@@ -1,11 +1,10 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_t_c_p_connection" kind="class" prot="public">
     <compoundname>wxTCPConnection</compoundname>
     <basecompoundref refid="classwx_object" prot="public" virt="non-virtual">wxObject</basecompoundref>
     <includes local="no">wx/sckipc.h</includes>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_t_c_p_connection_1a14a184b6e30f8bf3b636175a738d5b51" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
         <definition>wxTCPConnection::wxTCPConnection</definition>
@@ -42,7 +41,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_t_c_p_connection_1adc7cc4dd3ed4af62f392e0cb91cdaed9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
         <definition>bool wxTCPConnection::Advise</definition>
@@ -138,7 +136,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_t_c_p_connection_1a641117e1e951023a991bf2d9701cb021" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
         <definition>bool wxTCPConnection::Execute</definition>
@@ -218,7 +215,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_t_c_p_connection_1ab9a0d9650141a968fc143e5402869729" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
         <definition>bool wxTCPConnection::Poke</definition>
@@ -572,35 +568,35 @@
 <para>A <ref refid="classwx_t_c_p_client" kindref="compound">wxTCPClient</ref> object represents the connection between a client and a server. </para>    </briefdescription>
     <detaileddescription>
 <para>It emulates a DDE-style protocol, but uses TCP/IP which is available on most platforms.</para><para>A DDE-based implementation for Windows is available using <ref refid="classwx_d_d_e_connection" kindref="compound">wxDDEConnection</ref>.</para><para>A <ref refid="classwx_t_c_p_connection" kindref="compound">wxTCPConnection</ref> object can be created by making a connection using a <ref refid="classwx_t_c_p_client" kindref="compound">wxTCPClient</ref> object, or by the acceptance of a connection by a <ref refid="classwx_t_c_p_server" kindref="compound">wxTCPServer</ref> object. The bulk of a conversation is controlled by calling members in a <bold><ref refid="classwx_t_c_p_connection" kindref="compound">wxTCPConnection</ref></bold> object or by overriding its members.</para><para>An application should normally derive a new connection class from <ref refid="classwx_t_c_p_connection" kindref="compound">wxTCPConnection</ref>, in order to override the communication event handlers to do something interesting.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxnet" kindref="member">wxNet</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__net" kindref="compound">Networking</ref></para><para><simplesect kind="see"><para><ref refid="classwx_t_c_p_client" kindref="compound">wxTCPClient</ref>, <ref refid="classwx_t_c_p_server" kindref="compound">wxTCPServer</ref>, <ref refid="overview__ipc" kindref="compound">Interprocess Communication</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxnet" kindref="member">wxNet</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__net" kindref="compound">Networking</ref></para><para><simplesect kind="see"><para><ref refid="classwx_t_c_p_client" kindref="compound">wxTCPClient</ref>, <ref refid="classwx_t_c_p_server" kindref="compound">wxTCPServer</ref>, <ref refid="overview_ipc" kindref="compound">Interprocess Communication</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10662">
+      <node id="10722">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="10661">
+      <node id="10721">
         <label>wxTCPConnection</label>
         <link refid="classwx_t_c_p_connection"/>
-        <childnode refid="10662" relation="public-inheritance">
+        <childnode refid="10722" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10664">
+      <node id="10724">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="10665" relation="usage">
+        <childnode refid="10725" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="10663">
+      <node id="10723">
         <label>wxTCPConnection</label>
         <link refid="classwx_t_c_p_connection"/>
-        <childnode refid="10664" relation="public-inheritance">
+        <childnode refid="10724" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10665">
+      <node id="10725">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

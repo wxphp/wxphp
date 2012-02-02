@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_header_ctrl" kind="class" prot="public">
     <compoundname>wxHeaderCtrl</compoundname>
     <basecompoundref refid="classwx_control" prot="public" virt="non-virtual">wxControl</basecompoundref>
@@ -378,11 +378,11 @@
         <briefdescription>
 <para>Helper function appending the checkable items corresponding to all the columns to the given menu. </para>        </briefdescription>
         <detaileddescription>
-<para>This function is used by <ref refid="classwx_header_ctrl_1a1662ff7b43136b1ae710d11cbe9e3295" kindref="member">ShowColumnsMenu()</ref> but can also be used if you show your own custom columns menu and still want all the columns shown in it. It appends menu items with column labels as their text and consecutive ids starting from <emphasis>idColumnsBase</emphasis> to the menu and checks the items corresponding to the currently visible columns.</para><para>Example of use: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_menu" kindref="compound" tooltip="A menu is a popup (or pull down) list of items, one of which may be selected before...">wxMenu</ref><sp/>menu;</highlight></codeline>
+<para>This function is used by <ref refid="classwx_header_ctrl_1a1662ff7b43136b1ae710d11cbe9e3295" kindref="member">ShowColumnsMenu()</ref> but can also be used if you show your own custom columns menu and still want all the columns shown in it. It appends menu items with column labels as their text and consecutive ids starting from <emphasis>idColumnsBase</emphasis> to the menu and checks the items corresponding to the currently visible columns.</para><para>Example of use: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_menu" kindref="compound" tooltip="A menu is a popup (or pull down) list of items, one of which may be selected before the menu goes awa...">wxMenu</ref><sp/>menu;</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>menu.<ref refid="classwx_menu_1ab8b9fe9baabeb67cf3eaa70df072f7c9" kindref="member" tooltip="Adds a menu item.">Append</ref>(100,<sp/></highlight><highlight class="stringliteral">&quot;Some<sp/>custom<sp/>command&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>menu.<ref refid="classwx_menu_1ac4027fc18854f535171ea32f416fc667" kindref="member" tooltip="Adds a separator to the end of the menu.">AppendSeparator</ref>();</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_header_ctrl_1a22396560f002df58ecc7c6ed62feaf6e" kindref="member" tooltip="Helper function appending the checkable items corresponding to all the columns to...">AddColumnsItems</ref>(menu,<sp/>200);</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>rc<sp/>=<sp/><ref refid="classwx_window_1a9b7de6ea85ca926b668ba0682a61a93e" kindref="member" tooltip="This function shows a popup menu at the given position in this window and returns...">GetPopupMenuSelectionFromUser</ref>(menu,<sp/>pt);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_header_ctrl_1a22396560f002df58ecc7c6ed62feaf6e" kindref="member" tooltip="Helper function appending the checkable items corresponding to all the columns to the given menu...">AddColumnsItems</ref>(menu,<sp/>200);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>rc<sp/>=<sp/><ref refid="classwx_window_1a9b7de6ea85ca926b668ba0682a61a93e" kindref="member" tooltip="This function shows a popup menu at the given position in this window and returns the selected id...">GetPopupMenuSelectionFromUser</ref>(menu,<sp/>pt);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>rc<sp/>&gt;=<sp/>200<sp/>)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...<sp/>toggle<sp/>visibility<sp/>of<sp/>the<sp/>column<sp/>rc-200<sp/>...</highlight></codeline>
 </programlisting></para><para><parameterlist kind="param"><parameteritem>
@@ -418,6 +418,24 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/headerctrl.h" line="375"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_header_ctrl_1a317a54720263d266356c685c4c024869" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxHeaderCtrl::GetColumnTitleWidth</definition>
+        <argsstring>(const wxHeaderColumn &amp;col)</argsstring>
+        <name>GetColumnTitleWidth</name>
+        <param>
+          <type>const <ref refid="classwx_header_column" kindref="compound">wxHeaderColumn</ref> &amp;</type>
+          <declname>col</declname>
+        </param>
+        <briefdescription>
+<para>Returns width needed for given column&apos;s title. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="since"><para>2.9.4 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/headerctrl.h" line="382"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -493,7 +511,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/headerctrl.h" line="386"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/headerctrl.h" line="393"/>
       </memberdef>
       <memberdef kind="function" id="classwx_header_ctrl_1abfa944a8547bc9f1e5633387644692d5" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -529,7 +547,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/headerctrl.h" line="406"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/headerctrl.h" line="413"/>
       </memberdef>
       <memberdef kind="function" id="classwx_header_ctrl_1a7cf46f00454c094ac576fbbddd1ccd0f" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -554,7 +572,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/headerctrl.h" line="430"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/headerctrl.h" line="437"/>
       </memberdef>
       <memberdef kind="function" id="classwx_header_ctrl_1ab3f416ac080e032dcd9913118d527d58" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -572,7 +590,7 @@
         <briefdescription>
 <para>Method which may be implemented by the derived classes to allow double clicking the column separator to resize the column to fit its contents. </para>        </briefdescription>
         <detaileddescription>
-<para>When a separator is double clicked, the default handler of EVT_HEADER_SEPARATOR_DCLICK event calls this function and refreshes the column if it returns true so to implement the resizing of the column to fit its width on header double click you need to implement this method using logic similar to this example: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">MyHeaderColumn<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classwx_header_column" kindref="compound" tooltip="Represents a column header in controls displaying tabular data such as wxDataViewCtrl...">wxHeaderColumn</ref></highlight></codeline>
+<para>When a separator is double clicked, the default handler of EVT_HEADER_SEPARATOR_DCLICK event calls this function and refreshes the column if it returns true so to implement the resizing of the column to fit its width on header double click you need to implement this method using logic similar to this example: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">MyHeaderColumn<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classwx_header_column" kindref="compound" tooltip="Represents a column header in controls displaying tabular data such as wxDataViewCtrl or wxGrid...">wxHeaderColumn</ref></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...</highlight></codeline>
@@ -584,16 +602,16 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>m_width;</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">MyHeaderCtrl<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classwx_header_ctrl" kindref="compound" tooltip="wxHeaderCtrl is the control containing the column headings which is usually used...">wxHeaderCtrl</ref></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">MyHeaderCtrl<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classwx_header_ctrl" kindref="compound" tooltip="wxHeaderCtrl is the control containing the column headings which is usually used for display of tabul...">wxHeaderCtrl</ref></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classwx_header_column" kindref="compound" tooltip="Represents a column header in controls displaying tabular data such as wxDataViewCtrl...">wxHeaderColumn</ref>&amp;<sp/><ref refid="classwx_header_ctrl_1a338b8203f8bdaf71b1ee17a28453163b" kindref="member" tooltip="Method to be implemented by the derived classes to return the information for the...">GetColumn</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>idx)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classwx_header_column" kindref="compound" tooltip="Represents a column header in controls displaying tabular data such as wxDataViewCtrl or wxGrid...">wxHeaderColumn</ref>&amp;<sp/><ref refid="classwx_header_ctrl_1a338b8203f8bdaf71b1ee17a28453163b" kindref="member" tooltip="Method to be implemented by the derived classes to return the information for the given column...">GetColumn</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>idx)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
 <codeline><highlight class="keyword"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_cols[idx];</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classwx_header_ctrl_1ab3f416ac080e032dcd9913118d527d58" kindref="member" tooltip="Method which may be implemented by the derived classes to allow double clicking the...">UpdateColumnWidthToFit</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>idx,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>widthTitle)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classwx_header_ctrl_1ab3f416ac080e032dcd9913118d527d58" kindref="member" tooltip="Method which may be implemented by the derived classes to allow double clicking the column separator ...">UpdateColumnWidthToFit</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>idx,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>widthTitle)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>widthContents<sp/>=<sp/>...<sp/>compute<sp/>minimal<sp/>width<sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>column<sp/>idx<sp/>...</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_cols[idx].SetWidth(wxMax(widthContents,<sp/>widthTitle));</highlight></codeline>
@@ -621,7 +639,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/headerctrl.h" line="488"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/headerctrl.h" line="495"/>
       </memberdef>
       <memberdef kind="function" id="classwx_header_ctrl_1a2b3b06067d136bc1ae1f2ebb1f92f7c7" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -638,7 +656,7 @@
 <para>This method is called by <ref refid="classwx_header_ctrl_1a41ff1c0ad9b13a79b17e61555e81eb25" kindref="member">SetColumnCount()</ref> before effectively changing the number of columns.</para><para>The base class version does nothing but it is good practice to still call it from the overridden version in the derived class. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/headerctrl.h" line="500"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/headerctrl.h" line="507"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -673,95 +691,95 @@
 <listitem><para>EVT_HEADER_DRAGGING_CANCELLED(id,  func): The resizing or reordering operation currently in progress was cancelled. This can happen if the user pressed Esc key while dragging the mouse or the mouse capture was lost for some other reason. You only need to handle this event if your application entered into some modal mode when resizing or reordering began, in which case it should handle this event in addition to the matching end resizing or reordering ones. </para></listitem>
 </itemizedlist>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref></para><para><simplesect kind="see"><para><ref refid="classwx_grid" kindref="compound">wxGrid</ref>, <ref refid="classwx_list_ctrl" kindref="compound">wxListCtrl</ref>, <ref refid="classwx_data_view_ctrl" kindref="compound">wxDataViewCtrl</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref></para><para><simplesect kind="see"><para><ref refid="classwx_grid" kindref="compound">wxGrid</ref>, <ref refid="classwx_list_ctrl" kindref="compound">wxListCtrl</ref>, <ref refid="classwx_data_view_ctrl" kindref="compound">wxDataViewCtrl</ref> </para></simplesect>
 </para></sect1>
     </detaileddescription>
     <inheritancegraph>
-      <node id="6888">
+      <node id="6892">
         <label>wxHeaderCtrlSimple</label>
         <link refid="classwx_header_ctrl_simple"/>
-        <childnode refid="6882" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="6886">
-        <label>wxObject</label>
-        <link refid="classwx_object"/>
-      </node>
-      <node id="6885">
-        <label>wxEvtHandler</label>
-        <link refid="classwx_evt_handler"/>
         <childnode refid="6886" relation="public-inheritance">
         </childnode>
-        <childnode refid="6887" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="6887">
-        <label>wxTrackable</label>
-        <link refid="classwx_trackable"/>
-      </node>
-      <node id="6883">
-        <label>wxControl</label>
-        <link refid="classwx_control"/>
-        <childnode refid="6884" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="6884">
-        <label>wxWindow</label>
-        <link refid="classwx_window"/>
-        <childnode refid="6885" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="6882">
-        <label>wxHeaderCtrl</label>
-        <link refid="classwx_header_ctrl"/>
-        <childnode refid="6883" relation="public-inheritance">
-        </childnode>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
-      <node id="6893">
-        <label>wxObject</label>
-        <link refid="classwx_object"/>
-        <childnode refid="6894" relation="usage">
-          <edgelabel>m_refData</edgelabel>
-        </childnode>
-      </node>
-      <node id="6892">
-        <label>wxEvtHandler</label>
-        <link refid="classwx_evt_handler"/>
-        <childnode refid="6893" relation="public-inheritance">
-        </childnode>
-        <childnode refid="6895" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="6895">
-        <label>wxTrackable</label>
-        <link refid="classwx_trackable"/>
       </node>
       <node id="6890">
-        <label>wxControl</label>
-        <link refid="classwx_control"/>
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+      </node>
+      <node id="6889">
+        <label>wxEvtHandler</label>
+        <link refid="classwx_evt_handler"/>
+        <childnode refid="6890" relation="public-inheritance">
+        </childnode>
         <childnode refid="6891" relation="public-inheritance">
         </childnode>
       </node>
       <node id="6891">
+        <label>wxTrackable</label>
+        <link refid="classwx_trackable"/>
+      </node>
+      <node id="6887">
+        <label>wxControl</label>
+        <link refid="classwx_control"/>
+        <childnode refid="6888" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6888">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="6892" relation="public-inheritance">
+        <childnode refid="6889" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6889">
+      <node id="6886">
         <label>wxHeaderCtrl</label>
         <link refid="classwx_header_ctrl"/>
-        <childnode refid="6890" relation="public-inheritance">
+        <childnode refid="6887" relation="public-inheritance">
         </childnode>
       </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="6897">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="6898" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="6896">
+        <label>wxEvtHandler</label>
+        <link refid="classwx_evt_handler"/>
+        <childnode refid="6897" relation="public-inheritance">
+        </childnode>
+        <childnode refid="6899" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6899">
+        <label>wxTrackable</label>
+        <link refid="classwx_trackable"/>
+      </node>
       <node id="6894">
+        <label>wxControl</label>
+        <link refid="classwx_control"/>
+        <childnode refid="6895" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6895">
+        <label>wxWindow</label>
+        <link refid="classwx_window"/>
+        <childnode refid="6896" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6893">
+        <label>wxHeaderCtrl</label>
+        <link refid="classwx_header_ctrl"/>
+        <childnode refid="6894" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6898">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/headerctrl.h" line="130" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/headerctrl.h" bodystart="129" bodyend="501"/>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/headerctrl.h" line="130" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/headerctrl.h" bodystart="129" bodyend="508"/>
     <listofallmembers>
       <member refid="classwx_window_1a3afbd49b1ea2f8275e3600dcac102923" prot="public" virt="virtual"><scope>wxHeaderCtrl</scope><name>AcceptsFocus</name></member>
       <member refid="classwx_window_1a2370bdd3ab08e7ef3c7555c6aa8301b8" prot="public" virt="virtual"><scope>wxHeaderCtrl</scope><name>AcceptsFocusFromKeyboard</name></member>
@@ -850,6 +868,7 @@
       <member refid="classwx_header_ctrl_1a9c2c4b031c8ae6baa075cf6f19b11c82" prot="public" virt="non-virtual"><scope>wxHeaderCtrl</scope><name>GetColumnCount</name></member>
       <member refid="classwx_header_ctrl_1abd51a074fd17438a59b3b9f74c1a40ec" prot="public" virt="non-virtual"><scope>wxHeaderCtrl</scope><name>GetColumnPos</name></member>
       <member refid="classwx_header_ctrl_1acdb9b8a7013e39408bb3eb2c71247d5a" prot="public" virt="non-virtual"><scope>wxHeaderCtrl</scope><name>GetColumnsOrder</name></member>
+      <member refid="classwx_header_ctrl_1a317a54720263d266356c685c4c024869" prot="public" virt="non-virtual"><scope>wxHeaderCtrl</scope><name>GetColumnTitleWidth</name></member>
       <member refid="classwx_window_1ac5664c7cd26848b5eebfaded2ecde7be" prot="public" virt="non-virtual"><scope>wxHeaderCtrl</scope><name>GetConstraints</name></member>
       <member refid="classwx_window_1ade8de9a91bb5bf49c3a52e5262a5ffea" prot="public" virt="non-virtual"><scope>wxHeaderCtrl</scope><name>GetContainingSizer</name></member>
       <member refid="classwx_window_1ad7ce1e9af33e6be0b608813eff2d349c" prot="public" virt="non-virtual"><scope>wxHeaderCtrl</scope><name>GetCursor</name></member>

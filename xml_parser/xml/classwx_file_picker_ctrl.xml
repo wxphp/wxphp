@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_file_picker_ctrl" kind="class" prot="public">
     <compoundname>wxFilePickerCtrl</compoundname>
     <basecompoundref refid="classwx_picker_base" prot="public" virt="non-virtual">wxPickerBase</basecompoundref>
@@ -242,6 +242,24 @@
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filepicker.h" line="131"/>
       </memberdef>
+      <memberdef kind="function" id="classwx_file_picker_ctrl_1ab36700ece10509deb7384f30ebf0baea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxFilePickerCtrl::SetInitialDirectory</definition>
+        <argsstring>(const wxString &amp;dir)</argsstring>
+        <name>SetInitialDirectory</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>dir</declname>
+        </param>
+        <briefdescription>
+<para>Set the directory to show when starting to browse for files. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function is mostly useful for the file picker controls which have no selection initially to configure the directory that should be shown if the user starts browsing for files as otherwise the directory of initially selected file is used, which is usually the desired behaviour and so the directory specified by this function is ignored in this case.</para><para><simplesect kind="since"><para>2.9.4 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filepicker.h" line="145"/>
+      </memberdef>
       <memberdef kind="function" id="classwx_file_picker_ctrl_1aa18c0c1598d60bc6ef526f7749c1e156" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void wxFilePickerCtrl::SetPath</definition>
@@ -257,7 +275,7 @@
 <para>This must be a valid file if the <computeroutput>wxFLP_FILE_MUST_EXIST</computeroutput> style was given. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filepicker.h" line="137"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filepicker.h" line="151"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -279,100 +297,100 @@
 <listitem><para>EVT_FILEPICKER_CHANGED(id,  func): The user changed the file selected in the control either using the button or using text control (see wxFLP_USE_TEXTCTRL; note that in this case the event is fired only if the user&apos;s input is valid, e.g. an existing file path if wxFLP_FILE_MUST_EXIST was given). </para></listitem>
 </itemizedlist>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__pickers" kindref="compound">Picker Controls</ref> <htmlonly> &lt;br&gt;&lt;div&gt;&lt;span class=&apos;appearance&apos;&gt;Appearance:&lt;/span&gt;&lt;br&gt;&lt;table class=&apos;appearance&apos;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&apos;wxmsw/filepickerctrl.png&apos; alt=&apos;wxMSW appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxgtk/filepickerctrl.png&apos; alt=&apos;wxGTK appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxmac/filepickerctrl.png&apos; alt=&apos;wxMac appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;wxMSW appearance&lt;/td&gt;&lt;td&gt;wxGTK appearance&lt;/td&gt;&lt;td&gt;wxMac appearance&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt; </htmlonly></para><para><simplesect kind="see"><para><ref refid="classwx_file_dialog" kindref="compound">wxFileDialog</ref>, <ref refid="classwx_file_dir_picker_event" kindref="compound">wxFileDirPickerEvent</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__pickers" kindref="compound">Picker Controls</ref> <htmlonly> &lt;br&gt;&lt;div&gt;&lt;span class=&apos;appearance&apos;&gt;Appearance:&lt;/span&gt;&lt;br&gt;&lt;table class=&apos;appearance&apos;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&apos;wxmsw/filepickerctrl.png&apos; alt=&apos;wxMSW appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxgtk/filepickerctrl.png&apos; alt=&apos;wxGTK appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxmac/filepickerctrl.png&apos; alt=&apos;wxMac appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;wxMSW appearance&lt;/td&gt;&lt;td&gt;wxGTK appearance&lt;/td&gt;&lt;td&gt;wxMac appearance&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt; </htmlonly></para><para><simplesect kind="see"><para><ref refid="classwx_file_dialog" kindref="compound">wxFileDialog</ref>, <ref refid="classwx_file_dir_picker_event" kindref="compound">wxFileDirPickerEvent</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="6224">
-        <label>wxObject</label>
-        <link refid="classwx_object"/>
-      </node>
-      <node id="6223">
-        <label>wxEvtHandler</label>
-        <link refid="classwx_evt_handler"/>
-        <childnode refid="6224" relation="public-inheritance">
-        </childnode>
-        <childnode refid="6225" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="6225">
-        <label>wxTrackable</label>
-        <link refid="classwx_trackable"/>
-      </node>
-      <node id="6221">
-        <label>wxControl</label>
-        <link refid="classwx_control"/>
-        <childnode refid="6222" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="6222">
-        <label>wxWindow</label>
-        <link refid="classwx_window"/>
-        <childnode refid="6223" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="6219">
-        <label>wxFilePickerCtrl</label>
-        <link refid="classwx_file_picker_ctrl"/>
-        <childnode refid="6220" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="6220">
-        <label>wxPickerBase</label>
-        <link refid="classwx_picker_base"/>
-        <childnode refid="6221" relation="public-inheritance">
-        </childnode>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
-      <node id="6231">
-        <label>wxObject</label>
-        <link refid="classwx_object"/>
-        <childnode refid="6232" relation="usage">
-          <edgelabel>m_refData</edgelabel>
-        </childnode>
-      </node>
-      <node id="6230">
-        <label>wxEvtHandler</label>
-        <link refid="classwx_evt_handler"/>
-        <childnode refid="6231" relation="public-inheritance">
-        </childnode>
-        <childnode refid="6233" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="6233">
-        <label>wxTrackable</label>
-        <link refid="classwx_trackable"/>
-      </node>
       <node id="6228">
-        <label>wxControl</label>
-        <link refid="classwx_control"/>
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+      </node>
+      <node id="6227">
+        <label>wxEvtHandler</label>
+        <link refid="classwx_evt_handler"/>
+        <childnode refid="6228" relation="public-inheritance">
+        </childnode>
         <childnode refid="6229" relation="public-inheritance">
         </childnode>
       </node>
       <node id="6229">
-        <label>wxWindow</label>
-        <link refid="classwx_window"/>
-        <childnode refid="6230" relation="public-inheritance">
+        <label>wxTrackable</label>
+        <link refid="classwx_trackable"/>
+      </node>
+      <node id="6225">
+        <label>wxControl</label>
+        <link refid="classwx_control"/>
+        <childnode refid="6226" relation="public-inheritance">
         </childnode>
       </node>
       <node id="6226">
-        <label>wxFilePickerCtrl</label>
-        <link refid="classwx_file_picker_ctrl"/>
+        <label>wxWindow</label>
+        <link refid="classwx_window"/>
         <childnode refid="6227" relation="public-inheritance">
         </childnode>
       </node>
+      <node id="6223">
+        <label>wxFilePickerCtrl</label>
+        <link refid="classwx_file_picker_ctrl"/>
+        <childnode refid="6224" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6224">
+        <label>wxPickerBase</label>
+        <link refid="classwx_picker_base"/>
+        <childnode refid="6225" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="6235">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="6236" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="6234">
+        <label>wxEvtHandler</label>
+        <link refid="classwx_evt_handler"/>
+        <childnode refid="6235" relation="public-inheritance">
+        </childnode>
+        <childnode refid="6237" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6237">
+        <label>wxTrackable</label>
+        <link refid="classwx_trackable"/>
+      </node>
       <node id="6232">
+        <label>wxControl</label>
+        <link refid="classwx_control"/>
+        <childnode refid="6233" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6233">
+        <label>wxWindow</label>
+        <link refid="classwx_window"/>
+        <childnode refid="6234" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6230">
+        <label>wxFilePickerCtrl</label>
+        <link refid="classwx_file_picker_ctrl"/>
+        <childnode refid="6231" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6236">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
-      <node id="6227">
+      <node id="6231">
         <label>wxPickerBase</label>
         <link refid="classwx_picker_base"/>
-        <childnode refid="6228" relation="public-inheritance">
+        <childnode refid="6232" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filepicker.h" line="61" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filepicker.h" bodystart="60" bodyend="138"/>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filepicker.h" line="61" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filepicker.h" bodystart="60" bodyend="152"/>
     <listofallmembers>
       <member refid="classwx_window_1a3afbd49b1ea2f8275e3600dcac102923" prot="public" virt="virtual"><scope>wxFilePickerCtrl</scope><name>AcceptsFocus</name></member>
       <member refid="classwx_window_1a2370bdd3ab08e7ef3c7555c6aa8301b8" prot="public" virt="virtual"><scope>wxFilePickerCtrl</scope><name>AcceptsFocusFromKeyboard</name></member>
@@ -643,6 +661,7 @@
       <member refid="classwx_window_1a4c1a2cbc7363237b3a7c70af4e702c72" prot="public" virt="non-virtual"><scope>wxFilePickerCtrl</scope><name>SetHelpText</name></member>
       <member refid="classwx_window_1a7f27d0faed14effa013381bdc40e1bcd" prot="public" virt="non-virtual"><scope>wxFilePickerCtrl</scope><name>SetId</name></member>
       <member refid="classwx_window_1ae6dfe0b0d4a8c666b21ce8df8d96727b" prot="protected" virt="virtual"><scope>wxFilePickerCtrl</scope><name>SetInitialBestSize</name></member>
+      <member refid="classwx_file_picker_ctrl_1ab36700ece10509deb7384f30ebf0baea" prot="public" virt="non-virtual"><scope>wxFilePickerCtrl</scope><name>SetInitialDirectory</name></member>
       <member refid="classwx_window_1a1b309ca50ba87e34f968c83b79af1397" prot="public" virt="non-virtual"><scope>wxFilePickerCtrl</scope><name>SetInitialSize</name></member>
       <member refid="classwx_picker_base_1a902b0b8db0a78820d8d985500f5f66c1" prot="public" virt="non-virtual"><scope>wxFilePickerCtrl</scope><name>SetInternalMargin</name></member>
       <member refid="classwx_control_1a2c2ae20554e7db5e765f163022ce09c0" prot="public" virt="virtual"><scope>wxFilePickerCtrl</scope><name>SetLabel</name></member>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_hyperlink_event" kind="class" prot="public">
     <compoundname>wxHyperlinkEvent</compoundname>
     <basecompoundref refid="classwx_command_event" prot="public" virt="non-virtual">wxCommandEvent</basecompoundref>
@@ -69,38 +69,11 @@
 <listitem><para>EVT_HYPERLINK(id,  func): User clicked on an hyperlink. </para></listitem>
 </itemizedlist>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref> </para>    </detaileddescription>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7200">
-        <label>wxObject</label>
-        <link refid="classwx_object"/>
-      </node>
-      <node id="7198">
-        <label>wxCommandEvent</label>
-        <link refid="classwx_command_event"/>
-        <childnode refid="7199" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="7197">
-        <label>wxHyperlinkEvent</label>
-        <link refid="classwx_hyperlink_event"/>
-        <childnode refid="7198" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="7199">
-        <label>wxEvent</label>
-        <link refid="classwx_event"/>
-        <childnode refid="7200" relation="public-inheritance">
-        </childnode>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
       <node id="7204">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="7205" relation="usage">
-          <edgelabel>m_refData</edgelabel>
-        </childnode>
       </node>
       <node id="7202">
         <label>wxCommandEvent</label>
@@ -120,7 +93,34 @@
         <childnode refid="7204" relation="public-inheritance">
         </childnode>
       </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="7208">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="7209" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="7206">
+        <label>wxCommandEvent</label>
+        <link refid="classwx_command_event"/>
+        <childnode refid="7207" relation="public-inheritance">
+        </childnode>
+      </node>
       <node id="7205">
+        <label>wxHyperlinkEvent</label>
+        <link refid="classwx_hyperlink_event"/>
+        <childnode refid="7206" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7207">
+        <label>wxEvent</label>
+        <link refid="classwx_event"/>
+        <childnode refid="7208" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7209">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

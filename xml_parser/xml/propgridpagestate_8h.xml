@@ -1,12 +1,11 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="propgridpagestate_8h" kind="file">
     <compoundname>propgridpagestate.h</compoundname>
     <innerclass refid="structwx_property_grid_hit_test_result" prot="public">wxPropertyGridHitTestResult</innerclass>
     <innerclass refid="classwx_property_grid_iterator" prot="public">wxPropertyGridIterator</innerclass>
     <innerclass refid="classwx_p_g_v_iterator" prot="public">wxPGVIterator</innerclass>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="enum" id="propgridpagestate_8h_1a307ba26bf1eeb9d76108893f4f723b0a" prot="public" static="no">
         <name>wxPG_ITERATOR_FLAGS</name>
         <enumvalue id="propgridpagestate_8h_1a307ba26bf1eeb9d76108893f4f723b0aa879aa0952cc5f6b16264baa4d75401c8" prot="public">

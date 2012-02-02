@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_translations" kind="class" prot="public">
     <compoundname>wxTranslations</compoundname>
     <includes local="no">wx/translation.h</includes>
@@ -113,7 +113,7 @@
         <briefdescription>
 <para>Add a catalog for use with the current locale. </para>        </briefdescription>
         <detaileddescription>
-<para>By default, it is searched for in standard places (see <ref refid="classwx_file_translations_loader" kindref="compound">wxFileTranslationsLoader</ref>), but you may also prepend additional directories to the search path with <ref refid="classwx_file_translations_loader_1aef1c18a8e931eaff259e0d1b84e4bd94" kindref="member">wxFileTranslationsLoader::AddCatalogLookupPathPrefix()</ref>.</para><para>All loaded catalogs will be used for message lookup by <ref refid="classwx_translations_1abc65ffea4b238c11c7131e5303f174f2" kindref="member">GetString()</ref> for the current locale.</para><para>In this overload, <computeroutput>msgid</computeroutput> strings are assumed to be in English and written only using 7-bit ASCII characters. If you have to deal with non-English strings or 8-bit characters in the source code, see the instructions in <ref refid="overview__nonenglish" kindref="compound">Writing Non-English Applications</ref>.</para><para><simplesect kind="return"><para>true if catalog was successfully loaded, false otherwise (which might mean that the catalog is not found or that it isn&apos;t in the correct format). </para></simplesect>
+<para>By default, it is searched for in standard places (see <ref refid="classwx_file_translations_loader" kindref="compound">wxFileTranslationsLoader</ref>), but you may also prepend additional directories to the search path with <ref refid="classwx_file_translations_loader_1aef1c18a8e931eaff259e0d1b84e4bd94" kindref="member">wxFileTranslationsLoader::AddCatalogLookupPathPrefix()</ref>.</para><para>All loaded catalogs will be used for message lookup by <ref refid="classwx_translations_1abc65ffea4b238c11c7131e5303f174f2" kindref="member">GetString()</ref> for the current locale.</para><para>In this overload, <computeroutput>msgid</computeroutput> strings are assumed to be in English and written only using 7-bit ASCII characters. If you have to deal with non-English strings or 8-bit characters in the source code, see the instructions in <ref refid="overview_nonenglish" kindref="compound">Writing Non-English Applications</ref>.</para><para><simplesect kind="return"><para>true if catalog was successfully loaded, false otherwise (which might mean that the catalog is not found or that it isn&apos;t in the correct format). </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>

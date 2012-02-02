@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="overview_windowstyles" kind="page">
+    <compoundname>overview_windowstyles</compoundname>
+    <title>Window Styles</title>
+    <detaileddescription>
+<para>Window styles are used to specify alternative behaviour and appearances for windows, when they are created.</para><para>The symbols are defined in such a way that they can be combined in a &apos;bit-list&apos; using the C++ <emphasis>bitwise-or</emphasis> operator.</para><para>For example:</para><para><programlisting><codeline><highlight class="normal"><ref refid="defs_8h_1ab9dd38fb28514dc86647c9bab14a5abe" kindref="member">wxCAPTION</ref><sp/>|<sp/><ref refid="defs_8h_1a58a06afb75f2d7eaf75678be07cd1bb9" kindref="member">wxMINIMIZE_BOX</ref><sp/>|<sp/><ref refid="defs_8h_1a8968324afeca5856872724521f199e04" kindref="member">wxMAXIMIZE_BOX</ref><sp/>|<sp/><ref refid="defs_8h_1ab2e7b3533b073e1df781c5b60ccc92d5" kindref="member">wxRESIZE_BORDER</ref></highlight></codeline>
+</programlisting></para><para>For the window styles specific to each window class, please see the documentation for the window.</para><para>Most windows can use the generic styles listed for <ref refid="classwx_window" kindref="compound">wxWindow</ref> in addition to their own styles. </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

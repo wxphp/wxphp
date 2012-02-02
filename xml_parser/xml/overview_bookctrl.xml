@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="overview_bookctrl" kind="page">
+    <compoundname>overview_bookctrl</compoundname>
+    <title>wxBookCtrl Overview</title>
+    <detaileddescription>
+<para>Classes:</para><para><itemizedlist>
+<listitem><para><ref refid="classwx_choicebook" kindref="compound">wxChoicebook</ref> </para></listitem>
+<listitem><para><ref refid="classwx_listbook" kindref="compound">wxListbook</ref> </para></listitem>
+<listitem><para><ref refid="classwx_notebook" kindref="compound">wxNotebook</ref> </para></listitem>
+<listitem><para><ref refid="classwx_treebook" kindref="compound">wxTreebook</ref> </para></listitem>
+<listitem><para><ref refid="classwx_toolbook" kindref="compound">wxToolbook</ref></para></listitem>
+</itemizedlist>
+Sections:</para><para><itemizedlist>
+<listitem><para><ref refid="overview_bookctrl_1overview_bookctrl_intro" kindref="member">Introduction</ref> </para></listitem>
+<listitem><para><ref refid="overview_bookctrl_1overview_bookctrl_bestbookctrl" kindref="member">Best Book</ref></para></listitem>
+</itemizedlist>
+<hruler/>
+</para><sect1 id="overview_bookctrl_1overview_bookctrl_intro">
+<title>Introduction</title>
+<para>A book control is a convenient way of displaying multiple pages of information, displayed one page at a time. wxWidgets has five variants of this control:</para><para><itemizedlist>
+<listitem><para><ref refid="classwx_choicebook" kindref="compound">wxChoicebook</ref>: controlled by a <ref refid="classwx_choice" kindref="compound">wxChoice</ref> </para></listitem>
+<listitem><para><ref refid="classwx_listbook" kindref="compound">wxListbook</ref>: controlled by a <ref refid="classwx_list_ctrl" kindref="compound">wxListCtrl</ref> </para></listitem>
+<listitem><para><ref refid="classwx_notebook" kindref="compound">wxNotebook</ref>: uses a row of tabs </para></listitem>
+<listitem><para><ref refid="classwx_treebook" kindref="compound">wxTreebook</ref>: controlled by a <ref refid="classwx_tree_ctrl" kindref="compound">wxTreeCtrl</ref> </para></listitem>
+<listitem><para><ref refid="classwx_toolbook" kindref="compound">wxToolbook</ref>: controlled by a <ref refid="classwx_tool_bar" kindref="compound">wxToolBar</ref></para></listitem>
+</itemizedlist>
+See the <ref refid="page_samples_1page_samples_notebook" kindref="member">Notebook Sample</ref> for an example of wxBookCtrl usage.</para></sect1>
+<sect1 id="overview_bookctrl_1overview_bookctrl_bestbookctrl">
+<title>Best Book</title>
+<para><ref refid="interface_2wx_2bookctrl_8h_1ab367c06ea9df73f0d3bf3c464afdb7d6" kindref="member">wxBookCtrl</ref> is mapped to the class best suited for a given platform. Currently it provides <ref refid="classwx_choicebook" kindref="compound">wxChoicebook</ref> for smartphones equipped with WinCE, and <ref refid="classwx_notebook" kindref="compound">wxNotebook</ref> for all other platforms. The mapping consists of:</para><para><table rows="5" cols="2"><row>
+<entry thead="no"><para><ref refid="interface_2wx_2bookctrl_8h_1ab367c06ea9df73f0d3bf3c464afdb7d6" kindref="member">wxBookCtrl</ref> </para></entry><entry thead="no"><para><ref refid="classwx_choicebook" kindref="compound">wxChoicebook</ref> or <ref refid="classwx_notebook" kindref="compound">wxNotebook</ref>  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>wxEVT_COMMAND_BOOKCTRL_PAGE_CHANGED</computeroutput>  </para></entry><entry thead="no"><para><computeroutput>wxEVT_COMMAND_CHOICEBOOK_PAGE_CHANGED</computeroutput> or <computeroutput>wxEVT_COMMAND_NOTEBOOK_PAGE_CHANGED</computeroutput>  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>wxEVT_COMMAND_BOOKCTRL_PAGE_CHANGING</computeroutput>  </para></entry><entry thead="no"><para><computeroutput>wxEVT_COMMAND_CHOICEBOOK_PAGE_CHANGING</computeroutput> or <computeroutput>wxEVT_COMMAND_NOTEBOOK_PAGE_CHANGING</computeroutput>  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>EVT_BOOKCTRL_PAGE_CHANGED(id, fn)</computeroutput>  </para></entry><entry thead="no"><para><computeroutput>EVT_CHOICEBOOK_PAGE_CHANGED(id, fn)</computeroutput> or <computeroutput>EVT_NOTEBOOK_PAGE_CHANGED(id, fn)</computeroutput>  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>EVT_BOOKCTRL_PAGE_CHANGING(id, fn)</computeroutput>  </para></entry><entry thead="no"><para><computeroutput>EVT_CHOICEBOOK_PAGE_CHANGING(id, fn)</computeroutput> or <computeroutput>EVT_NOTEBOOK_PAGE_CHANGING(id, fn)</computeroutput>  </para></entry></row>
+</table>
+</para><para>For orientation of the book controller, use following flags in style:</para><para><itemizedlist>
+<listitem><para><bold>wxBK_TOP:</bold> controller above pages </para></listitem>
+<listitem><para><bold>wxBK_BOTTOM:</bold> controller below pages </para></listitem>
+<listitem><para><bold>wxBK_LEFT:</bold> controller on the left </para></listitem>
+<listitem><para><bold>wxBK_RIGHT:</bold> controller on the right </para></listitem>
+<listitem><para><bold>wxBK_DEFAULT:</bold> native controller placement </para></listitem>
+</itemizedlist>
+</para></sect1>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

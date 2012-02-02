@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_accelerator_entry" kind="class" prot="public">
     <compoundname>wxAcceleratorEntry</compoundname>
     <includes local="no">wx/accel.h</includes>
@@ -302,7 +302,7 @@
 <para>An object used by an application wishing to create an accelerator table (see <ref refid="classwx_accelerator_table" kindref="compound">wxAcceleratorTable</ref>). </para>    </briefdescription>
     <detaileddescription>
 <para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__data" kindref="compound">Data Structures</ref></para><para><simplesect kind="see"><para><ref refid="classwx_accelerator_table" kindref="compound">wxAcceleratorTable</ref>, <ref refid="classwx_window_1a0af5e9aa4dee6a4e92c0700f92605642" kindref="member">wxWindow::SetAcceleratorTable</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__data" kindref="compound">Data Structures</ref></para><para><simplesect kind="see"><para><ref refid="classwx_accelerator_table" kindref="compound">wxAcceleratorTable</ref>, <ref refid="classwx_window_1a0af5e9aa4dee6a4e92c0700f92605642" kindref="member">wxWindow::SetAcceleratorTable</ref> </para></simplesect>
 </para>    </detaileddescription>
     <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/accel.h" line="45" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/accel.h" bodystart="44" bodyend="139"/>
     <listofallmembers>

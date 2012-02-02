@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_file_ctrl" kind="class" prot="public">
     <compoundname>wxFileCtrl</compoundname>
     <basecompoundref refid="classwx_control" prot="public" virt="non-virtual">wxControl</basecompoundref>
@@ -404,83 +404,83 @@
 </para></listitem>
 </itemizedlist>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref> <htmlonly> &lt;br&gt;&lt;div&gt;&lt;span class=&apos;appearance&apos;&gt;Appearance:&lt;/span&gt;&lt;br&gt;&lt;table class=&apos;appearance&apos;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&apos;wxmsw/filectrl.png&apos; alt=&apos;wxMSW appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxgtk/filectrl.png&apos; alt=&apos;wxGTK appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxmac/filectrl.png&apos; alt=&apos;wxMac appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;wxMSW appearance&lt;/td&gt;&lt;td&gt;wxGTK appearance&lt;/td&gt;&lt;td&gt;wxMac appearance&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt; </htmlonly></para><para>Implementations:<nonbreakablespace/><nonbreakablespace/>native under <ref refid="page__port_1page_port_wxgtk" kindref="member">wxGTK</ref> port; a generic implementation is used elsewhere.</para><para><simplesect kind="see"><para><ref refid="classwx_generic_dir_ctrl" kindref="compound">wxGenericDirCtrl</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref> <htmlonly> &lt;br&gt;&lt;div&gt;&lt;span class=&apos;appearance&apos;&gt;Appearance:&lt;/span&gt;&lt;br&gt;&lt;table class=&apos;appearance&apos;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&apos;wxmsw/filectrl.png&apos; alt=&apos;wxMSW appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxgtk/filectrl.png&apos; alt=&apos;wxGTK appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxmac/filectrl.png&apos; alt=&apos;wxMac appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;wxMSW appearance&lt;/td&gt;&lt;td&gt;wxGTK appearance&lt;/td&gt;&lt;td&gt;wxMac appearance&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt; </htmlonly></para><para>Implementations:<nonbreakablespace/><nonbreakablespace/>native under <ref refid="page_port_1page_port_wxgtk" kindref="member">wxGTK</ref> port; a generic implementation is used elsewhere.</para><para><simplesect kind="see"><para><ref refid="classwx_generic_dir_ctrl" kindref="compound">wxGenericDirCtrl</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="6144">
+      <node id="6148">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="6143">
+      <node id="6147">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="6144" relation="public-inheritance">
+        <childnode refid="6148" relation="public-inheritance">
         </childnode>
-        <childnode refid="6145" relation="public-inheritance">
+        <childnode refid="6149" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6145">
+      <node id="6149">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="6141">
+      <node id="6145">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="6142" relation="public-inheritance">
+        <childnode refid="6146" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6142">
+      <node id="6146">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="6143" relation="public-inheritance">
+        <childnode refid="6147" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6140">
+      <node id="6144">
         <label>wxFileCtrl</label>
         <link refid="classwx_file_ctrl"/>
-        <childnode refid="6141" relation="public-inheritance">
+        <childnode refid="6145" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="6150">
+      <node id="6154">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="6151" relation="usage">
+        <childnode refid="6155" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="6149">
+      <node id="6153">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="6150" relation="public-inheritance">
+        <childnode refid="6154" relation="public-inheritance">
         </childnode>
+        <childnode refid="6156" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6156">
+        <label>wxTrackable</label>
+        <link refid="classwx_trackable"/>
+      </node>
+      <node id="6151">
+        <label>wxControl</label>
+        <link refid="classwx_control"/>
         <childnode refid="6152" relation="public-inheritance">
         </childnode>
       </node>
       <node id="6152">
-        <label>wxTrackable</label>
-        <link refid="classwx_trackable"/>
-      </node>
-      <node id="6147">
-        <label>wxControl</label>
-        <link refid="classwx_control"/>
-        <childnode refid="6148" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="6148">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="6149" relation="public-inheritance">
+        <childnode refid="6153" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6146">
+      <node id="6150">
         <label>wxFileCtrl</label>
         <link refid="classwx_file_ctrl"/>
-        <childnode refid="6147" relation="public-inheritance">
+        <childnode refid="6151" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6151">
+      <node id="6155">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

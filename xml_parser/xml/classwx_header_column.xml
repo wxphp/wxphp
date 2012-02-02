@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_header_column" kind="class" prot="public">
     <compoundname>wxHeaderColumn</compoundname>
     <derivedcompoundref refid="classwx_settable_header_column" prot="public" virt="non-virtual">wxSettableHeaderColumn</derivedcompoundref>
@@ -207,28 +207,28 @@
 <para>Represents a column header in controls displaying tabular data such as <ref refid="classwx_data_view_ctrl" kindref="compound">wxDataViewCtrl</ref> or <ref refid="classwx_grid" kindref="compound">wxGrid</ref>. </para>    </briefdescription>
     <detaileddescription>
 <para>Notice that this is an abstract base class which is implemented (usually using the information stored in the associated control) by the different controls using <ref refid="classwx_header_ctrl" kindref="compound">wxHeaderCtrl</ref>. As the control only needs to retrieve the information about the column, this class defines only the methods for accessing the various column properties but not for changing them as the setters might not be needed at all, e.g. if the column attributes can only be changed via the methods of the main associated control (this is the case for <ref refid="classwx_grid" kindref="compound">wxGrid</ref> for example). If you do want to allow changing them directly using the column itself, you should inherit from <ref refid="classwx_settable_header_column" kindref="compound">wxSettableHeaderColumn</ref> instead of this class.</para><para>Finally, if you don&apos;t already store the column information at all anywhere, you should use the concrete <ref refid="classwx_header_column_simple" kindref="compound">wxHeaderColumnSimple</ref> class and <ref refid="classwx_header_ctrl_simple" kindref="compound">wxHeaderCtrlSimple</ref>.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref> </para>    </detaileddescription>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="6872">
+      <node id="6876">
         <label>wxSettableHeaderColumn</label>
         <link refid="classwx_settable_header_column"/>
-        <childnode refid="6871" relation="public-inheritance">
+        <childnode refid="6875" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6871">
+      <node id="6875">
         <label>wxHeaderColumn</label>
         <link refid="classwx_header_column"/>
       </node>
-      <node id="6873">
+      <node id="6877">
         <label>wxDataViewColumn</label>
         <link refid="classwx_data_view_column"/>
-        <childnode refid="6872" relation="public-inheritance">
+        <childnode refid="6876" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6874">
+      <node id="6878">
         <label>wxHeaderColumnSimple</label>
         <link refid="classwx_header_column_simple"/>
-        <childnode refid="6872" relation="public-inheritance">
+        <childnode refid="6876" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>

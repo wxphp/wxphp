@@ -1,11 +1,10 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_connection" kind="class" prot="public">
     <compoundname>wxConnection</compoundname>
     <basecompoundref refid="classwx_object" prot="public" virt="non-virtual">wxObject</basecompoundref>
     <includes local="no">wx/ipc.h</includes>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_connection_1a8ec46f3aa50b038514059f8578a8cb3b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
         <definition>wxConnection::wxConnection</definition>
@@ -42,7 +41,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_connection_1a21a78690ee1ae3649ea1ecd292f7f453" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
         <definition>bool wxConnection::Advise</definition>
@@ -142,7 +140,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_connection_1aedb1028c9578f04f2c5b084271b54e4d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
         <definition>bool wxConnection::Execute</definition>
@@ -222,7 +219,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_connection_1a1a3e3fccd19a0ee3aa2ac89f5ecb8d1d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
         <definition>bool wxConnection::Poke</definition>
@@ -634,35 +630,35 @@
 <para>A <ref refid="classwx_connection" kindref="compound">wxConnection</ref> object represents the connection between a client and a server. </para>    </briefdescription>
     <detaileddescription>
 <para>It is created by making a connection using a <ref refid="classwx_client" kindref="compound">wxClient</ref> object, or by the acceptance of a connection by a <ref refid="classwx_server" kindref="compound">wxServer</ref> object.</para><para>The bulk of a DDE-like (Dynamic Data Exchange) conversation is controlled by calling members in a <bold><ref refid="classwx_connection" kindref="compound">wxConnection</ref></bold> object or by overriding its members. The actual DDE-based implementation using <ref refid="classwx_d_d_e_connection" kindref="compound">wxDDEConnection</ref> is available on Windows only, but a platform-independent, socket-based version of this API is available using <ref refid="classwx_t_c_p_connection" kindref="compound">wxTCPConnection</ref>, which has the same API.</para><para>An application should normally derive a new connection class from <ref refid="classwx_connection" kindref="compound">wxConnection</ref>, in order to override the communication event handlers to do something interesting.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ipc" kindref="compound">Interprocess Communication</ref></para><para><simplesect kind="see"><para><ref refid="classwx_client" kindref="compound">wxClient</ref>, <ref refid="classwx_server" kindref="compound">wxServer</ref>, <ref refid="overview__ipc" kindref="compound">Interprocess Communication</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ipc" kindref="compound">Interprocess Communication</ref></para><para><simplesect kind="see"><para><ref refid="classwx_client" kindref="compound">wxClient</ref>, <ref refid="classwx_server" kindref="compound">wxServer</ref>, <ref refid="overview_ipc" kindref="compound">Interprocess Communication</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="5041">
+      <node id="5045">
         <label>wxConnection</label>
         <link refid="classwx_connection"/>
-        <childnode refid="5042" relation="public-inheritance">
+        <childnode refid="5046" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5042">
+      <node id="5046">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="5043">
+      <node id="5047">
         <label>wxConnection</label>
         <link refid="classwx_connection"/>
-        <childnode refid="5044" relation="public-inheritance">
+        <childnode refid="5048" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5044">
+      <node id="5048">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="5045" relation="usage">
+        <childnode refid="5049" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="5045">
+      <node id="5049">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_resource_translations_loader" kind="class" prot="public">
     <compoundname>wxResourceTranslationsLoader</compoundname>
     <basecompoundref refid="classwx_translations_loader" prot="public" virt="non-virtual">wxTranslationsLoader</basecompoundref>
@@ -42,25 +42,25 @@
 </programlisting></para><para>This class is only available on Windows.</para><para><simplesect kind="since"><para>2.9.1 </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="9074">
+      <node id="9082">
         <label>wxResourceTranslationsLoader</label>
         <link refid="classwx_resource_translations_loader"/>
-        <childnode refid="9075" relation="public-inheritance">
+        <childnode refid="9083" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9075">
+      <node id="9083">
         <label>wxTranslationsLoader</label>
         <link refid="classwx_translations_loader"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="9076">
+      <node id="9084">
         <label>wxResourceTranslationsLoader</label>
         <link refid="classwx_resource_translations_loader"/>
-        <childnode refid="9077" relation="public-inheritance">
+        <childnode refid="9085" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9077">
+      <node id="9085">
         <label>wxTranslationsLoader</label>
         <link refid="classwx_translations_loader"/>
       </node>

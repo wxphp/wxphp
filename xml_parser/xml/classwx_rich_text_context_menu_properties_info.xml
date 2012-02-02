@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_rich_text_context_menu_properties_info" kind="class" prot="public">
     <compoundname>wxRichTextContextMenuPropertiesInfo</compoundname>
     <includes local="no">wx/richtext/richtextctrl.h</includes>
@@ -101,11 +101,15 @@
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" line="108"/>
       </memberdef>
-      <memberdef kind="function" id="classwx_rich_text_context_menu_properties_info_1ab8df7381557a40b95432ab3b97f4b2f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classwx_rich_text_context_menu_properties_info_1add74ccfc41cc05728e2beb26069fa953" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
         <definition>int wxRichTextContextMenuPropertiesInfo::AddItems</definition>
-        <argsstring>(wxRichTextObject *container, wxRichTextObject *obj)</argsstring>
+        <argsstring>(wxRichTextCtrl *ctrl, wxRichTextObject *container, wxRichTextObject *obj)</argsstring>
         <name>AddItems</name>
+        <param>
+          <type><ref refid="classwx_rich_text_ctrl" kindref="compound">wxRichTextCtrl</ref> *</type>
+          <declname>ctrl</declname>
+        </param>
         <param>
           <type><ref refid="classwx_rich_text_object" kindref="compound">wxRichTextObject</ref> *</type>
           <declname>container</declname>
@@ -240,14 +244,14 @@
     <detaileddescription>
     </detaileddescription>
     <collaborationgraph>
-      <node id="9444">
+      <node id="9454">
         <label>wxArrayString</label>
         <link refid="classwx_array_string"/>
       </node>
-      <node id="9443">
+      <node id="9453">
         <label>wxRichTextContextMenuPropertiesInfo</label>
         <link refid="classwx_rich_text_context_menu_properties_info"/>
-        <childnode refid="9444" relation="usage">
+        <childnode refid="9454" relation="usage">
           <edgelabel>m_labels</edgelabel>
         </childnode>
       </node>
@@ -255,7 +259,7 @@
     <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" line="86" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" bodystart="85" bodyend="160"/>
     <listofallmembers>
       <member refid="classwx_rich_text_context_menu_properties_info_1aaedd2c298b02cca484f7d14324bb58d4" prot="public" virt="non-virtual"><scope>wxRichTextContextMenuPropertiesInfo</scope><name>AddItem</name></member>
-      <member refid="classwx_rich_text_context_menu_properties_info_1ab8df7381557a40b95432ab3b97f4b2f8" prot="public" virt="non-virtual"><scope>wxRichTextContextMenuPropertiesInfo</scope><name>AddItems</name></member>
+      <member refid="classwx_rich_text_context_menu_properties_info_1add74ccfc41cc05728e2beb26069fa953" prot="public" virt="non-virtual"><scope>wxRichTextContextMenuPropertiesInfo</scope><name>AddItems</name></member>
       <member refid="classwx_rich_text_context_menu_properties_info_1af01f8cef4f16aa225913d7672cd96a75" prot="public" virt="non-virtual"><scope>wxRichTextContextMenuPropertiesInfo</scope><name>AddMenuItems</name></member>
       <member refid="classwx_rich_text_context_menu_properties_info_1a30c7140560f7094aeb3017d33c938f0e" prot="public" virt="non-virtual"><scope>wxRichTextContextMenuPropertiesInfo</scope><name>Clear</name></member>
       <member refid="classwx_rich_text_context_menu_properties_info_1a04b7df6c17874e038cce18caa8691f6a" prot="public" virt="non-virtual"><scope>wxRichTextContextMenuPropertiesInfo</scope><name>GetCount</name></member>

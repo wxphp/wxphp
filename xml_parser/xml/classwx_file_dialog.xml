@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_file_dialog" kind="class" prot="public">
     <compoundname>wxFileDialog</compoundname>
     <basecompoundref refid="classwx_dialog" prot="public" virt="non-virtual">wxDialog</basecompoundref>
@@ -17,7 +17,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filedlg.h" line="252" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filedlg.h" bodystart="252" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filedlg.h" line="254" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filedlg.h" bodystart="254" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -140,7 +140,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filedlg.h" line="170"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filedlg.h" line="172"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_dialog_1accdea9f83669f417d1a02b6691b665d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -153,7 +153,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filedlg.h" line="175"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filedlg.h" line="177"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_dialog_1ae50d52391ea41fde8121db5fd0d33226" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -166,7 +166,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filedlg.h" line="180"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filedlg.h" line="182"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_dialog_1a0b6e2bfdb5997e74c99fcf6d3249a798" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
@@ -180,7 +180,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filedlg.h" line="188"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filedlg.h" line="190"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_dialog_1a8673a8a0b183118f1fb39049ee8059fb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -193,7 +193,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filedlg.h" line="193"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filedlg.h" line="195"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_dialog_1a282cf846facc9eae4682c43627229e9c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -210,7 +210,7 @@
 <para>This function should only be used with the dialogs which have <computeroutput>wxFD_MULTIPLE</computeroutput> style, use <ref refid="classwx_file_dialog_1a8673a8a0b183118f1fb39049ee8059fb" kindref="member">GetFilename()</ref> for the others.</para><para>Note that under Windows, if the user selects shortcuts, the filenames include paths, since the application cannot determine the full path of each referenced file by appending the directory containing the shortcuts to the filename. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filedlg.h" line="206"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filedlg.h" line="208"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_dialog_1a04b45dc8de9ba7f8bbede2ffaa60a5c4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>int</type>
@@ -223,7 +223,7 @@
 <para>Before the dialog is shown, this is the index which will be used when the dialog is first displayed.</para><para>After the dialog is shown, this is the index selected by the user. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filedlg.h" line="217"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filedlg.h" line="219"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_dialog_1aeaebb22ab4a577478f6e269ab836f87c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -236,7 +236,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filedlg.h" line="222"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filedlg.h" line="224"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_dialog_1aa0a73e2283240f681edb1adc3a6200ab" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -249,7 +249,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filedlg.h" line="227"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filedlg.h" line="229"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_dialog_1abad567fcf7bb920300d25ed2c497fb29" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -266,7 +266,7 @@
 <para>This function should only be used with the dialogs which have <computeroutput>wxFD_MULTIPLE</computeroutput> style, use <ref refid="classwx_file_dialog_1aa0a73e2283240f681edb1adc3a6200ab" kindref="member">GetPath()</ref> for the others. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filedlg.h" line="235"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filedlg.h" line="237"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_dialog_1a104d8d180710bfee033833568d9f2a76" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -279,7 +279,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filedlg.h" line="240"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filedlg.h" line="242"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_dialog_1ac9d3622241e377b3d7dae6fc80acdf88" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -296,7 +296,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filedlg.h" line="245"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filedlg.h" line="247"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_dialog_1aa312b8ae7961060c3116457c6334b527" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -314,7 +314,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filedlg.h" line="267"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filedlg.h" line="269"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_dialog_1afb7fe41fee49450402a598dfa3526a61" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -331,7 +331,7 @@
 <para>In wxGTK this will have little effect unless a default directory has previously been set. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filedlg.h" line="274"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filedlg.h" line="276"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_dialog_1a49a27f0f2550b9bc79ad26c9a19eaf28" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -348,7 +348,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filedlg.h" line="279"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filedlg.h" line="281"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_dialog_1a6b3ac95e95750179164111b36ec4e0ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -365,7 +365,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filedlg.h" line="284"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filedlg.h" line="286"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_dialog_1af81f0017c66440e2987648e5bc64f856" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -382,7 +382,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filedlg.h" line="290"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filedlg.h" line="292"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_dialog_1aeb0137b721770bb390043b77cf2c09ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -399,7 +399,7 @@
 <para>Note that the native Motif dialog has some limitations with respect to wildcards; see the Remarks section above. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filedlg.h" line="299"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filedlg.h" line="301"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_dialog_1a04943e4abb27a197a110898d40ddb4f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>int</type>
@@ -413,25 +413,25 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filedlg.h" line="305"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filedlg.h" line="307"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para>This class represents the file chooser dialog. </para>    </briefdescription>
     <detaileddescription>
-<para>The path and filename are distinct elements of a full file pathname. If path is <ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref>, the current directory will be used. If filename is <ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref>, no default filename will be supplied. The wildcard determines what files are displayed in the file selector, and file extension supplies a type extension for the required filename.</para><para>The typical usage for the open file dialog is: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>MyFrame::OnOpen(<ref refid="classwx_command_event" kindref="compound" tooltip="This event class contains information about command events, which originate from...">wxCommandEvent</ref>&amp;<sp/>WXUNUSED(event))</highlight></codeline>
+<para>The path and filename are distinct elements of a full file pathname. If path is <ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref>, the current directory will be used. If filename is <ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref>, no default filename will be supplied. The wildcard determines what files are displayed in the file selector, and file extension supplies a type extension for the required filename.</para><para>The typical usage for the open file dialog is: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>MyFrame::OnOpen(<ref refid="classwx_command_event" kindref="compound" tooltip="This event class contains information about command events, which originate from a variety of simple ...">wxCommandEvent</ref>&amp;<sp/>WXUNUSED(event))</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(...current<sp/>content<sp/>has<sp/>not<sp/>been<sp/>saved...)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group__group__funcmacro__dialog_1gaf8a6b7e1e34eae82d3d75e3721298b26" kindref="member" tooltip="Show a general purpose message dialog.">wxMessageBox</ref>(<ref refid="group__group__funcmacro__string_1ga8a02b8875a521df57263a9e6f090f2d0" kindref="member" tooltip="This macro expands into a call to wxGetTranslation(), so it marks the message for...">_</ref>(</highlight><highlight class="stringliteral">&quot;Current<sp/>content<sp/>has<sp/>not<sp/>been<sp/>saved!<sp/>Proceed?&quot;</highlight><highlight class="normal">),<sp/><ref refid="group__group__funcmacro__string_1ga8a02b8875a521df57263a9e6f090f2d0" kindref="member" tooltip="This macro expands into a call to wxGetTranslation(), so it marks the message for...">_</ref>(</highlight><highlight class="stringliteral">&quot;Please<sp/>confirm&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group__group__funcmacro__dialog_1gaf8a6b7e1e34eae82d3d75e3721298b26" kindref="member" tooltip="Show a general purpose message dialog.">wxMessageBox</ref>(<ref refid="group__group__funcmacro__string_1ga8a02b8875a521df57263a9e6f090f2d0" kindref="member" tooltip="This macro expands into a call to wxGetTranslation(), so it marks the message for the extraction by x...">_</ref>(</highlight><highlight class="stringliteral">&quot;Current<sp/>content<sp/>has<sp/>not<sp/>been<sp/>saved!<sp/>Proceed?&quot;</highlight><highlight class="normal">),<sp/><ref refid="group__group__funcmacro__string_1ga8a02b8875a521df57263a9e6f090f2d0" kindref="member" tooltip="This macro expands into a call to wxGetTranslation(), so it marks the message for the extraction by x...">_</ref>(</highlight><highlight class="stringliteral">&quot;Please<sp/>confirm&quot;</highlight><highlight class="normal">),</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="defs_8h_1a01d0612a961327f6038a91e5f94fa44a" kindref="member">wxICON_QUESTION</ref><sp/>|<sp/><ref refid="defs_8h_1a5ba00a09cea0417a2ef7c4a4c2b0012c" kindref="member">wxYES_NO</ref>,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">)<sp/>==<sp/><ref refid="defs_8h_1ab1e324ba2871ccdef2d95fb718c8d479" kindref="member">wxNO</ref><sp/>)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//else:<sp/>proceed<sp/>asking<sp/>to<sp/>the<sp/>user<sp/>the<sp/>new<sp/>file<sp/>to<sp/>open</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_file_dialog" kindref="compound" tooltip="This class represents the file chooser dialog.">wxFileDialog</ref><sp/></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>openFileDialog(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/><ref refid="group__group__funcmacro__string_1ga8a02b8875a521df57263a9e6f090f2d0" kindref="member" tooltip="This macro expands into a call to wxGetTranslation(), so it marks the message for...">_</ref>(</highlight><highlight class="stringliteral">&quot;Open<sp/>XYZ<sp/>file&quot;</highlight><highlight class="normal">),<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;XYZ<sp/>files<sp/>(*.xyz)|*.xyz&quot;</highlight><highlight class="normal">,<sp/><ref refid="filedlg_8h_1a726ca809ffd3d67ab4b8476646f26635a66a0a1b2dc1cea202030df12462a1026" kindref="member">wxFD_OPEN</ref>|<ref refid="filedlg_8h_1a726ca809ffd3d67ab4b8476646f26635a0fa7600d35ad244e3e4f7d872eaf1fba" kindref="member">wxFD_FILE_MUST_EXIST</ref>);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>openFileDialog(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/><ref refid="group__group__funcmacro__string_1ga8a02b8875a521df57263a9e6f090f2d0" kindref="member" tooltip="This macro expands into a call to wxGetTranslation(), so it marks the message for the extraction by x...">_</ref>(</highlight><highlight class="stringliteral">&quot;Open<sp/>XYZ<sp/>file&quot;</highlight><highlight class="normal">),<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;XYZ<sp/>files<sp/>(*.xyz)|*.xyz&quot;</highlight><highlight class="normal">,<sp/><ref refid="filedlg_8h_1abed82baf7f470b522273a3e37c24c600a66a0a1b2dc1cea202030df12462a1026" kindref="member">wxFD_OPEN</ref>|<ref refid="filedlg_8h_1abed82baf7f470b522273a3e37c24c600a0fa7600d35ad244e3e4f7d872eaf1fba" kindref="member">wxFD_FILE_MUST_EXIST</ref>);</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(openFileDialog.ShowModal()<sp/>==<sp/><ref refid="defs_8h_1ac66d0a09761e7d86b2ac0b2e0c6a8cbba27aec3f2d4b5cf0e36c028bbab048206" kindref="member">wxID_CANCEL</ref>)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>user<sp/>changed<sp/>idea...</highlight><highlight class="normal"></highlight></codeline>
@@ -447,11 +447,11 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-</programlisting></para><para>The typical usage for the save file dialog is instead somewhat simpler: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>MyFrame::OnSaveAs(<ref refid="classwx_command_event" kindref="compound" tooltip="This event class contains information about command events, which originate from...">wxCommandEvent</ref>&amp;<sp/>WXUNUSED(event))</highlight></codeline>
+</programlisting></para><para>The typical usage for the save file dialog is instead somewhat simpler: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>MyFrame::OnSaveAs(<ref refid="classwx_command_event" kindref="compound" tooltip="This event class contains information about command events, which originate from a variety of simple ...">wxCommandEvent</ref>&amp;<sp/>WXUNUSED(event))</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_file_dialog" kindref="compound" tooltip="This class represents the file chooser dialog.">wxFileDialog</ref><sp/></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>saveFileDialog(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/><ref refid="group__group__funcmacro__string_1ga8a02b8875a521df57263a9e6f090f2d0" kindref="member" tooltip="This macro expands into a call to wxGetTranslation(), so it marks the message for...">_</ref>(</highlight><highlight class="stringliteral">&quot;Save<sp/>XYZ<sp/>file&quot;</highlight><highlight class="normal">),<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;XYZ<sp/>files<sp/>(*.xyz)|*.xyz&quot;</highlight><highlight class="normal">,<sp/><ref refid="filedlg_8h_1a726ca809ffd3d67ab4b8476646f26635aac29a39c558c3709c8bffaf012c90aec" kindref="member">wxFD_SAVE</ref>|<ref refid="filedlg_8h_1a726ca809ffd3d67ab4b8476646f26635a5f106d797bb886352a221437ffa39715" kindref="member">wxFD_OVERWRITE_PROMPT</ref>);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>saveFileDialog(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/><ref refid="group__group__funcmacro__string_1ga8a02b8875a521df57263a9e6f090f2d0" kindref="member" tooltip="This macro expands into a call to wxGetTranslation(), so it marks the message for the extraction by x...">_</ref>(</highlight><highlight class="stringliteral">&quot;Save<sp/>XYZ<sp/>file&quot;</highlight><highlight class="normal">),<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;XYZ<sp/>files<sp/>(*.xyz)|*.xyz&quot;</highlight><highlight class="normal">,<sp/><ref refid="filedlg_8h_1abed82baf7f470b522273a3e37c24c600aac29a39c558c3709c8bffaf012c90aec" kindref="member">wxFD_SAVE</ref>|<ref refid="filedlg_8h_1abed82baf7f470b522273a3e37c24c600a5f106d797bb886352a221437ffa39715" kindref="member">wxFD_OVERWRITE_PROMPT</ref>);</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(saveFileDialog.ShowModal()<sp/>==<sp/><ref refid="defs_8h_1ac66d0a09761e7d86b2ac0b2e0c6a8cbba27aec3f2d4b5cf0e36c028bbab048206" kindref="member">wxID_CANCEL</ref>)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>user<sp/>changed<sp/>idea...</highlight><highlight class="normal"></highlight></codeline>
@@ -481,112 +481,112 @@
 <listitem><para>wxFD_PREVIEW: Show the preview of the selected files (currently only supported by wxGTK). </para></listitem>
 </itemizedlist>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__cmndlg" kindref="compound">Common Dialogs</ref></para><para><simplesect kind="see"><para><ref refid="overview__cmndlg_1overview_cmndlg_file" kindref="member">wxFileDialog Overview</ref>, <ref refid="group__group__funcmacro__dialog_1ga34b2514dafd2823f697c3fe68caecc1c" kindref="member">wxFileSelector()</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__cmndlg" kindref="compound">Common Dialogs</ref></para><para><simplesect kind="see"><para><ref refid="overview_cmndlg_1overview_cmndlg_file" kindref="member">wxFileDialog Overview</ref>, <ref refid="group__group__funcmacro__dialog_1ga34b2514dafd2823f697c3fe68caecc1c" kindref="member">wxFileSelector()</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="6171">
+      <node id="6175">
         <label>wxNonOwnedWindow</label>
         <link refid="classwx_non_owned_window"/>
-        <childnode refid="6172" relation="public-inheritance">
+        <childnode refid="6176" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6174">
+      <node id="6178">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="6168">
+      <node id="6172">
         <label>wxFileDialog</label>
         <link refid="classwx_file_dialog"/>
-        <childnode refid="6169" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="6173">
-        <label>wxEvtHandler</label>
-        <link refid="classwx_evt_handler"/>
-        <childnode refid="6174" relation="public-inheritance">
-        </childnode>
-        <childnode refid="6175" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="6175">
-        <label>wxTrackable</label>
-        <link refid="classwx_trackable"/>
-      </node>
-      <node id="6172">
-        <label>wxWindow</label>
-        <link refid="classwx_window"/>
         <childnode refid="6173" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6169">
-        <label>wxDialog</label>
-        <link refid="classwx_dialog"/>
-        <childnode refid="6170" relation="public-inheritance">
+      <node id="6177">
+        <label>wxEvtHandler</label>
+        <link refid="classwx_evt_handler"/>
+        <childnode refid="6178" relation="public-inheritance">
+        </childnode>
+        <childnode refid="6179" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6170">
+      <node id="6179">
+        <label>wxTrackable</label>
+        <link refid="classwx_trackable"/>
+      </node>
+      <node id="6176">
+        <label>wxWindow</label>
+        <link refid="classwx_window"/>
+        <childnode refid="6177" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6173">
+        <label>wxDialog</label>
+        <link refid="classwx_dialog"/>
+        <childnode refid="6174" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6174">
         <label>wxTopLevelWindow</label>
         <link refid="classwx_top_level_window"/>
-        <childnode refid="6171" relation="public-inheritance">
+        <childnode refid="6175" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="6179">
+      <node id="6183">
         <label>wxNonOwnedWindow</label>
         <link refid="classwx_non_owned_window"/>
-        <childnode refid="6180" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="6182">
-        <label>wxObject</label>
-        <link refid="classwx_object"/>
-        <childnode refid="6183" relation="usage">
-          <edgelabel>m_refData</edgelabel>
-        </childnode>
-      </node>
-      <node id="6176">
-        <label>wxFileDialog</label>
-        <link refid="classwx_file_dialog"/>
-        <childnode refid="6177" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="6181">
-        <label>wxEvtHandler</label>
-        <link refid="classwx_evt_handler"/>
-        <childnode refid="6182" relation="public-inheritance">
-        </childnode>
         <childnode refid="6184" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6184">
-        <label>wxTrackable</label>
-        <link refid="classwx_trackable"/>
+      <node id="6186">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="6187" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
       </node>
       <node id="6180">
-        <label>wxWindow</label>
-        <link refid="classwx_window"/>
+        <label>wxFileDialog</label>
+        <link refid="classwx_file_dialog"/>
         <childnode refid="6181" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6177">
+      <node id="6185">
+        <label>wxEvtHandler</label>
+        <link refid="classwx_evt_handler"/>
+        <childnode refid="6186" relation="public-inheritance">
+        </childnode>
+        <childnode refid="6188" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6188">
+        <label>wxTrackable</label>
+        <link refid="classwx_trackable"/>
+      </node>
+      <node id="6184">
+        <label>wxWindow</label>
+        <link refid="classwx_window"/>
+        <childnode refid="6185" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6181">
         <label>wxDialog</label>
         <link refid="classwx_dialog"/>
-        <childnode refid="6178" relation="public-inheritance">
+        <childnode refid="6182" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6178">
+      <node id="6182">
         <label>wxTopLevelWindow</label>
         <link refid="classwx_top_level_window"/>
-        <childnode refid="6179" relation="public-inheritance">
+        <childnode refid="6183" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6183">
+      <node id="6187">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filedlg.h" line="136" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filedlg.h" bodystart="135" bodyend="306"/>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filedlg.h" line="138" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filedlg.h" bodystart="137" bodyend="308"/>
     <listofallmembers>
       <member refid="classwx_window_1a3afbd49b1ea2f8275e3600dcac102923" prot="public" virt="virtual"><scope>wxFileDialog</scope><name>AcceptsFocus</name></member>
       <member refid="classwx_window_1a2370bdd3ab08e7ef3c7555c6aa8301b8" prot="public" virt="virtual"><scope>wxFileDialog</scope><name>AcceptsFocusFromKeyboard</name></member>
@@ -928,6 +928,7 @@
       <member refid="classwx_window_1a81f23590239934fa10fded0566a65d8c" prot="public" virt="non-virtual"><scope>wxFileDialog</scope><name>SetPosition</name></member>
       <member refid="classwx_window_1a07f5f7ed3f78e0ef7b3dee3f4da81001" prot="public" virt="virtual"><scope>wxFileDialog</scope><name>SetPreviousHandler</name></member>
       <member refid="classwx_object_1afab780710f2adc1bb33310e27590140b" prot="public" virt="non-virtual"><scope>wxFileDialog</scope><name>SetRefData</name></member>
+      <member refid="classwx_top_level_window_1a82afa6f09dd5faef6330807ef59374e8" prot="public" virt="virtual"><scope>wxFileDialog</scope><name>SetRepresentedFilename</name></member>
       <member refid="classwx_dialog_1a0d04ed85ac5cd271a61514d446340673" prot="public" virt="non-virtual"><scope>wxFileDialog</scope><name>SetReturnCode</name></member>
       <member refid="classwx_top_level_window_1a98e95b1b10f44b80f9b29a03ab09a879" prot="public" virt="non-virtual"><scope>wxFileDialog</scope><name>SetRightMenu</name></member>
       <member refid="classwx_window_1aa842d59529f873683e55cd8392ec46e9" prot="public" virt="virtual"><scope>wxFileDialog</scope><name>SetScrollbar</name></member>

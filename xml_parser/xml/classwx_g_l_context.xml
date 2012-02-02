@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_g_l_context" kind="class" prot="public">
     <compoundname>wxGLContext</compoundname>
     <basecompoundref refid="classwx_object" prot="public" virt="non-virtual">wxObject</basecompoundref>
@@ -66,35 +66,35 @@
 <para>An instance of a <ref refid="classwx_g_l_context" kindref="compound">wxGLContext</ref> represents the state of an OpenGL state machine and the connection between OpenGL and the system. </para>    </briefdescription>
     <detaileddescription>
 <para>The OpenGL state includes everything that can be set with the OpenGL API: colors, rendering variables, display lists, texture objects, etc. Although it is possible to have multiple rendering contexts share display lists in order to save resources, this method is hardly used today any more, because display lists are only a tiny fraction of the overall state.</para><para>Therefore, one rendering context is usually used with or bound to multiple output windows in turn, so that the application has access to the complete and identical state while rendering into each window.</para><para>Binding (making current) a rendering context with another instance of a <ref refid="classwx_g_l_canvas" kindref="compound">wxGLCanvas</ref> however works only if the other <ref refid="classwx_g_l_canvas" kindref="compound">wxGLCanvas</ref> was created with the same attributes as the <ref refid="classwx_g_l_canvas" kindref="compound">wxGLCanvas</ref> from which the <ref refid="classwx_g_l_context" kindref="compound">wxGLContext</ref> was initialized. (This applies to sharing display lists among contexts analogously.)</para><para>Note that some <ref refid="classwx_g_l_context" kindref="compound">wxGLContext</ref> features are extremely platform-specific - its best to check your native platform&apos;s glcanvas header (on windows include/wx/msw/glcanvas.h) to see what features your native platform provides.</para><para>wxHAS_OPENGL_ES is defined on platforms that only have this implementation available (eg the iPhone) und don&apos;t support the full specification.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxgl" kindref="member">wxGL</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__gl" kindref="compound">OpenGL</ref></para><para><simplesect kind="see"><para><ref refid="classwx_g_l_canvas" kindref="compound">wxGLCanvas</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxgl" kindref="member">wxGL</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__gl" kindref="compound">OpenGL</ref></para><para><simplesect kind="see"><para><ref refid="classwx_g_l_canvas" kindref="compound">wxGLCanvas</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="6547">
+      <node id="6551">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="6546">
+      <node id="6550">
         <label>wxGLContext</label>
         <link refid="classwx_g_l_context"/>
-        <childnode refid="6547" relation="public-inheritance">
+        <childnode refid="6551" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="6549">
+      <node id="6553">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="6550" relation="usage">
+        <childnode refid="6554" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="6548">
+      <node id="6552">
         <label>wxGLContext</label>
         <link refid="classwx_g_l_context"/>
-        <childnode refid="6549" relation="public-inheritance">
+        <childnode refid="6553" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6550">
+      <node id="6554">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

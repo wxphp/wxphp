@@ -1,12 +1,11 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_mouse_state" kind="class" prot="public">
     <compoundname>wxMouseState</compoundname>
     <basecompoundref refid="classwx_keyboard_state" prot="public" virt="non-virtual">wxKeyboardState</basecompoundref>
     <derivedcompoundref refid="classwx_mouse_event" prot="public" virt="non-virtual">wxMouseEvent</derivedcompoundref>
     <includes local="no">wx/mousestate.h</includes>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_mouse_state_1aa3eff164b6e5407a6185e051ab26ac52" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_point" kindref="compound">wxPoint</ref></type>
         <definition>wxPoint wxMouseState::GetPosition</definition>
@@ -308,32 +307,32 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/>None; this class implementation is entirely header-based.</para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="group__group__funcmacro__misc_1ga6fb42677c51d509690e7062b9dadaa25" kindref="member">wxGetMouseState()</ref>, <ref refid="classwx_mouse_event" kindref="compound">wxMouseEvent</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7854">
+      <node id="7860">
         <label>wxKeyboardState</label>
         <link refid="classwx_keyboard_state"/>
       </node>
-      <node id="7855">
+      <node id="7861">
         <label>wxMouseEvent</label>
         <link refid="classwx_mouse_event"/>
-        <childnode refid="7853" relation="public-inheritance">
+        <childnode refid="7859" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7853">
+      <node id="7859">
         <label>wxMouseState</label>
         <link refid="classwx_mouse_state"/>
-        <childnode refid="7854" relation="public-inheritance">
+        <childnode refid="7860" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7857">
+      <node id="7863">
         <label>wxKeyboardState</label>
         <link refid="classwx_keyboard_state"/>
       </node>
-      <node id="7856">
+      <node id="7862">
         <label>wxMouseState</label>
         <link refid="classwx_mouse_state"/>
-        <childnode refid="7857" relation="public-inheritance">
+        <childnode refid="7863" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>

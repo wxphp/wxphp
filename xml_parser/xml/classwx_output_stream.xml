@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_output_stream" kind="class" prot="public">
     <compoundname>wxOutputStream</compoundname>
     <basecompoundref refid="classwx_stream_base" prot="public" virt="non-virtual">wxStreamBase</basecompoundref>
@@ -203,118 +203,118 @@
 <para><ref refid="classwx_output_stream" kindref="compound">wxOutputStream</ref> is an abstract base class which may not be used directly. </para>    </briefdescription>
     <detaileddescription>
 <para>It is the base class of all streams which provide a <ref refid="classwx_output_stream_1a22154f02408431ffe8b1590407c3b011" kindref="member">Write()</ref> function, i.e. which can be used to output data (e.g. to a file, to a socket, etc).</para><para>If you want to create your own output stream, you&apos;ll need to derive from this class and implement the protected <ref refid="classwx_output_stream_1a41773bceb97b1981cbc3d69c596df929" kindref="member">OnSysWrite()</ref> function only.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__streams" kindref="compound">Streams</ref> </para>    </detaileddescription>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__streams" kindref="compound">Streams</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="8467">
+      <node id="8475">
         <label>wxZlibOutputStream</label>
         <link refid="classwx_zlib_output_stream"/>
-        <childnode refid="8462" relation="public-inheritance">
+        <childnode refid="8470" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8471">
+      <node id="8479">
         <label>wxTempFileOutputStream</label>
         <link refid="classwx_temp_file_output_stream"/>
-        <childnode refid="8455" relation="public-inheritance">
+        <childnode refid="8463" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8474">
+        <label>wxBufferedOutputStream</label>
+        <link refid="classwx_buffered_output_stream"/>
+        <childnode refid="8470" relation="public-inheritance">
         </childnode>
       </node>
       <node id="8466">
-        <label>wxBufferedOutputStream</label>
-        <link refid="classwx_buffered_output_stream"/>
-        <childnode refid="8462" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="8458">
         <label>wxFFileOutputStream</label>
         <link refid="classwx_f_file_output_stream"/>
-        <childnode refid="8455" relation="public-inheritance">
+        <childnode refid="8463" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8465">
+      <node id="8473">
         <label>wxZipOutputStream</label>
         <link refid="classwx_zip_output_stream"/>
-        <childnode refid="8463" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="8461">
-        <label>wxFileStream</label>
-        <link refid="classwx_file_stream"/>
-        <childnode refid="8460" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="8457">
-        <label>wxCountingOutputStream</label>
-        <link refid="classwx_counting_output_stream"/>
-        <childnode refid="8455" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="8468">
-        <label>wxMemoryOutputStream</label>
-        <link refid="classwx_memory_output_stream"/>
-        <childnode refid="8455" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="8460">
-        <label>wxFileOutputStream</label>
-        <link refid="classwx_file_output_stream"/>
-        <childnode refid="8455" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="8456">
-        <label>wxStreamBase</label>
-        <link refid="classwx_stream_base"/>
-      </node>
-      <node id="8464">
-        <label>wxTarOutputStream</label>
-        <link refid="classwx_tar_output_stream"/>
-        <childnode refid="8463" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="8462">
-        <label>wxFilterOutputStream</label>
-        <link refid="classwx_filter_output_stream"/>
-        <childnode refid="8455" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="8470">
-        <label>wxStringOutputStream</label>
-        <link refid="classwx_string_output_stream"/>
-        <childnode refid="8455" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="8455">
-        <label>wxOutputStream</label>
-        <link refid="classwx_output_stream"/>
-        <childnode refid="8456" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="8463">
-        <label>wxArchiveOutputStream</label>
-        <link refid="classwx_archive_output_stream"/>
-        <childnode refid="8462" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="8459">
-        <label>wxFFileStream</label>
-        <link refid="classwx_f_file_stream"/>
-        <childnode refid="8458" relation="public-inheritance">
+        <childnode refid="8471" relation="public-inheritance">
         </childnode>
       </node>
       <node id="8469">
-        <label>wxSocketOutputStream</label>
-        <link refid="classwx_socket_output_stream"/>
-        <childnode refid="8455" relation="public-inheritance">
+        <label>wxFileStream</label>
+        <link refid="classwx_file_stream"/>
+        <childnode refid="8468" relation="public-inheritance">
         </childnode>
       </node>
-    </inheritancegraph>
-    <collaborationgraph>
-      <node id="8473">
+      <node id="8465">
+        <label>wxCountingOutputStream</label>
+        <link refid="classwx_counting_output_stream"/>
+        <childnode refid="8463" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8476">
+        <label>wxMemoryOutputStream</label>
+        <link refid="classwx_memory_output_stream"/>
+        <childnode refid="8463" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8468">
+        <label>wxFileOutputStream</label>
+        <link refid="classwx_file_output_stream"/>
+        <childnode refid="8463" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8464">
         <label>wxStreamBase</label>
         <link refid="classwx_stream_base"/>
       </node>
       <node id="8472">
+        <label>wxTarOutputStream</label>
+        <link refid="classwx_tar_output_stream"/>
+        <childnode refid="8471" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8470">
+        <label>wxFilterOutputStream</label>
+        <link refid="classwx_filter_output_stream"/>
+        <childnode refid="8463" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8478">
+        <label>wxStringOutputStream</label>
+        <link refid="classwx_string_output_stream"/>
+        <childnode refid="8463" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8463">
         <label>wxOutputStream</label>
         <link refid="classwx_output_stream"/>
-        <childnode refid="8473" relation="public-inheritance">
+        <childnode refid="8464" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8471">
+        <label>wxArchiveOutputStream</label>
+        <link refid="classwx_archive_output_stream"/>
+        <childnode refid="8470" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8467">
+        <label>wxFFileStream</label>
+        <link refid="classwx_f_file_stream"/>
+        <childnode refid="8466" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8477">
+        <label>wxSocketOutputStream</label>
+        <link refid="classwx_socket_output_stream"/>
+        <childnode refid="8463" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="8481">
+        <label>wxStreamBase</label>
+        <link refid="classwx_stream_base"/>
+      </node>
+      <node id="8480">
+        <label>wxOutputStream</label>
+        <link refid="classwx_output_stream"/>
+        <childnode refid="8481" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>

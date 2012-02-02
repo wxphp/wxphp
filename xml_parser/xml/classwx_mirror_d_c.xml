@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_mirror_d_c" kind="class" prot="public">
     <compoundname>wxMirrorDC</compoundname>
     <basecompoundref refid="classwx_d_c" prot="public" virt="non-virtual">wxDC</basecompoundref>
@@ -32,46 +32,46 @@
     <detaileddescription>
 <para>reflection related to the diagonal line x == y.</para><para><simplesect kind="since"><para>2.5.0</para></simplesect>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__dc" kindref="compound">Device Contexts</ref> </para>    </detaileddescription>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__dc" kindref="compound">Device Contexts</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7808">
+      <node id="7814">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="7807">
+      <node id="7813">
         <label>wxDC</label>
         <link refid="classwx_d_c"/>
-        <childnode refid="7808" relation="public-inheritance">
+        <childnode refid="7814" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7806">
+      <node id="7812">
         <label>wxMirrorDC</label>
         <link refid="classwx_mirror_d_c"/>
-        <childnode refid="7807" relation="public-inheritance">
+        <childnode refid="7813" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7811">
+      <node id="7817">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="7812" relation="usage">
+        <childnode refid="7818" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="7810">
+      <node id="7816">
         <label>wxDC</label>
         <link refid="classwx_d_c"/>
-        <childnode refid="7811" relation="public-inheritance">
+        <childnode refid="7817" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7809">
+      <node id="7815">
         <label>wxMirrorDC</label>
         <link refid="classwx_mirror_d_c"/>
-        <childnode refid="7810" relation="public-inheritance">
+        <childnode refid="7816" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7812">
+      <node id="7818">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

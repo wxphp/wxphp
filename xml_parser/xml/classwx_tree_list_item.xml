@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_tree_list_item" kind="class" prot="public">
     <compoundname>wxTreeListItem</compoundname>
     <includes local="no">wx/treelist.h</includes>
@@ -36,7 +36,7 @@
     <detaileddescription>
 <para>This is an opaque class which can&apos;t be used by the application in any other way than receiving or passing it to <ref refid="classwx_tree_list_ctrl" kindref="compound">wxTreeListCtrl</ref> and checking for validity.</para><para><simplesect kind="see"><para><ref refid="classwx_tree_list_ctrl" kindref="compound">wxTreeListCtrl</ref></para></simplesect>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref></para><para><simplesect kind="since"><para>2.9.3 </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref></para><para><simplesect kind="since"><para>2.9.3 </para></simplesect>
 </para>    </detaileddescription>
     <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treelist.h" line="26" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treelist.h" bodystart="25" bodyend="39"/>
     <listofallmembers>

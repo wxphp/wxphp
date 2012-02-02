@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="overview_fs" kind="page">
+    <compoundname>overview_fs</compoundname>
+    <title>wxFileSystem Overview</title>
+    <detaileddescription>
+<para>The wxHTML library uses a <bold>virtual</bold> file systems mechanism similar to the one used in Midnight Commander, Dos Navigator, FAR or almost any modern file manager.</para><para>It allows the user to access data stored in archives as if they were ordinary files. On-the-fly generated files that exist only in memory are also supported.</para><para><itemizedlist>
+<listitem><para><ref refid="overview_fs_1overview_fs_classes" kindref="member">Classes</ref> </para></listitem>
+<listitem><para><ref refid="overview_fs_1overview_fs_locations" kindref="member">Locations</ref> </para></listitem>
+<listitem><para><ref refid="overview_fs_1overview_fs_combined" kindref="member">Combined Protocols</ref> </para></listitem>
+<listitem><para><ref refid="overview_fs_1overview_fs_wxhtmlfs" kindref="member">File Systems Included in wxHTML</ref> </para></listitem>
+<listitem><para><ref refid="overview_fs_1overview_fs_init" kindref="member">Initializing file system handlers</ref></para></listitem>
+</itemizedlist>
+<hruler/>
+</para><sect1 id="overview_fs_1overview_fs_classes">
+<title>Classes</title>
+<para>Three classes are used in order to provide virtual file systems mechanism:</para><para><itemizedlist>
+<listitem><para>The <ref refid="classwx_f_s_file" kindref="compound">wxFSFile</ref> class provides information about opened file (name, input stream, mime type and anchor). </para></listitem>
+<listitem><para>The <ref refid="classwx_file_system" kindref="compound">wxFileSystem</ref> class is the interface. Its main methods are ChangePathTo() and OpenFile(). This class is most often used by the end user. </para></listitem>
+<listitem><para>The <ref refid="classwx_file_system_handler" kindref="compound">wxFileSystemHandler</ref> is the core of virtual file systems mechanism. You can derive your own handler and pass it to the VFS mechanism. You can derive your own handler and pass it to wxFileSystem&apos;s AddHandler() method. In the new handler you only need to override the OpenFile() and CanOpen() methods.</para></listitem>
+</itemizedlist>
+</para></sect1>
+<sect1 id="overview_fs_1overview_fs_locations">
+<title>Locations</title>
+<para>Locations (aka filenames aka addresses) are constructed from four parts:</para><para><itemizedlist>
+<listitem><para><bold>protocol</bold> - handler can recognize if it is able to open a file by checking its protocol. Examples are &quot;http&quot;, &quot;file&quot; or &quot;ftp&quot;. </para></listitem>
+<listitem><para><bold>right location</bold> - is the name of file within the protocol. In &quot;http://www.wxwidgets.org/index.html&quot; the right location is &quot;//www.wxwidgets.org/index.html&quot;. </para></listitem>
+<listitem><para><bold>anchor</bold> - an anchor is optional and is usually not present. In &quot;index.htm#chapter2&quot; the anchor is &quot;chapter2&quot;. </para></listitem>
+<listitem><para><bold>left location</bold> - this is usually an empty string. It is used by &apos;local&apos; protocols such as ZIP. See Combined Protocols paragraph for details.</para></listitem>
+</itemizedlist>
+</para></sect1>
+<sect1 id="overview_fs_1overview_fs_combined">
+<title>Combined Protocols</title>
+<para>The left location precedes the protocol in the URL string.</para><para>It is not used by global protocols like HTTP but it becomes handy when nesting protocols - for example you may want to access files in a ZIP archive: <ulink url="file:archives/cpp_doc.zip#zip:reference/fopen.htm#syntax">file:archives/cpp_doc.zip#zip:reference/fopen.htm#syntax</ulink> In this example, the protocol is &quot;zip&quot;, right location is &quot;reference/fopen.htm&quot;, anchor is &quot;syntax&quot; and left location is &quot;file:archives/cpp_doc.zip&quot;.</para><para>There are <bold>two</bold> protocols used in this example: &quot;zip&quot; and &quot;file&quot;.</para></sect1>
+<sect1 id="overview_fs_1overview_fs_wxhtmlfs">
+<title>File Systems Included in wxHTML</title>
+<para>The following virtual file system handlers are part of wxWidgets so far:</para><para><itemizedlist>
+<listitem><para><bold>wxArchiveFSHandler:</bold> A handler for archives such as zip and tar. Include file is wx/fs_arc.h. URLs examples: &quot;archive.zip#zip:filename&quot;, &quot;archive.tar.gz#gzip:#tar:filename&quot;. </para></listitem>
+<listitem><para><bold>wxFilterFSHandler:</bold> A handler for compression schemes such as gzip. Header is wx/fs_filter.h. URLs are in the form, e.g.: &quot;document.ps.gz#gzip:&quot;. </para></listitem>
+<listitem><para><bold>wxInternetFSHandler:</bold> A handler for accessing documents via HTTP or FTP protocols. Include file is wx/fs_inet.h. </para></listitem>
+<listitem><para><bold><ref refid="classwx_memory_f_s_handler" kindref="compound">wxMemoryFSHandler</ref>:</bold> This handler allows you to access data stored in memory (such as bitmaps) as if they were regular files. See <ref refid="classwx_memory_f_s_handler" kindref="compound">wxMemoryFSHandler</ref> for details. Include file is <ref refid="fs__mem_8h" kindref="compound">wx/fs_mem.h</ref>. URL is prefixed with memory:, e.g. &quot;memory:myfile.htm&quot;</para></listitem>
+</itemizedlist>
+In addition, <ref refid="classwx_file_system" kindref="compound">wxFileSystem</ref> itself can access local files.</para></sect1>
+<sect1 id="overview_fs_1overview_fs_init">
+<title>Initializing file system handlers</title>
+<para>Use <ref refid="classwx_file_system_1a442d841b2baa5a0eb83c3a985b1e3119" kindref="member">wxFileSystem::AddHandler</ref> to initialize a handler, for example:</para><para><programlisting><codeline><highlight class="preprocessor">#include<sp/>&lt;<ref refid="fs__mem_8h" kindref="compound">wx/fs_mem.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">...</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">bool<sp/><ref refid="classwx_app_console_1a99953775a2fd83fa2456e390779afe15" kindref="member" tooltip="This must be provided by the application, and will usually create the application&amp;#39;s main window...">MyApp::OnInit</ref>()</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_file_system_1a442d841b2baa5a0eb83c3a985b1e3119" kindref="member" tooltip="This static function adds new handler into the list of handlers (see wxFileSystemHandler) which provi...">wxFileSystem::AddHandler</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classwx_memory_f_s_handler" kindref="compound" tooltip="This wxFileSystem handler can store arbitrary data in memory stream and make them accessible via an U...">wxMemoryFSHandler</ref>);</highlight></codeline>
+<codeline><highlight class="normal">...</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> </para></sect1>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

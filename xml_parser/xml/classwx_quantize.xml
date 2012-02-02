@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_quantize" kind="class" prot="public">
     <compoundname>wxQuantize</compoundname>
     <basecompoundref refid="classwx_object" prot="public" virt="non-virtual">wxObject</basecompoundref>
@@ -138,34 +138,34 @@
 <para>Performs quantization, or colour reduction, on a <ref refid="classwx_image" kindref="compound">wxImage</ref>. </para>    </briefdescription>
     <detaileddescription>
 <para>Functions in this class are static and so a <ref refid="classwx_quantize" kindref="compound">wxQuantize</ref> object need not be created.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__misc" kindref="compound">Miscellaneous</ref> </para>    </detaileddescription>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__misc" kindref="compound">Miscellaneous</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="8953">
+      <node id="8961">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="8952">
+      <node id="8960">
         <label>wxQuantize</label>
         <link refid="classwx_quantize"/>
-        <childnode refid="8953" relation="public-inheritance">
+        <childnode refid="8961" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="8955">
+      <node id="8963">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="8956" relation="usage">
+        <childnode refid="8964" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="8954">
+      <node id="8962">
         <label>wxQuantize</label>
         <link refid="classwx_quantize"/>
-        <childnode refid="8955" relation="public-inheritance">
+        <childnode refid="8963" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8956">
+      <node id="8964">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

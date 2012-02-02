@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_active_x_container" kind="class" prot="public">
     <compoundname>wxActiveXContainer</compoundname>
     <basecompoundref refid="classwx_control" prot="public" virt="non-virtual">wxControl</basecompoundref>
@@ -52,6 +52,54 @@
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/ole/activex.h" line="299"/>
       </memberdef>
+      <memberdef kind="function" id="classwx_active_x_container_1a974bbd77a8cb9f6544fab0c361e1b5e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxActiveXContainer::QueryClientSiteInterface</definition>
+        <argsstring>(REFIID iid, void **_interface, const char *&amp;desc)</argsstring>
+        <name>QueryClientSiteInterface</name>
+        <param>
+          <type>REFIID</type>
+          <declname>iid</declname>
+        </param>
+        <param>
+          <type>void **</type>
+          <declname>_interface</declname>
+        </param>
+        <param>
+          <type>const char *&amp;</type>
+          <declname>desc</declname>
+        </param>
+        <briefdescription>
+<para>Queries host&apos;s site for interface. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>iid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The iid of the required interface. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_interface</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Double pointer to outgoing interface. Supply your own interface if desired. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>desc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The description of the outgoing interface. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>bool Return true if interface supplied else return false. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/ole/activex.h" line="312"/>
+      </memberdef>
       </sectiondef>
     <briefdescription>
 <para><ref refid="classwx_active_x_container" kindref="compound">wxActiveXContainer</ref> is a host for an ActiveX control on Windows (and as such is a platform-specific class). </para>    </briefdescription>
@@ -85,13 +133,13 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>m_pAX;</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>CreateControl(<ref refid="classwx_control" kindref="compound" tooltip="This is the base class for a control or &amp;quot;widget&amp;quot;.">wxControl</ref>*<sp/>ctrl,<sp/><ref refid="classwx_window" kindref="compound" tooltip="wxWindow is the base class for all windows and represents any visible object on screen...">wxWindow</ref>*<sp/>parent,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>CreateControl(<ref refid="classwx_control" kindref="compound" tooltip="This is the base class for a control or &amp;quot;widget&amp;quot;.">wxControl</ref>*<sp/>ctrl,<sp/><ref refid="classwx_window" kindref="compound" tooltip="wxWindow is the base class for all windows and represents any visible object on screen.">wxWindow</ref>*<sp/>parent,</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="windowid_8h_1ae8091432cc2cb2485d45f2302fb51133" kindref="member" tooltip="The type of unique identifiers (ID) used for wxWindow-derived classes.">wxWindowID</ref><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classwx_point" kindref="compound" tooltip="A wxPoint is a useful data structure for graphics operations.">wxPoint</ref>&amp;<sp/>pos,</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classwx_size" kindref="compound" tooltip="A wxSize is a useful data structure for graphics operations.">wxSize</ref>&amp;<sp/>size,</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>style,</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classwx_validator" kindref="compound" tooltip="wxValidator is the base class for a family of validator classes that mediate between...">wxValidator</ref>&amp;<sp/>validator,</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change...">wxString</ref>&amp;<sp/>name)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classwx_validator" kindref="compound" tooltip="wxValidator is the base class for a family of validator classes that mediate between a class of contr...">wxValidator</ref>&amp;<sp/>validator,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change was actually the m...">wxString</ref>&amp;<sp/>name)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>IDispatch*<sp/>pDispatch;</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>::CoCreateInstance(CLSID_Pdf,<sp/>NULL,</highlight></codeline>
@@ -106,7 +154,7 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>validator,<sp/>name)<sp/>)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_ctrl<sp/>=<sp/><ref refid="group__group__funcmacro__rtti_1gaae25db7169be29d37f3451dff0ac7711" kindref="member" tooltip="This macro checks that the cast is valid in debug mode (an assert failure will result...">wxStaticCast</ref>(ctrl,<sp/><ref refid="classwx_media_ctrl" kindref="compound" tooltip="wxMediaCtrl is a class for displaying types of media, such as videos, audio files...">wxMediaCtrl</ref>);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_ctrl<sp/>=<sp/><ref refid="group__group__funcmacro__rtti_1gaae25db7169be29d37f3451dff0ac7711" kindref="member" tooltip="This macro checks that the cast is valid in debug mode (an assert failure will result if wxDynamicCas...">wxStaticCast</ref>(ctrl,<sp/><ref refid="classwx_media_ctrl" kindref="compound" tooltip="wxMediaCtrl is a class for displaying types of media, such as videos, audio files, natively through native codecs.">wxMediaCtrl</ref>);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_pAX<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classwx_active_x_container_1a02551c52a49949823115ebd552dd72f8" kindref="member" tooltip="Creates this ActiveX container.">wxActiveXContainer</ref>(ctrl,</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DIID__DPdf,</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pDispatch);</highlight></codeline>
@@ -128,7 +176,7 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>Load(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change...">wxString</ref>&amp;<sp/>fileName)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>Load(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change was actually the m...">wxString</ref>&amp;<sp/>fileName)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(m_PDF.CallMethod(</highlight><highlight class="stringliteral">&quot;LoadFile&quot;</highlight><highlight class="normal">,<sp/>fileName).GetBool())</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
@@ -143,7 +191,7 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>Load(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classwx_u_r_i" kindref="compound" tooltip="wxURI is used to extract information from a URI (Uniform Resource Identifier).">wxURI</ref>&amp;<sp/>location)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_PDF.CallMethod(</highlight><highlight class="stringliteral">&quot;LoadFile&quot;</highlight><highlight class="normal">,<sp/>location.<ref refid="classwx_u_r_i_1a3352a1dd8649194230a72efcd2d0ebf9" kindref="member" tooltip="Builds the URI from its individual components, adds proper separators, and returns...">BuildUnescapedURI</ref>()).GetBool();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_PDF.CallMethod(</highlight><highlight class="stringliteral">&quot;LoadFile&quot;</highlight><highlight class="normal">,<sp/>location.<ref refid="classwx_u_r_i_1a3352a1dd8649194230a72efcd2d0ebf9" kindref="member" tooltip="Builds the URI from its individual components, adds proper separators, and returns escape sequences t...">BuildUnescapedURI</ref>()).GetBool();</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>Load(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classwx_u_r_i" kindref="compound" tooltip="wxURI is used to extract information from a URI (Uniform Resource Identifier).">wxURI</ref>&amp;<sp/>WXUNUSED(location),</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classwx_u_r_i" kindref="compound" tooltip="wxURI is used to extract information from a URI (Uniform Resource Identifier).">wxURI</ref>&amp;<sp/>WXUNUSED(proxy))</highlight></codeline>
@@ -161,7 +209,7 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_PDF.CallMethod(</highlight><highlight class="stringliteral">&quot;setCurrentPage&quot;</highlight><highlight class="normal">,<sp/><ref refid="classwx_variant" kindref="compound" tooltip="The wxVariant class represents a container for any type.">wxVariant</ref>((</highlight><highlight class="keywordtype">long</highlight><highlight class="normal">)where.<ref refid="classwx_long_long_1a9b10c4f110db0e37b4fcf0250c246454" kindref="member" tooltip="Convert to native long long (only for compilers supporting it).">GetValue</ref>()));</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classwx_long_long" kindref="compound" tooltip="This class represents a signed 64 bit long number.">wxLongLong</ref><sp/><ref refid="classwx_window_1ad9a883e20827fa717e92fc2f8bd99d6b" kindref="member" tooltip="This gets the position of the window in pixels, relative to the parent window for...">GetPosition</ref>()</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classwx_long_long" kindref="compound" tooltip="This class represents a signed 64 bit long number.">wxLongLong</ref><sp/><ref refid="classwx_window_1ad9a883e20827fa717e92fc2f8bd99d6b" kindref="member" tooltip="This gets the position of the window in pixels, relative to the parent window for the child windows o...">GetPosition</ref>()</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
@@ -213,103 +261,103 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_active_x_container" kindref="compound" tooltip="wxActiveXContainer is a host for an ActiveX control on Windows (and as such is a...">wxActiveXContainer</ref>*<sp/>m_pAX;</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_automation_object" kindref="compound" tooltip="The wxAutomationObject class represents an OLE automation object containing a single...">wxAutomationObject</ref><sp/>m_PDF;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_active_x_container" kindref="compound" tooltip="wxActiveXContainer is a host for an ActiveX control on Windows (and as such is a platform-specific cl...">wxActiveXContainer</ref>*<sp/>m_pAX;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_automation_object" kindref="compound" tooltip="The wxAutomationObject class represents an OLE automation object containing a single data member...">wxAutomationObject</ref><sp/>m_PDF;</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__rtti_1ga9c252d076397bec5ac241272a7a60747" kindref="member" tooltip="Used inside a class declaration to make the class known to wxWidgets RTTI system...">wxDECLARE_DYNAMIC_CLASS</ref>(wxPDFMediaBackend)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__rtti_1ga9c252d076397bec5ac241272a7a60747" kindref="member" tooltip="Used inside a class declaration to make the class known to wxWidgets RTTI system and also declare tha...">wxDECLARE_DYNAMIC_CLASS</ref>(wxPDFMediaBackend)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__rtti_1ga4cbf0c21eb5986eb489dc67450eab1d1" kindref="member" tooltip="Used in a C++ implementation file to complete the declaration of a class that has...">wxIMPLEMENT_DYNAMIC_CLASS</ref>(wxPDFMediaBackend,<sp/>wxMediaBackend);</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__rtti_1ga4cbf0c21eb5986eb489dc67450eab1d1" kindref="member" tooltip="Used in a C++ implementation file to complete the declaration of a class that has run-time type infor...">wxIMPLEMENT_DYNAMIC_CLASS</ref>(wxPDFMediaBackend,<sp/>wxMediaBackend);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Put<sp/>this<sp/>in<sp/>one<sp/>of<sp/>your<sp/>existing<sp/>source<sp/>files<sp/>and<sp/>then<sp/>create<sp/>a<sp/>wxMediaCtrl<sp/>with</highlight><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_media_ctrl" kindref="compound" tooltip="wxMediaCtrl is a class for displaying types of media, such as videos, audio files...">wxMediaCtrl</ref>*<sp/>mymediactrl<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classwx_media_ctrl" kindref="compound" tooltip="wxMediaCtrl is a class for displaying types of media, such as videos, audio files...">wxMediaCtrl</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;myfile.pdf&quot;</highlight><highlight class="normal">,<sp/><ref refid="defs_8h_1ac66d0a09761e7d86b2ac0b2e0c6a8cbba1f375b01ea03a713bbb7e32a36a2589c" kindref="member" tooltip="Any id: means that we don&amp;#39;t care about the id, whether when installing an event...">wxID_ANY</ref>,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_media_ctrl" kindref="compound" tooltip="wxMediaCtrl is a class for displaying types of media, such as videos, audio files, natively through native codecs.">wxMediaCtrl</ref>*<sp/>mymediactrl<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classwx_media_ctrl" kindref="compound" tooltip="wxMediaCtrl is a class for displaying types of media, such as videos, audio files, natively through native codecs.">wxMediaCtrl</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;myfile.pdf&quot;</highlight><highlight class="normal">,<sp/><ref refid="defs_8h_1ac66d0a09761e7d86b2ac0b2e0c6a8cbba1f375b01ea03a713bbb7e32a36a2589c" kindref="member" tooltip="Any id: means that we don&amp;#39;t care about the id, whether when installing an event handler or when creat...">wxID_ANY</ref>,</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="gdicmn_8h_1af5a90c753eaf3d3e3e5068a19ec3c1d0" kindref="member" tooltip="Global instance of a wxPoint initialized with values (-1,-1).">wxDefaultPosition</ref>,<sp/><ref refid="classwx_size" kindref="compound" tooltip="A wxSize is a useful data structure for graphics operations.">wxSize</ref>(300,300),</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/></highlight><highlight class="stringliteral">&quot;wxPDFMediaBackend&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>[this]<sp/>is<sp/>the<sp/>parent<sp/>window,<sp/>&quot;myfile.pdf&quot;<sp/>is<sp/>the<sp/>PDF<sp/>file<sp/>to<sp/>open</highlight></codeline>
-</programlisting></para><para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page__port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor> </para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref>, <ref refid="group__group__class__ipc" kindref="compound">Interprocess Communication</ref></para><para><simplesect kind="see"><para><ref refid="classwx_active_x_event" kindref="compound">wxActiveXEvent</ref>, <ref refid="page__samples_1page_samples_flash" kindref="member">Flash Sample</ref> </para></simplesect>
+</programlisting></para><para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page_port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor> </para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref>, <ref refid="group__group__class__ipc" kindref="compound">Interprocess Communication</ref></para><para><simplesect kind="see"><para><ref refid="classwx_active_x_event" kindref="compound">wxActiveXEvent</ref>, <ref refid="page_samples_1page_samples_flash" kindref="member">Flash Sample</ref> </para></simplesect>
 </para></sect1>
     </detaileddescription>
     <inheritancegraph>
-      <node id="4210">
+      <node id="4214">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="4206">
+      <node id="4210">
         <label>wxActiveXContainer</label>
         <link refid="classwx_active_x_container"/>
-        <childnode refid="4207" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4209">
-        <label>wxEvtHandler</label>
-        <link refid="classwx_evt_handler"/>
-        <childnode refid="4210" relation="public-inheritance">
-        </childnode>
         <childnode refid="4211" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4211">
+      <node id="4213">
+        <label>wxEvtHandler</label>
+        <link refid="classwx_evt_handler"/>
+        <childnode refid="4214" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4215" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4215">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="4207">
+      <node id="4211">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="4208" relation="public-inheritance">
+        <childnode refid="4212" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4208">
+      <node id="4212">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="4209" relation="public-inheritance">
+        <childnode refid="4213" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="4216">
+      <node id="4220">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="4217" relation="usage">
+        <childnode refid="4221" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="4212">
+      <node id="4216">
         <label>wxActiveXContainer</label>
         <link refid="classwx_active_x_container"/>
-        <childnode refid="4213" relation="public-inheritance">
+        <childnode refid="4217" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4215">
+      <node id="4219">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="4216" relation="public-inheritance">
+        <childnode refid="4220" relation="public-inheritance">
         </childnode>
+        <childnode refid="4222" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4222">
+        <label>wxTrackable</label>
+        <link refid="classwx_trackable"/>
+      </node>
+      <node id="4217">
+        <label>wxControl</label>
+        <link refid="classwx_control"/>
         <childnode refid="4218" relation="public-inheritance">
         </childnode>
       </node>
       <node id="4218">
-        <label>wxTrackable</label>
-        <link refid="classwx_trackable"/>
-      </node>
-      <node id="4213">
-        <label>wxControl</label>
-        <link refid="classwx_control"/>
-        <childnode refid="4214" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4214">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="4215" relation="public-inheritance">
+        <childnode refid="4219" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4217">
+      <node id="4221">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/ole/activex.h" line="287" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/ole/activex.h" bodystart="286" bodyend="300"/>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/ole/activex.h" line="287" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/ole/activex.h" bodystart="286" bodyend="313"/>
     <listofallmembers>
       <member refid="classwx_window_1a3afbd49b1ea2f8275e3600dcac102923" prot="public" virt="virtual"><scope>wxActiveXContainer</scope><name>AcceptsFocus</name></member>
       <member refid="classwx_window_1a2370bdd3ab08e7ef3c7555c6aa8301b8" prot="public" virt="virtual"><scope>wxActiveXContainer</scope><name>AcceptsFocusFromKeyboard</name></member>
@@ -519,6 +567,7 @@
       <member refid="classwx_window_1a0a76891d726ad5f9a729e27e4eab2b57" prot="public" virt="non-virtual"><scope>wxActiveXContainer</scope><name>ProcessWindowEvent</name></member>
       <member refid="classwx_window_1a0a11aa4a50491d051f947e2618e52178" prot="public" virt="non-virtual"><scope>wxActiveXContainer</scope><name>ProcessWindowEventLocally</name></member>
       <member refid="classwx_window_1a398c11ab9af7956067a964f560d1978c" prot="public" virt="non-virtual"><scope>wxActiveXContainer</scope><name>PushEventHandler</name></member>
+      <member refid="classwx_active_x_container_1a974bbd77a8cb9f6544fab0c361e1b5e7" prot="public" virt="virtual"><scope>wxActiveXContainer</scope><name>QueryClientSiteInterface</name></member>
       <member refid="classwx_window_1a69e450f21b0d7013269ec1a4771f043b" prot="protected" virt="virtual"><scope>wxActiveXContainer</scope><name>QueueEvent</name></member>
       <member refid="classwx_window_1a54808c933f22a891c5db646f6209fa4d" prot="public" virt="virtual"><scope>wxActiveXContainer</scope><name>Raise</name></member>
       <member refid="classwx_object_1a2f6f1aa51fe9fc2b1415ca4211a90e9e" prot="public" virt="non-virtual"><scope>wxActiveXContainer</scope><name>Ref</name></member>

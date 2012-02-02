@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_find_replace_dialog" kind="class" prot="public">
     <compoundname>wxFindReplaceDialog</compoundname>
     <basecompoundref refid="classwx_dialog" prot="public" virt="non-virtual">wxDialog</basecompoundref>
@@ -108,107 +108,107 @@
     <briefdescription>
 <para><ref refid="classwx_find_replace_dialog" kindref="compound">wxFindReplaceDialog</ref> is a standard modeless dialog which is used to allow the user to search for some text (and possibly replace it with something else). </para>    </briefdescription>
     <detaileddescription>
-<para>The actual searching is supposed to be done in the owner window which is the parent of this dialog. Note that it means that unlike for the other standard dialogs this one <bold>must</bold> have a parent window. Also note that there is no way to use this dialog in a modal way; it is always, by design and implementation, modeless.</para><para>Please see the <ref refid="page__samples_1page_samples_dialogs" kindref="member">Dialogs Sample</ref> sample for an example of using it.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__cmndlg" kindref="compound">Common Dialogs</ref> </para>    </detaileddescription>
+<para>The actual searching is supposed to be done in the owner window which is the parent of this dialog. Note that it means that unlike for the other standard dialogs this one <bold>must</bold> have a parent window. Also note that there is no way to use this dialog in a modal way; it is always, by design and implementation, modeless.</para><para>Please see the <ref refid="page_samples_1page_samples_dialogs" kindref="member">Dialogs Sample</ref> sample for an example of using it.</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__cmndlg" kindref="compound">Common Dialogs</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="6316">
+      <node id="6320">
         <label>wxNonOwnedWindow</label>
         <link refid="classwx_non_owned_window"/>
-        <childnode refid="6317" relation="public-inheritance">
+        <childnode refid="6321" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6319">
+      <node id="6323">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="6318">
+      <node id="6322">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="6319" relation="public-inheritance">
+        <childnode refid="6323" relation="public-inheritance">
         </childnode>
-        <childnode refid="6320" relation="public-inheritance">
+        <childnode refid="6324" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6320">
+      <node id="6324">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="6317">
+      <node id="6321">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
+        <childnode refid="6322" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6318">
+        <label>wxDialog</label>
+        <link refid="classwx_dialog"/>
+        <childnode refid="6319" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6317">
+        <label>wxFindReplaceDialog</label>
+        <link refid="classwx_find_replace_dialog"/>
         <childnode refid="6318" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6314">
-        <label>wxDialog</label>
-        <link refid="classwx_dialog"/>
-        <childnode refid="6315" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="6313">
-        <label>wxFindReplaceDialog</label>
-        <link refid="classwx_find_replace_dialog"/>
-        <childnode refid="6314" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="6315">
+      <node id="6319">
         <label>wxTopLevelWindow</label>
         <link refid="classwx_top_level_window"/>
-        <childnode refid="6316" relation="public-inheritance">
+        <childnode refid="6320" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="6324">
+      <node id="6328">
         <label>wxNonOwnedWindow</label>
         <link refid="classwx_non_owned_window"/>
-        <childnode refid="6325" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="6327">
-        <label>wxObject</label>
-        <link refid="classwx_object"/>
-        <childnode refid="6328" relation="usage">
-          <edgelabel>m_refData</edgelabel>
-        </childnode>
-      </node>
-      <node id="6326">
-        <label>wxEvtHandler</label>
-        <link refid="classwx_evt_handler"/>
-        <childnode refid="6327" relation="public-inheritance">
-        </childnode>
         <childnode refid="6329" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6329">
+      <node id="6331">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="6332" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="6330">
+        <label>wxEvtHandler</label>
+        <link refid="classwx_evt_handler"/>
+        <childnode refid="6331" relation="public-inheritance">
+        </childnode>
+        <childnode refid="6333" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6333">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="6325">
+      <node id="6329">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
+        <childnode refid="6330" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6326">
+        <label>wxDialog</label>
+        <link refid="classwx_dialog"/>
+        <childnode refid="6327" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6325">
+        <label>wxFindReplaceDialog</label>
+        <link refid="classwx_find_replace_dialog"/>
         <childnode refid="6326" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6322">
-        <label>wxDialog</label>
-        <link refid="classwx_dialog"/>
-        <childnode refid="6323" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="6321">
-        <label>wxFindReplaceDialog</label>
-        <link refid="classwx_find_replace_dialog"/>
-        <childnode refid="6322" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="6323">
+      <node id="6327">
         <label>wxTopLevelWindow</label>
         <link refid="classwx_top_level_window"/>
-        <childnode refid="6324" relation="public-inheritance">
+        <childnode refid="6328" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6328">
+      <node id="6332">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
@@ -541,6 +541,7 @@
       <member refid="classwx_window_1a81f23590239934fa10fded0566a65d8c" prot="public" virt="non-virtual"><scope>wxFindReplaceDialog</scope><name>SetPosition</name></member>
       <member refid="classwx_window_1a07f5f7ed3f78e0ef7b3dee3f4da81001" prot="public" virt="virtual"><scope>wxFindReplaceDialog</scope><name>SetPreviousHandler</name></member>
       <member refid="classwx_object_1afab780710f2adc1bb33310e27590140b" prot="public" virt="non-virtual"><scope>wxFindReplaceDialog</scope><name>SetRefData</name></member>
+      <member refid="classwx_top_level_window_1a82afa6f09dd5faef6330807ef59374e8" prot="public" virt="virtual"><scope>wxFindReplaceDialog</scope><name>SetRepresentedFilename</name></member>
       <member refid="classwx_dialog_1a0d04ed85ac5cd271a61514d446340673" prot="public" virt="non-virtual"><scope>wxFindReplaceDialog</scope><name>SetReturnCode</name></member>
       <member refid="classwx_top_level_window_1a98e95b1b10f44b80f9b29a03ab09a879" prot="public" virt="non-virtual"><scope>wxFindReplaceDialog</scope><name>SetRightMenu</name></member>
       <member refid="classwx_window_1aa842d59529f873683e55cd8392ec46e9" prot="public" virt="virtual"><scope>wxFindReplaceDialog</scope><name>SetScrollbar</name></member>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_size_event" kind="class" prot="public">
     <compoundname>wxSizeEvent</compoundname>
     <basecompoundref refid="classwx_event" prot="public" virt="non-virtual">wxEvent</basecompoundref>
@@ -25,7 +25,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4066"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4090"/>
       </memberdef>
       <memberdef kind="function" id="classwx_size_event_1ab4630e0469e7eaf1952e7afacadb7031" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
@@ -38,7 +38,7 @@
 <para>This is the new total size of the window, i.e. the same size as would be returned by <ref refid="classwx_window_1a124c12cff1e7b6e96a5e1fd3e48dca34" kindref="member">wxWindow::GetSize()</ref> if it were called now. Use <ref refid="classwx_window_1ae56fc53268b815b58570f66bfc33838f" kindref="member">wxWindow::GetClientSize()</ref> if you catch this event in a top level window such as <ref refid="classwx_frame" kindref="compound">wxFrame</ref> to find the size available for the window contents. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4076"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4100"/>
       </memberdef>
       <memberdef kind="function" id="classwx_size_event_1a10feb0885d50853a00bf302e1a1c6a22" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -55,7 +55,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4077"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4101"/>
       </memberdef>
       <memberdef kind="function" id="classwx_size_event_1af43d08bdee3bf87b2cfd12e6c684ec87" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_rect" kindref="compound">wxRect</ref></type>
@@ -68,7 +68,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4079"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4103"/>
       </memberdef>
       <memberdef kind="function" id="classwx_size_event_1aec71605403d6b11aa858d194fd486850" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -85,63 +85,63 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4080"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4104"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para>A size event holds information about size change events of <ref refid="classwx_window" kindref="compound">wxWindow</ref>. </para>    </briefdescription>
     <detaileddescription>
-<para>The EVT_SIZE handler function will be called when the window has been resized.</para><para>You may wish to use this for frames to resize their child windows as appropriate.</para><para>Note that the size passed is of the whole window: call <ref refid="classwx_window_1ae56fc53268b815b58570f66bfc33838f" kindref="member">wxWindow::GetClientSize()</ref> for the area which may be used by the application.</para><para>When a window is resized, usually only a small part of the window is damaged and you may only need to repaint that area. However, if your drawing depends on the size of the window, you may need to clear the DC explicitly and repaint the whole window. In which case, you may need to call <ref refid="classwx_window_1a29dc7251746154c821b17841b9877830" kindref="member">wxWindow::Refresh</ref> to invalidate the entire window.</para><para><bold>Important</bold> : Sizers ( see <ref refid="overview__sizer" kindref="compound">Sizers Overview</ref> ) rely on size events to function correctly. Therefore, in a sizer-based layout, do not forget to call Skip on all size events you catch (and don&apos;t catch size events at all when you don&apos;t need to).</para><para><heading level="2">Events using this class</heading>
+<para>The EVT_SIZE handler function will be called when the window has been resized.</para><para>You may wish to use this for frames to resize their child windows as appropriate.</para><para>Note that the size passed is of the whole window: call <ref refid="classwx_window_1ae56fc53268b815b58570f66bfc33838f" kindref="member">wxWindow::GetClientSize()</ref> for the area which may be used by the application.</para><para>When a window is resized, usually only a small part of the window is damaged and you may only need to repaint that area. However, if your drawing depends on the size of the window, you may need to clear the DC explicitly and repaint the whole window. In which case, you may need to call <ref refid="classwx_window_1a29dc7251746154c821b17841b9877830" kindref="member">wxWindow::Refresh</ref> to invalidate the entire window.</para><para><bold>Important</bold> : Sizers ( see <ref refid="overview_sizer" kindref="compound">Sizers Overview</ref> ) rely on size events to function correctly. Therefore, in a sizer-based layout, do not forget to call Skip on all size events you catch (and don&apos;t catch size events at all when you don&apos;t need to).</para><para><heading level="2">Events using this class</heading>
 </para><para>The following event handler macros redirect the events to member function handlers &apos;<bold>func</bold>&apos; with prototypes like: void<nonbreakablespace/>handlerFuncName(<ref refid="classwx_size_event" kindref="compound">wxSizeEvent</ref>&amp;<nonbreakablespace/>event)Event macros: <itemizedlist>
 <listitem><para>EVT_SIZE(func): Process a <computeroutput>wxEVT_SIZE</computeroutput> event. </para></listitem>
 </itemizedlist>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="classwx_size" kindref="compound">wxSize</ref>, <ref refid="overview__events" kindref="compound">Events and Event Handling</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="classwx_size" kindref="compound">wxSize</ref>, <ref refid="overview_events" kindref="compound">Events and Event Handling</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10169">
+      <node id="10229">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="10167">
+      <node id="10227">
         <label>wxSizeEvent</label>
         <link refid="classwx_size_event"/>
-        <childnode refid="10168" relation="public-inheritance">
+        <childnode refid="10228" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10168">
+      <node id="10228">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="10169" relation="public-inheritance">
+        <childnode refid="10229" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10172">
+      <node id="10232">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="10173" relation="usage">
+        <childnode refid="10233" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="10170">
+      <node id="10230">
         <label>wxSizeEvent</label>
         <link refid="classwx_size_event"/>
-        <childnode refid="10171" relation="public-inheritance">
+        <childnode refid="10231" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10171">
+      <node id="10231">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="10172" relation="public-inheritance">
+        <childnode refid="10232" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10173">
+      <node id="10233">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4061" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4060" bodyend="4081"/>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4085" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4084" bodyend="4105"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxSizeEvent</scope><name>AllocExclusive</name></member>
       <member refid="classwx_event_1a26878097a702e8d0368da150125d4158" prot="public" virt="pure-virtual"><scope>wxSizeEvent</scope><name>Clone</name></member>

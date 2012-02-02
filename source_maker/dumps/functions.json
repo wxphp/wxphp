@@ -1832,6 +1832,23 @@
 			]
 		}
 	],
+	"wxAbort":[
+		{
+			"return_type":"void",
+			"parameters_type":[
+				
+			],
+			"parameters_name":[
+				
+			],
+			"parameters_required":[
+				
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
 	"wxDisableAsserts":[
 		{
 			"return_type":"void",

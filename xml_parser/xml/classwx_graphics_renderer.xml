@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_graphics_renderer" kind="class" prot="public">
     <compoundname>wxGraphicsRenderer</compoundname>
     <basecompoundref refid="classwx_object" prot="public" virt="non-virtual">wxObject</basecompoundref>
@@ -533,36 +533,36 @@
 <para>A <ref refid="classwx_graphics_renderer" kindref="compound">wxGraphicsRenderer</ref> is the instance corresponding to the rendering engine used. </para>    </briefdescription>
     <detaileddescription>
 <para>There may be multiple instances on a system, if there are different rendering engines present, but there is always only one instance per engine. This instance is pointed back to by all objects created by it (<ref refid="classwx_graphics_context" kindref="compound">wxGraphicsContext</ref>, <ref refid="classwx_graphics_path" kindref="compound">wxGraphicsPath</ref> etc) and can be retrieved through their <ref refid="classwx_graphics_object_1a1cbac3ca9b99eaafa6eccf6476742cd0" kindref="member">wxGraphicsObject::GetRenderer()</ref> method. Therefore you can create an additional instance of a path etc. by calling <ref refid="classwx_graphics_object_1a1cbac3ca9b99eaafa6eccf6476742cd0" kindref="member">wxGraphicsObject::GetRenderer()</ref> and then using the appropriate CreateXXX() function of that renderer.</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_graphics_path" kindref="compound" tooltip="A wxGraphicsPath is a native representation of a geometric path.">wxGraphicsPath</ref><sp/>*path<sp/>=<sp/></highlight><highlight class="comment">//<sp/>from<sp/>somewhere</highlight><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_graphics_brush" kindref="compound" tooltip="A wxGraphicsBrush is a native representation of a brush.">wxGraphicsBrush</ref><sp/>*brush<sp/>=<sp/>path-&gt;<ref refid="classwx_graphics_object_1a1cbac3ca9b99eaafa6eccf6476742cd0" kindref="member" tooltip="Returns the renderer that was used to create this instance, or NULL if it has not...">GetRenderer</ref>()-&gt;<ref refid="classwx_graphics_renderer_1af4925b45520135fd41788fc37e244029" kindref="member" tooltip="Creates a native brush from a wxBrush.">CreateBrush</ref>(<sp/>*<ref refid="brush_8h_1a69faad3dd0814b86866bd36d0963d598" kindref="member" tooltip="Black brush.">wxBLACK_BRUSH</ref><sp/>);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_graphics_brush" kindref="compound" tooltip="A wxGraphicsBrush is a native representation of a brush.">wxGraphicsBrush</ref><sp/>*brush<sp/>=<sp/>path-&gt;<ref refid="classwx_graphics_object_1a1cbac3ca9b99eaafa6eccf6476742cd0" kindref="member" tooltip="Returns the renderer that was used to create this instance, or NULL if it has not been initialized ye...">GetRenderer</ref>()-&gt;<ref refid="classwx_graphics_renderer_1af4925b45520135fd41788fc37e244029" kindref="member" tooltip="Creates a native brush from a wxBrush.">CreateBrush</ref>(<sp/>*<ref refid="brush_8h_1a69faad3dd0814b86866bd36d0963d598" kindref="member" tooltip="Black brush.">wxBLACK_BRUSH</ref><sp/>);</highlight></codeline>
 </programlisting></para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__gdi" kindref="compound">Graphics Device Interface (GDI)</ref> </para>    </detaileddescription>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__gdi" kindref="compound">Graphics Device Interface (GDI)</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="6617">
+      <node id="6621">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="6616">
+      <node id="6620">
         <label>wxGraphicsRenderer</label>
         <link refid="classwx_graphics_renderer"/>
-        <childnode refid="6617" relation="public-inheritance">
+        <childnode refid="6621" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="6619">
+      <node id="6623">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="6620" relation="usage">
+        <childnode refid="6624" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="6618">
+      <node id="6622">
         <label>wxGraphicsRenderer</label>
         <link refid="classwx_graphics_renderer"/>
-        <childnode refid="6619" relation="public-inheritance">
+        <childnode refid="6623" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6620">
+      <node id="6624">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

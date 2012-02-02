@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="variant_8h" kind="file">
     <compoundname>variant.h</compoundname>
     <innerclass refid="classwx_variant" prot="public">wxVariant</innerclass>
@@ -12,7 +12,7 @@
         <briefdescription>
 <para>This macro returns a pointer to the data stored in <emphasis>var</emphasis> (<ref refid="classwx_variant" kindref="compound">wxVariant</ref>) cast to the type <emphasis>classname</emphasis> if the data is of this type (the check is done during the run-time) or NULL otherwise. </para>        </briefdescription>
         <detaileddescription>
-<para>Include file: <verbatim>#include &lt;wx/variant.h&gt; </verbatim></para><para><simplesect kind="see"><para><ref refid="overview__rtti" kindref="compound">Runtime Type Information (RTTI)</ref>, <ref refid="group__group__funcmacro__rtti_1ga2606f92f8d5f8e22f4afb44a6df3c38a" kindref="member">wxDynamicCast()</ref> </para></simplesect>
+<para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/variant.h&gt; </verbatim></para><para><simplesect kind="see"><para><ref refid="overview_rtti" kindref="compound">Runtime Type Information (RTTI)</ref>, <ref refid="group__group__funcmacro__rtti_1ga2606f92f8d5f8e22f4afb44a6df3c38a" kindref="member">wxDynamicCast()</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_client_data" kind="class" prot="public">
     <compoundname>wxClientData</compoundname>
     <derivedcompoundref refid="classwx_string_client_data" prot="public" virt="non-virtual">wxStringClientData</derivedcompoundref>
@@ -37,23 +37,23 @@
 <para>All classes deriving from <ref refid="classwx_evt_handler" kindref="compound">wxEvtHandler</ref> (such as all controls and <ref refid="classwx_app" kindref="compound">wxApp</ref>) can hold arbitrary data which is here referred to as &quot;client data&quot;. </para>    </briefdescription>
     <detaileddescription>
 <para>This is useful e.g. for scripting languages which need to handle shadow objects for most of wxWidgets&apos; classes and which store a handle to such a shadow class as client data in that class. This data can either be of type void - in which case the data <emphasis>container</emphasis> does not take care of freeing the data again or it is of type <ref refid="classwx_client_data" kindref="compound">wxClientData</ref> or its derivatives. In that case the container (e.g. a control) will free the memory itself later. Note that you <emphasis>must</emphasis> not assign both void data and data derived from the <ref refid="classwx_client_data" kindref="compound">wxClientData</ref> class to a container.</para><para>Some controls can hold various items and these controls can additionally hold client data for each item. This is the case for <ref refid="classwx_choice" kindref="compound">wxChoice</ref>, <ref refid="classwx_combo_box" kindref="compound">wxComboBox</ref> and <ref refid="classwx_list_box" kindref="compound">wxListBox</ref>. <ref refid="classwx_tree_ctrl" kindref="compound">wxTreeCtrl</ref> has a specialized class <ref refid="classwx_tree_item_data" kindref="compound">wxTreeItemData</ref> for each item in the tree.</para><para>If you want to add client data to your own classes, you may use the mix-in class <ref refid="classwx_client_data_container" kindref="compound">wxClientDataContainer</ref>.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__containers" kindref="compound">Containers</ref></para><para><simplesect kind="see"><para><ref refid="classwx_evt_handler" kindref="compound">wxEvtHandler</ref>, <ref refid="classwx_tree_item_data" kindref="compound">wxTreeItemData</ref>, <ref refid="classwx_string_client_data" kindref="compound">wxStringClientData</ref>, <ref refid="classwx_client_data_container" kindref="compound">wxClientDataContainer</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__containers" kindref="compound">Containers</ref></para><para><simplesect kind="see"><para><ref refid="classwx_evt_handler" kindref="compound">wxEvtHandler</ref>, <ref refid="classwx_tree_item_data" kindref="compound">wxTreeItemData</ref>, <ref refid="classwx_string_client_data" kindref="compound">wxStringClientData</ref>, <ref refid="classwx_client_data_container" kindref="compound">wxClientDataContainer</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="4784">
+      <node id="4788">
         <label>wxClientData</label>
         <link refid="classwx_client_data"/>
       </node>
-      <node id="4786">
+      <node id="4790">
         <label>wxTreeItemData</label>
         <link refid="classwx_tree_item_data"/>
-        <childnode refid="4784" relation="public-inheritance">
+        <childnode refid="4788" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4785">
+      <node id="4789">
         <label>wxStringClientData</label>
         <link refid="classwx_string_client_data"/>
-        <childnode refid="4784" relation="public-inheritance">
+        <childnode refid="4788" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>

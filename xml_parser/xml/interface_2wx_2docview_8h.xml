@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="interface_2wx_2docview_8h" kind="file">
     <compoundname>docview.h</compoundname>
     <innerclass refid="classwx_doc_template" prot="public">wxDocTemplate</innerclass>
@@ -25,7 +25,7 @@
         <briefdescription>
 <para>Copies the given file to <emphasis>stream</emphasis>. </para>        </briefdescription>
         <detaileddescription>
-<para>Useful when converting an old application to use streams (within the document/view framework, for example).</para><para>Include file: <verbatim>#include &lt;wx/docview.h&gt; </verbatim> </para>        </detaileddescription>
+<para>Useful when converting an old application to use streams (within the document/view framework, for example).</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/docview.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/docview.h" line="1643"/>
@@ -46,7 +46,7 @@
         <briefdescription>
 <para>Copies the given stream to the file <emphasis>filename</emphasis>. </para>        </briefdescription>
         <detaileddescription>
-<para>Useful when converting an old application to use streams (within the document/view framework, for example).</para><para>Include file: <verbatim>#include &lt;wx/docview.h&gt; </verbatim> </para>        </detaileddescription>
+<para>Useful when converting an old application to use streams (within the document/view framework, for example).</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/docview.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/docview.h" line="1653"/>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_u_r_l_data_object" kind="class" prot="public">
     <compoundname>wxURLDataObject</compoundname>
     <basecompoundref refid="classwx_text_data_object" prot="public" virt="non-virtual">wxTextDataObject</basecompoundref>
@@ -57,56 +57,56 @@
     <briefdescription>
 <para><ref refid="classwx_u_r_l_data_object" kindref="compound">wxURLDataObject</ref> is a <ref refid="classwx_data_object" kindref="compound">wxDataObject</ref> containing an URL and can be used e.g. </para>    </briefdescription>
     <detaileddescription>
-<para>when you need to put an URL on or retrieve it from the clipboard:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="clipbrd_8h_1a7981f5d50a36729858d8356aac6e77eb" kindref="member" tooltip="The backwards compatible access macro that returns the global clipboard object pointer...">wxTheClipboard</ref>-&gt;SetData(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classwx_u_r_l_data_object_1a57104fc32eb66f8fa666b1f2799631d5" kindref="member" tooltip="Constructor, may be used to initialize the URL.">wxURLDataObject</ref>(url));</highlight></codeline>
+<para>when you need to put an URL on or retrieve it from the clipboard:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="clipbrd_8h_1a7981f5d50a36729858d8356aac6e77eb" kindref="member" tooltip="The backwards compatible access macro that returns the global clipboard object pointer.">wxTheClipboard</ref>-&gt;SetData(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classwx_u_r_l_data_object_1a57104fc32eb66f8fa666b1f2799631d5" kindref="member" tooltip="Constructor, may be used to initialize the URL.">wxURLDataObject</ref>(url));</highlight></codeline>
 </programlisting></para><para><simplesect kind="note"><para>This class is derived from <ref refid="classwx_data_object_composite" kindref="compound">wxDataObjectComposite</ref> on Windows rather than <ref refid="classwx_text_data_object" kindref="compound">wxTextDataObject</ref> on all other platforms.</para></simplesect>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__dnd" kindref="compound">Clipboard and Drag &amp; Drop</ref></para><para><simplesect kind="see"><para><ref refid="overview__dnd" kindref="compound">Drag and Drop Overview</ref>, <ref refid="classwx_data_object" kindref="compound">wxDataObject</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__dnd" kindref="compound">Clipboard and Drag &amp; Drop</ref></para><para><simplesect kind="see"><para><ref refid="overview_dnd" kindref="compound">Drag and Drop Overview</ref>, <ref refid="classwx_data_object" kindref="compound">wxDataObject</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="11213">
+      <node id="11274">
         <label>wxURLDataObject</label>
         <link refid="classwx_u_r_l_data_object"/>
-        <childnode refid="11214" relation="public-inheritance">
+        <childnode refid="11275" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11216">
+      <node id="11277">
         <label>wxDataObject</label>
         <link refid="classwx_data_object"/>
       </node>
-      <node id="11214">
+      <node id="11275">
         <label>wxTextDataObject</label>
         <link refid="classwx_text_data_object"/>
-        <childnode refid="11215" relation="public-inheritance">
+        <childnode refid="11276" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11215">
+      <node id="11276">
         <label>wxDataObjectSimple</label>
         <link refid="classwx_data_object_simple"/>
-        <childnode refid="11216" relation="public-inheritance">
+        <childnode refid="11277" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="11217">
+      <node id="11278">
         <label>wxURLDataObject</label>
         <link refid="classwx_u_r_l_data_object"/>
-        <childnode refid="11218" relation="public-inheritance">
+        <childnode refid="11279" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11220">
+      <node id="11281">
         <label>wxDataObject</label>
         <link refid="classwx_data_object"/>
       </node>
-      <node id="11218">
+      <node id="11279">
         <label>wxTextDataObject</label>
         <link refid="classwx_text_data_object"/>
-        <childnode refid="11219" relation="public-inheritance">
+        <childnode refid="11280" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11219">
+      <node id="11280">
         <label>wxDataObjectSimple</label>
         <link refid="classwx_data_object_simple"/>
-        <childnode refid="11220" relation="public-inheritance">
+        <childnode refid="11281" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>

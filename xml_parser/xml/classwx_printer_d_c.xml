@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_printer_d_c" kind="class" prot="public">
     <compoundname>wxPrinterDC</compoundname>
     <basecompoundref refid="classwx_d_c" prot="public" virt="non-virtual">wxDC</basecompoundref>
@@ -40,47 +40,47 @@
 <para>A printer device context is specific to MSW and Mac, and allows access to any printer with a Windows or Macintosh driver. </para>    </briefdescription>
     <detaileddescription>
 <para>See <ref refid="classwx_d_c" kindref="compound">wxDC</ref> for further information on device contexts, and <ref refid="classwx_d_c_1ab4c22c7c7490a4aabc13dfd9e7a285a3" kindref="member">wxDC::GetSize()</ref> for advice on achieving the correct scaling for the page.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__printing" kindref="compound">Printing Framework</ref></para><para><simplesect kind="see"><para><ref refid="overview__printing" kindref="compound">Printing Framework Overview</ref>, <ref refid="classwx_d_c" kindref="compound">wxDC</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__printing" kindref="compound">Printing Framework</ref></para><para><simplesect kind="see"><para><ref refid="overview_printing" kindref="compound">Printing Framework Overview</ref>, <ref refid="classwx_d_c" kindref="compound">wxDC</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="8805">
+      <node id="8813">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="8803">
+      <node id="8811">
         <label>wxPrinterDC</label>
         <link refid="classwx_printer_d_c"/>
-        <childnode refid="8804" relation="public-inheritance">
+        <childnode refid="8812" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8804">
+      <node id="8812">
         <label>wxDC</label>
         <link refid="classwx_d_c"/>
-        <childnode refid="8805" relation="public-inheritance">
+        <childnode refid="8813" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="8808">
+      <node id="8816">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="8809" relation="usage">
+        <childnode refid="8817" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="8806">
+      <node id="8814">
         <label>wxPrinterDC</label>
         <link refid="classwx_printer_d_c"/>
-        <childnode refid="8807" relation="public-inheritance">
+        <childnode refid="8815" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8807">
+      <node id="8815">
         <label>wxDC</label>
         <link refid="classwx_d_c"/>
-        <childnode refid="8808" relation="public-inheritance">
+        <childnode refid="8816" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8809">
+      <node id="8817">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

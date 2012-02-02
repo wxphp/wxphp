@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_image_handler" kind="class" prot="public">
     <compoundname>wxImageHandler</compoundname>
     <basecompoundref refid="classwx_object" prot="public" virt="non-virtual">wxObject</basecompoundref>
@@ -393,39 +393,39 @@
     <briefdescription>
 <para>This is the base class for implementing image file loading/saving, and image creation from data. </para>    </briefdescription>
     <detaileddescription>
-<para>It is used within <ref refid="classwx_image" kindref="compound">wxImage</ref> and is not normally seen by the application.</para><para>If you wish to extend the capabilities of <ref refid="classwx_image" kindref="compound">wxImage</ref>, derive a class from <ref refid="classwx_image_handler" kindref="compound">wxImageHandler</ref> and add the handler using <ref refid="classwx_image_1ab39fb3747dfb8c2d444eff9fe41fa205" kindref="member">wxImage::AddHandler</ref> in your application initialization.</para><para>Note that all wxImageHandlers provided by wxWidgets are part of the <ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref> library. For details about the default handlers, please see the section <ref refid="classwx_image_1image_handlers" kindref="member">Available image handlers</ref> in the <ref refid="classwx_image" kindref="compound">wxImage</ref> class documentation.</para><sect1 id="classwx_image_handler_1imagehandler_note">
+<para>It is used within <ref refid="classwx_image" kindref="compound">wxImage</ref> and is not normally seen by the application.</para><para>If you wish to extend the capabilities of <ref refid="classwx_image" kindref="compound">wxImage</ref>, derive a class from <ref refid="classwx_image_handler" kindref="compound">wxImageHandler</ref> and add the handler using <ref refid="classwx_image_1ab39fb3747dfb8c2d444eff9fe41fa205" kindref="member">wxImage::AddHandler</ref> in your application initialization.</para><para>Note that all wxImageHandlers provided by wxWidgets are part of the <ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref> library. For details about the default handlers, please see the section <ref refid="classwx_image_1image_handlers" kindref="member">Available image handlers</ref> in the <ref refid="classwx_image" kindref="compound">wxImage</ref> class documentation.</para><sect1 id="classwx_image_handler_1imagehandler_note">
 <title>Note (Legal Issue)</title>
 <para>This software is based in part on the work of the Independent JPEG Group. (Applies when wxWidgets is linked with JPEG support. wxJPEGHandler uses libjpeg created by IJG.)</para><para>Predefined objects/pointers: <ref refid="image_8h_1aea75fc2e13965b07bf9369ac4c5d1343" kindref="member">wxNullImage</ref></para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__gdi" kindref="compound">Graphics Device Interface (GDI)</ref></para><para><simplesect kind="see"><para><ref refid="classwx_image" kindref="compound">wxImage</ref>, <ref refid="group__group__funcmacro__appinitterm_1ga27f6c78d5d13374a28022b7bd44c6823" kindref="member">wxInitAllImageHandlers()</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__gdi" kindref="compound">Graphics Device Interface (GDI)</ref></para><para><simplesect kind="see"><para><ref refid="classwx_image" kindref="compound">wxImage</ref>, <ref refid="group__group__funcmacro__appinitterm_1ga27f6c78d5d13374a28022b7bd44c6823" kindref="member">wxInitAllImageHandlers()</ref> </para></simplesect>
 </para></sect1>
     </detaileddescription>
     <inheritancegraph>
-      <node id="7244">
+      <node id="7248">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="7243">
+      <node id="7247">
         <label>wxImageHandler</label>
         <link refid="classwx_image_handler"/>
-        <childnode refid="7244" relation="public-inheritance">
+        <childnode refid="7248" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7246">
+      <node id="7250">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="7247" relation="usage">
+        <childnode refid="7251" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="7245">
+      <node id="7249">
         <label>wxImageHandler</label>
         <link refid="classwx_image_handler"/>
-        <childnode refid="7246" relation="public-inheritance">
+        <childnode refid="7250" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7247">
+      <node id="7251">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

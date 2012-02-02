@@ -1,11 +1,10 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_rich_text_header_footer_data" kind="class" prot="public">
     <compoundname>wxRichTextHeaderFooterData</compoundname>
     <basecompoundref refid="classwx_object" prot="public" virt="non-virtual">wxObject</basecompoundref>
     <includes local="no">wx/richtext/richtextprint.h</includes>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_rich_text_header_footer_data_1a966315e86262a0b73a78f10fcdaa22a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
         <definition>wxRichTextHeaderFooterData::wxRichTextHeaderFooterData</definition>
@@ -396,34 +395,34 @@
 <para>Headers and footers can be specified independently for odd, even or both page sides. Different text can be specified for left, centre and right locations on the page, and the font and text colour can also be specified.</para><para>You can specify the following keywords in header and footer text, which will be substituted for the actual values during printing and preview.</para><para><itemizedlist>
 <listitem><para>@DATE@: the current date.</para></listitem><listitem><para>@PAGESCNT@: the total number of pages.</para></listitem><listitem><para>@PAGENUM@: the current page number.</para></listitem><listitem><para>@TIME@: the current time.</para></listitem><listitem><para>@TITLE@: the title of the document, as passed to the <ref refid="classwx_rich_text_printing" kindref="compound">wxRichTextPrinting</ref> or wxRichTextLayout constructor.</para></listitem></itemizedlist>
 </para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxrichtext" kindref="member">wxRichText</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__richtext" kindref="compound">Rich Text</ref> </para>    </detaileddescription>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxrichtext" kindref="member">wxRichText</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__richtext" kindref="compound">Rich Text</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="9573">
+      <node id="9629">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="9572">
+      <node id="9628">
         <label>wxRichTextHeaderFooterData</label>
         <link refid="classwx_rich_text_header_footer_data"/>
-        <childnode refid="9573" relation="public-inheritance">
+        <childnode refid="9629" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="9575">
+      <node id="9631">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="9576" relation="usage">
+        <childnode refid="9632" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="9574">
+      <node id="9630">
         <label>wxRichTextHeaderFooterData</label>
         <link refid="classwx_rich_text_header_footer_data"/>
-        <childnode refid="9575" relation="public-inheritance">
+        <childnode refid="9631" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9576">
+      <node id="9632">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

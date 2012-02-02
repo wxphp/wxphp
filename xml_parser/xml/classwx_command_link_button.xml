@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_command_link_button" kind="class" prot="public">
     <compoundname>wxCommandLinkButton</compoundname>
     <basecompoundref refid="classwx_button" prot="public" virt="non-virtual">wxButton</basecompoundref>
@@ -357,107 +357,107 @@
     <detaileddescription>
 <para>Pressing such button usually results in switching to another window of the program and so they can be used as a replacement for the &quot;Next&quot; button in a multi-page dialog (such as <ref refid="classwx_wizard" kindref="compound">wxWizard</ref>), for example.</para><para>Their advantage compared to the ordinary wxButtons is that they emphasize the action of switching the window and also that they allow to give more detailed explanation to the user because, in addition to the short button label, they also show a longer description string.</para><para>The short, title-like, part of the label is called the <emphasis>main label</emphasis> and the longer description is the <emphasis>note</emphasis>. Both of them can be set and queried independently using wxCommandLinkButton-specific methods such as <ref refid="classwx_command_link_button_1a6cecd5ecdb7eff45519d02a6766c5b07" kindref="member">SetMainLabel()</ref> or <ref refid="classwx_command_link_button_1a6b6fb7dcf99ac3282577ddf22be452c0" kindref="member">GetNote()</ref> or also via <ref refid="classwx_command_link_button_1abc8a21805f1a8c07734a3b781e8dd18b" kindref="member">SetLabel()</ref> and <ref refid="classwx_command_link_button_1a62f9b9ae4a163d4e202498edcccedea3" kindref="member">GetLabel()</ref> methods inherited from <ref refid="classwx_button" kindref="compound">wxButton</ref>. When using the latter, the main label and the note are concatenated into a single string using a new line character between them (notice that the note part can have more new lines in it).</para><para><ref refid="classwx_command_link_button" kindref="compound">wxCommandLinkButton</ref> generates the same event as <ref refid="classwx_button" kindref="compound">wxButton</ref> but doesn&apos;t support any of wxButton-specific styles nor adds any new styles of its own.</para><para>Currently this class uses native implementation under Windows Vista and later versions and a generic implementation for the other platforms and earlier Windows versions.</para><para><simplesect kind="since"><para>2.9.2</para></simplesect>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref> <htmlonly> &lt;br&gt;&lt;div&gt;&lt;span class=&apos;appearance&apos;&gt;Appearance:&lt;/span&gt;&lt;br&gt;&lt;table class=&apos;appearance&apos;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&apos;wxmsw/commandlinkbutton.png&apos; alt=&apos;wxMSW appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxgtk/commandlinkbutton.png&apos; alt=&apos;wxGTK appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxmac/commandlinkbutton.png&apos; alt=&apos;wxMac appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;wxMSW appearance&lt;/td&gt;&lt;td&gt;wxGTK appearance&lt;/td&gt;&lt;td&gt;wxMac appearance&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt; </htmlonly></para><para><simplesect kind="see"><para><ref refid="classwx_button" kindref="compound">wxButton</ref>, <ref refid="classwx_bitmap_button" kindref="compound">wxBitmapButton</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref> <htmlonly> &lt;br&gt;&lt;div&gt;&lt;span class=&apos;appearance&apos;&gt;Appearance:&lt;/span&gt;&lt;br&gt;&lt;table class=&apos;appearance&apos;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&apos;wxmsw/commandlinkbutton.png&apos; alt=&apos;wxMSW appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxgtk/commandlinkbutton.png&apos; alt=&apos;wxGTK appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxmac/commandlinkbutton.png&apos; alt=&apos;wxMac appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;wxMSW appearance&lt;/td&gt;&lt;td&gt;wxGTK appearance&lt;/td&gt;&lt;td&gt;wxMac appearance&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt; </htmlonly></para><para><simplesect kind="see"><para><ref refid="classwx_button" kindref="compound">wxButton</ref>, <ref refid="classwx_bitmap_button" kindref="compound">wxBitmapButton</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="5008">
+      <node id="5012">
         <label>wxCommandLinkButton</label>
         <link refid="classwx_command_link_button"/>
-        <childnode refid="5009" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="5014">
-        <label>wxObject</label>
-        <link refid="classwx_object"/>
-      </node>
-      <node id="5013">
-        <label>wxEvtHandler</label>
-        <link refid="classwx_evt_handler"/>
-        <childnode refid="5014" relation="public-inheritance">
-        </childnode>
-        <childnode refid="5015" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="5015">
-        <label>wxTrackable</label>
-        <link refid="classwx_trackable"/>
-      </node>
-      <node id="5011">
-        <label>wxControl</label>
-        <link refid="classwx_control"/>
-        <childnode refid="5012" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="5012">
-        <label>wxWindow</label>
-        <link refid="classwx_window"/>
         <childnode refid="5013" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5010">
-        <label>wxAnyButton</label>
-        <link refid="classwx_any_button"/>
-        <childnode refid="5011" relation="public-inheritance">
+      <node id="5018">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+      </node>
+      <node id="5017">
+        <label>wxEvtHandler</label>
+        <link refid="classwx_evt_handler"/>
+        <childnode refid="5018" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5019" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5009">
+      <node id="5019">
+        <label>wxTrackable</label>
+        <link refid="classwx_trackable"/>
+      </node>
+      <node id="5015">
+        <label>wxControl</label>
+        <link refid="classwx_control"/>
+        <childnode refid="5016" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5016">
+        <label>wxWindow</label>
+        <link refid="classwx_window"/>
+        <childnode refid="5017" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5014">
+        <label>wxAnyButton</label>
+        <link refid="classwx_any_button"/>
+        <childnode refid="5015" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5013">
         <label>wxButton</label>
         <link refid="classwx_button"/>
-        <childnode refid="5010" relation="public-inheritance">
+        <childnode refid="5014" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="5016">
+      <node id="5020">
         <label>wxCommandLinkButton</label>
         <link refid="classwx_command_link_button"/>
-        <childnode refid="5017" relation="public-inheritance">
+        <childnode refid="5021" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5022">
+      <node id="5026">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="5023" relation="usage">
+        <childnode refid="5027" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="5021">
+      <node id="5025">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="5022" relation="public-inheritance">
+        <childnode refid="5026" relation="public-inheritance">
         </childnode>
+        <childnode refid="5028" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5028">
+        <label>wxTrackable</label>
+        <link refid="classwx_trackable"/>
+      </node>
+      <node id="5023">
+        <label>wxControl</label>
+        <link refid="classwx_control"/>
         <childnode refid="5024" relation="public-inheritance">
         </childnode>
       </node>
       <node id="5024">
-        <label>wxTrackable</label>
-        <link refid="classwx_trackable"/>
-      </node>
-      <node id="5019">
-        <label>wxControl</label>
-        <link refid="classwx_control"/>
-        <childnode refid="5020" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="5020">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="5021" relation="public-inheritance">
+        <childnode refid="5025" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5018">
+      <node id="5022">
         <label>wxAnyButton</label>
         <link refid="classwx_any_button"/>
-        <childnode refid="5019" relation="public-inheritance">
+        <childnode refid="5023" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5017">
+      <node id="5021">
         <label>wxButton</label>
         <link refid="classwx_button"/>
-        <childnode refid="5018" relation="public-inheritance">
+        <childnode refid="5022" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5023">
+      <node id="5027">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

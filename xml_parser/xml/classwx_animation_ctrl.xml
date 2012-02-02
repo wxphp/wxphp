@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_animation_ctrl" kind="class" prot="public">
     <compoundname>wxAnimationCtrl</compoundname>
     <basecompoundref refid="classwx_control" prot="public" virt="non-virtual">wxControl</basecompoundref>
@@ -301,83 +301,83 @@
 <listitem><para>wxAC_NO_AUTORESIZE: By default, the control will adjust its size to exactly fit to the size of the animation when SetAnimation is called. If this style flag is given, the control will not change its size </para></listitem>
 </itemizedlist>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref></para><para>Implementations:<nonbreakablespace/><nonbreakablespace/>native under <ref refid="page__port_1page_port_wxgtk" kindref="member">wxGTK</ref>, <ref refid="page__port_1page_port_wxmsw" kindref="member">wxMSW</ref> ports; a generic implementation is used elsewhere.</para><para><htmlonly> &lt;br&gt;&lt;div&gt;&lt;span class=&apos;appearance&apos;&gt;Appearance:&lt;/span&gt;&lt;br&gt;&lt;table class=&apos;appearance&apos;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&apos;wxmsw/animationctrl.png&apos; alt=&apos;wxMSW appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxgtk/animationctrl.png&apos; alt=&apos;wxGTK appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxmac/animationctrl.png&apos; alt=&apos;wxMac appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;wxMSW appearance&lt;/td&gt;&lt;td&gt;wxGTK appearance&lt;/td&gt;&lt;td&gt;wxMac appearance&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt; </htmlonly></para><para><simplesect kind="see"><para><ref refid="classwx_animation" kindref="compound">wxAnimation</ref>, <ref refid="page__samples_1page_samples_animate" kindref="member">Animation Sample</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref></para><para>Implementations:<nonbreakablespace/><nonbreakablespace/>native under <ref refid="page_port_1page_port_wxgtk" kindref="member">wxGTK</ref>, <ref refid="page_port_1page_port_wxmsw" kindref="member">wxMSW</ref> ports; a generic implementation is used elsewhere.</para><para><htmlonly> &lt;br&gt;&lt;div&gt;&lt;span class=&apos;appearance&apos;&gt;Appearance:&lt;/span&gt;&lt;br&gt;&lt;table class=&apos;appearance&apos;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&apos;wxmsw/animationctrl.png&apos; alt=&apos;wxMSW appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxgtk/animationctrl.png&apos; alt=&apos;wxGTK appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxmac/animationctrl.png&apos; alt=&apos;wxMac appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;wxMSW appearance&lt;/td&gt;&lt;td&gt;wxGTK appearance&lt;/td&gt;&lt;td&gt;wxMac appearance&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt; </htmlonly></para><para><simplesect kind="see"><para><ref refid="classwx_animation" kindref="compound">wxAnimation</ref>, <ref refid="page_samples_1page_samples_animate" kindref="member">Animation Sample</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="4237">
+      <node id="4241">
         <label>wxAnimationCtrl</label>
         <link refid="classwx_animation_ctrl"/>
-        <childnode refid="4238" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4241">
-        <label>wxObject</label>
-        <link refid="classwx_object"/>
-      </node>
-      <node id="4240">
-        <label>wxEvtHandler</label>
-        <link refid="classwx_evt_handler"/>
-        <childnode refid="4241" relation="public-inheritance">
-        </childnode>
         <childnode refid="4242" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4242">
+      <node id="4245">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+      </node>
+      <node id="4244">
+        <label>wxEvtHandler</label>
+        <link refid="classwx_evt_handler"/>
+        <childnode refid="4245" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4246" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4246">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="4238">
+      <node id="4242">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="4239" relation="public-inheritance">
+        <childnode refid="4243" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4239">
+      <node id="4243">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="4240" relation="public-inheritance">
+        <childnode refid="4244" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="4243">
+      <node id="4247">
         <label>wxAnimationCtrl</label>
         <link refid="classwx_animation_ctrl"/>
-        <childnode refid="4244" relation="public-inheritance">
+        <childnode refid="4248" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4247">
+      <node id="4251">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="4248" relation="usage">
+        <childnode refid="4252" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="4246">
+      <node id="4250">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="4247" relation="public-inheritance">
+        <childnode refid="4251" relation="public-inheritance">
         </childnode>
+        <childnode refid="4253" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4253">
+        <label>wxTrackable</label>
+        <link refid="classwx_trackable"/>
+      </node>
+      <node id="4248">
+        <label>wxControl</label>
+        <link refid="classwx_control"/>
         <childnode refid="4249" relation="public-inheritance">
         </childnode>
       </node>
       <node id="4249">
-        <label>wxTrackable</label>
-        <link refid="classwx_trackable"/>
-      </node>
-      <node id="4244">
-        <label>wxControl</label>
-        <link refid="classwx_control"/>
-        <childnode refid="4245" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4245">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="4246" relation="public-inheritance">
+        <childnode refid="4250" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4248">
+      <node id="4252">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

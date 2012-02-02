@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_integer_validator" kind="class" prot="public">
     <compoundname>wxIntegerValidator</compoundname>
     <basecompoundref refid="classwx_num_validator" prot="public" virt="non-virtual">wxNumValidator&lt; T &gt;</basecompoundref>
@@ -32,7 +32,7 @@
         <argsstring>(ValueType *value=NULL, int style=wxNUM_VAL_DEFAULT)</argsstring>
         <name>wxIntegerValidator</name>
         <param>
-          <type><ref refid="classwx_integer_validator_1a70544cb69a1ff43801668daa70ffa5ec" kindref="member">ValueType</ref> *</type>
+          <type><ref refid="classwx_num_validator_1a651c1cd4cf84fdcbecb201c474e22afe" kindref="member">ValueType</ref> *</type>
           <declname>value</declname>
           <defval>NULL</defval>
         </param>
@@ -68,7 +68,7 @@
     <briefdescription>
 <para>Validator for text entries used for integer entry. </para>    </briefdescription>
     <detaileddescription>
-<para>This validator can be used with <ref refid="classwx_text_ctrl" kindref="compound">wxTextCtrl</ref> or <ref refid="classwx_combo_box" kindref="compound">wxComboBox</ref> (and potentially any other class implementing <ref refid="classwx_text_entry" kindref="compound">wxTextEntry</ref> interface) to check that only valid integer values can be entered into them.</para><para>This is a template class which can be instantiated for all the integer types (i.e. <computeroutput>short</computeroutput>, <computeroutput>int</computeroutput>, <computeroutput>long</computeroutput> and <computeroutput>long long</computeroutput> if available) as well as their unsigned versions.</para><para>By default this validator accepts any integer values in the range appropriate for its type, e.g. <computeroutput>INT_MIN..INT_MAX</computeroutput> for <computeroutput>int</computeroutput> or <computeroutput>0..USHRT_MAX</computeroutput> for <computeroutput>unsigned short</computeroutput>. This range can be restricted further by calling <ref refid="classwx_num_validator_1afb03f64e6ba6525dc152e2f8e8c0a2ab" kindref="member">SetMin()</ref> and <ref refid="classwx_num_validator_1a6f10b5931be461cdc3f988262bbf11d1" kindref="member">SetMax()</ref> or <ref refid="classwx_num_validator_1a20bd7a1545887952d883e3c870e6b6a8" kindref="member">SetRange()</ref> methods inherited from the base class.</para><para>When the validator displays integers with thousands separators, the character used for the separators (usually &quot;.&quot; or &quot;,&quot;) depends on the locale set with <ref refid="classwx_locale" kindref="compound">wxLocale</ref> (note that you shouldn&apos;t change locale with setlocale() as this can result in a mismatch between the thousands separator used by <ref refid="classwx_locale" kindref="compound">wxLocale</ref> and the one used by the run-time library).</para><para>A simple example of using this class: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">MyDialog<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classwx_dialog" kindref="compound" tooltip="A dialog box is a window with a title bar and sometimes a system menu, which can...">wxDialog</ref></highlight></codeline>
+<para>This validator can be used with <ref refid="classwx_text_ctrl" kindref="compound">wxTextCtrl</ref> or <ref refid="classwx_combo_box" kindref="compound">wxComboBox</ref> (and potentially any other class implementing <ref refid="classwx_text_entry" kindref="compound">wxTextEntry</ref> interface) to check that only valid integer values can be entered into them.</para><para>This is a template class which can be instantiated for all the integer types (i.e. <computeroutput>short</computeroutput>, <computeroutput>int</computeroutput>, <computeroutput>long</computeroutput> and <computeroutput>long long</computeroutput> if available) as well as their unsigned versions.</para><para>By default this validator accepts any integer values in the range appropriate for its type, e.g. <computeroutput>INT_MIN..INT_MAX</computeroutput> for <computeroutput>int</computeroutput> or <computeroutput>0..USHRT_MAX</computeroutput> for <computeroutput>unsigned short</computeroutput>. This range can be restricted further by calling <ref refid="classwx_num_validator_1afb03f64e6ba6525dc152e2f8e8c0a2ab" kindref="member">SetMin()</ref> and <ref refid="classwx_num_validator_1a6f10b5931be461cdc3f988262bbf11d1" kindref="member">SetMax()</ref> or <ref refid="classwx_num_validator_1a20bd7a1545887952d883e3c870e6b6a8" kindref="member">SetRange()</ref> methods inherited from the base class.</para><para>When the validator displays integers with thousands separators, the character used for the separators (usually &quot;.&quot; or &quot;,&quot;) depends on the locale set with <ref refid="classwx_locale" kindref="compound">wxLocale</ref> (note that you shouldn&apos;t change locale with setlocale() as this can result in a mismatch between the thousands separator used by <ref refid="classwx_locale" kindref="compound">wxLocale</ref> and the one used by the run-time library).</para><para>A simple example of using this class: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">MyDialog<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classwx_dialog" kindref="compound" tooltip="A dialog box is a window with a title bar and sometimes a system menu, which can be moved around the ...">wxDialog</ref></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MyDialog()</highlight></codeline>
@@ -90,85 +90,85 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>m_value;</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
-</programlisting> For more information, please see <ref refid="overview__validator" kindref="compound">wxValidator Overview</ref>.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__validator" kindref="compound">Validators</ref></para><para><simplesect kind="see"><para><ref refid="overview__validator" kindref="compound">wxValidator Overview</ref>, <ref refid="classwx_validator" kindref="compound">wxValidator</ref>, <ref refid="classwx_generic_validator" kindref="compound">wxGenericValidator</ref>, <ref refid="classwx_text_validator" kindref="compound">wxTextValidator</ref>, <ref refid="valnum_8h_1a9d2ba1b6ccfcfa65586cb54cd517e9fb" kindref="member">wxMakeIntegerValidator()</ref></para></simplesect>
+</programlisting> For more information, please see <ref refid="overview_validator" kindref="compound">wxValidator Overview</ref>.</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__validator" kindref="compound">Validators</ref></para><para><simplesect kind="see"><para><ref refid="overview_validator" kindref="compound">wxValidator Overview</ref>, <ref refid="classwx_validator" kindref="compound">wxValidator</ref>, <ref refid="classwx_generic_validator" kindref="compound">wxGenericValidator</ref>, <ref refid="classwx_text_validator" kindref="compound">wxTextValidator</ref>, <ref refid="valnum_8h_1a9d2ba1b6ccfcfa65586cb54cd517e9fb" kindref="member">wxMakeIntegerValidator()</ref></para></simplesect>
 <simplesect kind="since"><para>2.9.2 </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7301">
+      <node id="7305">
         <label>wxValidator</label>
         <link refid="classwx_validator"/>
-        <childnode refid="7302" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="7300">
-        <label>wxNumValidator&lt; T &gt;</label>
-        <link refid="classwx_num_validator"/>
-        <childnode refid="7301" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="7299">
-        <label>wxIntegerValidator&lt; T &gt;</label>
-        <link refid="classwx_integer_validator"/>
-        <childnode refid="7300" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="7303">
-        <label>wxObject</label>
-        <link refid="classwx_object"/>
-      </node>
-      <node id="7302">
-        <label>wxEvtHandler</label>
-        <link refid="classwx_evt_handler"/>
-        <childnode refid="7303" relation="public-inheritance">
-        </childnode>
-        <childnode refid="7304" relation="public-inheritance">
+        <childnode refid="7306" relation="public-inheritance">
         </childnode>
       </node>
       <node id="7304">
+        <label>wxNumValidator&lt; T &gt;</label>
+        <link refid="classwx_num_validator"/>
+        <childnode refid="7305" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7303">
+        <label>wxIntegerValidator&lt; T &gt;</label>
+        <link refid="classwx_integer_validator"/>
+        <childnode refid="7304" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7307">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+      </node>
+      <node id="7306">
+        <label>wxEvtHandler</label>
+        <link refid="classwx_evt_handler"/>
+        <childnode refid="7307" relation="public-inheritance">
+        </childnode>
+        <childnode refid="7308" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7308">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7307">
+      <node id="7311">
         <label>wxValidator</label>
         <link refid="classwx_validator"/>
-        <childnode refid="7308" relation="public-inheritance">
+        <childnode refid="7312" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7306">
+      <node id="7310">
         <label>wxNumValidator&lt; T &gt;</label>
         <link refid="classwx_num_validator"/>
-        <childnode refid="7307" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="7305">
-        <label>wxIntegerValidator&lt; T &gt;</label>
-        <link refid="classwx_integer_validator"/>
-        <childnode refid="7306" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="7309">
-        <label>wxObject</label>
-        <link refid="classwx_object"/>
-        <childnode refid="7310" relation="usage">
-          <edgelabel>m_refData</edgelabel>
-        </childnode>
-      </node>
-      <node id="7308">
-        <label>wxEvtHandler</label>
-        <link refid="classwx_evt_handler"/>
-        <childnode refid="7309" relation="public-inheritance">
-        </childnode>
         <childnode refid="7311" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7311">
+      <node id="7309">
+        <label>wxIntegerValidator&lt; T &gt;</label>
+        <link refid="classwx_integer_validator"/>
+        <childnode refid="7310" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7313">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="7314" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="7312">
+        <label>wxEvtHandler</label>
+        <link refid="classwx_evt_handler"/>
+        <childnode refid="7313" relation="public-inheritance">
+        </childnode>
+        <childnode refid="7315" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7315">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="7310">
+      <node id="7314">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

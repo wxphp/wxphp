@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="dir_09e0adf0cda2f12f88cd194ab881d289" kind="dir">
+    <compoundname>docs/doxygen/groups/</compoundname>
+    <innerfile refid="class_8h">class.h</innerfile>
+    <innerfile refid="class__appmanagement_8h">class_appmanagement.h</innerfile>
+    <innerfile refid="class__archive_8h">class_archive.h</innerfile>
+    <innerfile refid="class__aui_8h">class_aui.h</innerfile>
+    <innerfile refid="class__bookctrl_8h">class_bookctrl.h</innerfile>
+    <innerfile refid="class__cfg_8h">class_cfg.h</innerfile>
+    <innerfile refid="class__cmndlg_8h">class_cmndlg.h</innerfile>
+    <innerfile refid="class__containers_8h">class_containers.h</innerfile>
+    <innerfile refid="class__conv_8h">class_conv.h</innerfile>
+    <innerfile refid="class__ctrl_8h">class_ctrl.h</innerfile>
+    <innerfile refid="class__data_8h">class_data.h</innerfile>
+    <innerfile refid="class__dc_8h">class_dc.h</innerfile>
+    <innerfile refid="class__debugging_8h">class_debugging.h</innerfile>
+    <innerfile refid="class__dnd_8h">class_dnd.h</innerfile>
+    <innerfile refid="class__docview_8h">class_docview.h</innerfile>
+    <innerfile refid="class__dvc_8h">class_dvc.h</innerfile>
+    <innerfile refid="class__events_8h">class_events.h</innerfile>
+    <innerfile refid="class__file_8h">class_file.h</innerfile>
+    <innerfile refid="class__gdi_8h">class_gdi.h</innerfile>
+    <innerfile refid="class__gl_8h">class_gl.h</innerfile>
+    <innerfile refid="class__grid_8h">class_grid.h</innerfile>
+    <innerfile refid="class__help_8h">class_help.h</innerfile>
+    <innerfile refid="class__html_8h">class_html.h</innerfile>
+    <innerfile refid="class__ipc_8h">class_ipc.h</innerfile>
+    <innerfile refid="class__logging_8h">class_logging.h</innerfile>
+    <innerfile refid="class__managedwnd_8h">class_managedwnd.h</innerfile>
+    <innerfile refid="class__media_8h">class_media.h</innerfile>
+    <innerfile refid="class__menus_8h">class_menus.h</innerfile>
+    <innerfile refid="class__misc_8h">class_misc.h</innerfile>
+    <innerfile refid="class__miscwnd_8h">class_miscwnd.h</innerfile>
+    <innerfile refid="class__net_8h">class_net.h</innerfile>
+    <innerfile refid="class__pickers_8h">class_pickers.h</innerfile>
+    <innerfile refid="class__printing_8h">class_printing.h</innerfile>
+    <innerfile refid="class__propgrid_8h">class_propgrid.h</innerfile>
+    <innerfile refid="class__ribbon_8h">class_ribbon.h</innerfile>
+    <innerfile refid="class__richtext_8h">class_richtext.h</innerfile>
+    <innerfile refid="class__rtti_8h">class_rtti.h</innerfile>
+    <innerfile refid="class__smartpointers_8h">class_smartpointers.h</innerfile>
+    <innerfile refid="class__stc_8h">class_stc.h</innerfile>
+    <innerfile refid="class__streams_8h">class_streams.h</innerfile>
+    <innerfile refid="class__threading_8h">class_threading.h</innerfile>
+    <innerfile refid="class__validator_8h">class_validator.h</innerfile>
+    <innerfile refid="class__vfs_8h">class_vfs.h</innerfile>
+    <innerfile refid="class__webview_8h">class_webview.h</innerfile>
+    <innerfile refid="class__winlayout_8h">class_winlayout.h</innerfile>
+    <innerfile refid="class__xml_8h">class_xml.h</innerfile>
+    <innerfile refid="class__xrc_8h">class_xrc.h</innerfile>
+    <innerfile refid="funcmacro_8h">funcmacro.h</innerfile>
+    <innerfile refid="funcmacro__appinitterm_8h">funcmacro_appinitterm.h</innerfile>
+    <innerfile refid="funcmacro__atomic_8h">funcmacro_atomic.h</innerfile>
+    <innerfile refid="funcmacro__byteorder_8h">funcmacro_byteorder.h</innerfile>
+    <innerfile refid="funcmacro__crt_8h">funcmacro_crt.h</innerfile>
+    <innerfile refid="funcmacro__debug_8h">funcmacro_debug.h</innerfile>
+    <innerfile refid="funcmacro__dialog_8h">funcmacro_dialog.h</innerfile>
+    <innerfile refid="funcmacro__env_8h">funcmacro_env.h</innerfile>
+    <innerfile refid="funcmacro__events_8h">funcmacro_events.h</innerfile>
+    <innerfile refid="funcmacro__file_8h">funcmacro_file.h</innerfile>
+    <innerfile refid="funcmacro__gdi_8h">funcmacro_gdi.h</innerfile>
+    <innerfile refid="funcmacro__locale_8h">funcmacro_locale.h</innerfile>
+    <innerfile refid="funcmacro__log_8h">funcmacro_log.h</innerfile>
+    <innerfile refid="funcmacro__math_8h">funcmacro_math.h</innerfile>
+    <innerfile refid="funcmacro__misc_8h">funcmacro_misc.h</innerfile>
+    <innerfile refid="funcmacro__networkuseros_8h">funcmacro_networkuseros.h</innerfile>
+    <innerfile refid="funcmacro__procctrl_8h">funcmacro_procctrl.h</innerfile>
+    <innerfile refid="funcmacro__rtti_8h">funcmacro_rtti.h</innerfile>
+    <innerfile refid="funcmacro__string_8h">funcmacro_string.h</innerfile>
+    <innerfile refid="funcmacro__thread_8h">funcmacro_thread.h</innerfile>
+    <innerfile refid="funcmacro__time_8h">funcmacro_time.h</innerfile>
+    <innerfile refid="funcmacro__version_8h">funcmacro_version.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-svn/docs/doxygen/groups/"/>
+  </compounddef>
+</doxygen>

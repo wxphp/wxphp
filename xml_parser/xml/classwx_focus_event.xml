@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_focus_event" kind="class" prot="public">
     <compoundname>wxFocusEvent</compoundname>
     <basecompoundref refid="classwx_event" prot="public" virt="non-virtual">wxEvent</basecompoundref>
@@ -26,7 +26,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2948"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2969"/>
       </memberdef>
       <memberdef kind="function" id="classwx_focus_event_1abdd67f681894fa94e596ab3134b30d3e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
@@ -39,7 +39,7 @@
 <para>Warning: the window pointer may be NULL! </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2957"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2978"/>
       </memberdef>
       <memberdef kind="function" id="classwx_focus_event_1a0761d1e6d4d6e987ad4e2a8ee9e63f32" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -56,7 +56,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2959"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2980"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -68,52 +68,52 @@
 <listitem><para>EVT_KILL_FOCUS(func): Process a <computeroutput>wxEVT_KILL_FOCUS</computeroutput> event. </para></listitem>
 </itemizedlist>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="overview__events" kindref="compound">Events and Event Handling</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="overview_events" kindref="compound">Events and Event Handling</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="6355">
+      <node id="6359">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="6353">
+      <node id="6357">
         <label>wxFocusEvent</label>
         <link refid="classwx_focus_event"/>
-        <childnode refid="6354" relation="public-inheritance">
+        <childnode refid="6358" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6354">
+      <node id="6358">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="6355" relation="public-inheritance">
+        <childnode refid="6359" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="6358">
+      <node id="6362">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="6359" relation="usage">
+        <childnode refid="6363" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="6356">
+      <node id="6360">
         <label>wxFocusEvent</label>
         <link refid="classwx_focus_event"/>
-        <childnode refid="6357" relation="public-inheritance">
+        <childnode refid="6361" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6357">
+      <node id="6361">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="6358" relation="public-inheritance">
+        <childnode refid="6362" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6359">
+      <node id="6363">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2943" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="2942" bodyend="2960"/>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2964" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="2963" bodyend="2981"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxFocusEvent</scope><name>AllocExclusive</name></member>
       <member refid="classwx_event_1a26878097a702e8d0368da150125d4158" prot="public" virt="pure-virtual"><scope>wxFocusEvent</scope><name>Clone</name></member>

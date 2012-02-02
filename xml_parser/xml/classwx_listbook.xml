@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_listbook" kind="class" prot="public">
     <compoundname>wxListbook</compoundname>
     <basecompoundref refid="classwx_book_ctrl_base" prot="public" virt="non-virtual">wxBookCtrlBase</basecompoundref>
@@ -76,7 +76,7 @@
     <briefdescription>
 <para><ref refid="classwx_listbook" kindref="compound">wxListbook</ref> is a class similar to <ref refid="classwx_notebook" kindref="compound">wxNotebook</ref> but which uses a <ref refid="classwx_list_ctrl" kindref="compound">wxListCtrl</ref> to show the labels instead of the tabs. </para>    </briefdescription>
     <detaileddescription>
-<para>The underlying <ref refid="classwx_list_ctrl" kindref="compound">wxListCtrl</ref> displays page labels in a one-column report view by default. Calling wxBookCtrl::SetImageList will implicitly switch the control to use an icon view.</para><para>For usage documentation of this class, please refer to the base abstract class wxBookCtrl. You can also use the <ref refid="page__samples_1page_samples_notebook" kindref="member">Notebook Sample</ref> to see <ref refid="classwx_listbook" kindref="compound">wxListbook</ref> in action.</para><para><heading level="2">Styles</heading>
+<para>The underlying <ref refid="classwx_list_ctrl" kindref="compound">wxListCtrl</ref> displays page labels in a one-column report view by default. Calling wxBookCtrl::SetImageList will implicitly switch the control to use an icon view.</para><para>For usage documentation of this class, please refer to the base abstract class wxBookCtrl. You can also use the <ref refid="page_samples_1page_samples_notebook" kindref="member">Notebook Sample</ref> to see <ref refid="classwx_listbook" kindref="compound">wxListbook</ref> in action.</para><para><heading level="2">Styles</heading>
 </para><para>This class supports the following styles: <itemizedlist>
 <listitem><para>wxLB_DEFAULT: Choose the default location for the labels depending on the current platform (left everywhere except Mac where it is top). </para></listitem>
 <listitem><para>wxLB_TOP: Place labels above the page area. </para></listitem>
@@ -90,107 +90,107 @@
 <listitem><para>EVT_LISTBOOK_PAGE_CHANGING(id,  func): The page selection is about to be changed. Processes a <computeroutput>wxEVT_COMMAND_LISTBOOK_PAGE_CHANGING</computeroutput> event. This event can be vetoed. </para></listitem>
 </itemizedlist>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__bookctrl" kindref="compound">Book Controls</ref> <htmlonly> &lt;br&gt;&lt;div&gt;&lt;span class=&apos;appearance&apos;&gt;Appearance:&lt;/span&gt;&lt;br&gt;&lt;table class=&apos;appearance&apos;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&apos;wxmsw/listbook.png&apos; alt=&apos;wxMSW appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxgtk/listbook.png&apos; alt=&apos;wxGTK appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxmac/listbook.png&apos; alt=&apos;wxMac appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;wxMSW appearance&lt;/td&gt;&lt;td&gt;wxGTK appearance&lt;/td&gt;&lt;td&gt;wxMac appearance&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt; </htmlonly></para><para><simplesect kind="see"><para><ref refid="interface_2wx_2bookctrl_8h_1ab367c06ea9df73f0d3bf3c464afdb7d6" kindref="member">wxBookCtrl</ref>, <ref refid="classwx_notebook" kindref="compound">wxNotebook</ref>, <ref refid="page__samples_1page_samples_notebook" kindref="member">Notebook Sample</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__bookctrl" kindref="compound">Book Controls</ref> <htmlonly> &lt;br&gt;&lt;div&gt;&lt;span class=&apos;appearance&apos;&gt;Appearance:&lt;/span&gt;&lt;br&gt;&lt;table class=&apos;appearance&apos;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&apos;wxmsw/listbook.png&apos; alt=&apos;wxMSW appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxgtk/listbook.png&apos; alt=&apos;wxGTK appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxmac/listbook.png&apos; alt=&apos;wxMac appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;wxMSW appearance&lt;/td&gt;&lt;td&gt;wxGTK appearance&lt;/td&gt;&lt;td&gt;wxMac appearance&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt; </htmlonly></para><para><simplesect kind="see"><para><ref refid="interface_2wx_2bookctrl_8h_1ab367c06ea9df73f0d3bf3c464afdb7d6" kindref="member">wxBookCtrl</ref>, <ref refid="classwx_notebook" kindref="compound">wxNotebook</ref>, <ref refid="page_samples_1page_samples_notebook" kindref="member">Notebook Sample</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7399">
+      <node id="7403">
         <label>wxBookCtrlBase</label>
         <link refid="classwx_book_ctrl_base"/>
-        <childnode refid="7400" relation="public-inheritance">
+        <childnode refid="7404" relation="public-inheritance">
         </childnode>
-        <childnode refid="7405" relation="public-inheritance">
+        <childnode refid="7409" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7403">
+      <node id="7407">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="7402">
+      <node id="7406">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="7403" relation="public-inheritance">
+        <childnode refid="7407" relation="public-inheritance">
         </childnode>
-        <childnode refid="7404" relation="public-inheritance">
+        <childnode refid="7408" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7404">
+      <node id="7408">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="7398">
+      <node id="7402">
         <label>wxListbook</label>
         <link refid="classwx_listbook"/>
-        <childnode refid="7399" relation="public-inheritance">
+        <childnode refid="7403" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7400">
+      <node id="7404">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="7401" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="7401">
-        <label>wxWindow</label>
-        <link refid="classwx_window"/>
-        <childnode refid="7402" relation="public-inheritance">
+        <childnode refid="7405" relation="public-inheritance">
         </childnode>
       </node>
       <node id="7405">
+        <label>wxWindow</label>
+        <link refid="classwx_window"/>
+        <childnode refid="7406" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7409">
         <label>wxWithImages</label>
         <link refid="classwx_with_images"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7407">
+      <node id="7411">
         <label>wxBookCtrlBase</label>
         <link refid="classwx_book_ctrl_base"/>
-        <childnode refid="7408" relation="public-inheritance">
+        <childnode refid="7412" relation="public-inheritance">
         </childnode>
-        <childnode refid="7414" relation="public-inheritance">
+        <childnode refid="7418" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7411">
+      <node id="7415">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="7412" relation="usage">
+        <childnode refid="7416" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="7410">
+      <node id="7414">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
+        <childnode refid="7415" relation="public-inheritance">
+        </childnode>
+        <childnode refid="7417" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7417">
+        <label>wxTrackable</label>
+        <link refid="classwx_trackable"/>
+      </node>
+      <node id="7410">
+        <label>wxListbook</label>
+        <link refid="classwx_listbook"/>
         <childnode refid="7411" relation="public-inheritance">
         </childnode>
+      </node>
+      <node id="7412">
+        <label>wxControl</label>
+        <link refid="classwx_control"/>
         <childnode refid="7413" relation="public-inheritance">
         </childnode>
       </node>
       <node id="7413">
-        <label>wxTrackable</label>
-        <link refid="classwx_trackable"/>
-      </node>
-      <node id="7406">
-        <label>wxListbook</label>
-        <link refid="classwx_listbook"/>
-        <childnode refid="7407" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="7408">
-        <label>wxControl</label>
-        <link refid="classwx_control"/>
-        <childnode refid="7409" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="7409">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="7410" relation="public-inheritance">
+        <childnode refid="7414" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7414">
+      <node id="7418">
         <label>wxWithImages</label>
         <link refid="classwx_with_images"/>
       </node>
-      <node id="7412">
+      <node id="7416">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

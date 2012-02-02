@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="base64_8h" kind="file">
     <compoundname>base64.h</compoundname>
       <sectiondef kind="enum">
@@ -90,7 +90,7 @@
 </parameteritem>
 </parameterlist>
 <simplesect kind="return"><para><computeroutput>wxCONV_FAILED</computeroutput> if the output buffer is too small.</para></simplesect>
-Include file: <verbatim>#include &lt;wx/base64.h&gt; </verbatim> </para>        </detaileddescription>
+Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/base64.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/base64.h" line="53"/>
@@ -126,7 +126,7 @@ Include file: <verbatim>#include &lt;wx/base64.h&gt; </verbatim> </para>        
 <para>The length of the input data.</para></parameterdescription>
 </parameteritem>
 </parameterlist>
-Include file: <verbatim>#include &lt;wx/base64.h&gt; </verbatim> </para>        </detaileddescription>
+Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/base64.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/base64.h" line="72"/>
@@ -143,7 +143,7 @@ Include file: <verbatim>#include &lt;wx/base64.h&gt; </verbatim> </para>        
         <briefdescription>
 <para>This function encodes the given data using base64 and returns the output as a <ref refid="classwx_string" kindref="compound">wxString</ref>. </para>        </briefdescription>
         <detaileddescription>
-<para>There is no error return.</para><para>Include file: <verbatim>#include &lt;wx/base64.h&gt; </verbatim> </para>        </detaileddescription>
+<para>There is no error return.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/base64.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/base64.h" line="82"/>
@@ -160,7 +160,7 @@ Include file: <verbatim>#include &lt;wx/base64.h&gt; </verbatim> </para>        
         <briefdescription>
 <para>Returns the size of the buffer necessary to contain the data encoded in a base64 string of length <emphasis>srcLen</emphasis>. </para>        </briefdescription>
         <detaileddescription>
-<para>This can be useful for allocating a buffer to be passed to <ref refid="group__group__funcmacro__misc_1ga97da529725f807059069449cdc0eb6e3" kindref="member">wxBase64Decode()</ref>.</para><para>Include file: <verbatim>#include &lt;wx/base64.h&gt; </verbatim> </para>        </detaileddescription>
+<para>This can be useful for allocating a buffer to be passed to <ref refid="group__group__funcmacro__misc_1ga97da529725f807059069449cdc0eb6e3" kindref="member">wxBase64Decode()</ref>.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/base64.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/base64.h" line="92"/>
@@ -177,7 +177,7 @@ Include file: <verbatim>#include &lt;wx/base64.h&gt; </verbatim> </para>        
         <briefdescription>
 <para>Returns the length of the string with base64 representation of a buffer of specified size <emphasis>len</emphasis>. </para>        </briefdescription>
         <detaileddescription>
-<para>This can be useful for allocating the buffer passed to <ref refid="group__group__funcmacro__misc_1gae76ac8ba0136d28435a233108cc40bee" kindref="member">wxBase64Encode()</ref>.</para><para>Include file: <verbatim>#include &lt;wx/base64.h&gt; </verbatim> </para>        </detaileddescription>
+<para>This can be useful for allocating the buffer passed to <ref refid="group__group__funcmacro__misc_1gae76ac8ba0136d28435a233108cc40bee" kindref="member">wxBase64Encode()</ref>.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/base64.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/base64.h" line="101"/>
@@ -260,7 +260,7 @@ Include file: <verbatim>#include &lt;wx/base64.h&gt; </verbatim> </para>        
 <para>If this pointer is non-NULL and an error occurs during decoding, it is filled with the index of the invalid character.</para></parameterdescription>
 </parameteritem>
 </parameterlist>
-Include file: <verbatim>#include &lt;wx/base64.h&gt; </verbatim> </para>        </detaileddescription>
+Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/base64.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/base64.h" line="145"/>
@@ -296,7 +296,7 @@ Include file: <verbatim>#include &lt;wx/base64.h&gt; </verbatim> </para>        
 <para>Decode a Base64-encoded <ref refid="classwx_string" kindref="compound">wxString</ref>. </para>        </briefdescription>
         <detaileddescription>
 <para>See the <ref refid="group__group__funcmacro__misc_1ga97da529725f807059069449cdc0eb6e3" kindref="member">wxBase64Decode(void*,size_t,const char*,size_t,wxBase64DecodeMode,size_t*)</ref> overload for more information about the parameters of this function, the only difference between it and this one is that a <ref refid="classwx_string" kindref="compound">wxString</ref> is used instead of a <computeroutput>char*</computeroutput> pointer and its length.</para><para><simplesect kind="since"><para>2.9.1</para></simplesect>
-Include file: <verbatim>#include &lt;wx/base64.h&gt; </verbatim> </para>        </detaileddescription>
+Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/base64.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/base64.h" line="162"/>
@@ -328,7 +328,7 @@ Include file: <verbatim>#include &lt;wx/base64.h&gt; </verbatim> </para>        
         <briefdescription>
 <para>Decode a Base64-encoded string and return decoded contents in a buffer. </para>        </briefdescription>
         <detaileddescription>
-<para>See the <ref refid="group__group__funcmacro__misc_1ga97da529725f807059069449cdc0eb6e3" kindref="member">wxBase64Decode(void*,size_t,const char*,size_t,wxBase64DecodeMode,size_t*)</ref> overload for more information about the parameters of this function. The difference of this overload is that it allocates a buffer of necessary size on its own and returns it, freeing you from the need to do it manually. Because of this, it is simpler to use and is recommended for normal use.</para><para>Include file: <verbatim>#include &lt;wx/base64.h&gt; </verbatim> </para>        </detaileddescription>
+<para>See the <ref refid="group__group__funcmacro__misc_1ga97da529725f807059069449cdc0eb6e3" kindref="member">wxBase64Decode(void*,size_t,const char*,size_t,wxBase64DecodeMode,size_t*)</ref> overload for more information about the parameters of this function. The difference of this overload is that it allocates a buffer of necessary size on its own and returns it, freeing you from the need to do it manually. Because of this, it is simpler to use and is recommended for normal use.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/base64.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/base64.h" line="178"/>
@@ -355,7 +355,7 @@ Include file: <verbatim>#include &lt;wx/base64.h&gt; </verbatim> </para>        
         <briefdescription>
 <para>Decode a Base64-encoded <ref refid="classwx_string" kindref="compound">wxString</ref> and return decoded contents in a buffer. </para>        </briefdescription>
         <detaileddescription>
-<para>See the <ref refid="group__group__funcmacro__misc_1ga97da529725f807059069449cdc0eb6e3" kindref="member">wxBase64Decode(void*,size_t,const char*,size_t,wxBase64DecodeMode,size_t*)</ref> overload for more information about the parameters of this function.</para><para>This overload takes as input a <ref refid="classwx_string" kindref="compound">wxString</ref> and returns the internally-allocated memory as a <ref refid="classwx_memory_buffer" kindref="compound">wxMemoryBuffer</ref>, containing the Base64-decoded data.</para><para>Include file: <verbatim>#include &lt;wx/base64.h&gt; </verbatim> </para>        </detaileddescription>
+<para>See the <ref refid="group__group__funcmacro__misc_1ga97da529725f807059069449cdc0eb6e3" kindref="member">wxBase64Decode(void*,size_t,const char*,size_t,wxBase64DecodeMode,size_t*)</ref> overload for more information about the parameters of this function.</para><para>This overload takes as input a <ref refid="classwx_string" kindref="compound">wxString</ref> and returns the internally-allocated memory as a <ref refid="classwx_memory_buffer" kindref="compound">wxMemoryBuffer</ref>, containing the Base64-decoded data.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/base64.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/base64.h" line="193"/>

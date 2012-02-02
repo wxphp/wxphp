@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_paint_d_c" kind="class" prot="public">
     <compoundname>wxPaintDC</compoundname>
     <basecompoundref refid="classwx_window_d_c" prot="public" virt="non-virtual">wxWindowDC</basecompoundref>
@@ -27,59 +27,59 @@
 <para>A <ref refid="classwx_paint_d_c" kindref="compound">wxPaintDC</ref> must be constructed if an application wishes to paint on the client area of a window from within an EVT_PAINT() event handler. </para>    </briefdescription>
     <detaileddescription>
 <para>This should normally be constructed as a temporary stack object; don&apos;t store a <ref refid="classwx_paint_d_c" kindref="compound">wxPaintDC</ref> object. If you have an EVT_PAINT() handler, you <emphasis>must</emphasis> create a <ref refid="classwx_paint_d_c" kindref="compound">wxPaintDC</ref> object within it even if you don&apos;t actually use it.</para><para>Using <ref refid="classwx_paint_d_c" kindref="compound">wxPaintDC</ref> within your EVT_PAINT() handler is important because it automatically sets the clipping area to the damaged area of the window. Attempts to draw outside this area do not appear.</para><para>To draw on a window from outside your EVT_PAINT() handler, construct a <ref refid="classwx_client_d_c" kindref="compound">wxClientDC</ref> object.</para><para>To draw on the whole window including decorations, construct a <ref refid="classwx_window_d_c" kindref="compound">wxWindowDC</ref> object (Windows only).</para><para>A <ref refid="classwx_paint_d_c" kindref="compound">wxPaintDC</ref> object is initialized to use the same font and colours as the window it is associated with.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__dc" kindref="compound">Device Contexts</ref></para><para><simplesect kind="see"><para><ref refid="classwx_d_c" kindref="compound">wxDC</ref>, <ref refid="classwx_client_d_c" kindref="compound">wxClientDC</ref>, <ref refid="classwx_memory_d_c" kindref="compound">wxMemoryDC</ref>, <ref refid="classwx_window_d_c" kindref="compound">wxWindowDC</ref>, <ref refid="classwx_screen_d_c" kindref="compound">wxScreenDC</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__dc" kindref="compound">Device Contexts</ref></para><para><simplesect kind="see"><para><ref refid="classwx_d_c" kindref="compound">wxDC</ref>, <ref refid="classwx_client_d_c" kindref="compound">wxClientDC</ref>, <ref refid="classwx_memory_d_c" kindref="compound">wxMemoryDC</ref>, <ref refid="classwx_window_d_c" kindref="compound">wxWindowDC</ref>, <ref refid="classwx_screen_d_c" kindref="compound">wxScreenDC</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="8516">
+      <node id="8524">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="8514">
+      <node id="8522">
         <label>wxWindowDC</label>
         <link refid="classwx_window_d_c"/>
-        <childnode refid="8515" relation="public-inheritance">
+        <childnode refid="8523" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8515">
+      <node id="8523">
         <label>wxDC</label>
         <link refid="classwx_d_c"/>
-        <childnode refid="8516" relation="public-inheritance">
+        <childnode refid="8524" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8513">
+      <node id="8521">
         <label>wxPaintDC</label>
         <link refid="classwx_paint_d_c"/>
-        <childnode refid="8514" relation="public-inheritance">
+        <childnode refid="8522" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="8520">
+      <node id="8528">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="8521" relation="usage">
+        <childnode refid="8529" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="8518">
+      <node id="8526">
         <label>wxWindowDC</label>
         <link refid="classwx_window_d_c"/>
-        <childnode refid="8519" relation="public-inheritance">
+        <childnode refid="8527" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8519">
+      <node id="8527">
         <label>wxDC</label>
         <link refid="classwx_d_c"/>
-        <childnode refid="8520" relation="public-inheritance">
+        <childnode refid="8528" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8517">
+      <node id="8525">
         <label>wxPaintDC</label>
         <link refid="classwx_paint_d_c"/>
-        <childnode refid="8518" relation="public-inheritance">
+        <childnode refid="8526" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8521">
+      <node id="8529">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

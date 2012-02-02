@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="arrstr_8h" kind="file">
     <compoundname>arrstr.h</compoundname>
     <innerclass refid="classwx_array_string" prot="public">wxArrayString</innerclass>
@@ -27,7 +27,7 @@
 <para>Splits the given <ref refid="classwx_string" kindref="compound">wxString</ref> object using the separator <emphasis>sep</emphasis> and returns the result as a <ref refid="classwx_array_string" kindref="compound">wxArrayString</ref>. </para>        </briefdescription>
         <detaileddescription>
 <para>If the <emphasis>escape</emphasis> character is non-NULL, then the occurrences of <emphasis>sep</emphasis> immediately prefixed with <emphasis>escape</emphasis> are not considered as separators. Note that empty tokens will be generated if there are two or more adjacent separators.</para><para><simplesect kind="see"><para><ref refid="group__group__funcmacro__string_1gaa77e8bb770f70b5e94aff5b6c7804c44" kindref="member">wxJoin()</ref></para></simplesect>
-Include file: <verbatim>#include &lt;wx/arrstr.h&gt; </verbatim> </para>        </detaileddescription>
+Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/arrstr.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/arrstr.h" line="355"/>
@@ -54,7 +54,7 @@ Include file: <verbatim>#include &lt;wx/arrstr.h&gt; </verbatim> </para>        
 <para>Concatenate all lines of the given <ref refid="classwx_array_string" kindref="compound">wxArrayString</ref> object using the separator <emphasis>sep</emphasis> and returns the result as a <ref refid="classwx_string" kindref="compound">wxString</ref>. </para>        </briefdescription>
         <detaileddescription>
 <para>If the <emphasis>escape</emphasis> character is non-NULL, then it&apos;s used as prefix for each occurrence of <emphasis>sep</emphasis> in the strings contained in <emphasis>arr</emphasis> before joining them which is necessary in order to be able to recover the original array contents from the string later using <ref refid="group__group__funcmacro__string_1ga530ba2b0b90c59bc3d98c0eaf6f7a912" kindref="member">wxSplit()</ref>.</para><para><simplesect kind="see"><para><ref refid="group__group__funcmacro__string_1ga530ba2b0b90c59bc3d98c0eaf6f7a912" kindref="member">wxSplit()</ref></para></simplesect>
-Include file: <verbatim>#include &lt;wx/arrstr.h&gt; </verbatim> </para>        </detaileddescription>
+Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/arrstr.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/arrstr.h" line="371"/>

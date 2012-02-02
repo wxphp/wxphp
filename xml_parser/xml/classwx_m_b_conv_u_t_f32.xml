@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_m_b_conv_u_t_f32" kind="class" prot="public">
     <compoundname>wxMBConvUTF32</compoundname>
     <basecompoundref refid="classwx_m_b_conv" prot="public" virt="non-virtual">wxMBConv</basecompoundref>
@@ -8,28 +8,28 @@
 <para>This class is used to convert between multibyte encodings and UTF-32 Unicode encoding (also known as UCS-4). </para>    </briefdescription>
     <detaileddescription>
 <para>Unlike UTF-8 encoding, UTF-32 uses (double) words and not bytes and hence depends on the byte ordering: big or little endian. Hence this class is provided in two versions: wxMBConvUTF32LE and wxMBConvUTF32BE and <ref refid="classwx_m_b_conv_u_t_f32" kindref="compound">wxMBConvUTF32</ref> itself is just a typedef for one of them (native for the given platform, e.g. LE under Windows and BE under Mac).</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__conv" kindref="compound">Text Conversion</ref></para><para><simplesect kind="see"><para><ref refid="classwx_m_b_conv_u_t_f8" kindref="compound">wxMBConvUTF8</ref>, <ref refid="classwx_m_b_conv_u_t_f16" kindref="compound">wxMBConvUTF16</ref>, <ref refid="overview__mbconv" kindref="compound">wxMBConv Overview</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__conv" kindref="compound">Text Conversion</ref></para><para><simplesect kind="see"><para><ref refid="classwx_m_b_conv_u_t_f8" kindref="compound">wxMBConvUTF8</ref>, <ref refid="classwx_m_b_conv_u_t_f16" kindref="compound">wxMBConvUTF16</ref>, <ref refid="overview_mbconv" kindref="compound">wxMBConv Overview</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7582">
+      <node id="7588">
         <label>wxMBConvUTF32</label>
         <link refid="classwx_m_b_conv_u_t_f32"/>
-        <childnode refid="7583" relation="public-inheritance">
+        <childnode refid="7589" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7583">
+      <node id="7589">
         <label>wxMBConv</label>
         <link refid="classwx_m_b_conv"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7584">
+      <node id="7590">
         <label>wxMBConvUTF32</label>
         <link refid="classwx_m_b_conv_u_t_f32"/>
-        <childnode refid="7585" relation="public-inheritance">
+        <childnode refid="7591" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7585">
+      <node id="7591">
         <label>wxMBConv</label>
         <link refid="classwx_m_b_conv"/>
       </node>

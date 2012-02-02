@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="overview_toolbar" kind="page">
+    <compoundname>overview_toolbar</compoundname>
+    <title>Toolbar Overview</title>
+    <detaileddescription>
+<para>Classes: <ref refid="classwx_tool_bar" kindref="compound">wxToolBar</ref></para><para><itemizedlist>
+<listitem><para><ref refid="overview_toolbar_1overview_toolbar_intro" kindref="member">Introduction</ref> </para></listitem>
+<listitem><para><ref refid="overview_toolbar_1overview_toolbar_library" kindref="member">Using the Toolbar Library</ref></para></listitem>
+</itemizedlist>
+<hruler/>
+</para><sect1 id="overview_toolbar_1overview_toolbar_intro">
+<title>Introduction</title>
+<para>The toolbar family of classes allows an application to use toolbars in a variety of configurations and styles.</para><para>The toolbar is a popular user interface component and contains a set of bitmap buttons or toggles. A toolbar gives faster access to an application&apos;s facilities than menus, which have to be popped up and selected rather laboriously.</para><para>Instead of supplying one toolbar class with a number of different implementations depending on platform, wxWidgets separates out the classes. This is because there are a number of different toolbar styles that you may wish to use simultaneously, and also, future toolbar implementations will emerge which cannot all be shoe-horned into the one class.</para><para>For each platform, the symbol <ref refid="classwx_tool_bar" kindref="compound">wxToolBar</ref> is defined to be one of the specific toolbar classes.</para><para>The following is a summary of the toolbar classes and their differences:</para><para><itemizedlist>
+<listitem><para>wxToolBarBase: This is a base class with pure virtual functions, and should not be used directly. </para></listitem>
+<listitem><para>wxToolBarSimple: A simple toolbar class written entirely with generic wxWidgets functionality. A simple 3D effect for buttons is possible, but it is not consistent with the Windows look and feel. This toolbar can scroll, and you can have arbitrary numbers of rows and columns. </para></listitem>
+<listitem><para>wxToolBarMSW: This class implements an old-style Windows toolbar, only on Windows. There are small, three-dimensional buttons, which do not (currently) reflect the current Windows colour settings: the buttons are grey. This is the default <ref refid="classwx_tool_bar" kindref="compound">wxToolBar</ref> on 16-bit windows. </para></listitem>
+<listitem><para>wxToolBar95: Uses the native Windows 95 toolbar class. It dynamically adjusts it&apos;s background and button colours according to user colour settings. CreateTools must be called after the tools have been added. No absolute positioning is supported but you can specify the number of rows, and add tool separators with <computeroutput>AddSeparator</computeroutput>. Tooltips are supported. <computeroutput>OnRightClick</computeroutput> is not supported. This is the default <ref refid="classwx_tool_bar" kindref="compound">wxToolBar</ref> on Windows 95, Windows NT 4 and above. With the style wxTB_FLAT, the flat toolbar look is used, with a border that is highlighted when the cursor moves over the buttons.</para></listitem>
+</itemizedlist>
+A toolbar might appear as a single row of images under the menubar, or it might be in a separate frame layout in several rows and columns. The class handles the layout of the images, unless explicit positioning is requested.</para><para>A tool is a bitmap which can either be a button (there is no &apos;state&apos;, it just generates an event when clicked) or it can be a toggle. If a toggle, a second bitmap can be provided to depict the &apos;on&apos; state; if the second bitmap is omitted, either the inverse of the first bitmap will be used (for monochrome displays) or a thick border is drawn around the bitmap (for colour displays where inverting will not have the desired result).</para><para>The Windows-specific toolbar classes expect 16-colour bitmaps that are 16 pixels wide and 15 pixels high. If you want to use a different size, call <computeroutput>SetToolBitmapSize</computeroutput> as the demo shows, before adding tools to the button bar. Don&apos;t supply more than one bitmap for each tool, because the toolbar generates all three images (normal, depressed, and checked) from the single bitmap you give it.</para></sect1>
+<sect1 id="overview_toolbar_1overview_toolbar_library">
+<title>Using the Toolbar Library</title>
+<para>Include <computeroutput>&quot;wx/toolbar.h&quot;</computeroutput>, or if using a class directly, one of:</para><para><itemizedlist>
+<listitem><para><computeroutput>&quot;wx/msw/tbarmsw.h&quot;</computeroutput> for wxToolBarMSW</para></listitem><listitem><para><computeroutput>&quot;wx/msw/tbar95.h&quot;</computeroutput> for wxToolBar95</para></listitem><listitem><para><computeroutput>&quot;wx/tbarsmpl.h&quot;</computeroutput> for wxToolBarSimple</para></listitem></itemizedlist>
+</para><para>An example of using a toolbar is given in the &quot;toolbar&quot; sample. </para></sect1>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

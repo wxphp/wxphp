@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="structwx_linux_distribution_info" kind="struct" prot="public">
     <compoundname>wxLinuxDistributionInfo</compoundname>
     <includes local="no">wx/platinfo.h</includes>
@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="130" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" bodystart="130" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="128" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" bodystart="128" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structwx_linux_distribution_info_1ac447b43da687ba16932e585cdd7b875b" prot="public" static="no" mutable="no">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -28,7 +28,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="131" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" bodystart="131" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="129" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" bodystart="129" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structwx_linux_distribution_info_1a7b3568edd6c359a3c79da3bdb5290356" prot="public" static="no" mutable="no">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -41,7 +41,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="132" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" bodystart="132" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="130" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" bodystart="130" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structwx_linux_distribution_info_1a351c0063ae682948a9b11dd4888e3348" prot="public" static="no" mutable="no">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -54,7 +54,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="133" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" bodystart="133" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="131" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" bodystart="131" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -73,7 +73,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="135"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="133"/>
       </memberdef>
       <memberdef kind="function" id="structwx_linux_distribution_info_1a974d1e318b78239d7c15bf4432179aea" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -90,7 +90,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="136"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="134"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -98,14 +98,14 @@
     <detaileddescription>
 <para>See <ref refid="group__group__funcmacro__networkuseros_1ga06f6fb212c396bd20865ee4e2f69aa1f" kindref="member">wxGetLinuxDistributionInfo()</ref> or <ref refid="classwx_platform_info_1a79be6e7e9749940c41f208bb29acee3d" kindref="member">wxPlatformInfo::GetLinuxDistributionInfo()</ref> for more info. </para>    </detaileddescription>
     <collaborationgraph>
-      <node id="7395">
+      <node id="7399">
         <label>wxString</label>
         <link refid="classwx_string"/>
       </node>
-      <node id="7394">
+      <node id="7398">
         <label>wxLinuxDistributionInfo</label>
         <link refid="structwx_linux_distribution_info"/>
-        <childnode refid="7395" relation="usage">
+        <childnode refid="7399" relation="usage">
           <edgelabel>Description</edgelabel>
           <edgelabel>CodeName</edgelabel>
           <edgelabel>Release</edgelabel>
@@ -113,7 +113,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="129" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" bodystart="128" bodyend="137"/>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="127" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" bodystart="126" bodyend="135"/>
     <listofallmembers>
       <member refid="structwx_linux_distribution_info_1a7b3568edd6c359a3c79da3bdb5290356" prot="public" virt="non-virtual"><scope>wxLinuxDistributionInfo</scope><name>CodeName</name></member>
       <member refid="structwx_linux_distribution_info_1a351c0063ae682948a9b11dd4888e3348" prot="public" virt="non-virtual"><scope>wxLinuxDistributionInfo</scope><name>Description</name></member>

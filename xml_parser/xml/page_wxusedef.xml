@@ -1,0 +1,609 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="page_wxusedef" kind="page">
+    <compoundname>page_wxusedef</compoundname>
+    <title>wxUSE preprocessor symbols defined by wxWidgets</title>
+    <detaileddescription>
+<para>This section documents the wxUSE preprocessor symbols used in the wxWidgets source, grouped by category (and sorted by alphabetical order inside each category).</para><para>These symbols are always defined and whether the given feature is active or not depends on their value: if defined as <computeroutput>1</computeroutput>, feature is active, otherwise it is disabled. Because of this these symbols should be always tested using #if and not #ifdef.</para><para><itemizedlist>
+<listitem><para><ref refid="page_wxusedef_1page_wxusedef_important" kindref="member">Most important wxUSE symbols</ref> </para></listitem>
+<listitem><para><ref refid="page_wxusedef_1page_wxusedef_multi" kindref="member">Generic wxUSE preprocessor symbols</ref> </para></listitem>
+<listitem><para><ref refid="page_wxusedef_1page_wxusedef_unix" kindref="member">wxUSE preprocessor symbols used only under Unix platforms</ref> </para></listitem>
+<listitem><para><ref refid="page_wxusedef_1page_wxusedef_x11" kindref="member">wxUSE preprocessor symbols used only in wxX11 Platform</ref> </para></listitem>
+<listitem><para><ref refid="page_wxusedef_1page_wxusedef_gtk" kindref="member">wxUSE preprocessor symbols used only in wxGTK port</ref> </para></listitem>
+<listitem><para><ref refid="page_wxusedef_1page_wxusedef_mac" kindref="member">wxUSE preprocessor symbols used only in wxMac port</ref> </para></listitem>
+<listitem><para><ref refid="page_wxusedef_1page_wxusedef_motif" kindref="member">wxUSE preprocessor symbols used only in wxMotif port</ref> </para></listitem>
+<listitem><para><ref refid="page_wxusedef_1page_wxusedef_cocoa" kindref="member">wxUSE preprocessor symbols used only in Cocoa port</ref> </para></listitem>
+<listitem><para><ref refid="page_wxusedef_1page_wxusedef_os2" kindref="member">wxUSE preprocessor symbols used only in OS2 port</ref> </para></listitem>
+<listitem><para><ref refid="page_wxusedef_1page_wxusedef_msw" kindref="member">wxUSE preprocessor symbols used only in wxMSW port</ref> </para></listitem>
+<listitem><para><ref refid="page_wxusedef_1page_wxusedef_univ" kindref="member">wxUSE preprocessor symbols used only in wxUniversal</ref></para></listitem>
+</itemizedlist>
+<hruler/>
+</para><sect1 id="page_wxusedef_1page_wxusedef_important">
+<title>Most important wxUSE symbols</title>
+<para>This table summarizes some of the global build features affecting the entire library:</para><para><table rows="8" cols="2"><row>
+<entry thead="no"><para>wxUSE_STL </para></entry><entry thead="no"><para>Container classes and <ref refid="classwx_string" kindref="compound">wxString</ref> are implemented using standard classes and provide the same standard API. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_STD_STRING </para></entry><entry thead="no"><para><ref refid="classwx_string" kindref="compound">wxString</ref> is implemented using std::[w]string and can be constructed from it (but provides wxWidgets-compatible API, in particular is implicitly convertible to <computeroutput>char*</computeroutput> and not std::[w]string). </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_STD_IOSTREAM </para></entry><entry thead="no"><para>Standard C++ classes are used instead of or in addition to wx stream classes. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_UNICODE </para></entry><entry thead="no"><para>Compiled with Unicode support (default in wxWidgets 3.0, non-Unicode build will be deprecated in the future). </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_UNICODE_WCHAR </para></entry><entry thead="no"><para><ref refid="classwx_string" kindref="compound">wxString</ref> uses wchar_t buffer for internal storage (default under MSW). </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_UNICODE_UTF8 </para></entry><entry thead="no"><para><ref refid="classwx_string" kindref="compound">wxString</ref> uses UTF-8 for internal storage (default under Unix and Mac systems). </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_UTF8_LOCALE_ONLY </para></entry><entry thead="no"><para>Library supports running only under UTF-8 (and C) locale. This eliminates the code necessary for conversions from the other locales and reduces the library size; useful for embedded systems. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_GUI </para></entry><entry thead="no"><para>Use the GUI classes; if set to 0 only non-GUI classes are available. </para></entry></row>
+</table>
+</para></sect1>
+<sect1 id="page_wxusedef_1page_wxusedef_multi">
+<title>Generic wxUSE preprocessor symbols</title>
+<para><table rows="202" cols="2"><row>
+<entry thead="no"><para>wxUSE_ABOUTDLG </para></entry><entry thead="no"><para>Use <ref refid="classwx_about_dialog_info" kindref="compound">wxAboutDialogInfo</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_ACCEL </para></entry><entry thead="no"><para>Use wxAcceleratorTable/Entry classes and support for them in <ref refid="classwx_menu" kindref="compound">wxMenu</ref>, <ref refid="classwx_menu_bar" kindref="compound">wxMenuBar</ref>. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_AFM_FOR_POSTSCRIPT </para></entry><entry thead="no"><para>In <ref refid="classwx_post_script_d_c" kindref="compound">wxPostScriptDC</ref> class use AFM (adobe font metrics) file for character widths. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_ANIMATIONCTRL </para></entry><entry thead="no"><para>Use <ref refid="classwx_animation_ctrl" kindref="compound">wxAnimationCtrl</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_ARTPROVIDER_STD </para></entry><entry thead="no"><para>Use standard low quality icons in <ref refid="classwx_art_provider" kindref="compound">wxArtProvider</ref>. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_ARTPROVIDER_TANGO </para></entry><entry thead="no"><para>Use Tango icons in <ref refid="classwx_art_provider" kindref="compound">wxArtProvider</ref>. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_ANY </para></entry><entry thead="no"><para>Use <ref refid="classwx_any" kindref="compound">wxAny</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_APPLE_IEEE </para></entry><entry thead="no"><para>IEEE Extended to/from double routines; see src/common/extended.c file. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_ARCHIVE_STREAMS </para></entry><entry thead="no"><para>Enable streams for archive formats. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_AUI </para></entry><entry thead="no"><para>Use AUI (dockable windows) library. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_BASE64 </para></entry><entry thead="no"><para>Enables Base64 support. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_BITMAPCOMBOBOX </para></entry><entry thead="no"><para>Use <ref refid="classwx_bitmap_combo_box" kindref="compound">wxBitmapComboBox</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_BMPBUTTON </para></entry><entry thead="no"><para>Use <ref refid="classwx_bitmap_button" kindref="compound">wxBitmapButton</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_BUSYINFO </para></entry><entry thead="no"><para>Use <ref refid="classwx_busy_info" kindref="compound">wxBusyInfo</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_BUTTON </para></entry><entry thead="no"><para>Use <ref refid="classwx_button" kindref="compound">wxButton</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_CALENDARCTRL </para></entry><entry thead="no"><para>Use <ref refid="classwx_calendar_ctrl" kindref="compound">wxCalendarCtrl</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_CARET </para></entry><entry thead="no"><para>Use <ref refid="classwx_caret" kindref="compound">wxCaret</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_CHECKBOX </para></entry><entry thead="no"><para>Use <ref refid="classwx_check_box" kindref="compound">wxCheckBox</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_CHECKLISTBOX </para></entry><entry thead="no"><para>Use <ref refid="classwx_check_list_box" kindref="compound">wxCheckListBox</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_CHOICE </para></entry><entry thead="no"><para>Use <ref refid="classwx_choice" kindref="compound">wxChoice</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_CHOICEBOOK </para></entry><entry thead="no"><para>Use <ref refid="classwx_choicebook" kindref="compound">wxChoicebook</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_CHOICEDLG </para></entry><entry thead="no"><para>Use <ref refid="classwx_single_choice_dialog" kindref="compound">wxSingleChoiceDialog</ref>, or <ref refid="classwx_multi_choice_dialog" kindref="compound">wxMultiChoiceDialog</ref> classes. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_CLIPBOARD </para></entry><entry thead="no"><para>Use <ref refid="classwx_clipboard" kindref="compound">wxClipboard</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_CMDLINE_PARSER </para></entry><entry thead="no"><para>Use <ref refid="classwx_cmd_line_parser" kindref="compound">wxCmdLineParser</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_COLLPANE </para></entry><entry thead="no"><para>Use <ref refid="classwx_collapsible_pane" kindref="compound">wxCollapsiblePane</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_COLOURDLG </para></entry><entry thead="no"><para>Use <ref refid="classwx_colour_dialog" kindref="compound">wxColourDialog</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_COLOURPICKERCTRL </para></entry><entry thead="no"><para>Use <ref refid="classwx_colour_picker_ctrl" kindref="compound">wxColourPickerCtrl</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_COMBOBOX </para></entry><entry thead="no"><para>Use <ref refid="classwx_combo_box" kindref="compound">wxComboBox</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_COMBOCTRL </para></entry><entry thead="no"><para>Use <ref refid="classwx_combo_ctrl" kindref="compound">wxComboCtrl</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_CONFIG </para></entry><entry thead="no"><para>Use wxConfig and related classes. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_CONFIG_NATIVE </para></entry><entry thead="no"><para>When enabled use native OS configuration instead of the <ref refid="classwx_file_config" kindref="compound">wxFileConfig</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_CONSOLE_EVENTLOOP </para></entry><entry thead="no"><para>Enable event loop in console programs. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_CONSTRAINTS </para></entry><entry thead="no"><para>Use <ref refid="classwx_layout_constraints" kindref="compound">wxLayoutConstraints</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_CONTROLS </para></entry><entry thead="no"><para>If set to 0, no classes deriving from <ref refid="classwx_control" kindref="compound">wxControl</ref> can be used. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_DATAOBJ </para></entry><entry thead="no"><para>Use <ref refid="classwx_data_object" kindref="compound">wxDataObject</ref> and related classes. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_DATAVIEWCTRL </para></entry><entry thead="no"><para>Use <ref refid="classwx_data_view_ctrl" kindref="compound">wxDataViewCtrl</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_DATEPICKCTRL </para></entry><entry thead="no"><para>Use <ref refid="classwx_date_picker_ctrl" kindref="compound">wxDatePickerCtrl</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_DATETIME </para></entry><entry thead="no"><para>Use <ref refid="classwx_date_time" kindref="compound">wxDateTime</ref> and related classes. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_DBGHELP </para></entry><entry thead="no"><para>Use wxDbgHelpDLL class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_DC_TRANSFORM_MATRIX </para></entry><entry thead="no"><para>Use <ref refid="classwx_d_c_1a6e3243fcb5d194ef5637f4bda11a49c3" kindref="member">wxDC::SetTransformMatrix()</ref> and related methods. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_DEBUG_CONTEXT </para></entry><entry thead="no"><para>Use <ref refid="classwx_debug_context" kindref="compound">wxDebugContext</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_DEBUG_NEW_ALWAYS </para></entry><entry thead="no"><para>See <ref refid="overview_debugging" kindref="compound">Debugging</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_DEBUGREPORT </para></entry><entry thead="no"><para>Use <ref refid="classwx_debug_report" kindref="compound">wxDebugReport</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_DIALUP_MANAGER </para></entry><entry thead="no"><para>Use <ref refid="classwx_dial_up_manager" kindref="compound">wxDialUpManager</ref> and related classes. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_DIRDLG </para></entry><entry thead="no"><para>Use <ref refid="classwx_dir_dialog" kindref="compound">wxDirDialog</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_DIRPICKERCTRL </para></entry><entry thead="no"><para>Use <ref refid="classwx_dir_picker_ctrl" kindref="compound">wxDirPickerCtrl</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_DISPLAY </para></entry><entry thead="no"><para>Use <ref refid="classwx_display" kindref="compound">wxDisplay</ref> and related classes. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_DOC_VIEW_ARCHITECTURE </para></entry><entry thead="no"><para>Use <ref refid="classwx_document" kindref="compound">wxDocument</ref> and related classes. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_DRAG_AND_DROP </para></entry><entry thead="no"><para>Use Drag and drop classes. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_DRAGIMAGE </para></entry><entry thead="no"><para>Use <ref refid="classwx_drag_image" kindref="compound">wxDragImage</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_DYNAMIC_LOADER </para></entry><entry thead="no"><para>Use wxPluginManager and related classes. Requires <ref refid="classwx_dynamic_library" kindref="compound">wxDynamicLibrary</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_DYNLIB_CLASS </para></entry><entry thead="no"><para>Use <ref refid="classwx_dynamic_library" kindref="compound">wxDynamicLibrary</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_EDITABLELISTBOX </para></entry><entry thead="no"><para>Use <ref refid="classwx_editable_list_box" kindref="compound">wxEditableListBox</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_EXCEPTIONS </para></entry><entry thead="no"><para>Use exception handling. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_EXPAT </para></entry><entry thead="no"><para>enable XML support using expat parser. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_EXTENDED_RTTI </para></entry><entry thead="no"><para>Use extended RTTI, see also Runtime class information (RTTI) </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_FFILE </para></entry><entry thead="no"><para>Use <ref refid="classwx_f_file" kindref="compound">wxFFile</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_FILE </para></entry><entry thead="no"><para>Use <ref refid="classwx_file" kindref="compound">wxFile</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_FILECONFIG </para></entry><entry thead="no"><para>Use <ref refid="classwx_file_config" kindref="compound">wxFileConfig</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_FILECTRL </para></entry><entry thead="no"><para>Use <ref refid="classwx_file_ctrl" kindref="compound">wxFileCtrl</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_FILEDLG </para></entry><entry thead="no"><para>Use <ref refid="classwx_file_dialog" kindref="compound">wxFileDialog</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_FILEPICKERCTRL </para></entry><entry thead="no"><para>Use <ref refid="classwx_file_picker_ctrl" kindref="compound">wxFilePickerCtrl</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_FILESYSTEM </para></entry><entry thead="no"><para>Use <ref refid="classwx_file_system" kindref="compound">wxFileSystem</ref> and related classes. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_FINDREPLDLG </para></entry><entry thead="no"><para>Use <ref refid="classwx_find_replace_dialog" kindref="compound">wxFindReplaceDialog</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_FONTDLG </para></entry><entry thead="no"><para>Use <ref refid="classwx_font_dialog" kindref="compound">wxFontDialog</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_FONTENUM </para></entry><entry thead="no"><para>Use <ref refid="classwx_font_enumerator" kindref="compound">wxFontEnumerator</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_FONTMAP </para></entry><entry thead="no"><para>Use <ref refid="classwx_font_mapper" kindref="compound">wxFontMapper</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_FONTPICKERCTRL </para></entry><entry thead="no"><para>Use <ref refid="classwx_font_picker_ctrl" kindref="compound">wxFontPickerCtrl</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_FS_ARCHIVE </para></entry><entry thead="no"><para>Use virtual archive filesystems like wxArchiveFSHandler in <ref refid="classwx_file_system" kindref="compound">wxFileSystem</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_FS_INET </para></entry><entry thead="no"><para>Use virtual HTTP/FTP filesystems like wxInternetFSHandler in <ref refid="classwx_file_system" kindref="compound">wxFileSystem</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_FS_ZIP </para></entry><entry thead="no"><para>Please use wxUSE_FS_ARCHIVE instead. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_FSVOLUME </para></entry><entry thead="no"><para>Use <ref refid="classwx_f_s_volume" kindref="compound">wxFSVolume</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_GAUGE </para></entry><entry thead="no"><para>Use <ref refid="classwx_gauge" kindref="compound">wxGauge</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_GENERIC_DRAGIMAGE </para></entry><entry thead="no"><para>Used in <ref refid="classwx_drag_image" kindref="compound">wxDragImage</ref> sample. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_GENERIC_DRAWELLIPSE </para></entry><entry thead="no"><para>See comment in <ref refid="interface_2wx_2dc_8h" kindref="compound">wx/dc.h</ref> file. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_GENERIC_MDI_AS_NATIVE </para></entry><entry thead="no"><para>This is not a user-settable symbol, it is only used internally in wx/generic/mdig.h. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_GEOMETRY </para></entry><entry thead="no"><para>Use common geometry classes </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_GIF </para></entry><entry thead="no"><para>Use GIF <ref refid="classwx_image_handler" kindref="compound">wxImageHandler</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_GLCANVAS </para></entry><entry thead="no"><para>Enables OpenGL support. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_GLOBAL_MEMORY_OPERATORS </para></entry><entry thead="no"><para>Override global operators <computeroutput>new</computeroutput> and <computeroutput>delete</computeroutput> to use wxWidgets memory leak detection </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_GRAPHICS_CONTEXT </para></entry><entry thead="no"><para>Use <ref refid="classwx_graphics_context" kindref="compound">wxGraphicsContext</ref> and related classes. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_GRID </para></entry><entry thead="no"><para>Use <ref refid="classwx_grid" kindref="compound">wxGrid</ref> and related classes. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_HELP </para></entry><entry thead="no"><para>Use <ref refid="classwx_help_controller" kindref="compound">wxHelpController</ref> and related classes. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_HTML </para></entry><entry thead="no"><para>Use <ref refid="classwx_html_window" kindref="compound">wxHtmlWindow</ref> and related classes. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_HYPERLINKCTRL </para></entry><entry thead="no"><para>Use <ref refid="classwx_hyperlink_ctrl" kindref="compound">wxHyperlinkCtrl</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_ICO_CUR </para></entry><entry thead="no"><para>Support Windows ICO and CUR formats. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_IFF </para></entry><entry thead="no"><para>Enables the <ref refid="classwx_image" kindref="compound">wxImage</ref> handler for Amiga IFF images. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_IMAGE </para></entry><entry thead="no"><para>Use <ref refid="classwx_image" kindref="compound">wxImage</ref> and related classes. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_IMAGLIST </para></entry><entry thead="no"><para>Use <ref refid="classwx_image_list" kindref="compound">wxImageList</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_INTL </para></entry><entry thead="no"><para>Use <ref refid="classwx_locale" kindref="compound">wxLocale</ref> and related classes. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_IOSTREAMH </para></entry><entry thead="no"><para>Use header &quot;iostream.h&quot; instead of &quot;iostream&quot;. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_IPC </para></entry><entry thead="no"><para>Use interprocess communication classes. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_IPV6 </para></entry><entry thead="no"><para>Use experimental wxIPV6address and related classes. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_JOYSTICK </para></entry><entry thead="no"><para>Use <ref refid="classwx_joystick" kindref="compound">wxJoystick</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_LIBJPEG </para></entry><entry thead="no"><para>Enables JPEG format support (requires libjpeg). </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_LIBPNG </para></entry><entry thead="no"><para>Enables PNG format support (requires libpng). Also requires wxUSE_ZLIB. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_LIBTIFF </para></entry><entry thead="no"><para>Enables TIFF format support (requires libtiff). </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_LISTBOOK </para></entry><entry thead="no"><para>Use <ref refid="classwx_listbook" kindref="compound">wxListbook</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_LISTBOX </para></entry><entry thead="no"><para>Use <ref refid="classwx_list_box" kindref="compound">wxListBox</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_LISTCTRL </para></entry><entry thead="no"><para>Use <ref refid="classwx_list_ctrl" kindref="compound">wxListCtrl</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_LOG </para></entry><entry thead="no"><para>Use <ref refid="classwx_log" kindref="compound">wxLog</ref> and related classes. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_LOG_DEBUG </para></entry><entry thead="no"><para>Enabled when <ref refid="classwx_log" kindref="compound">wxLog</ref> used with __WXDEBUG__ defined. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_LOG_DIALOG </para></entry><entry thead="no"><para>Use wxLogDialog class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_LOGGUI </para></entry><entry thead="no"><para>Use <ref refid="classwx_log_gui" kindref="compound">wxLogGui</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_LOGWINDOW </para></entry><entry thead="no"><para>Use wxLogFrame class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_LONGLONG </para></entry><entry thead="no"><para>Use <ref refid="classwx_long_long" kindref="compound">wxLongLong</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_LONGLONG_NATIVE </para></entry><entry thead="no"><para>Use native <computeroutput>long long</computeroutput> type in <ref refid="classwx_long_long" kindref="compound">wxLongLong</ref> implementation. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_LONGLONG_WX </para></entry><entry thead="no"><para>Use generic <ref refid="classwx_long_long" kindref="compound">wxLongLong</ref> implementation. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_MARKUP </para></entry><entry thead="no"><para>Provide <ref refid="classwx_control_1afeb308dc3b54d8d735b33cb250395503" kindref="member">wxControl::SetLabelMarkup()</ref> method. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_MDI </para></entry><entry thead="no"><para>Use <ref refid="classwx_m_d_i_parent_frame" kindref="compound">wxMDIParentFrame</ref>, and <ref refid="classwx_m_d_i_child_frame" kindref="compound">wxMDIChildFrame</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_MDI_ARCHITECTURE </para></entry><entry thead="no"><para>Use MDI-based document-view classes. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_MEDIACTRL </para></entry><entry thead="no"><para>Use <ref refid="classwx_media_ctrl" kindref="compound">wxMediaCtrl</ref>. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_MEMORY_TRACING </para></entry><entry thead="no"><para>Use wxWidgets memory leak detection, not recommended if using another memory debugging tool. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_MENUS </para></entry><entry thead="no"><para>Use <ref refid="classwx_menu" kindref="compound">wxMenu</ref> and related classes. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_METAFILE </para></entry><entry thead="no"><para>Use wxMetaFile and related classes. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_MIMETYPE </para></entry><entry thead="no"><para>Use <ref refid="classwx_file_type" kindref="compound">wxFileType</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_MINIFRAME </para></entry><entry thead="no"><para>Use <ref refid="classwx_mini_frame" kindref="compound">wxMiniFrame</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_MOUSEWHEEL </para></entry><entry thead="no"><para>Support mouse wheel events. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_MSGDLG </para></entry><entry thead="no"><para>Use <ref refid="classwx_message_dialog" kindref="compound">wxMessageDialog</ref> class and wxMessageBox function. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_NATIVE_STATUSBAR </para></entry><entry thead="no"><para>Use native <ref refid="classwx_status_bar" kindref="compound">wxStatusBar</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_NOTEBOOK </para></entry><entry thead="no"><para>Use <ref refid="classwx_notebook" kindref="compound">wxNotebook</ref> and related classes. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_NUMBERDLG </para></entry><entry thead="no"><para>Use wxNumberEntryDialog class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_ODCOMBOBOX </para></entry><entry thead="no"><para>Use <ref refid="classwx_owner_drawn_combo_box" kindref="compound">wxOwnerDrawnComboBox</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_ON_FATAL_EXCEPTION </para></entry><entry thead="no"><para>Catch signals in <ref refid="classwx_app_console_1a927931aafbb7aec4debdfc02ee6f6f9d" kindref="member">wxApp::OnFatalException</ref> method. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_OPENGL </para></entry><entry thead="no"><para>Please use wxUSE_GLCANVAS to test for enabled OpenGL support instead. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_OWNER_DRAWN </para></entry><entry thead="no"><para>Use interface for owner-drawn GUI elements. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_PALETTE </para></entry><entry thead="no"><para>Use <ref refid="classwx_palette" kindref="compound">wxPalette</ref> and related classes. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_PCX </para></entry><entry thead="no"><para>Enables <ref refid="classwx_image" kindref="compound">wxImage</ref> PCX handler. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_PNM </para></entry><entry thead="no"><para>Enables <ref refid="classwx_image" kindref="compound">wxImage</ref> PNM handler. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_POPUPWIN </para></entry><entry thead="no"><para>Use <ref refid="classwx_popup_window" kindref="compound">wxPopupWindow</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_POSTSCRIPT </para></entry><entry thead="no"><para>Use wxPostScriptPrinter class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_PRINTF_POS_PARAMS </para></entry><entry thead="no"><para>Use wxVsnprintf which supports positional parameters. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_PRINTING_ARCHITECTURE </para></entry><entry thead="no"><para>Enable printer classes. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_PROGRESSDLG </para></entry><entry thead="no"><para>Enables progress dialog classes. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_PROPGRID </para></entry><entry thead="no"><para>Use <ref refid="classwx_property_grid" kindref="compound">wxPropertyGrid</ref> library. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_PROTOCOL </para></entry><entry thead="no"><para>Use <ref refid="classwx_protocol" kindref="compound">wxProtocol</ref> and derived classes. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_PROTOCOL_FILE </para></entry><entry thead="no"><para>Use wxFileProto class. (requires <ref refid="classwx_protocol" kindref="compound">wxProtocol</ref>) </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_PROTOCOL_FTP </para></entry><entry thead="no"><para>Use <ref refid="classwx_f_t_p" kindref="compound">wxFTP</ref> class. (requires <ref refid="classwx_protocol" kindref="compound">wxProtocol</ref>) </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_PROTOCOL_HTTP </para></entry><entry thead="no"><para>Use <ref refid="classwx_h_t_t_p" kindref="compound">wxHTTP</ref> class. (requireswxProtocol) </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_RADIOBOX </para></entry><entry thead="no"><para>Use <ref refid="classwx_radio_box" kindref="compound">wxRadioBox</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_RADIOBTN </para></entry><entry thead="no"><para>Use <ref refid="classwx_radio_button" kindref="compound">wxRadioButton</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_REGEX </para></entry><entry thead="no"><para>Use <ref refid="classwx_reg_ex" kindref="compound">wxRegEx</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_RICHTEXT </para></entry><entry thead="no"><para>Use <ref refid="classwx_rich_text_ctrl" kindref="compound">wxRichTextCtrl</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_RICHTEXT_XML_HANDLER </para></entry><entry thead="no"><para>See src/xrc/xh_richtext.cpp file. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_SASH </para></entry><entry thead="no"><para>Use <ref refid="classwx_sash_window" kindref="compound">wxSashWindow</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_SCROLLBAR </para></entry><entry thead="no"><para>Use <ref refid="classwx_scroll_bar" kindref="compound">wxScrollBar</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_SEARCHCTRL </para></entry><entry thead="no"><para>Use <ref refid="classwx_search_ctrl" kindref="compound">wxSearchCtrl</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_SELECT_DISPATCHER </para></entry><entry thead="no"><para>Use wxSelectDispatcher class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_SLIDER </para></entry><entry thead="no"><para>Use <ref refid="classwx_slider" kindref="compound">wxSlider</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_SNGLINST_CHECKER </para></entry><entry thead="no"><para>Use <ref refid="classwx_single_instance_checker" kindref="compound">wxSingleInstanceChecker</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_SOCKETS </para></entry><entry thead="no"><para>Enables Network address classes. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_SOUND </para></entry><entry thead="no"><para>Use <ref refid="classwx_sound" kindref="compound">wxSound</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_SPINBTN </para></entry><entry thead="no"><para>Use <ref refid="classwx_spin_button" kindref="compound">wxSpinButton</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_SPINCTRL </para></entry><entry thead="no"><para>Use <ref refid="classwx_spin_ctrl" kindref="compound">wxSpinCtrl</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_SPLASH </para></entry><entry thead="no"><para>Use <ref refid="classwx_splash_screen" kindref="compound">wxSplashScreen</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_SPLINES </para></entry><entry thead="no"><para>Provide methods for spline drawing in <ref refid="classwx_d_c" kindref="compound">wxDC</ref>. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_SPLITTER </para></entry><entry thead="no"><para>Use <ref refid="classwx_splitter_window" kindref="compound">wxSplitterWindow</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_STACKWALKER </para></entry><entry thead="no"><para>Enables <ref refid="classwx_stack_walker" kindref="compound">wxStackWalker</ref> and related classes. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_STARTUP_TIPS </para></entry><entry thead="no"><para>Use startup tips, <ref refid="classwx_tip_provider" kindref="compound">wxTipProvider</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_STATBMP </para></entry><entry thead="no"><para>Use <ref refid="classwx_static_bitmap" kindref="compound">wxStaticBitmap</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_STATBOX </para></entry><entry thead="no"><para>Use <ref refid="classwx_static_box" kindref="compound">wxStaticBox</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_STATLINE </para></entry><entry thead="no"><para>Use <ref refid="classwx_static_line" kindref="compound">wxStaticLine</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_STATTEXT </para></entry><entry thead="no"><para>Use <ref refid="classwx_static_text" kindref="compound">wxStaticText</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_STATUSBAR </para></entry><entry thead="no"><para>Use <ref refid="classwx_status_bar" kindref="compound">wxStatusBar</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_STC </para></entry><entry thead="no"><para>Use <ref refid="classwx_styled_text_ctrl" kindref="compound">wxStyledTextCtrl</ref>. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_STDPATHS </para></entry><entry thead="no"><para>Use <ref refid="classwx_standard_paths" kindref="compound">wxStandardPaths</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_STOPWATCH </para></entry><entry thead="no"><para>Use <ref refid="classwx_stop_watch" kindref="compound">wxStopWatch</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_STREAMS </para></entry><entry thead="no"><para>Enable stream classes. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_SVG </para></entry><entry thead="no"><para>Use <ref refid="classwx_s_v_g_file_d_c" kindref="compound">wxSVGFileDC</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_SYSTEM_OPTIONS </para></entry><entry thead="no"><para>Use <ref refid="classwx_system_options" kindref="compound">wxSystemOptions</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_TAB_DIALOG </para></entry><entry thead="no"><para>Use the obsolete wxTabControl class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_TARSTREAM </para></entry><entry thead="no"><para>Enable Tar files support. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_TASKBARICON </para></entry><entry thead="no"><para>Use <ref refid="classwx_task_bar_icon" kindref="compound">wxTaskBarIcon</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_TEXTBUFFER </para></entry><entry thead="no"><para>Use wxTextBuffer class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_TEXTCTRL </para></entry><entry thead="no"><para>Use <ref refid="classwx_text_ctrl" kindref="compound">wxTextCtrl</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_TEXTDLG </para></entry><entry thead="no"><para>Use <ref refid="classwx_text_entry_dialog" kindref="compound">wxTextEntryDialog</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_TEXTFILE </para></entry><entry thead="no"><para>Use <ref refid="classwx_text_file" kindref="compound">wxTextFile</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_TGA </para></entry><entry thead="no"><para>Enable <ref refid="classwx_image" kindref="compound">wxImage</ref> TGA handler. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_THREADS </para></entry><entry thead="no"><para>Use <ref refid="classwx_thread" kindref="compound">wxThread</ref> and related classes. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_TIMER </para></entry><entry thead="no"><para>Use <ref refid="classwx_timer" kindref="compound">wxTimer</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_TIPWINDOW </para></entry><entry thead="no"><para>Use <ref refid="classwx_tip_window" kindref="compound">wxTipWindow</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_TOGGLEBTN </para></entry><entry thead="no"><para>Use <ref refid="classwx_toggle_button" kindref="compound">wxToggleButton</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_TOOLBAR </para></entry><entry thead="no"><para>Use <ref refid="classwx_tool_bar" kindref="compound">wxToolBar</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_TOOLBAR_NATIVE </para></entry><entry thead="no"><para>Use native <ref refid="classwx_tool_bar" kindref="compound">wxToolBar</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_TOOLBOOK </para></entry><entry thead="no"><para>Use <ref refid="classwx_toolbook" kindref="compound">wxToolbook</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_TOOLTIPS </para></entry><entry thead="no"><para>Use <ref refid="classwx_tool_tip" kindref="compound">wxToolTip</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_TREEBOOK </para></entry><entry thead="no"><para>Use <ref refid="classwx_treebook" kindref="compound">wxTreebook</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_TREECTRL </para></entry><entry thead="no"><para>Use <ref refid="classwx_tree_ctrl" kindref="compound">wxTreeCtrl</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_TREELISTCTRL </para></entry><entry thead="no"><para>Use <ref refid="classwx_tree_list_ctrl" kindref="compound">wxTreeListCtrl</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_TTM_WINDOWFROMPOINT </para></entry><entry thead="no"><para>Obsolete, do not use. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_URL </para></entry><entry thead="no"><para>Use <ref refid="classwx_u_r_l" kindref="compound">wxURL</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_URL_NATIVE </para></entry><entry thead="no"><para>Use native support for some operations with <ref refid="classwx_u_r_l" kindref="compound">wxURL</ref>. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_VALIDATORS </para></entry><entry thead="no"><para>Use <ref refid="classwx_validator" kindref="compound">wxValidator</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_VARIANT </para></entry><entry thead="no"><para>Use <ref refid="classwx_variant" kindref="compound">wxVariant</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_WEBVIEW </para></entry><entry thead="no"><para>Use <ref refid="classwx_web_view" kindref="compound">wxWebView</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_WIZARDDLG </para></entry><entry thead="no"><para>Use <ref refid="classwx_wizard" kindref="compound">wxWizard</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_WXHTML_HELP </para></entry><entry thead="no"><para>Use <ref refid="classwx_html_help_controller" kindref="compound">wxHtmlHelpController</ref> and related classes. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_XML </para></entry><entry thead="no"><para>Use XML parsing classes. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_XPM </para></entry><entry thead="no"><para>Enable XPM reader for <ref refid="classwx_image" kindref="compound">wxImage</ref> and <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> classes. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_XRC </para></entry><entry thead="no"><para>Use XRC XML-based resource system. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_ZIPSTREAM </para></entry><entry thead="no"><para>Enable streams for Zip files. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_ZLIB </para></entry><entry thead="no"><para>Use wxZlibInput and <ref refid="classwx_zlib_output_stream" kindref="compound">wxZlibOutputStream</ref> classes, required by wxUSE_LIBPNG. </para></entry></row>
+</table>
+</para></sect1>
+<sect1 id="page_wxusedef_1page_wxusedef_unix">
+<title>wxUSE preprocessor symbols used only under Unix platforms</title>
+<para><table rows="6" cols="2"><row>
+<entry thead="no"><para>wxUSE_EPOLL_DISPATCHER </para></entry><entry thead="no"><para>Use wxEpollDispatcher class. See also wxUSE_SELECT_DISPATCHER. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_GSTREAMER </para></entry><entry thead="no"><para>Use GStreamer library in <ref refid="classwx_media_ctrl" kindref="compound">wxMediaCtrl</ref>. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_LIBMSPACK </para></entry><entry thead="no"><para>Use libmspack library. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_LIBSDL </para></entry><entry thead="no"><para>Use SDL for <ref refid="classwx_sound" kindref="compound">wxSound</ref> implementation. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_PLUGINS </para></entry><entry thead="no"><para>See also wxUSE_LIBSDL. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_UNIX </para></entry><entry thead="no"><para>Enabled on Unix Platform. </para></entry></row>
+</table>
+</para></sect1>
+<sect1 id="page_wxusedef_1page_wxusedef_x11">
+<title>wxUSE preprocessor symbols used only in wxX11 Platform</title>
+<para><table rows="2" cols="2"><row>
+<entry thead="no"><para>wxUSE_NANOX </para></entry><entry thead="no"><para>Use NanoX. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_UNIV_TEXTCTRL </para></entry><entry thead="no"><para>Use wxUniv&apos;s implementation of <ref refid="classwx_text_ctrl" kindref="compound">wxTextCtrl</ref> class. </para></entry></row>
+</table>
+</para></sect1>
+<sect1 id="page_wxusedef_1page_wxusedef_gtk">
+<title>wxUSE preprocessor symbols used only in wxGTK port</title>
+<para><table rows="5" cols="2"><row>
+<entry thead="no"><para>wxUSE_DETECT_SM </para></entry><entry thead="no"><para>Use code to detect X11 session manager. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_GTKPRINT </para></entry><entry thead="no"><para>Use GTK+ printing support. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_LIBGNOMEPRINT </para></entry><entry thead="no"><para>Use GNOME printing support. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_LIBGNOMEVFS </para></entry><entry thead="no"><para>Use GNOME VFS support. Currently has no effect.  </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_LIBHILDON </para></entry><entry thead="no"><para>Use Hildon framework for Nokia 770. Currently has no effect.  </para></entry></row>
+</table>
+</para></sect1>
+<sect1 id="page_wxusedef_1page_wxusedef_mac">
+<title>wxUSE preprocessor symbols used only in wxMac port</title>
+<para><table rows="4" cols="2"><row>
+<entry thead="no"><para>wxUSE_MAC_CRITICAL_REGION_MUTEX </para></entry><entry thead="no"><para>See src/osx/carbon/thread.cpp file. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_MAC_PTHREADS_MUTEX </para></entry><entry thead="no"><para>See src/osx/carbon/thread.cpp file. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_MAC_SEMAPHORE_MUTEX </para></entry><entry thead="no"><para>See src/osx/carbon/thread.cpp file. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_WEBKIT </para></entry><entry thead="no"><para>Use wxWebKitCtrl class. </para></entry></row>
+</table>
+</para></sect1>
+<sect1 id="page_wxusedef_1page_wxusedef_motif">
+<title>wxUSE preprocessor symbols used only in wxMotif port</title>
+<para><table rows="2" cols="2"><row>
+<entry thead="no"><para>wxUSE_GADGETS </para></entry><entry thead="no"><para>Use xmCascadeButtonGadgetClass, xmLabelGadgetClass, xmPushButtonGadgetClass and xmToggleButtonGadgetClass classes. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_INVISIBLE_RESIZE </para></entry><entry thead="no"><para>See src/motif/dialog.cpp file. </para></entry></row>
+</table>
+</para></sect1>
+<sect1 id="page_wxusedef_1page_wxusedef_cocoa">
+<title>wxUSE preprocessor symbols used only in Cocoa port</title>
+<para><table rows="1" cols="2"><row>
+<entry thead="no"><para>wxUSE_OBJC_UNIQUIFYING </para></entry><entry thead="no"><para>Enable Objective-C class name uniquifying. </para></entry></row>
+</table>
+</para></sect1>
+<sect1 id="page_wxusedef_1page_wxusedef_os2">
+<title>wxUSE preprocessor symbols used only in OS2 port</title>
+<para><table rows="6" cols="2"><row>
+<entry thead="no"><para>wxUSE_CONSOLEDEBUG </para></entry><entry thead="no"><para>See src/os2/app.cpp file. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_DDE </para></entry><entry thead="no"><para>See src/os2/mimetype.cpp file. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_IMAGE_LOADING_IN_MSW </para></entry><entry thead="no"><para>See src/os2/clipbrd.cpp file. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_IMAGE_LOADING_IN_OS2 </para></entry><entry thead="no"><para>See src/os2/gdiimage.cpp file. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_NET_API </para></entry><entry thead="no"><para>Use NetBios32GetInfo API call. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_RESOURCE_LOADING_IN_OS2 </para></entry><entry thead="no"><para>See src/os2/gdiimage.cpp file. </para></entry></row>
+</table>
+</para></sect1>
+<sect1 id="page_wxusedef_1page_wxusedef_msw">
+<title>wxUSE preprocessor symbols used only in wxMSW port</title>
+<para><table rows="30" cols="2"><row>
+<entry thead="no"><para>wxUSE_ACCESSIBILITY </para></entry><entry thead="no"><para>Enable accessibility support </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_ACTIVEX </para></entry><entry thead="no"><para>Use <ref refid="classwx_active_x_container" kindref="compound">wxActiveXContainer</ref> and related classes. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_COMBOCTRL_POPUP_ANIMATION </para></entry><entry thead="no"><para>See wx/msw/combo.h file. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_COMCTL32_SAFELY </para></entry><entry thead="no"><para>See src/msw/treectrl.cpp file. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_COMMON_DIALOGS </para></entry><entry thead="no"><para>Enable use of windows common dialogs from header commdlg.h; example PRINTDLG. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_CRASHREPORT </para></entry><entry thead="no"><para>Use wxCrashReport class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_DATEPICKCTRL_GENERIC </para></entry><entry thead="no"><para>Use generic <ref refid="classwx_date_picker_ctrl" kindref="compound">wxDatePickerCtrl</ref> implementation in addition to the native one. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_DC_CACHEING </para></entry><entry thead="no"><para>cache temporary <ref refid="classwx_d_c" kindref="compound">wxDC</ref> objects. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_DDE_FOR_IPC </para></entry><entry thead="no"><para>See <ref refid="interface_2wx_2ipc_8h" kindref="compound">wx/ipc.h</ref> file. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_ENH_METAFILE </para></entry><entry thead="no"><para>Use wxEnhMetaFile. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_HOTKEY </para></entry><entry thead="no"><para>Use <ref refid="classwx_window_1a53ca57872dac5851ea6ba55a494b899b" kindref="member">wxWindow::RegisterHotKey()</ref> and <ref refid="classwx_window_1a695f60d65f8f6c12e3c3645ad9c0c35b" kindref="member">wxWindow::UnregisterHotKey</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_INKEDIT </para></entry><entry thead="no"><para>Use InkEdit library. Related to Tablet PCs. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_MS_HTML_HELP </para></entry><entry thead="no"><para>Use wxCHMHelpController class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_NO_MANIFEST </para></entry><entry thead="no"><para>Use to prevent the auto generation, under MSVC, of manifest file needed by windows XP and above. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_NORLANDER_HEADERS </para></entry><entry thead="no"><para>Using headers whose author is Anders Norlander. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_OLE </para></entry><entry thead="no"><para>Enables OLE helper routines. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_OLE_AUTOMATION </para></entry><entry thead="no"><para>Enable OLE automation utilities. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_OLE_CLIPBOARD </para></entry><entry thead="no"><para>Use OLE clipboard. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_PENWINDOWS </para></entry><entry thead="no"><para>See src/msw/penwin.cpp file. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_POSTSCRIPT_ARCHITECTURE_IN_MSW </para></entry><entry thead="no"><para>Use PS printing in wxMSW. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_PS_PRINTING </para></entry><entry thead="no"><para>See src/msw/dcprint.cpp file. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_REGKEY </para></entry><entry thead="no"><para>Use <ref refid="classwx_reg_key" kindref="compound">wxRegKey</ref> class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_RICHEDIT </para></entry><entry thead="no"><para>Enable use of riched32.dll in <ref refid="classwx_text_ctrl" kindref="compound">wxTextCtrl</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_RICHEDIT2 </para></entry><entry thead="no"><para>Enable use of riched20.dll in <ref refid="classwx_text_ctrl" kindref="compound">wxTextCtrl</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_VC_CRTDBG </para></entry><entry thead="no"><para>See wx/msw/msvcrt.h file. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_UNICODE_MSLU </para></entry><entry thead="no"><para>Use MSLU for Unicode support under Windows 9x systems. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_UXTHEME </para></entry><entry thead="no"><para>Enable support for XP themes. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_WIN_METAFILES_ALWAYS </para></entry><entry thead="no"><para>Use wxMetaFile even when wxUSE_ENH_METAFILE=1. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_WXDIB </para></entry><entry thead="no"><para>Use wxDIB class. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_XPM_IN_MSW </para></entry><entry thead="no"><para>See also wxUSE_XPM </para></entry></row>
+</table>
+</para></sect1>
+<sect1 id="page_wxusedef_1page_wxusedef_univ">
+<title>wxUSE preprocessor symbols used only in wxUniversal</title>
+<para><table rows="5" cols="2"><row>
+<entry thead="no"><para>wxUSE_ALL_THEMES </para></entry><entry thead="no"><para>Use all themes in wxUniversal; See wx/univ/theme.h file. </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_THEME_GTK </para></entry><entry thead="no"><para>Use GTK+ 1-like theme in wxUniversal </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_THEME_METAL </para></entry><entry thead="no"><para>Use GTK+ 2-like theme in wxUniversal </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_THEME_MONO </para></entry><entry thead="no"><para>Use simple monochrome theme in wxUniversal </para></entry></row>
+<row>
+<entry thead="no"><para>wxUSE_THEME_WIN32 </para></entry><entry thead="no"><para>Use Win32-like theme in wxUniversal </para></entry></row>
+</table>
+</para></sect1>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_grid_cell_number_editor" kind="class" prot="public">
     <compoundname>wxGridCellNumberEditor</compoundname>
     <basecompoundref refid="classwx_grid_cell_text_editor" prot="public" virt="non-virtual">wxGridCellTextEditor</basecompoundref>
@@ -79,40 +79,40 @@
 <para>Grid cell editor for numeric integer data. </para>    </briefdescription>
     <detaileddescription>
 <para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__grid" kindref="compound">Grid Related Classes</ref></para><para><simplesect kind="see"><para><ref refid="classwx_grid_cell_editor" kindref="compound">wxGridCellEditor</ref>, <ref refid="classwx_grid_cell_auto_wrap_string_editor" kindref="compound">wxGridCellAutoWrapStringEditor</ref>, <ref refid="classwx_grid_cell_bool_editor" kindref="compound">wxGridCellBoolEditor</ref>, <ref refid="classwx_grid_cell_choice_editor" kindref="compound">wxGridCellChoiceEditor</ref>, <ref refid="classwx_grid_cell_enum_editor" kindref="compound">wxGridCellEnumEditor</ref>, <ref refid="classwx_grid_cell_float_editor" kindref="compound">wxGridCellFloatEditor</ref>, <ref refid="classwx_grid_cell_text_editor" kindref="compound">wxGridCellTextEditor</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__grid" kindref="compound">Grid Related Classes</ref></para><para><simplesect kind="see"><para><ref refid="classwx_grid_cell_editor" kindref="compound">wxGridCellEditor</ref>, <ref refid="classwx_grid_cell_auto_wrap_string_editor" kindref="compound">wxGridCellAutoWrapStringEditor</ref>, <ref refid="classwx_grid_cell_bool_editor" kindref="compound">wxGridCellBoolEditor</ref>, <ref refid="classwx_grid_cell_choice_editor" kindref="compound">wxGridCellChoiceEditor</ref>, <ref refid="classwx_grid_cell_enum_editor" kindref="compound">wxGridCellEnumEditor</ref>, <ref refid="classwx_grid_cell_float_editor" kindref="compound">wxGridCellFloatEditor</ref>, <ref refid="classwx_grid_cell_text_editor" kindref="compound">wxGridCellTextEditor</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="6706">
+      <node id="6710">
         <label>wxGridCellNumberEditor</label>
         <link refid="classwx_grid_cell_number_editor"/>
-        <childnode refid="6707" relation="public-inheritance">
+        <childnode refid="6711" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6707">
+      <node id="6711">
         <label>wxGridCellTextEditor</label>
         <link refid="classwx_grid_cell_text_editor"/>
-        <childnode refid="6708" relation="public-inheritance">
+        <childnode refid="6712" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6708">
+      <node id="6712">
         <label>wxGridCellEditor</label>
         <link refid="classwx_grid_cell_editor"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="6709">
+      <node id="6713">
         <label>wxGridCellNumberEditor</label>
         <link refid="classwx_grid_cell_number_editor"/>
-        <childnode refid="6710" relation="public-inheritance">
+        <childnode refid="6714" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6710">
+      <node id="6714">
         <label>wxGridCellTextEditor</label>
         <link refid="classwx_grid_cell_text_editor"/>
-        <childnode refid="6711" relation="public-inheritance">
+        <childnode refid="6715" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6711">
+      <node id="6715">
         <label>wxGridCellEditor</label>
         <link refid="classwx_grid_cell_editor"/>
       </node>

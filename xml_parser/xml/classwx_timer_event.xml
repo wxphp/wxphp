@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_timer_event" kind="class" prot="public">
     <compoundname>wxTimerEvent</compoundname>
     <basecompoundref refid="classwx_event" prot="public" virt="non-virtual">wxEvent</basecompoundref>
@@ -65,20 +65,20 @@
     <briefdescription>
 <para><ref refid="classwx_timer_event" kindref="compound">wxTimerEvent</ref> object is passed to the event handler of timer events (see <ref refid="classwx_timer_1aa3966b37329a4fad69ad384733eab27e" kindref="member">wxTimer::SetOwner</ref>). </para>    </briefdescription>
     <detaileddescription>
-<para>For example:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">MyFrame<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classwx_frame" kindref="compound" tooltip="A frame is a window whose size and position can (usually) be changed by the user...">wxFrame</ref></highlight></codeline>
+<para>For example:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">MyFrame<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classwx_frame" kindref="compound" tooltip="A frame is a window whose size and position can (usually) be changed by the user.">wxFrame</ref></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>OnTimer(<ref refid="classwx_timer_event" kindref="compound" tooltip="wxTimerEvent object is passed to the event handler of timer events (see wxTimer::SetOwner)...">wxTimerEvent</ref>&amp;<sp/>event);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>OnTimer(<ref refid="classwx_timer_event" kindref="compound" tooltip="wxTimerEvent object is passed to the event handler of timer events (see wxTimer::SetOwner).">wxTimerEvent</ref>&amp;<sp/>event);</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_timer" kindref="compound" tooltip="The wxTimer class allows you to execute code at specified intervals.">wxTimer</ref><sp/>m_timer;</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__events_1gab6eca03fad44ec10b75d3cb82e9219e3" kindref="member" tooltip="Use this macro inside a class declaration to declare a static event table for that...">wxDECLARE_EVENT_TABLE</ref>();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__events_1gab6eca03fad44ec10b75d3cb82e9219e3" kindref="member" tooltip="Use this macro inside a class declaration to declare a static event table for that class...">wxDECLARE_EVENT_TABLE</ref>();</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__events_1ga736930efaab4d7e445e9e8e520c7b74d" kindref="member" tooltip="Use this macro in a source file to start listing static event handlers for a specific...">wxBEGIN_EVENT_TABLE</ref>(MyFrame,<sp/><ref refid="classwx_frame" kindref="compound" tooltip="A frame is a window whose size and position can (usually) be changed by the user...">wxFrame</ref>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__events_1ga736930efaab4d7e445e9e8e520c7b74d" kindref="member" tooltip="Use this macro in a source file to start listing static event handlers for a specific class...">wxBEGIN_EVENT_TABLE</ref>(MyFrame,<sp/><ref refid="classwx_frame" kindref="compound" tooltip="A frame is a window whose size and position can (usually) be changed by the user.">wxFrame</ref>)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EVT_TIMER(TIMER_ID,<sp/>MyFrame::OnTimer)</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__events_1ga383fad2a46e1d6c220fbe03ecfbc9c17" kindref="member" tooltip="Use this macro in a source file to end listing static event handlers for a specific...">wxEND_EVENT_TABLE</ref>()</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__events_1ga383fad2a46e1d6c220fbe03ecfbc9c17" kindref="member" tooltip="Use this macro in a source file to end listing static event handlers for a specific class...">wxEND_EVENT_TABLE</ref>()</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>MyFrame::MyFrame()</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>m_timer(this,<sp/>TIMER_ID)</highlight></codeline>
@@ -86,52 +86,52 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_timer.Start(1000);<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>1<sp/>second<sp/>interval</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>MyFrame::OnTimer(<ref refid="classwx_timer_event" kindref="compound" tooltip="wxTimerEvent object is passed to the event handler of timer events (see wxTimer::SetOwner)...">wxTimerEvent</ref>&amp;<sp/>event)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>MyFrame::OnTimer(<ref refid="classwx_timer_event" kindref="compound" tooltip="wxTimerEvent object is passed to the event handler of timer events (see wxTimer::SetOwner).">wxTimerEvent</ref>&amp;<sp/>event)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>do<sp/>whatever<sp/>you<sp/>want<sp/>to<sp/>do<sp/>every<sp/>second<sp/>here</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 </programlisting></para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="classwx_timer" kindref="compound">wxTimer</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="classwx_timer" kindref="compound">wxTimer</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10822">
+      <node id="10883">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="10820">
+      <node id="10881">
         <label>wxTimerEvent</label>
         <link refid="classwx_timer_event"/>
-        <childnode refid="10821" relation="public-inheritance">
+        <childnode refid="10882" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10821">
+      <node id="10882">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="10822" relation="public-inheritance">
+        <childnode refid="10883" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10825">
+      <node id="10886">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="10826" relation="usage">
+        <childnode refid="10887" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="10823">
+      <node id="10884">
         <label>wxTimerEvent</label>
         <link refid="classwx_timer_event"/>
-        <childnode refid="10824" relation="public-inheritance">
+        <childnode refid="10885" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10824">
+      <node id="10885">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="10825" relation="public-inheritance">
+        <childnode refid="10886" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10826">
+      <node id="10887">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

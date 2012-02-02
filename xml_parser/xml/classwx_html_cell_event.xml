@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_html_cell_event" kind="class" prot="public">
     <compoundname>wxHtmlCellEvent</compoundname>
     <basecompoundref refid="classwx_command_event" prot="public" virt="non-virtual">wxCommandEvent</basecompoundref>
@@ -104,38 +104,11 @@
 <listitem><para>EVT_HTML_CELL_CLICKED(id,  func): User clicked on a <ref refid="classwx_html_cell" kindref="compound">wxHtmlCell</ref>. When handling this event, remember to use wxHtmlCell::SetLinkClicked(true) if the cell contains a link. </para></listitem>
 </itemizedlist>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxhtml" kindref="member">wxHTML</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__html" kindref="compound">HTML</ref> </para>    </detaileddescription>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxhtml" kindref="member">wxHTML</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__html" kindref="compound">HTML</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="6972">
-        <label>wxObject</label>
-        <link refid="classwx_object"/>
-      </node>
-      <node id="6969">
-        <label>wxHtmlCellEvent</label>
-        <link refid="classwx_html_cell_event"/>
-        <childnode refid="6970" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="6970">
-        <label>wxCommandEvent</label>
-        <link refid="classwx_command_event"/>
-        <childnode refid="6971" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="6971">
-        <label>wxEvent</label>
-        <link refid="classwx_event"/>
-        <childnode refid="6972" relation="public-inheritance">
-        </childnode>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
       <node id="6976">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="6977" relation="usage">
-          <edgelabel>m_refData</edgelabel>
-        </childnode>
       </node>
       <node id="6973">
         <label>wxHtmlCellEvent</label>
@@ -155,7 +128,34 @@
         <childnode refid="6976" relation="public-inheritance">
         </childnode>
       </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="6980">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="6981" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
       <node id="6977">
+        <label>wxHtmlCellEvent</label>
+        <link refid="classwx_html_cell_event"/>
+        <childnode refid="6978" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6978">
+        <label>wxCommandEvent</label>
+        <link refid="classwx_command_event"/>
+        <childnode refid="6979" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6979">
+        <label>wxEvent</label>
+        <link refid="classwx_event"/>
+        <childnode refid="6980" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6981">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

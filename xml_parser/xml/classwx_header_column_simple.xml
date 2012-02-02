@@ -1,11 +1,10 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_header_column_simple" kind="class" prot="public">
     <compoundname>wxHeaderColumnSimple</compoundname>
     <basecompoundref refid="classwx_settable_header_column" prot="public" virt="non-virtual">wxSettableHeaderColumn</basecompoundref>
     <includes local="no">wx/headercol.h</includes>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_header_column_simple_1a219431d463c61334f8de7ac45ebb16f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
         <definition>wxHeaderColumnSimple::wxHeaderColumnSimple</definition>
@@ -72,7 +71,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_header_column_simple_1abd3ff067a6cd780281671a4a17453203" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
         <definition>virtual void wxHeaderColumnSimple::SetTitle</definition>
@@ -315,46 +313,46 @@
     <briefdescription>
 <para>Simple container for the information about the column. </para>    </briefdescription>
     <detaileddescription>
-<para>This is a concrete class implementing all <ref refid="classwx_settable_header_column" kindref="compound">wxSettableHeaderColumn</ref> class methods in a trivial way, i.e. by just storing the information in the object itself. It is used by and with <ref refid="classwx_header_ctrl_simple" kindref="compound">wxHeaderCtrlSimple</ref>, e.g. <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_header_ctrl_simple" kindref="compound" tooltip="wxHeaderCtrlSimple is a concrete header control which can be used directly, without...">wxHeaderCtrlSimple</ref><sp/>*<sp/>header<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classwx_header_ctrl_simple" kindref="compound" tooltip="wxHeaderCtrlSimple is a concrete header control which can be used directly, without...">wxHeaderCtrlSimple</ref>(...);</highlight></codeline>
+<para>This is a concrete class implementing all <ref refid="classwx_settable_header_column" kindref="compound">wxSettableHeaderColumn</ref> class methods in a trivial way, i.e. by just storing the information in the object itself. It is used by and with <ref refid="classwx_header_ctrl_simple" kindref="compound">wxHeaderCtrlSimple</ref>, e.g. <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_header_ctrl_simple" kindref="compound" tooltip="wxHeaderCtrlSimple is a concrete header control which can be used directly, without inheriting from i...">wxHeaderCtrlSimple</ref><sp/>*<sp/>header<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classwx_header_ctrl_simple" kindref="compound" tooltip="wxHeaderCtrlSimple is a concrete header control which can be used directly, without inheriting from i...">wxHeaderCtrlSimple</ref>(...);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_header_column_simple" kindref="compound" tooltip="Simple container for the information about the column.">wxHeaderColumnSimple</ref><sp/>col(</highlight><highlight class="stringliteral">&quot;Title&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>col.SetWidth(100);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>col.SetSortable(100);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>header-&gt;<ref refid="classwx_header_ctrl_simple_1a953d8f6fcc305cea02182a10eb47cc08" kindref="member" tooltip="Append the column to the end of the control.">AppendColumn</ref>(col);</highlight></codeline>
 </programlisting></para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref> </para>    </detaileddescription>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="6877">
+      <node id="6881">
         <label>wxSettableHeaderColumn</label>
         <link refid="classwx_settable_header_column"/>
-        <childnode refid="6878" relation="public-inheritance">
+        <childnode refid="6882" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6878">
+      <node id="6882">
         <label>wxHeaderColumn</label>
         <link refid="classwx_header_column"/>
       </node>
-      <node id="6876">
+      <node id="6880">
         <label>wxHeaderColumnSimple</label>
         <link refid="classwx_header_column_simple"/>
-        <childnode refid="6877" relation="public-inheritance">
+        <childnode refid="6881" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="6880">
+      <node id="6884">
         <label>wxSettableHeaderColumn</label>
         <link refid="classwx_settable_header_column"/>
-        <childnode refid="6881" relation="public-inheritance">
+        <childnode refid="6885" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6881">
+      <node id="6885">
         <label>wxHeaderColumn</label>
         <link refid="classwx_header_column"/>
       </node>
-      <node id="6879">
+      <node id="6883">
         <label>wxHeaderColumnSimple</label>
         <link refid="classwx_header_column_simple"/>
-        <childnode refid="6880" relation="public-inheritance">
+        <childnode refid="6884" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>

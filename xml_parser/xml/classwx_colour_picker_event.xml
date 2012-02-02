@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_colour_picker_event" kind="class" prot="public">
     <compoundname>wxColourPickerEvent</compoundname>
     <basecompoundref refid="classwx_command_event" prot="public" virt="non-virtual">wxCommandEvent</basecompoundref>
@@ -69,39 +69,12 @@
 <listitem><para>EVT_COLOURPICKER_CHANGED(id,  func): Generated whenever the selected colour changes. </para></listitem>
 </itemizedlist>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="classwx_colour_picker_ctrl" kindref="compound">wxColourPickerCtrl</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="classwx_colour_picker_ctrl" kindref="compound">wxColourPickerCtrl</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="4894">
-        <label>wxObject</label>
-        <link refid="classwx_object"/>
-      </node>
-      <node id="4892">
-        <label>wxCommandEvent</label>
-        <link refid="classwx_command_event"/>
-        <childnode refid="4893" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4891">
-        <label>wxColourPickerEvent</label>
-        <link refid="classwx_colour_picker_event"/>
-        <childnode refid="4892" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4893">
-        <label>wxEvent</label>
-        <link refid="classwx_event"/>
-        <childnode refid="4894" relation="public-inheritance">
-        </childnode>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
       <node id="4898">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="4899" relation="usage">
-          <edgelabel>m_refData</edgelabel>
-        </childnode>
       </node>
       <node id="4896">
         <label>wxCommandEvent</label>
@@ -121,7 +94,34 @@
         <childnode refid="4898" relation="public-inheritance">
         </childnode>
       </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4902">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="4903" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="4900">
+        <label>wxCommandEvent</label>
+        <link refid="classwx_command_event"/>
+        <childnode refid="4901" relation="public-inheritance">
+        </childnode>
+      </node>
       <node id="4899">
+        <label>wxColourPickerEvent</label>
+        <link refid="classwx_colour_picker_event"/>
+        <childnode refid="4900" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4901">
+        <label>wxEvent</label>
+        <link refid="classwx_event"/>
+        <childnode refid="4902" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4903">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

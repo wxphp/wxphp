@@ -1,11 +1,10 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_doc_template" kind="class" prot="public">
     <compoundname>wxDocTemplate</compoundname>
     <basecompoundref refid="classwx_object" prot="public" virt="non-virtual">wxObject</basecompoundref>
     <includes local="no">wx/docview.h</includes>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_doc_template_1a642da97ef09b08959a7f19604325e7d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_page_setup_dialog_data" kindref="compound">wxPageSetupDialogData</ref> &amp;</type>
         <definition>wxPageSetupDialogData&amp; wxDocTemplate::GetPageSetupDialogData</definition>
@@ -678,38 +677,38 @@
 <para>The <ref refid="classwx_doc_template" kindref="compound">wxDocTemplate</ref> class is used to model the relationship between a document class and a view class. </para>    </briefdescription>
     <detaileddescription>
 <para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__docview" kindref="compound">Document/View Framework</ref></para><para><simplesect kind="see"><para><ref refid="overview__docview_1overview_docview_wxdoctemplate" kindref="member">wxDocTemplate overview</ref>, <ref refid="classwx_document" kindref="compound">wxDocument</ref>, <ref refid="classwx_view" kindref="compound">wxView</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__docview" kindref="compound">Document/View Framework</ref></para><para><simplesect kind="see"><para><ref refid="overview_docview_1overview_docview_wxdoctemplate" kindref="member">wxDocTemplate overview</ref>, <ref refid="classwx_document" kindref="compound">wxDocument</ref>, <ref refid="classwx_view" kindref="compound">wxView</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="5756">
+      <node id="5760">
         <label>wxDocTemplate</label>
         <link refid="classwx_doc_template"/>
-        <childnode refid="5757" relation="public-inheritance">
+        <childnode refid="5761" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5757">
+      <node id="5761">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="5761">
+      <node id="5765">
         <label>wxString</label>
         <link refid="classwx_string"/>
       </node>
-      <node id="5762">
+      <node id="5766">
         <label>wxClassInfo</label>
         <link refid="classwx_class_info"/>
       </node>
-      <node id="5758">
+      <node id="5762">
         <label>wxDocTemplate</label>
         <link refid="classwx_doc_template"/>
-        <childnode refid="5759" relation="public-inheritance">
+        <childnode refid="5763" relation="public-inheritance">
         </childnode>
-        <childnode refid="5758" relation="usage">
+        <childnode refid="5762" relation="usage">
           <edgelabel>m_documentManager</edgelabel>
         </childnode>
-        <childnode refid="5761" relation="usage">
+        <childnode refid="5765" relation="usage">
           <edgelabel>m_defaultExt</edgelabel>
           <edgelabel>m_directory</edgelabel>
           <edgelabel>m_viewTypeName</edgelabel>
@@ -717,19 +716,19 @@
           <edgelabel>m_description</edgelabel>
           <edgelabel>m_fileFilter</edgelabel>
         </childnode>
-        <childnode refid="5762" relation="usage">
+        <childnode refid="5766" relation="usage">
           <edgelabel>m_docClassInfo</edgelabel>
           <edgelabel>m_viewClassInfo</edgelabel>
         </childnode>
       </node>
-      <node id="5759">
+      <node id="5763">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="5760" relation="usage">
+        <childnode refid="5764" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="5760">
+      <node id="5764">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

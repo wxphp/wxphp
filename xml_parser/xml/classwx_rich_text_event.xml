@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_rich_text_event" kind="class" prot="public">
     <compoundname>wxRichTextEvent</compoundname>
     <basecompoundref refid="classwx_notify_event" prot="public" virt="non-virtual">wxNotifyEvent</basecompoundref>
@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" line="2239" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" bodystart="2239" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" line="2342" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" bodystart="2342" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classwx_rich_text_event_1a59f74b63d97caab493e3cb2011371b5b" prot="protected" static="no" mutable="no">
         <type>long</type>
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" line="2240" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" bodystart="2240" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" line="2343" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" bodystart="2343" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classwx_rich_text_event_1a5e937df1563162d1a41b76a4bc5a34e5" prot="protected" static="no" mutable="no">
         <type><ref refid="classwx_rich_text_style_sheet" kindref="compound">wxRichTextStyleSheet</ref> *</type>
@@ -42,7 +42,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" line="2241" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" bodystart="2241" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" line="2344" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" bodystart="2344" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classwx_rich_text_event_1a957ae902f8e991af7b01fe2a7fb1c3ab" prot="protected" static="no" mutable="no">
         <type><ref refid="classwx_rich_text_style_sheet" kindref="compound">wxRichTextStyleSheet</ref> *</type>
@@ -55,7 +55,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" line="2242" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" bodystart="2242" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" line="2345" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" bodystart="2345" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classwx_rich_text_event_1a09f228ea36d3edf99d746d3212fd7a92" prot="protected" static="no" mutable="no">
         <type><ref refid="classwx_rich_text_range" kindref="compound">wxRichTextRange</ref></type>
@@ -68,7 +68,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" line="2243" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" bodystart="2243" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" line="2346" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" bodystart="2346" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classwx_rich_text_event_1a47065e0cfaaf8c542a62eb40502b35b2" prot="protected" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__string_1gad42f64d8c82f1ce4ae58773a89b2d6a7" kindref="member">wxChar</ref></type>
@@ -81,7 +81,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" line="2244" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" bodystart="2244" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" line="2347" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" bodystart="2347" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classwx_rich_text_event_1a83e6f7f693018bb6b2ce49e6115dfc51" prot="protected" static="no" mutable="no">
         <type><ref refid="classwx_rich_text_paragraph_layout_box" kindref="compound">wxRichTextParagraphLayoutBox</ref> *</type>
@@ -94,7 +94,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" line="2245" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" bodystart="2245" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" line="2348" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" bodystart="2348" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classwx_rich_text_event_1a0d574ae94e2a6e72813ec581f145759f" prot="protected" static="no" mutable="no">
         <type><ref refid="classwx_rich_text_paragraph_layout_box" kindref="compound">wxRichTextParagraphLayoutBox</ref> *</type>
@@ -107,7 +107,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" line="2246" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" bodystart="2246" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" line="2349" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" bodystart="2349" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -147,7 +147,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" line="2134" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" bodystart="2130" bodyend="2134"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" line="2237" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" bodystart="2233" bodyend="2237"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_event_1a1e4f9b9b06c12d63930502199725f04e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -164,7 +164,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" line="2144" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" bodystart="2139" bodyend="2144"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" line="2247" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" bodystart="2242" bodyend="2247"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_event_1a3f1487902c8585c6121c61f56424a43b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>long</type>
@@ -177,7 +177,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" line="2149" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" bodystart="2149" bodyend="2149"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" line="2252" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" bodystart="2252" bodyend="2252"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_event_1a9ae047effe6eeeaa145fd535b5f96aa6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -194,7 +194,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" line="2154" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" bodystart="2154" bodyend="2154"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" line="2257" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" bodystart="2257" bodyend="2257"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_event_1aca70752cb8da14b7dec19a3ac73da8fd" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -207,7 +207,7 @@
 <para>Possible values are <computeroutput>wxRICHTEXT_CTRL_DOWN</computeroutput>, <computeroutput>wxRICHTEXT_SHIFT_DOWN</computeroutput>, and <computeroutput>wxRICHTEXT_ALT_DOWN</computeroutput>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" line="2161" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" bodystart="2161" bodyend="2161"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" line="2264" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" bodystart="2264" bodyend="2264"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_event_1a43e7d77c9e36caeff6e63d0e9ff2d657" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -224,7 +224,7 @@
 <para>Possible values are <computeroutput>wxRICHTEXT_CTRL_DOWN</computeroutput>, <computeroutput>wxRICHTEXT_SHIFT_DOWN</computeroutput>, and <computeroutput>wxRICHTEXT_ALT_DOWN</computeroutput>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" line="2168" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" bodystart="2168" bodyend="2168"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" line="2271" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" bodystart="2271" bodyend="2271"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_event_1a74e5213966dd27507158f0325e96a353" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classwx_rich_text_style_sheet" kindref="compound">wxRichTextStyleSheet</ref> *</type>
@@ -237,7 +237,7 @@
 <para>Can be used in a <computeroutput>wxEVT_COMMAND_RICHTEXT_STYLESHEET_CHANGING</computeroutput> or <computeroutput>wxEVT_COMMAND_RICHTEXT_STYLESHEET_CHANGED</computeroutput> event handler. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" line="2176" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" bodystart="2176" bodyend="2176"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" line="2279" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" bodystart="2279" bodyend="2279"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_event_1a8f0fb2c34fc096f0a45dca472e2165fd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -254,7 +254,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" line="2181" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" bodystart="2181" bodyend="2181"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" line="2284" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" bodystart="2284" bodyend="2284"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_event_1a515dd98f33544863be5c4f8fc2dd929c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classwx_rich_text_style_sheet" kindref="compound">wxRichTextStyleSheet</ref> *</type>
@@ -267,7 +267,7 @@
 <para>Can be used in a <computeroutput>wxEVT_COMMAND_RICHTEXT_STYLESHEET_CHANGING</computeroutput> or <computeroutput>wxEVT_COMMAND_RICHTEXT_STYLESHEET_CHANGED</computeroutput> event handler. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" line="2189" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" bodystart="2189" bodyend="2189"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" line="2292" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" bodystart="2292" bodyend="2292"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_event_1ad3e6fe55d10326f17a9a8dcfa90f7d9a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -284,7 +284,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" line="2194" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" bodystart="2194" bodyend="2194"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" line="2297" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" bodystart="2297" bodyend="2297"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_event_1a8a2910d6eff4ec5c7755c0c57e0c32bf" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>const <ref refid="classwx_rich_text_range" kindref="compound">wxRichTextRange</ref> &amp;</type>
@@ -297,7 +297,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" line="2199" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" bodystart="2199" bodyend="2199"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" line="2302" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" bodystart="2302" bodyend="2302"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_event_1a98a815d779ffa3149fe0014e3b1fff5c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -314,7 +314,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" line="2204" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" bodystart="2204" bodyend="2204"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" line="2307" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" bodystart="2307" bodyend="2307"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_event_1a1d1f192fd5daa97689355a4aff6f6c2f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="group__group__funcmacro__string_1gad42f64d8c82f1ce4ae58773a89b2d6a7" kindref="member">wxChar</ref></type>
@@ -327,7 +327,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" line="2209" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" bodystart="2209" bodyend="2209"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" line="2312" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" bodystart="2312" bodyend="2312"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_event_1ab1ad44f0c9ed964fe0f51520a46b2849" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -344,7 +344,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" line="2214" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" bodystart="2214" bodyend="2214"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" line="2317" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" bodystart="2317" bodyend="2317"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_event_1ab7413fb7765f4436faa64babe5502bee" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classwx_rich_text_paragraph_layout_box" kindref="compound">wxRichTextParagraphLayoutBox</ref> *</type>
@@ -357,7 +357,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" line="2219" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" bodystart="2219" bodyend="2219"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" line="2322" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" bodystart="2322" bodyend="2322"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_event_1a6de0f69f786083a2abbbe7947b9ea17f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -374,7 +374,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" line="2224" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" bodystart="2224" bodyend="2224"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" line="2327" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" bodystart="2327" bodyend="2327"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_event_1a2fc6718192f22d5fc80c8a554fefc8fb" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classwx_rich_text_paragraph_layout_box" kindref="compound">wxRichTextParagraphLayoutBox</ref> *</type>
@@ -387,7 +387,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" line="2229" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" bodystart="2229" bodyend="2229"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" line="2332" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" bodystart="2332" bodyend="2332"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_event_1ae0c516964c4cb8c949bca187c2a3d4ba" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -404,7 +404,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" line="2234" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" bodystart="2234" bodyend="2234"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" line="2337" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" bodystart="2337" bodyend="2337"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_event_1a9a49b9b40f1a9add6febdce80c1e7d03" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
         <type><ref refid="classwx_event" kindref="compound">wxEvent</ref> *</type>
@@ -415,11 +415,11 @@
         <briefdescription>
 <para>Returns a copy of the event. </para>        </briefdescription>
         <detaileddescription>
-<para>Any event that is posted to the wxWidgets event system for later action (via <ref refid="classwx_evt_handler_1a0737c6d2cbcd5ded4b1ecdd53ed0def3" kindref="member">wxEvtHandler::AddPendingEvent</ref>, <ref refid="classwx_evt_handler_1acffd03bf407a856166ea71ef0318b59a" kindref="member">wxEvtHandler::QueueEvent</ref> or <ref refid="group__group__funcmacro__events_1ga0cf60a1ad3a5f1e659f7ae591570f58d" kindref="member">wxPostEvent()</ref>) must implement this method.</para><para>All wxWidgets events fully implement this method, but any derived events implemented by the user should also implement this method just in case they (or some event derived from them) are ever posted.</para><para>All wxWidgets events implement a copy constructor, so the easiest way of implementing the Clone function is to implement a copy constructor for a new event (call it MyEvent) and then define the Clone function like this:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_event" kindref="compound" tooltip="An event is a structure holding information about an event passed to a callback or...">wxEvent</ref><sp/>*<ref refid="classwx_rich_text_event_1a9a49b9b40f1a9add6febdce80c1e7d03" kindref="member" tooltip="Returns a copy of the event.">Clone</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>MyEvent(*</highlight><highlight class="keyword">this</highlight><highlight class="normal">);<sp/>}</highlight></codeline>
+<para>Any event that is posted to the wxWidgets event system for later action (via <ref refid="classwx_evt_handler_1a0737c6d2cbcd5ded4b1ecdd53ed0def3" kindref="member">wxEvtHandler::AddPendingEvent</ref>, <ref refid="classwx_evt_handler_1acffd03bf407a856166ea71ef0318b59a" kindref="member">wxEvtHandler::QueueEvent</ref> or <ref refid="group__group__funcmacro__events_1ga0cf60a1ad3a5f1e659f7ae591570f58d" kindref="member">wxPostEvent()</ref>) must implement this method.</para><para>All wxWidgets events fully implement this method, but any derived events implemented by the user should also implement this method just in case they (or some event derived from them) are ever posted.</para><para>All wxWidgets events implement a copy constructor, so the easiest way of implementing the Clone function is to implement a copy constructor for a new event (call it MyEvent) and then define the Clone function like this:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_event" kindref="compound" tooltip="An event is a structure holding information about an event passed to a callback or member function...">wxEvent</ref><sp/>*<ref refid="classwx_rich_text_event_1a9a49b9b40f1a9add6febdce80c1e7d03" kindref="member" tooltip="Returns a copy of the event.">Clone</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>MyEvent(*</highlight><highlight class="keyword">this</highlight><highlight class="normal">);<sp/>}</highlight></codeline>
 </programlisting> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" line="2236" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" bodystart="2236" bodyend="2236"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" line="2339" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" bodystart="2339" bodyend="2339"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -430,7 +430,7 @@
 <listitem><para>EVT_RICHTEXT_LEFT_CLICK(id,  func): Process a <computeroutput>wxEVT_COMMAND_RICHTEXT_LEFT_CLICK</computeroutput> event, generated when the user releases the left mouse button over an object. </para></listitem>
 <listitem><para>EVT_RICHTEXT_RIGHT_CLICK(id,  func): Process a <computeroutput>wxEVT_COMMAND_RICHTEXT_RIGHT_CLICK</computeroutput> event, generated when the user releases the right mouse button over an object. </para></listitem>
 <listitem><para>EVT_RICHTEXT_MIDDLE_CLICK(id,  func): Process a <computeroutput>wxEVT_COMMAND_RICHTEXT_MIDDLE_CLICK</computeroutput> event, generated when the user releases the middle mouse button over an object. </para></listitem>
-<listitem><para>EVT_RICHTEXT_LEFT_DCLICK(id,  func): Process a <computeroutput>wxEVT_COMMAND_RICHTEXT_DLEFT_CLICK</computeroutput> event, generated when the user double-clicks an object. </para></listitem>
+<listitem><para>EVT_RICHTEXT_LEFT_DCLICK(id,  func): Process a <computeroutput>wxEVT_COMMAND_RICHTEXT_LEFT_DCLICK</computeroutput> event, generated when the user double-clicks an object. </para></listitem>
 <listitem><para>EVT_RICHTEXT_RETURN(id,  func): Process a <computeroutput>wxEVT_COMMAND_RICHTEXT_RETURN</computeroutput> event, generated when the user presses the return key. Valid event functions: GetFlags, GetPosition. </para></listitem>
 <listitem><para>EVT_RICHTEXT_CHARACTER(id,  func): Process a <computeroutput>wxEVT_COMMAND_RICHTEXT_CHARACTER</computeroutput> event, generated when the user presses a character key. Valid event functions: GetFlags, GetPosition, GetCharacter. </para></listitem>
 <listitem><para>EVT_RICHTEXT_DELETE(id,  func): Process a <computeroutput>wxEVT_COMMAND_RICHTEXT_DELETE</computeroutput> event, generated when the user presses the backspace or delete key. Valid event functions: GetFlags, GetPosition. </para></listitem>
@@ -439,6 +439,7 @@
 <listitem><para>EVT_RICHTEXT_STYLESHEET_CHANGED(id,  func): Process a <computeroutput>wxEVT_COMMAND_RICHTEXT_STYLESHEET_CHANGING</computeroutput> event, generated when the control&apos;s stylesheet has changed, for example the user added, edited or deleted a style. Valid event functions: GetRange, GetPosition. </para></listitem>
 <listitem><para>EVT_RICHTEXT_STYLESHEET_REPLACING(id,  func): Process a <computeroutput>wxEVT_COMMAND_RICHTEXT_STYLESHEET_REPLACING</computeroutput> event, generated when the control&apos;s stylesheet is about to be replaced, for example when a file is loaded into the control. Valid event functions: Veto, GetOldStyleSheet, GetNewStyleSheet. </para></listitem>
 <listitem><para>EVT_RICHTEXT_STYLESHEET_REPLACED(id,  func): Process a <computeroutput>wxEVT_COMMAND_RICHTEXT_STYLESHEET_REPLACED</computeroutput> event, generated when the control&apos;s stylesheet has been replaced, for example when a file is loaded into the control. Valid event functions: GetOldStyleSheet, GetNewStyleSheet. </para></listitem>
+<listitem><para>EVT_RICHTEXT_PROPERTIES_CHANGED(id,  func): Process a <computeroutput>wxEVT_COMMAND_RICHTEXT_PROPERTIES_CHANGED</computeroutput> event, generated when properties have been applied to the control. Valid event functions: GetPosition, GetRange. </para></listitem>
 <listitem><para>EVT_RICHTEXT_CONTENT_INSERTED(id,  func): Process a <computeroutput>wxEVT_COMMAND_RICHTEXT_CONTENT_INSERTED</computeroutput> event, generated when content has been inserted into the control. Valid event functions: GetPosition, GetRange. </para></listitem>
 <listitem><para>EVT_RICHTEXT_CONTENT_DELETED(id,  func): Process a <computeroutput>wxEVT_COMMAND_RICHTEXT_CONTENT_DELETED</computeroutput> event, generated when content has been deleted from the control. Valid event functions: GetPosition, GetRange. </para></listitem>
 <listitem><para>EVT_RICHTEXT_BUFFER_RESET(id,  func): Process a <computeroutput>wxEVT_COMMAND_RICHTEXT_BUFFER_RESET</computeroutput> event, generated when the buffer has been reset by deleting all content. You can use this to set a default style for the first new paragraph. </para></listitem>
@@ -446,385 +447,387 @@
 <listitem><para>EVT_RICHTEXT_FOCUS_OBJECT_CHANGED(id,  func): Process a <computeroutput>wxEVT_COMMAND_RICHTEXT_FOCUS_OBJECT_CHANGED</computeroutput> event, generated when the current focus object has changed. </para></listitem>
 </itemizedlist>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxrichtext" kindref="member">wxRichText</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref>, <ref refid="group__group__class__richtext" kindref="compound">Rich Text</ref> </para>    </detaileddescription>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxrichtext" kindref="member">wxRichText</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref>, <ref refid="group__group__class__richtext" kindref="compound">Rich Text</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="9492">
+      <node id="9548">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="9490">
+      <node id="9546">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="9491" relation="public-inheritance">
+        <childnode refid="9547" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9489">
+      <node id="9545">
         <label>wxNotifyEvent</label>
         <link refid="classwx_notify_event"/>
-        <childnode refid="9490" relation="public-inheritance">
+        <childnode refid="9546" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9488">
+      <node id="9544">
         <label>wxRichTextEvent</label>
         <link refid="classwx_rich_text_event"/>
-        <childnode refid="9489" relation="public-inheritance">
+        <childnode refid="9545" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9491">
+      <node id="9547">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="9492" relation="public-inheritance">
+        <childnode refid="9548" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="9528">
+      <node id="9567">
         <label>wxString</label>
         <link refid="classwx_string"/>
       </node>
-      <node id="9523">
+      <node id="9580">
         <label>wxRichTextRenderer</label>
         <link refid="classwx_rich_text_renderer"/>
-        <childnode refid="9497" relation="public-inheritance">
+        <childnode refid="9553" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9527">
+      <node id="9584">
         <label>wxCommandProcessor</label>
         <link refid="classwx_command_processor"/>
-        <childnode refid="9497" relation="public-inheritance">
+        <childnode refid="9553" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9502">
+      <node id="9558">
         <label>wxRichTextObject</label>
         <link refid="classwx_rich_text_object"/>
-        <childnode refid="9497" relation="public-inheritance">
+        <childnode refid="9553" relation="public-inheritance">
         </childnode>
-        <childnode refid="9503" relation="usage">
+        <childnode refid="9559" relation="usage">
           <edgelabel>m_size</edgelabel>
           <edgelabel>m_minSize</edgelabel>
           <edgelabel>m_maxSize</edgelabel>
         </childnode>
-        <childnode refid="9504" relation="usage">
+        <childnode refid="9560" relation="usage">
           <edgelabel>m_pos</edgelabel>
         </childnode>
-        <childnode refid="9505" relation="usage">
+        <childnode refid="9561" relation="usage">
           <edgelabel>m_attributes</edgelabel>
         </childnode>
-        <childnode refid="9513" relation="usage">
+        <childnode refid="9570" relation="usage">
           <edgelabel>m_properties</edgelabel>
         </childnode>
-        <childnode refid="9502" relation="usage">
+        <childnode refid="9558" relation="usage">
           <edgelabel>m_parent</edgelabel>
         </childnode>
-        <childnode refid="9514" relation="usage">
+        <childnode refid="9571" relation="usage">
           <edgelabel>m_ownRange</edgelabel>
           <edgelabel>m_range</edgelabel>
         </childnode>
       </node>
-      <node id="9512">
+      <node id="9569">
         <label>wxTextAttrBorder</label>
         <link refid="classwx_text_attr_border"/>
-        <childnode refid="9509" relation="usage">
+        <childnode refid="9565" relation="usage">
           <edgelabel>m_borderWidth</edgelabel>
         </childnode>
       </node>
-      <node id="9525">
+      <node id="9582">
         <label>wxRichTextCommand</label>
         <link refid="classwx_rich_text_command"/>
-        <childnode refid="9526" relation="public-inheritance">
+        <childnode refid="9583" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9497">
+      <node id="9553">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="9498" relation="usage">
+        <childnode refid="9554" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="9499">
+      <node id="9555">
         <label>wxRichTextStyleSheet</label>
         <link refid="classwx_rich_text_style_sheet"/>
-        <childnode refid="9497" relation="public-inheritance">
+        <childnode refid="9553" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9513">
+      <node id="9570">
         <label>wxRichTextProperties</label>
         <link refid="classwx_rich_text_properties"/>
-        <childnode refid="9497" relation="public-inheritance">
+        <childnode refid="9553" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9518">
+      <node id="9575">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="9497" relation="public-inheritance">
+        <childnode refid="9553" relation="public-inheritance">
         </childnode>
-        <childnode refid="9519" relation="public-inheritance">
+        <childnode refid="9576" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9501">
+      <node id="9557">
         <label>wxRichTextCompositeObject</label>
         <link refid="classwx_rich_text_composite_object"/>
-        <childnode refid="9502" relation="public-inheritance">
+        <childnode refid="9558" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9495">
+      <node id="9551">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="9496" relation="public-inheritance">
+        <childnode refid="9552" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9514">
+      <node id="9571">
         <label>wxRichTextRange</label>
         <link refid="classwx_rich_text_range"/>
       </node>
-      <node id="9503">
+      <node id="9559">
         <label>wxSize</label>
         <link refid="classwx_size"/>
       </node>
-      <node id="9506">
+      <node id="9562">
         <label>wxTextAttr</label>
         <link refid="classwx_text_attr"/>
       </node>
-      <node id="9505">
+      <node id="9561">
         <label>wxRichTextAttr</label>
         <link refid="classwx_rich_text_attr"/>
-        <childnode refid="9506" relation="public-inheritance">
+        <childnode refid="9562" relation="public-inheritance">
         </childnode>
-        <childnode refid="9507" relation="usage">
+        <childnode refid="9563" relation="usage">
           <edgelabel>m_textBoxAttr</edgelabel>
         </childnode>
       </node>
-      <node id="9519">
+      <node id="9576">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="9516">
+      <node id="9573">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="9517" relation="public-inheritance">
+        <childnode refid="9574" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9515">
+      <node id="9572">
         <label>wxRichTextCtrl</label>
         <link refid="classwx_rich_text_ctrl"/>
-        <childnode refid="9516" relation="public-inheritance">
+        <childnode refid="9573" relation="public-inheritance">
         </childnode>
-        <childnode refid="9520" relation="usage">
+        <childnode refid="9577" relation="usage">
           <edgelabel>sm_availableFontNames</edgelabel>
         </childnode>
-        <childnode refid="9521" relation="usage">
+        <childnode refid="9578" relation="usage">
           <edgelabel>m_selection</edgelabel>
         </childnode>
-        <childnode refid="9504" relation="usage">
-          <edgelabel>m_dragStart</edgelabel>
-        </childnode>
-        <childnode refid="9522" relation="usage">
+        <childnode refid="9579" relation="usage">
           <edgelabel>m_buffer</edgelabel>
         </childnode>
-        <childnode refid="9529" relation="usage">
+        <childnode refid="9585" relation="usage">
           <edgelabel>m_fullLayoutTime</edgelabel>
         </childnode>
-        <childnode refid="9502" relation="usage">
+        <childnode refid="9558" relation="usage">
           <edgelabel>m_selectionAnchorObject</edgelabel>
         </childnode>
-        <childnode refid="9500" relation="usage">
+        <childnode refid="9556" relation="usage">
           <edgelabel>m_focusObject</edgelabel>
         </childnode>
-        <childnode refid="9530" relation="usage">
+        <childnode refid="9586" relation="usage">
           <edgelabel>m_textCursor</edgelabel>
           <edgelabel>m_urlCursor</edgelabel>
         </childnode>
-        <childnode refid="9532" relation="usage">
+        <childnode refid="9588" relation="usage">
           <edgelabel>m_contextMenu</edgelabel>
         </childnode>
-        <childnode refid="9533" relation="usage">
+        <childnode refid="9589" relation="usage">
           <edgelabel>m_contextMenuPropertiesInfo</edgelabel>
         </childnode>
       </node>
-      <node id="9517">
+      <node id="9574">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="9518" relation="public-inheritance">
+        <childnode refid="9575" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9507">
+      <node id="9563">
         <label>wxTextBoxAttr</label>
         <link refid="classwx_text_box_attr"/>
-        <childnode refid="9508" relation="usage">
+        <childnode refid="9564" relation="usage">
           <edgelabel>m_size</edgelabel>
+          <edgelabel>m_minSize</edgelabel>
+          <edgelabel>m_maxSize</edgelabel>
         </childnode>
-        <childnode refid="9510" relation="usage">
+        <childnode refid="9566" relation="usage">
           <edgelabel>m_margins</edgelabel>
           <edgelabel>m_padding</edgelabel>
           <edgelabel>m_position</edgelabel>
         </childnode>
-        <childnode refid="9511" relation="usage">
+        <childnode refid="9567" relation="usage">
+          <edgelabel>m_boxStyleName</edgelabel>
+        </childnode>
+        <childnode refid="9568" relation="usage">
           <edgelabel>m_border</edgelabel>
           <edgelabel>m_outline</edgelabel>
         </childnode>
       </node>
-      <node id="9520">
+      <node id="9577">
         <label>wxArrayString</label>
         <link refid="classwx_array_string"/>
       </node>
-      <node id="9494">
+      <node id="9550">
         <label>wxNotifyEvent</label>
         <link refid="classwx_notify_event"/>
-        <childnode refid="9495" relation="public-inheritance">
+        <childnode refid="9551" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9510">
+      <node id="9566">
         <label>wxTextAttrDimensions</label>
         <link refid="classwx_text_attr_dimensions"/>
-        <childnode refid="9509" relation="usage">
+        <childnode refid="9565" relation="usage">
           <edgelabel>m_left</edgelabel>
           <edgelabel>m_bottom</edgelabel>
           <edgelabel>m_top</edgelabel>
           <edgelabel>m_right</edgelabel>
         </childnode>
       </node>
-      <node id="9508">
+      <node id="9564">
         <label>wxTextAttrSize</label>
         <link refid="classwx_text_attr_size"/>
-        <childnode refid="9509" relation="usage">
+        <childnode refid="9565" relation="usage">
           <edgelabel>m_width</edgelabel>
           <edgelabel>m_height</edgelabel>
         </childnode>
       </node>
-      <node id="9526">
+      <node id="9583">
         <label>wxCommand</label>
         <link refid="classwx_command"/>
-        <childnode refid="9497" relation="public-inheritance">
+        <childnode refid="9553" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9532">
+      <node id="9588">
         <label>wxMenu</label>
         <link refid="classwx_menu"/>
-        <childnode refid="9518" relation="public-inheritance">
+        <childnode refid="9575" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9493">
+      <node id="9549">
         <label>wxRichTextEvent</label>
         <link refid="classwx_rich_text_event"/>
-        <childnode refid="9494" relation="public-inheritance">
+        <childnode refid="9550" relation="public-inheritance">
         </childnode>
-        <childnode refid="9499" relation="usage">
+        <childnode refid="9555" relation="usage">
           <edgelabel>m_newStyleSheet</edgelabel>
           <edgelabel>m_oldStyleSheet</edgelabel>
         </childnode>
-        <childnode refid="9500" relation="usage">
+        <childnode refid="9556" relation="usage">
           <edgelabel>m_oldContainer</edgelabel>
           <edgelabel>m_container</edgelabel>
         </childnode>
-        <childnode refid="9514" relation="usage">
+        <childnode refid="9571" relation="usage">
           <edgelabel>m_range</edgelabel>
         </childnode>
       </node>
-      <node id="9533">
+      <node id="9589">
         <label>wxRichTextContextMenuPropertiesInfo</label>
         <link refid="classwx_rich_text_context_menu_properties_info"/>
-        <childnode refid="9520" relation="usage">
+        <childnode refid="9577" relation="usage">
           <edgelabel>m_labels</edgelabel>
         </childnode>
       </node>
-      <node id="9531">
+      <node id="9587">
         <label>wxGDIObject</label>
         <link refid="classwx_g_d_i_object"/>
-        <childnode refid="9497" relation="public-inheritance">
+        <childnode refid="9553" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9509">
+      <node id="9565">
         <label>wxTextAttrDimension</label>
         <link refid="classwx_text_attr_dimension"/>
       </node>
-      <node id="9524">
+      <node id="9581">
         <label>wxRichTextFontTable</label>
         <link refid="classwx_rich_text_font_table"/>
-        <childnode refid="9497" relation="public-inheritance">
+        <childnode refid="9553" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9496">
+      <node id="9552">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="9497" relation="public-inheritance">
+        <childnode refid="9553" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9529">
+      <node id="9585">
         <label>wxLongLong</label>
         <link refid="classwx_long_long"/>
       </node>
-      <node id="9522">
+      <node id="9579">
         <label>wxRichTextBuffer</label>
         <link refid="classwx_rich_text_buffer"/>
-        <childnode refid="9500" relation="public-inheritance">
+        <childnode refid="9556" relation="public-inheritance">
         </childnode>
-        <childnode refid="9523" relation="usage">
+        <childnode refid="9580" relation="usage">
           <edgelabel>sm_renderer</edgelabel>
         </childnode>
-        <childnode refid="9499" relation="usage">
+        <childnode refid="9555" relation="usage">
           <edgelabel>m_styleSheet</edgelabel>
         </childnode>
-        <childnode refid="9524" relation="usage">
+        <childnode refid="9581" relation="usage">
           <edgelabel>m_fontTable</edgelabel>
         </childnode>
-        <childnode refid="9525" relation="usage">
+        <childnode refid="9582" relation="usage">
           <edgelabel>m_batchedCommand</edgelabel>
         </childnode>
-        <childnode refid="9527" relation="usage">
+        <childnode refid="9584" relation="usage">
           <edgelabel>m_commandProcessor</edgelabel>
         </childnode>
-        <childnode refid="9528" relation="usage">
+        <childnode refid="9567" relation="usage">
           <edgelabel>m_batchedCommandsName</edgelabel>
         </childnode>
       </node>
-      <node id="9504">
+      <node id="9560">
         <label>wxPoint</label>
         <link refid="classwx_point"/>
       </node>
-      <node id="9521">
+      <node id="9578">
         <label>wxRichTextSelection</label>
         <link refid="classwx_rich_text_selection"/>
-        <childnode refid="9500" relation="usage">
+        <childnode refid="9556" relation="usage">
           <edgelabel>m_container</edgelabel>
         </childnode>
       </node>
-      <node id="9500">
+      <node id="9556">
         <label>wxRichTextParagraphLayoutBox</label>
         <link refid="classwx_rich_text_paragraph_layout_box"/>
-        <childnode refid="9501" relation="public-inheritance">
+        <childnode refid="9557" relation="public-inheritance">
         </childnode>
-        <childnode refid="9505" relation="usage">
+        <childnode refid="9561" relation="usage">
           <edgelabel>m_defaultAttributes</edgelabel>
         </childnode>
-        <childnode refid="9514" relation="usage">
+        <childnode refid="9571" relation="usage">
           <edgelabel>m_invalidRange</edgelabel>
         </childnode>
-        <childnode refid="9515" relation="usage">
+        <childnode refid="9572" relation="usage">
           <edgelabel>m_ctrl</edgelabel>
         </childnode>
       </node>
-      <node id="9530">
+      <node id="9586">
         <label>wxCursor</label>
         <link refid="classwx_cursor"/>
-        <childnode refid="9531" relation="public-inheritance">
+        <childnode refid="9587" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9511">
+      <node id="9568">
         <label>wxTextAttrBorders</label>
         <link refid="classwx_text_attr_borders"/>
-        <childnode refid="9512" relation="usage">
+        <childnode refid="9569" relation="usage">
           <edgelabel>m_left</edgelabel>
           <edgelabel>m_bottom</edgelabel>
           <edgelabel>m_top</edgelabel>
           <edgelabel>m_right</edgelabel>
         </childnode>
       </node>
-      <node id="9498">
+      <node id="9554">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" line="2120" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" bodystart="2119" bodyend="2250"/>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" line="2223" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" bodystart="2222" bodyend="2353"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxRichTextEvent</scope><name>AllocExclusive</name></member>
       <member refid="classwx_notify_event_1a7b23515f827b2ce1da1e6990d9aafe80" prot="public" virt="non-virtual"><scope>wxRichTextEvent</scope><name>Allow</name></member>

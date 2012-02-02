@@ -1,0 +1,228 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="page_stockitems" kind="page">
+    <compoundname>page_stockitems</compoundname>
+    <title>Stock items</title>
+    <detaileddescription>
+<para>The following is the list of the window IDs for which stock buttons and menu items are created.</para><para>See the <ref refid="classwx_button" kindref="compound">wxButton</ref> constructor and the <ref refid="classwx_menu_item" kindref="compound">wxMenuItem</ref> constructor for classes which automatically add stock bitmaps when using stock IDs. Also note that you can retrieve stock bitmaps using <ref refid="classwx_art_provider" kindref="compound">wxArtProvider</ref>.</para><para><table rows="73" cols="3"><row>
+<entry thead="no"><para><bold>Stock ID</bold> </para></entry><entry thead="no"><para><bold>GTK icon</bold> </para></entry><entry thead="no"><para><bold>Stock label</bold> </para></entry></row>
+<row>
+<entry thead="no"><para>wxID_ABOUT </para></entry><entry thead="no"><para><image type="html" name="gtk-about.png"></image>
+ </para></entry><entry thead="no"><para>&amp;About </para></entry></row>
+<row>
+<entry thead="no"><para>wxID_ADD </para></entry><entry thead="no"><para><image type="html" name="gtk-add.png"></image>
+ </para></entry><entry thead="no"><para>Add </para></entry></row>
+<row>
+<entry thead="no"><para>wxID_APPLY </para></entry><entry thead="no"><para><image type="html" name="gtk-apply.png"></image>
+ </para></entry><entry thead="no"><para>&amp;Apply </para></entry></row>
+<row>
+<entry thead="no"><para>wxID_BACKWARD </para></entry><entry thead="no"><para><image type="html" name="gtk-go-back-ltr.png"></image>
+ </para></entry><entry thead="no"><para>&amp;Back </para></entry></row>
+<row>
+<entry thead="no"><para>wxID_BOLD </para></entry><entry thead="no"><para><image type="html" name="gtk-bold.png"></image>
+ </para></entry><entry thead="no"><para>&amp;Bold </para></entry></row>
+<row>
+<entry thead="no"><para>wxID_BOTTOM </para></entry><entry thead="no"><para><image type="html" name="gtk-goto-bottom.png"></image>
+ </para></entry><entry thead="no"><para>&amp;Bottom </para></entry></row>
+<row>
+<entry thead="no"><para>wxID_CANCEL </para></entry><entry thead="no"><para><image type="html" name="gtk-cancel.png"></image>
+ </para></entry><entry thead="no"><para>&amp;Cancel </para></entry></row>
+<row>
+<entry thead="no"><para>wxID_CDROM </para></entry><entry thead="no"><para><image type="html" name="gtk-cdrom.png"></image>
+ </para></entry><entry thead="no"><para>&amp;CD-Rom </para></entry></row>
+<row>
+<entry thead="no"><para>wxID_CLEAR </para></entry><entry thead="no"><para><image type="html" name="gtk-clear.png"></image>
+ </para></entry><entry thead="no"><para>&amp;Clear </para></entry></row>
+<row>
+<entry thead="no"><para>wxID_CLOSE </para></entry><entry thead="no"><para><image type="html" name="gtk-close.png"></image>
+ </para></entry><entry thead="no"><para>&amp;Close </para></entry></row>
+<row>
+<entry thead="no"><para>wxID_CONVERT </para></entry><entry thead="no"><para><image type="html" name="gtk-convert.png"></image>
+ </para></entry><entry thead="no"><para>&amp;Convert </para></entry></row>
+<row>
+<entry thead="no"><para>wxID_COPY </para></entry><entry thead="no"><para><image type="html" name="gtk-copy.png"></image>
+ </para></entry><entry thead="no"><para>&amp;Copy </para></entry></row>
+<row>
+<entry thead="no"><para>wxID_CUT </para></entry><entry thead="no"><para><image type="html" name="gtk-cut.png"></image>
+ </para></entry><entry thead="no"><para>Cu&amp;t </para></entry></row>
+<row>
+<entry thead="no"><para>wxID_DELETE </para></entry><entry thead="no"><para><image type="html" name="gtk-delete.png"></image>
+ </para></entry><entry thead="no"><para>&amp;Delete </para></entry></row>
+<row>
+<entry thead="no"><para>wxID_DOWN </para></entry><entry thead="no"><para><image type="html" name="gtk-go-down.png"></image>
+ </para></entry><entry thead="no"><para>&amp;Down </para></entry></row>
+<row>
+<entry thead="no"><para>wxID_EDIT </para></entry><entry thead="no"><para><image type="html" name="gtk-edit.png"></image>
+ </para></entry><entry thead="no"><para>&amp;Edit </para></entry></row>
+<row>
+<entry thead="no"><para>wxID_EXECUTE </para></entry><entry thead="no"><para><image type="html" name="gtk-execute.png"></image>
+ </para></entry><entry thead="no"><para>&amp;Execute </para></entry></row>
+<row>
+<entry thead="no"><para>wxID_EXIT </para></entry><entry thead="no"><para><image type="html" name="gtk-quit.png"></image>
+ </para></entry><entry thead="no"><para>&amp;Quit </para></entry></row>
+<row>
+<entry thead="no"><para>wxID_FILE </para></entry><entry thead="no"><para><image type="html" name="gtk-file.png"></image>
+ </para></entry><entry thead="no"><para>&amp;File </para></entry></row>
+<row>
+<entry thead="no"><para>wxID_FIND </para></entry><entry thead="no"><para><image type="html" name="gtk-find.png"></image>
+ </para></entry><entry thead="no"><para>&amp;Find </para></entry></row>
+<row>
+<entry thead="no"><para>wxID_FIRST </para></entry><entry thead="no"><para><image type="html" name="gtk-goto-first-ltr.png"></image>
+ </para></entry><entry thead="no"><para>&amp;First </para></entry></row>
+<row>
+<entry thead="no"><para>wxID_FLOPPY </para></entry><entry thead="no"><para><image type="html" name="gtk-floppy.png"></image>
+ </para></entry><entry thead="no"><para>&amp;Floppy </para></entry></row>
+<row>
+<entry thead="no"><para>wxID_FORWARD </para></entry><entry thead="no"><para><image type="html" name="gtk-go-forward-ltr.png"></image>
+ </para></entry><entry thead="no"><para>&amp;Forward </para></entry></row>
+<row>
+<entry thead="no"><para>wxID_HARDDISK </para></entry><entry thead="no"><para><image type="html" name="gtk-harddisk.png"></image>
+ </para></entry><entry thead="no"><para>&amp;Harddisk </para></entry></row>
+<row>
+<entry thead="no"><para>wxID_HELP </para></entry><entry thead="no"><para><image type="html" name="gtk-help.png"></image>
+ </para></entry><entry thead="no"><para>&amp;Help </para></entry></row>
+<row>
+<entry thead="no"><para>wxID_HOME </para></entry><entry thead="no"><para><image type="html" name="gtk-home.png"></image>
+ </para></entry><entry thead="no"><para>&amp;Home </para></entry></row>
+<row>
+<entry thead="no"><para>wxID_INDENT </para></entry><entry thead="no"><para><image type="html" name="gtk-indent-ltr.png"></image>
+ </para></entry><entry thead="no"><para>Indent </para></entry></row>
+<row>
+<entry thead="no"><para>wxID_INDEX </para></entry><entry thead="no"><para><image type="html" name="gtk-index.png"></image>
+ </para></entry><entry thead="no"><para>&amp;Index </para></entry></row>
+<row>
+<entry thead="no"><para>wxID_INFO </para></entry><entry thead="no"><para><image type="html" name="gtk-info.png"></image>
+ </para></entry><entry thead="no"><para>&amp;Info </para></entry></row>
+<row>
+<entry thead="no"><para>wxID_ITALIC </para></entry><entry thead="no"><para><image type="html" name="gtk-italic.png"></image>
+ </para></entry><entry thead="no"><para>&amp;Italic </para></entry></row>
+<row>
+<entry thead="no"><para>wxID_JUMP_TO </para></entry><entry thead="no"><para><image type="html" name="gtk-jump-to-ltr.png"></image>
+ </para></entry><entry thead="no"><para>&amp;Jump to </para></entry></row>
+<row>
+<entry thead="no"><para>wxID_JUSTIFY_CENTER </para></entry><entry thead="no"><para><image type="html" name="gtk-justify-center.png"></image>
+ </para></entry><entry thead="no"><para>Centered </para></entry></row>
+<row>
+<entry thead="no"><para>wxID_JUSTIFY_FILL </para></entry><entry thead="no"><para><image type="html" name="gtk-justify-fill.png"></image>
+ </para></entry><entry thead="no"><para>Justified </para></entry></row>
+<row>
+<entry thead="no"><para>wxID_JUSTIFY_LEFT </para></entry><entry thead="no"><para><image type="html" name="gtk-justify-left.png"></image>
+ </para></entry><entry thead="no"><para>Align Left </para></entry></row>
+<row>
+<entry thead="no"><para>wxID_JUSTIFY_RIGHT </para></entry><entry thead="no"><para><image type="html" name="gtk-justify-right.png"></image>
+ </para></entry><entry thead="no"><para>Align Right </para></entry></row>
+<row>
+<entry thead="no"><para>wxID_LAST </para></entry><entry thead="no"><para><image type="html" name="gtk-goto-last-ltr.png"></image>
+ </para></entry><entry thead="no"><para>&amp;Last </para></entry></row>
+<row>
+<entry thead="no"><para>wxID_NETWORK </para></entry><entry thead="no"><para><image type="html" name="gtk-network.png"></image>
+ </para></entry><entry thead="no"><para>&amp;Network </para></entry></row>
+<row>
+<entry thead="no"><para>wxID_NEW </para></entry><entry thead="no"><para><image type="html" name="gtk-new.png"></image>
+ </para></entry><entry thead="no"><para>&amp;New </para></entry></row>
+<row>
+<entry thead="no"><para>wxID_NO </para></entry><entry thead="no"><para><image type="html" name="gtk-no.png"></image>
+ </para></entry><entry thead="no"><para>&amp;No </para></entry></row>
+<row>
+<entry thead="no"><para>wxID_OK </para></entry><entry thead="no"><para><image type="html" name="gtk-ok.png"></image>
+ </para></entry><entry thead="no"><para>&amp;OK </para></entry></row>
+<row>
+<entry thead="no"><para>wxID_OPEN </para></entry><entry thead="no"><para><image type="html" name="gtk-open.png"></image>
+ </para></entry><entry thead="no"><para>&amp;Open... </para></entry></row>
+<row>
+<entry thead="no"><para>wxID_PASTE </para></entry><entry thead="no"><para><image type="html" name="gtk-paste.png"></image>
+ </para></entry><entry thead="no"><para>&amp;Paste </para></entry></row>
+<row>
+<entry thead="no"><para>wxID_PREFERENCES </para></entry><entry thead="no"><para><image type="html" name="gtk-preferences.png"></image>
+ </para></entry><entry thead="no"><para>&amp;Preferences </para></entry></row>
+<row>
+<entry thead="no"><para>wxID_PREVIEW </para></entry><entry thead="no"><para><image type="html" name="gtk-print-preview.png"></image>
+ </para></entry><entry thead="no"><para>Print previe&amp;w </para></entry></row>
+<row>
+<entry thead="no"><para>wxID_PRINT </para></entry><entry thead="no"><para><image type="html" name="gtk-print.png"></image>
+ </para></entry><entry thead="no"><para>&amp;Print... </para></entry></row>
+<row>
+<entry thead="no"><para>wxID_PROPERTIES </para></entry><entry thead="no"><para><image type="html" name="gtk-properties.png"></image>
+ </para></entry><entry thead="no"><para>&amp;Properties </para></entry></row>
+<row>
+<entry thead="no"><para>wxID_REDO </para></entry><entry thead="no"><para><image type="html" name="gtk-redo-ltr.png"></image>
+ </para></entry><entry thead="no"><para>&amp;Redo </para></entry></row>
+<row>
+<entry thead="no"><para>wxID_REFRESH </para></entry><entry thead="no"><para><image type="html" name="gtk-refresh.png"></image>
+ </para></entry><entry thead="no"><para>Refresh </para></entry></row>
+<row>
+<entry thead="no"><para>wxID_REMOVE </para></entry><entry thead="no"><para><image type="html" name="gtk-remove.png"></image>
+ </para></entry><entry thead="no"><para>Remove </para></entry></row>
+<row>
+<entry thead="no"><para>wxID_REPLACE </para></entry><entry thead="no"><para><image type="html" name="gtk-find-and-replace.png"></image>
+ </para></entry><entry thead="no"><para>Rep&amp;lace </para></entry></row>
+<row>
+<entry thead="no"><para>wxID_REVERT_TO_SAVED </para></entry><entry thead="no"><para><image type="html" name="gtk-revert-to-saved-ltr.png"></image>
+ </para></entry><entry thead="no"><para>Revert to Saved </para></entry></row>
+<row>
+<entry thead="no"><para>wxID_SAVE </para></entry><entry thead="no"><para><image type="html" name="gtk-save.png"></image>
+ </para></entry><entry thead="no"><para>&amp;Save </para></entry></row>
+<row>
+<entry thead="no"><para>wxID_SAVEAS </para></entry><entry thead="no"><para><image type="html" name="gtk-save-as.png"></image>
+ </para></entry><entry thead="no"><para>Save &amp;As... </para></entry></row>
+<row>
+<entry thead="no"><para>wxID_SELECTALL </para></entry><entry thead="no"><para><image type="html" name="gtk-select-all.png"></image>
+ </para></entry><entry thead="no"><para>Select &amp;All </para></entry></row>
+<row>
+<entry thead="no"><para>wxID_SELECT_COLOR </para></entry><entry thead="no"><para><image type="html" name="gtk-select-color.png"></image>
+ </para></entry><entry thead="no"><para>&amp;Color </para></entry></row>
+<row>
+<entry thead="no"><para>wxID_SELECT_FONT </para></entry><entry thead="no"><para><image type="html" name="gtk-select-font.png"></image>
+ </para></entry><entry thead="no"><para>&amp;Font </para></entry></row>
+<row>
+<entry thead="no"><para>wxID_SORT_ASCENDING </para></entry><entry thead="no"><para><image type="html" name="gtk-sort-ascending.png"></image>
+ </para></entry><entry thead="no"><para>&amp;Ascending </para></entry></row>
+<row>
+<entry thead="no"><para>wxID_SORT_DESCENDING </para></entry><entry thead="no"><para><image type="html" name="gtk-sort-descending.png"></image>
+ </para></entry><entry thead="no"><para>&amp;Descending </para></entry></row>
+<row>
+<entry thead="no"><para>wxID_SPELL_CHECK </para></entry><entry thead="no"><para><image type="html" name="gtk-spell-check.png"></image>
+ </para></entry><entry thead="no"><para>&amp;Spell Check </para></entry></row>
+<row>
+<entry thead="no"><para>wxID_STOP </para></entry><entry thead="no"><para><image type="html" name="gtk-stop.png"></image>
+ </para></entry><entry thead="no"><para>&amp;Stop </para></entry></row>
+<row>
+<entry thead="no"><para>wxID_STRIKETHROUGH </para></entry><entry thead="no"><para><image type="html" name="gtk-strikethrough.png"></image>
+ </para></entry><entry thead="no"><para>&amp;Strikethrough </para></entry></row>
+<row>
+<entry thead="no"><para>wxID_TOP </para></entry><entry thead="no"><para><image type="html" name="gtk-goto-top.png"></image>
+ </para></entry><entry thead="no"><para>&amp;Top </para></entry></row>
+<row>
+<entry thead="no"><para>wxID_UNDELETE </para></entry><entry thead="no"><para><image type="html" name="gtk-undelete-ltr.png"></image>
+ </para></entry><entry thead="no"><para>Undelete </para></entry></row>
+<row>
+<entry thead="no"><para>wxID_UNDERLINE </para></entry><entry thead="no"><para><image type="html" name="gtk-underline.png"></image>
+ </para></entry><entry thead="no"><para>&amp;Underline </para></entry></row>
+<row>
+<entry thead="no"><para>wxID_UNDO </para></entry><entry thead="no"><para><image type="html" name="gtk-undo-ltr.png"></image>
+ </para></entry><entry thead="no"><para>&amp;Undo </para></entry></row>
+<row>
+<entry thead="no"><para>wxID_UNINDENT </para></entry><entry thead="no"><para><image type="html" name="gtk-unindent-ltr.png"></image>
+ </para></entry><entry thead="no"><para>&amp;Unindent </para></entry></row>
+<row>
+<entry thead="no"><para>wxID_UP </para></entry><entry thead="no"><para><image type="html" name="gtk-go-up.png"></image>
+ </para></entry><entry thead="no"><para>&amp;Up </para></entry></row>
+<row>
+<entry thead="no"><para>wxID_YES </para></entry><entry thead="no"><para><image type="html" name="gtk-yes.png"></image>
+ </para></entry><entry thead="no"><para>&amp;Yes </para></entry></row>
+<row>
+<entry thead="no"><para>wxID_ZOOM_100 </para></entry><entry thead="no"><para><image type="html" name="gtk-zoom-100.png"></image>
+ </para></entry><entry thead="no"><para>&amp;Actual Size </para></entry></row>
+<row>
+<entry thead="no"><para>wxID_ZOOM_FIT </para></entry><entry thead="no"><para><image type="html" name="gtk-zoom-fit.png"></image>
+ </para></entry><entry thead="no"><para>Zoom to &amp;Fit </para></entry></row>
+<row>
+<entry thead="no"><para>wxID_ZOOM_IN </para></entry><entry thead="no"><para><image type="html" name="gtk-zoom-in.png"></image>
+ </para></entry><entry thead="no"><para>Zoom &amp;In </para></entry></row>
+<row>
+<entry thead="no"><para>wxID_ZOOM_OUT </para></entry><entry thead="no"><para><image type="html" name="gtk-zoom-out.png"></image>
+ </para></entry><entry thead="no"><para>Zoom &amp;Out </para></entry></row>
+</table>
+</para><para>Note that some of the IDs listed above also have a stock accelerator and an associated help string. </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

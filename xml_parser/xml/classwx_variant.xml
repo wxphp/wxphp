@@ -1,12 +1,11 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_variant" kind="class" prot="public">
     <compoundname>wxVariant</compoundname>
     <basecompoundref refid="classwx_object" prot="public" virt="non-virtual">wxObject</basecompoundref>
     <includes local="no">wx/variant.h</includes>
       <sectiondef kind="user-defined">
       <header>List Functionality</header>
-      <description><para><anchor id="_1amgrpf42ad0940945a084280de2e178957780"/> </para></description>
       <memberdef kind="function" id="classwx_variant_1a59c3a9127a5dd1d4d1172f130395f3e6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_variant" kindref="compound">wxVariant</ref></type>
         <definition>wxVariant wxVariant::operator[]</definition>
@@ -159,7 +158,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_variant_1a194d1f7f077bb7c72e956038dc6a3795" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
         <definition>bool wxVariant::Convert</definition>
@@ -298,7 +296,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_variant_1a1d1ab31c00cd2974b6df6cbccf2575c9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
         <definition>bool wxVariant::operator!=</definition>
@@ -539,7 +536,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_variant_1ac491fed52a8b0ee15e7142867bf359ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void wxVariant::operator=</definition>
@@ -550,7 +546,7 @@
           <declname>value</declname>
         </param>
         <briefdescription>
-<para>Assignment operator, using <ref refid="overview__refcount" kindref="compound">reference counting</ref> if possible. </para>        </briefdescription>
+<para>Assignment operator, using <ref refid="overview_refcount" kindref="compound">reference counting</ref> if possible. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -567,7 +563,7 @@
           <declname>value</declname>
         </param>
         <briefdescription>
-<para>Assignment operator, using <ref refid="overview__refcount" kindref="compound">reference counting</ref> if possible. </para>        </briefdescription>
+<para>Assignment operator, using <ref refid="overview_refcount" kindref="compound">reference counting</ref> if possible. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -584,7 +580,7 @@
           <declname>value</declname>
         </param>
         <briefdescription>
-<para>Assignment operator, using <ref refid="overview__refcount" kindref="compound">reference counting</ref> if possible. </para>        </briefdescription>
+<para>Assignment operator, using <ref refid="overview_refcount" kindref="compound">reference counting</ref> if possible. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -601,7 +597,7 @@
           <declname>value</declname>
         </param>
         <briefdescription>
-<para>Assignment operator, using <ref refid="overview__refcount" kindref="compound">reference counting</ref> if possible. </para>        </briefdescription>
+<para>Assignment operator, using <ref refid="overview_refcount" kindref="compound">reference counting</ref> if possible. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -618,7 +614,7 @@
           <declname>value</declname>
         </param>
         <briefdescription>
-<para>Assignment operator, using <ref refid="overview__refcount" kindref="compound">reference counting</ref> if possible. </para>        </briefdescription>
+<para>Assignment operator, using <ref refid="overview_refcount" kindref="compound">reference counting</ref> if possible. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -635,7 +631,7 @@
           <declname>value</declname>
         </param>
         <briefdescription>
-<para>Assignment operator, using <ref refid="overview__refcount" kindref="compound">reference counting</ref> if possible. </para>        </briefdescription>
+<para>Assignment operator, using <ref refid="overview_refcount" kindref="compound">reference counting</ref> if possible. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -652,7 +648,7 @@
           <declname>value</declname>
         </param>
         <briefdescription>
-<para>Assignment operator, using <ref refid="overview__refcount" kindref="compound">reference counting</ref> if possible. </para>        </briefdescription>
+<para>Assignment operator, using <ref refid="overview_refcount" kindref="compound">reference counting</ref> if possible. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -669,7 +665,7 @@
           <declname>value</declname>
         </param>
         <briefdescription>
-<para>Assignment operator, using <ref refid="overview__refcount" kindref="compound">reference counting</ref> if possible. </para>        </briefdescription>
+<para>Assignment operator, using <ref refid="overview_refcount" kindref="compound">reference counting</ref> if possible. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -686,7 +682,7 @@
           <declname>value</declname>
         </param>
         <briefdescription>
-<para>Assignment operator, using <ref refid="overview__refcount" kindref="compound">reference counting</ref> if possible. </para>        </briefdescription>
+<para>Assignment operator, using <ref refid="overview_refcount" kindref="compound">reference counting</ref> if possible. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -703,7 +699,7 @@
           <declname>value</declname>
         </param>
         <briefdescription>
-<para>Assignment operator, using <ref refid="overview__refcount" kindref="compound">reference counting</ref> if possible. </para>        </briefdescription>
+<para>Assignment operator, using <ref refid="overview_refcount" kindref="compound">reference counting</ref> if possible. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -720,7 +716,7 @@
           <declname>value</declname>
         </param>
         <briefdescription>
-<para>Assignment operator, using <ref refid="overview__refcount" kindref="compound">reference counting</ref> if possible. </para>        </briefdescription>
+<para>Assignment operator, using <ref refid="overview_refcount" kindref="compound">reference counting</ref> if possible. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -737,7 +733,7 @@
           <declname>value</declname>
         </param>
         <briefdescription>
-<para>Assignment operator, using <ref refid="overview__refcount" kindref="compound">reference counting</ref> if possible. </para>        </briefdescription>
+<para>Assignment operator, using <ref refid="overview_refcount" kindref="compound">reference counting</ref> if possible. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -754,7 +750,7 @@
           <declname>value</declname>
         </param>
         <briefdescription>
-<para>Assignment operator, using <ref refid="overview__refcount" kindref="compound">reference counting</ref> if possible. </para>        </briefdescription>
+<para>Assignment operator, using <ref refid="overview_refcount" kindref="compound">reference counting</ref> if possible. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -771,7 +767,7 @@
           <declname>value</declname>
         </param>
         <briefdescription>
-<para>Assignment operator, using <ref refid="overview__refcount" kindref="compound">reference counting</ref> if possible. </para>        </briefdescription>
+<para>Assignment operator, using <ref refid="overview_refcount" kindref="compound">reference counting</ref> if possible. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -788,7 +784,7 @@
           <declname>value</declname>
         </param>
         <briefdescription>
-<para>Assignment operator, using <ref refid="overview__refcount" kindref="compound">reference counting</ref> if possible. </para>        </briefdescription>
+<para>Assignment operator, using <ref refid="overview_refcount" kindref="compound">reference counting</ref> if possible. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -797,7 +793,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_variant_1af926a9aae2c3cc057710492b0ba816dc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
         <definition>bool wxVariant::operator==</definition>
@@ -1038,7 +1033,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_variant_1a5dad9f6c1a45c43dd09713aed9bd2c6c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
         <definition>double wxVariant::operator double</definition>
@@ -1456,7 +1450,7 @@
         <briefdescription>
 <para>Destructor. </para>        </briefdescription>
         <detaileddescription>
-<para><simplesect kind="note"><para>wxVariantData&apos;s destructor is protected, so <ref refid="classwx_variant_data" kindref="compound">wxVariantData</ref> cannot usually be deleted. Instead, <ref refid="classwx_variant_data_1a5c90358b8b5d3bc99c0c3410cf565010" kindref="member">wxVariantData::DecRef()</ref> should be called. See <ref refid="overview__refcount_1overview_refcount_destruct" kindref="member">reference-counted object destruction</ref> for more info. </para></simplesect>
+<para><simplesect kind="note"><para>wxVariantData&apos;s destructor is protected, so <ref refid="classwx_variant_data" kindref="compound">wxVariantData</ref> cannot usually be deleted. Instead, <ref refid="classwx_variant_data_1a5c90358b8b5d3bc99c0c3410cf565010" kindref="member">wxVariantData::DecRef()</ref> should be called. See <ref refid="overview_refcount_1overview_refcount_destruct" kindref="member">reference-counted object destruction</ref> for more info. </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -1836,7 +1830,7 @@
 <para>The <ref refid="classwx_variant" kindref="compound">wxVariant</ref> class represents a container for any type. </para>    </briefdescription>
     <detaileddescription>
 <para>A variant&apos;s value can be changed at run time, possibly to a different type of value.</para><para><simplesect kind="note"><para>As of wxWidgets 2.9.1, <ref refid="classwx_any" kindref="compound">wxAny</ref> has become the preferred variant class. While most controls still use <ref refid="classwx_variant" kindref="compound">wxVariant</ref> in their interface, you can start using <ref refid="classwx_any" kindref="compound">wxAny</ref> in your code because of an implicit conversion layer. See below for more information.</para></simplesect>
-As standard, <ref refid="classwx_variant" kindref="compound">wxVariant</ref> can store values of type bool, wxChar, double, long, string, string list, time, date, void pointer, list of strings, and list of variants. However, an application can extend wxVariant&apos;s capabilities by deriving from the class <ref refid="classwx_variant_data" kindref="compound">wxVariantData</ref> and using the <ref refid="classwx_variant_data" kindref="compound">wxVariantData</ref> form of the <ref refid="classwx_variant" kindref="compound">wxVariant</ref> constructor or assignment operator to assign this data to a variant. Actual values for user-defined types will need to be accessed via the <ref refid="classwx_variant_data" kindref="compound">wxVariantData</ref> object, unlike the case for basic data types where convenience functions such as <ref refid="classwx_variant_1ab8a21610ac6295f3f12a5a38581f93a3" kindref="member">GetLong()</ref> can be used.</para><para>Pointers to any <ref refid="classwx_object" kindref="compound">wxObject</ref> derived class can also easily be stored in a <ref refid="classwx_variant" kindref="compound">wxVariant</ref>. <ref refid="classwx_variant" kindref="compound">wxVariant</ref> will then use wxWidgets&apos; built-in RTTI system to set the type name (returned by <ref refid="classwx_variant_1a585b00398c7800fe3d83d4067a323aa9" kindref="member">GetType()</ref>) and to perform type-safety checks at runtime.</para><para>This class is useful for reducing the programming for certain tasks, such as an editor for different data types, or a remote procedure call protocol.</para><para>An optional name member is associated with a <ref refid="classwx_variant" kindref="compound">wxVariant</ref>. This might be used, for example, in CORBA or OLE automation classes, where named parameters are required.</para><para>Note that as of wxWidgets 2.7.1, <ref refid="classwx_variant" kindref="compound">wxVariant</ref> is <ref refid="overview__refcount" kindref="compound">reference counted</ref>. Additionally, the convenience macros DECLARE_VARIANT_OBJECT() and IMPLEMENT_VARIANT_OBJECT() were added so that adding (limited) support for conversion to and from <ref refid="classwx_variant" kindref="compound">wxVariant</ref> can be very easily implemented without modifying either <ref refid="classwx_variant" kindref="compound">wxVariant</ref> or the class to be stored by <ref refid="classwx_variant" kindref="compound">wxVariant</ref>. Since assignment operators cannot be declared outside the class, the shift left operators are used like this:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>in<sp/>the<sp/>header<sp/>file</highlight><highlight class="normal"></highlight></codeline>
+As standard, <ref refid="classwx_variant" kindref="compound">wxVariant</ref> can store values of type bool, wxChar, double, long, string, string list, time, date, void pointer, list of strings, and list of variants. However, an application can extend wxVariant&apos;s capabilities by deriving from the class <ref refid="classwx_variant_data" kindref="compound">wxVariantData</ref> and using the <ref refid="classwx_variant_data" kindref="compound">wxVariantData</ref> form of the <ref refid="classwx_variant" kindref="compound">wxVariant</ref> constructor or assignment operator to assign this data to a variant. Actual values for user-defined types will need to be accessed via the <ref refid="classwx_variant_data" kindref="compound">wxVariantData</ref> object, unlike the case for basic data types where convenience functions such as <ref refid="classwx_variant_1ab8a21610ac6295f3f12a5a38581f93a3" kindref="member">GetLong()</ref> can be used.</para><para>Pointers to any <ref refid="classwx_object" kindref="compound">wxObject</ref> derived class can also easily be stored in a <ref refid="classwx_variant" kindref="compound">wxVariant</ref>. <ref refid="classwx_variant" kindref="compound">wxVariant</ref> will then use wxWidgets&apos; built-in RTTI system to set the type name (returned by <ref refid="classwx_variant_1a585b00398c7800fe3d83d4067a323aa9" kindref="member">GetType()</ref>) and to perform type-safety checks at runtime.</para><para>This class is useful for reducing the programming for certain tasks, such as an editor for different data types, or a remote procedure call protocol.</para><para>An optional name member is associated with a <ref refid="classwx_variant" kindref="compound">wxVariant</ref>. This might be used, for example, in CORBA or OLE automation classes, where named parameters are required.</para><para>Note that as of wxWidgets 2.7.1, <ref refid="classwx_variant" kindref="compound">wxVariant</ref> is <ref refid="overview_refcount" kindref="compound">reference counted</ref>. Additionally, the convenience macros DECLARE_VARIANT_OBJECT() and IMPLEMENT_VARIANT_OBJECT() were added so that adding (limited) support for conversion to and from <ref refid="classwx_variant" kindref="compound">wxVariant</ref> can be very easily implemented without modifying either <ref refid="classwx_variant" kindref="compound">wxVariant</ref> or the class to be stored by <ref refid="classwx_variant" kindref="compound">wxVariant</ref>. Since assignment operators cannot be declared outside the class, the shift left operators are used like this:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>in<sp/>the<sp/>header<sp/>file</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>DECLARE_VARIANT_OBJECT(MyClass)</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>in<sp/>the<sp/>implementation<sp/>file</highlight><highlight class="normal"></highlight></codeline>
@@ -1849,17 +1843,17 @@ As standard, <ref refid="classwx_variant" kindref="compound">wxVariant</ref> can
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>or</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>value<sp/>&lt;&lt;<sp/>variant;</highlight></codeline>
-</programlisting></para><para>For this to work, MyClass must derive from <ref refid="classwx_object" kindref="compound">wxObject</ref>, implement the <ref refid="overview__rtti" kindref="compound">wxWidgets RTTI system</ref> and support the assignment operator and equality operator for itself. Ideally, it should also be reference counted to make copying operations cheap and fast. This can be most easily implemented using the reference counting support offered by <ref refid="classwx_object" kindref="compound">wxObject</ref> itself. By default, wxWidgets already implements the shift operator conversion for a few of its drawing related classes:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/>IMPLEMENT_VARIANT_OBJECT(<ref refid="classwx_colour" kindref="compound" tooltip="A colour is an object representing a combination of Red, Green, and Blue (RGB) intensity...">wxColour</ref>)</highlight></codeline>
+</programlisting></para><para>For this to work, MyClass must derive from <ref refid="classwx_object" kindref="compound">wxObject</ref>, implement the <ref refid="overview_rtti" kindref="compound">wxWidgets RTTI system</ref> and support the assignment operator and equality operator for itself. Ideally, it should also be reference counted to make copying operations cheap and fast. This can be most easily implemented using the reference counting support offered by <ref refid="classwx_object" kindref="compound">wxObject</ref> itself. By default, wxWidgets already implements the shift operator conversion for a few of its drawing related classes:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/>IMPLEMENT_VARIANT_OBJECT(<ref refid="classwx_colour" kindref="compound" tooltip="A colour is an object representing a combination of Red, Green, and Blue (RGB) intensity values...">wxColour</ref>)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>IMPLEMENT_VARIANT_OBJECT(<ref refid="classwx_image" kindref="compound" tooltip="This class encapsulates a platform-independent image.">wxImage</ref>)</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>IMPLEMENT_VARIANT_OBJECT(<ref refid="classwx_icon" kindref="compound" tooltip="An icon is a small rectangular bitmap usually used for denoting a minimized application...">wxIcon</ref>)</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>IMPLEMENT_VARIANT_OBJECT(<ref refid="classwx_bitmap" kindref="compound" tooltip="This class encapsulates the concept of a platform-dependent bitmap, either monochrome...">wxBitmap</ref>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>IMPLEMENT_VARIANT_OBJECT(<ref refid="classwx_icon" kindref="compound" tooltip="An icon is a small rectangular bitmap usually used for denoting a minimized application.">wxIcon</ref>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>IMPLEMENT_VARIANT_OBJECT(<ref refid="classwx_bitmap" kindref="compound" tooltip="This class encapsulates the concept of a platform-dependent bitmap, either monochrome or colour or co...">wxBitmap</ref>)</highlight></codeline>
 </programlisting></para><para>Note that as of wxWidgets 2.9.0, <ref refid="classwx_variant_data" kindref="compound">wxVariantData</ref> no longer inherits from <ref refid="classwx_object" kindref="compound">wxObject</ref> and <ref refid="classwx_variant" kindref="compound">wxVariant</ref> no longer uses the type-unsafe wxList class for list operations but the type-safe wxVariantList class. Also, <ref refid="classwx_variant_data" kindref="compound">wxVariantData</ref> now supports the <ref refid="classwx_variant_data_1a1dff3469897917c2d583c54ec03a1795" kindref="member">wxVariantData::Clone()</ref> function for implementing the <ref refid="classwx_variant_1af5021c0a8bfb8ce1b987764ab662b132" kindref="member">Unshare()</ref> function. <ref refid="classwx_variant_data_1a1dff3469897917c2d583c54ec03a1795" kindref="member">wxVariantData::Clone()</ref> is implemented automatically by IMPLEMENT_VARIANT_OBJECT().</para><para>Since <ref refid="classwx_variant_data" kindref="compound">wxVariantData</ref> no longer derives from <ref refid="classwx_object" kindref="compound">wxObject</ref>, any code that tests the type of the data using <ref refid="group__group__funcmacro__rtti_1ga2606f92f8d5f8e22f4afb44a6df3c38a" kindref="member">wxDynamicCast()</ref> will require adjustment. You can use the macro wxDynamicCastVariantData() with the same arguments as <ref refid="group__group__funcmacro__rtti_1ga2606f92f8d5f8e22f4afb44a6df3c38a" kindref="member">wxDynamicCast()</ref>, to use C++ RTTI type information instead of wxWidgets RTTI.</para><sect1 id="classwx_variant_1variant_wxanyconversion">
 <title>wxVariant to wxAny Conversion Layer</title>
 <para><ref refid="classwx_any" kindref="compound">wxAny</ref> is a more modern, template-based variant class. It is not directly compatible with <ref refid="classwx_variant" kindref="compound">wxVariant</ref>, but there is a transparent conversion layer.</para><para>Following is an example how to use these conversions with wxPropertyGrid&apos;s property class <ref refid="classwx_p_g_property" kindref="compound">wxPGProperty</ref> (which currently uses wxVariants both internally and in the public API):</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>property<sp/>value<sp/>as<sp/>wxAny<sp/>instead<sp/>of<sp/>wxVariant</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_any" kindref="compound" tooltip="The wxAny class represents a container for any type.">wxAny</ref><sp/>value<sp/>=<sp/></highlight><highlight class="keyword">property</highlight><highlight class="normal">-&gt;GetValue();</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Do<sp/>something<sp/>with<sp/>it</highlight><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DoSomethingWithString(value.<ref refid="classwx_any_1ad5958253489be22f0e414cd1dd7a38f6" kindref="member" tooltip="This template function converts wxAny into given type.">As</ref>&lt;<ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change...">wxString</ref>&gt;());</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DoSomethingWithString(value.<ref refid="classwx_any_1ad5958253489be22f0e414cd1dd7a38f6" kindref="member" tooltip="This template function converts wxAny into given type.">As</ref>&lt;<ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change was actually the m...">wxString</ref>&gt;());</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Write<sp/>back<sp/>new<sp/>value<sp/>to<sp/>property</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>value<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;New<sp/>Value&quot;</highlight><highlight class="normal">;</highlight></codeline>
@@ -1888,36 +1882,36 @@ Supplied conversion functions will automatically work with all built-in <ref ref
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>IMPLEMENT_TRIVIAL_WXANY_CONVERSION(Foo,<sp/>wxVariantDataFoo)</highlight></codeline>
 </programlisting></para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__data" kindref="compound">Data Structures</ref></para><para><simplesect kind="see"><para><ref refid="classwx_variant_data" kindref="compound">wxVariantData</ref>, <ref refid="classwx_any" kindref="compound">wxAny</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__data" kindref="compound">Data Structures</ref></para><para><simplesect kind="see"><para><ref refid="classwx_variant_data" kindref="compound">wxVariantData</ref>, <ref refid="classwx_any" kindref="compound">wxAny</ref> </para></simplesect>
 </para></sect1>
     </detaileddescription>
     <inheritancegraph>
-      <node id="11254">
+      <node id="11315">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="11253">
+      <node id="11314">
         <label>wxVariant</label>
         <link refid="classwx_variant"/>
-        <childnode refid="11254" relation="public-inheritance">
+        <childnode refid="11315" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="11256">
+      <node id="11317">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="11257" relation="usage">
+        <childnode refid="11318" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="11255">
+      <node id="11316">
         <label>wxVariant</label>
         <link refid="classwx_variant"/>
-        <childnode refid="11256" relation="public-inheritance">
+        <childnode refid="11317" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11257">
+      <node id="11318">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_editable_list_box" kind="class" prot="public">
     <compoundname>wxEditableListBox</compoundname>
     <basecompoundref refid="classwx_panel" prot="public" virt="non-virtual">wxPanel</basecompoundref>
@@ -219,83 +219,83 @@
 <listitem><para>wxEL_DEFAULT_STYLE: Default style: wxEL_ALLOW_NEW|wxEL_ALLOW_EDIT|wxEL_ALLOW_DELETE. </para></listitem>
 </itemizedlist>
 The control uses a <ref refid="classwx_list_ctrl" kindref="compound">wxListCtrl</ref> internally and emit its events.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref></para><para><simplesect kind="see"><para><ref refid="classwx_list_box" kindref="compound">wxListBox</ref>, <ref refid="classwx_list_ctrl" kindref="compound">wxListCtrl</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref></para><para><simplesect kind="see"><para><ref refid="classwx_list_box" kindref="compound">wxListBox</ref>, <ref refid="classwx_list_ctrl" kindref="compound">wxListCtrl</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="5802">
+      <node id="5806">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="5801">
+      <node id="5805">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="5802" relation="public-inheritance">
+        <childnode refid="5806" relation="public-inheritance">
         </childnode>
-        <childnode refid="5803" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="5799">
-        <label>wxPanel</label>
-        <link refid="classwx_panel"/>
-        <childnode refid="5800" relation="public-inheritance">
+        <childnode refid="5807" relation="public-inheritance">
         </childnode>
       </node>
       <node id="5803">
+        <label>wxPanel</label>
+        <link refid="classwx_panel"/>
+        <childnode refid="5804" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5807">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="5800">
+      <node id="5804">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="5801" relation="public-inheritance">
+        <childnode refid="5805" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5798">
+      <node id="5802">
         <label>wxEditableListBox</label>
         <link refid="classwx_editable_list_box"/>
-        <childnode refid="5799" relation="public-inheritance">
+        <childnode refid="5803" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="5808">
+      <node id="5812">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="5809" relation="usage">
+        <childnode refid="5813" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="5807">
+      <node id="5811">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="5808" relation="public-inheritance">
+        <childnode refid="5812" relation="public-inheritance">
         </childnode>
-        <childnode refid="5810" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="5805">
-        <label>wxPanel</label>
-        <link refid="classwx_panel"/>
-        <childnode refid="5806" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="5810">
-        <label>wxTrackable</label>
-        <link refid="classwx_trackable"/>
-      </node>
-      <node id="5806">
-        <label>wxWindow</label>
-        <link refid="classwx_window"/>
-        <childnode refid="5807" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="5804">
-        <label>wxEditableListBox</label>
-        <link refid="classwx_editable_list_box"/>
-        <childnode refid="5805" relation="public-inheritance">
+        <childnode refid="5814" relation="public-inheritance">
         </childnode>
       </node>
       <node id="5809">
+        <label>wxPanel</label>
+        <link refid="classwx_panel"/>
+        <childnode refid="5810" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5814">
+        <label>wxTrackable</label>
+        <link refid="classwx_trackable"/>
+      </node>
+      <node id="5810">
+        <label>wxWindow</label>
+        <link refid="classwx_window"/>
+        <childnode refid="5811" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5808">
+        <label>wxEditableListBox</label>
+        <link refid="classwx_editable_list_box"/>
+        <childnode refid="5809" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5813">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

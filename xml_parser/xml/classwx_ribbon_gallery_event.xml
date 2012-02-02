@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_ribbon_gallery_event" kind="class" prot="public">
     <compoundname>wxRibbonGalleryEvent</compoundname>
     <basecompoundref refid="classwx_command_event" prot="public" virt="non-virtual">wxCommandEvent</basecompoundref>
@@ -103,59 +103,59 @@
     </briefdescription>
     <detaileddescription>
 <para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxribbon" kindref="member">wxRibbon</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref>, <ref refid="group__group__class__ribbon" kindref="compound">Ribbon User Interface</ref></para><para><simplesect kind="see"><para><ref refid="classwx_ribbon_bar" kindref="compound">wxRibbonBar</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxribbon" kindref="member">wxRibbon</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref>, <ref refid="group__group__class__ribbon" kindref="compound">Ribbon User Interface</ref></para><para><simplesect kind="see"><para><ref refid="classwx_ribbon_bar" kindref="compound">wxRibbonBar</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="9167">
+      <node id="9175">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="9165">
+      <node id="9173">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="9166" relation="public-inheritance">
+        <childnode refid="9174" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9164">
+      <node id="9172">
         <label>wxRibbonGalleryEvent</label>
         <link refid="classwx_ribbon_gallery_event"/>
-        <childnode refid="9165" relation="public-inheritance">
+        <childnode refid="9173" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9166">
+      <node id="9174">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="9167" relation="public-inheritance">
+        <childnode refid="9175" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="9171">
+      <node id="9179">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="9172" relation="usage">
+        <childnode refid="9180" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="9169">
+      <node id="9177">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="9170" relation="public-inheritance">
+        <childnode refid="9178" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9168">
+      <node id="9176">
         <label>wxRibbonGalleryEvent</label>
         <link refid="classwx_ribbon_gallery_event"/>
-        <childnode refid="9169" relation="public-inheritance">
+        <childnode refid="9177" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9170">
+      <node id="9178">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="9171" relation="public-inheritance">
+        <childnode refid="9179" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9172">
+      <node id="9180">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

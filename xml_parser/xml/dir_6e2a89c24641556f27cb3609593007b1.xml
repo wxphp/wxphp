@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="dir_6e2a89c24641556f27cb3609593007b1" kind="dir">
+    <compoundname>interface/wx/html/</compoundname>
+    <innerfile refid="helpctrl_8h">helpctrl.h</innerfile>
+    <innerfile refid="helpdata_8h">helpdata.h</innerfile>
+    <innerfile refid="helpdlg_8h">helpdlg.h</innerfile>
+    <innerfile refid="helpfrm_8h">helpfrm.h</innerfile>
+    <innerfile refid="helpwnd_8h">helpwnd.h</innerfile>
+    <innerfile refid="htmlcell_8h">htmlcell.h</innerfile>
+    <innerfile refid="htmlfilt_8h">htmlfilt.h</innerfile>
+    <innerfile refid="htmlpars_8h">htmlpars.h</innerfile>
+    <innerfile refid="htmltag_8h">htmltag.h</innerfile>
+    <innerfile refid="htmlwin_8h">htmlwin.h</innerfile>
+    <innerfile refid="htmprint_8h">htmprint.h</innerfile>
+    <innerfile refid="winpars_8h">winpars.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/"/>
+  </compounddef>
+</doxygen>

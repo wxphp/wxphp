@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_property_grid" kind="class" prot="public">
     <compoundname>wxPropertyGrid</compoundname>
     <basecompoundref refid="classwx_control" prot="public" virt="non-virtual">wxControl</basecompoundref>
@@ -7,7 +7,7 @@
     <includes local="no">wx/propgrid/propgrid.h</includes>
       <sectiondef kind="user-defined">
       <header>wxPropertyGrid customization</header>
-      <description><para><anchor id="_1amgrp057f89bc8cc96ece443d78d44ea31ee0"/>Reimplement these member functions in derived class for better control over <ref refid="classwx_property_grid" kindref="compound">wxPropertyGrid</ref> behaviour. </para></description>
+      <description><para>Reimplement these member functions in derived class for better control over <ref refid="classwx_property_grid" kindref="compound">wxPropertyGrid</ref> behaviour. </para></description>
       <memberdef kind="function" id="classwx_property_grid_1a6eff1187beba43109be7a12194b0bf2b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
         <definition>virtual void wxPropertyGrid::DoShowPropertyError</definition>
@@ -65,7 +65,7 @@
       </sectiondef>
       <sectiondef kind="user-defined">
       <header>Property development functions</header>
-      <description><para><anchor id="_1amgrp0d87d9d6d6adcb546a74353b9f31248b"/>These member functions are usually only called when creating custom user properties. </para></description>
+      <description><para>These member functions are usually only called when creating custom user properties. </para></description>
       <memberdef kind="function" id="classwx_property_grid_1a98d434dc2d39b242aa98a0359143d5a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void wxPropertyGrid::EditorsValueWasModified</definition>
@@ -1552,7 +1552,7 @@ This function only works properly if grid size prior to call was already fairly 
 <para>The sorting function to be used. It should return a value greater than 0 if position of p1 is after p2. So, for instance, when comparing property names, you can use following implementation:</para></parameterdescription>
 </parameteritem>
 </parameterlist>
-<programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>MyPropertySortFunction(<ref refid="classwx_property_grid" kindref="compound" tooltip="wxPropertyGrid is a specialized grid for editing properties - in other words name...">wxPropertyGrid</ref>*<sp/>propGrid,</highlight></codeline>
+<programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>MyPropertySortFunction(<ref refid="classwx_property_grid" kindref="compound" tooltip="wxPropertyGrid is a specialized grid for editing properties - in other words name = value pairs...">wxPropertyGrid</ref>*<sp/>propGrid,</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_p_g_property" kindref="compound" tooltip="wxPGProperty is base class for all wxPropertyGrid properties.">wxPGProperty</ref>*<sp/>p1,</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_p_g_property" kindref="compound" tooltip="wxPGProperty is base class for all wxPropertyGrid properties.">wxPGProperty</ref>*<sp/>p2)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
@@ -1700,7 +1700,7 @@ This function only works properly if grid size prior to call was already fairly 
     <briefdescription>
 <para><ref refid="classwx_property_grid" kindref="compound">wxPropertyGrid</ref> is a specialized grid for editing properties - in other words name = value pairs. </para>    </briefdescription>
     <detaileddescription>
-<para>List of ready-to-use property classes include strings, numbers, flag sets, fonts, colours and many others. It is possible, for example, to categorize properties, set up a complete tree-hierarchy, add more than two columns, and set arbitrary per-property attributes.</para><para>Please note that most member functions are inherited and as such not documented on this page. This means you will probably also want to read <ref refid="classwx_property_grid_interface" kindref="compound">wxPropertyGridInterface</ref> class reference.</para><para>See also <ref refid="overview__propgrid" kindref="compound">wxPropertyGrid Overview</ref>.</para><sect1 id="classwx_property_grid_1propgrid_window_styles_">
+<para>List of ready-to-use property classes include strings, numbers, flag sets, fonts, colours and many others. It is possible, for example, to categorize properties, set up a complete tree-hierarchy, add more than two columns, and set arbitrary per-property attributes.</para><para>Please note that most member functions are inherited and as such not documented on this page. This means you will probably also want to read <ref refid="classwx_property_grid_interface" kindref="compound">wxPropertyGridInterface</ref> class reference.</para><para>See also <ref refid="overview_propgrid" kindref="compound">wxPropertyGrid Overview</ref>.</para><sect1 id="classwx_property_grid_1propgrid_window_styles_">
 <title>Window Styles</title>
 <para>See <ref refid="interface_2wx_2propgrid_2propgrid_8h_1propgrid_window_styles" kindref="member">wxPropertyGrid Window Styles</ref>.</para></sect1>
 <sect1 id="classwx_property_grid_1propgrid_event_handling">
@@ -1723,62 +1723,17 @@ This function only works properly if grid size prior to call was already fairly 
 </itemizedlist>
 <simplesect kind="remark"><para>Use <ref refid="classwx_window_1a15c678314cfc1d807196bc298b713ed3" kindref="member">Freeze()</ref> and <ref refid="classwx_window_1a279a532124073261b28131b6afb59a1e" kindref="member">Thaw()</ref> respectively to disable and enable drawing. This will also delay sorting etc. miscellaneous calculations to the last possible moment.</para></simplesect>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxpropgrid" kindref="member">wxPropertyGrid</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__propgrid" kindref="compound">wxPropertyGrid</ref> <htmlonly> &lt;br&gt;&lt;div&gt;&lt;span class=&apos;appearance&apos;&gt;Appearance:&lt;/span&gt;&lt;br&gt;&lt;table class=&apos;appearance&apos;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&apos;wxmsw/propertygrid.png&apos; alt=&apos;wxMSW appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxgtk/propertygrid.png&apos; alt=&apos;wxGTK appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxmac/propertygrid.png&apos; alt=&apos;wxMac appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;wxMSW appearance&lt;/td&gt;&lt;td&gt;wxGTK appearance&lt;/td&gt;&lt;td&gt;wxMac appearance&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt; </htmlonly> </para></sect1>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxpropgrid" kindref="member">wxPropertyGrid</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__propgrid" kindref="compound">wxPropertyGrid</ref> <htmlonly> &lt;br&gt;&lt;div&gt;&lt;span class=&apos;appearance&apos;&gt;Appearance:&lt;/span&gt;&lt;br&gt;&lt;table class=&apos;appearance&apos;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&apos;wxmsw/propertygrid.png&apos; alt=&apos;wxMSW appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxgtk/propertygrid.png&apos; alt=&apos;wxGTK appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxmac/propertygrid.png&apos; alt=&apos;wxMac appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;wxMSW appearance&lt;/td&gt;&lt;td&gt;wxGTK appearance&lt;/td&gt;&lt;td&gt;wxMac appearance&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt; </htmlonly> </para></sect1>
     </detaileddescription>
     <inheritancegraph>
-      <node id="8863">
+      <node id="8871">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="8862">
-        <label>wxEvtHandler</label>
-        <link refid="classwx_evt_handler"/>
-        <childnode refid="8863" relation="public-inheritance">
-        </childnode>
-        <childnode refid="8864" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="8864">
-        <label>wxTrackable</label>
-        <link refid="classwx_trackable"/>
-      </node>
-      <node id="8860">
-        <label>wxControl</label>
-        <link refid="classwx_control"/>
-        <childnode refid="8861" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="8861">
-        <label>wxWindow</label>
-        <link refid="classwx_window"/>
-        <childnode refid="8862" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="8859">
-        <label>wxPropertyGrid</label>
-        <link refid="classwx_property_grid"/>
-        <childnode refid="8860" relation="public-inheritance">
-        </childnode>
-        <childnode refid="8865" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="8865">
-        <label>wxPropertyGridInterface</label>
-        <link refid="classwx_property_grid_interface"/>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
       <node id="8870">
-        <label>wxObject</label>
-        <link refid="classwx_object"/>
-        <childnode refid="8871" relation="usage">
-          <edgelabel>m_refData</edgelabel>
-        </childnode>
-      </node>
-      <node id="8869">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="8870" relation="public-inheritance">
+        <childnode refid="8871" relation="public-inheritance">
         </childnode>
         <childnode refid="8872" relation="public-inheritance">
         </childnode>
@@ -1787,22 +1742,22 @@ This function only works properly if grid size prior to call was already fairly 
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="8867">
+      <node id="8868">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="8868" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="8868">
-        <label>wxWindow</label>
-        <link refid="classwx_window"/>
         <childnode refid="8869" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8866">
+      <node id="8869">
+        <label>wxWindow</label>
+        <link refid="classwx_window"/>
+        <childnode refid="8870" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8867">
         <label>wxPropertyGrid</label>
         <link refid="classwx_property_grid"/>
-        <childnode refid="8867" relation="public-inheritance">
+        <childnode refid="8868" relation="public-inheritance">
         </childnode>
         <childnode refid="8873" relation="public-inheritance">
         </childnode>
@@ -1811,7 +1766,52 @@ This function only works properly if grid size prior to call was already fairly 
         <label>wxPropertyGridInterface</label>
         <link refid="classwx_property_grid_interface"/>
       </node>
-      <node id="8871">
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="8878">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="8879" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="8877">
+        <label>wxEvtHandler</label>
+        <link refid="classwx_evt_handler"/>
+        <childnode refid="8878" relation="public-inheritance">
+        </childnode>
+        <childnode refid="8880" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8880">
+        <label>wxTrackable</label>
+        <link refid="classwx_trackable"/>
+      </node>
+      <node id="8875">
+        <label>wxControl</label>
+        <link refid="classwx_control"/>
+        <childnode refid="8876" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8876">
+        <label>wxWindow</label>
+        <link refid="classwx_window"/>
+        <childnode refid="8877" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8874">
+        <label>wxPropertyGrid</label>
+        <link refid="classwx_property_grid"/>
+        <childnode refid="8875" relation="public-inheritance">
+        </childnode>
+        <childnode refid="8881" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8881">
+        <label>wxPropertyGridInterface</label>
+        <link refid="classwx_property_grid_interface"/>
+      </node>
+      <node id="8879">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

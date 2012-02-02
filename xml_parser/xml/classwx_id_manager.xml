@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_id_manager" kind="class" prot="public">
     <compoundname>wxIdManager</compoundname>
     <includes local="no">wx/windowid.h</includes>
@@ -48,7 +48,7 @@
         <briefdescription>
 <para>Called directly by <ref refid="classwx_window_1ad9bc342d1e38d221e37f0f6396950c8c" kindref="member">wxWindow::UnreserveControlId()</ref>, this function will unreserve an ID or range of IDs that is currently reserved. </para>        </briefdescription>
         <detaileddescription>
-<para>This should only be called for IDs returned by ReserveControlId() that have NOT been assigned to a wxWindowIDRef (see <ref refid="overview__windowids" kindref="compound">Window IDs</ref>).</para><para><parameterlist kind="param"><parameteritem>
+<para>This should only be called for IDs returned by ReserveControlId() that have NOT been assigned to a wxWindowIDRef (see <ref refid="overview_windowids" kindref="compound">Window IDs</ref>).</para><para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>id</parametername>
 </parameternamelist>
@@ -74,7 +74,7 @@
 <para><ref refid="classwx_id_manager" kindref="compound">wxIdManager</ref> is responsible for allocating and releasing window IDs. </para>    </briefdescription>
     <detaileddescription>
 <para>It is used by <ref refid="classwx_window_1a8175da594e6045635a1d1cfe775cdddb" kindref="member">wxWindow::NewControlId()</ref> and <ref refid="classwx_window_1ad9bc342d1e38d221e37f0f6396950c8c" kindref="member">wxWindow::UnreserveControlId()</ref>, and can also be used be used directly.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__cfg" kindref="compound">Application and System configuration</ref></para><para><simplesect kind="see"><para><ref refid="classwx_window_1a8175da594e6045635a1d1cfe775cdddb" kindref="member">wxWindow::NewControlId()</ref>, <ref refid="classwx_window_1ad9bc342d1e38d221e37f0f6396950c8c" kindref="member">wxWindow::UnreserveControlId()</ref>, <ref refid="overview__windowids" kindref="compound">Window IDs</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__cfg" kindref="compound">Application and System configuration</ref></para><para><simplesect kind="see"><para><ref refid="classwx_window_1a8175da594e6045635a1d1cfe775cdddb" kindref="member">wxWindow::NewControlId()</ref>, <ref refid="classwx_window_1ad9bc342d1e38d221e37f0f6396950c8c" kindref="member">wxWindow::UnreserveControlId()</ref>, <ref refid="overview_windowids" kindref="compound">Window IDs</ref> </para></simplesect>
 </para>    </detaileddescription>
     <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/windowid.h" line="28" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/windowid.h" bodystart="27" bodyend="58"/>
     <listofallmembers>

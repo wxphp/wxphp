@@ -1,11 +1,10 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_automation_object" kind="class" prot="public">
     <compoundname>wxAutomationObject</compoundname>
     <basecompoundref refid="classwx_object" prot="public" virt="non-virtual">wxObject</basecompoundref>
     <includes local="no">wx/msw/ole/automtn.h</includes>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_automation_object_1ab79635adfce3cfc9cb369f539d09c925" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_variant" kindref="compound">wxVariant</ref></type>
         <definition>wxVariant wxAutomationObject::CallMethod</definition>
@@ -54,7 +53,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_automation_object_1a72ba1f7cfe73c0c87afac55e58bad111" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_variant" kindref="compound">wxVariant</ref></type>
         <definition>wxVariant wxAutomationObject::GetProperty</definition>
@@ -103,7 +101,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_automation_object_1ad1bcb65b8e3b8b40968a0dcf2b28fbb6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
         <definition>bool wxAutomationObject::PutProperty</definition>
@@ -403,39 +400,39 @@
     <briefdescription>
 <para>The <bold><ref refid="classwx_automation_object" kindref="compound">wxAutomationObject</ref></bold> class represents an OLE automation object containing a single data member, an IDispatch pointer. </para>    </briefdescription>
     <detaileddescription>
-<para>It contains a number of functions that make it easy to perform automation operations, and set and get properties. The class makes heavy use of the <ref refid="classwx_variant" kindref="compound">wxVariant</ref> class.</para><para>The usage of these classes is quite close to OLE automation usage in Visual Basic. The API is high-level, and the application can specify multiple properties in a single string. The following example gets the current Excel instance, and if it exists, makes the active cell bold.</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_automation_object" kindref="compound" tooltip="The wxAutomationObject class represents an OLE automation object containing a single...">wxAutomationObject</ref><sp/>excelObject;</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(excelObject.<ref refid="classwx_automation_object_1ac5c1db0ad00feadf6531dce1d6ef4bc8" kindref="member" tooltip="Retrieves the current object associated with the specified ProgID, and attaches the...">GetInstance</ref>(</highlight><highlight class="stringliteral">&quot;Excel.Application&quot;</highlight><highlight class="normal">))</highlight></codeline>
+<para>It contains a number of functions that make it easy to perform automation operations, and set and get properties. The class makes heavy use of the <ref refid="classwx_variant" kindref="compound">wxVariant</ref> class.</para><para>The usage of these classes is quite close to OLE automation usage in Visual Basic. The API is high-level, and the application can specify multiple properties in a single string. The following example gets the current Excel instance, and if it exists, makes the active cell bold.</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_automation_object" kindref="compound" tooltip="The wxAutomationObject class represents an OLE automation object containing a single data member...">wxAutomationObject</ref><sp/>excelObject;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(excelObject.<ref refid="classwx_automation_object_1ac5c1db0ad00feadf6531dce1d6ef4bc8" kindref="member" tooltip="Retrieves the current object associated with the specified ProgID, and attaches the IDispatch pointer...">GetInstance</ref>(</highlight><highlight class="stringliteral">&quot;Excel.Application&quot;</highlight><highlight class="normal">))</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>excelObject.<ref refid="classwx_automation_object_1ad1bcb65b8e3b8b40968a0dcf2b28fbb6" kindref="member" tooltip="Puts a property value into this object.">PutProperty</ref>(</highlight><highlight class="stringliteral">&quot;ActiveCell.Font.Bold&quot;</highlight><highlight class="normal">,<sp/>@</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
-</programlisting></para><para>Note that this class obviously works under Windows only.</para><para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page__port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor> </para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__data" kindref="compound">Data Structures</ref></para><para><simplesect kind="see"><para><ref refid="classwx_variant" kindref="compound">wxVariant</ref> </para></simplesect>
+</programlisting></para><para>Note that this class obviously works under Windows only.</para><para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page_port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor> </para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__data" kindref="compound">Data Structures</ref></para><para><simplesect kind="see"><para><ref refid="classwx_variant" kindref="compound">wxVariant</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="4450">
+      <node id="4454">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="4449">
+      <node id="4453">
         <label>wxAutomationObject</label>
         <link refid="classwx_automation_object"/>
-        <childnode refid="4450" relation="public-inheritance">
+        <childnode refid="4454" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="4452">
+      <node id="4456">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="4453" relation="usage">
+        <childnode refid="4457" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="4451">
+      <node id="4455">
         <label>wxAutomationObject</label>
         <link refid="classwx_automation_object"/>
-        <childnode refid="4452" relation="public-inheritance">
+        <childnode refid="4456" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4453">
+      <node id="4457">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

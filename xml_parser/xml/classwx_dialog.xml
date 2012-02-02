@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_dialog" kind="class" prot="public">
     <compoundname>wxDialog</compoundname>
     <basecompoundref refid="classwx_top_level_window" prot="public" virt="non-virtual">wxTopLevelWindow</basecompoundref>
@@ -138,7 +138,7 @@
         <briefdescription>
 <para>Destructor. </para>        </briefdescription>
         <detaileddescription>
-<para>Deletes any child windows before deleting the physical window.</para><para>See <ref refid="overview__windowdeletion" kindref="compound">Window Deletion</ref> for more info. </para>        </detaileddescription>
+<para>Deletes any child windows before deleting the physical window.</para><para>See <ref refid="overview_windowdeletion" kindref="compound">Window Deletion</ref> for more info. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dialog.h" line="193"/>
@@ -155,7 +155,7 @@
         <briefdescription>
 <para>Adds an identifier to be regarded as a main button for the non-scrolling area of a dialog. </para>        </briefdescription>
         <detaileddescription>
-<para><simplesect kind="see"><para><ref refid="overview__dialog_1overview_dialog_autoscrolling" kindref="member">Automatic scrolling dialogs</ref> (for more on layout adaptation) </para></simplesect>
+<para><simplesect kind="see"><para><ref refid="overview_dialog_1overview_dialog_autoscrolling" kindref="member">Automatic scrolling dialogs</ref> (for more on layout adaptation) </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -169,7 +169,7 @@
         <briefdescription>
 <para>Returns true if this dialog can and should perform layout adaptation using <ref refid="classwx_dialog_1a919613599a9e919913146e21d09b44c0" kindref="member">DoLayoutAdaptation()</ref>, usually if the dialog is too large to fit on the display. </para>        </briefdescription>
         <detaileddescription>
-<para><simplesect kind="see"><para><ref refid="overview__dialog_1overview_dialog_autoscrolling" kindref="member">Automatic scrolling dialogs</ref> (for more on layout adaptation) </para></simplesect>
+<para><simplesect kind="see"><para><ref refid="overview_dialog_1overview_dialog_autoscrolling" kindref="member">Automatic scrolling dialogs</ref> (for more on layout adaptation) </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -337,7 +337,7 @@ This is a combination of <ref refid="classwx_dialog_1ae362b7c61430593ef8ac5034f1
         <briefdescription>
 <para>Performs layout adaptation, usually if the dialog is too large to fit on the display. </para>        </briefdescription>
         <detaileddescription>
-<para><simplesect kind="see"><para><ref refid="overview__dialog_1overview_dialog_autoscrolling" kindref="member">Automatic scrolling dialogs</ref> (for more on layout adaptation) </para></simplesect>
+<para><simplesect kind="see"><para><ref refid="overview_dialog_1overview_dialog_autoscrolling" kindref="member">Automatic scrolling dialogs</ref> (for more on layout adaptation) </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -351,7 +351,7 @@ This is a combination of <ref refid="classwx_dialog_1ae362b7c61430593ef8ac5034f1
         <briefdescription>
 <para>This function is called when the titlebar OK button is pressed (PocketPC only). </para>        </briefdescription>
         <detaileddescription>
-<para>A command event for the identifier returned by <ref refid="classwx_dialog_1ae1dfa9d9b983615e6f350dbbfafbabe6" kindref="member">GetAffirmativeId()</ref> is sent by default. You can override this function. If the function returns false, wxWidgets will call <ref refid="classwx_window_1a3e44f4a494fc9ef4346c4fba70c8de0c" kindref="member">Close()</ref> for the dialog.</para><para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page__port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor>  </para>        </detaileddescription>
+<para>A command event for the identifier returned by <ref refid="classwx_dialog_1ae1dfa9d9b983615e6f350dbbfafbabe6" kindref="member">GetAffirmativeId()</ref> is sent by default. You can override this function. If the function returns false, wxWidgets will call <ref refid="classwx_window_1a3e44f4a494fc9ef4346c4fba70c8de0c" kindref="member">Close()</ref> for the dialog.</para><para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page_port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor>  </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dialog.h" line="303"/>
@@ -404,7 +404,7 @@ This is a combination of <ref refid="classwx_dialog_1ae362b7c61430593ef8ac5034f1
         <briefdescription>
 <para>Override this to return a window containing the main content of the dialog. </para>        </briefdescription>
         <detaileddescription>
-<para>This is particularly useful when the dialog implements pages, such as <ref refid="classwx_property_sheet_dialog" kindref="compound">wxPropertySheetDialog</ref>, and allows the <ref refid="overview__dialog" kindref="compound">layout adaptation code</ref> to know that only the pages need to be made scrollable. </para>        </detaileddescription>
+<para>This is particularly useful when the dialog implements pages, such as <ref refid="classwx_property_sheet_dialog" kindref="compound">wxPropertySheetDialog</ref>, and allows the <ref refid="overview_dialog" kindref="compound">layout adaptation code</ref> to know that only the pages need to be made scrollable. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dialog.h" line="339"/>
@@ -431,7 +431,7 @@ This is a combination of <ref refid="classwx_dialog_1ae362b7c61430593ef8ac5034f1
         <briefdescription>
 <para>Returns true if the dialog has been adapted, usually by making it scrollable to work with a small display. </para>        </briefdescription>
         <detaileddescription>
-<para><simplesect kind="see"><para><ref refid="overview__dialog_1overview_dialog_autoscrolling" kindref="member">Automatic scrolling dialogs</ref> (for more on layout adaptation) </para></simplesect>
+<para><simplesect kind="see"><para><ref refid="overview_dialog_1overview_dialog_autoscrolling" kindref="member">Automatic scrolling dialogs</ref> (for more on layout adaptation) </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -445,7 +445,7 @@ This is a combination of <ref refid="classwx_dialog_1ae362b7c61430593ef8ac5034f1
         <briefdescription>
 <para>Gets a value representing the aggressiveness of search for buttons and sizers to be in the non-scrolling part of a layout-adapted dialog. </para>        </briefdescription>
         <detaileddescription>
-<para>Zero switches off adaptation, and 3 allows search for standard buttons anywhere in the dialog.</para><para><simplesect kind="see"><para><ref refid="overview__dialog_1overview_dialog_autoscrolling" kindref="member">Automatic scrolling dialogs</ref> (for more on layout adaptation) </para></simplesect>
+<para>Zero switches off adaptation, and 3 allows search for standard buttons anywhere in the dialog.</para><para><simplesect kind="see"><para><ref refid="overview_dialog_1overview_dialog_autoscrolling" kindref="member">Automatic scrolling dialogs</ref> (for more on layout adaptation) </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -459,7 +459,7 @@ This is a combination of <ref refid="classwx_dialog_1ae362b7c61430593ef8ac5034f1
         <briefdescription>
 <para>Gets the adaptation mode, overriding the global adaptation flag. </para>        </briefdescription>
         <detaileddescription>
-<para><simplesect kind="see"><para><ref refid="overview__dialog_1overview_dialog_autoscrolling" kindref="member">Automatic scrolling dialogs</ref> (for more on layout adaptation) </para></simplesect>
+<para><simplesect kind="see"><para><ref refid="overview_dialog_1overview_dialog_autoscrolling" kindref="member">Automatic scrolling dialogs</ref> (for more on layout adaptation) </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -473,7 +473,7 @@ This is a combination of <ref refid="classwx_dialog_1ae362b7c61430593ef8ac5034f1
         <briefdescription>
 <para>Returns an array of identifiers to be regarded as the main buttons for the non-scrolling area of a dialog. </para>        </briefdescription>
         <detaileddescription>
-<para><simplesect kind="see"><para><ref refid="overview__dialog_1overview_dialog_autoscrolling" kindref="member">Automatic scrolling dialogs</ref> (for more on layout adaptation) </para></simplesect>
+<para><simplesect kind="see"><para><ref refid="overview_dialog_1overview_dialog_autoscrolling" kindref="member">Automatic scrolling dialogs</ref> (for more on layout adaptation) </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -502,7 +502,7 @@ This is a combination of <ref refid="classwx_dialog_1ae362b7c61430593ef8ac5034f1
         <briefdescription>
 <para>On PocketPC, a dialog is automatically provided with an empty toolbar. </para>        </briefdescription>
         <detaileddescription>
-<para>This function allows you to access the toolbar and add tools to it. Removing tools and adding arbitrary controls are not currently supported.</para><para>This function is not available on any other platform.</para><para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page__port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor>  </para>        </detaileddescription>
+<para>This function allows you to access the toolbar and add tools to it. Removing tools and adding arbitrary controls are not currently supported.</para><para>This function is not available on any other platform.</para><para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page_port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor>  </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dialog.h" line="408"/>
@@ -562,7 +562,7 @@ This is a combination of <ref refid="classwx_dialog_1ae362b7c61430593ef8ac5034f1
         <briefdescription>
 <para>Returns true if <emphasis>id</emphasis> is in the array of identifiers to be regarded as the main buttons for the non-scrolling area of a dialog. </para>        </briefdescription>
         <detaileddescription>
-<para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page__port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor> </para><para><simplesect kind="see"><para><ref refid="overview__dialog_1overview_dialog_autoscrolling" kindref="member">Automatic scrolling dialogs</ref> (for more on layout adaptation) </para></simplesect>
+<para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page_port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor> </para><para><simplesect kind="see"><para><ref refid="overview_dialog_1overview_dialog_autoscrolling" kindref="member">Automatic scrolling dialogs</ref> (for more on layout adaptation) </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -709,7 +709,7 @@ This is a combination of <ref refid="classwx_dialog_1ae362b7c61430593ef8ac5034f1
         <briefdescription>
 <para>Marks the dialog as having been adapted, usually by making it scrollable to work with a small display. </para>        </briefdescription>
         <detaileddescription>
-<para><simplesect kind="see"><para><ref refid="overview__dialog_1overview_dialog_autoscrolling" kindref="member">Automatic scrolling dialogs</ref> (for more on layout adaptation) </para></simplesect>
+<para><simplesect kind="see"><para><ref refid="overview_dialog_1overview_dialog_autoscrolling" kindref="member">Automatic scrolling dialogs</ref> (for more on layout adaptation) </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -727,7 +727,7 @@ This is a combination of <ref refid="classwx_dialog_1ae362b7c61430593ef8ac5034f1
         <briefdescription>
 <para>Sets the aggressiveness of search for buttons and sizers to be in the non-scrolling part of a layout-adapted dialog. </para>        </briefdescription>
         <detaileddescription>
-<para>Zero switches off adaptation, and 3 allows search for standard buttons anywhere in the dialog.</para><para><simplesect kind="see"><para><ref refid="overview__dialog_1overview_dialog_autoscrolling" kindref="member">Automatic scrolling dialogs</ref> (for more on layout adaptation) </para></simplesect>
+<para>Zero switches off adaptation, and 3 allows search for standard buttons anywhere in the dialog.</para><para><simplesect kind="see"><para><ref refid="overview_dialog_1overview_dialog_autoscrolling" kindref="member">Automatic scrolling dialogs</ref> (for more on layout adaptation) </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -745,7 +745,7 @@ This is a combination of <ref refid="classwx_dialog_1ae362b7c61430593ef8ac5034f1
         <briefdescription>
 <para>Sets the adaptation mode, overriding the global adaptation flag. </para>        </briefdescription>
         <detaileddescription>
-<para><simplesect kind="see"><para><ref refid="interface_2wx_2dialog_8h_1a5121a982861076ced173471760f36baf" kindref="member">wxDialogLayoutAdaptationMode</ref>, <ref refid="overview__dialog_1overview_dialog_autoscrolling" kindref="member">Automatic scrolling dialogs</ref> (for more on layout adaptation) </para></simplesect>
+<para><simplesect kind="see"><para><ref refid="interface_2wx_2dialog_8h_1a5121a982861076ced173471760f36baf" kindref="member">wxDialogLayoutAdaptationMode</ref>, <ref refid="overview_dialog_1overview_dialog_autoscrolling" kindref="member">Automatic scrolling dialogs</ref> (for more on layout adaptation) </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -763,7 +763,7 @@ This is a combination of <ref refid="classwx_dialog_1ae362b7c61430593ef8ac5034f1
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000010"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This function doesn&apos;t work for all ports, just use <ref refid="classwx_dialog_1a6e078c3d0653f75ad3c34a37c0b54637" kindref="member">ShowModal()</ref> to show a modal dialog instead.</para></xrefdescription></xrefsect>Allows the programmer to specify whether the dialog box is modal (<ref refid="classwx_dialog_1ae8e5fa98d473b812b8d1c2f163b65c67" kindref="member">Show()</ref> blocks control until the dialog is hidden) or modeless (control returns immediately).</para><para><parameterlist kind="param"><parameteritem>
+<para><xrefsect id="deprecated_1_deprecated000010"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This function doesn&apos;t work for all ports, just use <ref refid="classwx_dialog_1a6e078c3d0653f75ad3c34a37c0b54637" kindref="member">ShowModal()</ref> to show a modal dialog instead.</para></xrefdescription></xrefsect></para><para>Allows the programmer to specify whether the dialog box is modal (<ref refid="classwx_dialog_1ae8e5fa98d473b812b8d1c2f163b65c67" kindref="member">Show()</ref> blocks control until the dialog is hidden) or modeless (control returns immediately).</para><para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>flag</parametername>
 </parameternamelist>
@@ -882,7 +882,7 @@ This is a combination of <ref refid="classwx_dialog_1ae362b7c61430593ef8ac5034f1
         <briefdescription>
 <para>A static function enabling or disabling layout adaptation for all dialogs. </para>        </briefdescription>
         <detaileddescription>
-<para><simplesect kind="see"><para><ref refid="overview__dialog_1overview_dialog_autoscrolling" kindref="member">Automatic scrolling dialogs</ref> (for more on layout adaptation) </para></simplesect>
+<para><simplesect kind="see"><para><ref refid="overview_dialog_1overview_dialog_autoscrolling" kindref="member">Automatic scrolling dialogs</ref> (for more on layout adaptation) </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -896,7 +896,7 @@ This is a combination of <ref refid="classwx_dialog_1ae362b7c61430593ef8ac5034f1
         <briefdescription>
 <para>A static function getting the current layout adapter object. </para>        </briefdescription>
         <detaileddescription>
-<para><simplesect kind="see"><para><ref refid="overview__dialog_1overview_dialog_autoscrolling" kindref="member">Automatic scrolling dialogs</ref> (for more on layout adaptation) </para></simplesect>
+<para><simplesect kind="see"><para><ref refid="overview_dialog_1overview_dialog_autoscrolling" kindref="member">Automatic scrolling dialogs</ref> (for more on layout adaptation) </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -910,7 +910,7 @@ This is a combination of <ref refid="classwx_dialog_1ae362b7c61430593ef8ac5034f1
         <briefdescription>
 <para>A static function returning true if layout adaptation is enabled for all dialogs. </para>        </briefdescription>
         <detaileddescription>
-<para><simplesect kind="see"><para><ref refid="overview__dialog_1overview_dialog_autoscrolling" kindref="member">Automatic scrolling dialogs</ref> (for more on layout adaptation) </para></simplesect>
+<para><simplesect kind="see"><para><ref refid="overview_dialog_1overview_dialog_autoscrolling" kindref="member">Automatic scrolling dialogs</ref> (for more on layout adaptation) </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -928,7 +928,7 @@ This is a combination of <ref refid="classwx_dialog_1ae362b7c61430593ef8ac5034f1
         <briefdescription>
 <para>A static function for setting the current layout adapter object, returning the old adapter. </para>        </briefdescription>
         <detaileddescription>
-<para>If you call this, you should delete the old adapter object.</para><para><simplesect kind="see"><para><ref refid="classwx_dialog_layout_adapter" kindref="compound">wxDialogLayoutAdapter</ref>, <ref refid="overview__dialog_1overview_dialog_autoscrolling" kindref="member">Automatic scrolling dialogs</ref> </para></simplesect>
+<para>If you call this, you should delete the old adapter object.</para><para><simplesect kind="see"><para><ref refid="classwx_dialog_layout_adapter" kindref="compound">wxDialogLayoutAdapter</ref>, <ref refid="overview_dialog_1overview_dialog_autoscrolling" kindref="member">Automatic scrolling dialogs</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -938,7 +938,7 @@ This is a combination of <ref refid="classwx_dialog_1ae362b7c61430593ef8ac5034f1
     <briefdescription>
 <para>A dialog box is a window with a title bar and sometimes a system menu, which can be moved around the screen. </para>    </briefdescription>
     <detaileddescription>
-<para>It can contain controls and other windows and is often used to allow the user to make some choice or to answer a question.</para><para>Dialogs can be made scrollable, automatically, for computers with low resolution screens: please see <ref refid="overview__dialog_1overview_dialog_autoscrolling" kindref="member">Automatic scrolling dialogs</ref> for further details.</para><para>Dialogs usually contains either a single button allowing to close the dialog or two buttons, one accepting the changes and the other one discarding them (such button, if present, is automatically activated if the user presses the &quot;Esc&quot; key). By default, buttons with the standard wxID_OK and wxID_CANCEL identifiers behave as expected. Starting with wxWidgets 2.7 it is also possible to use a button with a different identifier instead, see <ref refid="classwx_dialog_1a72ea7e269bedb2552bfeaccdbac07939" kindref="member">SetAffirmativeId()</ref> and <ref refid="classwx_dialog_1a585869988e308f549128a6a065f387c6" kindref="member">SetEscapeId()</ref>.</para><para>Also notice that the <ref refid="classwx_dialog_1ae362b7c61430593ef8ac5034f1bd92c8" kindref="member">CreateButtonSizer()</ref> should be used to create the buttons appropriate for the current platform and positioned correctly (including their order which is platform-dependent).</para><sect1 id="classwx_dialog_1dialog_modal">
+<para>It can contain controls and other windows and is often used to allow the user to make some choice or to answer a question.</para><para>Dialogs can be made scrollable, automatically, for computers with low resolution screens: please see <ref refid="overview_dialog_1overview_dialog_autoscrolling" kindref="member">Automatic scrolling dialogs</ref> for further details.</para><para>Dialogs usually contains either a single button allowing to close the dialog or two buttons, one accepting the changes and the other one discarding them (such button, if present, is automatically activated if the user presses the &quot;Esc&quot; key). By default, buttons with the standard wxID_OK and wxID_CANCEL identifiers behave as expected. Starting with wxWidgets 2.7 it is also possible to use a button with a different identifier instead, see <ref refid="classwx_dialog_1a72ea7e269bedb2552bfeaccdbac07939" kindref="member">SetAffirmativeId()</ref> and <ref refid="classwx_dialog_1a585869988e308f549128a6a065f387c6" kindref="member">SetEscapeId()</ref>.</para><para>Also notice that the <ref refid="classwx_dialog_1ae362b7c61430593ef8ac5034f1bd92c8" kindref="member">CreateButtonSizer()</ref> should be used to create the buttons appropriate for the current platform and positioned correctly (including their order which is platform-dependent).</para><sect1 id="classwx_dialog_1dialog_modal">
 <title>Modal and Modeless</title>
 <para>There are two kinds of dialog, modal and modeless. A modal dialog blocks program flow and user input on other windows until it is dismissed, whereas a modeless dialog behaves more like a frame in that program flow continues, and input in other windows is still possible. To show a modal dialog you should use the <ref refid="classwx_dialog_1a6e078c3d0653f75ad3c34a37c0b54637" kindref="member">ShowModal()</ref> method while to show a dialog modelessly you simply use <ref refid="classwx_dialog_1ae8e5fa98d473b812b8d1c2f163b65c67" kindref="member">Show()</ref>, just as with frames.</para><para>Note that the modal dialog is one of the very few examples of wxWindow-derived objects which may be created on the stack and not on the heap. In other words, while most windows would be created like this:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>AskUser()</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
@@ -979,204 +979,204 @@ Under Unix or Linux, MWM (the Motif Window Manager) or other window managers rec
 <listitem><para>EVT_INIT_DIALOG(func): Process a <computeroutput>wxEVT_INIT_DIALOG</computeroutput> event. See <ref refid="classwx_init_dialog_event" kindref="compound">wxInitDialogEvent</ref>. </para></listitem>
 </itemizedlist>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__cmndlg" kindref="compound">Common Dialogs</ref></para><para><simplesect kind="see"><para><ref refid="overview__dialog" kindref="compound">wxDialog Overview</ref>, <ref refid="classwx_frame" kindref="compound">wxFrame</ref>, <ref refid="overview__validator" kindref="compound">wxValidator Overview</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__cmndlg" kindref="compound">Common Dialogs</ref></para><para><simplesect kind="see"><para><ref refid="overview_dialog" kindref="compound">wxDialog Overview</ref>, <ref refid="classwx_frame" kindref="compound">wxFrame</ref>, <ref refid="overview_validator" kindref="compound">wxValidator Overview</ref> </para></simplesect>
 </para></sect1>
     </detaileddescription>
     <inheritancegraph>
-      <node id="5571">
+      <node id="5575">
         <label>wxNonOwnedWindow</label>
         <link refid="classwx_non_owned_window"/>
-        <childnode refid="5572" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="5574">
-        <label>wxObject</label>
-        <link refid="classwx_object"/>
-      </node>
-      <node id="5580">
-        <label>wxFontDialog</label>
-        <link refid="classwx_font_dialog"/>
-        <childnode refid="5569" relation="public-inheritance">
+        <childnode refid="5576" relation="public-inheritance">
         </childnode>
       </node>
       <node id="5578">
-        <label>wxFileDialog</label>
-        <link refid="classwx_file_dialog"/>
-        <childnode refid="5569" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="5573">
-        <label>wxEvtHandler</label>
-        <link refid="classwx_evt_handler"/>
-        <childnode refid="5574" relation="public-inheritance">
-        </childnode>
-        <childnode refid="5575" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="5585">
-        <label>wxProgressDialog</label>
-        <link refid="classwx_progress_dialog"/>
-        <childnode refid="5569" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="5588">
-        <label>wxRichTextStyleOrganiserDialog</label>
-        <link refid="classwx_rich_text_style_organiser_dialog"/>
-        <childnode refid="5569" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="5582">
-        <label>wxMultiChoiceDialog</label>
-        <link refid="classwx_multi_choice_dialog"/>
-        <childnode refid="5569" relation="public-inheritance">
-        </childnode>
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
       </node>
       <node id="5584">
-        <label>wxPrintDialog</label>
-        <link refid="classwx_print_dialog"/>
-        <childnode refid="5569" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="5593">
-        <label>wxWizard</label>
-        <link refid="classwx_wizard"/>
-        <childnode refid="5569" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="5575">
-        <label>wxTrackable</label>
-        <link refid="classwx_trackable"/>
-      </node>
-      <node id="5572">
-        <label>wxWindow</label>
-        <link refid="classwx_window"/>
+        <label>wxFontDialog</label>
+        <link refid="classwx_font_dialog"/>
         <childnode refid="5573" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5569">
-        <label>wxDialog</label>
-        <link refid="classwx_dialog"/>
-        <childnode refid="5570" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="5581">
-        <label>wxMessageDialog</label>
-        <link refid="classwx_message_dialog"/>
-        <childnode refid="5569" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="5579">
-        <label>wxFindReplaceDialog</label>
-        <link refid="classwx_find_replace_dialog"/>
-        <childnode refid="5569" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="5589">
-        <label>wxSingleChoiceDialog</label>
-        <link refid="classwx_single_choice_dialog"/>
-        <childnode refid="5569" relation="public-inheritance">
+      <node id="5582">
+        <label>wxFileDialog</label>
+        <link refid="classwx_file_dialog"/>
+        <childnode refid="5573" relation="public-inheritance">
         </childnode>
       </node>
       <node id="5577">
-        <label>wxDirDialog</label>
-        <link refid="classwx_dir_dialog"/>
-        <childnode refid="5569" relation="public-inheritance">
+        <label>wxEvtHandler</label>
+        <link refid="classwx_evt_handler"/>
+        <childnode refid="5578" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5579" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5576">
-        <label>wxColourDialog</label>
-        <link refid="classwx_colour_dialog"/>
-        <childnode refid="5569" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="5570">
-        <label>wxTopLevelWindow</label>
-        <link refid="classwx_top_level_window"/>
-        <childnode refid="5571" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="5587">
-        <label>wxRichTextFormattingDialog</label>
-        <link refid="classwx_rich_text_formatting_dialog"/>
-        <childnode refid="5586" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="5591">
-        <label>wxTextEntryDialog</label>
-        <link refid="classwx_text_entry_dialog"/>
-        <childnode refid="5569" relation="public-inheritance">
+      <node id="5589">
+        <label>wxProgressDialog</label>
+        <link refid="classwx_progress_dialog"/>
+        <childnode refid="5573" relation="public-inheritance">
         </childnode>
       </node>
       <node id="5592">
-        <label>wxPasswordEntryDialog</label>
-        <link refid="classwx_password_entry_dialog"/>
-        <childnode refid="5591" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="5590">
-        <label>wxSymbolPickerDialog</label>
-        <link refid="classwx_symbol_picker_dialog"/>
-        <childnode refid="5569" relation="public-inheritance">
+        <label>wxRichTextStyleOrganiserDialog</label>
+        <link refid="classwx_rich_text_style_organiser_dialog"/>
+        <childnode refid="5573" relation="public-inheritance">
         </childnode>
       </node>
       <node id="5586">
-        <label>wxPropertySheetDialog</label>
-        <link refid="classwx_property_sheet_dialog"/>
-        <childnode refid="5569" relation="public-inheritance">
+        <label>wxMultiChoiceDialog</label>
+        <link refid="classwx_multi_choice_dialog"/>
+        <childnode refid="5573" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5588">
+        <label>wxPrintDialog</label>
+        <link refid="classwx_print_dialog"/>
+        <childnode refid="5573" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5597">
+        <label>wxWizard</label>
+        <link refid="classwx_wizard"/>
+        <childnode refid="5573" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5579">
+        <label>wxTrackable</label>
+        <link refid="classwx_trackable"/>
+      </node>
+      <node id="5576">
+        <label>wxWindow</label>
+        <link refid="classwx_window"/>
+        <childnode refid="5577" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5573">
+        <label>wxDialog</label>
+        <link refid="classwx_dialog"/>
+        <childnode refid="5574" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5585">
+        <label>wxMessageDialog</label>
+        <link refid="classwx_message_dialog"/>
+        <childnode refid="5573" relation="public-inheritance">
         </childnode>
       </node>
       <node id="5583">
+        <label>wxFindReplaceDialog</label>
+        <link refid="classwx_find_replace_dialog"/>
+        <childnode refid="5573" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5593">
+        <label>wxSingleChoiceDialog</label>
+        <link refid="classwx_single_choice_dialog"/>
+        <childnode refid="5573" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5581">
+        <label>wxDirDialog</label>
+        <link refid="classwx_dir_dialog"/>
+        <childnode refid="5573" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5580">
+        <label>wxColourDialog</label>
+        <link refid="classwx_colour_dialog"/>
+        <childnode refid="5573" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5574">
+        <label>wxTopLevelWindow</label>
+        <link refid="classwx_top_level_window"/>
+        <childnode refid="5575" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5591">
+        <label>wxRichTextFormattingDialog</label>
+        <link refid="classwx_rich_text_formatting_dialog"/>
+        <childnode refid="5590" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5595">
+        <label>wxTextEntryDialog</label>
+        <link refid="classwx_text_entry_dialog"/>
+        <childnode refid="5573" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5596">
+        <label>wxPasswordEntryDialog</label>
+        <link refid="classwx_password_entry_dialog"/>
+        <childnode refid="5595" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5594">
+        <label>wxSymbolPickerDialog</label>
+        <link refid="classwx_symbol_picker_dialog"/>
+        <childnode refid="5573" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5590">
+        <label>wxPropertySheetDialog</label>
+        <link refid="classwx_property_sheet_dialog"/>
+        <childnode refid="5573" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5587">
         <label>wxPageSetupDialog</label>
         <link refid="classwx_page_setup_dialog"/>
-        <childnode refid="5569" relation="public-inheritance">
+        <childnode refid="5573" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="5596">
+      <node id="5600">
         <label>wxNonOwnedWindow</label>
         <link refid="classwx_non_owned_window"/>
-        <childnode refid="5597" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="5599">
-        <label>wxObject</label>
-        <link refid="classwx_object"/>
-        <childnode refid="5600" relation="usage">
-          <edgelabel>m_refData</edgelabel>
-        </childnode>
-      </node>
-      <node id="5598">
-        <label>wxEvtHandler</label>
-        <link refid="classwx_evt_handler"/>
-        <childnode refid="5599" relation="public-inheritance">
-        </childnode>
         <childnode refid="5601" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5601">
+      <node id="5603">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="5604" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="5602">
+        <label>wxEvtHandler</label>
+        <link refid="classwx_evt_handler"/>
+        <childnode refid="5603" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5605" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5605">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="5597">
+      <node id="5601">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="5598" relation="public-inheritance">
+        <childnode refid="5602" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5594">
+      <node id="5598">
         <label>wxDialog</label>
         <link refid="classwx_dialog"/>
-        <childnode refid="5595" relation="public-inheritance">
+        <childnode refid="5599" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5595">
+      <node id="5599">
         <label>wxTopLevelWindow</label>
         <link refid="classwx_top_level_window"/>
-        <childnode refid="5596" relation="public-inheritance">
+        <childnode refid="5600" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5600">
+      <node id="5604">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
@@ -1507,6 +1507,7 @@ Under Unix or Linux, MWM (the Motif Window Manager) or other window managers rec
       <member refid="classwx_window_1a81f23590239934fa10fded0566a65d8c" prot="public" virt="non-virtual"><scope>wxDialog</scope><name>SetPosition</name></member>
       <member refid="classwx_window_1a07f5f7ed3f78e0ef7b3dee3f4da81001" prot="public" virt="virtual"><scope>wxDialog</scope><name>SetPreviousHandler</name></member>
       <member refid="classwx_object_1afab780710f2adc1bb33310e27590140b" prot="public" virt="non-virtual"><scope>wxDialog</scope><name>SetRefData</name></member>
+      <member refid="classwx_top_level_window_1a82afa6f09dd5faef6330807ef59374e8" prot="public" virt="virtual"><scope>wxDialog</scope><name>SetRepresentedFilename</name></member>
       <member refid="classwx_dialog_1a0d04ed85ac5cd271a61514d446340673" prot="public" virt="non-virtual"><scope>wxDialog</scope><name>SetReturnCode</name></member>
       <member refid="classwx_top_level_window_1a98e95b1b10f44b80f9b29a03ab09a879" prot="public" virt="non-virtual"><scope>wxDialog</scope><name>SetRightMenu</name></member>
       <member refid="classwx_window_1aa842d59529f873683e55cd8392ec46e9" prot="public" virt="virtual"><scope>wxDialog</scope><name>SetScrollbar</name></member>

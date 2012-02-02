@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_query_new_palette_event" kind="class" prot="public">
     <compoundname>wxQueryNewPaletteEvent</compoundname>
     <basecompoundref refid="classwx_event" prot="public" virt="non-virtual">wxEvent</basecompoundref>
@@ -21,7 +21,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3065"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3086"/>
       </memberdef>
       <memberdef kind="function" id="classwx_query_new_palette_event_1a351fc69e97118c9e217a53bf571e6cd2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -38,7 +38,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3067"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3088"/>
       </memberdef>
       <memberdef kind="function" id="classwx_query_new_palette_event_1a81eff6fe59ca6c4118d99424da0d9ce7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -51,7 +51,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3068"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3089"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -59,49 +59,49 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="8966">
+      <node id="8974">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="8964">
+      <node id="8972">
         <label>wxQueryNewPaletteEvent</label>
         <link refid="classwx_query_new_palette_event"/>
-        <childnode refid="8965" relation="public-inheritance">
+        <childnode refid="8973" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8965">
+      <node id="8973">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="8966" relation="public-inheritance">
+        <childnode refid="8974" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="8969">
+      <node id="8977">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="8970" relation="usage">
+        <childnode refid="8978" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="8967">
+      <node id="8975">
         <label>wxQueryNewPaletteEvent</label>
         <link refid="classwx_query_new_palette_event"/>
-        <childnode refid="8968" relation="public-inheritance">
+        <childnode refid="8976" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8968">
+      <node id="8976">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="8969" relation="public-inheritance">
+        <childnode refid="8977" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8970">
+      <node id="8978">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3063" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="3062" bodyend="3069"/>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3084" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="3083" bodyend="3090"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxQueryNewPaletteEvent</scope><name>AllocExclusive</name></member>
       <member refid="classwx_event_1a26878097a702e8d0368da150125d4158" prot="public" virt="pure-virtual"><scope>wxQueryNewPaletteEvent</scope><name>Clone</name></member>

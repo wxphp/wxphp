@@ -1,10 +1,9 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_caret" kind="class" prot="public">
     <compoundname>wxCaret</compoundname>
     <includes local="no">wx/caret.h</includes>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_caret_1a69612cbfbe2bd14a244b9c347db5e142" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
         <definition>wxCaret::wxCaret</definition>
@@ -53,7 +52,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_caret_1aa3364db05669724259f42a4df68cb303" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
         <definition>bool wxCaret::Create</definition>
@@ -102,7 +100,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_caret_1a39fdb7ed7a18ae274c2ba58d697b2528" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void wxCaret::GetPosition</definition>
@@ -143,7 +140,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_caret_1ae14c6047f60597ff0304b8d4b25a7bc7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void wxCaret::GetSize</definition>
@@ -184,7 +180,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_caret_1ae490dc3156c4c686bc37f601edc33388" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void wxCaret::Move</definition>
@@ -225,7 +220,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_caret_1a0dd4f34b8e000a967701bb2821ed8bb2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void wxCaret::SetSize</definition>
@@ -388,7 +382,7 @@
 <para>A caret is a blinking cursor showing the position where the typed text will appear. </para>    </briefdescription>
     <detaileddescription>
 <para>Text controls usually have their own caret but <ref refid="classwx_caret" kindref="compound">wxCaret</ref> provides a way to use a caret in other windows.</para><para>Currently, the caret appears as a rectangle of the given size. In the future, it will be possible to specify a bitmap to be used for the caret shape.</para><para>A caret is always associated with a window and the current caret can be retrieved using <ref refid="classwx_window_1a83ed7c9d9252b912eebc753d6132245b" kindref="member">wxWindow::GetCaret()</ref>. The same caret can&apos;t be reused in two different windows.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__misc" kindref="compound">Miscellaneous</ref> </para>    </detaileddescription>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__misc" kindref="compound">Miscellaneous</ref> </para>    </detaileddescription>
     <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/caret.h" line="28" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/caret.h" bodystart="27" bodyend="144"/>
     <listofallmembers>
       <member refid="classwx_caret_1aa3364db05669724259f42a4df68cb303" prot="public" virt="non-virtual"><scope>wxCaret</scope><name>Create</name></member>

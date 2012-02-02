@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_tool_tip" kind="class" prot="public">
     <compoundname>wxToolTip</compoundname>
     <basecompoundref refid="classwx_object" prot="public" virt="non-virtual">wxObject</basecompoundref>
@@ -97,7 +97,7 @@
         <briefdescription>
 <para>Set the delay after which the tooltip disappears or how long a tooltip remains visible. </para>        </briefdescription>
         <detaileddescription>
-<para><simplesect kind="note"><para>May not be supported on all platforms (eg. wxCocoa, GTK, Palmos). </para></simplesect>
+<para><simplesect kind="note"><para>May not be supported on all platforms (eg. wxCocoa, GTK). </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -151,7 +151,7 @@
         <briefdescription>
 <para>Set the delay between subsequent tooltips to appear. </para>        </briefdescription>
         <detaileddescription>
-<para><simplesect kind="note"><para>May not be supported on all platforms (eg. wxCocoa, GTK, Palmos). </para></simplesect>
+<para><simplesect kind="note"><para>May not be supported on all platforms (eg. wxCocoa, GTK). </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -162,34 +162,34 @@
 <para>This class holds information about a tooltip associated with a window (see <ref refid="classwx_window_1a81a9fb74e3c6c7f4416e882f5e589b8c" kindref="member">wxWindow::SetToolTip()</ref>). </para>    </briefdescription>
     <detaileddescription>
 <para>The four static methods, <ref refid="classwx_tool_tip_1a527208d12631dfb3e6dea71011b887d6" kindref="member">wxToolTip::Enable()</ref>, <ref refid="classwx_tool_tip_1a5db5357f084afef9c4602baf0cb89105" kindref="member">wxToolTip::SetDelay()</ref> <ref refid="classwx_tool_tip_1a6e947da99007aa96e2bd351c8ed08a21" kindref="member">wxToolTip::SetAutoPop()</ref> and <ref refid="classwx_tool_tip_1a10e1eb761dca8e28583250265aa22ad3" kindref="member">wxToolTip::SetReshow()</ref> can be used to globally alter tooltips behaviour.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__help" kindref="compound">Help</ref> </para>    </detaileddescription>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__help" kindref="compound">Help</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10890">
+      <node id="10951">
         <label>wxToolTip</label>
         <link refid="classwx_tool_tip"/>
-        <childnode refid="10891" relation="public-inheritance">
+        <childnode refid="10952" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10891">
+      <node id="10952">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10892">
+      <node id="10953">
         <label>wxToolTip</label>
         <link refid="classwx_tool_tip"/>
-        <childnode refid="10893" relation="public-inheritance">
+        <childnode refid="10954" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10893">
+      <node id="10954">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="10894" relation="usage">
+        <childnode refid="10955" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="10894">
+      <node id="10955">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

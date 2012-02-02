@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_window" kind="class" prot="public">
     <compoundname>wxWindow</compoundname>
     <basecompoundref refid="classwx_evt_handler" prot="public" virt="non-virtual">wxEvtHandler</basecompoundref>
@@ -19,7 +19,7 @@
     <includes local="no">wx/window.h</includes>
       <sectiondef kind="user-defined">
       <header>Focus functions</header>
-      <description><para><anchor id="_1amgrp22f1533c4c91abd09b6361074985558a"/>See also the static function <ref refid="classwx_window_1a777258379a3eef1b0530f12db6b77cab" kindref="member">FindFocus()</ref>. </para></description>
+      <description><para>See also the static function <ref refid="classwx_window_1a777258379a3eef1b0530f12db6b77cab" kindref="member">FindFocus()</ref>. </para></description>
       <memberdef kind="function" id="classwx_window_1a3afbd49b1ea2f8275e3600dcac102923" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
         <definition>virtual bool wxWindow::AcceptsFocus</definition>
@@ -124,7 +124,6 @@
       </sectiondef>
       <sectiondef kind="user-defined">
       <header>Child management functions</header>
-      <description><para><anchor id="_1amgrpff8b2026007a6a6f7c22d6154d80eee5"/> </para></description>
       <memberdef kind="function" id="classwx_window_1abf60159278059a5bb397eb8647227bb3" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
         <definition>virtual void wxWindow::AddChild</definition>
@@ -251,7 +250,6 @@
       </sectiondef>
       <sectiondef kind="user-defined">
       <header>Sibling and parent management functions</header>
-      <description><para><anchor id="_1amgrp9173cffcd2a93036fff01871bf8168f0"/> </para></description>
       <memberdef kind="function" id="classwx_window_1a55d3155d2d3139a84e8fb19a8900aa76" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
         <definition>wxWindow* wxWindow::GetGrandParent</definition>
@@ -336,7 +334,7 @@
       </sectiondef>
       <sectiondef kind="user-defined">
       <header>Scrolling and scrollbars functions</header>
-      <description><para><anchor id="_1amgrp43f7f2ce08628f2c499cdb9ee17292bb"/>Note that these methods don&apos;t work with native controls which don&apos;t use wxWidgets scrolling framework (i.e.</para><para>don&apos;t derive from wxScrolledWindow). </para></description>
+      <description><para>Note that these methods don&apos;t work with native controls which don&apos;t use wxWidgets scrolling framework (i.e.</para><para>don&apos;t derive from wxScrolledWindow). </para></description>
       <memberdef kind="function" id="classwx_window_1aae29552806a328c6a55ef8f07647f5ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
         <definition>virtual void wxWindow::AlwaysShowScrollbars</definition>
@@ -773,7 +771,7 @@
 </parameterlist>
 <simplesect kind="remark"><para>Let&apos;s say you wish to display 50 lines of text, using the same font. The window is sized so that you can only see 16 lines at a time. You would use: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_window_1aa842d59529f873683e55cd8392ec46e9" kindref="member" tooltip="Sets the scrollbar properties of a built-in scrollbar.">SetScrollbar</ref>(<ref refid="defs_8h_1a1e6994f40bd9cb140e292afb165af971a2134d1cb8cf605532880c118190695b5" kindref="member">wxVERTICAL</ref>,<sp/>0,<sp/>16,<sp/>50);</highlight></codeline>
 </programlisting> Note that with the window at this size, the thumb position can never go above 50 minus 16, or 34. You can determine how many lines are currently visible by dividing the current view size by the character height in pixels. When defining your own scrollbar behaviour, you will always need to recalculate the scrollbar settings when the window size changes. You could therefore put your scrollbar calculations and SetScrollbar call into a function named AdjustScrollbars, which can be called initially and also from your <ref refid="classwx_size_event" kindref="compound">wxSizeEvent</ref> handler function.</para></simplesect>
-<simplesect kind="see"><para><ref refid="overview__scrolling" kindref="compound">Scrolled Windows</ref>, <ref refid="classwx_scroll_bar" kindref="compound">wxScrollBar</ref>, <ref refid="classwx_scrolled" kindref="compound">wxScrolled</ref>, <ref refid="classwx_scroll_win_event" kindref="compound">wxScrollWinEvent</ref> </para></simplesect>
+<simplesect kind="see"><para><ref refid="overview_scrolling" kindref="compound">Scrolled Windows</ref>, <ref refid="classwx_scroll_bar" kindref="compound">wxScrollBar</ref>, <ref refid="classwx_scrolled" kindref="compound">wxScrolled</ref>, <ref refid="classwx_scroll_win_event" kindref="compound">wxScrollWinEvent</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -782,7 +780,7 @@
       </sectiondef>
       <sectiondef kind="user-defined">
       <header>Sizing functions</header>
-      <description><para><anchor id="_1amgrp732ceaea2a253e14f0f57d7813b5b573"/>See also the protected functions <ref refid="classwx_window_1a01e7604ab0f0b2b1a8e322a630a4669e" kindref="member">DoGetBestSize()</ref> and <ref refid="classwx_window_1ae6dfe0b0d4a8c666b21ce8df8d96727b" kindref="member">SetInitialBestSize()</ref>. </para></description>
+      <description><para>See also the protected functions <ref refid="classwx_window_1a01e7604ab0f0b2b1a8e322a630a4669e" kindref="member">DoGetBestSize()</ref> and <ref refid="classwx_window_1ae6dfe0b0d4a8c666b21ce8df8d96727b" kindref="member">SetInitialBestSize()</ref>. </para></description>
       <memberdef kind="function" id="classwx_window_1a100905524d330cfd9620fd726e378066" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void wxWindow::CacheBestSize</definition>
@@ -848,7 +846,7 @@
 <para>Sizes the window so that it fits around its subwindows. </para>        </briefdescription>
         <detaileddescription>
 <para>This function won&apos;t do anything if there are no subwindows and will only really work correctly if sizers are used for the subwindows layout.</para><para>Also, if the window has exactly one subwindow it is better (faster and the result is more precise as <ref refid="classwx_window_1a2bf38a6cbd1f82fb46f274396f482994" kindref="member">Fit()</ref> adds some margin to account for fuzziness of its calculations) to call:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>window-&gt;SetClientSize(child-&gt;GetSize());</highlight></codeline>
-</programlisting></para><para>instead of calling <ref refid="classwx_window_1a2bf38a6cbd1f82fb46f274396f482994" kindref="member">Fit()</ref>.</para><para><simplesect kind="see"><para><ref refid="overview__windowsizing" kindref="compound">Window Sizing Overview</ref> </para></simplesect>
+</programlisting></para><para>instead of calling <ref refid="classwx_window_1a2bf38a6cbd1f82fb46f274396f482994" kindref="member">Fit()</ref>.</para><para><simplesect kind="see"><para><ref refid="overview_windowsizing" kindref="compound">Window Sizing Overview</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -876,7 +874,7 @@
         <briefdescription>
 <para>This functions returns the best acceptable minimal size for the window. </para>        </briefdescription>
         <detaileddescription>
-<para>For example, for a static control, it will be the minimal size such that the control label is not truncated. For windows containing subwindows (typically <ref refid="classwx_panel" kindref="compound">wxPanel</ref>), the size returned by this function will be the same as the size the window would have had after calling <ref refid="classwx_window_1a2bf38a6cbd1f82fb46f274396f482994" kindref="member">Fit()</ref>.</para><para>Note that when you write your own widget you need to override the <ref refid="classwx_window_1a01e7604ab0f0b2b1a8e322a630a4669e" kindref="member">DoGetBestSize()</ref> function instead of this (non-virtual!) function.</para><para><simplesect kind="see"><para><ref refid="classwx_window_1a100905524d330cfd9620fd726e378066" kindref="member">CacheBestSize()</ref>, <ref refid="overview__windowsizing" kindref="compound">Window Sizing Overview</ref> </para></simplesect>
+<para>For example, for a static control, it will be the minimal size such that the control label is not truncated. For windows containing subwindows (typically <ref refid="classwx_panel" kindref="compound">wxPanel</ref>), the size returned by this function will be the same as the size the window would have had after calling <ref refid="classwx_window_1a2bf38a6cbd1f82fb46f274396f482994" kindref="member">Fit()</ref>.</para><para>Note that when you write your own widget you need to override the <ref refid="classwx_window_1a01e7604ab0f0b2b1a8e322a630a4669e" kindref="member">DoGetBestSize()</ref> function instead of this (non-virtual!) function.</para><para><simplesect kind="see"><para><ref refid="classwx_window_1a100905524d330cfd9620fd726e378066" kindref="member">CacheBestSize()</ref>, <ref refid="overview_windowsizing" kindref="compound">Window Sizing Overview</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -925,7 +923,7 @@
         <briefdescription>
 <para>Merges the window&apos;s best size into the min size and returns the result. </para>        </briefdescription>
         <detaileddescription>
-<para>This is the value used by sizers to determine the appropriate amount of space to allocate for the widget.</para><para>This is the method called by a <ref refid="classwx_sizer" kindref="compound">wxSizer</ref> when it queries the size of a window or control.</para><para><simplesect kind="see"><para><ref refid="classwx_window_1a7e64b9380374e5681f146e9e319e35e3" kindref="member">GetBestSize()</ref>, <ref refid="classwx_window_1a1b309ca50ba87e34f968c83b79af1397" kindref="member">SetInitialSize()</ref>, <ref refid="overview__windowsizing" kindref="compound">Window Sizing Overview</ref> </para></simplesect>
+<para>This is the value used by sizers to determine the appropriate amount of space to allocate for the widget.</para><para>This is the method called by a <ref refid="classwx_sizer" kindref="compound">wxSizer</ref> when it queries the size of a window or control.</para><para><simplesect kind="see"><para><ref refid="classwx_window_1a7e64b9380374e5681f146e9e319e35e3" kindref="member">GetBestSize()</ref>, <ref refid="classwx_window_1a1b309ca50ba87e34f968c83b79af1397" kindref="member">SetInitialSize()</ref>, <ref refid="overview_windowsizing" kindref="compound">Window Sizing Overview</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -939,7 +937,7 @@
         <briefdescription>
 <para>Returns the maximum size of window&apos;s client area. </para>        </briefdescription>
         <detaileddescription>
-<para>This is an indication to the sizer layout mechanism that this is the maximum possible size as well as the upper bound on window&apos;s size settable using <ref refid="classwx_window_1aa59f715217fffa5bcf14cd97f92e7840" kindref="member">SetClientSize()</ref>.</para><para><simplesect kind="see"><para><ref refid="classwx_window_1a0a1672e81caf81a95eb5b48383d22065" kindref="member">GetMaxSize()</ref>, <ref refid="overview__windowsizing" kindref="compound">Window Sizing Overview</ref> </para></simplesect>
+<para>This is an indication to the sizer layout mechanism that this is the maximum possible size as well as the upper bound on window&apos;s size settable using <ref refid="classwx_window_1aa59f715217fffa5bcf14cd97f92e7840" kindref="member">SetClientSize()</ref>.</para><para><simplesect kind="see"><para><ref refid="classwx_window_1a0a1672e81caf81a95eb5b48383d22065" kindref="member">GetMaxSize()</ref>, <ref refid="overview_windowsizing" kindref="compound">Window Sizing Overview</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -953,7 +951,7 @@
         <briefdescription>
 <para>Returns the maximum size of the window. </para>        </briefdescription>
         <detaileddescription>
-<para>This is an indication to the sizer layout mechanism that this is the maximum possible size as well as the upper bound on window&apos;s size settable using <ref refid="classwx_window_1a180312d5ad4a4a5ad805b8d52d67a74e" kindref="member">SetSize()</ref>.</para><para><simplesect kind="see"><para><ref refid="classwx_window_1aef9b71458720452374137cd20be24b97" kindref="member">GetMaxClientSize()</ref>, <ref refid="overview__windowsizing" kindref="compound">Window Sizing Overview</ref> </para></simplesect>
+<para>This is an indication to the sizer layout mechanism that this is the maximum possible size as well as the upper bound on window&apos;s size settable using <ref refid="classwx_window_1a180312d5ad4a4a5ad805b8d52d67a74e" kindref="member">SetSize()</ref>.</para><para><simplesect kind="see"><para><ref refid="classwx_window_1aef9b71458720452374137cd20be24b97" kindref="member">GetMaxClientSize()</ref>, <ref refid="overview_windowsizing" kindref="compound">Window Sizing Overview</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -967,7 +965,7 @@
         <briefdescription>
 <para>Returns the minimum size of window&apos;s client area, an indication to the sizer layout mechanism that this is the minimum required size of its client area. </para>        </briefdescription>
         <detaileddescription>
-<para>It normally just returns the value set by <ref refid="classwx_window_1a6e35ba44b97e374dfffa460d41d94b31" kindref="member">SetMinClientSize()</ref>, but it can be overridden to do the calculation on demand.</para><para><simplesect kind="see"><para><ref refid="classwx_window_1a853c9a8443f996a368569a8fae551f5a" kindref="member">GetMinSize()</ref>, <ref refid="overview__windowsizing" kindref="compound">Window Sizing Overview</ref> </para></simplesect>
+<para>It normally just returns the value set by <ref refid="classwx_window_1a6e35ba44b97e374dfffa460d41d94b31" kindref="member">SetMinClientSize()</ref>, but it can be overridden to do the calculation on demand.</para><para><simplesect kind="see"><para><ref refid="classwx_window_1a853c9a8443f996a368569a8fae551f5a" kindref="member">GetMinSize()</ref>, <ref refid="overview_windowsizing" kindref="compound">Window Sizing Overview</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -981,7 +979,7 @@
         <briefdescription>
 <para>Returns the minimum size of the window, an indication to the sizer layout mechanism that this is the minimum required size. </para>        </briefdescription>
         <detaileddescription>
-<para>This method normally just returns the value set by <ref refid="classwx_window_1a3fc066f4d8083319f004ac43811d545d" kindref="member">SetMinSize()</ref>, but it can be overridden to do the calculation on demand.</para><para><simplesect kind="see"><para><ref refid="classwx_window_1a8e88d1d38c2bf98a72d86b42cf3e35c0" kindref="member">GetMinClientSize()</ref>, <ref refid="overview__windowsizing" kindref="compound">Window Sizing Overview</ref> </para></simplesect>
+<para>This method normally just returns the value set by <ref refid="classwx_window_1a3fc066f4d8083319f004ac43811d545d" kindref="member">SetMinSize()</ref>, but it can be overridden to do the calculation on demand.</para><para><simplesect kind="see"><para><ref refid="classwx_window_1a8e88d1d38c2bf98a72d86b42cf3e35c0" kindref="member">GetMinClientSize()</ref>, <ref refid="overview_windowsizing" kindref="compound">Window Sizing Overview</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -1074,7 +1072,7 @@
 <para>Receives the window height.</para></parameterdescription>
 </parameteritem>
 </parameterlist>
-<bold>wxPerl Note:</bold> In wxPerl this method is implemented as GetSizeWH() returning a 2-element list (width, height).</para><para><simplesect kind="see"><para><ref refid="classwx_window_1ae56fc53268b815b58570f66bfc33838f" kindref="member">GetClientSize()</ref>, <ref refid="classwx_window_1a614d32c464296b7d6caabcafc18deb97" kindref="member">GetVirtualSize()</ref>, <ref refid="overview__windowsizing" kindref="compound">Window Sizing Overview</ref> </para></simplesect>
+<bold>wxPerl Note:</bold> In wxPerl this method is implemented as GetSizeWH() returning a 2-element list (width, height).</para><para><simplesect kind="see"><para><ref refid="classwx_window_1ae56fc53268b815b58570f66bfc33838f" kindref="member">GetClientSize()</ref>, <ref refid="classwx_window_1a614d32c464296b7d6caabcafc18deb97" kindref="member">GetVirtualSize()</ref>, <ref refid="overview_windowsizing" kindref="compound">Window Sizing Overview</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -1101,7 +1099,7 @@
         <briefdescription>
 <para>This gets the virtual size of the window in pixels. </para>        </briefdescription>
         <detaileddescription>
-<para>By default it returns the client size of the window, but after a call to <ref refid="classwx_window_1a37f293b7904bc6668b86cccb0aea5669" kindref="member">SetVirtualSize()</ref> it will return the size set with that method.</para><para><simplesect kind="see"><para><ref refid="overview__windowsizing" kindref="compound">Window Sizing Overview</ref> </para></simplesect>
+<para>By default it returns the client size of the window, but after a call to <ref refid="classwx_window_1a37f293b7904bc6668b86cccb0aea5669" kindref="member">SetVirtualSize()</ref> it will return the size set with that method.</para><para><simplesect kind="see"><para><ref refid="overview_windowsizing" kindref="compound">Window Sizing Overview</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -1149,7 +1147,7 @@
         <argsstring>() const </argsstring>
         <name>GetBestVirtualSize</name>
         <briefdescription>
-<para>Return the largest of ClientSize and BestSize (as determined by a sizer, interior children, or other means). </para>        </briefdescription>
+<para>Return the largest of ClientSize and BestSize (as determined by a sizer, interior children, or other means) </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -1303,7 +1301,7 @@
         <briefdescription>
 <para>This sets the size of the window client area in pixels. </para>        </briefdescription>
         <detaileddescription>
-<para>Using this function to size a window tends to be more device-independent than <ref refid="classwx_window_1a180312d5ad4a4a5ad805b8d52d67a74e" kindref="member">SetSize()</ref>, since the application need not worry about what dimensions the border or title bar have when trying to fit the window around panel items, for example.</para><para><simplesect kind="see"><para><ref refid="overview__windowsizing" kindref="compound">Window Sizing Overview</ref> </para></simplesect>
+<para>Using this function to size a window tends to be more device-independent than <ref refid="classwx_window_1a180312d5ad4a4a5ad805b8d52d67a74e" kindref="member">SetSize()</ref>, since the application need not worry about what dimensions the border or title bar have when trying to fit the window around panel items, for example.</para><para><simplesect kind="see"><para><ref refid="overview_windowsizing" kindref="compound">Window Sizing Overview</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -1373,7 +1371,7 @@
         <briefdescription>
 <para>A <emphasis>smart</emphasis> SetSize that will fill in default size components with the window&apos;s <emphasis>best</emphasis> size values. </para>        </briefdescription>
         <detaileddescription>
-<para>Also sets the window&apos;s minsize to the value passed in for use with sizers. This means that if a full or partial size is passed to this function then the sizers will use that size instead of the results of <ref refid="classwx_window_1a7e64b9380374e5681f146e9e319e35e3" kindref="member">GetBestSize()</ref> to determine the minimum needs of the window for layout.</para><para>Most controls will use this to set their initial size, and their min size to the passed in value (if any.)</para><para><simplesect kind="see"><para><ref refid="classwx_window_1a180312d5ad4a4a5ad805b8d52d67a74e" kindref="member">SetSize()</ref>, <ref refid="classwx_window_1a7e64b9380374e5681f146e9e319e35e3" kindref="member">GetBestSize()</ref>, <ref refid="classwx_window_1a1a54fcda8d52986482e030bd54739e9f" kindref="member">GetEffectiveMinSize()</ref>, <ref refid="overview__windowsizing" kindref="compound">Window Sizing Overview</ref> </para></simplesect>
+<para>Also sets the window&apos;s minsize to the value passed in for use with sizers. This means that if a full or partial size is passed to this function then the sizers will use that size instead of the results of <ref refid="classwx_window_1a7e64b9380374e5681f146e9e319e35e3" kindref="member">GetBestSize()</ref> to determine the minimum needs of the window for layout.</para><para>Most controls will use this to set their initial size, and their min size to the passed in value (if any.)</para><para><simplesect kind="see"><para><ref refid="classwx_window_1a180312d5ad4a4a5ad805b8d52d67a74e" kindref="member">SetSize()</ref>, <ref refid="classwx_window_1a7e64b9380374e5681f146e9e319e35e3" kindref="member">GetBestSize()</ref>, <ref refid="classwx_window_1a1a54fcda8d52986482e030bd54739e9f" kindref="member">GetEffectiveMinSize()</ref>, <ref refid="overview_windowsizing" kindref="compound">Window Sizing Overview</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -1391,8 +1389,8 @@
         <briefdescription>
 <para>Sets the maximum client size of the window, to indicate to the sizer layout mechanism that this is the maximum possible size of its client area. </para>        </briefdescription>
         <detaileddescription>
-<para>Note that this method is just a shortcut for: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_window_1a38b496214d728a3212afadee5ed51606" kindref="member" tooltip="Sets the maximum size of the window, to indicate to the sizer layout mechanism that...">SetMaxSize</ref>(<ref refid="classwx_window_1a693fffbbb7ad5f36a5f442703396dafa" kindref="member" tooltip="Converts client area size size to corresponding window size.">ClientToWindowSize</ref>(size));</highlight></codeline>
-</programlisting></para><para><simplesect kind="see"><para><ref refid="classwx_window_1a38b496214d728a3212afadee5ed51606" kindref="member">SetMaxSize()</ref>, <ref refid="overview__windowsizing" kindref="compound">Window Sizing Overview</ref> </para></simplesect>
+<para>Note that this method is just a shortcut for: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_window_1a38b496214d728a3212afadee5ed51606" kindref="member" tooltip="Sets the maximum size of the window, to indicate to the sizer layout mechanism that this is the maxim...">SetMaxSize</ref>(<ref refid="classwx_window_1a693fffbbb7ad5f36a5f442703396dafa" kindref="member" tooltip="Converts client area size size to corresponding window size.">ClientToWindowSize</ref>(size));</highlight></codeline>
+</programlisting></para><para><simplesect kind="see"><para><ref refid="classwx_window_1a38b496214d728a3212afadee5ed51606" kindref="member">SetMaxSize()</ref>, <ref refid="overview_windowsizing" kindref="compound">Window Sizing Overview</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -1411,7 +1409,7 @@
         <briefdescription>
 <para>Sets the maximum size of the window, to indicate to the sizer layout mechanism that this is the maximum possible size. </para>        </briefdescription>
         <detaileddescription>
-<para><simplesect kind="see"><para><ref refid="classwx_window_1a664e5b2ddd817d9c58788269fe1d8479" kindref="member">SetMaxClientSize()</ref>, <ref refid="overview__windowsizing" kindref="compound">Window Sizing Overview</ref> </para></simplesect>
+<para><simplesect kind="see"><para><ref refid="classwx_window_1a664e5b2ddd817d9c58788269fe1d8479" kindref="member">SetMaxClientSize()</ref>, <ref refid="overview_windowsizing" kindref="compound">Window Sizing Overview</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -1429,8 +1427,8 @@
         <briefdescription>
 <para>Sets the minimum client size of the window, to indicate to the sizer layout mechanism that this is the minimum required size of window&apos;s client area. </para>        </briefdescription>
         <detaileddescription>
-<para>You may need to call this if you change the window size after construction and before adding to its parent sizer.</para><para>Note, that just as with <ref refid="classwx_window_1a3fc066f4d8083319f004ac43811d545d" kindref="member">SetMinSize()</ref>, calling this method doesn&apos;t prevent the program from explicitly making the window smaller than the specified size.</para><para>Note that this method is just a shortcut for: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_window_1a3fc066f4d8083319f004ac43811d545d" kindref="member" tooltip="Sets the minimum size of the window, to indicate to the sizer layout mechanism that...">SetMinSize</ref>(<ref refid="classwx_window_1a693fffbbb7ad5f36a5f442703396dafa" kindref="member" tooltip="Converts client area size size to corresponding window size.">ClientToWindowSize</ref>(size));</highlight></codeline>
-</programlisting></para><para><simplesect kind="see"><para><ref refid="classwx_window_1a3fc066f4d8083319f004ac43811d545d" kindref="member">SetMinSize()</ref>, <ref refid="overview__windowsizing" kindref="compound">Window Sizing Overview</ref> </para></simplesect>
+<para>You may need to call this if you change the window size after construction and before adding to its parent sizer.</para><para>Note, that just as with <ref refid="classwx_window_1a3fc066f4d8083319f004ac43811d545d" kindref="member">SetMinSize()</ref>, calling this method doesn&apos;t prevent the program from explicitly making the window smaller than the specified size.</para><para>Note that this method is just a shortcut for: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_window_1a3fc066f4d8083319f004ac43811d545d" kindref="member" tooltip="Sets the minimum size of the window, to indicate to the sizer layout mechanism that this is the minim...">SetMinSize</ref>(<ref refid="classwx_window_1a693fffbbb7ad5f36a5f442703396dafa" kindref="member" tooltip="Converts client area size size to corresponding window size.">ClientToWindowSize</ref>(size));</highlight></codeline>
+</programlisting></para><para><simplesect kind="see"><para><ref refid="classwx_window_1a3fc066f4d8083319f004ac43811d545d" kindref="member">SetMinSize()</ref>, <ref refid="overview_windowsizing" kindref="compound">Window Sizing Overview</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -1449,7 +1447,7 @@
         <briefdescription>
 <para>Sets the minimum size of the window, to indicate to the sizer layout mechanism that this is the minimum required size. </para>        </briefdescription>
         <detaileddescription>
-<para>You may need to call this if you change the window size after construction and before adding to its parent sizer.</para><para>Notice that calling this method doesn&apos;t prevent the program from making the window explicitly smaller than the specified size by calling <ref refid="classwx_window_1a180312d5ad4a4a5ad805b8d52d67a74e" kindref="member">SetSize()</ref>, it just ensures that it won&apos;t become smaller than this size during the automatic layout.</para><para><simplesect kind="see"><para><ref refid="classwx_window_1a6e35ba44b97e374dfffa460d41d94b31" kindref="member">SetMinClientSize()</ref>, <ref refid="overview__windowsizing" kindref="compound">Window Sizing Overview</ref> </para></simplesect>
+<para>You may need to call this if you change the window size after construction and before adding to its parent sizer.</para><para>Notice that calling this method doesn&apos;t prevent the program from making the window explicitly smaller than the specified size by calling <ref refid="classwx_window_1a180312d5ad4a4a5ad805b8d52d67a74e" kindref="member">SetSize()</ref>, it just ensures that it won&apos;t become smaller than this size during the automatic layout.</para><para><simplesect kind="see"><para><ref refid="classwx_window_1a6e35ba44b97e374dfffa460d41d94b31" kindref="member">SetMinClientSize()</ref>, <ref refid="overview_windowsizing" kindref="compound">Window Sizing Overview</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -1523,7 +1521,7 @@
 </parameteritem>
 </parameterlist>
 <simplesect kind="remark"><para>This overload sets the position and optionally size, of the window. Parameters may be wxDefaultCoord to indicate either that a default should be supplied by wxWidgets, or that the current value of the dimension should be used.</para></simplesect>
-<simplesect kind="see"><para><ref refid="classwx_window_1ab1cb98c8d25b9e6ff7b706b1446c3df7" kindref="member">Move()</ref>, <ref refid="overview__windowsizing" kindref="compound">Window Sizing Overview</ref> </para></simplesect>
+<simplesect kind="see"><para><ref refid="classwx_window_1ab1cb98c8d25b9e6ff7b706b1446c3df7" kindref="member">Move()</ref>, <ref refid="overview_windowsizing" kindref="compound">Window Sizing Overview</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -1542,7 +1540,7 @@
 <para>Sets the size of the window in pixels. </para>        </briefdescription>
         <detaileddescription>
 <para>The size is specified using a <ref refid="classwx_rect" kindref="compound">wxRect</ref>, <ref refid="classwx_size" kindref="compound">wxSize</ref> or by a couple of <computeroutput>int</computeroutput> objects.</para><para><simplesect kind="remark"><para>This form must be used with non-default width and height values.</para></simplesect>
-<simplesect kind="see"><para><ref refid="classwx_window_1ab1cb98c8d25b9e6ff7b706b1446c3df7" kindref="member">Move()</ref>, <ref refid="overview__windowsizing" kindref="compound">Window Sizing Overview</ref> </para></simplesect>
+<simplesect kind="see"><para><ref refid="classwx_window_1ab1cb98c8d25b9e6ff7b706b1446c3df7" kindref="member">Move()</ref>, <ref refid="overview_windowsizing" kindref="compound">Window Sizing Overview</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -1609,7 +1607,7 @@
         <briefdescription>
 <para>Use of this function for windows which are not toplevel windows (such as <ref refid="classwx_dialog" kindref="compound">wxDialog</ref> or <ref refid="classwx_frame" kindref="compound">wxFrame</ref>) is discouraged. </para>        </briefdescription>
         <detaileddescription>
-<para>Please use <ref refid="classwx_window_1a3fc066f4d8083319f004ac43811d545d" kindref="member">SetMinSize()</ref> and <ref refid="classwx_window_1a38b496214d728a3212afadee5ed51606" kindref="member">SetMaxSize()</ref> instead.</para><para><simplesect kind="see"><para><ref refid="classwx_top_level_window_1ac01a45e5d82e4e3be22a4841c1217e11" kindref="member">wxTopLevelWindow::SetSizeHints</ref>, <ref refid="overview__windowsizing" kindref="compound">Window Sizing Overview</ref> </para></simplesect>
+<para>Please use <ref refid="classwx_window_1a3fc066f4d8083319f004ac43811d545d" kindref="member">SetMinSize()</ref> and <ref refid="classwx_window_1a38b496214d728a3212afadee5ed51606" kindref="member">SetMaxSize()</ref> instead.</para><para><simplesect kind="see"><para><ref refid="classwx_top_level_window_1ac01a45e5d82e4e3be22a4841c1217e11" kindref="member">wxTopLevelWindow::SetSizeHints</ref>, <ref refid="overview_windowsizing" kindref="compound">Window Sizing Overview</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -1674,7 +1672,7 @@
         <briefdescription>
 <para>Sets the virtual size of the window in pixels. </para>        </briefdescription>
         <detaileddescription>
-<para><simplesect kind="see"><para><ref refid="overview__windowsizing" kindref="compound">Window Sizing Overview</ref> </para></simplesect>
+<para><simplesect kind="see"><para><ref refid="overview_windowsizing" kindref="compound">Window Sizing Overview</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -1700,7 +1698,6 @@
       </sectiondef>
       <sectiondef kind="user-defined">
       <header>Positioning functions</header>
-      <description><para><anchor id="_1amgrp5b4c115eed346d228e1e748d2ba5e211"/> </para></description>
       <memberdef kind="function" id="classwx_window_1a06c0ecb262995b40083bfb446a6cff99" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void wxWindow::Center</definition>
@@ -1932,9 +1929,9 @@
         <name>GetClientAreaOrigin</name>
         <reimplementedby refid="classwx_frame_1ab4c447b8c1b139680d3ce4858dcd5db4">GetClientAreaOrigin</reimplementedby>
         <briefdescription>
-<para>Get the origin of the client area of the window relative to the window top left corner (the client area may be shifted because of the borders, scrollbars, other decorations. </para>        </briefdescription>
+<para>Get the origin of the client area of the window relative to the window top left corner (the client area may be shifted because of the borders, scrollbars, other decorations...) </para>        </briefdescription>
         <detaileddescription>
-<para>..) </para>        </detaileddescription>
+        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/window.h" line="1331"/>
@@ -2063,7 +2060,6 @@
       </sectiondef>
       <sectiondef kind="user-defined">
       <header>Coordinate conversion functions</header>
-      <description><para><anchor id="_1amgrped280bddb396fc5430fe7879b84739a3"/> </para></description>
       <memberdef kind="function" id="classwx_window_1a29eac611e5f6b47db82bb4dd5450ba3d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void wxWindow::ClientToScreen</definition>
@@ -2264,7 +2260,6 @@
       </sectiondef>
       <sectiondef kind="user-defined">
       <header>Drawing-related functions</header>
-      <description><para><anchor id="_1amgrp018a5c590dbfb6eb0d5b5038ab3a802c"/> </para></description>
       <memberdef kind="function" id="classwx_window_1a61e833684ee5c89775e91e88be1a9a52" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
         <definition>virtual void wxWindow::ClearBackground</definition>
@@ -2805,7 +2800,7 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000068"><xreftitle>Deprecated</xreftitle><xrefdescription><para>use <ref refid="classwx_d_c_1afc58b0f4653159e713377d38c84a120f" kindref="member">wxDC::SetPalette</ref> instead. </para></xrefdescription></xrefsect></para>        </detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000068"><xreftitle>Deprecated</xreftitle><xrefdescription><para>use <ref refid="classwx_d_c_1afc58b0f4653159e713377d38c84a120f" kindref="member">wxDC::SetPalette</ref> instead.</para></xrefdescription></xrefsect></para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/window.h" line="1837"/>
@@ -2889,7 +2884,7 @@
       </sectiondef>
       <sectiondef kind="user-defined">
       <header>Event-handling functions</header>
-      <description><para><anchor id="_1amgrpb0ea6c58c0785a60ebd8d9fa084a4a29"/><ref refid="classwx_window" kindref="compound">wxWindow</ref> allows you to build a (sort of) stack of event handlers which can be used to override the window&apos;s own event handling. </para></description>
+      <description><para><ref refid="classwx_window" kindref="compound">wxWindow</ref> allows you to build a (sort of) stack of event handlers which can be used to override the window&apos;s own event handling. </para></description>
       <memberdef kind="function" id="classwx_window_1a72c2454cf309f30109da3cbfe237c760" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_evt_handler" kindref="compound">wxEvtHandler</ref> *</type>
         <definition>wxEvtHandler* wxWindow::GetEventHandler</definition>
@@ -2935,7 +2930,7 @@
         <briefdescription>
 <para>Shorthand for: </para>        </briefdescription>
         <detaileddescription>
-<para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_window_1a72c2454cf309f30109da3cbfe237c760" kindref="member" tooltip="Returns the event handler for this window.">GetEventHandler</ref>()-&gt;<ref refid="classwx_evt_handler_1a8205cb1a5a00d8b550b3ead22266b16b" kindref="member" tooltip="Processes an event by calling ProcessEvent() and handles any exceptions that occur...">SafelyProcessEvent</ref>(event);</highlight></codeline>
+<para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_window_1a72c2454cf309f30109da3cbfe237c760" kindref="member" tooltip="Returns the event handler for this window.">GetEventHandler</ref>()-&gt;<ref refid="classwx_evt_handler_1a8205cb1a5a00d8b550b3ead22266b16b" kindref="member" tooltip="Processes an event by calling ProcessEvent() and handles any exceptions that occur in the process...">SafelyProcessEvent</ref>(event);</highlight></codeline>
 </programlisting></para><para><simplesect kind="see"><para><ref refid="classwx_window_1a0a76891d726ad5f9a729e27e4eab2b57" kindref="member">ProcessWindowEvent()</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
@@ -2954,7 +2949,7 @@
         <briefdescription>
 <para>Convenient wrapper for <ref refid="classwx_window_1a5ebdbd87c28644149a07f1742996df96" kindref="member">ProcessEvent()</ref>. </para>        </briefdescription>
         <detaileddescription>
-<para>This is the same as writing <programlisting><codeline><highlight class="normal"><sp/><ref refid="classwx_window_1a72c2454cf309f30109da3cbfe237c760" kindref="member" tooltip="Returns the event handler for this window.">GetEventHandler</ref>()-&gt;<ref refid="classwx_evt_handler_1a65968dd27f3aac7718f2dd6b2ddd5a08" kindref="member" tooltip="Processes an event, searching event tables and calling zero or more suitable event...">ProcessEvent</ref>(event);</highlight></codeline>
+<para>This is the same as writing <programlisting><codeline><highlight class="normal"><sp/><ref refid="classwx_window_1a72c2454cf309f30109da3cbfe237c760" kindref="member" tooltip="Returns the event handler for this window.">GetEventHandler</ref>()-&gt;<ref refid="classwx_evt_handler_1a65968dd27f3aac7718f2dd6b2ddd5a08" kindref="member" tooltip="Processes an event, searching event tables and calling zero or more suitable event handler function(s...">ProcessEvent</ref>(event);</highlight></codeline>
 </programlisting> but more convenient. Notice that <ref refid="classwx_window_1a5ebdbd87c28644149a07f1742996df96" kindref="member">ProcessEvent()</ref> itself can&apos;t be called for <ref refid="classwx_window" kindref="compound">wxWindow</ref> objects as it ignores the event handlers associated with the window; use this function instead. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -3000,7 +2995,7 @@
 <para>If this is true, the handler will be deleted after it is removed (and the returned value will be NULL).</para></parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="see"><para><ref refid="overview__events_1overview_events_processing" kindref="member">How Events are Processed</ref> </para></simplesect>
+<simplesect kind="see"><para><ref refid="overview_events_1overview_events_processing" kindref="member">How Events are Processed</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -3029,7 +3024,7 @@
 <para>Specifies the handler to be pushed. It must not be part of a <ref refid="classwx_evt_handler" kindref="compound">wxEvtHandler</ref> chain; an assert will fail if it&apos;s not unlinked (see <ref refid="classwx_evt_handler_1a360fdeefcf53b62fb49fb828406bb8a6" kindref="member">wxEvtHandler::IsUnlinked</ref>).</para></parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="see"><para><ref refid="overview__events_1overview_events_processing" kindref="member">How Events are Processed</ref> </para></simplesect>
+<simplesect kind="see"><para><ref refid="overview_events_1overview_events_processing" kindref="member">How Events are Processed</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -3082,7 +3077,7 @@
 <para>Specifies the handler to be set. Cannot be NULL.</para></parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="see"><para><ref refid="overview__events_1overview_events_processing" kindref="member">How Events are Processed</ref> </para></simplesect>
+<simplesect kind="see"><para><ref refid="overview_events_1overview_events_processing" kindref="member">How Events are Processed</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -3127,7 +3122,6 @@
       </sectiondef>
       <sectiondef kind="user-defined">
       <header>Window styles functions</header>
-      <description><para><anchor id="_1amgrpe0e9ea092db897936a1afb49f16284ce"/> </para></description>
       <memberdef kind="function" id="classwx_window_1a8da0e59017af368c062f11c9abe2c667" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>long</type>
         <definition>long wxWindow::GetExtraStyle</definition>
@@ -3234,7 +3228,7 @@
         <briefdescription>
 <para>Sets the style of the window. </para>        </briefdescription>
         <detaileddescription>
-<para>Please note that some styles cannot be changed after the window creation and that <ref refid="classwx_window_1a29dc7251746154c821b17841b9877830" kindref="member">Refresh()</ref> might need to be called after changing the others for the change to take place immediately.</para><para>See <ref refid="overview__windowstyles" kindref="compound">Window styles</ref> for more information about flags.</para><para><simplesect kind="see"><para><ref refid="classwx_window_1a0a0e81677bf2f0de5982a634e11d9a69" kindref="member">GetWindowStyleFlag()</ref> </para></simplesect>
+<para>Please note that some styles cannot be changed after the window creation and that <ref refid="classwx_window_1a29dc7251746154c821b17841b9877830" kindref="member">Refresh()</ref> might need to be called after changing the others for the change to take place immediately.</para><para>See <ref refid="overview_windowstyles" kindref="compound">Window styles</ref> for more information about flags.</para><para><simplesect kind="see"><para><ref refid="classwx_window_1a0a0e81677bf2f0de5982a634e11d9a69" kindref="member">GetWindowStyleFlag()</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -3280,7 +3274,6 @@
       </sectiondef>
       <sectiondef kind="user-defined">
       <header>Tab order functions</header>
-      <description><para><anchor id="_1amgrp12821f773e9f3773d379a589e465232f"/> </para></description>
       <memberdef kind="function" id="classwx_window_1a79e66079125e8420de269811bdb6f2b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void wxWindow::MoveAfterInTabOrder</definition>
@@ -3372,7 +3365,6 @@
       </sectiondef>
       <sectiondef kind="user-defined">
       <header>Z order functions</header>
-      <description><para><anchor id="_1amgrpecc4de9f7a85c311f98709d5223aaa13"/> </para></description>
       <memberdef kind="function" id="classwx_window_1a124944524f36b71385dad8fddaad8ded" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
         <definition>virtual void wxWindow::Lower</definition>
@@ -3406,7 +3398,6 @@
       </sectiondef>
       <sectiondef kind="user-defined">
       <header>Window status functions</header>
-      <description><para><anchor id="_1amgrpf0f6ac9d92f0ded547a4fa85082b43c7"/> </para></description>
       <memberdef kind="function" id="classwx_window_1a7ed103df04014cb3c59c6a3fb4d95328" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
         <definition>bool wxWindow::Hide</definition>
@@ -3683,7 +3674,6 @@
       </sectiondef>
       <sectiondef kind="user-defined">
       <header>Context-sensitive help functions</header>
-      <description><para><anchor id="_1amgrp718cf3d083a8ed76849b0c3a97d461c9"/> </para></description>
       <memberdef kind="function" id="classwx_window_1a77f8a4bbee228ed333af2e6a06509cff" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
         <definition>wxString wxWindow::GetHelpText</definition>
@@ -3831,7 +3821,6 @@
       </sectiondef>
       <sectiondef kind="user-defined">
       <header>Popup/context menu functions</header>
-      <description><para><anchor id="_1amgrp9f5d6110e9ad25ed879f15ca62bf203c"/> </para></description>
       <memberdef kind="function" id="classwx_window_1a9b7de6ea85ca926b668ba0682a61a93e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
         <definition>int wxWindow::GetPopupMenuSelectionFromUser</definition>
@@ -3932,7 +3921,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_window_1a6a332586346cb9ece4a8fe058a7b88c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_validator" kindref="compound">wxValidator</ref> *</type>
         <definition>virtual wxValidator* wxWindow::GetValidator</definition>
@@ -4010,7 +3998,6 @@
       </sectiondef>
       <sectiondef kind="user-defined">
       <header>wxWindow properties functions</header>
-      <description><para><anchor id="_1amgrpd6424db1a1fbce01269715eb7dae0f99"/> </para></description>
       <memberdef kind="function" id="classwx_window_1a4633b6ad527c921598f55af5274156f0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="windowid_8h_1ae8091432cc2cb2485d45f2302fb51133" kindref="member">wxWindowID</ref></type>
         <definition>wxWindowID wxWindow::GetId</definition>
@@ -4020,7 +4007,7 @@
 <para>Returns the identifier of the window. </para>        </briefdescription>
         <detaileddescription>
 <para><simplesect kind="remark"><para>Each window has an integer identifier. If the application has not provided one (or the default wxID_ANY) a unique identifier with a negative value will be generated.</para></simplesect>
-<simplesect kind="see"><para><ref refid="classwx_window_1a7f27d0faed14effa013381bdc40e1bcd" kindref="member">SetId()</ref>, <ref refid="overview__windowids" kindref="compound">Window IDs</ref> </para></simplesect>
+<simplesect kind="see"><para><ref refid="classwx_window_1a7f27d0faed14effa013381bdc40e1bcd" kindref="member">SetId()</ref>, <ref refid="overview_windowids" kindref="compound">Window IDs</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -4097,7 +4084,7 @@
 <para>Sets the identifier of the window. </para>        </briefdescription>
         <detaileddescription>
 <para><simplesect kind="remark"><para>Each window has an integer identifier. If the application has not provided one, an identifier will be generated. Normally, the identifier should be provided on creation and should not be modified subsequently.</para></simplesect>
-<simplesect kind="see"><para><ref refid="classwx_window_1a4633b6ad527c921598f55af5274156f0" kindref="member">GetId()</ref>, <ref refid="overview__windowids" kindref="compound">Window IDs</ref> </para></simplesect>
+<simplesect kind="see"><para><ref refid="classwx_window_1a4633b6ad527c921598f55af5274156f0" kindref="member">GetId()</ref>, <ref refid="overview_windowids" kindref="compound">Window IDs</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -4255,7 +4242,6 @@
       </sectiondef>
       <sectiondef kind="user-defined">
       <header>Window deletion functions</header>
-      <description><para><anchor id="_1amgrp2d7941d682480c6b69a951726c5effbe"/> </para></description>
       <memberdef kind="function" id="classwx_window_1a3e44f4a494fc9ef4346c4fba70c8de0c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
         <definition>bool wxWindow::Close</definition>
@@ -4278,7 +4264,7 @@
 </parameteritem>
 </parameterlist>
 <simplesect kind="remark"><para>Close calls the close handler for the window, providing an opportunity for the window to choose whether to destroy the window. Usually it is only used with the top level windows (<ref refid="classwx_frame" kindref="compound">wxFrame</ref> and <ref refid="classwx_dialog" kindref="compound">wxDialog</ref> classes) as the others are not supposed to have any special OnClose() logic. The close handler should check whether the window is being deleted forcibly, using <ref refid="classwx_close_event_1adaa0548df45e05e8487cc5664ac352cf" kindref="member">wxCloseEvent::CanVeto</ref>, in which case it should destroy the window using <ref refid="classwx_window_1a6bf0c5be864544d9ce0560087667b7fc" kindref="member">wxWindow::Destroy</ref>. Note that calling Close does not guarantee that the window will be destroyed; but it provides a way to simulate a manual close of a window, which may or may not be implemented by destroying the window. The default implementation of wxDialog::OnCloseWindow does not necessarily delete the dialog, since it will simply simulate an wxID_CANCEL event which is handled by the appropriate button event handler and may do anything at all. To guarantee that the window will be destroyed, call <ref refid="classwx_window_1a6bf0c5be864544d9ce0560087667b7fc" kindref="member">wxWindow::Destroy</ref> instead</para></simplesect>
-<simplesect kind="see"><para><ref refid="overview__windowdeletion" kindref="compound">Window Deletion Overview</ref>, <ref refid="classwx_window_1a6bf0c5be864544d9ce0560087667b7fc" kindref="member">Destroy()</ref>, <ref refid="classwx_close_event" kindref="compound">wxCloseEvent</ref> </para></simplesect>
+<simplesect kind="see"><para><ref refid="overview_windowdeletion" kindref="compound">Window Deletion Overview</ref>, <ref refid="classwx_window_1a6bf0c5be864544d9ce0560087667b7fc" kindref="member">Destroy()</ref>, <ref refid="classwx_close_event" kindref="compound">wxCloseEvent</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -4314,7 +4300,6 @@
       </sectiondef>
       <sectiondef kind="user-defined">
       <header>Drag and drop functions</header>
-      <description><para><anchor id="_1amgrp9707b913bb983bc489223af419ab680a"/> </para></description>
       <memberdef kind="function" id="classwx_window_1a4511e71affd926a47c5c320563ca2df5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_drop_target" kindref="compound">wxDropTarget</ref> *</type>
         <definition>virtual wxDropTarget* wxWindow::GetDropTarget</definition>
@@ -4323,7 +4308,7 @@
         <briefdescription>
 <para>Returns the associated drop target, which may be NULL. </para>        </briefdescription>
         <detaileddescription>
-<para><simplesect kind="see"><para><ref refid="classwx_window_1ae34b4d45433ca8287df0e47d46411e58" kindref="member">SetDropTarget()</ref>, <ref refid="overview__dnd" kindref="compound">Drag and Drop Overview</ref> </para></simplesect>
+<para><simplesect kind="see"><para><ref refid="classwx_window_1ae34b4d45433ca8287df0e47d46411e58" kindref="member">SetDropTarget()</ref>, <ref refid="overview_dnd" kindref="compound">Drag and Drop Overview</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -4341,7 +4326,7 @@
         <briefdescription>
 <para>Associates a drop target with this window. </para>        </briefdescription>
         <detaileddescription>
-<para>If the window already has a drop target, it is deleted.</para><para><simplesect kind="see"><para><ref refid="classwx_window_1a4511e71affd926a47c5c320563ca2df5" kindref="member">GetDropTarget()</ref>, <ref refid="overview__dnd" kindref="compound">Drag and Drop Overview</ref> </para></simplesect>
+<para>If the window already has a drop target, it is deleted.</para><para><simplesect kind="see"><para><ref refid="classwx_window_1a4511e71affd926a47c5c320563ca2df5" kindref="member">GetDropTarget()</ref>, <ref refid="overview_dnd" kindref="compound">Drag and Drop Overview</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -4377,7 +4362,6 @@
       </sectiondef>
       <sectiondef kind="user-defined">
       <header>Constraints, sizers and window layout functions</header>
-      <description><para><anchor id="_1amgrp48691ac84e8f7fda28548b15155836c2"/> </para></description>
       <memberdef kind="function" id="classwx_window_1ade8de9a91bb5bf49c3a52e5262a5ffea" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_sizer" kindref="compound">wxSizer</ref> *</type>
         <definition>wxSizer* wxWindow::GetContainingSizer</definition>
@@ -4513,7 +4497,7 @@
         <briefdescription>
 <para>Invokes the constraint-based layout algorithm or the sizer-based algorithm for this window. </para>        </briefdescription>
         <detaileddescription>
-<para>This function does not get called automatically when the window is resized because lots of windows deriving from <ref refid="classwx_window" kindref="compound">wxWindow</ref> does not need this functionality. If you want to have <ref refid="classwx_window_1a1b143c3e72bd0af533b76db4830a6113" kindref="member">Layout()</ref> called automatically, you should derive from <ref refid="classwx_panel" kindref="compound">wxPanel</ref> (see <ref refid="classwx_panel_1a6ded9b75baf21e2c9f5496f746b68bf0" kindref="member">wxPanel::Layout</ref>).</para><para><simplesect kind="see"><para><ref refid="overview__windowsizing" kindref="compound">Window Sizing Overview</ref> </para></simplesect>
+<para>This function does not get called automatically when the window is resized because lots of windows deriving from <ref refid="classwx_window" kindref="compound">wxWindow</ref> does not need this functionality. If you want to have <ref refid="classwx_window_1a1b143c3e72bd0af533b76db4830a6113" kindref="member">Layout()</ref> called automatically, you should derive from <ref refid="classwx_panel" kindref="compound">wxPanel</ref> (see <ref refid="classwx_panel_1a6ded9b75baf21e2c9f5496f746b68bf0" kindref="member">wxPanel::Layout</ref>).</para><para><simplesect kind="see"><para><ref refid="overview_windowsizing" kindref="compound">Window Sizing Overview</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -4561,7 +4545,6 @@
       </sectiondef>
       <sectiondef kind="user-defined">
       <header>Mouse functions</header>
-      <description><para><anchor id="_1amgrp25b5db2271d8fa6fa3f6e80a3a78d5ae"/> </para></description>
       <memberdef kind="function" id="classwx_window_1a5c72c6260a73ef77bb0b1f7ec85fcfef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void wxWindow::CaptureMouse</definition>
@@ -4714,7 +4697,6 @@
       </sectiondef>
       <sectiondef kind="user-defined">
       <header>Miscellaneous functions</header>
-      <description><para><anchor id="_1amgrp458f92801f3edfaf2e30b1f530c324e2"/> </para></description>
       <memberdef kind="function" id="classwx_window_1a6a026b2a16a9f050deddd44e5586762c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="defs_8h_1a9b85a92dd590efbbe1248e0a9fc90024" kindref="member">wxHitTest</ref></type>
         <definition>wxHitTest wxWindow::HitTest</definition>
@@ -4799,10 +4781,10 @@
 <para>Does the window-specific updating after processing the update event. </para>        </briefdescription>
         <detaileddescription>
 <para>This function is called by <ref refid="classwx_window_1adf0a4987728bd0bf69f922641b3efbfc" kindref="member">UpdateWindowUI()</ref> in order to check return values in the <ref refid="classwx_update_u_i_event" kindref="compound">wxUpdateUIEvent</ref> and act appropriately. For example, to allow frame and dialog title updating, wxWidgets implements this function as follows:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>do<sp/>the<sp/>window-specific<sp/>processing<sp/>after<sp/>processing<sp/>the<sp/>update<sp/>event</highlight><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classwx_window_1ae8a84a80645e99f4d24a22e5c386f626" kindref="member" tooltip="Does the window-specific updating after processing the update event.">wxTopLevelWindowBase::DoUpdateWindowUI</ref>(<ref refid="classwx_update_u_i_event" kindref="compound" tooltip="This class is used for pseudo-events which are called by wxWidgets to give an application...">wxUpdateUIEvent</ref>&amp;<sp/>event)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classwx_window_1ae8a84a80645e99f4d24a22e5c386f626" kindref="member" tooltip="Does the window-specific updating after processing the update event.">wxTopLevelWindowBase::DoUpdateWindowUI</ref>(<ref refid="classwx_update_u_i_event" kindref="compound" tooltip="This class is used for pseudo-events which are called by wxWidgets to give an application the chance ...">wxUpdateUIEvent</ref>&amp;<sp/>event)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>event.<ref refid="classwx_update_u_i_event_1ac61d7606adecfe42790e199180572bf5" kindref="member" tooltip="Returns true if the application has called Enable().">GetSetEnabled</ref>()<sp/>)</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Enable(event.<ref refid="classwx_update_u_i_event_1a25d9c2e56638b3a5da39006f62f9467b" kindref="member" tooltip="Returns true if the UI element should be enabled.">GetEnabled</ref>());</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_window_1a4e933aa891f42fbb3b87438057c573af" kindref="member" tooltip="Enable or disable the window for user input.">Enable</ref>(event.<ref refid="classwx_update_u_i_event_1a25d9c2e56638b3a5da39006f62f9467b" kindref="member" tooltip="Returns true if the UI element should be enabled.">GetEnabled</ref>());</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>event.<ref refid="classwx_update_u_i_event_1a8212fb8f73b47cd5f99d8f7106de6661" kindref="member" tooltip="Returns true if the application has called SetText().">GetSetText</ref>()<sp/>)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
@@ -4823,7 +4805,7 @@
         <briefdescription>
 <para>Returns the platform-specific handle of the physical window. </para>        </briefdescription>
         <detaileddescription>
-<para>Cast it to an appropriate handle, such as <bold>HWND</bold> for Windows, <bold>Widget</bold> for Motif, <bold>GtkWidget</bold> for GTK or <bold>WinHandle</bold> for PalmOS.</para><para><bold>wxPerl Note:</bold> This method will return an integer in wxPerl. </para>        </detaileddescription>
+<para>Cast it to an appropriate handle, such as <bold>HWND</bold> for Windows, <bold>Widget</bold> for Motif or <bold>GtkWidget</bold> for GTK.</para><para><bold>wxPerl Note:</bold> This method will return an integer in wxPerl. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/window.h" line="3051"/>
@@ -5069,10 +5051,10 @@
         <briefdescription>
 <para>This function sends one or more <ref refid="classwx_update_u_i_event" kindref="compound">wxUpdateUIEvent</ref> to the window. </para>        </briefdescription>
         <detaileddescription>
-<para>The particular implementation depends on the window; for example a <ref refid="classwx_tool_bar" kindref="compound">wxToolBar</ref> will send an update UI event for each toolbar button, and a <ref refid="classwx_frame" kindref="compound">wxFrame</ref> will send an update UI event for each menubar menu item.</para><para>You can call this function from your application to ensure that your UI is up-to-date at this point (as far as your <ref refid="classwx_update_u_i_event" kindref="compound">wxUpdateUIEvent</ref> handlers are concerned). This may be necessary if you have called <ref refid="classwx_update_u_i_event_1ab3a94b31cf5c72ae84ffa8b7cc1777e7" kindref="member">wxUpdateUIEvent::SetMode()</ref> or <ref refid="classwx_update_u_i_event_1a24daac56f682b866baac592e761ccede" kindref="member">wxUpdateUIEvent::SetUpdateInterval()</ref> to limit the overhead that wxWidgets incurs by sending update UI events in idle time. <emphasis>flags</emphasis> should be a bitlist of one or more of the <ref refid="defs_8h_1a125d733e58da75b9609114a226e4d81c" kindref="member">wxUpdateUI</ref> enumeration.</para><para>If you are calling this function from an OnInternalIdle or OnIdle function, make sure you pass the wxUPDATE_UI_FROMIDLE flag, since this tells the window to only update the UI elements that need to be updated in idle time. Some windows update their elements only when necessary, for example when a menu is about to be shown. The following is an example of how to call UpdateWindowUI from an idle function.</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classwx_window_1a6b5654c0c6c6245d592c279521f7099c" kindref="member" tooltip="This virtual function is normally only used internally, but sometimes an application...">MyWindow::OnInternalIdle</ref>()</highlight></codeline>
+<para>The particular implementation depends on the window; for example a <ref refid="classwx_tool_bar" kindref="compound">wxToolBar</ref> will send an update UI event for each toolbar button, and a <ref refid="classwx_frame" kindref="compound">wxFrame</ref> will send an update UI event for each menubar menu item.</para><para>You can call this function from your application to ensure that your UI is up-to-date at this point (as far as your <ref refid="classwx_update_u_i_event" kindref="compound">wxUpdateUIEvent</ref> handlers are concerned). This may be necessary if you have called <ref refid="classwx_update_u_i_event_1ab3a94b31cf5c72ae84ffa8b7cc1777e7" kindref="member">wxUpdateUIEvent::SetMode()</ref> or <ref refid="classwx_update_u_i_event_1a24daac56f682b866baac592e761ccede" kindref="member">wxUpdateUIEvent::SetUpdateInterval()</ref> to limit the overhead that wxWidgets incurs by sending update UI events in idle time. <emphasis>flags</emphasis> should be a bitlist of one or more of the <ref refid="defs_8h_1a125d733e58da75b9609114a226e4d81c" kindref="member">wxUpdateUI</ref> enumeration.</para><para>If you are calling this function from an OnInternalIdle or OnIdle function, make sure you pass the wxUPDATE_UI_FROMIDLE flag, since this tells the window to only update the UI elements that need to be updated in idle time. Some windows update their elements only when necessary, for example when a menu is about to be shown. The following is an example of how to call UpdateWindowUI from an idle function.</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classwx_window_1a6b5654c0c6c6245d592c279521f7099c" kindref="member" tooltip="This virtual function is normally only used internally, but sometimes an application may need it to i...">MyWindow::OnInternalIdle</ref>()</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classwx_update_u_i_event_1a82d4a0dd8adea9d37d4b04cebe190d5f" kindref="member" tooltip="Returns true if it is appropriate to update (send UI update events to) this window...">wxUpdateUIEvent::CanUpdate</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">))</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UpdateWindowUI(<ref refid="defs_8h_1a125d733e58da75b9609114a226e4d81ca666eed0046e7a96070b43e2619fecf75" kindref="member" tooltip="Invoked from On(Internal)Idle.">wxUPDATE_UI_FROMIDLE</ref>);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classwx_update_u_i_event_1a82d4a0dd8adea9d37d4b04cebe190d5f" kindref="member" tooltip="Returns true if it is appropriate to update (send UI update events to) this window.">wxUpdateUIEvent::CanUpdate</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">))</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_window_1adf0a4987728bd0bf69f922641b3efbfc" kindref="member" tooltip="This function sends one or more wxUpdateUIEvent to the window.">UpdateWindowUI</ref>(<ref refid="defs_8h_1a125d733e58da75b9609114a226e4d81ca666eed0046e7a96070b43e2619fecf75" kindref="member" tooltip="Invoked from On(Internal)Idle.">wxUPDATE_UI_FROMIDLE</ref>);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 </programlisting></para><para><simplesect kind="see"><para><ref refid="classwx_update_u_i_event" kindref="compound">wxUpdateUIEvent</ref>, <ref refid="classwx_window_1ae8a84a80645e99f4d24a22e5c386f626" kindref="member">DoUpdateWindowUI()</ref>, <ref refid="classwx_window_1a6b5654c0c6c6245d592c279521f7099c" kindref="member">OnInternalIdle()</ref> </para></simplesect>
 </para>        </detaileddescription>
@@ -5083,7 +5065,6 @@
       </sectiondef>
       <sectiondef kind="user-defined">
       <header>Miscellaneous static functions</header>
-      <description><para><anchor id="_1amgrpef3799b3ae43b7e590ee39b5f2280646"/> </para></description>
       <memberdef kind="function" id="classwx_window_1a170d85e4aa0cbacbfcdd0728120e1417" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structwx_visual_attributes" kindref="compound">wxVisualAttributes</ref></type>
         <definition>static wxVisualAttributes wxWindow::GetClassDefaultAttributes</definition>
@@ -5217,7 +5198,7 @@
         <briefdescription>
 <para>Create a new ID or range of IDs that are not currently in use. </para>        </briefdescription>
         <detaileddescription>
-<para>The IDs will be reserved until assigned to a <ref refid="classwx_window" kindref="compound">wxWindow</ref> ID or unreserved with <ref refid="classwx_window_1ad9bc342d1e38d221e37f0f6396950c8c" kindref="member">UnreserveControlId()</ref>.</para><para>See <ref refid="overview__windowids" kindref="compound">Window IDs</ref> for more information.</para><para><parameterlist kind="param"><parameteritem>
+<para>The IDs will be reserved until assigned to a <ref refid="classwx_window" kindref="compound">wxWindow</ref> ID or unreserved with <ref refid="classwx_window_1ad9bc342d1e38d221e37f0f6396950c8c" kindref="member">UnreserveControlId()</ref>.</para><para>See <ref refid="overview_windowids" kindref="compound">Window IDs</ref> for more information.</para><para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>count</parametername>
 </parameternamelist>
@@ -5226,7 +5207,7 @@
 </parameteritem>
 </parameterlist>
 <simplesect kind="return"><para>Returns the ID or the first ID of the range (i.e. the most negative), or wxID_NONE if the specified number of identifiers couldn&apos;t be allocated.</para></simplesect>
-<simplesect kind="see"><para><ref refid="classwx_window_1ad9bc342d1e38d221e37f0f6396950c8c" kindref="member">UnreserveControlId()</ref>, <ref refid="classwx_id_manager" kindref="compound">wxIdManager</ref>, <ref refid="overview__windowids" kindref="compound">Window IDs</ref> </para></simplesect>
+<simplesect kind="see"><para><ref refid="classwx_window_1ad9bc342d1e38d221e37f0f6396950c8c" kindref="member">UnreserveControlId()</ref>, <ref refid="classwx_id_manager" kindref="compound">wxIdManager</ref>, <ref refid="overview_windowids" kindref="compound">Window IDs</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -5249,7 +5230,7 @@
         <briefdescription>
 <para>Unreserve an ID or range of IDs that was reserved by <ref refid="classwx_window_1a8175da594e6045635a1d1cfe775cdddb" kindref="member">NewControlId()</ref>. </para>        </briefdescription>
         <detaileddescription>
-<para>See <ref refid="overview__windowids" kindref="compound">Window IDs</ref> for more information.</para><para><parameterlist kind="param"><parameteritem>
+<para>See <ref refid="overview_windowids" kindref="compound">Window IDs</ref> for more information.</para><para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>id</parametername>
 </parameternamelist>
@@ -5264,7 +5245,7 @@
 <para>The number of sequential IDs to unreserve.</para></parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="see"><para><ref refid="classwx_window_1a8175da594e6045635a1d1cfe775cdddb" kindref="member">NewControlId()</ref>, <ref refid="classwx_id_manager" kindref="compound">wxIdManager</ref>, <ref refid="overview__windowids" kindref="compound">Window IDs</ref> </para></simplesect>
+<simplesect kind="see"><para><ref refid="classwx_window_1a8175da594e6045635a1d1cfe775cdddb" kindref="member">NewControlId()</ref>, <ref refid="classwx_id_manager" kindref="compound">wxIdManager</ref>, <ref refid="overview_windowids" kindref="compound">Window IDs</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -5272,7 +5253,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_window_1a0f9814efc50316b4c57b7ec2bf78b716" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
         <definition>bool wxWindow::SafelyProcessEvent</definition>
@@ -5465,7 +5445,7 @@
         <briefdescription>
 <para>Destructor. </para>        </briefdescription>
         <detaileddescription>
-<para>Deletes all sub-windows, then deletes itself. Instead of using the <bold>delete</bold> operator explicitly, you should normally use <ref refid="classwx_window_1a6bf0c5be864544d9ce0560087667b7fc" kindref="member">Destroy()</ref> so that wxWidgets can delete a window only when it is safe to do so, in idle time.</para><para><simplesect kind="see"><para><ref refid="overview__windowdeletion" kindref="compound">Window Deletion Overview</ref>, <ref refid="classwx_window_1a6bf0c5be864544d9ce0560087667b7fc" kindref="member">Destroy()</ref>, <ref refid="classwx_close_event" kindref="compound">wxCloseEvent</ref> </para></simplesect>
+<para>Deletes all sub-windows, then deletes itself. Instead of using the <bold>delete</bold> operator explicitly, you should normally use <ref refid="classwx_window_1a6bf0c5be864544d9ce0560087667b7fc" kindref="member">Destroy()</ref> so that wxWidgets can delete a window only when it is safe to do so, in idle time.</para><para><simplesect kind="see"><para><ref refid="overview_windowdeletion" kindref="compound">Window Deletion Overview</ref>, <ref refid="classwx_window_1a6bf0c5be864544d9ce0560087667b7fc" kindref="member">Destroy()</ref>, <ref refid="classwx_close_event" kindref="compound">wxCloseEvent</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -5567,7 +5547,7 @@
         <detaileddescription>
 <para>The default implementation of this function is designed for use in container windows, such as <ref refid="classwx_panel" kindref="compound">wxPanel</ref>, and works something like this:<orderedlist>
 <listitem><para>If the window has a sizer then it is used to calculate the best size.</para></listitem><listitem><para>Otherwise if the window has layout constraints then those are used to calculate the best size.</para></listitem><listitem><para>Otherwise if the window has children then the best size is set to be large enough to show all the children.</para></listitem><listitem><para>Otherwise if there are no children then the window&apos;s minimal size will be used as its best size.</para></listitem><listitem><para>Otherwise if there is no minimal size set, then the current size is used for the best size.</para></listitem></orderedlist>
-</para><para><simplesect kind="see"><para><ref refid="overview__windowsizing" kindref="compound">Window Sizing Overview</ref> </para></simplesect>
+</para><para><simplesect kind="see"><para><ref refid="overview_windowsizing" kindref="compound">Window Sizing Overview</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -5585,7 +5565,7 @@
         <briefdescription>
 <para>Sets the initial window size if none is given (i.e. </para>        </briefdescription>
         <detaileddescription>
-<para>at least one of the components of the size passed to ctor/Create() is wxDefaultCoord). <xrefsect id="deprecated_1_deprecated000069"><xreftitle>Deprecated</xreftitle><xrefdescription></xrefdescription></xrefsect><xrefsect id="todo_1_todo000065"><xreftitle>Todo</xreftitle><xrefdescription><para>provide deprecation description </para></xrefdescription></xrefsect></para>        </detaileddescription>
+<para>at least one of the components of the size passed to ctor/Create() is wxDefaultCoord). <xrefsect id="deprecated_1_deprecated000069"><xreftitle>Deprecated</xreftitle><xrefdescription></xrefdescription></xrefsect><xrefsect id="todo_1_todo000064"><xreftitle>Todo</xreftitle><xrefdescription><para>provide deprecation description </para></xrefdescription></xrefsect></para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/window.h" line="3415"/>
@@ -5616,7 +5596,7 @@
         <briefdescription>
 <para>This function is public in <ref refid="classwx_evt_handler" kindref="compound">wxEvtHandler</ref> but protected in <ref refid="classwx_window" kindref="compound">wxWindow</ref> because for wxWindows you should always call <ref refid="classwx_window_1a5ebdbd87c28644149a07f1742996df96" kindref="member">ProcessEvent()</ref> on the pointer returned by <ref refid="classwx_window_1a72c2454cf309f30109da3cbfe237c760" kindref="member">GetEventHandler()</ref> and not on the <ref refid="classwx_window" kindref="compound">wxWindow</ref> object itself. </para>        </briefdescription>
         <detaileddescription>
-<para>For convenience, a <ref refid="classwx_window_1a0a76891d726ad5f9a729e27e4eab2b57" kindref="member">ProcessWindowEvent()</ref> method is provided as a synonym for <programlisting><codeline><highlight class="normal"><sp/><ref refid="classwx_window_1a72c2454cf309f30109da3cbfe237c760" kindref="member" tooltip="Returns the event handler for this window.">GetEventHandler</ref>()-&gt;<ref refid="classwx_evt_handler_1a65968dd27f3aac7718f2dd6b2ddd5a08" kindref="member" tooltip="Processes an event, searching event tables and calling zero or more suitable event...">ProcessEvent</ref>()<sp/></highlight></codeline>
+<para>For convenience, a <ref refid="classwx_window_1a0a76891d726ad5f9a729e27e4eab2b57" kindref="member">ProcessWindowEvent()</ref> method is provided as a synonym for <programlisting><codeline><highlight class="normal"><sp/><ref refid="classwx_window_1a72c2454cf309f30109da3cbfe237c760" kindref="member" tooltip="Returns the event handler for this window.">GetEventHandler</ref>()-&gt;<ref refid="classwx_evt_handler_1a65968dd27f3aac7718f2dd6b2ddd5a08" kindref="member" tooltip="Processes an event, searching event tables and calling zero or more suitable event handler function(s...">ProcessEvent</ref>()<sp/></highlight></codeline>
 </programlisting></para><para>Note that it&apos;s still possible to call these functions directly on the <ref refid="classwx_window" kindref="compound">wxWindow</ref> object (e.g. casting it to <ref refid="classwx_evt_handler" kindref="compound">wxEvtHandler</ref>) but doing that will create subtle bugs when windows with event handlers pushed on them are involved.</para><para>This holds also for all other <ref refid="classwx_evt_handler" kindref="compound">wxEvtHandler</ref> functions. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -5626,7 +5606,7 @@
     <briefdescription>
 <para><ref refid="classwx_window" kindref="compound">wxWindow</ref> is the base class for all windows and represents any visible object on screen. </para>    </briefdescription>
     <detaileddescription>
-<para>All controls, top level windows and so on are windows. Sizers and device contexts are not, however, as they don&apos;t appear on screen themselves.</para><para>Please note that all children of the window will be deleted automatically by the destructor before the window itself is deleted which means that you don&apos;t have to worry about deleting them manually. Please see the <ref refid="overview__windowdeletion" kindref="compound">window deletion overview</ref> for more information.</para><para>Also note that in this, and many others, wxWidgets classes some <computeroutput>GetXXX()</computeroutput> methods may be overloaded (as, for example, <ref refid="classwx_window_1a124c12cff1e7b6e96a5e1fd3e48dca34" kindref="member">wxWindow::GetSize</ref> or <ref refid="classwx_window_1ae56fc53268b815b58570f66bfc33838f" kindref="member">wxWindow::GetClientSize</ref>). In this case, the overloads are non-virtual because having multiple virtual functions with the same name results in a virtual function name hiding at the derived class level (in English, this means that the derived class has to override all overloaded variants if it overrides any of them). To allow overriding them in the derived class, wxWidgets uses a unique protected virtual <computeroutput>DoGetXXX()</computeroutput> method and all <computeroutput>GetXXX()</computeroutput> ones are forwarded to it, so overriding the former changes the behaviour of the latter.</para><para><heading level="2">Styles</heading>
+<para>All controls, top level windows and so on are windows. Sizers and device contexts are not, however, as they don&apos;t appear on screen themselves.</para><para>Please note that all children of the window will be deleted automatically by the destructor before the window itself is deleted which means that you don&apos;t have to worry about deleting them manually. Please see the <ref refid="overview_windowdeletion" kindref="compound">window deletion overview</ref> for more information.</para><para>Also note that in this, and many others, wxWidgets classes some <computeroutput>GetXXX()</computeroutput> methods may be overloaded (as, for example, <ref refid="classwx_window_1a124c12cff1e7b6e96a5e1fd3e48dca34" kindref="member">wxWindow::GetSize</ref> or <ref refid="classwx_window_1ae56fc53268b815b58570f66bfc33838f" kindref="member">wxWindow::GetClientSize</ref>). In this case, the overloads are non-virtual because having multiple virtual functions with the same name results in a virtual function name hiding at the derived class level (in English, this means that the derived class has to override all overloaded variants if it overrides any of them). To allow overriding them in the derived class, wxWidgets uses a unique protected virtual <computeroutput>DoGetXXX()</computeroutput> method and all <computeroutput>GetXXX()</computeroutput> ones are forwarded to it, so overriding the former changes the behaviour of the latter.</para><para><heading level="2">Styles</heading>
 </para><para>This class supports the following styles: <itemizedlist>
 <listitem><para>wxBORDER_DEFAULT: The window class will decide the kind of border to show, if any. </para></listitem>
 <listitem><para>wxBORDER_SIMPLE: Displays a thin border around the window. wxSIMPLE_BORDER is the old name for this style. </para></listitem>
@@ -5650,7 +5630,7 @@
 <heading level="2">Extra styles</heading>
 </para><para>This class supports the following extra styles: <itemizedlist>
 <listitem><para>wxWS_EX_VALIDATE_RECURSIVELY: By default, <ref refid="classwx_window_1ac87f253253a0c5eb498871c83afa40fd" kindref="member">wxWindow::Validate()</ref>, wxWindow::TransferDataTo() and <ref refid="classwx_window_1ab8e51f36e7d8790b361c8d8c6f37b1ad" kindref="member">wxWindow::TransferDataFromWindow()</ref> only work on direct children of the window (compatible behaviour). Set this flag to make them recursively descend into all subwindows. </para></listitem>
-<listitem><para>wxWS_EX_BLOCK_EVENTS: wxCommandEvents and the objects of the derived classes are forwarded to the parent window and so on recursively by default. Using this flag for the given window allows to block this propagation at this window, i.e. prevent the events from being propagated further upwards. Dialogs have this flag on by default for the reasons explained in the <ref refid="overview__events" kindref="compound">Events and Event Handling</ref>. </para></listitem>
+<listitem><para>wxWS_EX_BLOCK_EVENTS: wxCommandEvents and the objects of the derived classes are forwarded to the parent window and so on recursively by default. Using this flag for the given window allows to block this propagation at this window, i.e. prevent the events from being propagated further upwards. Dialogs have this flag on by default for the reasons explained in the <ref refid="overview_events" kindref="compound">Events and Event Handling</ref>. </para></listitem>
 <listitem><para>wxWS_EX_TRANSIENT: Don&apos;t use this window as an implicit parent for the other windows: this must be used with transient windows as otherwise there is the risk of creating a dialog/frame with this window as a parent, which would lead to a crash if the parent were destroyed before the child. </para></listitem>
 <listitem><para>wxWS_EX_CONTEXTHELP: Under Windows, puts a query button on the caption. When pressed, Windows will go into a context-sensitive help mode and wxWidgets will send a <computeroutput>wxEVT_HELP</computeroutput> event if the user clicked on an application window. This style cannot be used (because of the underlying native behaviour) together with <computeroutput>wxMAXIMIZE_BOX</computeroutput> or <computeroutput>wxMINIMIZE_BOX</computeroutput>, so these two styles are automatically turned off if this one is used. </para></listitem>
 <listitem><para>wxWS_EX_PROCESS_IDLE: This window should always process idle events, even if the mode set by <ref refid="classwx_idle_event_1a655610b1a5a1c668efc7d475313af2e3" kindref="member">wxIdleEvent::SetMode</ref> is <computeroutput>wxIDLE_PROCESS_SPECIFIED</computeroutput>. </para></listitem>
@@ -5684,887 +5664,887 @@
 <listitem><para>EVT_SYS_COLOUR_CHANGED(func): Process a <computeroutput>wxEVT_SYS_COLOUR_CHANGED</computeroutput> event. See <ref refid="classwx_sys_colour_changed_event" kindref="compound">wxSysColourChangedEvent</ref>. </para></listitem>
 </itemizedlist>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__miscwnd" kindref="compound">Miscellaneous Windows</ref></para><para><simplesect kind="see"><para><ref refid="overview__events" kindref="compound">Events and Event Handling</ref>, <ref refid="overview__windowsizing" kindref="compound">Window Sizing Overview</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__miscwnd" kindref="compound">Miscellaneous Windows</ref></para><para><simplesect kind="see"><para><ref refid="overview_events" kindref="compound">Events and Event Handling</ref>, <ref refid="overview_windowsizing" kindref="compound">Window Sizing Overview</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="11477">
+      <node id="11538">
         <label>wxStaticText</label>
         <link refid="classwx_static_text"/>
-        <childnode refid="11407" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11473">
-        <label>wxSpinCtrlDouble</label>
-        <link refid="classwx_spin_ctrl_double"/>
-        <childnode refid="11407" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11444">
-        <label>wxGenericDirCtrl</label>
-        <link refid="classwx_generic_dir_ctrl"/>
-        <childnode refid="11407" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11514">
-        <label>wxDocChildFrame</label>
-        <link refid="classwx_doc_child_frame"/>
-        <childnode refid="11513" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11540">
-        <label>wxSashLayoutWindow</label>
-        <link refid="classwx_sash_layout_window"/>
-        <childnode refid="11539" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11409">
-        <label>wxAnimationCtrl</label>
-        <link refid="classwx_animation_ctrl"/>
-        <childnode refid="11407" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11446">
-        <label>wxHeaderCtrlSimple</label>
-        <link refid="classwx_header_ctrl_simple"/>
-        <childnode refid="11445" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11419">
-        <label>wxAuiNotebook</label>
-        <link refid="classwx_aui_notebook"/>
-        <childnode refid="11418" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11427">
-        <label>wxCollapsiblePane</label>
-        <link refid="classwx_collapsible_pane"/>
-        <childnode refid="11407" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11471">
-        <label>wxSpinButton</label>
-        <link refid="classwx_spin_button"/>
-        <childnode refid="11407" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11490">
-        <label>wxNonOwnedWindow</label>
-        <link refid="classwx_non_owned_window"/>
-        <childnode refid="11402" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11435">
-        <label>wxListBox</label>
-        <link refid="classwx_list_box"/>
-        <childnode refid="11433" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11527">
-        <label>wxHScrolledWindow</label>
-        <link refid="classwx_h_scrolled_window"/>
-        <childnode refid="11525" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11518">
-        <label>wxMDIChildFrame</label>
-        <link refid="classwx_m_d_i_child_frame"/>
-        <childnode refid="11513" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11414">
-        <label>wxCommandLinkButton</label>
-        <link refid="classwx_command_link_button"/>
-        <childnode refid="11411" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11460">
-        <label>wxRibbonControl</label>
-        <link refid="classwx_ribbon_control"/>
-        <childnode refid="11407" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11448">
-        <label>wxInfoBar</label>
-        <link refid="classwx_info_bar"/>
-        <childnode refid="11407" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11418">
-        <label>wxBookCtrlBase</label>
-        <link refid="classwx_book_ctrl_base"/>
-        <childnode refid="11407" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11542">
-        <label>wxTipWindow</label>
-        <link refid="classwx_tip_window"/>
-        <childnode refid="11402" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11484">
-        <label>wxTreeCtrl</label>
-        <link refid="classwx_tree_ctrl"/>
-        <childnode refid="11407" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11529">
-        <label>wxPreviewControlBar</label>
-        <link refid="classwx_preview_control_bar"/>
-        <childnode refid="11525" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11532">
-        <label>wxVListBox</label>
-        <link refid="classwx_v_list_box"/>
-        <childnode refid="11531" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11404">
-        <label>wxObject</label>
-        <link refid="classwx_object"/>
-      </node>
-      <node id="11499">
-        <label>wxFontDialog</label>
-        <link refid="classwx_font_dialog"/>
-        <childnode refid="11494" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11535">
-        <label>wxSimpleHtmlListBox</label>
-        <link refid="classwx_simple_html_list_box"/>
-        <childnode refid="11533" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11469">
-        <label>wxScrollBar</label>
-        <link refid="classwx_scroll_bar"/>
-        <childnode refid="11407" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11531">
-        <label>wxVScrolledWindow</label>
-        <link refid="classwx_v_scrolled_window"/>
-        <childnode refid="11525" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11408">
-        <label>wxActiveXContainer</label>
-        <link refid="classwx_active_x_container"/>
-        <childnode refid="11407" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11481">
-        <label>wxSearchCtrl</label>
-        <link refid="classwx_search_ctrl"/>
-        <childnode refid="11480" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11497">
-        <label>wxFileDialog</label>
-        <link refid="classwx_file_dialog"/>
-        <childnode refid="11494" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11429">
-        <label>wxBitmapComboBox</label>
-        <link refid="classwx_bitmap_combo_box"/>
-        <childnode refid="11428" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11480">
-        <label>wxTextCtrl</label>
-        <link refid="classwx_text_ctrl"/>
-        <childnode refid="11407" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11403">
-        <label>wxEvtHandler</label>
-        <link refid="classwx_evt_handler"/>
-        <childnode refid="11404" relation="public-inheritance">
-        </childnode>
-        <childnode refid="11405" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11525">
-        <label>wxPanel</label>
-        <link refid="classwx_panel"/>
-        <childnode refid="11402" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11459">
-        <label>wxRadioButton</label>
-        <link refid="classwx_radio_button"/>
-        <childnode refid="11407" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11478">
-        <label>wxStatusBar</label>
-        <link refid="classwx_status_bar"/>
-        <childnode refid="11407" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11476">
-        <label>wxStaticLine</label>
-        <link refid="classwx_static_line"/>
-        <childnode refid="11407" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11441">
-        <label>wxDatePickerCtrl</label>
-        <link refid="classwx_date_picker_ctrl"/>
-        <childnode refid="11407" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11538">
-        <label>wxPGMultiButton</label>
-        <link refid="classwx_p_g_multi_button"/>
-        <childnode refid="11402" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11504">
-        <label>wxProgressDialog</label>
-        <link refid="classwx_progress_dialog"/>
-        <childnode refid="11494" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11465">
-        <label>wxRibbonPanel</label>
-        <link refid="classwx_ribbon_panel"/>
-        <childnode refid="11460" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11458">
-        <label>wxRadioBox</label>
-        <link refid="classwx_radio_box"/>
-        <childnode refid="11407" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11507">
-        <label>wxRichTextStyleOrganiserDialog</label>
-        <link refid="classwx_rich_text_style_organiser_dialog"/>
-        <childnode refid="11494" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11426">
-        <label>wxCheckBox</label>
-        <link refid="classwx_check_box"/>
-        <childnode refid="11407" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11515">
-        <label>wxDocParentFrame</label>
-        <link refid="classwx_doc_parent_frame"/>
-        <childnode refid="11513" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11415">
-        <label>wxToggleButton</label>
-        <link refid="classwx_toggle_button"/>
-        <childnode refid="11410" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11541">
-        <label>wxSplitterWindow</label>
-        <link refid="classwx_splitter_window"/>
-        <childnode refid="11402" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11440">
-        <label>wxDataViewTreeCtrl</label>
-        <link refid="classwx_data_view_tree_ctrl"/>
-        <childnode refid="11438" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11483">
-        <label>wxToolBar</label>
-        <link refid="classwx_tool_bar"/>
-        <childnode refid="11407" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11501">
-        <label>wxMultiChoiceDialog</label>
-        <link refid="classwx_multi_choice_dialog"/>
-        <childnode refid="11494" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11462">
-        <label>wxRibbonButtonBar</label>
-        <link refid="classwx_ribbon_button_bar"/>
-        <childnode refid="11460" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11424">
-        <label>wxTreebook</label>
-        <link refid="classwx_treebook"/>
-        <childnode refid="11418" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11503">
-        <label>wxPrintDialog</label>
-        <link refid="classwx_print_dialog"/>
-        <childnode refid="11494" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11436">
-        <label>wxCheckListBox</label>
-        <link refid="classwx_check_list_box"/>
-        <childnode refid="11435" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11512">
-        <label>wxWizard</label>
-        <link refid="classwx_wizard"/>
-        <childnode refid="11494" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11439">
-        <label>wxDataViewListCtrl</label>
-        <link refid="classwx_data_view_list_ctrl"/>
-        <childnode refid="11438" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11405">
-        <label>wxTrackable</label>
-        <link refid="classwx_trackable"/>
-      </node>
-      <node id="11437">
-        <label>wxRearrangeList</label>
-        <link refid="classwx_rearrange_list"/>
-        <childnode refid="11436" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11492">
-        <label>wxPopupTransientWindow</label>
-        <link refid="classwx_popup_transient_window"/>
-        <childnode refid="11491" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11421">
-        <label>wxListbook</label>
-        <link refid="classwx_listbook"/>
-        <childnode refid="11418" relation="public-inheritance">
+        <childnode refid="11468" relation="public-inheritance">
         </childnode>
       </node>
       <node id="11534">
-        <label>wxRichTextStyleListBox</label>
-        <link refid="classwx_rich_text_style_list_box"/>
-        <childnode refid="11533" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11453">
-        <label>wxColourPickerCtrl</label>
-        <link refid="classwx_colour_picker_ctrl"/>
-        <childnode refid="11452" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11447">
-        <label>wxHyperlinkCtrl</label>
-        <link refid="classwx_hyperlink_ctrl"/>
-        <childnode refid="11407" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11407">
-        <label>wxControl</label>
-        <link refid="classwx_control"/>
-        <childnode refid="11402" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11450">
-        <label>wxListView</label>
-        <link refid="classwx_list_view"/>
-        <childnode refid="11449" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11467">
-        <label>wxRichTextCtrl</label>
-        <link refid="classwx_rich_text_ctrl"/>
-        <childnode refid="11407" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11443">
-        <label>wxGauge</label>
-        <link refid="classwx_gauge"/>
-        <childnode refid="11407" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11485">
-        <label>wxWebView</label>
-        <link refid="classwx_web_view"/>
-        <childnode refid="11407" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11402">
-        <label>wxWindow</label>
-        <link refid="classwx_window"/>
-        <childnode refid="11403" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11451">
-        <label>wxMediaCtrl</label>
-        <link refid="classwx_media_ctrl"/>
-        <childnode refid="11407" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11423">
-        <label>wxToolbook</label>
-        <link refid="classwx_toolbook"/>
-        <childnode refid="11418" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11449">
-        <label>wxListCtrl</label>
-        <link refid="classwx_list_ctrl"/>
-        <childnode refid="11407" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11521">
-        <label>wxDocMDIParentFrame</label>
-        <link refid="classwx_doc_m_d_i_parent_frame"/>
-        <childnode refid="11520" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11417">
-        <label>wxAuiToolBar</label>
-        <link refid="classwx_aui_tool_bar"/>
-        <childnode refid="11407" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11430">
-        <label>wxComboCtrl</label>
-        <link refid="classwx_combo_ctrl"/>
-        <childnode refid="11407" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11463">
-        <label>wxRibbonGallery</label>
-        <link refid="classwx_ribbon_gallery"/>
-        <childnode refid="11460" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11494">
-        <label>wxDialog</label>
-        <link refid="classwx_dialog"/>
-        <childnode refid="11493" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11500">
-        <label>wxMessageDialog</label>
-        <link refid="classwx_message_dialog"/>
-        <childnode refid="11494" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11498">
-        <label>wxFindReplaceDialog</label>
-        <link refid="classwx_find_replace_dialog"/>
-        <childnode refid="11494" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11416">
-        <label>wxBitmapToggleButton</label>
-        <link refid="classwx_bitmap_toggle_button"/>
-        <childnode refid="11415" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11533">
-        <label>wxHtmlListBox</label>
-        <link refid="classwx_html_list_box"/>
-        <childnode refid="11532" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11455">
-        <label>wxFilePickerCtrl</label>
-        <link refid="classwx_file_picker_ctrl"/>
-        <childnode refid="11452" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11461">
-        <label>wxRibbonBar</label>
-        <link refid="classwx_ribbon_bar"/>
-        <childnode refid="11460" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11472">
-        <label>wxSpinCtrl</label>
-        <link refid="classwx_spin_ctrl"/>
-        <childnode refid="11407" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11434">
-        <label>wxChoice</label>
-        <link refid="classwx_choice"/>
-        <childnode refid="11433" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11428">
-        <label>wxComboBox</label>
-        <link refid="classwx_combo_box"/>
-        <childnode refid="11407" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11479">
-        <label>wxStyledTextCtrl</label>
-        <link refid="classwx_styled_text_ctrl"/>
-        <childnode refid="11407" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11431">
-        <label>wxOwnerDrawnComboBox</label>
-        <link refid="classwx_owner_drawn_combo_box"/>
-        <childnode refid="11430" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11513">
-        <label>wxFrame</label>
-        <link refid="classwx_frame"/>
-        <childnode refid="11493" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11488">
-        <label>wxMDIClientWindow</label>
-        <link refid="classwx_m_d_i_client_window"/>
-        <childnode refid="11402" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11489">
-        <label>wxMenuBar</label>
-        <link refid="classwx_menu_bar"/>
-        <childnode refid="11402" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11523">
-        <label>wxPreviewFrame</label>
-        <link refid="classwx_preview_frame"/>
-        <childnode refid="11513" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11528">
-        <label>wxHVScrolledWindow</label>
-        <link refid="classwx_h_v_scrolled_window"/>
-        <childnode refid="11525" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11508">
-        <label>wxSingleChoiceDialog</label>
-        <link refid="classwx_single_choice_dialog"/>
-        <childnode refid="11494" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11432">
-        <label>wxRichTextStyleComboCtrl</label>
-        <link refid="classwx_rich_text_style_combo_ctrl"/>
-        <childnode refid="11430" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11496">
-        <label>wxDirDialog</label>
-        <link refid="classwx_dir_dialog"/>
-        <childnode refid="11494" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11410">
-        <label>wxAnyButton</label>
-        <link refid="classwx_any_button"/>
-        <childnode refid="11407" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11438">
-        <label>wxDataViewCtrl</label>
-        <link refid="classwx_data_view_ctrl"/>
-        <childnode refid="11407" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11411">
-        <label>wxButton</label>
-        <link refid="classwx_button"/>
-        <childnode refid="11410" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11466">
-        <label>wxRibbonToolBar</label>
-        <link refid="classwx_ribbon_tool_bar"/>
-        <childnode refid="11460" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11406">
-        <label>wxBannerWindow</label>
-        <link refid="classwx_banner_window"/>
-        <childnode refid="11402" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11516">
-        <label>wxHtmlHelpDialog</label>
-        <link refid="classwx_html_help_dialog"/>
-        <childnode refid="11513" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11495">
-        <label>wxColourDialog</label>
-        <link refid="classwx_colour_dialog"/>
-        <childnode refid="11494" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11530">
-        <label>wxPropertyGridManager</label>
-        <link refid="classwx_property_grid_manager"/>
-        <childnode refid="11525" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11486">
-        <label>wxGLCanvas</label>
-        <link refid="classwx_g_l_canvas"/>
-        <childnode refid="11402" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11487">
-        <label>wxHtmlHelpWindow</label>
-        <link refid="classwx_html_help_window"/>
-        <childnode refid="11402" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11420">
-        <label>wxChoicebook</label>
-        <link refid="classwx_choicebook"/>
-        <childnode refid="11418" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11491">
-        <label>wxPopupWindow</label>
-        <link refid="classwx_popup_window"/>
-        <childnode refid="11490" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11433">
-        <label>wxControlWithItems</label>
-        <link refid="classwx_control_with_items"/>
-        <childnode refid="11407" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11522">
-        <label>wxMiniFrame</label>
-        <link refid="classwx_mini_frame"/>
-        <childnode refid="11513" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11457">
-        <label>wxPropertyGrid</label>
-        <link refid="classwx_property_grid"/>
-        <childnode refid="11407" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11468">
-        <label>wxRichTextStyleListCtrl</label>
-        <link refid="classwx_rich_text_style_list_ctrl"/>
-        <childnode refid="11407" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11454">
-        <label>wxDirPickerCtrl</label>
-        <link refid="classwx_dir_picker_ctrl"/>
-        <childnode refid="11452" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11474">
-        <label>wxStaticBitmap</label>
-        <link refid="classwx_static_bitmap"/>
-        <childnode refid="11407" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11470">
-        <label>wxSlider</label>
-        <link refid="classwx_slider"/>
-        <childnode refid="11407" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11493">
-        <label>wxTopLevelWindow</label>
-        <link refid="classwx_top_level_window"/>
-        <childnode refid="11490" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11422">
-        <label>wxNotebook</label>
-        <link refid="classwx_notebook"/>
-        <childnode refid="11418" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11506">
-        <label>wxRichTextFormattingDialog</label>
-        <link refid="classwx_rich_text_formatting_dialog"/>
-        <childnode refid="11505" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11543">
-        <label>wxTreeListCtrl</label>
-        <link refid="classwx_tree_list_ctrl"/>
-        <childnode refid="11402" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11510">
-        <label>wxTextEntryDialog</label>
-        <link refid="classwx_text_entry_dialog"/>
-        <childnode refid="11494" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11537">
-        <label>wxWizardPageSimple</label>
-        <link refid="classwx_wizard_page_simple"/>
-        <childnode refid="11536" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11517">
-        <label>wxHtmlHelpFrame</label>
-        <link refid="classwx_html_help_frame"/>
-        <childnode refid="11513" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11526">
-        <label>wxEditableListBox</label>
-        <link refid="classwx_editable_list_box"/>
-        <childnode refid="11525" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11412">
-        <label>wxBitmapButton</label>
-        <link refid="classwx_bitmap_button"/>
-        <childnode refid="11411" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11445">
-        <label>wxHeaderCtrl</label>
-        <link refid="classwx_header_ctrl"/>
-        <childnode refid="11407" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11413">
-        <label>wxContextHelpButton</label>
-        <link refid="classwx_context_help_button"/>
-        <childnode refid="11412" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11524">
-        <label>wxSplashScreen</label>
-        <link refid="classwx_splash_screen"/>
-        <childnode refid="11513" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11520">
-        <label>wxMDIParentFrame</label>
-        <link refid="classwx_m_d_i_parent_frame"/>
-        <childnode refid="11513" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11536">
-        <label>wxWizardPage</label>
-        <link refid="classwx_wizard_page"/>
-        <childnode refid="11525" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11442">
-        <label>wxFileCtrl</label>
-        <link refid="classwx_file_ctrl"/>
-        <childnode refid="11407" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11519">
-        <label>wxDocMDIChildFrame</label>
-        <link refid="classwx_doc_m_d_i_child_frame"/>
-        <childnode refid="11518" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11511">
-        <label>wxPasswordEntryDialog</label>
-        <link refid="classwx_password_entry_dialog"/>
-        <childnode refid="11510" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11464">
-        <label>wxRibbonPage</label>
-        <link refid="classwx_ribbon_page"/>
-        <childnode refid="11460" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11509">
-        <label>wxSymbolPickerDialog</label>
-        <link refid="classwx_symbol_picker_dialog"/>
-        <childnode refid="11494" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11475">
-        <label>wxStaticBox</label>
-        <link refid="classwx_static_box"/>
-        <childnode refid="11407" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11456">
-        <label>wxFontPickerCtrl</label>
-        <link refid="classwx_font_picker_ctrl"/>
-        <childnode refid="11452" relation="public-inheritance">
+        <label>wxSpinCtrlDouble</label>
+        <link refid="classwx_spin_ctrl_double"/>
+        <childnode refid="11468" relation="public-inheritance">
         </childnode>
       </node>
       <node id="11505">
-        <label>wxPropertySheetDialog</label>
-        <link refid="classwx_property_sheet_dialog"/>
+        <label>wxGenericDirCtrl</label>
+        <link refid="classwx_generic_dir_ctrl"/>
+        <childnode refid="11468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11575">
+        <label>wxDocChildFrame</label>
+        <link refid="classwx_doc_child_frame"/>
+        <childnode refid="11574" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11601">
+        <label>wxSashLayoutWindow</label>
+        <link refid="classwx_sash_layout_window"/>
+        <childnode refid="11600" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11470">
+        <label>wxAnimationCtrl</label>
+        <link refid="classwx_animation_ctrl"/>
+        <childnode refid="11468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11507">
+        <label>wxHeaderCtrlSimple</label>
+        <link refid="classwx_header_ctrl_simple"/>
+        <childnode refid="11506" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11480">
+        <label>wxAuiNotebook</label>
+        <link refid="classwx_aui_notebook"/>
+        <childnode refid="11479" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11488">
+        <label>wxCollapsiblePane</label>
+        <link refid="classwx_collapsible_pane"/>
+        <childnode refid="11468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11532">
+        <label>wxSpinButton</label>
+        <link refid="classwx_spin_button"/>
+        <childnode refid="11468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11551">
+        <label>wxNonOwnedWindow</label>
+        <link refid="classwx_non_owned_window"/>
+        <childnode refid="11463" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11496">
+        <label>wxListBox</label>
+        <link refid="classwx_list_box"/>
         <childnode refid="11494" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11482">
-        <label>wxTimePickerCtrl</label>
-        <link refid="classwx_time_picker_ctrl"/>
-        <childnode refid="11407" relation="public-inheritance">
+      <node id="11588">
+        <label>wxHScrolledWindow</label>
+        <link refid="classwx_h_scrolled_window"/>
+        <childnode refid="11586" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11452">
-        <label>wxPickerBase</label>
-        <link refid="classwx_picker_base"/>
-        <childnode refid="11407" relation="public-inheritance">
+      <node id="11579">
+        <label>wxMDIChildFrame</label>
+        <link refid="classwx_m_d_i_child_frame"/>
+        <childnode refid="11574" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11475">
+        <label>wxCommandLinkButton</label>
+        <link refid="classwx_command_link_button"/>
+        <childnode refid="11472" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11521">
+        <label>wxRibbonControl</label>
+        <link refid="classwx_ribbon_control"/>
+        <childnode refid="11468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11509">
+        <label>wxInfoBar</label>
+        <link refid="classwx_info_bar"/>
+        <childnode refid="11468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11479">
+        <label>wxBookCtrlBase</label>
+        <link refid="classwx_book_ctrl_base"/>
+        <childnode refid="11468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11603">
+        <label>wxTipWindow</label>
+        <link refid="classwx_tip_window"/>
+        <childnode refid="11463" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11545">
+        <label>wxTreeCtrl</label>
+        <link refid="classwx_tree_ctrl"/>
+        <childnode refid="11468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11590">
+        <label>wxPreviewControlBar</label>
+        <link refid="classwx_preview_control_bar"/>
+        <childnode refid="11586" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11593">
+        <label>wxVListBox</label>
+        <link refid="classwx_v_list_box"/>
+        <childnode refid="11592" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11465">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+      </node>
+      <node id="11560">
+        <label>wxFontDialog</label>
+        <link refid="classwx_font_dialog"/>
+        <childnode refid="11555" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11596">
+        <label>wxSimpleHtmlListBox</label>
+        <link refid="classwx_simple_html_list_box"/>
+        <childnode refid="11594" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11530">
+        <label>wxScrollBar</label>
+        <link refid="classwx_scroll_bar"/>
+        <childnode refid="11468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11592">
+        <label>wxVScrolledWindow</label>
+        <link refid="classwx_v_scrolled_window"/>
+        <childnode refid="11586" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11469">
+        <label>wxActiveXContainer</label>
+        <link refid="classwx_active_x_container"/>
+        <childnode refid="11468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11542">
+        <label>wxSearchCtrl</label>
+        <link refid="classwx_search_ctrl"/>
+        <childnode refid="11541" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11558">
+        <label>wxFileDialog</label>
+        <link refid="classwx_file_dialog"/>
+        <childnode refid="11555" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11490">
+        <label>wxBitmapComboBox</label>
+        <link refid="classwx_bitmap_combo_box"/>
+        <childnode refid="11489" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11541">
+        <label>wxTextCtrl</label>
+        <link refid="classwx_text_ctrl"/>
+        <childnode refid="11468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11464">
+        <label>wxEvtHandler</label>
+        <link refid="classwx_evt_handler"/>
+        <childnode refid="11465" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11466" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11586">
+        <label>wxPanel</label>
+        <link refid="classwx_panel"/>
+        <childnode refid="11463" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11520">
+        <label>wxRadioButton</label>
+        <link refid="classwx_radio_button"/>
+        <childnode refid="11468" relation="public-inheritance">
         </childnode>
       </node>
       <node id="11539">
-        <label>wxSashWindow</label>
-        <link refid="classwx_sash_window"/>
-        <childnode refid="11402" relation="public-inheritance">
+        <label>wxStatusBar</label>
+        <link refid="classwx_status_bar"/>
+        <childnode refid="11468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11537">
+        <label>wxStaticLine</label>
+        <link refid="classwx_static_line"/>
+        <childnode refid="11468" relation="public-inheritance">
         </childnode>
       </node>
       <node id="11502">
-        <label>wxPageSetupDialog</label>
-        <link refid="classwx_page_setup_dialog"/>
+        <label>wxDatePickerCtrl</label>
+        <link refid="classwx_date_picker_ctrl"/>
+        <childnode refid="11468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11599">
+        <label>wxPGMultiButton</label>
+        <link refid="classwx_p_g_multi_button"/>
+        <childnode refid="11463" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11565">
+        <label>wxProgressDialog</label>
+        <link refid="classwx_progress_dialog"/>
+        <childnode refid="11555" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11526">
+        <label>wxRibbonPanel</label>
+        <link refid="classwx_ribbon_panel"/>
+        <childnode refid="11521" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11519">
+        <label>wxRadioBox</label>
+        <link refid="classwx_radio_box"/>
+        <childnode refid="11468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11568">
+        <label>wxRichTextStyleOrganiserDialog</label>
+        <link refid="classwx_rich_text_style_organiser_dialog"/>
+        <childnode refid="11555" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11487">
+        <label>wxCheckBox</label>
+        <link refid="classwx_check_box"/>
+        <childnode refid="11468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11576">
+        <label>wxDocParentFrame</label>
+        <link refid="classwx_doc_parent_frame"/>
+        <childnode refid="11574" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11476">
+        <label>wxToggleButton</label>
+        <link refid="classwx_toggle_button"/>
+        <childnode refid="11471" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11602">
+        <label>wxSplitterWindow</label>
+        <link refid="classwx_splitter_window"/>
+        <childnode refid="11463" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11501">
+        <label>wxDataViewTreeCtrl</label>
+        <link refid="classwx_data_view_tree_ctrl"/>
+        <childnode refid="11499" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11544">
+        <label>wxToolBar</label>
+        <link refid="classwx_tool_bar"/>
+        <childnode refid="11468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11562">
+        <label>wxMultiChoiceDialog</label>
+        <link refid="classwx_multi_choice_dialog"/>
+        <childnode refid="11555" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11523">
+        <label>wxRibbonButtonBar</label>
+        <link refid="classwx_ribbon_button_bar"/>
+        <childnode refid="11521" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11485">
+        <label>wxTreebook</label>
+        <link refid="classwx_treebook"/>
+        <childnode refid="11479" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11564">
+        <label>wxPrintDialog</label>
+        <link refid="classwx_print_dialog"/>
+        <childnode refid="11555" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11497">
+        <label>wxCheckListBox</label>
+        <link refid="classwx_check_list_box"/>
+        <childnode refid="11496" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11573">
+        <label>wxWizard</label>
+        <link refid="classwx_wizard"/>
+        <childnode refid="11555" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11500">
+        <label>wxDataViewListCtrl</label>
+        <link refid="classwx_data_view_list_ctrl"/>
+        <childnode refid="11499" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11466">
+        <label>wxTrackable</label>
+        <link refid="classwx_trackable"/>
+      </node>
+      <node id="11498">
+        <label>wxRearrangeList</label>
+        <link refid="classwx_rearrange_list"/>
+        <childnode refid="11497" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11553">
+        <label>wxPopupTransientWindow</label>
+        <link refid="classwx_popup_transient_window"/>
+        <childnode refid="11552" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11482">
+        <label>wxListbook</label>
+        <link refid="classwx_listbook"/>
+        <childnode refid="11479" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11595">
+        <label>wxRichTextStyleListBox</label>
+        <link refid="classwx_rich_text_style_list_box"/>
+        <childnode refid="11594" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11514">
+        <label>wxColourPickerCtrl</label>
+        <link refid="classwx_colour_picker_ctrl"/>
+        <childnode refid="11513" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11508">
+        <label>wxHyperlinkCtrl</label>
+        <link refid="classwx_hyperlink_ctrl"/>
+        <childnode refid="11468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11468">
+        <label>wxControl</label>
+        <link refid="classwx_control"/>
+        <childnode refid="11463" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11511">
+        <label>wxListView</label>
+        <link refid="classwx_list_view"/>
+        <childnode refid="11510" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11528">
+        <label>wxRichTextCtrl</label>
+        <link refid="classwx_rich_text_ctrl"/>
+        <childnode refid="11468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11504">
+        <label>wxGauge</label>
+        <link refid="classwx_gauge"/>
+        <childnode refid="11468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11546">
+        <label>wxWebView</label>
+        <link refid="classwx_web_view"/>
+        <childnode refid="11468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11463">
+        <label>wxWindow</label>
+        <link refid="classwx_window"/>
+        <childnode refid="11464" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11512">
+        <label>wxMediaCtrl</label>
+        <link refid="classwx_media_ctrl"/>
+        <childnode refid="11468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11484">
+        <label>wxToolbook</label>
+        <link refid="classwx_toolbook"/>
+        <childnode refid="11479" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11510">
+        <label>wxListCtrl</label>
+        <link refid="classwx_list_ctrl"/>
+        <childnode refid="11468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11582">
+        <label>wxDocMDIParentFrame</label>
+        <link refid="classwx_doc_m_d_i_parent_frame"/>
+        <childnode refid="11581" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11478">
+        <label>wxAuiToolBar</label>
+        <link refid="classwx_aui_tool_bar"/>
+        <childnode refid="11468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11491">
+        <label>wxComboCtrl</label>
+        <link refid="classwx_combo_ctrl"/>
+        <childnode refid="11468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11524">
+        <label>wxRibbonGallery</label>
+        <link refid="classwx_ribbon_gallery"/>
+        <childnode refid="11521" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11555">
+        <label>wxDialog</label>
+        <link refid="classwx_dialog"/>
+        <childnode refid="11554" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11561">
+        <label>wxMessageDialog</label>
+        <link refid="classwx_message_dialog"/>
+        <childnode refid="11555" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11559">
+        <label>wxFindReplaceDialog</label>
+        <link refid="classwx_find_replace_dialog"/>
+        <childnode refid="11555" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11477">
+        <label>wxBitmapToggleButton</label>
+        <link refid="classwx_bitmap_toggle_button"/>
+        <childnode refid="11476" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11594">
+        <label>wxHtmlListBox</label>
+        <link refid="classwx_html_list_box"/>
+        <childnode refid="11593" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11516">
+        <label>wxFilePickerCtrl</label>
+        <link refid="classwx_file_picker_ctrl"/>
+        <childnode refid="11513" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11522">
+        <label>wxRibbonBar</label>
+        <link refid="classwx_ribbon_bar"/>
+        <childnode refid="11521" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11533">
+        <label>wxSpinCtrl</label>
+        <link refid="classwx_spin_ctrl"/>
+        <childnode refid="11468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11495">
+        <label>wxChoice</label>
+        <link refid="classwx_choice"/>
         <childnode refid="11494" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11425">
+      <node id="11489">
+        <label>wxComboBox</label>
+        <link refid="classwx_combo_box"/>
+        <childnode refid="11468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11540">
+        <label>wxStyledTextCtrl</label>
+        <link refid="classwx_styled_text_ctrl"/>
+        <childnode refid="11468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11492">
+        <label>wxOwnerDrawnComboBox</label>
+        <link refid="classwx_owner_drawn_combo_box"/>
+        <childnode refid="11491" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11574">
+        <label>wxFrame</label>
+        <link refid="classwx_frame"/>
+        <childnode refid="11554" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11549">
+        <label>wxMDIClientWindow</label>
+        <link refid="classwx_m_d_i_client_window"/>
+        <childnode refid="11463" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11550">
+        <label>wxMenuBar</label>
+        <link refid="classwx_menu_bar"/>
+        <childnode refid="11463" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11584">
+        <label>wxPreviewFrame</label>
+        <link refid="classwx_preview_frame"/>
+        <childnode refid="11574" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11589">
+        <label>wxHVScrolledWindow</label>
+        <link refid="classwx_h_v_scrolled_window"/>
+        <childnode refid="11586" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11569">
+        <label>wxSingleChoiceDialog</label>
+        <link refid="classwx_single_choice_dialog"/>
+        <childnode refid="11555" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11493">
+        <label>wxRichTextStyleComboCtrl</label>
+        <link refid="classwx_rich_text_style_combo_ctrl"/>
+        <childnode refid="11491" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11557">
+        <label>wxDirDialog</label>
+        <link refid="classwx_dir_dialog"/>
+        <childnode refid="11555" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11471">
+        <label>wxAnyButton</label>
+        <link refid="classwx_any_button"/>
+        <childnode refid="11468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11499">
+        <label>wxDataViewCtrl</label>
+        <link refid="classwx_data_view_ctrl"/>
+        <childnode refid="11468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11472">
+        <label>wxButton</label>
+        <link refid="classwx_button"/>
+        <childnode refid="11471" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11527">
+        <label>wxRibbonToolBar</label>
+        <link refid="classwx_ribbon_tool_bar"/>
+        <childnode refid="11521" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11467">
+        <label>wxBannerWindow</label>
+        <link refid="classwx_banner_window"/>
+        <childnode refid="11463" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11577">
+        <label>wxHtmlHelpDialog</label>
+        <link refid="classwx_html_help_dialog"/>
+        <childnode refid="11574" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11556">
+        <label>wxColourDialog</label>
+        <link refid="classwx_colour_dialog"/>
+        <childnode refid="11555" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11591">
+        <label>wxPropertyGridManager</label>
+        <link refid="classwx_property_grid_manager"/>
+        <childnode refid="11586" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11547">
+        <label>wxGLCanvas</label>
+        <link refid="classwx_g_l_canvas"/>
+        <childnode refid="11463" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11548">
+        <label>wxHtmlHelpWindow</label>
+        <link refid="classwx_html_help_window"/>
+        <childnode refid="11463" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11481">
+        <label>wxChoicebook</label>
+        <link refid="classwx_choicebook"/>
+        <childnode refid="11479" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11552">
+        <label>wxPopupWindow</label>
+        <link refid="classwx_popup_window"/>
+        <childnode refid="11551" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11494">
+        <label>wxControlWithItems</label>
+        <link refid="classwx_control_with_items"/>
+        <childnode refid="11468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11583">
+        <label>wxMiniFrame</label>
+        <link refid="classwx_mini_frame"/>
+        <childnode refid="11574" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11518">
+        <label>wxPropertyGrid</label>
+        <link refid="classwx_property_grid"/>
+        <childnode refid="11468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11529">
+        <label>wxRichTextStyleListCtrl</label>
+        <link refid="classwx_rich_text_style_list_ctrl"/>
+        <childnode refid="11468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11515">
+        <label>wxDirPickerCtrl</label>
+        <link refid="classwx_dir_picker_ctrl"/>
+        <childnode refid="11513" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11535">
+        <label>wxStaticBitmap</label>
+        <link refid="classwx_static_bitmap"/>
+        <childnode refid="11468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11531">
+        <label>wxSlider</label>
+        <link refid="classwx_slider"/>
+        <childnode refid="11468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11554">
+        <label>wxTopLevelWindow</label>
+        <link refid="classwx_top_level_window"/>
+        <childnode refid="11551" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11483">
+        <label>wxNotebook</label>
+        <link refid="classwx_notebook"/>
+        <childnode refid="11479" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11567">
+        <label>wxRichTextFormattingDialog</label>
+        <link refid="classwx_rich_text_formatting_dialog"/>
+        <childnode refid="11566" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11604">
+        <label>wxTreeListCtrl</label>
+        <link refid="classwx_tree_list_ctrl"/>
+        <childnode refid="11463" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11571">
+        <label>wxTextEntryDialog</label>
+        <link refid="classwx_text_entry_dialog"/>
+        <childnode refid="11555" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11598">
+        <label>wxWizardPageSimple</label>
+        <link refid="classwx_wizard_page_simple"/>
+        <childnode refid="11597" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11578">
+        <label>wxHtmlHelpFrame</label>
+        <link refid="classwx_html_help_frame"/>
+        <childnode refid="11574" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11587">
+        <label>wxEditableListBox</label>
+        <link refid="classwx_editable_list_box"/>
+        <childnode refid="11586" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11473">
+        <label>wxBitmapButton</label>
+        <link refid="classwx_bitmap_button"/>
+        <childnode refid="11472" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11506">
+        <label>wxHeaderCtrl</label>
+        <link refid="classwx_header_ctrl"/>
+        <childnode refid="11468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11474">
+        <label>wxContextHelpButton</label>
+        <link refid="classwx_context_help_button"/>
+        <childnode refid="11473" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11585">
+        <label>wxSplashScreen</label>
+        <link refid="classwx_splash_screen"/>
+        <childnode refid="11574" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11581">
+        <label>wxMDIParentFrame</label>
+        <link refid="classwx_m_d_i_parent_frame"/>
+        <childnode refid="11574" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11597">
+        <label>wxWizardPage</label>
+        <link refid="classwx_wizard_page"/>
+        <childnode refid="11586" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11503">
+        <label>wxFileCtrl</label>
+        <link refid="classwx_file_ctrl"/>
+        <childnode refid="11468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11580">
+        <label>wxDocMDIChildFrame</label>
+        <link refid="classwx_doc_m_d_i_child_frame"/>
+        <childnode refid="11579" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11572">
+        <label>wxPasswordEntryDialog</label>
+        <link refid="classwx_password_entry_dialog"/>
+        <childnode refid="11571" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11525">
+        <label>wxRibbonPage</label>
+        <link refid="classwx_ribbon_page"/>
+        <childnode refid="11521" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11570">
+        <label>wxSymbolPickerDialog</label>
+        <link refid="classwx_symbol_picker_dialog"/>
+        <childnode refid="11555" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11536">
+        <label>wxStaticBox</label>
+        <link refid="classwx_static_box"/>
+        <childnode refid="11468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11517">
+        <label>wxFontPickerCtrl</label>
+        <link refid="classwx_font_picker_ctrl"/>
+        <childnode refid="11513" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11566">
+        <label>wxPropertySheetDialog</label>
+        <link refid="classwx_property_sheet_dialog"/>
+        <childnode refid="11555" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11543">
+        <label>wxTimePickerCtrl</label>
+        <link refid="classwx_time_picker_ctrl"/>
+        <childnode refid="11468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11513">
+        <label>wxPickerBase</label>
+        <link refid="classwx_picker_base"/>
+        <childnode refid="11468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11600">
+        <label>wxSashWindow</label>
+        <link refid="classwx_sash_window"/>
+        <childnode refid="11463" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11563">
+        <label>wxPageSetupDialog</label>
+        <link refid="classwx_page_setup_dialog"/>
+        <childnode refid="11555" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11486">
         <label>wxCalendarCtrl</label>
         <link refid="classwx_calendar_ctrl"/>
-        <childnode refid="11407" relation="public-inheritance">
+        <childnode refid="11468" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="11546">
+      <node id="11607">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="11547" relation="usage">
+        <childnode refid="11608" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="11545">
+      <node id="11606">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="11546" relation="public-inheritance">
+        <childnode refid="11607" relation="public-inheritance">
         </childnode>
-        <childnode refid="11548" relation="public-inheritance">
+        <childnode refid="11609" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11548">
+      <node id="11609">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="11544">
+      <node id="11605">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="11545" relation="public-inheritance">
+        <childnode refid="11606" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11547">
+      <node id="11608">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

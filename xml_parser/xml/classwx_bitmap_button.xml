@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_bitmap_button" kind="class" prot="public">
     <compoundname>wxBitmapButton</compoundname>
     <basecompoundref refid="classwx_button" prot="public" virt="non-virtual">wxButton</basecompoundref>
@@ -194,113 +194,113 @@ Note that the wxBU_EXACTFIT style supported by <ref refid="classwx_button" kindr
 <listitem><para>EVT_BUTTON(id,  func): Process a <computeroutput>wxEVT_COMMAND_BUTTON_CLICKED</computeroutput> event, when the button is clicked. </para></listitem>
 </itemizedlist>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref> <htmlonly> &lt;br&gt;&lt;div&gt;&lt;span class=&apos;appearance&apos;&gt;Appearance:&lt;/span&gt;&lt;br&gt;&lt;table class=&apos;appearance&apos;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&apos;wxmsw/bitmapbutton.png&apos; alt=&apos;wxMSW appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxgtk/bitmapbutton.png&apos; alt=&apos;wxGTK appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxmac/bitmapbutton.png&apos; alt=&apos;wxMac appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;wxMSW appearance&lt;/td&gt;&lt;td&gt;wxGTK appearance&lt;/td&gt;&lt;td&gt;wxMac appearance&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt; </htmlonly></para><para><simplesect kind="see"><para><ref refid="classwx_button" kindref="compound">wxButton</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref> <htmlonly> &lt;br&gt;&lt;div&gt;&lt;span class=&apos;appearance&apos;&gt;Appearance:&lt;/span&gt;&lt;br&gt;&lt;table class=&apos;appearance&apos;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&apos;wxmsw/bitmapbutton.png&apos; alt=&apos;wxMSW appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxgtk/bitmapbutton.png&apos; alt=&apos;wxGTK appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxmac/bitmapbutton.png&apos; alt=&apos;wxMac appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;wxMSW appearance&lt;/td&gt;&lt;td&gt;wxGTK appearance&lt;/td&gt;&lt;td&gt;wxMac appearance&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt; </htmlonly></para><para><simplesect kind="see"><para><ref refid="classwx_button" kindref="compound">wxButton</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="4478">
+      <node id="4482">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="4477">
+      <node id="4481">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="4478" relation="public-inheritance">
+        <childnode refid="4482" relation="public-inheritance">
         </childnode>
-        <childnode refid="4479" relation="public-inheritance">
+        <childnode refid="4483" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4479">
+      <node id="4483">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="4475">
+      <node id="4479">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="4476" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4476">
-        <label>wxWindow</label>
-        <link refid="classwx_window"/>
-        <childnode refid="4477" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4474">
-        <label>wxAnyButton</label>
-        <link refid="classwx_any_button"/>
-        <childnode refid="4475" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4473">
-        <label>wxButton</label>
-        <link refid="classwx_button"/>
-        <childnode refid="4474" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4472">
-        <label>wxBitmapButton</label>
-        <link refid="classwx_bitmap_button"/>
-        <childnode refid="4473" relation="public-inheritance">
+        <childnode refid="4480" relation="public-inheritance">
         </childnode>
       </node>
       <node id="4480">
+        <label>wxWindow</label>
+        <link refid="classwx_window"/>
+        <childnode refid="4481" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4478">
+        <label>wxAnyButton</label>
+        <link refid="classwx_any_button"/>
+        <childnode refid="4479" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4477">
+        <label>wxButton</label>
+        <link refid="classwx_button"/>
+        <childnode refid="4478" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4476">
+        <label>wxBitmapButton</label>
+        <link refid="classwx_bitmap_button"/>
+        <childnode refid="4477" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4484">
         <label>wxContextHelpButton</label>
         <link refid="classwx_context_help_button"/>
-        <childnode refid="4472" relation="public-inheritance">
+        <childnode refid="4476" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="4487">
+      <node id="4491">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="4488" relation="usage">
+        <childnode refid="4492" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="4486">
+      <node id="4490">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="4487" relation="public-inheritance">
+        <childnode refid="4491" relation="public-inheritance">
         </childnode>
+        <childnode refid="4493" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4493">
+        <label>wxTrackable</label>
+        <link refid="classwx_trackable"/>
+      </node>
+      <node id="4488">
+        <label>wxControl</label>
+        <link refid="classwx_control"/>
         <childnode refid="4489" relation="public-inheritance">
         </childnode>
       </node>
       <node id="4489">
-        <label>wxTrackable</label>
-        <link refid="classwx_trackable"/>
+        <label>wxWindow</label>
+        <link refid="classwx_window"/>
+        <childnode refid="4490" relation="public-inheritance">
+        </childnode>
       </node>
-      <node id="4484">
-        <label>wxControl</label>
-        <link refid="classwx_control"/>
-        <childnode refid="4485" relation="public-inheritance">
+      <node id="4487">
+        <label>wxAnyButton</label>
+        <link refid="classwx_any_button"/>
+        <childnode refid="4488" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4486">
+        <label>wxButton</label>
+        <link refid="classwx_button"/>
+        <childnode refid="4487" relation="public-inheritance">
         </childnode>
       </node>
       <node id="4485">
-        <label>wxWindow</label>
-        <link refid="classwx_window"/>
+        <label>wxBitmapButton</label>
+        <link refid="classwx_bitmap_button"/>
         <childnode refid="4486" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4483">
-        <label>wxAnyButton</label>
-        <link refid="classwx_any_button"/>
-        <childnode refid="4484" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4482">
-        <label>wxButton</label>
-        <link refid="classwx_button"/>
-        <childnode refid="4483" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4481">
-        <label>wxBitmapButton</label>
-        <link refid="classwx_bitmap_button"/>
-        <childnode refid="4482" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4488">
+      <node id="4492">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

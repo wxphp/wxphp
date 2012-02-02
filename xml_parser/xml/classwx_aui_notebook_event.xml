@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_aui_notebook_event" kind="class" prot="public">
     <compoundname>wxAuiNotebookEvent</compoundname>
     <basecompoundref refid="classwx_book_ctrl_event" prot="public" virt="non-virtual">wxBookCtrlEvent</basecompoundref>
@@ -57,83 +57,83 @@
 <listitem><para>EVT_AUINOTEBOOK_ALLOW_DND(id,  func): Whether to allow a tab to be dropped. Processes a <computeroutput>wxEVT_COMMAND_AUINOTEBOOK_ALLOW_DND</computeroutput> event. This event must be specially allowed. </para></listitem>
 </itemizedlist>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxaui" kindref="member">wxAui</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref>, <ref refid="group__group__class__bookctrl" kindref="compound">Book Controls</ref></para><para><simplesect kind="see"><para><ref refid="classwx_aui_notebook" kindref="compound">wxAuiNotebook</ref>, <ref refid="classwx_book_ctrl_event" kindref="compound">wxBookCtrlEvent</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxaui" kindref="member">wxAui</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref>, <ref refid="group__group__class__bookctrl" kindref="compound">Book Controls</ref></para><para><simplesect kind="see"><para><ref refid="classwx_aui_notebook" kindref="compound">wxAuiNotebook</ref>, <ref refid="classwx_book_ctrl_event" kindref="compound">wxBookCtrlEvent</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="4395">
+      <node id="4399">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="4393">
+      <node id="4397">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="4394" relation="public-inheritance">
+        <childnode refid="4398" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4391">
+      <node id="4395">
         <label>wxBookCtrlEvent</label>
         <link refid="classwx_book_ctrl_event"/>
-        <childnode refid="4392" relation="public-inheritance">
+        <childnode refid="4396" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4392">
+      <node id="4396">
         <label>wxNotifyEvent</label>
         <link refid="classwx_notify_event"/>
-        <childnode refid="4393" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4390">
-        <label>wxAuiNotebookEvent</label>
-        <link refid="classwx_aui_notebook_event"/>
-        <childnode refid="4391" relation="public-inheritance">
+        <childnode refid="4397" relation="public-inheritance">
         </childnode>
       </node>
       <node id="4394">
+        <label>wxAuiNotebookEvent</label>
+        <link refid="classwx_aui_notebook_event"/>
+        <childnode refid="4395" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4398">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="4395" relation="public-inheritance">
+        <childnode refid="4399" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="4401">
+      <node id="4405">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="4402" relation="usage">
+        <childnode refid="4406" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="4399">
+      <node id="4403">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="4400" relation="public-inheritance">
+        <childnode refid="4404" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4397">
+      <node id="4401">
         <label>wxBookCtrlEvent</label>
         <link refid="classwx_book_ctrl_event"/>
-        <childnode refid="4398" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4398">
-        <label>wxNotifyEvent</label>
-        <link refid="classwx_notify_event"/>
-        <childnode refid="4399" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4396">
-        <label>wxAuiNotebookEvent</label>
-        <link refid="classwx_aui_notebook_event"/>
-        <childnode refid="4397" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4400">
-        <label>wxEvent</label>
-        <link refid="classwx_event"/>
-        <childnode refid="4401" relation="public-inheritance">
+        <childnode refid="4402" relation="public-inheritance">
         </childnode>
       </node>
       <node id="4402">
+        <label>wxNotifyEvent</label>
+        <link refid="classwx_notify_event"/>
+        <childnode refid="4403" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4400">
+        <label>wxAuiNotebookEvent</label>
+        <link refid="classwx_aui_notebook_event"/>
+        <childnode refid="4401" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4404">
+        <label>wxEvent</label>
+        <link refid="classwx_event"/>
+        <childnode refid="4405" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4406">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

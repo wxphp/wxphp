@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_d_d_e_server" kind="class" prot="public">
     <compoundname>wxDDEServer</compoundname>
     <includes local="no">wx/dde.h</includes>
@@ -56,7 +56,7 @@
 <para>A <ref refid="classwx_d_d_e_server" kindref="compound">wxDDEServer</ref> object represents the server part of a client-server DDE (Dynamic Data Exchange) conversation. </para>    </briefdescription>
     <detaileddescription>
 <para>This DDE-based implementation is available on Windows only, but a platform-independent, socket-based version of this API is available using <ref refid="classwx_t_c_p_server" kindref="compound">wxTCPServer</ref>.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ipc" kindref="compound">Interprocess Communication</ref> Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page__port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor> </para><para><simplesect kind="see"><para><ref refid="classwx_d_d_e_client" kindref="compound">wxDDEClient</ref>, <ref refid="classwx_d_d_e_connection" kindref="compound">wxDDEConnection</ref>, <ref refid="overview__ipc" kindref="compound">Interprocess Communication</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ipc" kindref="compound">Interprocess Communication</ref> Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page_port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor> </para><para><simplesect kind="see"><para><ref refid="classwx_d_d_e_client" kindref="compound">wxDDEClient</ref>, <ref refid="classwx_d_d_e_connection" kindref="compound">wxDDEConnection</ref>, <ref refid="overview_ipc" kindref="compound">Interprocess Communication</ref> </para></simplesect>
 </para>    </detaileddescription>
     <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dde.h" line="290" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dde.h" bodystart="289" bodyend="318"/>
     <listofallmembers>

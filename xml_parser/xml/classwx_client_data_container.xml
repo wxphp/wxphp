@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_client_data_container" kind="class" prot="public">
     <compoundname>wxClientDataContainer</compoundname>
     <derivedcompoundref refid="classwx_grid_cell_attr_provider" prot="public" virt="non-virtual">wxGridCellAttrProvider</derivedcompoundref>
@@ -97,17 +97,17 @@
     <detaileddescription>
 <para>This data can either be of type void - in which case the data <emphasis>container</emphasis> does not take care of freeing the data again or it is of type <ref refid="classwx_client_data" kindref="compound">wxClientData</ref> or its derivatives. In that case the container will free the memory itself later. Note that you <emphasis>must</emphasis> not assign both void data and data derived from the <ref refid="classwx_client_data" kindref="compound">wxClientData</ref> class to a container.</para><para><simplesect kind="note"><para>This functionality is currently duplicated in <ref refid="classwx_evt_handler" kindref="compound">wxEvtHandler</ref> in order to avoid having more than one vtable in that class hierarchy.</para></simplesect>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__containers" kindref="compound">Containers</ref></para><para><simplesect kind="see"><para><ref refid="classwx_evt_handler" kindref="compound">wxEvtHandler</ref>, <ref refid="classwx_client_data" kindref="compound">wxClientData</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__containers" kindref="compound">Containers</ref></para><para><simplesect kind="see"><para><ref refid="classwx_evt_handler" kindref="compound">wxEvtHandler</ref>, <ref refid="classwx_client_data" kindref="compound">wxClientData</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="4788">
+      <node id="4792">
         <label>wxClientDataContainer</label>
         <link refid="classwx_client_data_container"/>
       </node>
-      <node id="4789">
+      <node id="4793">
         <label>wxGridCellAttrProvider</label>
         <link refid="classwx_grid_cell_attr_provider"/>
-        <childnode refid="4788" relation="public-inheritance">
+        <childnode refid="4792" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>

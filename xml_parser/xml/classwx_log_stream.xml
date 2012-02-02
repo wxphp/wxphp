@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_log_stream" kind="class" prot="public">
     <compoundname>wxLogStream</compoundname>
     <basecompoundref refid="classwx_log" prot="public" virt="non-virtual">wxLog</basecompoundref>
@@ -28,29 +28,29 @@
 <para>This class can be used to redirect the log messages to a C++ stream. </para>    </briefdescription>
     <detaileddescription>
 <para>Please note that this class is only available if wxWidgets was compiled with the standard iostream library support (<computeroutput>wxUSE_STD_IOSTREAM</computeroutput> must be on).</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__logging" kindref="compound">Logging</ref></para><para><simplesect kind="see"><para><ref refid="classwx_log_stderr" kindref="compound">wxLogStderr</ref>, <ref refid="classwx_stream_to_text_redirector" kindref="compound">wxStreamToTextRedirector</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__logging" kindref="compound">Logging</ref></para><para><simplesect kind="see"><para><ref refid="classwx_log_stderr" kindref="compound">wxLogStderr</ref>, <ref refid="classwx_stream_to_text_redirector" kindref="compound">wxStreamToTextRedirector</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7534">
+      <node id="7540">
         <label>wxLog</label>
         <link refid="classwx_log"/>
       </node>
-      <node id="7533">
+      <node id="7539">
         <label>wxLogStream</label>
         <link refid="classwx_log_stream"/>
-        <childnode refid="7534" relation="public-inheritance">
+        <childnode refid="7540" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7536">
+      <node id="7542">
         <label>wxLog</label>
         <link refid="classwx_log"/>
       </node>
-      <node id="7535">
+      <node id="7541">
         <label>wxLogStream</label>
         <link refid="classwx_log_stream"/>
-        <childnode refid="7536" relation="public-inheritance">
+        <childnode refid="7542" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
@@ -80,6 +80,7 @@
       <member refid="classwx_log_1a14a562556933276939cedbb470f149cb" prot="public" virt="non-virtual"><scope>wxLogStream</scope><name>Resume</name></member>
       <member refid="classwx_log_1ac7ea85f71c8d3ecd4247f412be410505" prot="public" virt="non-virtual"><scope>wxLogStream</scope><name>SetActiveTarget</name></member>
       <member refid="classwx_log_1a7ae244e71dff20efd3a37b3718841a39" prot="public" virt="non-virtual"><scope>wxLogStream</scope><name>SetComponentLevel</name></member>
+      <member refid="classwx_log_1a9f316422df6930c549db80a5e4bf36a2" prot="public" virt="non-virtual"><scope>wxLogStream</scope><name>SetFormatter</name></member>
       <member refid="classwx_log_1a4ea68379469ca27f645d5f91c2d42b3b" prot="public" virt="non-virtual"><scope>wxLogStream</scope><name>SetLogLevel</name></member>
       <member refid="classwx_log_1ae814f9b9b4c8b4a52e34d7c919f98296" prot="public" virt="non-virtual"><scope>wxLogStream</scope><name>SetRepetitionCounting</name></member>
       <member refid="classwx_log_1a2525bf54fa3f31dc50e6e3cd8651e71d" prot="public" virt="non-virtual"><scope>wxLogStream</scope><name>SetThreadActiveTarget</name></member>

@@ -1,11 +1,10 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_rich_text_formatting_dialog" kind="class" prot="public">
     <compoundname>wxRichTextFormattingDialog</compoundname>
     <basecompoundref refid="classwx_property_sheet_dialog" prot="public" virt="non-virtual">wxPropertySheetDialog</basecompoundref>
     <includes local="no">wx/richtext/richtextformatdlg.h</includes>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_rich_text_formatting_dialog_1a9e6d854405dd54a7d19efc7b99c91506" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_text_attr" kindref="compound">wxTextAttr</ref> &amp;</type>
         <definition>const wxTextAttr&amp; wxRichTextFormattingDialog::GetAttributes</definition>
@@ -487,118 +486,118 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>formatDlg.ApplyStyle(m_richTextCtrl,<sp/>range);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 </programlisting></para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxrichtext" kindref="member">wxRichText</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__richtext" kindref="compound">Rich Text</ref> </para>    </detaileddescription>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxrichtext" kindref="member">wxRichText</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__richtext" kindref="compound">Rich Text</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="9552">
+      <node id="9608">
         <label>wxNonOwnedWindow</label>
         <link refid="classwx_non_owned_window"/>
-        <childnode refid="9553" relation="public-inheritance">
+        <childnode refid="9609" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9555">
+      <node id="9611">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="9554">
+      <node id="9610">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="9555" relation="public-inheritance">
+        <childnode refid="9611" relation="public-inheritance">
         </childnode>
-        <childnode refid="9556" relation="public-inheritance">
+        <childnode refid="9612" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9556">
+      <node id="9612">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="9553">
+      <node id="9609">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="9554" relation="public-inheritance">
+        <childnode refid="9610" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9550">
+      <node id="9606">
         <label>wxDialog</label>
         <link refid="classwx_dialog"/>
-        <childnode refid="9551" relation="public-inheritance">
+        <childnode refid="9607" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9551">
+      <node id="9607">
         <label>wxTopLevelWindow</label>
         <link refid="classwx_top_level_window"/>
-        <childnode refid="9552" relation="public-inheritance">
+        <childnode refid="9608" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9548">
+      <node id="9604">
         <label>wxRichTextFormattingDialog</label>
         <link refid="classwx_rich_text_formatting_dialog"/>
-        <childnode refid="9549" relation="public-inheritance">
+        <childnode refid="9605" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9549">
+      <node id="9605">
         <label>wxPropertySheetDialog</label>
         <link refid="classwx_property_sheet_dialog"/>
-        <childnode refid="9550" relation="public-inheritance">
+        <childnode refid="9606" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="9561">
+      <node id="9617">
         <label>wxNonOwnedWindow</label>
         <link refid="classwx_non_owned_window"/>
-        <childnode refid="9562" relation="public-inheritance">
+        <childnode refid="9618" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9564">
+      <node id="9620">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="9565" relation="usage">
+        <childnode refid="9621" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="9563">
+      <node id="9619">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="9564" relation="public-inheritance">
+        <childnode refid="9620" relation="public-inheritance">
         </childnode>
-        <childnode refid="9566" relation="public-inheritance">
+        <childnode refid="9622" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9566">
+      <node id="9622">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="9562">
+      <node id="9618">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="9563" relation="public-inheritance">
+        <childnode refid="9619" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9559">
+      <node id="9615">
         <label>wxDialog</label>
         <link refid="classwx_dialog"/>
-        <childnode refid="9560" relation="public-inheritance">
+        <childnode refid="9616" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9560">
+      <node id="9616">
         <label>wxTopLevelWindow</label>
         <link refid="classwx_top_level_window"/>
-        <childnode refid="9561" relation="public-inheritance">
+        <childnode refid="9617" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9557">
+      <node id="9613">
         <label>wxRichTextFormattingDialog</label>
         <link refid="classwx_rich_text_formatting_dialog"/>
-        <childnode refid="9558" relation="public-inheritance">
+        <childnode refid="9614" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9558">
+      <node id="9614">
         <label>wxPropertySheetDialog</label>
         <link refid="classwx_property_sheet_dialog"/>
-        <childnode refid="9559" relation="public-inheritance">
+        <childnode refid="9615" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9565">
+      <node id="9621">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
@@ -953,6 +952,7 @@
       <member refid="classwx_window_1a81f23590239934fa10fded0566a65d8c" prot="public" virt="non-virtual"><scope>wxRichTextFormattingDialog</scope><name>SetPosition</name></member>
       <member refid="classwx_window_1a07f5f7ed3f78e0ef7b3dee3f4da81001" prot="public" virt="virtual"><scope>wxRichTextFormattingDialog</scope><name>SetPreviousHandler</name></member>
       <member refid="classwx_object_1afab780710f2adc1bb33310e27590140b" prot="public" virt="non-virtual"><scope>wxRichTextFormattingDialog</scope><name>SetRefData</name></member>
+      <member refid="classwx_top_level_window_1a82afa6f09dd5faef6330807ef59374e8" prot="public" virt="virtual"><scope>wxRichTextFormattingDialog</scope><name>SetRepresentedFilename</name></member>
       <member refid="classwx_dialog_1a0d04ed85ac5cd271a61514d446340673" prot="public" virt="non-virtual"><scope>wxRichTextFormattingDialog</scope><name>SetReturnCode</name></member>
       <member refid="classwx_top_level_window_1a98e95b1b10f44b80f9b29a03ab09a879" prot="public" virt="non-virtual"><scope>wxRichTextFormattingDialog</scope><name>SetRightMenu</name></member>
       <member refid="classwx_window_1aa842d59529f873683e55cd8392ec46e9" prot="public" virt="virtual"><scope>wxRichTextFormattingDialog</scope><name>SetScrollbar</name></member>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_u_r_i" kind="class" prot="public">
     <compoundname>wxURI</compoundname>
     <basecompoundref refid="classwx_object" prot="public" virt="non-virtual">wxObject</basecompoundref>
@@ -450,47 +450,47 @@
 <para><ref refid="classwx_u_r_i" kindref="compound">wxURI</ref> is used to extract information from a URI (Uniform Resource Identifier). </para>    </briefdescription>
     <detaileddescription>
 <para>For information about URIs, see RFC 3986 (<ulink url="http://www.ietf.org/rfc/rfc3986.txt">http://www.ietf.org/rfc/rfc3986.txt</ulink>).</para><para>In short, a URL is a URI. In other words, URL is a subset of a URI - all acceptable URLs are also acceptable URIs.</para><para><ref refid="classwx_u_r_i" kindref="compound">wxURI</ref> automatically escapes invalid characters in a string, so there is no chance of <ref refid="classwx_u_r_i" kindref="compound">wxURI</ref> &quot;failing&quot; on construction/creation.</para><para><ref refid="classwx_u_r_i" kindref="compound">wxURI</ref> supports copy construction and standard assignment operators. <ref refid="classwx_u_r_i" kindref="compound">wxURI</ref> can also be inherited from to provide further functionality.</para><para>To obtain individual components you can use one of the GetXXX() methods. However, you should check HasXXX() before calling a get method, which determines whether or not the component referred to by the method is defined according to RFC 2396. Consider an undefined component equivalent to a NULL C string.</para><para>Example: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>protocol<sp/>will<sp/>hold<sp/>the<sp/>http<sp/>protocol<sp/>(i.e.<sp/>&quot;http&quot;)</highlight><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change...">wxString</ref><sp/>protocol;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change was actually the m...">wxString</ref><sp/>protocol;</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_u_r_i" kindref="compound" tooltip="wxURI is used to extract information from a URI (Uniform Resource Identifier).">wxURI</ref><sp/>myuri(</highlight><highlight class="stringliteral">&quot;http://mysite.com&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>myuri.HasScheme()<sp/>)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>protocol<sp/>=<sp/>myuri.GetScheme();</highlight></codeline>
 </programlisting></para><para><simplesect kind="note"><para>On URIs with a &quot;file&quot; scheme <ref refid="classwx_u_r_i" kindref="compound">wxURI</ref> does not parse the userinfo, server, or port portion. This is to keep compatability with <ref refid="classwx_file_system" kindref="compound">wxFileSystem</ref>, the old <ref refid="classwx_u_r_l" kindref="compound">wxURL</ref>, and older url specifications.</para></simplesect>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__net" kindref="compound">Networking</ref></para><para><simplesect kind="see"><para><ref refid="classwx_u_r_l" kindref="compound">wxURL</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__net" kindref="compound">Networking</ref></para><para><simplesect kind="see"><para><ref refid="classwx_u_r_l" kindref="compound">wxURL</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="11201">
+      <node id="11262">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="11200">
+      <node id="11261">
         <label>wxURI</label>
         <link refid="classwx_u_r_i"/>
-        <childnode refid="11201" relation="public-inheritance">
+        <childnode refid="11262" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11202">
+      <node id="11263">
         <label>wxURL</label>
         <link refid="classwx_u_r_l"/>
-        <childnode refid="11200" relation="public-inheritance">
+        <childnode refid="11261" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="11204">
+      <node id="11265">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="11205" relation="usage">
+        <childnode refid="11266" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="11203">
+      <node id="11264">
         <label>wxURI</label>
         <link refid="classwx_u_r_i"/>
-        <childnode refid="11204" relation="public-inheritance">
+        <childnode refid="11265" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11205">
+      <node id="11266">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

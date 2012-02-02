@@ -1,9 +1,46 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_icon_bundle" kind="class" prot="public">
     <compoundname>wxIconBundle</compoundname>
     <basecompoundref refid="classwx_g_d_i_object" prot="public" virt="non-virtual">wxGDIObject</basecompoundref>
     <includes local="no">wx/iconbndl.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="classwx_icon_bundle_1a9a2af35e541b6528949fbe29d035ff50" prot="public" static="no">
+        <name>@13</name>
+        <enumvalue id="classwx_icon_bundle_1a9a2af35e541b6528949fbe29d035ff50ace97e3a6d1a418f379ff610379db0c3c" prot="public">
+          <name>FALLBACK_NONE</name>
+          <initializer> 0</initializer>
+          <briefdescription>
+<para>Return invalid icon if exact size is not found. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classwx_icon_bundle_1a9a2af35e541b6528949fbe29d035ff50a27467ada8c18746e09ed0125eaffaa74" prot="public">
+          <name>FALLBACK_SYSTEM</name>
+          <initializer> 1</initializer>
+          <briefdescription>
+<para>Return the icon of the system icon size if exact size is not found. </para>          </briefdescription>
+          <detaileddescription>
+<para>May be combined with other non-NONE enum elements to determine what happens if the system icon size is not found neither. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classwx_icon_bundle_1a9a2af35e541b6528949fbe29d035ff50a1ae672eced490bb4304c78471e922d69" prot="public">
+          <name>FALLBACK_NEAREST_LARGER</name>
+          <initializer> 2</initializer>
+          <briefdescription>
+<para>Return the icon of closest larger size or, if there is no icon of larger size in the bundle, the closest icon of smaller size. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>The elements of this enum determine what happens if <ref refid="classwx_icon_bundle_1a96ffc72b040c8f15c1f65fb3606488b4" kindref="member">GetIcon()</ref> doesn&apos;t find the icon of exactly the requested size. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="since"><para>2.9.4 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/iconbndl.h" line="31" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/iconbndl.h" bodystart="30" bodyend="43"/>
+      </memberdef>
+      </sectiondef>
       <sectiondef kind="public-func">
       <memberdef kind="function" id="classwx_icon_bundle_1a2f65bb12c79fa372019d380ede4cfbb4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -16,7 +53,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/iconbndl.h" line="27"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/iconbndl.h" line="49"/>
       </memberdef>
       <memberdef kind="function" id="classwx_icon_bundle_1a8926b55cde0f0327cdfe6496d1c5a65e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -38,7 +75,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/iconbndl.h" line="32"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/iconbndl.h" line="54"/>
       </memberdef>
       <memberdef kind="function" id="classwx_icon_bundle_1a7e5fbe5ae2baf1925240dcbbf50f5b82" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -61,7 +98,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/iconbndl.h" line="43"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/iconbndl.h" line="65"/>
       </memberdef>
       <memberdef kind="function" id="classwx_icon_bundle_1a4ab2055fb57aa5ed44990958e2de2b6d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -78,7 +115,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/iconbndl.h" line="48"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/iconbndl.h" line="70"/>
       </memberdef>
       <memberdef kind="function" id="classwx_icon_bundle_1a41281e6108842ebfbab4acedfaaaa6de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -95,7 +132,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/iconbndl.h" line="53"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/iconbndl.h" line="75"/>
       </memberdef>
       <memberdef kind="function" id="classwx_icon_bundle_1a3dd3de60abb5e07439f66d778d37de46" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -108,7 +145,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/iconbndl.h" line="58"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/iconbndl.h" line="80"/>
       </memberdef>
       <memberdef kind="function" id="classwx_icon_bundle_1a62c4e9119b8d73a4273c61ffd3c119f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -130,7 +167,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/iconbndl.h" line="65"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/iconbndl.h" line="87"/>
       </memberdef>
       <memberdef kind="function" id="classwx_icon_bundle_1adf0f0de9782521c17c2bd0439bbd06fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -153,7 +190,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/iconbndl.h" line="78"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/iconbndl.h" line="100"/>
       </memberdef>
       <memberdef kind="function" id="classwx_icon_bundle_1a0a8c33284a082b901079e2c5042aa1d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -170,43 +207,53 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/iconbndl.h" line="85"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/iconbndl.h" line="107"/>
       </memberdef>
-      <memberdef kind="function" id="classwx_icon_bundle_1aedc5845de7b55c0d172bbdffb8055317" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classwx_icon_bundle_1a96ffc72b040c8f15c1f65fb3606488b4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_icon" kindref="compound">wxIcon</ref></type>
         <definition>wxIcon wxIconBundle::GetIcon</definition>
-        <argsstring>(const wxSize &amp;size) const </argsstring>
+        <argsstring>(const wxSize &amp;size, int flags=FALLBACK_SYSTEM) const </argsstring>
         <name>GetIcon</name>
         <param>
           <type>const <ref refid="classwx_size" kindref="compound">wxSize</ref> &amp;</type>
           <declname>size</declname>
         </param>
+        <param>
+          <type>int</type>
+          <declname>flags</declname>
+          <defval>FALLBACK_SYSTEM</defval>
+        </param>
         <briefdescription>
-<para>Returns the icon with the given size; if no such icon exists, returns the icon with size <computeroutput>wxSYS_ICON_X</computeroutput> and <computeroutput>wxSYS_ICON_Y</computeroutput>; if no such icon exists, returns the first icon in the bundle. </para>        </briefdescription>
+<para>Returns the icon with the given size. </para>        </briefdescription>
         <detaileddescription>
-<para>If size = wxDefaultSize, returns the icon with size <computeroutput>wxSYS_ICON_X</computeroutput> and <computeroutput>wxSYS_ICON_Y</computeroutput>. </para>        </detaileddescription>
+<para>If <emphasis>size</emphasis> is <ref refid="gdicmn_8h_1a33a012cdb075e9f78c93f63bec2dc27b" kindref="member">wxDefaultSize</ref>, it is interpreted as the standard system icon size, i.e. the size returned by <ref refid="classwx_system_settings_1aa18e3b5794dc4193c4b0668d28d4933a" kindref="member">wxSystemSettings::GetMetric()</ref> for <computeroutput>wxSYS_ICON_X</computeroutput> and <computeroutput>wxSYS_ICON_Y</computeroutput>.</para><para>If the bundle contains an icon with exactly the requested size, it&apos;s always returned. Otherwise, the behaviour depends on the flags. If only ::FALLBACK_NONE is given, the function returns an invalid icon. If ::FALLBACK_SYSTEM is given, it tries to find the icon of standard system size, regardless of the size passed as parameter. Otherwise, or if the icon system size is not found neither, but ::FALLBACK_NEAREST_LARGER flag is specified, the function returns the smallest icon of the size larger than the requested one or, if this fails too, just the icon closest to the specified size.</para><para>The <emphasis>flags</emphasis> parameter is available only since wxWidgets 2.9.4. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/iconbndl.h" line="95"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/iconbndl.h" line="128"/>
       </memberdef>
-      <memberdef kind="function" id="classwx_icon_bundle_1af1743352dd0730fc957972252f225bd7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classwx_icon_bundle_1a4e97d8e76baeda28f71dcbd5d7e76127" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_icon" kindref="compound">wxIcon</ref></type>
         <definition>wxIcon wxIconBundle::GetIcon</definition>
-        <argsstring>(wxCoord size=wxDefaultCoord) const </argsstring>
+        <argsstring>(wxCoord size=wxDefaultCoord, int flags=FALLBACK_SYSTEM) const </argsstring>
         <name>GetIcon</name>
         <param>
           <type><ref refid="defs_8h_1a11f6efc0e8d8d680f3ec8e82aa4f1770" kindref="member">wxCoord</ref></type>
           <declname>size</declname>
           <defval><ref refid="defs_8h_1ae297119c813ec5d3328ce3f43f9ac6c1" kindref="member">wxDefaultCoord</ref></defval>
         </param>
+        <param>
+          <type>int</type>
+          <declname>flags</declname>
+          <defval>FALLBACK_SYSTEM</defval>
+        </param>
         <briefdescription>
 <para>Same as. </para>        </briefdescription>
         <detaileddescription>
-<para><programlisting><codeline><highlight class="normal"><sp/><ref refid="classwx_icon_bundle_1aedc5845de7b55c0d172bbdffb8055317" kindref="member" tooltip="Returns the icon with the given size; if no such icon exists, returns the icon with...">GetIcon</ref>(<sp/><ref refid="classwx_size" kindref="compound" tooltip="A wxSize is a useful data structure for graphics operations.">wxSize</ref>(<sp/>size,<sp/>size<sp/>)<sp/>)<sp/></highlight></codeline>
+<para><programlisting><codeline><highlight class="normal"><sp/><ref refid="classwx_icon_bundle_1a96ffc72b040c8f15c1f65fb3606488b4" kindref="member" tooltip="Returns the icon with the given size.">GetIcon</ref>(<sp/><ref refid="classwx_size" kindref="compound" tooltip="A wxSize is a useful data structure for graphics operations.">wxSize</ref>(<sp/>size,<sp/>size<sp/>)<sp/>)<sp/></highlight></codeline>
 </programlisting>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/iconbndl.h" line="100"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/iconbndl.h" line="134"/>
       </memberdef>
       <memberdef kind="function" id="classwx_icon_bundle_1ac830fcc74abffa167558dd84fbd34645" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_icon" kindref="compound">wxIcon</ref></type>
@@ -223,7 +270,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/iconbndl.h" line="106"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/iconbndl.h" line="140"/>
       </memberdef>
       <memberdef kind="function" id="classwx_icon_bundle_1a02acfb70b42a200b4eee9aa51a179860" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -236,7 +283,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/iconbndl.h" line="111"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/iconbndl.h" line="145"/>
       </memberdef>
       <memberdef kind="function" id="classwx_icon_bundle_1a78b33103b5a4b16b2581cec8a334f601" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_icon" kindref="compound">wxIcon</ref></type>
@@ -253,7 +300,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/iconbndl.h" line="116"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/iconbndl.h" line="150"/>
       </memberdef>
       <memberdef kind="function" id="classwx_icon_bundle_1a3d7505f4b585ffca07395855dfaccd45" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -261,12 +308,12 @@
         <argsstring>() const </argsstring>
         <name>IsEmpty</name>
         <briefdescription>
-<para>Returns true if the bundle doesn&apos;t contain any icons, false otherwise (in which case a call to <ref refid="classwx_icon_bundle_1aedc5845de7b55c0d172bbdffb8055317" kindref="member">GetIcon()</ref> with default parameter should return a valid icon). </para>        </briefdescription>
+<para>Returns true if the bundle doesn&apos;t contain any icons, false otherwise (in which case a call to <ref refid="classwx_icon_bundle_1a96ffc72b040c8f15c1f65fb3606488b4" kindref="member">GetIcon()</ref> with default parameter should return a valid icon). </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/iconbndl.h" line="123"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/iconbndl.h" line="157"/>
       </memberdef>
       <memberdef kind="function" id="classwx_icon_bundle_1ae2ebe7031b08ad23c5323b431fa86e31" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_icon_bundle" kindref="compound">wxIconBundle</ref> &amp;</type>
@@ -278,63 +325,63 @@
           <declname>ic</declname>
         </param>
         <briefdescription>
-<para>Assignment operator, using <ref refid="overview__refcount" kindref="compound">reference counting</ref>. </para>        </briefdescription>
+<para>Assignment operator, using <ref refid="overview_refcount" kindref="compound">reference counting</ref>. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/iconbndl.h" line="128"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/iconbndl.h" line="162"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para>This class contains multiple copies of an icon in different sizes. </para>    </briefdescription>
     <detaileddescription>
 <para>It is typically used in <ref refid="classwx_dialog_1a25159a919f632d6b2d15f19a1bfbe639" kindref="member">wxDialog::SetIcons</ref> and <ref refid="classwx_top_level_window_1a34270084ea5a46c12309abbb99f2004c" kindref="member">wxTopLevelWindow::SetIcons</ref>.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__gdi" kindref="compound">Graphics Device Interface (GDI)</ref></para><para>Predefined objects/pointers: <ref refid="iconbndl_8h_1a6b22172688a6f18a3c6c89ee327d5759" kindref="member">wxNullIconBundle</ref> </para>    </detaileddescription>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__gdi" kindref="compound">Graphics Device Interface (GDI)</ref></para><para>Predefined objects/pointers: <ref refid="iconbndl_8h_1a6b22172688a6f18a3c6c89ee327d5759" kindref="member">wxNullIconBundle</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7215">
+      <node id="7219">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="7214">
+      <node id="7218">
         <label>wxGDIObject</label>
         <link refid="classwx_g_d_i_object"/>
-        <childnode refid="7215" relation="public-inheritance">
+        <childnode refid="7219" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7213">
+      <node id="7217">
         <label>wxIconBundle</label>
         <link refid="classwx_icon_bundle"/>
-        <childnode refid="7214" relation="public-inheritance">
+        <childnode refid="7218" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7218">
+      <node id="7222">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="7219" relation="usage">
+        <childnode refid="7223" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="7217">
+      <node id="7221">
         <label>wxGDIObject</label>
         <link refid="classwx_g_d_i_object"/>
-        <childnode refid="7218" relation="public-inheritance">
+        <childnode refid="7222" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7219">
+      <node id="7223">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
-      <node id="7216">
+      <node id="7220">
         <label>wxIconBundle</label>
         <link refid="classwx_icon_bundle"/>
-        <childnode refid="7217" relation="public-inheritance">
+        <childnode refid="7221" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/iconbndl.h" line="22" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/iconbndl.h" bodystart="21" bodyend="130"/>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/iconbndl.h" line="22" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/iconbndl.h" bodystart="21" bodyend="164"/>
     <listofallmembers>
       <member refid="classwx_icon_bundle_1a62c4e9119b8d73a4273c61ffd3c119f3" prot="public" virt="non-virtual"><scope>wxIconBundle</scope><name>AddIcon</name></member>
       <member refid="classwx_icon_bundle_1adf0f0de9782521c17c2bd0439bbd06fc" prot="public" virt="non-virtual"><scope>wxIconBundle</scope><name>AddIcon</name></member>
@@ -342,9 +389,12 @@
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxIconBundle</scope><name>AllocExclusive</name></member>
       <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxIconBundle</scope><name>CloneRefData</name></member>
       <member refid="classwx_object_1a95c6a5e4e1e03ff23c7b9efe4cff0c1a" prot="protected" virt="virtual"><scope>wxIconBundle</scope><name>CreateRefData</name></member>
+      <member refid="classwx_icon_bundle_1a9a2af35e541b6528949fbe29d035ff50a1ae672eced490bb4304c78471e922d69" prot="public" virt="non-virtual"><scope>wxIconBundle</scope><name>FALLBACK_NEAREST_LARGER</name></member>
+      <member refid="classwx_icon_bundle_1a9a2af35e541b6528949fbe29d035ff50ace97e3a6d1a418f379ff610379db0c3c" prot="public" virt="non-virtual"><scope>wxIconBundle</scope><name>FALLBACK_NONE</name></member>
+      <member refid="classwx_icon_bundle_1a9a2af35e541b6528949fbe29d035ff50a27467ada8c18746e09ed0125eaffaa74" prot="public" virt="non-virtual"><scope>wxIconBundle</scope><name>FALLBACK_SYSTEM</name></member>
       <member refid="classwx_object_1ab3a0c6f723cbaddb47be4e8dd98cc8e2" prot="public" virt="virtual"><scope>wxIconBundle</scope><name>GetClassInfo</name></member>
-      <member refid="classwx_icon_bundle_1aedc5845de7b55c0d172bbdffb8055317" prot="public" virt="non-virtual"><scope>wxIconBundle</scope><name>GetIcon</name></member>
-      <member refid="classwx_icon_bundle_1af1743352dd0730fc957972252f225bd7" prot="public" virt="non-virtual"><scope>wxIconBundle</scope><name>GetIcon</name></member>
+      <member refid="classwx_icon_bundle_1a96ffc72b040c8f15c1f65fb3606488b4" prot="public" virt="non-virtual"><scope>wxIconBundle</scope><name>GetIcon</name></member>
+      <member refid="classwx_icon_bundle_1a4e97d8e76baeda28f71dcbd5d7e76127" prot="public" virt="non-virtual"><scope>wxIconBundle</scope><name>GetIcon</name></member>
       <member refid="classwx_icon_bundle_1a78b33103b5a4b16b2581cec8a334f601" prot="public" virt="non-virtual"><scope>wxIconBundle</scope><name>GetIconByIndex</name></member>
       <member refid="classwx_icon_bundle_1a02acfb70b42a200b4eee9aa51a179860" prot="public" virt="non-virtual"><scope>wxIconBundle</scope><name>GetIconCount</name></member>
       <member refid="classwx_icon_bundle_1ac830fcc74abffa167558dd84fbd34645" prot="public" virt="non-virtual"><scope>wxIconBundle</scope><name>GetIconOfExactSize</name></member>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_string_tokenizer" kind="class" prot="public">
     <compoundname>wxStringTokenizer</compoundname>
     <basecompoundref refid="classwx_object" prot="public" virt="non-virtual">wxObject</basecompoundref>
@@ -159,40 +159,40 @@
 <para>It replaces the standard C function <computeroutput>strtok()</computeroutput> and also extends it in a number of ways.</para><para>To use this class, you should create a <ref refid="classwx_string_tokenizer" kindref="compound">wxStringTokenizer</ref> object, give it the string to tokenize and also the delimiters which separate tokens in the string (by default, white space characters will be used).</para><para>Then <ref refid="classwx_string_tokenizer_1a6537282af1f6b9757393046d780e5270" kindref="member">wxStringTokenizer::GetNextToken()</ref> may be called repeatedly until <ref refid="classwx_string_tokenizer_1a9617fc60328fbc8a502b5da16841fd73" kindref="member">wxStringTokenizer::HasMoreTokens()</ref> returns false.</para><para>For example:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_string_tokenizer" kindref="compound" tooltip="wxStringTokenizer helps you to break a string up into a number of tokens.">wxStringTokenizer</ref><sp/>tokenizer(</highlight><highlight class="stringliteral">&quot;first:second:third:fourth&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;:&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(<sp/>tokenizer.HasMoreTokens()<sp/>)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change...">wxString</ref><sp/>token<sp/>=<sp/>tokenizer.GetNextToken();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change was actually the m...">wxString</ref><sp/>token<sp/>=<sp/>tokenizer.GetNextToken();</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>process<sp/>token<sp/>here</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 </programlisting></para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__data" kindref="compound">Data Structures</ref></para><para><simplesect kind="see"><para><ref refid="group__group__funcmacro__string_1ga2c25293c0f273b78001e02313ca20d96" kindref="member">wxStringTokenize()</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__data" kindref="compound">Data Structures</ref></para><para><simplesect kind="see"><para><ref refid="group__group__funcmacro__string_1ga2c25293c0f273b78001e02313ca20d96" kindref="member">wxStringTokenize()</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10539">
+      <node id="10599">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="10538">
+      <node id="10598">
         <label>wxStringTokenizer</label>
         <link refid="classwx_string_tokenizer"/>
-        <childnode refid="10539" relation="public-inheritance">
+        <childnode refid="10599" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10541">
+      <node id="10601">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="10542" relation="usage">
+        <childnode refid="10602" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="10540">
+      <node id="10600">
         <label>wxStringTokenizer</label>
         <link refid="classwx_string_tokenizer"/>
-        <childnode refid="10541" relation="public-inheritance">
+        <childnode refid="10601" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10542">
+      <node id="10602">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

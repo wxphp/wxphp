@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_web_view_event" kind="class" prot="public">
     <compoundname>wxWebViewEvent</compoundname>
     <basecompoundref refid="classwx_notify_event" prot="public" virt="non-virtual">wxNotifyEvent</basecompoundref>
@@ -82,77 +82,77 @@
 <listitem><para>EVT_WEB_VIEW_NAVIGATING(id,  func): Process a <computeroutput>wxEVT_COMMAND_WEB_VIEW_NAVIGATING</computeroutput> event, generated before trying to get a resource. This event may be vetoed to prevent navigating to this resource. Note that if the displayed HTML document has several frames, one such event will be generated per frame. </para></listitem>
 <listitem><para>EVT_WEB_VIEW_NAVIGATED(id,  func): Process a <computeroutput>wxEVT_COMMAND_WEB_VIEW_NAVIGATED</computeroutput> event generated after it was confirmed that a resource would be requested. This event may not be vetoed. Note that if the displayed HTML document has several frames, one such event will be generated per frame. </para></listitem>
 <listitem><para>EVT_WEB_VIEW_LOADED(id,  func): Process a <computeroutput>wxEVT_COMMAND_WEB_VIEW_LOADED</computeroutput> event generated when the document is fully loaded and displayed. Note that if the displayed HTML document has several frames, one such event will be generated per frame. </para></listitem>
-<listitem><para>EVT_WEB_VIEW_ERRROR(id,  func): Process a <computeroutput>wxEVT_COMMAND_WEB_VIEW_ERROR</computeroutput> event generated when a navigation error occurs. The integer associated with this event will be a wxWebNavigationError item. The string associated with this event may contain a backend-specific more precise error message/code. </para></listitem>
+<listitem><para>EVT_WEB_VIEW_ERROR(id,  func): Process a <computeroutput>wxEVT_COMMAND_WEB_VIEW_ERROR</computeroutput> event generated when a navigation error occurs. The integer associated with this event will be a wxWebNavigationError item. The string associated with this event may contain a backend-specific more precise error message/code. </para></listitem>
 <listitem><para>EVT_WEB_VIEW_NEWWINDOW(id,  func): Process a <computeroutput>wxEVT_COMMAND_WEB_VIEW_NEWWINDOW</computeroutput> event, generated when a new window is created. You must handle this event if you want anything to happen, for example to load the page in a new window or tab. </para></listitem>
 <listitem><para>EVT_WEB_VIEW_TITLE_CHANGED(id,  func): Process a <computeroutput>wxEVT_COMMAND_WEB_VIEW_TITLE_CHANGED</computeroutput> event, generated when the page title changes. Use GetString to get the title. </para></listitem>
 </itemizedlist>
 <simplesect kind="since"><para>2.9.3 <heading level="2"></heading>
 </para></simplesect>
-Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxwebview" kindref="member">wxWebView</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref>, <ref refid="group__group__class__webview" kindref="compound">WebView</ref></para><para><simplesect kind="see"><para><ref refid="classwx_web_view" kindref="compound">wxWebView</ref> </para></simplesect>
+Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxwebview" kindref="member">wxWebView</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref>, <ref refid="group__group__class__webview" kindref="compound">WebView</ref></para><para><simplesect kind="see"><para><ref refid="classwx_web_view" kindref="compound">wxWebView</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="11390">
+      <node id="11451">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="11388">
+      <node id="11449">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="11389" relation="public-inheritance">
+        <childnode refid="11450" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11386">
+      <node id="11447">
         <label>wxWebViewEvent</label>
         <link refid="classwx_web_view_event"/>
-        <childnode refid="11387" relation="public-inheritance">
+        <childnode refid="11448" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11387">
+      <node id="11448">
         <label>wxNotifyEvent</label>
         <link refid="classwx_notify_event"/>
-        <childnode refid="11388" relation="public-inheritance">
+        <childnode refid="11449" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11389">
+      <node id="11450">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="11390" relation="public-inheritance">
+        <childnode refid="11451" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="11395">
+      <node id="11456">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="11396" relation="usage">
+        <childnode refid="11457" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="11393">
+      <node id="11454">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="11394" relation="public-inheritance">
+        <childnode refid="11455" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11391">
+      <node id="11452">
         <label>wxWebViewEvent</label>
         <link refid="classwx_web_view_event"/>
-        <childnode refid="11392" relation="public-inheritance">
+        <childnode refid="11453" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11392">
+      <node id="11453">
         <label>wxNotifyEvent</label>
         <link refid="classwx_notify_event"/>
-        <childnode refid="11393" relation="public-inheritance">
+        <childnode refid="11454" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11394">
+      <node id="11455">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="11395" relation="public-inheritance">
+        <childnode refid="11456" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11396">
+      <node id="11457">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

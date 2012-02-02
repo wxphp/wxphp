@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_file_config" kind="class" prot="public">
     <compoundname>wxFileConfig</compoundname>
     <basecompoundref refid="classwx_config_base" prot="public" virt="non-virtual">wxConfigBase</basecompoundref>
@@ -43,7 +43,7 @@
         <briefdescription>
 <para>Constructor allowing to choose the file names to use. </para>        </briefdescription>
         <detaileddescription>
-<para>If <emphasis>localFilename</emphasis> and/or <emphasis>globalFilename</emphasis> are explicitly specified, they are used as the names of the user and system-wide configuration files (the latter is only read by the program while the former is read from and written to). Otherwise the behaviour depends on <emphasis>style</emphasis> parameter. If it includes wxCONFIG_USE_LOCAL_FILE, then the local file name is constructed from the information in <emphasis>appName</emphasis> and <emphasis>vendorName</emphasis> arguments in a system-dependent way. If wxCONFIG_USE_GLOBAL_FILE is not specified at all (and <emphasis>globalFilename</emphasis> is empty) then the system-wide file is not used at all. Otherwise its name and path are also constructed in the way appropriate for the current platform from the application and vendor names. </para>        </detaileddescription>
+<para>If <emphasis>localFilename</emphasis> and/or <emphasis>globalFilename</emphasis> are explicitly specified, they are used as the names of the user and system-wide configuration files (the latter is only read by the program while the former is read from and written to). Otherwise the behaviour depends on <emphasis>style</emphasis> parameter. If it includes ::wxCONFIG_USE_LOCAL_FILE, then the local file name is constructed from the information in <emphasis>appName</emphasis> and <emphasis>vendorName</emphasis> arguments in a system-dependent way. If ::wxCONFIG_USE_GLOBAL_FILE is not specified at all (and <emphasis>globalFilename</emphasis> is empty) then the system-wide file is not used at all. Otherwise its name and path are also constructed in the way appropriate for the current platform from the application and vendor names. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fileconf.h" line="50"/>
@@ -422,9 +422,9 @@
         <name>DeleteAll</name>
         <reimplements refid="classwx_config_base_1af2dd5ec6b56f89decf0e96b057c4846f">DeleteAll</reimplements>
         <briefdescription>
-<para>Delete the whole underlying object (disk file, registry key, . </para>        </briefdescription>
+<para>Delete the whole underlying object (disk file, registry key, ...). </para>        </briefdescription>
         <detaileddescription>
-<para>..). Primarily for use by uninstallation routine. </para>        </detaileddescription>
+<para>Primarily for use by uninstallation routine. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fileconf.h" line="132"/>
@@ -514,47 +514,47 @@
 <para><ref refid="classwx_file_config" kindref="compound">wxFileConfig</ref> implements <ref refid="classwx_config_base" kindref="compound">wxConfigBase</ref> interface for storing and retrieving configuration information using plain text files. </para>    </briefdescription>
     <detaileddescription>
 <para>The files have a simple format reminiscent of Windows INI files with lines of the form <computeroutput>&quot;key = value&quot;</computeroutput> defining the keys and lines of special form <computeroutput>&quot;[group]&quot;</computeroutput> indicating the start of each group.</para><para>This class is used by default for wxConfig on Unix platforms but may also be used explicitly if you want to use files and not the registry even under Windows.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__cfg" kindref="compound">Application and System configuration</ref></para><para><simplesect kind="see"><para><ref refid="classwx_file_config_1a6220fdc0f07a7e36e559e58d29965337" kindref="member">wxFileConfig::Save</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__cfg" kindref="compound">Application and System configuration</ref></para><para><simplesect kind="see"><para><ref refid="classwx_file_config_1a6220fdc0f07a7e36e559e58d29965337" kindref="member">wxFileConfig::Save</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="6134">
+      <node id="6138">
         <label>wxConfigBase</label>
         <link refid="classwx_config_base"/>
-        <childnode refid="6135" relation="public-inheritance">
+        <childnode refid="6139" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6133">
+      <node id="6137">
         <label>wxFileConfig</label>
         <link refid="classwx_file_config"/>
-        <childnode refid="6134" relation="public-inheritance">
+        <childnode refid="6138" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6135">
+      <node id="6139">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="6137">
+      <node id="6141">
         <label>wxConfigBase</label>
         <link refid="classwx_config_base"/>
-        <childnode refid="6138" relation="public-inheritance">
+        <childnode refid="6142" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6136">
+      <node id="6140">
         <label>wxFileConfig</label>
         <link refid="classwx_file_config"/>
-        <childnode refid="6137" relation="public-inheritance">
+        <childnode refid="6141" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6138">
+      <node id="6142">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="6139" relation="usage">
+        <childnode refid="6143" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="6139">
+      <node id="6143">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

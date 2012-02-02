@@ -1,11 +1,10 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_single_choice_dialog" kind="class" prot="public">
     <compoundname>wxSingleChoiceDialog</compoundname>
     <basecompoundref refid="classwx_dialog" prot="public" virt="non-virtual">wxDialog</basecompoundref>
     <includes local="no">wx/choicdlg.h</includes>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_single_choice_dialog_1ae06193d2820525ba430058a62b9ad45e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
         <definition>wxSingleChoiceDialog::wxSingleChoiceDialog</definition>
@@ -296,107 +295,107 @@
 <para>This class represents a dialog that shows a list of strings, and allows the user to select one. </para>    </briefdescription>
     <detaileddescription>
 <para>Double-clicking on a list item is equivalent to single-clicking and then pressing OK.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__cmndlg" kindref="compound">Common Dialogs</ref></para><para><simplesect kind="see"><para><ref refid="overview__cmndlg_1overview_cmndlg_singlechoice" kindref="member">wxSingleChoiceDialog Overview</ref>, <ref refid="classwx_multi_choice_dialog" kindref="compound">wxMultiChoiceDialog</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__cmndlg" kindref="compound">Common Dialogs</ref></para><para><simplesect kind="see"><para><ref refid="overview_cmndlg_1overview_cmndlg_singlechoice" kindref="member">wxSingleChoiceDialog Overview</ref>, <ref refid="classwx_multi_choice_dialog" kindref="compound">wxMultiChoiceDialog</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10149">
+      <node id="10209">
         <label>wxNonOwnedWindow</label>
         <link refid="classwx_non_owned_window"/>
-        <childnode refid="10150" relation="public-inheritance">
+        <childnode refid="10210" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10152">
+      <node id="10212">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="10151">
+      <node id="10211">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="10152" relation="public-inheritance">
+        <childnode refid="10212" relation="public-inheritance">
         </childnode>
-        <childnode refid="10153" relation="public-inheritance">
+        <childnode refid="10213" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10153">
+      <node id="10213">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="10150">
+      <node id="10210">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="10151" relation="public-inheritance">
+        <childnode refid="10211" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10147">
+      <node id="10207">
         <label>wxDialog</label>
         <link refid="classwx_dialog"/>
-        <childnode refid="10148" relation="public-inheritance">
+        <childnode refid="10208" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10146">
+      <node id="10206">
         <label>wxSingleChoiceDialog</label>
         <link refid="classwx_single_choice_dialog"/>
-        <childnode refid="10147" relation="public-inheritance">
+        <childnode refid="10207" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10148">
+      <node id="10208">
         <label>wxTopLevelWindow</label>
         <link refid="classwx_top_level_window"/>
-        <childnode refid="10149" relation="public-inheritance">
+        <childnode refid="10209" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10157">
+      <node id="10217">
         <label>wxNonOwnedWindow</label>
         <link refid="classwx_non_owned_window"/>
-        <childnode refid="10158" relation="public-inheritance">
+        <childnode refid="10218" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10160">
+      <node id="10220">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="10161" relation="usage">
+        <childnode refid="10221" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="10159">
+      <node id="10219">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="10160" relation="public-inheritance">
+        <childnode refid="10220" relation="public-inheritance">
         </childnode>
-        <childnode refid="10162" relation="public-inheritance">
+        <childnode refid="10222" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10162">
+      <node id="10222">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="10158">
+      <node id="10218">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="10159" relation="public-inheritance">
+        <childnode refid="10219" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10155">
+      <node id="10215">
         <label>wxDialog</label>
         <link refid="classwx_dialog"/>
-        <childnode refid="10156" relation="public-inheritance">
+        <childnode refid="10216" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10154">
+      <node id="10214">
         <label>wxSingleChoiceDialog</label>
         <link refid="classwx_single_choice_dialog"/>
-        <childnode refid="10155" relation="public-inheritance">
+        <childnode refid="10215" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10156">
+      <node id="10216">
         <label>wxTopLevelWindow</label>
         <link refid="classwx_top_level_window"/>
-        <childnode refid="10157" relation="public-inheritance">
+        <childnode refid="10217" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10161">
+      <node id="10221">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
@@ -730,6 +729,7 @@
       <member refid="classwx_window_1a81f23590239934fa10fded0566a65d8c" prot="public" virt="non-virtual"><scope>wxSingleChoiceDialog</scope><name>SetPosition</name></member>
       <member refid="classwx_window_1a07f5f7ed3f78e0ef7b3dee3f4da81001" prot="public" virt="virtual"><scope>wxSingleChoiceDialog</scope><name>SetPreviousHandler</name></member>
       <member refid="classwx_object_1afab780710f2adc1bb33310e27590140b" prot="public" virt="non-virtual"><scope>wxSingleChoiceDialog</scope><name>SetRefData</name></member>
+      <member refid="classwx_top_level_window_1a82afa6f09dd5faef6330807ef59374e8" prot="public" virt="virtual"><scope>wxSingleChoiceDialog</scope><name>SetRepresentedFilename</name></member>
       <member refid="classwx_dialog_1a0d04ed85ac5cd271a61514d446340673" prot="public" virt="non-virtual"><scope>wxSingleChoiceDialog</scope><name>SetReturnCode</name></member>
       <member refid="classwx_top_level_window_1a98e95b1b10f44b80f9b29a03ab09a879" prot="public" virt="non-virtual"><scope>wxSingleChoiceDialog</scope><name>SetRightMenu</name></member>
       <member refid="classwx_window_1aa842d59529f873683e55cd8392ec46e9" prot="public" virt="virtual"><scope>wxSingleChoiceDialog</scope><name>SetScrollbar</name></member>

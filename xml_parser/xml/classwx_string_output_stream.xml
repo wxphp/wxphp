@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_string_output_stream" kind="class" prot="public">
     <compoundname>wxStringOutputStream</compoundname>
     <basecompoundref refid="classwx_output_stream" prot="public" virt="non-virtual">wxOutputStream</basecompoundref>
@@ -46,40 +46,40 @@
 <para>This class implements an output stream which writes data either to a user-provided or internally allocated string. </para>    </briefdescription>
     <detaileddescription>
 <para>Note that currently this stream does not support seeking but can tell its current position.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__streams" kindref="compound">Streams</ref> </para>    </detaileddescription>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__streams" kindref="compound">Streams</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10534">
+      <node id="10594">
         <label>wxStreamBase</label>
         <link refid="classwx_stream_base"/>
       </node>
-      <node id="10532">
+      <node id="10592">
         <label>wxStringOutputStream</label>
         <link refid="classwx_string_output_stream"/>
-        <childnode refid="10533" relation="public-inheritance">
+        <childnode refid="10593" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10533">
+      <node id="10593">
         <label>wxOutputStream</label>
         <link refid="classwx_output_stream"/>
-        <childnode refid="10534" relation="public-inheritance">
+        <childnode refid="10594" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10537">
+      <node id="10597">
         <label>wxStreamBase</label>
         <link refid="classwx_stream_base"/>
       </node>
-      <node id="10535">
+      <node id="10595">
         <label>wxStringOutputStream</label>
         <link refid="classwx_string_output_stream"/>
-        <childnode refid="10536" relation="public-inheritance">
+        <childnode refid="10596" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10536">
+      <node id="10596">
         <label>wxOutputStream</label>
         <link refid="classwx_output_stream"/>
-        <childnode refid="10537" relation="public-inheritance">
+        <childnode refid="10597" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>

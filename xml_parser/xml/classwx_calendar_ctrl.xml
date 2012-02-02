@@ -1,12 +1,11 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_calendar_ctrl" kind="class" prot="public">
     <compoundname>wxCalendarCtrl</compoundname>
     <basecompoundref refid="classwx_control" prot="public" virt="non-virtual">wxControl</basecompoundref>
     <includes local="no">wx/calctrl.h</includes>
       <sectiondef kind="user-defined">
       <header>Date Range Functions</header>
-      <description><para><anchor id="_1amgrp1eff549d5f94fbe96a6ceaf84d69e836"/> </para></description>
       <memberdef kind="function" id="classwx_calendar_ctrl_1a79094f14e7b500012099907dea5f3211" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
         <definition>virtual bool wxCalendarCtrl::SetDateRange</definition>
@@ -255,7 +254,7 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000004"><xreftitle>Deprecated</xreftitle><xrefdescription></xrefdescription></xrefsect>This function should be used instead of changing <computeroutput>wxCAL_NO_YEAR_CHANGE</computeroutput> style bit directly. It allows or disallows the user to change the year interactively. Only in generic <ref refid="classwx_calendar_ctrl" kindref="compound">wxCalendarCtrl</ref>. </para>        </detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000004"><xreftitle>Deprecated</xreftitle><xrefdescription></xrefdescription></xrefsect></para><para>This function should be used instead of changing <computeroutput>wxCAL_NO_YEAR_CHANGE</computeroutput> style bit directly. It allows or disallows the user to change the year interactively. Only in generic <ref refid="classwx_calendar_ctrl" kindref="compound">wxCalendarCtrl</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/calctrl.h" line="324"/>
@@ -582,84 +581,84 @@
 </itemizedlist>
 <simplesect kind="note"><para>Changing the selected date will trigger an EVT_CALENDAR_DAY, MONTH or YEAR event as well as an EVT_CALENDAR_SEL_CHANGED event.</para></simplesect>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref> <htmlonly> &lt;br&gt;&lt;div&gt;&lt;span class=&apos;appearance&apos;&gt;Appearance:&lt;/span&gt;&lt;br&gt;&lt;table class=&apos;appearance&apos;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&apos;wxmsw/calendarctrl.png&apos; alt=&apos;wxMSW appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxgtk/calendarctrl.png&apos; alt=&apos;wxGTK appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxmac/calendarctrl.png&apos; alt=&apos;wxMac appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;wxMSW appearance&lt;/td&gt;&lt;td&gt;wxGTK appearance&lt;/td&gt;&lt;td&gt;wxMac appearance&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt; </htmlonly></para><para>Implementations:<nonbreakablespace/><nonbreakablespace/>native under <ref refid="page__port_1page_port_wxgtk" kindref="member">wxGTK</ref>, <ref refid="page__port_1page_port_wxmsw" kindref="member">wxMSW</ref> ports; a generic implementation is used elsewhere.</para><para><simplesect kind="see"><para><ref refid="page__samples_1page_samples_calendar" kindref="member">Calendar Sample</ref>, <ref refid="classwx_calendar_date_attr" kindref="compound">wxCalendarDateAttr</ref>, <ref refid="classwx_calendar_event" kindref="compound">wxCalendarEvent</ref>, <ref refid="classwx_date_picker_ctrl" kindref="compound">wxDatePickerCtrl</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref> <htmlonly> &lt;br&gt;&lt;div&gt;&lt;span class=&apos;appearance&apos;&gt;Appearance:&lt;/span&gt;&lt;br&gt;&lt;table class=&apos;appearance&apos;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&apos;wxmsw/calendarctrl.png&apos; alt=&apos;wxMSW appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxgtk/calendarctrl.png&apos; alt=&apos;wxGTK appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxmac/calendarctrl.png&apos; alt=&apos;wxMac appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;wxMSW appearance&lt;/td&gt;&lt;td&gt;wxGTK appearance&lt;/td&gt;&lt;td&gt;wxMac appearance&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt; </htmlonly></para><para>Implementations:<nonbreakablespace/><nonbreakablespace/>native under <ref refid="page_port_1page_port_wxgtk" kindref="member">wxGTK</ref>, <ref refid="page_port_1page_port_wxmsw" kindref="member">wxMSW</ref> ports; a generic implementation is used elsewhere.</para><para><simplesect kind="see"><para><ref refid="page_samples_1page_samples_calendar" kindref="member">Calendar Sample</ref>, <ref refid="classwx_calendar_date_attr" kindref="compound">wxCalendarDateAttr</ref>, <ref refid="classwx_calendar_event" kindref="compound">wxCalendarEvent</ref>, <ref refid="classwx_date_picker_ctrl" kindref="compound">wxDatePickerCtrl</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="4663">
+      <node id="4667">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="4662">
+      <node id="4666">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="4663" relation="public-inheritance">
+        <childnode refid="4667" relation="public-inheritance">
         </childnode>
-        <childnode refid="4664" relation="public-inheritance">
+        <childnode refid="4668" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4664">
+      <node id="4668">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="4660">
+      <node id="4664">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="4661" relation="public-inheritance">
+        <childnode refid="4665" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4661">
+      <node id="4665">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="4662" relation="public-inheritance">
+        <childnode refid="4666" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4659">
+      <node id="4663">
         <label>wxCalendarCtrl</label>
         <link refid="classwx_calendar_ctrl"/>
-        <childnode refid="4660" relation="public-inheritance">
+        <childnode refid="4664" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="4669">
+      <node id="4673">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="4670" relation="usage">
+        <childnode refid="4674" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="4668">
+      <node id="4672">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="4669" relation="public-inheritance">
+        <childnode refid="4673" relation="public-inheritance">
         </childnode>
+        <childnode refid="4675" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4675">
+        <label>wxTrackable</label>
+        <link refid="classwx_trackable"/>
+      </node>
+      <node id="4670">
+        <label>wxControl</label>
+        <link refid="classwx_control"/>
         <childnode refid="4671" relation="public-inheritance">
         </childnode>
       </node>
       <node id="4671">
-        <label>wxTrackable</label>
-        <link refid="classwx_trackable"/>
-      </node>
-      <node id="4666">
-        <label>wxControl</label>
-        <link refid="classwx_control"/>
-        <childnode refid="4667" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4667">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="4668" relation="public-inheritance">
+        <childnode refid="4672" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4670">
+      <node id="4674">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
-      <node id="4665">
+      <node id="4669">
         <label>wxCalendarCtrl</label>
         <link refid="classwx_calendar_ctrl"/>
-        <childnode refid="4666" relation="public-inheritance">
+        <childnode refid="4670" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>

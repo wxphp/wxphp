@@ -1,10 +1,9 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="colour_8h" kind="file">
     <compoundname>colour.h</compoundname>
     <innerclass refid="classwx_colour" prot="public">wxColour</innerclass>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="enum" id="colour_8h_1a99fb83031ce9923c84392b4e92f956b5" prot="public" static="no">
         <name>@2</name>
         <enumvalue id="colour_8h_1a99fb83031ce9923c84392b4e92f956b5a11f9e43cf157a8d4b49c87c957807bea" prot="public">
@@ -42,7 +41,6 @@
       </sectiondef>
       <sectiondef kind="user-defined">
       <header>Predefined colors.</header>
-      <description><para><anchor id="_1amgrp53cbe6475a70038d27355642f8f3f03f"/> </para></description>
       <memberdef kind="variable" id="colour_8h_1a882fc9395ce82080f0c2c91ca04731d6" prot="public" static="no" mutable="no">
         <type><ref refid="classwx_colour" kindref="compound">wxColour</ref></type>
         <definition>wxColour wxNullColour</definition>
@@ -222,7 +220,7 @@
 <para>Converts string to a <ref refid="classwx_colour" kindref="compound">wxColour</ref> best represented by the given string. </para>        </briefdescription>
         <detaileddescription>
 <para>Returns true on success.</para><para><simplesect kind="see"><para><ref refid="group__group__funcmacro__misc_1ga0adf8026ea8ed126420a2e7ef9edc678" kindref="member">wxToString(const wxColour&amp;)</ref></para></simplesect>
-Include file: <verbatim>#include &lt;wx/colour.h&gt; </verbatim> </para>        </detaileddescription>
+Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/colour.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h" line="308"/>
@@ -240,7 +238,7 @@ Include file: <verbatim>#include &lt;wx/colour.h&gt; </verbatim> </para>        
 <para>Converts the given <ref refid="classwx_colour" kindref="compound">wxColour</ref> into a string. </para>        </briefdescription>
         <detaileddescription>
 <para><simplesect kind="see"><para><ref refid="group__group__funcmacro__misc_1ga598ae7504c6436af325490b41f4b5e90" kindref="member">wxFromString(const wxString&amp;, wxColour*)</ref></para></simplesect>
-Include file: <verbatim>#include &lt;wx/colour.h&gt; </verbatim> </para>        </detaileddescription>
+Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/colour.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h" line="317"/>

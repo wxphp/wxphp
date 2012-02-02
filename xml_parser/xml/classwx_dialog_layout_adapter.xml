@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_dialog_layout_adapter" kind="class" prot="public">
     <compoundname>wxDialogLayoutAdapter</compoundname>
     <includes local="no">wx/dialog.h</includes>
@@ -56,7 +56,7 @@
 <para>This abstract class is the base for classes that help wxWidgets perform run-time layout adaptation of dialogs. </para>    </briefdescription>
     <detaileddescription>
 <para>Principally, this is to cater for small displays by making part of the dialog scroll, but the application developer may find other uses for layout adaption.</para><para>By default, there is one instance of wxStandardDialogLayoutAdapter which can perform adaptation for most custom dialogs and dialogs with book controls such as <ref refid="classwx_property_sheet_dialog" kindref="compound">wxPropertySheetDialog</ref>.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__winlayout" kindref="compound">Window Layout</ref></para><para><simplesect kind="see"><para><ref refid="overview__dialog_1overview_dialog_autoscrolling" kindref="member">Automatic scrolling dialogs</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__winlayout" kindref="compound">Window Layout</ref></para><para><simplesect kind="see"><para><ref refid="overview_dialog_1overview_dialog_autoscrolling" kindref="member">Automatic scrolling dialogs</ref> </para></simplesect>
 </para>    </detaileddescription>
     <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dialog.h" line="658" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dialog.h" bodystart="657" bodyend="676"/>
     <listofallmembers>

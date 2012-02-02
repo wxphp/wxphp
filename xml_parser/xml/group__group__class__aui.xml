@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="group__group__class__aui" kind="group">
     <compoundname>group_class_aui</compoundname>
     <title>Window Docking (wxAUI)</title>
@@ -109,7 +109,7 @@
         </briefdescription>
         <detaileddescription>
 <para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxaui" kindref="member">wxAui</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__aui" kindref="compound">Window Docking (wxAUI)</ref> </para>        </detaileddescription>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxaui" kindref="member">wxAui</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__aui" kindref="compound">Window Docking (wxAUI)</ref> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/toolbar.h" line="15" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/toolbar.h" bodystart="14" bodyend="36"/>
@@ -144,7 +144,7 @@
         </briefdescription>
         <detaileddescription>
 <para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxaui" kindref="member">wxAui</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__aui" kindref="compound">Window Docking (wxAUI)</ref> </para>        </detaileddescription>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxaui" kindref="member">wxAui</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__aui" kindref="compound">Window Docking (wxAUI)</ref> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/toolbar.h" line="43" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/toolbar.h" bodystart="42" bodyend="47"/>
@@ -187,7 +187,7 @@
         </briefdescription>
         <detaileddescription>
 <para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxaui" kindref="member">wxAui</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__aui" kindref="compound">Window Docking (wxAUI)</ref> </para>        </detaileddescription>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxaui" kindref="member">wxAui</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__aui" kindref="compound">Window Docking (wxAUI)</ref> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/toolbar.h" line="54" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/toolbar.h" bodystart="53" bodyend="59"/>
@@ -196,6 +196,6 @@
     <briefdescription>
 <para>wxAUI is a set classes for writing a customizable application interface with built-in docking, floatable panes and a flexible MDI-like interface. </para>    </briefdescription>
     <detaileddescription>
-<para>Related Overviews: <ref refid="overview__aui" kindref="compound">wxAUI Overview</ref> </para>    </detaileddescription>
+<para>Related Overviews: <ref refid="overview_aui" kindref="compound">wxAUI Overview</ref> </para>    </detaileddescription>
   </compounddef>
 </doxygen>

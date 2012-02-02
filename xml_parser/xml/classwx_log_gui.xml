@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_log_gui" kind="class" prot="public">
     <compoundname>wxLogGui</compoundname>
     <basecompoundref refid="classwx_log" prot="public" virt="non-virtual">wxLog</basecompoundref>
@@ -274,35 +274,35 @@
     <briefdescription>
 <para>This is the default log target for the GUI wxWidgets applications. </para>    </briefdescription>
     <detaileddescription>
-<para>Please see <ref refid="overview__log_1overview_log_customize" kindref="member">Logging Customization</ref> for explanation of how to change the default log target.</para><para>An object of this class is used by default to show the log messages created by using <ref refid="group__group__funcmacro__log_1ga249358701f3c2d410088ddf7a61d8564" kindref="member">wxLogMessage()</ref>, <ref refid="group__group__funcmacro__log_1ga0dd3c633f990f794e76065c9a7af4c87" kindref="member">wxLogError()</ref> and other logging functions. It doesn&apos;t display the messages logged by them immediately however but accumulates all messages logged during an event handler execution and then shows them all at once when its <ref refid="classwx_log_gui_1ac7614396e348c3472bd8d28ba86d782a" kindref="member">Flush()</ref> method is called during the idle time processing. This has the important advantage of showing only a single dialog to the user even if several messages were logged because of a single error as it often happens (e.g. a low level function could log a message because it failed to open a file resulting in its caller logging another message due to the failure of higher level operation requiring the use of this file). If you need to force the display of all previously logged messages immediately you can use <ref refid="classwx_log_1ab0808092c4ec1d503e261d9d226d7e90" kindref="member">wxLog::FlushActive()</ref> to force the dialog display.</para><para>Also notice that if an error message is logged when several informative messages had been already logged before, the informative messages are discarded on the assumption that they are not useful -- and may be confusing and hence harmful -- any more after the error. The warning and error messages are never discarded however and any informational messages logged after the first error one are also kept (as they may contain information about the error recovery). You may override DoLog() method to change this behaviour.</para><para>At any rate, it is possible that that several messages were accumulated before this class <ref refid="classwx_log_gui_1ac7614396e348c3472bd8d28ba86d782a" kindref="member">Flush()</ref> method is called. If this is the case, <ref refid="classwx_log_gui_1ac7614396e348c3472bd8d28ba86d782a" kindref="member">Flush()</ref> uses a custom dialog which shows the last message directly and allows the user to view the previously logged ones by expanding the &quot;Details&quot; <ref refid="classwx_collapsible_pane" kindref="compound">wxCollapsiblePane</ref> inside it. This custom dialog also provides the buttons for copying the log messages to the clipboard and saving them to a file.</para><para>However if only a single message is present when <ref refid="classwx_log_gui_1ac7614396e348c3472bd8d28ba86d782a" kindref="member">Flush()</ref> is called, just a <ref refid="group__group__funcmacro__dialog_1gaf8a6b7e1e34eae82d3d75e3721298b26" kindref="member">wxMessageBox()</ref> is used to show it. This has the advantage of being closer to the native behaviour but it doesn&apos;t give the user any possibility to copy or save the message (except for the recent Windows versions where <computeroutput>Ctrl-C</computeroutput> may be pressed in the message box to copy its contents to the clipboard) so you may want to override DoShowSingleMessage() to customize <ref refid="classwx_log_gui" kindref="compound">wxLogGui</ref> -- the dialogs sample shows how to do this.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__logging" kindref="compound">Logging</ref> </para>    </detaileddescription>
+<para>Please see <ref refid="overview_log_1overview_log_customize" kindref="member">Logging Customization</ref> for explanation of how to change the default log target.</para><para>An object of this class is used by default to show the log messages created by using <ref refid="group__group__funcmacro__log_1ga249358701f3c2d410088ddf7a61d8564" kindref="member">wxLogMessage()</ref>, <ref refid="group__group__funcmacro__log_1ga0dd3c633f990f794e76065c9a7af4c87" kindref="member">wxLogError()</ref> and other logging functions. It doesn&apos;t display the messages logged by them immediately however but accumulates all messages logged during an event handler execution and then shows them all at once when its <ref refid="classwx_log_gui_1ac7614396e348c3472bd8d28ba86d782a" kindref="member">Flush()</ref> method is called during the idle time processing. This has the important advantage of showing only a single dialog to the user even if several messages were logged because of a single error as it often happens (e.g. a low level function could log a message because it failed to open a file resulting in its caller logging another message due to the failure of higher level operation requiring the use of this file). If you need to force the display of all previously logged messages immediately you can use <ref refid="classwx_log_1ab0808092c4ec1d503e261d9d226d7e90" kindref="member">wxLog::FlushActive()</ref> to force the dialog display.</para><para>Also notice that if an error message is logged when several informative messages had been already logged before, the informative messages are discarded on the assumption that they are not useful -- and may be confusing and hence harmful -- any more after the error. The warning and error messages are never discarded however and any informational messages logged after the first error one are also kept (as they may contain information about the error recovery). You may override DoLog() method to change this behaviour.</para><para>At any rate, it is possible that that several messages were accumulated before this class <ref refid="classwx_log_gui_1ac7614396e348c3472bd8d28ba86d782a" kindref="member">Flush()</ref> method is called. If this is the case, <ref refid="classwx_log_gui_1ac7614396e348c3472bd8d28ba86d782a" kindref="member">Flush()</ref> uses a custom dialog which shows the last message directly and allows the user to view the previously logged ones by expanding the &quot;Details&quot; <ref refid="classwx_collapsible_pane" kindref="compound">wxCollapsiblePane</ref> inside it. This custom dialog also provides the buttons for copying the log messages to the clipboard and saving them to a file.</para><para>However if only a single message is present when <ref refid="classwx_log_gui_1ac7614396e348c3472bd8d28ba86d782a" kindref="member">Flush()</ref> is called, just a <ref refid="group__group__funcmacro__dialog_1gaf8a6b7e1e34eae82d3d75e3721298b26" kindref="member">wxMessageBox()</ref> is used to show it. This has the advantage of being closer to the native behaviour but it doesn&apos;t give the user any possibility to copy or save the message (except for the recent Windows versions where <computeroutput>Ctrl-C</computeroutput> may be pressed in the message box to copy its contents to the clipboard) so you may want to override DoShowSingleMessage() to customize <ref refid="classwx_log_gui" kindref="compound">wxLogGui</ref> -- the dialogs sample shows how to do this.</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__logging" kindref="compound">Logging</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7508">
+      <node id="7514">
         <label>wxLog</label>
         <link refid="classwx_log"/>
       </node>
-      <node id="7507">
+      <node id="7513">
         <label>wxLogGui</label>
         <link refid="classwx_log_gui"/>
-        <childnode refid="7508" relation="public-inheritance">
+        <childnode refid="7514" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7511">
+      <node id="7517">
         <label>wxArrayString</label>
         <link refid="classwx_array_string"/>
       </node>
-      <node id="7510">
+      <node id="7516">
         <label>wxLog</label>
         <link refid="classwx_log"/>
       </node>
-      <node id="7509">
+      <node id="7515">
         <label>wxLogGui</label>
         <link refid="classwx_log_gui"/>
-        <childnode refid="7510" relation="public-inheritance">
+        <childnode refid="7516" relation="public-inheritance">
         </childnode>
-        <childnode refid="7511" relation="usage">
+        <childnode refid="7517" relation="usage">
           <edgelabel>m_aMessages</edgelabel>
         </childnode>
       </node>
@@ -344,6 +344,7 @@
       <member refid="classwx_log_1a14a562556933276939cedbb470f149cb" prot="public" virt="non-virtual"><scope>wxLogGui</scope><name>Resume</name></member>
       <member refid="classwx_log_1ac7ea85f71c8d3ecd4247f412be410505" prot="public" virt="non-virtual"><scope>wxLogGui</scope><name>SetActiveTarget</name></member>
       <member refid="classwx_log_1a7ae244e71dff20efd3a37b3718841a39" prot="public" virt="non-virtual"><scope>wxLogGui</scope><name>SetComponentLevel</name></member>
+      <member refid="classwx_log_1a9f316422df6930c549db80a5e4bf36a2" prot="public" virt="non-virtual"><scope>wxLogGui</scope><name>SetFormatter</name></member>
       <member refid="classwx_log_1a4ea68379469ca27f645d5f91c2d42b3b" prot="public" virt="non-virtual"><scope>wxLogGui</scope><name>SetLogLevel</name></member>
       <member refid="classwx_log_1ae814f9b9b4c8b4a52e34d7c919f98296" prot="public" virt="non-virtual"><scope>wxLogGui</scope><name>SetRepetitionCounting</name></member>
       <member refid="classwx_log_1a2525bf54fa3f31dc50e6e3cd8651e71d" prot="public" virt="non-virtual"><scope>wxLogGui</scope><name>SetThreadActiveTarget</name></member>

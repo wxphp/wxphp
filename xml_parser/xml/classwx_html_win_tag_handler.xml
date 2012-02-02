@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_html_win_tag_handler" kind="class" prot="public">
     <compoundname>wxHtmlWinTagHandler</compoundname>
     <basecompoundref refid="classwx_html_tag_handler" prot="public" virt="non-virtual">wxHtmlTagHandler</basecompoundref>
@@ -23,62 +23,62 @@
 <para>This is basically <ref refid="classwx_html_tag_handler" kindref="compound">wxHtmlTagHandler</ref> except that it is extended with protected member m_WParser pointing to the <ref refid="classwx_html_win_parser" kindref="compound">wxHtmlWinParser</ref> object (value of this member is identical to wxHtmlParser&apos;s m_Parser). </para>    </briefdescription>
     <detaileddescription>
 <para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxhtml" kindref="member">wxHTML</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__html" kindref="compound">HTML</ref> </para>    </detaileddescription>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxhtml" kindref="member">wxHTML</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__html" kindref="compound">HTML</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7145">
+      <node id="7149">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="7143">
+      <node id="7147">
         <label>wxHtmlWinTagHandler</label>
         <link refid="classwx_html_win_tag_handler"/>
-        <childnode refid="7144" relation="public-inheritance">
+        <childnode refid="7148" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7144">
+      <node id="7148">
         <label>wxHtmlTagHandler</label>
         <link refid="classwx_html_tag_handler"/>
-        <childnode refid="7145" relation="public-inheritance">
+        <childnode refid="7149" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7148">
+      <node id="7152">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="7149" relation="usage">
+        <childnode refid="7153" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="7151">
+      <node id="7155">
         <label>wxHtmlWinParser</label>
         <link refid="classwx_html_win_parser"/>
-        <childnode refid="7150" relation="public-inheritance">
+        <childnode refid="7154" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7146">
+      <node id="7150">
         <label>wxHtmlWinTagHandler</label>
         <link refid="classwx_html_win_tag_handler"/>
-        <childnode refid="7147" relation="public-inheritance">
+        <childnode refid="7151" relation="public-inheritance">
         </childnode>
-        <childnode refid="7151" relation="usage">
+        <childnode refid="7155" relation="usage">
           <edgelabel>m_WParser</edgelabel>
         </childnode>
       </node>
-      <node id="7147">
+      <node id="7151">
         <label>wxHtmlTagHandler</label>
         <link refid="classwx_html_tag_handler"/>
-        <childnode refid="7148" relation="public-inheritance">
+        <childnode refid="7152" relation="public-inheritance">
         </childnode>
-        <childnode refid="7150" relation="usage">
+        <childnode refid="7154" relation="usage">
           <edgelabel>m_Parser</edgelabel>
         </childnode>
       </node>
-      <node id="7149">
+      <node id="7153">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
-      <node id="7150">
+      <node id="7154">
         <label>wxHtmlParser</label>
         <link refid="classwx_html_parser"/>
       </node>

@@ -1,11 +1,10 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_grid_bag_sizer" kind="class" prot="public">
     <compoundname>wxGridBagSizer</compoundname>
     <basecompoundref refid="classwx_flex_grid_sizer" prot="public" virt="non-virtual">wxFlexGridSizer</basecompoundref>
     <includes local="no">wx/gbsizer.h</includes>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_grid_bag_sizer_1a6ebe8e9beed20c4b69e66bebe49735a5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_sizer_item" kindref="compound">wxSizerItem</ref> *</type>
         <definition>wxSizerItem* wxGridBagSizer::Add</definition>
@@ -156,7 +155,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_grid_bag_sizer_1a6eeacb196cb017f5772c5efbb041af89" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
         <definition>bool wxGridBagSizer::CheckForIntersection</definition>
@@ -207,7 +205,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_grid_bag_sizer_1afd6961bb50e602a7a7d2f9059e3c8d46" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_g_b_sizer_item" kindref="compound">wxGBSizerItem</ref> *</type>
         <definition>wxGBSizerItem* wxGridBagSizer::FindItem</definition>
@@ -244,7 +241,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_grid_bag_sizer_1a9aab78eb0dc76273d06c42999d998123" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_g_b_position" kindref="compound">wxGBPosition</ref></type>
         <definition>wxGBPosition wxGridBagSizer::GetItemPosition</definition>
@@ -298,7 +294,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_grid_bag_sizer_1aa071287e1f6ba7bedd229b59c17d760b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_g_b_span" kindref="compound">wxGBSpan</ref></type>
         <definition>wxGBSpan wxGridBagSizer::GetItemSpan</definition>
@@ -352,7 +347,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_grid_bag_sizer_1ae201d64c488895851e2b1d5499150433" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
         <definition>bool wxGridBagSizer::SetItemPosition</definition>
@@ -418,7 +412,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_grid_bag_sizer_1a83d09fb358698a56b69ed2219c4f600a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
         <definition>bool wxGridBagSizer::SetItemSpan</definition>
@@ -642,70 +635,70 @@
 <para>A <ref refid="classwx_sizer" kindref="compound">wxSizer</ref> that can lay out items in a virtual grid like a <ref refid="classwx_flex_grid_sizer" kindref="compound">wxFlexGridSizer</ref> but in this case explicit positioning of the items is allowed using <ref refid="classwx_g_b_position" kindref="compound">wxGBPosition</ref>, and items can optionally span more than one row and/or column using <ref refid="classwx_g_b_span" kindref="compound">wxGBSpan</ref>. </para>    </briefdescription>
     <detaileddescription>
 <para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__winlayout" kindref="compound">Window Layout</ref> </para>    </detaileddescription>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__winlayout" kindref="compound">Window Layout</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="6626">
-        <label>wxFlexGridSizer</label>
-        <link refid="classwx_flex_grid_sizer"/>
-        <childnode refid="6627" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="6629">
-        <label>wxObject</label>
-        <link refid="classwx_object"/>
-      </node>
-      <node id="6625">
-        <label>wxGridBagSizer</label>
-        <link refid="classwx_grid_bag_sizer"/>
-        <childnode refid="6626" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="6628">
-        <label>wxSizer</label>
-        <link refid="classwx_sizer"/>
-        <childnode refid="6629" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="6627">
-        <label>wxGridSizer</label>
-        <link refid="classwx_grid_sizer"/>
-        <childnode refid="6628" relation="public-inheritance">
-        </childnode>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
-      <node id="6631">
-        <label>wxFlexGridSizer</label>
-        <link refid="classwx_flex_grid_sizer"/>
-        <childnode refid="6632" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="6634">
-        <label>wxObject</label>
-        <link refid="classwx_object"/>
-        <childnode refid="6635" relation="usage">
-          <edgelabel>m_refData</edgelabel>
-        </childnode>
-      </node>
       <node id="6630">
-        <label>wxGridBagSizer</label>
-        <link refid="classwx_grid_bag_sizer"/>
+        <label>wxFlexGridSizer</label>
+        <link refid="classwx_flex_grid_sizer"/>
         <childnode refid="6631" relation="public-inheritance">
         </childnode>
       </node>
       <node id="6633">
-        <label>wxSizer</label>
-        <link refid="classwx_sizer"/>
-        <childnode refid="6634" relation="public-inheritance">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+      </node>
+      <node id="6629">
+        <label>wxGridBagSizer</label>
+        <link refid="classwx_grid_bag_sizer"/>
+        <childnode refid="6630" relation="public-inheritance">
         </childnode>
       </node>
       <node id="6632">
-        <label>wxGridSizer</label>
-        <link refid="classwx_grid_sizer"/>
+        <label>wxSizer</label>
+        <link refid="classwx_sizer"/>
         <childnode refid="6633" relation="public-inheritance">
         </childnode>
       </node>
+      <node id="6631">
+        <label>wxGridSizer</label>
+        <link refid="classwx_grid_sizer"/>
+        <childnode refid="6632" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
       <node id="6635">
+        <label>wxFlexGridSizer</label>
+        <link refid="classwx_flex_grid_sizer"/>
+        <childnode refid="6636" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6638">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="6639" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="6634">
+        <label>wxGridBagSizer</label>
+        <link refid="classwx_grid_bag_sizer"/>
+        <childnode refid="6635" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6637">
+        <label>wxSizer</label>
+        <link refid="classwx_sizer"/>
+        <childnode refid="6638" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6636">
+        <label>wxGridSizer</label>
+        <link refid="classwx_grid_sizer"/>
+        <childnode refid="6637" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6639">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

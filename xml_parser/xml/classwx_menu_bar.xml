@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_menu_bar" kind="class" prot="public">
     <compoundname>wxMenuBar</compoundname>
     <basecompoundref refid="classwx_window" prot="public" virt="non-virtual">wxWindow</basecompoundref>
@@ -217,6 +217,32 @@
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="108"/>
       </memberdef>
+      <memberdef kind="function" id="classwx_menu_bar_1a580d2873f93ac3d7ed73e8228fdafd32" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxMenuBar::IsEnabledTop</definition>
+        <argsstring>(size_t pos) const </argsstring>
+        <name>IsEnabledTop</name>
+        <param>
+          <type>size_t</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if the menu with the given index is enabled. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The menu position (0-based)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="since"><para>2.9.4 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="118"/>
+      </memberdef>
       <memberdef kind="function" id="classwx_menu_bar_1ae995701578fa19cc6ae528cfb13a4d7d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
         <definition>virtual void wxMenuBar::EnableTop</definition>
@@ -252,7 +278,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="120"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="130"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_bar_1a72a687fc651015d2e5ed13ec08421771" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_menu_item" kindref="compound">wxMenuItem</ref> *</type>
@@ -290,7 +316,7 @@
 <bold>wxPerl Note:</bold> In wxPerl this method takes just the <emphasis>id</emphasis> parameter; in scalar context it returns the associated <computeroutput>Wx::MenuItem</computeroutput>, in list context it returns a 2-element list (item, submenu). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="138"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="148"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_bar_1ad4b4ab008d8ce44175c0d1fdf04a8dfe" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -307,7 +333,7 @@
 <para>The <emphasis>title</emphasis> parameter may specify either the menu title (with accelerator characters, i.e. <computeroutput>&quot;&amp;File&quot;</computeroutput>) or just the menu label (<computeroutput>&quot;File&quot;</computeroutput>) indifferently. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="148"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="158"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_bar_1acb65b9dd177f1ee86c0152a7d76bc683" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>int</type>
@@ -345,7 +371,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="164"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="174"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_bar_1a2192b1438a15162576cbb7229e5bba92" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -372,7 +398,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="177"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="187"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_bar_1a483e76c0b8ede4003d6af4a517abc143" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -399,7 +425,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="190"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="200"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_bar_1a8668fed74dce3aef498f7e6b1ffab46f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -423,11 +449,11 @@
 </parameterlist>
 <simplesect kind="return"><para>The menu label, or the empty string if the menu was not found.</para></simplesect>
 <simplesect kind="remark"><para>Use only after the menubar has been associated with a frame.</para></simplesect>
-<xrefsect id="deprecated_1_deprecated000037"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This function is deprecated in favour of <ref refid="classwx_menu_bar_1a91a17429979973efabe5fe568e2a605e" kindref="member">GetMenuLabel()</ref> and <ref refid="classwx_menu_bar_1a3e1461a2f953578d9d3e8e827903914f" kindref="member">GetMenuLabelText()</ref>.</para></xrefdescription></xrefsect><simplesect kind="see"><para><ref refid="classwx_menu_bar_1ab21c09c911ec182f1b4fe566350b2437" kindref="member">SetLabelTop()</ref> </para></simplesect>
+<xrefsect id="deprecated_1_deprecated000037"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This function is deprecated in favour of <ref refid="classwx_menu_bar_1a91a17429979973efabe5fe568e2a605e" kindref="member">GetMenuLabel()</ref> and <ref refid="classwx_menu_bar_1a3e1461a2f953578d9d3e8e827903914f" kindref="member">GetMenuLabelText()</ref>.</para></xrefdescription></xrefsect></para><para><simplesect kind="see"><para><ref refid="classwx_menu_bar_1ab21c09c911ec182f1b4fe566350b2437" kindref="member">SetLabelTop()</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="209"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="219"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_bar_1a7935fbf932f070f13c31b213c5e3419d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_menu" kindref="compound">wxMenu</ref> *</type>
@@ -444,7 +470,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="214"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="224"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_bar_1a6574f59bd6cf9ef1bef337874cd1d985" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -457,7 +483,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="219"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="229"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_bar_1a91a17429979973efabe5fe568e2a605e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -485,7 +511,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="235"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="245"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_bar_1a3e1461a2f953578d9d3e8e827903914f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -513,7 +539,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="251"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="261"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_bar_1a6bb349afc87743a78f25159bc68a4087" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -562,7 +588,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="269"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="279"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_bar_1acc768768d8b594d62c5ca5d05ef65d76" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -588,7 +614,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="279"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="289"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_bar_1a2618a145723e765cf56c88cf8b5269f0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -614,7 +640,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="289"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="299"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_bar_1a45199e821baabb53291a6b459767ccd3" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -638,7 +664,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="294"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="304"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_bar_1aae839504bd7e571befabe7507dce8742" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_menu" kindref="compound">wxMenu</ref> *</type>
@@ -656,7 +682,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="303"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="313"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_bar_1a198569eaa57ff6a122a8118cac0d1622" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_menu" kindref="compound">wxMenu</ref> *</type>
@@ -705,7 +731,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="320"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="330"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_bar_1a4379fba6f5a0a3e62b6271735f2b4841" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -742,7 +768,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="332"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="342"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_bar_1a4b3669c33dfafeb1c8468a0ba3c09d5f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -780,7 +806,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="346"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="356"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_bar_1ab21c09c911ec182f1b4fe566350b2437" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -814,11 +840,11 @@
 </parameteritem>
 </parameterlist>
 <simplesect kind="remark"><para>Use only after the menubar has been associated with a frame.</para></simplesect>
-<xrefsect id="deprecated_1_deprecated000038"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This function has been deprecated in favour of <ref refid="classwx_menu_bar_1a66a14aec7caeff702f964cd35085cf06" kindref="member">SetMenuLabel()</ref>.</para></xrefdescription></xrefsect><simplesect kind="see"><para><ref refid="classwx_menu_bar_1a8668fed74dce3aef498f7e6b1ffab46f" kindref="member">GetLabelTop()</ref> </para></simplesect>
+<xrefsect id="deprecated_1_deprecated000038"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This function has been deprecated in favour of <ref refid="classwx_menu_bar_1a66a14aec7caeff702f964cd35085cf06" kindref="member">SetMenuLabel()</ref>.</para></xrefdescription></xrefsect></para><para><simplesect kind="see"><para><ref refid="classwx_menu_bar_1a8668fed74dce3aef498f7e6b1ffab46f" kindref="member">GetLabelTop()</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="363"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="373"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_bar_1a66a14aec7caeff702f964cd35085cf06" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -855,7 +881,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="375"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="385"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_bar_1a01721f1ddbf86e409d4717497091f060" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_frame" kindref="compound">wxFrame</ref> *</type>
@@ -868,7 +894,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="398"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="408"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_bar_1a9ac733c462b06078e81b9d90197d0669" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -881,7 +907,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="399"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="409"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_bar_1a4ca9c3e53c3ff18f7f74e3d2aeea3dab" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -898,7 +924,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="400"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="410"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_bar_1a3fc40b9272a0ef7ff1bcbea04d3557c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -911,7 +937,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="401"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="411"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -939,7 +965,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="386"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="396"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_bar_1ab64676b036f37ff43df842b0dfffa39e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_menu_bar" kindref="compound">wxMenuBar</ref> *</type>
@@ -954,7 +980,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="396"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="406"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -962,50 +988,17 @@
     <detaileddescription>
 <para><simplesect kind="remark"><para>To respond to a menu selection, provide a handler for EVT_MENU, in the frame that contains the menu bar.</para></simplesect>
 If you have a toolbar which uses the same identifiers as your EVT_MENU entries, events from the toolbar will also be processed by your EVT_MENU event handlers.</para><para>Tip: under Windows, if you discover that menu shortcuts (for example, Alt-F to show the file menu) are not working, check any EVT_CHAR events you are handling in child windows. If you are not calling event.Skip() for events that you don&apos;t process in these event handlers, menu shortcuts may cease to work.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__menus" kindref="compound">Menus</ref></para><para><simplesect kind="see"><para><ref refid="classwx_menu" kindref="compound">wxMenu</ref>, <ref refid="overview__events" kindref="compound">Events and Event Handling</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__menus" kindref="compound">Menus</ref></para><para><simplesect kind="see"><para><ref refid="classwx_menu" kindref="compound">wxMenu</ref>, <ref refid="overview_events" kindref="compound">Events and Event Handling</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7708">
+      <node id="7714">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="7707">
-        <label>wxEvtHandler</label>
-        <link refid="classwx_evt_handler"/>
-        <childnode refid="7708" relation="public-inheritance">
-        </childnode>
-        <childnode refid="7709" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="7709">
-        <label>wxTrackable</label>
-        <link refid="classwx_trackable"/>
-      </node>
-      <node id="7706">
-        <label>wxWindow</label>
-        <link refid="classwx_window"/>
-        <childnode refid="7707" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="7705">
-        <label>wxMenuBar</label>
-        <link refid="classwx_menu_bar"/>
-        <childnode refid="7706" relation="public-inheritance">
-        </childnode>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
       <node id="7713">
-        <label>wxObject</label>
-        <link refid="classwx_object"/>
-        <childnode refid="7714" relation="usage">
-          <edgelabel>m_refData</edgelabel>
-        </childnode>
-      </node>
-      <node id="7712">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="7713" relation="public-inheritance">
+        <childnode refid="7714" relation="public-inheritance">
         </childnode>
         <childnode refid="7715" relation="public-inheritance">
         </childnode>
@@ -1014,24 +1007,57 @@ If you have a toolbar which uses the same identifiers as your EVT_MENU entries, 
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="7711">
+      <node id="7712">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
+        <childnode refid="7713" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7711">
+        <label>wxMenuBar</label>
+        <link refid="classwx_menu_bar"/>
         <childnode refid="7712" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7710">
-        <label>wxMenuBar</label>
-        <link refid="classwx_menu_bar"/>
-        <childnode refid="7711" relation="public-inheritance">
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="7719">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="7720" relation="usage">
+          <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="7714">
+      <node id="7718">
+        <label>wxEvtHandler</label>
+        <link refid="classwx_evt_handler"/>
+        <childnode refid="7719" relation="public-inheritance">
+        </childnode>
+        <childnode refid="7721" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7721">
+        <label>wxTrackable</label>
+        <link refid="classwx_trackable"/>
+      </node>
+      <node id="7717">
+        <label>wxWindow</label>
+        <link refid="classwx_window"/>
+        <childnode refid="7718" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7716">
+        <label>wxMenuBar</label>
+        <link refid="classwx_menu_bar"/>
+        <childnode refid="7717" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7720">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="33" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" bodystart="32" bodyend="403"/>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="33" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" bodystart="32" bodyend="413"/>
     <listofallmembers>
       <member refid="classwx_window_1a3afbd49b1ea2f8275e3600dcac102923" prot="public" virt="virtual"><scope>wxMenuBar</scope><name>AcceptsFocus</name></member>
       <member refid="classwx_window_1a2370bdd3ab08e7ef3c7555c6aa8301b8" prot="public" virt="virtual"><scope>wxMenuBar</scope><name>AcceptsFocusFromKeyboard</name></member>
@@ -1212,6 +1238,7 @@ If you have a toolbar which uses the same identifiers as your EVT_MENU entries, 
       <member refid="classwx_window_1a9d1be1bbb625ebf87ad4ad47e49a0194" prot="public" virt="virtual"><scope>wxMenuBar</scope><name>IsDoubleBuffered</name></member>
       <member refid="classwx_menu_bar_1a2618a145723e765cf56c88cf8b5269f0" prot="public" virt="non-virtual"><scope>wxMenuBar</scope><name>IsEnabled</name></member>
       <member refid="classwx_window_1a59452a5bd42f5ea4b31d7fc4aa59644f" prot="public" virt="non-virtual" ambiguityscope="wxWindow::"><scope>wxMenuBar</scope><name>IsEnabled</name></member>
+      <member refid="classwx_menu_bar_1a580d2873f93ac3d7ed73e8228fdafd32" prot="public" virt="non-virtual"><scope>wxMenuBar</scope><name>IsEnabledTop</name></member>
       <member refid="classwx_window_1af27ef77c913e32050543f3b0ca435a0d" prot="public" virt="non-virtual"><scope>wxMenuBar</scope><name>IsExposed</name></member>
       <member refid="classwx_window_1a31af79f647cbec4950ce31620db51753" prot="public" virt="non-virtual"><scope>wxMenuBar</scope><name>IsExposed</name></member>
       <member refid="classwx_window_1a4a23e724619ec070f7d5c45ba21529d5" prot="public" virt="non-virtual"><scope>wxMenuBar</scope><name>IsExposed</name></member>

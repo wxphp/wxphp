@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_dial_up_event" kind="class" prot="public">
     <compoundname>wxDialUpEvent</compoundname>
     <basecompoundref refid="classwx_event" prot="public" virt="non-virtual">wxEvent</basecompoundref>
@@ -57,46 +57,46 @@
 <para>This is the event class for the dialup events sent by <ref refid="classwx_dial_up_manager" kindref="compound">wxDialUpManager</ref>. </para>    </briefdescription>
     <detaileddescription>
 <para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref> </para>    </detaileddescription>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="5606">
+      <node id="5610">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="5605">
+      <node id="5609">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="5606" relation="public-inheritance">
+        <childnode refid="5610" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5604">
+      <node id="5608">
         <label>wxDialUpEvent</label>
         <link refid="classwx_dial_up_event"/>
-        <childnode refid="5605" relation="public-inheritance">
+        <childnode refid="5609" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="5609">
+      <node id="5613">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="5610" relation="usage">
+        <childnode refid="5614" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="5608">
+      <node id="5612">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="5609" relation="public-inheritance">
+        <childnode refid="5613" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5607">
+      <node id="5611">
         <label>wxDialUpEvent</label>
         <link refid="classwx_dial_up_event"/>
-        <childnode refid="5608" relation="public-inheritance">
+        <childnode refid="5612" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5610">
+      <node id="5614">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

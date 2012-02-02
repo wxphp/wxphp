@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_tree_ctrl" kind="class" prot="public">
     <compoundname>wxTreeCtrl</compoundname>
     <basecompoundref refid="classwx_control" prot="public" virt="non-virtual">wxControl</basecompoundref>
@@ -1848,84 +1848,84 @@
 <listitem><para>EVT_TREE_ITEM_MENU(id,  func): The context menu for the selected item has been requested, either by a right click or by using the menu key. Processes a <computeroutput>wxEVT_COMMAND_TREE_ITEM_MENU</computeroutput> event type. </para></listitem>
 <listitem><para>EVT_TREE_STATE_IMAGE_CLICK(id,  func): The state image has been clicked. Windows only. Processes a <computeroutput>wxEVT_COMMAND_TREE_STATE_IMAGE_CLICK</computeroutput> event type. </para></listitem>
 </itemizedlist>
-See also <ref refid="overview__windowstyles" kindref="compound">Window Styles</ref>.</para><para><bold>Win32</bold> <bold>notes:</bold> </para><para><ref refid="classwx_tree_ctrl" kindref="compound">wxTreeCtrl</ref> class uses the standard common treeview control under Win32 implemented in the system library comctl32.dll. Some versions of this library are known to have bugs with handling the tree control colours: the usual symptom is that the expanded items leave black (or otherwise incorrectly coloured) background behind them, especially for the controls using non-default background colour. The recommended solution is to upgrade the comctl32.dll to a newer version: see <ulink url="http://www.microsoft.com/downloads/details.aspx?familyid=cb2cf3a2-8025-4e8f-8511-9b476a8d35d2">http://www.microsoft.com/downloads/details.aspx?familyid=cb2cf3a2-8025-4e8f-8511-9b476a8d35d2</ulink></para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref> <htmlonly> &lt;br&gt;&lt;div&gt;&lt;span class=&apos;appearance&apos;&gt;Appearance:&lt;/span&gt;&lt;br&gt;&lt;table class=&apos;appearance&apos;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&apos;wxmsw/treectrl.png&apos; alt=&apos;wxMSW appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxgtk/treectrl.png&apos; alt=&apos;wxGTK appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxmac/treectrl.png&apos; alt=&apos;wxMac appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;wxMSW appearance&lt;/td&gt;&lt;td&gt;wxGTK appearance&lt;/td&gt;&lt;td&gt;wxMac appearance&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt; </htmlonly></para><para><simplesect kind="see"><para><ref refid="classwx_data_view_tree_ctrl" kindref="compound">wxDataViewTreeCtrl</ref>, <ref refid="classwx_tree_event" kindref="compound">wxTreeEvent</ref>, <ref refid="classwx_tree_item_data" kindref="compound">wxTreeItemData</ref>, <ref refid="overview__treectrl" kindref="compound">wxTreeCtrl Overview</ref>, <ref refid="classwx_list_box" kindref="compound">wxListBox</ref>, <ref refid="classwx_list_ctrl" kindref="compound">wxListCtrl</ref>, <ref refid="classwx_image_list" kindref="compound">wxImageList</ref> </para></simplesect>
+See also <ref refid="overview_windowstyles" kindref="compound">Window Styles</ref>.</para><para><bold>Win32</bold> <bold>notes:</bold> </para><para><ref refid="classwx_tree_ctrl" kindref="compound">wxTreeCtrl</ref> class uses the standard common treeview control under Win32 implemented in the system library comctl32.dll. Some versions of this library are known to have bugs with handling the tree control colours: the usual symptom is that the expanded items leave black (or otherwise incorrectly coloured) background behind them, especially for the controls using non-default background colour. The recommended solution is to upgrade the comctl32.dll to a newer version: see <ulink url="http://www.microsoft.com/downloads/details.aspx?familyid=cb2cf3a2-8025-4e8f-8511-9b476a8d35d2">http://www.microsoft.com/downloads/details.aspx?familyid=cb2cf3a2-8025-4e8f-8511-9b476a8d35d2</ulink></para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref> <htmlonly> &lt;br&gt;&lt;div&gt;&lt;span class=&apos;appearance&apos;&gt;Appearance:&lt;/span&gt;&lt;br&gt;&lt;table class=&apos;appearance&apos;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&apos;wxmsw/treectrl.png&apos; alt=&apos;wxMSW appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxgtk/treectrl.png&apos; alt=&apos;wxGTK appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxmac/treectrl.png&apos; alt=&apos;wxMac appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;wxMSW appearance&lt;/td&gt;&lt;td&gt;wxGTK appearance&lt;/td&gt;&lt;td&gt;wxMac appearance&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt; </htmlonly></para><para><simplesect kind="see"><para><ref refid="classwx_data_view_tree_ctrl" kindref="compound">wxDataViewTreeCtrl</ref>, <ref refid="classwx_tree_event" kindref="compound">wxTreeEvent</ref>, <ref refid="classwx_tree_item_data" kindref="compound">wxTreeItemData</ref>, <ref refid="overview_treectrl" kindref="compound">wxTreeCtrl Overview</ref>, <ref refid="classwx_list_box" kindref="compound">wxListBox</ref>, <ref refid="classwx_list_ctrl" kindref="compound">wxListCtrl</ref>, <ref refid="classwx_image_list" kindref="compound">wxImageList</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="11127">
+      <node id="11188">
         <label>wxTreeCtrl</label>
         <link refid="classwx_tree_ctrl"/>
-        <childnode refid="11128" relation="public-inheritance">
+        <childnode refid="11189" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11131">
+      <node id="11192">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="11130">
+      <node id="11191">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="11131" relation="public-inheritance">
+        <childnode refid="11192" relation="public-inheritance">
         </childnode>
-        <childnode refid="11132" relation="public-inheritance">
+        <childnode refid="11193" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11132">
+      <node id="11193">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="11128">
+      <node id="11189">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="11129" relation="public-inheritance">
+        <childnode refid="11190" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11129">
+      <node id="11190">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="11130" relation="public-inheritance">
+        <childnode refid="11191" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="11133">
+      <node id="11194">
         <label>wxTreeCtrl</label>
         <link refid="classwx_tree_ctrl"/>
-        <childnode refid="11134" relation="public-inheritance">
+        <childnode refid="11195" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11137">
+      <node id="11198">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="11138" relation="usage">
+        <childnode refid="11199" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="11136">
+      <node id="11197">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="11137" relation="public-inheritance">
+        <childnode refid="11198" relation="public-inheritance">
         </childnode>
-        <childnode refid="11139" relation="public-inheritance">
+        <childnode refid="11200" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11139">
+      <node id="11200">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="11134">
+      <node id="11195">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="11135" relation="public-inheritance">
+        <childnode refid="11196" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11135">
+      <node id="11196">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="11136" relation="public-inheritance">
+        <childnode refid="11197" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11138">
+      <node id="11199">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_p_g_choices" kind="class" prot="public">
     <compoundname>wxPGChoices</compoundname>
     <includes local="no">wx/propgrid/property.h</includes>
@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1844" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" bodystart="1844" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1851" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" bodystart="1851" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1849"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1856"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_choices_1a15f6e4d2e72622cce63bf71dc78c9b88" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -47,7 +47,7 @@
 <para>To create a real copy, use <ref refid="classwx_p_g_choices_1a664624e8aca6108a1e828310d28ed055" kindref="member">Copy()</ref> member function instead. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1855"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1862"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_choices_1a4ba956d97ac0d3c661ecbb9597a2cfb4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -69,7 +69,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1858"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1865"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_choices_1afc9d3e1f88b8f04cf15e1674f344fd31" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -91,7 +91,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1861"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1868"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_choices_1afbeb1519bb8ef2a1754dce54d1e9db7e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -108,7 +108,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1864"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1871"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_choices_1adddd87f2d17ae55496d06e69638f34ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -121,7 +121,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1867"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1874"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_choices_1a7281ca96c7aaf39b059a93bc08fcd72d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -143,7 +143,7 @@
 <para>If did not have own copies, creates them now. If was empty, identical to set except that creates copies. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1873"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1880"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_choices_1ab032093f86d6deede023384b6a4b9da6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -165,7 +165,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1876"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1883"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_choices_1abaad3f625545a723c4c71779d1c61bbe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -186,7 +186,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1879"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1886"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_choices_1a1e944d06f48321bd52ecf8083977af04" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>wxPGChoiceEntry &amp;</type>
@@ -208,7 +208,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1882"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1889"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_choices_1a4f80a54ab0b024062d24e92a0cdd5150" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>wxPGChoiceEntry &amp;</type>
@@ -234,7 +234,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1886"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1893"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_choices_1a0612ee728f9cbddb93c0c86f0c5131ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>wxPGChoiceEntry &amp;</type>
@@ -251,7 +251,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1889"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1896"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_choices_1a651a88c625073e5df822281e37c75622" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>wxPGChoiceEntry &amp;</type>
@@ -273,7 +273,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1892"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1899"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_choices_1af9a2b2f920f296468a881cb7d3bb93db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -290,7 +290,7 @@
 <para>To create a real copy, use <ref refid="classwx_p_g_choices_1a664624e8aca6108a1e828310d28ed055" kindref="member">Copy()</ref> member function instead. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1898"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1905"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_choices_1a4435a4292a0976a24d7bcd5ab7679c70" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -307,7 +307,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1903"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1910"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_choices_1ab410a3078b4999e935cb818dcd231c7b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -320,7 +320,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1908"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1915"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_choices_1a664624e8aca6108a1e828310d28ed055" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_p_g_choices" kindref="compound">wxPGChoices</ref></type>
@@ -333,7 +333,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1913"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1920"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_choices_1a59be3534f419c411e64604afbdbada1e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -350,7 +350,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1918"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1925"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_choices_1a9d7e7201a48f4b654cf046a84714e434" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>unsigned int</type>
@@ -363,7 +363,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1923"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1930"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_choices_1a1e7d17bc9e92655516a5d6d1b7d00e39" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -380,7 +380,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1928"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1935"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_choices_1a9614048af2183398fe84d3d2d41495b3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="dynarray_8h_1add87f199292e36ee87efd6d7f0d4ee66" kindref="member">wxArrayInt</ref></type>
@@ -397,7 +397,7 @@
 <para>Unmatching strings result in wxPG_INVALID_VALUE entry in array. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1934"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1941"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_choices_1aabedd01373c71f0fdec3ee5536e5eb89" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="dynarray_8h_1add87f199292e36ee87efd6d7f0d4ee66" kindref="member">wxArrayInt</ref></type>
@@ -419,7 +419,7 @@
 <para>Unmatching strings are added to &apos;unmatched&apos;, if not NULL. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1941"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1948"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_choices_1a785d8809009d6e4cd1ca5155226599f1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_p_g_property" kindref="compound">wxPGProperty</ref> *</type>
@@ -436,7 +436,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1945"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1952"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_choices_1aaa52d4ac5fdd72e4a4b4fc680895e6d5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -453,7 +453,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1950"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1957"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_choices_1a8441dbcd2014f7d9911b711fbb6f3bc5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -470,7 +470,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1955"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1962"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_choices_1afc478a534f2c9253453308db191a083e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -487,7 +487,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1960"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1967"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_choices_1ac2eb80d39dcc077387f10a05550e9c49" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>wxPGChoiceEntry &amp;</type>
@@ -513,7 +513,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1965"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1972"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_choices_1aaa68760c3fff1857bbd405ae8ba1eb1b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>wxPGChoiceEntry &amp;</type>
@@ -534,7 +534,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1970"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1977"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_choices_1ae98aadbd919ed1bc31a92e3ed3749613" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -547,7 +547,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1976"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1983"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_choices_1a818d71bc5af7ae515c35cfd272cead4e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const wxPGChoiceEntry &amp;</type>
@@ -564,7 +564,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1981"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1988"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_choices_1aefb4f26b3f411afea6958f4895087200" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>wxPGChoiceEntry &amp;</type>
@@ -581,7 +581,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1986"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1993"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_choices_1a6d7e39a1e716e544151efacf7c7b6674" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -603,7 +603,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1991"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1998"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_choices_1a7b5c14e6866c91a324baaa6baeef49a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -625,7 +625,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1996"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="2003"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_choices_1a8600801f24500cfabbe065b7fd610ccb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -647,7 +647,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="2001"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="2008"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_choices_1a26193b1d9752a565e4d526168a4b582e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -660,7 +660,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="2006"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="2013"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_choices_1a1c92bf85702aab7f0bf7110ee70f9882" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_array_string" kindref="compound">wxArrayString</ref></type>
@@ -673,7 +673,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="2011"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="2018"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_choices_1ad525e239eae573b47f271111bedb8a49" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -690,7 +690,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="2013"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="2020"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_choices_1a6dd611e7ae6675e90abbe74fbbed79c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>wxPGChoiceEntry &amp;</type>
@@ -707,7 +707,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="2015"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="2022"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_choices_1a04d8bc30085a73de07c834e8e3e3163d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const wxPGChoiceEntry &amp;</type>
@@ -724,7 +724,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="2016"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="2023"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -732,8 +732,8 @@
     <detaileddescription>
 <para>Each entry can have label, value, bitmap, text colour, and background colour.</para><para><ref refid="classwx_p_g_choices" kindref="compound">wxPGChoices</ref> uses reference counting, similar to other wxWidgets classes. This means that assignment operator and copy constructor only copy the reference and not the actual data. Use <ref refid="classwx_p_g_choices_1a664624e8aca6108a1e828310d28ed055" kindref="member">Copy()</ref> member function to create a real copy.</para><para><simplesect kind="remark"><para>If you do not specify value for entry, index is used.</para></simplesect>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxpropgrid" kindref="member">wxPropertyGrid</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__propgrid" kindref="compound">wxPropertyGrid</ref> </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1842" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" bodystart="1841" bodyend="2017"/>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxpropgrid" kindref="member">wxPropertyGrid</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__propgrid" kindref="compound">wxPropertyGrid</ref> </para>    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1849" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" bodystart="1848" bodyend="2024"/>
     <listofallmembers>
       <member refid="classwx_p_g_choices_1a7281ca96c7aaf39b059a93bc08fcd72d" prot="public" virt="non-virtual"><scope>wxPGChoices</scope><name>Add</name></member>
       <member refid="classwx_p_g_choices_1ab032093f86d6deede023384b6a4b9da6" prot="public" virt="non-virtual"><scope>wxPGChoices</scope><name>Add</name></member>

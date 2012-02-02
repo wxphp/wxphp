@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="group__group__funcmacro__math" kind="group">
     <compoundname>group_funcmacro_math</compoundname>
     <title>Math</title>
@@ -16,7 +16,7 @@
         <briefdescription>
 <para>Returns a non-zero value if <emphasis>x</emphasis> is neither infinite nor NaN (not a number), returns 0 otherwise. </para>        </briefdescription>
         <detaileddescription>
-<para>Include file: <verbatim>#include &lt;wx/math.h&gt; </verbatim> </para>        </detaileddescription>
+<para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/math.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/math.h" line="18"/>
@@ -33,7 +33,7 @@
         <briefdescription>
 <para>Returns a non-zero value if x is NaN (not a number), returns 0 otherwise. </para>        </briefdescription>
         <detaileddescription>
-<para>Include file: <verbatim>#include &lt;wx/math.h&gt; </verbatim> </para>        </detaileddescription>
+<para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/math.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/math.h" line="25"/>

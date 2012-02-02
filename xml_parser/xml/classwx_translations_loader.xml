@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_translations_loader" kind="class" prot="public">
     <compoundname>wxTranslationsLoader</compoundname>
     <derivedcompoundref refid="classwx_file_translations_loader" prot="public" virt="non-virtual">wxFileTranslationsLoader</derivedcompoundref>
@@ -81,19 +81,19 @@
 <simplesect kind="since"><para>2.9.1 </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="11107">
+      <node id="11168">
         <label>wxFileTranslationsLoader</label>
         <link refid="classwx_file_translations_loader"/>
-        <childnode refid="11106" relation="public-inheritance">
+        <childnode refid="11167" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11108">
+      <node id="11169">
         <label>wxResourceTranslationsLoader</label>
         <link refid="classwx_resource_translations_loader"/>
-        <childnode refid="11106" relation="public-inheritance">
+        <childnode refid="11167" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11106">
+      <node id="11167">
         <label>wxTranslationsLoader</label>
         <link refid="classwx_translations_loader"/>
       </node>

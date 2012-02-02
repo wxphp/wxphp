@@ -1,12 +1,11 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_any" kind="class" prot="public">
     <compoundname>wxAny</compoundname>
     <includes local="no">wx/any.h</includes>
       <sectiondef kind="user-defined">
       <header>Assignment operators</header>
-      <description><para><anchor id="_1amgrp77392bcb1b5bb3eb14aab07a82043b45"/> </para></description>
-      <memberdef kind="function" id="classwx_any_1a541e66e0480075de627c7dfb0268b8dd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classwx_any_1a541e66e0480075de627c7dfb0268b8dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
           <param>
             <type>typename T</type>
@@ -65,7 +64,6 @@
       </sectiondef>
       <sectiondef kind="user-defined">
       <header>Equality operators</header>
-      <description><para><anchor id="_1amgrp60e0410fc395293aa09ecd920b9b0b11"/> </para></description>
       <memberdef kind="function" id="classwx_any_1a03624c1199b671fecfafce1c601af90f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
         <definition>bool wxAny::operator==</definition>
@@ -341,7 +339,6 @@
       </sectiondef>
       <sectiondef kind="user-defined">
       <header>Inequality operators</header>
-      <description><para><anchor id="_1amgrp0ea71201dd50f25b89054528051bc408"/> </para></description>
       <memberdef kind="function" id="classwx_any_1ada1873fa336f96ac0ca554468f6a204a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
         <definition>bool wxAny::operator!=</definition>
@@ -629,7 +626,7 @@
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/any.h" line="62"/>
       </memberdef>
-      <memberdef kind="function" id="classwx_any_1a5024428dd23e1776fccdd05afaea5cbc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classwx_any_1a5024428dd23e1776fccdd05afaea5cbc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
           <param>
             <type>typename T</type>
@@ -699,7 +696,7 @@
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/any.h" line="89"/>
       </memberdef>
-      <memberdef kind="function" id="classwx_any_1ad5958253489be22f0e414cd1dd7a38f6" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classwx_any_1ad5958253489be22f0e414cd1dd7a38f6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
           <param>
             <type>typename T</type>
@@ -718,7 +715,7 @@ This template function may not work properly with Visual C++ 6. For full compile
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/any.h" line="105"/>
       </memberdef>
-      <memberdef kind="function" id="classwx_any_1ae199ddb24972bb32afc27511c64963bd" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classwx_any_1ae199ddb24972bb32afc27511c64963bd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
           <param>
             <type>typename T</type>
@@ -738,7 +735,7 @@ This template function may not work properly with Visual C++ 6. For full compile
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/any.h" line="118"/>
       </memberdef>
-      <memberdef kind="function" id="classwx_any_1a2ffeadd0c60660f17920988d44e6c36b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classwx_any_1a2ffeadd0c60660f17920988d44e6c36b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
           <param>
             <type>typename T</type>
@@ -851,7 +848,7 @@ This template function may not work properly with Visual C++ 6. For full compile
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Let&apos;s<sp/>do<sp/>a<sp/>sanity<sp/>check<sp/>to<sp/>make<sp/>sure<sp/>that<sp/>any<sp/>still<sp/>holds</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>data<sp/>of<sp/>correct<sp/>type.</highlight><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>any.<ref refid="classwx_any_1ae199ddb24972bb32afc27511c64963bd" kindref="member" tooltip="Use this template function for checking if this wxAny holds a specific C++ data type...">CheckType</ref>&lt;MyClass&gt;()<sp/>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>any.<ref refid="classwx_any_1ae199ddb24972bb32afc27511c64963bd" kindref="member" tooltip="Use this template function for checking if this wxAny holds a specific C++ data type.">CheckType</ref>&lt;MyClass&gt;()<sp/>)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Thank<sp/>goodness,<sp/>still<sp/>a<sp/>correct<sp/>type.</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MyClass<sp/>myObject2<sp/>=<sp/>any.<ref refid="classwx_any_1ad5958253489be22f0e414cd1dd7a38f6" kindref="member" tooltip="This template function converts wxAny into given type.">As</ref>&lt;MyClass&gt;();</highlight></codeline>
@@ -863,7 +860,7 @@ This template function may not work properly with Visual C++ 6. For full compile
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 </programlisting></para><para>When compared to <ref refid="classwx_variant" kindref="compound">wxVariant</ref>, there are various internal implementation differences as well. For instance, <ref refid="classwx_any" kindref="compound">wxAny</ref> only allocates separate data object in heap for large objects (i.e. ones with size more than WX_ANY_VALUE_BUFFER_SIZE, which at the time of writing is 16 bytes).</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__data" kindref="compound">Data Structures</ref></para><para><simplesect kind="see"><para><ref refid="classwx_any_value_type" kindref="compound">wxAnyValueType</ref>, <ref refid="classwx_variant" kindref="compound">wxVariant</ref>, <ref refid="overview__cpp__rtti__disabled" kindref="compound">Caveats When Not Using C++ RTTI</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__data" kindref="compound">Data Structures</ref></para><para><simplesect kind="see"><para><ref refid="classwx_any_value_type" kindref="compound">wxAnyValueType</ref>, <ref refid="classwx_variant" kindref="compound">wxVariant</ref>, <ref refid="overview_cpp_rtti_disabled" kindref="compound">Caveats When Not Using C++ RTTI</ref> </para></simplesect>
 </para>    </detaileddescription>
     <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/any.h" line="57" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/any.h" bodystart="56" bodyend="231"/>
     <listofallmembers>

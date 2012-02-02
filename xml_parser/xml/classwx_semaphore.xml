@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_semaphore" kind="class" prot="public">
     <compoundname>wxSemaphore</compoundname>
     <includes local="no">wx/thread.h</includes>
@@ -113,7 +113,7 @@
 <para><ref refid="classwx_semaphore" kindref="compound">wxSemaphore</ref> is a counter limiting the number of threads concurrently accessing a shared resource. </para>    </briefdescription>
     <detaileddescription>
 <para>This counter is always between 0 and the maximum value specified during the semaphore creation. When the counter is strictly greater than 0, a call to <ref refid="classwx_semaphore_1a4a54b5fbb2b80b7ca3b8da55e8fa790c" kindref="member">wxSemaphore::Wait()</ref> returns immediately and decrements the counter. As soon as it reaches 0, any subsequent calls to <ref refid="classwx_semaphore_1a4a54b5fbb2b80b7ca3b8da55e8fa790c" kindref="member">wxSemaphore::Wait</ref> block and only return when the semaphore counter becomes strictly positive again as the result of calling <ref refid="classwx_semaphore_1af258c7e7a626fec8a9fc3ff718c960d6" kindref="member">wxSemaphore::Post</ref> which increments the counter.</para><para>In general, semaphores are useful to restrict access to a shared resource which can only be accessed by some fixed number of clients at the same time. For example, when modeling a hotel reservation system a semaphore with the counter equal to the total number of available rooms could be created. Each time a room is reserved, the semaphore should be acquired by calling <ref refid="classwx_semaphore_1a4a54b5fbb2b80b7ca3b8da55e8fa790c" kindref="member">wxSemaphore::Wait</ref> and each time a room is freed it should be released by calling <ref refid="classwx_semaphore_1af258c7e7a626fec8a9fc3ff718c960d6" kindref="member">wxSemaphore::Post</ref>.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__threading" kindref="compound">Threading</ref> </para>    </detaileddescription>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__threading" kindref="compound">Threading</ref> </para>    </detaileddescription>
     <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="1405" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" bodystart="1404" bodyend="1468"/>
     <listofallmembers>
       <member refid="classwx_semaphore_1af258c7e7a626fec8a9fc3ff718c960d6" prot="public" virt="non-virtual"><scope>wxSemaphore</scope><name>Post</name></member>

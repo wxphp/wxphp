@@ -1,0 +1,310 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="overview_python" kind="page">
+    <compoundname>overview_python</compoundname>
+    <title>wxPython Overview</title>
+    <detaileddescription>
+<para>This topic was written by Robin Dunn, author of the <ulink url="http://www.python.org/">wxPython</ulink> wrapper.</para><para><itemizedlist>
+<listitem><para><ref refid="overview_python_1overview_python_what" kindref="member">What is wxPython?</ref> </para></listitem>
+<listitem><para><ref refid="overview_python_1overview_python_why" kindref="member">Why Use wxPython?</ref> </para></listitem>
+<listitem><para><ref refid="overview_python_1overview_python_othergui" kindref="member">Other Python GUIs</ref> </para></listitem>
+<listitem><para><ref refid="overview_python_1overview_python_using" kindref="member">Using wxPython</ref> </para></listitem>
+<listitem><para><ref refid="overview_python_1overview_python_classes" kindref="member">Classes Implemented in wxPython</ref> </para></listitem>
+<listitem><para><ref refid="overview_python_1overview_python_help" kindref="member">Where to Go for Help</ref></para></listitem>
+</itemizedlist>
+<hruler/>
+</para><sect1 id="overview_python_1overview_python_what">
+<title>What is wxPython?</title>
+<para>wxPython is a blending of the wxWidgets GUI classes and the Python programming language.</para><sect2 id="overview_python_1overview_python_what_py">
+<title>Python</title>
+<para>So what is Python? Go to <ulink url="http://www.python.org">http://www.python.org</ulink> to learn more, but in a nutshell Python is an interpreted, interactive, object-oriented programming language. It is often compared to Tcl, Perl, Scheme or Java.</para><para>Python combines remarkable power with very clear syntax. It has modules, classes, exceptions, very high level dynamic data types, and dynamic typing. There are interfaces to many system calls and libraries, and new built-in modules are easily written in C or C++. Python is also usable as an extension language for applications that need a programmable interface.</para><para>Python is copyrighted but freely usable and distributable, even for commercial use.</para></sect2>
+<sect2 id="overview_python_1overview_python_what_wxpy">
+<title>wxPython</title>
+<para>wxPython is a Python package that can be imported at runtime that includes a collection of Python modules and an extension module (native code). It provides a series of Python classes that mirror (or shadow) many of the wxWidgets GUI classes. This extension module attempts to mirror the class hierarchy of wxWidgets as closely as possible. This means that there is a <ref refid="classwx_frame" kindref="compound">wxFrame</ref> class in wxPython that looks, smells, tastes and acts almost the same as the <ref refid="classwx_frame" kindref="compound">wxFrame</ref> class in the C++ version.</para><para>wxPython is very versatile. It can be used to create standalone GUI applications, or in situations where Python is embedded in a C++ application as an internal scripting or macro language.</para><para>Currently wxPython is available for Win32 platforms and the GTK toolkit (wxGTK) on most Unix/X-windows platforms. See the wxPython website <ulink url="http://wxPython.org/">http://wxPython.org/</ulink> for details about getting wxPython working for you.</para></sect2>
+</sect1>
+<sect1 id="overview_python_1overview_python_why">
+<title>Why Use wxPython?</title>
+<para>So why would you want to use wxPython over just C++ and wxWidgets? Personally I prefer using Python for everything. I only use C++ when I absolutely have to eke more performance out of an algorithm, and even then I usually code it as an extension module and leave the majority of the program in Python.</para><para>Another good thing to use wxPython for is quick prototyping of your wxWidgets apps. With C++ you have to continuously go though the edit-compile-link-run cycle, which can be quite time consuming. With Python it is only an edit-run cycle. You can easily build an application in a few hours with Python that would normally take a few days or longer with C++. Converting a wxPython app to a C++/wxWidgets app should be a straight forward task.</para></sect1>
+<sect1 id="overview_python_1overview_python_othergui">
+<title>Other Python GUIs</title>
+<para>There are other GUI solutions out there for Python.</para><sect2 id="overview_python_1overview_python_othergui_tkinter">
+<title>Tkinter</title>
+<para>Tkinter is the de facto standard GUI for Python. It is available on nearly every platform that Python and Tcl/TK are. Why Tcl/Tk? Well because Tkinter is just a wrapper around Tcl&apos;s GUI toolkit, Tk. This has it&apos;s upsides and it&apos;s downsides...</para><para>The upside is that Tk is a pretty versatile toolkit. It can be made to do a lot of things in a lot of different environments. It is fairly easy to create new widgets and use them interchangeably in your programs.</para><para>The downside is Tcl. When using Tkinter you actually have two separate language interpreters running, the Python interpreter and the Tcl interpreter for the GUI. Since the guts of Tcl is mostly about string processing, it is fairly slow as well. (Not too bad on a fast Pentium II, but you really notice the difference on slower machines.)</para><para>It wasn&apos;t until the latest version of Tcl/Tk that native Look and Feel was possible on non-Motif platforms. This is because Tk usually implements its own widgets (controls) even when there are native controls available.</para><para>Tkinter is a pretty low-level toolkit. You have to do a lot of work (verbose program code) to do things that would be much simpler with a higher level of abstraction.</para></sect2>
+<sect2 id="overview_python_1overview_python_othergui_pythonwin">
+<title>PythonWin</title>
+<para>PythonWin is an add-on package for Python for the Win32 platform. It includes wrappers for MFC as well as much of the Win32 API. Because of its foundation, it is very familiar for programmers who have experience with MFC and the Win32 API. It is obviously not compatible with other platforms and toolkits. PythonWin is organized as separate packages and modules so you can use the pieces you need without having to use the GUI portions.</para></sect2>
+<sect2 id="overview_python_1overview_python_othergui_others">
+<title>Others</title>
+<para>There are quite a few other GUI modules available for Python, some in active use, some that haven&apos;t been updated for ages. Most are simple wrappers around some C or C++ toolkit or another, and most are not cross-platform compatible. See <ulink url="http://pypi.python.org/pypi?:action=browse&show=all&c=433">this link</ulink> for a listing of a few of them.</para></sect2>
+</sect1>
+<sect1 id="overview_python_1overview_python_using">
+<title>Using wxPython</title>
+<para>I&apos;m not going to try and teach the Python language here. You can do that at the <ulink url="http://www.python.org/doc/tut/tut.html">Python Tutorial</ulink>. I&apos;m also going to assume that you know a bit about wxWidgets already, enough to notice the similarities in the classes used.</para><para>Take a look at the following wxPython program. You can find a similar program in the <computeroutput>wxPython/demo</computeroutput> directory, named <computeroutput>DialogUnits.py</computeroutput>. If your Python and wxPython are properly installed, you should be able to run it by issuing this command:</para><para><programlisting><codeline><highlight class="normal">python<sp/>DialogUnits.py</highlight></codeline>
+</programlisting></para><para><programlisting><codeline><highlight class="normal">01:<sp/>##<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>all<sp/>of<sp/>the<sp/>wxPython<sp/>GUI<sp/></highlight><highlight class="keyword">package</highlight></codeline>
+<codeline><highlight class="keyword"></highlight><highlight class="normal">02:<sp/>from<sp/>wxPython.wx<sp/>import<sp/>*</highlight></codeline>
+<codeline><highlight class="normal">03:</highlight></codeline>
+<codeline><highlight class="normal">04:<sp/>##<sp/>Create<sp/>a<sp/>new<sp/>frame<sp/>class,<sp/>derived<sp/>from<sp/>the<sp/>wxPython<sp/>Frame.</highlight></codeline>
+<codeline><highlight class="normal">05:<sp/>class<sp/>MyFrame(wxFrame):</highlight></codeline>
+<codeline><highlight class="normal">06:</highlight></codeline>
+<codeline><highlight class="normal">07:<sp/><sp/><sp/><sp/><sp/>def<sp/>__init__(self,<sp/>parent,<sp/>id,<sp/>title):</highlight></codeline>
+<codeline><highlight class="normal">08:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>First,<sp/>call<sp/>the<sp/>base<sp/>class&apos;<sp/>__init__<sp/>method<sp/>to<sp/>create<sp/>the<sp/>frame</highlight></codeline>
+<codeline><highlight class="normal">09:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wxFrame.__init__(self,<sp/>parent,<sp/>id,<sp/>title,</highlight></codeline>
+<codeline><highlight class="normal">10:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wxPoint(100,<sp/>100),<sp/>wxSize(160,<sp/>100))</highlight></codeline>
+<codeline><highlight class="normal">11:</highlight></codeline>
+<codeline><highlight class="normal">12:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>Associate<sp/>some<sp/>events<sp/>with<sp/>methods<sp/>of<sp/>this<sp/>class</highlight></codeline>
+<codeline><highlight class="normal">13:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EVT_SIZE(self,<sp/>self.OnSize)</highlight></codeline>
+<codeline><highlight class="normal">14:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EVT_MOVE(self,<sp/>self.OnMove)</highlight></codeline>
+<codeline><highlight class="normal">15:</highlight></codeline>
+<codeline><highlight class="normal">16:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>Add<sp/>a<sp/>panel<sp/>and<sp/>some<sp/>controls<sp/>to<sp/>display<sp/>the<sp/>size<sp/>and<sp/>position</highlight></codeline>
+<codeline><highlight class="normal">17:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>panel<sp/>=<sp/>wxPanel(self,<sp/>-1)</highlight></codeline>
+<codeline><highlight class="normal">18:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wxStaticText(panel,<sp/>-1,<sp/>&quot;Size:&quot;,</highlight></codeline>
+<codeline><highlight class="normal">19:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wxDLG_PNT(panel,<sp/>wxPoint(4,<sp/>4)),<sp/><sp/>wxDefaultSize)</highlight></codeline>
+<codeline><highlight class="normal">20:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wxStaticText(panel,<sp/>-1,<sp/>&quot;Pos:&quot;,</highlight></codeline>
+<codeline><highlight class="normal">21:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wxDLG_PNT(panel,<sp/>wxPoint(4,<sp/>14)),<sp/>wxDefaultSize)</highlight></codeline>
+<codeline><highlight class="normal">22:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.sizeCtrl<sp/>=<sp/>wxTextCtrl(panel,<sp/>-1,<sp/>&quot;&quot;,</highlight></codeline>
+<codeline><highlight class="normal">23:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wxDLG_PNT(panel,<sp/>wxPoint(24,<sp/>4)),</highlight></codeline>
+<codeline><highlight class="normal">24:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wxDLG_SZE(panel,<sp/>wxSize(36,<sp/>-1)),</highlight></codeline>
+<codeline><highlight class="normal">25:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wxTE_READONLY)</highlight></codeline>
+<codeline><highlight class="normal">26:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.posCtrl<sp/>=<sp/>wxTextCtrl(panel,<sp/>-1,<sp/>&quot;&quot;,</highlight></codeline>
+<codeline><highlight class="normal">27:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wxDLG_PNT(panel,<sp/>wxPoint(24,<sp/>14)),</highlight></codeline>
+<codeline><highlight class="normal">28:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wxDLG_SZE(panel,<sp/>wxSize(36,<sp/>-1)),</highlight></codeline>
+<codeline><highlight class="normal">29:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wxTE_READONLY)</highlight></codeline>
+<codeline><highlight class="normal">30:</highlight></codeline>
+<codeline><highlight class="normal">31:</highlight></codeline>
+<codeline><highlight class="normal">32:<sp/><sp/><sp/><sp/><sp/>#<sp/>This<sp/>method<sp/>is<sp/>called<sp/>automatically<sp/>when<sp/>the<sp/>CLOSE<sp/>event<sp/>is</highlight></codeline>
+<codeline><highlight class="normal">33:<sp/><sp/><sp/><sp/><sp/>#<sp/>sent<sp/>to<sp/>this<sp/>window</highlight></codeline>
+<codeline><highlight class="normal">34:<sp/><sp/><sp/><sp/><sp/>def<sp/>OnCloseWindow(self,<sp/>event):</highlight></codeline>
+<codeline><highlight class="normal">35:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>tell<sp/>the<sp/>window<sp/>to<sp/>kill<sp/>itself</highlight></codeline>
+<codeline><highlight class="normal">36:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.Destroy()</highlight></codeline>
+<codeline><highlight class="normal">37:</highlight></codeline>
+<codeline><highlight class="normal">38:<sp/><sp/><sp/><sp/><sp/>#<sp/>This<sp/>method<sp/>is<sp/>called<sp/>by<sp/>the<sp/>system<sp/>when<sp/>the<sp/>window<sp/>is<sp/>resized,</highlight></codeline>
+<codeline><highlight class="normal">39:<sp/><sp/><sp/><sp/><sp/>#<sp/>because<sp/>of<sp/>the<sp/>association<sp/>above.</highlight></codeline>
+<codeline><highlight class="normal">40:<sp/><sp/><sp/><sp/><sp/>def<sp/>OnSize(self,<sp/>event):</highlight></codeline>
+<codeline><highlight class="normal">41:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>size<sp/>=<sp/>event.GetSize()</highlight></codeline>
+<codeline><highlight class="normal">42:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.sizeCtrl.SetValue(&quot;%s,<sp/>%s&quot;<sp/>%<sp/>(size.width,<sp/>size.height))</highlight></codeline>
+<codeline><highlight class="normal">43:</highlight></codeline>
+<codeline><highlight class="normal">44:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>tell<sp/>the<sp/>event<sp/>system<sp/>to<sp/>continue<sp/>looking<sp/>for<sp/>an<sp/>event<sp/>handler,</highlight></codeline>
+<codeline><highlight class="normal">45:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>so<sp/>the<sp/>default<sp/>handler<sp/>will<sp/>get<sp/>called.</highlight></codeline>
+<codeline><highlight class="normal">46:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>event.Skip()</highlight></codeline>
+<codeline><highlight class="normal">47:</highlight></codeline>
+<codeline><highlight class="normal">48:<sp/><sp/><sp/><sp/><sp/>#<sp/>This<sp/>method<sp/>is<sp/>called<sp/>by<sp/>the<sp/>system<sp/>when<sp/>the<sp/>window<sp/>is<sp/>moved,</highlight></codeline>
+<codeline><highlight class="normal">49:<sp/><sp/><sp/><sp/><sp/>#<sp/>because<sp/>of<sp/>the<sp/>association<sp/>above.</highlight></codeline>
+<codeline><highlight class="normal">50:<sp/><sp/><sp/><sp/><sp/>def<sp/>OnMove(self,<sp/>event):</highlight></codeline>
+<codeline><highlight class="normal">51:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pos<sp/>=<sp/>event.GetPosition()</highlight></codeline>
+<codeline><highlight class="normal">52:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.posCtrl.SetValue(&quot;%s,<sp/>%s&quot;<sp/>%<sp/>(pos.x,<sp/>pos.y))</highlight></codeline>
+<codeline><highlight class="normal">53:</highlight></codeline>
+<codeline><highlight class="normal">54:</highlight></codeline>
+<codeline><highlight class="normal">55:<sp/>#<sp/>Every<sp/>wxWidgets<sp/>application<sp/>must<sp/>have<sp/>a<sp/>class<sp/>derived<sp/>from<sp/>wxApp</highlight></codeline>
+<codeline><highlight class="normal">56:<sp/>class<sp/>MyApp(wxApp):</highlight></codeline>
+<codeline><highlight class="normal">57:</highlight></codeline>
+<codeline><highlight class="normal">58:<sp/><sp/><sp/><sp/><sp/>#<sp/>wxWidgets<sp/>calls<sp/>this<sp/>method<sp/>to<sp/>initialize<sp/>the<sp/>application</highlight></codeline>
+<codeline><highlight class="normal">59:<sp/><sp/><sp/><sp/><sp/>def<sp/>OnInit(self):</highlight></codeline>
+<codeline><highlight class="normal">60:</highlight></codeline>
+<codeline><highlight class="normal">61:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>Create<sp/>an<sp/>instance<sp/>of<sp/>our<sp/>customized<sp/>Frame<sp/>class</highlight></codeline>
+<codeline><highlight class="normal">62:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>frame<sp/>=<sp/>MyFrame(NULL,<sp/>-1,<sp/>&quot;This<sp/>is<sp/>a<sp/>test&quot;)</highlight></codeline>
+<codeline><highlight class="normal">63:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>frame.Show(true)</highlight></codeline>
+<codeline><highlight class="normal">64:</highlight></codeline>
+<codeline><highlight class="normal">67:</highlight></codeline>
+<codeline><highlight class="normal">68:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>Return<sp/>a<sp/>success<sp/>flag</highlight></codeline>
+<codeline><highlight class="normal">69:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>true</highlight></codeline>
+<codeline><highlight class="normal">70:</highlight></codeline>
+<codeline><highlight class="normal">71:</highlight></codeline>
+<codeline><highlight class="normal">72:<sp/>app<sp/>=<sp/>MyApp(0)<sp/><sp/><sp/><sp/><sp/>#<sp/>Create<sp/>an<sp/>instance<sp/>of<sp/>the<sp/>application<sp/>class</highlight></codeline>
+<codeline><highlight class="normal">73:<sp/>app.MainLoop()<sp/><sp/><sp/><sp/><sp/>#<sp/>Tell<sp/>it<sp/>to<sp/>start<sp/>processing<sp/>events</highlight></codeline>
+<codeline><highlight class="normal">74:</highlight></codeline>
+</programlisting></para><sect2 id="overview_python_1overview_python_using_notice">
+<title>Things to Notice</title>
+<para>At line 2 the wxPython classes, constants, and etc. are imported into the current module&apos;s namespace. If you prefer to reduce namespace pollution you can use <computeroutput>&quot;from wxPython import wx&quot;</computeroutput> and then access all the wxPython identifiers through the wx module, for example, <computeroutput>&quot;wx.wxFrame&quot;</computeroutput>.</para><para>At line 13 the frame&apos;s sizing and moving events are connected to methods of the class. These helper functions are intended to be like the event table macros that wxWidgets employs. But since static event tables are impossible with wxPython, we use helpers that are named the same to dynamically build the table. The only real difference is that the first argument to the event helpers is always the window that the event table entry should be added to.</para><para>Notice the use of <computeroutput>wxDLG_PNT</computeroutput> and <computeroutput>wxDLG_SZE</computeroutput> in lines 19-29 to convert from dialog units to pixels. These helpers are unique to wxPython since Python can&apos;t do method overloading like C++.</para><para>There is an <computeroutput>OnCloseWindow</computeroutput> method at line 34 but no call to <computeroutput>EVT_CLOSE</computeroutput> to attach the event to the method. Does it really get called? The answer is, yes it does. This is because many of the standard events are attached to windows that have the associated standard method names. I have tried to follow the lead of the C++ classes in this area to determine what is standard but since that changes from time to time I can make no guarantees, nor will it be fully documented. When in doubt, use an <computeroutput>EVT_***</computeroutput> function.</para><para>At lines 17 to 21 notice that there are no saved references to the panel or the static text items that are created. Those of you who know Python might be wondering what happens when Python deletes these objects when they go out of scope. Do they disappear from the GUI? They don&apos;t. Remember that in wxPython the Python objects are just shadows of the corresponding C++ objects. Once the C++ windows and controls are attached to their parents, the parents manage them and delete them when necessary. For this reason, most wxPython objects do not need to have a <computeroutput>__del__</computeroutput> method that explicitly causes the C++ object to be deleted. If you ever have the need to forcibly delete a window, use the Destroy() method as shown on line 36.</para><para>Just like wxWidgets in C++, wxPython apps need to create a class derived from <computeroutput><ref refid="classwx_app" kindref="compound">wxApp</ref></computeroutput> (line 56) that implements a method named <computeroutput>OnInit</computeroutput>, (line 59.) This method should create the application&apos;s main window (line 62) and show it.</para><para>And finally, at line 72 an instance of the application class is created. At this point wxPython finishes initializing itself, and calls the <computeroutput>OnInit</computeroutput> method to get things started. (The zero parameter here is a flag for functionality that isn&apos;t quite implemented yet. Just ignore it for now.) The call to <computeroutput>MainLoop</computeroutput> at line 73 starts the event loop which continues until the application terminates or all the top level windows are closed.</para></sect2>
+</sect1>
+<sect1 id="overview_python_1overview_python_classes">
+<title>Classes Implemented in wxPython</title>
+<para>The following classes are supported in wxPython. Most provide nearly full implementations of the public interfaces specified in the C++ documentation, others are less so. They will all be brought as close as possible to the C++ spec over time.</para><para><itemizedlist>
+<listitem><para><ref refid="classwx_accelerator_entry" kindref="compound">wxAcceleratorEntry</ref> </para></listitem>
+<listitem><para><ref refid="classwx_accelerator_table" kindref="compound">wxAcceleratorTable</ref> </para></listitem>
+<listitem><para><ref refid="classwx_activate_event" kindref="compound">wxActivateEvent</ref> </para></listitem>
+<listitem><para><ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> </para></listitem>
+<listitem><para><ref refid="classwx_bitmap_button" kindref="compound">wxBitmapButton</ref> </para></listitem>
+<listitem><para><ref refid="classwx_bitmap_data_object" kindref="compound">wxBitmapDataObject</ref> </para></listitem>
+<listitem><para>wxBMPHandler </para></listitem>
+<listitem><para><ref refid="classwx_box_sizer" kindref="compound">wxBoxSizer</ref> </para></listitem>
+<listitem><para><ref refid="classwx_brush" kindref="compound">wxBrush</ref> </para></listitem>
+<listitem><para><ref refid="classwx_busy_info" kindref="compound">wxBusyInfo</ref> </para></listitem>
+<listitem><para><ref refid="classwx_busy_cursor" kindref="compound">wxBusyCursor</ref> </para></listitem>
+<listitem><para><ref refid="classwx_button" kindref="compound">wxButton</ref> </para></listitem>
+<listitem><para><ref refid="classwx_calculate_layout_event" kindref="compound">wxCalculateLayoutEvent</ref> </para></listitem>
+<listitem><para><ref refid="classwx_calendar_ctrl" kindref="compound">wxCalendarCtrl</ref> </para></listitem>
+<listitem><para><ref refid="classwx_caret" kindref="compound">wxCaret</ref> </para></listitem>
+<listitem><para><ref refid="classwx_check_box" kindref="compound">wxCheckBox</ref> </para></listitem>
+<listitem><para><ref refid="classwx_check_list_box" kindref="compound">wxCheckListBox</ref> </para></listitem>
+<listitem><para><ref refid="classwx_choice" kindref="compound">wxChoice</ref> </para></listitem>
+<listitem><para><ref refid="classwx_client_d_c" kindref="compound">wxClientDC</ref> </para></listitem>
+<listitem><para><ref refid="classwx_clipboard" kindref="compound">wxClipboard</ref> </para></listitem>
+<listitem><para><ref refid="classwx_close_event" kindref="compound">wxCloseEvent</ref> </para></listitem>
+<listitem><para><ref refid="classwx_colour_data" kindref="compound">wxColourData</ref> </para></listitem>
+<listitem><para><ref refid="classwx_colour_dialog" kindref="compound">wxColourDialog</ref> </para></listitem>
+<listitem><para><ref refid="classwx_colour" kindref="compound">wxColour</ref> </para></listitem>
+<listitem><para><ref refid="classwx_combo_box" kindref="compound">wxComboBox</ref> </para></listitem>
+<listitem><para><ref refid="classwx_command_event" kindref="compound">wxCommandEvent</ref> </para></listitem>
+<listitem><para><ref refid="classwx_config_base" kindref="compound">wxConfigBase</ref> </para></listitem>
+<listitem><para><ref refid="classwx_control" kindref="compound">wxControl</ref> </para></listitem>
+<listitem><para><ref refid="classwx_cursor" kindref="compound">wxCursor</ref> </para></listitem>
+<listitem><para><ref refid="classwx_custom_data_object" kindref="compound">wxCustomDataObject</ref> </para></listitem>
+<listitem><para><ref refid="classwx_data_format" kindref="compound">wxDataFormat</ref> </para></listitem>
+<listitem><para><ref refid="classwx_data_object" kindref="compound">wxDataObject</ref> </para></listitem>
+<listitem><para><ref refid="classwx_data_object_composite" kindref="compound">wxDataObjectComposite</ref> </para></listitem>
+<listitem><para><ref refid="classwx_data_object_simple" kindref="compound">wxDataObjectSimple</ref> </para></listitem>
+<listitem><para><ref refid="classwx_date_time" kindref="compound">wxDateTime</ref> </para></listitem>
+<listitem><para><ref refid="classwx_date_span" kindref="compound">wxDateSpan</ref> </para></listitem>
+<listitem><para><ref refid="classwx_d_c" kindref="compound">wxDC</ref> </para></listitem>
+<listitem><para><ref refid="classwx_dialog" kindref="compound">wxDialog</ref> </para></listitem>
+<listitem><para><ref refid="classwx_dir_dialog" kindref="compound">wxDirDialog</ref> </para></listitem>
+<listitem><para><ref refid="classwx_drag_image" kindref="compound">wxDragImage</ref> </para></listitem>
+<listitem><para><ref refid="classwx_drop_files_event" kindref="compound">wxDropFilesEvent</ref> </para></listitem>
+<listitem><para><ref refid="classwx_drop_source" kindref="compound">wxDropSource</ref> </para></listitem>
+<listitem><para><ref refid="classwx_drop_target" kindref="compound">wxDropTarget</ref> </para></listitem>
+<listitem><para><ref refid="classwx_erase_event" kindref="compound">wxEraseEvent</ref> </para></listitem>
+<listitem><para><ref refid="classwx_event" kindref="compound">wxEvent</ref> </para></listitem>
+<listitem><para><ref refid="classwx_evt_handler" kindref="compound">wxEvtHandler</ref> </para></listitem>
+<listitem><para><ref refid="classwx_file_config" kindref="compound">wxFileConfig</ref> </para></listitem>
+<listitem><para><ref refid="classwx_file_data_object" kindref="compound">wxFileDataObject</ref> </para></listitem>
+<listitem><para><ref refid="classwx_file_dialog" kindref="compound">wxFileDialog</ref> </para></listitem>
+<listitem><para><ref refid="classwx_file_drop_target" kindref="compound">wxFileDropTarget</ref> </para></listitem>
+<listitem><para><ref refid="classwx_file_system" kindref="compound">wxFileSystem</ref> </para></listitem>
+<listitem><para><ref refid="classwx_file_system_handler" kindref="compound">wxFileSystemHandler</ref> </para></listitem>
+<listitem><para><ref refid="classwx_focus_event" kindref="compound">wxFocusEvent</ref> </para></listitem>
+<listitem><para><ref refid="classwx_font_data" kindref="compound">wxFontData</ref> </para></listitem>
+<listitem><para><ref refid="classwx_font_dialog" kindref="compound">wxFontDialog</ref> </para></listitem>
+<listitem><para><ref refid="classwx_font" kindref="compound">wxFont</ref> </para></listitem>
+<listitem><para><ref refid="classwx_frame" kindref="compound">wxFrame</ref> </para></listitem>
+<listitem><para><ref refid="classwx_f_s_file" kindref="compound">wxFSFile</ref> </para></listitem>
+<listitem><para><ref refid="classwx_gauge" kindref="compound">wxGauge</ref> </para></listitem>
+<listitem><para>wxGIFHandler </para></listitem>
+<listitem><para><ref refid="classwx_g_l_canvas" kindref="compound">wxGLCanvas</ref> </para></listitem>
+<listitem><para><ref refid="classwx_html_cell" kindref="compound">wxHtmlCell</ref> </para></listitem>
+<listitem><para><ref refid="classwx_html_container_cell" kindref="compound">wxHtmlContainerCell</ref> </para></listitem>
+<listitem><para><ref refid="classwx_html_d_c_renderer" kindref="compound">wxHtmlDCRenderer</ref> </para></listitem>
+<listitem><para><ref refid="classwx_html_easy_printing" kindref="compound">wxHtmlEasyPrinting</ref> </para></listitem>
+<listitem><para><ref refid="classwx_html_parser" kindref="compound">wxHtmlParser</ref> </para></listitem>
+<listitem><para><ref refid="classwx_html_tag_handler" kindref="compound">wxHtmlTagHandler</ref> </para></listitem>
+<listitem><para><ref refid="classwx_html_tag" kindref="compound">wxHtmlTag</ref> </para></listitem>
+<listitem><para><ref refid="classwx_html_win_parser" kindref="compound">wxHtmlWinParser</ref> </para></listitem>
+<listitem><para><ref refid="classwx_html_printout" kindref="compound">wxHtmlPrintout</ref> </para></listitem>
+<listitem><para><ref refid="classwx_html_win_tag_handler" kindref="compound">wxHtmlWinTagHandler</ref> </para></listitem>
+<listitem><para><ref refid="classwx_html_window" kindref="compound">wxHtmlWindow</ref> </para></listitem>
+<listitem><para><ref refid="classwx_iconize_event" kindref="compound">wxIconizeEvent</ref> </para></listitem>
+<listitem><para><ref refid="classwx_icon" kindref="compound">wxIcon</ref> </para></listitem>
+<listitem><para><ref refid="classwx_idle_event" kindref="compound">wxIdleEvent</ref> </para></listitem>
+<listitem><para><ref refid="classwx_image" kindref="compound">wxImage</ref> </para></listitem>
+<listitem><para><ref refid="classwx_image_handler" kindref="compound">wxImageHandler</ref> </para></listitem>
+<listitem><para><ref refid="classwx_image_list" kindref="compound">wxImageList</ref> </para></listitem>
+<listitem><para><ref refid="classwx_individual_layout_constraint" kindref="compound">wxIndividualLayoutConstraint</ref> </para></listitem>
+<listitem><para><ref refid="classwx_init_dialog_event" kindref="compound">wxInitDialogEvent</ref> </para></listitem>
+<listitem><para><ref refid="classwx_input_stream" kindref="compound">wxInputStream</ref> </para></listitem>
+<listitem><para><ref refid="classwx_file_system" kindref="compound">wxInternetFSHandler</ref> </para></listitem>
+<listitem><para><ref refid="classwx_joystick_event" kindref="compound">wxJoystickEvent</ref> </para></listitem>
+<listitem><para>wxJPEGHandler </para></listitem>
+<listitem><para><ref refid="classwx_key_event" kindref="compound">wxKeyEvent</ref> </para></listitem>
+<listitem><para><ref refid="classwx_layout_algorithm" kindref="compound">wxLayoutAlgorithm</ref> </para></listitem>
+<listitem><para><ref refid="classwx_layout_constraints" kindref="compound">wxLayoutConstraints</ref> </para></listitem>
+<listitem><para><ref refid="classwx_list_box" kindref="compound">wxListBox</ref> </para></listitem>
+<listitem><para><ref refid="classwx_list_ctrl" kindref="compound">wxListCtrl</ref> </para></listitem>
+<listitem><para><ref refid="classwx_list_event" kindref="compound">wxListEvent</ref> </para></listitem>
+<listitem><para><ref refid="classwx_list_item" kindref="compound">wxListItem</ref> </para></listitem>
+<listitem><para><ref refid="classwx_mask" kindref="compound">wxMask</ref> </para></listitem>
+<listitem><para><ref refid="classwx_maximize_event" kindref="compound">wxMaximizeEvent</ref> </para></listitem>
+<listitem><para><ref refid="classwx_m_d_i_child_frame" kindref="compound">wxMDIChildFrame</ref> </para></listitem>
+<listitem><para><ref refid="classwx_m_d_i_client_window" kindref="compound">wxMDIClientWindow</ref> </para></listitem>
+<listitem><para><ref refid="classwx_m_d_i_parent_frame" kindref="compound">wxMDIParentFrame</ref> </para></listitem>
+<listitem><para><ref refid="classwx_memory_d_c" kindref="compound">wxMemoryDC</ref> </para></listitem>
+<listitem><para><ref refid="classwx_memory_f_s_handler" kindref="compound">wxMemoryFSHandler</ref> </para></listitem>
+<listitem><para><ref refid="classwx_menu_bar" kindref="compound">wxMenuBar</ref> </para></listitem>
+<listitem><para><ref refid="classwx_menu_event" kindref="compound">wxMenuEvent</ref> </para></listitem>
+<listitem><para><ref refid="classwx_menu_item" kindref="compound">wxMenuItem</ref> </para></listitem>
+<listitem><para><ref refid="classwx_menu" kindref="compound">wxMenu</ref> </para></listitem>
+<listitem><para><ref refid="classwx_message_dialog" kindref="compound">wxMessageDialog</ref> </para></listitem>
+<listitem><para><ref refid="classwx_metafile_d_c" kindref="compound">wxMetafileDC</ref> </para></listitem>
+<listitem><para><ref refid="classwx_mini_frame" kindref="compound">wxMiniFrame</ref> </para></listitem>
+<listitem><para><ref refid="classwx_mouse_event" kindref="compound">wxMouseEvent</ref> </para></listitem>
+<listitem><para><ref refid="classwx_move_event" kindref="compound">wxMoveEvent</ref> </para></listitem>
+<listitem><para>wxNotebookEvent </para></listitem>
+<listitem><para><ref refid="classwx_notebook" kindref="compound">wxNotebook</ref> </para></listitem>
+<listitem><para><ref refid="classwx_page_setup_dialog_data" kindref="compound">wxPageSetupDialogData</ref> </para></listitem>
+<listitem><para><ref refid="classwx_page_setup_dialog" kindref="compound">wxPageSetupDialog</ref> </para></listitem>
+<listitem><para><ref refid="classwx_paint_d_c" kindref="compound">wxPaintDC</ref> </para></listitem>
+<listitem><para><ref refid="classwx_paint_event" kindref="compound">wxPaintEvent</ref> </para></listitem>
+<listitem><para><ref refid="classwx_palette" kindref="compound">wxPalette</ref> </para></listitem>
+<listitem><para><ref refid="classwx_panel" kindref="compound">wxPanel</ref> </para></listitem>
+<listitem><para><ref refid="classwx_pen" kindref="compound">wxPen</ref> </para></listitem>
+<listitem><para>wxPNGHandler </para></listitem>
+<listitem><para><ref refid="classwx_point" kindref="compound">wxPoint</ref> </para></listitem>
+<listitem><para><ref refid="classwx_post_script_d_c" kindref="compound">wxPostScriptDC</ref> </para></listitem>
+<listitem><para><ref refid="classwx_preview_frame" kindref="compound">wxPreviewFrame</ref> </para></listitem>
+<listitem><para><ref refid="classwx_print_data" kindref="compound">wxPrintData</ref> </para></listitem>
+<listitem><para><ref refid="classwx_print_dialog_data" kindref="compound">wxPrintDialogData</ref> </para></listitem>
+<listitem><para><ref refid="classwx_print_dialog" kindref="compound">wxPrintDialog</ref> </para></listitem>
+<listitem><para><ref refid="classwx_printer" kindref="compound">wxPrinter</ref> </para></listitem>
+<listitem><para><ref refid="classwx_print_preview" kindref="compound">wxPrintPreview</ref> </para></listitem>
+<listitem><para><ref refid="classwx_printer_d_c" kindref="compound">wxPrinterDC</ref> </para></listitem>
+<listitem><para><ref refid="classwx_printout" kindref="compound">wxPrintout</ref> </para></listitem>
+<listitem><para><ref refid="classwx_process" kindref="compound">wxProcess</ref> </para></listitem>
+<listitem><para><ref refid="classwx_query_layout_info_event" kindref="compound">wxQueryLayoutInfoEvent</ref> </para></listitem>
+<listitem><para><ref refid="classwx_radio_box" kindref="compound">wxRadioBox</ref> </para></listitem>
+<listitem><para><ref refid="classwx_radio_button" kindref="compound">wxRadioButton</ref> </para></listitem>
+<listitem><para><ref refid="classwx_real_point" kindref="compound">wxRealPoint</ref> </para></listitem>
+<listitem><para><ref refid="classwx_rect" kindref="compound">wxRect</ref> </para></listitem>
+<listitem><para><ref refid="classwx_region_iterator" kindref="compound">wxRegionIterator</ref> </para></listitem>
+<listitem><para><ref refid="classwx_region" kindref="compound">wxRegion</ref> </para></listitem>
+<listitem><para><ref refid="classwx_sash_event" kindref="compound">wxSashEvent</ref> </para></listitem>
+<listitem><para><ref refid="classwx_sash_layout_window" kindref="compound">wxSashLayoutWindow</ref> </para></listitem>
+<listitem><para><ref refid="classwx_sash_window" kindref="compound">wxSashWindow</ref> </para></listitem>
+<listitem><para><ref refid="classwx_screen_d_c" kindref="compound">wxScreenDC</ref> </para></listitem>
+<listitem><para><ref refid="classwx_scroll_bar" kindref="compound">wxScrollBar</ref> </para></listitem>
+<listitem><para><ref refid="classwx_scroll_event" kindref="compound">wxScrollEvent</ref> </para></listitem>
+<listitem><para><ref refid="group__group__class__miscwnd_1ga695bec5996cd4d5512d1a01cfdcf96a5" kindref="member">wxScrolledWindow</ref> </para></listitem>
+<listitem><para><ref refid="classwx_scroll_win_event" kindref="compound">wxScrollWinEvent</ref> </para></listitem>
+<listitem><para><ref refid="classwx_show_event" kindref="compound">wxShowEvent</ref> </para></listitem>
+<listitem><para><ref refid="classwx_single_choice_dialog" kindref="compound">wxSingleChoiceDialog</ref> </para></listitem>
+<listitem><para><ref refid="classwx_size_event" kindref="compound">wxSizeEvent</ref> </para></listitem>
+<listitem><para><ref refid="classwx_size" kindref="compound">wxSize</ref> </para></listitem>
+<listitem><para><ref refid="classwx_sizer" kindref="compound">wxSizer</ref> </para></listitem>
+<listitem><para><ref refid="classwx_sizer_item" kindref="compound">wxSizerItem</ref> </para></listitem>
+<listitem><para><ref refid="classwx_slider" kindref="compound">wxSlider</ref> </para></listitem>
+<listitem><para><ref refid="classwx_spin_button" kindref="compound">wxSpinButton</ref> </para></listitem>
+<listitem><para><ref refid="classwx_spin_event" kindref="compound">wxSpinEvent</ref> </para></listitem>
+<listitem><para><ref refid="classwx_splitter_window" kindref="compound">wxSplitterWindow</ref> </para></listitem>
+<listitem><para><ref refid="classwx_static_bitmap" kindref="compound">wxStaticBitmap</ref> </para></listitem>
+<listitem><para><ref refid="classwx_static_box" kindref="compound">wxStaticBox</ref> </para></listitem>
+<listitem><para><ref refid="classwx_static_box_sizer" kindref="compound">wxStaticBoxSizer</ref> </para></listitem>
+<listitem><para><ref refid="classwx_static_line" kindref="compound">wxStaticLine</ref> </para></listitem>
+<listitem><para><ref refid="classwx_static_text" kindref="compound">wxStaticText</ref> </para></listitem>
+<listitem><para><ref refid="classwx_status_bar" kindref="compound">wxStatusBar</ref> </para></listitem>
+<listitem><para><ref refid="classwx_sys_colour_changed_event" kindref="compound">wxSysColourChangedEvent</ref> </para></listitem>
+<listitem><para><ref refid="classwx_task_bar_icon" kindref="compound">wxTaskBarIcon</ref> </para></listitem>
+<listitem><para><ref refid="classwx_text_ctrl" kindref="compound">wxTextCtrl</ref> </para></listitem>
+<listitem><para><ref refid="classwx_text_data_object" kindref="compound">wxTextDataObject</ref> </para></listitem>
+<listitem><para><ref refid="classwx_text_drop_target" kindref="compound">wxTextDropTarget</ref> </para></listitem>
+<listitem><para><ref refid="classwx_text_entry_dialog" kindref="compound">wxTextEntryDialog</ref> </para></listitem>
+<listitem><para><ref refid="classwx_timer" kindref="compound">wxTimer</ref> </para></listitem>
+<listitem><para><ref refid="classwx_timer_event" kindref="compound">wxTimerEvent</ref> </para></listitem>
+<listitem><para><ref refid="classwx_time_span" kindref="compound">wxTimeSpan</ref> </para></listitem>
+<listitem><para><ref refid="classwx_tip_provider" kindref="compound">wxTipProvider</ref> </para></listitem>
+<listitem><para>wxToolBarTool </para></listitem>
+<listitem><para><ref refid="classwx_tool_bar" kindref="compound">wxToolBar</ref> </para></listitem>
+<listitem><para><ref refid="classwx_tool_tip" kindref="compound">wxToolTip</ref> </para></listitem>
+<listitem><para><ref refid="classwx_tree_ctrl" kindref="compound">wxTreeCtrl</ref> </para></listitem>
+<listitem><para><ref refid="classwx_tree_event" kindref="compound">wxTreeEvent</ref> </para></listitem>
+<listitem><para><ref refid="classwx_tree_item_data" kindref="compound">wxTreeItemData</ref> </para></listitem>
+<listitem><para><ref refid="classwx_tree_item_id" kindref="compound">wxTreeItemId</ref> </para></listitem>
+<listitem><para><ref refid="classwx_update_u_i_event" kindref="compound">wxUpdateUIEvent</ref> </para></listitem>
+<listitem><para><ref refid="classwx_validator" kindref="compound">wxValidator</ref> </para></listitem>
+<listitem><para><ref refid="classwx_window_d_c" kindref="compound">wxWindowDC</ref> </para></listitem>
+<listitem><para><ref refid="classwx_window" kindref="compound">wxWindow</ref> </para></listitem>
+<listitem><para><ref refid="classwx_file_system" kindref="compound">wxZipFSHandler</ref></para></listitem>
+</itemizedlist>
+</para></sect1>
+<sect1 id="overview_python_1overview_python_help">
+<title>Where to Go for Help</title>
+<para>Since wxPython is a blending of multiple technologies, help comes from multiple sources. See <ulink url="http://wxpython.org/">http://wxpython.org/</ulink> for details on various sources of help, but probably the best source is the wxPython-users mail list. You can view the archive or subscribe by going to <ulink url="http://wxpython.org/maillist.php">http://wxpython.org/maillist.php</ulink></para><para>Or you can send mail directly to the list using this address: <ulink url="mailto:wxpython-users@lists.wxwidgets.org">wxpython-users@lists.wxwidgets.org</ulink> </para></sect1>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

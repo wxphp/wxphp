@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="dir_0cab067ff85fb81ea382e0e998d8c67b" kind="dir">
     <compoundname>interface/wx/msw/ole/</compoundname>
     <innerfile refid="activex_8h">activex.h</innerfile>

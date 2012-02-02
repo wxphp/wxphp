@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_grid_cell_date_time_renderer" kind="class" prot="public">
     <compoundname>wxGridCellDateTimeRenderer</compoundname>
     <basecompoundref refid="classwx_grid_cell_string_renderer" prot="public" virt="non-virtual">wxGridCellStringRenderer</basecompoundref>
@@ -73,41 +73,41 @@
 <para>This class may be used to format a date/time data in a cell. </para>    </briefdescription>
     <detaileddescription>
 <para>The class <ref refid="classwx_date_time" kindref="compound">wxDateTime</ref> is used internally to display the local date/time or to parse the string date entered in the cell thanks to the defined format.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__grid" kindref="compound">Grid Related Classes</ref></para><para><simplesect kind="see"><para><ref refid="classwx_grid_cell_renderer" kindref="compound">wxGridCellRenderer</ref>, <ref refid="classwx_grid_cell_auto_wrap_string_renderer" kindref="compound">wxGridCellAutoWrapStringRenderer</ref>, <ref refid="classwx_grid_cell_bool_renderer" kindref="compound">wxGridCellBoolRenderer</ref>, <ref refid="classwx_grid_cell_enum_renderer" kindref="compound">wxGridCellEnumRenderer</ref>, <ref refid="classwx_grid_cell_float_renderer" kindref="compound">wxGridCellFloatRenderer</ref>, <ref refid="classwx_grid_cell_number_renderer" kindref="compound">wxGridCellNumberRenderer</ref>, <ref refid="classwx_grid_cell_string_renderer" kindref="compound">wxGridCellStringRenderer</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__grid" kindref="compound">Grid Related Classes</ref></para><para><simplesect kind="see"><para><ref refid="classwx_grid_cell_renderer" kindref="compound">wxGridCellRenderer</ref>, <ref refid="classwx_grid_cell_auto_wrap_string_renderer" kindref="compound">wxGridCellAutoWrapStringRenderer</ref>, <ref refid="classwx_grid_cell_bool_renderer" kindref="compound">wxGridCellBoolRenderer</ref>, <ref refid="classwx_grid_cell_enum_renderer" kindref="compound">wxGridCellEnumRenderer</ref>, <ref refid="classwx_grid_cell_float_renderer" kindref="compound">wxGridCellFloatRenderer</ref>, <ref refid="classwx_grid_cell_number_renderer" kindref="compound">wxGridCellNumberRenderer</ref>, <ref refid="classwx_grid_cell_string_renderer" kindref="compound">wxGridCellStringRenderer</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="6667">
+      <node id="6671">
         <label>wxGridCellDateTimeRenderer</label>
         <link refid="classwx_grid_cell_date_time_renderer"/>
-        <childnode refid="6668" relation="public-inheritance">
+        <childnode refid="6672" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6669">
+      <node id="6673">
         <label>wxGridCellRenderer</label>
         <link refid="classwx_grid_cell_renderer"/>
       </node>
-      <node id="6668">
+      <node id="6672">
         <label>wxGridCellStringRenderer</label>
         <link refid="classwx_grid_cell_string_renderer"/>
-        <childnode refid="6669" relation="public-inheritance">
+        <childnode refid="6673" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="6670">
+      <node id="6674">
         <label>wxGridCellDateTimeRenderer</label>
         <link refid="classwx_grid_cell_date_time_renderer"/>
-        <childnode refid="6671" relation="public-inheritance">
+        <childnode refid="6675" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6672">
+      <node id="6676">
         <label>wxGridCellRenderer</label>
         <link refid="classwx_grid_cell_renderer"/>
       </node>
-      <node id="6671">
+      <node id="6675">
         <label>wxGridCellStringRenderer</label>
         <link refid="classwx_grid_cell_string_renderer"/>
-        <childnode refid="6672" relation="public-inheritance">
+        <childnode refid="6676" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>

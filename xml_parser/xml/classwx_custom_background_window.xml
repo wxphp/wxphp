@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_custom_background_window" kind="class" prot="public">
     <compoundname>wxCustomBackgroundWindow</compoundname>
     <includes local="no">wx/custombgwin.h</includes>
@@ -48,12 +48,12 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">MyCanvas<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classwx_custom_background_window" kindref="compound" tooltip="A helper class making it possible to use custom background for any window.">wxCustomBackgroundWindow</ref>&lt;wxScrolledWindow&gt;</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MyCanvas(<ref refid="classwx_window" kindref="compound" tooltip="wxWindow is the base class for all windows and represents any visible object on screen...">wxWindow</ref>*<sp/>parent)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MyCanvas(<ref refid="classwx_window" kindref="compound" tooltip="wxWindow is the base class for all windows and represents any visible object on screen.">wxWindow</ref>*<sp/>parent)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Notice<sp/>that<sp/>we<sp/>must<sp/>explicitly<sp/>call<sp/>base<sp/>class<sp/>Create()</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>instead<sp/>of<sp/>using<sp/>its<sp/>ctor<sp/>as<sp/>wxCustomBackgroundWindow</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>doesn&apos;t<sp/>define<sp/>any<sp/>non-default<sp/>ctors.</highlight><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Create(parent,<sp/><ref refid="defs_8h_1ac66d0a09761e7d86b2ac0b2e0c6a8cbba1f375b01ea03a713bbb7e32a36a2589c" kindref="member" tooltip="Any id: means that we don&amp;#39;t care about the id, whether when installing an event...">wxID_ANY</ref>);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Create(parent,<sp/><ref refid="defs_8h_1ac66d0a09761e7d86b2ac0b2e0c6a8cbba1f375b01ea03a713bbb7e32a36a2589c" kindref="member" tooltip="Any id: means that we don&amp;#39;t care about the id, whether when installing an event handler or when creat...">wxID_ANY</ref>);</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>

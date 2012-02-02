@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="textdlg_8h" kind="file">
     <compoundname>textdlg.h</compoundname>
     <innerclass refid="classwx_password_entry_dialog" prot="public">wxPasswordEntryDialog</innerclass>
@@ -47,7 +47,7 @@
         <briefdescription>
 <para>Pop up a dialog box with title set to <emphasis>caption</emphasis>, <computeroutput>message</computeroutput>, and a <computeroutput>default_value</computeroutput>. </para>        </briefdescription>
         <detaileddescription>
-<para>The user may type in text and press OK to return this text, or press Cancel to return the empty string.</para><para>If <computeroutput>centre</computeroutput> is true, the message text (which may include new line characters) is centred; if false, the message is left-justified.</para><para>This function is a wrapper around <ref refid="classwx_text_entry_dialog" kindref="compound">wxTextEntryDialog</ref> and while it is usually more convenient to use, using the dialog directly is more flexible, e.g. it allows you to specify the <computeroutput>wxTE_MULTILINE</computeroutput> to allow the user enter multiple lines of text while this function is limited to single line entry only.</para><para>Include file: <verbatim>#include &lt;wx/textdlg.h&gt; </verbatim> </para>        </detaileddescription>
+<para>The user may type in text and press OK to return this text, or press Cancel to return the empty string.</para><para>If <computeroutput>centre</computeroutput> is true, the message text (which may include new line characters) is centred; if false, the message is left-justified.</para><para>This function is a wrapper around <ref refid="classwx_text_entry_dialog" kindref="compound">wxTextEntryDialog</ref> and while it is usually more convenient to use, using the dialog directly is more flexible, e.g. it allows you to specify the <computeroutput>wxTE_MULTILINE</computeroutput> to allow the user enter multiple lines of text while this function is limited to single line entry only.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/textdlg.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textdlg.h" line="147"/>
@@ -94,7 +94,7 @@
         <briefdescription>
 <para>Similar to <ref refid="group__group__funcmacro__dialog_1ga7ffaac89c7b1be611d61599ec0bc2a8d" kindref="member">wxGetTextFromUser()</ref> but the text entered in the dialog is not shown on screen but replaced with stars. </para>        </briefdescription>
         <detaileddescription>
-<para>This is intended to be used for entering passwords as the function name implies.</para><para>Include file: <verbatim>#include &lt;wx/textdlg.h&gt; </verbatim> </para>        </detaileddescription>
+<para>This is intended to be used for entering passwords as the function name implies.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/textdlg.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textdlg.h" line="162"/>

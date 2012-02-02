@@ -1168,6 +1168,7 @@
 			"WXK_SHIFT",
 			"WXK_ALT",
 			"WXK_CONTROL",
+			"WXK_RAW_CONTROL",
 			"WXK_MENU",
 			"WXK_PAUSE",
 			"WXK_CAPITAL",
@@ -2135,14 +2136,12 @@
 			"wxPORT_MSW",
 			"wxPORT_MOTIF",
 			"wxPORT_GTK",
-			"wxPORT_MGL",
+			"wxPORT_DFB",
 			"wxPORT_X11",
 			"wxPORT_OS2",
 			"wxPORT_MAC",
 			"wxPORT_COCOA",
-			"wxPORT_WINCE",
-			"wxPORT_PALMOS",
-			"wxPORT_DFB"
+			"wxPORT_WINCE"
 		],
 		"wxArchitecture":[
 			"wxARCH_INVALID",
@@ -2173,31 +2172,6 @@
 			"wxPreviewFrame_AppModal",
 			"wxPreviewFrame_WindowModal",
 			"wxPreviewFrame_NonModal"
-		],
-		"wxSignal":[
-			"wxSIGNONE",
-			"wxSIGHUP",
-			"wxSIGINT",
-			"wxSIGQUIT",
-			"wxSIGILL",
-			"wxSIGTRAP",
-			"wxSIGABRT",
-			"wxSIGEMT",
-			"wxSIGFPE",
-			"wxSIGKILL",
-			"wxSIGBUS",
-			"wxSIGSEGV",
-			"wxSIGSYS",
-			"wxSIGPIPE",
-			"wxSIGALRM",
-			"wxSIGTERM"
-		],
-		"wxKillError":[
-			"wxKILL_OK",
-			"wxKILL_BAD_SIGNAL",
-			"wxKILL_ACCESS_DENIED",
-			"wxKILL_NO_PROCESS",
-			"wxKILL_ERROR"
 		],
 		"wxPropertySheetDialogFlags":[
 			"wxPROPSHEET_DEFAULT",
@@ -2818,6 +2792,41 @@
 			"wxURL_NOPATH",
 			"wxURL_CONNERR",
 			"wxURL_PROTOERR"
+		],
+		"wxSignal":[
+			"wxSIGNONE",
+			"wxSIGHUP",
+			"wxSIGINT",
+			"wxSIGQUIT",
+			"wxSIGILL",
+			"wxSIGTRAP",
+			"wxSIGABRT",
+			"wxSIGEMT",
+			"wxSIGFPE",
+			"wxSIGKILL",
+			"wxSIGBUS",
+			"wxSIGSEGV",
+			"wxSIGSYS",
+			"wxSIGPIPE",
+			"wxSIGALRM",
+			"wxSIGTERM"
+		],
+		"wxKillError":[
+			"wxKILL_OK",
+			"wxKILL_BAD_SIGNAL",
+			"wxKILL_ACCESS_DENIED",
+			"wxKILL_NO_PROCESS",
+			"wxKILL_ERROR"
+		],
+		"wxKillFlags":[
+			"wxKILL_NOCHILDREN",
+			"wxKILL_CHILDREN"
+		],
+		"wxShutdownFlags":[
+			"wxSHUTDOWN_FORCE",
+			"wxSHUTDOWN_POWEROFF",
+			"wxSHUTDOWN_REBOOT",
+			"wxSHUTDOWN_LOGOFF"
 		],
 		"wxNumValidatorStyle":[
 			"wxNUM_VAL_DEFAULT",

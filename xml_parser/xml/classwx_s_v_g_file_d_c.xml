@@ -1,11 +1,10 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_s_v_g_file_d_c" kind="class" prot="public">
     <compoundname>wxSVGFileDC</compoundname>
     <basecompoundref refid="classwx_d_c" prot="public" virt="non-virtual">wxDC</basecompoundref>
     <includes local="no">wx/dcsvg.h</includes>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_s_v_g_file_d_c_1ae9c7ad3de5259a461eb4fd7c56b58d90" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void wxSVGFileDC::CrossHair</definition>
@@ -364,46 +363,46 @@
 <para>A <ref refid="classwx_s_v_g_file_d_c" kindref="compound">wxSVGFileDC</ref> is a device context onto which graphics and text can be drawn, and the output produced as a vector file, in SVG format (see the W3C SVG Specifications &lt;<ulink url="http://www.w3.org/TR/2001/REC-SVG-20010904/">http://www.w3.org/TR/2001/REC-SVG-20010904/</ulink>&gt;). </para>    </briefdescription>
     <detaileddescription>
 <para>This format can be read by a range of programs, including a Netscape plugin (Adobe), full details are given in the SVG Implementation and Resource Directory &lt;<ulink url="http://www.svgi.org/">http://www.svgi.org/</ulink>&gt;. Vector formats may often be smaller than raster formats.</para><para>The intention behind <ref refid="classwx_s_v_g_file_d_c" kindref="compound">wxSVGFileDC</ref> is that it can be used to produce a file corresponding to the screen display context, <ref refid="classwx_s_v_g_file_d_c" kindref="compound">wxSVGFileDC</ref>, by passing the <ref refid="classwx_s_v_g_file_d_c" kindref="compound">wxSVGFileDC</ref> as a parameter instead of a <ref refid="classwx_s_v_g_file_d_c" kindref="compound">wxSVGFileDC</ref>. Thus the <ref refid="classwx_s_v_g_file_d_c" kindref="compound">wxSVGFileDC</ref> is a write-only class.</para><para>As the <ref refid="classwx_s_v_g_file_d_c" kindref="compound">wxSVGFileDC</ref> is a vector format, raster operations like <ref refid="classwx_s_v_g_file_d_c_1ae394c964ff6902391b5ae5a370acb8da" kindref="member">GetPixel()</ref> are unlikely to be supported. However, the SVG specification allows for PNG format raster files to be embedded in the SVG, and so bitmaps, icons and blit operations in <ref refid="classwx_s_v_g_file_d_c" kindref="compound">wxSVGFileDC</ref> are supported.</para><para>A more substantial SVG library (for reading and writing) is available at the wxArt2D website &lt;<ulink url="http://wxart2d.sourceforge.net/">http://wxart2d.sourceforge.net/</ulink>&gt;.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__dc" kindref="compound">Device Contexts</ref> </para>    </detaileddescription>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__dc" kindref="compound">Device Contexts</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10567">
+      <node id="10627">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="10566">
+      <node id="10626">
         <label>wxDC</label>
         <link refid="classwx_d_c"/>
-        <childnode refid="10567" relation="public-inheritance">
+        <childnode refid="10627" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10565">
+      <node id="10625">
         <label>wxSVGFileDC</label>
         <link refid="classwx_s_v_g_file_d_c"/>
-        <childnode refid="10566" relation="public-inheritance">
+        <childnode refid="10626" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10570">
+      <node id="10630">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="10571" relation="usage">
+        <childnode refid="10631" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="10569">
+      <node id="10629">
         <label>wxDC</label>
         <link refid="classwx_d_c"/>
-        <childnode refid="10570" relation="public-inheritance">
+        <childnode refid="10630" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10568">
+      <node id="10628">
         <label>wxSVGFileDC</label>
         <link refid="classwx_s_v_g_file_d_c"/>
-        <childnode refid="10569" relation="public-inheritance">
+        <childnode refid="10629" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10571">
+      <node id="10631">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

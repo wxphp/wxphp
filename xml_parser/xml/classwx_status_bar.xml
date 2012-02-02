@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_status_bar" kind="class" prot="public">
     <compoundname>wxStatusBar</compoundname>
     <basecompoundref refid="classwx_control" prot="public" virt="non-virtual">wxControl</basecompoundref>
@@ -494,83 +494,83 @@
 </itemizedlist>
 <simplesect kind="remark"><para>It is possible to create controls and other windows on the status bar. Position these windows from an OnSize() event handler.</para><simplesectsep/><para>Notice that only the first 127 characters of a string will be shown in status bar fields under pre-XP MSW systems (or even under later systems if a proper manifest indicating that the program uses version 6 of common controls library is not used). This is a limitation of the native control on these platforms.</para></simplesect>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__miscwnd" kindref="compound">Miscellaneous Windows</ref></para><para><simplesect kind="see"><para><ref refid="classwx_status_bar_pane" kindref="compound">wxStatusBarPane</ref>, <ref refid="classwx_frame" kindref="compound">wxFrame</ref>, <ref refid="page__samples_1page_samples_statbar" kindref="member">Status Bar Sample</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__miscwnd" kindref="compound">Miscellaneous Windows</ref></para><para><simplesect kind="see"><para><ref refid="classwx_status_bar_pane" kindref="compound">wxStatusBarPane</ref>, <ref refid="classwx_frame" kindref="compound">wxFrame</ref>, <ref refid="page_samples_1page_samples_statbar" kindref="member">Status Bar Sample</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10452">
+      <node id="10512">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="10451">
+      <node id="10511">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="10452" relation="public-inheritance">
+        <childnode refid="10512" relation="public-inheritance">
         </childnode>
-        <childnode refid="10453" relation="public-inheritance">
+        <childnode refid="10513" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10448">
+      <node id="10508">
         <label>wxStatusBar</label>
         <link refid="classwx_status_bar"/>
-        <childnode refid="10449" relation="public-inheritance">
+        <childnode refid="10509" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10453">
+      <node id="10513">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="10449">
+      <node id="10509">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="10450" relation="public-inheritance">
+        <childnode refid="10510" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10450">
+      <node id="10510">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="10451" relation="public-inheritance">
+        <childnode refid="10511" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10458">
+      <node id="10518">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="10459" relation="usage">
+        <childnode refid="10519" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="10457">
+      <node id="10517">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="10458" relation="public-inheritance">
+        <childnode refid="10518" relation="public-inheritance">
         </childnode>
-        <childnode refid="10460" relation="public-inheritance">
+        <childnode refid="10520" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10454">
+      <node id="10514">
         <label>wxStatusBar</label>
         <link refid="classwx_status_bar"/>
-        <childnode refid="10455" relation="public-inheritance">
+        <childnode refid="10515" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10460">
+      <node id="10520">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="10455">
+      <node id="10515">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="10456" relation="public-inheritance">
+        <childnode refid="10516" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10456">
+      <node id="10516">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="10457" relation="public-inheritance">
+        <childnode refid="10517" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10459">
+      <node id="10519">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

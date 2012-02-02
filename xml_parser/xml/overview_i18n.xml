@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="overview_i18n" kind="page">
+    <compoundname>overview_i18n</compoundname>
+    <title>Internationalization</title>
+    <detaileddescription>
+<para><itemizedlist>
+<listitem><para><ref refid="overview_i18n_1overview_i18n_intro" kindref="member">Introduction</ref> </para></listitem>
+<listitem><para><ref refid="overview_i18n_1overview_i18n_menuaccel" kindref="member">Translating Menu Accelerators</ref></para></listitem>
+</itemizedlist>
+<hruler/>
+</para><sect1 id="overview_i18n_1overview_i18n_intro">
+<title>Introduction</title>
+<para>Although internationalization of an application (i18n for short) involves far more than just translating its text messages to another message - date, time and currency formats need changing too, some languages are written left to right and others right to left, character encoding may differ and many other things may need changing too - it is a necessary first step. wxWidgets provides facilities for message translation with it&apos;s <ref refid="classwx_locale" kindref="compound">wxLocale</ref> class and is itself fully translated into several languages. Please consult wxWidgets home page for the most up-to-date translations - and if you translate it into one of the languages not done yet, your translations would be gratefully accepted for inclusion into future versions of the library!</para><para>The wxWidgets approach to i18n closely follows the GNU gettext package. wxWidgets uses the message catalogs which are binary compatible with gettext catalogs and this allows to use all of the programs in this package to work with them. But note that no additional libraries are needed during run-time, however, so you have only the message catalogs to distribute and nothing else.</para><para>During program development you will need the gettext package for working with message catalogs. <bold>Warning:</bold> gettext versions &lt; 0.10 are known to be buggy, so you should find a later version of it!</para><para>There are two kinds of message catalogs: source catalogs which are text files with extension .po and binary catalogs which are created from the source ones with <emphasis>msgfmt</emphasis> program (part of gettext package) and have the extension .mo. Only the binary files are needed during program execution.</para><para>Translating your application involves several steps:</para><para><itemizedlist>
+<listitem><para>Translating the strings in the program text using wxGetTranslation or equivalently the <computeroutput><ref refid="group__group__funcmacro__string_1ga8a02b8875a521df57263a9e6f090f2d0" kindref="member">_()</ref></computeroutput> macro. </para></listitem>
+<listitem><para>Extracting the strings to be translated from the program: this uses the work done in the previous step because <computeroutput>xgettext</computeroutput> program used for string extraction recognises the standard <computeroutput><ref refid="group__group__funcmacro__string_1ga8a02b8875a521df57263a9e6f090f2d0" kindref="member">_()</ref></computeroutput> as well as (using its <computeroutput>-k</computeroutput> option) our wxGetTranslation and extracts all strings inside the calls to these functions. Alternatively, you may use <computeroutput>-a</computeroutput> option to extract all the strings, but it will usually result in many strings being found which don&apos;t have to be translated at all. This will create a text message catalog - a .po file. </para></listitem>
+<listitem><para>Translating the strings extracted in the previous step to other language(s). It involves editing the .po file. </para></listitem>
+<listitem><para>Compiling the .po file into .mo file to be used by the program. </para></listitem>
+<listitem><para>Installing the .mo files with your application in the appropriate location for the target system which is the one returned by <ref refid="classwx_standard_paths_1a3dc46e76d0a5045a9331d02fd429173c" kindref="member">wxStandardPaths::GetLocalizedResourcesDir</ref>( <ref refid="classwx_standard_paths_1a00cb1fa092b0a164c3d1b5813b836a93a555b4185a68ec29bce358ac2718e78bc" kindref="member">wxStandardPaths::ResourceCat_Messages</ref> ). If the message catalogs are not installed in this default location you may explicitly use <ref refid="classwx_locale_1ab9c802bd24b0dc1e12a417e7b8febc17" kindref="member">wxLocale::AddCatalogLookupPathPrefix()</ref> to still allow wxWidgets to find them but it is strongly recommended to use the default directory. </para></listitem>
+<listitem><para>Setting the appropriate locale in your program to use the strings for the given language: see <ref refid="classwx_locale" kindref="compound">wxLocale</ref>.</para></listitem>
+</itemizedlist>
+</para></sect1>
+<sect1 id="overview_i18n_1overview_i18n_menuaccel">
+<title>Translating Menu Accelerators</title>
+<para>If you translate the accelerator modifier names (Ctrl, Alt and Shift) in your menu labels, you may find the accelerators no longer work. In your message catalogs, you need to provide individual translations of these modifiers from their lower case names (ctrl, alt, shift) so that the wxWidgets accelerator code can recognise them even when translated. wxWidgets does not provide translations for all of these currently. wxWidgets does not yet handle translated special key names such as Backspace, End, Insert, etc.</para><para><simplesect kind="see"><para><itemizedlist>
+<listitem><para>The gettext Manual: <ulink url="http://www.gnu.org/software/gettext/manual/gettext.html">http://www.gnu.org/software/gettext/manual/gettext.html</ulink> </para></listitem>
+<listitem><para><ref refid="overview_nonenglish" kindref="compound">Writing Non-English Applications</ref> - It focuses on handling charsets related problems. </para></listitem>
+<listitem><para><ref refid="page_samples_1page_samples_internat" kindref="member">Internationalization Sample</ref> - Shows you how all this looks in practice. </para></listitem>
+</itemizedlist>
+</para></simplesect>
+</para></sect1>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

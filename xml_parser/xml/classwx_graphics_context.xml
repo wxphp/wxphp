@@ -1,11 +1,10 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_graphics_context" kind="class" prot="public">
     <compoundname>wxGraphicsContext</compoundname>
     <basecompoundref refid="classwx_graphics_object" prot="public" virt="non-virtual">wxGraphicsObject</basecompoundref>
     <includes local="no">wx/graphics.h</includes>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_graphics_context_1a799dd1e4c0047a901e53361938edf264" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_graphics_brush" kindref="compound">wxGraphicsBrush</ref></type>
         <definition>wxGraphicsBrush wxGraphicsContext::CreateLinearGradientBrush</definition>
@@ -78,7 +77,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_graphics_context_1a03ac1f51fd5bf3ff24f70dac5659bee6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_graphics_brush" kindref="compound">wxGraphicsBrush</ref></type>
         <definition>virtual wxGraphicsBrush wxGraphicsContext::CreateRadialGradientBrush</definition>
@@ -159,7 +157,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_graphics_context_1aee61e2fbc580d7f6a344daa1d1e13296" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
         <definition>virtual void wxGraphicsContext::DrawBitmap</definition>
@@ -294,7 +291,7 @@
         <briefdescription>
 <para>Creates a <ref refid="classwx_graphics_context" kindref="compound">wxGraphicsContext</ref> from a <ref refid="classwx_printer_d_c" kindref="compound">wxPrinterDC</ref>. </para>        </briefdescription>
         <detaileddescription>
-<para>Under GTK+, this will only work when using the GtkPrint printing backend which is available since GTK+ 2.10.</para><para><simplesect kind="see"><para><ref refid="classwx_graphics_renderer_1a37eb2c013dc332db408e379d78ecd11f" kindref="member">wxGraphicsRenderer::CreateContext()</ref>, <ref refid="overview__unixprinting" kindref="compound">Printing Under Unix (GTK+)</ref> </para></simplesect>
+<para>Under GTK+, this will only work when using the GtkPrint printing backend which is available since GTK+ 2.10.</para><para><simplesect kind="see"><para><ref refid="classwx_graphics_renderer_1a37eb2c013dc332db408e379d78ecd11f" kindref="member">wxGraphicsRenderer::CreateContext()</ref>, <ref refid="overview_unixprinting" kindref="compound">Printing Under Unix (GTK+)</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -1627,7 +1624,7 @@
 <para>It is created by a renderer using <ref refid="classwx_graphics_renderer_1a37eb2c013dc332db408e379d78ecd11f" kindref="member">wxGraphicsRenderer::CreateContext()</ref>. This can be either directly using a renderer instance, or indirectly using the static convenience <ref refid="classwx_graphics_context_1adbc3ec3262f53e209276293ff1c0944e" kindref="member">Create()</ref> functions of <ref refid="classwx_graphics_context" kindref="compound">wxGraphicsContext</ref> that always delegate the task to the default renderer.</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>MyCanvas::OnPaint(<ref refid="classwx_paint_event" kindref="compound" tooltip="A paint event is sent when a window&amp;#39;s contents needs to be repainted.">wxPaintEvent</ref><sp/>&amp;event)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>paint<sp/>DC</highlight><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_paint_d_c" kindref="compound" tooltip="A wxPaintDC must be constructed if an application wishes to paint on the client area...">wxPaintDC</ref><sp/>dc(</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_paint_d_c" kindref="compound" tooltip="A wxPaintDC must be constructed if an application wishes to paint on the client area of a window from...">wxPaintDC</ref><sp/>dc(</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>graphics<sp/>context<sp/>from<sp/>it</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_graphics_context" kindref="compound" tooltip="A wxGraphicsContext instance is the object that is drawn upon.">wxGraphicsContext</ref><sp/>*gc<sp/>=<sp/><ref refid="classwx_graphics_context_1adbc3ec3262f53e209276293ff1c0944e" kindref="member" tooltip="Creates a wxGraphicsContext from a wxWindow.">wxGraphicsContext::Create</ref>(<sp/>dc<sp/>);</highlight></codeline>
@@ -1651,47 +1648,47 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 </programlisting></para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__gdi" kindref="compound">Graphics Device Interface (GDI)</ref>, <ref refid="group__group__class__dc" kindref="compound">Device Contexts</ref></para><para><simplesect kind="see"><para><ref refid="classwx_graphics_renderer_1a37eb2c013dc332db408e379d78ecd11f" kindref="member">wxGraphicsRenderer::CreateContext()</ref>, <ref refid="classwx_g_c_d_c" kindref="compound">wxGCDC</ref>, <ref refid="classwx_d_c" kindref="compound">wxDC</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__gdi" kindref="compound">Graphics Device Interface (GDI)</ref>, <ref refid="group__group__class__dc" kindref="compound">Device Contexts</ref></para><para><simplesect kind="see"><para><ref refid="classwx_graphics_renderer_1a37eb2c013dc332db408e379d78ecd11f" kindref="member">wxGraphicsRenderer::CreateContext()</ref>, <ref refid="classwx_g_c_d_c" kindref="compound">wxGCDC</ref>, <ref refid="classwx_d_c" kindref="compound">wxDC</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="6567">
+      <node id="6571">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="6565">
+      <node id="6569">
         <label>wxGraphicsContext</label>
         <link refid="classwx_graphics_context"/>
-        <childnode refid="6566" relation="public-inheritance">
+        <childnode refid="6570" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6566">
+      <node id="6570">
         <label>wxGraphicsObject</label>
         <link refid="classwx_graphics_object"/>
-        <childnode refid="6567" relation="public-inheritance">
+        <childnode refid="6571" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="6570">
+      <node id="6574">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="6571" relation="usage">
+        <childnode refid="6575" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="6568">
+      <node id="6572">
         <label>wxGraphicsContext</label>
         <link refid="classwx_graphics_context"/>
-        <childnode refid="6569" relation="public-inheritance">
+        <childnode refid="6573" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6569">
+      <node id="6573">
         <label>wxGraphicsObject</label>
         <link refid="classwx_graphics_object"/>
-        <childnode refid="6570" relation="public-inheritance">
+        <childnode refid="6574" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6571">
+      <node id="6575">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_h_scrolled_window" kind="class" prot="public">
     <compoundname>wxHScrolledWindow</compoundname>
     <basecompoundref refid="classwx_panel" prot="public" virt="non-virtual">wxPanel</basecompoundref>
@@ -153,107 +153,107 @@
 <para>In the name of this class, &quot;H&quot; stands for &quot;horizontal&quot; because it can be used for scrolling columns of variable widths. </para>    </briefdescription>
     <detaileddescription>
 <para>It is not necessary to know the widths of all columns in advance -- only those which are shown on the screen need to be measured.</para><para>In any case, this is a generalization of <ref refid="classwx_scrolled" kindref="compound">wxScrolled</ref> which can be only used when all columns have the same widths. It lacks some other <ref refid="classwx_scrolled" kindref="compound">wxScrolled</ref> features however, notably it can&apos;t scroll specific pixel sizes of the window or its exact client area size.</para><para>To use this class, you need to derive from it and implement the <ref refid="classwx_var_h_scroll_helper_1a45737e4bd127fc6a069b62f182192c69" kindref="member">OnGetColumnWidth()</ref> pure virtual method. You also must call <ref refid="classwx_var_h_scroll_helper_1a6ac4d84f3d415972a7affee13af4d08e" kindref="member">SetColumnCount()</ref> to let the base class know how many columns it should display, but from that moment on the scrolling is handled entirely by <ref refid="classwx_h_scrolled_window" kindref="compound">wxHScrolledWindow</ref>. You only need to draw the visible part of contents in your <computeroutput>OnPaint()</computeroutput> method as usual. You should use <ref refid="classwx_var_h_scroll_helper_1aeb22cb2418c86445668ef42cbf447202" kindref="member">GetVisibleColumnsBegin()</ref> and <ref refid="classwx_var_h_scroll_helper_1a6ad4fc5cabc4ecae6830daa81d717c0f" kindref="member">GetVisibleColumnsEnd()</ref> to select the lines to display. Note that the device context origin is not shifted so the first visible column always appears at the point (0, 0) in physical as well as logical coordinates.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__miscwnd" kindref="compound">Miscellaneous Windows</ref></para><para><simplesect kind="see"><para><ref refid="classwx_h_v_scrolled_window" kindref="compound">wxHVScrolledWindow</ref>, <ref refid="classwx_v_scrolled_window" kindref="compound">wxVScrolledWindow</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__miscwnd" kindref="compound">Miscellaneous Windows</ref></para><para><simplesect kind="see"><para><ref refid="classwx_h_v_scrolled_window" kindref="compound">wxHVScrolledWindow</ref>, <ref refid="classwx_v_scrolled_window" kindref="compound">wxVScrolledWindow</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="6951">
+      <node id="6955">
         <label>wxVarScrollHelperBase</label>
         <link refid="classwx_var_scroll_helper_base"/>
       </node>
-      <node id="6944">
+      <node id="6948">
         <label>wxHScrolledWindow</label>
         <link refid="classwx_h_scrolled_window"/>
-        <childnode refid="6945" relation="public-inheritance">
+        <childnode refid="6949" relation="public-inheritance">
         </childnode>
-        <childnode refid="6950" relation="public-inheritance">
+        <childnode refid="6954" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6948">
+      <node id="6952">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="6947">
+      <node id="6951">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="6948" relation="public-inheritance">
+        <childnode refid="6952" relation="public-inheritance">
         </childnode>
-        <childnode refid="6949" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="6945">
-        <label>wxPanel</label>
-        <link refid="classwx_panel"/>
-        <childnode refid="6946" relation="public-inheritance">
+        <childnode refid="6953" relation="public-inheritance">
         </childnode>
       </node>
       <node id="6949">
+        <label>wxPanel</label>
+        <link refid="classwx_panel"/>
+        <childnode refid="6950" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6953">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="6946">
+      <node id="6950">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="6947" relation="public-inheritance">
+        <childnode refid="6951" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6950">
+      <node id="6954">
         <label>wxVarHScrollHelper</label>
         <link refid="classwx_var_h_scroll_helper"/>
-        <childnode refid="6951" relation="public-inheritance">
+        <childnode refid="6955" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="6960">
+      <node id="6964">
         <label>wxVarScrollHelperBase</label>
         <link refid="classwx_var_scroll_helper_base"/>
       </node>
-      <node id="6952">
+      <node id="6956">
         <label>wxHScrolledWindow</label>
         <link refid="classwx_h_scrolled_window"/>
-        <childnode refid="6953" relation="public-inheritance">
+        <childnode refid="6957" relation="public-inheritance">
         </childnode>
-        <childnode refid="6959" relation="public-inheritance">
+        <childnode refid="6963" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6956">
+      <node id="6960">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="6957" relation="usage">
+        <childnode refid="6961" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="6955">
+      <node id="6959">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="6956" relation="public-inheritance">
-        </childnode>
-        <childnode refid="6958" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="6953">
-        <label>wxPanel</label>
-        <link refid="classwx_panel"/>
-        <childnode refid="6954" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="6958">
-        <label>wxTrackable</label>
-        <link refid="classwx_trackable"/>
-      </node>
-      <node id="6954">
-        <label>wxWindow</label>
-        <link refid="classwx_window"/>
-        <childnode refid="6955" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="6959">
-        <label>wxVarHScrollHelper</label>
-        <link refid="classwx_var_h_scroll_helper"/>
         <childnode refid="6960" relation="public-inheritance">
+        </childnode>
+        <childnode refid="6962" relation="public-inheritance">
         </childnode>
       </node>
       <node id="6957">
+        <label>wxPanel</label>
+        <link refid="classwx_panel"/>
+        <childnode refid="6958" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6962">
+        <label>wxTrackable</label>
+        <link refid="classwx_trackable"/>
+      </node>
+      <node id="6958">
+        <label>wxWindow</label>
+        <link refid="classwx_window"/>
+        <childnode refid="6959" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6963">
+        <label>wxVarHScrollHelper</label>
+        <link refid="classwx_var_h_scroll_helper"/>
+        <childnode refid="6964" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6961">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

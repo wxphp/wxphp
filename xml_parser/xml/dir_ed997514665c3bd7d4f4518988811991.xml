@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="dir_ed997514665c3bd7d4f4518988811991" kind="dir">
+    <compoundname>interface/wx/propgrid/</compoundname>
+    <innerfile refid="editors_8h">editors.h</innerfile>
+    <innerfile refid="manager_8h">manager.h</innerfile>
+    <innerfile refid="property_8h">property.h</innerfile>
+    <innerfile refid="interface_2wx_2propgrid_2propgrid_8h">propgrid.h</innerfile>
+    <innerfile refid="propgridiface_8h">propgridiface.h</innerfile>
+    <innerfile refid="propgridpagestate_8h">propgridpagestate.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/"/>
+  </compounddef>
+</doxygen>

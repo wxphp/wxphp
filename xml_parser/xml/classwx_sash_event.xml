@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_sash_event" kind="class" prot="public">
     <compoundname>wxSashEvent</compoundname>
     <basecompoundref refid="classwx_command_event" prot="public" virt="non-virtual">wxCommandEvent</basecompoundref>
@@ -78,59 +78,59 @@
 <listitem><para>EVT_SASH_DRAGGED_RANGE(id1,  id2,  func): Process a <computeroutput>wxEVT_SASH_DRAGGED_RANGE</computeroutput> event, when the user has finished dragging a sash. The event handler is called when windows with ids in the given range have their sashes dragged. </para></listitem>
 </itemizedlist>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="classwx_sash_window" kindref="compound">wxSashWindow</ref>, <ref refid="overview__events" kindref="compound">Events and Event Handling</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="classwx_sash_window" kindref="compound">wxSashWindow</ref>, <ref refid="overview_events" kindref="compound">Events and Event Handling</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="9983">
+      <node id="10043">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="9981">
+      <node id="10041">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="9982" relation="public-inheritance">
+        <childnode refid="10042" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9980">
+      <node id="10040">
         <label>wxSashEvent</label>
         <link refid="classwx_sash_event"/>
-        <childnode refid="9981" relation="public-inheritance">
+        <childnode refid="10041" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9982">
+      <node id="10042">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="9983" relation="public-inheritance">
+        <childnode refid="10043" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="9987">
+      <node id="10047">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="9988" relation="usage">
+        <childnode refid="10048" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="9985">
+      <node id="10045">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="9986" relation="public-inheritance">
+        <childnode refid="10046" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9984">
+      <node id="10044">
         <label>wxSashEvent</label>
         <link refid="classwx_sash_event"/>
-        <childnode refid="9985" relation="public-inheritance">
+        <childnode refid="10045" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9986">
+      <node id="10046">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="9987" relation="public-inheritance">
+        <childnode refid="10047" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9988">
+      <node id="10048">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

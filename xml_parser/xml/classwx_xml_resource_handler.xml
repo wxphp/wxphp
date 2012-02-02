@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_xml_resource_handler" kind="class" prot="public">
     <compoundname>wxXmlResourceHandler</compoundname>
     <basecompoundref refid="classwx_object" prot="public" virt="non-virtual">wxObject</basecompoundref>
@@ -50,9 +50,9 @@
           <declname>instance</declname>
         </param>
         <briefdescription>
-<para>Creates an object (menu, dialog, control, . </para>        </briefdescription>
+<para>Creates an object (menu, dialog, control, ...) from an XML node. </para>        </briefdescription>
         <detaileddescription>
-<para>..) from an XML node. Should check for validity. <emphasis>parent</emphasis> is a higher-level object (usually window, dialog or panel) that is often necessary to create the resource.</para><para>If <bold>instance</bold> is non-NULL it should not create a new instance via &apos;new&apos; but should rather use this one, and call its Create method. </para>        </detaileddescription>
+<para>Should check for validity. <emphasis>parent</emphasis> is a higher-level object (usually window, dialog or panel) that is often necessary to create the resource.</para><para>If <bold>instance</bold> is non-NULL it should not create a new instance via &apos;new&apos; but should rather use this one, and call its Create method. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xmlres.h" line="459"/>
@@ -708,11 +708,11 @@
           <defval>true</defval>
         </param>
         <briefdescription>
-<para>Gets text from param and does some conversions:<itemizedlist>
-<listitem><para>replaces \n, \r, \t by respective characters (according to C syntax)</para></listitem><listitem><para>replaces <computeroutput>$</computeroutput> by <computeroutput>and</computeroutput> <computeroutput>$$</computeroutput> by <computeroutput>$</computeroutput> (needed for <computeroutput>_File</computeroutput> to <computeroutput>File</computeroutput> translation because of XML syntax)</para></listitem><listitem><para>calls wxGetTranslations (unless disabled in <ref refid="classwx_xml_resource" kindref="compound">wxXmlResource</ref>). </para></listitem></itemizedlist>
-</para>        </briefdescription>
+<para>Gets text from param and does some conversions: </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><itemizedlist>
+<listitem><para>replaces \n, \r, \t by respective characters (according to C syntax)</para></listitem><listitem><para>replaces <computeroutput>$</computeroutput> by <computeroutput>and</computeroutput> <computeroutput>$$</computeroutput> by <computeroutput>$</computeroutput> (needed for <computeroutput>_File</computeroutput> to <computeroutput>File</computeroutput> translation because of XML syntax)</para></listitem><listitem><para>calls wxGetTranslations (unless disabled in <ref refid="classwx_xml_resource" kindref="compound">wxXmlResource</ref>) </para></listitem></itemizedlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xmlres.h" line="672"/>
@@ -840,41 +840,41 @@
     <detaileddescription>
 <para><ref refid="classwx_xml_resource_handler" kindref="compound">wxXmlResourceHandler</ref> is an abstract base class for resource handlers capable of creating a control from an XML node.</para><para><simplesect kind="see"><para><ref refid="classwx_xml_resource_handler" kindref="compound">wxXmlResourceHandler</ref>, <ref refid="classwx_sizer" kindref="compound">wxSizer</ref></para></simplesect>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxxrc" kindref="member">wxXRC</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__xrc" kindref="compound">XML Based Resource System (XRC)</ref></para><para>See <ref refid="overview__xrc" kindref="compound">XML Based Resource System (XRC)</ref> for details.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxxrc" kindref="member">wxXRC</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__xrc" kindref="compound">XML Based Resource System (XRC)</ref> </para>    </detaileddescription>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxxrc" kindref="member">wxXRC</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__xrc" kindref="compound">XML Based Resource System (XRC)</ref></para><para>See <ref refid="overview_xrc" kindref="compound">XML Based Resource System (XRC)</ref> for details.</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxxrc" kindref="member">wxXRC</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__xrc" kindref="compound">XML Based Resource System (XRC)</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="11681">
+      <node id="11742">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="11682">
+      <node id="11743">
         <label>wxSizerXmlHandler</label>
         <link refid="classwx_sizer_xml_handler"/>
-        <childnode refid="11680" relation="public-inheritance">
+        <childnode refid="11741" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11680">
+      <node id="11741">
         <label>wxXmlResourceHandler</label>
         <link refid="classwx_xml_resource_handler"/>
-        <childnode refid="11681" relation="public-inheritance">
+        <childnode refid="11742" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="11684">
+      <node id="11745">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="11685" relation="usage">
+        <childnode refid="11746" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="11683">
+      <node id="11744">
         <label>wxXmlResourceHandler</label>
         <link refid="classwx_xml_resource_handler"/>
-        <childnode refid="11684" relation="public-inheritance">
+        <childnode refid="11745" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11685">
+      <node id="11746">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

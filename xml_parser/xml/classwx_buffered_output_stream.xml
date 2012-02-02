@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_buffered_output_stream" kind="class" prot="public">
     <compoundname>wxBufferedOutputStream</compoundname>
     <basecompoundref refid="classwx_filter_output_stream" prot="public" virt="non-virtual">wxFilterOutputStream</basecompoundref>
@@ -133,33 +133,9 @@
 <para>This stream acts as a cache. </para>    </briefdescription>
     <detaileddescription>
 <para>It caches the bytes to be written to the specified output stream (See <ref refid="classwx_filter_output_stream" kindref="compound">wxFilterOutputStream</ref>). The data is only written when the cache is full, when the buffered stream is destroyed or when calling <ref refid="classwx_buffered_output_stream_1a309319db903fbd2476dd5d7a6b800051" kindref="member">SeekO()</ref>.</para><para>This class may not be used without some other stream to write the data to (such as a file stream or a memory stream).</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__streams" kindref="compound">Streams</ref></para><para><simplesect kind="see"><para><ref refid="classwx_stream_buffer" kindref="compound">wxStreamBuffer</ref>, <ref refid="classwx_output_stream" kindref="compound">wxOutputStream</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__streams" kindref="compound">Streams</ref></para><para><simplesect kind="see"><para><ref refid="classwx_stream_buffer" kindref="compound">wxStreamBuffer</ref>, <ref refid="classwx_output_stream" kindref="compound">wxOutputStream</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="4610">
-        <label>wxBufferedOutputStream</label>
-        <link refid="classwx_buffered_output_stream"/>
-        <childnode refid="4611" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4613">
-        <label>wxStreamBase</label>
-        <link refid="classwx_stream_base"/>
-      </node>
-      <node id="4611">
-        <label>wxFilterOutputStream</label>
-        <link refid="classwx_filter_output_stream"/>
-        <childnode refid="4612" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4612">
-        <label>wxOutputStream</label>
-        <link refid="classwx_output_stream"/>
-        <childnode refid="4613" relation="public-inheritance">
-        </childnode>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
       <node id="4614">
         <label>wxBufferedOutputStream</label>
         <link refid="classwx_buffered_output_stream"/>
@@ -180,6 +156,30 @@
         <label>wxOutputStream</label>
         <link refid="classwx_output_stream"/>
         <childnode refid="4617" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4618">
+        <label>wxBufferedOutputStream</label>
+        <link refid="classwx_buffered_output_stream"/>
+        <childnode refid="4619" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4621">
+        <label>wxStreamBase</label>
+        <link refid="classwx_stream_base"/>
+      </node>
+      <node id="4619">
+        <label>wxFilterOutputStream</label>
+        <link refid="classwx_filter_output_stream"/>
+        <childnode refid="4620" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4620">
+        <label>wxOutputStream</label>
+        <link refid="classwx_output_stream"/>
+        <childnode refid="4621" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>

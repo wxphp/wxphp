@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_html_printout" kind="class" prot="public">
     <compoundname>wxHtmlPrintout</compoundname>
     <basecompoundref refid="classwx_printout" prot="public" virt="non-virtual">wxPrintout</basecompoundref>
@@ -255,46 +255,46 @@
 <para>This class serves as printout class for HTML documents. </para>    </briefdescription>
     <detaileddescription>
 <para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxhtml" kindref="member">wxHTML</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__html" kindref="compound">HTML</ref>, <ref refid="group__group__class__printing" kindref="compound">Printing Framework</ref> </para>    </detaileddescription>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxhtml" kindref="member">wxHTML</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__html" kindref="compound">HTML</ref>, <ref refid="group__group__class__printing" kindref="compound">Printing Framework</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7103">
+      <node id="7107">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="7102">
+      <node id="7106">
         <label>wxPrintout</label>
         <link refid="classwx_printout"/>
-        <childnode refid="7103" relation="public-inheritance">
+        <childnode refid="7107" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7101">
+      <node id="7105">
         <label>wxHtmlPrintout</label>
         <link refid="classwx_html_printout"/>
-        <childnode refid="7102" relation="public-inheritance">
+        <childnode refid="7106" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7106">
+      <node id="7110">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="7107" relation="usage">
+        <childnode refid="7111" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="7105">
+      <node id="7109">
         <label>wxPrintout</label>
         <link refid="classwx_printout"/>
-        <childnode refid="7106" relation="public-inheritance">
+        <childnode refid="7110" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7104">
+      <node id="7108">
         <label>wxHtmlPrintout</label>
         <link refid="classwx_html_printout"/>
-        <childnode refid="7105" relation="public-inheritance">
+        <childnode refid="7109" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7107">
+      <node id="7111">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

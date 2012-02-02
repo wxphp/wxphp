@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_mask" kind="class" prot="public">
     <compoundname>wxMask</compoundname>
     <basecompoundref refid="classwx_object" prot="public" virt="non-virtual">wxObject</basecompoundref>
@@ -184,35 +184,35 @@
 <para>This class encapsulates a monochrome mask bitmap, where the masked area is black and the unmasked area is white. </para>    </briefdescription>
     <detaileddescription>
 <para>When associated with a bitmap and drawn in a device context, the unmasked area of the bitmap will be drawn, and the masked area will not be drawn.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__gdi" kindref="compound">Graphics Device Interface (GDI)</ref></para><para><simplesect kind="see"><para><ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref>, <ref refid="classwx_d_c_1a12bed94a15136b9080683f4151042a34" kindref="member">wxDC::Blit</ref>, <ref refid="classwx_memory_d_c" kindref="compound">wxMemoryDC</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__gdi" kindref="compound">Graphics Device Interface (GDI)</ref></para><para><simplesect kind="see"><para><ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref>, <ref refid="classwx_d_c_1a12bed94a15136b9080683f4151042a34" kindref="member">wxDC::Blit</ref>, <ref refid="classwx_memory_d_c" kindref="compound">wxMemoryDC</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7552">
+      <node id="7558">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="7551">
+      <node id="7557">
         <label>wxMask</label>
         <link refid="classwx_mask"/>
-        <childnode refid="7552" relation="public-inheritance">
+        <childnode refid="7558" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7554">
+      <node id="7560">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="7555" relation="usage">
+        <childnode refid="7561" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="7553">
+      <node id="7559">
         <label>wxMask</label>
         <link refid="classwx_mask"/>
-        <childnode refid="7554" relation="public-inheritance">
+        <childnode refid="7560" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7555">
+      <node id="7561">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

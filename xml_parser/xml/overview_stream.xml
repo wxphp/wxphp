@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="overview_stream" kind="page">
+    <compoundname>overview_stream</compoundname>
+    <title>Stream classes overview</title>
+    <detaileddescription>
+<para>Classes:</para><para><itemizedlist>
+<listitem><para><ref refid="classwx_stream_base" kindref="compound">wxStreamBase</ref> </para></listitem>
+<listitem><para><ref refid="classwx_stream_buffer" kindref="compound">wxStreamBuffer</ref> </para></listitem>
+<listitem><para><ref refid="classwx_input_stream" kindref="compound">wxInputStream</ref> </para></listitem>
+<listitem><para><ref refid="classwx_output_stream" kindref="compound">wxOutputStream</ref> </para></listitem>
+<listitem><para><ref refid="classwx_filter_input_stream" kindref="compound">wxFilterInputStream</ref> </para></listitem>
+<listitem><para><ref refid="classwx_filter_output_stream" kindref="compound">wxFilterOutputStream</ref> </para></listitem>
+<listitem><para><ref refid="classwx_file_input_stream" kindref="compound">wxFileInputStream</ref> </para></listitem>
+<listitem><para><ref refid="classwx_file_output_stream" kindref="compound">wxFileOutputStream</ref> </para></listitem>
+<listitem><para><ref refid="classwx_text_input_stream" kindref="compound">wxTextInputStream</ref> </para></listitem>
+<listitem><para><ref refid="classwx_text_output_stream" kindref="compound">wxTextOutputStream</ref> </para></listitem>
+<listitem><para><ref refid="classwx_data_input_stream" kindref="compound">wxDataInputStream</ref> </para></listitem>
+<listitem><para><ref refid="classwx_data_output_stream" kindref="compound">wxDataOutputStream</ref></para></listitem>
+</itemizedlist>
+<itemizedlist>
+<listitem><para><ref refid="overview_stream_1overview_stream_intro" kindref="member">Introduction</ref> </para></listitem>
+<listitem><para><ref refid="overview_stream_1overview_stream_example" kindref="member">Example</ref></para></listitem>
+</itemizedlist>
+<hruler/>
+</para><sect1 id="overview_stream_1overview_stream_intro">
+<title>Introduction</title>
+<sect2 id="overview_stream_1overview_stream_intro_std">
+<title>wxWidgets and Standard Streams</title>
+<para>wxWidgets provides its own set of stream classes in order to support platforms not providing standard C++ streams implementation and also to make it possible to provide binary versions of wxWidgets application not depending on any particular standard library version. The wxWidgets stream classes also provide some functionality not available in the standard library such as support for several compression formats and possibility to work with sockets or text controls (for output only in the latter case).</para><para>Nevertheless wxWidgets programs can also use standard stream classes and are encouraged to do so if the above considerations don&apos;t apply. Moreover, <ref refid="classwx_std_input_stream" kindref="compound">wxStdInputStream</ref> and <ref refid="classwx_std_output_stream" kindref="compound">wxStdOutputStream</ref> classes are provided to provide a degree of interoperability between the two and make it possible to use any wxWidgets stream as a standard stream (the converse possibility to use a standard stream as a wxWidgets stream is planned for a future release).</para></sect2>
+<sect2 id="overview_stream_1overview_stream_intro_overview">
+<title>Stream Classes</title>
+<para>wxStream classes are divided in two main groups:</para><para><itemizedlist>
+<listitem><para>The core: <ref refid="classwx_stream_base" kindref="compound">wxStreamBase</ref>, <ref refid="classwx_stream_buffer" kindref="compound">wxStreamBuffer</ref>, <ref refid="classwx_input_stream" kindref="compound">wxInputStream</ref>, <ref refid="classwx_output_stream" kindref="compound">wxOutputStream</ref>, <ref refid="classwx_filter_input_stream" kindref="compound">wxFilterInputStream</ref>, <ref refid="classwx_filter_output_stream" kindref="compound">wxFilterOutputStream</ref> </para></listitem>
+<listitem><para>The &quot;IO&quot; classes: <ref refid="classwx_socket_input_stream" kindref="compound">wxSocketInputStream</ref>, <ref refid="classwx_socket_output_stream" kindref="compound">wxSocketOutputStream</ref>, <ref refid="classwx_file_input_stream" kindref="compound">wxFileInputStream</ref>, <ref refid="classwx_file_output_stream" kindref="compound">wxFileOutputStream</ref>, ... </para></listitem>
+<listitem><para>Classes for reading text or binary data from a particular stream such as <ref refid="classwx_text_input_stream" kindref="compound">wxTextInputStream</ref>, <ref refid="classwx_text_output_stream" kindref="compound">wxTextOutputStream</ref>, <ref refid="classwx_data_input_stream" kindref="compound">wxDataInputStream</ref> and <ref refid="classwx_data_output_stream" kindref="compound">wxDataOutputStream</ref></para></listitem>
+</itemizedlist>
+<ref refid="classwx_stream_base" kindref="compound">wxStreamBase</ref> is the base definition of a stream. It defines, for example, the API of OnSysRead(), OnSysWrite(), OnSysSeek() and OnSysTell(). These functions are really implemented by the &quot;IO&quot; classes. <ref refid="classwx_input_stream" kindref="compound">wxInputStream</ref> and <ref refid="classwx_output_stream" kindref="compound">wxOutputStream</ref> classes inherit from <ref refid="classwx_stream_base" kindref="compound">wxStreamBase</ref> and provide specialized methods for input and output.</para><para><ref refid="classwx_stream_buffer" kindref="compound">wxStreamBuffer</ref> is a cache manager for <ref refid="classwx_stream_base" kindref="compound">wxStreamBase</ref>: it manages a stream buffer linked to a stream. One stream can have multiple stream buffers but one stream has always one autoinitialized stream buffer.</para><para><ref refid="classwx_input_stream" kindref="compound">wxInputStream</ref> is the base class for read-only streams. It implements Read(), SeekI() (I for Input), and all read or IO generic related functions. <ref refid="classwx_output_stream" kindref="compound">wxOutputStream</ref> does the same thing for write-only streams.</para><para><ref refid="classwx_filter_input_stream" kindref="compound">wxFilterInputStream</ref> and wxFileterOutputStream are the base class definitions for stream filtering. Stream filtering means a stream which does no syscall but filters data which are passed to it and then pass them to another stream. For example, wxZLibInputStream is an inline stream decompressor.</para><para>The &quot;IO&quot; classes implements the specific parts of the stream. This could be nothing in the case of <ref refid="classwx_memory_input_stream" kindref="compound">wxMemoryInputStream</ref> and <ref refid="classwx_memory_output_stream" kindref="compound">wxMemoryOutputStream</ref> which base themselves on <ref refid="classwx_stream_buffer" kindref="compound">wxStreamBuffer</ref>. This could also be a simple link to the true syscall (for example read(...), write(...)).</para></sect2>
+</sect1>
+<sect1 id="overview_stream_1overview_stream_example">
+<title>Example</title>
+<para>Usage is simple. We can take the example of <ref refid="classwx_file_input_stream" kindref="compound">wxFileInputStream</ref> and here is some sample code:</para><para><programlisting><codeline><highlight class="normal">...</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>The<sp/>constructor<sp/>initializes<sp/>the<sp/>stream<sp/>buffer<sp/>and<sp/>open<sp/>the<sp/>file<sp/>descriptor</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>associated<sp/>to<sp/>the<sp/>name<sp/>of<sp/>the<sp/>file.</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">wxFileInputStream<sp/>in_stream(</highlight><highlight class="stringliteral">&quot;the_file_to_be_read&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>Ok,<sp/>read<sp/>some<sp/>bytes<sp/>...<sp/>nb_datas<sp/>is<sp/>expressed<sp/>in<sp/>bytes.</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">in_stream.<ref refid="classwx_input_stream_1a72f24d0f50c7f07bb68dedf5e8690f4e" kindref="member" tooltip="Reads the specified amount of bytes and stores the data in buffer.">Read</ref>(data,<sp/>nb_datas);</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(in_stream.LastError()<sp/>!=<sp/>wxSTREAM_NOERROR)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Oh<sp/>oh,<sp/>something<sp/>bad<sp/>happens.</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>For<sp/>a<sp/>complete<sp/>list,<sp/>look<sp/>into<sp/>the<sp/>documentation<sp/>at<sp/>wxStreamBase.</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>You<sp/>can<sp/>also<sp/>inline<sp/>all<sp/>like<sp/>this.</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(in_stream.<ref refid="classwx_input_stream_1a72f24d0f50c7f07bb68dedf5e8690f4e" kindref="member" tooltip="Reads the specified amount of bytes and stores the data in buffer.">Read</ref>(data,<sp/>nb_datas).LastError()<sp/>!=<sp/>wxSTREAM_NOERROR)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Do<sp/>something.</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>You<sp/>can<sp/>also<sp/>get<sp/>the<sp/>last<sp/>number<sp/>of<sp/>bytes<sp/>REALLY<sp/>put<sp/>into<sp/>the<sp/>buffer.</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>really_read<sp/>=<sp/>in_stream.<ref refid="classwx_input_stream_1a475a7fe822572eb15182fea22f5969d9" kindref="member" tooltip="Returns the last number of bytes read.">LastRead</ref>();</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>Ok,<sp/>moves<sp/>to<sp/>the<sp/>beginning<sp/>of<sp/>the<sp/>stream.<sp/>SeekI<sp/>returns<sp/>the<sp/>last<sp/>position</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>in<sp/>the<sp/>stream<sp/>counted<sp/>from<sp/>the<sp/>beginning.</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">off_t<sp/>old_position<sp/>=<sp/>in_stream.<ref refid="classwx_input_stream_1a989ed0f85fe7340cc0996bbcee03822d" kindref="member" tooltip="Changes the stream current position.">SeekI</ref>(0,<sp/>wxFromBeginning);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>What<sp/>is<sp/>my<sp/>current<sp/>position<sp/>?</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">off_t<sp/>position<sp/>=<sp/>in_stream.<ref refid="classwx_input_stream_1aece5e9ece88100f15fa91802b005ef4b" kindref="member" tooltip="Returns the current stream position or wxInvalidOffset if it&amp;#39;s not available (e.g.">TellI</ref>();</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>wxFileInputStream<sp/>will<sp/>close<sp/>the<sp/>file<sp/>descriptor<sp/>on<sp/>destruction.</highlight></codeline>
+</programlisting> </para></sect1>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

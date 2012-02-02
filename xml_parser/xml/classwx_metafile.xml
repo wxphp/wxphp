@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_metafile" kind="class" prot="public">
     <compoundname>wxMetafile</compoundname>
     <basecompoundref refid="classwx_object" prot="public" virt="non-virtual">wxObject</basecompoundref>
@@ -31,7 +31,7 @@
         <briefdescription>
 <para>Destructor. </para>        </briefdescription>
         <detaileddescription>
-<para>See <ref refid="overview__refcount_1overview_refcount_destruct" kindref="member">Object Destruction</ref> for more info. </para>        </detaileddescription>
+<para>See <ref refid="overview_refcount_1overview_refcount_destruct" kindref="member">Object Destruction</ref> for more info. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/metafile.h" line="92"/>
@@ -84,11 +84,11 @@
         <briefdescription>
 <para>Passes the metafile data to the clipboard. </para>        </briefdescription>
         <detaileddescription>
-<para>The metafile can no longer be used for anything, but the <ref refid="classwx_metafile" kindref="compound">wxMetafile</ref> object must still be destroyed by the application.</para><para>Below is a example of metafile, metafile device context and clipboard use from the <computeroutput>hello.cpp</computeroutput> example. Note the way the metafile dimensions are passed to the clipboard, making use of the device context&apos;s ability to keep track of the maximum extent of drawing commands.</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_metafile_d_c" kindref="compound" tooltip="This is a type of device context that allows a metafile object to be created (Windows...">wxMetafileDC</ref><sp/>dc;</highlight></codeline>
+<para>The metafile can no longer be used for anything, but the <ref refid="classwx_metafile" kindref="compound">wxMetafile</ref> object must still be destroyed by the application.</para><para>Below is a example of metafile, metafile device context and clipboard use from the <computeroutput>hello.cpp</computeroutput> example. Note the way the metafile dimensions are passed to the clipboard, making use of the device context&apos;s ability to keep track of the maximum extent of drawing commands.</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_metafile_d_c" kindref="compound" tooltip="This is a type of device context that allows a metafile object to be created (Windows only)...">wxMetafileDC</ref><sp/>dc;</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(dc.<ref refid="classwx_d_c_1aac2d04cf636651fbbc943d4236586e3a" kindref="member" tooltip="Returns true if the DC is ok to use.">IsOk</ref>())</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Draw(dc,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_metafile" kindref="compound" tooltip="A wxMetafile represents the MS Windows metafile object, so metafile operations have...">wxMetafile</ref><sp/>*mf<sp/>=<sp/>dc.<ref refid="classwx_metafile_d_c_1a33b05bb7da88ada1bd4f3d4b05b1baf5" kindref="member" tooltip="This must be called after the device context is finished with.">Close</ref>();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_metafile" kindref="compound" tooltip="A wxMetafile represents the MS Windows metafile object, so metafile operations have no effect in X...">wxMetafile</ref><sp/>*mf<sp/>=<sp/>dc.<ref refid="classwx_metafile_d_c_1a33b05bb7da88ada1bd4f3d4b05b1baf5" kindref="member" tooltip="This must be called after the device context is finished with.">Close</ref>();</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mf)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>success<sp/>=<sp/>mf-&gt;<ref refid="classwx_metafile_1a2e84ccbc1ec4edbf217684782e34035a" kindref="member" tooltip="Passes the metafile data to the clipboard.">SetClipboard</ref>((</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)(dc.<ref refid="classwx_d_c_1a8829696c6ebabed7053f8a9479fabeef" kindref="member" tooltip="Gets the maximum horizontal extent used in drawing commands so far.">MaxX</ref>()<sp/>+<sp/>10),<sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)(dc.<ref refid="classwx_d_c_1a90b1bc13bd01e442754e91935a8d0ef3" kindref="member" tooltip="Gets the maximum vertical extent used in drawing commands so far.">MaxY</ref>()<sp/>+<sp/>10));</highlight></codeline>
@@ -104,36 +104,36 @@
     <briefdescription>
 <para>A <bold><ref refid="classwx_metafile" kindref="compound">wxMetafile</ref></bold> represents the MS Windows metafile object, so metafile operations have no effect in X. </para>    </briefdescription>
     <detaileddescription>
-<para>In wxWidgets, only sufficient functionality has been provided for copying a graphic to the clipboard; this may be extended in a future version.</para><para>Presently, the only way of creating a metafile is to use a <ref refid="classwx_metafile_d_c" kindref="compound">wxMetafileDC</ref>.</para><para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page__port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor> </para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__gdi" kindref="compound">Graphics Device Interface (GDI)</ref></para><para><simplesect kind="see"><para><ref refid="classwx_metafile_d_c" kindref="compound">wxMetafileDC</ref> </para></simplesect>
+<para>In wxWidgets, only sufficient functionality has been provided for copying a graphic to the clipboard; this may be extended in a future version.</para><para>Presently, the only way of creating a metafile is to use a <ref refid="classwx_metafile_d_c" kindref="compound">wxMetafileDC</ref>.</para><para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page_port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor> </para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__gdi" kindref="compound">Graphics Device Interface (GDI)</ref></para><para><simplesect kind="see"><para><ref refid="classwx_metafile_d_c" kindref="compound">wxMetafileDC</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7776">
+      <node id="7782">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="7775">
+      <node id="7781">
         <label>wxMetafile</label>
         <link refid="classwx_metafile"/>
-        <childnode refid="7776" relation="public-inheritance">
+        <childnode refid="7782" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7778">
+      <node id="7784">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="7779" relation="usage">
+        <childnode refid="7785" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="7777">
+      <node id="7783">
         <label>wxMetafile</label>
         <link refid="classwx_metafile"/>
-        <childnode refid="7778" relation="public-inheritance">
+        <childnode refid="7784" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7779">
+      <node id="7785">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

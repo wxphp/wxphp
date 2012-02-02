@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_symbol_picker_dialog" kind="class" prot="public">
     <compoundname>wxSymbolPickerDialog</compoundname>
     <basecompoundref refid="classwx_dialog" prot="public" virt="non-virtual">wxDialog</basecompoundref>
@@ -370,21 +370,21 @@
     <briefdescription>
 <para><ref refid="classwx_symbol_picker_dialog" kindref="compound">wxSymbolPickerDialog</ref> presents the user with a choice of fonts and a grid of available characters. </para>    </briefdescription>
     <detaileddescription>
-<para>This modal dialog provides the application with a selected symbol and optional font selection.</para><para>Although this dialog is contained in the rich text library, the dialog is generic and can be used in other contexts.</para><para>To use the dialog, pass a default symbol specified as a string, an initial font name, and a current font name. The difference between the initial font and current font is that the initial font determines what the font control will be set to when the dialog shows - an empty string will show the selection <emphasis>normal</emphasis> text. The current font, on the other hand, is used by the dialog to determine what font to display the characters in, even when no initial font is selected. This allows the user (and application) to distinguish between inserting a symbol in the current font, and inserting it with a specified font.</para><para>When the dialog is dismissed, the application can get the selected symbol with <ref refid="classwx_symbol_picker_dialog_1a389d8abbd9efdeae0630970dc7e1b17c" kindref="member">wxSymbolPickerDialog::GetSymbol</ref> and test whether a font was specified with <ref refid="classwx_symbol_picker_dialog_1acc1c4081f83b87dd65d8f56f097f10b5" kindref="member">wxSymbolPickerDialog::UseNormalFont</ref>,fetching the specified font with <ref refid="classwx_symbol_picker_dialog_1ad572da05101c54a87aad483365a25257" kindref="member">wxSymbolPickerDialog::GetFontName</ref>.</para><para>Here&apos;s a realistic example, inserting the supplied symbol into a rich text control in either the current font or specified font.</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_rich_text_ctrl" kindref="compound" tooltip="wxRichTextCtrl provides a generic, ground-up implementation of a text control capable...">wxRichTextCtrl</ref>*<sp/>ctrl<sp/>=<sp/>(<ref refid="classwx_rich_text_ctrl" kindref="compound" tooltip="wxRichTextCtrl provides a generic, ground-up implementation of a text control capable...">wxRichTextCtrl</ref>*)<sp/><ref refid="classwx_window_1a3468ef382c612b5f8e91c7c18d00a69f" kindref="member" tooltip="Find a child of this window, by id.">FindWindow</ref>(ID_RICHTEXT_CTRL);</highlight></codeline>
+<para>This modal dialog provides the application with a selected symbol and optional font selection.</para><para>Although this dialog is contained in the rich text library, the dialog is generic and can be used in other contexts.</para><para>To use the dialog, pass a default symbol specified as a string, an initial font name, and a current font name. The difference between the initial font and current font is that the initial font determines what the font control will be set to when the dialog shows - an empty string will show the selection <emphasis>normal</emphasis> text. The current font, on the other hand, is used by the dialog to determine what font to display the characters in, even when no initial font is selected. This allows the user (and application) to distinguish between inserting a symbol in the current font, and inserting it with a specified font.</para><para>When the dialog is dismissed, the application can get the selected symbol with <ref refid="classwx_symbol_picker_dialog_1a389d8abbd9efdeae0630970dc7e1b17c" kindref="member">wxSymbolPickerDialog::GetSymbol</ref> and test whether a font was specified with <ref refid="classwx_symbol_picker_dialog_1acc1c4081f83b87dd65d8f56f097f10b5" kindref="member">wxSymbolPickerDialog::UseNormalFont</ref>,fetching the specified font with <ref refid="classwx_symbol_picker_dialog_1ad572da05101c54a87aad483365a25257" kindref="member">wxSymbolPickerDialog::GetFontName</ref>.</para><para>Here&apos;s a realistic example, inserting the supplied symbol into a rich text control in either the current font or specified font.</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_rich_text_ctrl" kindref="compound" tooltip="wxRichTextCtrl provides a generic, ground-up implementation of a text control capable of showing mult...">wxRichTextCtrl</ref>*<sp/>ctrl<sp/>=<sp/>(<ref refid="classwx_rich_text_ctrl" kindref="compound" tooltip="wxRichTextCtrl provides a generic, ground-up implementation of a text control capable of showing mult...">wxRichTextCtrl</ref>*)<sp/><ref refid="classwx_window_1a3468ef382c612b5f8e91c7c18d00a69f" kindref="member" tooltip="Find a child of this window, by id.">FindWindow</ref>(ID_RICHTEXT_CTRL);</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_text_attr" kindref="compound" tooltip="wxTextAttr represents the character and paragraph attributes, or style, for a range...">wxTextAttr</ref><sp/>attr;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_text_attr" kindref="compound" tooltip="wxTextAttr represents the character and paragraph attributes, or style, for a range of text in a wxTe...">wxTextAttr</ref><sp/>attr;</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>attr.<ref refid="classwx_text_attr_1a315ebbc5a41840a0777a7716fc19f5f0" kindref="member" tooltip="Sets the flags determining which styles are being specified.">SetFlags</ref>(<ref refid="textctrl_8h_1a5544b853914845e9d6453501951d60c2a2f294aa629dbe616483873a28b7daae6" kindref="member" tooltip="Defined as the combination of all wxTEXT_ATTR_FONT_* values above.">wxTEXT_ATTR_FONT</ref>);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ctrl-GetStyle(ctrl-&gt;<ref refid="classwx_rich_text_ctrl_1a0f545fd94a54eafc2bf5225df9bd9bfd" kindref="member" tooltip="Returns the current insertion point.">GetInsertionPoint</ref>(),<sp/>attr);</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change...">wxString</ref><sp/>currentFontName;</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(attr.<ref refid="classwx_text_attr_1a2c431011c991a4586cfa917b88c84218" kindref="member" tooltip="Returns true if the attribute object specifies any font attributes.">HasFont</ref>()<sp/>&amp;&amp;<sp/>attr.<ref refid="classwx_text_attr_1a3137309e77a7816651e3d13edb25ae3e" kindref="member" tooltip="Creates and returns a font specified by the font attributes in the wxTextAttr object...">GetFont</ref>().<ref refid="classwx_font_1a3ea0ba08b44ea25a2c52cf18efb6856e" kindref="member" tooltip="Returns true if this object is a valid font, false otherwise.">IsOk</ref>())</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>currentFontName<sp/>=<sp/>attr.<ref refid="classwx_text_attr_1a3137309e77a7816651e3d13edb25ae3e" kindref="member" tooltip="Creates and returns a font specified by the font attributes in the wxTextAttr object...">GetFont</ref>().<ref refid="classwx_font_1a8bc47f26fc8ac471b9d312550430adaf" kindref="member" tooltip="Returns the face name associated with the font, or the empty string if there is no...">GetFaceName</ref>();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change was actually the m...">wxString</ref><sp/>currentFontName;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(attr.<ref refid="classwx_text_attr_1a2c431011c991a4586cfa917b88c84218" kindref="member" tooltip="Returns true if the attribute object specifies any font attributes.">HasFont</ref>()<sp/>&amp;&amp;<sp/>attr.<ref refid="classwx_text_attr_1a3137309e77a7816651e3d13edb25ae3e" kindref="member" tooltip="Creates and returns a font specified by the font attributes in the wxTextAttr object.">GetFont</ref>().<ref refid="classwx_font_1a3ea0ba08b44ea25a2c52cf18efb6856e" kindref="member" tooltip="Returns true if this object is a valid font, false otherwise.">IsOk</ref>())</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>currentFontName<sp/>=<sp/>attr.<ref refid="classwx_text_attr_1a3137309e77a7816651e3d13edb25ae3e" kindref="member" tooltip="Creates and returns a font specified by the font attributes in the wxTextAttr object.">GetFont</ref>().<ref refid="classwx_font_1a8bc47f26fc8ac471b9d312550430adaf" kindref="member" tooltip="Returns the face name associated with the font, or the empty string if there is no face information...">GetFaceName</ref>();</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Don&apos;t<sp/>set<sp/>the<sp/>initial<sp/>font<sp/>in<sp/>the<sp/>dialog<sp/>(so<sp/>the<sp/>user<sp/>is<sp/>choosing</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>&apos;normal<sp/>text&apos;,<sp/>i.e.<sp/>the<sp/>current<sp/>font)<sp/>but<sp/>do<sp/>tell<sp/>the<sp/>dialog</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>what<sp/>&apos;normal<sp/>text&apos;<sp/>is.</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_symbol_picker_dialog" kindref="compound" tooltip="wxSymbolPickerDialog presents the user with a choice of fonts and a grid of available...">wxSymbolPickerDialog</ref><sp/>dlg(</highlight><highlight class="stringliteral">&quot;*&quot;</highlight><highlight class="normal">,<sp/><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member" tooltip="The global wxString instance of an empty string.">wxEmptyString</ref>,<sp/>currentFontName,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_symbol_picker_dialog" kindref="compound" tooltip="wxSymbolPickerDialog presents the user with a choice of fonts and a grid of available characters...">wxSymbolPickerDialog</ref><sp/>dlg(</highlight><highlight class="stringliteral">&quot;*&quot;</highlight><highlight class="normal">,<sp/><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member" tooltip="The global wxString instance of an empty string.">wxEmptyString</ref>,<sp/>currentFontName,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(dlg.ShowModal()<sp/>==<sp/><ref refid="defs_8h_1ac66d0a09761e7d86b2ac0b2e0c6a8cbbaeeb1bdf97306d7f0fdffb62c8af3d02f" kindref="member" tooltip="Standard button and menu IDs.">wxID_OK</ref>)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
@@ -396,114 +396,114 @@
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!dlg.UseNormalFont())</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_font" kindref="compound" tooltip="A font is an object which determines the appearance of text.">wxFont</ref><sp/>font(attr.<ref refid="classwx_text_attr_1a3137309e77a7816651e3d13edb25ae3e" kindref="member" tooltip="Creates and returns a font specified by the font attributes in the wxTextAttr object...">GetFont</ref>());</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>font.SetFaceName(dlg.GetFontName());</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_font" kindref="compound" tooltip="A font is an object which determines the appearance of text.">wxFont</ref><sp/>font(attr.<ref refid="classwx_text_attr_1a3137309e77a7816651e3d13edb25ae3e" kindref="member" tooltip="Creates and returns a font specified by the font attributes in the wxTextAttr object.">GetFont</ref>());</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>font.<ref refid="classwx_font_1a97456a61332a1b6d44a76f0b57b01709" kindref="member" tooltip="Sets the facename for the font.">SetFaceName</ref>(dlg.GetFontName());</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>attr.<ref refid="classwx_text_attr_1a12d6cd64d373280777f47813fe24c7b6" kindref="member" tooltip="Sets the attributes for the given font.">SetFont</ref>(font);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ctrl-SetStyle(insertionPoint,<sp/>insertionPoint+1,<sp/>attr);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 </programlisting></para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxrichtext" kindref="member">wxRichText</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__cmndlg" kindref="compound">Common Dialogs</ref> </para>    </detaileddescription>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxrichtext" kindref="member">wxRichText</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__cmndlg" kindref="compound">Common Dialogs</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10575">
+      <node id="10635">
         <label>wxNonOwnedWindow</label>
         <link refid="classwx_non_owned_window"/>
-        <childnode refid="10576" relation="public-inheritance">
+        <childnode refid="10636" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10578">
+      <node id="10638">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="10577">
+      <node id="10637">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="10578" relation="public-inheritance">
+        <childnode refid="10638" relation="public-inheritance">
         </childnode>
-        <childnode refid="10579" relation="public-inheritance">
+        <childnode refid="10639" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10579">
+      <node id="10639">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="10576">
+      <node id="10636">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="10577" relation="public-inheritance">
+        <childnode refid="10637" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10573">
+      <node id="10633">
         <label>wxDialog</label>
         <link refid="classwx_dialog"/>
-        <childnode refid="10574" relation="public-inheritance">
+        <childnode refid="10634" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10574">
+      <node id="10634">
         <label>wxTopLevelWindow</label>
         <link refid="classwx_top_level_window"/>
-        <childnode refid="10575" relation="public-inheritance">
+        <childnode refid="10635" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10572">
+      <node id="10632">
         <label>wxSymbolPickerDialog</label>
         <link refid="classwx_symbol_picker_dialog"/>
-        <childnode refid="10573" relation="public-inheritance">
+        <childnode refid="10633" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10583">
+      <node id="10643">
         <label>wxNonOwnedWindow</label>
         <link refid="classwx_non_owned_window"/>
-        <childnode refid="10584" relation="public-inheritance">
+        <childnode refid="10644" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10586">
+      <node id="10646">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="10587" relation="usage">
+        <childnode refid="10647" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="10585">
+      <node id="10645">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="10586" relation="public-inheritance">
+        <childnode refid="10646" relation="public-inheritance">
         </childnode>
-        <childnode refid="10588" relation="public-inheritance">
+        <childnode refid="10648" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10588">
+      <node id="10648">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="10584">
+      <node id="10644">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="10585" relation="public-inheritance">
+        <childnode refid="10645" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10581">
+      <node id="10641">
         <label>wxDialog</label>
         <link refid="classwx_dialog"/>
-        <childnode refid="10582" relation="public-inheritance">
+        <childnode refid="10642" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10582">
+      <node id="10642">
         <label>wxTopLevelWindow</label>
         <link refid="classwx_top_level_window"/>
-        <childnode refid="10583" relation="public-inheritance">
+        <childnode refid="10643" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10580">
+      <node id="10640">
         <label>wxSymbolPickerDialog</label>
         <link refid="classwx_symbol_picker_dialog"/>
-        <childnode refid="10581" relation="public-inheritance">
+        <childnode refid="10641" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10587">
+      <node id="10647">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
@@ -844,6 +844,7 @@
       <member refid="classwx_window_1a81f23590239934fa10fded0566a65d8c" prot="public" virt="non-virtual"><scope>wxSymbolPickerDialog</scope><name>SetPosition</name></member>
       <member refid="classwx_window_1a07f5f7ed3f78e0ef7b3dee3f4da81001" prot="public" virt="virtual"><scope>wxSymbolPickerDialog</scope><name>SetPreviousHandler</name></member>
       <member refid="classwx_object_1afab780710f2adc1bb33310e27590140b" prot="public" virt="non-virtual"><scope>wxSymbolPickerDialog</scope><name>SetRefData</name></member>
+      <member refid="classwx_top_level_window_1a82afa6f09dd5faef6330807ef59374e8" prot="public" virt="virtual"><scope>wxSymbolPickerDialog</scope><name>SetRepresentedFilename</name></member>
       <member refid="classwx_dialog_1a0d04ed85ac5cd271a61514d446340673" prot="public" virt="non-virtual"><scope>wxSymbolPickerDialog</scope><name>SetReturnCode</name></member>
       <member refid="classwx_top_level_window_1a98e95b1b10f44b80f9b29a03ab09a879" prot="public" virt="non-virtual"><scope>wxSymbolPickerDialog</scope><name>SetRightMenu</name></member>
       <member refid="classwx_window_1aa842d59529f873683e55cd8392ec46e9" prot="public" virt="virtual"><scope>wxSymbolPickerDialog</scope><name>SetScrollbar</name></member>

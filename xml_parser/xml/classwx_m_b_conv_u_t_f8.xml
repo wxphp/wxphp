@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_m_b_conv_u_t_f8" kind="class" prot="public">
     <compoundname>wxMBConvUTF8</compoundname>
     <basecompoundref refid="classwx_m_b_conv" prot="public" virt="non-virtual">wxMBConv</basecompoundref>
@@ -8,28 +8,28 @@
 <para>This class converts between the UTF-8 encoding and Unicode. </para>    </briefdescription>
     <detaileddescription>
 <para>It has one predefined instance, <bold>wxConvUTF8</bold>.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__conv" kindref="compound">Text Conversion</ref></para><para><simplesect kind="see"><para><ref refid="classwx_m_b_conv_u_t_f7" kindref="compound">wxMBConvUTF7</ref>, <ref refid="overview__mbconv" kindref="compound">wxMBConv Overview</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__conv" kindref="compound">Text Conversion</ref></para><para><simplesect kind="see"><para><ref refid="classwx_m_b_conv_u_t_f7" kindref="compound">wxMBConvUTF7</ref>, <ref refid="overview_mbconv" kindref="compound">wxMBConv Overview</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7590">
+      <node id="7596">
         <label>wxMBConvUTF8</label>
         <link refid="classwx_m_b_conv_u_t_f8"/>
-        <childnode refid="7591" relation="public-inheritance">
+        <childnode refid="7597" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7591">
+      <node id="7597">
         <label>wxMBConv</label>
         <link refid="classwx_m_b_conv"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7592">
+      <node id="7598">
         <label>wxMBConvUTF8</label>
         <link refid="classwx_m_b_conv_u_t_f8"/>
-        <childnode refid="7593" relation="public-inheritance">
+        <childnode refid="7599" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7593">
+      <node id="7599">
         <label>wxMBConv</label>
         <link refid="classwx_m_b_conv"/>
       </node>

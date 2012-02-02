@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_file_system_handler" kind="class" prot="public">
     <compoundname>wxFileSystemHandler</compoundname>
     <basecompoundref refid="classwx_object" prot="public" virt="non-virtual">wxObject</basecompoundref>
@@ -31,9 +31,9 @@
         <briefdescription>
 <para>Returns true if the handler is able to open this file. </para>        </briefdescription>
         <detaileddescription>
-<para>This function doesn&apos;t check whether the file exists or not, it only checks if it knows the protocol. Example:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classwx_file_system_handler_1a421720c382a63c7117076757567c762f" kindref="member" tooltip="Returns true if the handler is able to open this file.">MyHand::CanOpen</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change...">wxString</ref>&amp;<sp/>location)</highlight></codeline>
+<para>This function doesn&apos;t check whether the file exists or not, it only checks if it knows the protocol. Example:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classwx_file_system_handler_1a421720c382a63c7117076757567c762f" kindref="member" tooltip="Returns true if the handler is able to open this file.">MyHand::CanOpen</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change was actually the m...">wxString</ref>&amp;<sp/>location)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(GetProtocol(location)<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;http&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="classwx_file_system_handler_1adf6e84f1ba33f047c15fb33f343b523a" kindref="member" tooltip="Returns the protocol string extracted from location.">GetProtocol</ref>(location)<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;http&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 </programlisting></para><para>Must be overridden in derived handlers. </para>        </detaileddescription>
         <inbodydescription>
@@ -210,44 +210,44 @@
     <briefdescription>
 <para>Classes derived from <ref refid="classwx_file_system_handler" kindref="compound">wxFileSystemHandler</ref> are used to access virtual file systems. </para>    </briefdescription>
     <detaileddescription>
-<para>Its public interface consists of two methods: <ref refid="classwx_file_system_handler_1a421720c382a63c7117076757567c762f" kindref="member">wxFileSystemHandler::CanOpen</ref> and <ref refid="classwx_file_system_handler_1a1295897a496f83c538d4dcf8897301e2" kindref="member">wxFileSystemHandler::OpenFile</ref>.</para><para>It provides additional protected methods to simplify the process of opening the file: <ref refid="classwx_file_system_handler_1adf6e84f1ba33f047c15fb33f343b523a" kindref="member">GetProtocol()</ref>, <ref refid="classwx_file_system_handler_1a3f56ed8be86e2ddaf3af0d20c17aa067" kindref="member">GetLeftLocation()</ref>, <ref refid="classwx_file_system_handler_1a759935b4792339bf97d6c6529bffb966" kindref="member">GetRightLocation()</ref>, <ref refid="classwx_file_system_handler_1a3b928b08cc72f225b94fed6077c37d52" kindref="member">GetAnchor()</ref>, <ref refid="classwx_file_system_handler_1a95c04756cd89cc2a5d66116bbbb3acdc" kindref="member">GetMimeTypeFromExt()</ref>.</para><para>Please have a look at overview (see <ref refid="classwx_file_system" kindref="compound">wxFileSystem</ref>) if you don&apos;t know how locations are constructed.</para><para>Also consult the <ref refid="overview__fs_1overview_fs_wxhtmlfs" kindref="member">list of available handlers</ref>.</para><para>Note that the handlers are shared by all instances of <ref refid="classwx_file_system" kindref="compound">wxFileSystem</ref>.</para><para><simplesect kind="remark"><para>wxHTML library provides handlers for local files and HTTP or FTP protocol.</para></simplesect>
+<para>Its public interface consists of two methods: <ref refid="classwx_file_system_handler_1a421720c382a63c7117076757567c762f" kindref="member">wxFileSystemHandler::CanOpen</ref> and <ref refid="classwx_file_system_handler_1a1295897a496f83c538d4dcf8897301e2" kindref="member">wxFileSystemHandler::OpenFile</ref>.</para><para>It provides additional protected methods to simplify the process of opening the <ulink url="file:">file:</ulink> <ref refid="classwx_file_system_handler_1adf6e84f1ba33f047c15fb33f343b523a" kindref="member">GetProtocol()</ref>, <ref refid="classwx_file_system_handler_1a3f56ed8be86e2ddaf3af0d20c17aa067" kindref="member">GetLeftLocation()</ref>, <ref refid="classwx_file_system_handler_1a759935b4792339bf97d6c6529bffb966" kindref="member">GetRightLocation()</ref>, <ref refid="classwx_file_system_handler_1a3b928b08cc72f225b94fed6077c37d52" kindref="member">GetAnchor()</ref>, <ref refid="classwx_file_system_handler_1a95c04756cd89cc2a5d66116bbbb3acdc" kindref="member">GetMimeTypeFromExt()</ref>.</para><para>Please have a look at overview (see <ref refid="classwx_file_system" kindref="compound">wxFileSystem</ref>) if you don&apos;t know how locations are constructed.</para><para>Also consult the <ref refid="overview_fs_1overview_fs_wxhtmlfs" kindref="member">list of available handlers</ref>.</para><para>Note that the handlers are shared by all instances of <ref refid="classwx_file_system" kindref="compound">wxFileSystem</ref>.</para><para><simplesect kind="remark"><para>wxHTML library provides handlers for local files and HTTP or FTP protocol.</para></simplesect>
 <simplesect kind="note"><para>The location parameter passed to <ref refid="classwx_file_system_handler_1a1295897a496f83c538d4dcf8897301e2" kindref="member">OpenFile()</ref> or <ref refid="classwx_file_system_handler_1a421720c382a63c7117076757567c762f" kindref="member">CanOpen()</ref> methods is always an absolute path. You don&apos;t need to check the FS&apos;s current path.</para></simplesect>
 <bold>wxPerl Note:</bold> In wxPerl, you need to derive your file system handler class from <computeroutput>Wx::PlFileSystemHandler</computeroutput>.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__vfs" kindref="compound">Virtual File System</ref></para><para><simplesect kind="see"><para><ref refid="classwx_file_system" kindref="compound">wxFileSystem</ref>, <ref refid="classwx_f_s_file" kindref="compound">wxFSFile</ref>, <ref refid="overview__fs" kindref="compound">wxFileSystem Overview</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__vfs" kindref="compound">Virtual File System</ref></para><para><simplesect kind="see"><para><ref refid="classwx_file_system" kindref="compound">wxFileSystem</ref>, <ref refid="classwx_f_s_file" kindref="compound">wxFSFile</ref>, <ref refid="overview_fs" kindref="compound">wxFileSystem Overview</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="6252">
+      <node id="6256">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="6253">
+      <node id="6257">
         <label>wxMemoryFSHandler</label>
         <link refid="classwx_memory_f_s_handler"/>
-        <childnode refid="6251" relation="public-inheritance">
+        <childnode refid="6255" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6251">
+      <node id="6255">
         <label>wxFileSystemHandler</label>
         <link refid="classwx_file_system_handler"/>
-        <childnode refid="6252" relation="public-inheritance">
+        <childnode refid="6256" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="6255">
+      <node id="6259">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="6256" relation="usage">
+        <childnode refid="6260" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="6254">
+      <node id="6258">
         <label>wxFileSystemHandler</label>
         <link refid="classwx_file_system_handler"/>
-        <childnode refid="6255" relation="public-inheritance">
+        <childnode refid="6259" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6256">
+      <node id="6260">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

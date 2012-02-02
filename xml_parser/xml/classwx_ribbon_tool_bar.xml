@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_ribbon_tool_bar" kind="class" prot="public">
     <compoundname>wxRibbonToolBar</compoundname>
     <basecompoundref refid="classwx_ribbon_control" prot="public" virt="non-virtual">wxRibbonControl</basecompoundref>
@@ -225,6 +225,33 @@
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/toolbar.h" line="103"/>
       </memberdef>
+      <memberdef kind="function" id="classwx_ribbon_tool_bar_1aa3e2792ad5759a40f38bd2b3f5387654" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>wxRibbonToolBarToolBase *</type>
+        <definition>virtual wxRibbonToolBarToolBase* wxRibbonToolBar::AddToggleTool</definition>
+        <argsstring>(int tool_id, const wxBitmap &amp;bitmap, const wxString &amp;help_string)</argsstring>
+        <name>AddToggleTool</name>
+        <param>
+          <type>int</type>
+          <declname>tool_id</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> &amp;</type>
+          <declname>bitmap</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>help_string</declname>
+        </param>
+        <briefdescription>
+<para>Add a toggle tool to the tool bar (simple version). </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="since"><para>2.9.4</para></simplesect>
+<simplesect kind="see"><para><ref refid="classwx_ribbon_tool_bar_1a1675720633457a243509a3a10ed53bba" kindref="member">AddTool()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/toolbar.h" line="115"/>
+      </memberdef>
       <memberdef kind="function" id="classwx_ribbon_tool_bar_1ab2868211962b01d0ccd53f7aab9a5f4f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>wxRibbonToolBarToolBase *</type>
         <definition>virtual wxRibbonToolBarToolBase* wxRibbonToolBar::AddTool</definition>
@@ -305,11 +332,11 @@
 </parameteritem>
 </parameterlist>
 <simplesect kind="return"><para>An opaque pointer which can be used only with other tool bar methods.</para></simplesect>
-<simplesect kind="see"><para><ref refid="classwx_ribbon_tool_bar_1afc88a9c97fb4c517a3634929fa4f64ef" kindref="member">AddDropdownTool()</ref>, <ref refid="classwx_ribbon_tool_bar_1aa0920c4b386293403fcd97a0dcae3a4c" kindref="member">AddHybridTool()</ref>, <ref refid="classwx_ribbon_tool_bar_1a8ffb9fae53d1e78106465836c7c087af" kindref="member">AddSeparator()</ref> </para></simplesect>
+<simplesect kind="see"><para><ref refid="classwx_ribbon_tool_bar_1afc88a9c97fb4c517a3634929fa4f64ef" kindref="member">AddDropdownTool()</ref>, <ref refid="classwx_ribbon_tool_bar_1aa0920c4b386293403fcd97a0dcae3a4c" kindref="member">AddHybridTool()</ref>, <ref refid="classwx_ribbon_tool_bar_1a8ffb9fae53d1e78106465836c7c087af" kindref="member">AddSeparator()</ref>, <ref refid="classwx_ribbon_tool_bar_1a312d34cb3534ba02fe6b621d5dbb3483" kindref="member">InsertTool()</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/toolbar.h" line="135"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/toolbar.h" line="147"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_tool_bar_1a8ffb9fae53d1e78106465836c7c087af" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>wxRibbonToolBarToolBase *</type>
@@ -322,7 +349,546 @@
 <para>Separators are used to separate tools into groups. As such, a separator is not explicitly drawn, but is visually seen as the gap between tool groups. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/toolbar.h" line="144"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/toolbar.h" line="156"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_ribbon_tool_bar_1a312d34cb3534ba02fe6b621d5dbb3483" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>wxRibbonToolBarToolBase *</type>
+        <definition>virtual wxRibbonToolBarToolBase* wxRibbonToolBar::InsertTool</definition>
+        <argsstring>(size_t pos, int tool_id, const wxBitmap &amp;bitmap, const wxString &amp;help_string, wxRibbonButtonKind kind=wxRIBBON_BUTTON_NORMAL)</argsstring>
+        <name>InsertTool</name>
+        <param>
+          <type>size_t</type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>tool_id</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> &amp;</type>
+          <declname>bitmap</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>help_string</declname>
+        </param>
+        <param>
+          <type><ref refid="art_8h_1a49672bfa76086982645f3797b0162e19" kindref="member">wxRibbonButtonKind</ref></type>
+          <declname>kind</declname>
+          <defval>wxRIBBON_BUTTON_NORMAL</defval>
+        </param>
+        <briefdescription>
+<para>Insert a tool to the tool bar (simple version) as the specified position. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="since"><para>2.9.4</para></simplesect>
+<simplesect kind="see"><para><ref refid="classwx_ribbon_tool_bar_1a312d34cb3534ba02fe6b621d5dbb3483" kindref="member">InsertTool()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/toolbar.h" line="171"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_ribbon_tool_bar_1aca11e4e102ac0048feec46e253ee93a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>wxRibbonToolBarToolBase *</type>
+        <definition>virtual wxRibbonToolBarToolBase* wxRibbonToolBar::InsertDropdownTool</definition>
+        <argsstring>(size_t pos, int tool_id, const wxBitmap &amp;bitmap, const wxString &amp;help_string=wxEmptyString)</argsstring>
+        <name>InsertDropdownTool</name>
+        <param>
+          <type>size_t</type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>tool_id</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> &amp;</type>
+          <declname>bitmap</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>help_string</declname>
+          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
+        </param>
+        <briefdescription>
+<para>Insert a dropdown tool to the tool bar (simple version) as the specified position. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="since"><para>2.9.4</para></simplesect>
+<simplesect kind="see"><para><ref refid="classwx_ribbon_tool_bar_1afc88a9c97fb4c517a3634929fa4f64ef" kindref="member">AddDropdownTool()</ref>, <ref refid="classwx_ribbon_tool_bar_1a312d34cb3534ba02fe6b621d5dbb3483" kindref="member">InsertTool()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/toolbar.h" line="186"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_ribbon_tool_bar_1af639809c018d957407d72dfcc68c5796" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>wxRibbonToolBarToolBase *</type>
+        <definition>virtual wxRibbonToolBarToolBase* wxRibbonToolBar::InsertHybridTool</definition>
+        <argsstring>(size_t pos, int tool_id, const wxBitmap &amp;bitmap, const wxString &amp;help_string=wxEmptyString)</argsstring>
+        <name>InsertHybridTool</name>
+        <param>
+          <type>size_t</type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>tool_id</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> &amp;</type>
+          <declname>bitmap</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>help_string</declname>
+          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
+        </param>
+        <briefdescription>
+<para>Insert a hybrid tool to the tool bar (simple version) as the specified position. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="since"><para>2.9.4</para></simplesect>
+<simplesect kind="see"><para><ref refid="classwx_ribbon_tool_bar_1aa0920c4b386293403fcd97a0dcae3a4c" kindref="member">AddHybridTool()</ref>, <ref refid="classwx_ribbon_tool_bar_1a312d34cb3534ba02fe6b621d5dbb3483" kindref="member">InsertTool()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/toolbar.h" line="200"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_ribbon_tool_bar_1a9ba08f72cdc184be59eda474651622e8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>wxRibbonToolBarToolBase *</type>
+        <definition>virtual wxRibbonToolBarToolBase* wxRibbonToolBar::InsertToggleTool</definition>
+        <argsstring>(size_t pos, int tool_id, const wxBitmap &amp;bitmap, const wxString &amp;help_string=wxEmptyString)</argsstring>
+        <name>InsertToggleTool</name>
+        <param>
+          <type>size_t</type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>tool_id</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> &amp;</type>
+          <declname>bitmap</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>help_string</declname>
+          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
+        </param>
+        <briefdescription>
+<para>Insert a toggle tool to the tool bar (simple version) as the specified position. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="since"><para>2.9.4</para></simplesect>
+<simplesect kind="see"><para><ref refid="classwx_ribbon_tool_bar_1aa3e2792ad5759a40f38bd2b3f5387654" kindref="member">AddToggleTool()</ref>, <ref refid="classwx_ribbon_tool_bar_1a312d34cb3534ba02fe6b621d5dbb3483" kindref="member">InsertTool()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/toolbar.h" line="214"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_ribbon_tool_bar_1afe6765c55d5e84a5bac39693332a0ac7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>wxRibbonToolBarToolBase *</type>
+        <definition>virtual wxRibbonToolBarToolBase* wxRibbonToolBar::InsertTool</definition>
+        <argsstring>(size_t pos, int tool_id, const wxBitmap &amp;bitmap, const wxBitmap &amp;bitmap_disabled=wxNullBitmap, const wxString &amp;help_string=wxEmptyString, wxRibbonButtonKind kind=wxRIBBON_BUTTON_NORMAL, wxObject *client_data=NULL)</argsstring>
+        <name>InsertTool</name>
+        <param>
+          <type>size_t</type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>tool_id</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> &amp;</type>
+          <declname>bitmap</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> &amp;</type>
+          <declname>bitmap_disabled</declname>
+          <defval><ref refid="interface_2wx_2bitmap_8h_1a2947690e84b8fdb2e37b79a4af8f8a21" kindref="member">wxNullBitmap</ref></defval>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>help_string</declname>
+          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
+        </param>
+        <param>
+          <type><ref refid="art_8h_1a49672bfa76086982645f3797b0162e19" kindref="member">wxRibbonButtonKind</ref></type>
+          <declname>kind</declname>
+          <defval>wxRIBBON_BUTTON_NORMAL</defval>
+        </param>
+        <param>
+          <type><ref refid="classwx_object" kindref="compound">wxObject</ref> *</type>
+          <declname>client_data</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+<para>Insert a tool to the tool bar at the specified position. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position of the new tool (number of tools and separators from the begining of the toolbar). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tool_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID of the new tool (used for event callbacks). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bitmap</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Bitmap to use as the foreground for the new tool. Does not have to be the same size as other tool bitmaps, but should be similar as otherwise it will look visually odd. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bitmap_disabled</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Bitmap to use when the tool is disabled. If left as wxNullBitmap, then a bitmap will be automatically generated from <emphasis>bitmap</emphasis>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>help_string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The UI help string to associate with the new tool. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>kind</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The kind of tool to add. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>client_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Client data to associate with the new tool.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An opaque pointer which can be used only with other tool bar methods.</para></simplesect>
+<simplesect kind="since"><para>2.9.4</para></simplesect>
+<simplesect kind="see"><para><ref refid="classwx_ribbon_tool_bar_1aca11e4e102ac0048feec46e253ee93a7" kindref="member">InsertDropdownTool()</ref>, <ref refid="classwx_ribbon_tool_bar_1af639809c018d957407d72dfcc68c5796" kindref="member">InsertHybridTool()</ref>, <ref refid="classwx_ribbon_tool_bar_1aaad936b4a748f72bff61edf4ed1db1fd" kindref="member">InsertSeparator()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/toolbar.h" line="252"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_ribbon_tool_bar_1aaad936b4a748f72bff61edf4ed1db1fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>wxRibbonToolBarToolBase *</type>
+        <definition>virtual wxRibbonToolBarToolBase* wxRibbonToolBar::InsertSeparator</definition>
+        <argsstring>(size_t pos)</argsstring>
+        <name>InsertSeparator</name>
+        <param>
+          <type>size_t</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+<para>Insert a separator to the tool bar at the specified position. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="since"><para>2.9.4</para></simplesect>
+<simplesect kind="see"><para><ref refid="classwx_ribbon_tool_bar_1a8ffb9fae53d1e78106465836c7c087af" kindref="member">AddSeparator()</ref>, <ref refid="classwx_ribbon_tool_bar_1a312d34cb3534ba02fe6b621d5dbb3483" kindref="member">InsertTool()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/toolbar.h" line="261"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_ribbon_tool_bar_1ae0cc3ea212638290159d31415d8895ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxRibbonToolBar::ClearTools</definition>
+        <argsstring>()</argsstring>
+        <name>ClearTools</name>
+        <briefdescription>
+<para>Deletes all the tools in the toolbar. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="since"><para>2.9.4 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/toolbar.h" line="268"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_ribbon_tool_bar_1ad35f18c7feba2c9512b111bef57e6ef7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxRibbonToolBar::DeleteTool</definition>
+        <argsstring>(int tool_id)</argsstring>
+        <name>DeleteTool</name>
+        <param>
+          <type>int</type>
+          <declname>tool_id</declname>
+        </param>
+        <briefdescription>
+<para>Removes the specified tool from the toolbar and deletes it. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tool_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID of the tool to delete.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the tool was deleted, false otherwise.</para></simplesect>
+<simplesect kind="since"><para>2.9.4</para></simplesect>
+<simplesect kind="see"><para><ref refid="classwx_ribbon_tool_bar_1adc6c3450b240e4911074feb175f93158" kindref="member">DeleteToolByPos()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/toolbar.h" line="282"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_ribbon_tool_bar_1adc6c3450b240e4911074feb175f93158" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxRibbonToolBar::DeleteToolByPos</definition>
+        <argsstring>(size_t pos)</argsstring>
+        <name>DeleteToolByPos</name>
+        <param>
+          <type>size_t</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+<para>This function behaves like <ref refid="classwx_ribbon_tool_bar_1ad35f18c7feba2c9512b111bef57e6ef7" kindref="member">DeleteTool()</ref> but it deletes the tool at the specified position and not the one with the given id. </para>        </briefdescription>
+        <detaileddescription>
+<para>Usefull to delete separators.</para><para><simplesect kind="since"><para>2.9.4 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/toolbar.h" line="291"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_ribbon_tool_bar_1ab904359913bbac54b98bf1939a48953c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>wxRibbonToolBarToolBase *</type>
+        <definition>virtual wxRibbonToolBarToolBase* wxRibbonToolBar::FindById</definition>
+        <argsstring>(int tool_id) const </argsstring>
+        <name>FindById</name>
+        <param>
+          <type>int</type>
+          <declname>tool_id</declname>
+        </param>
+        <briefdescription>
+<para>Returns a pointer to the tool opaque structure by <emphasis>id</emphasis> or NULL if no corresponding tool is found. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="since"><para>2.9.4 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/toolbar.h" line="299"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_ribbon_tool_bar_1a6f4d560907de9728b5475ea699a85281" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>wxRibbonToolBarToolBase *</type>
+        <definition>wxRibbonToolBarToolBase* wxRibbonToolBar::GetToolByPos</definition>
+        <argsstring>(size_t pos) const virtual size_t GetToolCount() const </argsstring>
+        <name>GetToolByPos</name>
+        <param>
+          <type>size_t</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+<para>Return the opaque pointer corresponding to the given tool. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>an opaque pointer, NULL if is a separator or not found.</para></simplesect>
+<simplesect kind="since"><para>2.9.4 Returns the number of tools in the toolbar.</para><simplesectsep/><para>2.9.4 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/toolbar.h" line="315"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_ribbon_tool_bar_1a0da73f9df429c665420bb3c762ebd403" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>virtual int wxRibbonToolBar::GetToolId</definition>
+        <argsstring>(const wxRibbonToolBarToolBase *tool) const </argsstring>
+        <name>GetToolId</name>
+        <param>
+          <type>const wxRibbonToolBarToolBase *</type>
+          <declname>tool</declname>
+        </param>
+        <briefdescription>
+<para>Return the id assciated to the tool opaque structure. </para>        </briefdescription>
+        <detaileddescription>
+<para>The structure pointer must not be NULL.</para><para><simplesect kind="since"><para>2.9.4 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/toolbar.h" line="324"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_ribbon_tool_bar_1a11cbf29d5bcd68eeb5f85bd05aaa7af1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classwx_object" kindref="compound">wxObject</ref> *</type>
+        <definition>virtual wxObject* wxRibbonToolBar::GetToolClientData</definition>
+        <argsstring>(int tool_id) const </argsstring>
+        <name>GetToolClientData</name>
+        <param>
+          <type>int</type>
+          <declname>tool_id</declname>
+        </param>
+        <briefdescription>
+<para>Get any client data associated with the tool. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>toolId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID of the tool in question, as passed to <ref refid="classwx_ribbon_tool_bar_1a1675720633457a243509a3a10ed53bba" kindref="member">AddTool()</ref>.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Client data, or NULL if there is none.</para></simplesect>
+<simplesect kind="since"><para>2.9.4 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/toolbar.h" line="336"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_ribbon_tool_bar_1aeeef026e7a2ae3f4dbcc3e52557a5dce" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxRibbonToolBar::GetToolEnabled</definition>
+        <argsstring>(int tool_id) const </argsstring>
+        <name>GetToolEnabled</name>
+        <param>
+          <type>int</type>
+          <declname>tool_id</declname>
+        </param>
+        <briefdescription>
+<para>Called to determine whether a tool is enabled (responds to user input). </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>toolId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID of the tool in question, as passed to <ref refid="classwx_ribbon_tool_bar_1a1675720633457a243509a3a10ed53bba" kindref="member">AddTool()</ref>.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the tool is enabled, false otherwise.</para></simplesect>
+<simplesect kind="since"><para>2.9.4</para></simplesect>
+<simplesect kind="see"><para><ref refid="classwx_ribbon_tool_bar_1a97dcf4e8c1c2b70acc88ca75e03f19fd" kindref="member">EnableTool()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/toolbar.h" line="350"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_ribbon_tool_bar_1a4d46fb3e8dbe28bb6981d7b4db2803e7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>virtual wxString wxRibbonToolBar::GetToolHelpString</definition>
+        <argsstring>(int tool_id) const </argsstring>
+        <name>GetToolHelpString</name>
+        <param>
+          <type>int</type>
+          <declname>tool_id</declname>
+        </param>
+        <briefdescription>
+<para>Returns the help string for the given tool. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>toolId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID of the tool in question, as passed to <ref refid="classwx_ribbon_tool_bar_1a1675720633457a243509a3a10ed53bba" kindref="member">AddTool()</ref>.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="since"><para>2.9.4 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/toolbar.h" line="360"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_ribbon_tool_bar_1ad768bead1e79aa85e88e55a2a9e0621d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="art_8h_1a49672bfa76086982645f3797b0162e19" kindref="member">wxRibbonButtonKind</ref></type>
+        <definition>virtual wxRibbonButtonKind wxRibbonToolBar::GetToolKind</definition>
+        <argsstring>(int tool_id) const </argsstring>
+        <name>GetToolKind</name>
+        <param>
+          <type>int</type>
+          <declname>tool_id</declname>
+        </param>
+        <briefdescription>
+<para>Return the kind of the given tool. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>toolId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID of the tool in question, as passed to <ref refid="classwx_ribbon_tool_bar_1a1675720633457a243509a3a10ed53bba" kindref="member">AddTool()</ref>.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="since"><para>2.9.4 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/toolbar.h" line="370"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_ribbon_tool_bar_1a00c38c9257c7492c5aab18bf12306360" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>virtual int wxRibbonToolBar::GetToolPos</definition>
+        <argsstring>(int tool_id) const </argsstring>
+        <name>GetToolPos</name>
+        <param>
+          <type>int</type>
+          <declname>tool_id</declname>
+        </param>
+        <briefdescription>
+<para>Returns the tool position in the toolbar, or <computeroutput>wxNOT_FOUND</computeroutput> if the tool is not found. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>toolId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID of the tool in question, as passed to <ref refid="classwx_ribbon_tool_bar_1a1675720633457a243509a3a10ed53bba" kindref="member">AddTool()</ref>.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="since"><para>2.9.4 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/toolbar.h" line="381"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_ribbon_tool_bar_1a7b12c2a54deeaedf612bc04705d28720" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxRibbonToolBar::GetToolState</definition>
+        <argsstring>(int tool_id) const </argsstring>
+        <name>GetToolState</name>
+        <param>
+          <type>int</type>
+          <declname>tool_id</declname>
+        </param>
+        <briefdescription>
+<para>Gets the on/off state of a toggle tool. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>toolId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID of the tool in question, as passed to <ref refid="classwx_ribbon_tool_bar_1a1675720633457a243509a3a10ed53bba" kindref="member">AddTool()</ref>.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the tool is toggled on, false otherwise.</para></simplesect>
+<simplesect kind="see"><para><ref refid="classwx_ribbon_tool_bar_1aaaf93abfe569a7c42a240d804e750131" kindref="member">ToggleTool()</ref></para></simplesect>
+<simplesect kind="since"><para>2.9.4 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/toolbar.h" line="395"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_ribbon_tool_bar_1a3dd872fbf4a614db656130c141c924a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxRibbonToolBar::Realize</definition>
+        <argsstring>()</argsstring>
+        <name>Realize</name>
+        <reimplements refid="classwx_ribbon_control_1af8c100dc4a4eb2e2cc8ce7619044cfc2">Realize</reimplements>
+        <briefdescription>
+<para>Calculate tool layouts and positions. </para>        </briefdescription>
+        <detaileddescription>
+<para>Must be called after tools are added to the tool bar, as otherwise the newly added tools will not be displayed. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/toolbar.h" line="403"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_tool_bar_1a5abee7a0e02bcd3705479746b8672736" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -359,7 +925,210 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/toolbar.h" line="159"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/toolbar.h" line="418"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_ribbon_tool_bar_1ad5363115a1418b54a162afebc4ce48d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxRibbonToolBar::SetToolClientData</definition>
+        <argsstring>(int tool_id, wxObject *clientData)</argsstring>
+        <name>SetToolClientData</name>
+        <param>
+          <type>int</type>
+          <declname>tool_id</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_object" kindref="compound">wxObject</ref> *</type>
+          <declname>clientData</declname>
+        </param>
+        <briefdescription>
+<para>Sets the client data associated with the tool. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID of the tool in question, as passed to <ref refid="classwx_ribbon_tool_bar_1a1675720633457a243509a3a10ed53bba" kindref="member">AddTool()</ref>.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="since"><para>2.9.4 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/toolbar.h" line="428"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_ribbon_tool_bar_1a04078695e62582b815a08044d27665f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxRibbonToolBar::SetToolDisabledBitmap</definition>
+        <argsstring>(int tool_id, const wxBitmap &amp;bitmap)</argsstring>
+        <name>SetToolDisabledBitmap</name>
+        <param>
+          <type>int</type>
+          <declname>tool_id</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> &amp;</type>
+          <declname>bitmap</declname>
+        </param>
+        <briefdescription>
+<para>Sets the bitmap to be used by the tool with the given ID when the tool is in a disabled state. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tool_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID of the tool in question, as passed to <ref refid="classwx_ribbon_tool_bar_1a1675720633457a243509a3a10ed53bba" kindref="member">AddTool()</ref>.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="since"><para>2.9.4 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/toolbar.h" line="439"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_ribbon_tool_bar_1ad5a2925155b3d28f3d675567e6fc36cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxRibbonToolBar::SetToolHelpString</definition>
+        <argsstring>(int tool_id, const wxString &amp;helpString)</argsstring>
+        <name>SetToolHelpString</name>
+        <param>
+          <type>int</type>
+          <declname>tool_id</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>helpString</declname>
+        </param>
+        <briefdescription>
+<para>Sets the help string shown in tooltip for the given tool. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tool_Id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID of the tool in question, as passed to <ref refid="classwx_ribbon_tool_bar_1a1675720633457a243509a3a10ed53bba" kindref="member">AddTool()</ref>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>helpString</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A string for the help.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="classwx_ribbon_tool_bar_1a4d46fb3e8dbe28bb6981d7b4db2803e7" kindref="member">GetToolHelpString()</ref></para></simplesect>
+<simplesect kind="since"><para>2.9.4 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/toolbar.h" line="453"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_ribbon_tool_bar_1a6529d00831bdbebba8a073d968d33804" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxRibbonToolBar::SetToolNormalBitmap</definition>
+        <argsstring>(int tool_id, const wxBitmap &amp;bitmap)</argsstring>
+        <name>SetToolNormalBitmap</name>
+        <param>
+          <type>int</type>
+          <declname>tool_id</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> &amp;</type>
+          <declname>bitmap</declname>
+        </param>
+        <briefdescription>
+<para>Sets the bitmap to be used by the tool with the given ID. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tool_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID of the tool in question, as passed to <ref refid="classwx_ribbon_tool_bar_1a1675720633457a243509a3a10ed53bba" kindref="member">AddTool()</ref>.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="since"><para>2.9.4 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/toolbar.h" line="463"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_ribbon_tool_bar_1a97dcf4e8c1c2b70acc88ca75e03f19fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxRibbonToolBar::EnableTool</definition>
+        <argsstring>(int tool_id, bool enable=true)</argsstring>
+        <name>EnableTool</name>
+        <param>
+          <type>int</type>
+          <declname>tool_id</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>enable</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>Enable or disable a single tool on the bar. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tool_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID of the tool to enable or disable. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>enable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true to enable the tool, false to disable it.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="since"><para>2.9.4 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/toolbar.h" line="475"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_ribbon_tool_bar_1aaaf93abfe569a7c42a240d804e750131" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxRibbonToolBar::ToggleTool</definition>
+        <argsstring>(int tool_id, bool checked)</argsstring>
+        <name>ToggleTool</name>
+        <param>
+          <type>int</type>
+          <declname>tool_id</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>checked</declname>
+        </param>
+        <briefdescription>
+<para>Set a toggle tool to the checked or unchecked state. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tool_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID of the toggle tool to manipulate. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>checked</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true to set the tool to the toggled/pressed/checked state, false to set it to the untoggled/unpressed/unchecked state.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="since"><para>2.9.4 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/toolbar.h" line="488"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -371,67 +1140,22 @@
 <listitem><para>EVT_RIBBONTOOLBAR_DROPDOWN_CLICKED(id,  func): Triggered when the dropdown region of a tool on the tool bar is clicked. wxRibbonToolBarEvent::PopupMenu() should be called by the event handler if it wants to display a popup menu (which is what most dropdown tools should be doing). </para></listitem>
 </itemizedlist>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxribbon" kindref="member">wxRibbon</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ribbon" kindref="compound">Ribbon User Interface</ref> </para>    </detaileddescription>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxribbon" kindref="member">wxRibbon</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ribbon" kindref="compound">Ribbon User Interface</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="9204">
+      <node id="9212">
         <label>wxRibbonControl</label>
         <link refid="classwx_ribbon_control"/>
-        <childnode refid="9205" relation="public-inheritance">
+        <childnode refid="9213" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9208">
+      <node id="9216">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-      </node>
-      <node id="9207">
-        <label>wxEvtHandler</label>
-        <link refid="classwx_evt_handler"/>
-        <childnode refid="9208" relation="public-inheritance">
-        </childnode>
-        <childnode refid="9209" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="9209">
-        <label>wxTrackable</label>
-        <link refid="classwx_trackable"/>
-      </node>
-      <node id="9205">
-        <label>wxControl</label>
-        <link refid="classwx_control"/>
-        <childnode refid="9206" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="9206">
-        <label>wxWindow</label>
-        <link refid="classwx_window"/>
-        <childnode refid="9207" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="9203">
-        <label>wxRibbonToolBar</label>
-        <link refid="classwx_ribbon_tool_bar"/>
-        <childnode refid="9204" relation="public-inheritance">
-        </childnode>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
-      <node id="9211">
-        <label>wxRibbonControl</label>
-        <link refid="classwx_ribbon_control"/>
-        <childnode refid="9212" relation="public-inheritance">
-        </childnode>
       </node>
       <node id="9215">
-        <label>wxObject</label>
-        <link refid="classwx_object"/>
-        <childnode refid="9216" relation="usage">
-          <edgelabel>m_refData</edgelabel>
-        </childnode>
-      </node>
-      <node id="9214">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="9215" relation="public-inheritance">
+        <childnode refid="9216" relation="public-inheritance">
         </childnode>
         <childnode refid="9217" relation="public-inheritance">
         </childnode>
@@ -440,30 +1164,75 @@
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="9212">
+      <node id="9213">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="9213" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="9213">
-        <label>wxWindow</label>
-        <link refid="classwx_window"/>
         <childnode refid="9214" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9210">
-        <label>wxRibbonToolBar</label>
-        <link refid="classwx_ribbon_tool_bar"/>
-        <childnode refid="9211" relation="public-inheritance">
+      <node id="9214">
+        <label>wxWindow</label>
+        <link refid="classwx_window"/>
+        <childnode refid="9215" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9216">
+      <node id="9211">
+        <label>wxRibbonToolBar</label>
+        <link refid="classwx_ribbon_tool_bar"/>
+        <childnode refid="9212" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="9219">
+        <label>wxRibbonControl</label>
+        <link refid="classwx_ribbon_control"/>
+        <childnode refid="9220" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9223">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="9224" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="9222">
+        <label>wxEvtHandler</label>
+        <link refid="classwx_evt_handler"/>
+        <childnode refid="9223" relation="public-inheritance">
+        </childnode>
+        <childnode refid="9225" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9225">
+        <label>wxTrackable</label>
+        <link refid="classwx_trackable"/>
+      </node>
+      <node id="9220">
+        <label>wxControl</label>
+        <link refid="classwx_control"/>
+        <childnode refid="9221" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9221">
+        <label>wxWindow</label>
+        <link refid="classwx_window"/>
+        <childnode refid="9222" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9218">
+        <label>wxRibbonToolBar</label>
+        <link refid="classwx_ribbon_tool_bar"/>
+        <childnode refid="9219" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9224">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/toolbar.h" line="31" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/toolbar.h" bodystart="30" bodyend="160"/>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/toolbar.h" line="31" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/toolbar.h" bodystart="30" bodyend="489"/>
     <listofallmembers>
       <member refid="classwx_window_1a3afbd49b1ea2f8275e3600dcac102923" prot="public" virt="virtual"><scope>wxRibbonToolBar</scope><name>AcceptsFocus</name></member>
       <member refid="classwx_window_1a2370bdd3ab08e7ef3c7555c6aa8301b8" prot="public" virt="virtual"><scope>wxRibbonToolBar</scope><name>AcceptsFocusFromKeyboard</name></member>
@@ -474,6 +1243,7 @@
       <member refid="classwx_ribbon_tool_bar_1aa0920c4b386293403fcd97a0dcae3a4c" prot="public" virt="virtual"><scope>wxRibbonToolBar</scope><name>AddHybridTool</name></member>
       <member refid="classwx_window_1a774b5b5548a6258727b5e2099e63ae9a" prot="protected" virt="virtual"><scope>wxRibbonToolBar</scope><name>AddPendingEvent</name></member>
       <member refid="classwx_ribbon_tool_bar_1a8ffb9fae53d1e78106465836c7c087af" prot="public" virt="virtual"><scope>wxRibbonToolBar</scope><name>AddSeparator</name></member>
+      <member refid="classwx_ribbon_tool_bar_1aa3e2792ad5759a40f38bd2b3f5387654" prot="public" virt="virtual"><scope>wxRibbonToolBar</scope><name>AddToggleTool</name></member>
       <member refid="classwx_ribbon_tool_bar_1a1675720633457a243509a3a10ed53bba" prot="public" virt="virtual"><scope>wxRibbonToolBar</scope><name>AddTool</name></member>
       <member refid="classwx_ribbon_tool_bar_1ab2868211962b01d0ccd53f7aab9a5f4f" prot="public" virt="virtual"><scope>wxRibbonToolBar</scope><name>AddTool</name></member>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxRibbonToolBar</scope><name>AllocExclusive</name></member>
@@ -489,6 +1259,7 @@
       <member refid="classwx_window_1a4a1819eeee3f2143cdde4f329ffde787" prot="public" virt="non-virtual"><scope>wxRibbonToolBar</scope><name>Centre</name></member>
       <member refid="classwx_window_1ab8e9b91b0e2db344fd71259616dfd433" prot="public" virt="non-virtual"><scope>wxRibbonToolBar</scope><name>CentreOnParent</name></member>
       <member refid="classwx_window_1a61e833684ee5c89775e91e88be1a9a52" prot="public" virt="virtual"><scope>wxRibbonToolBar</scope><name>ClearBackground</name></member>
+      <member refid="classwx_ribbon_tool_bar_1ae0cc3ea212638290159d31415d8895ad" prot="public" virt="virtual"><scope>wxRibbonToolBar</scope><name>ClearTools</name></member>
       <member refid="classwx_window_1a29eac611e5f6b47db82bb4dd5450ba3d" prot="public" virt="non-virtual"><scope>wxRibbonToolBar</scope><name>ClientToScreen</name></member>
       <member refid="classwx_window_1a7de852b144210b93b690189e99dbe1df" prot="public" virt="non-virtual"><scope>wxRibbonToolBar</scope><name>ClientToScreen</name></member>
       <member refid="classwx_window_1a693fffbbb7ad5f36a5f442703396dafa" prot="public" virt="virtual"><scope>wxRibbonToolBar</scope><name>ClientToWindowSize</name></member>
@@ -507,6 +1278,8 @@
       <member refid="classwx_window_1a95b7ca8faa033f5ab35458887c07bf38" prot="public" virt="non-virtual" ambiguityscope="wxWindow::"><scope>wxRibbonToolBar</scope><name>Create</name></member>
       <member refid="classwx_object_1a95c6a5e4e1e03ff23c7b9efe4cff0c1a" prot="protected" virt="virtual"><scope>wxRibbonToolBar</scope><name>CreateRefData</name></member>
       <member refid="classwx_evt_handler_1a6e7f9cf4ebd0623c1d94979855d096f8" prot="public" virt="non-virtual"><scope>wxRibbonToolBar</scope><name>DeletePendingEvents</name></member>
+      <member refid="classwx_ribbon_tool_bar_1ad35f18c7feba2c9512b111bef57e6ef7" prot="public" virt="virtual"><scope>wxRibbonToolBar</scope><name>DeleteTool</name></member>
+      <member refid="classwx_ribbon_tool_bar_1adc6c3450b240e4911074feb175f93158" prot="public" virt="virtual"><scope>wxRibbonToolBar</scope><name>DeleteToolByPos</name></member>
       <member refid="classwx_window_1a6bf0c5be864544d9ce0560087667b7fc" prot="public" virt="virtual"><scope>wxRibbonToolBar</scope><name>Destroy</name></member>
       <member refid="classwx_window_1aff47b32c8d42d515ea0bb6a6c2fea917" prot="public" virt="non-virtual"><scope>wxRibbonToolBar</scope><name>DestroyChildren</name></member>
       <member refid="classwx_window_1a26d7329a9a753fa0445501f01f66c41e" prot="public" virt="non-virtual"><scope>wxRibbonToolBar</scope><name>Disable</name></member>
@@ -521,7 +1294,9 @@
       <member refid="classwx_window_1a7e7015bc61bd79b6821d2dccaecf9eda" prot="public" virt="virtual"><scope>wxRibbonToolBar</scope><name>DragAcceptFiles</name></member>
       <member refid="classwx_control_1a0bb834cae2a8986aceddb89f84ef4ed1" prot="public" virt="non-virtual"><scope>wxRibbonToolBar</scope><name>Ellipsize</name></member>
       <member refid="classwx_window_1a4e933aa891f42fbb3b87438057c573af" prot="public" virt="virtual"><scope>wxRibbonToolBar</scope><name>Enable</name></member>
+      <member refid="classwx_ribbon_tool_bar_1a97dcf4e8c1c2b70acc88ca75e03f19fd" prot="public" virt="virtual"><scope>wxRibbonToolBar</scope><name>EnableTool</name></member>
       <member refid="classwx_control_1abdbd9c0684856546671e759dd95b23d4" prot="public" virt="non-virtual"><scope>wxRibbonToolBar</scope><name>EscapeMnemonics</name></member>
+      <member refid="classwx_ribbon_tool_bar_1ab904359913bbac54b98bf1939a48953c" prot="public" virt="virtual"><scope>wxRibbonToolBar</scope><name>FindById</name></member>
       <member refid="classwx_window_1a777258379a3eef1b0530f12db6b77cab" prot="public" virt="non-virtual"><scope>wxRibbonToolBar</scope><name>FindFocus</name></member>
       <member refid="classwx_window_1a3468ef382c612b5f8e91c7c18d00a69f" prot="public" virt="non-virtual"><scope>wxRibbonToolBar</scope><name>FindWindow</name></member>
       <member refid="classwx_window_1ab2dad735acc2121b964ee1d51836cffa" prot="public" virt="non-virtual"><scope>wxRibbonToolBar</scope><name>FindWindow</name></member>
@@ -611,6 +1386,14 @@
       <member refid="classwx_window_1ac9cd7b4472d5419e518f69311914466f" prot="public" virt="non-virtual"><scope>wxRibbonToolBar</scope><name>GetTextExtent</name></member>
       <member refid="classwx_window_1a79e5f88a2408871663d4ab0405cd35f6" prot="public" virt="non-virtual"><scope>wxRibbonToolBar</scope><name>GetTextExtent</name></member>
       <member refid="classwx_window_1a0b31a21532407cf809d73aa09f34235c" prot="public" virt="virtual"><scope>wxRibbonToolBar</scope><name>GetThemeEnabled</name></member>
+      <member refid="classwx_ribbon_tool_bar_1a6f4d560907de9728b5475ea699a85281" prot="public" virt="non-virtual"><scope>wxRibbonToolBar</scope><name>GetToolByPos</name></member>
+      <member refid="classwx_ribbon_tool_bar_1a11cbf29d5bcd68eeb5f85bd05aaa7af1" prot="public" virt="virtual"><scope>wxRibbonToolBar</scope><name>GetToolClientData</name></member>
+      <member refid="classwx_ribbon_tool_bar_1aeeef026e7a2ae3f4dbcc3e52557a5dce" prot="public" virt="virtual"><scope>wxRibbonToolBar</scope><name>GetToolEnabled</name></member>
+      <member refid="classwx_ribbon_tool_bar_1a4d46fb3e8dbe28bb6981d7b4db2803e7" prot="public" virt="virtual"><scope>wxRibbonToolBar</scope><name>GetToolHelpString</name></member>
+      <member refid="classwx_ribbon_tool_bar_1a0da73f9df429c665420bb3c762ebd403" prot="public" virt="virtual"><scope>wxRibbonToolBar</scope><name>GetToolId</name></member>
+      <member refid="classwx_ribbon_tool_bar_1ad768bead1e79aa85e88e55a2a9e0621d" prot="public" virt="virtual"><scope>wxRibbonToolBar</scope><name>GetToolKind</name></member>
+      <member refid="classwx_ribbon_tool_bar_1a00c38c9257c7492c5aab18bf12306360" prot="public" virt="virtual"><scope>wxRibbonToolBar</scope><name>GetToolPos</name></member>
+      <member refid="classwx_ribbon_tool_bar_1a7b12c2a54deeaedf612bc04705d28720" prot="public" virt="virtual"><scope>wxRibbonToolBar</scope><name>GetToolState</name></member>
       <member refid="classwx_window_1aae94155ccf8a6e4e72ad08527c89ba89" prot="public" virt="non-virtual"><scope>wxRibbonToolBar</scope><name>GetToolTip</name></member>
       <member refid="classwx_window_1ad1a9c53c8e7e5010874f15b8ff4a6568" prot="public" virt="non-virtual"><scope>wxRibbonToolBar</scope><name>GetToolTipText</name></member>
       <member refid="classwx_window_1a7e32d9a9ffd058c931db20416bc55baa" prot="public" virt="non-virtual"><scope>wxRibbonToolBar</scope><name>GetUpdateClientRect</name></member>
@@ -638,6 +1421,12 @@
       <member refid="classwx_window_1a9fd5b6520c1b30eb8e82bb5d56bc24c0" prot="public" virt="virtual"><scope>wxRibbonToolBar</scope><name>InformFirstDirection</name></member>
       <member refid="classwx_window_1a6b1bf9e099704e7a493b8c4666b1f7f7" prot="public" virt="virtual"><scope>wxRibbonToolBar</scope><name>InheritAttributes</name></member>
       <member refid="classwx_window_1aa90a260c0a835a133043460b7d0024a8" prot="public" virt="virtual"><scope>wxRibbonToolBar</scope><name>InitDialog</name></member>
+      <member refid="classwx_ribbon_tool_bar_1aca11e4e102ac0048feec46e253ee93a7" prot="public" virt="virtual"><scope>wxRibbonToolBar</scope><name>InsertDropdownTool</name></member>
+      <member refid="classwx_ribbon_tool_bar_1af639809c018d957407d72dfcc68c5796" prot="public" virt="virtual"><scope>wxRibbonToolBar</scope><name>InsertHybridTool</name></member>
+      <member refid="classwx_ribbon_tool_bar_1aaad936b4a748f72bff61edf4ed1db1fd" prot="public" virt="virtual"><scope>wxRibbonToolBar</scope><name>InsertSeparator</name></member>
+      <member refid="classwx_ribbon_tool_bar_1a9ba08f72cdc184be59eda474651622e8" prot="public" virt="virtual"><scope>wxRibbonToolBar</scope><name>InsertToggleTool</name></member>
+      <member refid="classwx_ribbon_tool_bar_1a312d34cb3534ba02fe6b621d5dbb3483" prot="public" virt="virtual"><scope>wxRibbonToolBar</scope><name>InsertTool</name></member>
+      <member refid="classwx_ribbon_tool_bar_1afe6765c55d5e84a5bac39693332a0ac7" prot="public" virt="virtual"><scope>wxRibbonToolBar</scope><name>InsertTool</name></member>
       <member refid="classwx_window_1ae1b56ca87d8590ee5e576012229a380a" prot="public" virt="non-virtual"><scope>wxRibbonToolBar</scope><name>InvalidateBestSize</name></member>
       <member refid="classwx_window_1af918e6fe8565c2d5235973cc3de84a43" prot="public" virt="non-virtual"><scope>wxRibbonToolBar</scope><name>IsBeingDeleted</name></member>
       <member refid="classwx_window_1a9d1be1bbb625ebf87ad4ad47e49a0194" prot="public" virt="virtual"><scope>wxRibbonToolBar</scope><name>IsDoubleBuffered</name></member>
@@ -690,7 +1479,7 @@
       <member refid="classwx_window_1a69e450f21b0d7013269ec1a4771f043b" prot="protected" virt="virtual"><scope>wxRibbonToolBar</scope><name>QueueEvent</name></member>
       <member refid="classwx_window_1a54808c933f22a891c5db646f6209fa4d" prot="public" virt="virtual"><scope>wxRibbonToolBar</scope><name>Raise</name></member>
       <member refid="classwx_ribbon_control_1a379282918991e9df796d1451bb578c0d" prot="public" virt="non-virtual"><scope>wxRibbonToolBar</scope><name>Realise</name></member>
-      <member refid="classwx_ribbon_control_1af8c100dc4a4eb2e2cc8ce7619044cfc2" prot="public" virt="virtual"><scope>wxRibbonToolBar</scope><name>Realize</name></member>
+      <member refid="classwx_ribbon_tool_bar_1a3dd872fbf4a614db656130c141c924a0" prot="public" virt="virtual"><scope>wxRibbonToolBar</scope><name>Realize</name></member>
       <member refid="classwx_object_1a2f6f1aa51fe9fc2b1415ca4211a90e9e" prot="public" virt="non-virtual"><scope>wxRibbonToolBar</scope><name>Ref</name></member>
       <member refid="classwx_window_1a29dc7251746154c821b17841b9877830" prot="public" virt="virtual"><scope>wxRibbonToolBar</scope><name>Refresh</name></member>
       <member refid="classwx_window_1ab0ae6b9898cd261c39ebeb2891aa3d67" prot="public" virt="non-virtual"><scope>wxRibbonToolBar</scope><name>RefreshRect</name></member>
@@ -769,6 +1558,10 @@
       <member refid="classwx_window_1abc95691b45e29a52c24aa9d33d46dec1" prot="public" virt="non-virtual"><scope>wxRibbonToolBar</scope><name>SetSizer</name></member>
       <member refid="classwx_window_1a29938af9828fd35da666536cdfb6b73c" prot="public" virt="non-virtual"><scope>wxRibbonToolBar</scope><name>SetSizerAndFit</name></member>
       <member refid="classwx_window_1a41dd19ed8809fd8ec662e2aa2a9579c3" prot="public" virt="virtual"><scope>wxRibbonToolBar</scope><name>SetThemeEnabled</name></member>
+      <member refid="classwx_ribbon_tool_bar_1ad5363115a1418b54a162afebc4ce48d3" prot="public" virt="virtual"><scope>wxRibbonToolBar</scope><name>SetToolClientData</name></member>
+      <member refid="classwx_ribbon_tool_bar_1a04078695e62582b815a08044d27665f5" prot="public" virt="virtual"><scope>wxRibbonToolBar</scope><name>SetToolDisabledBitmap</name></member>
+      <member refid="classwx_ribbon_tool_bar_1ad5a2925155b3d28f3d675567e6fc36cd" prot="public" virt="virtual"><scope>wxRibbonToolBar</scope><name>SetToolHelpString</name></member>
+      <member refid="classwx_ribbon_tool_bar_1a6529d00831bdbebba8a073d968d33804" prot="public" virt="virtual"><scope>wxRibbonToolBar</scope><name>SetToolNormalBitmap</name></member>
       <member refid="classwx_window_1a81a9fb74e3c6c7f4416e882f5e589b8c" prot="public" virt="non-virtual"><scope>wxRibbonToolBar</scope><name>SetToolTip</name></member>
       <member refid="classwx_window_1a494e0b7cfca9299caa40e847767e7357" prot="public" virt="non-virtual"><scope>wxRibbonToolBar</scope><name>SetToolTip</name></member>
       <member refid="classwx_window_1ac8cf4398cec50ac36634760f45a0656f" prot="public" virt="virtual"><scope>wxRibbonToolBar</scope><name>SetTransparent</name></member>
@@ -782,6 +1575,7 @@
       <member refid="classwx_window_1a7fbc92ce240a8d4f6956b6e0276ef07f" prot="public" virt="virtual"><scope>wxRibbonToolBar</scope><name>Show</name></member>
       <member refid="classwx_window_1a596b1715edfc7609f352b2e000ecbaec" prot="public" virt="virtual"><scope>wxRibbonToolBar</scope><name>ShowWithEffect</name></member>
       <member refid="classwx_window_1a279a532124073261b28131b6afb59a1e" prot="public" virt="non-virtual"><scope>wxRibbonToolBar</scope><name>Thaw</name></member>
+      <member refid="classwx_ribbon_tool_bar_1aaaf93abfe569a7c42a240d804e750131" prot="public" virt="virtual"><scope>wxRibbonToolBar</scope><name>ToggleTool</name></member>
       <member refid="classwx_window_1a8a4fa47129de552bfec37db8c69688a2" prot="public" virt="non-virtual"><scope>wxRibbonToolBar</scope><name>ToggleWindowStyle</name></member>
       <member refid="classwx_window_1ab8e51f36e7d8790b361c8d8c6f37b1ad" prot="public" virt="virtual"><scope>wxRibbonToolBar</scope><name>TransferDataFromWindow</name></member>
       <member refid="classwx_window_1a88cc65e424a129d9b0057756cdb67ec9" prot="public" virt="virtual"><scope>wxRibbonToolBar</scope><name>TransferDataToWindow</name></member>

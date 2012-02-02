@@ -1,11 +1,10 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_list_item" kind="class" prot="public">
     <compoundname>wxListItem</compoundname>
     <basecompoundref refid="classwx_object" prot="public" virt="non-virtual">wxObject</basecompoundref>
     <includes local="no">wx/listctrl.h</includes>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_list_item_1a2fbe1d24df53a081c5b8d4a93248bfd7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void wxListItem::SetData</definition>
@@ -21,7 +20,7 @@
 <para>Please note that client data is associated with the item and not with subitems. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1531"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1586"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_item_1afe3c57a6238f1fd9bcf467304a0afc74" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -38,7 +37,7 @@
 <para>Please note that client data is associated with the item and not with subitems. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1532"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1587"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -53,7 +52,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1426"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1481"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_item_1a42119c1285a87375beca516b0bfa1879" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -66,7 +65,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1431"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1486"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_item_1acae9de360bdae7ebae7a51dd08e9d6d2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="interface_2wx_2listctrl_8h_1afddccbb0d7cf18f9b205f00efc5738d0" kindref="member">wxListColumnFormat</ref></type>
@@ -79,7 +78,7 @@
 <para>Can be one of <computeroutput>wxLIST_FORMAT_LEFT</computeroutput>, <computeroutput>wxLIST_FORMAT_RIGHT</computeroutput> or <computeroutput>wxLIST_FORMAT_CENTRE</computeroutput>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1437"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1492"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_item_1acd6c314a505d502fd0a077a9bd2d5af4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_colour" kindref="compound">wxColour</ref></type>
@@ -92,7 +91,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1442"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1497"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_item_1a7f2f0ba25e3fce2e31cd9d30e2b5c05a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -105,7 +104,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1447"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1502"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_item_1aea10ba13f9e35797f12809d944babc91" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="defs_8h_1a74cc3a4753ec135e9e2ee6b155c97216" kindref="member">wxUIntPtr</ref></type>
@@ -118,7 +117,7 @@
 <para>Please note that client data is associated with the item and not with subitems. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1453"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1508"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_item_1a14af52b2ed4d5437bb601bfd0438581e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_font" kindref="compound">wxFont</ref></type>
@@ -131,7 +130,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1458"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1513"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_item_1a4a8ef273ac55020a8ef0c27f0790ac62" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>long</type>
@@ -144,7 +143,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1463"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1518"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_item_1a320095e9ca0458a3a2677d84d2305f3b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -157,7 +156,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1469"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1524"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_item_1aadcc15de141d7479635469bfadf27276" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>long</type>
@@ -172,7 +171,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1482"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1537"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_item_1a92621ee18531bf87875d32c9cb8e261c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>long</type>
@@ -187,7 +186,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1494"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1549"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_item_1abe4ca5d183a4cb72fdcd11cf0bb922e0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -200,7 +199,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1499"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1554"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_item_1a3a436dbfa5d10ff652ab847bfdbbeec7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_colour" kindref="compound">wxColour</ref></type>
@@ -213,7 +212,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1504"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1559"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_item_1ab57aba0897ae3e2c18442931bbfdbefa" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -226,7 +225,7 @@
 <para>Returns the column width. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1509"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1564"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_item_1afa9fff5f18ac4e9914499261b2a5ee0f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -243,7 +242,7 @@
 <para>See also <ref refid="classwx_list_item_1acae9de360bdae7ebae7a51dd08e9d6d2" kindref="member">GetAlign()</ref> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1514"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1569"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_item_1a0bebe32d7a97890ace77ee349b9011b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -260,7 +259,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1519"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1574"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_item_1ac6c4c2a7471d8ed69de4d13ce62daa0c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -277,7 +276,7 @@
 <para>Meaningful only in report mode. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1524"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1579"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_item_1a10a0a06869c8e1e55458cc1109f17a28" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -294,7 +293,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1538"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1593"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_item_1acc586bd9e92693a7405366ed7ab5cdc0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -311,7 +310,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1543"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1598"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_item_1ad0b1de6940857d814a7f175ee0076dc1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -328,7 +327,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1549"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1604"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_item_1a2b9395037783f0f44f87f835c1b071f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -345,7 +344,7 @@
 <para>See <ref refid="classwx_list_item_1aadcc15de141d7479635469bfadf27276" kindref="member">GetMask()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1554"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1609"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_item_1a6194edc9db9f4f521e1873d5ae6f6a42" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -362,7 +361,7 @@
 <para>See <ref refid="classwx_list_item_1a92621ee18531bf87875d32c9cb8e261c" kindref="member">GetState()</ref> for valid flag values. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1562"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1617"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_item_1aaa3a97f86342d4dddd2ddf3b2b29fb01" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -379,7 +378,7 @@
 <para>See also <ref refid="classwx_list_item_1a6194edc9db9f4f521e1873d5ae6f6a42" kindref="member">SetState()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1568"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1623"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_item_1aa3c69c9507833b6081edc280df17d6e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -396,7 +395,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1573"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1628"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_item_1a9e971c1815de2f34e6ef132ea71e457a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -413,7 +412,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1578"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1633"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_item_1abd2490fdc76ee4bdfdc8d7450f36f680" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -430,7 +429,7 @@
 <para>Sets the column width. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1583"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1638"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -443,40 +442,40 @@
 <listitem><para><computeroutput>wxLIST_MASK_STATE:</computeroutput> The state field is valid.</para></listitem><listitem><para><computeroutput>wxLIST_MASK_TEXT:</computeroutput> The label field is valid.</para></listitem><listitem><para><computeroutput>wxLIST_MASK_IMAGE:</computeroutput> The image field is valid.</para></listitem><listitem><para><computeroutput>wxLIST_MASK_DATA:</computeroutput> The application-defined data field is valid.</para></listitem><listitem><para><computeroutput>wxLIST_MASK_WIDTH:</computeroutput> The column width field is valid.</para></listitem><listitem><para><computeroutput>wxLIST_MASK_FORMAT:</computeroutput> The column format field is valid.</para></listitem></itemizedlist>
 </para></listitem></itemizedlist>
 </para><para>The <ref refid="classwx_list_item" kindref="compound">wxListItem</ref> object can also contain item-specific colour and font information: for this you need to call one of <ref refid="classwx_list_item_1a9e971c1815de2f34e6ef132ea71e457a" kindref="member">SetTextColour()</ref>, <ref refid="classwx_list_item_1a0bebe32d7a97890ace77ee349b9011b5" kindref="member">SetBackgroundColour()</ref> or <ref refid="classwx_list_item_1a10a0a06869c8e1e55458cc1109f17a28" kindref="member">SetFont()</ref> functions on it passing it the colour/font to use. If the colour/font is not specified, the default list control colour/font is used.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__data" kindref="compound">Data Structures</ref></para><para><simplesect kind="see"><para><ref refid="classwx_list_ctrl" kindref="compound">wxListCtrl</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__data" kindref="compound">Data Structures</ref></para><para><simplesect kind="see"><para><ref refid="classwx_list_ctrl" kindref="compound">wxListCtrl</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7462">
+      <node id="7466">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="7461">
+      <node id="7465">
         <label>wxListItem</label>
         <link refid="classwx_list_item"/>
-        <childnode refid="7462" relation="public-inheritance">
+        <childnode refid="7466" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7464">
+      <node id="7468">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="7465" relation="usage">
+        <childnode refid="7469" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="7463">
+      <node id="7467">
         <label>wxListItem</label>
         <link refid="classwx_list_item"/>
-        <childnode refid="7464" relation="public-inheritance">
+        <childnode refid="7468" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7465">
+      <node id="7469">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1421" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" bodystart="1420" bodyend="1584"/>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1476" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" bodystart="1475" bodyend="1639"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxListItem</scope><name>AllocExclusive</name></member>
       <member refid="classwx_list_item_1a42119c1285a87375beca516b0bfa1879" prot="public" virt="non-virtual"><scope>wxListItem</scope><name>Clear</name></member>

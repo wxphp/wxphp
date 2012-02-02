@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="numdlg_8h" kind="file">
     <compoundname>numdlg.h</compoundname>
       <sectiondef kind="func">
@@ -47,7 +47,7 @@
         <briefdescription>
 <para>Shows a dialog asking the user for numeric input. </para>        </briefdescription>
         <detaileddescription>
-<para>The dialogs title is set to <computeroutput>caption</computeroutput>, it contains a (possibly) multiline <computeroutput>message</computeroutput> above the single line <computeroutput>prompt</computeroutput> and the zone for entering the number.</para><para>The number entered must be in the range <computeroutput>min</computeroutput> to <computeroutput>max</computeroutput> (both of which should be positive) and <computeroutput>value</computeroutput> is the initial value of it. If the user enters an invalid value, it is forced to fall into the specified range. If the user cancels the dialog, the function returns -1.</para><para>Dialog is centered on its <computeroutput>parent</computeroutput> unless an explicit position is given in <computeroutput>pos</computeroutput>.</para><para>Include file: <verbatim>#include &lt;wx/numdlg.h&gt; </verbatim> </para>        </detaileddescription>
+<para>The dialogs title is set to <computeroutput>caption</computeroutput>, it contains a (possibly) multiline <computeroutput>message</computeroutput> above the single line <computeroutput>prompt</computeroutput> and the zone for entering the number.</para><para>The number entered must be in the range <computeroutput>min</computeroutput> to <computeroutput>max</computeroutput> (both of which should be positive) and <computeroutput>value</computeroutput> is the initial value of it. If the user enters an invalid value, it is forced to fall into the specified range. If the user cancels the dialog, the function returns -1.</para><para>Dialog is centered on its <computeroutput>parent</computeroutput> unless an explicit position is given in <computeroutput>pos</computeroutput>.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/numdlg.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/numdlg.h" line="34"/>

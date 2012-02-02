@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_static_text" kind="class" prot="public">
     <compoundname>wxStaticText</compoundname>
     <basecompoundref refid="classwx_control" prot="public" virt="non-virtual">wxControl</basecompoundref>
@@ -205,83 +205,83 @@
 <listitem><para>wxST_ELLIPSIZE_END: If the label text width exceeds the control width, replace the end of the label with an ellipsis; uses <ref refid="classwx_control_1a0bb834cae2a8986aceddb89f84ef4ed1" kindref="member">wxControl::Ellipsize</ref>. </para></listitem>
 </itemizedlist>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref> <htmlonly> &lt;br&gt;&lt;div&gt;&lt;span class=&apos;appearance&apos;&gt;Appearance:&lt;/span&gt;&lt;br&gt;&lt;table class=&apos;appearance&apos;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&apos;wxmsw/statictext.png&apos; alt=&apos;wxMSW appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxgtk/statictext.png&apos; alt=&apos;wxGTK appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxmac/statictext.png&apos; alt=&apos;wxMac appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;wxMSW appearance&lt;/td&gt;&lt;td&gt;wxGTK appearance&lt;/td&gt;&lt;td&gt;wxMac appearance&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt; </htmlonly></para><para><simplesect kind="see"><para><ref refid="classwx_static_bitmap" kindref="compound">wxStaticBitmap</ref>, <ref refid="classwx_static_box" kindref="compound">wxStaticBox</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref> <htmlonly> &lt;br&gt;&lt;div&gt;&lt;span class=&apos;appearance&apos;&gt;Appearance:&lt;/span&gt;&lt;br&gt;&lt;table class=&apos;appearance&apos;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&apos;wxmsw/statictext.png&apos; alt=&apos;wxMSW appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxgtk/statictext.png&apos; alt=&apos;wxGTK appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxmac/statictext.png&apos; alt=&apos;wxMac appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;wxMSW appearance&lt;/td&gt;&lt;td&gt;wxGTK appearance&lt;/td&gt;&lt;td&gt;wxMac appearance&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt; </htmlonly></para><para><simplesect kind="see"><para><ref refid="classwx_static_bitmap" kindref="compound">wxStaticBitmap</ref>, <ref refid="classwx_static_box" kindref="compound">wxStaticBox</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10435">
+      <node id="10495">
         <label>wxStaticText</label>
         <link refid="classwx_static_text"/>
-        <childnode refid="10436" relation="public-inheritance">
+        <childnode refid="10496" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10439">
+      <node id="10499">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="10438">
+      <node id="10498">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="10439" relation="public-inheritance">
+        <childnode refid="10499" relation="public-inheritance">
         </childnode>
-        <childnode refid="10440" relation="public-inheritance">
+        <childnode refid="10500" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10440">
+      <node id="10500">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="10436">
+      <node id="10496">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="10437" relation="public-inheritance">
+        <childnode refid="10497" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10437">
+      <node id="10497">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="10438" relation="public-inheritance">
+        <childnode refid="10498" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10441">
+      <node id="10501">
         <label>wxStaticText</label>
         <link refid="classwx_static_text"/>
-        <childnode refid="10442" relation="public-inheritance">
+        <childnode refid="10502" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10445">
+      <node id="10505">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="10446" relation="usage">
+        <childnode refid="10506" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="10444">
+      <node id="10504">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="10445" relation="public-inheritance">
+        <childnode refid="10505" relation="public-inheritance">
         </childnode>
-        <childnode refid="10447" relation="public-inheritance">
+        <childnode refid="10507" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10447">
+      <node id="10507">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="10442">
+      <node id="10502">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="10443" relation="public-inheritance">
+        <childnode refid="10503" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10443">
+      <node id="10503">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="10444" relation="public-inheritance">
+        <childnode refid="10504" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10446">
+      <node id="10506">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

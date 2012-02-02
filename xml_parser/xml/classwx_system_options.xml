@@ -1,11 +1,10 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_system_options" kind="class" prot="public">
     <compoundname>wxSystemOptions</compoundname>
     <basecompoundref refid="classwx_object" prot="public" virt="non-virtual">wxObject</basecompoundref>
     <includes local="no">wx/sysopt.h</includes>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_system_options_1aa04043bfa0ffee30aaf09f2e436f6208" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>static void wxSystemOptions::SetOption</definition>
@@ -25,7 +24,7 @@
 <para>The function is case-insensitive to <emphasis>name</emphasis>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sysopt.h" line="204"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sysopt.h" line="194"/>
       </memberdef>
       <memberdef kind="function" id="classwx_system_options_1abbde7fd57657d7cc3db0a91f9292b28c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -46,7 +45,7 @@
 <para>The function is case-insensitive to <emphasis>name</emphasis>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sysopt.h" line="205"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sysopt.h" line="195"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -61,7 +60,7 @@
 <para>You don&apos;t need to create an instance of <ref refid="classwx_system_options" kindref="compound">wxSystemOptions</ref> since all of its functions are static. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sysopt.h" line="165"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sysopt.h" line="155"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -81,7 +80,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sysopt.h" line="173"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sysopt.h" line="163"/>
       </memberdef>
       <memberdef kind="function" id="classwx_system_options_1a51e4eb471bfd1472e874c6ca2fd89660" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -99,7 +98,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sysopt.h" line="181"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sysopt.h" line="171"/>
       </memberdef>
       <memberdef kind="function" id="classwx_system_options_1ac53621f9648eda4dc69d43c8da54bd39" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -117,7 +116,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sysopt.h" line="189"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sysopt.h" line="179"/>
       </memberdef>
       <memberdef kind="function" id="classwx_system_options_1a9040fd20567d5f848000d681b0bb4da9" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -134,7 +133,7 @@
 <para>This is mostly useful for boolean options for which you can&apos;t use <computeroutput>GetOptionInt(name)</computeroutput> == 0 as this would also be true if the option hadn&apos;t been set at all. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sysopt.h" line="198"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sysopt.h" line="188"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -177,54 +176,47 @@
 <listitem><para>osx.openfiledialog.always-show-types: Per default a <ref refid="classwx_file_dialog" kindref="compound">wxFileDialog</ref> with wxFD_OPEN does not show a types-popup on OSX but allows the selection of files from any of the supported types. Setting this to 1 shows a <ref refid="classwx_choice" kindref="compound">wxChoice</ref> for selection (if there is more than one supported filetype). </para></listitem>
 </itemizedlist>
 </para></sect1>
-<sect1 id="classwx_system_options_1sysopt_mgl">
-<title>MGL</title>
-<para> <itemizedlist>
-<listitem><para>mgl.aa-threshold: Set this integer option to point size below which fonts are not antialiased. Default: 10. </para></listitem>
-<listitem><para>mgl.screen-refresh: Screen refresh rate in Hz. A reasonable default is used if not specified. </para></listitem>
-</itemizedlist>
-</para></sect1>
 <sect1 id="classwx_system_options_1sysopt_motif">
 <title>Motif</title>
 <para> <itemizedlist>
 <listitem><para>motif.largebuttons: If 1, uses a bigger default size for wxButtons. </para></listitem>
 </itemizedlist>
 The compile-time option to include or exclude this functionality is wxUSE_SYSTEM_OPTIONS.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__cfg" kindref="compound">Application and System configuration</ref></para><para><simplesect kind="see"><para><ref refid="classwx_system_settings" kindref="compound">wxSystemSettings</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__cfg" kindref="compound">Application and System configuration</ref></para><para><simplesect kind="see"><para><ref refid="classwx_system_settings" kindref="compound">wxSystemSettings</ref> </para></simplesect>
 </para></sect1>
     </detaileddescription>
     <inheritancegraph>
-      <node id="10597">
+      <node id="10657">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="10596">
+      <node id="10656">
         <label>wxSystemOptions</label>
         <link refid="classwx_system_options"/>
-        <childnode refid="10597" relation="public-inheritance">
+        <childnode refid="10657" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10599">
+      <node id="10659">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="10600" relation="usage">
+        <childnode refid="10660" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="10598">
+      <node id="10658">
         <label>wxSystemOptions</label>
         <link refid="classwx_system_options"/>
-        <childnode refid="10599" relation="public-inheritance">
+        <childnode refid="10659" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10600">
+      <node id="10660">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sysopt.h" line="157" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sysopt.h" bodystart="156" bodyend="207"/>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sysopt.h" line="147" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sysopt.h" bodystart="146" bodyend="197"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxSystemOptions</scope><name>AllocExclusive</name></member>
       <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxSystemOptions</scope><name>CloneRefData</name></member>

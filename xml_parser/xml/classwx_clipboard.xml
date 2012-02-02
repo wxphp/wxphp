@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_clipboard" kind="class" prot="public">
     <compoundname>wxClipboard</compoundname>
     <basecompoundref refid="classwx_object" prot="public" virt="non-virtual">wxObject</basecompoundref>
@@ -131,7 +131,7 @@
         <briefdescription>
 <para>Returns true if there is data which matches the data format of the given data object currently <bold>available</bold> on the clipboard. </para>        </briefdescription>
         <detaileddescription>
-<para><xrefsect id="todo_1_todo000021"><xreftitle>Todo</xreftitle><xrefdescription><para>The name of this function is misleading. This should be renamed to something that more accurately indicates what it does. </para></xrefdescription></xrefsect></para>        </detaileddescription>
+<para><xrefsect id="todo_1_todo000020"><xreftitle>Todo</xreftitle><xrefdescription><para>The name of this function is misleading. This should be renamed to something that more accurately indicates what it does. </para></xrefdescription></xrefsect></para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/clipbrd.h" line="127"/>
@@ -204,56 +204,56 @@
     <briefdescription>
 <para>A class for manipulating the clipboard. </para>    </briefdescription>
     <detaileddescription>
-<para>To use the clipboard, you call member functions of the global <ref refid="clipbrd_8h_1a7981f5d50a36729858d8356aac6e77eb" kindref="member">wxTheClipboard</ref> object.</para><para>See the <ref refid="overview__dataobject" kindref="compound">wxDataObject Overview</ref> for further information.</para><para>Call <ref refid="classwx_clipboard_1a27dd0b1a54a368c9a786c8616eac667d" kindref="member">wxClipboard::Open()</ref> to get ownership of the clipboard. If this operation returns true, you now own the clipboard. Call <ref refid="classwx_clipboard_1afae7236718f30437c15709a911d4bab6" kindref="member">wxClipboard::SetData()</ref> to put data on the clipboard, or <ref refid="classwx_clipboard_1af9edcd205c3749a317bd6b1e8a5716cc" kindref="member">wxClipboard::GetData()</ref> to retrieve data from the clipboard. Call <ref refid="classwx_clipboard_1afe9ac8bdb2af7c20cf68d36d460ac4fe" kindref="member">wxClipboard::Close()</ref> to close the clipboard and relinquish ownership. You should keep the clipboard open only momentarily.</para><para>For example:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Write<sp/>some<sp/>text<sp/>to<sp/>the<sp/>clipboard</highlight><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="clipbrd_8h_1a7981f5d50a36729858d8356aac6e77eb" kindref="member" tooltip="The backwards compatible access macro that returns the global clipboard object pointer...">wxTheClipboard</ref>-&gt;Open())</highlight></codeline>
+<para>To use the clipboard, you call member functions of the global <ref refid="clipbrd_8h_1a7981f5d50a36729858d8356aac6e77eb" kindref="member">wxTheClipboard</ref> object.</para><para>See the <ref refid="overview_dataobject" kindref="compound">wxDataObject Overview</ref> for further information.</para><para>Call <ref refid="classwx_clipboard_1a27dd0b1a54a368c9a786c8616eac667d" kindref="member">wxClipboard::Open()</ref> to get ownership of the clipboard. If this operation returns true, you now own the clipboard. Call <ref refid="classwx_clipboard_1afae7236718f30437c15709a911d4bab6" kindref="member">wxClipboard::SetData()</ref> to put data on the clipboard, or <ref refid="classwx_clipboard_1af9edcd205c3749a317bd6b1e8a5716cc" kindref="member">wxClipboard::GetData()</ref> to retrieve data from the clipboard. Call <ref refid="classwx_clipboard_1afe9ac8bdb2af7c20cf68d36d460ac4fe" kindref="member">wxClipboard::Close()</ref> to close the clipboard and relinquish ownership. You should keep the clipboard open only momentarily.</para><para>For example:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Write<sp/>some<sp/>text<sp/>to<sp/>the<sp/>clipboard</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="clipbrd_8h_1a7981f5d50a36729858d8356aac6e77eb" kindref="member" tooltip="The backwards compatible access macro that returns the global clipboard object pointer.">wxTheClipboard</ref>-&gt;Open())</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>This<sp/>data<sp/>objects<sp/>are<sp/>held<sp/>by<sp/>the<sp/>clipboard,</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>so<sp/>do<sp/>not<sp/>delete<sp/>them<sp/>in<sp/>the<sp/>app.</highlight><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="clipbrd_8h_1a7981f5d50a36729858d8356aac6e77eb" kindref="member" tooltip="The backwards compatible access macro that returns the global clipboard object pointer...">wxTheClipboard</ref>-&gt;SetData(<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classwx_text_data_object" kindref="compound" tooltip="wxTextDataObject is a specialization of wxDataObjectSimple for text data.">wxTextDataObject</ref>(</highlight><highlight class="stringliteral">&quot;Some<sp/>text&quot;</highlight><highlight class="normal">)<sp/>);</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="clipbrd_8h_1a7981f5d50a36729858d8356aac6e77eb" kindref="member" tooltip="The backwards compatible access macro that returns the global clipboard object pointer...">wxTheClipboard</ref>-&gt;Close();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="clipbrd_8h_1a7981f5d50a36729858d8356aac6e77eb" kindref="member" tooltip="The backwards compatible access macro that returns the global clipboard object pointer.">wxTheClipboard</ref>-&gt;SetData(<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classwx_text_data_object" kindref="compound" tooltip="wxTextDataObject is a specialization of wxDataObjectSimple for text data.">wxTextDataObject</ref>(</highlight><highlight class="stringliteral">&quot;Some<sp/>text&quot;</highlight><highlight class="normal">)<sp/>);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="clipbrd_8h_1a7981f5d50a36729858d8356aac6e77eb" kindref="member" tooltip="The backwards compatible access macro that returns the global clipboard object pointer.">wxTheClipboard</ref>-&gt;Close();</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Read<sp/>some<sp/>text</highlight><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="clipbrd_8h_1a7981f5d50a36729858d8356aac6e77eb" kindref="member" tooltip="The backwards compatible access macro that returns the global clipboard object pointer...">wxTheClipboard</ref>-&gt;Open())</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="clipbrd_8h_1a7981f5d50a36729858d8356aac6e77eb" kindref="member" tooltip="The backwards compatible access macro that returns the global clipboard object pointer.">wxTheClipboard</ref>-&gt;Open())</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="clipbrd_8h_1a7981f5d50a36729858d8356aac6e77eb" kindref="member" tooltip="The backwards compatible access macro that returns the global clipboard object pointer...">wxTheClipboard</ref>-&gt;IsSupported(<sp/><ref refid="defs_8h_1a263109c79f708754bf656c7768b27047ac72dfba09ea736965c1c9c52acdb857a" kindref="member">wxDF_TEXT</ref><sp/>))</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="clipbrd_8h_1a7981f5d50a36729858d8356aac6e77eb" kindref="member" tooltip="The backwards compatible access macro that returns the global clipboard object pointer.">wxTheClipboard</ref>-&gt;IsSupported(<sp/><ref refid="defs_8h_1a263109c79f708754bf656c7768b27047ac72dfba09ea736965c1c9c52acdb857a" kindref="member">wxDF_TEXT</ref><sp/>))</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_text_data_object" kindref="compound" tooltip="wxTextDataObject is a specialization of wxDataObjectSimple for text data.">wxTextDataObject</ref><sp/>data;</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="clipbrd_8h_1a7981f5d50a36729858d8356aac6e77eb" kindref="member" tooltip="The backwards compatible access macro that returns the global clipboard object pointer...">wxTheClipboard</ref>-&gt;GetData(<sp/>data<sp/>);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="clipbrd_8h_1a7981f5d50a36729858d8356aac6e77eb" kindref="member" tooltip="The backwards compatible access macro that returns the global clipboard object pointer.">wxTheClipboard</ref>-&gt;GetData(<sp/>data<sp/>);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__dialog_1gaf8a6b7e1e34eae82d3d75e3721298b26" kindref="member" tooltip="Show a general purpose message dialog.">wxMessageBox</ref>(<sp/>data.<ref refid="classwx_text_data_object_1a6b43294c05885cc8981b37f3c42815bd" kindref="member" tooltip="Returns the text associated with the data object.">GetText</ref>()<sp/>);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="clipbrd_8h_1a7981f5d50a36729858d8356aac6e77eb" kindref="member" tooltip="The backwards compatible access macro that returns the global clipboard object pointer...">wxTheClipboard</ref>-&gt;Close();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="clipbrd_8h_1a7981f5d50a36729858d8356aac6e77eb" kindref="member" tooltip="The backwards compatible access macro that returns the global clipboard object pointer.">wxTheClipboard</ref>-&gt;Close();</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 </programlisting></para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__dnd" kindref="compound">Clipboard and Drag &amp; Drop</ref></para><para><simplesect kind="see"><para><ref refid="overview__dnd" kindref="compound">Drag and Drop Overview</ref>, <ref refid="overview__dataobject" kindref="compound">wxDataObject Overview</ref>, <ref refid="classwx_data_object" kindref="compound">wxDataObject</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__dnd" kindref="compound">Clipboard and Drag &amp; Drop</ref></para><para><simplesect kind="see"><para><ref refid="overview_dnd" kindref="compound">Drag and Drop Overview</ref>, <ref refid="overview_dataobject" kindref="compound">wxDataObject Overview</ref>, <ref refid="classwx_data_object" kindref="compound">wxDataObject</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="4800">
+      <node id="4804">
         <label>wxClipboard</label>
         <link refid="classwx_clipboard"/>
-        <childnode refid="4801" relation="public-inheritance">
+        <childnode refid="4805" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4801">
+      <node id="4805">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="4802">
+      <node id="4806">
         <label>wxClipboard</label>
         <link refid="classwx_clipboard"/>
-        <childnode refid="4803" relation="public-inheritance">
+        <childnode refid="4807" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4803">
+      <node id="4807">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="4804" relation="usage">
+        <childnode refid="4808" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="4804">
+      <node id="4808">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

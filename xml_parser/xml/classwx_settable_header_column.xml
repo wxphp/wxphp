@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_settable_header_column" kind="class" prot="public">
     <compoundname>wxSettableHeaderColumn</compoundname>
     <basecompoundref refid="classwx_header_column" prot="public" virt="non-virtual">wxHeaderColumn</basecompoundref>
@@ -364,39 +364,39 @@
 <para>Adds methods to set the column attributes to <ref refid="classwx_header_column" kindref="compound">wxHeaderColumn</ref>. </para>    </briefdescription>
     <detaileddescription>
 <para>This class adds setters for the column attributes defined by <ref refid="classwx_header_column" kindref="compound">wxHeaderColumn</ref>. It is still an abstract base class and needs to be implemented before using it with <ref refid="classwx_header_ctrl" kindref="compound">wxHeaderCtrl</ref>.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref> </para>    </detaileddescription>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10099">
+      <node id="10159">
         <label>wxSettableHeaderColumn</label>
         <link refid="classwx_settable_header_column"/>
-        <childnode refid="10100" relation="public-inheritance">
+        <childnode refid="10160" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10100">
+      <node id="10160">
         <label>wxHeaderColumn</label>
         <link refid="classwx_header_column"/>
       </node>
-      <node id="10101">
+      <node id="10161">
         <label>wxDataViewColumn</label>
         <link refid="classwx_data_view_column"/>
-        <childnode refid="10099" relation="public-inheritance">
+        <childnode refid="10159" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10102">
+      <node id="10162">
         <label>wxHeaderColumnSimple</label>
         <link refid="classwx_header_column_simple"/>
-        <childnode refid="10099" relation="public-inheritance">
+        <childnode refid="10159" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10103">
+      <node id="10163">
         <label>wxSettableHeaderColumn</label>
         <link refid="classwx_settable_header_column"/>
-        <childnode refid="10104" relation="public-inheritance">
+        <childnode refid="10164" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10104">
+      <node id="10164">
         <label>wxHeaderColumn</label>
         <link refid="classwx_header_column"/>
       </node>

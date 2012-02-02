@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_text_output_stream" kind="class" prot="public">
     <compoundname>wxTextOutputStream</compoundname>
     <includes local="no">wx/txtstrm.h</includes>
@@ -232,13 +232,13 @@
 <para>This class provides functions that write text data using an output stream, allowing you to write text, floats, and integers. </para>    </briefdescription>
     <detaileddescription>
 <para>You can also simulate the C++ <computeroutput>std::cout</computeroutput> class:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_f_file_output_stream" kindref="compound" tooltip="This class represents data written to a file.">wxFFileOutputStream</ref><sp/>output(<sp/>stderr<sp/>);</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_text_output_stream" kindref="compound" tooltip="This class provides functions that write text data using an output stream, allowing...">wxTextOutputStream</ref><sp/>cout(<sp/>output<sp/>);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_text_output_stream" kindref="compound" tooltip="This class provides functions that write text data using an output stream, allowing you to write text...">wxTextOutputStream</ref><sp/>cout(<sp/>output<sp/>);</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;This<sp/>is<sp/>a<sp/>text<sp/>line&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>1234;</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>1.23456;</highlight></codeline>
 </programlisting></para><para>The <ref refid="classwx_text_output_stream" kindref="compound">wxTextOutputStream</ref> writes text files (or streams) on DOS, Macintosh and Unix in their native formats (concerning the line ending).</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__streams" kindref="compound">Streams</ref></para><para><simplesect kind="see"><para><ref refid="classwx_text_input_stream" kindref="compound">wxTextInputStream</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__streams" kindref="compound">Streams</ref></para><para><simplesect kind="see"><para><ref refid="classwx_text_input_stream" kindref="compound">wxTextInputStream</ref> </para></simplesect>
 </para>    </detaileddescription>
     <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/txtstrm.h" line="226" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/txtstrm.h" bodystart="225" bodyend="312"/>
     <listofallmembers>

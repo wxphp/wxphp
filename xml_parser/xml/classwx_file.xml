@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_file" kind="class" prot="public">
     <compoundname>wxFile</compoundname>
     <includes local="no">wx/file.h</includes>
@@ -9,7 +9,7 @@
         <enumvalue id="classwx_file_1ae26cef66ac8e94be0c687c2a0fd569dfae10ad0bce1ba499f9d8164e1d6ca037b" prot="public">
           <name>read</name>
           <briefdescription>
-<para>Open file for reading or test if it can be opened for reading with <ref refid="classwx_file_1a9842fdcc9d4f4b8c74cf73c2dd48be26" kindref="member">Access()</ref>. </para>          </briefdescription>
+<para>Open file for reading or test if it can be opened for reading with <ref refid="classwx_file_1a9842fdcc9d4f4b8c74cf73c2dd48be26" kindref="member">Access()</ref> </para>          </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
@@ -23,7 +23,7 @@
         <enumvalue id="classwx_file_1ae26cef66ac8e94be0c687c2a0fd569dfaa08562dcbd6cd8900950880061096e78" prot="public">
           <name>read_write</name>
           <briefdescription>
-<para>Open file for reading and writing; cannot be used with <ref refid="classwx_file_1a9842fdcc9d4f4b8c74cf73c2dd48be26" kindref="member">Access()</ref>. </para>          </briefdescription>
+<para>Open file for reading and writing; cannot be used with <ref refid="classwx_file_1a9842fdcc9d4f4b8c74cf73c2dd48be26" kindref="member">Access()</ref> </para>          </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
@@ -49,9 +49,9 @@
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/file.h" line="167" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/file.h" bodystart="167" bodyend="193"/>
       </memberdef>
-      <memberdef kind="enum" id="classwx_file_1abbbe054c2d93454a93e23c7065e627f4" prot="public" static="no">
-        <name>@5</name>
-        <enumvalue id="classwx_file_1abbbe054c2d93454a93e23c7065e627f4a359b3619a978343a5d73f56d85ce325d" prot="public">
+      <memberdef kind="enum" id="classwx_file_1ac786c4f988c4f52a19d0ca9a7367d2a5" prot="public" static="no">
+        <name>@7</name>
+        <enumvalue id="classwx_file_1ac786c4f988c4f52a19d0ca9a7367d2a5a359b3619a978343a5d73f56d85ce325d" prot="public">
           <name>fd_invalid</name>
           <initializer> -1</initializer>
           <briefdescription>
@@ -59,21 +59,21 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="classwx_file_1abbbe054c2d93454a93e23c7065e627f4a2d93554cc38b0192eb4ee2470c0a3da3" prot="public">
+        <enumvalue id="classwx_file_1ac786c4f988c4f52a19d0ca9a7367d2a5a2d93554cc38b0192eb4ee2470c0a3da3" prot="public">
           <name>fd_stdin</name>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="classwx_file_1abbbe054c2d93454a93e23c7065e627f4a38e8e5eadaa724762a1fc8e2268c3298" prot="public">
+        <enumvalue id="classwx_file_1ac786c4f988c4f52a19d0ca9a7367d2a5a38e8e5eadaa724762a1fc8e2268c3298" prot="public">
           <name>fd_stdout</name>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="classwx_file_1abbbe054c2d93454a93e23c7065e627f4aeb6c143720130cb92ec6fc29abe23382" prot="public">
+        <enumvalue id="classwx_file_1ac786c4f988c4f52a19d0ca9a7367d2a5aeb6c143720130cb92ec6fc29abe23382" prot="public">
           <name>fd_stderr</name>
           <briefdescription>
           </briefdescription>
@@ -221,7 +221,7 @@
         <briefdescription>
 <para>Attaches an existing file descriptor to the <ref refid="classwx_file" kindref="compound">wxFile</ref> object. </para>        </briefdescription>
         <detaileddescription>
-<para>Examples of predefined file descriptors are 0, 1 and 2 which correspond to stdin, stdout and stderr (and have symbolic names of <computeroutput><ref refid="classwx_file_1abbbe054c2d93454a93e23c7065e627f4a2d93554cc38b0192eb4ee2470c0a3da3" kindref="member">wxFile::fd_stdin</ref></computeroutput>, <computeroutput><ref refid="classwx_file_1abbbe054c2d93454a93e23c7065e627f4a38e8e5eadaa724762a1fc8e2268c3298" kindref="member">wxFile::fd_stdout</ref></computeroutput> and <computeroutput><ref refid="classwx_file_1abbbe054c2d93454a93e23c7065e627f4aeb6c143720130cb92ec6fc29abe23382" kindref="member">wxFile::fd_stderr</ref></computeroutput>).</para><para>The descriptor should be already opened and it will be closed by <ref refid="classwx_file" kindref="compound">wxFile</ref> object. </para>        </detaileddescription>
+<para>Examples of predefined file descriptors are 0, 1 and 2 which correspond to stdin, stdout and stderr (and have symbolic names of <computeroutput><ref refid="classwx_file_1ac786c4f988c4f52a19d0ca9a7367d2a5a2d93554cc38b0192eb4ee2470c0a3da3" kindref="member">wxFile::fd_stdin</ref></computeroutput>, <computeroutput><ref refid="classwx_file_1ac786c4f988c4f52a19d0ca9a7367d2a5a38e8e5eadaa724762a1fc8e2268c3298" kindref="member">wxFile::fd_stdout</ref></computeroutput> and <computeroutput><ref refid="classwx_file_1ac786c4f988c4f52a19d0ca9a7367d2a5aeb6c143720130cb92ec6fc29abe23382" kindref="member">wxFile::fd_stderr</ref></computeroutput>).</para><para>The descriptor should be already opened and it will be closed by <ref refid="classwx_file" kindref="compound">wxFile</ref> object. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/file.h" line="275"/>
@@ -625,7 +625,7 @@
 <para>A <ref refid="classwx_file" kindref="compound">wxFile</ref> performs raw file I/O. </para>    </briefdescription>
     <detaileddescription>
 <para>This is a very small class designed to minimize the overhead of using it - in fact, there is hardly any overhead at all, but using it brings you automatic error checking and hides differences between platforms and compilers. <ref refid="classwx_file" kindref="compound">wxFile</ref> also automatically closes the file in its destructor so you won&apos;t forget to do so. <ref refid="classwx_file" kindref="compound">wxFile</ref> is a wrapper around <computeroutput>file</computeroutput> descriptor. - see also <ref refid="classwx_f_file" kindref="compound">wxFFile</ref> for a wrapper around <computeroutput>FILE</computeroutput> structure.</para><para><ref refid="group__group__funcmacro__file_1ga69d831b3febabc149c67b716c8e22de5" kindref="member">wxFileOffset</ref> is used by the <ref refid="classwx_file" kindref="compound">wxFile</ref> functions which require offsets as parameter or return them. If the platform supports it, wxFileOffset is a typedef for a native 64 bit integer, otherwise a 32 bit integer is used for <ref refid="group__group__funcmacro__file_1ga69d831b3febabc149c67b716c8e22de5" kindref="member">wxFileOffset</ref>.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__file" kindref="compound">File Handling</ref> </para>    </detaileddescription>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__file" kindref="compound">File Handling</ref> </para>    </detaileddescription>
     <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/file.h" line="160" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/file.h" bodystart="159" bodyend="435"/>
     <listofallmembers>
       <member refid="classwx_file_1a9842fdcc9d4f4b8c74cf73c2dd48be26" prot="public" virt="non-virtual"><scope>wxFile</scope><name>Access</name></member>
@@ -637,10 +637,10 @@
       <member refid="classwx_file_1ae584442c77415e9d287ca7faec0dcca4" prot="public" virt="non-virtual"><scope>wxFile</scope><name>Eof</name></member>
       <member refid="classwx_file_1ad6530a4db084b157d81a1314c4a62420" prot="public" virt="non-virtual"><scope>wxFile</scope><name>Exists</name></member>
       <member refid="classwx_file_1a785378439ec028b40e6b5708e4b61c10" prot="public" virt="non-virtual"><scope>wxFile</scope><name>fd</name></member>
-      <member refid="classwx_file_1abbbe054c2d93454a93e23c7065e627f4a359b3619a978343a5d73f56d85ce325d" prot="public" virt="non-virtual"><scope>wxFile</scope><name>fd_invalid</name></member>
-      <member refid="classwx_file_1abbbe054c2d93454a93e23c7065e627f4aeb6c143720130cb92ec6fc29abe23382" prot="public" virt="non-virtual"><scope>wxFile</scope><name>fd_stderr</name></member>
-      <member refid="classwx_file_1abbbe054c2d93454a93e23c7065e627f4a2d93554cc38b0192eb4ee2470c0a3da3" prot="public" virt="non-virtual"><scope>wxFile</scope><name>fd_stdin</name></member>
-      <member refid="classwx_file_1abbbe054c2d93454a93e23c7065e627f4a38e8e5eadaa724762a1fc8e2268c3298" prot="public" virt="non-virtual"><scope>wxFile</scope><name>fd_stdout</name></member>
+      <member refid="classwx_file_1ac786c4f988c4f52a19d0ca9a7367d2a5a359b3619a978343a5d73f56d85ce325d" prot="public" virt="non-virtual"><scope>wxFile</scope><name>fd_invalid</name></member>
+      <member refid="classwx_file_1ac786c4f988c4f52a19d0ca9a7367d2a5aeb6c143720130cb92ec6fc29abe23382" prot="public" virt="non-virtual"><scope>wxFile</scope><name>fd_stderr</name></member>
+      <member refid="classwx_file_1ac786c4f988c4f52a19d0ca9a7367d2a5a2d93554cc38b0192eb4ee2470c0a3da3" prot="public" virt="non-virtual"><scope>wxFile</scope><name>fd_stdin</name></member>
+      <member refid="classwx_file_1ac786c4f988c4f52a19d0ca9a7367d2a5a38e8e5eadaa724762a1fc8e2268c3298" prot="public" virt="non-virtual"><scope>wxFile</scope><name>fd_stdout</name></member>
       <member refid="classwx_file_1a0b3ac667c1e6133c6c4ffce3c81b3c4c" prot="public" virt="non-virtual"><scope>wxFile</scope><name>Flush</name></member>
       <member refid="classwx_file_1a765609522af7fbf010a76902961673be" prot="public" virt="non-virtual"><scope>wxFile</scope><name>GetKind</name></member>
       <member refid="classwx_file_1a9cf7fc7bb53404e017a243fa6151c64f" prot="public" virt="non-virtual"><scope>wxFile</scope><name>GetLastError</name></member>

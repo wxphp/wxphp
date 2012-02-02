@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_real_point" kind="class" prot="public">
     <compoundname>wxRealPoint</compoundname>
     <includes local="no">wx/gdicmn.h</includes>
       <sectiondef kind="user-defined">
       <header>Miscellaneous operators</header>
-      <description><para><anchor id="_1amgrpe09e661963a51ecc56ad0a00cbd2649b"/>Note that these operators are documented as class members (to make them easier to find) but, as their prototype shows, they are implemented as global operators; note that this is transparent to the user but it helps to understand why the following functions are documented to take the <ref refid="classwx_point" kindref="compound">wxPoint</ref> they operate on as an explicit argument. </para></description>
+      <description><para>Note that these operators are documented as class members (to make them easier to find) but, as their prototype shows, they are implemented as global operators; note that this is transparent to the user but it helps to understand why the following functions are documented to take the <ref refid="classwx_point" kindref="compound">wxPoint</ref> they operate on as an explicit argument. </para></description>
       <memberdef kind="function" id="classwx_real_point_1a3e5dbda7892b3608c43dd0c9fb3ef8ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_real_point" kindref="compound">wxRealPoint</ref> &amp;</type>
         <definition>wxRealPoint&amp; wxRealPoint::operator=</definition>
@@ -442,7 +442,7 @@
 <para>A <ref refid="classwx_real_point" kindref="compound">wxRealPoint</ref> is a useful data structure for graphics operations. </para>    </briefdescription>
     <detaileddescription>
 <para>It contains floating point <emphasis>x</emphasis> and <emphasis>y</emphasis> members. See <ref refid="classwx_point" kindref="compound">wxPoint</ref> for an integer version.</para><para>Note that the coordinates stored inside a <ref refid="classwx_real_point" kindref="compound">wxRealPoint</ref> object may be negative and that <ref refid="classwx_real_point" kindref="compound">wxRealPoint</ref> functions do not perform any check against negative values.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__data" kindref="compound">Data Structures</ref></para><para><simplesect kind="see"><para><ref refid="classwx_point" kindref="compound">wxPoint</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__data" kindref="compound">Data Structures</ref></para><para><simplesect kind="see"><para><ref refid="classwx_point" kindref="compound">wxPoint</ref> </para></simplesect>
 </para>    </detaileddescription>
     <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="130" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" bodystart="129" bodyend="193"/>
     <listofallmembers>

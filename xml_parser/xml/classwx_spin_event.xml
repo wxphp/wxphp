@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_spin_event" kind="class" prot="public">
     <compoundname>wxSpinEvent</compoundname>
     <basecompoundref refid="classwx_notify_event" prot="public" virt="non-virtual">wxNotifyEvent</basecompoundref>
@@ -69,71 +69,71 @@
 <listitem><para>EVT_SPIN_DOWN(id,  func): Generated when right/down arrow is pressed. </para></listitem>
 </itemizedlist>
 Note that if you handle both SPIN and UP or DOWN events, you will be notified about each of them twice: first the UP/DOWN event will be received and then, if it wasn&apos;t vetoed, the SPIN event will be sent.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="classwx_spin_button" kindref="compound">wxSpinButton</ref> and <ref refid="classwx_spin_ctrl" kindref="compound">wxSpinCtrl</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="classwx_spin_button" kindref="compound">wxSpinButton</ref> and <ref refid="classwx_spin_ctrl" kindref="compound">wxSpinCtrl</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10331">
+      <node id="10391">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="10329">
+      <node id="10389">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="10330" relation="public-inheritance">
+        <childnode refid="10390" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10328">
+      <node id="10388">
         <label>wxNotifyEvent</label>
         <link refid="classwx_notify_event"/>
-        <childnode refid="10329" relation="public-inheritance">
+        <childnode refid="10389" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10327">
+      <node id="10387">
         <label>wxSpinEvent</label>
         <link refid="classwx_spin_event"/>
-        <childnode refid="10328" relation="public-inheritance">
+        <childnode refid="10388" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10330">
+      <node id="10390">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="10331" relation="public-inheritance">
+        <childnode refid="10391" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10336">
+      <node id="10396">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="10337" relation="usage">
+        <childnode refid="10397" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="10334">
+      <node id="10394">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="10335" relation="public-inheritance">
+        <childnode refid="10395" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10333">
+      <node id="10393">
         <label>wxNotifyEvent</label>
         <link refid="classwx_notify_event"/>
-        <childnode refid="10334" relation="public-inheritance">
+        <childnode refid="10394" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10332">
+      <node id="10392">
         <label>wxSpinEvent</label>
         <link refid="classwx_spin_event"/>
-        <childnode refid="10333" relation="public-inheritance">
+        <childnode refid="10393" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10335">
+      <node id="10395">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="10336" relation="public-inheritance">
+        <childnode refid="10396" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10337">
+      <node id="10397">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

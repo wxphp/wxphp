@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_text_entry" kind="class" prot="public">
     <compoundname>wxTextEntry</compoundname>
     <derivedcompoundref refid="classwx_combo_box" prot="public" virt="non-virtual">wxComboBox</derivedcompoundref>
@@ -7,7 +7,6 @@
     <derivedcompoundref refid="classwx_text_ctrl" prot="public" virt="non-virtual">wxTextCtrl</derivedcompoundref>
     <includes local="no">wx/textentry.h</includes>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_text_entry_1af2f9684123d3f4d7233945016b2d5c1d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
         <definition>bool wxTextEntry::SetMargins</definition>
@@ -239,7 +238,7 @@
         <briefdescription>
 <para>Sets the new text control value. </para>        </briefdescription>
         <detaileddescription>
-<para>It also marks the control as not-modified which means that IsModified() would return false immediately after the call to <ref refid="classwx_text_entry_1a8c52ab71f51c8f80556c2c8e763cbca1" kindref="member">ChangeValue()</ref>.</para><para>The insertion point is set to the start of the control (i.e. position 0) by this function.</para><para>This functions does not generate the <computeroutput>wxEVT_COMMAND_TEXT_UPDATED</computeroutput> event but otherwise is identical to <ref refid="classwx_text_entry_1a90f876b2dd83ba5c97ba0c193b386e9f" kindref="member">SetValue()</ref>.</para><para>See <ref refid="overview__events_1overview_events_prog" kindref="member">User Generated Events vs Programmatically Generated Events</ref> for more information.</para><para><simplesect kind="since"><para>2.7.1</para></simplesect>
+<para>It also marks the control as not-modified which means that IsModified() would return false immediately after the call to <ref refid="classwx_text_entry_1a8c52ab71f51c8f80556c2c8e763cbca1" kindref="member">ChangeValue()</ref>.</para><para>The insertion point is set to the start of the control (i.e. position 0) by this function.</para><para>This functions does not generate the <computeroutput>wxEVT_COMMAND_TEXT_UPDATED</computeroutput> event but otherwise is identical to <ref refid="classwx_text_entry_1a90f876b2dd83ba5c97ba0c193b386e9f" kindref="member">SetValue()</ref>.</para><para>See <ref refid="overview_events_1overview_events_prog" kindref="member">User Generated Events vs Programmatically Generated Events</ref> for more information.</para><para><simplesect kind="since"><para>2.7.1</para></simplesect>
 <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>value</parametername>
@@ -291,7 +290,7 @@
 <para>Returns the insertion point, or cursor, position. </para>        </briefdescription>
         <detaileddescription>
 <para>This is defined as the zero based index of the character position to the right of the insertion point. For example, if the insertion point is at the end of the single-line text control, it is equal to both <ref refid="classwx_text_entry_1a0d31704b5bc0b8cfe2502a66409d05c9" kindref="member">GetLastPosition()</ref> and <computeroutput>&quot;GetValue().Length()&quot;</computeroutput> (but notice that the latter equality is not necessarily true for multiline edit controls which may use multiple new line characters).</para><para>The following code snippet safely returns the character at the insertion point or the zero character if the point is at the end of the control.</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>GetCurrentChar(<ref refid="classwx_text_ctrl" kindref="compound" tooltip="A text control allows text to be displayed and edited.">wxTextCtrl</ref><sp/>*tc)<sp/>{</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(tc-&gt;<ref refid="classwx_text_entry_1a396c9bc8cbf6adb7e69dcf035d31efbe" kindref="member" tooltip="Returns the insertion point, or cursor, position.">GetInsertionPoint</ref>()<sp/>==<sp/>tc-&gt;<ref refid="classwx_text_entry_1a0d31704b5bc0b8cfe2502a66409d05c9" kindref="member" tooltip="Returns the zero based index of the last position in the text control, which is equal...">GetLastPosition</ref>())</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(tc-&gt;<ref refid="classwx_text_entry_1a396c9bc8cbf6adb7e69dcf035d31efbe" kindref="member" tooltip="Returns the insertion point, or cursor, position.">GetInsertionPoint</ref>()<sp/>==<sp/>tc-&gt;<ref refid="classwx_text_entry_1a0d31704b5bc0b8cfe2502a66409d05c9" kindref="member" tooltip="Returns the zero based index of the last position in the text control, which is equal to the number o...">GetLastPosition</ref>())</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">;</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>tc-&gt;<ref refid="classwx_text_entry_1af234557ffcbfefb3ea45358c4f2a5283" kindref="member" tooltip="Gets the contents of the control.">GetValue</ref>[tc-&gt;<ref refid="classwx_text_entry_1a396c9bc8cbf6adb7e69dcf035d31efbe" kindref="member" tooltip="Returns the insertion point, or cursor, position.">GetInsertionPoint</ref>()];</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
@@ -629,7 +628,6 @@
         <argsstring>(long from, long to)</argsstring>
         <name>SetSelection</name>
         <reimplementedby refid="classwx_combo_box_1a110d8b94ae2655ab28488b22843b47b1">SetSelection</reimplementedby>
-        <reimplementedby refid="classwx_combo_box_1a110d8b94ae2655ab28488b22843b47b1">SetSelection</reimplementedby>
         <reimplementedby refid="classwx_combo_ctrl_1a62f78126cae07f006685349851340b29">SetSelection</reimplementedby>
         <param>
           <type>long</type>
@@ -801,54 +799,54 @@
 <para>Common base class for single line text entry fields. </para>    </briefdescription>
     <detaileddescription>
 <para>This class is not a control itself, as it doesn&apos;t derive from <ref refid="classwx_window" kindref="compound">wxWindow</ref>. Instead it is used as a base class by other controls, notably <ref refid="classwx_text_ctrl" kindref="compound">wxTextCtrl</ref> and <ref refid="classwx_combo_box" kindref="compound">wxComboBox</ref> and gathers the methods common to both of them.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref></para><para><simplesect kind="see"><para><ref refid="classwx_text_ctrl" kindref="compound">wxTextCtrl</ref>, <ref refid="classwx_combo_box" kindref="compound">wxComboBox</ref></para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref></para><para><simplesect kind="see"><para><ref refid="classwx_text_ctrl" kindref="compound">wxTextCtrl</ref>, <ref refid="classwx_combo_box" kindref="compound">wxComboBox</ref></para></simplesect>
 <simplesect kind="since"><para>2.9.0 </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10748">
+      <node id="10809">
         <label>wxSearchCtrl</label>
         <link refid="classwx_search_ctrl"/>
-        <childnode refid="10747" relation="public-inheritance">
+        <childnode refid="10808" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10743">
+      <node id="10804">
         <label>wxBitmapComboBox</label>
         <link refid="classwx_bitmap_combo_box"/>
-        <childnode refid="10742" relation="public-inheritance">
+        <childnode refid="10803" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10747">
+      <node id="10808">
         <label>wxTextCtrl</label>
         <link refid="classwx_text_ctrl"/>
-        <childnode refid="10741" relation="public-inheritance">
+        <childnode refid="10802" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10741">
+      <node id="10802">
         <label>wxTextEntry</label>
         <link refid="classwx_text_entry"/>
       </node>
-      <node id="10744">
+      <node id="10805">
         <label>wxComboCtrl</label>
         <link refid="classwx_combo_ctrl"/>
-        <childnode refid="10741" relation="public-inheritance">
+        <childnode refid="10802" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10742">
+      <node id="10803">
         <label>wxComboBox</label>
         <link refid="classwx_combo_box"/>
-        <childnode refid="10741" relation="public-inheritance">
+        <childnode refid="10802" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10745">
+      <node id="10806">
         <label>wxOwnerDrawnComboBox</label>
         <link refid="classwx_owner_drawn_combo_box"/>
-        <childnode refid="10744" relation="public-inheritance">
+        <childnode refid="10805" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10746">
+      <node id="10807">
         <label>wxRichTextStyleComboCtrl</label>
         <link refid="classwx_rich_text_style_combo_ctrl"/>
-        <childnode refid="10744" relation="public-inheritance">
+        <childnode refid="10805" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>

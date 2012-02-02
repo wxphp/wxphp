@@ -1,12 +1,11 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_grid_table_base" kind="class" prot="public">
     <compoundname>wxGridTableBase</compoundname>
     <basecompoundref refid="classwx_object" prot="public" virt="non-virtual">wxObject</basecompoundref>
     <includes local="no">wx/grid.h</includes>
       <sectiondef kind="user-defined">
       <header>Table Cell Accessors</header>
-      <description><para><anchor id="_1amgrp4edd8e1c699750fa0a68ef3afeff65d7"/> </para></description>
       <memberdef kind="function" id="classwx_grid_table_base_1a53b7f70b9eff26b9d699993e3a71968b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
         <definition>virtual bool wxGridTableBase::IsEmptyCell</definition>
@@ -358,7 +357,7 @@
       </sectiondef>
       <sectiondef kind="user-defined">
       <header>Table Structure Modifiers</header>
-      <description><para><anchor id="_1amgrpa3e9f1e602d4e8c84231bc5b0a74af4a"/>Notice that none of these functions are pure virtual as they don&apos;t have to be implemented if the table structure is never modified after creation, i.e.</para><para>neither rows nor columns are never added or deleted but that you do need to implement them if they are called, i.e. if your code either calls them directly or uses the matching <ref refid="classwx_grid" kindref="compound">wxGrid</ref> methods, as by default they simply do nothing which is definitely inappropriate. </para></description>
+      <description><para>Notice that none of these functions are pure virtual as they don&apos;t have to be implemented if the table structure is never modified after creation, i.e.</para><para>neither rows nor columns are never added or deleted but that you do need to implement them if they are called, i.e. if your code either calls them directly or uses the matching <ref refid="classwx_grid" kindref="compound">wxGrid</ref> methods, as by default they simply do nothing which is definitely inappropriate. </para></description>
       <memberdef kind="function" id="classwx_grid_table_base_1acc1ed3ef5d026594cb09d957f34761f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
         <definition>virtual void wxGridTableBase::Clear</definition>
@@ -454,7 +453,7 @@
         <briefdescription>
 <para>Delete rows from the table. </para>        </briefdescription>
         <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
+<para>Notice that currently deleting a row intersecting a multi-cell (see SetCellSize()) is not supported and will result in a crash.</para><para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>pos</parametername>
 </parameternamelist>
@@ -472,7 +471,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="1465"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="1468"/>
       </memberdef>
       <memberdef kind="function" id="classwx_grid_table_base_1a361c7064a0199afc01678318ce8b712d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -495,7 +494,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="1470"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="1473"/>
       </memberdef>
       <memberdef kind="function" id="classwx_grid_table_base_1a2f70e66794796670b6e5367e200d5168" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -513,7 +512,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="1475"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="1478"/>
       </memberdef>
       <memberdef kind="function" id="classwx_grid_table_base_1a4f96bd344c49875495c4f20ef707ca4b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -536,12 +535,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="1480"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="1483"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
       <header>Table Row and Column Labels</header>
-      <description><para><anchor id="_1amgrpfa110c605aa069b4b9a752c4a9116a6c"/>By default the numbers are used for labeling rows and Latin letters for labeling columns.</para><para>If the table has more than 26 columns, the pairs of letters are used starting from the 27-th one and so on, i.e. the sequence of labels is A, B, ..., Z, AA, AB, ..., AZ, BA, ..., ..., ZZ, AAA, ... </para></description>
+      <description><para>By default the numbers are used for labeling rows and Latin letters for labeling columns.</para><para>If the table has more than 26 columns, the pairs of letters are used starting from the 27-th one and so on, i.e. the sequence of labels is A, B, ..., Z, AA, AB, ..., AZ, BA, ..., ..., ZZ, AAA, ... </para></description>
       <memberdef kind="function" id="classwx_grid_table_base_1ad2a20c7f8ac0cbca8665639897b0aa33" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
         <definition>virtual wxString wxGridTableBase::GetRowLabelValue</definition>
@@ -557,7 +556,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="1498"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="1501"/>
       </memberdef>
       <memberdef kind="function" id="classwx_grid_table_base_1ac7db44c525e0791b29005ee4fa48e729" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -574,7 +573,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="1503"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="1506"/>
       </memberdef>
       <memberdef kind="function" id="classwx_grid_table_base_1a8205840a49da8ab2147fa8081afb2de6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -595,7 +594,7 @@
 <para>The default version does nothing, i.e. the label is not stored. You must override this method in your derived class if you wish <ref refid="classwx_grid_1ae67491f6e506a37dd45bc52e47a09fdc" kindref="member">wxGrid::SetRowLabelValue()</ref> to work. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="1512"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="1515"/>
       </memberdef>
       <memberdef kind="function" id="classwx_grid_table_base_1a2c228818518de127b34c13655153021e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -616,12 +615,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="1517"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="1520"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
       <header>Attributes Management</header>
-      <description><para><anchor id="_1amgrp8f39c4f523d9cd82cf24c7690fb9087b"/>By default the attributes management is delegated to <ref refid="classwx_grid_cell_attr_provider" kindref="compound">wxGridCellAttrProvider</ref> class.</para><para>You may override the methods in this section to handle the attributes directly if, for example, they can be computed from the cell values. </para></description>
+      <description><para>By default the attributes management is delegated to <ref refid="classwx_grid_cell_attr_provider" kindref="compound">wxGridCellAttrProvider</ref> class.</para><para>You may override the methods in this section to handle the attributes directly if, for example, they can be computed from the cell values. </para></description>
       <memberdef kind="function" id="classwx_grid_table_base_1ad0248937170cf1f0280694525ee5f994" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void wxGridTableBase::SetAttrProvider</definition>
@@ -637,7 +636,7 @@
 <para>The table takes ownership of <emphasis>attrProvider</emphasis> pointer and will delete it when it doesn&apos;t need it any more. The pointer can be NULL, however this won&apos;t disable attributes management in the table but will just result in a default attributes being recreated the next time any of the other functions in this section is called. To completely disable the attributes support, should this be needed, you need to override <ref refid="classwx_grid_table_base_1aa5d507ed6d82b7a7878ad65f5e75d4f0" kindref="member">CanHaveAttributes()</ref> to return false. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="1543"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="1546"/>
       </memberdef>
       <memberdef kind="function" id="classwx_grid_table_base_1a774b855c89b93812fff8940917f8dc3e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_grid_cell_attr_provider" kindref="compound">wxGridCellAttrProvider</ref> *</type>
@@ -650,7 +649,7 @@
 <para>This function may return NULL if the attribute provider hasn&apos;t been neither associated with this table by <ref refid="classwx_grid_table_base_1ad0248937170cf1f0280694525ee5f994" kindref="member">SetAttrProvider()</ref> nor created on demand by any other methods. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="1552"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="1555"/>
       </memberdef>
       <memberdef kind="function" id="classwx_grid_table_base_1af031321a86e3835d23177ffe53eee643" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_grid_cell_attr" kindref="compound">wxGridCellAttr</ref> *</type>
@@ -675,7 +674,7 @@
 <para>By default this function is simply forwarded to <ref refid="classwx_grid_cell_attr_provider_1a26ce9f9fd2e86e649b031b6211b6ab0a" kindref="member">wxGridCellAttrProvider::GetAttr()</ref> but it may be overridden to handle attributes directly in the table. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="1562"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="1565"/>
       </memberdef>
       <memberdef kind="function" id="classwx_grid_table_base_1a12277f75a635fd35fcaefd0d56cad0ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -700,7 +699,7 @@
 <para>By default this function is simply forwarded to <ref refid="classwx_grid_cell_attr_provider_1a85676f2c08382cd2a1e3c1f38a24540b" kindref="member">wxGridCellAttrProvider::SetAttr()</ref>.</para><para>The table takes ownership of <emphasis>attr</emphasis>, i.e. will call DecRef() on it. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="1572"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="1575"/>
       </memberdef>
       <memberdef kind="function" id="classwx_grid_table_base_1a8f1dc4a35497eeec27104943f0d7be11" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -721,7 +720,7 @@
 <para>By default this function is simply forwarded to <ref refid="classwx_grid_cell_attr_provider_1afe30d6ea1164d0730d3f7ba447150735" kindref="member">wxGridCellAttrProvider::SetRowAttr()</ref>.</para><para>The table takes ownership of <emphasis>attr</emphasis>, i.e. will call DecRef() on it. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="1582"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="1585"/>
       </memberdef>
       <memberdef kind="function" id="classwx_grid_table_base_1ac08a10473e538c1f3859ad59936eb870" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -742,7 +741,7 @@
 <para>By default this function is simply forwarded to <ref refid="classwx_grid_cell_attr_provider_1ab07209295a7afb61658d24b3fe34cb89" kindref="member">wxGridCellAttrProvider::SetColAttr()</ref>.</para><para>The table takes ownership of <emphasis>attr</emphasis>, i.e. will call DecRef() on it. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="1592"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="1595"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -865,7 +864,7 @@
 <para>By default, the table automatically creates a <ref refid="classwx_grid_cell_attr_provider" kindref="compound">wxGridCellAttrProvider</ref> when this function is called if it had no attribute provider before and returns true. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="1603"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="1606"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -873,39 +872,39 @@
     <detaileddescription>
 <para>A grid table is responsible for storing the grid data and, indirectly, grid cell attributes. The data can be stored in the way most convenient for the application but has to be provided in string form to <ref refid="classwx_grid" kindref="compound">wxGrid</ref>. It is also possible to provide cells values in other formats if appropriate, e.g. as numbers.</para><para>This base class is not quite abstract as it implements a trivial strategy for storing the attributes by forwarding it to <ref refid="classwx_grid_cell_attr_provider" kindref="compound">wxGridCellAttrProvider</ref> and also provides stubs for some other functions. However it does have a number of pure virtual methods which must be implemented in the derived classes.</para><para><simplesect kind="see"><para>wxGridStringTable</para></simplesect>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__grid" kindref="compound">Grid Related Classes</ref> </para>    </detaileddescription>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__grid" kindref="compound">Grid Related Classes</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="6847">
+      <node id="6851">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="6846">
+      <node id="6850">
         <label>wxGridTableBase</label>
         <link refid="classwx_grid_table_base"/>
-        <childnode refid="6847" relation="public-inheritance">
+        <childnode refid="6851" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="6849">
+      <node id="6853">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="6850" relation="usage">
+        <childnode refid="6854" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="6848">
+      <node id="6852">
         <label>wxGridTableBase</label>
         <link refid="classwx_grid_table_base"/>
-        <childnode refid="6849" relation="public-inheritance">
+        <childnode refid="6853" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6850">
+      <node id="6854">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="1217" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" bodystart="1216" bodyend="1604"/>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="1217" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" bodystart="1216" bodyend="1607"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxGridTableBase</scope><name>AllocExclusive</name></member>
       <member refid="classwx_grid_table_base_1a2f70e66794796670b6e5367e200d5168" prot="public" virt="virtual"><scope>wxGridTableBase</scope><name>AppendCols</name></member>

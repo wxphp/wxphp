@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_socket_server" kind="class" prot="public">
     <compoundname>wxSocketServer</compoundname>
     <basecompoundref refid="classwx_socket_base" prot="public" virt="non-virtual">wxSocketBase</basecompoundref>
@@ -159,47 +159,47 @@ If <emphasis>wait</emphasis> is false, it will try to accept a pending connectio
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-<para><xrefsect id="todo_1_todo000058"><xreftitle>Todo</xreftitle><xrefdescription><para>describe me.</para></xrefdescription></xrefsect><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxnet" kindref="member">wxNet</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__net" kindref="compound">Networking</ref> </para>    </detaileddescription>
+<para><xrefsect id="todo_1_todo000057"><xreftitle>Todo</xreftitle><xrefdescription><para>describe me.</para></xrefdescription></xrefsect></para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxnet" kindref="member">wxNet</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__net" kindref="compound">Networking</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10262">
+      <node id="10322">
         <label>wxSocketBase</label>
         <link refid="classwx_socket_base"/>
-        <childnode refid="10263" relation="public-inheritance">
+        <childnode refid="10323" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10263">
+      <node id="10323">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="10261">
+      <node id="10321">
         <label>wxSocketServer</label>
         <link refid="classwx_socket_server"/>
-        <childnode refid="10262" relation="public-inheritance">
+        <childnode refid="10322" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10265">
+      <node id="10325">
         <label>wxSocketBase</label>
         <link refid="classwx_socket_base"/>
-        <childnode refid="10266" relation="public-inheritance">
+        <childnode refid="10326" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10266">
+      <node id="10326">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="10267" relation="usage">
+        <childnode refid="10327" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="10264">
+      <node id="10324">
         <label>wxSocketServer</label>
         <link refid="classwx_socket_server"/>
-        <childnode refid="10265" relation="public-inheritance">
+        <childnode refid="10325" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10267">
+      <node id="10327">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

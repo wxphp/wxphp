@@ -1,12 +1,11 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_font" kind="class" prot="public">
     <compoundname>wxFont</compoundname>
     <basecompoundref refid="classwx_g_d_i_object" prot="public" virt="non-virtual">wxGDIObject</basecompoundref>
     <includes local="no">wx/font.h</includes>
       <sectiondef kind="user-defined">
       <header>Getters</header>
-      <description><para><anchor id="_1amgrpc9fd0bcb5385a65354c37f1bb504399d"/> </para></description>
       <memberdef kind="function" id="classwx_font_1a6213ecdc22472eeb718735fc274b15f9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="interface_2wx_2font_8h_1a09016a7497d1ec6defdf13fd6439acca" kindref="member">wxFontEncoding</ref></type>
         <definition>virtual wxFontEncoding wxFont::GetEncoding</definition>
@@ -19,7 +18,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="438"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="459"/>
       </memberdef>
       <memberdef kind="function" id="classwx_font_1a8bc47f26fc8ac471b9d312550430adaf" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -33,7 +32,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="446"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="467"/>
       </memberdef>
       <memberdef kind="function" id="classwx_font_1ab30e7d5190af3f4770e0726162036248" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="interface_2wx_2font_8h_1a0cd7bfd21a4f901245d3c86d8ea0c080" kindref="member">wxFontFamily</ref></type>
@@ -47,7 +46,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="463"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="484"/>
       </memberdef>
       <memberdef kind="function" id="classwx_font_1ac78bab66824b38f42669cfc0b4dc7c9f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -61,7 +60,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="476"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="497"/>
       </memberdef>
       <memberdef kind="function" id="classwx_font_1a4cfe1d8a93962db84e16266f819b38b5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -75,7 +74,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="492"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="513"/>
       </memberdef>
       <memberdef kind="function" id="classwx_font_1a4e29e4bfc1abc6cc40a0090aef8acac4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_native_font_info" kindref="compound">wxNativeFontInfo</ref> *</type>
@@ -89,7 +88,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="494"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="515"/>
       </memberdef>
       <memberdef kind="function" id="classwx_font_1a889b67c4a005c53c9902b249e67c92bd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>int</type>
@@ -103,7 +102,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="501"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="522"/>
       </memberdef>
       <memberdef kind="function" id="classwx_font_1aa1a71826329661e40ef8d6beba7954ec" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
@@ -117,7 +116,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="512"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="533"/>
       </memberdef>
       <memberdef kind="function" id="classwx_font_1a443add23b2aa92835412c884966bb5de" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="interface_2wx_2font_8h_1ab8f87d0b928ad1f8cba7d1c01f5f7a55" kindref="member">wxFontStyle</ref></type>
@@ -131,7 +130,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="519"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="540"/>
       </memberdef>
       <memberdef kind="function" id="classwx_font_1a6ab8532e2022ddeeed6440bb3fc021e8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -145,7 +144,22 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="526"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="547"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_font_1ad0a60827b6f2f7df8ab2934c71e4057b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxFont::GetStrikethrough</definition>
+        <argsstring>() const </argsstring>
+        <name>GetStrikethrough</name>
+        <briefdescription>
+<para>Returns true if the font is stricken-through, false otherwise. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classwx_font_1a074f14f7bea2d493d7ec14a65f76a3b7" kindref="member">SetStrikethrough()</ref></para></simplesect>
+<simplesect kind="since"><para>2.9.4 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="556"/>
       </memberdef>
       <memberdef kind="function" id="classwx_font_1a31a59466126665b0ff2b59fabff99258" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="interface_2wx_2font_8h_1a7cc37d08c7e84370f4fcc175b557a022" kindref="member">wxFontWeight</ref></type>
@@ -159,7 +173,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="533"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="563"/>
       </memberdef>
       <memberdef kind="function" id="classwx_font_1a16b426084f431686ffd5d628b2ff9b61" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -172,7 +186,7 @@
 <para>Note that this function under some platforms is different than just testing for the font family being equal to <computeroutput>wxFONTFAMILY_TELETYPE</computeroutput> because native platform-specific functions are used for the check (resulting in a more accurate return value). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="544"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="574"/>
       </memberdef>
       <memberdef kind="function" id="classwx_font_1a3ea0ba08b44ea25a2c52cf18efb6856e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -185,12 +199,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="549"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="579"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
       <header>Similar fonts creation</header>
-      <description><para><anchor id="_1amgrpf725db28525fdd821e5692f12838e215"/>The functions in this section either modify the font in place or create a new font similar to the given one but with its weight, style or size changed. </para></description>
+      <description><para>The functions in this section either modify the font in place or create a new font similar to the given one but with its weight, style or size changed. </para></description>
       <memberdef kind="function" id="classwx_font_1ac528779f9748a5853e854c5514ff711f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_font" kindref="compound">wxFont</ref></type>
         <definition>wxFont wxFont::Bold</definition>
@@ -204,7 +218,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="570"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="600"/>
       </memberdef>
       <memberdef kind="function" id="classwx_font_1a593fb633202b4ac5977fd4210d2a7d55" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_font" kindref="compound">wxFont</ref></type>
@@ -219,7 +233,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="579"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="609"/>
       </memberdef>
       <memberdef kind="function" id="classwx_font_1a3167bed7db5f0c4d3a88fc3395bd3c56" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_font" kindref="compound">wxFont</ref></type>
@@ -234,7 +248,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="591"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="621"/>
       </memberdef>
       <memberdef kind="function" id="classwx_font_1a7661691f4f1b5e93d923eaa41681c551" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_font" kindref="compound">wxFont</ref></type>
@@ -249,7 +263,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="603"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="633"/>
       </memberdef>
       <memberdef kind="function" id="classwx_font_1ab618e94bface067515b6a88ecb206827" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_font" kindref="compound">wxFont</ref></type>
@@ -264,7 +278,22 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="612"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="642"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_font_1a800aaf74c6686eb30a8b614550b4c7f4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_font" kindref="compound">wxFont</ref></type>
+        <definition>wxFont wxFont::Strikethrough</definition>
+        <argsstring>() const </argsstring>
+        <name>Strikethrough</name>
+        <briefdescription>
+<para>Returns stricken-through version of this font. </para>        </briefdescription>
+        <detaileddescription>
+<para>Currently stricken-through fonts are only supported in wxMSW and wxGTK.</para><para><simplesect kind="see"><para><ref refid="classwx_font_1a39b684e80dcc0e05e4aee6c3c1daa0a8" kindref="member">MakeStrikethrough()</ref></para></simplesect>
+<simplesect kind="since"><para>2.9.4 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="653"/>
       </memberdef>
       <memberdef kind="function" id="classwx_font_1a490c5c47ce9d42a9b430664c476e3940" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_font" kindref="compound">wxFont</ref> &amp;</type>
@@ -279,7 +308,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="621"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="662"/>
       </memberdef>
       <memberdef kind="function" id="classwx_font_1a656641cb094eaa574be999ca791ced96" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_font" kindref="compound">wxFont</ref> &amp;</type>
@@ -294,7 +323,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="630"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="671"/>
       </memberdef>
       <memberdef kind="function" id="classwx_font_1aae5977e23525729e23d3ac4dbc70c365" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_font" kindref="compound">wxFont</ref> &amp;</type>
@@ -309,7 +338,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="642"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="683"/>
       </memberdef>
       <memberdef kind="function" id="classwx_font_1a119d3c74838fe89bc4f36ebd698421a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_font" kindref="compound">wxFont</ref> &amp;</type>
@@ -324,7 +353,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="654"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="695"/>
       </memberdef>
       <memberdef kind="function" id="classwx_font_1a6b44689f563aebc1f55e8fd09ba4315f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_font" kindref="compound">wxFont</ref> &amp;</type>
@@ -339,7 +368,22 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="663"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="704"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_font_1a39b684e80dcc0e05e4aee6c3c1daa0a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_font" kindref="compound">wxFont</ref> &amp;</type>
+        <definition>wxFont&amp; wxFont::MakeStrikethrough</definition>
+        <argsstring>()</argsstring>
+        <name>MakeStrikethrough</name>
+        <briefdescription>
+<para>Changes this font to be stricken-through. </para>        </briefdescription>
+        <detaileddescription>
+<para>Currently stricken-through fonts are only supported in wxMSW and wxGTK.</para><para><simplesect kind="see"><para><ref refid="classwx_font_1a800aaf74c6686eb30a8b614550b4c7f4" kindref="member">Strikethrough()</ref></para></simplesect>
+<simplesect kind="since"><para>2.9.4 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="715"/>
       </memberdef>
       <memberdef kind="function" id="classwx_font_1ab9921c9c057e5aceef20c701bda6a80d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_font" kindref="compound">wxFont</ref> &amp;</type>
@@ -358,7 +402,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="675"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="727"/>
       </memberdef>
       <memberdef kind="function" id="classwx_font_1ada3d128075fbf8c41a50da0398aeb1cd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_font" kindref="compound">wxFont</ref></type>
@@ -377,12 +421,12 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="687"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="739"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
       <header>Setters</header>
-      <description><para><anchor id="_1amgrp6e47466b75bb957a603aa54c079ac8bf"/>These functions internally recreate the native font object with the new specified property. </para></description>
+      <description><para>These functions internally recreate the native font object with the new specified property. </para></description>
       <memberdef kind="function" id="classwx_font_1af8dd83a8ab30564d53e643d5bfe0bd57" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
         <definition>virtual void wxFont::SetEncoding</definition>
@@ -399,7 +443,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="707"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="759"/>
       </memberdef>
       <memberdef kind="function" id="classwx_font_1a97456a61332a1b6d44a76f0b57b01709" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -427,7 +471,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="724"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="776"/>
       </memberdef>
       <memberdef kind="function" id="classwx_font_1a20202449727755508176f186b8d5b340" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -453,7 +497,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="739"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="791"/>
       </memberdef>
       <memberdef kind="function" id="classwx_font_1aaef8dc8fc6c8b81246af000a201b52c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -472,7 +516,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="753"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="805"/>
       </memberdef>
       <memberdef kind="function" id="classwx_font_1afa8eb67298aea006e3a262bd7b0c8493" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -493,11 +537,11 @@
 <row>
 <entry thead="no"><para>wxMSW </para></entry><entry thead="no"><para><computeroutput>[light|bold] [italic] [FACE-NAME] [POINTSIZE] [ENCODING]</computeroutput> </para></entry><entry thead="no"><para>Tahoma 10 WINDOWS-1252 </para></entry></row>
 </table>
-</para><para><xrefsect id="todo_1_todo000031"><xreftitle>Todo</xreftitle><xrefdescription><para>add an example for wxMac</para></xrefdescription></xrefsect>For more detailed information about the allowed syntaxes you can look at the documentation of the native API used for font-rendering (e.g. <computeroutput>pango_font_description_from_string</computeroutput> on GTK).</para><para>Note that unlike <ref refid="classwx_font_1aaef8dc8fc6c8b81246af000a201b52c5" kindref="member">SetNativeFontInfo()</ref>, this function doesn&apos;t always restore all attributes of the <ref refid="classwx_font" kindref="compound">wxFont</ref> object under all platforms; e.g. on wxMSW the font family is not restored (because GetNativeFontInfoUserDesc doesn&apos;t return it on wxMSW). If you want to serialize/deserialize a font in string form, you should use <ref refid="classwx_font_1ac78bab66824b38f42669cfc0b4dc7c9f" kindref="member">GetNativeFontInfoDesc()</ref> and <ref refid="classwx_font_1aaef8dc8fc6c8b81246af000a201b52c5" kindref="member">SetNativeFontInfo()</ref> instead.</para><para><simplesect kind="see"><para><ref refid="classwx_font_1aaef8dc8fc6c8b81246af000a201b52c5" kindref="member">SetNativeFontInfo()</ref> </para></simplesect>
+</para><para><xrefsect id="todo_1_todo000030"><xreftitle>Todo</xreftitle><xrefdescription><para>add an example for wxMac</para></xrefdescription></xrefsect></para><para>For more detailed information about the allowed syntaxes you can look at the documentation of the native API used for font-rendering (e.g. <computeroutput>pango_font_description_from_string</computeroutput> on GTK).</para><para>Note that unlike <ref refid="classwx_font_1aaef8dc8fc6c8b81246af000a201b52c5" kindref="member">SetNativeFontInfo()</ref>, this function doesn&apos;t always restore all attributes of the <ref refid="classwx_font" kindref="compound">wxFont</ref> object under all platforms; e.g. on wxMSW the font family is not restored (because GetNativeFontInfoUserDesc doesn&apos;t return it on wxMSW). If you want to serialize/deserialize a font in string form, you should use <ref refid="classwx_font_1ac78bab66824b38f42669cfc0b4dc7c9f" kindref="member">GetNativeFontInfoDesc()</ref> and <ref refid="classwx_font_1aaef8dc8fc6c8b81246af000a201b52c5" kindref="member">SetNativeFontInfo()</ref> instead.</para><para><simplesect kind="see"><para><ref refid="classwx_font_1aaef8dc8fc6c8b81246af000a201b52c5" kindref="member">SetNativeFontInfo()</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="782"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="834"/>
       </memberdef>
       <memberdef kind="function" id="classwx_font_1a31bb8005da8e4172a0f8e3fecc04efef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -515,7 +559,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="784"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="836"/>
       </memberdef>
       <memberdef kind="function" id="classwx_font_1a32d54af99749f180991c4cdab9f9a7dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -541,7 +585,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="797"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="849"/>
       </memberdef>
       <memberdef kind="function" id="classwx_font_1a94f364735647de9ddd065dfa992ad4e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -559,7 +603,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="812"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="864"/>
       </memberdef>
       <memberdef kind="function" id="classwx_font_1a1e2199aae978662fc4ceaa79be8a70b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -585,7 +629,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="822"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="874"/>
       </memberdef>
       <memberdef kind="function" id="classwx_font_1a8954f2ebca7091d8f06b9db733884932" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -604,7 +648,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="834"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="886"/>
       </memberdef>
       <memberdef kind="function" id="classwx_font_1a62d30098660ab88cae1bb157dba92fc2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -626,7 +670,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="844"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="896"/>
       </memberdef>
       <memberdef kind="function" id="classwx_font_1a2a8a3a71090bfa4ed957dfd1ffcc524c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -652,7 +696,34 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="854"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="906"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_font_1a074f14f7bea2d493d7ec14a65f76a3b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxFont::SetStrikethrough</definition>
+        <argsstring>(bool strikethrough)</argsstring>
+        <name>SetStrikethrough</name>
+        <param>
+          <type>bool</type>
+          <declname>strikethrough</declname>
+        </param>
+        <briefdescription>
+<para>Sets strike-through attribute of the font. </para>        </briefdescription>
+        <detaileddescription>
+<para>Currently stricken-through fonts are only supported in wxMSW and wxGTK.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>strikethrough</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true to add strike-through style, false to remove it.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="classwx_font_1ad0a60827b6f2f7df8ab2934c71e4057b" kindref="member">GetStrikethrough()</ref></para></simplesect>
+<simplesect kind="since"><para>2.9.4 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="920"/>
       </memberdef>
       <memberdef kind="function" id="classwx_font_1a63c3c48f10dd64bfdca812f4526cb7eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -678,11 +749,10 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="864"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="930"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_font_1a9d2f00bf5f89780396b8e95aec377fe8" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_font" kindref="compound">wxFont</ref> *</type>
         <definition>static wxFont* wxFont::New</definition>
@@ -725,7 +795,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="917"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="983"/>
       </memberdef>
       <memberdef kind="function" id="classwx_font_1aa3a2b32a848f28d1002cee6fef00919e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_font" kindref="compound">wxFont</ref> *</type>
@@ -761,7 +831,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="921"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="987"/>
       </memberdef>
       <memberdef kind="function" id="classwx_font_1afce36dbeb3a745d51bc3bc96c8d054ac" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_font" kindref="compound">wxFont</ref> *</type>
@@ -805,7 +875,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="928"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="994"/>
       </memberdef>
       <memberdef kind="function" id="classwx_font_1aa811bdd42f19b988d266f72ebc6f187b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_font" kindref="compound">wxFont</ref> *</type>
@@ -841,7 +911,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="933"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="999"/>
       </memberdef>
       <memberdef kind="function" id="classwx_font_1ac8142ebe654a60391cb391788b8b3fc8" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_font" kindref="compound">wxFont</ref> *</type>
@@ -858,7 +928,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="936"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="1002"/>
       </memberdef>
       <memberdef kind="function" id="classwx_font_1af576c894ec8b69e2525202abde04e81c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_font" kindref="compound">wxFont</ref> *</type>
@@ -875,7 +945,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="937"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="1003"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -890,7 +960,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="298"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="300"/>
       </memberdef>
       <memberdef kind="function" id="classwx_font_1ad77ff719ea7cf27f32d1de7e14dc76c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -902,12 +972,12 @@
           <declname>font</declname>
         </param>
         <briefdescription>
-<para>Copy constructor, uses <ref refid="overview__refcount" kindref="compound">reference counting</ref>. </para>        </briefdescription>
+<para>Copy constructor, uses <ref refid="overview_refcount" kindref="compound">reference counting</ref>. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="303"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="305"/>
       </memberdef>
       <memberdef kind="function" id="classwx_font_1a76044c9609bf8300e2c77a908a417544" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -946,7 +1016,7 @@
           <defval>wxFONTENCODING_DEFAULT</defval>
         </param>
         <briefdescription>
-<para>Creates a font object with the specified attributes. </para>        </briefdescription>
+<para>Creates a font object with the specified attributes and size in points. </para>        </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -1006,14 +1076,14 @@
 <row>
 <entry thead="no"><para><computeroutput>wxFONTENCODING_CP1250</computeroutput>...1252</para></entry><entry thead="no"><para>Windows encodings similar to ISO8859 (but not identical). </para></entry></row>
 </table>
-If the specified encoding isn&apos;t available, no font is created (see also <ref refid="overview__fontencoding" kindref="compound">Font Encodings</ref>).</para></parameterdescription>
+If the specified encoding isn&apos;t available, no font is created (see also <ref refid="overview_fontencoding" kindref="compound">Font Encodings</ref>).</para></parameterdescription>
 </parameteritem>
 </parameterlist>
 <simplesect kind="remark"><para>If the desired font does not exist, the closest match will be chosen. Under Windows, only scalable TrueType fonts are used. </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="349"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="351"/>
       </memberdef>
       <memberdef kind="function" id="classwx_font_1a713d2958dea28fbfd9a4ad03b4627cfb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -1052,7 +1122,7 @@ If the specified encoding isn&apos;t available, no font is created (see also <re
           <defval>wxFONTENCODING_DEFAULT</defval>
         </param>
         <briefdescription>
-<para>Creates a font object with the specified attributes. </para>        </briefdescription>
+<para>Creates a font object with the specified attributes and size in pixels. </para>        </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -1112,14 +1182,50 @@ If the specified encoding isn&apos;t available, no font is created (see also <re
 <row>
 <entry thead="no"><para><computeroutput>wxFONTENCODING_CP1250</computeroutput>...1252</para></entry><entry thead="no"><para>Windows encodings similar to ISO8859 (but not identical). </para></entry></row>
 </table>
-If the specified encoding isn&apos;t available, no font is created (see also <ref refid="overview__fontencoding" kindref="compound">Font Encodings</ref>).</para></parameterdescription>
+If the specified encoding isn&apos;t available, no font is created (see also <ref refid="overview_fontencoding" kindref="compound">Font Encodings</ref>).</para></parameterdescription>
 </parameteritem>
 </parameterlist>
 <simplesect kind="remark"><para>If the desired font does not exist, the closest match will be chosen. Under Windows, only scalable TrueType fonts are used. </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="395"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="397"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_font_1aeea129b8160e21d0207ab0c0044cf3e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxFont::wxFont</definition>
+        <argsstring>(int pointSize, wxFontFamily family, int flags, const wxString &amp;faceName=wxEmptyString, wxFontEncoding encoding=wxFONTENCODING_DEFAULT)</argsstring>
+        <name>wxFont</name>
+        <param>
+          <type>int</type>
+          <declname>pointSize</declname>
+        </param>
+        <param>
+          <type><ref refid="interface_2wx_2font_8h_1a0cd7bfd21a4f901245d3c86d8ea0c080" kindref="member">wxFontFamily</ref></type>
+          <declname>family</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>flags</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>faceName</declname>
+          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
+        </param>
+        <param>
+          <type><ref refid="interface_2wx_2font_8h_1a09016a7497d1ec6defdf13fd6439acca" kindref="member">wxFontEncoding</ref></type>
+          <declname>encoding</declname>
+          <defval>wxFONTENCODING_DEFAULT</defval>
+        </param>
+        <briefdescription>
+<para>Creates a font object using font flags. </para>        </briefdescription>
+        <detaileddescription>
+<para>This constructor is similar to the constructors above except it specifies the font styles such as underlined, italic, bold, ... in a single <emphasis>flags</emphasis> argument instead of using separate arguments for them. This parameter can be a combination of <ref refid="interface_2wx_2font_8h_1a332098a83a5d888d2e1169b4bd9565da" kindref="member">wxFontFlag</ref> enum elements. The meaning of the remaining arguments is the same as in the other constructors, please see their documentation for details.</para><para>Notice that this constructor provides the only way of creating fonts with strike-through style.</para><para><simplesect kind="since"><para>2.9.4 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="416"/>
       </memberdef>
       <memberdef kind="function" id="classwx_font_1a9d43775aaeafc628064b0e1b63730567" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -1136,7 +1242,7 @@ If the specified encoding isn&apos;t available, no font is created (see also <re
 <para>This constructor uses <ref refid="classwx_font_1aaef8dc8fc6c8b81246af000a201b52c5" kindref="member">SetNativeFontInfo()</ref> to initialize the font. If <emphasis>fontdesc</emphasis> is invalid the font remains uninitialized, i.e. its <ref refid="classwx_font_1a3ea0ba08b44ea25a2c52cf18efb6856e" kindref="member">IsOk()</ref> method will return false. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="404"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="425"/>
       </memberdef>
       <memberdef kind="function" id="classwx_font_1a17d85e1cac77bf812182915f3a017976" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -1153,7 +1259,7 @@ If the specified encoding isn&apos;t available, no font is created (see also <re
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="409"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="430"/>
       </memberdef>
       <memberdef kind="function" id="classwx_font_1ac706dcbd9f032e4e0e32f72163e65827" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -1163,11 +1269,11 @@ If the specified encoding isn&apos;t available, no font is created (see also <re
         <briefdescription>
 <para>Destructor. </para>        </briefdescription>
         <detaileddescription>
-<para>See <ref refid="overview__refcount_1overview_refcount_destruct" kindref="member">reference-counted object destruction</ref> for more info.</para><para><simplesect kind="remark"><para>Although all remaining fonts are deleted when the application exits, the application should try to clean up all fonts itself. This is because wxWidgets cannot know if a pointer to the font object is stored in an application data structure, and there is a risk of double deletion. </para></simplesect>
+<para>See <ref refid="overview_refcount_1overview_refcount_destruct" kindref="member">reference-counted object destruction</ref> for more info.</para><para><simplesect kind="remark"><para>Although all remaining fonts are deleted when the application exits, the application should try to clean up all fonts itself. This is because wxWidgets cannot know if a pointer to the font object is stored in an application data structure, and there is a risk of double deletion. </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="423"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="444"/>
       </memberdef>
       <memberdef kind="function" id="classwx_font_1a1ff8c4459b61511f71add9541ed5d6c4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1181,10 +1287,10 @@ If the specified encoding isn&apos;t available, no font is created (see also <re
         <briefdescription>
 <para>Inequality operator. </para>        </briefdescription>
         <detaileddescription>
-<para>See <ref refid="overview__refcount_1overview_refcount_equality" kindref="member">reference-counted object comparison</ref> for more info. </para>        </detaileddescription>
+<para>See <ref refid="overview_refcount_1overview_refcount_equality" kindref="member">reference-counted object comparison</ref> for more info. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="875"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="941"/>
       </memberdef>
       <memberdef kind="function" id="classwx_font_1ab90b5364937fd6a31a12644171681c29" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1198,10 +1304,10 @@ If the specified encoding isn&apos;t available, no font is created (see also <re
         <briefdescription>
 <para>Equality operator. </para>        </briefdescription>
         <detaileddescription>
-<para>See <ref refid="overview__refcount_1overview_refcount_equality" kindref="member">reference-counted object comparison</ref> for more info. </para>        </detaileddescription>
+<para>See <ref refid="overview_refcount_1overview_refcount_equality" kindref="member">reference-counted object comparison</ref> for more info. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="883"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="949"/>
       </memberdef>
       <memberdef kind="function" id="classwx_font_1aec71458f1c78b21704eafcb87017936f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_font" kindref="compound">wxFont</ref> &amp;</type>
@@ -1213,12 +1319,12 @@ If the specified encoding isn&apos;t available, no font is created (see also <re
           <declname>font</declname>
         </param>
         <briefdescription>
-<para>Assignment operator, using <ref refid="overview__refcount" kindref="compound">reference counting</ref>. </para>        </briefdescription>
+<para>Assignment operator, using <ref refid="overview_refcount" kindref="compound">reference counting</ref>. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="888"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="954"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -1230,11 +1336,11 @@ If the specified encoding isn&apos;t available, no font is created (see also <re
         <briefdescription>
 <para>Returns the current application&apos;s default encoding. </para>        </briefdescription>
         <detaileddescription>
-<para><simplesect kind="see"><para><ref refid="overview__fontencoding" kindref="compound">Font Encodings</ref>, <ref refid="classwx_font_1af1e93b4d416b6d62c6b0a374055c600a" kindref="member">SetDefaultEncoding()</ref> </para></simplesect>
+<para><simplesect kind="see"><para><ref refid="overview_fontencoding" kindref="compound">Font Encodings</ref>, <ref refid="classwx_font_1af1e93b4d416b6d62c6b0a374055c600a" kindref="member">SetDefaultEncoding()</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="898"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="964"/>
       </memberdef>
       <memberdef kind="function" id="classwx_font_1af1e93b4d416b6d62c6b0a374055c600a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1248,63 +1354,63 @@ If the specified encoding isn&apos;t available, no font is created (see also <re
         <briefdescription>
 <para>Sets the default font encoding. </para>        </briefdescription>
         <detaileddescription>
-<para><simplesect kind="see"><para><ref refid="overview__fontencoding" kindref="compound">Font Encodings</ref>, <ref refid="classwx_font_1a25477da7dac4edbf65fab4a72191d729" kindref="member">GetDefaultEncoding()</ref> </para></simplesect>
+<para><simplesect kind="see"><para><ref refid="overview_fontencoding" kindref="compound">Font Encodings</ref>, <ref refid="classwx_font_1a25477da7dac4edbf65fab4a72191d729" kindref="member">GetDefaultEncoding()</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="905"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="971"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para>A font is an object which determines the appearance of text. </para>    </briefdescription>
     <detaileddescription>
-<para>Fonts are used for drawing text to a device context, and setting the appearance of a window&apos;s text.</para><para>This class uses <ref refid="overview__refcount" kindref="compound">reference counting and copy-on-write</ref> internally so that assignments between two instances of this class are very cheap. You can therefore use actual objects instead of pointers without efficiency problems. If an instance of this class is changed it will create its own data internally so that other instances, which previously shared the data using the reference counting, are not affected.</para><para>You can retrieve the current system font settings with <ref refid="classwx_system_settings" kindref="compound">wxSystemSettings</ref>.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__gdi" kindref="compound">Graphics Device Interface (GDI)</ref></para><para>Predefined objects/pointers: <ref refid="interface_2wx_2font_8h_1aa81b6e7b8f74356bfe604485a4be1066" kindref="member">wxNullFont</ref>, <ref refid="interface_2wx_2font_8h_1a3d7653ceb6b4f01e64fcfce0aec79a5a" kindref="member">wxNORMAL_FONT</ref>, <ref refid="interface_2wx_2font_8h_1a717f06a50bfc94b1b0e5a5cf18f85e9f" kindref="member">wxSMALL_FONT</ref>, <ref refid="interface_2wx_2font_8h_1a0105413f0c4164745a0102ed3ee8177a" kindref="member">wxITALIC_FONT</ref>, <ref refid="interface_2wx_2font_8h_1a45e210182a5159f343998b151ef0c813" kindref="member">wxSWISS_FONT</ref></para><para><simplesect kind="see"><para><ref refid="overview__font" kindref="compound">wxFont Overview</ref>, <ref refid="classwx_d_c_1afab18239d707cd403235b36a987171a8" kindref="member">wxDC::SetFont</ref>, <ref refid="classwx_d_c_1a11d35ce34fccb57b0efc7dc91168660b" kindref="member">wxDC::DrawText</ref>, <ref refid="classwx_d_c_1ae55cbf1bc7b7e836cb192eb48d31efab" kindref="member">wxDC::GetTextExtent</ref>, <ref refid="classwx_font_dialog" kindref="compound">wxFontDialog</ref>, <ref refid="classwx_system_settings" kindref="compound">wxSystemSettings</ref> </para></simplesect>
+<para>Fonts are used for drawing text to a device context, and setting the appearance of a window&apos;s text.</para><para>This class uses <ref refid="overview_refcount" kindref="compound">reference counting and copy-on-write</ref> internally so that assignments between two instances of this class are very cheap. You can therefore use actual objects instead of pointers without efficiency problems. If an instance of this class is changed it will create its own data internally so that other instances, which previously shared the data using the reference counting, are not affected.</para><para>You can retrieve the current system font settings with <ref refid="classwx_system_settings" kindref="compound">wxSystemSettings</ref>.</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__gdi" kindref="compound">Graphics Device Interface (GDI)</ref></para><para>Predefined objects/pointers: <ref refid="interface_2wx_2font_8h_1aa81b6e7b8f74356bfe604485a4be1066" kindref="member">wxNullFont</ref>, <ref refid="interface_2wx_2font_8h_1a3d7653ceb6b4f01e64fcfce0aec79a5a" kindref="member">wxNORMAL_FONT</ref>, <ref refid="interface_2wx_2font_8h_1a717f06a50bfc94b1b0e5a5cf18f85e9f" kindref="member">wxSMALL_FONT</ref>, <ref refid="interface_2wx_2font_8h_1a0105413f0c4164745a0102ed3ee8177a" kindref="member">wxITALIC_FONT</ref>, <ref refid="interface_2wx_2font_8h_1a45e210182a5159f343998b151ef0c813" kindref="member">wxSWISS_FONT</ref></para><para><simplesect kind="see"><para><ref refid="overview_font" kindref="compound">wxFont Overview</ref>, <ref refid="classwx_d_c_1afab18239d707cd403235b36a987171a8" kindref="member">wxDC::SetFont</ref>, <ref refid="classwx_d_c_1a11d35ce34fccb57b0efc7dc91168660b" kindref="member">wxDC::DrawText</ref>, <ref refid="classwx_d_c_1ae55cbf1bc7b7e836cb192eb48d31efab" kindref="member">wxDC::GetTextExtent</ref>, <ref refid="classwx_font_dialog" kindref="compound">wxFontDialog</ref>, <ref refid="classwx_system_settings" kindref="compound">wxSystemSettings</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="6362">
+      <node id="6366">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="6361">
+      <node id="6365">
         <label>wxGDIObject</label>
         <link refid="classwx_g_d_i_object"/>
-        <childnode refid="6362" relation="public-inheritance">
+        <childnode refid="6366" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6360">
+      <node id="6364">
         <label>wxFont</label>
         <link refid="classwx_font"/>
-        <childnode refid="6361" relation="public-inheritance">
+        <childnode refid="6365" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="6365">
+      <node id="6369">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="6366" relation="usage">
+        <childnode refid="6370" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="6364">
+      <node id="6368">
         <label>wxGDIObject</label>
         <link refid="classwx_g_d_i_object"/>
-        <childnode refid="6365" relation="public-inheritance">
+        <childnode refid="6369" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6363">
+      <node id="6367">
         <label>wxFont</label>
         <link refid="classwx_font"/>
-        <childnode refid="6364" relation="public-inheritance">
+        <childnode refid="6368" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6366">
+      <node id="6370">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="293" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" bodystart="292" bodyend="940"/>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="295" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" bodystart="294" bodyend="1006"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxFont</scope><name>AllocExclusive</name></member>
       <member refid="classwx_font_1ac528779f9748a5853e854c5514ff711f" prot="public" virt="non-virtual"><scope>wxFont</scope><name>Bold</name></member>
@@ -1321,6 +1427,7 @@ If the specified encoding isn&apos;t available, no font is created (see also <re
       <member refid="classwx_font_1aa1a71826329661e40ef8d6beba7954ec" prot="public" virt="virtual"><scope>wxFont</scope><name>GetPixelSize</name></member>
       <member refid="classwx_font_1a889b67c4a005c53c9902b249e67c92bd" prot="public" virt="virtual"><scope>wxFont</scope><name>GetPointSize</name></member>
       <member refid="classwx_object_1aabdb4fc957226544a8408167844e4f42" prot="public" virt="non-virtual"><scope>wxFont</scope><name>GetRefData</name></member>
+      <member refid="classwx_font_1ad0a60827b6f2f7df8ab2934c71e4057b" prot="public" virt="virtual"><scope>wxFont</scope><name>GetStrikethrough</name></member>
       <member refid="classwx_font_1a443add23b2aa92835412c884966bb5de" prot="public" virt="virtual"><scope>wxFont</scope><name>GetStyle</name></member>
       <member refid="classwx_font_1a6ab8532e2022ddeeed6440bb3fc021e8" prot="public" virt="virtual"><scope>wxFont</scope><name>GetUnderlined</name></member>
       <member refid="classwx_font_1a31a59466126665b0ff2b59fabff99258" prot="public" virt="virtual"><scope>wxFont</scope><name>GetWeight</name></member>
@@ -1335,6 +1442,7 @@ If the specified encoding isn&apos;t available, no font is created (see also <re
       <member refid="classwx_font_1a656641cb094eaa574be999ca791ced96" prot="public" virt="non-virtual"><scope>wxFont</scope><name>MakeItalic</name></member>
       <member refid="classwx_font_1aae5977e23525729e23d3ac4dbc70c365" prot="public" virt="non-virtual"><scope>wxFont</scope><name>MakeLarger</name></member>
       <member refid="classwx_font_1a119d3c74838fe89bc4f36ebd698421a2" prot="public" virt="non-virtual"><scope>wxFont</scope><name>MakeSmaller</name></member>
+      <member refid="classwx_font_1a39b684e80dcc0e05e4aee6c3c1daa0a8" prot="public" virt="non-virtual"><scope>wxFont</scope><name>MakeStrikethrough</name></member>
       <member refid="classwx_font_1a6b44689f563aebc1f55e8fd09ba4315f" prot="public" virt="non-virtual"><scope>wxFont</scope><name>MakeUnderlined</name></member>
       <member refid="classwx_font_1a9d2f00bf5f89780396b8e95aec377fe8" prot="public" virt="non-virtual"><scope>wxFont</scope><name>New</name></member>
       <member refid="classwx_font_1aa3a2b32a848f28d1002cee6fef00919e" prot="public" virt="non-virtual"><scope>wxFont</scope><name>New</name></member>
@@ -1360,12 +1468,14 @@ If the specified encoding isn&apos;t available, no font is created (see also <re
       <member refid="classwx_font_1a94f364735647de9ddd065dfa992ad4e4" prot="public" virt="virtual"><scope>wxFont</scope><name>SetPixelSize</name></member>
       <member refid="classwx_font_1a32d54af99749f180991c4cdab9f9a7dd" prot="public" virt="virtual"><scope>wxFont</scope><name>SetPointSize</name></member>
       <member refid="classwx_object_1afab780710f2adc1bb33310e27590140b" prot="public" virt="non-virtual"><scope>wxFont</scope><name>SetRefData</name></member>
+      <member refid="classwx_font_1a074f14f7bea2d493d7ec14a65f76a3b7" prot="public" virt="virtual"><scope>wxFont</scope><name>SetStrikethrough</name></member>
       <member refid="classwx_font_1a1e2199aae978662fc4ceaa79be8a70b7" prot="public" virt="virtual"><scope>wxFont</scope><name>SetStyle</name></member>
       <member refid="classwx_font_1a8954f2ebca7091d8f06b9db733884932" prot="public" virt="non-virtual"><scope>wxFont</scope><name>SetSymbolicSize</name></member>
       <member refid="classwx_font_1a62d30098660ab88cae1bb157dba92fc2" prot="public" virt="non-virtual"><scope>wxFont</scope><name>SetSymbolicSizeRelativeTo</name></member>
       <member refid="classwx_font_1a2a8a3a71090bfa4ed957dfd1ffcc524c" prot="public" virt="virtual"><scope>wxFont</scope><name>SetUnderlined</name></member>
       <member refid="classwx_font_1a63c3c48f10dd64bfdca812f4526cb7eb" prot="public" virt="virtual"><scope>wxFont</scope><name>SetWeight</name></member>
       <member refid="classwx_font_1a7661691f4f1b5e93d923eaa41681c551" prot="public" virt="non-virtual"><scope>wxFont</scope><name>Smaller</name></member>
+      <member refid="classwx_font_1a800aaf74c6686eb30a8b614550b4c7f4" prot="public" virt="non-virtual"><scope>wxFont</scope><name>Strikethrough</name></member>
       <member refid="classwx_font_1ab618e94bface067515b6a88ecb206827" prot="public" virt="non-virtual"><scope>wxFont</scope><name>Underlined</name></member>
       <member refid="classwx_object_1af51efc6b1ae632fc7f0cd7ebbce9fa36" prot="public" virt="non-virtual"><scope>wxFont</scope><name>UnRef</name></member>
       <member refid="classwx_object_1a74b40e42d19a4b9e9bec0b57d62a5725" prot="public" virt="non-virtual"><scope>wxFont</scope><name>UnShare</name></member>
@@ -1373,6 +1483,7 @@ If the specified encoding isn&apos;t available, no font is created (see also <re
       <member refid="classwx_font_1ad77ff719ea7cf27f32d1de7e14dc76c1" prot="public" virt="non-virtual"><scope>wxFont</scope><name>wxFont</name></member>
       <member refid="classwx_font_1a76044c9609bf8300e2c77a908a417544" prot="public" virt="non-virtual"><scope>wxFont</scope><name>wxFont</name></member>
       <member refid="classwx_font_1a713d2958dea28fbfd9a4ad03b4627cfb" prot="public" virt="non-virtual"><scope>wxFont</scope><name>wxFont</name></member>
+      <member refid="classwx_font_1aeea129b8160e21d0207ab0c0044cf3e4" prot="public" virt="non-virtual"><scope>wxFont</scope><name>wxFont</name></member>
       <member refid="classwx_font_1a9d43775aaeafc628064b0e1b63730567" prot="public" virt="non-virtual"><scope>wxFont</scope><name>wxFont</name></member>
       <member refid="classwx_font_1a17d85e1cac77bf812182915f3a017976" prot="public" virt="non-virtual"><scope>wxFont</scope><name>wxFont</name></member>
       <member refid="classwx_g_d_i_object_1a20ac442e0d24cf6250d7bd45f0d968d5" prot="public" virt="non-virtual"><scope>wxFont</scope><name>wxGDIObject</name></member>

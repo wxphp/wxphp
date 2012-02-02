@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="webview_8h" kind="file">
     <compoundname>webview.h</compoundname>
     <innerclass refid="classwx_web_view_history_item" prot="public">wxWebViewHistoryItem</innerclass>
@@ -81,9 +81,9 @@
         <enumvalue id="webview_8h_1a3cbf5a9a4918c1d0607ece28f5d99a7aa5afaf5ee01e7f0c060b672851738004a" prot="public">
           <name>wxWEB_NAV_ERR_CONNECTION</name>
           <briefdescription>
-<para>Connection error (timeout, etc. </para>          </briefdescription>
+<para>Connection error (timeout, etc.) </para>          </briefdescription>
           <detaileddescription>
-<para>) </para>          </detaileddescription>
+          </detaileddescription>
         </enumvalue>
         <enumvalue id="webview_8h_1a3cbf5a9a4918c1d0607ece28f5d99a7aad36efa5dac583d8d2ea5af1803b18d1b" prot="public">
           <name>wxWEB_NAV_ERR_CERTIFICATE</name>

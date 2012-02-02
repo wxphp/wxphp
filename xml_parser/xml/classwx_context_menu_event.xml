@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_context_menu_event" kind="class" prot="public">
     <compoundname>wxContextMenuEvent</compoundname>
     <basecompoundref refid="classwx_command_event" prot="public" virt="non-virtual">wxCommandEvent</basecompoundref>
@@ -31,7 +31,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2854"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2875"/>
       </memberdef>
       <memberdef kind="function" id="classwx_context_menu_event_1a291e3437b4bf913128ea14e511d161cb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_point" kindref="compound">wxPoint</ref> &amp;</type>
@@ -44,7 +44,7 @@
 <para>Use <ref refid="classwx_window_1a65531bbc52f9508b0e31a9c08c97bd31" kindref="member">wxWindow::ScreenToClient</ref> to convert to client coordinates.</para><para>You can also omit a position from <ref refid="classwx_window_1a8f715d238cf74a845488b0e2645e98df" kindref="member">wxWindow::PopupMenu</ref> in order to use the current mouse pointer position.</para><para>If the event originated from a keyboard event, the value returned from this function will be wxDefaultPosition. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2866"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2887"/>
       </memberdef>
       <memberdef kind="function" id="classwx_context_menu_event_1a24d0fdf2c831940a85b4e80e2c5d15a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -61,7 +61,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2871"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2892"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -72,33 +72,9 @@
 <listitem><para>EVT_CONTEXT_MENU(func): A right click (or other context menu command depending on platform) has been detected. </para></listitem>
 </itemizedlist>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="classwx_command_event" kindref="compound">wxCommandEvent</ref>, <ref refid="overview__events" kindref="compound">Events and Event Handling</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="classwx_command_event" kindref="compound">wxCommandEvent</ref>, <ref refid="overview_events" kindref="compound">Events and Event Handling</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="5076">
-        <label>wxContextMenuEvent</label>
-        <link refid="classwx_context_menu_event"/>
-        <childnode refid="5077" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="5079">
-        <label>wxObject</label>
-        <link refid="classwx_object"/>
-      </node>
-      <node id="5077">
-        <label>wxCommandEvent</label>
-        <link refid="classwx_command_event"/>
-        <childnode refid="5078" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="5078">
-        <label>wxEvent</label>
-        <link refid="classwx_event"/>
-        <childnode refid="5079" relation="public-inheritance">
-        </childnode>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
       <node id="5080">
         <label>wxContextMenuEvent</label>
         <link refid="classwx_context_menu_event"/>
@@ -108,9 +84,6 @@
       <node id="5083">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="5084" relation="usage">
-          <edgelabel>m_refData</edgelabel>
-        </childnode>
       </node>
       <node id="5081">
         <label>wxCommandEvent</label>
@@ -124,12 +97,39 @@
         <childnode refid="5083" relation="public-inheritance">
         </childnode>
       </node>
+    </inheritancegraph>
+    <collaborationgraph>
       <node id="5084">
+        <label>wxContextMenuEvent</label>
+        <link refid="classwx_context_menu_event"/>
+        <childnode refid="5085" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5087">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="5088" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="5085">
+        <label>wxCommandEvent</label>
+        <link refid="classwx_command_event"/>
+        <childnode refid="5086" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5086">
+        <label>wxEvent</label>
+        <link refid="classwx_event"/>
+        <childnode refid="5087" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5088">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2848" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="2847" bodyend="2872"/>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2869" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="2868" bodyend="2893"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxContextMenuEvent</scope><name>AllocExclusive</name></member>
       <member refid="classwx_event_1a26878097a702e8d0368da150125d4158" prot="public" virt="pure-virtual"><scope>wxContextMenuEvent</scope><name>Clone</name></member>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_dir" kind="class" prot="public">
     <compoundname>wxDir</compoundname>
     <includes local="no">wx/dir.h</includes>
@@ -353,7 +353,7 @@
     <briefdescription>
 <para><ref refid="classwx_dir" kindref="compound">wxDir</ref> is a portable equivalent of Unix open/read/closedir functions which allow enumerating of the files in a directory. </para>    </briefdescription>
     <detaileddescription>
-<para><ref refid="classwx_dir" kindref="compound">wxDir</ref> allows to enumerate files as well as directories.</para><para><ref refid="classwx_dir" kindref="compound">wxDir</ref> also provides a flexible way to enumerate files recursively using <ref refid="classwx_dir_1a7621f55a0dff2a394e6da1a61e427df1" kindref="member">Traverse()</ref> or a simpler <ref refid="classwx_dir_1adf11b6104db3ff8c17902328d0ada848" kindref="member">GetAllFiles()</ref> function.</para><para>Example of use:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_dir" kindref="compound" tooltip="wxDir is a portable equivalent of Unix open/read/closedir functions which allow enumerating...">wxDir</ref><sp/>dir(<ref refid="group__group__funcmacro__file_1gab0cc6ceca11d23f61cba353c01eeac06" kindref="member" tooltip="Returns a string containing the current (or working) directory.">wxGetCwd</ref>());</highlight></codeline>
+<para><ref refid="classwx_dir" kindref="compound">wxDir</ref> allows to enumerate files as well as directories.</para><para><ref refid="classwx_dir" kindref="compound">wxDir</ref> also provides a flexible way to enumerate files recursively using <ref refid="classwx_dir_1a7621f55a0dff2a394e6da1a61e427df1" kindref="member">Traverse()</ref> or a simpler <ref refid="classwx_dir_1adf11b6104db3ff8c17902328d0ada848" kindref="member">GetAllFiles()</ref> function.</para><para>Example of use:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_dir" kindref="compound" tooltip="wxDir is a portable equivalent of Unix open/read/closedir functions which allow enumerating of the fi...">wxDir</ref><sp/>dir(<ref refid="group__group__funcmacro__file_1gab0cc6ceca11d23f61cba353c01eeac06" kindref="member" tooltip="Returns a string containing the current (or working) directory.">wxGetCwd</ref>());</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>!dir.IsOpened()<sp/>)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
@@ -364,17 +364,17 @@
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>puts(</highlight><highlight class="stringliteral">&quot;Enumerating<sp/>object<sp/>files<sp/>in<sp/>current<sp/>directory:&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change...">wxString</ref><sp/>filename;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change was actually the m...">wxString</ref><sp/>filename;</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>cont<sp/>=<sp/>dir.GetFirst(&amp;filename,<sp/>filespec,<sp/>flags);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(<sp/>cont<sp/>)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;%s\n&quot;</highlight><highlight class="normal">,<sp/>filename.<ref refid="classwx_string_1a6418ec90c6d4ffe0b05702be1b35df4f" kindref="member" tooltip="Returns a lightweight intermediate class which is in turn implicitly convertible...">c_str</ref>());</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;%s\n&quot;</highlight><highlight class="normal">,<sp/>filename.<ref refid="classwx_string_1a6418ec90c6d4ffe0b05702be1b35df4f" kindref="member" tooltip="Returns a lightweight intermediate class which is in turn implicitly convertible to both const char* ...">c_str</ref>());</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cont<sp/>=<sp/>dir.GetNext(&amp;filename);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 </programlisting></para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__file" kindref="compound">File Handling</ref> </para>    </detaileddescription>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__file" kindref="compound">File Handling</ref> </para>    </detaileddescription>
     <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dir.h" line="151" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dir.h" bodystart="150" bodyend="316"/>
     <listofallmembers>
       <member refid="classwx_dir_1ae03564ab50b6b83947f34477d89f0866" prot="public" virt="non-virtual"><scope>wxDir</scope><name>Exists</name></member>

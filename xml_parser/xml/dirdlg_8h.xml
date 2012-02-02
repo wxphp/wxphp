@@ -1,8 +1,21 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="dirdlg_8h" kind="file">
     <compoundname>dirdlg.h</compoundname>
     <innerclass refid="classwx_dir_dialog" prot="public">wxDirDialog</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="dirdlg_8h_1a6a3be41eb502e07bc949f454de2e4ac1" prot="public" static="no">
+        <name>wxDD_DEFAULT_STYLE</name>
+        <initializer>(wxDEFAULT_DIALOG_STYLE|wxRESIZE_BORDER)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dirdlg.h" line="9" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dirdlg.h" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
       <sectiondef kind="func">
       <memberdef kind="function" id="group__group__funcmacro__dialog_1ga0be8769b6d082b6f11102429f879dfd3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -37,15 +50,15 @@
         <briefdescription>
 <para>Pops up a directory selector dialog. </para>        </briefdescription>
         <detaileddescription>
-<para>The arguments have the same meaning as those of <ref refid="classwx_dir_dialog_1a72322832d7830dd637fb4daa541c267a" kindref="member">wxDirDialog::wxDirDialog()</ref>. The message is displayed at the top, and the default_path, if specified, is set as the initial selection.</para><para>The application must check for an empty return value (if the user pressed Cancel). For example:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change...">wxString</ref>&amp;<sp/>dir<sp/>=<sp/><ref refid="group__group__funcmacro__dialog_1ga0be8769b6d082b6f11102429f879dfd3" kindref="member" tooltip="Pops up a directory selector dialog.">wxDirSelector</ref>(</highlight><highlight class="stringliteral">&quot;Choose<sp/>a<sp/>folder&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<para>The arguments have the same meaning as those of <ref refid="classwx_dir_dialog_1a72322832d7830dd637fb4daa541c267a" kindref="member">wxDirDialog::wxDirDialog()</ref>. The message is displayed at the top, and the default_path, if specified, is set as the initial selection.</para><para>The application must check for an empty return value (if the user pressed Cancel). For example:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change was actually the m...">wxString</ref>&amp;<sp/>dir<sp/>=<sp/><ref refid="group__group__funcmacro__dialog_1ga0be8769b6d082b6f11102429f879dfd3" kindref="member" tooltip="Pops up a directory selector dialog.">wxDirSelector</ref>(</highlight><highlight class="stringliteral">&quot;Choose<sp/>a<sp/>folder&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>!dir.<ref refid="classwx_string_1ac6ae24a8ccc6e4e671f972948fca437c" kindref="member">empty</ref>()<sp/>)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-</programlisting></para><para>Include file: <verbatim>#include &lt;wx/dirdlg.h&gt; </verbatim> </para>        </detaileddescription>
+</programlisting></para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/dirdlg.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dirdlg.h" line="140"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dirdlg.h" line="142"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

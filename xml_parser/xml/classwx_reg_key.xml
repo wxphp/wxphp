@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_reg_key" kind="class" prot="public">
     <compoundname>wxRegKey</compoundname>
     <includes local="no">wx/msw/registry.h</includes>
@@ -61,7 +61,7 @@
         <enumvalue id="classwx_reg_key_1a1dcc4de4d1cc4370399e8813cb6abd5baca3b3b4b6e2b20de9d9e576f34ae315d" prot="public">
           <name>HKPD</name>
           <briefdescription>
-<para>HKEY_PERFORMANCE_DATA (Windows NT and 2K only). </para>          </briefdescription>
+<para>HKEY_PERFORMANCE_DATA (Windows NT and 2K only) </para>          </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
@@ -75,7 +75,7 @@
         <enumvalue id="classwx_reg_key_1a1dcc4de4d1cc4370399e8813cb6abd5bab3ed4c9e7c3ed7446a7eaf013a14081f" prot="public">
           <name>HKDD</name>
           <briefdescription>
-<para>HKEY_DYN_DATA (Windows 95 and 98 only). </para>          </briefdescription>
+<para>HKEY_DYN_DATA (Windows 95 and 98 only) </para>          </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
@@ -113,7 +113,7 @@
         <enumvalue id="classwx_reg_key_1a50c331bab4eb972c283eeaf59fc448aeacc5cd22316a3273670261ed85bf9d72e" prot="public">
           <name>Type_Expand_String</name>
           <briefdescription>
-<para>Unicode null-terminated string (with environment variable references). </para>          </briefdescription>
+<para>Unicode null-terminated string (with environment variable references) </para>          </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
@@ -148,7 +148,7 @@
         <enumvalue id="classwx_reg_key_1a50c331bab4eb972c283eeaf59fc448aeacc7e8383cc247869748a32caa8955f6c" prot="public">
           <name>Type_Link</name>
           <briefdescription>
-<para>Symbolic Link (Unicode). </para>          </briefdescription>
+<para>Symbolic Link (Unicode) </para>          </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
@@ -1137,9 +1137,9 @@ After creating a key, it can hold a value. The values can be:</para><para><itemi
 <listitem><para>Multi String Value </para></listitem>
 <listitem><para>Expandable String Value</para></listitem>
 </itemizedlist>
-Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page__port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor> </para><para><bold>Example:</bold> </para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>This<sp/>assume<sp/>that<sp/>the<sp/>key<sp/>already<sp/>exists,<sp/>use<sp/>HasSubKey()<sp/>to<sp/>check</highlight><highlight class="normal"></highlight></codeline>
+Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page_port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor> </para><para><bold>Example:</bold> </para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>This<sp/>assume<sp/>that<sp/>the<sp/>key<sp/>already<sp/>exists,<sp/>use<sp/>HasSubKey()<sp/>to<sp/>check</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>for<sp/>the<sp/>key<sp/>existence<sp/>if<sp/>necessary.</highlight><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_reg_key" kindref="compound" tooltip="wxRegKey is a class representing the Windows registry (it is only available under...">wxRegKey</ref><sp/>key(<ref refid="classwx_reg_key_1a1dcc4de4d1cc4370399e8813cb6abd5ba992c16a969ad045c3fd146853d31ffe0" kindref="member" tooltip="HKEY_LOCAL_MACHINE.">wxRegKey::HKLM</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Software\\MyKey&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_reg_key" kindref="compound" tooltip="wxRegKey is a class representing the Windows registry (it is only available under Windows)...">wxRegKey</ref><sp/>key(<ref refid="classwx_reg_key_1a1dcc4de4d1cc4370399e8813cb6abd5ba992c16a969ad045c3fd146853d31ffe0" kindref="member" tooltip="HKEY_LOCAL_MACHINE.">wxRegKey::HKLM</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Software\\MyKey&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>a<sp/>new<sp/>value<sp/>&quot;MyValue&quot;<sp/>and<sp/>set<sp/>it<sp/>to<sp/>12.</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>key.SetValue(</highlight><highlight class="stringliteral">&quot;MyValue&quot;</highlight><highlight class="normal">,<sp/>12);</highlight></codeline>
@@ -1147,13 +1147,13 @@ Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Read<sp/>the<sp/>value<sp/>back.</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>value;</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>key.QueryValue(</highlight><highlight class="stringliteral">&quot;MyValue&quot;</highlight><highlight class="normal">,<sp/>&amp;value);</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__dialog_1gaf8a6b7e1e34eae82d3d75e3721298b26" kindref="member" tooltip="Show a general purpose message dialog.">wxMessageBox</ref>(<ref refid="classwx_string_1addd9ccfa3ae2b7ab2d66bcbf034d0be0" kindref="member" tooltip="This static function returns the string containing the result of calling Printf()...">wxString::Format</ref>(</highlight><highlight class="stringliteral">&quot;%d&quot;</highlight><highlight class="normal">,<sp/>value),<sp/></highlight><highlight class="stringliteral">&quot;Registry<sp/>Value&quot;</highlight><highlight class="normal">,<sp/><ref refid="defs_8h_1a9c40266b61a27f0124a69a699753889a" kindref="member">wxOK</ref>);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__dialog_1gaf8a6b7e1e34eae82d3d75e3721298b26" kindref="member" tooltip="Show a general purpose message dialog.">wxMessageBox</ref>(<ref refid="classwx_string_1addd9ccfa3ae2b7ab2d66bcbf034d0be0" kindref="member" tooltip="This static function returns the string containing the result of calling Printf() with the passed par...">wxString::Format</ref>(</highlight><highlight class="stringliteral">&quot;%d&quot;</highlight><highlight class="normal">,<sp/>value),<sp/></highlight><highlight class="stringliteral">&quot;Registry<sp/>Value&quot;</highlight><highlight class="normal">,<sp/><ref refid="defs_8h_1a9c40266b61a27f0124a69a699753889a" kindref="member">wxOK</ref>);</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>the<sp/>number<sp/>of<sp/>subkeys<sp/>and<sp/>enumerate<sp/>them.</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>subkeys;</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>key.GetKeyInfo(&amp;subkeys,<sp/>NULL,<sp/>NULL,<sp/>NULL);</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change...">wxString</ref><sp/>key_name;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change was actually the m...">wxString</ref><sp/>key_name;</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>key.GetFirstKey(key_name,<sp/>1);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>subkeys;<sp/>i++)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
@@ -1161,7 +1161,7 @@ Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>key.GetNextKey(key_name,<sp/>1);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 </programlisting></para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__cfg" kindref="compound">Application and System configuration</ref> </para>    </detaileddescription>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__cfg" kindref="compound">Application and System configuration</ref> </para>    </detaileddescription>
     <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/registry.h" line="68" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/registry.h" bodystart="67" bodyend="412"/>
     <listofallmembers>
       <member refid="classwx_reg_key_1a10e685bc8b2e08cde20cb56f9623182d" prot="public" virt="non-virtual"><scope>wxRegKey</scope><name>AccessMode</name></member>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_window_modal_dialog_event" kind="class" prot="public">
     <compoundname>wxWindowModalDialogEvent</compoundname>
     <basecompoundref refid="classwx_command_event" prot="public" virt="non-virtual">wxCommandEvent</basecompoundref>
@@ -63,7 +63,7 @@
         <briefdescription>
 <para>Returns a copy of the event. </para>        </briefdescription>
         <detaileddescription>
-<para>Any event that is posted to the wxWidgets event system for later action (via <ref refid="classwx_evt_handler_1a0737c6d2cbcd5ded4b1ecdd53ed0def3" kindref="member">wxEvtHandler::AddPendingEvent</ref>, <ref refid="classwx_evt_handler_1acffd03bf407a856166ea71ef0318b59a" kindref="member">wxEvtHandler::QueueEvent</ref> or <ref refid="group__group__funcmacro__events_1ga0cf60a1ad3a5f1e659f7ae591570f58d" kindref="member">wxPostEvent()</ref>) must implement this method.</para><para>All wxWidgets events fully implement this method, but any derived events implemented by the user should also implement this method just in case they (or some event derived from them) are ever posted.</para><para>All wxWidgets events implement a copy constructor, so the easiest way of implementing the Clone function is to implement a copy constructor for a new event (call it MyEvent) and then define the Clone function like this:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_event" kindref="compound" tooltip="An event is a structure holding information about an event passed to a callback or...">wxEvent</ref><sp/>*<ref refid="classwx_window_modal_dialog_event_1a091a8dafde1e11074460401426a9a7ce" kindref="member" tooltip="Returns a copy of the event.">Clone</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>MyEvent(*</highlight><highlight class="keyword">this</highlight><highlight class="normal">);<sp/>}</highlight></codeline>
+<para>Any event that is posted to the wxWidgets event system for later action (via <ref refid="classwx_evt_handler_1a0737c6d2cbcd5ded4b1ecdd53ed0def3" kindref="member">wxEvtHandler::AddPendingEvent</ref>, <ref refid="classwx_evt_handler_1acffd03bf407a856166ea71ef0318b59a" kindref="member">wxEvtHandler::QueueEvent</ref> or <ref refid="group__group__funcmacro__events_1ga0cf60a1ad3a5f1e659f7ae591570f58d" kindref="member">wxPostEvent()</ref>) must implement this method.</para><para>All wxWidgets events fully implement this method, but any derived events implemented by the user should also implement this method just in case they (or some event derived from them) are ever posted.</para><para>All wxWidgets events implement a copy constructor, so the easiest way of implementing the Clone function is to implement a copy constructor for a new event (call it MyEvent) and then define the Clone function like this:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_event" kindref="compound" tooltip="An event is a structure holding information about an event passed to a callback or member function...">wxEvent</ref><sp/>*<ref refid="classwx_window_modal_dialog_event_1a091a8dafde1e11074460401426a9a7ce" kindref="member" tooltip="Returns a copy of the event.">Clone</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>MyEvent(*</highlight><highlight class="keyword">this</highlight><highlight class="normal">);<sp/>}</highlight></codeline>
 </programlisting> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -75,56 +75,56 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="11581">
+      <node id="11642">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="11579">
+      <node id="11640">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="11580" relation="public-inheritance">
+        <childnode refid="11641" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11578">
+      <node id="11639">
         <label>wxWindowModalDialogEvent</label>
         <link refid="classwx_window_modal_dialog_event"/>
-        <childnode refid="11579" relation="public-inheritance">
+        <childnode refid="11640" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11580">
+      <node id="11641">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="11581" relation="public-inheritance">
+        <childnode refid="11642" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="11585">
+      <node id="11646">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="11586" relation="usage">
+        <childnode refid="11647" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="11583">
+      <node id="11644">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="11584" relation="public-inheritance">
+        <childnode refid="11645" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11582">
+      <node id="11643">
         <label>wxWindowModalDialogEvent</label>
         <link refid="classwx_window_modal_dialog_event"/>
-        <childnode refid="11583" relation="public-inheritance">
+        <childnode refid="11644" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11584">
+      <node id="11645">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="11585" relation="public-inheritance">
+        <childnode refid="11646" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11586">
+      <node id="11647">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

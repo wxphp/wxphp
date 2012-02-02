@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_app_console" kind="class" prot="public">
     <compoundname>wxAppConsole</compoundname>
     <basecompoundref refid="classwx_evt_handler" prot="public" virt="non-virtual">wxEvtHandler</basecompoundref>
@@ -8,7 +8,7 @@
     <includes local="no">wx/app.h</includes>
       <sectiondef kind="user-defined">
       <header>Event-handling</header>
-      <description><para><anchor id="_1amgrpbf9fecadf84bfa30f3a9dcc31697e56c"/>Note that you should look at wxEvtLoopBase for more event-processing documentation. </para></description>
+      <description><para>Note that you should look at wxEvtLoopBase for more event-processing documentation. </para></description>
       <memberdef kind="function" id="classwx_app_console_1a14523f3e9ab468c19c697c65484b36db" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>int</type>
         <definition>virtual int wxAppConsole::MainLoop</definition>
@@ -108,7 +108,7 @@
       </sectiondef>
       <sectiondef kind="user-defined">
       <header>Pending events</header>
-      <description><para><anchor id="_1amgrp59d45f70ffc02e64ee6ae514ae8d3ce1"/>Pending events are handled by <ref refid="classwx_app_console" kindref="compound">wxAppConsole</ref> rather than <ref refid="classwx_event_loop_base" kindref="compound">wxEventLoopBase</ref> to allow queuing of events even when there&apos;s no event loop (e.g.</para><para>in <ref refid="classwx_app_console_1a99953775a2fd83fa2456e390779afe15" kindref="member">wxAppConsole::OnInit</ref>). </para></description>
+      <description><para>Pending events are handled by <ref refid="classwx_app_console" kindref="compound">wxAppConsole</ref> rather than <ref refid="classwx_event_loop_base" kindref="compound">wxEventLoopBase</ref> to allow queuing of events even when there&apos;s no event loop (e.g.</para><para>in <ref refid="classwx_app_console_1a99953775a2fd83fa2456e390779afe15" kindref="member">wxAppConsole::OnInit</ref>). </para></description>
       <memberdef kind="function" id="classwx_app_console_1ab62db8e6265c1e841220c47b9778ab7e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
         <definition>virtual void wxAppConsole::ProcessPendingEvents</definition>
@@ -179,7 +179,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_app_console_1adc46f57d8691bc0098830522f9de9d90" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void wxAppConsole::ScheduleForDestruction</definition>
@@ -217,7 +216,6 @@
       </sectiondef>
       <sectiondef kind="user-defined">
       <header>Callbacks for application-wide &quot;events&quot;</header>
-      <description><para><anchor id="_1amgrp4ba7046725b8d11e72d2c0c82208268b"/> </para></description>
       <memberdef kind="function" id="classwx_app_console_1a5f91d78bbfe3c9ef28e8e3c8fdf29989" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
         <definition>virtual void wxAppConsole::OnAssertFailure</definition>
@@ -476,7 +474,6 @@
       </sectiondef>
       <sectiondef kind="user-defined">
       <header>Application informations</header>
-      <description><para><anchor id="_1amgrp85ff99f21ccd05470c599503208e6caa"/> </para></description>
       <memberdef kind="function" id="classwx_app_console_1a83aa5fdf1e636dc441b62ceb95c8bf5a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
         <definition>wxString wxAppConsole::GetAppDisplayName</definition>
@@ -791,77 +788,77 @@
 <listitem><para>implement Apple-specific event handlers (see wxAppConsole::MacXXX functions)</para></listitem>
 </itemizedlist>
 You should use the macro <ref refid="group__group__funcmacro__rtti_1ga967aafaa261481fe2d2e1cf599e3e003" kindref="member">wxIMPLEMENT_APP(appClass)</ref> in your application implementation file to tell wxWidgets how to create an instance of your application class.</para><para>Use <ref refid="group__group__funcmacro__rtti_1ga1523a2d553dea288d66cd35e8a0ffd5c" kindref="member">wxDECLARE_APP(appClass)</ref> in a header file if you want the <ref refid="group__group__funcmacro__appinitterm_1gac387a69e740a149f9888e4992a3a4c6c" kindref="member">wxGetApp()</ref> function (which returns a reference to your application object) to be visible to other files.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__appmanagement" kindref="compound">Application and Process Management</ref></para><para><simplesect kind="see"><para><ref refid="overview__app" kindref="compound">wxApp Overview</ref>, <ref refid="classwx_app" kindref="compound">wxApp</ref>, <ref refid="classwx_app_traits" kindref="compound">wxAppTraits</ref>, <ref refid="classwx_event_loop_base" kindref="compound">wxEventLoopBase</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__appmanagement" kindref="compound">Application and Process Management</ref></para><para><simplesect kind="see"><para><ref refid="overview_app" kindref="compound">wxApp Overview</ref>, <ref refid="classwx_app" kindref="compound">wxApp</ref>, <ref refid="classwx_app_traits" kindref="compound">wxAppTraits</ref>, <ref refid="classwx_event_loop_base" kindref="compound">wxEventLoopBase</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="4290">
+      <node id="4294">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="4289">
+      <node id="4293">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="4290" relation="public-inheritance">
+        <childnode refid="4294" relation="public-inheritance">
         </childnode>
-        <childnode refid="4291" relation="public-inheritance">
+        <childnode refid="4295" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4291">
+      <node id="4295">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="4293">
+      <node id="4297">
         <label>wxApp</label>
         <link refid="classwx_app"/>
-        <childnode refid="4288" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4288">
-        <label>wxAppConsole</label>
-        <link refid="classwx_app_console"/>
-        <childnode refid="4289" relation="public-inheritance">
-        </childnode>
         <childnode refid="4292" relation="public-inheritance">
         </childnode>
       </node>
       <node id="4292">
+        <label>wxAppConsole</label>
+        <link refid="classwx_app_console"/>
+        <childnode refid="4293" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4296" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4296">
         <label>wxEventFilter</label>
         <link refid="classwx_event_filter"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="4296">
+      <node id="4300">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="4297" relation="usage">
+        <childnode refid="4301" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="4295">
+      <node id="4299">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="4296" relation="public-inheritance">
+        <childnode refid="4300" relation="public-inheritance">
         </childnode>
-        <childnode refid="4298" relation="public-inheritance">
+        <childnode refid="4302" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4298">
+      <node id="4302">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="4294">
+      <node id="4298">
         <label>wxAppConsole</label>
         <link refid="classwx_app_console"/>
-        <childnode refid="4295" relation="public-inheritance">
-        </childnode>
         <childnode refid="4299" relation="public-inheritance">
         </childnode>
+        <childnode refid="4303" relation="public-inheritance">
+        </childnode>
       </node>
-      <node id="4299">
+      <node id="4303">
         <label>wxEventFilter</label>
         <link refid="classwx_event_filter"/>
       </node>
-      <node id="4297">
+      <node id="4301">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
@@ -885,9 +882,9 @@ You should use the macro <ref refid="group__group__funcmacro__rtti_1ga967aafaa26
       <member refid="classwx_evt_handler_1a13061cf0ed01ac10a804ac057ef4bdbc" prot="public" virt="non-virtual"><scope>wxAppConsole</scope><name>Disconnect</name></member>
       <member refid="classwx_evt_handler_1a2f171e19444b9c4034c5e11f24fa9c91" prot="public" virt="non-virtual"><scope>wxAppConsole</scope><name>Disconnect</name></member>
       <member refid="classwx_evt_handler_1a16a6f823853e4b74b43dd9a2cf3abee6" prot="public" virt="non-virtual"><scope>wxAppConsole</scope><name>Disconnect</name></member>
-      <member refid="classwx_event_filter_1a24ff5a104b4bff9fc8f26752be22d8f9aa2b35768d0be474ac339b9162c0db85a" prot="public" virt="non-virtual"><scope>wxAppConsole</scope><name>Event_Ignore</name></member>
-      <member refid="classwx_event_filter_1a24ff5a104b4bff9fc8f26752be22d8f9a6d508074572ecf366e3c3b537bcba776" prot="public" virt="non-virtual"><scope>wxAppConsole</scope><name>Event_Processed</name></member>
-      <member refid="classwx_event_filter_1a24ff5a104b4bff9fc8f26752be22d8f9ae3620010ea8dc45c4547052a75fe51da" prot="public" virt="non-virtual"><scope>wxAppConsole</scope><name>Event_Skip</name></member>
+      <member refid="classwx_event_filter_1a35d6b67209fb2293e927cf19f95e7da1aa2b35768d0be474ac339b9162c0db85a" prot="public" virt="non-virtual"><scope>wxAppConsole</scope><name>Event_Ignore</name></member>
+      <member refid="classwx_event_filter_1a35d6b67209fb2293e927cf19f95e7da1a6d508074572ecf366e3c3b537bcba776" prot="public" virt="non-virtual"><scope>wxAppConsole</scope><name>Event_Processed</name></member>
+      <member refid="classwx_event_filter_1a35d6b67209fb2293e927cf19f95e7da1ae3620010ea8dc45c4547052a75fe51da" prot="public" virt="non-virtual"><scope>wxAppConsole</scope><name>Event_Skip</name></member>
       <member refid="classwx_app_console_1ad0f1e724efa8ae1e94cde655c74c85dc" prot="public" virt="virtual"><scope>wxAppConsole</scope><name>ExitMainLoop</name></member>
       <member refid="classwx_app_console_1ada7ab606e014a10d46e4b3c6f602e20c" prot="public" virt="virtual"><scope>wxAppConsole</scope><name>FilterEvent</name></member>
       <member refid="classwx_app_console_1a83aa5fdf1e636dc441b62ceb95c8bf5a" prot="public" virt="non-virtual"><scope>wxAppConsole</scope><name>GetAppDisplayName</name></member>

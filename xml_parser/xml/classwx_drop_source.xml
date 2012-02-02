@@ -1,13 +1,13 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_drop_source" kind="class" prot="public">
     <compoundname>wxDropSource</compoundname>
     <includes local="no">wx/dnd.h</includes>
       <sectiondef kind="public-func">
-      <memberdef kind="function" id="classwx_drop_source_1a06dbcfe97a0615d59c97d0be7d11f6e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classwx_drop_source_1a18ebb798180a16972f3d5157fdcdac20" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
         <definition>wxDropSource::wxDropSource</definition>
-        <argsstring>(wxWindow *win=NULL, const wxIcon &amp;iconCopy=wxNullIcon, const wxIcon &amp;iconMove=wxNullIcon, const wxIcon &amp;iconNone=wxNullIcon)</argsstring>
+        <argsstring>(wxWindow *win=NULL, const wxCursor &amp;iconCopy=wxNullIcon, const wxCursor &amp;iconMove=wxNullIcon, const wxCursor &amp;iconNone=wxNullIcon)</argsstring>
         <name>wxDropSource</name>
         <param>
           <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
@@ -15,24 +15,24 @@
           <defval>NULL</defval>
         </param>
         <param>
-          <type>const <ref refid="classwx_icon" kindref="compound">wxIcon</ref> &amp;</type>
+          <type>const <ref refid="classwx_cursor" kindref="compound">wxCursor</ref> &amp;</type>
           <declname>iconCopy</declname>
           <defval><ref refid="icon_8h_1a953854798a8dfd400777318358dad5b6" kindref="member">wxNullIcon</ref></defval>
         </param>
         <param>
-          <type>const <ref refid="classwx_icon" kindref="compound">wxIcon</ref> &amp;</type>
+          <type>const <ref refid="classwx_cursor" kindref="compound">wxCursor</ref> &amp;</type>
           <declname>iconMove</declname>
           <defval><ref refid="icon_8h_1a953854798a8dfd400777318358dad5b6" kindref="member">wxNullIcon</ref></defval>
         </param>
         <param>
-          <type>const <ref refid="classwx_icon" kindref="compound">wxIcon</ref> &amp;</type>
+          <type>const <ref refid="classwx_cursor" kindref="compound">wxCursor</ref> &amp;</type>
           <declname>iconNone</declname>
           <defval><ref refid="icon_8h_1a953854798a8dfd400777318358dad5b6" kindref="member">wxNullIcon</ref></defval>
         </param>
         <briefdescription>
 <para>This constructor requires that you must call <ref refid="classwx_drop_source_1aa3a84a8bf1e6817439ff6eb6570e8a3b" kindref="member">SetData()</ref> later. </para>        </briefdescription>
         <detaileddescription>
-<para>Note that the type of <emphasis>iconCopy</emphasis> and subsequent parameters differs between different ports: these are cursors under Windows but icons for GTK. You should use the macro <ref refid="group__group__funcmacro__gdi_1gafd3af54dd770553f30cfde5971c0cce4" kindref="member">wxDROP_ICON()</ref> in portable programs instead of directly using either of these types.</para><para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page__port_1page_port_wxmsw" kindref="member">wxMSW</ref>, <ref refid="page__port_1page_port_wxosx" kindref="member">wxOSX</ref> ports.  <onlyfor>wxmsw,wxosx</onlyfor> </para><para><parameterlist kind="param"><parameteritem>
+<para>Note that the type of <emphasis>iconCopy</emphasis> and subsequent parameters differs between different ports: these are cursors under Windows and OS X but icons for GTK. You should use the macro <ref refid="group__group__funcmacro__gdi_1gafd3af54dd770553f30cfde5971c0cce4" kindref="member">wxDROP_ICON()</ref> in portable programs instead of directly using either of these types.</para><para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page_port_1page_port_wxmsw" kindref="member">wxMSW</ref>, <ref refid="page_port_1page_port_wxosx" kindref="member">wxOSX</ref> ports.  <onlyfor>wxmsw,wxosx</onlyfor> </para><para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>win</parametername>
 </parameternamelist>
@@ -66,10 +66,10 @@
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dnd.h" line="209"/>
       </memberdef>
-      <memberdef kind="function" id="classwx_drop_source_1a867fea285027d6625acacfcb799833b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classwx_drop_source_1aa6a8e29a67fc96422a1d17aea8fd0f8d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
         <definition>wxDropSource::wxDropSource</definition>
-        <argsstring>(wxDataObject &amp;data, wxWindow *win=NULL, const wxIcon &amp;iconCopy=wxNullIcon, const wxIcon &amp;iconMove=wxNullIcon, const wxIcon &amp;iconNone=wxNullIcon)</argsstring>
+        <argsstring>(wxDataObject &amp;data, wxWindow *win=NULL, const wxCursor &amp;iconCopy=wxNullIcon, const wxCursor &amp;iconMove=wxNullIcon, const wxCursor &amp;iconNone=wxNullIcon)</argsstring>
         <name>wxDropSource</name>
         <param>
           <type><ref refid="classwx_data_object" kindref="compound">wxDataObject</ref> &amp;</type>
@@ -81,24 +81,24 @@
           <defval>NULL</defval>
         </param>
         <param>
-          <type>const <ref refid="classwx_icon" kindref="compound">wxIcon</ref> &amp;</type>
+          <type>const <ref refid="classwx_cursor" kindref="compound">wxCursor</ref> &amp;</type>
           <declname>iconCopy</declname>
           <defval><ref refid="icon_8h_1a953854798a8dfd400777318358dad5b6" kindref="member">wxNullIcon</ref></defval>
         </param>
         <param>
-          <type>const <ref refid="classwx_icon" kindref="compound">wxIcon</ref> &amp;</type>
+          <type>const <ref refid="classwx_cursor" kindref="compound">wxCursor</ref> &amp;</type>
           <declname>iconMove</declname>
           <defval><ref refid="icon_8h_1a953854798a8dfd400777318358dad5b6" kindref="member">wxNullIcon</ref></defval>
         </param>
         <param>
-          <type>const <ref refid="classwx_icon" kindref="compound">wxIcon</ref> &amp;</type>
+          <type>const <ref refid="classwx_cursor" kindref="compound">wxCursor</ref> &amp;</type>
           <declname>iconNone</declname>
           <defval><ref refid="icon_8h_1a953854798a8dfd400777318358dad5b6" kindref="member">wxNullIcon</ref></defval>
         </param>
         <briefdescription>
-<para>The constructor for <ref refid="classwx_data_object" kindref="compound">wxDataObject</ref>. </para>        </briefdescription>
+<para>The constructor taking a <ref refid="classwx_data_object" kindref="compound">wxDataObject</ref>. </para>        </briefdescription>
         <detaileddescription>
-<para>Note that the type of <emphasis>iconCopy</emphasis> and subsequent parameters differs between different ports: these are cursors under Windows but icons for GTK. You should use the macro <ref refid="group__group__funcmacro__gdi_1gafd3af54dd770553f30cfde5971c0cce4" kindref="member">wxDROP_ICON()</ref> in portable programs instead of directly using either of these types.</para><para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page__port_1page_port_wxmsw" kindref="member">wxMSW</ref>, <ref refid="page__port_1page_port_wxosx" kindref="member">wxOSX</ref> ports.  <onlyfor>wxmsw,wxosx</onlyfor> </para><para><parameterlist kind="param"><parameteritem>
+<para>Note that the type of <emphasis>iconCopy</emphasis> and subsequent parameters differs between different ports: these are cursors under Windows and OS X but icons for GTK. You should use the macro <ref refid="group__group__funcmacro__gdi_1gafd3af54dd770553f30cfde5971c0cce4" kindref="member">wxDROP_ICON()</ref> in portable programs instead of directly using either of these types.</para><para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page_port_1page_port_wxmsw" kindref="member">wxMSW</ref>, <ref refid="page_port_1page_port_wxosx" kindref="member">wxOSX</ref> ports.  <onlyfor>wxmsw,wxosx</onlyfor> </para><para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>data</parametername>
 </parameternamelist>
@@ -139,10 +139,10 @@
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dnd.h" line="235"/>
       </memberdef>
-      <memberdef kind="function" id="classwx_drop_source_1a0534684be549317b7a14ce27d5afc699" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classwx_drop_source_1a43c3d972b72a8d38c6fbfeb57a25455f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
         <definition>wxDropSource::wxDropSource</definition>
-        <argsstring>(wxWindow *win=NULL, const wxCursor &amp;iconCopy=wxNullCursor, const wxCursor &amp;iconMove=wxNullCursor, const wxCursor &amp;iconNone=wxNullCursor)</argsstring>
+        <argsstring>(wxWindow *win=NULL, const wxIcon &amp;iconCopy=wxNullCursor, const wxIcon &amp;iconMove=wxNullCursor, const wxIcon &amp;iconNone=wxNullCursor)</argsstring>
         <name>wxDropSource</name>
         <param>
           <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
@@ -150,24 +150,24 @@
           <defval>NULL</defval>
         </param>
         <param>
-          <type>const <ref refid="classwx_cursor" kindref="compound">wxCursor</ref> &amp;</type>
+          <type>const <ref refid="classwx_icon" kindref="compound">wxIcon</ref> &amp;</type>
           <declname>iconCopy</declname>
           <defval><ref refid="cursor_8h_1ace2643fa7246d855696e3415e344d0ac" kindref="member">wxNullCursor</ref></defval>
         </param>
         <param>
-          <type>const <ref refid="classwx_cursor" kindref="compound">wxCursor</ref> &amp;</type>
+          <type>const <ref refid="classwx_icon" kindref="compound">wxIcon</ref> &amp;</type>
           <declname>iconMove</declname>
           <defval><ref refid="cursor_8h_1ace2643fa7246d855696e3415e344d0ac" kindref="member">wxNullCursor</ref></defval>
         </param>
         <param>
-          <type>const <ref refid="classwx_cursor" kindref="compound">wxCursor</ref> &amp;</type>
+          <type>const <ref refid="classwx_icon" kindref="compound">wxIcon</ref> &amp;</type>
           <declname>iconNone</declname>
           <defval><ref refid="cursor_8h_1ace2643fa7246d855696e3415e344d0ac" kindref="member">wxNullCursor</ref></defval>
         </param>
         <briefdescription>
 <para>This constructor requires that you must call <ref refid="classwx_drop_source_1aa3a84a8bf1e6817439ff6eb6570e8a3b" kindref="member">SetData()</ref> later. </para>        </briefdescription>
         <detaileddescription>
-<para>Note that the type of <emphasis>iconCopy</emphasis> and subsequent parameters differs between different ports: these are cursors under Windows but icons for GTK. You should use the macro <ref refid="group__group__funcmacro__gdi_1gafd3af54dd770553f30cfde5971c0cce4" kindref="member">wxDROP_ICON()</ref> in portable programs instead of directly using either of these types.</para><para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page__port_1page_port_wxgtk" kindref="member">wxGTK</ref> port.  <onlyfor>wxgtk</onlyfor> </para><para><parameterlist kind="param"><parameteritem>
+<para>This is the wxGTK-specific version of the constructor taking <ref refid="classwx_icon" kindref="compound">wxIcon</ref> instead of <ref refid="classwx_cursor" kindref="compound">wxCursor</ref> as the other ports.</para><para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page_port_1page_port_wxgtk" kindref="member">wxGTK</ref> port.  <onlyfor>wxgtk</onlyfor> </para><para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>win</parametername>
 </parameternamelist>
@@ -199,12 +199,12 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dnd.h" line="259"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dnd.h" line="257"/>
       </memberdef>
-      <memberdef kind="function" id="classwx_drop_source_1afd4966dacaa526f6d2e5708d91136da7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classwx_drop_source_1a4553613a2242f83058238295e2211af7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
         <definition>wxDropSource::wxDropSource</definition>
-        <argsstring>(wxDataObject &amp;data, wxWindow *win=NULL, const wxCursor &amp;iconCopy=wxNullCursor, const wxCursor &amp;iconMove=wxNullCursor, const wxCursor &amp;iconNone=wxNullCursor)</argsstring>
+        <argsstring>(wxDataObject &amp;data, wxWindow *win=NULL, const wxIcon &amp;iconCopy=wxNullCursor, const wxIcon &amp;iconMove=wxNullCursor, const wxIcon &amp;iconNone=wxNullCursor)</argsstring>
         <name>wxDropSource</name>
         <param>
           <type><ref refid="classwx_data_object" kindref="compound">wxDataObject</ref> &amp;</type>
@@ -216,24 +216,24 @@
           <defval>NULL</defval>
         </param>
         <param>
-          <type>const <ref refid="classwx_cursor" kindref="compound">wxCursor</ref> &amp;</type>
+          <type>const <ref refid="classwx_icon" kindref="compound">wxIcon</ref> &amp;</type>
           <declname>iconCopy</declname>
           <defval><ref refid="cursor_8h_1ace2643fa7246d855696e3415e344d0ac" kindref="member">wxNullCursor</ref></defval>
         </param>
         <param>
-          <type>const <ref refid="classwx_cursor" kindref="compound">wxCursor</ref> &amp;</type>
+          <type>const <ref refid="classwx_icon" kindref="compound">wxIcon</ref> &amp;</type>
           <declname>iconMove</declname>
           <defval><ref refid="cursor_8h_1ace2643fa7246d855696e3415e344d0ac" kindref="member">wxNullCursor</ref></defval>
         </param>
         <param>
-          <type>const <ref refid="classwx_cursor" kindref="compound">wxCursor</ref> &amp;</type>
+          <type>const <ref refid="classwx_icon" kindref="compound">wxIcon</ref> &amp;</type>
           <declname>iconNone</declname>
           <defval><ref refid="cursor_8h_1ace2643fa7246d855696e3415e344d0ac" kindref="member">wxNullCursor</ref></defval>
         </param>
         <briefdescription>
-<para>The constructor for <ref refid="classwx_data_object" kindref="compound">wxDataObject</ref>. </para>        </briefdescription>
+<para>The constructor taking a <ref refid="classwx_data_object" kindref="compound">wxDataObject</ref>. </para>        </briefdescription>
         <detaileddescription>
-<para>Note that the type of <emphasis>iconCopy</emphasis> and subsequent parameters differs between different ports: these are cursors under Windows but icons for GTK. You should use the macro <ref refid="group__group__funcmacro__gdi_1gafd3af54dd770553f30cfde5971c0cce4" kindref="member">wxDROP_ICON()</ref> in portable programs instead of directly using either of these types.</para><para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page__port_1page_port_wxgtk" kindref="member">wxGTK</ref> port.  <onlyfor>wxgtk</onlyfor> </para><para><parameterlist kind="param"><parameteritem>
+<para>This is the wxGTK-specific version of the constructor taking <ref refid="classwx_icon" kindref="compound">wxIcon</ref> instead of <ref refid="classwx_cursor" kindref="compound">wxCursor</ref> as the other ports.</para><para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page_port_1page_port_wxgtk" kindref="member">wxGTK</ref> port.  <onlyfor>wxgtk</onlyfor> </para><para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>data</parametername>
 </parameternamelist>
@@ -272,20 +272,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dnd.h" line="285"/>
-      </memberdef>
-      <memberdef kind="function" id="classwx_drop_source_1ac05014ae97c0b4644435baf7e2b5d30f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
-        <type></type>
-        <definition>virtual wxDropSource::~wxDropSource</definition>
-        <argsstring>()</argsstring>
-        <name>~wxDropSource</name>
-        <briefdescription>
-<para>Default constructor. </para>        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dnd.h" line="290"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dnd.h" line="281"/>
       </memberdef>
       <memberdef kind="function" id="classwx_drop_source_1a7053f3286614a78d0fd8c282c286778d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="interface_2wx_2dnd_8h_1adbd4b292582eebbc9a6ce3dee31c2afb" kindref="member">wxDragResult</ref></type>
@@ -312,7 +299,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dnd.h" line="307"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dnd.h" line="298"/>
       </memberdef>
       <memberdef kind="function" id="classwx_drop_source_1a04e5d7ce7fd76f5bf94ffa4a29611997" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_data_object" kindref="compound">wxDataObject</ref> *</type>
@@ -325,7 +312,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dnd.h" line="312"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dnd.h" line="303"/>
       </memberdef>
       <memberdef kind="function" id="classwx_drop_source_1a2b667de6f631839d4c4383f436726f7f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -351,7 +338,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dnd.h" line="326"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dnd.h" line="317"/>
       </memberdef>
       <memberdef kind="function" id="classwx_drop_source_1af8cd9f1b071b115b20e976599333423d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -387,7 +374,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dnd.h" line="336"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dnd.h" line="327"/>
       </memberdef>
       <memberdef kind="function" id="classwx_drop_source_1aa3a84a8bf1e6817439ff6eb6570e8a3b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -404,27 +391,26 @@
 <para>This will not delete any previously associated data. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dnd.h" line="342"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dnd.h" line="333"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para>This class represents a source for a drag and drop operation. </para>    </briefdescription>
     <detaileddescription>
 <para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__dnd" kindref="compound">Clipboard and Drag &amp; Drop</ref></para><para><simplesect kind="see"><para><ref refid="overview__dnd" kindref="compound">Drag and Drop Overview</ref>, <ref refid="overview__dataobject" kindref="compound">wxDataObject Overview</ref>, <ref refid="classwx_drop_target" kindref="compound">wxDropTarget</ref>, <ref refid="classwx_text_drop_target" kindref="compound">wxTextDropTarget</ref>, <ref refid="classwx_file_drop_target" kindref="compound">wxFileDropTarget</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__dnd" kindref="compound">Clipboard and Drag &amp; Drop</ref></para><para><simplesect kind="see"><para><ref refid="overview_dnd" kindref="compound">Drag and Drop Overview</ref>, <ref refid="overview_dataobject" kindref="compound">wxDataObject Overview</ref>, <ref refid="classwx_drop_target" kindref="compound">wxDropTarget</ref>, <ref refid="classwx_text_drop_target" kindref="compound">wxTextDropTarget</ref>, <ref refid="classwx_file_drop_target" kindref="compound">wxFileDropTarget</ref> </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dnd.h" line="185" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dnd.h" bodystart="184" bodyend="343"/>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dnd.h" line="185" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dnd.h" bodystart="184" bodyend="334"/>
     <listofallmembers>
       <member refid="classwx_drop_source_1a7053f3286614a78d0fd8c282c286778d" prot="public" virt="virtual"><scope>wxDropSource</scope><name>DoDragDrop</name></member>
       <member refid="classwx_drop_source_1a04e5d7ce7fd76f5bf94ffa4a29611997" prot="public" virt="non-virtual"><scope>wxDropSource</scope><name>GetDataObject</name></member>
       <member refid="classwx_drop_source_1a2b667de6f631839d4c4383f436726f7f" prot="public" virt="virtual"><scope>wxDropSource</scope><name>GiveFeedback</name></member>
       <member refid="classwx_drop_source_1af8cd9f1b071b115b20e976599333423d" prot="public" virt="non-virtual"><scope>wxDropSource</scope><name>SetCursor</name></member>
       <member refid="classwx_drop_source_1aa3a84a8bf1e6817439ff6eb6570e8a3b" prot="public" virt="non-virtual"><scope>wxDropSource</scope><name>SetData</name></member>
-      <member refid="classwx_drop_source_1a06dbcfe97a0615d59c97d0be7d11f6e5" prot="public" virt="non-virtual"><scope>wxDropSource</scope><name>wxDropSource</name></member>
-      <member refid="classwx_drop_source_1a867fea285027d6625acacfcb799833b1" prot="public" virt="non-virtual"><scope>wxDropSource</scope><name>wxDropSource</name></member>
-      <member refid="classwx_drop_source_1a0534684be549317b7a14ce27d5afc699" prot="public" virt="non-virtual"><scope>wxDropSource</scope><name>wxDropSource</name></member>
-      <member refid="classwx_drop_source_1afd4966dacaa526f6d2e5708d91136da7" prot="public" virt="non-virtual"><scope>wxDropSource</scope><name>wxDropSource</name></member>
-      <member refid="classwx_drop_source_1ac05014ae97c0b4644435baf7e2b5d30f" prot="public" virt="virtual"><scope>wxDropSource</scope><name>~wxDropSource</name></member>
+      <member refid="classwx_drop_source_1a18ebb798180a16972f3d5157fdcdac20" prot="public" virt="non-virtual"><scope>wxDropSource</scope><name>wxDropSource</name></member>
+      <member refid="classwx_drop_source_1aa6a8e29a67fc96422a1d17aea8fd0f8d" prot="public" virt="non-virtual"><scope>wxDropSource</scope><name>wxDropSource</name></member>
+      <member refid="classwx_drop_source_1a43c3d972b72a8d38c6fbfeb57a25455f" prot="public" virt="non-virtual"><scope>wxDropSource</scope><name>wxDropSource</name></member>
+      <member refid="classwx_drop_source_1a4553613a2242f83058238295e2211af7" prot="public" virt="non-virtual"><scope>wxDropSource</scope><name>wxDropSource</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

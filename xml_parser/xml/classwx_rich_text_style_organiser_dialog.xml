@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_rich_text_style_organiser_dialog" kind="class" prot="public">
     <compoundname>wxRichTextStyleOrganiserDialog</compoundname>
     <basecompoundref refid="classwx_dialog" prot="public" virt="non-virtual">wxDialog</basecompoundref>
@@ -320,106 +320,106 @@
 <para>This class shows a style sheet and allows the user to edit, add and remove styles. </para>    </briefdescription>
     <detaileddescription>
 <para>It can also be used as a style browser, for example if the application is not using a permanent <ref refid="classwx_rich_text_style_combo_ctrl" kindref="compound">wxRichTextStyleComboCtrl</ref> or <ref refid="classwx_rich_text_style_list_ctrl" kindref="compound">wxRichTextStyleListCtrl</ref> to present styles.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxrichtext" kindref="member">wxRichText</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__richtext" kindref="compound">Rich Text</ref> </para>    </detaileddescription>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxrichtext" kindref="member">wxRichText</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__richtext" kindref="compound">Rich Text</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="9906">
+      <node id="9966">
         <label>wxNonOwnedWindow</label>
         <link refid="classwx_non_owned_window"/>
-        <childnode refid="9907" relation="public-inheritance">
+        <childnode refid="9967" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9909">
+      <node id="9969">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="9908">
+      <node id="9968">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="9909" relation="public-inheritance">
+        <childnode refid="9969" relation="public-inheritance">
         </childnode>
-        <childnode refid="9910" relation="public-inheritance">
+        <childnode refid="9970" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9903">
+      <node id="9963">
         <label>wxRichTextStyleOrganiserDialog</label>
         <link refid="classwx_rich_text_style_organiser_dialog"/>
-        <childnode refid="9904" relation="public-inheritance">
+        <childnode refid="9964" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9910">
+      <node id="9970">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="9907">
+      <node id="9967">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="9908" relation="public-inheritance">
+        <childnode refid="9968" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9904">
+      <node id="9964">
         <label>wxDialog</label>
         <link refid="classwx_dialog"/>
-        <childnode refid="9905" relation="public-inheritance">
+        <childnode refid="9965" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9905">
+      <node id="9965">
         <label>wxTopLevelWindow</label>
         <link refid="classwx_top_level_window"/>
-        <childnode refid="9906" relation="public-inheritance">
+        <childnode refid="9966" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="9914">
+      <node id="9974">
         <label>wxNonOwnedWindow</label>
         <link refid="classwx_non_owned_window"/>
-        <childnode refid="9915" relation="public-inheritance">
+        <childnode refid="9975" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9917">
+      <node id="9977">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="9918" relation="usage">
+        <childnode refid="9978" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="9916">
+      <node id="9976">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="9917" relation="public-inheritance">
+        <childnode refid="9977" relation="public-inheritance">
         </childnode>
-        <childnode refid="9919" relation="public-inheritance">
+        <childnode refid="9979" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9911">
+      <node id="9971">
         <label>wxRichTextStyleOrganiserDialog</label>
         <link refid="classwx_rich_text_style_organiser_dialog"/>
-        <childnode refid="9912" relation="public-inheritance">
+        <childnode refid="9972" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9919">
+      <node id="9979">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="9915">
+      <node id="9975">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="9916" relation="public-inheritance">
+        <childnode refid="9976" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9912">
+      <node id="9972">
         <label>wxDialog</label>
         <link refid="classwx_dialog"/>
-        <childnode refid="9913" relation="public-inheritance">
+        <childnode refid="9973" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9913">
+      <node id="9973">
         <label>wxTopLevelWindow</label>
         <link refid="classwx_top_level_window"/>
-        <childnode refid="9914" relation="public-inheritance">
+        <childnode refid="9974" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9918">
+      <node id="9978">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
@@ -759,6 +759,7 @@
       <member refid="classwx_window_1a81f23590239934fa10fded0566a65d8c" prot="public" virt="non-virtual"><scope>wxRichTextStyleOrganiserDialog</scope><name>SetPosition</name></member>
       <member refid="classwx_window_1a07f5f7ed3f78e0ef7b3dee3f4da81001" prot="public" virt="virtual"><scope>wxRichTextStyleOrganiserDialog</scope><name>SetPreviousHandler</name></member>
       <member refid="classwx_object_1afab780710f2adc1bb33310e27590140b" prot="public" virt="non-virtual"><scope>wxRichTextStyleOrganiserDialog</scope><name>SetRefData</name></member>
+      <member refid="classwx_top_level_window_1a82afa6f09dd5faef6330807ef59374e8" prot="public" virt="virtual"><scope>wxRichTextStyleOrganiserDialog</scope><name>SetRepresentedFilename</name></member>
       <member refid="classwx_rich_text_style_organiser_dialog_1af9f054d70edd8f9bb360cb03a946dd7a" prot="public" virt="non-virtual"><scope>wxRichTextStyleOrganiserDialog</scope><name>SetRestartNumbering</name></member>
       <member refid="classwx_dialog_1a0d04ed85ac5cd271a61514d446340673" prot="public" virt="non-virtual"><scope>wxRichTextStyleOrganiserDialog</scope><name>SetReturnCode</name></member>
       <member refid="classwx_rich_text_style_organiser_dialog_1a5b2c5b292d07559c307ceee81fa5ec1e" prot="public" virt="non-virtual"><scope>wxRichTextStyleOrganiserDialog</scope><name>SetRichTextCtrl</name></member>

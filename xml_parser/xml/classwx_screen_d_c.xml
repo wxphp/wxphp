@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_screen_d_c" kind="class" prot="public">
     <compoundname>wxScreenDC</compoundname>
     <basecompoundref refid="classwx_d_c" prot="public" virt="non-virtual">wxDC</basecompoundref>
@@ -75,47 +75,47 @@
 <para>A <ref refid="classwx_screen_d_c" kindref="compound">wxScreenDC</ref> can be used to paint on the screen. </para>    </briefdescription>
     <detaileddescription>
 <para>This should normally be constructed as a temporary stack object; don&apos;t store a <ref refid="classwx_screen_d_c" kindref="compound">wxScreenDC</ref> object.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__dc" kindref="compound">Device Contexts</ref></para><para><simplesect kind="see"><para><ref refid="classwx_d_c" kindref="compound">wxDC</ref>, <ref refid="classwx_memory_d_c" kindref="compound">wxMemoryDC</ref>, <ref refid="classwx_paint_d_c" kindref="compound">wxPaintDC</ref>, <ref refid="classwx_client_d_c" kindref="compound">wxClientDC</ref>, <ref refid="classwx_window_d_c" kindref="compound">wxWindowDC</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__dc" kindref="compound">Device Contexts</ref></para><para><simplesect kind="see"><para><ref refid="classwx_d_c" kindref="compound">wxDC</ref>, <ref refid="classwx_memory_d_c" kindref="compound">wxMemoryDC</ref>, <ref refid="classwx_paint_d_c" kindref="compound">wxPaintDC</ref>, <ref refid="classwx_client_d_c" kindref="compound">wxClientDC</ref>, <ref refid="classwx_window_d_c" kindref="compound">wxWindowDC</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10030">
+      <node id="10090">
         <label>wxScreenDC</label>
         <link refid="classwx_screen_d_c"/>
-        <childnode refid="10031" relation="public-inheritance">
+        <childnode refid="10091" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10032">
+      <node id="10092">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="10031">
+      <node id="10091">
         <label>wxDC</label>
         <link refid="classwx_d_c"/>
-        <childnode refid="10032" relation="public-inheritance">
+        <childnode refid="10092" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10033">
+      <node id="10093">
         <label>wxScreenDC</label>
         <link refid="classwx_screen_d_c"/>
-        <childnode refid="10034" relation="public-inheritance">
+        <childnode refid="10094" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10035">
+      <node id="10095">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="10036" relation="usage">
+        <childnode refid="10096" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="10034">
+      <node id="10094">
         <label>wxDC</label>
         <link refid="classwx_d_c"/>
-        <childnode refid="10035" relation="public-inheritance">
+        <childnode refid="10095" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10036">
+      <node id="10096">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

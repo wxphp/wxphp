@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_mouse_events_manager" kind="class" prot="public">
     <compoundname>wxMouseEventsManager</compoundname>
     <basecompoundref refid="classwx_evt_handler" prot="public" virt="non-virtual">wxEvtHandler</basecompoundref>
@@ -283,58 +283,58 @@
 <para>Helper for handling mouse input events in windows containing multiple items. </para>    </briefdescription>
     <detaileddescription>
 <para>This class handles mouse events and synthesizes high-level notifications such as clicks and drag events from low level mouse button presses and mouse movement events. It is useful because handling the mouse events is less obvious than might seem at a first glance: for example, clicks on an object should only be generated if the mouse was both pressed and released over it and not just released (so it requires storing the previous state) and dragging shouldn&apos;t start before the mouse moves away far enough.</para><para>This class encapsulates all these dull details for controls containing multiple items which can be identified by a positive integer index and you just need to implement its pure virtual functions to use it.</para><para>Notice that this class supposes that all items can be identified by an integer &quot;index&quot; but it doesn&apos;t need to be an ordinal index of the item (although this is the most common case) -- it can be any value which can be used to uniquely identify an item.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref> </para>    </detaileddescription>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7846">
+      <node id="7852">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="7845">
+      <node id="7851">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="7846" relation="public-inheritance">
+        <childnode refid="7852" relation="public-inheritance">
         </childnode>
-        <childnode refid="7847" relation="public-inheritance">
+        <childnode refid="7853" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7844">
+      <node id="7850">
         <label>wxMouseEventsManager</label>
         <link refid="classwx_mouse_events_manager"/>
-        <childnode refid="7845" relation="public-inheritance">
+        <childnode refid="7851" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7847">
+      <node id="7853">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7850">
+      <node id="7856">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="7851" relation="usage">
+        <childnode refid="7857" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="7849">
+      <node id="7855">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="7850" relation="public-inheritance">
+        <childnode refid="7856" relation="public-inheritance">
         </childnode>
-        <childnode refid="7852" relation="public-inheritance">
+        <childnode refid="7858" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7848">
+      <node id="7854">
         <label>wxMouseEventsManager</label>
         <link refid="classwx_mouse_events_manager"/>
-        <childnode refid="7849" relation="public-inheritance">
+        <childnode refid="7855" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7852">
+      <node id="7858">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="7851">
+      <node id="7857">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

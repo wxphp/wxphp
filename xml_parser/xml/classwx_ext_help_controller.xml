@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_ext_help_controller" kind="class" prot="public">
     <compoundname>wxExtHelpController</compoundname>
     <basecompoundref refid="classwx_help_controller" prot="public" virt="non-virtual">wxHelpController</basecompoundref>
@@ -197,7 +197,7 @@
           <declname>blockNo</declname>
         </param>
         <briefdescription>
-<para>Display help for URL (using DisplayHelp) or keyword (using KeywordSearch). </para>        </briefdescription>
+<para>Display help for URL (using DisplayHelp) or keyword (using KeywordSearch) </para>        </briefdescription>
         <detaileddescription>
 <para><simplesect kind="return"><para>true on success </para></simplesect>
 </para>        </detaileddescription>
@@ -353,29 +353,29 @@
 <para>This class implements help via an external browser. </para>    </briefdescription>
     <detaileddescription>
 <para>It requires the name of a directory containing the documentation and a file mapping numerical Section numbers to relative URLS.</para><para>The map file contains two or three fields per line: numeric_id relative_URL [; comment/documentation]</para><para>The numeric_id is the id used to look up the entry in <ref refid="classwx_ext_help_controller_1addfd43e1bb21602f9e8c86526411484f" kindref="member">DisplaySection()</ref>/DisplayBlock(). The relative_URL is a filename of an html file, relative to the help directory. The optional comment/documentation field (after a &apos;;&apos;) is used for keyword searches, so some meaningful text here does not hurt. If the documentation itself contains a &apos;;&apos;, only the part before that will be displayed in the listbox, but all of it used for search.</para><para>Lines starting with &apos;;&apos; will be ignored.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__help" kindref="compound">Help</ref></para><para><simplesect kind="see"><para><ref refid="classwx_help_controller" kindref="compound">wxHelpController</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__help" kindref="compound">Help</ref></para><para><simplesect kind="see"><para><ref refid="classwx_help_controller" kindref="compound">wxHelpController</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="6100">
+      <node id="6104">
         <label>wxHelpController</label>
         <link refid="classwx_help_controller"/>
       </node>
-      <node id="6099">
+      <node id="6103">
         <label>wxExtHelpController</label>
         <link refid="classwx_ext_help_controller"/>
-        <childnode refid="6100" relation="public-inheritance">
+        <childnode refid="6104" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="6102">
+      <node id="6106">
         <label>wxHelpController</label>
         <link refid="classwx_help_controller"/>
       </node>
-      <node id="6101">
+      <node id="6105">
         <label>wxExtHelpController</label>
         <link refid="classwx_ext_help_controller"/>
-        <childnode refid="6102" relation="public-inheritance">
+        <childnode refid="6106" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>

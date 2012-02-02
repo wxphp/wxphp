@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_collapsible_pane_event" kind="class" prot="public">
     <compoundname>wxCollapsiblePaneEvent</compoundname>
     <basecompoundref refid="classwx_command_event" prot="public" virt="non-virtual">wxCommandEvent</basecompoundref>
@@ -69,39 +69,12 @@
 <listitem><para>EVT_COLLAPSIBLEPANE_CHANGED(id,  func): The user expanded or collapsed the collapsible pane. </para></listitem>
 </itemizedlist>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="classwx_collapsible_pane" kindref="compound">wxCollapsiblePane</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="classwx_collapsible_pane" kindref="compound">wxCollapsiblePane</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="4841">
-        <label>wxObject</label>
-        <link refid="classwx_object"/>
-      </node>
-      <node id="4839">
-        <label>wxCommandEvent</label>
-        <link refid="classwx_command_event"/>
-        <childnode refid="4840" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4838">
-        <label>wxCollapsiblePaneEvent</label>
-        <link refid="classwx_collapsible_pane_event"/>
-        <childnode refid="4839" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4840">
-        <label>wxEvent</label>
-        <link refid="classwx_event"/>
-        <childnode refid="4841" relation="public-inheritance">
-        </childnode>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
       <node id="4845">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="4846" relation="usage">
-          <edgelabel>m_refData</edgelabel>
-        </childnode>
       </node>
       <node id="4843">
         <label>wxCommandEvent</label>
@@ -121,7 +94,34 @@
         <childnode refid="4845" relation="public-inheritance">
         </childnode>
       </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4849">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="4850" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="4847">
+        <label>wxCommandEvent</label>
+        <link refid="classwx_command_event"/>
+        <childnode refid="4848" relation="public-inheritance">
+        </childnode>
+      </node>
       <node id="4846">
+        <label>wxCollapsiblePaneEvent</label>
+        <link refid="classwx_collapsible_pane_event"/>
+        <childnode refid="4847" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4848">
+        <label>wxEvent</label>
+        <link refid="classwx_event"/>
+        <childnode refid="4849" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4850">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

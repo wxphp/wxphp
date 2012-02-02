@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_counting_output_stream" kind="class" prot="public">
     <compoundname>wxCountingOutputStream</compoundname>
     <basecompoundref refid="classwx_output_stream" prot="public" virt="non-virtual">wxOutputStream</basecompoundref>
@@ -50,40 +50,40 @@
 <para><ref refid="classwx_counting_output_stream" kindref="compound">wxCountingOutputStream</ref> is a specialized output stream which does not write any data anywhere, instead it counts how many bytes would get written if this were a normal stream. </para>    </briefdescription>
     <detaileddescription>
 <para>This can sometimes be useful or required if some data gets serialized to a stream or compressed by using stream compression and thus the final size of the stream cannot be known other than pretending to write the stream. One case where the resulting size would have to be known is if the data has to be written to a piece of memory and the memory has to be allocated before writing to it (which is probably always the case when writing to a memory stream).</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__streams" kindref="compound">Streams</ref> </para>    </detaileddescription>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__streams" kindref="compound">Streams</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="5199">
+      <node id="5203">
         <label>wxCountingOutputStream</label>
         <link refid="classwx_counting_output_stream"/>
-        <childnode refid="5200" relation="public-inheritance">
+        <childnode refid="5204" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5201">
+      <node id="5205">
         <label>wxStreamBase</label>
         <link refid="classwx_stream_base"/>
       </node>
-      <node id="5200">
+      <node id="5204">
         <label>wxOutputStream</label>
         <link refid="classwx_output_stream"/>
-        <childnode refid="5201" relation="public-inheritance">
+        <childnode refid="5205" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="5202">
+      <node id="5206">
         <label>wxCountingOutputStream</label>
         <link refid="classwx_counting_output_stream"/>
-        <childnode refid="5203" relation="public-inheritance">
+        <childnode refid="5207" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5204">
+      <node id="5208">
         <label>wxStreamBase</label>
         <link refid="classwx_stream_base"/>
       </node>
-      <node id="5203">
+      <node id="5207">
         <label>wxOutputStream</label>
         <link refid="classwx_output_stream"/>
-        <childnode refid="5204" relation="public-inheritance">
+        <childnode refid="5208" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="platinfo_8h" kind="file">
     <compoundname>platinfo.h</compoundname>
     <innerclass refid="structwx_linux_distribution_info" prot="public">wxLinuxDistributionInfo</innerclass>
@@ -43,7 +43,7 @@
           <name>wxOS_WINDOWS_9X</name>
           <initializer> 1 &lt;&lt; 2</initializer>
           <briefdescription>
-<para>Windows 9x family (95/98/ME). </para>          </briefdescription>
+<para>Windows 9x family (95/98/ME) </para>          </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
@@ -51,7 +51,7 @@
           <name>wxOS_WINDOWS_NT</name>
           <initializer> 1 &lt;&lt; 3</initializer>
           <briefdescription>
-<para>Windows NT family (NT/2000/XP/Vista/7). </para>          </briefdescription>
+<para>Windows NT family (NT/2000/XP/Vista/7) </para>          </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
@@ -67,7 +67,7 @@
           <name>wxOS_WINDOWS_CE</name>
           <initializer> 1 &lt;&lt; 5</initializer>
           <briefdescription>
-<para>Windows CE (Window Mobile). </para>          </briefdescription>
+<para>Windows CE (Window Mobile) </para>          </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
@@ -218,11 +218,11 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="platinfo_8h_1a4acbc14b366d6ce2875f809be384757baa4506a0e59a94311f4fe1e978a4fd11e" prot="public">
-          <name>wxPORT_MGL</name>
+        <enumvalue id="platinfo_8h_1a4acbc14b366d6ce2875f809be384757ba18244a3980773d7bed125a950ee195e0" prot="public">
+          <name>wxPORT_DFB</name>
           <initializer> 1 &lt;&lt; 4</initializer>
           <briefdescription>
-<para>wxMGL, using wxUniversal </para>          </briefdescription>
+<para>wxDFB, using wxUniversal </para>          </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
@@ -266,29 +266,13 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="platinfo_8h_1a4acbc14b366d6ce2875f809be384757ba704658cdc4f7e75100add2147ad10a1b" prot="public">
-          <name>wxPORT_PALMOS</name>
-          <initializer> 1 &lt;&lt; 10</initializer>
-          <briefdescription>
-<para>wxPalmOS, toolkit is PalmOS API </para>          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="platinfo_8h_1a4acbc14b366d6ce2875f809be384757ba18244a3980773d7bed125a950ee195e0" prot="public">
-          <name>wxPORT_DFB</name>
-          <initializer> 1 &lt;&lt; 11</initializer>
-          <briefdescription>
-<para>wxDFB, using wxUniversal </para>          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
         <briefdescription>
 <para>The list of wxWidgets ports. </para>        </briefdescription>
         <detaileddescription>
 <para>Some of them can be used with more than a single (native) toolkit; e.g. wxWinCE port sources can be used with smartphones, pocket PCs and handheld devices SDKs. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="72" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" bodystart="71" bodyend="88"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="72" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" bodystart="71" bodyend="86"/>
       </memberdef>
       <memberdef kind="enum" id="platinfo_8h_1ab2b4836af7d22393b06c1d4f110bdb4c" prot="public" static="no">
         <name>wxArchitecture</name>
@@ -327,7 +311,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="97" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" bodystart="96" bodyend="104"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="95" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" bodystart="94" bodyend="102"/>
       </memberdef>
       <memberdef kind="enum" id="platinfo_8h_1a604702957b3c219643e1c989766f7047" prot="public" static="no">
         <name>wxEndianness</name>
@@ -373,7 +357,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="111" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" bodystart="110" bodyend="119"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="109" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" bodystart="108" bodyend="117"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

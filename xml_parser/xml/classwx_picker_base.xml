@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_picker_base" kind="class" prot="public">
     <compoundname>wxPickerBase</compoundname>
     <basecompoundref refid="classwx_control" prot="public" virt="non-virtual">wxControl</basecompoundref>
@@ -61,7 +61,7 @@
 <codeline><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>wxMSW<sp/>is<sp/>one<sp/>of<sp/>the<sp/>platforms<sp/>where<sp/>the<sp/>generic<sp/>implementation</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>of<sp/>wxFilePickerCtrl<sp/>is<sp/>used...</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_button" kindref="compound" tooltip="A button is a control that contains a text string, and is one of the most common...">wxButton</ref><sp/>*pButt<sp/>=<sp/><ref refid="group__group__funcmacro__rtti_1gaa3a4a52303d4a1fa3d3346e762638c64" kindref="member" tooltip="Same as static_cast&amp;lt;T&amp;gt;(x) if the compiler supports static cast or (T)x for...">wx_static_cast</ref>(<ref refid="classwx_button" kindref="compound" tooltip="A button is a control that contains a text string, and is one of the most common...">wxButton</ref>*,<sp/>myFilePickerCtrl-&gt;GetPickerCtrl());</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_button" kindref="compound" tooltip="A button is a control that contains a text string, and is one of the most common elements of a GUI...">wxButton</ref><sp/>*pButt<sp/>=<sp/><ref refid="group__group__funcmacro__rtti_1gaa3a4a52303d4a1fa3d3346e762638c64" kindref="member" tooltip="Same as static_cast&amp;lt;T&amp;gt;(x) if the compiler supports static cast or (T)x for old compilers.">wx_static_cast</ref>(<ref refid="classwx_button" kindref="compound" tooltip="A button is a control that contains a text string, and is one of the most common elements of a GUI...">wxButton</ref>*,<sp/>myFilePickerCtrl-&gt;GetPickerCtrl());</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pButt)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pButt-&gt;<ref refid="classwx_button_1ae16ea5741a8a6ef4c1d2708fef315a9a" kindref="member" tooltip="Sets the string label for the button.">SetLabel</ref>(</highlight><highlight class="stringliteral">&quot;Custom<sp/>browse<sp/>string&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#endif</highlight></codeline>
@@ -219,108 +219,108 @@
 <listitem><para>wxPB_USE_TEXTCTRL: Creates a text control to the left of the picker which is completely managed by this <ref refid="classwx_picker_base" kindref="compound">wxPickerBase</ref> class. </para></listitem>
 </itemizedlist>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__pickers" kindref="compound">Picker Controls</ref></para><para><simplesect kind="see"><para><ref refid="classwx_colour_picker_ctrl" kindref="compound">wxColourPickerCtrl</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__pickers" kindref="compound">Picker Controls</ref></para><para><simplesect kind="see"><para><ref refid="classwx_colour_picker_ctrl" kindref="compound">wxColourPickerCtrl</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="8669">
+      <node id="8677">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="8668">
+      <node id="8676">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="8669" relation="public-inheritance">
+        <childnode refid="8677" relation="public-inheritance">
         </childnode>
-        <childnode refid="8670" relation="public-inheritance">
+        <childnode refid="8678" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8670">
+      <node id="8678">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="8671">
+      <node id="8679">
         <label>wxColourPickerCtrl</label>
         <link refid="classwx_colour_picker_ctrl"/>
-        <childnode refid="8665" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="8666">
-        <label>wxControl</label>
-        <link refid="classwx_control"/>
-        <childnode refid="8667" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="8667">
-        <label>wxWindow</label>
-        <link refid="classwx_window"/>
-        <childnode refid="8668" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="8673">
-        <label>wxFilePickerCtrl</label>
-        <link refid="classwx_file_picker_ctrl"/>
-        <childnode refid="8665" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="8672">
-        <label>wxDirPickerCtrl</label>
-        <link refid="classwx_dir_picker_ctrl"/>
-        <childnode refid="8665" relation="public-inheritance">
+        <childnode refid="8673" relation="public-inheritance">
         </childnode>
       </node>
       <node id="8674">
-        <label>wxFontPickerCtrl</label>
-        <link refid="classwx_font_picker_ctrl"/>
-        <childnode refid="8665" relation="public-inheritance">
+        <label>wxControl</label>
+        <link refid="classwx_control"/>
+        <childnode refid="8675" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8665">
+      <node id="8675">
+        <label>wxWindow</label>
+        <link refid="classwx_window"/>
+        <childnode refid="8676" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8681">
+        <label>wxFilePickerCtrl</label>
+        <link refid="classwx_file_picker_ctrl"/>
+        <childnode refid="8673" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8680">
+        <label>wxDirPickerCtrl</label>
+        <link refid="classwx_dir_picker_ctrl"/>
+        <childnode refid="8673" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8682">
+        <label>wxFontPickerCtrl</label>
+        <link refid="classwx_font_picker_ctrl"/>
+        <childnode refid="8673" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8673">
         <label>wxPickerBase</label>
         <link refid="classwx_picker_base"/>
-        <childnode refid="8666" relation="public-inheritance">
+        <childnode refid="8674" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="8679">
+      <node id="8687">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="8680" relation="usage">
+        <childnode refid="8688" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="8678">
+      <node id="8686">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="8679" relation="public-inheritance">
+        <childnode refid="8687" relation="public-inheritance">
         </childnode>
-        <childnode refid="8681" relation="public-inheritance">
+        <childnode refid="8689" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8681">
+      <node id="8689">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="8676">
+      <node id="8684">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="8677" relation="public-inheritance">
+        <childnode refid="8685" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8677">
+      <node id="8685">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="8678" relation="public-inheritance">
+        <childnode refid="8686" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8680">
+      <node id="8688">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
-      <node id="8675">
+      <node id="8683">
         <label>wxPickerBase</label>
         <link refid="classwx_picker_base"/>
-        <childnode refid="8676" relation="public-inheritance">
+        <childnode refid="8684" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_zip_class_factory" kind="class" prot="public">
     <compoundname>wxZipClassFactory</compoundname>
     <basecompoundref refid="classwx_archive_class_factory" prot="public" virt="non-virtual">wxArchiveClassFactory</basecompoundref>
@@ -8,47 +8,47 @@
 <para>Class factory for the zip archive format. </para>    </briefdescription>
     <detaileddescription>
 <para>See the base class for details.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__archive" kindref="compound">Archive support</ref>, <ref refid="group__group__class__streams" kindref="compound">Streams</ref></para><para><simplesect kind="see"><para><ref refid="overview__archive" kindref="compound">Archive Formats</ref>, <ref refid="overview__archive_1overview_archive_generic" kindref="member">Generic Archive Programming</ref>, <ref refid="classwx_zip_entry" kindref="compound">wxZipEntry</ref>, <ref refid="classwx_zip_input_stream" kindref="compound">wxZipInputStream</ref>, <ref refid="classwx_zip_output_stream" kindref="compound">wxZipOutputStream</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__archive" kindref="compound">Archive support</ref>, <ref refid="group__group__class__streams" kindref="compound">Streams</ref></para><para><simplesect kind="see"><para><ref refid="overview_archive" kindref="compound">Archive Formats</ref>, <ref refid="overview_archive_1overview_archive_generic" kindref="member">Generic Archive Programming</ref>, <ref refid="classwx_zip_entry" kindref="compound">wxZipEntry</ref>, <ref refid="classwx_zip_input_stream" kindref="compound">wxZipInputStream</ref>, <ref refid="classwx_zip_output_stream" kindref="compound">wxZipOutputStream</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="11688">
+      <node id="11749">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="11686">
+      <node id="11747">
         <label>wxZipClassFactory</label>
         <link refid="classwx_zip_class_factory"/>
-        <childnode refid="11687" relation="public-inheritance">
+        <childnode refid="11748" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11687">
+      <node id="11748">
         <label>wxArchiveClassFactory</label>
         <link refid="classwx_archive_class_factory"/>
-        <childnode refid="11688" relation="public-inheritance">
+        <childnode refid="11749" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="11691">
+      <node id="11752">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="11692" relation="usage">
+        <childnode refid="11753" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="11689">
+      <node id="11750">
         <label>wxZipClassFactory</label>
         <link refid="classwx_zip_class_factory"/>
-        <childnode refid="11690" relation="public-inheritance">
+        <childnode refid="11751" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11690">
+      <node id="11751">
         <label>wxArchiveClassFactory</label>
         <link refid="classwx_archive_class_factory"/>
-        <childnode refid="11691" relation="public-inheritance">
+        <childnode refid="11752" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11692">
+      <node id="11753">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

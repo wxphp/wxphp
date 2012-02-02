@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_date_picker_ctrl" kind="class" prot="public">
     <compoundname>wxDatePickerCtrl</compoundname>
     <basecompoundref refid="classwx_control" prot="public" virt="non-virtual">wxControl</basecompoundref>
@@ -54,7 +54,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datectrl.h" line="67"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datectrl.h" line="74"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_picker_ctrl_1acd8017cd43d31da4e60e7933c2d76be9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -163,7 +163,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datectrl.h" line="105"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datectrl.h" line="112"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_picker_ctrl_1ad33b7d8c7171792071c40ebdc2961b90" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type>bool</type>
@@ -200,7 +200,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datectrl.h" line="128"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datectrl.h" line="135"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_picker_ctrl_1a68a7f9555f2e10be812bc67c9ba321a4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type><ref refid="classwx_date_time" kindref="compound">wxDateTime</ref></type>
@@ -213,7 +213,7 @@
 <para>For a control with <computeroutput>wxDP_ALLOWNONE</computeroutput> style the returned value may be invalid if no date is entered, otherwise it is always valid. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datectrl.h" line="136"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datectrl.h" line="143"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_picker_ctrl_1a3b6c3a53f106d335f1bc7769efe5e145" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -235,7 +235,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datectrl.h" line="146"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datectrl.h" line="153"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_picker_ctrl_1a5681c88888ec3881fa6b940cd60bad9c" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -252,107 +252,107 @@
 <para>The date should be valid unless the control was created with <computeroutput>wxDP_ALLOWNONE</computeroutput> style and included in the currently selected range, if any.</para><para>Calling this method does not result in a date change event. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datectrl.h" line="157"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datectrl.h" line="164"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para>This control allows the user to select a date. </para>    </briefdescription>
     <detaileddescription>
-<para>Unlike <ref refid="classwx_calendar_ctrl" kindref="compound">wxCalendarCtrl</ref>, which is a relatively big control, <ref refid="classwx_date_picker_ctrl" kindref="compound">wxDatePickerCtrl</ref> is implemented as a small window showing the currently selected date. The control can be edited using the keyboard, and can also display a popup window for more user-friendly date selection, depending on the styles used and the platform, except PalmOS where date is selected using native dialog.</para><para>It is only available if <computeroutput>wxUSE_DATEPICKCTRL</computeroutput> is set to 1.</para><para><heading level="2">Styles</heading>
+<para>Unlike <ref refid="classwx_calendar_ctrl" kindref="compound">wxCalendarCtrl</ref>, which is a relatively big control, <ref refid="classwx_date_picker_ctrl" kindref="compound">wxDatePickerCtrl</ref> is implemented as a small window showing the currently selected date. The control can be edited using the keyboard, and can also display a popup window for more user-friendly date selection, depending on the styles used and the platform.</para><para>It is only available if <computeroutput>wxUSE_DATEPICKCTRL</computeroutput> is set to 1.</para><para><heading level="2">Styles</heading>
 </para><para>This class supports the following styles: <itemizedlist>
 <listitem><para>wxDP_SPIN: Creates a control without a month calendar drop down but with spin-control-like arrows to change individual date components. This style is not supported by the generic version. </para></listitem>
-<listitem><para>wxDP_DROPDOWN: Creates a control with a month calendar drop-down part from which the user can select a date. </para></listitem>
-<listitem><para>wxDP_DEFAULT: Creates a control with the style that is best supported for the current platform (currently wxDP_SPIN under Windows and wxDP_DROPDOWN elsewhere). </para></listitem>
-<listitem><para>wxDP_ALLOWNONE: With this style, the control allows the user to not enter any valid date at all. Without it - the default - the control always has some valid date. </para></listitem>
-<listitem><para>wxDP_SHOWCENTURY: Forces display of the century in the default date format. Without this style the century could be displayed, or not, depending on the default date representation in the system. </para></listitem>
+<listitem><para>wxDP_DROPDOWN: Creates a control with a month calendar drop-down part from which the user can select a date. This style is not supported in OSX/Cocoa native version. </para></listitem>
+<listitem><para>wxDP_DEFAULT: Creates a control with the style that is best supported for the current platform (currently wxDP_SPIN under Windows and OSX/Cocoa and wxDP_DROPDOWN elsewhere). </para></listitem>
+<listitem><para>wxDP_ALLOWNONE: With this style, the control allows the user to not enter any valid date at all. Without it - the default - the control always has some valid date. This style is not supported in OSX/Cocoa native version. </para></listitem>
+<listitem><para>wxDP_SHOWCENTURY: Forces display of the century in the default date format. Without this style the century could be displayed, or not, depending on the default date representation in the system. This style is not supported in OSX/Cocoa native version currently. </para></listitem>
 </itemizedlist>
-<heading level="2">Events emitted by this class</heading>
+As can be seen from the remarks above, most of the control style are only supported in the native MSW implementation. In portable code it&apos;s recommended to use <computeroutput>wxDP_DEFAULT</computeroutput> style only, possibly combined with <computeroutput>wxDP_SHOWCENTURY</computeroutput> (this is also the style used by default if none is specified).</para><para><heading level="2">Events emitted by this class</heading>
 </para><para>The following event handler macros redirect the events to member function handlers &apos;<bold>func</bold>&apos; with prototypes like: void<nonbreakablespace/>handlerFuncName(<ref refid="classwx_date_event" kindref="compound">wxDateEvent</ref>&amp;<nonbreakablespace/>event)Event macros for events emitted by this class: <itemizedlist>
 <listitem><para>EVT_DATE_CHANGED(id,  func): This event fires when the user changes the current selection in the control. </para></listitem>
 </itemizedlist>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__pickers" kindref="compound">Picker Controls</ref> <htmlonly> &lt;br&gt;&lt;div&gt;&lt;span class=&apos;appearance&apos;&gt;Appearance:&lt;/span&gt;&lt;br&gt;&lt;table class=&apos;appearance&apos;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&apos;wxmsw/datepickerctrl.png&apos; alt=&apos;wxMSW appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxgtk/datepickerctrl.png&apos; alt=&apos;wxGTK appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxmac/datepickerctrl.png&apos; alt=&apos;wxMac appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;wxMSW appearance&lt;/td&gt;&lt;td&gt;wxGTK appearance&lt;/td&gt;&lt;td&gt;wxMac appearance&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt; </htmlonly></para><para><simplesect kind="see"><para><ref refid="classwx_calendar_ctrl" kindref="compound">wxCalendarCtrl</ref>, <ref refid="classwx_date_event" kindref="compound">wxDateEvent</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__pickers" kindref="compound">Picker Controls</ref> <htmlonly> &lt;br&gt;&lt;div&gt;&lt;span class=&apos;appearance&apos;&gt;Appearance:&lt;/span&gt;&lt;br&gt;&lt;table class=&apos;appearance&apos;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&apos;wxmsw/datepickerctrl.png&apos; alt=&apos;wxMSW appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxgtk/datepickerctrl.png&apos; alt=&apos;wxGTK appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxmac/datepickerctrl.png&apos; alt=&apos;wxMac appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;wxMSW appearance&lt;/td&gt;&lt;td&gt;wxGTK appearance&lt;/td&gt;&lt;td&gt;wxMac appearance&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt; </htmlonly></para><para><simplesect kind="see"><para><ref refid="classwx_calendar_ctrl" kindref="compound">wxCalendarCtrl</ref>, <ref refid="classwx_date_event" kindref="compound">wxDateEvent</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="5481">
+      <node id="5485">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="5480">
+      <node id="5484">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="5481" relation="public-inheritance">
+        <childnode refid="5485" relation="public-inheritance">
         </childnode>
+        <childnode refid="5486" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5481">
+        <label>wxDatePickerCtrl</label>
+        <link refid="classwx_date_picker_ctrl"/>
         <childnode refid="5482" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5477">
-        <label>wxDatePickerCtrl</label>
-        <link refid="classwx_date_picker_ctrl"/>
-        <childnode refid="5478" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="5482">
+      <node id="5486">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="5478">
+      <node id="5482">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="5479" relation="public-inheritance">
+        <childnode refid="5483" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5479">
+      <node id="5483">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="5480" relation="public-inheritance">
+        <childnode refid="5484" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="5487">
+      <node id="5491">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="5488" relation="usage">
+        <childnode refid="5492" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="5486">
+      <node id="5490">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="5487" relation="public-inheritance">
+        <childnode refid="5491" relation="public-inheritance">
         </childnode>
-        <childnode refid="5489" relation="public-inheritance">
+        <childnode refid="5493" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5483">
+      <node id="5487">
         <label>wxDatePickerCtrl</label>
         <link refid="classwx_date_picker_ctrl"/>
-        <childnode refid="5484" relation="public-inheritance">
+        <childnode refid="5488" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5489">
+      <node id="5493">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="5484">
+      <node id="5488">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="5485" relation="public-inheritance">
+        <childnode refid="5489" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5485">
+      <node id="5489">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="5486" relation="public-inheritance">
+        <childnode refid="5490" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5488">
+      <node id="5492">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datectrl.h" line="56" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datectrl.h" bodystart="55" bodyend="158"/>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datectrl.h" line="63" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datectrl.h" bodystart="62" bodyend="165"/>
     <listofallmembers>
       <member refid="classwx_window_1a3afbd49b1ea2f8275e3600dcac102923" prot="public" virt="virtual"><scope>wxDatePickerCtrl</scope><name>AcceptsFocus</name></member>
       <member refid="classwx_window_1a2370bdd3ab08e7ef3c7555c6aa8301b8" prot="public" virt="virtual"><scope>wxDatePickerCtrl</scope><name>AcceptsFocusFromKeyboard</name></member>

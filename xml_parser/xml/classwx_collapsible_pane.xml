@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_collapsible_pane" kind="class" prot="public">
     <compoundname>wxCollapsiblePane</compoundname>
     <basecompoundref refid="classwx_control" prot="public" virt="non-virtual">wxControl</basecompoundref>
@@ -250,17 +250,17 @@
     <briefdescription>
 <para>A collapsible pane is a container with an embedded button-like control which can be used by the user to collapse or expand the pane&apos;s contents. </para>    </briefdescription>
     <detaileddescription>
-<para>Once constructed you should use the <ref refid="classwx_collapsible_pane_1a4fab8a810f7eb766dd0c672a74187e06" kindref="member">GetPane()</ref> function to access the pane and add your controls inside it (i.e. use the returned pointer from <ref refid="classwx_collapsible_pane_1a4fab8a810f7eb766dd0c672a74187e06" kindref="member">GetPane()</ref> as parent for the controls which must go in the pane, <bold>not</bold> the <ref refid="classwx_collapsible_pane" kindref="compound">wxCollapsiblePane</ref> itself!).</para><para>Note that because of its nature of control which can dynamically (and drastically) change its size at run-time under user-input, when putting <ref refid="classwx_collapsible_pane" kindref="compound">wxCollapsiblePane</ref> inside a <ref refid="classwx_sizer" kindref="compound">wxSizer</ref> you should be careful to add it with a proportion value of zero; this is because otherwise all other windows with non-null proportion values will automatically resize each time the user expands or collapse the pane window usually resulting in a weird, flickering effect.</para><para>Usage sample:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_collapsible_pane" kindref="compound" tooltip="A collapsible pane is a container with an embedded button-like control which can...">wxCollapsiblePane</ref><sp/>*collpane<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classwx_collapsible_pane_1afe29ca6c7b230a05d63022c3adb7348a" kindref="member" tooltip="Default constructor.">wxCollapsiblePane</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/><ref refid="defs_8h_1ac66d0a09761e7d86b2ac0b2e0c6a8cbba1f375b01ea03a713bbb7e32a36a2589c" kindref="member" tooltip="Any id: means that we don&amp;#39;t care about the id, whether when installing an event...">wxID_ANY</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Details:&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<para>Once constructed you should use the <ref refid="classwx_collapsible_pane_1a4fab8a810f7eb766dd0c672a74187e06" kindref="member">GetPane()</ref> function to access the pane and add your controls inside it (i.e. use the returned pointer from <ref refid="classwx_collapsible_pane_1a4fab8a810f7eb766dd0c672a74187e06" kindref="member">GetPane()</ref> as parent for the controls which must go in the pane, <bold>not</bold> the <ref refid="classwx_collapsible_pane" kindref="compound">wxCollapsiblePane</ref> itself!).</para><para>Note that because of its nature of control which can dynamically (and drastically) change its size at run-time under user-input, when putting <ref refid="classwx_collapsible_pane" kindref="compound">wxCollapsiblePane</ref> inside a <ref refid="classwx_sizer" kindref="compound">wxSizer</ref> you should be careful to add it with a proportion value of zero; this is because otherwise all other windows with non-null proportion values will automatically resize each time the user expands or collapse the pane window usually resulting in a weird, flickering effect.</para><para>Usage sample:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_collapsible_pane" kindref="compound" tooltip="A collapsible pane is a container with an embedded button-like control which can be used by the user ...">wxCollapsiblePane</ref><sp/>*collpane<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classwx_collapsible_pane_1afe29ca6c7b230a05d63022c3adb7348a" kindref="member" tooltip="Default constructor.">wxCollapsiblePane</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/><ref refid="defs_8h_1ac66d0a09761e7d86b2ac0b2e0c6a8cbba1f375b01ea03a713bbb7e32a36a2589c" kindref="member" tooltip="Any id: means that we don&amp;#39;t care about the id, whether when installing an event handler or when creat...">wxID_ANY</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Details:&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>add<sp/>the<sp/>pane<sp/>with<sp/>a<sp/>zero<sp/>proportion<sp/>value<sp/>to<sp/>the<sp/>&apos;sz&apos;<sp/>sizer<sp/>which<sp/>contains<sp/>it</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>sz-&gt;Add(collpane,<sp/>0,<sp/><ref refid="defs_8h_1a27b6b668631a5f79f24d474af7d9b388aa50aca1b853659665bd11d3befd32f64" kindref="member">wxGROW</ref>|<ref refid="defs_8h_1ac0f30319732dcceda470516918ff3556a066863c82a2c08f6f53b663de87c60b6" kindref="member">wxALL</ref>,<sp/>5);</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>now<sp/>add<sp/>a<sp/>test<sp/>label<sp/>in<sp/>the<sp/>collapsible<sp/>pane<sp/>using<sp/>a<sp/>sizer<sp/>to<sp/>layout<sp/>it:</highlight><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_window" kindref="compound" tooltip="wxWindow is the base class for all windows and represents any visible object on screen...">wxWindow</ref><sp/>*win<sp/>=<sp/>collpane-&gt;<ref refid="classwx_collapsible_pane_1a4fab8a810f7eb766dd0c672a74187e06" kindref="member" tooltip="Returns a pointer to the pane window.">GetPane</ref>();</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_sizer" kindref="compound" tooltip="wxSizer is the abstract base class used for laying out subwindows in a window.">wxSizer</ref><sp/>*paneSz<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classwx_box_sizer" kindref="compound" tooltip="The basic idea behind a box sizer is that windows will most often be laid out in...">wxBoxSizer</ref>(<ref refid="defs_8h_1a1e6994f40bd9cb140e292afb165af971a2134d1cb8cf605532880c118190695b5" kindref="member">wxVERTICAL</ref>);</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>paneSz-&gt;<ref refid="classwx_sizer_1a4e2122f2749261473c21cb192d00709f" kindref="member" tooltip="Appends a child to the sizer.">Add</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classwx_static_text" kindref="compound" tooltip="A static text control displays one or more lines of read-only text.">wxStaticText</ref>(win,<sp/><ref refid="defs_8h_1ac66d0a09761e7d86b2ac0b2e0c6a8cbba1f375b01ea03a713bbb7e32a36a2589c" kindref="member" tooltip="Any id: means that we don&amp;#39;t care about the id, whether when installing an event...">wxID_ANY</ref>,<sp/></highlight><highlight class="stringliteral">&quot;test!&quot;</highlight><highlight class="normal">),<sp/>1,<sp/><ref refid="defs_8h_1a27b6b668631a5f79f24d474af7d9b388aa50aca1b853659665bd11d3befd32f64" kindref="member">wxGROW</ref>|<ref refid="defs_8h_1ac0f30319732dcceda470516918ff3556a066863c82a2c08f6f53b663de87c60b6" kindref="member">wxALL</ref>,<sp/>2);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_window" kindref="compound" tooltip="wxWindow is the base class for all windows and represents any visible object on screen.">wxWindow</ref><sp/>*win<sp/>=<sp/>collpane-&gt;<ref refid="classwx_collapsible_pane_1a4fab8a810f7eb766dd0c672a74187e06" kindref="member" tooltip="Returns a pointer to the pane window.">GetPane</ref>();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_sizer" kindref="compound" tooltip="wxSizer is the abstract base class used for laying out subwindows in a window.">wxSizer</ref><sp/>*paneSz<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classwx_box_sizer" kindref="compound" tooltip="The basic idea behind a box sizer is that windows will most often be laid out in rather simple basic ...">wxBoxSizer</ref>(<ref refid="defs_8h_1a1e6994f40bd9cb140e292afb165af971a2134d1cb8cf605532880c118190695b5" kindref="member">wxVERTICAL</ref>);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>paneSz-&gt;<ref refid="classwx_sizer_1a4e2122f2749261473c21cb192d00709f" kindref="member" tooltip="Appends a child to the sizer.">Add</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classwx_static_text" kindref="compound" tooltip="A static text control displays one or more lines of read-only text.">wxStaticText</ref>(win,<sp/><ref refid="defs_8h_1ac66d0a09761e7d86b2ac0b2e0c6a8cbba1f375b01ea03a713bbb7e32a36a2589c" kindref="member" tooltip="Any id: means that we don&amp;#39;t care about the id, whether when installing an event handler or when creat...">wxID_ANY</ref>,<sp/></highlight><highlight class="stringliteral">&quot;test!&quot;</highlight><highlight class="normal">),<sp/>1,<sp/><ref refid="defs_8h_1a27b6b668631a5f79f24d474af7d9b388aa50aca1b853659665bd11d3befd32f64" kindref="member">wxGROW</ref>|<ref refid="defs_8h_1ac0f30319732dcceda470516918ff3556a066863c82a2c08f6f53b663de87c60b6" kindref="member">wxALL</ref>,<sp/>2);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>win-&gt;<ref refid="classwx_window_1abc95691b45e29a52c24aa9d33d46dec1" kindref="member" tooltip="Sets the window to have the given layout sizer.">SetSizer</ref>(paneSz);</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>paneSz-&gt;<ref refid="classwx_sizer_1abc460cd0e2bb3bde72142fdb434bc546" kindref="member" tooltip="This method first calls Fit() and then wxTopLevelWindow::SetSizeHints() on the window...">SetSizeHints</ref>(win);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>paneSz-&gt;<ref refid="classwx_sizer_1abc460cd0e2bb3bde72142fdb434bc546" kindref="member" tooltip="This method first calls Fit() and then wxTopLevelWindow::SetSizeHints() on the window passed to it...">SetSizeHints</ref>(win);</highlight></codeline>
 </programlisting></para><para>It is only available if <computeroutput>wxUSE_COLLPANE</computeroutput> is set to 1 (the default).</para><para><heading level="2">Styles</heading>
 </para><para>This class supports the following styles: <itemizedlist>
 <listitem><para>wxCP_DEFAULT_STYLE: The default style. It includes wxTAB_TRAVERSAL and wxBORDER_NONE. </para></listitem>
@@ -272,83 +272,83 @@
 <listitem><para>EVT_NAVIGATION_KEY(func): Process a navigation key event. </para></listitem>
 </itemizedlist>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref> <htmlonly> &lt;br&gt;&lt;div&gt;&lt;span class=&apos;appearance&apos;&gt;Appearance:&lt;/span&gt;&lt;br&gt;&lt;table class=&apos;appearance&apos;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&apos;wxmsw/collapsiblepane.png&apos; alt=&apos;wxMSW appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxgtk/collapsiblepane.png&apos; alt=&apos;wxGTK appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxmac/collapsiblepane.png&apos; alt=&apos;wxMac appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;wxMSW appearance&lt;/td&gt;&lt;td&gt;wxGTK appearance&lt;/td&gt;&lt;td&gt;wxMac appearance&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt; </htmlonly></para><para><simplesect kind="see"><para><ref refid="classwx_panel" kindref="compound">wxPanel</ref>, <ref refid="classwx_collapsible_pane_event" kindref="compound">wxCollapsiblePaneEvent</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref> <htmlonly> &lt;br&gt;&lt;div&gt;&lt;span class=&apos;appearance&apos;&gt;Appearance:&lt;/span&gt;&lt;br&gt;&lt;table class=&apos;appearance&apos;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&apos;wxmsw/collapsiblepane.png&apos; alt=&apos;wxMSW appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxgtk/collapsiblepane.png&apos; alt=&apos;wxGTK appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxmac/collapsiblepane.png&apos; alt=&apos;wxMac appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;wxMSW appearance&lt;/td&gt;&lt;td&gt;wxGTK appearance&lt;/td&gt;&lt;td&gt;wxMac appearance&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt; </htmlonly></para><para><simplesect kind="see"><para><ref refid="classwx_panel" kindref="compound">wxPanel</ref>, <ref refid="classwx_collapsible_pane_event" kindref="compound">wxCollapsiblePaneEvent</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="4825">
+      <node id="4829">
         <label>wxCollapsiblePane</label>
         <link refid="classwx_collapsible_pane"/>
-        <childnode refid="4826" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4829">
-        <label>wxObject</label>
-        <link refid="classwx_object"/>
-      </node>
-      <node id="4828">
-        <label>wxEvtHandler</label>
-        <link refid="classwx_evt_handler"/>
-        <childnode refid="4829" relation="public-inheritance">
-        </childnode>
         <childnode refid="4830" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4830">
+      <node id="4833">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+      </node>
+      <node id="4832">
+        <label>wxEvtHandler</label>
+        <link refid="classwx_evt_handler"/>
+        <childnode refid="4833" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4834" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4834">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="4826">
+      <node id="4830">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="4827" relation="public-inheritance">
+        <childnode refid="4831" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4827">
+      <node id="4831">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="4828" relation="public-inheritance">
+        <childnode refid="4832" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="4831">
+      <node id="4835">
         <label>wxCollapsiblePane</label>
         <link refid="classwx_collapsible_pane"/>
-        <childnode refid="4832" relation="public-inheritance">
+        <childnode refid="4836" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4835">
+      <node id="4839">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="4836" relation="usage">
+        <childnode refid="4840" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="4834">
+      <node id="4838">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="4835" relation="public-inheritance">
+        <childnode refid="4839" relation="public-inheritance">
         </childnode>
+        <childnode refid="4841" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4841">
+        <label>wxTrackable</label>
+        <link refid="classwx_trackable"/>
+      </node>
+      <node id="4836">
+        <label>wxControl</label>
+        <link refid="classwx_control"/>
         <childnode refid="4837" relation="public-inheritance">
         </childnode>
       </node>
       <node id="4837">
-        <label>wxTrackable</label>
-        <link refid="classwx_trackable"/>
-      </node>
-      <node id="4832">
-        <label>wxControl</label>
-        <link refid="classwx_control"/>
-        <childnode refid="4833" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4833">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="4834" relation="public-inheritance">
+        <childnode refid="4838" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4836">
+      <node id="4840">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

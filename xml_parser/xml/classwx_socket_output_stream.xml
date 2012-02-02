@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_socket_output_stream" kind="class" prot="public">
     <compoundname>wxSocketOutputStream</compoundname>
     <basecompoundref refid="classwx_output_stream" prot="public" virt="non-virtual">wxOutputStream</basecompoundref>
@@ -27,41 +27,41 @@
 <para>This class implements an output stream which writes data from a connected socket. </para>    </briefdescription>
     <detaileddescription>
 <para>Note that this stream is purely sequential and it does not support seeking.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxnet" kindref="member">wxNet</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__net" kindref="compound">Networking</ref>, <ref refid="group__group__class__streams" kindref="compound">Streams</ref></para><para><simplesect kind="see"><para><ref refid="classwx_socket_base" kindref="compound">wxSocketBase</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxnet" kindref="member">wxNet</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__net" kindref="compound">Networking</ref>, <ref refid="group__group__class__streams" kindref="compound">Streams</ref></para><para><simplesect kind="see"><para><ref refid="classwx_socket_base" kindref="compound">wxSocketBase</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10257">
+      <node id="10317">
         <label>wxStreamBase</label>
         <link refid="classwx_stream_base"/>
       </node>
-      <node id="10256">
+      <node id="10316">
         <label>wxOutputStream</label>
         <link refid="classwx_output_stream"/>
-        <childnode refid="10257" relation="public-inheritance">
+        <childnode refid="10317" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10255">
+      <node id="10315">
         <label>wxSocketOutputStream</label>
         <link refid="classwx_socket_output_stream"/>
-        <childnode refid="10256" relation="public-inheritance">
+        <childnode refid="10316" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10260">
+      <node id="10320">
         <label>wxStreamBase</label>
         <link refid="classwx_stream_base"/>
       </node>
-      <node id="10259">
+      <node id="10319">
         <label>wxOutputStream</label>
         <link refid="classwx_output_stream"/>
-        <childnode refid="10260" relation="public-inheritance">
+        <childnode refid="10320" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10258">
+      <node id="10318">
         <label>wxSocketOutputStream</label>
         <link refid="classwx_socket_output_stream"/>
-        <childnode refid="10259" relation="public-inheritance">
+        <childnode refid="10319" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>

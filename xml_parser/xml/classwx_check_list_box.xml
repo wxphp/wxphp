@@ -1,12 +1,11 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_check_list_box" kind="class" prot="public">
     <compoundname>wxCheckListBox</compoundname>
     <basecompoundref refid="classwx_list_box" prot="public" virt="non-virtual">wxListBox</basecompoundref>
     <derivedcompoundref refid="classwx_rearrange_list" prot="public" virt="non-virtual">wxRearrangeList</derivedcompoundref>
     <includes local="no">wx/checklst.h</includes>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_check_list_box_1aee09053ee942c61dc98bbe853d5525d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
         <definition>wxCheckListBox::wxCheckListBox</definition>
@@ -439,137 +438,137 @@
 <listitem><para>EVT_CHECKLISTBOX(id,  func): Process a <computeroutput>wxEVT_COMMAND_CHECKLISTBOX_TOGGLED</computeroutput> event, when an item in the check list box is checked or unchecked. <ref refid="classwx_command_event_1abaf0dde08fd04018feba4b458b757a7f" kindref="member">wxCommandEvent::GetInt()</ref> will contain the index of the item that was checked or unchecked. <ref refid="classwx_command_event_1a787f616f732b35c6ed30ab10b74147e4" kindref="member">wxCommandEvent::IsChecked()</ref> is not valid! Use <ref refid="classwx_check_list_box_1a9662fd127c0f51764b4f6836205c40fe" kindref="member">wxCheckListBox::IsChecked()</ref> instead. </para></listitem>
 </itemizedlist>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref> <htmlonly> &lt;br&gt;&lt;div&gt;&lt;span class=&apos;appearance&apos;&gt;Appearance:&lt;/span&gt;&lt;br&gt;&lt;table class=&apos;appearance&apos;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&apos;wxmsw/checklistbox.png&apos; alt=&apos;wxMSW appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxgtk/checklistbox.png&apos; alt=&apos;wxGTK appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxmac/checklistbox.png&apos; alt=&apos;wxMac appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;wxMSW appearance&lt;/td&gt;&lt;td&gt;wxGTK appearance&lt;/td&gt;&lt;td&gt;wxMac appearance&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt; </htmlonly></para><para><simplesect kind="see"><para><ref refid="classwx_list_box" kindref="compound">wxListBox</ref>, <ref refid="classwx_choice" kindref="compound">wxChoice</ref>, <ref refid="classwx_combo_box" kindref="compound">wxComboBox</ref>, <ref refid="classwx_list_ctrl" kindref="compound">wxListCtrl</ref>, <ref refid="classwx_command_event" kindref="compound">wxCommandEvent</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref> <htmlonly> &lt;br&gt;&lt;div&gt;&lt;span class=&apos;appearance&apos;&gt;Appearance:&lt;/span&gt;&lt;br&gt;&lt;table class=&apos;appearance&apos;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&apos;wxmsw/checklistbox.png&apos; alt=&apos;wxMSW appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxgtk/checklistbox.png&apos; alt=&apos;wxGTK appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxmac/checklistbox.png&apos; alt=&apos;wxMac appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;wxMSW appearance&lt;/td&gt;&lt;td&gt;wxGTK appearance&lt;/td&gt;&lt;td&gt;wxMac appearance&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt; </htmlonly></para><para><simplesect kind="see"><para><ref refid="classwx_list_box" kindref="compound">wxListBox</ref>, <ref refid="classwx_choice" kindref="compound">wxChoice</ref>, <ref refid="classwx_combo_box" kindref="compound">wxComboBox</ref>, <ref refid="classwx_list_ctrl" kindref="compound">wxListCtrl</ref>, <ref refid="classwx_command_event" kindref="compound">wxCommandEvent</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="4718">
+      <node id="4722">
         <label>wxItemContainer</label>
         <link refid="classwx_item_container"/>
-        <childnode refid="4719" relation="public-inheritance">
+        <childnode refid="4723" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4711">
+      <node id="4715">
         <label>wxListBox</label>
         <link refid="classwx_list_box"/>
-        <childnode refid="4712" relation="public-inheritance">
+        <childnode refid="4716" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4716">
+      <node id="4720">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="4715">
+      <node id="4719">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="4716" relation="public-inheritance">
+        <childnode refid="4720" relation="public-inheritance">
         </childnode>
-        <childnode refid="4717" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4710">
-        <label>wxCheckListBox</label>
-        <link refid="classwx_check_list_box"/>
-        <childnode refid="4711" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4717">
-        <label>wxTrackable</label>
-        <link refid="classwx_trackable"/>
-      </node>
-      <node id="4720">
-        <label>wxRearrangeList</label>
-        <link refid="classwx_rearrange_list"/>
-        <childnode refid="4710" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4713">
-        <label>wxControl</label>
-        <link refid="classwx_control"/>
-        <childnode refid="4714" relation="public-inheritance">
+        <childnode refid="4721" relation="public-inheritance">
         </childnode>
       </node>
       <node id="4714">
-        <label>wxWindow</label>
-        <link refid="classwx_window"/>
+        <label>wxCheckListBox</label>
+        <link refid="classwx_check_list_box"/>
         <childnode refid="4715" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4712">
-        <label>wxControlWithItems</label>
-        <link refid="classwx_control_with_items"/>
-        <childnode refid="4713" relation="public-inheritance">
+      <node id="4721">
+        <label>wxTrackable</label>
+        <link refid="classwx_trackable"/>
+      </node>
+      <node id="4724">
+        <label>wxRearrangeList</label>
+        <link refid="classwx_rearrange_list"/>
+        <childnode refid="4714" relation="public-inheritance">
         </childnode>
+      </node>
+      <node id="4717">
+        <label>wxControl</label>
+        <link refid="classwx_control"/>
         <childnode refid="4718" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4719">
+      <node id="4718">
+        <label>wxWindow</label>
+        <link refid="classwx_window"/>
+        <childnode refid="4719" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4716">
+        <label>wxControlWithItems</label>
+        <link refid="classwx_control_with_items"/>
+        <childnode refid="4717" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4722" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4723">
         <label>wxItemContainerImmutable</label>
         <link refid="classwx_item_container_immutable"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="4730">
+      <node id="4734">
         <label>wxItemContainer</label>
         <link refid="classwx_item_container"/>
-        <childnode refid="4731" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4722">
-        <label>wxListBox</label>
-        <link refid="classwx_list_box"/>
-        <childnode refid="4723" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4727">
-        <label>wxObject</label>
-        <link refid="classwx_object"/>
-        <childnode refid="4728" relation="usage">
-          <edgelabel>m_refData</edgelabel>
+        <childnode refid="4735" relation="public-inheritance">
         </childnode>
       </node>
       <node id="4726">
-        <label>wxEvtHandler</label>
-        <link refid="classwx_evt_handler"/>
+        <label>wxListBox</label>
+        <link refid="classwx_list_box"/>
         <childnode refid="4727" relation="public-inheritance">
-        </childnode>
-        <childnode refid="4729" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4721">
-        <label>wxCheckListBox</label>
-        <link refid="classwx_check_list_box"/>
-        <childnode refid="4722" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4729">
-        <label>wxTrackable</label>
-        <link refid="classwx_trackable"/>
-      </node>
-      <node id="4724">
-        <label>wxControl</label>
-        <link refid="classwx_control"/>
-        <childnode refid="4725" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4725">
-        <label>wxWindow</label>
-        <link refid="classwx_window"/>
-        <childnode refid="4726" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4723">
-        <label>wxControlWithItems</label>
-        <link refid="classwx_control_with_items"/>
-        <childnode refid="4724" relation="public-inheritance">
-        </childnode>
-        <childnode refid="4730" relation="public-inheritance">
         </childnode>
       </node>
       <node id="4731">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="4732" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="4730">
+        <label>wxEvtHandler</label>
+        <link refid="classwx_evt_handler"/>
+        <childnode refid="4731" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4733" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4725">
+        <label>wxCheckListBox</label>
+        <link refid="classwx_check_list_box"/>
+        <childnode refid="4726" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4733">
+        <label>wxTrackable</label>
+        <link refid="classwx_trackable"/>
+      </node>
+      <node id="4728">
+        <label>wxControl</label>
+        <link refid="classwx_control"/>
+        <childnode refid="4729" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4729">
+        <label>wxWindow</label>
+        <link refid="classwx_window"/>
+        <childnode refid="4730" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4727">
+        <label>wxControlWithItems</label>
+        <link refid="classwx_control_with_items"/>
+        <childnode refid="4728" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4734" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4735">
         <label>wxItemContainerImmutable</label>
         <link refid="classwx_item_container_immutable"/>
       </node>
-      <node id="4728">
+      <node id="4732">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_query_layout_info_event" kind="class" prot="public">
     <compoundname>wxQueryLayoutInfoEvent</compoundname>
     <basecompoundref refid="classwx_event" prot="public" virt="non-virtual">wxEvent</basecompoundref>
@@ -182,47 +182,47 @@
 <listitem><para>EVT_QUERY_LAYOUT_INFO(func): Process a <computeroutput>wxEVT_QUERY_LAYOUT_INFO</computeroutput> event, to get size, orientation and alignment from a window. </para></listitem>
 </itemizedlist>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="classwx_calculate_layout_event" kindref="compound">wxCalculateLayoutEvent</ref>, <ref refid="classwx_sash_layout_window" kindref="compound">wxSashLayoutWindow</ref>, <ref refid="classwx_layout_algorithm" kindref="compound">wxLayoutAlgorithm</ref>. </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="classwx_calculate_layout_event" kindref="compound">wxCalculateLayoutEvent</ref>, <ref refid="classwx_sash_layout_window" kindref="compound">wxSashLayoutWindow</ref>, <ref refid="classwx_layout_algorithm" kindref="compound">wxLayoutAlgorithm</ref>. </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="8959">
+      <node id="8967">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="8957">
+      <node id="8965">
         <label>wxQueryLayoutInfoEvent</label>
         <link refid="classwx_query_layout_info_event"/>
-        <childnode refid="8958" relation="public-inheritance">
+        <childnode refid="8966" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8958">
+      <node id="8966">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="8959" relation="public-inheritance">
+        <childnode refid="8967" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="8962">
+      <node id="8970">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="8963" relation="usage">
+        <childnode refid="8971" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="8960">
+      <node id="8968">
         <label>wxQueryLayoutInfoEvent</label>
         <link refid="classwx_query_layout_info_event"/>
-        <childnode refid="8961" relation="public-inheritance">
+        <childnode refid="8969" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8961">
+      <node id="8969">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="8962" relation="public-inheritance">
+        <childnode refid="8970" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8963">
+      <node id="8971">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

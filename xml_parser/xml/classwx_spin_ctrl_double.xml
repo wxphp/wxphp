@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_spin_ctrl_double" kind="class" prot="public">
     <compoundname>wxSpinCtrlDouble</compoundname>
     <basecompoundref refid="classwx_control" prot="public" virt="non-virtual">wxControl</basecompoundref>
@@ -399,83 +399,83 @@
 <listitem><para>EVT_SPINCTRLDOUBLE(id,  func): Generated whenever the numeric value of the spin control is changed, that is, when the up/down spin button is clicked, when ENTER is pressed, or the control loses focus and the new value is different from the last. See <ref refid="classwx_spin_double_event" kindref="compound">wxSpinDoubleEvent</ref>. </para></listitem>
 </itemizedlist>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref> <htmlonly> &lt;br&gt;&lt;div&gt;&lt;span class=&apos;appearance&apos;&gt;Appearance:&lt;/span&gt;&lt;br&gt;&lt;table class=&apos;appearance&apos;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&apos;wxmsw/spinctrldouble.png&apos; alt=&apos;wxMSW appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxgtk/spinctrldouble.png&apos; alt=&apos;wxGTK appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxmac/spinctrldouble.png&apos; alt=&apos;wxMac appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;wxMSW appearance&lt;/td&gt;&lt;td&gt;wxGTK appearance&lt;/td&gt;&lt;td&gt;wxMac appearance&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt; </htmlonly></para><para><simplesect kind="see"><para><ref refid="classwx_spin_button" kindref="compound">wxSpinButton</ref>, <ref refid="classwx_spin_ctrl" kindref="compound">wxSpinCtrl</ref>, <ref refid="classwx_control" kindref="compound">wxControl</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref> <htmlonly> &lt;br&gt;&lt;div&gt;&lt;span class=&apos;appearance&apos;&gt;Appearance:&lt;/span&gt;&lt;br&gt;&lt;table class=&apos;appearance&apos;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&apos;wxmsw/spinctrldouble.png&apos; alt=&apos;wxMSW appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxgtk/spinctrldouble.png&apos; alt=&apos;wxGTK appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxmac/spinctrldouble.png&apos; alt=&apos;wxMac appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;wxMSW appearance&lt;/td&gt;&lt;td&gt;wxGTK appearance&lt;/td&gt;&lt;td&gt;wxMac appearance&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt; </htmlonly></para><para><simplesect kind="see"><para><ref refid="classwx_spin_button" kindref="compound">wxSpinButton</ref>, <ref refid="classwx_spin_ctrl" kindref="compound">wxSpinCtrl</ref>, <ref refid="classwx_control" kindref="compound">wxControl</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10303">
+      <node id="10363">
         <label>wxSpinCtrlDouble</label>
         <link refid="classwx_spin_ctrl_double"/>
-        <childnode refid="10304" relation="public-inheritance">
+        <childnode refid="10364" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10307">
+      <node id="10367">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="10306">
+      <node id="10366">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="10307" relation="public-inheritance">
+        <childnode refid="10367" relation="public-inheritance">
         </childnode>
-        <childnode refid="10308" relation="public-inheritance">
+        <childnode refid="10368" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10308">
+      <node id="10368">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="10304">
+      <node id="10364">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="10305" relation="public-inheritance">
+        <childnode refid="10365" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10305">
+      <node id="10365">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="10306" relation="public-inheritance">
+        <childnode refid="10366" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10309">
+      <node id="10369">
         <label>wxSpinCtrlDouble</label>
         <link refid="classwx_spin_ctrl_double"/>
-        <childnode refid="10310" relation="public-inheritance">
+        <childnode refid="10370" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10313">
+      <node id="10373">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="10314" relation="usage">
+        <childnode refid="10374" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="10312">
+      <node id="10372">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="10313" relation="public-inheritance">
+        <childnode refid="10373" relation="public-inheritance">
         </childnode>
-        <childnode refid="10315" relation="public-inheritance">
+        <childnode refid="10375" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10315">
+      <node id="10375">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="10310">
+      <node id="10370">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="10311" relation="public-inheritance">
+        <childnode refid="10371" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10311">
+      <node id="10371">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="10312" relation="public-inheritance">
+        <childnode refid="10372" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10314">
+      <node id="10374">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

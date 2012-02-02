@@ -1,12 +1,31 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="toplevel_8h" kind="file">
     <compoundname>toplevel.h</compoundname>
     <innerclass refid="classwx_top_level_window" prot="public">wxTopLevelWindow</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="toplevel_8h_1ab3ad2777e5178344fa798ec8fd8e95e2" prot="public" static="no">
+        <name>wxDEFAULT_FRAME_STYLE</name>
+        <initializer>(wxSYSTEM_MENU |          \
+                               wxRESIZE_BORDER |        \
+                               wxMINIMIZE_BOX |         \
+                               wxMAXIMIZE_BOX |         \
+                               wxCLOSE_BOX |            \
+                               wxCAPTION |              \
+                               wxCLIP_CHILDREN)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toplevel.h" line="43" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toplevel.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
       <sectiondef kind="enum">
-      <memberdef kind="enum" id="toplevel_8h_1adb49720dc49f7d4e4cf9adbf2948e409" prot="public" static="no">
-        <name>@20</name>
-        <enumvalue id="toplevel_8h_1adb49720dc49f7d4e4cf9adbf2948e409a8108db1470990d8ff6bf08c195f11c4f" prot="public">
+      <memberdef kind="enum" id="toplevel_8h_1aaf8fd5f0e57d456151c951e0f3715fc4" prot="public" static="no">
+        <name>@23</name>
+        <enumvalue id="toplevel_8h_1aaf8fd5f0e57d456151c951e0f3715fc4a8108db1470990d8ff6bf08c195f11c4f" prot="public">
           <name>wxUSER_ATTENTION_INFO</name>
           <initializer> 1</initializer>
           <briefdescription>
@@ -14,7 +33,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="toplevel_8h_1adb49720dc49f7d4e4cf9adbf2948e409ab5eb31d93125653334ffbe901c1a2135" prot="public">
+        <enumvalue id="toplevel_8h_1aaf8fd5f0e57d456151c951e0f3715fc4ab5eb31d93125653334ffbe901c1a2135" prot="public">
           <name>wxUSER_ATTENTION_ERROR</name>
           <initializer> 2</initializer>
           <briefdescription>
@@ -30,9 +49,9 @@
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toplevel.h" line="13" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toplevel.h" bodystart="12" bodyend="16"/>
       </memberdef>
-      <memberdef kind="enum" id="toplevel_8h_1aae05225933a42f81e7c4a9fb286596f9" prot="public" static="no">
-        <name>@21</name>
-        <enumvalue id="toplevel_8h_1aae05225933a42f81e7c4a9fb286596f9a4625145320cb6292879930fddaec9846" prot="public">
+      <memberdef kind="enum" id="toplevel_8h_1a94798fdadfbf49a7c658ace669a1d310" prot="public" static="no">
+        <name>@24</name>
+        <enumvalue id="toplevel_8h_1a94798fdadfbf49a7c658ace669a1d310a4625145320cb6292879930fddaec9846" prot="public">
           <name>wxFULLSCREEN_NOMENUBAR</name>
           <initializer> 0x0001</initializer>
           <briefdescription>
@@ -40,7 +59,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="toplevel_8h_1aae05225933a42f81e7c4a9fb286596f9a201b1534be9376afa9f9bbd8d0f747e0" prot="public">
+        <enumvalue id="toplevel_8h_1a94798fdadfbf49a7c658ace669a1d310a201b1534be9376afa9f9bbd8d0f747e0" prot="public">
           <name>wxFULLSCREEN_NOTOOLBAR</name>
           <initializer> 0x0002</initializer>
           <briefdescription>
@@ -48,7 +67,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="toplevel_8h_1aae05225933a42f81e7c4a9fb286596f9ae24e5651560ad32e4defd3fae63c8249" prot="public">
+        <enumvalue id="toplevel_8h_1a94798fdadfbf49a7c658ace669a1d310ae24e5651560ad32e4defd3fae63c8249" prot="public">
           <name>wxFULLSCREEN_NOSTATUSBAR</name>
           <initializer> 0x0004</initializer>
           <briefdescription>
@@ -56,7 +75,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="toplevel_8h_1aae05225933a42f81e7c4a9fb286596f9aaa20e9333ae71a20f1f82d93b1384f2e" prot="public">
+        <enumvalue id="toplevel_8h_1a94798fdadfbf49a7c658ace669a1d310aaa20e9333ae71a20f1f82d93b1384f2e" prot="public">
           <name>wxFULLSCREEN_NOBORDER</name>
           <initializer> 0x0008</initializer>
           <briefdescription>
@@ -64,7 +83,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="toplevel_8h_1aae05225933a42f81e7c4a9fb286596f9af4ce9818046a65150e66be67072e85e6" prot="public">
+        <enumvalue id="toplevel_8h_1a94798fdadfbf49a7c658ace669a1d310af4ce9818046a65150e66be67072e85e6" prot="public">
           <name>wxFULLSCREEN_NOCAPTION</name>
           <initializer> 0x0010</initializer>
           <briefdescription>
@@ -72,7 +91,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="toplevel_8h_1aae05225933a42f81e7c4a9fb286596f9a72ce60840ea903bc619581af981dab15" prot="public">
+        <enumvalue id="toplevel_8h_1a94798fdadfbf49a7c658ace669a1d310a72ce60840ea903bc619581af981dab15" prot="public">
           <name>wxFULLSCREEN_ALL</name>
           <initializer> wxFULLSCREEN_NOMENUBAR | wxFULLSCREEN_NOTOOLBAR |
                           wxFULLSCREEN_NOSTATUSBAR | wxFULLSCREEN_NOBORDER |

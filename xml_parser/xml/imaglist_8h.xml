@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="imaglist_8h" kind="file">
     <compoundname>imaglist.h</compoundname>
     <innerclass refid="classwx_image_list" prot="public">wxImageList</innerclass>
@@ -50,23 +50,23 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="enum">
-      <memberdef kind="enum" id="imaglist_8h_1ac36f475ca5b446f4fde4c9b90bec77c8" prot="public" static="no">
-        <name>@12</name>
-        <enumvalue id="imaglist_8h_1ac36f475ca5b446f4fde4c9b90bec77c8aec1cfefd5c35fa6dc93c282472ed9122" prot="public">
+      <memberdef kind="enum" id="imaglist_8h_1aba01db17f4a2bfbc3db60dc172972a25" prot="public" static="no">
+        <name>@15</name>
+        <enumvalue id="imaglist_8h_1aba01db17f4a2bfbc3db60dc172972a25aec1cfefd5c35fa6dc93c282472ed9122" prot="public">
           <name>wxIMAGE_LIST_NORMAL</name>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="imaglist_8h_1ac36f475ca5b446f4fde4c9b90bec77c8aaff447fcf94ef577a1b477adad415da0" prot="public">
+        <enumvalue id="imaglist_8h_1aba01db17f4a2bfbc3db60dc172972a25aaff447fcf94ef577a1b477adad415da0" prot="public">
           <name>wxIMAGE_LIST_SMALL</name>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="imaglist_8h_1ac36f475ca5b446f4fde4c9b90bec77c8adda05446800fbd3ad25dac2e69411001" prot="public">
+        <enumvalue id="imaglist_8h_1aba01db17f4a2bfbc3db60dc172972a25adda05446800fbd3ad25dac2e69411001" prot="public">
           <name>wxIMAGE_LIST_STATE</name>
           <briefdescription>
           </briefdescription>

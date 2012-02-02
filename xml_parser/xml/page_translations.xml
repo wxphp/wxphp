@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="page_translations" kind="page">
+    <compoundname>page_translations</compoundname>
+    <title>Translations</title>
+    <detaileddescription>
+<para>wxWidgets uses a certain number of user-readable strings such as <computeroutput>&quot;help&quot;</computeroutput> or <computeroutput>&quot;Load file&quot;</computeroutput> which should be translated to the users language if it is different from English.</para><para>wxWidgets has built in support for internationalization (<emphasis>i18n</emphasis> from now on) which allows for this to happen automatically if the translations to the current language are available.</para><para>You may find here the list of all existing translations with the addresses of the official translators whom you should contact if you would like to submit any corrections to the translations for your language.</para><para>Also, please see <ref refid="page_translations_1page_translations_howtohelp" kindref="member">How to help</ref> if you would like to translate wxWidgets to your language if it is not mentioned here (or to help with one which already is - it is quite helpful to have several translators for one language at least for proof reading).</para><para><itemizedlist>
+<listitem><para><ref refid="page_translations_1page_translations_avail" kindref="member">Available translations</ref> </para></listitem>
+<listitem><para><ref refid="page_translations_1page_translations_howtohelp" kindref="member">How to help</ref></para></listitem>
+</itemizedlist>
+<hruler/>
+</para><sect1 id="page_translations_1page_translations_avail">
+<title>Available translations</title>
+<para>Below is the table containing the list of languages supported by wxWidgets. The columns of this table have the obvious meaning: in each row you will see the language, the official translator (if any) for it and the status of the translations.</para><para>Please note that email addresses in the table below are intentionally invalid to foil spam robots, remove one <computeroutput>@</computeroutput> from them.</para><para><table rows="36" cols="3"><row>
+<entry thead="yes"><para>Language </para></entry><entry thead="yes"><para>Status </para></entry><entry thead="yes"><para>Translator(s) </para><para></para></entry></row>
+<row>
+<entry thead="no"><para>Afrikaans </para></entry><entry thead="no"><para>71% </para></entry><entry thead="no"><para><ulink url="mailto:rkwjpj@@puk.ac.za">Petri Jooste</ulink> </para><para></para></entry></row>
+<row>
+<entry thead="no"><para>Albanian </para></entry><entry thead="no"><para>79% </para></entry><entry thead="no"><para><ulink url="mailto:besnik@@programeshqip.org">Besnik Bleta</ulink> </para><para></para></entry></row>
+<row>
+<entry thead="no"><para>Basque </para></entry><entry thead="no"><para>18% </para></entry><entry thead="no"><para><ulink url="mailto:3arrano@@euskalerria.org">3ARRANO Euskalgintza Taldea</ulink> </para><para></para></entry></row>
+<row>
+<entry thead="no"><para>Catalan </para></entry><entry thead="no"><para>67% </para></entry><entry thead="no"><para><ulink url="mailto:paubcrespo@@hotmail.com">Pau Bosch i Crespo</ulink> </para><para></para></entry></row>
+<row>
+<entry thead="no"><para>Chinese (simplified) </para></entry><entry thead="no"><para>80% </para></entry><entry thead="no"><para><ulink url="mailto:mrfx@@fm365.com">mrfx</ulink> </para><para></para></entry></row>
+<row>
+<entry thead="no"><para>Chinese (traditional) </para></entry><entry thead="no"><para>80% </para></entry><entry thead="no"><para><ulink url="mailto:pal.tw@@yahoo.com.tw">pal.tw</ulink> </para><para></para></entry></row>
+<row>
+<entry thead="no"><para>Czech </para></entry><entry thead="no"><para>68% </para></entry><entry thead="no"><para><ulink url="mailto:v.slavik@@volny.cz">Vaclav Slavik</ulink>, <ulink url="mailto:deirdre_skye@@web.de">Herbert Breunung</ulink>  </para><para></para></entry></row>
+<row>
+<entry thead="no"><para>Danish </para></entry><entry thead="no"><para>78% </para></entry><entry thead="no"><para><ulink url="mailto:leif@@danmos.dk">Leif Jensen</ulink>, <ulink url="mailto:Henrik@@fangorn.dk">Henrik Ræder Clausen</ulink>, <ulink url="mailto:mulrich15@@yahoo.dk">Morten Råbjerg Ulrich</ulink>  </para><para></para></entry></row>
+<row>
+<entry thead="no"><para>Dutch </para></entry><entry thead="no"><para>92% </para></entry><entry thead="no"><para><ulink url="mailto:phubers@@solve-i-t.com">Patrick Hubers</ulink> </para><para></para></entry></row>
+<row>
+<entry thead="no"><para>English (UK) </para></entry><entry thead="no"><para>100% </para></entry><entry thead="no"><para>N/A </para><para></para></entry></row>
+<row>
+<entry thead="no"><para>Finnish </para></entry><entry thead="no"><para>88% </para></entry><entry thead="no"><para><ulink url="mailto:kgb@@compart.fi">Kaj G Backas</ulink>, <ulink url="mailto:lanurmi@@iki.fi">Lauri Nurmi</ulink>, <ulink url="mailto:jmsalli79@@hotmail.com">Jaakko Salli</ulink>, <ulink url="mailto:elias.julkunen@gmail.com">Elias Julkunen</ulink>  </para><para></para></entry></row>
+<row>
+<entry thead="no"><para>French (standard) </para></entry><entry thead="no"><para>95% </para></entry><entry thead="no"><para><ulink url="mailto:Stephane.Junique@@optics.kth.se">Stephane Junique</ulink>, <ulink url="mailto:lionel.allorge@@lunerouge.com">Lionel Allorge</ulink>, <ulink url="mailto:Gilles.Guyot@@Krypton.be">Gilles Guyot</ulink>  </para><para></para></entry></row>
+<row>
+<entry thead="no"><para>Galician </para></entry><entry thead="no"><para>80% </para></entry><entry thead="no"><para><ulink url="mailto:leandro.regueiro@@gmail.com">Leandro Regueiro</ulink>, <ulink url="mailto:correoadrian82@@hotmail.com">Adrián González Alba</ulink>  </para><para></para></entry></row>
+<row>
+<entry thead="no"><para>German </para></entry><entry thead="no"><para>81% </para></entry><entry thead="no"><para><ulink url="mailto:DanR@@gmx.de">Daniel Reith</ulink>, <ulink url="mailto:sparhawk@@aon.at">Gerhard Gruber</ulink>, <ulink url="mailto:stefan@@hedemann.de">Stefan Hedemann</ulink>, <ulink url="mailto:D.Reymann@@geisenheim.mnd.fh-wiesbaden.de">Dr. Detlev Reymann</ulink>, Mark Johnson, <ulink url="mailto:martinnost@@users.sf.net">Martin Jost</ulink>, <ulink url="mailto:deirdre_skye@@web.de">Herbert Breunung</ulink>, <ulink url="mailto:chbuck@@gmail.com">Ch. Buck</ulink>  </para><para></para></entry></row>
+<row>
+<entry thead="no"><para>Greek </para></entry><entry thead="no"><para>76% </para></entry><entry thead="no"><para><ulink url="mailto:tsolako1@@otenet.gr">Tsolakos Stavros</ulink>, <ulink url="mailto:nassosy@@compulink.gr">Nassos Yiannopoulos</ulink>  </para><para></para></entry></row>
+<row>
+<entry thead="no"><para>Hindi </para></entry><entry thead="no"><para>92% </para></entry><entry thead="no"><para><ulink url="mailto:dysxhi@@yahoo.co.in">Dhananjaya Sharma</ulink>, <ulink url="mailto:priyank.bolia@@gmail.com">Priyank Bolia</ulink>  </para><para></para></entry></row>
+<row>
+<entry thead="no"><para>Hungarian </para></entry><entry thead="no"><para>80% </para></entry><entry thead="no"><para><ulink url="mailto:Janos_Vegh@@users.sourceforge.net">Végh János Dr.</ulink>  </para><para></para></entry></row>
+<row>
+<entry thead="no"><para>Indonesian </para></entry><entry thead="no"><para>73% </para></entry><entry thead="no"><para><ulink url="mailto:bambang@@3wsi.com">Bambang Purnomosidi D. P.</ulink>  </para><para></para></entry></row>
+<row>
+<entry thead="no"><para>Italian </para></entry><entry thead="no"><para>91% </para></entry><entry thead="no"><para><ulink url="mailto:mbarbon@@cpan.org">Mattia Barbon</ulink>, <ulink url="mailto:m.cavallini@@koansoftware.com">Marco Cavallini</ulink> (<ulink url="http://www.koansoftware.com">Koan Software</ulink>)  </para><para></para></entry></row>
+<row>
+<entry thead="no"><para>Japanese </para></entry><entry thead="no"><para>81% </para></entry><entry thead="no"><para><ulink url="mailto:james.bishop1@@tiscali.co.uk">James Bishop</ulink>, <ulink url="mailto:saito@@inetrt.skcapi.co.jp">Hiroshi Saito</ulink>, <ulink url="mailto:suzumizaki@@free.japandesign.ne.jp">Suzumizaki-Kimitaka</ulink>  </para><para></para></entry></row>
+<row>
+<entry thead="no"><para>Latvian </para></entry><entry thead="no"><para>21% </para></entry><entry thead="no"><para><ulink url="mailto:lauris@@nix.lv">Lauris Bukshis</ulink>  </para><para></para></entry></row>
+<row>
+<entry thead="no"><para>Malay </para></entry><entry thead="no"><para>95% </para></entry><entry thead="no"><para><ulink url="mailto:mahrazi@@gmail.com">Mahrazi Mohd Kamal</ulink>  </para><para></para></entry></row>
+<row>
+<entry thead="no"><para>Norwegian Bokmal </para></entry><entry thead="no"><para>78% </para></entry><entry thead="no"><para><ulink url="mailto:hans@@nordhaug.priv.no">Hans F. Nordhaug</ulink>  </para><para></para></entry></row>
+<row>
+<entry thead="no"><para>Polish </para></entry><entry thead="no"><para>81% </para></entry><entry thead="no"><para><ulink url="mailto:matiso@@hoga.pl">Piotr Mackowiak</ulink>, <ulink url="mailto:jpiw@@go2.pl">Janusz Piwowarski</ulink>, <ulink url="mailto:abx@@abx.art.pl">ABX</ulink>  </para><para></para></entry></row>
+<row>
+<entry thead="no"><para>Portuguese (pt) </para></entry><entry thead="no"><para>95% </para></entry><entry thead="no"><para><ulink url="mailto:bernardosw@@terra.com.br">Bernardo Santos Wernesback</ulink>, <ulink url="mailto:marionrpereira76@@hotmail.com">Mario Pereira</ulink>, <ulink url="mailto:digiplan.pt@@gmail.com">Antonio Cardoso Martins</ulink>, <ulink url="mailto:mail@@cgoncalves.info">Carlos Gonçalves</ulink>  </para><para></para></entry></row>
+<row>
+<entry thead="no"><para>Portuguese (pt_BR) </para></entry><entry thead="no"><para>100% </para></entry><entry thead="no"><para><ulink url="mailto:e.a.tacao@@terra.com.br">E.A. Tacao</ulink>, <ulink url="mailto:jecdiniz@@yahoo.com.br">José Eduardo de Carvalho Diniz</ulink>, <ulink url="mailto:adiel@@inf.ufsc.br">Adiel Mittmann</ulink>  </para><para></para></entry></row>
+<row>
+<entry thead="no"><para>Russian </para></entry><entry thead="no"><para>78% </para></entry><entry thead="no"><para><ulink url="mailto:wolfsoft@@mail.ru">Dennis Prochko</ulink>, <ulink url="mailto:rolinsky@@mema.ucl.ac.be">Roman Rolinsky</ulink>, <ulink url="mailto:vadim@@wxwidgets.org">Vadim Zeitlin</ulink>, <ulink url="mailto:kai@@cmail.ru">Andrew V. Samoilov</ulink>  </para><para></para></entry></row>
+<row>
+<entry thead="no"><para>Slovak </para></entry><entry thead="no"><para>77% </para></entry><entry thead="no"><para><ulink url="mailto:helix84@@centrum.sk">Ivan Masar</ulink> </para><para></para></entry></row>
+<row>
+<entry thead="no"><para>Slovenian </para></entry><entry thead="no"><para>100% </para></entry><entry thead="no"><para><ulink url="mailto:roman.plevel@@iskratr.si">Roman Plevel</ulink>, <ulink url="mailto:miles@@filmsi.net">Martin Srebotnjak</ulink>  </para><para></para></entry></row>
+<row>
+<entry thead="no"><para>Spanish </para></entry><entry thead="no"><para>95% </para></entry><entry thead="no"><para><ulink url="mailto:guille@@iies.es">Guillermo Rodriguez Garcia</ulink>, <ulink url="mailto:jsj666@@hotmail.com">JSJ</ulink>, <ulink url="mailto:francisco.vila@@hispalinux.es">Francisco Vila</ulink>, <ulink url="mailto:correoadrian82@@hotmail.com">Adrián González Alba</ulink>  </para><para></para></entry></row>
+<row>
+<entry thead="no"><para>Swedish </para></entry><entry thead="no"><para>95% </para></entry><entry thead="no"><para><ulink url="mailto:jor@@mindless.com">Jonas Rydberg</ulink>, <ulink url="mailto:kgb@@compart.fi">Kaj G Backas</ulink>  </para><para></para></entry></row>
+<row>
+<entry thead="no"><para>Turkish </para></entry><entry thead="no"><para>92% </para></entry><entry thead="no"><para><ulink url="mailto:dogusanh@@dynaset.org">Hakki Dogusan</ulink> </para><para></para></entry></row>
+<row>
+<entry thead="no"><para>Ukrainian </para></entry><entry thead="no"><para>95% </para></entry><entry thead="no"><para><ulink url="mailto:manko@@salingshot.co.nz">Eugene Manko</ulink>, <ulink url="mailto:yurchor@@ukr.net">Yuri Chornoivan</ulink>, <ulink url="mailto:k_ilya@@ukr.net">Ylia K</ulink>  </para><para></para></entry></row>
+<row>
+<entry thead="no"><para>Valencian (ca@valencia) </para></entry><entry thead="no"><para>67% </para></entry><entry thead="no"><para><ulink url="mailto:rmh@@aybabtu.com">Robert Millan</ulink> </para><para></para></entry></row>
+<row>
+<entry thead="no"><para>Vietnamese </para></entry><entry thead="no"><para>100% </para></entry><entry thead="no"><para><ulink url="mailto:vnwildman@gmail.com">Tran Ngoc Quan</ulink> </para><para></para></entry></row>
+</table>
+<linebreak/>
+</para></sect1>
+<sect1 id="page_translations_1page_translations_howtohelp">
+<title>How to help</title>
+<para>wxWidgets uses the standard <ulink url="http://www.gnu.org/software/gettext/">GNU gettext</ulink> tools for i18n so if you are already familiar with them you shouldn&apos;t have any problems with working on wxWidgets translations.</para><para>Here are the steps you should follow:</para><para><orderedlist>
+<listitem><para>Get the latest version of the file <computeroutput>locale/wxstd.pot</computeroutput> from the wxWidgets source tree: if you&apos;re using <ulink url="http://www.wxwidgets.org/develop/svn.htm">Subversion</ulink> or the <ulink url="http://wxwindows.sourceforge.net/snapshots/">daily snapshots</ulink> you should already have it. Otherwise you can always retrieve it directly from the Subversion repository via the <ulink url="http://svn.wxwidgets.org/viewvc/wx/wxWidgets/trunk/locale/wxstd.pot?view=co">Web interface</ulink>.</para></listitem><listitem><para>Rename it to <computeroutput>XY.po</computeroutput> where <computeroutput>&quot;XY&quot;</computeroutput> is the 2 letter <ulink url="http://www.loc.gov/standards/iso639-2/php/English_list.php">ISO 639-2 language code</ulink> for your language.</para></listitem><listitem><para>Translate the strings in this file using either your favourite text editor or a specialized tool such as Vaclav Slavik&apos;s excellent <ulink url="http://www.poedit.net/">poEdit</ulink> utility.</para></listitem><listitem><para>Verify that your translations can at least be compiled (even if they are yet incomplete) by running <computeroutput>msgfmt -v XY.po</computeroutput> command: please note that you <emphasis>must</emphasis> use the <computeroutput>-v</computeroutput> option. In particular, please fill the header fields because <computeroutput>msgfmt</computeroutput> doesn&apos;t accept the default values for them.</para></listitem><listitem><para>Send the finished translation to <ulink url="mailto:vadim@wxwidgets.org">Vadim Zeitlin</ulink> and it will be added to the next wxWidgets release or snapshot.</para></listitem></orderedlist>
+</para><para>In addition, please consider subscribing to the very low volume <ulink url="http://lists.wxwidgets.org/mailman/listinfo/wx-translators">wxWidgets translators</ulink> mailing list on which the news especially important for the translators are announced.</para><para>Thank you in advance for your help! </para></sect1>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

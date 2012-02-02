@@ -1,11 +1,10 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_tree_list_ctrl" kind="class" prot="public">
     <compoundname>wxTreeListCtrl</compoundname>
     <basecompoundref refid="classwx_window" prot="public" virt="non-virtual">wxWindow</basecompoundref>
     <includes local="no">wx/treelist.h</includes>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="variable" id="classwx_tree_list_ctrl_1a68f097e2bed86c69817fc6841a8e6ebb" prot="public" static="yes" mutable="no">
         <type>const int</type>
         <definition>const int wxTreeListCtrl::NO_IMAGE</definition>
@@ -65,7 +64,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_tree_list_ctrl_1a8464b3bf449606d5da7849be6b0986a5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
         <definition>int wxTreeListCtrl::AppendColumn</definition>
@@ -238,7 +236,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_tree_list_ctrl_1a35b2d82789812c71ac0a724396ef21ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_tree_list_item" kindref="compound">wxTreeListItem</ref></type>
         <definition>wxTreeListItem wxTreeListCtrl::AppendItem</definition>
@@ -419,7 +416,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_tree_list_ctrl_1a6714b7cf9b2c76a8a5bec5a60b51664c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_tree_list_item" kindref="compound">wxTreeListItem</ref></type>
         <definition>wxTreeListItem wxTreeListCtrl::GetRootItem</definition>
@@ -511,7 +507,7 @@
 <para>Get item after the given one in the depth-first tree-traversal order. </para>        </briefdescription>
         <detaileddescription>
 <para>Calling this function starting with the result of <ref refid="classwx_tree_list_ctrl_1a5840ec74e9cb0e1790d5412e27e223a5" kindref="member">GetFirstItem()</ref> allows iterating over all items in the tree.</para><para>The iteration stops when this function returns an invalid item, i.e. <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/><ref refid="classwx_tree_list_item" kindref="compound" tooltip="Unique identifier of an item in wxTreeListCtrl.">wxTreeListItem</ref><sp/>item<sp/>=<sp/>tree-&gt;GetFirstItem();</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>item.IsOk();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>item.<ref refid="classwx_tree_list_item_1a61666cb8d9e60edbb723cda61a51283a" kindref="member" tooltip="Return true if the item is valid.">IsOk</ref>();</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>item<sp/>=<sp/>tree-&gt;GetNextItem(item)<sp/>)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...<sp/>Do<sp/>something<sp/>with<sp/>every<sp/>tree<sp/>item<sp/>...</highlight></codeline>
@@ -523,7 +519,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_tree_list_ctrl_1aaadfd7cba3fd4f873909bf73e078181a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
         <definition>const wxString&amp; wxTreeListCtrl::GetItemText</definition>
@@ -658,7 +653,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_tree_list_ctrl_1a2d448f6124e09e022cb8b67a39f67bfa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void wxTreeListCtrl::Expand</definition>
@@ -712,7 +706,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_tree_list_ctrl_1ae03092aec1d5ed3bc059833b03e9e5e4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_tree_list_item" kindref="compound">wxTreeListItem</ref></type>
         <definition>wxTreeListItem wxTreeListCtrl::GetSelection</definition>
@@ -822,7 +815,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_tree_list_ctrl_1a322e37f102b928817742fa6911a1407b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void wxTreeListCtrl::CheckItem</definition>
@@ -957,7 +949,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_tree_list_ctrl_1af8a7315bd7efcf57971bed41337918a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void wxTreeListCtrl::SetSortColumn</definition>
@@ -1052,7 +1043,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_tree_list_ctrl_1a11ecb0a29ca28b61737b1e10619ff875" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
         <definition>wxWindow* wxTreeListCtrl::GetView</definition>
@@ -1244,72 +1234,72 @@
 <listitem><para>EVT_TREELIST_COLUMN_SORTED(id,  func): Process <computeroutput>wxEVT_COMMAND_TREELIST_COLUMN_SORTED</computeroutput> event indicating that the control contents has just been resorted using the specified column. The event doesn&apos;t carry the sort direction, use <ref refid="classwx_tree_list_ctrl_1a707c2f1d1f2eee8bcb207e007ed54e68" kindref="member">GetSortColumn()</ref> method if you need to know it. </para></listitem>
 </itemizedlist>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref></para><para><simplesect kind="since"><para>2.9.3</para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref></para><para><simplesect kind="since"><para>2.9.3</para></simplesect>
 <simplesect kind="see"><para><ref refid="classwx_tree_ctrl" kindref="compound">wxTreeCtrl</ref>, <ref refid="classwx_data_view_ctrl" kindref="compound">wxDataViewCtrl</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="11160">
+      <node id="11221">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="11159">
+      <node id="11220">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="11160" relation="public-inheritance">
+        <childnode refid="11221" relation="public-inheritance">
         </childnode>
-        <childnode refid="11161" relation="public-inheritance">
+        <childnode refid="11222" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11161">
+      <node id="11222">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="11158">
+      <node id="11219">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="11159" relation="public-inheritance">
+        <childnode refid="11220" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11157">
+      <node id="11218">
         <label>wxTreeListCtrl</label>
         <link refid="classwx_tree_list_ctrl"/>
-        <childnode refid="11158" relation="public-inheritance">
+        <childnode refid="11219" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="11165">
+      <node id="11226">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="11166" relation="usage">
+        <childnode refid="11227" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="11164">
+      <node id="11225">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="11165" relation="public-inheritance">
+        <childnode refid="11226" relation="public-inheritance">
         </childnode>
-        <childnode refid="11167" relation="public-inheritance">
+        <childnode refid="11228" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11167">
+      <node id="11228">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="11163">
+      <node id="11224">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="11164" relation="public-inheritance">
+        <childnode refid="11225" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11162">
+      <node id="11223">
         <label>wxTreeListCtrl</label>
         <link refid="classwx_tree_list_ctrl"/>
-        <childnode refid="11163" relation="public-inheritance">
+        <childnode refid="11224" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11166">
+      <node id="11227">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

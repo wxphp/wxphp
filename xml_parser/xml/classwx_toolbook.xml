@@ -1,11 +1,10 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_toolbook" kind="class" prot="public">
     <compoundname>wxToolbook</compoundname>
     <basecompoundref refid="classwx_book_ctrl_base" prot="public" virt="non-virtual">wxBookCtrlBase</basecompoundref>
     <includes local="no">wx/toolbook.h</includes>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_toolbook_1a8d988e8cdd0a495d737603418af5da34" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
         <definition>wxToolbook::wxToolbook</definition>
@@ -79,118 +78,118 @@
     <briefdescription>
 <para><ref refid="classwx_toolbook" kindref="compound">wxToolbook</ref> is a class similar to <ref refid="classwx_notebook" kindref="compound">wxNotebook</ref> but which uses a <ref refid="classwx_tool_bar" kindref="compound">wxToolBar</ref> to show the labels instead of the tabs. </para>    </briefdescription>
     <detaileddescription>
-<para>There is no documentation for this class yet but its usage is identical to <ref refid="classwx_notebook" kindref="compound">wxNotebook</ref> (except for the features clearly related to tabs only), so please refer to that class documentation for now. You can also use the <ref refid="page__samples_1page_samples_notebook" kindref="member">Notebook Sample</ref> to see <ref refid="classwx_toolbook" kindref="compound">wxToolbook</ref> in action.</para><para><heading level="2">Styles</heading>
+<para>There is no documentation for this class yet but its usage is identical to <ref refid="classwx_notebook" kindref="compound">wxNotebook</ref> (except for the features clearly related to tabs only), so please refer to that class documentation for now. You can also use the <ref refid="page_samples_1page_samples_notebook" kindref="member">Notebook Sample</ref> to see <ref refid="classwx_toolbook" kindref="compound">wxToolbook</ref> in action.</para><para><heading level="2">Styles</heading>
 </para><para>This class supports the following styles: <itemizedlist>
 <listitem><para>wxTBK_BUTTONBAR: Use wxButtonToolBar-based implementation under Mac OS (ignored under other platforms). </para></listitem>
 <listitem><para>wxTBK_HORZ_LAYOUT: Shows the text and the icons alongside, not vertically stacked (only implement under Windows and GTK 2 platforms as it relies on <computeroutput>wxTB_HORZ_LAYOUT</computeroutput> flag support). </para></listitem>
 </itemizedlist>
-The common wxBookCtrl styles described in the <ref refid="overview__bookctrl" kindref="compound">wxBookCtrl Overview</ref> are also supported.</para><para><heading level="2">Events emitted by this class</heading>
+The common wxBookCtrl styles described in the <ref refid="overview_bookctrl" kindref="compound">wxBookCtrl Overview</ref> are also supported.</para><para><heading level="2">Events emitted by this class</heading>
 </para><para>The following event handler macros redirect the events to member function handlers &apos;<bold>func</bold>&apos; with prototypes like: void<nonbreakablespace/>handlerFuncName(<ref refid="classwx_book_ctrl_event" kindref="compound">wxBookCtrlEvent</ref>&amp;<nonbreakablespace/>event)Event macros for events emitted by this class: <itemizedlist>
 <listitem><para>EVT_TOOLBOOK_PAGE_CHANGED(id,  func): The page selection was changed. Processes a <computeroutput>wxEVT_COMMAND_TOOLBOOK_PAGE_CHANGED</computeroutput> event. </para></listitem>
 <listitem><para>EVT_TOOLBOOK_PAGE_CHANGING(id,  func): The page selection is about to be changed. Processes a <computeroutput>wxEVT_COMMAND_TOOLBOOK_PAGE_CHANGING</computeroutput> event. This event can be vetoed (using <ref refid="classwx_notify_event_1a49e4502414a11e273f51a34a21d2acd3" kindref="member">wxNotifyEvent::Veto()</ref>). </para></listitem>
 </itemizedlist>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__bookctrl" kindref="compound">Book Controls</ref></para><para><simplesect kind="see"><para><ref refid="overview__bookctrl" kindref="compound">wxBookCtrl Overview</ref>, <ref refid="classwx_book_ctrl_base" kindref="compound">wxBookCtrlBase</ref>, <ref refid="classwx_notebook" kindref="compound">wxNotebook</ref>, <ref refid="page__samples_1page_samples_notebook" kindref="member">Notebook Sample</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__bookctrl" kindref="compound">Book Controls</ref></para><para><simplesect kind="see"><para><ref refid="overview_bookctrl" kindref="compound">wxBookCtrl Overview</ref>, <ref refid="classwx_book_ctrl_base" kindref="compound">wxBookCtrlBase</ref>, <ref refid="classwx_notebook" kindref="compound">wxNotebook</ref>, <ref refid="page_samples_1page_samples_notebook" kindref="member">Notebook Sample</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10874">
+      <node id="10935">
         <label>wxBookCtrlBase</label>
         <link refid="classwx_book_ctrl_base"/>
-        <childnode refid="10875" relation="public-inheritance">
+        <childnode refid="10936" relation="public-inheritance">
         </childnode>
-        <childnode refid="10880" relation="public-inheritance">
+        <childnode refid="10941" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10878">
+      <node id="10939">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="10877">
+      <node id="10938">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="10878" relation="public-inheritance">
+        <childnode refid="10939" relation="public-inheritance">
         </childnode>
-        <childnode refid="10879" relation="public-inheritance">
+        <childnode refid="10940" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10879">
+      <node id="10940">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="10875">
+      <node id="10936">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="10876" relation="public-inheritance">
+        <childnode refid="10937" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10876">
+      <node id="10937">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="10877" relation="public-inheritance">
+        <childnode refid="10938" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10873">
+      <node id="10934">
         <label>wxToolbook</label>
         <link refid="classwx_toolbook"/>
-        <childnode refid="10874" relation="public-inheritance">
+        <childnode refid="10935" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10880">
+      <node id="10941">
         <label>wxWithImages</label>
         <link refid="classwx_with_images"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10882">
+      <node id="10943">
         <label>wxBookCtrlBase</label>
         <link refid="classwx_book_ctrl_base"/>
-        <childnode refid="10883" relation="public-inheritance">
+        <childnode refid="10944" relation="public-inheritance">
         </childnode>
-        <childnode refid="10889" relation="public-inheritance">
+        <childnode refid="10950" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10886">
+      <node id="10947">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="10887" relation="usage">
+        <childnode refid="10948" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="10885">
+      <node id="10946">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="10886" relation="public-inheritance">
+        <childnode refid="10947" relation="public-inheritance">
         </childnode>
-        <childnode refid="10888" relation="public-inheritance">
+        <childnode refid="10949" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10888">
+      <node id="10949">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="10883">
+      <node id="10944">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="10884" relation="public-inheritance">
+        <childnode refid="10945" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10884">
+      <node id="10945">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="10885" relation="public-inheritance">
+        <childnode refid="10946" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10881">
+      <node id="10942">
         <label>wxToolbook</label>
         <link refid="classwx_toolbook"/>
-        <childnode refid="10882" relation="public-inheritance">
+        <childnode refid="10943" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10889">
+      <node id="10950">
         <label>wxWithImages</label>
         <link refid="classwx_with_images"/>
       </node>
-      <node id="10887">
+      <node id="10948">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

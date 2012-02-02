@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_bitmap_handler" kind="class" prot="public">
     <compoundname>wxBitmapHandler</compoundname>
     <basecompoundref refid="classwx_object" prot="public" virt="non-virtual">wxObject</basecompoundref>
@@ -363,36 +363,36 @@
     <briefdescription>
 <para>This is the base class for implementing bitmap file loading/saving, and bitmap creation from data. </para>    </briefdescription>
     <detaileddescription>
-<para>It is used within <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> and is not normally seen by the application.</para><para>If you wish to extend the capabilities of <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref>, derive a class from <ref refid="classwx_bitmap_handler" kindref="compound">wxBitmapHandler</ref> and add the handler using <ref refid="classwx_bitmap_1a6418825ad15574229188e0c5f97a4f3a" kindref="member">wxBitmap::AddHandler()</ref> in your application initialization.</para><para>Note that all wxBitmapHandlers provided by wxWidgets are part of the <ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref> library. For details about the default handlers, please see the note in the <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> class documentation.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__gdi" kindref="compound">Graphics Device Interface (GDI)</ref></para><para><simplesect kind="see"><para><ref refid="overview__bitmap" kindref="compound">Bitmaps and Icons</ref>, <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref>, <ref refid="classwx_icon" kindref="compound">wxIcon</ref>, <ref refid="classwx_cursor" kindref="compound">wxCursor</ref> </para></simplesect>
+<para>It is used within <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> and is not normally seen by the application.</para><para>If you wish to extend the capabilities of <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref>, derive a class from <ref refid="classwx_bitmap_handler" kindref="compound">wxBitmapHandler</ref> and add the handler using <ref refid="classwx_bitmap_1a6418825ad15574229188e0c5f97a4f3a" kindref="member">wxBitmap::AddHandler()</ref> in your application initialization.</para><para>Note that all wxBitmapHandlers provided by wxWidgets are part of the <ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref> library. For details about the default handlers, please see the note in the <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> class documentation.</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__gdi" kindref="compound">Graphics Device Interface (GDI)</ref></para><para><simplesect kind="see"><para><ref refid="overview_bitmap" kindref="compound">Bitmaps and Icons</ref>, <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref>, <ref refid="classwx_icon" kindref="compound">wxIcon</ref>, <ref refid="classwx_cursor" kindref="compound">wxCursor</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="4517">
+      <node id="4521">
         <label>wxBitmapHandler</label>
         <link refid="classwx_bitmap_handler"/>
-        <childnode refid="4518" relation="public-inheritance">
+        <childnode refid="4522" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4518">
+      <node id="4522">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="4519">
+      <node id="4523">
         <label>wxBitmapHandler</label>
         <link refid="classwx_bitmap_handler"/>
-        <childnode refid="4520" relation="public-inheritance">
+        <childnode refid="4524" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4520">
+      <node id="4524">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="4521" relation="usage">
+        <childnode refid="4525" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="4521">
+      <node id="4525">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

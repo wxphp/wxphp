@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_data_view_event" kind="class" prot="public">
     <compoundname>wxDataViewEvent</compoundname>
     <basecompoundref refid="classwx_notify_event" prot="public" virt="non-virtual">wxNotifyEvent</basecompoundref>
@@ -26,7 +26,7 @@
 <para>Typically used by wxWidgets internals only. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2889"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2925"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_event_1a9b09195a0ac2d647d32b8e1dea526f56" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -39,7 +39,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2895"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2931"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_event_1a9d28389919124a7c75245d8be0125acf" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_data_view_column" kindref="compound">wxDataViewColumn</ref> *</type>
@@ -52,7 +52,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2901"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2937"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_event_1aff3971b971d9f6a25ccbf1724f73074b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_data_view_model" kindref="compound">wxDataViewModel</ref> *</type>
@@ -65,7 +65,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2906"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2942"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_event_1ae1546895cebb713da4fa0beb16192321" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_point" kindref="compound">wxPoint</ref></type>
@@ -78,7 +78,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2911"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2947"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_event_1a4e3f986b62c3ad701a336eee7df190b3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_variant" kindref="compound">wxVariant</ref> &amp;</type>
@@ -91,7 +91,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2916"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2952"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_event_1a3ea8ac264bcf936e251ff7ad9a0b3d58" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -105,7 +105,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2936"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2972"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_event_1a66a231dc80ba6c36840251fef78294c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -122,7 +122,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2941"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2977"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_event_1a66fb568e9dd899f5becde2d9ef88138b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -139,7 +139,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2946"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2982"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_event_1aa2ccb0d75d49a8fefa40a8fcbd7876a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -156,7 +156,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2951"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2987"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_event_1a59db8632419879f0e51d94b32b5ff914" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -173,7 +173,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2956"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2992"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_event_1ac56a99bcd34d37972addb6023966fef8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -190,7 +190,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2961"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2997"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_event_1a682829f5dc99f9a2aa96a8c90ab6cf6f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_data_object" kindref="compound">wxDataObject</ref> *</type>
@@ -203,7 +203,7 @@
 <para>Gets associated <ref refid="classwx_data_object" kindref="compound">wxDataObject</ref> for data transfer within a drag operation. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2967"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="3003"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_event_1a67f5b5297c0f414d24831e9c8605f6ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -220,7 +220,7 @@
 <para>Sets the <ref refid="classwx_data_format" kindref="compound">wxDataFormat</ref> during a drop operation. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2972"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="3008"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_event_1a7ac173817b313a07e5f5392ed40649da" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_data_format" kindref="compound">wxDataFormat</ref></type>
@@ -233,7 +233,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2977"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="3013"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_event_1a9c5bb283557e59ae23a1956bbb7216d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -250,7 +250,7 @@
 <para>Sets the data size for a drop data transfer. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2982"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="3018"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_event_1aac492fa44dbab660ff23e77327a40659" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -263,7 +263,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2987"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="3023"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_event_1a467b5a7586cab95f2bbe72b3528d4cb2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -280,7 +280,7 @@
 <para>Sets the data buffer for a drop data transfer. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2992"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="3028"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_event_1a76fe710667fa96c015d6de26f8ac1835" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void *</type>
@@ -293,7 +293,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2997"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="3033"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_event_1a7ab4fe887ee1092de709f100421a6550" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -306,7 +306,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="3002"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="3038"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_event_1a9d5d5e747eddab1b7eb36264011ff67d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -319,7 +319,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="3007"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="3043"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -347,75 +347,75 @@
 <listitem><para>EVT_DATAVIEW_CACHE_HINT(id,  func): Process a <computeroutput>wxEVT_COMMAND_DATAVIEW_CACHE_HINT</computeroutput> event. </para></listitem>
 </itemizedlist>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref>, <ref refid="group__group__class__dvc" kindref="compound">wxDataViewCtrl Related Classes</ref> </para>    </detaileddescription>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref>, <ref refid="group__group__class__dvc" kindref="compound">wxDataViewCtrl Related Classes</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="5317">
+      <node id="5321">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="5313">
+      <node id="5317">
         <label>wxDataViewEvent</label>
         <link refid="classwx_data_view_event"/>
-        <childnode refid="5314" relation="public-inheritance">
+        <childnode refid="5318" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5315">
+      <node id="5319">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="5316" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="5314">
-        <label>wxNotifyEvent</label>
-        <link refid="classwx_notify_event"/>
-        <childnode refid="5315" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="5316">
-        <label>wxEvent</label>
-        <link refid="classwx_event"/>
-        <childnode refid="5317" relation="public-inheritance">
-        </childnode>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
-      <node id="5322">
-        <label>wxObject</label>
-        <link refid="classwx_object"/>
-        <childnode refid="5323" relation="usage">
-          <edgelabel>m_refData</edgelabel>
+        <childnode refid="5320" relation="public-inheritance">
         </childnode>
       </node>
       <node id="5318">
-        <label>wxDataViewEvent</label>
-        <link refid="classwx_data_view_event"/>
+        <label>wxNotifyEvent</label>
+        <link refid="classwx_notify_event"/>
         <childnode refid="5319" relation="public-inheritance">
         </childnode>
       </node>
       <node id="5320">
-        <label>wxCommandEvent</label>
-        <link refid="classwx_command_event"/>
+        <label>wxEvent</label>
+        <link refid="classwx_event"/>
         <childnode refid="5321" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5319">
-        <label>wxNotifyEvent</label>
-        <link refid="classwx_notify_event"/>
-        <childnode refid="5320" relation="public-inheritance">
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="5326">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="5327" relation="usage">
+          <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="5321">
-        <label>wxEvent</label>
-        <link refid="classwx_event"/>
-        <childnode refid="5322" relation="public-inheritance">
+      <node id="5322">
+        <label>wxDataViewEvent</label>
+        <link refid="classwx_data_view_event"/>
+        <childnode refid="5323" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5324">
+        <label>wxCommandEvent</label>
+        <link refid="classwx_command_event"/>
+        <childnode refid="5325" relation="public-inheritance">
         </childnode>
       </node>
       <node id="5323">
+        <label>wxNotifyEvent</label>
+        <link refid="classwx_notify_event"/>
+        <childnode refid="5324" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5325">
+        <label>wxEvent</label>
+        <link refid="classwx_event"/>
+        <childnode refid="5326" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5327">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2883" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" bodystart="2882" bodyend="3008"/>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2919" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" bodystart="2918" bodyend="3044"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxDataViewEvent</scope><name>AllocExclusive</name></member>
       <member refid="classwx_notify_event_1a7b23515f827b2ce1da1e6990d9aafe80" prot="public" virt="non-virtual"><scope>wxDataViewEvent</scope><name>Allow</name></member>

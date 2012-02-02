@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_rich_text_paragraph_style_definition" kind="class" prot="public">
     <compoundname>wxRichTextParagraphStyleDefinition</compoundname>
     <basecompoundref refid="classwx_rich_text_style_definition" prot="public" virt="non-virtual">wxRichTextStyleDefinition</basecompoundref>
@@ -72,52 +72,52 @@
 <para>This class represents a paragraph style definition, usually added to a <ref refid="classwx_rich_text_style_sheet" kindref="compound">wxRichTextStyleSheet</ref>. </para>    </briefdescription>
     <detaileddescription>
 <para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxrichtext" kindref="member">wxRichText</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__richtext" kindref="compound">Rich Text</ref> </para>    </detaileddescription>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxrichtext" kindref="member">wxRichText</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__richtext" kindref="compound">Rich Text</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="9738">
+      <node id="9798">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="9736">
+      <node id="9796">
         <label>wxRichTextParagraphStyleDefinition</label>
         <link refid="classwx_rich_text_paragraph_style_definition"/>
-        <childnode refid="9737" relation="public-inheritance">
+        <childnode refid="9797" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9739">
+      <node id="9799">
         <label>wxRichTextListStyleDefinition</label>
         <link refid="classwx_rich_text_list_style_definition"/>
-        <childnode refid="9736" relation="public-inheritance">
+        <childnode refid="9796" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9737">
+      <node id="9797">
         <label>wxRichTextStyleDefinition</label>
         <link refid="classwx_rich_text_style_definition"/>
-        <childnode refid="9738" relation="public-inheritance">
+        <childnode refid="9798" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="9742">
+      <node id="9802">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="9743" relation="usage">
+        <childnode refid="9803" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="9740">
+      <node id="9800">
         <label>wxRichTextParagraphStyleDefinition</label>
         <link refid="classwx_rich_text_paragraph_style_definition"/>
-        <childnode refid="9741" relation="public-inheritance">
+        <childnode refid="9801" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9741">
+      <node id="9801">
         <label>wxRichTextStyleDefinition</label>
         <link refid="classwx_rich_text_style_definition"/>
-        <childnode refid="9742" relation="public-inheritance">
+        <childnode refid="9802" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9743">
+      <node id="9803">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

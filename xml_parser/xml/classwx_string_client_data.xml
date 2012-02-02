@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_string_client_data" kind="class" prot="public">
     <compoundname>wxStringClientData</compoundname>
     <basecompoundref refid="classwx_client_data" prot="public" virt="non-virtual">wxClientData</basecompoundref>
@@ -70,28 +70,28 @@
 <para>Predefined client data class for holding a string. </para>    </briefdescription>
     <detaileddescription>
 <para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__containers" kindref="compound">Containers</ref> </para>    </detaileddescription>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__containers" kindref="compound">Containers</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10523">
+      <node id="10583">
         <label>wxClientData</label>
         <link refid="classwx_client_data"/>
       </node>
-      <node id="10522">
+      <node id="10582">
         <label>wxStringClientData</label>
         <link refid="classwx_string_client_data"/>
-        <childnode refid="10523" relation="public-inheritance">
+        <childnode refid="10583" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10525">
+      <node id="10585">
         <label>wxClientData</label>
         <link refid="classwx_client_data"/>
       </node>
-      <node id="10524">
+      <node id="10584">
         <label>wxStringClientData</label>
         <link refid="classwx_string_client_data"/>
-        <childnode refid="10525" relation="public-inheritance">
+        <childnode refid="10585" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>

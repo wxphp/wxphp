@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_log_chain" kind="class" prot="public">
     <compoundname>wxLogChain</compoundname>
     <basecompoundref refid="classwx_log" prot="public" virt="non-virtual">wxLog</basecompoundref>
@@ -114,7 +114,7 @@
     <briefdescription>
 <para>This simple class allows you to chain log sinks, that is to install a new sink but keep passing log messages to the old one instead of replacing it completely as <ref refid="classwx_log_1ac7ea85f71c8d3ecd4247f412be410505" kindref="member">wxLog::SetActiveTarget</ref> does. </para>    </briefdescription>
     <detaileddescription>
-<para>It is especially useful when you want to divert the logs somewhere (for example to a file or a log window) but also keep showing the error messages using the standard dialogs as <ref refid="classwx_log_gui" kindref="compound">wxLogGui</ref> does by default.</para><para>Example of usage:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_log_chain" kindref="compound" tooltip="This simple class allows you to chain log sinks, that is to install a new sink but...">wxLogChain</ref><sp/>*logChain<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classwx_log_chain_1a0b13ad0a56791e4686cf13d759bcab23" kindref="member" tooltip="Sets the specified logger (which may be NULL) as the default log target but the log...">wxLogChain</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classwx_log_stderr" kindref="compound" tooltip="This class can be used to redirect the log messages to a C file stream (not to be...">wxLogStderr</ref>);</highlight></codeline>
+<para>It is especially useful when you want to divert the logs somewhere (for example to a file or a log window) but also keep showing the error messages using the standard dialogs as <ref refid="classwx_log_gui" kindref="compound">wxLogGui</ref> does by default.</para><para>Example of usage:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_log_chain" kindref="compound" tooltip="This simple class allows you to chain log sinks, that is to install a new sink but keep passing log m...">wxLogChain</ref><sp/>*logChain<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classwx_log_chain_1a0b13ad0a56791e4686cf13d759bcab23" kindref="member" tooltip="Sets the specified logger (which may be NULL) as the default log target but the log messages are also...">wxLogChain</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classwx_log_stderr" kindref="compound" tooltip="This class can be used to redirect the log messages to a C file stream (not to be confused with C++ s...">wxLogStderr</ref>);</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>all<sp/>the<sp/>log<sp/>messages<sp/>are<sp/>sent<sp/>to<sp/>stderr<sp/>and<sp/>also<sp/>processed<sp/>as<sp/>usually</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>...</highlight></codeline>
@@ -123,45 +123,45 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>pointer<sp/>as<sp/>active<sp/>log<sp/>target,<sp/>use<sp/>SetActiveTarget()<sp/>instead</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/><ref refid="classwx_log_1ac7ea85f71c8d3ecd4247f412be410505" kindref="member" tooltip="Sets the specified log target as the active one.">wxLog::SetActiveTarget</ref>(...something<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>or<sp/>NULL...);</highlight></codeline>
 </programlisting></para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__logging" kindref="compound">Logging</ref> </para>    </detaileddescription>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__logging" kindref="compound">Logging</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7503">
+      <node id="7507">
         <label>wxLogWindow</label>
         <link refid="classwx_log_window"/>
-        <childnode refid="7502" relation="public-inheritance">
+        <childnode refid="7506" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7502">
+      <node id="7506">
         <label>wxLogInterposer</label>
         <link refid="classwx_log_interposer"/>
-        <childnode refid="7500" relation="public-inheritance">
+        <childnode refid="7504" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7508">
+        <label>wxLogInterposerTemp</label>
+        <link refid="classwx_log_interposer_temp"/>
+        <childnode refid="7504" relation="public-inheritance">
         </childnode>
       </node>
       <node id="7504">
-        <label>wxLogInterposerTemp</label>
-        <link refid="classwx_log_interposer_temp"/>
-        <childnode refid="7500" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="7500">
         <label>wxLogChain</label>
         <link refid="classwx_log_chain"/>
-        <childnode refid="7501" relation="public-inheritance">
+        <childnode refid="7505" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7501">
+      <node id="7505">
         <label>wxLog</label>
         <link refid="classwx_log"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7505">
+      <node id="7509">
         <label>wxLogChain</label>
         <link refid="classwx_log_chain"/>
-        <childnode refid="7506" relation="public-inheritance">
+        <childnode refid="7510" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7506">
+      <node id="7510">
         <label>wxLog</label>
         <link refid="classwx_log"/>
       </node>
@@ -196,6 +196,7 @@
       <member refid="classwx_log_1a14a562556933276939cedbb470f149cb" prot="public" virt="non-virtual"><scope>wxLogChain</scope><name>Resume</name></member>
       <member refid="classwx_log_1ac7ea85f71c8d3ecd4247f412be410505" prot="public" virt="non-virtual"><scope>wxLogChain</scope><name>SetActiveTarget</name></member>
       <member refid="classwx_log_1a7ae244e71dff20efd3a37b3718841a39" prot="public" virt="non-virtual"><scope>wxLogChain</scope><name>SetComponentLevel</name></member>
+      <member refid="classwx_log_1a9f316422df6930c549db80a5e4bf36a2" prot="public" virt="non-virtual"><scope>wxLogChain</scope><name>SetFormatter</name></member>
       <member refid="classwx_log_chain_1aecfefb1a2435a5372d4a317353b8a7e9" prot="public" virt="non-virtual"><scope>wxLogChain</scope><name>SetLog</name></member>
       <member refid="classwx_log_1a4ea68379469ca27f645d5f91c2d42b3b" prot="public" virt="non-virtual"><scope>wxLogChain</scope><name>SetLogLevel</name></member>
       <member refid="classwx_log_1ae814f9b9b4c8b4a52e34d7c919f98296" prot="public" virt="non-virtual"><scope>wxLogChain</scope><name>SetRepetitionCounting</name></member>

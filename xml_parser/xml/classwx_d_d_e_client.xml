@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_d_d_e_client" kind="class" prot="public">
     <compoundname>wxDDEClient</compoundname>
     <basecompoundref refid="classwx_object" prot="public" virt="non-virtual">wxObject</basecompoundref>
@@ -78,35 +78,35 @@
 <para>A <ref refid="classwx_d_d_e_client" kindref="compound">wxDDEClient</ref> object represents the client part of a client-server DDE (Dynamic Data Exchange) conversation. </para>    </briefdescription>
     <detaileddescription>
 <para>To create a client which can communicate with a suitable server, you need to derive a class from <ref refid="classwx_d_d_e_connection" kindref="compound">wxDDEConnection</ref> and another from <ref refid="classwx_d_d_e_client" kindref="compound">wxDDEClient</ref>. The custom <ref refid="classwx_d_d_e_connection" kindref="compound">wxDDEConnection</ref> class will intercept communications in a &quot;conversation&quot; with a server, and the custom <ref refid="classwx_d_d_e_server" kindref="compound">wxDDEServer</ref> is required so that a user-overridden <ref refid="classwx_d_d_e_client_1a286079977cd233d29497507fd04d71c0" kindref="member">OnMakeConnection()</ref> member can return a <ref refid="classwx_d_d_e_connection" kindref="compound">wxDDEConnection</ref> of the required class, when a connection is made.</para><para>This DDE-based implementation is available on Windows only, but a platform-independent, socket-based version of this API is available using <ref refid="classwx_t_c_p_client" kindref="compound">wxTCPClient</ref>.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ipc" kindref="compound">Interprocess Communication</ref> Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page__port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor> </para><para><simplesect kind="see"><para><ref refid="classwx_d_d_e_server" kindref="compound">wxDDEServer</ref>, <ref refid="classwx_d_d_e_connection" kindref="compound">wxDDEConnection</ref>, <ref refid="overview__ipc" kindref="compound">Interprocess Communication</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ipc" kindref="compound">Interprocess Communication</ref> Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page_port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor> </para><para><simplesect kind="see"><para><ref refid="classwx_d_d_e_server" kindref="compound">wxDDEServer</ref>, <ref refid="classwx_d_d_e_connection" kindref="compound">wxDDEConnection</ref>, <ref refid="overview_ipc" kindref="compound">Interprocess Communication</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="5528">
+      <node id="5532">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="5527">
+      <node id="5531">
         <label>wxDDEClient</label>
         <link refid="classwx_d_d_e_client"/>
-        <childnode refid="5528" relation="public-inheritance">
+        <childnode refid="5532" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="5530">
+      <node id="5534">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="5531" relation="usage">
+        <childnode refid="5535" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="5529">
+      <node id="5533">
         <label>wxDDEClient</label>
         <link refid="classwx_d_d_e_client"/>
-        <childnode refid="5530" relation="public-inheritance">
+        <childnode refid="5534" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5531">
+      <node id="5535">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

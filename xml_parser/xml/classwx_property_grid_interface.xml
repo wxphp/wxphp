@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_property_grid_interface" kind="class" prot="public">
     <compoundname>wxPropertyGridInterface</compoundname>
     <derivedcompoundref refid="classwx_property_grid" prot="public" virt="non-virtual">wxPropertyGrid</derivedcompoundref>
@@ -7,7 +7,6 @@
     <derivedcompoundref refid="classwx_property_grid_page" prot="public" virt="non-virtual">wxPropertyGridPage</derivedcompoundref>
     <includes local="no">wx/propgrid/propgridiface.h</includes>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_property_grid_interface_1a41ab8661411082563c8191f614f91007" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_property_grid_iterator" kindref="compound">wxPropertyGridIterator</ref></type>
         <definition>wxPropertyGridIterator wxPropertyGridInterface::GetIterator</definition>
@@ -86,7 +85,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_property_grid_interface_1acef8d8a08d18b0f78a29d52c96c85d8d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_property_grid_iterator" kindref="compound">wxPropertyGridIterator</ref></type>
         <definition>wxPropertyGridIterator wxPropertyGridInterface::GetIterator</definition>
@@ -701,7 +699,7 @@ This functions deselects selected property, if any. Validation failure option wx
 <para></para></parameterdescription>
 </parameteritem>
 </parameterlist>
-<xrefsect id="todo_1_todo000048"><xreftitle>Todo</xreftitle><xrefdescription><para>docme </para></xrefdescription></xrefsect><parameterlist kind="param"><parameteritem>
+<xrefsect id="todo_1_todo000047"><xreftitle>Todo</xreftitle><xrefdescription><para>docme </para></xrefdescription></xrefsect><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>flags</parametername>
 </parameternamelist>
@@ -716,7 +714,7 @@ This functions deselects selected property, if any. Validation failure option wx
 <para></para></parameterdescription>
 </parameteritem>
 </parameterlist>
-<xrefsect id="todo_1_todo000049"><xreftitle>Todo</xreftitle><xrefdescription><para>docme </para></xrefdescription></xrefsect><parameterlist kind="param"><parameteritem>
+<xrefsect id="todo_1_todo000048"><xreftitle>Todo</xreftitle><xrefdescription><para>docme </para></xrefdescription></xrefsect><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>iterFlags</parametername>
 </parameternamelist>
@@ -1211,7 +1209,7 @@ This functions deselects selected property, if any. Validation failure option wx
 <para></para></parameterdescription>
 </parameteritem>
 </parameterlist>
-<xrefsect id="todo_1_todo000050"><xreftitle>Todo</xreftitle><xrefdescription><para>docme </para></xrefdescription></xrefsect><parameterlist kind="param"><parameteritem>
+<xrefsect id="todo_1_todo000049"><xreftitle>Todo</xreftitle><xrefdescription><para>docme </para></xrefdescription></xrefsect><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>baseparent</parametername>
 </parameternamelist>
@@ -1219,7 +1217,7 @@ This functions deselects selected property, if any. Validation failure option wx
 <para></para></parameterdescription>
 </parameteritem>
 </parameterlist>
-<xrefsect id="todo_1_todo000051"><xreftitle>Todo</xreftitle><xrefdescription><para>docme </para></xrefdescription></xrefsect><parameterlist kind="param"><parameteritem>
+<xrefsect id="todo_1_todo000050"><xreftitle>Todo</xreftitle><xrefdescription><para>docme </para></xrefdescription></xrefsect><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>flags</parametername>
 </parameternamelist>
@@ -1318,7 +1316,7 @@ Use wxPG_INC_ATTRIBUTES to include property attributes as well. Each attribute w
 <para></para></parameterdescription>
 </parameteritem>
 </parameterlist>
-<xrefsect id="todo_1_todo000052"><xreftitle>Todo</xreftitle><xrefdescription><para>docme </para></xrefdescription></xrefsect><parameterlist kind="param"><parameteritem>
+<xrefsect id="todo_1_todo000051"><xreftitle>Todo</xreftitle><xrefdescription><para>docme </para></xrefdescription></xrefsect><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>hide</parametername>
 </parameternamelist>
@@ -1754,7 +1752,7 @@ Also, if you remove property in a <ref refid="classwx_property_grid" kindref="co
 <para></para></parameterdescription>
 </parameteritem>
 </parameterlist>
-<xrefsect id="todo_1_todo000053"><xreftitle>Todo</xreftitle><xrefdescription><para>docme </para></xrefdescription></xrefsect><parameterlist kind="param"><parameteritem>
+<xrefsect id="todo_1_todo000052"><xreftitle>Todo</xreftitle><xrefdescription><para>docme </para></xrefdescription></xrefsect><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>attrName</parametername>
 </parameternamelist>
@@ -1958,7 +1956,7 @@ Also, if you remove property in a <ref refid="classwx_property_grid" kindref="co
 <para></para></parameterdescription>
 </parameteritem>
 </parameterlist>
-<xrefsect id="todo_1_todo000054"><xreftitle>Todo</xreftitle><xrefdescription><para>docme </para></xrefdescription></xrefsect><parameterlist kind="param"><parameteritem>
+<xrefsect id="todo_1_todo000053"><xreftitle>Todo</xreftitle><xrefdescription><para>docme </para></xrefdescription></xrefsect><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>editor</parametername>
 </parameternamelist>
@@ -2704,9 +2702,9 @@ For custom editors, use pointer you received from <ref refid="classwx_property_g
         <argsstring>()</argsstring>
         <name>RegisterAdditionalEditors</name>
         <briefdescription>
-<para>Initializes additional property editors (SpinCtrl etc. </para>        </briefdescription>
+<para>Initializes additional property editors (SpinCtrl etc.). </para>        </briefdescription>
         <detaileddescription>
-<para>). Causes references to most object files in the library, so calling this may cause significant increase in executable size when linking with static library. </para>        </detaileddescription>
+<para>Causes references to most object files in the library, so calling this may cause significant increase in executable size when linking with static library. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="616"/>
@@ -2759,27 +2757,27 @@ For custom editors, use pointer you received from <ref refid="classwx_property_g
 <itemizedlist>
 <listitem><para>wxPropertyGridInterface&apos;s property operation member functions all accept a special wxPGPropArg id argument, using which you can refer to properties either by their pointer (for performance) or by their name (for conveniency).</para></listitem></itemizedlist>
 </para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxpropgrid" kindref="member">wxPropertyGrid</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__propgrid" kindref="compound">wxPropertyGrid</ref> </para>    </detaileddescription>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxpropgrid" kindref="member">wxPropertyGrid</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__propgrid" kindref="compound">wxPropertyGrid</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="8890">
+      <node id="8898">
         <label>wxPropertyGridManager</label>
         <link refid="classwx_property_grid_manager"/>
-        <childnode refid="8888" relation="public-inheritance">
+        <childnode refid="8896" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8889">
+      <node id="8897">
         <label>wxPropertyGrid</label>
         <link refid="classwx_property_grid"/>
-        <childnode refid="8888" relation="public-inheritance">
+        <childnode refid="8896" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8891">
+      <node id="8899">
         <label>wxPropertyGridPage</label>
         <link refid="classwx_property_grid_page"/>
-        <childnode refid="8888" relation="public-inheritance">
+        <childnode refid="8896" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8888">
+      <node id="8896">
         <label>wxPropertyGridInterface</label>
         <link refid="classwx_property_grid_interface"/>
       </node>

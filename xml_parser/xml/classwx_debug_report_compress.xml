@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_debug_report_compress" kind="class" prot="public">
     <compoundname>wxDebugReportCompress</compoundname>
     <basecompoundref refid="classwx_debug_report" prot="public" virt="non-virtual">wxDebugReport</basecompoundref>
@@ -89,34 +89,34 @@
 <para><ref refid="classwx_debug_report_compress" kindref="compound">wxDebugReportCompress</ref> is a <ref refid="classwx_debug_report" kindref="compound">wxDebugReport</ref> which compresses all the files in this debug report into a single ZIP file in its <ref refid="classwx_debug_report_1a3ec35bb65b88aac386a399b27ef940a5" kindref="member">wxDebugReport::Process()</ref> function. </para>    </briefdescription>
     <detaileddescription>
 <para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxqa" kindref="member">wxQA</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__debugging" kindref="compound">Debugging</ref> </para>    </detaileddescription>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxqa" kindref="member">wxQA</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__debugging" kindref="compound">Debugging</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="5549">
+      <node id="5553">
         <label>wxDebugReportUpload</label>
         <link refid="classwx_debug_report_upload"/>
-        <childnode refid="5547" relation="public-inheritance">
+        <childnode refid="5551" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5548">
+      <node id="5552">
         <label>wxDebugReport</label>
         <link refid="classwx_debug_report"/>
       </node>
-      <node id="5547">
+      <node id="5551">
         <label>wxDebugReportCompress</label>
         <link refid="classwx_debug_report_compress"/>
-        <childnode refid="5548" relation="public-inheritance">
+        <childnode refid="5552" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="5551">
+      <node id="5555">
         <label>wxDebugReport</label>
         <link refid="classwx_debug_report"/>
       </node>
-      <node id="5550">
+      <node id="5554">
         <label>wxDebugReportCompress</label>
         <link refid="classwx_debug_report_compress"/>
-        <childnode refid="5551" relation="public-inheritance">
+        <childnode refid="5555" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>

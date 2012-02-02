@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_drag_image" kind="class" prot="public">
     <compoundname>wxDragImage</compoundname>
     <basecompoundref refid="classwx_object" prot="public" virt="non-virtual">wxObject</basecompoundref>
@@ -519,35 +519,35 @@ You can move the image either when the image is hidden or shown, but in general 
 <para>This class is used when you wish to drag an object on the screen, and a simple cursor is not enough. </para>    </briefdescription>
     <detaileddescription>
 <para>On Windows, the Win32 API is used to achieve smooth dragging. On other platforms, wxGenericDragImage is used. Applications may also prefer to use wxGenericDragImage on Windows, too.</para><para><bold>wxPython Note:</bold> wxPython uses wxGenericDragImage on all platforms, but uses the <ref refid="classwx_drag_image" kindref="compound">wxDragImage</ref> name.</para><para>To use this class, when you wish to start dragging an image, create a <ref refid="classwx_drag_image" kindref="compound">wxDragImage</ref> object and store it somewhere you can access it as the drag progresses. Call <ref refid="classwx_drag_image_1a7af71929aec6994d903864ed95c7f7b6" kindref="member">BeginDrag()</ref> to start, and <ref refid="classwx_drag_image_1a481b3dbce5200247a46623431a99df13" kindref="member">EndDrag()</ref> to stop the drag. To move the image, initially call <ref refid="classwx_drag_image_1a53ba3036e7cf017d32a548e95d9072e3" kindref="member">Show()</ref> and then <ref refid="classwx_drag_image_1a51b7a0377bbdd79ad8d93c7bb1a67644" kindref="member">Move()</ref>. If you wish to update the screen contents during the drag (for example, highlight an item as in the dragimag sample), first call <ref refid="classwx_drag_image_1aeda0c97def022fc3cacbc879f053f93a" kindref="member">Hide()</ref>, update the screen, call <ref refid="classwx_drag_image_1a51b7a0377bbdd79ad8d93c7bb1a67644" kindref="member">Move()</ref>, and then call <ref refid="classwx_drag_image_1a53ba3036e7cf017d32a548e95d9072e3" kindref="member">Show()</ref>.</para><para>You can drag within one window, or you can use full-screen dragging either across the whole screen, or just restricted to one area of the screen to save resources. If you want the user to drag between two windows, then you will need to use full-screen dragging.</para><para>If you wish to draw the image yourself, use wxGenericDragImage and override <ref refid="classwx_drag_image_1a223db1e40bef00417b1c689553514582" kindref="member">DoDrawImage()</ref> and <ref refid="classwx_drag_image_1a469502a784e1309d52d3ac886d46ef88" kindref="member">GetImageRect()</ref>.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__dnd" kindref="compound">Clipboard and Drag &amp; Drop</ref></para><para><simplesect kind="see"><para><ref refid="page__samples_1page_samples_dragimag" kindref="member">Drag Image Sample</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__dnd" kindref="compound">Clipboard and Drag &amp; Drop</ref></para><para><simplesect kind="see"><para><ref refid="page_samples_1page_samples_dragimag" kindref="member">Drag Image Sample</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="5777">
+      <node id="5781">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="5776">
+      <node id="5780">
         <label>wxDragImage</label>
         <link refid="classwx_drag_image"/>
-        <childnode refid="5777" relation="public-inheritance">
+        <childnode refid="5781" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="5779">
+      <node id="5783">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="5780" relation="usage">
+        <childnode refid="5784" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="5778">
+      <node id="5782">
         <label>wxDragImage</label>
         <link refid="classwx_drag_image"/>
-        <childnode refid="5779" relation="public-inheritance">
+        <childnode refid="5783" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5780">
+      <node id="5784">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

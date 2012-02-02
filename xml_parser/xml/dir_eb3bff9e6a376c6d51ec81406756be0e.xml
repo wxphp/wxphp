@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="dir_eb3bff9e6a376c6d51ec81406756be0e" kind="dir">
+    <compoundname>interface/</compoundname>
+    <innerdir refid="dir_56124009263a0785640bf8156f8838ba">interface/wx/</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/"/>
+  </compounddef>
+</doxygen>

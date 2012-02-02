@@ -1,10 +1,9 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_number_formatter" kind="class" prot="public">
     <compoundname>wxNumberFormatter</compoundname>
     <includes local="no">wx/numformatter.h</includes>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_number_formatter_1aad539451a9ac91198141eead3be4e743" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
         <definition>static bool wxNumberFormatter::FromString</definition>
@@ -216,7 +215,7 @@
     <detaileddescription>
 <para>This class contains only static functions, so users must not create instances but directly call the member functions.</para><para><simplesect kind="since"><para>2.9.2</para></simplesect>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref> </para>    </detaileddescription>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref> </para>    </detaileddescription>
     <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/numformatter.h" line="21" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/numformatter.h" bodystart="20" bodyend="126"/>
     <listofallmembers>
       <member refid="classwx_number_formatter_1aad539451a9ac91198141eead3be4e743" prot="public" virt="non-virtual"><scope>wxNumberFormatter</scope><name>FromString</name></member>

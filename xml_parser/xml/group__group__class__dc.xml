@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="group__group__class__dc" kind="group">
     <compoundname>group_class_dc</compoundname>
     <title>Device Contexts</title>
@@ -22,6 +22,6 @@
     <briefdescription>
 <para>Device contexts are surfaces that may be drawn on, and provide an abstraction that allows parameterisation of your drawing code by passing different device contexts. </para>    </briefdescription>
     <detaileddescription>
-<para>Related Overviews: <ref refid="overview__dc" kindref="compound">Device Contexts</ref> </para>    </detaileddescription>
+<para>Related Overviews: <ref refid="overview_dc" kindref="compound">Device Contexts</ref> </para>    </detaileddescription>
   </compounddef>
 </doxygen>

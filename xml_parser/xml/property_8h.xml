@@ -1,12 +1,11 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="property_8h" kind="file">
     <compoundname>property.h</compoundname>
     <innerclass refid="classwx_p_g_property" prot="public">wxPGProperty</innerclass>
     <innerclass refid="classwx_p_g_cell" prot="public">wxPGCell</innerclass>
     <innerclass refid="classwx_p_g_choices" prot="public">wxPGChoices</innerclass>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="define" id="property_8h_1a85a6ad200c1c9847b7c194af4af2fa0c" prot="public" static="no">
         <name>wxPG_ATTR_DEFAULT_VALUE</name>
         <initializer>wxS(&quot;DefaultValue&quot;)</initializer>
@@ -71,7 +70,7 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000045"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use &quot;Hint&quot; (wxPG_ATTR_HINT) instead. </para></xrefdescription></xrefsect></para>        </detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000045"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use &quot;Hint&quot; (wxPG_ATTR_HINT) instead.</para></xrefdescription></xrefsect></para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="52" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" bodystart="52" bodyend="-1"/>
@@ -208,6 +207,18 @@
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="126" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" bodystart="126" bodyend="-1"/>
       </memberdef>
+      <memberdef kind="define" id="property_8h_1a8f8fbba85fc6663893838d20ac4bcea0" prot="public" static="no">
+        <name>wxPG_FILE_DIALOG_STYLE</name>
+        <initializer>wxS(&quot;DialogStyle&quot;)</initializer>
+        <briefdescription>
+<para>Specific to wxFileProperty and derivatives, long, default is 0. </para>        </briefdescription>
+        <detaileddescription>
+<para>Sets a specific <ref refid="classwx_file_dialog" kindref="compound">wxFileDialog</ref> style for the file dialog, e.g. <ref refid="filedlg_8h_1abed82baf7f470b522273a3e37c24c600aac29a39c558c3709c8bffaf012c90aec" kindref="member">wxFD_SAVE</ref>.</para><para><simplesect kind="since"><para>2.9.4 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="133" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" bodystart="133" bodyend="-1"/>
+      </memberdef>
       <memberdef kind="define" id="property_8h_1a97abb775beecdf1a0fafb19a83c27064" prot="public" static="no">
         <name>wxPG_DIR_DIALOG_MESSAGE</name>
         <initializer>wxS(&quot;DialogMessage&quot;)</initializer>
@@ -217,7 +228,7 @@
 <para>Sets a specific message for the dir dialog. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="131" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" bodystart="131" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="138" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" bodystart="138" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="property_8h_1a8df4932f72136a96e275bc47e0424b21" prot="public" static="no">
         <name>wxPG_ARRAY_DELIMITER</name>
@@ -228,7 +239,7 @@
 <para>If this is a quotation mark or hyphen, then strings will be quoted instead (with given character).</para><para>Default delimiter is quotation mark. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="140" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" bodystart="140" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="147" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" bodystart="147" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="property_8h_1adc9cc7e8e83bfe00e2731fed4414262d" prot="public" static="no">
         <name>wxPG_DATE_FORMAT</name>
@@ -239,7 +250,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="144" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" bodystart="144" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="151" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" bodystart="151" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="property_8h_1afaf305be931ad04c70cc87e4bea1f6b4" prot="public" static="no">
         <name>wxPG_DATE_PICKER_STYLE</name>
@@ -250,7 +261,7 @@
 <para>Default is wxDP_DEFAULT | wxDP_SHOWCENTURY. Using wxDP_ALLOWNONE will enable better unspecified value support in the editor. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="150" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" bodystart="150" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="157" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" bodystart="157" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="property_8h_1a94a6c060555a0273ba2c6eb6b4b8354d" prot="public" static="no">
         <name>wxPG_ATTR_SPINCTRL_STEP</name>
@@ -261,7 +272,7 @@
 <para>How much number changes when button is pressed (or up/down on keyboard). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="155" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" bodystart="155" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="162" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" bodystart="162" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="property_8h_1a0736a304ee458959cef2d961b2ce197c" prot="public" static="no">
         <name>wxPG_ATTR_SPINCTRL_WRAP</name>
@@ -272,7 +283,7 @@
 <para>If true, value wraps at Min/Max. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="159" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" bodystart="159" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="166" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" bodystart="166" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="property_8h_1a954e3111feb8105008786a43c4adacab" prot="public" static="no">
         <name>wxPG_ATTR_SPINCTRL_MOTIONSPIN</name>
@@ -283,7 +294,7 @@
 <para>If true, value can also by changed by moving mouse when left mouse button is being pressed. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="164" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" bodystart="164" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="171" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" bodystart="171" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="property_8h_1af122a189c011842114c76f92a9c8747c" prot="public" static="no">
         <name>wxPG_ATTR_MULTICHOICE_USERSTRINGMODE</name>
@@ -294,7 +305,7 @@
 <para>If 0, no user strings allowed. If 1, user strings appear before list strings. If 2, user strings appear after list string. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="169" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" bodystart="169" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="176" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" bodystart="176" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="property_8h_1ae0e144261fd157a14505ea4ccd491902" prot="public" static="no">
         <name>wxPG_COLOUR_ALLOW_CUSTOM</name>
@@ -305,7 +316,7 @@
 <para>Setting this attribute to 0 hides custom colour from property&apos;s list of choices. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="174" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" bodystart="174" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="181" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" bodystart="181" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="property_8h_1a6a5b9803f092feb44e6bbd6da4e3cb0d" prot="public" static="no">
         <name>wxPG_COLOUR_HAS_ALPHA</name>
@@ -316,11 +327,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="180" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" bodystart="180" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="187" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" bodystart="187" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="define" id="property_8h_1affbe3c4e1e2213c2fb1674f11f0af89b" prot="public" static="no">
         <name>wxPG_PROP_MAX</name>
         <initializer>wxPG_PROP_AUTO_UNSPECIFIED</initializer>
@@ -330,7 +340,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="317" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" bodystart="317" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="324" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" bodystart="324" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="property_8h_1a75aacc9fa61f87a81d7b3e676747141a" prot="public" static="no">
         <name>wxPG_PROP_PARENTAL_FLAGS</name>
@@ -343,7 +353,7 @@
 <para>Code should automatically take care of this, however. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="326" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" bodystart="323" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="333" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" bodystart="330" bodyend="-1"/>
       </memberdef>
       <memberdef kind="enum" id="property_8h_1a2aac85b6d4e1018849f0026b62f1b751" prot="public" static="no">
         <name>wxPGPropertyFlags</name>
@@ -522,7 +532,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="191" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" bodystart="190" bodyend="313"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="198" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" bodystart="197" bodyend="320"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="define">

@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="overview_aui" kind="page">
+    <compoundname>overview_aui</compoundname>
+    <title>wxAUI Overview</title>
+    <detaileddescription>
+<para>Classes:</para><para><itemizedlist>
+<listitem><para><ref refid="classwx_aui_manager" kindref="compound">wxAuiManager</ref> </para></listitem>
+<listitem><para><ref refid="classwx_aui_pane_info" kindref="compound">wxAuiPaneInfo</ref> </para></listitem>
+<listitem><para><ref refid="classwx_aui_notebook" kindref="compound">wxAuiNotebook</ref> </para></listitem>
+<listitem><para><ref refid="classwx_aui_dock_art" kindref="compound">wxAuiDockArt</ref> </para></listitem>
+<listitem><para><ref refid="classwx_aui_tab_art" kindref="compound">wxAuiTabArt</ref> </para></listitem>
+<listitem><para><ref refid="classwx_aui_tool_bar" kindref="compound">wxAuiToolBar</ref> </para></listitem>
+<listitem><para><ref refid="classwx_aui_tool_bar_art" kindref="compound">wxAuiToolBarArt</ref></para></listitem>
+</itemizedlist>
+wxAUI stands for Advanced User Interface. It aims to give the user a cutting edge interface with floatable windows, and a user-customizable layout. The original wxAUI sources have kindly been made available under the wxWindows licence by Kirix Corp. and they have since then been integrated into wxWidgets and further improved.</para><para>wxAUI attempts to encapsulate the following aspects of the user interface:</para><para><itemizedlist>
+<listitem><para><ref refid="overview_aui_1overview_aui_frame" kindref="member">Frame Management</ref> </para></listitem>
+<listitem><para><ref refid="overview_aui_1overview_aui_toolbar" kindref="member">Toolbars</ref> </para></listitem>
+<listitem><para><ref refid="overview_aui_1overview_aui_modeless" kindref="member">Modeless Controls</ref> </para></listitem>
+<listitem><para><ref refid="overview_aui_1overview_aui_lnf" kindref="member">Look and Feel</ref></para></listitem>
+</itemizedlist>
+<hruler/>
+</para><sect1 id="overview_aui_1overview_aui_frame">
+<title>Frame Management</title>
+<para>Frame management provides the means to open, move and hide common controls that are needed to interact with the document, and allow these configurations to be saved into different perspectives and loaded at a later time.</para></sect1>
+<sect1 id="overview_aui_1overview_aui_toolbar">
+<title>Toolbars</title>
+<para>Toolbars are a specialized subset of the frame management system and should behave similarly to other docked components. However, they also require additional functionality, such as &quot;spring-loaded&quot; rebar support, &quot;chevron&quot; buttons and end-user customizability.</para></sect1>
+<sect1 id="overview_aui_1overview_aui_modeless">
+<title>Modeless Controls</title>
+<para>Modeless controls expose a tool palette or set of options that float above the application content while allowing it to be accessed. Usually accessed by the toolbar, these controls disappear when an option is selected, but may also be &quot;torn off&quot; the toolbar into a floating frame of their own.</para></sect1>
+<sect1 id="overview_aui_1overview_aui_lnf">
+<title>Look and Feel</title>
+<para>Look and feel encompasses the way controls are drawn, both when shown statically as well as when they are being moved. This aspect of user interface design incorporates &quot;special effects&quot; such as transparent window dragging as well as frame animation.</para><para>wxAUI adheres to the following principles: Use native floating frames to obtain a native look and feel for all platforms. Use existing wxWidgets code where possible, such as sizer implementation for frame management. Use classes included in <ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref> and <ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref> only. </para></sect1>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

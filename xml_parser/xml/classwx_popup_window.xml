@@ -1,11 +1,24 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_popup_window" kind="class" prot="public">
     <compoundname>wxPopupWindow</compoundname>
     <basecompoundref refid="classwx_non_owned_window" prot="public" virt="non-virtual">wxNonOwnedWindow</basecompoundref>
     <derivedcompoundref refid="classwx_popup_transient_window" prot="public" virt="non-virtual">wxPopupTransientWindow</derivedcompoundref>
     <includes local="no">wx/popupwin.h</includes>
       <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_popup_window_1a067444f3532f95541e0c445a916af9dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxPopupWindow::wxPopupWindow</definition>
+        <argsstring>()</argsstring>
+        <name>wxPopupWindow</name>
+        <briefdescription>
+<para>Default constructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/popupwin.h" line="28"/>
+      </memberdef>
       <memberdef kind="function" id="classwx_popup_window_1ab31a3724d9682f6870bd17f71f99b95c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
         <definition>wxPopupWindow::wxPopupWindow</definition>
@@ -26,7 +39,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/popupwin.h" line="28"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/popupwin.h" line="33"/>
       </memberdef>
       <memberdef kind="function" id="classwx_popup_window_1a2b82f62c61b126fe4831a8039fe72f09" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -48,7 +61,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/popupwin.h" line="33"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/popupwin.h" line="38"/>
       </memberdef>
       <memberdef kind="function" id="classwx_popup_window_1af39e2a99cb6323a429833b9550819130" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -84,75 +97,30 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/popupwin.h" line="49"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/popupwin.h" line="54"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para>A special kind of top level window used for popup menus, combobox popups and such. </para>    </briefdescription>
     <detaileddescription>
 <para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__managedwnd" kindref="compound">Managed Windows</ref></para><para><simplesect kind="see"><para><ref refid="classwx_dialog" kindref="compound">wxDialog</ref>, <ref refid="classwx_frame" kindref="compound">wxFrame</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__managedwnd" kindref="compound">Managed Windows</ref></para><para><simplesect kind="see"><para><ref refid="classwx_dialog" kindref="compound">wxDialog</ref>, <ref refid="classwx_frame" kindref="compound">wxFrame</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="8708">
+      <node id="8716">
         <label>wxNonOwnedWindow</label>
         <link refid="classwx_non_owned_window"/>
-        <childnode refid="8709" relation="public-inheritance">
+        <childnode refid="8717" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8711">
+      <node id="8719">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-      </node>
-      <node id="8710">
-        <label>wxEvtHandler</label>
-        <link refid="classwx_evt_handler"/>
-        <childnode refid="8711" relation="public-inheritance">
-        </childnode>
-        <childnode refid="8712" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="8712">
-        <label>wxTrackable</label>
-        <link refid="classwx_trackable"/>
-      </node>
-      <node id="8713">
-        <label>wxPopupTransientWindow</label>
-        <link refid="classwx_popup_transient_window"/>
-        <childnode refid="8707" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="8709">
-        <label>wxWindow</label>
-        <link refid="classwx_window"/>
-        <childnode refid="8710" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="8707">
-        <label>wxPopupWindow</label>
-        <link refid="classwx_popup_window"/>
-        <childnode refid="8708" relation="public-inheritance">
-        </childnode>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
-      <node id="8715">
-        <label>wxNonOwnedWindow</label>
-        <link refid="classwx_non_owned_window"/>
-        <childnode refid="8716" relation="public-inheritance">
-        </childnode>
       </node>
       <node id="8718">
-        <label>wxObject</label>
-        <link refid="classwx_object"/>
-        <childnode refid="8719" relation="usage">
-          <edgelabel>m_refData</edgelabel>
-        </childnode>
-      </node>
-      <node id="8717">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="8718" relation="public-inheritance">
+        <childnode refid="8719" relation="public-inheritance">
         </childnode>
         <childnode refid="8720" relation="public-inheritance">
         </childnode>
@@ -161,24 +129,69 @@
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="8716">
-        <label>wxWindow</label>
-        <link refid="classwx_window"/>
-        <childnode refid="8717" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="8714">
-        <label>wxPopupWindow</label>
-        <link refid="classwx_popup_window"/>
+      <node id="8721">
+        <label>wxPopupTransientWindow</label>
+        <link refid="classwx_popup_transient_window"/>
         <childnode refid="8715" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8719">
+      <node id="8717">
+        <label>wxWindow</label>
+        <link refid="classwx_window"/>
+        <childnode refid="8718" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8715">
+        <label>wxPopupWindow</label>
+        <link refid="classwx_popup_window"/>
+        <childnode refid="8716" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="8723">
+        <label>wxNonOwnedWindow</label>
+        <link refid="classwx_non_owned_window"/>
+        <childnode refid="8724" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8726">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="8727" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="8725">
+        <label>wxEvtHandler</label>
+        <link refid="classwx_evt_handler"/>
+        <childnode refid="8726" relation="public-inheritance">
+        </childnode>
+        <childnode refid="8728" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8728">
+        <label>wxTrackable</label>
+        <link refid="classwx_trackable"/>
+      </node>
+      <node id="8724">
+        <label>wxWindow</label>
+        <link refid="classwx_window"/>
+        <childnode refid="8725" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8722">
+        <label>wxPopupWindow</label>
+        <link refid="classwx_popup_window"/>
+        <childnode refid="8723" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8727">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/popupwin.h" line="22" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/popupwin.h" bodystart="21" bodyend="50"/>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/popupwin.h" line="22" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/popupwin.h" bodystart="21" bodyend="55"/>
     <listofallmembers>
       <member refid="classwx_window_1a3afbd49b1ea2f8275e3600dcac102923" prot="public" virt="virtual"><scope>wxPopupWindow</scope><name>AcceptsFocus</name></member>
       <member refid="classwx_window_1a2370bdd3ab08e7ef3c7555c6aa8301b8" prot="public" virt="virtual"><scope>wxPopupWindow</scope><name>AcceptsFocusFromKeyboard</name></member>
@@ -496,6 +509,7 @@
       <member refid="classwx_evt_handler_1a3f0166c4154227d05575b01eb2c8d4be" prot="public" virt="non-virtual"><scope>wxPopupWindow</scope><name>wxEvtHandler</name></member>
       <member refid="classwx_object_1acaa378363a28af421ab56ad7b46eadf0" prot="public" virt="non-virtual"><scope>wxPopupWindow</scope><name>wxObject</name></member>
       <member refid="classwx_object_1a4721b4dc9b7aff0f30904ba2ea3954cf" prot="public" virt="non-virtual"><scope>wxPopupWindow</scope><name>wxObject</name></member>
+      <member refid="classwx_popup_window_1a067444f3532f95541e0c445a916af9dd" prot="public" virt="non-virtual"><scope>wxPopupWindow</scope><name>wxPopupWindow</name></member>
       <member refid="classwx_popup_window_1ab31a3724d9682f6870bd17f71f99b95c" prot="public" virt="non-virtual"><scope>wxPopupWindow</scope><name>wxPopupWindow</name></member>
       <member refid="classwx_window_1a695200a4915b934926dcf32afa44544c" prot="public" virt="non-virtual"><scope>wxPopupWindow</scope><name>wxWindow</name></member>
       <member refid="classwx_window_1a7799009b10d1765d1bbb6db4994f922e" prot="public" virt="non-virtual"><scope>wxPopupWindow</scope><name>wxWindow</name></member>

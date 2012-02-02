@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="overview_cmndlg" kind="page">
+    <compoundname>overview_cmndlg</compoundname>
+    <title>Common Dialogs</title>
+    <detaileddescription>
+<para>Classes:</para><para><itemizedlist>
+<listitem><para><ref refid="classwx_colour_dialog" kindref="compound">wxColourDialog</ref> </para></listitem>
+<listitem><para><ref refid="classwx_font_dialog" kindref="compound">wxFontDialog</ref> </para></listitem>
+<listitem><para><ref refid="classwx_print_dialog" kindref="compound">wxPrintDialog</ref> </para></listitem>
+<listitem><para><ref refid="classwx_file_dialog" kindref="compound">wxFileDialog</ref> </para></listitem>
+<listitem><para><ref refid="classwx_dir_dialog" kindref="compound">wxDirDialog</ref> </para></listitem>
+<listitem><para><ref refid="classwx_text_entry_dialog" kindref="compound">wxTextEntryDialog</ref> </para></listitem>
+<listitem><para><ref refid="classwx_password_entry_dialog" kindref="compound">wxPasswordEntryDialog</ref> </para></listitem>
+<listitem><para><ref refid="classwx_message_dialog" kindref="compound">wxMessageDialog</ref> </para></listitem>
+<listitem><para><ref refid="classwx_single_choice_dialog" kindref="compound">wxSingleChoiceDialog</ref> </para></listitem>
+<listitem><para><ref refid="classwx_multi_choice_dialog" kindref="compound">wxMultiChoiceDialog</ref></para></listitem>
+</itemizedlist>
+Common dialog classes and functions encapsulate commonly-needed dialog box requirements. They are all &apos;modal&apos;, grabbing the flow of control until the user dismisses the dialog, to make them easy to use within an application.</para><para>Some dialogs have both platform-dependent and platform-independent implementations, so that if underlying windowing systems do not provide the required functionality, the generic classes and functions can stand in. For example, under MS Windows, <ref refid="classwx_colour_dialog" kindref="compound">wxColourDialog</ref> uses the standard colour selector. There is also an equivalent called wxGenericColourDialog for other platforms, and a macro defines <ref refid="classwx_colour_dialog" kindref="compound">wxColourDialog</ref> to be the same as wxGenericColourDialog on non-MS Windows platforms. However, under MS Windows, the generic dialog can also be used, for testing or other purposes.</para><para><itemizedlist>
+<listitem><para><ref refid="overview_cmndlg_1overview_cmndlg_colour" kindref="member">wxColourDialog Overview</ref> </para></listitem>
+<listitem><para><ref refid="overview_cmndlg_1overview_cmndlg_font" kindref="member">wxFontDialog Overview</ref> </para></listitem>
+<listitem><para><ref refid="overview_cmndlg_1overview_cmndlg_print" kindref="member">wxPrintDialog Overview</ref> </para></listitem>
+<listitem><para><ref refid="overview_cmndlg_1overview_cmndlg_file" kindref="member">wxFileDialog Overview</ref> </para></listitem>
+<listitem><para><ref refid="overview_cmndlg_1overview_cmndlg_dir" kindref="member">wxDirDialog Overview</ref> </para></listitem>
+<listitem><para><ref refid="overview_cmndlg_1overview_cmndlg_textentry" kindref="member">wxTextEntryDialog Overview</ref> </para></listitem>
+<listitem><para><ref refid="overview_cmndlg_1overview_cmndlg_password" kindref="member">wxPasswordEntryDialog Overview</ref> </para></listitem>
+<listitem><para><ref refid="overview_cmndlg_1overview_cmndlg_msg" kindref="member">wxMessageDialog Overview</ref> </para></listitem>
+<listitem><para><ref refid="overview_cmndlg_1overview_cmndlg_singlechoice" kindref="member">wxSingleChoiceDialog Overview</ref> </para></listitem>
+<listitem><para><ref refid="overview_cmndlg_1overview_cmndlg_multichoice" kindref="member">wxMultiChoiceDialog Overview</ref></para></listitem>
+</itemizedlist>
+<hruler/>
+</para><sect1 id="overview_cmndlg_1overview_cmndlg_colour">
+<title>wxColourDialog Overview</title>
+<para>Classes: <ref refid="classwx_colour_dialog" kindref="compound">wxColourDialog</ref>, <ref refid="classwx_colour_data" kindref="compound">wxColourData</ref></para><para>The <ref refid="classwx_colour_dialog" kindref="compound">wxColourDialog</ref> presents a colour selector to the user, and returns with colour information.</para><sect2 id="overview_cmndlg_1overview_cmndlg_colour_msw">
+<title>The MS Windows Colour Selector</title>
+<para>Under Windows, the native colour selector common dialog is used. This presents a dialog box with three main regions: at the top left, a palette of 48 commonly-used colours is shown. Under this, there is a palette of 16 &apos;custom colours&apos; which can be set by the application if desired. Additionally, the user may open up the dialog box to show a right-hand panel containing controls to select a precise colour, and add it to the custom colour palette.</para></sect2>
+<sect2 id="overview_cmndlg_1overview_cmndlg_colour_generic">
+<title>The Generic Colour Selector</title>
+<para>Under non-MS Windows platforms, the colour selector is a simulation of most of the features of the MS Windows selector. Two palettes of 48 standard and 16 custom colours are presented, with the right-hand area containing three sliders for the user to select a colour from red, green and blue components. This colour may be added to the custom colour palette, and will replace either the currently selected custom colour, or the first one in the palette if none is selected. The RGB colour sliders are not optional in the generic colour selector. The generic colour selector is also available under MS Windows; use the name wxGenericColourDialog.</para></sect2>
+<sect2 id="overview_cmndlg_1overview_cmndlg_colour_example">
+<title>Example</title>
+<para>In the samples/dialogs directory, there is an example of using the <ref refid="classwx_colour_dialog" kindref="compound">wxColourDialog</ref> class. Here is an excerpt, which sets various parameters of a <ref refid="classwx_colour_data" kindref="compound">wxColourData</ref> object, including a grey scale for the custom colours. If the user did not cancel the dialog, the application retrieves the selected colour and uses it to set the background of a window.</para><para><programlisting><codeline><highlight class="normal"><ref refid="classwx_colour_data" kindref="compound" tooltip="This class holds a variety of information related to colour dialogs.">wxColourData</ref><sp/>data;</highlight></codeline>
+<codeline><highlight class="normal">data.<ref refid="classwx_colour_data_1a2e5e80d982cbcb17cac113a72efef2bf" kindref="member" tooltip="Under Windows, tells the Windows colour dialog to display the full dialog with custom colour selectio...">SetChooseFull</ref>(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>16;<sp/>i++)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_colour" kindref="compound" tooltip="A colour is an object representing a combination of Red, Green, and Blue (RGB) intensity values...">wxColour</ref><sp/>colour(i*16,<sp/>i*16,<sp/>i*16);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>data.<ref refid="classwx_colour_data_1afff3c5561456c17bcf6329a81dcfc716" kindref="member" tooltip="Sets custom colours for the colour dialog.">SetCustomColour</ref>(i,<sp/>colour);</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><ref refid="classwx_colour_dialog" kindref="compound" tooltip="This class represents the colour chooser dialog.">wxColourDialog</ref><sp/>dialog(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>&amp;data);</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(dialog.ShowModal()<sp/>==<sp/><ref refid="defs_8h_1ac66d0a09761e7d86b2ac0b2e0c6a8cbbaeeb1bdf97306d7f0fdffb62c8af3d02f" kindref="member" tooltip="Standard button and menu IDs.">wxID_OK</ref>)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_colour_data" kindref="compound" tooltip="This class holds a variety of information related to colour dialogs.">wxColourData</ref><sp/>retData<sp/>=<sp/>dialog.GetColourData();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_colour" kindref="compound" tooltip="A colour is an object representing a combination of Red, Green, and Blue (RGB) intensity values...">wxColour</ref><sp/>col<sp/>=<sp/>retData.<ref refid="classwx_colour_data_1ac9eb69a80b6c0638284f6f55966f2ce4" kindref="member" tooltip="Gets the current colour associated with the colour dialog.">GetColour</ref>();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_brush" kindref="compound" tooltip="A brush is a drawing tool for filling in areas.">wxBrush</ref><sp/>brush(col,<sp/>wxSOLID);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>myWindow-&gt;SetBackground(brush);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>myWindow-&gt;Clear();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>myWindow-&gt;Refresh();</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting></para></sect2>
+</sect1>
+<sect1 id="overview_cmndlg_1overview_cmndlg_font">
+<title>wxFontDialog Overview</title>
+<para>Classes: <ref refid="classwx_font_dialog" kindref="compound">wxFontDialog</ref>, <ref refid="classwx_font_data" kindref="compound">wxFontData</ref></para><para>The <ref refid="classwx_font_dialog" kindref="compound">wxFontDialog</ref> presents a font selector to the user, and returns with font and colour information.</para><sect2 id="overview_cmndlg_1overview_cmndlg_font_msw">
+<title>The MS Windows Font Selector</title>
+<para>Under Windows, the native font selector common dialog is used. This presents a dialog box with controls for font name, point size, style, weight, underlining, strikeout and text foreground colour. A sample of the font is shown on a white area of the dialog box. Note that in the translation from full MS Windows fonts to wxWidgets font conventions, strikeout is ignored and a font family (such as Swiss or Modern) is deduced from the actual font name (such as Arial or Courier).</para></sect2>
+<sect2 id="overview_cmndlg_1overview_cmndlg_font_generic">
+<title>The Generic Font Selector</title>
+<para>Under non-MS Windows platforms, the font selector is simpler. Controls for font family, point size, style, weight, underlining and text foreground colour are provided, and a sample is shown upon a white background. The generic font selector is also available under MS Windows; use the name wxGenericFontDialog.</para></sect2>
+<sect2 id="overview_cmndlg_1overview_cmndlg_font_example">
+<title>Example</title>
+<para>In the samples/dialogs directory, there is an example of using the <ref refid="classwx_font_dialog" kindref="compound">wxFontDialog</ref> class. The application uses the returned font and colour for drawing text on a canvas. Here is an excerpt:</para><para><programlisting><codeline><highlight class="normal"><ref refid="classwx_font_data" kindref="compound" tooltip="This class holds a variety of information related to font dialogs.">wxFontData</ref><sp/>data;</highlight></codeline>
+<codeline><highlight class="normal">data.<ref refid="classwx_font_data_1a24fd79c0a3eb6764cc7d525acba9aaeb" kindref="member" tooltip="Sets the font that will be initially used by the font dialog.">SetInitialFont</ref>(canvasFont);</highlight></codeline>
+<codeline><highlight class="normal">data.<ref refid="classwx_font_data_1a52e4308bf17d933b5b2948f6eb469608" kindref="member" tooltip="Sets the colour that will be used for the font foreground colour.">SetColour</ref>(canvasTextColour);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><ref refid="classwx_font_dialog" kindref="compound" tooltip="This class represents the font chooser dialog.">wxFontDialog</ref><sp/>dialog(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>&amp;data);</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(dialog.ShowModal()<sp/>==<sp/><ref refid="defs_8h_1ac66d0a09761e7d86b2ac0b2e0c6a8cbbaeeb1bdf97306d7f0fdffb62c8af3d02f" kindref="member" tooltip="Standard button and menu IDs.">wxID_OK</ref>)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_font_data" kindref="compound" tooltip="This class holds a variety of information related to font dialogs.">wxFontData</ref><sp/>retData<sp/>=<sp/>dialog.GetFontData();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>canvasFont<sp/>=<sp/>retData.<ref refid="classwx_font_data_1a5ecc1a48c1a783fef87c26f7ea825c0d" kindref="member" tooltip="Gets the font chosen by the user if the user pressed OK (wxFontDialog::ShowModal() returned wxID_OK)...">GetChosenFont</ref>();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>canvasTextColour<sp/>=<sp/>retData.<ref refid="classwx_font_data_1abb0099f48190807679d721639e9ab6e9" kindref="member" tooltip="Gets the colour associated with the font dialog.">GetColour</ref>();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>myWindow-&gt;Refresh();</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting></para></sect2>
+</sect1>
+<sect1 id="overview_cmndlg_1overview_cmndlg_print">
+<title>wxPrintDialog Overview</title>
+<para>Classes: <ref refid="classwx_print_dialog" kindref="compound">wxPrintDialog</ref>, <ref refid="classwx_print_data" kindref="compound">wxPrintData</ref></para><para>This class represents the print and print setup common dialogs. You may obtain a <ref refid="classwx_printer_d_c" kindref="compound">wxPrinterDC</ref> device context from a successfully dismissed print dialog.</para><para>The samples/printing example shows how to use it: see <ref refid="overview_printing" kindref="compound">Printing Framework Overview</ref> for an excerpt from this example.</para></sect1>
+<sect1 id="overview_cmndlg_1overview_cmndlg_file">
+<title>wxFileDialog Overview</title>
+<para>Classes: <ref refid="classwx_file_dialog" kindref="compound">wxFileDialog</ref></para><para>Pops up a file selector box. On Windows and GTK 2.4+, this is the common file selector dialog. In X, this is a file selector box with somewhat less functionality. The path and filename are distinct elements of a full file pathname.</para><para>If path is &quot;&quot;, the current directory will be used. If filename is &quot;&quot;, no default filename will be supplied. The wildcard determines what files are displayed in the file selector, and file extension supplies a type extension for the required filename. Flags may be a combination of wxFD_OPEN, wxFD_SAVE, wxFD_OVERWRITE_PROMPT, wxFD_HIDE_READONLY, wxFD_FILE_MUST_EXIST, wxFD_MULTIPLE, wxFD_CHANGE_DIR or 0.</para><para>Both the X and Windows versions implement a wildcard filter. Typing a filename containing wildcards (*, ?) in the filename text item, and clicking on Ok, will result in only those files matching the pattern being displayed. In the X version, supplying no default name will result in the wildcard filter being inserted in the filename text item; the filter is ignored if a default name is supplied.</para><para>The wildcard may be a specification for multiple types of file with a description for each, such as:</para><para><verbatim>
+&quot;BMP files (*.bmp)|*.bmp|GIF files (*.gif)|*.gif&quot;
+</verbatim></para></sect1>
+<sect1 id="overview_cmndlg_1overview_cmndlg_dir">
+<title>wxDirDialog Overview</title>
+<para>Classes: <ref refid="classwx_dir_dialog" kindref="compound">wxDirDialog</ref></para><para>This dialog shows a directory selector dialog, allowing the user to select a single directory.</para></sect1>
+<sect1 id="overview_cmndlg_1overview_cmndlg_textentry">
+<title>wxTextEntryDialog Overview</title>
+<para>Classes: <ref refid="classwx_text_entry_dialog" kindref="compound">wxTextEntryDialog</ref></para><para>This is a dialog with a text entry field. The value that the user entered is obtained using <ref refid="classwx_text_entry_dialog_1a0cc97d0ced585c7f6d271f6c348fbc32" kindref="member">wxTextEntryDialog::GetValue()</ref>.</para></sect1>
+<sect1 id="overview_cmndlg_1overview_cmndlg_password">
+<title>wxPasswordEntryDialog Overview</title>
+<para>Classes: <ref refid="classwx_password_entry_dialog" kindref="compound">wxPasswordEntryDialog</ref></para><para>This is a dialog with a password entry field. The value that the user entered is obtained using <ref refid="classwx_text_entry_dialog_1a0cc97d0ced585c7f6d271f6c348fbc32" kindref="member">wxTextEntryDialog::GetValue()</ref>.</para></sect1>
+<sect1 id="overview_cmndlg_1overview_cmndlg_msg">
+<title>wxMessageDialog Overview</title>
+<para>Classes: <ref refid="classwx_message_dialog" kindref="compound">wxMessageDialog</ref></para><para>This dialog shows a message, plus buttons that can be chosen from OK, Cancel, Yes, and No. Under Windows, an optional icon can be shown, such as an exclamation mark or question mark.</para><para>The return value of <ref refid="classwx_message_dialog_1a28e6cea6fb3857df6cc9b103e06dbadf" kindref="member">wxMessageDialog::ShowModal()</ref> indicates which button the user pressed.</para></sect1>
+<sect1 id="overview_cmndlg_1overview_cmndlg_singlechoice">
+<title>wxSingleChoiceDialog Overview</title>
+<para>Classes: <ref refid="classwx_single_choice_dialog" kindref="compound">wxSingleChoiceDialog</ref></para><para>This dialog shows a list of choices, plus OK and (optionally) Cancel. The user can select one of them. The selection can be obtained from the dialog as an index, a string or client data.</para></sect1>
+<sect1 id="overview_cmndlg_1overview_cmndlg_multichoice">
+<title>wxMultiChoiceDialog Overview</title>
+<para>Classes: <ref refid="classwx_multi_choice_dialog" kindref="compound">wxMultiChoiceDialog</ref></para><para>This dialog shows a list of choices, plus OK and (optionally) Cancel. The user can select one or more of them. </para></sect1>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

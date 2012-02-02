@@ -1,10 +1,9 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_html_rendering_info" kind="class" prot="public">
     <compoundname>wxHtmlRenderingInfo</compoundname>
     <includes local="no">wx/html/htmlcell.h</includes>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_html_rendering_info_1ab102ce8d36ec824c6e891e9c6a7ff60d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void wxHtmlRenderingInfo::SetSelection</definition>
@@ -98,7 +97,7 @@
 <para>This class contains information given to cells when drawing them. </para>    </briefdescription>
     <detaileddescription>
 <para>Contains rendering state, selection information and rendering style object that can be used to customize the output.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxhtml" kindref="member">wxHTML</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__html" kindref="compound">HTML</ref></para><para><simplesect kind="see"><para><ref refid="overview__html_1overview_html_cells" kindref="member">Cells and Containers</ref>, <ref refid="classwx_html_cell" kindref="compound">wxHtmlCell</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxhtml" kindref="member">wxHTML</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__html" kindref="compound">HTML</ref></para><para><simplesect kind="see"><para><ref refid="overview_html_1overview_html_cells" kindref="member">Cells and Containers</ref>, <ref refid="classwx_html_cell" kindref="compound">wxHtmlCell</ref> </para></simplesect>
 </para>    </detaileddescription>
     <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlcell.h" line="50" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlcell.h" bodystart="49" bodyend="69"/>
     <listofallmembers>

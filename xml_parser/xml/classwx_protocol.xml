@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_protocol" kind="class" prot="public">
     <compoundname>wxProtocol</compoundname>
     <basecompoundref refid="classwx_socket_client" prot="public" virt="non-virtual">wxSocketClient</basecompoundref>
@@ -8,7 +8,7 @@
     <includes local="no">wx/protocol/protocol.h</includes>
       <sectiondef kind="user-defined">
       <header>Logging support.</header>
-      <description><para><anchor id="_1amgrp94889b1e6395ed4688dda8b6db382868"/>Each <ref refid="classwx_protocol" kindref="compound">wxProtocol</ref> object may have the associated logger (by default there is none) which is used to log network requests and responses.</para><para><simplesect kind="see"><para><ref refid="classwx_protocol_log" kindref="compound">wxProtocolLog</ref> </para></simplesect>
+      <description><para>Each <ref refid="classwx_protocol" kindref="compound">wxProtocol</ref> object may have the associated logger (by default there is none) which is used to log network requests and responses.</para><para><simplesect kind="see"><para><ref refid="classwx_protocol_log" kindref="compound">wxProtocolLog</ref> </para></simplesect>
 </para></description>
       <memberdef kind="function" id="classwx_protocol_1aad66b5f4dd52e5a34fe80ef44d4fab52" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -234,71 +234,71 @@
 <para>Represents a protocol for use with <ref refid="classwx_u_r_l" kindref="compound">wxURL</ref>. </para>    </briefdescription>
     <detaileddescription>
 <para>Note that you may want to change the default time-out for HTTP/FTP connections and network operations (using <ref refid="classwx_protocol_1ab1e5d1001c2a7b4c6cf50b8e26829985" kindref="member">SetDefaultTimeout()</ref>) since the default time-out value is quite long (60 seconds).</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxnet" kindref="member">wxNet</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__net" kindref="compound">Networking</ref></para><para><simplesect kind="see"><para><ref refid="classwx_socket_base" kindref="compound">wxSocketBase</ref>, <ref refid="classwx_u_r_l" kindref="compound">wxURL</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxnet" kindref="member">wxNet</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__net" kindref="compound">Networking</ref></para><para><simplesect kind="see"><para><ref refid="classwx_socket_base" kindref="compound">wxSocketBase</ref>, <ref refid="classwx_u_r_l" kindref="compound">wxURL</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="8941">
+      <node id="8949">
         <label>wxSocketBase</label>
         <link refid="classwx_socket_base"/>
-        <childnode refid="8942" relation="public-inheritance">
+        <childnode refid="8950" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8942">
+      <node id="8950">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="8940">
+      <node id="8948">
         <label>wxSocketClient</label>
         <link refid="classwx_socket_client"/>
-        <childnode refid="8941" relation="public-inheritance">
+        <childnode refid="8949" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8943">
+      <node id="8951">
         <label>wxFTP</label>
         <link refid="classwx_f_t_p"/>
-        <childnode refid="8939" relation="public-inheritance">
+        <childnode refid="8947" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8944">
+      <node id="8952">
         <label>wxHTTP</label>
         <link refid="classwx_h_t_t_p"/>
-        <childnode refid="8939" relation="public-inheritance">
+        <childnode refid="8947" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8939">
+      <node id="8947">
         <label>wxProtocol</label>
         <link refid="classwx_protocol"/>
-        <childnode refid="8940" relation="public-inheritance">
+        <childnode refid="8948" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="8947">
+      <node id="8955">
         <label>wxSocketBase</label>
         <link refid="classwx_socket_base"/>
-        <childnode refid="8948" relation="public-inheritance">
+        <childnode refid="8956" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8948">
+      <node id="8956">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="8949" relation="usage">
+        <childnode refid="8957" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="8946">
+      <node id="8954">
         <label>wxSocketClient</label>
         <link refid="classwx_socket_client"/>
-        <childnode refid="8947" relation="public-inheritance">
+        <childnode refid="8955" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8945">
+      <node id="8953">
         <label>wxProtocol</label>
         <link refid="classwx_protocol"/>
-        <childnode refid="8946" relation="public-inheritance">
+        <childnode refid="8954" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8949">
+      <node id="8957">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

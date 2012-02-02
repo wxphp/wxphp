@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_check_box" kind="class" prot="public">
     <compoundname>wxCheckBox</compoundname>
     <basecompoundref refid="classwx_control" prot="public" virt="non-virtual">wxControl</basecompoundref>
@@ -307,7 +307,7 @@
 <para>Optionally (when the wxCHK_3STATE style flag is set) it can have a third state, called the mixed or undetermined state. Often this is used as a &quot;Does Not Apply&quot; state.</para><para><heading level="2">Styles</heading>
 </para><para>This class supports the following styles: <itemizedlist>
 <listitem><para>wxCHK_2STATE: Create a 2-state checkbox. This is the default. </para></listitem>
-<listitem><para>wxCHK_3STATE: Create a 3-state checkbox. Not implemented in wxMGL, wxOS2 and wxGTK built against GTK+ 1.2. </para></listitem>
+<listitem><para>wxCHK_3STATE: Create a 3-state checkbox. Not implemented in wxOS2 and wxGTK built against GTK+ 1.2. </para></listitem>
 <listitem><para>wxCHK_ALLOW_3RD_STATE_FOR_USER: By default a user can&apos;t set a 3-state checkbox to the third state. It can only be done from code. Using this flags allows the user to set the checkbox to the third state by clicking. </para></listitem>
 <listitem><para>wxALIGN_RIGHT: Makes the text appear on the left of the checkbox. </para></listitem>
 </itemizedlist>
@@ -316,83 +316,83 @@
 <listitem><para>EVT_CHECKBOX(id,  func): Process a <computeroutput>wxEVT_COMMAND_CHECKBOX_CLICKED</computeroutput> event, when the checkbox is clicked. </para></listitem>
 </itemizedlist>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref> <htmlonly> &lt;br&gt;&lt;div&gt;&lt;span class=&apos;appearance&apos;&gt;Appearance:&lt;/span&gt;&lt;br&gt;&lt;table class=&apos;appearance&apos;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&apos;wxmsw/checkbox.png&apos; alt=&apos;wxMSW appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxgtk/checkbox.png&apos; alt=&apos;wxGTK appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxmac/checkbox.png&apos; alt=&apos;wxMac appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;wxMSW appearance&lt;/td&gt;&lt;td&gt;wxGTK appearance&lt;/td&gt;&lt;td&gt;wxMac appearance&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt; </htmlonly></para><para><simplesect kind="see"><para><ref refid="classwx_radio_button" kindref="compound">wxRadioButton</ref>, <ref refid="classwx_command_event" kindref="compound">wxCommandEvent</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref> <htmlonly> &lt;br&gt;&lt;div&gt;&lt;span class=&apos;appearance&apos;&gt;Appearance:&lt;/span&gt;&lt;br&gt;&lt;table class=&apos;appearance&apos;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&apos;wxmsw/checkbox.png&apos; alt=&apos;wxMSW appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxgtk/checkbox.png&apos; alt=&apos;wxGTK appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxmac/checkbox.png&apos; alt=&apos;wxMac appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;wxMSW appearance&lt;/td&gt;&lt;td&gt;wxGTK appearance&lt;/td&gt;&lt;td&gt;wxMac appearance&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt; </htmlonly></para><para><simplesect kind="see"><para><ref refid="classwx_radio_button" kindref="compound">wxRadioButton</ref>, <ref refid="classwx_command_event" kindref="compound">wxCommandEvent</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="4701">
+      <node id="4705">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="4700">
+      <node id="4704">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="4701" relation="public-inheritance">
+        <childnode refid="4705" relation="public-inheritance">
         </childnode>
+        <childnode refid="4706" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4701">
+        <label>wxCheckBox</label>
+        <link refid="classwx_check_box"/>
         <childnode refid="4702" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4697">
-        <label>wxCheckBox</label>
-        <link refid="classwx_check_box"/>
-        <childnode refid="4698" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4702">
+      <node id="4706">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="4698">
+      <node id="4702">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="4699" relation="public-inheritance">
+        <childnode refid="4703" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4699">
+      <node id="4703">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="4700" relation="public-inheritance">
+        <childnode refid="4704" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="4707">
+      <node id="4711">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="4708" relation="usage">
+        <childnode refid="4712" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="4706">
+      <node id="4710">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="4707" relation="public-inheritance">
+        <childnode refid="4711" relation="public-inheritance">
         </childnode>
-        <childnode refid="4709" relation="public-inheritance">
+        <childnode refid="4713" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4703">
+      <node id="4707">
         <label>wxCheckBox</label>
         <link refid="classwx_check_box"/>
-        <childnode refid="4704" relation="public-inheritance">
+        <childnode refid="4708" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4709">
+      <node id="4713">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="4704">
+      <node id="4708">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="4705" relation="public-inheritance">
+        <childnode refid="4709" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4705">
+      <node id="4709">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="4706" relation="public-inheritance">
+        <childnode refid="4710" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4708">
+      <node id="4712">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

@@ -1,10 +1,9 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_affine_matrix2_d" kind="class" prot="public">
     <compoundname>wxAffineMatrix2D</compoundname>
     <includes local="no">wx/affinematrix2d.h</includes>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_affine_matrix2_d_1a326f3c8594e45625d3aacc450c1f73ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void wxAffineMatrix2D::IsEqual</definition>
@@ -446,7 +445,7 @@
 <para>A 3x2 matrix representing an affine 2D transformation. </para>    </briefdescription>
     <detaileddescription>
 <para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__misc" kindref="compound">Miscellaneous</ref></para><para><simplesect kind="since"><para>2.9.2 </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__misc" kindref="compound">Miscellaneous</ref></para><para><simplesect kind="since"><para>2.9.2 </para></simplesect>
 </para>    </detaileddescription>
     <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/affinematrix2d.h" line="19" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/affinematrix2d.h" bodystart="18" bodyend="161"/>
     <listofallmembers>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_html_window" kind="class" prot="public">
     <compoundname>wxHtmlWindow</compoundname>
     <basecompoundref refid="classwx_scrolled" prot="public" virt="non-virtual">wxScrolled&lt; wxPanel &gt;</basecompoundref>
@@ -94,7 +94,7 @@
         <briefdescription>
 <para>Returns pointer to the top-level container. </para>        </briefdescription>
         <detaileddescription>
-<para><simplesect kind="see"><para><ref refid="overview__html_1overview_html_cells" kindref="member">Cells and Containers</ref>, <ref refid="overview__printing" kindref="compound">Printing Framework Overview</ref> </para></simplesect>
+<para><simplesect kind="see"><para><ref refid="overview_html_1overview_html_cells" kindref="member">Cells and Containers</ref>, <ref refid="overview_printing" kindref="compound">Printing Framework Overview</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -253,7 +253,7 @@
 <parametername>location</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>The address of the document. See the <ref refid="overview__fs" kindref="compound">wxFileSystem Overview</ref> for details on the address format and <ref refid="classwx_file_system" kindref="compound">wxFileSystem</ref> for a description of how the file is opened.</para></parameterdescription>
+<para>The address of the document. See the <ref refid="overview_fs" kindref="compound">wxFileSystem Overview</ref> for details on the address format and <ref refid="classwx_file_system" kindref="compound">wxFileSystem</ref> for a description of how the file is opened.</para></parameterdescription>
 </parameteritem>
 </parameterlist>
 <simplesect kind="return"><para>false if an error occurred, true otherwise</para></simplesect>
@@ -703,7 +703,7 @@ The return value is:<itemizedlist>
           <declname>filter</declname>
         </param>
         <briefdescription>
-<para>Adds <ref refid="overview__html_1overview_html_filters" kindref="member">input filter</ref> to the static list of available filters. </para>        </briefdescription>
+<para>Adds <ref refid="overview_html_1overview_html_filters" kindref="member">input filter</ref> to the static list of available filters. </para>        </briefdescription>
         <detaileddescription>
 <para>These filters are present by default:<itemizedlist>
 <listitem><para><computeroutput>text/html</computeroutput> MIME type</para></listitem><listitem><para><computeroutput>image/*</computeroutput> MIME types</para></listitem><listitem><para>Plain Text filter (this filter is used if no other filter matches) </para></listitem></itemizedlist>
@@ -838,28 +838,28 @@ The return value is:<itemizedlist>
 <listitem><para>EVT_HTML_LINK_CLICKED(id,  func): A <ref refid="classwx_html_cell" kindref="compound">wxHtmlCell</ref> which contains an hyperlink was clicked. </para></listitem>
 </itemizedlist>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxhtml" kindref="member">wxHTML</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__html" kindref="compound">HTML</ref></para><para><simplesect kind="see"><para><ref refid="classwx_html_link_event" kindref="compound">wxHtmlLinkEvent</ref>, <ref refid="classwx_html_cell_event" kindref="compound">wxHtmlCellEvent</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxhtml" kindref="member">wxHTML</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__html" kindref="compound">HTML</ref></para><para><simplesect kind="see"><para><ref refid="classwx_html_link_event" kindref="compound">wxHtmlLinkEvent</ref>, <ref refid="classwx_html_cell_event" kindref="compound">wxHtmlCellEvent</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7135">
+      <node id="7139">
         <label>wxHtmlWindow</label>
         <link refid="classwx_html_window"/>
-        <childnode refid="7136" relation="public-inheritance">
+        <childnode refid="7140" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7136">
+      <node id="7140">
         <label>wxScrolledWindow</label>
         <link refid="classwx_scrolled"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7137">
+      <node id="7141">
         <label>wxHtmlWindow</label>
         <link refid="classwx_html_window"/>
-        <childnode refid="7138" relation="public-inheritance">
+        <childnode refid="7142" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7138">
+      <node id="7142">
         <label>wxScrolledWindow</label>
         <link refid="classwx_scrolled"/>
       </node>

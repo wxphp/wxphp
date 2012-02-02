@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="dir_eafa1df7f0d0beec2e4c41785b70afaa" kind="dir">
+    <compoundname>interface/wx/aui/</compoundname>
+    <innerfile refid="auibook_8h">auibook.h</innerfile>
+    <innerfile refid="dockart_8h">dockart.h</innerfile>
+    <innerfile refid="framemanager_8h">framemanager.h</innerfile>
+    <innerfile refid="interface_2wx_2aui_2toolbar_8h">toolbar.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/"/>
+  </compounddef>
+</doxygen>

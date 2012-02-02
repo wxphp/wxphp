@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_keyboard_state" kind="class" prot="public">
     <compoundname>wxKeyboardState</compoundname>
     <derivedcompoundref refid="classwx_key_event" prot="public" virt="non-virtual">wxKeyEvent</derivedcompoundref>
@@ -242,26 +242,26 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/>None; this class implementation is entirely header-based.</para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="classwx_key_event" kindref="compound">wxKeyEvent</ref>, <ref refid="classwx_mouse_state" kindref="compound">wxMouseState</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7365">
+      <node id="7369">
         <label>wxKeyboardState</label>
         <link refid="classwx_keyboard_state"/>
       </node>
-      <node id="7366">
+      <node id="7370">
         <label>wxKeyEvent</label>
         <link refid="classwx_key_event"/>
-        <childnode refid="7365" relation="public-inheritance">
+        <childnode refid="7369" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7368">
+      <node id="7372">
         <label>wxMouseEvent</label>
         <link refid="classwx_mouse_event"/>
-        <childnode refid="7367" relation="public-inheritance">
+        <childnode refid="7371" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7367">
+      <node id="7371">
         <label>wxMouseState</label>
         <link refid="classwx_mouse_state"/>
-        <childnode refid="7365" relation="public-inheritance">
+        <childnode refid="7369" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>

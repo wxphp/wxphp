@@ -1,12 +1,11 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_web_view" kind="class" prot="public">
     <compoundname>wxWebView</compoundname>
     <basecompoundref refid="classwx_control" prot="public" virt="non-virtual">wxControl</basecompoundref>
     <includes local="no">wx/webview.h</includes>
       <sectiondef kind="user-defined">
       <header>Clipboard</header>
-      <description><para><anchor id="_1amgrp23e5a7b7976e412ece233ceaf8257bc2"/> </para></description>
       <memberdef kind="function" id="classwx_web_view_1ac7f906e08b4000ee668bc678df0f7dfe" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type>bool</type>
         <definition>virtual bool wxWebView::CanCopy</definition>
@@ -91,7 +90,6 @@
       </sectiondef>
       <sectiondef kind="user-defined">
       <header>History</header>
-      <description><para><anchor id="_1amgrp16d2b386b2034b9488996466aaae0b57"/> </para></description>
       <memberdef kind="function" id="classwx_web_view_1aa8854bf3427e3d3d302b69f2c7277f0b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type>bool</type>
         <definition>virtual bool wxWebView::CanGoBack</definition>
@@ -221,7 +219,6 @@
       </sectiondef>
       <sectiondef kind="user-defined">
       <header>Selection</header>
-      <description><para><anchor id="_1amgrp6ff9dd0d34f65181173c1e4bc39939de"/> </para></description>
       <memberdef kind="function" id="classwx_web_view_1a3e0da6cd0adce28f4c089b93e5ee44f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
         <definition>virtual void wxWebView::ClearSelection</definition>
@@ -303,7 +300,6 @@
       </sectiondef>
       <sectiondef kind="user-defined">
       <header>Undo / Redo</header>
-      <description><para><anchor id="_1amgrp5ce16468137d785a3d0653360222ea62"/> </para></description>
       <memberdef kind="function" id="classwx_web_view_1a36f890fe85b0fd94fed04aa842d2dba9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type>bool</type>
         <definition>virtual bool wxWebView::CanRedo</definition>
@@ -359,7 +355,6 @@
       </sectiondef>
       <sectiondef kind="user-defined">
       <header>Zoom</header>
-      <description><para><anchor id="_1amgrp4252b72e6ebcd4d4b4c2e46a786f03d2"/> </para></description>
       <memberdef kind="function" id="classwx_web_view_1ad00351d35b1c578a9fd535dd6e6161a8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type>bool</type>
         <definition>virtual bool wxWebView::CanSetZoomType</definition>
@@ -815,7 +810,7 @@
           <defval>wxWEB_VIEW_BACKEND_DEFAULT</defval>
         </param>
         <briefdescription>
-<para>Factory function to create a new <ref refid="classwx_web_view" kindref="compound">wxWebView</ref> for two-step creation (you need to call <ref refid="classwx_web_view_1ad20a4d4a98ce4f8a096e4e6da52f9560" kindref="member">wxWebView::Create</ref> on the returned object). </para>        </briefdescription>
+<para>Factory function to create a new <ref refid="classwx_web_view" kindref="compound">wxWebView</ref> for two-step creation (you need to call <ref refid="classwx_web_view_1ad20a4d4a98ce4f8a096e4e6da52f9560" kindref="member">wxWebView::Create</ref> on the returned object) </para>        </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -941,95 +936,95 @@ The OSX WebKit backend uses Apple&apos;s <ulink url="http://developer.apple.com/
 <para>Many of the methods in <ref refid="classwx_web_view" kindref="compound">wxWebView</ref> are asynchronous, i.e. they return immediately and perform their work in the background. This includes functions such as LoadUrl() and <ref refid="classwx_web_view_1ac978367671b6bbb06b35d8cbf2ed56ac" kindref="member">Reload()</ref>. To receive notification of the progress and completion of these functions you need to handle the events that are provided. Specifically <computeroutput>wxEVT_COMMAND_WEB_VIEW_LOADED</computeroutput> notifies when the page or a sub-frame has finished loading and <computeroutput>wxEVT_COMMAND_WEB_VIEW_ERROR</computeroutput> notifies that an error has occurred.</para></sect1>
 <sect1 id="classwx_web_view_1vfs">
 <title>Virtual File Systems and Custom Schemes</title>
-<para><ref refid="classwx_web_view" kindref="compound">wxWebView</ref> supports the registering of custom scheme handlers, for example <computeroutput>file</computeroutput> or <computeroutput>http</computeroutput>. To do this create a new class which inherits from <ref refid="classwx_web_view_handler" kindref="compound">wxWebViewHandler</ref>, where wxWebHandler::GetFile() returns a pointer to a <ref refid="classwx_f_s_file" kindref="compound">wxFSFile</ref> which represents the given url. You can then register your handler with <ref refid="classwx_web_view_1a7f97f428ac96426dd84bfd1b7406dbc2" kindref="member">RegisterHandler()</ref> it will be called for all pages and resources.</para><para>wxWebFileHandler is provided to allow the navigation of pages inside a zip archive. It overrides the <computeroutput>file</computeroutput> scheme and provides support for the standard <computeroutput>file</computeroutput> syntax as well as paths to archives of the form <computeroutput><ulink url="file:///C:/exmaple/docs.zip;protocol=zip/main.htm">file:///C:/exmaple/docs.zip;protocol=zip/main.htm</ulink></computeroutput> </para><para><heading level="2">Events emitted by this class</heading>
+<para><ref refid="classwx_web_view" kindref="compound">wxWebView</ref> supports the registering of custom scheme handlers, for example <computeroutput>file</computeroutput> or <computeroutput>http</computeroutput>. To do this create a new class which inherits from <ref refid="classwx_web_view_handler" kindref="compound">wxWebViewHandler</ref>, where wxWebHandler::GetFile() returns a pointer to a <ref refid="classwx_f_s_file" kindref="compound">wxFSFile</ref> which represents the given url. You can then register your handler with <ref refid="classwx_web_view_1a7f97f428ac96426dd84bfd1b7406dbc2" kindref="member">RegisterHandler()</ref> it will be called for all pages and resources.</para><para>wxWebFileHandler is provided to allow the navigation of pages inside a zip archive. It overrides the <computeroutput>file</computeroutput> scheme and provides support for the standard <computeroutput>file</computeroutput> syntax as well as paths to archives of the form <computeroutput><ulink url="file:///C:/example/docs.zip;protocol=zip/main.htm">file:///C:/example/docs.zip;protocol=zip/main.htm</ulink></computeroutput> </para><para><heading level="2">Events emitted by this class</heading>
 </para><para>The following event handler macros redirect the events to member function handlers &apos;<bold>func</bold>&apos; with prototypes like: void<nonbreakablespace/>handlerFuncName(<ref refid="classwx_web_view_event" kindref="compound">wxWebViewEvent</ref>&amp;<nonbreakablespace/>event)Event macros for events emitted by this class: <itemizedlist>
 <listitem><para>EVT_WEB_VIEW_NAVIGATING(id,  func): Process a <computeroutput>wxEVT_COMMAND_WEB_VIEW_NAVIGATING</computeroutput> event, generated before trying to get a resource. This event may be vetoed to prevent navigating to this resource. Note that if the displayed HTML document has several frames, one such event will be generated per frame. </para></listitem>
 <listitem><para>EVT_WEB_VIEW_NAVIGATED(id,  func): Process a <computeroutput>wxEVT_COMMAND_WEB_VIEW_NAVIGATED</computeroutput> event generated after it was confirmed that a resource would be requested. This event may not be vetoed. Note that if the displayed HTML document has several frames, one such event will be generated per frame. </para></listitem>
 <listitem><para>EVT_WEB_VIEW_LOADED(id,  func): Process a <computeroutput>wxEVT_COMMAND_WEB_VIEW_LOADED</computeroutput> event generated when the document is fully loaded and displayed. Note that if the displayed HTML document has several frames, one such event will be generated per frame. </para></listitem>
-<listitem><para>EVT_WEB_VIEW_ERRROR(id,  func): Process a <computeroutput>wxEVT_COMMAND_WEB_VIEW_ERROR</computeroutput> event generated when a navigation error occurs. The integer associated with this event will be a wxWebNavigationError item. The string associated with this event may contain a backend-specific more precise error message/code. </para></listitem>
+<listitem><para>EVT_WEB_VIEW_ERROR(id,  func): Process a <computeroutput>wxEVT_COMMAND_WEB_VIEW_ERROR</computeroutput> event generated when a navigation error occurs. The integer associated with this event will be a wxWebNavigationError item. The string associated with this event may contain a backend-specific more precise error message/code. </para></listitem>
 <listitem><para>EVT_WEB_VIEW_NEWWINDOW(id,  func): Process a <computeroutput>wxEVT_COMMAND_WEB_VIEW_NEWWINDOW</computeroutput> event, generated when a new window is created. You must handle this event if you want anything to happen, for example to load the page in a new window or tab. </para></listitem>
 <listitem><para>EVT_WEB_VIEW_TITLE_CHANGED(id,  func): Process a <computeroutput>wxEVT_COMMAND_WEB_VIEW_TITLE_CHANGED</computeroutput> event, generated when the page title changes. Use GetString to get the title. </para></listitem>
 </itemizedlist>
 <simplesect kind="since"><para>2.9.3 <heading level="2"></heading>
 </para></simplesect>
-Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxwebview" kindref="member">wxWebView</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref>, <ref refid="group__group__class__webview" kindref="compound">WebView</ref> <simplesect kind="see"><para><ref refid="classwx_web_view_handler" kindref="compound">wxWebViewHandler</ref>, <ref refid="classwx_web_view_event" kindref="compound">wxWebViewEvent</ref> </para></simplesect>
+Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxwebview" kindref="member">wxWebView</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref>, <ref refid="group__group__class__webview" kindref="compound">WebView</ref> <simplesect kind="see"><para><ref refid="classwx_web_view_handler" kindref="compound">wxWebViewHandler</ref>, <ref refid="classwx_web_view_event" kindref="compound">wxWebViewEvent</ref> </para></simplesect>
 </para></sect1>
     </detaileddescription>
     <inheritancegraph>
-      <node id="11373">
+      <node id="11434">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="11372">
+      <node id="11433">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="11373" relation="public-inheritance">
+        <childnode refid="11434" relation="public-inheritance">
         </childnode>
-        <childnode refid="11374" relation="public-inheritance">
+        <childnode refid="11435" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11374">
+      <node id="11435">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="11370">
+      <node id="11431">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="11371" relation="public-inheritance">
+        <childnode refid="11432" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11369">
+      <node id="11430">
         <label>wxWebView</label>
         <link refid="classwx_web_view"/>
-        <childnode refid="11370" relation="public-inheritance">
+        <childnode refid="11431" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11371">
+      <node id="11432">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="11372" relation="public-inheritance">
+        <childnode refid="11433" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="11379">
+      <node id="11440">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="11380" relation="usage">
+        <childnode refid="11441" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="11378">
+      <node id="11439">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="11379" relation="public-inheritance">
+        <childnode refid="11440" relation="public-inheritance">
         </childnode>
-        <childnode refid="11381" relation="public-inheritance">
+        <childnode refid="11442" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11381">
+      <node id="11442">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="11376">
+      <node id="11437">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="11377" relation="public-inheritance">
+        <childnode refid="11438" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11375">
+      <node id="11436">
         <label>wxWebView</label>
         <link refid="classwx_web_view"/>
-        <childnode refid="11376" relation="public-inheritance">
+        <childnode refid="11437" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11377">
+      <node id="11438">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="11378" relation="public-inheritance">
+        <childnode refid="11439" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11380">
+      <node id="11441">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

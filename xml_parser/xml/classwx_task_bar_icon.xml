@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_task_bar_icon" kind="class" prot="public">
     <compoundname>wxTaskBarIcon</compoundname>
     <basecompoundref refid="classwx_evt_handler" prot="public" virt="non-virtual">wxEvtHandler</basecompoundref>
@@ -173,59 +173,59 @@
 <listitem><para>EVT_TASKBAR_CLICK(func): This is a synonym for either EVT_TASKBAR_RIGHT_DOWN or UP depending on the platform, use this event macro to catch the event which should result in the menu being displayed on the current platform. </para></listitem>
 </itemizedlist>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__misc" kindref="compound">Miscellaneous</ref> </para></sect1>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__misc" kindref="compound">Miscellaneous</ref> </para></sect1>
     </detaileddescription>
     <inheritancegraph>
-      <node id="10642">
+      <node id="10702">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="10641">
+      <node id="10701">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="10642" relation="public-inheritance">
+        <childnode refid="10702" relation="public-inheritance">
         </childnode>
-        <childnode refid="10643" relation="public-inheritance">
+        <childnode refid="10703" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10643">
+      <node id="10703">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="10640">
+      <node id="10700">
         <label>wxTaskBarIcon</label>
         <link refid="classwx_task_bar_icon"/>
-        <childnode refid="10641" relation="public-inheritance">
+        <childnode refid="10701" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10646">
+      <node id="10706">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="10647" relation="usage">
+        <childnode refid="10707" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="10645">
+      <node id="10705">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="10646" relation="public-inheritance">
+        <childnode refid="10706" relation="public-inheritance">
         </childnode>
-        <childnode refid="10648" relation="public-inheritance">
+        <childnode refid="10708" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10648">
+      <node id="10708">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="10644">
+      <node id="10704">
         <label>wxTaskBarIcon</label>
         <link refid="classwx_task_bar_icon"/>
-        <childnode refid="10645" relation="public-inheritance">
+        <childnode refid="10705" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10647">
+      <node id="10707">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

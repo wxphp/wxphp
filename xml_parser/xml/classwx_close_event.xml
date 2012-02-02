@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_close_event" kind="class" prot="public">
     <compoundname>wxCloseEvent</compoundname>
     <basecompoundref refid="classwx_event" prot="public" virt="non-virtual">wxEvent</basecompoundref>
@@ -26,7 +26,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3799"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3820"/>
       </memberdef>
       <memberdef kind="function" id="classwx_close_event_1adaa0548df45e05e8487cc5664ac352cf" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -39,7 +39,7 @@
 <para>Vetoing a window close event is not possible if the calling code wishes to force the application to exit, and so this function must be called to check this. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3806"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3827"/>
       </memberdef>
       <memberdef kind="function" id="classwx_close_event_1a59874843bd46af10ea3e8abcecf71e26" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -52,7 +52,7 @@
 <para>This method can only be called for end session and query end session events, it doesn&apos;t make sense for close window event. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3813"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3834"/>
       </memberdef>
       <memberdef kind="function" id="classwx_close_event_1a25150c209983febf02b80a6f93dfc6ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -69,7 +69,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3818"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3839"/>
       </memberdef>
       <memberdef kind="function" id="classwx_close_event_1af8059e703d942f5962a0b2f6dedc3bd6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -86,7 +86,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3823"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3844"/>
       </memberdef>
       <memberdef kind="function" id="classwx_close_event_1a0ec337c77613d5d8407831cd64e16417" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -104,7 +104,7 @@
 <para>You can only veto a shutdown if <ref refid="classwx_close_event_1adaa0548df45e05e8487cc5664ac352cf" kindref="member">CanVeto()</ref> returns true. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3831"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3852"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -133,52 +133,52 @@
 <listitem><para>EVT_END_SESSION(func): Process a <computeroutput>wxEVT_END_SESSION</computeroutput> session event, supplying the member function. This event can be handled in wxApp-derived class only. </para></listitem>
 </itemizedlist>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="classwx_window_1a3e44f4a494fc9ef4346c4fba70c8de0c" kindref="member">wxWindow::Close</ref>, <ref refid="overview__windowdeletion" kindref="compound">Window Deletion</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="classwx_window_1a3e44f4a494fc9ef4346c4fba70c8de0c" kindref="member">wxWindow::Close</ref>, <ref refid="overview_windowdeletion" kindref="compound">Window Deletion</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="4816">
+      <node id="4820">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="4814">
+      <node id="4818">
         <label>wxCloseEvent</label>
         <link refid="classwx_close_event"/>
-        <childnode refid="4815" relation="public-inheritance">
+        <childnode refid="4819" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4815">
+      <node id="4819">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="4816" relation="public-inheritance">
+        <childnode refid="4820" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="4819">
+      <node id="4823">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="4820" relation="usage">
+        <childnode refid="4824" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="4817">
+      <node id="4821">
         <label>wxCloseEvent</label>
         <link refid="classwx_close_event"/>
-        <childnode refid="4818" relation="public-inheritance">
+        <childnode refid="4822" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4818">
+      <node id="4822">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="4819" relation="public-inheritance">
+        <childnode refid="4823" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4820">
+      <node id="4824">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3794" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="3793" bodyend="3832"/>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3815" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="3814" bodyend="3853"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxCloseEvent</scope><name>AllocExclusive</name></member>
       <member refid="classwx_close_event_1adaa0548df45e05e8487cc5664ac352cf" prot="public" virt="non-virtual"><scope>wxCloseEvent</scope><name>CanVeto</name></member>

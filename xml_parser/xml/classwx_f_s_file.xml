@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_f_s_file" kind="class" prot="public">
     <compoundname>wxFSFile</compoundname>
     <basecompoundref refid="classwx_object" prot="public" virt="non-virtual">wxObject</basecompoundref>
@@ -177,35 +177,35 @@
     <detaileddescription>
 <para>It provides more informations than wxWidgets&apos; input streams (stream, filename, mime type, anchor).</para><para><simplesect kind="note"><para>Any pointer returned by a method of <ref refid="classwx_f_s_file" kindref="compound">wxFSFile</ref> is valid only as long as the <ref refid="classwx_f_s_file" kindref="compound">wxFSFile</ref> object exists. For example a call to <ref refid="classwx_f_s_file_1a0508b48f21d366aa209eed0b848a303b" kindref="member">GetStream()</ref> doesn&apos;t <emphasis>create</emphasis> the stream but only returns the pointer to it. In other words after 10 calls to <ref refid="classwx_f_s_file_1a0508b48f21d366aa209eed0b848a303b" kindref="member">GetStream()</ref> you will have obtained ten identical pointers.</para></simplesect>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__vfs" kindref="compound">Virtual File System</ref>, <ref refid="group__group__class__file" kindref="compound">File Handling</ref></para><para><simplesect kind="see"><para><ref refid="classwx_file_system_handler" kindref="compound">wxFileSystemHandler</ref>, <ref refid="classwx_file_system" kindref="compound">wxFileSystem</ref>, <ref refid="overview__fs" kindref="compound">wxFileSystem Overview</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__vfs" kindref="compound">Virtual File System</ref>, <ref refid="group__group__class__file" kindref="compound">File Handling</ref></para><para><simplesect kind="see"><para><ref refid="classwx_file_system_handler" kindref="compound">wxFileSystemHandler</ref>, <ref refid="classwx_file_system" kindref="compound">wxFileSystem</ref>, <ref refid="overview_fs" kindref="compound">wxFileSystem Overview</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="6447">
+      <node id="6451">
         <label>wxFSFile</label>
         <link refid="classwx_f_s_file"/>
-        <childnode refid="6448" relation="public-inheritance">
+        <childnode refid="6452" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6448">
+      <node id="6452">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="6449">
+      <node id="6453">
         <label>wxFSFile</label>
         <link refid="classwx_f_s_file"/>
-        <childnode refid="6450" relation="public-inheritance">
+        <childnode refid="6454" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6450">
+      <node id="6454">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="6451" relation="usage">
+        <childnode refid="6455" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="6451">
+      <node id="6455">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

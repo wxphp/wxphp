@@ -1,12 +1,11 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="interface_2wx_2propgrid_2propgrid_8h" kind="file">
     <compoundname>propgrid.h</compoundname>
     <innerclass refid="classwx_p_g_validation_info" prot="public">wxPGValidationInfo</innerclass>
     <innerclass refid="classwx_property_grid" prot="public">wxPropertyGrid</innerclass>
     <innerclass refid="classwx_property_grid_event" prot="public">wxPropertyGridEvent</innerclass>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="define" id="interface_2wx_2propgrid_2propgrid_8h_1acf768b936525faa42392f653a3296eb4" prot="public" static="no">
         <name>wxPG_DEFAULT_STYLE</name>
         <initializer>(0)</initializer>
@@ -255,7 +254,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="enum" id="interface_2wx_2propgrid_2propgrid_8h_1a509a11f37ea5e56864e257cde913035e" prot="public" static="no">
         <name>wxPG_VALIDATION_FAILURE_BEHAVIOR_FLAGS</name>
         <enumvalue id="interface_2wx_2propgrid_2propgrid_8h_1a509a11f37ea5e56864e257cde913035ead2d679dfb2b9d9b7b3a0bedd130599c7" prot="public">
@@ -328,7 +326,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="enum" id="interface_2wx_2propgrid_2propgrid_8h_1a241dc2408e56a31edee6739e9b101b0a" prot="public" static="no">
         <name>wxPG_KEYBOARD_ACTIONS</name>
         <enumvalue id="interface_2wx_2propgrid_2propgrid_8h_1a241dc2408e56a31edee6739e9b101b0aad57a1786fd0990702f586963235fd1e0" prot="public">
@@ -429,7 +426,7 @@
         <briefdescription>
 <para>This callback function is used for sorting properties. </para>        </briefdescription>
         <detaileddescription>
-<para>Call <ref refid="classwx_property_grid_1ad413c2a9f94db90466bc9039f928afe6" kindref="member">wxPropertyGrid::SetSortFunction()</ref> to set it.</para><para>Sort function should return a value greater than 0 if position of p1 is after p2. So, for instance, when comparing property names, you can use following implementation:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>MyPropertySortFunction(<ref refid="classwx_property_grid" kindref="compound" tooltip="wxPropertyGrid is a specialized grid for editing properties - in other words name...">wxPropertyGrid</ref>*<sp/>propGrid,</highlight></codeline>
+<para>Call <ref refid="classwx_property_grid_1ad413c2a9f94db90466bc9039f928afe6" kindref="member">wxPropertyGrid::SetSortFunction()</ref> to set it.</para><para>Sort function should return a value greater than 0 if position of p1 is after p2. So, for instance, when comparing property names, you can use following implementation:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>MyPropertySortFunction(<ref refid="classwx_property_grid" kindref="compound" tooltip="wxPropertyGrid is a specialized grid for editing properties - in other words name = value pairs...">wxPropertyGrid</ref>*<sp/>propGrid,</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_p_g_property" kindref="compound" tooltip="wxPGProperty is base class for all wxPropertyGrid properties.">wxPGProperty</ref>*<sp/>p1,</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_p_g_property" kindref="compound" tooltip="wxPGProperty is base class for all wxPropertyGrid properties.">wxPGProperty</ref>*<sp/>p2)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>

@@ -1,11 +1,10 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_rich_text_style_list_ctrl" kind="class" prot="public">
     <compoundname>wxRichTextStyleListCtrl</compoundname>
     <basecompoundref refid="classwx_control" prot="public" virt="non-virtual">wxControl</basecompoundref>
     <includes local="no">wx/richtext/richtextstyles.h</includes>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_rich_text_style_list_ctrl_1a6b71479a56f9b3e74c8f4f9c132bca0c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
         <definition>wxRichTextStyleListCtrl::wxRichTextStyleListCtrl</definition>
@@ -235,82 +234,82 @@
 <listitem><para>wxRICHTEXTSTYLELIST_HIDE_TYPE_SELECTOR: This style hides the category selection control. </para></listitem>
 </itemizedlist>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxrichtext" kindref="member">wxRichText</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__richtext" kindref="compound">Rich Text</ref> </para>    </detaileddescription>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxrichtext" kindref="member">wxRichText</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__richtext" kindref="compound">Rich Text</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="9894">
+      <node id="9954">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="9893">
+      <node id="9953">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="9894" relation="public-inheritance">
+        <childnode refid="9954" relation="public-inheritance">
         </childnode>
-        <childnode refid="9895" relation="public-inheritance">
+        <childnode refid="9955" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9895">
+      <node id="9955">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="9891">
+      <node id="9951">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="9892" relation="public-inheritance">
+        <childnode refid="9952" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9892">
+      <node id="9952">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="9893" relation="public-inheritance">
+        <childnode refid="9953" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9890">
+      <node id="9950">
         <label>wxRichTextStyleListCtrl</label>
         <link refid="classwx_rich_text_style_list_ctrl"/>
-        <childnode refid="9891" relation="public-inheritance">
+        <childnode refid="9951" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="9900">
+      <node id="9960">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="9901" relation="usage">
+        <childnode refid="9961" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="9899">
+      <node id="9959">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="9900" relation="public-inheritance">
+        <childnode refid="9960" relation="public-inheritance">
         </childnode>
-        <childnode refid="9902" relation="public-inheritance">
+        <childnode refid="9962" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9902">
+      <node id="9962">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="9897">
+      <node id="9957">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="9898" relation="public-inheritance">
+        <childnode refid="9958" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9898">
+      <node id="9958">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="9899" relation="public-inheritance">
+        <childnode refid="9959" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9896">
+      <node id="9956">
         <label>wxRichTextStyleListCtrl</label>
         <link refid="classwx_rich_text_style_list_ctrl"/>
-        <childnode refid="9897" relation="public-inheritance">
+        <childnode refid="9957" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9901">
+      <node id="9961">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

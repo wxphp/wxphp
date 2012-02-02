@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_colour_database" kind="class" prot="public">
     <compoundname>wxColourDatabase</compoundname>
     <includes local="no">wx/gdicmn.h</includes>
@@ -144,7 +144,7 @@
  YELLOW GREEN  </para></entry></row>
 </table>
 </para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__gdi" kindref="compound">Graphics Device Interface (GDI)</ref></para><para><simplesect kind="see"><para><ref refid="classwx_colour" kindref="compound">wxColour</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__gdi" kindref="compound">Graphics Device Interface (GDI)</ref></para><para><simplesect kind="see"><para><ref refid="classwx_colour" kindref="compound">wxColour</ref> </para></simplesect>
 </para>    </detaileddescription>
     <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="743" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" bodystart="742" bodyend="769"/>
     <listofallmembers>

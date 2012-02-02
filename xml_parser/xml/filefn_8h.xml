@@ -1,13 +1,11 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="filefn_8h" kind="file">
     <compoundname>filefn.h</compoundname>
     <innerclass refid="classwx_path_list" prot="public">wxPathList</innerclass>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       </sectiondef>
       <sectiondef kind="define">
       <memberdef kind="define" id="group__group__funcmacro__file_1gaf20a1b90767d4e46462f2af875048922" prot="public" static="no">
@@ -16,7 +14,7 @@
         <briefdescription>
 <para>Under Unix this macro changes the current process umask to the given value, unless it is equal to -1 in which case nothing is done, and restores it to the original value on scope exit. </para>        </briefdescription>
         <detaileddescription>
-<para>It works by declaring a variable which sets umask to <emphasis>mask</emphasis> in its constructor and restores it in its destructor. Under other platforms this macro expands to nothing.</para><para>Include file: <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
+<para>It works by declaring a variable which sets umask to <emphasis>mask</emphasis> in its constructor and restores it in its destructor. Under other platforms this macro expands to nothing.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="131" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" bodystart="131" bodyend="-1"/>
@@ -258,7 +256,7 @@
         <briefdescription>
 <para>File kind enumerations returned from <ref refid="group__group__funcmacro__file_1ga4fd2489fadb203b1c4451f2642b3eb8f" kindref="member">wxGetFileKind()</ref>. </para>        </briefdescription>
         <detaileddescription>
-<para>Include file: <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
+<para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="488" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" bodystart="487" bodyend="493"/>
@@ -321,7 +319,7 @@
 <para>Both <emphasis>total</emphasis> and <emphasis>free</emphasis> parameters may be NULL if the corresponding information is not needed.</para><para><simplesect kind="since"><para>2.3.2</para></simplesect>
 <simplesect kind="note"><para>The generic Unix implementation depends on the system having the <computeroutput>statfs()</computeroutput> or <computeroutput>statvfs()</computeroutput> function.</para></simplesect>
 <simplesect kind="return"><para>true on success, false if an error occurred (for example, the directory doesn’t exist).</para></simplesect>
-Include file: <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
+Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="151"/>
@@ -334,7 +332,7 @@ Include file: <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        
         <briefdescription>
 <para>Returns the Windows directory under Windows; other platforms return an empty string. </para>        </briefdescription>
         <detaileddescription>
-<para>Include file: <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
+<para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="159"/>
@@ -360,7 +358,7 @@ Include file: <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        
 <para>Parses the <emphasis>wildCard</emphasis>, returning the number of filters. </para>        </briefdescription>
         <detaileddescription>
 <para>Returns 0 if none or if there&apos;s a problem.</para><para>The arrays will contain an equal number of items found before the error. On platforms where native dialogs handle only one filter per entry, entries in arrays are automatically adjusted. <emphasis>wildCard</emphasis> is in the form:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;All<sp/>files<sp/>(*)|*|Image<sp/>Files<sp/>(*.jpeg<sp/>*.png)|*.jpg;*.png&quot;</highlight></codeline>
-</programlisting></para><para>Include file: <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
+</programlisting></para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="177"/>
@@ -377,7 +375,7 @@ Include file: <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        
         <briefdescription>
 <para>Converts a DOS to a Unix filename by replacing backslashes with forward slashes. </para>        </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000013"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Construct a <ref refid="classwx_file_name" kindref="compound">wxFileName</ref> with wxPATH_DOS and then use wxFileName::GetFullPath(wxPATH_UNIX) instead.</para></xrefdescription></xrefsect>Include file: <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000013"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Construct a <ref refid="classwx_file_name" kindref="compound">wxFileName</ref> with wxPATH_DOS and then use wxFileName::GetFullPath(wxPATH_UNIX) instead.</para></xrefdescription></xrefsect></para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="189"/>
@@ -394,7 +392,7 @@ Include file: <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        
         <briefdescription>
 <para>Converts a Unix to a DOS filename by replacing forward slashes with backslashes. </para>        </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000014"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Construct a <ref refid="classwx_file_name" kindref="compound">wxFileName</ref> with wxPATH_UNIX and then use wxFileName::GetFullPath(wxPATH_DOS) instead.</para></xrefdescription></xrefsect>Include file: <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000014"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Construct a <ref refid="classwx_file_name" kindref="compound">wxFileName</ref> with wxPATH_UNIX and then use wxFileName::GetFullPath(wxPATH_DOS) instead.</para></xrefdescription></xrefsect></para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="201"/>
@@ -411,7 +409,7 @@ Include file: <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        
         <briefdescription>
 <para>Returns true if <emphasis>dirname</emphasis> exists and is a directory. </para>        </briefdescription>
         <detaileddescription>
-<para>Include file: <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
+<para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="208"/>
@@ -440,7 +438,7 @@ Include file: <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000015"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This function is obsolete, please use <ref refid="classwx_file_name_1a4f06c2499ce10643e41175405b93e61c" kindref="member">wxFileName::SplitPath()</ref> instead.</para></xrefdescription></xrefsect>This function splits a full file name into components: the path (including possible disk/drive specification under Windows), the base name, and the extension. Any of the output parameters (<emphasis>path</emphasis>, <emphasis>name</emphasis> or <emphasis>ext</emphasis>) may be NULL if you are not interested in the value of a particular component.</para><para><ref refid="group__group__funcmacro__file_1ga3ab12077f51f54497b7ce829a4339326" kindref="member">wxSplitPath()</ref> will correctly handle filenames with both DOS and Unix path separators under Windows, however it will not consider backslashes as path separators under Unix (where backslash is a valid character in a filename).</para><para>On entry, <emphasis>fullname</emphasis> should be non-NULL (it may be empty though).</para><para>On return, <emphasis>path</emphasis> contains the file path (without the trailing separator), <emphasis>name</emphasis> contains the file name and <computeroutput>ext</computeroutput> contains the file extension without leading dot. All three of them may be empty if the corresponding component is. The old contents of the strings pointed to by these parameters will be overwritten in any case (if the pointers are not NULL).</para><para>Include file: <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000015"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This function is obsolete, please use <ref refid="classwx_file_name_1a4f06c2499ce10643e41175405b93e61c" kindref="member">wxFileName::SplitPath()</ref> instead.</para></xrefdescription></xrefsect></para><para>This function splits a full file name into components: the path (including possible disk/drive specification under Windows), the base name, and the extension. Any of the output parameters (<emphasis>path</emphasis>, <emphasis>name</emphasis> or <emphasis>ext</emphasis>) may be NULL if you are not interested in the value of a particular component.</para><para><ref refid="group__group__funcmacro__file_1ga3ab12077f51f54497b7ce829a4339326" kindref="member">wxSplitPath()</ref> will correctly handle filenames with both DOS and Unix path separators under Windows, however it will not consider backslashes as path separators under Unix (where backslash is a valid character in a filename).</para><para>On entry, <emphasis>fullname</emphasis> should be non-NULL (it may be empty though).</para><para>On return, <emphasis>path</emphasis> contains the file path (without the trailing separator), <emphasis>name</emphasis> contains the file name and <computeroutput>ext</computeroutput> contains the file extension without leading dot. All three of them may be empty if the corresponding component is. The old contents of the strings pointed to by these parameters will be overwritten in any case (if the pointers are not NULL).</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="236"/>
@@ -457,7 +455,7 @@ Include file: <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        
         <briefdescription>
 <para>Returns time of last modification of given file. </para>        </briefdescription>
         <detaileddescription>
-<para>The function returns <computeroutput>(time_t)-1</computeroutput> if an error occurred (e.g. file not found).</para><para>Include file: <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
+<para>The function returns <computeroutput>(time_t)-1</computeroutput> if an error occurred (e.g. file not found).</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="246"/>
@@ -483,7 +481,7 @@ Include file: <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        
         <briefdescription>
 <para>Renames <emphasis>file1</emphasis> to <emphasis>file2</emphasis>, returning true if successful. </para>        </briefdescription>
         <detaileddescription>
-<para>If <emphasis>file2</emphasis> is a directory, <emphasis>file1</emphasis> is moved into it (<emphasis>overwrite</emphasis> is ignored in this case). Otherwise, if <emphasis>file2</emphasis> is an existing file, it is overwritten if <emphasis>overwrite</emphasis> is true (default) and the function fails if <emphasis>overwrite</emphasis> is false.</para><para>Include file: <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
+<para>If <emphasis>file2</emphasis> is a directory, <emphasis>file1</emphasis> is moved into it (<emphasis>overwrite</emphasis> is ignored in this case). Otherwise, if <emphasis>file2</emphasis> is an existing file, it is overwritten if <emphasis>overwrite</emphasis> is true (default) and the function fails if <emphasis>overwrite</emphasis> is false.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="260"/>
@@ -509,7 +507,7 @@ Include file: <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        
         <briefdescription>
 <para>Copies <emphasis>file1</emphasis> to <emphasis>file2</emphasis>, returning true if successful. </para>        </briefdescription>
         <detaileddescription>
-<para>If <emphasis>overwrite</emphasis> parameter is true (default), the destination file is overwritten if it exists, but if <emphasis>overwrite</emphasis> is false, the functions fails in this case.</para><para>This function supports resources forks under Mac OS.</para><para>Include file: <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
+<para>If <emphasis>overwrite</emphasis> parameter is true (default), the destination file is overwritten if it exists, but if <emphasis>overwrite</emphasis> is false, the functions fails in this case.</para><para>This function supports resources forks under Mac OS.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="273"/>
@@ -526,7 +524,7 @@ Include file: <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        
         <briefdescription>
 <para>Returns true if the file exists and is a plain file. </para>        </briefdescription>
         <detaileddescription>
-<para>Include file: <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
+<para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="280"/>
@@ -552,7 +550,7 @@ Include file: <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        
 <para>Returns true if the <emphasis>pattern</emphasis> matches the <emphasis>text</emphasis>; if <emphasis>dot_special</emphasis> is true, filenames beginning with a dot are not matched with wildcard characters. </para>        </briefdescription>
         <detaileddescription>
 <para><simplesect kind="see"><para><ref refid="group__group__funcmacro__file_1gac3789ec7318ad36e403f32bb8269d001" kindref="member">wxIsWild()</ref></para></simplesect>
-Include file: <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
+Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="293"/>
@@ -575,7 +573,7 @@ Include file: <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000016"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This function is deprecated, use <ref refid="group__group__funcmacro__file_1gab0cc6ceca11d23f61cba353c01eeac06" kindref="member">wxGetCwd()</ref> instead.</para></xrefdescription></xrefsect>Copies the current working directory into the buffer if supplied, or copies the working directory into new storage (which you must delete yourself) if the buffer is NULL.</para><para><emphasis>sz</emphasis> is the size of the buffer if supplied.</para><para>Include file: <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000016"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This function is deprecated, use <ref refid="group__group__funcmacro__file_1gab0cc6ceca11d23f61cba353c01eeac06" kindref="member">wxGetCwd()</ref> instead.</para></xrefdescription></xrefsect></para><para>Copies the current working directory into the buffer if supplied, or copies the working directory into new storage (which you must delete yourself) if the buffer is NULL.</para><para><emphasis>sz</emphasis> is the size of the buffer if supplied.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="306"/>
@@ -592,7 +590,7 @@ Include file: <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        
         <briefdescription>
 <para>Returns the directory part of the filename. </para>        </briefdescription>
         <detaileddescription>
-<para>Include file: <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
+<para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="313"/>
@@ -610,7 +608,7 @@ Include file: <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        
 <para>Returns true if the pattern contains wildcards. </para>        </briefdescription>
         <detaileddescription>
 <para><simplesect kind="see"><para><ref refid="group__group__funcmacro__file_1ga0d499f5b09fb2b6e381bddff181dba17" kindref="member">wxMatchWild()</ref></para></simplesect>
-Include file: <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
+Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="322"/>
@@ -627,7 +625,7 @@ Include file: <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        
         <briefdescription>
 <para>Returns true if the argument is an absolute filename, i.e. </para>        </briefdescription>
         <detaileddescription>
-<para>with a slash or drive name at the beginning.</para><para>Include file: <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
+<para>with a slash or drive name at the beginning.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="330"/>
@@ -640,7 +638,7 @@ Include file: <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        
         <briefdescription>
 <para>Returns a string containing the current (or working) directory. </para>        </briefdescription>
         <detaileddescription>
-<para>Include file: <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
+<para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="337"/>
@@ -657,7 +655,7 @@ Include file: <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        
         <briefdescription>
 <para>Sets the current working directory, returning true if the operation succeeded. </para>        </briefdescription>
         <detaileddescription>
-<para>Under MS Windows, the current drive is also changed if <emphasis>dir</emphasis> contains a drive specification.</para><para>Include file: <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
+<para>Under MS Windows, the current drive is also changed if <emphasis>dir</emphasis> contains a drive specification.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="346"/>
@@ -682,7 +680,7 @@ Include file: <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        
         <briefdescription>
 <para>Concatenates <emphasis>file1</emphasis> and <emphasis>file2</emphasis> to <emphasis>file3</emphasis>, returning true if successful. </para>        </briefdescription>
         <detaileddescription>
-<para>Include file: <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
+<para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="356"/>
@@ -699,7 +697,7 @@ Include file: <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        
         <briefdescription>
 <para>Removes <emphasis>file</emphasis>, returning true if successful. </para>        </briefdescription>
         <detaileddescription>
-<para>Include file: <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
+<para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="363"/>
@@ -721,7 +719,7 @@ Include file: <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        
         <briefdescription>
 <para>Makes the directory <emphasis>dir</emphasis>, returning true if successful. </para>        </briefdescription>
         <detaileddescription>
-<para><emphasis>perm</emphasis> is the access mask for the directory for the systems on which it is supported (Unix) and doesn&apos;t have any effect on the other ones.</para><para>Include file: <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
+<para><emphasis>perm</emphasis> is the access mask for the directory for the systems on which it is supported (Unix) and doesn&apos;t have any effect on the other ones.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="426"/>
@@ -744,7 +742,7 @@ Include file: <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        
 <para>Removes the directory <emphasis>dir</emphasis>, returning true if successful. </para>        </briefdescription>
         <detaileddescription>
 <para>Does not work under VMS.</para><para>The <emphasis>flags</emphasis> parameter is reserved for future use.</para><para><simplesect kind="note"><para>There is also a wxRmDir() function which simply wraps the standard POSIX <computeroutput>rmdir()</computeroutput> function and so return an integer error code instead of a boolean value (but otherwise is currently identical to <ref refid="group__group__funcmacro__file_1ga9ae2276737ad4fe72ea96c5f2d9bbfd3" kindref="member">wxRmdir()</ref>), don&apos;t confuse these two functions.</para></simplesect>
-Include file: <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
+Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="441"/>
@@ -757,7 +755,7 @@ Include file: <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        
         <briefdescription>
 <para>Returns the next file that matches the path passed to <ref refid="group__group__funcmacro__file_1gab136c4ed6c3d71262d12780b723479ce" kindref="member">wxFindFirstFile()</ref>. </para>        </briefdescription>
         <detaileddescription>
-<para>See <ref refid="group__group__funcmacro__file_1gab136c4ed6c3d71262d12780b723479ce" kindref="member">wxFindFirstFile()</ref> for an example.</para><para>Include file: <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
+<para>See <ref refid="group__group__funcmacro__file_1gab136c4ed6c3d71262d12780b723479ce" kindref="member">wxFindFirstFile()</ref> for an example.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="450"/>
@@ -780,13 +778,13 @@ Include file: <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        
 <para>This function does directory searching; returns the first file that matches the path <emphasis>spec</emphasis>, or the empty string. </para>        </briefdescription>
         <detaileddescription>
 <para>Use <ref refid="group__group__funcmacro__file_1gabc2b3ae7f5c1f49034cc8577f00bc235" kindref="member">wxFindNextFile()</ref> to get the next matching file. Neither will report the current directory &quot;.&quot; or the parent directory &quot;..&quot;.</para><para><simplesect kind="warning"><para>As of 2.5.2, these functions are not thread-safe! (they use static variables). You probably want to use <ref refid="classwx_dir_1a08bad912e7c04ed2b5f7a4e498f77247" kindref="member">wxDir::GetFirst()</ref> or <ref refid="classwx_dir_traverser" kindref="compound">wxDirTraverser</ref> instead.</para></simplesect>
-<emphasis>spec</emphasis> may contain wildcards.</para><para><emphasis>flags</emphasis> may be wxDIR for restricting the query to directories, wxFILE for files or zero for either.</para><para>For example:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change...">wxString</ref><sp/>f<sp/>=<sp/><ref refid="group__group__funcmacro__file_1gab136c4ed6c3d71262d12780b723479ce" kindref="member" tooltip="This function does directory searching; returns the first file that matches the path...">wxFindFirstFile</ref>(</highlight><highlight class="stringliteral">&quot;/home/project/*.*&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<emphasis>spec</emphasis> may contain wildcards.</para><para><emphasis>flags</emphasis> may be wxDIR for restricting the query to directories, wxFILE for files or zero for either.</para><para>For example:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change was actually the m...">wxString</ref><sp/>f<sp/>=<sp/><ref refid="group__group__funcmacro__file_1gab136c4ed6c3d71262d12780b723479ce" kindref="member" tooltip="This function does directory searching; returns the first file that matches the path spec...">wxFindFirstFile</ref>(</highlight><highlight class="stringliteral">&quot;/home/project/*.*&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(<sp/>!f.<ref refid="classwx_string_1ac6ae24a8ccc6e4e671f972948fca437c" kindref="member">empty</ref>()<sp/>)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f<sp/>=<sp/><ref refid="group__group__funcmacro__file_1gabc2b3ae7f5c1f49034cc8577f00bc235" kindref="member" tooltip="Returns the next file that matches the path passed to wxFindFirstFile().">wxFindNextFile</ref>();</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-</programlisting></para><para>Include file: <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
+</programlisting></para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="480"/>
@@ -803,7 +801,7 @@ Include file: <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        
         <briefdescription>
 <para>Returns the type of an open file. </para>        </briefdescription>
         <detaileddescription>
-<para>Possible return values are enumerations of <ref refid="group__group__funcmacro__file_1ga68af15575db590aaa874d40a1073809d" kindref="member">wxFileKind</ref>.</para><para>Include file: <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
+<para>Possible return values are enumerations of <ref refid="group__group__funcmacro__file_1ga68af15575db590aaa874d40a1073809d" kindref="member">wxFileKind</ref>.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="505"/>
@@ -837,7 +835,7 @@ Include file: <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000017"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This function is obsolete, please use <ref refid="classwx_file_name_1a4f06c2499ce10643e41175405b93e61c" kindref="member">wxFileName::SplitPath()</ref> instead.</para></xrefdescription></xrefsect>Returns the filename for a full path. The second form returns a pointer to temporary storage that should not be deallocated.</para><para>Include file: <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000017"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This function is obsolete, please use <ref refid="classwx_file_name_1a4f06c2499ce10643e41175405b93e61c" kindref="member">wxFileName::SplitPath()</ref> instead.</para></xrefdescription></xrefsect></para><para>Returns the filename for a full path. The second form returns a pointer to temporary storage that should not be deallocated.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="520"/>
@@ -876,7 +874,7 @@ Include file: <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000018"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This function is obsolete, please use <ref refid="classwx_file_name_1a416af84fddd624a3b457dbffbe174317" kindref="member">wxFileName::CreateTempFileName()</ref> instead.</para></xrefdescription></xrefsect>Include file: <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000018"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This function is obsolete, please use <ref refid="classwx_file_name_1a416af84fddd624a3b457dbffbe174317" kindref="member">wxFileName::CreateTempFileName()</ref> instead.</para></xrefdescription></xrefsect></para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="532"/>

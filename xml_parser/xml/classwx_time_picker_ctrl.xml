@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_time_picker_ctrl" kind="class" prot="public">
     <compoundname>wxTimePickerCtrl</compoundname>
     <basecompoundref refid="classwx_control" prot="public" virt="non-virtual">wxControl</basecompoundref>
@@ -204,85 +204,85 @@
 <listitem><para>EVT_TIME_CHANGED(id,  func): This event fires when the user changes the current selection in the control. </para></listitem>
 </itemizedlist>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__pickers" kindref="compound">Picker Controls</ref> <htmlonly> &lt;br&gt;&lt;div&gt;&lt;span class=&apos;appearance&apos;&gt;Appearance:&lt;/span&gt;&lt;br&gt;&lt;table class=&apos;appearance&apos;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&apos;wxmsw/timepickerctrl.png&apos; alt=&apos;wxMSW appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxgtk/timepickerctrl.png&apos; alt=&apos;wxGTK appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxmac/timepickerctrl.png&apos; alt=&apos;wxMac appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;wxMSW appearance&lt;/td&gt;&lt;td&gt;wxGTK appearance&lt;/td&gt;&lt;td&gt;wxMac appearance&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt; </htmlonly></para><para><simplesect kind="see"><para><ref refid="classwx_date_picker_ctrl" kindref="compound">wxDatePickerCtrl</ref>, <ref refid="classwx_date_event" kindref="compound">wxDateEvent</ref></para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__pickers" kindref="compound">Picker Controls</ref> <htmlonly> &lt;br&gt;&lt;div&gt;&lt;span class=&apos;appearance&apos;&gt;Appearance:&lt;/span&gt;&lt;br&gt;&lt;table class=&apos;appearance&apos;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&apos;wxmsw/timepickerctrl.png&apos; alt=&apos;wxMSW appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxgtk/timepickerctrl.png&apos; alt=&apos;wxGTK appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxmac/timepickerctrl.png&apos; alt=&apos;wxMac appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;wxMSW appearance&lt;/td&gt;&lt;td&gt;wxGTK appearance&lt;/td&gt;&lt;td&gt;wxMac appearance&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt; </htmlonly></para><para><simplesect kind="see"><para><ref refid="classwx_date_picker_ctrl" kindref="compound">wxDatePickerCtrl</ref>, <ref refid="classwx_date_event" kindref="compound">wxDateEvent</ref></para></simplesect>
 <simplesect kind="since"><para>2.9.3 </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10802">
+      <node id="10863">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="10801">
+      <node id="10862">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="10802" relation="public-inheritance">
+        <childnode refid="10863" relation="public-inheritance">
         </childnode>
-        <childnode refid="10803" relation="public-inheritance">
+        <childnode refid="10864" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10803">
+      <node id="10864">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="10799">
+      <node id="10860">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="10800" relation="public-inheritance">
+        <childnode refid="10861" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10800">
+      <node id="10861">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="10801" relation="public-inheritance">
+        <childnode refid="10862" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10798">
+      <node id="10859">
         <label>wxTimePickerCtrl</label>
         <link refid="classwx_time_picker_ctrl"/>
-        <childnode refid="10799" relation="public-inheritance">
+        <childnode refid="10860" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10808">
+      <node id="10869">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="10809" relation="usage">
+        <childnode refid="10870" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="10807">
+      <node id="10868">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="10808" relation="public-inheritance">
+        <childnode refid="10869" relation="public-inheritance">
         </childnode>
-        <childnode refid="10810" relation="public-inheritance">
+        <childnode refid="10871" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10810">
+      <node id="10871">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="10805">
+      <node id="10866">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="10806" relation="public-inheritance">
+        <childnode refid="10867" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10806">
+      <node id="10867">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="10807" relation="public-inheritance">
+        <childnode refid="10868" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10809">
+      <node id="10870">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
-      <node id="10804">
+      <node id="10865">
         <label>wxTimePickerCtrl</label>
         <link refid="classwx_time_picker_ctrl"/>
-        <childnode refid="10805" relation="public-inheritance">
+        <childnode refid="10866" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>

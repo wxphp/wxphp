@@ -1,11 +1,10 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_f_t_p" kind="class" prot="public">
     <compoundname>wxFTP</compoundname>
     <basecompoundref refid="classwx_protocol" prot="public" virt="non-virtual">wxProtocol</basecompoundref>
     <includes local="no">wx/protocol/ftp.h</includes>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_f_t_p_1adf97ae110d01e048aa55da6f6e7a8185" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
         <definition>virtual bool wxFTP::Connect</definition>
@@ -48,7 +47,6 @@
       </sectiondef>
       <sectiondef kind="user-defined">
       <header>Functions for managing the FTP connection</header>
-      <description><para><anchor id="_1amgrp1ea650bc082f4589eb31774d4e3ea18e"/> </para></description>
       <memberdef kind="function" id="classwx_f_t_p_1a9f1d0c38321f880302959c07c4749d4d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
         <definition>virtual bool wxFTP::Abort</definition>
@@ -228,7 +226,6 @@
       </sectiondef>
       <sectiondef kind="user-defined">
       <header>Filesystem commands</header>
-      <description><para><anchor id="_1amgrpaa0fcddf8229b80feb69b2cbe92b7e2e"/> </para></description>
       <memberdef kind="function" id="classwx_f_t_p_1a33cced47ce8c8809f10f98485e5b2042" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
         <definition>bool wxFTP::ChDir</definition>
@@ -426,7 +423,6 @@
       </sectiondef>
       <sectiondef kind="user-defined">
       <header>Download and upload functions</header>
-      <description><para><anchor id="_1amgrpc5688c54a6ed60693bee41d9041fa925"/> </para></description>
       <memberdef kind="function" id="classwx_f_t_p_1a97d34cb6df2b6075e49a50b88d4a54b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_input_stream" kindref="compound">wxInputStream</ref> *</type>
         <definition>virtual wxInputStream* wxFTP::GetInputStream</definition>
@@ -496,7 +492,7 @@
     <briefdescription>
 <para><ref refid="classwx_f_t_p" kindref="compound">wxFTP</ref> can be used to establish a connection to an FTP server and perform all the usual operations. </para>    </briefdescription>
     <detaileddescription>
-<para>Please consult the RFC 959 (<ulink url="http://www.w3.org/Protocols/rfc959/">http://www.w3.org/Protocols/rfc959/</ulink>) for more details about the FTP protocol.</para><para><ref refid="classwx_f_t_p" kindref="compound">wxFTP</ref> can thus be used to create a (basic) FTP <bold>client</bold>.</para><para>To use a command which doesn&apos;t involve file transfer (i.e. directory oriented commands) you just need to call a corresponding member function or use the generic <ref refid="classwx_f_t_p_1a6a9d830ff6e3ec0075945425fe330f47" kindref="member">wxFTP::SendCommand()</ref> method. However to actually transfer files you just get or give a stream to or from this class and the actual data are read or written using the usual stream methods.</para><para>Example of using <ref refid="classwx_f_t_p" kindref="compound">wxFTP</ref> for file downloading:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_f_t_p" kindref="compound" tooltip="wxFTP can be used to establish a connection to an FTP server and perform all the...">wxFTP</ref><sp/>ftp;</highlight></codeline>
+<para>Please consult the RFC 959 (<ulink url="http://www.w3.org/Protocols/rfc959/">http://www.w3.org/Protocols/rfc959/</ulink>) for more details about the FTP protocol.</para><para><ref refid="classwx_f_t_p" kindref="compound">wxFTP</ref> can thus be used to create a (basic) FTP <bold>client</bold>.</para><para>To use a command which doesn&apos;t involve file transfer (i.e. directory oriented commands) you just need to call a corresponding member function or use the generic <ref refid="classwx_f_t_p_1a6a9d830ff6e3ec0075945425fe330f47" kindref="member">wxFTP::SendCommand()</ref> method. However to actually transfer files you just get or give a stream to or from this class and the actual data are read or written using the usual stream methods.</para><para>Example of using <ref refid="classwx_f_t_p" kindref="compound">wxFTP</ref> for file downloading:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_f_t_p" kindref="compound" tooltip="wxFTP can be used to establish a connection to an FTP server and perform all the usual operations...">wxFTP</ref><sp/>ftp;</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>if<sp/>you<sp/>don&apos;t<sp/>use<sp/>these<sp/>lines<sp/>anonymous<sp/>login<sp/>will<sp/>be<sp/>used</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ftp.<ref refid="classwx_f_t_p_1aa98a9516aacb33260942d5f65e4189ae" kindref="member" tooltip="Sets the user name to be sent to the FTP server to be allowed to log in.">SetUser</ref>(</highlight><highlight class="stringliteral">&quot;user&quot;</highlight><highlight class="normal">);</highlight></codeline>
@@ -510,13 +506,13 @@
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ftp.<ref refid="classwx_f_t_p_1a33cced47ce8c8809f10f98485e5b2042" kindref="member" tooltip="Change the current FTP working directory.">ChDir</ref>(</highlight><highlight class="stringliteral">&quot;/pub/2.8.9&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*filename<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;wxWidgets-2.8.9.tar.bz2&quot;</highlight><highlight class="normal">;</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size<sp/>=<sp/>ftp.<ref refid="classwx_f_t_p_1a54f6a620edf5d5ea6850c05dbb78f6cd" kindref="member" tooltip="Returns the file size in bytes or -1 if the file doesn&amp;#39;t exist or the size couldn&amp;#39;t...">GetFileSize</ref>(filename);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size<sp/>=<sp/>ftp.<ref refid="classwx_f_t_p_1a54f6a620edf5d5ea6850c05dbb78f6cd" kindref="member" tooltip="Returns the file size in bytes or -1 if the file doesn&amp;#39;t exist or the size couldn&amp;#39;t be determined...">GetFileSize</ref>(filename);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>size<sp/>==<sp/>-1<sp/>)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__log_1ga0dd3c633f990f794e76065c9a7af4c87" kindref="member" tooltip="The functions to use for error messages, i.e.">wxLogError</ref>(</highlight><highlight class="stringliteral">&quot;Couldn&apos;t<sp/>get<sp/>the<sp/>file<sp/>size<sp/>for<sp/>\&quot;%s\&quot;&quot;</highlight><highlight class="normal">,<sp/>filename);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_input_stream" kindref="compound" tooltip="wxInputStream is an abstract base class which may not be used directly.">wxInputStream</ref><sp/>*i<sp/>=<sp/>ftp.<ref refid="classwx_f_t_p_1a97d34cb6df2b6075e49a50b88d4a54b9" kindref="member" tooltip="Creates a new input stream on the specified path.">GetInputStream</ref>(filename);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_input_stream" kindref="compound" tooltip="wxInputStream is an abstract base class which may not be used directly.">wxInputStream</ref><sp/>*in<sp/>=<sp/>ftp.<ref refid="classwx_f_t_p_1a97d34cb6df2b6075e49a50b88d4a54b9" kindref="member" tooltip="Creates a new input stream on the specified path.">GetInputStream</ref>(filename);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>!in<sp/>)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__log_1ga0dd3c633f990f794e76065c9a7af4c87" kindref="member" tooltip="The functions to use for error messages, i.e.">wxLogError</ref>(</highlight><highlight class="stringliteral">&quot;Couldn&apos;t<sp/>get<sp/>the<sp/>file&quot;</highlight><highlight class="normal">);</highlight></codeline>
@@ -524,7 +520,7 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*data<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">[size];</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>!in-&gt;Read(data,<sp/>size)<sp/>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>!in-&gt;<ref refid="classwx_input_stream_1a72f24d0f50c7f07bb68dedf5e8690f4e" kindref="member" tooltip="Reads the specified amount of bytes and stores the data in buffer.">Read</ref>(data,<sp/>size)<sp/>)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__log_1ga0dd3c633f990f794e76065c9a7af4c87" kindref="member" tooltip="The functions to use for error messages, i.e.">wxLogError</ref>(</highlight><highlight class="stringliteral">&quot;Read<sp/>error:<sp/>%d&quot;</highlight><highlight class="normal">,<sp/>ftp.<ref refid="classwx_protocol_1a06994af171fb3f497f384a4002dbfc3c" kindref="member" tooltip="Returns the last occurred error.">GetError</ref>());</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
@@ -547,71 +543,71 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>out;</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 </programlisting></para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxnet" kindref="member">wxNet</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__net" kindref="compound">Networking</ref></para><para><simplesect kind="see"><para><ref refid="classwx_socket_base" kindref="compound">wxSocketBase</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxnet" kindref="member">wxNet</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__net" kindref="compound">Networking</ref></para><para><simplesect kind="see"><para><ref refid="classwx_socket_base" kindref="compound">wxSocketBase</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="6457">
+      <node id="6461">
         <label>wxSocketBase</label>
         <link refid="classwx_socket_base"/>
-        <childnode refid="6458" relation="public-inheritance">
+        <childnode refid="6462" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6458">
+      <node id="6462">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="6456">
+      <node id="6460">
         <label>wxSocketClient</label>
         <link refid="classwx_socket_client"/>
-        <childnode refid="6457" relation="public-inheritance">
+        <childnode refid="6461" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6454">
+      <node id="6458">
         <label>wxFTP</label>
         <link refid="classwx_f_t_p"/>
-        <childnode refid="6455" relation="public-inheritance">
+        <childnode refid="6459" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6455">
+      <node id="6459">
         <label>wxProtocol</label>
         <link refid="classwx_protocol"/>
-        <childnode refid="6456" relation="public-inheritance">
+        <childnode refid="6460" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="6462">
+      <node id="6466">
         <label>wxSocketBase</label>
         <link refid="classwx_socket_base"/>
-        <childnode refid="6463" relation="public-inheritance">
+        <childnode refid="6467" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6463">
+      <node id="6467">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="6464" relation="usage">
+        <childnode refid="6468" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="6461">
+      <node id="6465">
         <label>wxSocketClient</label>
         <link refid="classwx_socket_client"/>
-        <childnode refid="6462" relation="public-inheritance">
+        <childnode refid="6466" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6459">
+      <node id="6463">
         <label>wxFTP</label>
         <link refid="classwx_f_t_p"/>
-        <childnode refid="6460" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="6460">
-        <label>wxProtocol</label>
-        <link refid="classwx_protocol"/>
-        <childnode refid="6461" relation="public-inheritance">
+        <childnode refid="6464" relation="public-inheritance">
         </childnode>
       </node>
       <node id="6464">
+        <label>wxProtocol</label>
+        <link refid="classwx_protocol"/>
+        <childnode refid="6465" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6468">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

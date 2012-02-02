@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_c_s_conv" kind="class" prot="public">
     <compoundname>wxCSConv</compoundname>
     <basecompoundref refid="classwx_m_b_conv" prot="public" virt="non-virtual">wxMBConv</basecompoundref>
@@ -74,28 +74,28 @@
 <para>This class converts between any character set supported by the system and Unicode. </para>    </briefdescription>
     <detaileddescription>
 <para>Please notice that this class uses system-provided conversion functions, e.g. <computeroutput>MultiByteToWideChar()</computeroutput> and <computeroutput>WideCharToMultiByte()</computeroutput> under MSW and <computeroutput>iconv(3)</computeroutput> under Unix systems and as such may support different encodings and different encoding names on different platforms (although all relatively common encodings are supported should be supported everywhere).</para><para>It has one predefined instance, <bold>wxConvLocal</bold>, for the default user character set.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__conv" kindref="compound">Text Conversion</ref></para><para><simplesect kind="see"><para><ref refid="classwx_m_b_conv" kindref="compound">wxMBConv</ref>, <ref refid="classwx_encoding_converter" kindref="compound">wxEncodingConverter</ref>, <ref refid="overview__mbconv" kindref="compound">wxMBConv Overview</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__conv" kindref="compound">Text Conversion</ref></para><para><simplesect kind="see"><para><ref refid="classwx_m_b_conv" kindref="compound">wxMBConv</ref>, <ref refid="classwx_encoding_converter" kindref="compound">wxEncodingConverter</ref>, <ref refid="overview_mbconv" kindref="compound">wxMBConv Overview</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="5209">
+      <node id="5213">
         <label>wxCSConv</label>
         <link refid="classwx_c_s_conv"/>
-        <childnode refid="5210" relation="public-inheritance">
+        <childnode refid="5214" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5210">
+      <node id="5214">
         <label>wxMBConv</label>
         <link refid="classwx_m_b_conv"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="5211">
+      <node id="5215">
         <label>wxCSConv</label>
         <link refid="classwx_c_s_conv"/>
-        <childnode refid="5212" relation="public-inheritance">
+        <childnode refid="5216" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5212">
+      <node id="5216">
         <label>wxMBConv</label>
         <link refid="classwx_m_b_conv"/>
       </node>

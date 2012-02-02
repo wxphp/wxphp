@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="image_8h" kind="file">
     <compoundname>image.h</compoundname>
     <innerclass refid="classwx_image_handler" prot="public">wxImageHandler</innerclass>
@@ -426,9 +426,9 @@
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="70" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" bodystart="69" bodyend="75"/>
       </memberdef>
-      <memberdef kind="enum" id="image_8h_1abc5c98fcc1211af2b80116dd6e0a035d" prot="public" static="no">
-        <name>@11</name>
-        <enumvalue id="image_8h_1abc5c98fcc1211af2b80116dd6e0a035da5b44f596f5ff32a1bdd968503016cc53" prot="public">
+      <memberdef kind="enum" id="image_8h_1a16af7b253440dadd46a80a4b9fddba4d" prot="public" static="no">
+        <name>@14</name>
+        <enumvalue id="image_8h_1a16af7b253440dadd46a80a4b9fddba4da5b44f596f5ff32a1bdd968503016cc53" prot="public">
           <name>wxBMP_24BPP</name>
           <initializer> 24</initializer>
           <briefdescription>
@@ -436,7 +436,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="image_8h_1abc5c98fcc1211af2b80116dd6e0a035da1ed694a93c5f62b30816abe7eaff02b8" prot="public">
+        <enumvalue id="image_8h_1a16af7b253440dadd46a80a4b9fddba4da1ed694a93c5f62b30816abe7eaff02b8" prot="public">
           <name>wxBMP_8BPP</name>
           <initializer>  8</initializer>
           <briefdescription>
@@ -444,7 +444,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="image_8h_1abc5c98fcc1211af2b80116dd6e0a035da6550a9e24cc1fa64686be2d78d01cd52" prot="public">
+        <enumvalue id="image_8h_1a16af7b253440dadd46a80a4b9fddba4da6550a9e24cc1fa64686be2d78d01cd52" prot="public">
           <name>wxBMP_8BPP_GREY</name>
           <initializer>  9</initializer>
           <briefdescription>
@@ -452,7 +452,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="image_8h_1abc5c98fcc1211af2b80116dd6e0a035da46c97f88f140cbdd6ad7f5a19b3d3545" prot="public">
+        <enumvalue id="image_8h_1a16af7b253440dadd46a80a4b9fddba4da46c97f88f140cbdd6ad7f5a19b3d3545" prot="public">
           <name>wxBMP_8BPP_GRAY</name>
           <initializer>  wxBMP_8BPP_GREY</initializer>
           <briefdescription>
@@ -460,7 +460,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="image_8h_1abc5c98fcc1211af2b80116dd6e0a035da2476cf5d99c1705f0838a7839b5fc37b" prot="public">
+        <enumvalue id="image_8h_1a16af7b253440dadd46a80a4b9fddba4da2476cf5d99c1705f0838a7839b5fc37b" prot="public">
           <name>wxBMP_8BPP_RED</name>
           <initializer> 10</initializer>
           <briefdescription>
@@ -468,7 +468,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="image_8h_1abc5c98fcc1211af2b80116dd6e0a035da38d6d2931067962ca7ebc1334356bdd6" prot="public">
+        <enumvalue id="image_8h_1a16af7b253440dadd46a80a4b9fddba4da38d6d2931067962ca7ebc1334356bdd6" prot="public">
           <name>wxBMP_8BPP_PALETTE</name>
           <initializer> 11</initializer>
           <briefdescription>
@@ -476,7 +476,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="image_8h_1abc5c98fcc1211af2b80116dd6e0a035da1de2b3b0ee33ea12941d48793e12d216" prot="public">
+        <enumvalue id="image_8h_1a16af7b253440dadd46a80a4b9fddba4da1de2b3b0ee33ea12941d48793e12d216" prot="public">
           <name>wxBMP_4BPP</name>
           <initializer>  4</initializer>
           <briefdescription>
@@ -484,7 +484,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="image_8h_1abc5c98fcc1211af2b80116dd6e0a035dab28d3d8e5a1f9454273d2dfec151717f" prot="public">
+        <enumvalue id="image_8h_1a16af7b253440dadd46a80a4b9fddba4dab28d3d8e5a1f9454273d2dfec151717f" prot="public">
           <name>wxBMP_1BPP</name>
           <initializer>  1</initializer>
           <briefdescription>
@@ -492,7 +492,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="image_8h_1abc5c98fcc1211af2b80116dd6e0a035da746c7ab89c3af27b927f141aee6027b9" prot="public">
+        <enumvalue id="image_8h_1a16af7b253440dadd46a80a4b9fddba4da746c7ab89c3af27b927f141aee6027b9" prot="public">
           <name>wxBMP_1BPP_BW</name>
           <initializer>  2</initializer>
           <briefdescription>
@@ -538,6 +538,20 @@
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="351" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" bodystart="351" bodyend="-1"/>
       </memberdef>
+      <memberdef kind="variable" id="image_8h_1ab038b59ef0b8209ae59f38c9e26de410" prot="public" static="no" mutable="no">
+        <type>const unsigned char</type>
+        <definition>const unsigned char wxIMAGE_ALPHA_THRESHOLD</definition>
+        <argsstring></argsstring>
+        <name>wxIMAGE_ALPHA_THRESHOLD</name>
+        <initializer> 0x80</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="353" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" bodystart="353" bodyend="-1"/>
+      </memberdef>
       <memberdef kind="variable" id="image_8h_1aea75fc2e13965b07bf9369ac4c5d1343" prot="public" static="no" mutable="no">
         <type><ref refid="classwx_image" kindref="compound">wxImage</ref></type>
         <definition>wxImage wxNullImage</definition>
@@ -549,7 +563,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="1924" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" bodystart="1924" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="1927" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" bodystart="1927" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -562,10 +576,10 @@
 <para>Initializes all available image handlers. </para>        </briefdescription>
         <detaileddescription>
 <para>This function calls <ref refid="classwx_image_1ab39fb3747dfb8c2d444eff9fe41fa205" kindref="member">wxImage::AddHandler()</ref> for all the available image handlers (see <ref refid="classwx_image_1image_handlers" kindref="member">Available image handlers</ref> for the full list). Calling it is the simplest way to initialize <ref refid="classwx_image" kindref="compound">wxImage</ref> but it creates and registers even the handlers your program may not use. If you want to avoid the overhead of doing this you need to call <ref refid="classwx_image_1ab39fb3747dfb8c2d444eff9fe41fa205" kindref="member">wxImage::AddHandler()</ref> manually just for the handlers that you do want to use.</para><para><simplesect kind="see"><para><ref refid="classwx_image" kindref="compound">wxImage</ref>, <ref refid="classwx_image_handler" kindref="compound">wxImageHandler</ref></para></simplesect>
-Include file: <verbatim>#include &lt;wx/image.h&gt; </verbatim> </para>        </detaileddescription>
+Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/image.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="1948"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="1951"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

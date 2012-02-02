@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_f_s_volume" kind="class" prot="public">
     <compoundname>wxFSVolume</compoundname>
     <includes local="no">wx/volume.h</includes>
@@ -189,8 +189,8 @@
     <briefdescription>
 <para><ref refid="classwx_f_s_volume" kindref="compound">wxFSVolume</ref> represents a volume (also known as &apos;drive&apos;) in a file system under wxMSW. </para>    </briefdescription>
     <detaileddescription>
-<para>Unix ports of wxWidgets do not have the concept of volumes and thus do not implement <ref refid="classwx_f_s_volume" kindref="compound">wxFSVolume</ref>.</para><para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page__port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor> </para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__misc" kindref="compound">Miscellaneous</ref> </para>    </detaileddescription>
+<para>Unix ports of wxWidgets do not have the concept of volumes and thus do not implement <ref refid="classwx_f_s_volume" kindref="compound">wxFSVolume</ref>.</para><para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page_port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor> </para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__misc" kindref="compound">Miscellaneous</ref> </para>    </detaileddescription>
     <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/volume.h" line="68" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/volume.h" bodystart="67" bodyend="144"/>
     <listofallmembers>
       <member refid="classwx_f_s_volume_1a0a43342c22263988ce38996ee5ee37af" prot="public" virt="non-virtual"><scope>wxFSVolume</scope><name>CancelSearch</name></member>

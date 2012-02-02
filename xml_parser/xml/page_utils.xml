@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="page_utils" kind="page">
+    <compoundname>page_utils</compoundname>
+    <title>Utilities Overview</title>
+    <detaileddescription>
+<para>In addition to the wxWidgets libraries (see <ref refid="page_libs" kindref="compound">Library List</ref>), some utilities are available to the users in the <computeroutput>utils</computeroutput> hierarchy (even if some of them are explicitly conceived for wxWidgets maintainance and will probably be of little use to others).</para><para>Please note that these utilities do represent only the utilities developed and maintained by the wxWidgets team. There are lots of other user-contributed and user-maintained packages; see the wxWidgets download page: <ulink url="http://www.wxwidgets.org/downloads">http://www.wxwidgets.org/downloads</ulink> or directly <ulink url="http://wxcode.sourceforge.net">http://wxcode.sourceforge.net</ulink> or <ulink url="http://www.wxcommunity.com/">http://www.wxcommunity.com/</ulink> .</para><para><itemizedlist>
+<listitem><para><ref refid="page_utils_1page_utils_emulator" kindref="member">Emulator</ref> </para></listitem>
+<listitem><para><ref refid="page_utils_1page_utils_helpview" kindref="member">Help Viewer</ref> </para></listitem>
+<listitem><para><ref refid="page_utils_1page_utils_hhp2cached" kindref="member">HHP2Cached</ref> </para></listitem>
+<listitem><para><ref refid="page_utils_1page_utils_ifacecheck" kindref="member">Interface checker</ref> </para></listitem>
+<listitem><para><ref refid="page_utils_1page_utils_wxrc" kindref="member">wxWidgets XML Resource Compiler</ref></para></listitem>
+</itemizedlist>
+<hruler/>
+</para><sect1 id="page_utils_1page_utils_emulator">
+<title>Emulator</title>
+<para>Xnest-based display emulator for X11-based PDA applications.</para><para>This program can be found in <computeroutput>utils/emulator</computeroutput>.</para></sect1>
+<sect1 id="page_utils_1page_utils_helpview">
+<title>Help Viewer</title>
+<para>Helpview is a program for displaying wxWidgets HTML Help files. In many cases, you may wish to use the wxWidgets HTML Help classes from within your application, but this provides a handy stand-alone viewer. See <ref refid="overview_html" kindref="compound">wxHTML Overview</ref> for more details.</para><para>You can find Helpview in <computeroutput>utils/helpview</computeroutput>.</para></sect1>
+<sect1 id="page_utils_1page_utils_hhp2cached">
+<title>HHP2Cached</title>
+<para>This utility creates a &quot;cached&quot; version of a <computeroutput></computeroutput>.hhp file; using cached <computeroutput></computeroutput>.hhp files in <ref refid="classwx_html_help_controller" kindref="compound">wxHtmlHelpController</ref> can drammatically improve the performances of the help viewer. See <ref refid="classwx_html_help_controller" kindref="compound">wxHtmlHelpController</ref> for more details.</para><para>You can find HHP2Cached in <computeroutput>utils/hhp2cached</computeroutput>.</para></sect1>
+<sect1 id="page_utils_1page_utils_ifacecheck">
+<title>Interface checker</title>
+<para>This utility compares the wxWidgets real interface contained in the <computeroutput>include</computeroutput> hierarchy with the wxWidgets interface used for documentation purposes and kept in the <computeroutput>interface</computeroutput> hierarchy.</para><para>Ifacecheck warns about incoherences (mainly wrong prototype signatures) and can even correct them automatically. It uses the XML outputs of the gccxml utility (see <ulink url="http://www.gccxml.org">http://www.gccxml.org</ulink>) and of the Doxygen utility (see <ulink url="http://www.doxygen.org">http://www.doxygen.org</ulink>) to do the comparisons.</para><para>It&apos;s explicitly designed for wxWidgets documentation needs and is probably of little use for anything else than wxWidgets docs reviewing.</para><para>You can find it in <computeroutput>utils/ifacecheck</computeroutput>.</para></sect1>
+<sect1 id="page_utils_1page_utils_wxrc">
+<title>wxWidgets XML Resource Compiler</title>
+<para>This utility allows the user to compile <emphasis>binary</emphasis> versions of their XRC files, which are compressed and can be loaded faster than plain XRC files. See <ref refid="overview_xrc" kindref="compound">XML Based Resource System (XRC)</ref> for more info.</para><para>You can find it under <computeroutput>utils/wxrc</computeroutput>. </para></sect1>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

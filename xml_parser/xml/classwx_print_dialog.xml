@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_print_dialog" kind="class" prot="public">
     <compoundname>wxPrintDialog</compoundname>
     <basecompoundref refid="classwx_dialog" prot="public" virt="non-virtual">wxDialog</basecompoundref>
@@ -60,7 +60,7 @@
         <argsstring>()</argsstring>
         <name>GetPrintDialogData</name>
         <briefdescription>
-<para>Returns the <ref refid="overview__printing_1overview_printing_printdata" kindref="member">print dialog data</ref> associated with the print dialog. </para>        </briefdescription>
+<para>Returns the <ref refid="overview_printing_1overview_printing_printdata" kindref="member">print dialog data</ref> associated with the print dialog. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -86,57 +86,9 @@
 <para>This class represents the print and print setup common dialogs. </para>    </briefdescription>
     <detaileddescription>
 <para>You may obtain a <ref refid="classwx_printer_d_c" kindref="compound">wxPrinterDC</ref> device context from a successfully dismissed print dialog.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__printing" kindref="compound">Printing Framework</ref></para><para><simplesect kind="see"><para><ref refid="overview__printing" kindref="compound">Printing Framework Overview</ref>, <ref refid="overview__cmndlg_1overview_cmndlg_print" kindref="member">wxPrintDialog Overview</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__printing" kindref="compound">Printing Framework</ref></para><para><simplesect kind="see"><para><ref refid="overview_printing" kindref="compound">Printing Framework Overview</ref>, <ref refid="overview_cmndlg_1overview_cmndlg_print" kindref="member">wxPrintDialog Overview</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="8779">
-        <label>wxNonOwnedWindow</label>
-        <link refid="classwx_non_owned_window"/>
-        <childnode refid="8780" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="8782">
-        <label>wxObject</label>
-        <link refid="classwx_object"/>
-      </node>
-      <node id="8781">
-        <label>wxEvtHandler</label>
-        <link refid="classwx_evt_handler"/>
-        <childnode refid="8782" relation="public-inheritance">
-        </childnode>
-        <childnode refid="8783" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="8776">
-        <label>wxPrintDialog</label>
-        <link refid="classwx_print_dialog"/>
-        <childnode refid="8777" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="8783">
-        <label>wxTrackable</label>
-        <link refid="classwx_trackable"/>
-      </node>
-      <node id="8780">
-        <label>wxWindow</label>
-        <link refid="classwx_window"/>
-        <childnode refid="8781" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="8777">
-        <label>wxDialog</label>
-        <link refid="classwx_dialog"/>
-        <childnode refid="8778" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="8778">
-        <label>wxTopLevelWindow</label>
-        <link refid="classwx_top_level_window"/>
-        <childnode refid="8779" relation="public-inheritance">
-        </childnode>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
       <node id="8787">
         <label>wxNonOwnedWindow</label>
         <link refid="classwx_non_owned_window"/>
@@ -146,16 +98,13 @@
       <node id="8790">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="8791" relation="usage">
-          <edgelabel>m_refData</edgelabel>
-        </childnode>
       </node>
       <node id="8789">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
         <childnode refid="8790" relation="public-inheritance">
         </childnode>
-        <childnode refid="8792" relation="public-inheritance">
+        <childnode refid="8791" relation="public-inheritance">
         </childnode>
       </node>
       <node id="8784">
@@ -164,7 +113,7 @@
         <childnode refid="8785" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8792">
+      <node id="8791">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
@@ -186,7 +135,58 @@
         <childnode refid="8787" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8791">
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="8795">
+        <label>wxNonOwnedWindow</label>
+        <link refid="classwx_non_owned_window"/>
+        <childnode refid="8796" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8798">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="8799" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="8797">
+        <label>wxEvtHandler</label>
+        <link refid="classwx_evt_handler"/>
+        <childnode refid="8798" relation="public-inheritance">
+        </childnode>
+        <childnode refid="8800" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8792">
+        <label>wxPrintDialog</label>
+        <link refid="classwx_print_dialog"/>
+        <childnode refid="8793" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8800">
+        <label>wxTrackable</label>
+        <link refid="classwx_trackable"/>
+      </node>
+      <node id="8796">
+        <label>wxWindow</label>
+        <link refid="classwx_window"/>
+        <childnode refid="8797" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8793">
+        <label>wxDialog</label>
+        <link refid="classwx_dialog"/>
+        <childnode refid="8794" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8794">
+        <label>wxTopLevelWindow</label>
+        <link refid="classwx_top_level_window"/>
+        <childnode refid="8795" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8799">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
@@ -519,6 +519,7 @@
       <member refid="classwx_window_1a81f23590239934fa10fded0566a65d8c" prot="public" virt="non-virtual"><scope>wxPrintDialog</scope><name>SetPosition</name></member>
       <member refid="classwx_window_1a07f5f7ed3f78e0ef7b3dee3f4da81001" prot="public" virt="virtual"><scope>wxPrintDialog</scope><name>SetPreviousHandler</name></member>
       <member refid="classwx_object_1afab780710f2adc1bb33310e27590140b" prot="public" virt="non-virtual"><scope>wxPrintDialog</scope><name>SetRefData</name></member>
+      <member refid="classwx_top_level_window_1a82afa6f09dd5faef6330807ef59374e8" prot="public" virt="virtual"><scope>wxPrintDialog</scope><name>SetRepresentedFilename</name></member>
       <member refid="classwx_dialog_1a0d04ed85ac5cd271a61514d446340673" prot="public" virt="non-virtual"><scope>wxPrintDialog</scope><name>SetReturnCode</name></member>
       <member refid="classwx_top_level_window_1a98e95b1b10f44b80f9b29a03ab09a879" prot="public" virt="non-virtual"><scope>wxPrintDialog</scope><name>SetRightMenu</name></member>
       <member refid="classwx_window_1aa842d59529f873683e55cd8392ec46e9" prot="public" virt="virtual"><scope>wxPrintDialog</scope><name>SetScrollbar</name></member>

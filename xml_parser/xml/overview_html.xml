@@ -1,0 +1,337 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="overview_html" kind="page">
+    <compoundname>overview_html</compoundname>
+    <title>wxHTML Overview</title>
+    <detaileddescription>
+<para>The wxHTML library provides classes for parsing and displaying HTML.</para><para>It is not intended to be a high-end HTML browser. If you are looking for something like that try &lt;<ulink url="http://www.mozilla.org/">http://www.mozilla.org/</ulink>&gt;.</para><para>wxHTML can be used as a generic rich text viewer - for example to display a nice About Box (like those of GNOME apps) or to display the result of database searching. There is a <ref refid="classwx_file_system" kindref="compound">wxFileSystem</ref> class which allows you to use your own virtual file systems.</para><para><ref refid="classwx_html_window" kindref="compound">wxHtmlWindow</ref> supports tag handlers. This means that you can easily extend wxHtml library with new, unsupported tags. Not only that, you can even use your own application-specific tags!</para><para>See <computeroutput>src/html/m_*</computeroutput>.cpp files for details.</para><para>There is a generic <ref refid="classwx_html_parser" kindref="compound">wxHtmlParser</ref> class, independent of <ref refid="classwx_html_window" kindref="compound">wxHtmlWindow</ref>.</para><para><itemizedlist>
+<listitem><para><ref refid="overview_html_1overview_html_quickstart" kindref="member">wxHTML quick start</ref> </para></listitem>
+<listitem><para><ref refid="overview_html_1overview_html_printing" kindref="member">HTML Printing</ref> </para></listitem>
+<listitem><para><ref refid="overview_html_1overview_html_helpformats" kindref="member">Help Files Format</ref> </para></listitem>
+<listitem><para><ref refid="overview_html_1overview_html_filters" kindref="member">Input Filters</ref> </para></listitem>
+<listitem><para><ref refid="overview_html_1overview_html_cells" kindref="member">Cells and Containers</ref> </para></listitem>
+<listitem><para><ref refid="overview_html_1overview_html_handlers" kindref="member">Tag Handlers</ref> </para></listitem>
+<listitem><para><ref refid="overview_html_1overview_html_supptags" kindref="member">Tags supported by wxHTML</ref></para></listitem>
+</itemizedlist>
+<hruler/>
+</para><sect1 id="overview_html_1overview_html_quickstart">
+<title>wxHTML quick start</title>
+<sect2 id="overview_html_1overview_html_quickstart_disphtml">
+<title>Displaying HTML</title>
+<para>First of all, you must include <computeroutput>wx/wxhtml.h</computeroutput>.</para><para>Class <ref refid="classwx_html_window" kindref="compound">wxHtmlWindow</ref> (derived from <ref refid="group__group__class__miscwnd_1ga695bec5996cd4d5512d1a01cfdcf96a5" kindref="member">wxScrolledWindow</ref>) is used to display HTML documents.</para><para>It has two important methods: <ref refid="classwx_html_window_1ab7086e665bb533a34dc11ab29465db09" kindref="member">wxHtmlWindow::LoadPage</ref> and <ref refid="classwx_html_window_1ac6d0335b1bb749b498598fc5a3b32703" kindref="member">wxHtmlWindow::SetPage</ref>. LoadPage loads and displays HTML file while SetPage displays directly the passed <bold>string</bold>. See the example:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/>mywin<sp/>-&gt;<sp/>LoadPage(</highlight><highlight class="stringliteral">&quot;test.htm&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>mywin<sp/>-&gt;<sp/>SetPage(</highlight><highlight class="stringliteral">&quot;htmlbody&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;h1Error/h1&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Some<sp/>error<sp/>occurred<sp/>:-H)&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;/body/hmtl&quot;</highlight><highlight class="normal">);</highlight></codeline>
+</programlisting></para></sect2>
+<sect2 id="overview_html_1overview_html_quickstart_settingup">
+<title>Setting up wxHtmlWindow</title>
+<para>Because <ref refid="classwx_html_window" kindref="compound">wxHtmlWindow</ref> is derived from <ref refid="group__group__class__miscwnd_1ga695bec5996cd4d5512d1a01cfdcf96a5" kindref="member">wxScrolledWindow</ref> and not from <ref refid="classwx_frame" kindref="compound">wxFrame</ref>, it doesn&apos;t have visible frame. But the user usually wants to see the title of HTML page displayed somewhere and the frame&apos;s titlebar is the ideal place for it.</para><para><ref refid="classwx_html_window" kindref="compound">wxHtmlWindow</ref> provides 2 methods in order to handle this: <ref refid="classwx_html_window_1ab524aecb99227497a569981a2f11f67f" kindref="member">wxHtmlWindow::SetRelatedFrame</ref> and <ref refid="classwx_html_window_1a81b658e84cbaf395eddd2d9c40b00c70" kindref="member">wxHtmlWindow::SetRelatedStatusBar</ref>. See the example:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/>html<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classwx_html_window" kindref="compound" tooltip="wxHtmlWindow is probably the only class you will directly use unless you want to do something special...">wxHtmlWindow</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>html<sp/>-&gt;<sp/>SetRelatedFrame(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;HTML<sp/>:<sp/>%%s&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>html<sp/>-&gt;<sp/>SetRelatedStatusBar(0);</highlight></codeline>
+</programlisting></para><para>The first command associates the HTML object with its parent frame (this points to <ref refid="classwx_frame" kindref="compound">wxFrame</ref> object there) and sets the format of the title. Page title &quot;Hello, world!&quot; will be displayed as &quot;HTML : Hello, world!&quot; in this example.</para><para>The second command sets which frame&apos;s status bar should be used to display browser&apos;s messages (such as &quot;Loading...&quot; or &quot;Done&quot; or hypertext links).</para></sect2>
+<sect2 id="overview_html_1overview_html_quickstart_custom">
+<title>Customizing wxHtmlWindow</title>
+<para>You can customize <ref refid="classwx_html_window" kindref="compound">wxHtmlWindow</ref> by setting font size, font face and borders (space between border of window and displayed HTML). Related functions:</para><para><itemizedlist>
+<listitem><para><ref refid="classwx_html_window_1a31b77979403242da3ccd40bea9b29b87" kindref="member">wxHtmlWindow::SetFonts</ref> </para></listitem>
+<listitem><para><ref refid="classwx_html_window_1a3e2350cbf8bc74ba8451ab3f953046dc" kindref="member">wxHtmlWindow::SetBorders</ref> </para></listitem>
+<listitem><para><ref refid="classwx_html_window_1a22f8b0b78251259c01ce5e8f17294fd4" kindref="member">wxHtmlWindow::ReadCustomization</ref> </para></listitem>
+<listitem><para><ref refid="classwx_html_window_1a46bb9859128a69e2d943a248c7bd41bd" kindref="member">wxHtmlWindow::WriteCustomization</ref></para></listitem>
+</itemizedlist>
+The last two functions are used to store user customization info wxConfig stuff (for example in the registry under Windows, or in a dotfile under Unix).</para></sect2>
+</sect1>
+<sect1 id="overview_html_1overview_html_printing">
+<title>HTML Printing</title>
+<para>The wxHTML library provides printing facilities with several levels of complexity. The easiest way to print an HTML document is to use the <ref refid="classwx_html_easy_printing" kindref="compound">wxHtmlEasyPrinting</ref> class.</para><para>It lets you print HTML documents with only one command and you don&apos;t have to worry about deriving from the <ref refid="classwx_printout" kindref="compound">wxPrintout</ref> class at all. It is only a simple wrapper around the <ref refid="classwx_html_printout" kindref="compound">wxHtmlPrintout</ref>, normal wxWidgets printout class.</para><para>And finally there is the low level class <ref refid="classwx_html_d_c_renderer" kindref="compound">wxHtmlDCRenderer</ref> which you can use to render HTML into a rectangular area on any DC.</para><para>It supports rendering into multiple rectangles with the same width. (The most common use of this is placing one rectangle on each page or printing into two columns.)</para></sect1>
+<sect1 id="overview_html_1overview_html_helpformats">
+<title>Help Files Format</title>
+<para>wxHTML library can be used to show an help manual to the user; in fact, it supports natively (through <ref refid="classwx_html_help_controller" kindref="compound">wxHtmlHelpController</ref>) a reduced version of MS HTML Workshop format.</para><para>A <bold>book</bold> consists of three files: the header file, the contents file and the index file.</para><para>You can make a regular zip archive of these files, plus the HTML and any image files, for wxHTML (or helpview) to read; and the <computeroutput>&quot;.zip&quot;</computeroutput> file can optionally be renamed to <computeroutput>&quot;.htb&quot;</computeroutput>.</para><sect2 id="overview_html_1overview_html_helpformats_hhp">
+<title>Header file (.hhp)</title>
+<para>The header file must contain these lines (and may contain additional lines which are ignored):</para><para><programlisting><codeline><highlight class="normal">Contents<sp/>file=filename.hhc</highlight></codeline>
+<codeline><highlight class="normal">Index<sp/>file=filename.hhk</highlight></codeline>
+<codeline><highlight class="normal">Title=title<sp/>of<sp/>your<sp/>book</highlight></codeline>
+<codeline><highlight class="normal">Default<sp/>topic=</highlight><highlight class="keywordflow">default</highlight><highlight class="normal"><sp/>page<sp/>to<sp/>be<sp/>displayed.htm</highlight></codeline>
+</programlisting></para><para>All filenames (including the Default topic) are relative to the location of the <computeroutput>&quot;.hhp&quot;</computeroutput> file.</para><para><simplesect kind="note"><para>For localization, in addition the <computeroutput>&quot;.hhp&quot;</computeroutput> file may contain the line <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Charset=rfc_charset</highlight></codeline>
+</programlisting> which specifies what charset (e.g. &quot;iso8859_1&quot;) was used in contents and index files. Please note that this line is incompatible with MS HTML Help Workshop and it would either silently remove it or complain with some error. See also <ref refid="overview_nonenglish" kindref="compound">Writing Non-English Applications</ref>.</para></simplesect>
+</para></sect2>
+<sect2 id="overview_html_1overview_html_helpformats_hhc">
+<title>Contents file (.hhc)</title>
+<para>Contents file has HTML syntax and it can be parsed by regular HTML parser. It contains exactly one list (<computeroutput>&lt;ul&gt;</computeroutput>....<computeroutput>&lt;/ul&gt;</computeroutput> statement):</para><para><programlisting><codeline><highlight class="normal">&lt;ul&gt;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">&lt;li&gt;&lt;</highlight><highlight class="keywordtype">object</highlight><highlight class="normal"><sp/>type=</highlight><highlight class="stringliteral">&quot;text/sitemap&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;param<sp/>name=</highlight><highlight class="stringliteral">&quot;Name&quot;</highlight><highlight class="normal"><sp/>value=</highlight><highlight class="stringliteral">&quot;@topic<sp/>name@&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;param<sp/>name=</highlight><highlight class="stringliteral">&quot;ID&quot;</highlight><highlight class="normal"><sp/>value=@numeric_id@&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;param<sp/>name=</highlight><highlight class="stringliteral">&quot;Local&quot;</highlight><highlight class="normal"><sp/>value=</highlight><highlight class="stringliteral">&quot;@filename.htm@&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/</highlight><highlight class="keywordtype">object</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline><highlight class="normal">&lt;li&gt;&lt;</highlight><highlight class="keywordtype">object</highlight><highlight class="normal"><sp/>type=</highlight><highlight class="stringliteral">&quot;text/sitemap&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;param<sp/>name=</highlight><highlight class="stringliteral">&quot;Name&quot;</highlight><highlight class="normal"><sp/>value=</highlight><highlight class="stringliteral">&quot;@topic<sp/>name@&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;param<sp/>name=</highlight><highlight class="stringliteral">&quot;ID&quot;</highlight><highlight class="normal"><sp/>value=@numeric_id@&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;param<sp/>name=</highlight><highlight class="stringliteral">&quot;Local&quot;</highlight><highlight class="normal"><sp/>value=</highlight><highlight class="stringliteral">&quot;@filename.htm@&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/</highlight><highlight class="keywordtype">object</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline><highlight class="normal">...</highlight></codeline>
+<codeline><highlight class="normal">&lt;/ul&gt;</highlight></codeline>
+</programlisting></para><para>You can modify value attributes of param tags. The <emphasis>topic name</emphasis> is name of chapter/topic as is displayed in contents, <emphasis>filename.htm</emphasis> is the HTML page name (relative to the <computeroutput>&quot;.hhp&quot;</computeroutput> file) and <emphasis>numeric_id</emphasis> is optional - it is used only when you use <ref refid="classwx_html_help_controller_1a13918b23f9de9c34b161272af8c5bee7" kindref="member">wxHtmlHelpController::Display(int)</ref>.</para><para>Items in the list may be nested - one <computeroutput>&lt;li&gt;</computeroutput> statement may contain a <computeroutput>&lt;ul&gt;</computeroutput> sub-statement:</para><para><programlisting><codeline><highlight class="normal">&lt;ul&gt;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">&lt;li&gt;&lt;</highlight><highlight class="keywordtype">object</highlight><highlight class="normal"><sp/>type=</highlight><highlight class="stringliteral">&quot;text/sitemap&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;param<sp/>name=</highlight><highlight class="stringliteral">&quot;Name&quot;</highlight><highlight class="normal"><sp/>value=</highlight><highlight class="stringliteral">&quot;Top<sp/>node&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;param<sp/>name=</highlight><highlight class="stringliteral">&quot;Local&quot;</highlight><highlight class="normal"><sp/>value=</highlight><highlight class="stringliteral">&quot;top.htm&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;/</highlight><highlight class="keywordtype">object</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;ul&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;li&gt;&lt;</highlight><highlight class="keywordtype">object</highlight><highlight class="normal"><sp/>type=</highlight><highlight class="stringliteral">&quot;text/sitemap&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;param<sp/>name=</highlight><highlight class="stringliteral">&quot;Name&quot;</highlight><highlight class="normal"><sp/>value=</highlight><highlight class="stringliteral">&quot;subnode<sp/>in<sp/>topnode&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;param<sp/>name=</highlight><highlight class="stringliteral">&quot;Local&quot;</highlight><highlight class="normal"><sp/>value=</highlight><highlight class="stringliteral">&quot;subnode1.htm&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/</highlight><highlight class="keywordtype">object</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;/ul&gt;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">&lt;li&gt;&lt;</highlight><highlight class="keywordtype">object</highlight><highlight class="normal"><sp/>type=</highlight><highlight class="stringliteral">&quot;text/sitemap&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;param<sp/>name=</highlight><highlight class="stringliteral">&quot;Name&quot;</highlight><highlight class="normal"><sp/>value=</highlight><highlight class="stringliteral">&quot;Another<sp/>Top&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;param<sp/>name=</highlight><highlight class="stringliteral">&quot;Local&quot;</highlight><highlight class="normal"><sp/>value=</highlight><highlight class="stringliteral">&quot;top2.htm&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;/</highlight><highlight class="keywordtype">object</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline><highlight class="normal">...</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">&lt;/ul&gt;</highlight></codeline>
+</programlisting></para></sect2>
+<sect2 id="overview_html_1overview_html_helpformats_hhk">
+<title>Index file (.hhk)</title>
+<para>Index files have same format as contents files except that ID params are ignored and sublists are <bold>not</bold> allowed.</para></sect2>
+</sect1>
+<sect1 id="overview_html_1overview_html_filters">
+<title>Input Filters</title>
+<para>The wxHTML library provides a mechanism for reading and displaying files of many different file formats.</para><para><ref refid="classwx_html_window_1ab7086e665bb533a34dc11ab29465db09" kindref="member">wxHtmlWindow::LoadPage</ref> can load not only HTML files but any known file. To make a file type known to <ref refid="classwx_html_window" kindref="compound">wxHtmlWindow</ref> you must create a <ref refid="classwx_html_filter" kindref="compound">wxHtmlFilter</ref> filter and register it using <ref refid="classwx_html_window_1a7d4293c4d2f03fd8d6252c62573b0529" kindref="member">wxHtmlWindow::AddFilter</ref>.</para></sect1>
+<sect1 id="overview_html_1overview_html_cells">
+<title>Cells and Containers</title>
+<para>This article describes mechanism used by <ref refid="classwx_html_win_parser" kindref="compound">wxHtmlWinParser</ref> and <ref refid="classwx_html_window" kindref="compound">wxHtmlWindow</ref> to parse and display HTML documents.</para><sect2 id="overview_html_1overview_html_cells_cells">
+<title>Cells</title>
+<para>You can divide any text (or HTML) into small fragments. Let&apos;s call these fragments <bold>cells</bold>. Cell is for example one word, horizontal line, image or any other part of document. Each cell has width and height (except special &quot;magic&quot; cells with zero dimensions - e.g. colour changers or font changers). See <ref refid="classwx_html_cell" kindref="compound">wxHtmlCell</ref>.</para></sect2>
+<sect2 id="overview_html_1overview_html_cells_containers">
+<title>Containers</title>
+<para>Container is kind of cell that may contain sub-cells. Its size depends on number and sizes of its sub-cells (and also depends on width of window). See <ref refid="classwx_html_container_cell" kindref="compound">wxHtmlContainerCell</ref>, <ref refid="classwx_html_cell_1ada68b93b129fafc7b251580408b67fd6" kindref="member">wxHtmlCell::Layout</ref>. This image shows the cells and containers:</para><para><image type="html" name="overview_html_contbox.png"></image>
+</para></sect2>
+<sect2 id="overview_html_1overview_html_cells_conttaghandler">
+<title>Using Containers in Tag Handler</title>
+<para><ref refid="classwx_html_win_parser" kindref="compound">wxHtmlWinParser</ref> provides a user-friendly way of managing containers. It is based on the idea of opening and closing containers.</para><para>Use <ref refid="classwx_html_win_parser_1a893a9b0a622a76275a8fdd8227bfa7de" kindref="member">wxHtmlWinParser::OpenContainer</ref> to open new a container <emphasis>within</emphasis> an already opened container. This new container is a <emphasis>sub-container</emphasis> of the old one. (If you want to create a new container with the same depth level you can call <computeroutput>CloseContainer()</computeroutput>; OpenContainer();.)</para><para>Use <ref refid="classwx_html_win_parser_1aad9104fa431ab3573fd55cf8ddef4f60" kindref="member">wxHtmlWinParser::CloseContainer</ref> to close the container. This doesn&apos;t create a new container with same depth level but it returns &quot;control&quot; to the parent container. See explanation:</para><para><image type="html" name="overview_html_cont.png"></image>
+</para><para>There clearly must be same number of calls to OpenContainer as to CloseContainer.</para><sect3 id="overview_html_1overview_html_cells_conttaghandler_example">
+<title>Example</title>
+<para>This code creates a new paragraph (container at same depth level) with &quot;Hello, world!&quot;:</para><para><programlisting><codeline><highlight class="normal">m_WParser<sp/>-&gt;<sp/>CloseContainer();</highlight></codeline>
+<codeline><highlight class="normal">c<sp/>=<sp/>m_WParser<sp/>-&gt;<sp/>OpenContainer();</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">m_WParser<sp/>-&gt;<sp/>AddText(</highlight><highlight class="stringliteral">&quot;Hello,<sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal">m_WParser<sp/>-&gt;<sp/>AddText(</highlight><highlight class="stringliteral">&quot;world!&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">m_WParser<sp/>-&gt;<sp/>CloseContainer();</highlight></codeline>
+<codeline><highlight class="normal">m_WParser<sp/>-&gt;<sp/>OpenContainer();</highlight></codeline>
+</programlisting></para><para>and here is image of the situation:</para><para><image type="html" name="overview_html_hello.png"></image>
+</para><para>You can see that there was an opened container before the code was executed. We closed it, created our own container, then closed our container and opened new container.</para><para>The result was that we had <emphasis>same</emphasis> depth level after executing. This is general rule that should be followed by tag handlers: leave depth level of containers unmodified (in other words, number of OpenContainer and CloseContainer calls should be same within <ref refid="classwx_html_tag_handler_1a9b619fe66c49e8756f8ff5db04c5e69e" kindref="member">wxHtmlTagHandler::HandleTag</ref>&apos;s body).</para><para>Notice that it would be usually better to use <ref refid="classwx_html_container_cell_1a84c159f60c4bd8f82622647428720667" kindref="member">wxHtmlContainerCell::InsertCell</ref> instead of adding text to the parser directly.</para></sect3>
+</sect2>
+</sect1>
+<sect1 id="overview_html_1overview_html_handlers">
+<title>Tag Handlers</title>
+<para>The wxHTML library provides architecture of pluggable <emphasis>tag</emphasis> handlers. Tag handler is class that understands particular HTML tag (or tags) and is able to interpret it.</para><para><ref refid="classwx_html_win_parser" kindref="compound">wxHtmlWinParser</ref> has a static table of <bold>modules</bold>. Each module contains one or more tag handlers. Each time a new <ref refid="classwx_html_win_parser" kindref="compound">wxHtmlWinParser</ref> object is constructed all modules are scanned and handlers are added to wxHtmlParser&apos;s list of available handlers (note: wxHtmlParser&apos;s list is non-static).</para><sect2 id="overview_html_1overview_html_handlers_howworks">
+<title>How it works</title>
+<para>Common tag handler&apos;s <ref refid="classwx_html_tag_handler_1a9b619fe66c49e8756f8ff5db04c5e69e" kindref="member">wxHtmlTagHandler::HandleTag</ref> method works in four steps:</para><para><itemizedlist>
+<listitem><para>Save state of parent parser into local variables </para></listitem>
+<listitem><para>Change parser state according to tag&apos;s params </para></listitem>
+<listitem><para>Parse text between the tag and paired ending tag (if present) </para></listitem>
+<listitem><para>Restore original parser state</para></listitem>
+</itemizedlist>
+See <ref refid="classwx_html_win_parser" kindref="compound">wxHtmlWinParser</ref> for methods for modifying parser&apos;s state. In general you can do things like opening/closing containers, changing colors, fonts etc.</para></sect2>
+<sect2 id="overview_html_1overview_html_handlers_custom">
+<title>Providing own tag handlers</title>
+<para>You should create a new .cpp file and place the following lines into it:</para><para><programlisting><codeline><highlight class="preprocessor">#include<sp/>&lt;mod_templ.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;forcelink.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">FORCE_LINK_ME(yourmodulefilenamewithoutcpp)</highlight></codeline>
+</programlisting></para><para>Then you must define handlers and one module.</para></sect2>
+<sect2 id="overview_html_1overview_html_handlers_tag">
+<title>Tag handlers</title>
+<para>The handler is derived from <ref refid="classwx_html_win_tag_handler" kindref="compound">wxHtmlWinTagHandler</ref> (or directly from <ref refid="classwx_html_tag_handler" kindref="compound">wxHtmlTagHandler</ref>).</para><para>You can use set of macros to define the handler (see src/html/m_*.cpp files for details). Handler definition must start with <bold>TAG_HANDLER_BEGIN</bold> macro and end with <bold>TAG_HANDLER_END</bold> macro.</para><para>I strongly recommend to have a look at <emphasis>include/wxhtml/mod_templ.h</emphasis> file. Otherwise you won&apos;t understand the structure of macros.</para><para>See macros reference: <itemizedlist>
+<listitem><para><bold>TAG_HANDLER_BEGIN</bold>(<emphasis>name</emphasis>, <emphasis>tags</emphasis>): Starts handler definition. <emphasis>name</emphasis> is handler identifier (in fact part of class name), <emphasis>tags</emphasis> is string containing list of tags supported by this handler (in uppercase). This macro derives new class from <ref refid="classwx_html_win_tag_handler" kindref="compound">wxHtmlWinTagHandler</ref> and implements it is <ref refid="classwx_html_tag_handler_1a4659531bcbb3cbcafea31d31a227f747" kindref="member">wxHtmlTagHandler::GetSupportedTags</ref> method. Example: TAG_HANDLER_BEGIN(FONTS, &quot;B,I,U,T&quot;)</para></listitem>
+</itemizedlist>
+<itemizedlist>
+<listitem><para><bold>TAG_HANDLER_VARS:</bold> This macro starts block of variables definitions. (Variables are identical to class attributes.) Example:</para></listitem>
+</itemizedlist>
+<programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/>TAG_HANDLER_BEGIN(VARS_ONLY,<sp/></highlight><highlight class="stringliteral">&quot;CRAZYTAG&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TAG_HANDLER_VARS</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>my_int_var;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change was actually the m...">wxString</ref><sp/>something_else;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>TAG_HANDLER_END(VARS_ONLY)</highlight></codeline>
+</programlisting></para><para>This macro is used only in rare cases.</para><para><itemizedlist>
+<listitem><para><bold>TAG_HANDLER_CONSTR</bold>(<emphasis>name</emphasis>): This macro supplies object constructor. <emphasis>name</emphasis> is same name as the one from TAG_HANDLER_BEGIN macro. Body of constructor follow after this macro (you must use { and } ). Example:</para></listitem>
+</itemizedlist>
+<programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/>TAG_HANDLER_BEGIN(VARS2,<sp/></highlight><highlight class="stringliteral">&quot;CRAZYTAG&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TAG_HANDLER_VARS</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>my_int_var;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TAG_HANDLER_CONSTR(vars2)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/></highlight><highlight class="comment">//<sp/>!!!!!!</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>my_int_var<sp/>=<sp/>666;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="comment">//<sp/>!!!!!!</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>TAG_HANDLER_END(VARS2)</highlight></codeline>
+</programlisting></para><para>Never used in wxHTML :-)</para><para><itemizedlist>
+<listitem><para><bold>TAG_HANDLER_PROC</bold>(<emphasis>varib</emphasis>): This is very important macro. It defines <ref refid="classwx_html_tag_handler_1a9b619fe66c49e8756f8ff5db04c5e69e" kindref="member">wxHtmlTagHandler::HandleTag</ref> method. <emphasis>varib</emphasis> is name of parameter passed to the method, usually <emphasis>tag</emphasis>. Body of method follows after this macro. Note than you must use { and } ! Example:</para></listitem>
+</itemizedlist>
+<programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/>TAG_HANDLER_BEGIN(TITLE,<sp/></highlight><highlight class="stringliteral">&quot;TITLE&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TAG_HANDLER_PROC(tag)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;TITLE<sp/>found...\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>TAG_HANDLER_END(TITLE)</highlight></codeline>
+</programlisting></para><para><itemizedlist>
+<listitem><para><bold>TAG_HANDLER_END</bold>(<emphasis>name</emphasis>): Ends definition of tag handler <emphasis>name</emphasis>.</para></listitem>
+</itemizedlist>
+</para></sect2>
+<sect2 id="overview_html_1overview_html_handlers_modules">
+<title>Tags Modules</title>
+<para>You can use set of 3 macros TAGS_MODULE_BEGIN, TAGS_MODULE_ADD and TAGS_MODULE_END to inherit new module from <ref refid="classwx_html_tags_module" kindref="compound">wxHtmlTagsModule</ref> and to create instance of it.</para><para>See macros reference:</para><para><itemizedlist>
+<listitem><para><bold>TAGS_MODULE_BEGIN</bold>(<emphasis>modname</emphasis>): Begins module definition. <emphasis>modname</emphasis> is part of class name and must be unique. </para></listitem>
+<listitem><para><bold>TAGS_MODULE_ADD</bold>(<emphasis>name</emphasis>): Adds the handler to this module. <emphasis>name</emphasis> is the identifier from TAG_HANDLER_BEGIN. </para></listitem>
+<listitem><para><bold>TAGS_MODULE_END</bold>(<emphasis>modname</emphasis>): Ends the definition of module. Example:</para></listitem>
+</itemizedlist>
+<programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/>TAGS_MODULE_BEGIN(Examples)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TAGS_MODULE_ADD(VARS_ONLY)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TAGS_MODULE_ADD(VARS2)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TAGS_MODULE_ADD(TITLE)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>TAGS_MODULE_END(Examples)</highlight></codeline>
+</programlisting></para></sect2>
+</sect1>
+<sect1 id="overview_html_1overview_html_supptags">
+<title>Tags supported by wxHTML</title>
+<para>wxHTML is not full implementation of HTML standard. Instead, it supports most common tags so that it is possible to display <emphasis>simple</emphasis> HTML documents with it. (For example it works fine with pages created in Netscape Composer or generated by tex2rtf).</para><para>Following tables list all tags known to wxHTML, together with supported parameters.</para><para>A tag has general form of <computeroutput>tagname</computeroutput> param_1 param_2 ... param_n where param_i is either <computeroutput>paramname=&quot;paramvalue&quot;</computeroutput> or <computeroutput>paramname=paramvalue</computeroutput> - these two are equivalent. Unless stated otherwise, wxHTML is case-insensitive.</para><sect2 id="overview_html_1overview_html_supptags_commonvalues">
+<title>Table of common parameter values</title>
+<para>We will use these substitutions in tags descriptions:</para><para><programlisting><codeline><highlight class="normal">[alignment]<sp/><sp/><sp/><sp/><sp/>CENTER</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LEFT</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RIGHT</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>JUSTIFY</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">[v_alignment]<sp/><sp/><sp/>TOP</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BOTTOM</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CENTER</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">[color]<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>HTML<sp/>4.0-compliant<sp/>colour<sp/>specification</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">[fontsize]<sp/><sp/><sp/><sp/><sp/><sp/>-2</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-1</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+0</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+1</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+2</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+3</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+4</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>2</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>3</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>4</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>5</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>6</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>7</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">[pixels]<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>integer<sp/>value<sp/>that<sp/>represents<sp/>dimension<sp/>in<sp/>pixels</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">[percent]<sp/><sp/><sp/><sp/><sp/><sp/><sp/>i%</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>where<sp/>i<sp/>is<sp/>integer</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">[url]<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>an<sp/>URL</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">[string]<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>text<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">[coords]<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>c(1),c(2),c(3),...,c(n)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>where<sp/>c(i)<sp/>is<sp/>integer</highlight></codeline>
+</programlisting></para></sect2>
+<sect2 id="overview_html_1overview_html_supptags_list">
+<title>List of supported tags</title>
+<para><programlisting><codeline><highlight class="normal">A<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NAME=[string]</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>HREF=[url]</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TARGET=[target<sp/>window<sp/>spec]</highlight></codeline>
+<codeline><highlight class="normal">ADDRESS</highlight></codeline>
+<codeline><highlight class="normal">AREA<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SHAPE=POLY</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SHAPE=CIRCLE</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SHAPE=RECT</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>COORDS=[coords]</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>HREF=[url]</highlight></codeline>
+<codeline><highlight class="normal">B</highlight></codeline>
+<codeline><highlight class="normal">BIG</highlight></codeline>
+<codeline><highlight class="normal">BLOCKQUOTE</highlight></codeline>
+<codeline><highlight class="normal">BODY<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TEXT=[color]</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LINK=[color]</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BGCOLOR=[color]</highlight></codeline>
+<codeline><highlight class="normal">BR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ALIGN=[alignment]</highlight></codeline>
+<codeline><highlight class="normal">CENTER</highlight></codeline>
+<codeline><highlight class="normal">CITE</highlight></codeline>
+<codeline><highlight class="normal">CODE</highlight></codeline>
+<codeline><highlight class="normal">DD</highlight></codeline>
+<codeline><highlight class="normal">DIV<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ALIGN=[alignment]</highlight></codeline>
+<codeline><highlight class="normal">DL</highlight></codeline>
+<codeline><highlight class="normal">DT</highlight></codeline>
+<codeline><highlight class="normal">EM</highlight></codeline>
+<codeline><highlight class="normal">FONT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>COLOR=[color]</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SIZE=[fontsize]</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FACE=[comma-separated<sp/>list<sp/>of<sp/>facenames]</highlight></codeline>
+<codeline><highlight class="normal">HR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ALIGN=[alignment]</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SIZE=[pixels]</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>WIDTH=[percent|pixels]</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NOSHADE</highlight></codeline>
+<codeline><highlight class="normal">H1</highlight></codeline>
+<codeline><highlight class="normal">H2</highlight></codeline>
+<codeline><highlight class="normal">H3</highlight></codeline>
+<codeline><highlight class="normal">H4</highlight></codeline>
+<codeline><highlight class="normal">H5</highlight></codeline>
+<codeline><highlight class="normal">H6</highlight></codeline>
+<codeline><highlight class="normal">I</highlight></codeline>
+<codeline><highlight class="normal">IMG<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SRC=[url]</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>WIDTH=[percent|pixels]</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>HEIGHT=[pixels]</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ALIGN=TEXTTOP</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ALIGN=CENTER</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ALIGN=ABSCENTER</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ALIGN=BOTTOM</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>USEMAP=[url]</highlight></codeline>
+<codeline><highlight class="normal">KBD</highlight></codeline>
+<codeline><highlight class="normal">LI</highlight></codeline>
+<codeline><highlight class="normal">MAP<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NAME=[string]</highlight></codeline>
+<codeline><highlight class="normal">META<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>HTTP-EQUIV=</highlight><highlight class="stringliteral">&quot;Content-Type&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CONTENT=[string]</highlight></codeline>
+<codeline><highlight class="normal">OL</highlight></codeline>
+<codeline><highlight class="normal">P<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ALIGN=[alignment]</highlight></codeline>
+<codeline><highlight class="normal">PRE</highlight></codeline>
+<codeline><highlight class="normal">SAMP</highlight></codeline>
+<codeline><highlight class="normal">SMALL</highlight></codeline>
+<codeline><highlight class="normal">SPAN</highlight></codeline>
+<codeline><highlight class="normal">STRIKE</highlight></codeline>
+<codeline><highlight class="normal">STRONG</highlight></codeline>
+<codeline><highlight class="normal">SUB</highlight></codeline>
+<codeline><highlight class="normal">SUP</highlight></codeline>
+<codeline><highlight class="normal">TABLE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ALIGN=[alignment]</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>WIDTH=[percent|pixels]</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BORDER=[pixels]</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VALIGN=[v_alignment]</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BGCOLOR=[color]</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CELLSPACING=[pixels]</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CELLPADDING=[pixels]</highlight></codeline>
+<codeline><highlight class="normal">TD<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ALIGN=[alignment]</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VALIGN=[v_alignment]</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BGCOLOR=[color]</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>WIDTH=[percent|pixels]</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>COLSPAN=[pixels]</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ROWSPAN=[pixels]</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NOWRAP</highlight></codeline>
+<codeline><highlight class="normal">TH<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ALIGN=[alignment]</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VALIGN=[v_alignment]</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BGCOLOR=[color]</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>WIDTH=[percent|pixels]</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>COLSPAN=[pixels]</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ROWSPAN=[pixels]</highlight></codeline>
+<codeline><highlight class="normal">TITLE</highlight></codeline>
+<codeline><highlight class="normal">TR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ALIGN=[alignment]</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VALIGN=[v_alignment]</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BGCOLOR=[color]</highlight></codeline>
+<codeline><highlight class="normal">TT</highlight></codeline>
+<codeline><highlight class="normal">U</highlight></codeline>
+<codeline><highlight class="normal">UL</highlight></codeline>
+</programlisting></para></sect2>
+<sect2 id="overview_html_1overview_html_suppstyles_list">
+<title>List of supported styles</title>
+<para>wxHTML doesn&apos;t really have CSS support but it does support a few simple styles: you can use <computeroutput>&quot;text-align&quot;</computeroutput>, <computeroutput>&quot;width&quot;</computeroutput>, <computeroutput>&quot;vertical-align&quot;</computeroutput> and <computeroutput>&quot;background&quot;</computeroutput> with all elements and for <computeroutput>SPAN</computeroutput> elements a few other styles are additionally recognized:<itemizedlist>
+<listitem><para><computeroutput>color</computeroutput> </para></listitem><listitem><para><computeroutput>font-family</computeroutput> </para></listitem><listitem><para><computeroutput>font-size</computeroutput> (only in point units)</para></listitem><listitem><para><computeroutput>font-style</computeroutput> (only &quot;oblique&quot;, &quot;italic&quot; and &quot;normal&quot; values are supported)</para></listitem><listitem><para><computeroutput>font-weight</computeroutput> (only &quot;bold&quot; and &quot;normal&quot; values are supported)</para></listitem><listitem><para><computeroutput>text-decoration</computeroutput> (only &quot;underline&quot; value is supported) </para></listitem></itemizedlist>
+</para></sect2>
+</sect1>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

@@ -1,12 +1,11 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="interface_2wx_2string_8h" kind="file">
     <compoundname>string.h</compoundname>
     <innerclass refid="classwx_string" prot="public">wxString</innerclass>
     <innerclass refid="classwx_string_buffer_length" prot="public">wxStringBufferLength</innerclass>
     <innerclass refid="classwx_string_buffer" prot="public">wxStringBuffer</innerclass>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="interface_2wx_2string_8h_1adb9de78b97ce2369da971e3d1604a899" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
         <definition>bool operator==</definition>
@@ -387,7 +386,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="interface_2wx_2string_8h_1ad6e045ae55e256fdf1d0afe003fb1e11" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
         <definition>bool operator==</definition>

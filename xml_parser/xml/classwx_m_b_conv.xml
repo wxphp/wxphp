@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_m_b_conv" kind="class" prot="public">
     <compoundname>wxMBConv</compoundname>
     <derivedcompoundref refid="classwx_conv_auto" prot="public" virt="non-virtual">wxConvAuto</derivedcompoundref>
@@ -11,7 +11,6 @@
     <derivedcompoundref refid="classwx_m_b_conv_u_t_f8" prot="public" virt="non-virtual">wxMBConvUTF8</derivedcompoundref>
     <includes local="no">wx/strconv.h</includes>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_m_b_conv_1a62b723fea6758812e786a3ec5797f8ba" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const char *</type>
         <definition>const char* wxMBConv::cMB2WX</definition>
@@ -48,7 +47,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_m_b_conv_1a9bcb820aebfdd3d3e50a929b01c52f8d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const wchar_t *</type>
         <definition>const wchar_t* wxMBConv::cWC2WX</definition>
@@ -85,7 +83,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_m_b_conv_1a15f4266aa96806bb5eebc9b1c4eaff05" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const char *</type>
         <definition>const char* wxMBConv::cWX2MB</definition>
@@ -122,7 +119,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_m_b_conv_1ae08f0764f8acb6b075846c8bf126f57b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const wchar_t *</type>
         <definition>const wchar_t* wxMBConv::cWX2WC</definition>
@@ -432,7 +428,7 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000053"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This function is deprecated, please use <ref refid="classwx_m_b_conv_1a22ad1976c06a540a95dfa878038d65f2" kindref="member">ToWChar()</ref> instead.</para></xrefdescription></xrefsect>Converts from a string <emphasis>in</emphasis> multibyte encoding to Unicode putting up to <emphasis>outLen</emphasis> characters into the buffer <emphasis>out</emphasis>.</para><para>If <emphasis>out</emphasis> is NULL, only the length of the string which would result from the conversion is calculated and returned. Note that this is the length and not size, i.e. the returned value does not include the trailing <computeroutput>NUL</computeroutput>. But when the function is called with a non-NULL <emphasis>out</emphasis> buffer, the <emphasis>outLen</emphasis> parameter should be one more to allow to properly <computeroutput>NUL-terminate</computeroutput> the string.</para><para>So to properly use this function you need to write: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>lenConv<sp/>=<sp/>conv.MB2WC(NULL,<sp/>in,<sp/>0);</highlight></codeline>
+<para><xrefsect id="deprecated_1_deprecated000053"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This function is deprecated, please use <ref refid="classwx_m_b_conv_1a22ad1976c06a540a95dfa878038d65f2" kindref="member">ToWChar()</ref> instead.</para></xrefdescription></xrefsect></para><para>Converts from a string <emphasis>in</emphasis> multibyte encoding to Unicode putting up to <emphasis>outLen</emphasis> characters into the buffer <emphasis>out</emphasis>.</para><para>If <emphasis>out</emphasis> is NULL, only the length of the string which would result from the conversion is calculated and returned. Note that this is the length and not size, i.e. the returned value does not include the trailing <computeroutput>NUL</computeroutput>. But when the function is called with a non-NULL <emphasis>out</emphasis> buffer, the <emphasis>outLen</emphasis> parameter should be one more to allow to properly <computeroutput>NUL-terminate</computeroutput> the string.</para><para>So to properly use this function you need to write: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>lenConv<sp/>=<sp/>conv.MB2WC(NULL,<sp/>in,<sp/>0);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>lenConv<sp/>==<sp/>wxCONV_FAILED<sp/>)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...<sp/>handle<sp/>error<sp/>...</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>allocate<sp/>1<sp/>more<sp/>character<sp/>for<sp/>the<sp/>trailing<sp/>NUL<sp/>and<sp/>also<sp/>pass</highlight><highlight class="normal"></highlight></codeline>
@@ -488,7 +484,7 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000054"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This function is deprecated, please use <ref refid="classwx_m_b_conv_1a149c15b515e008fdd1f69a852f11594e" kindref="member">FromWChar()</ref> instead.</para></xrefdescription></xrefsect>Converts from Unicode to multibyte encoding. The semantics of this function (including the return value meaning) is the same as for <ref refid="classwx_m_b_conv_1a79d63eff51836148157c986943835742" kindref="member">wxMBConv::MB2WC</ref>. Notice that when the function is called with a non-NULL buffer, the <emphasis>n</emphasis> parameter should be the size of the buffer and so it should take into account the trailing <computeroutput>NUL</computeroutput>, which might take two or four bytes for some encodings (UTF-16 and UTF-32) and not one, i.e. <ref refid="classwx_m_b_conv_1a2d6590cbcc686be76a9c4f1c071ff99f" kindref="member">GetMBNulLen()</ref>. </para>        </detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000054"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This function is deprecated, please use <ref refid="classwx_m_b_conv_1a149c15b515e008fdd1f69a852f11594e" kindref="member">FromWChar()</ref> instead.</para></xrefdescription></xrefsect></para><para>Converts from Unicode to multibyte encoding. The semantics of this function (including the return value meaning) is the same as for <ref refid="classwx_m_b_conv_1a79d63eff51836148157c986943835742" kindref="member">wxMBConv::MB2WC</ref>. Notice that when the function is called with a non-NULL buffer, the <emphasis>n</emphasis> parameter should be the size of the buffer and so it should take into account the trailing <computeroutput>NUL</computeroutput>, which might take two or four bytes for some encodings (UTF-16 and UTF-32) and not one, i.e. <ref refid="classwx_m_b_conv_1a2d6590cbcc686be76a9c4f1c071ff99f" kindref="member">GetMBNulLen()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/strconv.h" line="328"/>
@@ -513,52 +509,52 @@
 <para>This class is the base class of a hierarchy of classes capable of converting text strings between multibyte (SBCS or DBCS) encodings and Unicode. </para>    </briefdescription>
     <detaileddescription>
 <para>This is an abstract base class which defines the operations implemented by all different conversion classes. The derived classes don&apos;t add any new operations of their own (except, possibly, some non-default constructors) and so you should simply use this class <ref refid="classwx_m_b_conv_1a22ad1976c06a540a95dfa878038d65f2" kindref="member">ToWChar()</ref> and <ref refid="classwx_m_b_conv_1a149c15b515e008fdd1f69a852f11594e" kindref="member">FromWChar()</ref> (or <ref refid="classwx_m_b_conv_1a0e572efeda6c5c73ddff1292609fa211" kindref="member">cMB2WC()</ref> and <ref refid="classwx_m_b_conv_1a496c808fc769800659e5de1a74115a54" kindref="member">cWC2MB()</ref>) methods with the objects of the derived class.</para><para>In the documentation for this and related classes please notice that length of the string refers to the number of characters in the string not counting the terminating <computeroutput>NUL</computeroutput>, if any. While the size of the string is the total number of bytes in the string, including any trailing <computeroutput>NUL</computeroutput>. Thus, length of wide character string <computeroutput>L&quot;foo&quot;</computeroutput> is 3 while its size can be either 8 or 16 depending on whether <computeroutput>wchar_t</computeroutput> is 2 bytes (as under Windows) or 4 (Unix).</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__conv" kindref="compound">Text Conversion</ref></para><para><simplesect kind="see"><para><ref refid="classwx_c_s_conv" kindref="compound">wxCSConv</ref>, <ref refid="classwx_encoding_converter" kindref="compound">wxEncodingConverter</ref>, <ref refid="overview__mbconv" kindref="compound">wxMBConv Overview</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__conv" kindref="compound">Text Conversion</ref></para><para><simplesect kind="see"><para><ref refid="classwx_c_s_conv" kindref="compound">wxCSConv</ref>, <ref refid="classwx_encoding_converter" kindref="compound">wxEncodingConverter</ref>, <ref refid="overview_mbconv" kindref="compound">wxMBConv Overview</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7571">
+      <node id="7577">
         <label>wxMBConvUTF7</label>
         <link refid="classwx_m_b_conv_u_t_f7"/>
-        <childnode refid="7565" relation="public-inheritance">
+        <childnode refid="7571" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7578">
+        <label>wxMBConvUTF8</label>
+        <link refid="classwx_m_b_conv_u_t_f8"/>
+        <childnode refid="7571" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7574">
+        <label>wxMBConvFile</label>
+        <link refid="classwx_m_b_conv_file"/>
+        <childnode refid="7571" relation="public-inheritance">
         </childnode>
       </node>
       <node id="7572">
-        <label>wxMBConvUTF8</label>
-        <link refid="classwx_m_b_conv_u_t_f8"/>
-        <childnode refid="7565" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="7568">
-        <label>wxMBConvFile</label>
-        <link refid="classwx_m_b_conv_file"/>
-        <childnode refid="7565" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="7566">
         <label>wxConvAuto</label>
         <link refid="classwx_conv_auto"/>
-        <childnode refid="7565" relation="public-inheritance">
+        <childnode refid="7571" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7570">
+      <node id="7576">
         <label>wxMBConvUTF32</label>
         <link refid="classwx_m_b_conv_u_t_f32"/>
-        <childnode refid="7565" relation="public-inheritance">
+        <childnode refid="7571" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7569">
+      <node id="7575">
         <label>wxMBConvUTF16</label>
         <link refid="classwx_m_b_conv_u_t_f16"/>
-        <childnode refid="7565" relation="public-inheritance">
+        <childnode refid="7571" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7567">
+      <node id="7573">
         <label>wxCSConv</label>
         <link refid="classwx_c_s_conv"/>
-        <childnode refid="7565" relation="public-inheritance">
+        <childnode refid="7571" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7565">
+      <node id="7571">
         <label>wxMBConv</label>
         <link refid="classwx_m_b_conv"/>
       </node>

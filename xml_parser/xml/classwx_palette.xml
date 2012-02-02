@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_palette" kind="class" prot="public">
     <compoundname>wxPalette</compoundname>
     <basecompoundref refid="classwx_g_d_i_object" prot="public" virt="non-virtual">wxGDIObject</basecompoundref>
@@ -28,7 +28,7 @@
           <declname>palette</declname>
         </param>
         <briefdescription>
-<para>Copy constructor, uses <ref refid="overview__refcount" kindref="compound">Reference Counting</ref>. </para>        </briefdescription>
+<para>Copy constructor, uses <ref refid="overview_refcount" kindref="compound">Reference Counting</ref>. </para>        </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -110,7 +110,7 @@
         <briefdescription>
 <para>Destructor. </para>        </briefdescription>
         <detaileddescription>
-<para><simplesect kind="see"><para><ref refid="overview__refcount_1overview_refcount_destruct" kindref="member">reference-counted object destruction</ref> </para></simplesect>
+<para><simplesect kind="see"><para><ref refid="overview_refcount_1overview_refcount_destruct" kindref="member">reference-counted object destruction</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -321,7 +321,7 @@
           <declname>palette</declname>
         </param>
         <briefdescription>
-<para>Assignment operator, using <ref refid="overview__refcount" kindref="compound">Reference Counting</ref>. </para>        </briefdescription>
+<para>Assignment operator, using <ref refid="overview_refcount" kindref="compound">Reference Counting</ref>. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -333,47 +333,47 @@
 <para>A palette is a table that maps pixel values to RGB colours. </para>    </briefdescription>
     <detaileddescription>
 <para>It allows the colours of a low-depth bitmap, for example, to be mapped to the available colours in a display. The notion of palettes is becoming more and more obsolete nowadays and only the MSW port is still using a native palette. All other ports use generic code which is basically just an array of colours.</para><para>It is likely that in the future the only use for palettes within wxWidgets will be for representing colour indeces from images (such as GIF or PNG). The image handlers for these formats have been modified to create a palette if there is such information in the original image file (usually 256 or less colour images). See <ref refid="classwx_image" kindref="compound">wxImage</ref> for more information.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__gdi" kindref="compound">Graphics Device Interface (GDI)</ref></para><para>Predefined objects/pointers: <ref refid="palette_8h_1a2ecbe58191b89a50dd5dd0643e29f708" kindref="member">wxNullPalette</ref></para><para><simplesect kind="see"><para><ref refid="classwx_d_c_1afc58b0f4653159e713377d38c84a120f" kindref="member">wxDC::SetPalette()</ref>, <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__gdi" kindref="compound">Graphics Device Interface (GDI)</ref></para><para>Predefined objects/pointers: <ref refid="palette_8h_1a2ecbe58191b89a50dd5dd0643e29f708" kindref="member">wxNullPalette</ref></para><para><simplesect kind="see"><para><ref refid="classwx_d_c_1afc58b0f4653159e713377d38c84a120f" kindref="member">wxDC::SetPalette()</ref>, <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="8529">
+      <node id="8537">
         <label>wxPalette</label>
         <link refid="classwx_palette"/>
-        <childnode refid="8530" relation="public-inheritance">
+        <childnode refid="8538" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8531">
+      <node id="8539">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="8530">
+      <node id="8538">
         <label>wxGDIObject</label>
         <link refid="classwx_g_d_i_object"/>
-        <childnode refid="8531" relation="public-inheritance">
+        <childnode refid="8539" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="8532">
+      <node id="8540">
         <label>wxPalette</label>
         <link refid="classwx_palette"/>
-        <childnode refid="8533" relation="public-inheritance">
+        <childnode refid="8541" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8534">
+      <node id="8542">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="8535" relation="usage">
+        <childnode refid="8543" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="8533">
+      <node id="8541">
         <label>wxGDIObject</label>
         <link refid="classwx_g_d_i_object"/>
-        <childnode refid="8534" relation="public-inheritance">
+        <childnode refid="8542" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8535">
+      <node id="8543">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

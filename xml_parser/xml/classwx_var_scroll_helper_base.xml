@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_var_scroll_helper_base" kind="class" prot="public">
     <compoundname>wxVarScrollHelperBase</compoundname>
     <derivedcompoundref refid="classwx_var_h_scroll_helper" prot="public" virt="non-virtual">wxVarHScrollHelper</derivedcompoundref>
@@ -310,73 +310,73 @@
 <para>This class provides all common base functionality for scroll calculations shared among all variable scrolled window implementations as well as automatic scrollbar functionality, saved scroll positions, controlling target windows to be scrolled, as well as defining all required virtual functions that need to be implemented for any orientation specific work. </para>    </briefdescription>
     <detaileddescription>
 <para>Documentation of this class is provided specifically for referencing use of the functions provided by this class for use with the variable scrolled windows that derive from here. You will likely want to derive your window from one of the already implemented variable scrolled windows rather than from <ref refid="classwx_var_scroll_helper_base" kindref="compound">wxVarScrollHelperBase</ref> directly.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__miscwnd" kindref="compound">Miscellaneous Windows</ref></para><para><simplesect kind="see"><para><ref refid="classwx_h_scrolled_window" kindref="compound">wxHScrolledWindow</ref>, <ref refid="classwx_h_v_scrolled_window" kindref="compound">wxHVScrolledWindow</ref>, <ref refid="classwx_v_scrolled_window" kindref="compound">wxVScrolledWindow</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__miscwnd" kindref="compound">Miscellaneous Windows</ref></para><para><simplesect kind="see"><para><ref refid="classwx_h_scrolled_window" kindref="compound">wxHScrolledWindow</ref>, <ref refid="classwx_h_v_scrolled_window" kindref="compound">wxHVScrolledWindow</ref>, <ref refid="classwx_v_scrolled_window" kindref="compound">wxVScrolledWindow</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="11264">
+      <node id="11325">
         <label>wxHScrolledWindow</label>
         <link refid="classwx_h_scrolled_window"/>
-        <childnode refid="11263" relation="public-inheritance">
+        <childnode refid="11324" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11262">
+      <node id="11323">
         <label>wxVarScrollHelperBase</label>
         <link refid="classwx_var_scroll_helper_base"/>
       </node>
-      <node id="11265">
+      <node id="11326">
         <label>wxVarHVScrollHelper</label>
         <link refid="classwx_var_h_v_scroll_helper"/>
-        <childnode refid="11263" relation="public-inheritance">
+        <childnode refid="11324" relation="public-inheritance">
         </childnode>
-        <childnode refid="11267" relation="public-inheritance">
+        <childnode refid="11328" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11269">
+      <node id="11330">
         <label>wxVListBox</label>
         <link refid="classwx_v_list_box"/>
-        <childnode refid="11268" relation="public-inheritance">
+        <childnode refid="11329" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11272">
+      <node id="11333">
         <label>wxSimpleHtmlListBox</label>
         <link refid="classwx_simple_html_list_box"/>
-        <childnode refid="11270" relation="public-inheritance">
+        <childnode refid="11331" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11268">
+      <node id="11329">
         <label>wxVScrolledWindow</label>
         <link refid="classwx_v_scrolled_window"/>
-        <childnode refid="11267" relation="public-inheritance">
+        <childnode refid="11328" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11271">
+      <node id="11332">
         <label>wxRichTextStyleListBox</label>
         <link refid="classwx_rich_text_style_list_box"/>
-        <childnode refid="11270" relation="public-inheritance">
+        <childnode refid="11331" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11270">
+      <node id="11331">
         <label>wxHtmlListBox</label>
         <link refid="classwx_html_list_box"/>
-        <childnode refid="11269" relation="public-inheritance">
+        <childnode refid="11330" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11266">
+      <node id="11327">
         <label>wxHVScrolledWindow</label>
         <link refid="classwx_h_v_scrolled_window"/>
-        <childnode refid="11265" relation="public-inheritance">
+        <childnode refid="11326" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11263">
+      <node id="11324">
         <label>wxVarHScrollHelper</label>
         <link refid="classwx_var_h_scroll_helper"/>
-        <childnode refid="11262" relation="public-inheritance">
+        <childnode refid="11323" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11267">
+      <node id="11328">
         <label>wxVarVScrollHelper</label>
         <link refid="classwx_var_v_scroll_helper"/>
-        <childnode refid="11262" relation="public-inheritance">
+        <childnode refid="11323" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>

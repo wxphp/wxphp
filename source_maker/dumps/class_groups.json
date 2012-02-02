@@ -516,6 +516,7 @@
 		"wxLogBuffer",
 		"wxLogInterposer",
 		"wxLogTextCtrl",
+		"wxLogFormatter",
 		"wxLog",
 		"wxLogNull",
 		"wxStreamToTextRedirector"
@@ -663,6 +664,7 @@
 		"wxRichTextFontTable",
 		"wxRichTextRange",
 		"wxRichTextSelection",
+		"wxRichTextDrawingContext",
 		"wxRichTextObject",
 		"wxRichTextCompositeObject",
 		"wxRichTextParagraphBox",
@@ -678,6 +680,7 @@
 		"wxRichTextAction",
 		"wxRichTextFileHandler",
 		"wxRichTextPlainTextHandler",
+		"wxRichTextDrawingHandler",
 		"wxRichTextRenderer",
 		"wxRichTextStdRenderer",
 		"wxRichTextCtrl",

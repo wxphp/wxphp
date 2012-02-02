@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_d_c" kind="class" prot="public">
     <compoundname>wxDC</compoundname>
     <basecompoundref refid="classwx_object" prot="public" virt="non-virtual">wxObject</basecompoundref>
@@ -15,7 +15,6 @@
     <includes local="no">wx/dc.h</includes>
       <sectiondef kind="user-defined">
       <header>Coordinate conversion functions</header>
-      <description><para><anchor id="_1amgrped280bddb396fc5430fe7879b84739a3"/> </para></description>
       <memberdef kind="function" id="classwx_d_c_1af0c7b7b0f2736fbce53675f1420ed11c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="defs_8h_1a11f6efc0e8d8d680f3ec8e82aa4f1770" kindref="member">wxCoord</ref></type>
         <definition>wxCoord wxDC::DeviceToLogicalX</definition>
@@ -155,7 +154,6 @@
       </sectiondef>
       <sectiondef kind="user-defined">
       <header>Drawing functions</header>
-      <description><para><anchor id="_1amgrpacbd117629503a69fa5ab2ecb229996a"/> </para></description>
       <memberdef kind="function" id="classwx_d_c_1acf301dfd75b0f31d969ecb9daec21e85" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void wxDC::Clear</definition>
@@ -1405,7 +1403,6 @@
       </sectiondef>
       <sectiondef kind="user-defined">
       <header>Clipping region functions</header>
-      <description><para><anchor id="_1amgrp83e66e2f0be2d4480a80651e56162e88"/> </para></description>
       <memberdef kind="function" id="classwx_d_c_1ae0b0fc593c4559b9ac70e121bd28e3b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void wxDC::DestroyClippingRegion</definition>
@@ -1542,7 +1539,6 @@
       </sectiondef>
       <sectiondef kind="user-defined">
       <header>Text/character extent functions</header>
-      <description><para><anchor id="_1amgrp356a054b61dbfcb9650f23b9ffdce279"/> </para></description>
       <memberdef kind="function" id="classwx_d_c_1a6faa7a475c43b2305e9ffebac5259d15" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="defs_8h_1a11f6efc0e8d8d680f3ec8e82aa4f1770" kindref="member">wxCoord</ref></type>
         <definition>wxCoord wxDC::GetCharHeight</definition>
@@ -1726,7 +1722,6 @@
       </sectiondef>
       <sectiondef kind="user-defined">
       <header>Text properties functions</header>
-      <description><para><anchor id="_1amgrp5bb95b125d870b6ffdf0c8bbcc1ed493"/> </para></description>
       <memberdef kind="function" id="classwx_d_c_1a424e74e4790076a314511f86b8b7f408" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
         <definition>int wxDC::GetBackgroundMode</definition>
@@ -1895,7 +1890,6 @@
       </sectiondef>
       <sectiondef kind="user-defined">
       <header>Bounding box functions</header>
-      <description><para><anchor id="_1amgrpc90e9970684ca62376f6c5e700554872"/> </para></description>
       <memberdef kind="function" id="classwx_d_c_1a850699d4fdc9006421b085d2d37fa0c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void wxDC::CalcBoundingBox</definition>
@@ -1987,7 +1981,6 @@
       </sectiondef>
       <sectiondef kind="user-defined">
       <header>Page and document start/end functions</header>
-      <description><para><anchor id="_1amgrpc42c5aa444373c7518426e27c20ea8d3"/> </para></description>
       <memberdef kind="function" id="classwx_d_c_1ad6572581c9d31dc349b6a7462426856c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
         <definition>bool wxDC::StartDoc</definition>
@@ -2050,7 +2043,6 @@
       </sectiondef>
       <sectiondef kind="user-defined">
       <header>Bit-Block Transfer operations (blit)</header>
-      <description><para><anchor id="_1amgrp56bcaff64a3d7841c0bdb7dce3e6ebdd"/> </para></description>
       <memberdef kind="function" id="classwx_d_c_1a12bed94a15136b9080683f4151042a34" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
         <definition>bool wxDC::Blit</definition>
@@ -2388,7 +2380,6 @@ There is partial support for <ref refid="classwx_d_c_1a12bed94a15136b9080683f415
       </sectiondef>
       <sectiondef kind="user-defined">
       <header>Background/foreground brush and pen</header>
-      <description><para><anchor id="_1amgrpb0d94a21198a7e69830daece1e399ebc"/> </para></description>
       <memberdef kind="function" id="classwx_d_c_1ac9f6e5ace963178d3e167975b43d465d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_brush" kindref="compound">wxBrush</ref> &amp;</type>
         <definition>const wxBrush&amp; wxDC::GetBackground</definition>
@@ -2487,7 +2478,7 @@ There is partial support for <ref refid="classwx_d_c_1a12bed94a15136b9080683f415
       </sectiondef>
       <sectiondef kind="user-defined">
       <header>Transformation matrix</header>
-      <description><para><anchor id="_1amgrp1751fcdc476b02101dc5c3cc8fc10cc1"/>See the notes about the availability of these functions in the class documentation. </para></description>
+      <description><para>See the notes about the availability of these functions in the class documentation. </para></description>
       <memberdef kind="function" id="classwx_d_c_1a00ff493fe7d976d9433f9adb559f3089" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
         <definition>bool wxDC::CanUseTransformMatrix</definition>
@@ -3027,120 +3018,120 @@ There is partial support for <ref refid="classwx_d_c_1a12bed94a15136b9080683f415
 <sect1 id="classwx_d_c_1Support">
 <title>for Transformation Matrix</title>
 <para>On some platforms (currently only under MSW and only on Windows NT, i.e. not Windows 9x/ME, systems) <ref refid="classwx_d_c" kindref="compound">wxDC</ref> has support for applying an arbitrary affine transformation matrix to its coordinate system. Call <ref refid="classwx_d_c_1a00ff493fe7d976d9433f9adb559f3089" kindref="member">CanUseTransformMatrix()</ref> to check if this support is available and then call <ref refid="classwx_d_c_1a6e3243fcb5d194ef5637f4bda11a49c3" kindref="member">SetTransformMatrix()</ref> if it is. If the transformation matrix is not supported, <ref refid="classwx_d_c_1a6e3243fcb5d194ef5637f4bda11a49c3" kindref="member">SetTransformMatrix()</ref> always simply returns false and doesn&apos;t do anything.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__dc" kindref="compound">Device Contexts</ref>, <ref refid="group__group__class__gdi" kindref="compound">Graphics Device Interface (GDI)</ref></para><para><simplesect kind="see"><para><ref refid="overview__dc" kindref="compound">Device Contexts</ref>, <ref refid="classwx_graphics_context" kindref="compound">wxGraphicsContext</ref>, <ref refid="classwx_d_c_font_changer" kindref="compound">wxDCFontChanger</ref>, <ref refid="classwx_d_c_text_colour_changer" kindref="compound">wxDCTextColourChanger</ref>, <ref refid="classwx_d_c_pen_changer" kindref="compound">wxDCPenChanger</ref>, <ref refid="classwx_d_c_brush_changer" kindref="compound">wxDCBrushChanger</ref>, <ref refid="classwx_d_c_clipper" kindref="compound">wxDCClipper</ref></para></simplesect>
-<xrefsect id="todo_1_todo000025"><xreftitle>Todo</xreftitle><xrefdescription><para>Precise definition of default/initial state. </para><para>Pixelwise definition of operations (e.g. last point of a line not drawn). </para></xrefdescription></xrefsect></para></sect1>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__dc" kindref="compound">Device Contexts</ref>, <ref refid="group__group__class__gdi" kindref="compound">Graphics Device Interface (GDI)</ref></para><para><simplesect kind="see"><para><ref refid="overview_dc" kindref="compound">Device Contexts</ref>, <ref refid="classwx_graphics_context" kindref="compound">wxGraphicsContext</ref>, <ref refid="classwx_d_c_font_changer" kindref="compound">wxDCFontChanger</ref>, <ref refid="classwx_d_c_text_colour_changer" kindref="compound">wxDCTextColourChanger</ref>, <ref refid="classwx_d_c_pen_changer" kindref="compound">wxDCPenChanger</ref>, <ref refid="classwx_d_c_brush_changer" kindref="compound">wxDCBrushChanger</ref>, <ref refid="classwx_d_c_clipper" kindref="compound">wxDCClipper</ref></para></simplesect>
+<xrefsect id="todo_1_todo000024"><xreftitle>Todo</xreftitle><xrefdescription><para>Precise definition of default/initial state. </para><para>Pixelwise definition of operations (e.g. last point of a line not drawn). </para></xrefdescription></xrefsect></para></sect1>
     </detaileddescription>
     <inheritancegraph>
-      <node id="5509">
+      <node id="5513">
         <label>wxScreenDC</label>
         <link refid="classwx_screen_d_c"/>
-        <childnode refid="5498" relation="public-inheritance">
+        <childnode refid="5502" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5500">
+      <node id="5504">
         <label>wxGCDC</label>
         <link refid="classwx_g_c_d_c"/>
-        <childnode refid="5498" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="5499">
-        <label>wxObject</label>
-        <link refid="classwx_object"/>
-      </node>
-      <node id="5501">
-        <label>wxMemoryDC</label>
-        <link refid="classwx_memory_d_c"/>
-        <childnode refid="5498" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="5511">
-        <label>wxWindowDC</label>
-        <link refid="classwx_window_d_c"/>
-        <childnode refid="5498" relation="public-inheritance">
+        <childnode refid="5502" relation="public-inheritance">
         </childnode>
       </node>
       <node id="5503">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+      </node>
+      <node id="5505">
+        <label>wxMemoryDC</label>
+        <link refid="classwx_memory_d_c"/>
+        <childnode refid="5502" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5515">
+        <label>wxWindowDC</label>
+        <link refid="classwx_window_d_c"/>
+        <childnode refid="5502" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5507">
         <label>wxBufferedPaintDC</label>
         <link refid="classwx_buffered_paint_d_c"/>
+        <childnode refid="5506" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5506">
+        <label>wxBufferedDC</label>
+        <link refid="classwx_buffered_d_c"/>
+        <childnode refid="5505" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5516">
+        <label>wxClientDC</label>
+        <link refid="classwx_client_d_c"/>
+        <childnode refid="5515" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5512">
+        <label>wxPrinterDC</label>
+        <link refid="classwx_printer_d_c"/>
+        <childnode refid="5502" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5509">
+        <label>wxMetafileDC</label>
+        <link refid="classwx_metafile_d_c"/>
         <childnode refid="5502" relation="public-inheritance">
         </childnode>
       </node>
       <node id="5502">
-        <label>wxBufferedDC</label>
-        <link refid="classwx_buffered_d_c"/>
-        <childnode refid="5501" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="5512">
-        <label>wxClientDC</label>
-        <link refid="classwx_client_d_c"/>
-        <childnode refid="5511" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="5508">
-        <label>wxPrinterDC</label>
-        <link refid="classwx_printer_d_c"/>
-        <childnode refid="5498" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="5505">
-        <label>wxMetafileDC</label>
-        <link refid="classwx_metafile_d_c"/>
-        <childnode refid="5498" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="5498">
         <label>wxDC</label>
         <link refid="classwx_d_c"/>
-        <childnode refid="5499" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="5506">
-        <label>wxMirrorDC</label>
-        <link refid="classwx_mirror_d_c"/>
-        <childnode refid="5498" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="5510">
-        <label>wxSVGFileDC</label>
-        <link refid="classwx_s_v_g_file_d_c"/>
-        <childnode refid="5498" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="5507">
-        <label>wxPostScriptDC</label>
-        <link refid="classwx_post_script_d_c"/>
-        <childnode refid="5498" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="5504">
-        <label>wxAutoBufferedPaintDC</label>
-        <link refid="classwx_auto_buffered_paint_d_c"/>
         <childnode refid="5503" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5513">
+      <node id="5510">
+        <label>wxMirrorDC</label>
+        <link refid="classwx_mirror_d_c"/>
+        <childnode refid="5502" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5514">
+        <label>wxSVGFileDC</label>
+        <link refid="classwx_s_v_g_file_d_c"/>
+        <childnode refid="5502" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5511">
+        <label>wxPostScriptDC</label>
+        <link refid="classwx_post_script_d_c"/>
+        <childnode refid="5502" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5508">
+        <label>wxAutoBufferedPaintDC</label>
+        <link refid="classwx_auto_buffered_paint_d_c"/>
+        <childnode refid="5507" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5517">
         <label>wxPaintDC</label>
         <link refid="classwx_paint_d_c"/>
-        <childnode refid="5511" relation="public-inheritance">
+        <childnode refid="5515" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="5515">
+      <node id="5519">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="5516" relation="usage">
+        <childnode refid="5520" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="5514">
+      <node id="5518">
         <label>wxDC</label>
         <link refid="classwx_d_c"/>
-        <childnode refid="5515" relation="public-inheritance">
+        <childnode refid="5519" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5516">
+      <node id="5520">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

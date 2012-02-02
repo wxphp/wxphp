@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_p_g_editor" kind="class" prot="public">
     <compoundname>wxPGEditor</compoundname>
     <basecompoundref refid="classwx_object" prot="public" virt="non-virtual">wxObject</basecompoundref>
@@ -311,9 +311,9 @@
           <declname>value</declname>
         </param>
         <briefdescription>
-<para>Sets control&apos;s value specifically from int (applies to choice etc. </para>        </briefdescription>
+<para>Sets control&apos;s value specifically from int (applies to choice etc.). </para>        </briefdescription>
         <detaileddescription>
-<para>). </para>        </detaileddescription>
+        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/editors.h" line="144"/>
@@ -411,34 +411,34 @@
 <listitem><para>Before you start using new editor you just created, you need to register it using static function <ref refid="classwx_property_grid_1a89ee01017530df27ff2c469bfbe0605e" kindref="member">wxPropertyGrid::RegisterEditorClass()</ref>, with code like this: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_p_g_editor" kindref="compound" tooltip="Base class for custom wxPropertyGrid editors.">wxPGEditor</ref>*<sp/>editorPointer<sp/>=<sp/><ref refid="classwx_property_grid_1a89ee01017530df27ff2c469bfbe0605e" kindref="member" tooltip="Registers a new editor class.">wxPropertyGrid::RegisterEditorClass</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>MyEditorClass(),<sp/></highlight><highlight class="stringliteral">&quot;MyEditor&quot;</highlight><highlight class="normal">);</highlight></codeline>
 </programlisting> After that, <ref refid="classwx_property_grid" kindref="compound">wxPropertyGrid</ref> will take ownership of the given object, but you should still store editorPointer somewhere, so you can pass it to <ref refid="classwx_p_g_property_1a2cd2e6f0b30a1ab789f9ea8b58226260" kindref="member">wxPGProperty::SetEditor()</ref>, or return it from wxPGEditor::DoGetEditorClass().</para></listitem></itemizedlist>
 </para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxpropgrid" kindref="member">wxPropertyGrid</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__propgrid" kindref="compound">wxPropertyGrid</ref> </para>    </detaileddescription>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxpropgrid" kindref="member">wxPropertyGrid</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__propgrid" kindref="compound">wxPropertyGrid</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="8641">
+      <node id="8649">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="8640">
+      <node id="8648">
         <label>wxPGEditor</label>
         <link refid="classwx_p_g_editor"/>
-        <childnode refid="8641" relation="public-inheritance">
+        <childnode refid="8649" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="8643">
+      <node id="8651">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="8644" relation="usage">
+        <childnode refid="8652" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="8642">
+      <node id="8650">
         <label>wxPGEditor</label>
         <link refid="classwx_p_g_editor"/>
-        <childnode refid="8643" relation="public-inheritance">
+        <childnode refid="8651" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8644">
+      <node id="8652">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

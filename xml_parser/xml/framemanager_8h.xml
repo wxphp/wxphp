@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="framemanager_8h" kind="file">
     <compoundname>framemanager.h</compoundname>
     <innerclass refid="classwx_aui_manager" prot="public">wxAuiManager</innerclass>
@@ -67,7 +67,7 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><xrefsect id="todo_1_todo000015"><xreftitle>Todo</xreftitle><xrefdescription><para><ref refid="classwx_aui_pane_info" kindref="compound">wxAuiPaneInfo</ref> dock direction types used with <ref refid="classwx_aui_manager" kindref="compound">wxAuiManager</ref>. </para></xrefdescription></xrefsect></para>        </detaileddescription>
+<para><xrefsect id="todo_1_todo000015"><xreftitle>Todo</xreftitle><xrefdescription><para><ref refid="classwx_aui_pane_info" kindref="compound">wxAuiPaneInfo</ref> dock direction types used with <ref refid="classwx_aui_manager" kindref="compound">wxAuiManager</ref>.</para></xrefdescription></xrefsect></para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/framemanager.h" line="14" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/framemanager.h" bodystart="13" bodyend="22"/>
@@ -78,7 +78,7 @@
           <name>wxAUI_MGR_ALLOW_FLOATING</name>
           <initializer> 1 &lt;&lt; 0</initializer>
           <briefdescription>
-          </briefdescription>
+<para>Allow a pane to be undocked to take the form of a <ref refid="classwx_mini_frame" kindref="compound">wxMiniFrame</ref>. </para>          </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
@@ -86,7 +86,7 @@
           <name>wxAUI_MGR_ALLOW_ACTIVE_PANE</name>
           <initializer> 1 &lt;&lt; 1</initializer>
           <briefdescription>
-          </briefdescription>
+<para>Change the color of the title bar of the pane when it is activated. </para>          </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
@@ -94,7 +94,7 @@
           <name>wxAUI_MGR_TRANSPARENT_DRAG</name>
           <initializer> 1 &lt;&lt; 2</initializer>
           <briefdescription>
-          </briefdescription>
+<para>Make the pane transparent during its movement. </para>          </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
@@ -102,7 +102,7 @@
           <name>wxAUI_MGR_TRANSPARENT_HINT</name>
           <initializer> 1 &lt;&lt; 3</initializer>
           <briefdescription>
-          </briefdescription>
+<para>The possible location for docking is indicated by a translucent area. </para>          </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
@@ -110,7 +110,7 @@
           <name>wxAUI_MGR_VENETIAN_BLINDS_HINT</name>
           <initializer> 1 &lt;&lt; 4</initializer>
           <briefdescription>
-          </briefdescription>
+<para>The possible location for docking is indicated by a gradually appearing partially transparent area. </para>          </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
@@ -118,7 +118,7 @@
           <name>wxAUI_MGR_RECTANGLE_HINT</name>
           <initializer> 1 &lt;&lt; 5</initializer>
           <briefdescription>
-          </briefdescription>
+<para>The possible location for docking is indicated by a rectangular outline. </para>          </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
@@ -126,7 +126,7 @@
           <name>wxAUI_MGR_HINT_FADE</name>
           <initializer> 1 &lt;&lt; 6</initializer>
           <briefdescription>
-          </briefdescription>
+<para>The translucent area where the pane could be docked appears gradually. </para>          </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
@@ -134,7 +134,7 @@
           <name>wxAUI_MGR_NO_VENETIAN_BLINDS_FADE</name>
           <initializer> 1 &lt;&lt; 7</initializer>
           <briefdescription>
-          </briefdescription>
+<para>Used in complement of wxAUI_MGR_VENETIAN_BLINDS_HINT to show the hint immediately. </para>          </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
@@ -142,7 +142,7 @@
           <name>wxAUI_MGR_LIVE_RESIZE</name>
           <initializer> 1 &lt;&lt; 8</initializer>
           <briefdescription>
-          </briefdescription>
+<para>When a docked pane is resized, its content is refreshed in live (instead of moving the border alone and refreshing the content at the end). </para>          </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
@@ -153,17 +153,17 @@
                         wxAUI_MGR_HINT_FADE |
                         wxAUI_MGR_NO_VENETIAN_BLINDS_FADE</initializer>
           <briefdescription>
-          </briefdescription>
+<para>Default behavior. </para>          </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
         <briefdescription>
-        </briefdescription>
+<para><ref refid="classwx_aui_manager" kindref="compound">wxAuiManager</ref> behaviour and visual effects style flags. </para>        </briefdescription>
         <detaileddescription>
-<para><xrefsect id="todo_1_todo000016"><xreftitle>Todo</xreftitle><xrefdescription><para><ref refid="classwx_aui_manager" kindref="compound">wxAuiManager</ref> behaviour style flags. </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/framemanager.h" line="29" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/framemanager.h" bodystart="28" bodyend="44"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/framemanager.h" line="29" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/framemanager.h" bodystart="28" bodyend="55"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

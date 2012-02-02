@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_text_validator" kind="class" prot="public">
     <compoundname>wxTextValidator</compoundname>
     <basecompoundref refid="classwx_validator" prot="public" virt="non-virtual">wxValidator</basecompoundref>
@@ -336,72 +336,72 @@
     <briefdescription>
 <para><ref refid="classwx_text_validator" kindref="compound">wxTextValidator</ref> validates text controls, providing a variety of filtering behaviours. </para>    </briefdescription>
     <detaileddescription>
-<para>For more information, please see <ref refid="overview__validator" kindref="compound">wxValidator Overview</ref>.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__validator" kindref="compound">Validators</ref></para><para><simplesect kind="see"><para><ref refid="overview__validator" kindref="compound">wxValidator Overview</ref>, <ref refid="classwx_validator" kindref="compound">wxValidator</ref>, <ref refid="classwx_generic_validator" kindref="compound">wxGenericValidator</ref>, <ref refid="classwx_integer_validator" kindref="compound">wxIntegerValidator</ref>, <ref refid="classwx_floating_point_validator" kindref="compound">wxFloatingPointValidator</ref> </para></simplesect>
+<para>For more information, please see <ref refid="overview_validator" kindref="compound">wxValidator Overview</ref>.</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__validator" kindref="compound">Validators</ref></para><para><simplesect kind="see"><para><ref refid="overview_validator" kindref="compound">wxValidator Overview</ref>, <ref refid="classwx_validator" kindref="compound">wxValidator</ref>, <ref refid="classwx_generic_validator" kindref="compound">wxGenericValidator</ref>, <ref refid="classwx_integer_validator" kindref="compound">wxIntegerValidator</ref>, <ref refid="classwx_floating_point_validator" kindref="compound">wxFloatingPointValidator</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10775">
+      <node id="10836">
         <label>wxValidator</label>
         <link refid="classwx_validator"/>
-        <childnode refid="10776" relation="public-inheritance">
+        <childnode refid="10837" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10777">
+      <node id="10838">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="10776">
+      <node id="10837">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="10777" relation="public-inheritance">
+        <childnode refid="10838" relation="public-inheritance">
         </childnode>
-        <childnode refid="10778" relation="public-inheritance">
+        <childnode refid="10839" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10778">
+      <node id="10839">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="10774">
+      <node id="10835">
         <label>wxTextValidator</label>
         <link refid="classwx_text_validator"/>
-        <childnode refid="10775" relation="public-inheritance">
+        <childnode refid="10836" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10780">
+      <node id="10841">
         <label>wxValidator</label>
         <link refid="classwx_validator"/>
-        <childnode refid="10781" relation="public-inheritance">
+        <childnode refid="10842" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10782">
+      <node id="10843">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="10783" relation="usage">
+        <childnode refid="10844" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="10781">
+      <node id="10842">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="10782" relation="public-inheritance">
+        <childnode refid="10843" relation="public-inheritance">
         </childnode>
-        <childnode refid="10784" relation="public-inheritance">
+        <childnode refid="10845" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10784">
+      <node id="10845">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="10779">
+      <node id="10840">
         <label>wxTextValidator</label>
         <link refid="classwx_text_validator"/>
-        <childnode refid="10780" relation="public-inheritance">
+        <childnode refid="10841" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10783">
+      <node id="10844">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_property_grid_manager" kind="class" prot="public">
     <compoundname>wxPropertyGridManager</compoundname>
     <basecompoundref refid="classwx_panel" prot="public" virt="non-virtual">wxPanel</basecompoundref>
@@ -867,7 +867,7 @@ If you use header, then you should always use this member function to set the sp
     <briefdescription>
 <para><ref refid="classwx_property_grid_manager" kindref="compound">wxPropertyGridManager</ref> is an efficient multi-page version of <ref refid="classwx_property_grid" kindref="compound">wxPropertyGrid</ref>, which can optionally have toolbar for mode and page selection, a help text box, and a header. </para>    </briefdescription>
     <detaileddescription>
-<para><ref refid="classwx_property_grid_manager" kindref="compound">wxPropertyGridManager</ref> inherits from <ref refid="classwx_property_grid_interface" kindref="compound">wxPropertyGridInterface</ref>, and as such it has most property manipulation functions. However, only some of them affect properties on all pages (eg. <ref refid="classwx_property_grid_interface_1ac5723b61ae48d373671343e774632ed3" kindref="member">GetPropertyByName()</ref> and <ref refid="classwx_property_grid_interface_1a678020610f0af4140eda4726cd89d728" kindref="member">ExpandAll()</ref>), while some (eg. <ref refid="classwx_property_grid_interface_1a8496963f469db86941157f8ce67896c4" kindref="member">Append()</ref>) only apply to the currently selected page.</para><para>To operate explicitly on properties on specific page, use <ref refid="classwx_property_grid_manager_1a7deaa866fbf87e6880c0564e4582f54e" kindref="member">wxPropertyGridManager::GetPage()</ref> to obtain pointer to page&apos;s <ref refid="classwx_property_grid_page" kindref="compound">wxPropertyGridPage</ref> object.</para><para>Visual methods, such as SetCellBackgroundColour() are only available in <ref refid="classwx_property_grid" kindref="compound">wxPropertyGrid</ref>. Use <ref refid="classwx_property_grid_manager_1aa0c62e680e94493dabdf40ab4642fef6" kindref="member">wxPropertyGridManager::GetGrid()</ref> to obtain pointer to it.</para><para>Non-virtual iterators will not work in <ref refid="classwx_property_grid_manager" kindref="compound">wxPropertyGridManager</ref>. Instead, you must acquire the internal grid (<ref refid="classwx_property_grid_manager_1aa0c62e680e94493dabdf40ab4642fef6" kindref="member">GetGrid()</ref>) or <ref refid="classwx_property_grid_page" kindref="compound">wxPropertyGridPage</ref> object (<ref refid="classwx_property_grid_manager_1a7deaa866fbf87e6880c0564e4582f54e" kindref="member">GetPage()</ref>).</para><para><ref refid="classwx_property_grid_manager" kindref="compound">wxPropertyGridManager</ref> constructor has exact same format as <ref refid="classwx_property_grid" kindref="compound">wxPropertyGrid</ref> constructor, and basicly accepts same extra window style flags (albeit also has some extra ones).</para><para>Here&apos;s some example code for creating and populating a <ref refid="classwx_property_grid_manager" kindref="compound">wxPropertyGridManager</ref>:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_property_grid_manager" kindref="compound" tooltip="wxPropertyGridManager is an efficient multi-page version of wxPropertyGrid, which...">wxPropertyGridManager</ref>*<sp/>pgMan<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classwx_property_grid_manager" kindref="compound" tooltip="wxPropertyGridManager is an efficient multi-page version of wxPropertyGrid, which...">wxPropertyGridManager</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>PGID,</highlight></codeline>
+<para><ref refid="classwx_property_grid_manager" kindref="compound">wxPropertyGridManager</ref> inherits from <ref refid="classwx_property_grid_interface" kindref="compound">wxPropertyGridInterface</ref>, and as such it has most property manipulation functions. However, only some of them affect properties on all pages (eg. <ref refid="classwx_property_grid_interface_1ac5723b61ae48d373671343e774632ed3" kindref="member">GetPropertyByName()</ref> and <ref refid="classwx_property_grid_interface_1a678020610f0af4140eda4726cd89d728" kindref="member">ExpandAll()</ref>), while some (eg. <ref refid="classwx_property_grid_interface_1a8496963f469db86941157f8ce67896c4" kindref="member">Append()</ref>) only apply to the currently selected page.</para><para>To operate explicitly on properties on specific page, use <ref refid="classwx_property_grid_manager_1a7deaa866fbf87e6880c0564e4582f54e" kindref="member">wxPropertyGridManager::GetPage()</ref> to obtain pointer to page&apos;s <ref refid="classwx_property_grid_page" kindref="compound">wxPropertyGridPage</ref> object.</para><para>Visual methods, such as SetCellBackgroundColour() are only available in <ref refid="classwx_property_grid" kindref="compound">wxPropertyGrid</ref>. Use <ref refid="classwx_property_grid_manager_1aa0c62e680e94493dabdf40ab4642fef6" kindref="member">wxPropertyGridManager::GetGrid()</ref> to obtain pointer to it.</para><para>Non-virtual iterators will not work in <ref refid="classwx_property_grid_manager" kindref="compound">wxPropertyGridManager</ref>. Instead, you must acquire the internal grid (<ref refid="classwx_property_grid_manager_1aa0c62e680e94493dabdf40ab4642fef6" kindref="member">GetGrid()</ref>) or <ref refid="classwx_property_grid_page" kindref="compound">wxPropertyGridPage</ref> object (<ref refid="classwx_property_grid_manager_1a7deaa866fbf87e6880c0564e4582f54e" kindref="member">GetPage()</ref>).</para><para><ref refid="classwx_property_grid_manager" kindref="compound">wxPropertyGridManager</ref> constructor has exact same format as <ref refid="classwx_property_grid" kindref="compound">wxPropertyGrid</ref> constructor, and basicly accepts same extra window style flags (albeit also has some extra ones).</para><para>Here&apos;s some example code for creating and populating a <ref refid="classwx_property_grid_manager" kindref="compound">wxPropertyGridManager</ref>:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_property_grid_manager" kindref="compound" tooltip="wxPropertyGridManager is an efficient multi-page version of wxPropertyGrid, which can optionally have...">wxPropertyGridManager</ref>*<sp/>pgMan<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classwx_property_grid_manager" kindref="compound" tooltip="wxPropertyGridManager is an efficient multi-page version of wxPropertyGrid, which can optionally have...">wxPropertyGridManager</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>PGID,</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="gdicmn_8h_1af5a90c753eaf3d3e3e5068a19ec3c1d0" kindref="member" tooltip="Global instance of a wxPoint initialized with values (-1,-1).">wxDefaultPosition</ref>,<sp/><ref refid="gdicmn_8h_1a33a012cdb075e9f78c93f63bec2dc27b" kindref="member" tooltip="Global instance of a wxSize object initialized to (-1,-1).">wxDefaultSize</ref>,</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>These<sp/>and<sp/>other<sp/>similar<sp/>styles<sp/>are<sp/>automatically</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>passed<sp/>to<sp/>the<sp/>embedded<sp/>wxPropertyGrid.</highlight><highlight class="normal"></highlight></codeline>
@@ -875,7 +875,7 @@ If you use header, then you should always use this member function to set the sp
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Include<sp/>toolbar.</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="interface_2wx_2propgrid_2propgrid_8h_1a967b646b15085e115051d83a65ffdfe8a4c708718b58d1b4b61a8bb23be022ec4" kindref="member" tooltip="wxPropertyGridManager only: Show tool bar for mode and page selection.">wxPG_TOOLBAR</ref><sp/>|</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Include<sp/>description<sp/>box.</highlight><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="interface_2wx_2propgrid_2propgrid_8h_1a967b646b15085e115051d83a65ffdfe8ae7a176f7037ce590e834bf62659a8326" kindref="member" tooltip="wxPropertyGridManager only: Show adjustable text box showing description or help...">wxPG_DESCRIPTION</ref><sp/>|</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="interface_2wx_2propgrid_2propgrid_8h_1a967b646b15085e115051d83a65ffdfe8ae7a176f7037ce590e834bf62659a8326" kindref="member" tooltip="wxPropertyGridManager only: Show adjustable text box showing description or help text, if available, for currently selected property.">wxPG_DESCRIPTION</ref><sp/>|</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Include<sp/>compactor.</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wxPG_COMPACTOR<sp/>|</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Plus<sp/>defaults.</highlight><highlight class="normal"></highlight></codeline>
@@ -906,86 +906,41 @@ If you use header, then you should always use this member function to set the sp
 <sect1 id="classwx_property_grid_manager_1propgridmanager_event_handling">
 <title>Event Handling</title>
 <para>See <ref refid="classwx_property_grid_1propgrid_event_handling" kindref="member">wxPropertyGrid Event Handling</ref> for more information.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxpropgrid" kindref="member">wxPropertyGrid</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__propgrid" kindref="compound">wxPropertyGrid</ref> </para></sect1>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxpropgrid" kindref="member">wxPropertyGrid</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__propgrid" kindref="compound">wxPropertyGrid</ref> </para></sect1>
     </detaileddescription>
     <inheritancegraph>
-      <node id="8899">
+      <node id="8907">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="8898">
-        <label>wxEvtHandler</label>
-        <link refid="classwx_evt_handler"/>
-        <childnode refid="8899" relation="public-inheritance">
-        </childnode>
-        <childnode refid="8900" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="8896">
-        <label>wxPanel</label>
-        <link refid="classwx_panel"/>
-        <childnode refid="8897" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="8900">
-        <label>wxTrackable</label>
-        <link refid="classwx_trackable"/>
-      </node>
-      <node id="8897">
-        <label>wxWindow</label>
-        <link refid="classwx_window"/>
-        <childnode refid="8898" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="8895">
-        <label>wxPropertyGridManager</label>
-        <link refid="classwx_property_grid_manager"/>
-        <childnode refid="8896" relation="public-inheritance">
-        </childnode>
-        <childnode refid="8901" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="8901">
-        <label>wxPropertyGridInterface</label>
-        <link refid="classwx_property_grid_interface"/>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
       <node id="8906">
-        <label>wxObject</label>
-        <link refid="classwx_object"/>
-        <childnode refid="8907" relation="usage">
-          <edgelabel>m_refData</edgelabel>
-        </childnode>
-      </node>
-      <node id="8905">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="8906" relation="public-inheritance">
+        <childnode refid="8907" relation="public-inheritance">
         </childnode>
         <childnode refid="8908" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8903">
+      <node id="8904">
         <label>wxPanel</label>
         <link refid="classwx_panel"/>
-        <childnode refid="8904" relation="public-inheritance">
+        <childnode refid="8905" relation="public-inheritance">
         </childnode>
       </node>
       <node id="8908">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="8904">
+      <node id="8905">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="8905" relation="public-inheritance">
+        <childnode refid="8906" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8902">
+      <node id="8903">
         <label>wxPropertyGridManager</label>
         <link refid="classwx_property_grid_manager"/>
-        <childnode refid="8903" relation="public-inheritance">
+        <childnode refid="8904" relation="public-inheritance">
         </childnode>
         <childnode refid="8909" relation="public-inheritance">
         </childnode>
@@ -994,7 +949,52 @@ If you use header, then you should always use this member function to set the sp
         <label>wxPropertyGridInterface</label>
         <link refid="classwx_property_grid_interface"/>
       </node>
-      <node id="8907">
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="8914">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="8915" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="8913">
+        <label>wxEvtHandler</label>
+        <link refid="classwx_evt_handler"/>
+        <childnode refid="8914" relation="public-inheritance">
+        </childnode>
+        <childnode refid="8916" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8911">
+        <label>wxPanel</label>
+        <link refid="classwx_panel"/>
+        <childnode refid="8912" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8916">
+        <label>wxTrackable</label>
+        <link refid="classwx_trackable"/>
+      </node>
+      <node id="8912">
+        <label>wxWindow</label>
+        <link refid="classwx_window"/>
+        <childnode refid="8913" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8910">
+        <label>wxPropertyGridManager</label>
+        <link refid="classwx_property_grid_manager"/>
+        <childnode refid="8911" relation="public-inheritance">
+        </childnode>
+        <childnode refid="8917" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8917">
+        <label>wxPropertyGridInterface</label>
+        <link refid="classwx_property_grid_interface"/>
+      </node>
+      <node id="8915">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

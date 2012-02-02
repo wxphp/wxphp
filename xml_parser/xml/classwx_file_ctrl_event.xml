@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_file_ctrl_event" kind="class" prot="public">
     <compoundname>wxFileCtrlEvent</compoundname>
     <basecompoundref refid="classwx_command_event" prot="public" virt="non-virtual">wxCommandEvent</basecompoundref>
@@ -147,38 +147,11 @@
 <listitem><para>EVT_FILECTRL_FILTERCHANGED(id,  func): The current file filter of the file control has been changed </para></listitem>
 </itemizedlist>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref> </para>    </detaileddescription>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="6156">
-        <label>wxObject</label>
-        <link refid="classwx_object"/>
-      </node>
-      <node id="6154">
-        <label>wxCommandEvent</label>
-        <link refid="classwx_command_event"/>
-        <childnode refid="6155" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="6155">
-        <label>wxEvent</label>
-        <link refid="classwx_event"/>
-        <childnode refid="6156" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="6153">
-        <label>wxFileCtrlEvent</label>
-        <link refid="classwx_file_ctrl_event"/>
-        <childnode refid="6154" relation="public-inheritance">
-        </childnode>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
       <node id="6160">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="6161" relation="usage">
-          <edgelabel>m_refData</edgelabel>
-        </childnode>
       </node>
       <node id="6158">
         <label>wxCommandEvent</label>
@@ -198,7 +171,34 @@
         <childnode refid="6158" relation="public-inheritance">
         </childnode>
       </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="6164">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="6165" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="6162">
+        <label>wxCommandEvent</label>
+        <link refid="classwx_command_event"/>
+        <childnode refid="6163" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6163">
+        <label>wxEvent</label>
+        <link refid="classwx_event"/>
+        <childnode refid="6164" relation="public-inheritance">
+        </childnode>
+      </node>
       <node id="6161">
+        <label>wxFileCtrlEvent</label>
+        <link refid="classwx_file_ctrl_event"/>
+        <childnode refid="6162" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6165">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

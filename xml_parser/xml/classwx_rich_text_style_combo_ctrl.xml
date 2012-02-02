@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_rich_text_style_combo_ctrl" kind="class" prot="public">
     <compoundname>wxRichTextStyleComboCtrl</compoundname>
     <basecompoundref refid="classwx_combo_ctrl" prot="public" virt="non-virtual">wxComboCtrl</basecompoundref>
@@ -133,107 +133,107 @@
 <para>This is a combo control that can display the styles in a <ref refid="classwx_rich_text_style_sheet" kindref="compound">wxRichTextStyleSheet</ref>, and apply the selection to an associated <ref refid="classwx_rich_text_ctrl" kindref="compound">wxRichTextCtrl</ref>. </para>    </briefdescription>
     <detaileddescription>
 <para>See <computeroutput>samples/richtext</computeroutput> for an example of how to use it.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxrichtext" kindref="member">wxRichText</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__richtext" kindref="compound">Rich Text</ref></para><para><simplesect kind="see"><para><ref refid="classwx_rich_text_style_list_box" kindref="compound">wxRichTextStyleListBox</ref>, <ref refid="overview__richtextctrl" kindref="compound">wxRichTextCtrl Overview</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxrichtext" kindref="member">wxRichText</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__richtext" kindref="compound">Rich Text</ref></para><para><simplesect kind="see"><para><ref refid="classwx_rich_text_style_list_box" kindref="compound">wxRichTextStyleListBox</ref>, <ref refid="overview_richtextctrl" kindref="compound">wxRichTextCtrl Overview</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="9847">
+      <node id="9907">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="9846">
+      <node id="9906">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="9847" relation="public-inheritance">
+        <childnode refid="9907" relation="public-inheritance">
         </childnode>
-        <childnode refid="9848" relation="public-inheritance">
+        <childnode refid="9908" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9848">
+      <node id="9908">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="9849">
+      <node id="9909">
         <label>wxTextEntry</label>
         <link refid="classwx_text_entry"/>
       </node>
-      <node id="9844">
+      <node id="9904">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="9845" relation="public-inheritance">
+        <childnode refid="9905" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9845">
+      <node id="9905">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="9846" relation="public-inheritance">
+        <childnode refid="9906" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9843">
+      <node id="9903">
         <label>wxComboCtrl</label>
         <link refid="classwx_combo_ctrl"/>
-        <childnode refid="9844" relation="public-inheritance">
+        <childnode refid="9904" relation="public-inheritance">
         </childnode>
-        <childnode refid="9849" relation="public-inheritance">
+        <childnode refid="9909" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9842">
+      <node id="9902">
         <label>wxRichTextStyleComboCtrl</label>
         <link refid="classwx_rich_text_style_combo_ctrl"/>
-        <childnode refid="9843" relation="public-inheritance">
+        <childnode refid="9903" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="9855">
+      <node id="9915">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="9856" relation="usage">
+        <childnode refid="9916" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="9854">
+      <node id="9914">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="9855" relation="public-inheritance">
+        <childnode refid="9915" relation="public-inheritance">
         </childnode>
-        <childnode refid="9857" relation="public-inheritance">
+        <childnode refid="9917" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9857">
+      <node id="9917">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="9858">
+      <node id="9918">
         <label>wxTextEntry</label>
         <link refid="classwx_text_entry"/>
       </node>
-      <node id="9852">
+      <node id="9912">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="9853" relation="public-inheritance">
+        <childnode refid="9913" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9853">
+      <node id="9913">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="9854" relation="public-inheritance">
+        <childnode refid="9914" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9851">
+      <node id="9911">
         <label>wxComboCtrl</label>
         <link refid="classwx_combo_ctrl"/>
-        <childnode refid="9852" relation="public-inheritance">
+        <childnode refid="9912" relation="public-inheritance">
         </childnode>
-        <childnode refid="9858" relation="public-inheritance">
+        <childnode refid="9918" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9850">
+      <node id="9910">
         <label>wxRichTextStyleComboCtrl</label>
         <link refid="classwx_rich_text_style_combo_ctrl"/>
-        <childnode refid="9851" relation="public-inheritance">
+        <childnode refid="9911" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9856">
+      <node id="9916">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

@@ -1,12 +1,11 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_grid_sizer" kind="class" prot="public">
     <compoundname>wxGridSizer</compoundname>
     <basecompoundref refid="classwx_sizer" prot="public" virt="non-virtual">wxSizer</basecompoundref>
     <derivedcompoundref refid="classwx_flex_grid_sizer" prot="public" virt="non-virtual">wxFlexGridSizer</derivedcompoundref>
     <includes local="no">wx/sizer.h</includes>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_grid_sizer_1a54163c431608c0cbe6c74c9009ef1ca2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
         <definition>wxGridSizer::wxGridSizer</definition>
@@ -299,59 +298,59 @@
 <para>A grid sizer is a sizer which lays out its children in a two-dimensional table with all table fields having the same size, i.e. </para>    </briefdescription>
     <detaileddescription>
 <para>the width of each field is the width of the widest child, the height of each field is the height of the tallest child.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__winlayout" kindref="compound">Window Layout</ref></para><para><simplesect kind="see"><para><ref refid="classwx_sizer" kindref="compound">wxSizer</ref>, <ref refid="overview__sizer" kindref="compound">Sizers Overview</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__winlayout" kindref="compound">Window Layout</ref></para><para><simplesect kind="see"><para><ref refid="classwx_sizer" kindref="compound">wxSizer</ref>, <ref refid="overview_sizer" kindref="compound">Sizers Overview</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="6838">
+      <node id="6842">
         <label>wxFlexGridSizer</label>
         <link refid="classwx_flex_grid_sizer"/>
-        <childnode refid="6835" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="6837">
-        <label>wxObject</label>
-        <link refid="classwx_object"/>
-      </node>
-      <node id="6839">
-        <label>wxGridBagSizer</label>
-        <link refid="classwx_grid_bag_sizer"/>
-        <childnode refid="6838" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="6836">
-        <label>wxSizer</label>
-        <link refid="classwx_sizer"/>
-        <childnode refid="6837" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="6835">
-        <label>wxGridSizer</label>
-        <link refid="classwx_grid_sizer"/>
-        <childnode refid="6836" relation="public-inheritance">
-        </childnode>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
-      <node id="6842">
-        <label>wxObject</label>
-        <link refid="classwx_object"/>
-        <childnode refid="6843" relation="usage">
-          <edgelabel>m_refData</edgelabel>
+        <childnode refid="6839" relation="public-inheritance">
         </childnode>
       </node>
       <node id="6841">
-        <label>wxSizer</label>
-        <link refid="classwx_sizer"/>
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+      </node>
+      <node id="6843">
+        <label>wxGridBagSizer</label>
+        <link refid="classwx_grid_bag_sizer"/>
         <childnode refid="6842" relation="public-inheritance">
         </childnode>
       </node>
       <node id="6840">
-        <label>wxGridSizer</label>
-        <link refid="classwx_grid_sizer"/>
+        <label>wxSizer</label>
+        <link refid="classwx_sizer"/>
         <childnode refid="6841" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6843">
+      <node id="6839">
+        <label>wxGridSizer</label>
+        <link refid="classwx_grid_sizer"/>
+        <childnode refid="6840" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="6846">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="6847" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="6845">
+        <label>wxSizer</label>
+        <link refid="classwx_sizer"/>
+        <childnode refid="6846" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6844">
+        <label>wxGridSizer</label>
+        <link refid="classwx_grid_sizer"/>
+        <childnode refid="6845" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6847">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

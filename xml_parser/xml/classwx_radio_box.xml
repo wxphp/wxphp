@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_radio_box" kind="class" prot="public">
     <compoundname>wxRadioBox</compoundname>
     <basecompoundref refid="classwx_control" prot="public" virt="non-virtual">wxControl</basecompoundref>
@@ -18,7 +18,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/radiobox.h" line="48"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/radiobox.h" line="45"/>
       </memberdef>
       <memberdef kind="function" id="classwx_radio_box_1a383386e9dfdb6b73b5356cffec2c253b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -163,7 +163,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/radiobox.h" line="96"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/radiobox.h" line="93"/>
       </memberdef>
       <memberdef kind="function" id="classwx_radio_box_1a4bf8c8ac111aa1f4a6657458e49aa152" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -292,7 +292,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/radiobox.h" line="142"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/radiobox.h" line="139"/>
       </memberdef>
       <memberdef kind="function" id="classwx_radio_box_1a0fe58140d4f3114624049a9338067d33" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -305,7 +305,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/radiobox.h" line="147"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/radiobox.h" line="144"/>
       </memberdef>
       <memberdef kind="function" id="classwx_radio_box_1a975cdb7268e0dee8056de71437da9926" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -371,7 +371,7 @@
 <para>See <ref refid="classwx_radio_box_1a2821fb98e7a2b2f52b0966c784bf4864" kindref="member">wxRadioBox()</ref> for further details. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/radiobox.h" line="162"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/radiobox.h" line="159"/>
       </memberdef>
       <memberdef kind="function" id="classwx_radio_box_1a866a228778655e03f9ca7777e558935d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -428,7 +428,7 @@
 <para>See <ref refid="classwx_radio_box_1a2821fb98e7a2b2f52b0966c784bf4864" kindref="member">wxRadioBox()</ref> for further details. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/radiobox.h" line="176"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/radiobox.h" line="173"/>
       </memberdef>
       <memberdef kind="function" id="classwx_radio_box_1a0e297404226d3737560ddd15eebcdccc" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -471,7 +471,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/radiobox.h" line="198"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/radiobox.h" line="195"/>
       </memberdef>
       <memberdef kind="function" id="classwx_radio_box_1a0235f9ff37a3c8da18f08024881ad88a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>int</type>
@@ -509,7 +509,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/radiobox.h" line="209"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/radiobox.h" line="206"/>
       </memberdef>
       <memberdef kind="function" id="classwx_radio_box_1a5408bc52124d53c0c84dec096cd85016" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>unsigned int</type>
@@ -522,7 +522,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/radiobox.h" line="214"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/radiobox.h" line="211"/>
       </memberdef>
       <memberdef kind="function" id="classwx_radio_box_1abb2a42f86759ba1dda374f4fbf032381" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>int</type>
@@ -547,7 +547,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/radiobox.h" line="223"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/radiobox.h" line="220"/>
       </memberdef>
       <memberdef kind="function" id="classwx_radio_box_1a383b81d4d6b7ae9918f2b7eb6114d92c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -573,7 +573,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/radiobox.h" line="234"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/radiobox.h" line="231"/>
       </memberdef>
       <memberdef kind="function" id="classwx_radio_box_1ac4fa8ff1332e529998950e1463c6c669" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_tool_tip" kindref="compound">wxToolTip</ref> *</type>
@@ -591,7 +591,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/radiobox.h" line="241"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/radiobox.h" line="238"/>
       </memberdef>
       <memberdef kind="function" id="classwx_radio_box_1a686246d4d9a58270639d9a878a4dc948" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>unsigned int</type>
@@ -604,7 +604,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/radiobox.h" line="246"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/radiobox.h" line="243"/>
       </memberdef>
       <memberdef kind="function" id="classwx_radio_box_1aad04486146f5323125a5c5061eae0f9e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -629,7 +629,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/radiobox.h" line="258"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/radiobox.h" line="255"/>
       </memberdef>
       <memberdef kind="function" id="classwx_radio_box_1a0ef41238d080693a4ae700272ccf141c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -654,7 +654,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/radiobox.h" line="273"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/radiobox.h" line="270"/>
       </memberdef>
       <memberdef kind="function" id="classwx_radio_box_1a2c7cbd294ddc0ce169947d9b447ce19f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -691,7 +691,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/radiobox.h" line="285"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/radiobox.h" line="282"/>
       </memberdef>
       <memberdef kind="function" id="classwx_radio_box_1a4eba2a89154b6ea56d3f51b1844bbde1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -728,7 +728,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/radiobox.h" line="300"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/radiobox.h" line="297"/>
       </memberdef>
       <memberdef kind="function" id="classwx_radio_box_1a1ad6078e61378f77034b3a93d6d7b0d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -772,7 +772,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/radiobox.h" line="328"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/radiobox.h" line="325"/>
       </memberdef>
       <memberdef kind="function" id="classwx_radio_box_1a9604c1693a26da3076d013ddd11f386c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>unsigned int</type>
@@ -787,7 +787,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/radiobox.h" line="332"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/radiobox.h" line="329"/>
       </memberdef>
       <memberdef kind="function" id="classwx_radio_box_1aa3976438a4928725f7fdc5c5561020d5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -814,7 +814,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/radiobox.h" line="333"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/radiobox.h" line="330"/>
       </memberdef>
       <memberdef kind="function" id="classwx_radio_box_1a95951516ebbf6d4ef78a110c0905777c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -851,7 +851,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/radiobox.h" line="334"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/radiobox.h" line="331"/>
       </memberdef>
       <memberdef kind="function" id="classwx_radio_box_1acdfb1a4331a5fc9b62d57f94b90f70c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -878,7 +878,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/radiobox.h" line="335"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/radiobox.h" line="332"/>
       </memberdef>
       <memberdef kind="function" id="classwx_radio_box_1afe941a37abea6422c8dab24102dfefc3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>int</type>
@@ -895,7 +895,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/radiobox.h" line="336"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/radiobox.h" line="333"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -905,77 +905,31 @@
 </para><para>This class supports the following styles: <itemizedlist>
 <listitem><para>wxRA_SPECIFY_ROWS: The major dimension parameter refers to the maximum number of rows. </para></listitem>
 <listitem><para>wxRA_SPECIFY_COLS: The major dimension parameter refers to the maximum number of columns. </para></listitem>
-<listitem><para>wxRA_USE_CHECKBOX: Use of the checkbox controls instead of radio buttons (currently supported only on PalmOS) </para></listitem>
 </itemizedlist>
 <heading level="2">Events emitted by this class</heading>
 </para><para>The following event handler macros redirect the events to member function handlers &apos;<bold>func</bold>&apos; with prototypes like: void<nonbreakablespace/>handlerFuncName(<ref refid="classwx_command_event" kindref="compound">wxCommandEvent</ref>&amp;<nonbreakablespace/>event)Event macros for events emitted by this class: <itemizedlist>
 <listitem><para>EVT_RADIOBOX(id,  func): Process a <computeroutput>wxEVT_COMMAND_RADIOBOX_SELECTED</computeroutput> event, when a radiobutton is clicked. </para></listitem>
 </itemizedlist>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref> <htmlonly> &lt;br&gt;&lt;div&gt;&lt;span class=&apos;appearance&apos;&gt;Appearance:&lt;/span&gt;&lt;br&gt;&lt;table class=&apos;appearance&apos;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&apos;wxmsw/radiobox.png&apos; alt=&apos;wxMSW appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxgtk/radiobox.png&apos; alt=&apos;wxGTK appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxmac/radiobox.png&apos; alt=&apos;wxMac appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;wxMSW appearance&lt;/td&gt;&lt;td&gt;wxGTK appearance&lt;/td&gt;&lt;td&gt;wxMac appearance&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt; </htmlonly></para><para><simplesect kind="see"><para><ref refid="overview__events" kindref="compound">Events and Event Handling</ref>, <ref refid="classwx_radio_button" kindref="compound">wxRadioButton</ref>, <ref refid="classwx_check_box" kindref="compound">wxCheckBox</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref> <htmlonly> &lt;br&gt;&lt;div&gt;&lt;span class=&apos;appearance&apos;&gt;Appearance:&lt;/span&gt;&lt;br&gt;&lt;table class=&apos;appearance&apos;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&apos;wxmsw/radiobox.png&apos; alt=&apos;wxMSW appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxgtk/radiobox.png&apos; alt=&apos;wxGTK appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxmac/radiobox.png&apos; alt=&apos;wxMac appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;wxMSW appearance&lt;/td&gt;&lt;td&gt;wxGTK appearance&lt;/td&gt;&lt;td&gt;wxMac appearance&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt; </htmlonly></para><para><simplesect kind="see"><para><ref refid="overview_events" kindref="compound">Events and Event Handling</ref>, <ref refid="classwx_radio_button" kindref="compound">wxRadioButton</ref>, <ref refid="classwx_check_box" kindref="compound">wxCheckBox</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="8975">
+      <node id="8983">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="8974">
-        <label>wxEvtHandler</label>
-        <link refid="classwx_evt_handler"/>
-        <childnode refid="8975" relation="public-inheritance">
-        </childnode>
-        <childnode refid="8976" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="8971">
-        <label>wxRadioBox</label>
-        <link refid="classwx_radio_box"/>
-        <childnode refid="8972" relation="public-inheritance">
-        </childnode>
-        <childnode refid="8977" relation="private-inheritance">
-        </childnode>
-      </node>
-      <node id="8976">
-        <label>wxTrackable</label>
-        <link refid="classwx_trackable"/>
-      </node>
-      <node id="8972">
-        <label>wxControl</label>
-        <link refid="classwx_control"/>
-        <childnode refid="8973" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="8973">
-        <label>wxWindow</label>
-        <link refid="classwx_window"/>
-        <childnode refid="8974" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="8977">
-        <label>wxItemContainerImmutable</label>
-        <link refid="classwx_item_container_immutable"/>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
       <node id="8982">
-        <label>wxObject</label>
-        <link refid="classwx_object"/>
-        <childnode refid="8983" relation="usage">
-          <edgelabel>m_refData</edgelabel>
-        </childnode>
-      </node>
-      <node id="8981">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="8982" relation="public-inheritance">
+        <childnode refid="8983" relation="public-inheritance">
         </childnode>
         <childnode refid="8984" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8978">
+      <node id="8979">
         <label>wxRadioBox</label>
         <link refid="classwx_radio_box"/>
-        <childnode refid="8979" relation="public-inheritance">
+        <childnode refid="8980" relation="public-inheritance">
         </childnode>
         <childnode refid="8985" relation="private-inheritance">
         </childnode>
@@ -984,28 +938,73 @@
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="8979">
+      <node id="8980">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="8980" relation="public-inheritance">
+        <childnode refid="8981" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8980">
+      <node id="8981">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="8981" relation="public-inheritance">
+        <childnode refid="8982" relation="public-inheritance">
         </childnode>
       </node>
       <node id="8985">
         <label>wxItemContainerImmutable</label>
         <link refid="classwx_item_container_immutable"/>
       </node>
-      <node id="8983">
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="8990">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="8991" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="8989">
+        <label>wxEvtHandler</label>
+        <link refid="classwx_evt_handler"/>
+        <childnode refid="8990" relation="public-inheritance">
+        </childnode>
+        <childnode refid="8992" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8986">
+        <label>wxRadioBox</label>
+        <link refid="classwx_radio_box"/>
+        <childnode refid="8987" relation="public-inheritance">
+        </childnode>
+        <childnode refid="8993" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="8992">
+        <label>wxTrackable</label>
+        <link refid="classwx_trackable"/>
+      </node>
+      <node id="8987">
+        <label>wxControl</label>
+        <link refid="classwx_control"/>
+        <childnode refid="8988" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8988">
+        <label>wxWindow</label>
+        <link refid="classwx_window"/>
+        <childnode refid="8989" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8993">
+        <label>wxItemContainerImmutable</label>
+        <link refid="classwx_item_container_immutable"/>
+      </node>
+      <node id="8991">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/radiobox.h" line="40" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/radiobox.h" bodystart="39" bodyend="338"/>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/radiobox.h" line="37" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/radiobox.h" bodystart="36" bodyend="335"/>
     <listofallmembers>
       <member refid="classwx_window_1a3afbd49b1ea2f8275e3600dcac102923" prot="public" virt="virtual"><scope>wxRadioBox</scope><name>AcceptsFocus</name></member>
       <member refid="classwx_window_1a2370bdd3ab08e7ef3c7555c6aa8301b8" prot="public" virt="virtual"><scope>wxRadioBox</scope><name>AcceptsFocusFromKeyboard</name></member>

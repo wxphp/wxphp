@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="textctrl_8h" kind="file">
     <compoundname>textctrl.h</compoundname>
     <innerclass refid="classwx_text_attr" prot="public">wxTextAttr</innerclass>
@@ -204,6 +204,17 @@
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="52" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" bodystart="52" bodyend="-1"/>
       </memberdef>
+      <memberdef kind="define" id="textctrl_8h_1a7e8798ee8590fd579f4e80aa06488ec5" prot="public" static="no">
+        <name>wxTEXT_TYPE_ANY</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="55" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
       </sectiondef>
       <sectiondef kind="enum">
       <memberdef kind="enum" id="textctrl_8h_1acf93ad4eb51199602dc2af60ca78b4e5" prot="public" static="no">
@@ -257,7 +268,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="66" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" bodystart="65" bodyend="76"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="68" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" bodystart="67" bodyend="78"/>
       </memberdef>
       <memberdef kind="enum" id="textctrl_8h_1a5544b853914845e9d6453501951d60c2" prot="public" static="no">
         <name>wxTextAttrFlags</name>
@@ -532,7 +543,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="83" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" bodystart="82" bodyend="151"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="85" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" bodystart="84" bodyend="153"/>
       </memberdef>
       <memberdef kind="enum" id="textctrl_8h_1a99ffd353a510e2b6aea0c58e27d25d16" prot="public" static="no">
         <name>wxTextAttrBulletStyle</name>
@@ -670,7 +681,7 @@
 <para>They can be combined together as a bitlist. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="157" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" bodystart="156" bodyend="177"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="159" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" bodystart="158" bodyend="179"/>
       </memberdef>
       <memberdef kind="enum" id="textctrl_8h_1a7c69f4858cb8754f2c36a03e86f8cb31" prot="public" static="no">
         <name>wxTextAttrEffects</name>
@@ -768,7 +779,7 @@
 <para>They can be combined together as a bitlist.</para><para>Of these, only wxTEXT_ATTR_EFFECT_CAPITALS, wxTEXT_ATTR_EFFECT_STRIKETHROUGH, wxTEXT_ATTR_EFFECT_SUPERSCRIPT and wxTEXT_ATTR_EFFECT_SUBSCRIPT are implemented. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="186" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" bodystart="185" bodyend="198"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="188" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" bodystart="187" bodyend="200"/>
       </memberdef>
       <memberdef kind="enum" id="textctrl_8h_1a52a6f973ecbac9d2a4249d1ca58bd172" prot="public" static="no">
         <name>wxTextAttrLineSpacing</name>
@@ -802,7 +813,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="204" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" bodystart="203" bodyend="208"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="206" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" bodystart="205" bodyend="210"/>
       </memberdef>
       <memberdef kind="enum" id="textctrl_8h_1a0ca70276b66011b1ca0a120b8c20fd16" prot="public" static="no">
         <name>wxTextCtrlHitTestResult</name>
@@ -848,7 +859,7 @@
 <para>The element names correspond to the relationship between the point asked for and the character returned, e.g. <computeroutput>wxTE_HT_BEFORE</computeroutput> means that the point is before (leftward or upward) it and so on. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="219" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" bodystart="218" bodyend="235"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="221" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" bodystart="220" bodyend="237"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="typedef">
@@ -863,7 +874,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="59" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" bodystart="59" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="61" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" bodystart="61" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

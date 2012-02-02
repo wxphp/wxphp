@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_progress_dialog" kind="class" prot="public">
     <compoundname>wxProgressDialog</compoundname>
     <basecompoundref refid="classwx_dialog" prot="public" virt="non-virtual">wxDialog</basecompoundref>
@@ -280,56 +280,8 @@
 <listitem><para>wxPD_REMAINING_TIME: This flag tells the dialog that it should show remaining time. </para></listitem>
 </itemizedlist>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__cmndlg" kindref="compound">Common Dialogs</ref> </para>    </detaileddescription>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__cmndlg" kindref="compound">Common Dialogs</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="8841">
-        <label>wxNonOwnedWindow</label>
-        <link refid="classwx_non_owned_window"/>
-        <childnode refid="8842" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="8844">
-        <label>wxObject</label>
-        <link refid="classwx_object"/>
-      </node>
-      <node id="8843">
-        <label>wxEvtHandler</label>
-        <link refid="classwx_evt_handler"/>
-        <childnode refid="8844" relation="public-inheritance">
-        </childnode>
-        <childnode refid="8845" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="8838">
-        <label>wxProgressDialog</label>
-        <link refid="classwx_progress_dialog"/>
-        <childnode refid="8839" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="8845">
-        <label>wxTrackable</label>
-        <link refid="classwx_trackable"/>
-      </node>
-      <node id="8842">
-        <label>wxWindow</label>
-        <link refid="classwx_window"/>
-        <childnode refid="8843" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="8839">
-        <label>wxDialog</label>
-        <link refid="classwx_dialog"/>
-        <childnode refid="8840" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="8840">
-        <label>wxTopLevelWindow</label>
-        <link refid="classwx_top_level_window"/>
-        <childnode refid="8841" relation="public-inheritance">
-        </childnode>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
       <node id="8849">
         <label>wxNonOwnedWindow</label>
         <link refid="classwx_non_owned_window"/>
@@ -339,16 +291,13 @@
       <node id="8852">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="8853" relation="usage">
-          <edgelabel>m_refData</edgelabel>
-        </childnode>
       </node>
       <node id="8851">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
         <childnode refid="8852" relation="public-inheritance">
         </childnode>
-        <childnode refid="8854" relation="public-inheritance">
+        <childnode refid="8853" relation="public-inheritance">
         </childnode>
       </node>
       <node id="8846">
@@ -357,7 +306,7 @@
         <childnode refid="8847" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8854">
+      <node id="8853">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
@@ -379,7 +328,58 @@
         <childnode refid="8849" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8853">
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="8857">
+        <label>wxNonOwnedWindow</label>
+        <link refid="classwx_non_owned_window"/>
+        <childnode refid="8858" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8860">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="8861" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="8859">
+        <label>wxEvtHandler</label>
+        <link refid="classwx_evt_handler"/>
+        <childnode refid="8860" relation="public-inheritance">
+        </childnode>
+        <childnode refid="8862" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8854">
+        <label>wxProgressDialog</label>
+        <link refid="classwx_progress_dialog"/>
+        <childnode refid="8855" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8862">
+        <label>wxTrackable</label>
+        <link refid="classwx_trackable"/>
+      </node>
+      <node id="8858">
+        <label>wxWindow</label>
+        <link refid="classwx_window"/>
+        <childnode refid="8859" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8855">
+        <label>wxDialog</label>
+        <link refid="classwx_dialog"/>
+        <childnode refid="8856" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8856">
+        <label>wxTopLevelWindow</label>
+        <link refid="classwx_top_level_window"/>
+        <childnode refid="8857" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8861">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
@@ -716,6 +716,7 @@
       <member refid="classwx_window_1a07f5f7ed3f78e0ef7b3dee3f4da81001" prot="public" virt="virtual"><scope>wxProgressDialog</scope><name>SetPreviousHandler</name></member>
       <member refid="classwx_progress_dialog_1a3f93ca94ae34633bcc83c3694e191781" prot="public" virt="non-virtual"><scope>wxProgressDialog</scope><name>SetRange</name></member>
       <member refid="classwx_object_1afab780710f2adc1bb33310e27590140b" prot="public" virt="non-virtual"><scope>wxProgressDialog</scope><name>SetRefData</name></member>
+      <member refid="classwx_top_level_window_1a82afa6f09dd5faef6330807ef59374e8" prot="public" virt="virtual"><scope>wxProgressDialog</scope><name>SetRepresentedFilename</name></member>
       <member refid="classwx_dialog_1a0d04ed85ac5cd271a61514d446340673" prot="public" virt="non-virtual"><scope>wxProgressDialog</scope><name>SetReturnCode</name></member>
       <member refid="classwx_top_level_window_1a98e95b1b10f44b80f9b29a03ab09a879" prot="public" virt="non-virtual"><scope>wxProgressDialog</scope><name>SetRightMenu</name></member>
       <member refid="classwx_window_1aa842d59529f873683e55cd8392ec46e9" prot="public" virt="virtual"><scope>wxProgressDialog</scope><name>SetScrollbar</name></member>

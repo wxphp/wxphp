@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_info_bar" kind="class" prot="public">
     <compoundname>wxInfoBar</compoundname>
     <basecompoundref refid="classwx_control" prot="public" virt="non-virtual">wxControl</basecompoundref>
     <includes local="no">wx/infobar.h</includes>
       <sectiondef kind="user-defined">
       <header>Generic version customization methods.</header>
-      <description><para><anchor id="_1amgrp002d53e22b676777e8993fec4d67a383"/>All these methods exist in the generic version of the class only.</para><para>The generic version uses <ref refid="classwx_window_1a596b1715edfc7609f352b2e000ecbaec" kindref="member">wxWindow::ShowWithEffect()</ref> function to progressively show it on the platforms which support it (currently only wxMSW). The methods here allow to change the default effect used (or disable it entirely) and change its duration. </para></description>
+      <description><para>All these methods exist in the generic version of the class only.</para><para>The generic version uses <ref refid="classwx_window_1a596b1715edfc7609f352b2e000ecbaec" kindref="member">wxWindow::ShowWithEffect()</ref> function to progressively show it on the platforms which support it (currently only wxMSW). The methods here allow to change the default effect used (or disable it entirely) and change its duration. </para></description>
       <memberdef kind="function" id="classwx_info_bar_1a7a07a24280a4a3e64ab13db6c1106a44" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void wxInfoBar::SetShowHideEffects</definition>
@@ -316,22 +316,22 @@
     <briefdescription>
 <para>An info bar is a transient window shown at top or bottom of its parent window to display non-critical information to the user. </para>    </briefdescription>
     <detaileddescription>
-<para>This class provides another way to show messages to the user, intermediate between message boxes and status bar messages. The message boxes are modal and thus interrupt the users work flow and should be used sparingly for this reason. However status bar messages are often too easy not to notice at all. An info bar provides a way to present the messages which has a much higher chance to be noticed by the user but without being annoying.</para><para>Info bar may show an icon (on the left), text message and, optionally, buttons allowing the user to react to the information presented. It always has a close button at the right allowing the user to dismiss it so it isn&apos;t necessary to provide a button just to close it.</para><para><ref refid="classwx_info_bar" kindref="compound">wxInfoBar</ref> calls its parent <ref refid="classwx_window_1a1b143c3e72bd0af533b76db4830a6113" kindref="member">wxWindow::Layout()</ref> method and assumes that it will change the parent layout appropriately depending on whether the info bar itself is shown or hidden. Usually this is achieved by simply using a sizer for the parent window layout and adding <ref refid="classwx_info_bar" kindref="compound">wxInfoBar</ref> to this sizer as one of the items. Considering the usual placement of the info bars, normally this sizer should be a vertical <ref refid="classwx_box_sizer" kindref="compound">wxBoxSizer</ref> and the bar its first or last element so the simplest possible example of using this class would be: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">MyFrame<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classwx_frame" kindref="compound" tooltip="A frame is a window whose size and position can (usually) be changed by the user...">wxFrame</ref></highlight></codeline>
+<para>This class provides another way to show messages to the user, intermediate between message boxes and status bar messages. The message boxes are modal and thus interrupt the users work flow and should be used sparingly for this reason. However status bar messages are often too easy not to notice at all. An info bar provides a way to present the messages which has a much higher chance to be noticed by the user but without being annoying.</para><para>Info bar may show an icon (on the left), text message and, optionally, buttons allowing the user to react to the information presented. It always has a close button at the right allowing the user to dismiss it so it isn&apos;t necessary to provide a button just to close it.</para><para><ref refid="classwx_info_bar" kindref="compound">wxInfoBar</ref> calls its parent <ref refid="classwx_window_1a1b143c3e72bd0af533b76db4830a6113" kindref="member">wxWindow::Layout()</ref> method and assumes that it will change the parent layout appropriately depending on whether the info bar itself is shown or hidden. Usually this is achieved by simply using a sizer for the parent window layout and adding <ref refid="classwx_info_bar" kindref="compound">wxInfoBar</ref> to this sizer as one of the items. Considering the usual placement of the info bars, normally this sizer should be a vertical <ref refid="classwx_box_sizer" kindref="compound">wxBoxSizer</ref> and the bar its first or last element so the simplest possible example of using this class would be: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">MyFrame<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classwx_frame" kindref="compound" tooltip="A frame is a window whose size and position can (usually) be changed by the user.">wxFrame</ref></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_info_bar" kindref="compound" tooltip="An info bar is a transient window shown at top or bottom of its parent window to...">wxInfoBar</ref><sp/>*m_infoBar;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_info_bar" kindref="compound" tooltip="An info bar is a transient window shown at top or bottom of its parent window to display non-critical...">wxInfoBar</ref><sp/>*m_infoBar;</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>MyFrame::MyFrame()</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_infoBar<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classwx_info_bar" kindref="compound" tooltip="An info bar is a transient window shown at top or bottom of its parent window to...">wxInfoBar</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_infoBar<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classwx_info_bar_1a802021e4b71dc8286c7fc56a45c73967" kindref="member" tooltip="Default constructor.">wxInfoBar</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_sizer" kindref="compound" tooltip="wxSizer is the abstract base class used for laying out subwindows in a window.">wxSizer</ref><sp/>*sizer<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classwx_box_sizer" kindref="compound" tooltip="The basic idea behind a box sizer is that windows will most often be laid out in...">wxBoxSizer</ref>(<ref refid="defs_8h_1a1e6994f40bd9cb140e292afb165af971a2134d1cb8cf605532880c118190695b5" kindref="member">wxVERTICAL</ref>);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_sizer" kindref="compound" tooltip="wxSizer is the abstract base class used for laying out subwindows in a window.">wxSizer</ref><sp/>*sizer<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classwx_box_sizer" kindref="compound" tooltip="The basic idea behind a box sizer is that windows will most often be laid out in rather simple basic ...">wxBoxSizer</ref>(<ref refid="defs_8h_1a1e6994f40bd9cb140e292afb165af971a2134d1cb8cf605532880c118190695b5" kindref="member">wxVERTICAL</ref>);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sizer-&gt;<ref refid="classwx_sizer_1a4e2122f2749261473c21cb192d00709f" kindref="member" tooltip="Appends a child to the sizer.">Add</ref>(m_infoBar,<sp/><ref refid="classwx_sizer_flags" kindref="compound" tooltip="Container for sizer items flags providing readable names for them.">wxSizerFlags</ref>().Expand());</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...<sp/>add<sp/>other<sp/>frame<sp/>controls<sp/>to<sp/>the<sp/>sizer<sp/>...</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SetSizer(sizer);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_window_1abc95691b45e29a52c24aa9d33d46dec1" kindref="member" tooltip="Sets the window to have the given layout sizer.">SetSizer</ref>(sizer);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>MyFrame::SomeMethod()</highlight></codeline>
@@ -339,84 +339,84 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_infoBar-&gt;ShowMessage(</highlight><highlight class="stringliteral">&quot;Something<sp/>happend&quot;</highlight><highlight class="normal">,<sp/><ref refid="defs_8h_1a6ad4380c48ee0854f49c171b1a2514eb" kindref="member">wxICON_INFORMATION</ref>);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 </programlisting></para><para>See the dialogs sample for more sophisticated examples.</para><para>Currently this class is implemented generically (i.e. in the same platform-independent way for all ports) and also natively in wxGTK but the native implementation requires a recent -- as of this writing -- GTK+ 2.18 version.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__miscwnd" kindref="compound">Miscellaneous Windows</ref></para><para><simplesect kind="see"><para><ref refid="classwx_status_bar" kindref="compound">wxStatusBar</ref>, <ref refid="classwx_message_dialog" kindref="compound">wxMessageDialog</ref></para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__miscwnd" kindref="compound">Miscellaneous Windows</ref></para><para><simplesect kind="see"><para><ref refid="classwx_status_bar" kindref="compound">wxStatusBar</ref>, <ref refid="classwx_message_dialog" kindref="compound">wxMessageDialog</ref></para></simplesect>
 <simplesect kind="since"><para>2.9.1 </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7260">
+      <node id="7264">
         <label>wxInfoBar</label>
         <link refid="classwx_info_bar"/>
-        <childnode refid="7261" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="7264">
-        <label>wxObject</label>
-        <link refid="classwx_object"/>
-      </node>
-      <node id="7263">
-        <label>wxEvtHandler</label>
-        <link refid="classwx_evt_handler"/>
-        <childnode refid="7264" relation="public-inheritance">
-        </childnode>
         <childnode refid="7265" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7265">
+      <node id="7268">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+      </node>
+      <node id="7267">
+        <label>wxEvtHandler</label>
+        <link refid="classwx_evt_handler"/>
+        <childnode refid="7268" relation="public-inheritance">
+        </childnode>
+        <childnode refid="7269" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7269">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="7261">
+      <node id="7265">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="7262" relation="public-inheritance">
+        <childnode refid="7266" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7262">
+      <node id="7266">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="7263" relation="public-inheritance">
+        <childnode refid="7267" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7266">
+      <node id="7270">
         <label>wxInfoBar</label>
         <link refid="classwx_info_bar"/>
-        <childnode refid="7267" relation="public-inheritance">
+        <childnode refid="7271" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7270">
+      <node id="7274">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="7271" relation="usage">
+        <childnode refid="7275" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="7269">
+      <node id="7273">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="7270" relation="public-inheritance">
+        <childnode refid="7274" relation="public-inheritance">
         </childnode>
+        <childnode refid="7276" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7276">
+        <label>wxTrackable</label>
+        <link refid="classwx_trackable"/>
+      </node>
+      <node id="7271">
+        <label>wxControl</label>
+        <link refid="classwx_control"/>
         <childnode refid="7272" relation="public-inheritance">
         </childnode>
       </node>
       <node id="7272">
-        <label>wxTrackable</label>
-        <link refid="classwx_trackable"/>
-      </node>
-      <node id="7267">
-        <label>wxControl</label>
-        <link refid="classwx_control"/>
-        <childnode refid="7268" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="7268">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="7269" relation="public-inheritance">
+        <childnode refid="7273" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7271">
+      <node id="7275">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

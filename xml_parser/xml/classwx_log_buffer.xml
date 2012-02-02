@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_log_buffer" kind="class" prot="public">
     <compoundname>wxLogBuffer</compoundname>
     <basecompoundref refid="classwx_log" prot="public" virt="non-virtual">wxLog</basecompoundref>
@@ -50,27 +50,27 @@
 <para><ref refid="classwx_log_buffer" kindref="compound">wxLogBuffer</ref> is a very simple implementation of log sink which simply collects all the logged messages in a string (except the debug messages which are output in the usual way immediately as we&apos;re presumably not interested in collecting them for later). </para>    </briefdescription>
     <detaileddescription>
 <para>The messages from different log function calls are separated by the new lines.</para><para>All the messages collected so far can be shown to the user (and the current buffer cleared) by calling the overloaded <ref refid="classwx_log_buffer_1af1e67e3ce1ef590448506419c046932c" kindref="member">wxLogBuffer::Flush</ref> method.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__logging" kindref="compound">Logging</ref> </para>    </detaileddescription>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__logging" kindref="compound">Logging</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7496">
+      <node id="7500">
         <label>wxLogBuffer</label>
         <link refid="classwx_log_buffer"/>
-        <childnode refid="7497" relation="public-inheritance">
+        <childnode refid="7501" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7497">
+      <node id="7501">
         <label>wxLog</label>
         <link refid="classwx_log"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7498">
+      <node id="7502">
         <label>wxLogBuffer</label>
         <link refid="classwx_log_buffer"/>
-        <childnode refid="7499" relation="public-inheritance">
+        <childnode refid="7503" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7499">
+      <node id="7503">
         <label>wxLog</label>
         <link refid="classwx_log"/>
       </node>
@@ -102,6 +102,7 @@
       <member refid="classwx_log_1a14a562556933276939cedbb470f149cb" prot="public" virt="non-virtual"><scope>wxLogBuffer</scope><name>Resume</name></member>
       <member refid="classwx_log_1ac7ea85f71c8d3ecd4247f412be410505" prot="public" virt="non-virtual"><scope>wxLogBuffer</scope><name>SetActiveTarget</name></member>
       <member refid="classwx_log_1a7ae244e71dff20efd3a37b3718841a39" prot="public" virt="non-virtual"><scope>wxLogBuffer</scope><name>SetComponentLevel</name></member>
+      <member refid="classwx_log_1a9f316422df6930c549db80a5e4bf36a2" prot="public" virt="non-virtual"><scope>wxLogBuffer</scope><name>SetFormatter</name></member>
       <member refid="classwx_log_1a4ea68379469ca27f645d5f91c2d42b3b" prot="public" virt="non-virtual"><scope>wxLogBuffer</scope><name>SetLogLevel</name></member>
       <member refid="classwx_log_1ae814f9b9b4c8b4a52e34d7c919f98296" prot="public" virt="non-virtual"><scope>wxLogBuffer</scope><name>SetRepetitionCounting</name></member>
       <member refid="classwx_log_1a2525bf54fa3f31dc50e6e3cd8651e71d" prot="public" virt="non-virtual"><scope>wxLogBuffer</scope><name>SetThreadActiveTarget</name></member>

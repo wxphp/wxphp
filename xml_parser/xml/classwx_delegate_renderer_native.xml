@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_delegate_renderer_native" kind="class" prot="public">
     <compoundname>wxDelegateRendererNative</compoundname>
     <basecompoundref refid="classwx_renderer_native" prot="public" virt="non-virtual">wxRendererNative</basecompoundref>
@@ -112,9 +112,9 @@
           <defval>NULL</defval>
         </param>
         <briefdescription>
-<para>Draw the contents of a header control button (label, sort arrows, etc. </para>        </briefdescription>
+<para>Draw the contents of a header control button (label, sort arrows, etc.). </para>        </briefdescription>
         <detaileddescription>
-<para>). This function is normally only called by <ref refid="classwx_delegate_renderer_native_1ac910b4ed8daf2381d806c18b217dd9f8" kindref="member">DrawHeaderButton()</ref>.</para><para>Depending on platforms the <emphasis>flags</emphasis> parameter may support the <computeroutput>wxCONTROL_SELECTED</computeroutput> <computeroutput>wxCONTROL_DISABLED</computeroutput> and <computeroutput>wxCONTROL_CURRENT</computeroutput> bits, see <ref refid="renderer_8h_1wxCONTROL_FLAGS" kindref="member">wxCONTROL_FLAGS</ref>.</para><para><simplesect kind="return"><para>The optimal width to contain the unabbreviated label text or bitmap, the sort arrow if present, and internal margins. </para></simplesect>
+<para>This function is normally only called by <ref refid="classwx_delegate_renderer_native_1ac910b4ed8daf2381d806c18b217dd9f8" kindref="member">DrawHeaderButton()</ref>.</para><para>Depending on platforms the <emphasis>flags</emphasis> parameter may support the <computeroutput>wxCONTROL_SELECTED</computeroutput> <computeroutput>wxCONTROL_DISABLED</computeroutput> and <computeroutput>wxCONTROL_CURRENT</computeroutput> bits, see <ref refid="renderer_8h_1wxCONTROL_FLAGS" kindref="member">wxCONTROL_FLAGS</ref>.</para><para><simplesect kind="return"><para>The optimal width to contain the unabbreviated label text or bitmap, the sort arrow if present, and internal margins. </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -500,28 +500,28 @@
 <para><ref refid="classwx_delegate_renderer_native" kindref="compound">wxDelegateRendererNative</ref> allows reuse of renderers code by forwarding all the <ref refid="classwx_renderer_native" kindref="compound">wxRendererNative</ref> methods to the given object and thus allowing you to only modify some of its methods -- without having to reimplement all of them. </para>    </briefdescription>
     <detaileddescription>
 <para>Note that the &quot;normal&quot;, inheritance-based approach, doesn&apos;t work with the renderers as it is impossible to derive from a class unknown at compile-time and the renderer is only chosen at run-time. So suppose that you want to only add something to the drawing of the tree control buttons but leave all the other methods unchanged -- the only way to do it, considering that the renderer class which you want to customize might not even be written yet when you write your code (it could be written later and loaded from a DLL during run-time), is by using this class.</para><para>Except for the constructor, it has exactly the same methods as <ref refid="classwx_renderer_native" kindref="compound">wxRendererNative</ref> and their implementation is trivial: they are simply forwarded to the real renderer. Note that the &quot;real&quot; renderer may, in turn, be a <ref refid="classwx_delegate_renderer_native" kindref="compound">wxDelegateRendererNative</ref> as well and that there may be arbitrarily many levels like this -- but at the end of the chain there must be a real renderer which does the drawing.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__gdi" kindref="compound">Graphics Device Interface (GDI)</ref></para><para><simplesect kind="see"><para><ref refid="classwx_renderer_native" kindref="compound">wxRendererNative</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__gdi" kindref="compound">Graphics Device Interface (GDI)</ref></para><para><simplesect kind="see"><para><ref refid="classwx_renderer_native" kindref="compound">wxRendererNative</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="5565">
+      <node id="5569">
         <label>wxDelegateRendererNative</label>
         <link refid="classwx_delegate_renderer_native"/>
-        <childnode refid="5566" relation="public-inheritance">
+        <childnode refid="5570" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5566">
+      <node id="5570">
         <label>wxRendererNative</label>
         <link refid="classwx_renderer_native"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="5567">
+      <node id="5571">
         <label>wxDelegateRendererNative</label>
         <link refid="classwx_delegate_renderer_native"/>
-        <childnode refid="5568" relation="public-inheritance">
+        <childnode refid="5572" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5568">
+      <node id="5572">
         <label>wxRendererNative</label>
         <link refid="classwx_renderer_native"/>
       </node>

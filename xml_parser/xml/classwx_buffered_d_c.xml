@@ -1,12 +1,11 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_buffered_d_c" kind="class" prot="public">
     <compoundname>wxBufferedDC</compoundname>
     <basecompoundref refid="classwx_memory_d_c" prot="public" virt="non-virtual">wxMemoryDC</basecompoundref>
     <derivedcompoundref refid="classwx_buffered_paint_d_c" prot="public" virt="non-virtual">wxBufferedPaintDC</derivedcompoundref>
     <includes local="no">wx/dcbuffer.h</includes>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_buffered_d_c_1a9a77fe1f6a944e2140c69f1dbee57ebb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void wxBufferedDC::Init</definition>
@@ -190,71 +189,71 @@
 <para>This class provides a simple way to avoid flicker: when drawing on it, everything is in fact first drawn on an in-memory buffer (a <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref>) and then copied to the screen, using the associated <ref refid="classwx_d_c" kindref="compound">wxDC</ref>, only once, when this object is destroyed. </para>    </briefdescription>
     <detaileddescription>
 <para><ref refid="classwx_buffered_d_c" kindref="compound">wxBufferedDC</ref> itself is typically associated with <ref refid="classwx_client_d_c" kindref="compound">wxClientDC</ref>, if you want to use it in your <computeroutput>EVT_PAINT</computeroutput> handler, you should look at <ref refid="classwx_buffered_paint_d_c" kindref="compound">wxBufferedPaintDC</ref> instead.</para><para>When used like this, a valid <emphasis>DC</emphasis> must be specified in the constructor while the <emphasis>buffer</emphasis> bitmap doesn&apos;t have to be explicitly provided, by default this class will allocate the bitmap of required size itself. However using a dedicated bitmap can speed up the redrawing process by eliminating the repeated creation and destruction of a possibly big bitmap. Otherwise, <ref refid="classwx_buffered_d_c" kindref="compound">wxBufferedDC</ref> can be used in the same way as any other device context.</para><para>There is another possible use for <ref refid="classwx_buffered_d_c" kindref="compound">wxBufferedDC</ref> is to use it to maintain a backing store for the window contents. In this case, the associated <emphasis>DC</emphasis> may be NULL but a valid backing store bitmap should be specified.</para><para>Finally, please note that GTK+ 2.0 as well as OS X provide double buffering themselves natively. You can either use <ref refid="classwx_window_1a9d1be1bbb625ebf87ad4ad47e49a0194" kindref="member">wxWindow::IsDoubleBuffered()</ref> to determine whether you need to use buffering or not, or use <ref refid="classwx_auto_buffered_paint_d_c" kindref="compound">wxAutoBufferedPaintDC</ref> to avoid needless double buffering on the systems which already do it automatically.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__dc" kindref="compound">Device Contexts</ref></para><para><simplesect kind="see"><para><ref refid="classwx_d_c" kindref="compound">wxDC</ref>, <ref refid="classwx_memory_d_c" kindref="compound">wxMemoryDC</ref>, <ref refid="classwx_buffered_paint_d_c" kindref="compound">wxBufferedPaintDC</ref>, <ref refid="classwx_auto_buffered_paint_d_c" kindref="compound">wxAutoBufferedPaintDC</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__dc" kindref="compound">Device Contexts</ref></para><para><simplesect kind="see"><para><ref refid="classwx_d_c" kindref="compound">wxDC</ref>, <ref refid="classwx_memory_d_c" kindref="compound">wxMemoryDC</ref>, <ref refid="classwx_buffered_paint_d_c" kindref="compound">wxBufferedPaintDC</ref>, <ref refid="classwx_auto_buffered_paint_d_c" kindref="compound">wxAutoBufferedPaintDC</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="4594">
+      <node id="4598">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="4592">
+      <node id="4596">
         <label>wxMemoryDC</label>
         <link refid="classwx_memory_d_c"/>
-        <childnode refid="4593" relation="public-inheritance">
+        <childnode refid="4597" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4599">
+        <label>wxBufferedPaintDC</label>
+        <link refid="classwx_buffered_paint_d_c"/>
+        <childnode refid="4595" relation="public-inheritance">
         </childnode>
       </node>
       <node id="4595">
-        <label>wxBufferedPaintDC</label>
-        <link refid="classwx_buffered_paint_d_c"/>
-        <childnode refid="4591" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4591">
         <label>wxBufferedDC</label>
         <link refid="classwx_buffered_d_c"/>
-        <childnode refid="4592" relation="public-inheritance">
+        <childnode refid="4596" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4593">
+      <node id="4597">
         <label>wxDC</label>
         <link refid="classwx_d_c"/>
-        <childnode refid="4594" relation="public-inheritance">
+        <childnode refid="4598" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4596">
+      <node id="4600">
         <label>wxAutoBufferedPaintDC</label>
         <link refid="classwx_auto_buffered_paint_d_c"/>
-        <childnode refid="4595" relation="public-inheritance">
+        <childnode refid="4599" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="4600">
+      <node id="4604">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="4601" relation="usage">
+        <childnode refid="4605" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="4598">
+      <node id="4602">
         <label>wxMemoryDC</label>
         <link refid="classwx_memory_d_c"/>
-        <childnode refid="4599" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4597">
-        <label>wxBufferedDC</label>
-        <link refid="classwx_buffered_d_c"/>
-        <childnode refid="4598" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4599">
-        <label>wxDC</label>
-        <link refid="classwx_d_c"/>
-        <childnode refid="4600" relation="public-inheritance">
+        <childnode refid="4603" relation="public-inheritance">
         </childnode>
       </node>
       <node id="4601">
+        <label>wxBufferedDC</label>
+        <link refid="classwx_buffered_d_c"/>
+        <childnode refid="4602" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4603">
+        <label>wxDC</label>
+        <link refid="classwx_d_c"/>
+        <childnode refid="4604" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4605">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

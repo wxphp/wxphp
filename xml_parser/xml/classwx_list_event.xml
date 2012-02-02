@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_list_event" kind="class" prot="public">
     <compoundname>wxListEvent</compoundname>
     <basecompoundref refid="classwx_notify_event" prot="public" virt="non-virtual">wxNotifyEvent</basecompoundref>
@@ -26,7 +26,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1118"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1173"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_event_1a68b671549e844ab05fd5d0eb97446f16" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>long</type>
@@ -39,7 +39,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1124"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1179"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_event_1ad8705b1e438b204ae9767d0686ff9ce1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>long</type>
@@ -52,7 +52,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1130"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1185"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_event_1ab545203136faa0ef7f38a2da19cb514f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -65,7 +65,7 @@
 <para>For the column dragging events, it is the column to the left of the divider being dragged, for the column click events it may be -1 if the user clicked in the list control header outside any column. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1139"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1194"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_event_1ab5012d0503cef8c04b0590b5b488a812" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>long</type>
@@ -78,7 +78,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1144"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1199"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_event_1a7b64486dd62f78f5e2ba43e2e21ff4c5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -91,7 +91,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1149"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1204"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_event_1a82f01598e75a679d3ab4bba3478b540d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>long</type>
@@ -104,7 +104,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1154"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1209"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_event_1ac734318808d9ca9faf0ff432f350db7a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_list_item" kindref="compound">wxListItem</ref> &amp;</type>
@@ -117,7 +117,7 @@
 <para>See also <ref refid="classwx_list_ctrl_1a65a4d9f5fa5bc363e4a93317777d57b4" kindref="member">wxListCtrl::SetItem</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1159"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1214"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_event_1a49229283487743e2c8a617dfc0258c57" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -130,7 +130,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1164"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1219"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_event_1a94a026c49d1ff0f5383920ba6a86b4a1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -143,7 +143,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1169"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1224"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_event_1afad331e11ecc3ab8238f47f399e02609" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>long</type>
@@ -156,7 +156,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1174"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1229"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_event_1a43108d2e4daf1a8ed177a1226ed75f9d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_point" kindref="compound">wxPoint</ref></type>
@@ -169,7 +169,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1179"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1234"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_event_1a1274a079f7f30627801f5f129509e299" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -182,7 +182,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1184"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1239"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_event_1a44b0b0a4118070f99262708357f7a9c4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -195,7 +195,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1193"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1248"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -225,76 +225,76 @@
 <listitem><para>EVT_LIST_CACHE_HINT(id,  func): Prepare cache for a virtual list control </para></listitem>
 </itemizedlist>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="classwx_list_ctrl" kindref="compound">wxListCtrl</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="classwx_list_ctrl" kindref="compound">wxListCtrl</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7454">
+      <node id="7458">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="7452">
+      <node id="7456">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="7453" relation="public-inheritance">
+        <childnode refid="7457" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7450">
+      <node id="7454">
         <label>wxListEvent</label>
         <link refid="classwx_list_event"/>
-        <childnode refid="7451" relation="public-inheritance">
+        <childnode refid="7455" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7451">
+      <node id="7455">
         <label>wxNotifyEvent</label>
         <link refid="classwx_notify_event"/>
-        <childnode refid="7452" relation="public-inheritance">
+        <childnode refid="7456" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7453">
+      <node id="7457">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="7454" relation="public-inheritance">
+        <childnode refid="7458" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7459">
+      <node id="7463">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="7460" relation="usage">
+        <childnode refid="7464" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="7457">
+      <node id="7461">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="7458" relation="public-inheritance">
+        <childnode refid="7462" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7455">
+      <node id="7459">
         <label>wxListEvent</label>
         <link refid="classwx_list_event"/>
-        <childnode refid="7456" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="7456">
-        <label>wxNotifyEvent</label>
-        <link refid="classwx_notify_event"/>
-        <childnode refid="7457" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="7458">
-        <label>wxEvent</label>
-        <link refid="classwx_event"/>
-        <childnode refid="7459" relation="public-inheritance">
+        <childnode refid="7460" relation="public-inheritance">
         </childnode>
       </node>
       <node id="7460">
+        <label>wxNotifyEvent</label>
+        <link refid="classwx_notify_event"/>
+        <childnode refid="7461" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7462">
+        <label>wxEvent</label>
+        <link refid="classwx_event"/>
+        <childnode refid="7463" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7464">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1113" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" bodystart="1112" bodyend="1194"/>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1168" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" bodystart="1167" bodyend="1249"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxListEvent</scope><name>AllocExclusive</name></member>
       <member refid="classwx_notify_event_1a7b23515f827b2ce1da1e6990d9aafe80" prot="public" virt="non-virtual"><scope>wxListEvent</scope><name>Allow</name></member>

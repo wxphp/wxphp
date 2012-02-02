@@ -1,11 +1,10 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_grid_cell_attr_provider" kind="class" prot="public">
     <compoundname>wxGridCellAttrProvider</compoundname>
     <basecompoundref refid="classwx_client_data_container" prot="public" virt="non-virtual">wxClientDataContainer</basecompoundref>
     <includes local="no">wx/grid.h</includes>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_grid_cell_attr_provider_1a85676f2c08382cd2a1e3c1f38a24540b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
         <definition>virtual void wxGridCellAttrProvider::SetAttr</definition>
@@ -75,7 +74,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_grid_cell_attr_provider_1ae9dde8ba83cbd36f6decfcedbb22301e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>const <ref refid="classwx_grid_column_header_renderer" kindref="compound">wxGridColumnHeaderRenderer</ref> &amp;</type>
         <definition>virtual const wxGridColumnHeaderRenderer&amp; wxGridCellAttrProvider::GetColumnHeaderRenderer</definition>
@@ -209,26 +207,26 @@
     <detaileddescription>
 <para>This class both defines an interface which grid cell attributes providers should implement -- and which can be implemented differently in derived classes -- and a default implementation of this interface which is often good enough to be used without modification, especially with not very large grids for which the efficiency of attributes storage hardly matters (see the discussion below).</para><para>An object of this class can be associated with a <ref refid="classwx_grid" kindref="compound">wxGrid</ref> using <ref refid="classwx_grid_table_base_1ad0248937170cf1f0280694525ee5f994" kindref="member">wxGridTableBase::SetAttrProvider()</ref> but it&apos;s not necessary to call it if you intend to use the default provider as it is used by <ref refid="classwx_grid_table_base" kindref="compound">wxGridTableBase</ref> by default anyhow.</para><para>Notice that while attributes provided by this class can be set for individual cells using <ref refid="classwx_grid_cell_attr_provider_1a85676f2c08382cd2a1e3c1f38a24540b" kindref="member">SetAttr()</ref> or the entire rows or columns using <ref refid="classwx_grid_cell_attr_provider_1afe30d6ea1164d0730d3f7ba447150735" kindref="member">SetRowAttr()</ref> and <ref refid="classwx_grid_cell_attr_provider_1ab07209295a7afb61658d24b3fe34cb89" kindref="member">SetColAttr()</ref> they are always retrieved using <ref refid="classwx_grid_cell_attr_provider_1a26ce9f9fd2e86e649b031b6211b6ab0a" kindref="member">GetAttr()</ref> function.</para><para>The default implementation of this class stores the attributes passed to its <ref refid="classwx_grid_cell_attr_provider_1a85676f2c08382cd2a1e3c1f38a24540b" kindref="member">SetAttr()</ref>, <ref refid="classwx_grid_cell_attr_provider_1afe30d6ea1164d0730d3f7ba447150735" kindref="member">SetRowAttr()</ref> and <ref refid="classwx_grid_cell_attr_provider_1ab07209295a7afb61658d24b3fe34cb89" kindref="member">SetColAttr()</ref> in a straightforward way. A derived class may use its knowledge about how the attributes are used in your program to implement it much more efficiently: for example, using a special background colour for all even-numbered rows can be implemented by simply returning the same attribute from <ref refid="classwx_grid_cell_attr_provider_1a26ce9f9fd2e86e649b031b6211b6ab0a" kindref="member">GetAttr()</ref> if the row number is even instead of having to store N/2 row attributes where N is the total number of rows in the grid.</para><para>Notice that objects of this class can&apos;t be copied. </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="6639">
+      <node id="6643">
         <label>wxClientDataContainer</label>
         <link refid="classwx_client_data_container"/>
       </node>
-      <node id="6638">
+      <node id="6642">
         <label>wxGridCellAttrProvider</label>
         <link refid="classwx_grid_cell_attr_provider"/>
-        <childnode refid="6639" relation="public-inheritance">
+        <childnode refid="6643" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="6641">
+      <node id="6645">
         <label>wxClientDataContainer</label>
         <link refid="classwx_client_data_container"/>
       </node>
-      <node id="6640">
+      <node id="6644">
         <label>wxGridCellAttrProvider</label>
         <link refid="classwx_grid_cell_attr_provider"/>
-        <childnode refid="6641" relation="public-inheritance">
+        <childnode refid="6645" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>

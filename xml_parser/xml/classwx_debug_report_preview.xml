@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_debug_report_preview" kind="class" prot="public">
     <compoundname>wxDebugReportPreview</compoundname>
     <derivedcompoundref refid="classwx_debug_report_preview_std" prot="public" virt="non-virtual">wxDebugReportPreviewStd</derivedcompoundref>
@@ -55,16 +55,16 @@
 <para>This class presents the debug report to the user and allows him to veto report entirely or remove some parts of it. </para>    </briefdescription>
     <detaileddescription>
 <para>Although not mandatory, using this class is strongly recommended as data included in the debug report might contain sensitive private information and the user should be notified about it as well as having a possibility to examine the data which had been gathered to check whether this is effectively the case and discard the debug report if it is.</para><para><ref refid="classwx_debug_report_preview" kindref="compound">wxDebugReportPreview</ref> is an abstract base class, currently the only concrete class deriving from it is <ref refid="classwx_debug_report_preview_std" kindref="compound">wxDebugReportPreviewStd</ref>.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxqa" kindref="member">wxQA</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__debugging" kindref="compound">Debugging</ref> </para>    </detaileddescription>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxqa" kindref="member">wxQA</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__debugging" kindref="compound">Debugging</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="5552">
+      <node id="5556">
         <label>wxDebugReportPreview</label>
         <link refid="classwx_debug_report_preview"/>
       </node>
-      <node id="5553">
+      <node id="5557">
         <label>wxDebugReportPreviewStd</label>
         <link refid="classwx_debug_report_preview_std"/>
-        <childnode refid="5552" relation="public-inheritance">
+        <childnode refid="5556" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>

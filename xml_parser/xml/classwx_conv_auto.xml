@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_conv_auto" kind="class" prot="public">
     <compoundname>wxConvAuto</compoundname>
     <basecompoundref refid="classwx_m_b_conv" prot="public" virt="non-virtual">wxMBConv</basecompoundref>
@@ -147,28 +147,28 @@
 <para>This class implements a Unicode to/from multibyte converter capable of automatically recognizing the encoding of the multibyte text on input. </para>    </briefdescription>
     <detaileddescription>
 <para>The logic used is very simple: the class uses the BOM (byte order mark) if it&apos;s present and tries to interpret the input as UTF-8 otherwise. If this fails, the input is interpreted as being in the default multibyte encoding which can be specified in the constructor of a <ref refid="classwx_conv_auto" kindref="compound">wxConvAuto</ref> instance and, in turn, defaults to the value of <ref refid="classwx_conv_auto_1a7dc2532ac7a49fddf4da770b1a814abd" kindref="member">GetFallbackEncoding()</ref> if not explicitly given.</para><para>For the conversion from Unicode to multibyte, the same encoding as was previously used for multibyte to Unicode conversion is reused. If there had been no previous multibyte to Unicode conversion, UTF-8 is used by default. Notice that once the multibyte encoding is automatically detected, it doesn&apos;t change any more, i.e. it is entirely determined by the first use of <ref refid="classwx_conv_auto" kindref="compound">wxConvAuto</ref> object in the multibyte-to-Unicode direction. However creating a copy of <ref refid="classwx_conv_auto" kindref="compound">wxConvAuto</ref> object, either via the usual copy constructor or assignment operator, or using <ref refid="classwx_m_b_conv_1ae6fd1020a2c7c82191c4822682e80d05" kindref="member">wxMBConv::Clone()</ref>, resets the automatically detected encoding so that the new copy will try to detect the encoding of the input on first use.</para><para>This class is used by default in wxWidgets classes and functions reading text from files such as <ref refid="classwx_file" kindref="compound">wxFile</ref>, <ref refid="classwx_f_file" kindref="compound">wxFFile</ref>, <ref refid="classwx_text_file" kindref="compound">wxTextFile</ref>, <ref refid="classwx_file_config" kindref="compound">wxFileConfig</ref> and various stream classes so the encoding set with its <ref refid="classwx_conv_auto_1a5c3f9760a2ae03fbf4748423367e7903" kindref="member">SetFallbackEncoding()</ref> method will affect how these classes treat input files. In particular, use this method to change the fall-back multibyte encoding used to interpret the contents of the files whose contents isn&apos;t valid UTF-8 or to disallow it completely.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__data" kindref="compound">Data Structures</ref></para><para><simplesect kind="see"><para><ref refid="overview__mbconv" kindref="compound">wxMBConv Overview</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__data" kindref="compound">Data Structures</ref></para><para><simplesect kind="see"><para><ref refid="overview_mbconv" kindref="compound">wxMBConv Overview</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="5195">
+      <node id="5199">
         <label>wxConvAuto</label>
         <link refid="classwx_conv_auto"/>
-        <childnode refid="5196" relation="public-inheritance">
+        <childnode refid="5200" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5196">
+      <node id="5200">
         <label>wxMBConv</label>
         <link refid="classwx_m_b_conv"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="5197">
+      <node id="5201">
         <label>wxConvAuto</label>
         <link refid="classwx_conv_auto"/>
-        <childnode refid="5198" relation="public-inheritance">
+        <childnode refid="5202" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5198">
+      <node id="5202">
         <label>wxMBConv</label>
         <link refid="classwx_m_b_conv"/>
       </node>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_combo_ctrl" kind="class" prot="public">
     <compoundname>wxComboCtrl</compoundname>
     <basecompoundref refid="classwx_control" prot="public" virt="non-virtual">wxControl</basecompoundref>
@@ -8,7 +8,6 @@
     <derivedcompoundref refid="classwx_rich_text_style_combo_ctrl" prot="public" virt="non-virtual">wxRichTextStyleComboCtrl</derivedcompoundref>
     <includes local="no">wx/combo.h</includes>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_combo_ctrl_1ae2b983f401d92ccc38f2bed47fb4d76b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
         <definition>bool wxComboCtrl::SetMargins</definition>
@@ -1107,7 +1106,7 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Let&apos;s<sp/>make<sp/>the<sp/>text<sp/>right-aligned</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>comboCtrl-&gt;<ref refid="classwx_combo_ctrl_1a00188332f7b6200c98f5f65966d5b151" kindref="member" tooltip="Set a custom window style for the embedded wxTextCtrl.">SetTextCtrlStyle</ref>(<ref refid="textctrl_8h_1aceaa4641c1007bda9d7768137a9f9644" kindref="member">wxTE_RIGHT</ref>);</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>comboCtrl-&gt;<ref refid="classwx_combo_ctrl_1aab2390bd7650a56e3d2c243140d28f98" kindref="member" tooltip="Creates the combo control for two-step construction.">Create</ref>(parent,<sp/><ref refid="defs_8h_1ac66d0a09761e7d86b2ac0b2e0c6a8cbba1f375b01ea03a713bbb7e32a36a2589c" kindref="member" tooltip="Any id: means that we don&amp;#39;t care about the id, whether when installing an event...">wxID_ANY</ref>,<sp/><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member" tooltip="The global wxString instance of an empty string.">wxEmptyString</ref>);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>comboCtrl-&gt;<ref refid="classwx_combo_ctrl_1aab2390bd7650a56e3d2c243140d28f98" kindref="member" tooltip="Creates the combo control for two-step construction.">Create</ref>(parent,<sp/><ref refid="defs_8h_1ac66d0a09761e7d86b2ac0b2e0c6a8cbba1f375b01ea03a713bbb7e32a36a2589c" kindref="member" tooltip="Any id: means that we don&amp;#39;t care about the id, whether when installing an event handler or when creat...">wxID_ANY</ref>,<sp/><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member" tooltip="The global wxString instance of an empty string.">wxEmptyString</ref>);</highlight></codeline>
 </programlisting> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -1324,7 +1323,7 @@
 <para><ref refid="classwx_combo_ctrl" kindref="compound">wxComboCtrl</ref> needs to be told somehow which control to use and this is done by <ref refid="classwx_combo_ctrl_1afb0b22cb38395040699eebcb679fd86a" kindref="member">SetPopupControl()</ref>. However, we need something more than just a <ref refid="classwx_control" kindref="compound">wxControl</ref> in this method as, for example, we need to call SetStringValue(&quot;initial text value&quot;) and <ref refid="classwx_control" kindref="compound">wxControl</ref> doesn&apos;t have such method. So we also need a <ref refid="classwx_combo_popup" kindref="compound">wxComboPopup</ref> which is an interface which must be implemented by a control to be usable as a popup.</para><para>We couldn&apos;t derive <ref refid="classwx_combo_popup" kindref="compound">wxComboPopup</ref> from <ref refid="classwx_control" kindref="compound">wxControl</ref> as this would make it impossible to have a class deriving from a wxWidgets control and from it, so instead it is just a mix-in.</para><para>Here&apos;s a minimal sample of <ref refid="classwx_list_view" kindref="compound">wxListView</ref> popup:</para><para><programlisting><codeline><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#include<sp/>&lt;<ref refid="combo_8h" kindref="compound">wx/combo.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#include<sp/>&lt;<ref refid="interface_2wx_2listctrl_8h" kindref="compound">wx/listctrl.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">wxListViewComboPopup<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classwx_list_view" kindref="compound" tooltip="This class currently simply presents a simpler to use interface for the wxListCtrl...">wxListView</ref>,<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classwx_combo_popup" kindref="compound" tooltip="In order to use a custom popup with wxComboCtrl, an interface class must be derived...">wxComboPopup</ref></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">wxListViewComboPopup<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classwx_list_view" kindref="compound" tooltip="This class currently simply presents a simpler to use interface for the wxListCtrl -- it can be thoug...">wxListView</ref>,<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classwx_combo_popup" kindref="compound" tooltip="In order to use a custom popup with wxComboCtrl, an interface class must be derived from wxComboPopup...">wxComboPopup</ref></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Initialize<sp/>member<sp/>variables</highlight><highlight class="normal"></highlight></codeline>
@@ -1334,24 +1333,24 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>popup<sp/>control</highlight><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classwx_combo_ctrl_1aab2390bd7650a56e3d2c243140d28f98" kindref="member" tooltip="Creates the combo control for two-step construction.">Create</ref>(<ref refid="classwx_window" kindref="compound" tooltip="wxWindow is the base class for all windows and represents any visible object on screen...">wxWindow</ref>*<sp/>parent)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classwx_combo_ctrl_1aab2390bd7650a56e3d2c243140d28f98" kindref="member" tooltip="Creates the combo control for two-step construction.">Create</ref>(<ref refid="classwx_window" kindref="compound" tooltip="wxWindow is the base class for all windows and represents any visible object on screen.">wxWindow</ref>*<sp/>parent)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classwx_combo_ctrl_1aab2390bd7650a56e3d2c243140d28f98" kindref="member" tooltip="Creates the combo control for two-step construction.">wxListView::Create</ref>(parent,1,<ref refid="classwx_point" kindref="compound" tooltip="A wxPoint is a useful data structure for graphics operations.">wxPoint</ref>(0,0),<ref refid="gdicmn_8h_1a33a012cdb075e9f78c93f63bec2dc27b" kindref="member" tooltip="Global instance of a wxSize object initialized to (-1,-1).">wxDefaultSize</ref>);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Return<sp/>pointer<sp/>to<sp/>the<sp/>created<sp/>control</highlight><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classwx_window" kindref="compound" tooltip="wxWindow is the base class for all windows and represents any visible object on screen...">wxWindow</ref><sp/>*GetControl()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classwx_window" kindref="compound" tooltip="wxWindow is the base class for all windows and represents any visible object on screen.">wxWindow</ref><sp/>*GetControl()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Translate<sp/>string<sp/>into<sp/>a<sp/>list<sp/>selection</highlight><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>SetStringValue(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change...">wxString</ref>&amp;<sp/>s)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>SetStringValue(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change was actually the m...">wxString</ref>&amp;<sp/>s)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n<sp/>=<sp/><ref refid="classwx_list_ctrl_1ad8d64b6d1b4af0df31e61ae9521388d4" kindref="member" tooltip="Find an item whose label matches this string, starting from start or the beginning...">wxListView::FindItem</ref>(-1,s);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n<sp/>=<sp/><ref refid="classwx_list_ctrl_1ad8d64b6d1b4af0df31e61ae9521388d4" kindref="member" tooltip="Find an item whose label matches this string, starting from start or the beginning if start is -1...">wxListView::FindItem</ref>(-1,s);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>n<sp/>&gt;=<sp/>0<sp/>&amp;&amp;<sp/>n<sp/>&lt;<sp/><ref refid="classwx_list_ctrl_1ac68cf16b035f4dca7d64931de82cdffa" kindref="member" tooltip="Returns the number of items in the list control.">wxListView::GetItemCount</ref>()<sp/>)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_list_view_1a02966936da5643b2d80a857676482b2b" kindref="member" tooltip="Selects or unselects the given item.">wxListView::Select</ref>(n);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>list<sp/>selection<sp/>as<sp/>a<sp/>string</highlight><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change...">wxString</ref><sp/>GetStringValue()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change was actually the m...">wxString</ref><sp/>GetStringValue()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
 <codeline><highlight class="keyword"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>m_value<sp/>&gt;=<sp/>0<sp/>)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classwx_list_ctrl_1ab0a596e1ad4714b6d5ee7b3180c59680" kindref="member" tooltip="Gets the item text for this item.">wxListView::GetItemText</ref>(m_value);</highlight></codeline>
@@ -1359,13 +1358,13 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Do<sp/>mouse<sp/>hot-tracking<sp/>(which<sp/>is<sp/>typical<sp/>in<sp/>list<sp/>popups)</highlight><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>OnMouseMove(<ref refid="classwx_mouse_event" kindref="compound" tooltip="This event class contains information about the events generated by the mouse: they...">wxMouseEvent</ref>&amp;<sp/>event)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>OnMouseMove(<ref refid="classwx_mouse_event" kindref="compound" tooltip="This event class contains information about the events generated by the mouse: they include mouse but...">wxMouseEvent</ref>&amp;<sp/>event)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO:<sp/>Move<sp/>selection<sp/>to<sp/>cursor</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>On<sp/>mouse<sp/>left<sp/>up,<sp/>set<sp/>the<sp/>value<sp/>and<sp/>close<sp/>the<sp/>popup</highlight><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>OnMouseClick(<ref refid="classwx_mouse_event" kindref="compound" tooltip="This event class contains information about the events generated by the mouse: they...">wxMouseEvent</ref>&amp;<sp/>WXUNUSED(event))</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>OnMouseClick(<ref refid="classwx_mouse_event" kindref="compound" tooltip="This event class contains information about the events generated by the mouse: they include mouse but...">wxMouseEvent</ref>&amp;<sp/>WXUNUSED(event))</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_value<sp/>=<sp/><ref refid="classwx_list_view_1a5104e465fc4c31782179c2a7f8a18a4d" kindref="member" tooltip="Returns the first selected item in a (presumably) multiple selection control.">wxListView::GetFirstSelected</ref>();</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
@@ -1379,14 +1378,14 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>m_value;<sp/></highlight><highlight class="comment">//<sp/>current<sp/>item<sp/>index</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__events_1gab6eca03fad44ec10b75d3cb82e9219e3" kindref="member" tooltip="Use this macro inside a class declaration to declare a static event table for that...">wxDECLARE_EVENT_TABLE</ref>();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__events_1gab6eca03fad44ec10b75d3cb82e9219e3" kindref="member" tooltip="Use this macro inside a class declaration to declare a static event table for that class...">wxDECLARE_EVENT_TABLE</ref>();</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__events_1ga736930efaab4d7e445e9e8e520c7b74d" kindref="member" tooltip="Use this macro in a source file to start listing static event handlers for a specific...">wxBEGIN_EVENT_TABLE</ref>(wxListViewComboPopup,<sp/><ref refid="classwx_list_view" kindref="compound" tooltip="This class currently simply presents a simpler to use interface for the wxListCtrl...">wxListView</ref>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__events_1ga736930efaab4d7e445e9e8e520c7b74d" kindref="member" tooltip="Use this macro in a source file to start listing static event handlers for a specific class...">wxBEGIN_EVENT_TABLE</ref>(wxListViewComboPopup,<sp/><ref refid="classwx_list_view" kindref="compound" tooltip="This class currently simply presents a simpler to use interface for the wxListCtrl -- it can be thoug...">wxListView</ref>)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EVT_MOTION(wxListViewComboPopup::OnMouseMove)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EVT_LEFT_UP(wxListViewComboPopup::OnMouseClick)</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__events_1ga383fad2a46e1d6c220fbe03ecfbc9c17" kindref="member" tooltip="Use this macro in a source file to end listing static event handlers for a specific...">wxEND_EVENT_TABLE</ref>()</highlight></codeline>
-</programlisting></para><para>Here&apos;s how you would create and populate it in a dialog constructor:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_combo_ctrl" kindref="compound" tooltip="A combo control is a generic combobox that allows totally custom popup.">wxComboCtrl</ref>*<sp/>comboCtrl<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classwx_combo_ctrl_1af31b505e73047689dc4d2948eaa13a3d" kindref="member" tooltip="Default constructor.">wxComboCtrl</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/><ref refid="defs_8h_1ac66d0a09761e7d86b2ac0b2e0c6a8cbba1f375b01ea03a713bbb7e32a36a2589c" kindref="member" tooltip="Any id: means that we don&amp;#39;t care about the id, whether when installing an event...">wxID_ANY</ref>,<sp/><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member" tooltip="The global wxString instance of an empty string.">wxEmptyString</ref>);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__events_1ga383fad2a46e1d6c220fbe03ecfbc9c17" kindref="member" tooltip="Use this macro in a source file to end listing static event handlers for a specific class...">wxEND_EVENT_TABLE</ref>()</highlight></codeline>
+</programlisting></para><para>Here&apos;s how you would create and populate it in a dialog constructor:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_combo_ctrl" kindref="compound" tooltip="A combo control is a generic combobox that allows totally custom popup.">wxComboCtrl</ref>*<sp/>comboCtrl<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classwx_combo_ctrl_1af31b505e73047689dc4d2948eaa13a3d" kindref="member" tooltip="Default constructor.">wxComboCtrl</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/><ref refid="defs_8h_1ac66d0a09761e7d86b2ac0b2e0c6a8cbba1f375b01ea03a713bbb7e32a36a2589c" kindref="member" tooltip="Any id: means that we don&amp;#39;t care about the id, whether when installing an event handler or when creat...">wxID_ANY</ref>,<sp/><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member" tooltip="The global wxString instance of an empty string.">wxEmptyString</ref>);</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>wxListViewComboPopup*<sp/>popupCtrl<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>wxListViewComboPopup();</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
@@ -1413,108 +1412,108 @@
 <listitem><para>EVT_COMBOBOX_CLOSEUP(id,  func): Process a <computeroutput>wxEVT_COMMAND_COMBOBOX_CLOSEUP</computeroutput> event, which is generated when the popup window of the combo control disappears (closes up). You should avoid adding or deleting items in this event. </para></listitem>
 </itemizedlist>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref> <htmlonly> &lt;br&gt;&lt;div&gt;&lt;span class=&apos;appearance&apos;&gt;Appearance:&lt;/span&gt;&lt;br&gt;&lt;table class=&apos;appearance&apos;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&apos;wxmsw/comboctrl.png&apos; alt=&apos;wxMSW appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxgtk/comboctrl.png&apos; alt=&apos;wxGTK appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxmac/comboctrl.png&apos; alt=&apos;wxMac appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;wxMSW appearance&lt;/td&gt;&lt;td&gt;wxGTK appearance&lt;/td&gt;&lt;td&gt;wxMac appearance&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt; </htmlonly></para><para><simplesect kind="see"><para><ref refid="classwx_combo_box" kindref="compound">wxComboBox</ref>, <ref refid="classwx_choice" kindref="compound">wxChoice</ref>, <ref refid="classwx_owner_drawn_combo_box" kindref="compound">wxOwnerDrawnComboBox</ref>, <ref refid="classwx_combo_popup" kindref="compound">wxComboPopup</ref>, <ref refid="classwx_command_event" kindref="compound">wxCommandEvent</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref> <htmlonly> &lt;br&gt;&lt;div&gt;&lt;span class=&apos;appearance&apos;&gt;Appearance:&lt;/span&gt;&lt;br&gt;&lt;table class=&apos;appearance&apos;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&apos;wxmsw/comboctrl.png&apos; alt=&apos;wxMSW appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxgtk/comboctrl.png&apos; alt=&apos;wxGTK appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxmac/comboctrl.png&apos; alt=&apos;wxMac appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;wxMSW appearance&lt;/td&gt;&lt;td&gt;wxGTK appearance&lt;/td&gt;&lt;td&gt;wxMac appearance&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt; </htmlonly></para><para><simplesect kind="see"><para><ref refid="classwx_combo_box" kindref="compound">wxComboBox</ref>, <ref refid="classwx_choice" kindref="compound">wxChoice</ref>, <ref refid="classwx_owner_drawn_combo_box" kindref="compound">wxOwnerDrawnComboBox</ref>, <ref refid="classwx_combo_popup" kindref="compound">wxComboPopup</ref>, <ref refid="classwx_command_event" kindref="compound">wxCommandEvent</ref> </para></simplesect>
 </para></sect1>
     </detaileddescription>
     <inheritancegraph>
-      <node id="4924">
+      <node id="4928">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="4923">
+      <node id="4927">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="4924" relation="public-inheritance">
+        <childnode refid="4928" relation="public-inheritance">
         </childnode>
-        <childnode refid="4925" relation="public-inheritance">
+        <childnode refid="4929" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4925">
+      <node id="4929">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="4926">
+      <node id="4930">
         <label>wxTextEntry</label>
         <link refid="classwx_text_entry"/>
       </node>
-      <node id="4921">
+      <node id="4925">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="4922" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4922">
-        <label>wxWindow</label>
-        <link refid="classwx_window"/>
-        <childnode refid="4923" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4920">
-        <label>wxComboCtrl</label>
-        <link refid="classwx_combo_ctrl"/>
-        <childnode refid="4921" relation="public-inheritance">
-        </childnode>
         <childnode refid="4926" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4927">
-        <label>wxOwnerDrawnComboBox</label>
-        <link refid="classwx_owner_drawn_combo_box"/>
-        <childnode refid="4920" relation="public-inheritance">
+      <node id="4926">
+        <label>wxWindow</label>
+        <link refid="classwx_window"/>
+        <childnode refid="4927" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4928">
+      <node id="4924">
+        <label>wxComboCtrl</label>
+        <link refid="classwx_combo_ctrl"/>
+        <childnode refid="4925" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4930" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4931">
+        <label>wxOwnerDrawnComboBox</label>
+        <link refid="classwx_owner_drawn_combo_box"/>
+        <childnode refid="4924" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4932">
         <label>wxRichTextStyleComboCtrl</label>
         <link refid="classwx_rich_text_style_combo_ctrl"/>
-        <childnode refid="4920" relation="public-inheritance">
+        <childnode refid="4924" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="4933">
+      <node id="4937">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="4934" relation="usage">
+        <childnode refid="4938" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="4932">
+      <node id="4936">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="4933" relation="public-inheritance">
+        <childnode refid="4937" relation="public-inheritance">
         </childnode>
+        <childnode refid="4939" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4939">
+        <label>wxTrackable</label>
+        <link refid="classwx_trackable"/>
+      </node>
+      <node id="4940">
+        <label>wxTextEntry</label>
+        <link refid="classwx_text_entry"/>
+      </node>
+      <node id="4934">
+        <label>wxControl</label>
+        <link refid="classwx_control"/>
         <childnode refid="4935" relation="public-inheritance">
         </childnode>
       </node>
       <node id="4935">
-        <label>wxTrackable</label>
-        <link refid="classwx_trackable"/>
-      </node>
-      <node id="4936">
-        <label>wxTextEntry</label>
-        <link refid="classwx_text_entry"/>
-      </node>
-      <node id="4930">
-        <label>wxControl</label>
-        <link refid="classwx_control"/>
-        <childnode refid="4931" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4931">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="4932" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4929">
-        <label>wxComboCtrl</label>
-        <link refid="classwx_combo_ctrl"/>
-        <childnode refid="4930" relation="public-inheritance">
-        </childnode>
         <childnode refid="4936" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4934">
+      <node id="4933">
+        <label>wxComboCtrl</label>
+        <link refid="classwx_combo_ctrl"/>
+        <childnode refid="4934" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4940" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4938">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_colour_dialog" kind="class" prot="public">
     <compoundname>wxColourDialog</compoundname>
     <basecompoundref refid="classwx_dialog" prot="public" virt="non-virtual">wxDialog</basecompoundref>
@@ -95,107 +95,107 @@
 <para>This class represents the colour chooser dialog. </para>    </briefdescription>
     <detaileddescription>
 <para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__cmndlg" kindref="compound">Common Dialogs</ref></para><para><simplesect kind="see"><para><ref refid="overview__cmndlg_1overview_cmndlg_colour" kindref="member">wxColourDialog Overview</ref>, <ref refid="classwx_colour" kindref="compound">wxColour</ref>, <ref refid="classwx_colour_data" kindref="compound">wxColourData</ref>, <ref refid="group__group__funcmacro__dialog_1gae21ee60a8c039d8b78aeeca9f27bac2b" kindref="member">wxGetColourFromUser()</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__cmndlg" kindref="compound">Common Dialogs</ref></para><para><simplesect kind="see"><para><ref refid="overview_cmndlg_1overview_cmndlg_colour" kindref="member">wxColourDialog Overview</ref>, <ref refid="classwx_colour" kindref="compound">wxColour</ref>, <ref refid="classwx_colour_data" kindref="compound">wxColourData</ref>, <ref refid="group__group__funcmacro__dialog_1gae21ee60a8c039d8b78aeeca9f27bac2b" kindref="member">wxGetColourFromUser()</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="4862">
+      <node id="4866">
         <label>wxNonOwnedWindow</label>
         <link refid="classwx_non_owned_window"/>
-        <childnode refid="4863" relation="public-inheritance">
+        <childnode refid="4867" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4865">
+      <node id="4869">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="4864">
+      <node id="4868">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="4865" relation="public-inheritance">
+        <childnode refid="4869" relation="public-inheritance">
         </childnode>
-        <childnode refid="4866" relation="public-inheritance">
+        <childnode refid="4870" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4866">
+      <node id="4870">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="4863">
+      <node id="4867">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
+        <childnode refid="4868" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4864">
+        <label>wxDialog</label>
+        <link refid="classwx_dialog"/>
+        <childnode refid="4865" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4863">
+        <label>wxColourDialog</label>
+        <link refid="classwx_colour_dialog"/>
         <childnode refid="4864" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4860">
-        <label>wxDialog</label>
-        <link refid="classwx_dialog"/>
-        <childnode refid="4861" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4859">
-        <label>wxColourDialog</label>
-        <link refid="classwx_colour_dialog"/>
-        <childnode refid="4860" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4861">
+      <node id="4865">
         <label>wxTopLevelWindow</label>
         <link refid="classwx_top_level_window"/>
-        <childnode refid="4862" relation="public-inheritance">
+        <childnode refid="4866" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="4870">
+      <node id="4874">
         <label>wxNonOwnedWindow</label>
         <link refid="classwx_non_owned_window"/>
-        <childnode refid="4871" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4873">
-        <label>wxObject</label>
-        <link refid="classwx_object"/>
-        <childnode refid="4874" relation="usage">
-          <edgelabel>m_refData</edgelabel>
-        </childnode>
-      </node>
-      <node id="4872">
-        <label>wxEvtHandler</label>
-        <link refid="classwx_evt_handler"/>
-        <childnode refid="4873" relation="public-inheritance">
-        </childnode>
         <childnode refid="4875" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4875">
+      <node id="4877">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="4878" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="4876">
+        <label>wxEvtHandler</label>
+        <link refid="classwx_evt_handler"/>
+        <childnode refid="4877" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4879" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4879">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="4871">
+      <node id="4875">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
+        <childnode refid="4876" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4872">
+        <label>wxDialog</label>
+        <link refid="classwx_dialog"/>
+        <childnode refid="4873" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4871">
+        <label>wxColourDialog</label>
+        <link refid="classwx_colour_dialog"/>
         <childnode refid="4872" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4868">
-        <label>wxDialog</label>
-        <link refid="classwx_dialog"/>
-        <childnode refid="4869" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4867">
-        <label>wxColourDialog</label>
-        <link refid="classwx_colour_dialog"/>
-        <childnode refid="4868" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4869">
+      <node id="4873">
         <label>wxTopLevelWindow</label>
         <link refid="classwx_top_level_window"/>
-        <childnode refid="4870" relation="public-inheritance">
+        <childnode refid="4874" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4874">
+      <node id="4878">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
@@ -528,6 +528,7 @@
       <member refid="classwx_window_1a81f23590239934fa10fded0566a65d8c" prot="public" virt="non-virtual"><scope>wxColourDialog</scope><name>SetPosition</name></member>
       <member refid="classwx_window_1a07f5f7ed3f78e0ef7b3dee3f4da81001" prot="public" virt="virtual"><scope>wxColourDialog</scope><name>SetPreviousHandler</name></member>
       <member refid="classwx_object_1afab780710f2adc1bb33310e27590140b" prot="public" virt="non-virtual"><scope>wxColourDialog</scope><name>SetRefData</name></member>
+      <member refid="classwx_top_level_window_1a82afa6f09dd5faef6330807ef59374e8" prot="public" virt="virtual"><scope>wxColourDialog</scope><name>SetRepresentedFilename</name></member>
       <member refid="classwx_dialog_1a0d04ed85ac5cd271a61514d446340673" prot="public" virt="non-virtual"><scope>wxColourDialog</scope><name>SetReturnCode</name></member>
       <member refid="classwx_top_level_window_1a98e95b1b10f44b80f9b29a03ab09a879" prot="public" virt="non-virtual"><scope>wxColourDialog</scope><name>SetRightMenu</name></member>
       <member refid="classwx_window_1aa842d59529f873683e55cd8392ec46e9" prot="public" virt="virtual"><scope>wxColourDialog</scope><name>SetScrollbar</name></member>

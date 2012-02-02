@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_archive_class_factory" kind="class" prot="public">
     <compoundname>wxArchiveClassFactory</compoundname>
     <basecompoundref refid="classwx_object" prot="public" virt="non-virtual">wxObject</basecompoundref>
@@ -7,7 +7,6 @@
     <derivedcompoundref refid="classwx_zip_class_factory" prot="public" virt="non-virtual">wxZipClassFactory</derivedcompoundref>
     <includes local="no">wx/archive.h</includes>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_archive_class_factory_1adafe1f5baee50e34416a382a77825ab8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_archive_class_factory" kindref="compound">wxArchiveClassFactory</ref> *</type>
         <definition>const wxArchiveClassFactory* wxArchiveClassFactory::GetNext</definition>
@@ -16,11 +15,11 @@
         <briefdescription>
 <para>GetFirst and GetNext can be used to enumerate the available factories. </para>        </briefdescription>
         <detaileddescription>
-<para>For example, to list them:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change...">wxString</ref><sp/>list;</highlight></codeline>
+<para>For example, to list them:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change was actually the m...">wxString</ref><sp/>list;</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classwx_archive_class_factory" kindref="compound" tooltip="Allows the creation of streams to handle archive formats such as zip and tar.">wxArchiveClassFactory</ref><sp/>*factory<sp/>=<sp/><ref refid="classwx_archive_class_factory_1a4550c0581291ca6255b7eb0cb917a8ce" kindref="member" tooltip="GetFirst and GetNext can be used to enumerate the available factories.">wxArchiveClassFactory::GetFirst</ref>();</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(factory)<sp/>{</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>list<sp/>&lt;&lt;<sp/>factory-&gt;<ref refid="classwx_archive_class_factory_1a771c29d666830289a903efee2ceb559e" kindref="member" tooltip="Returns the wxFileSystem protocol supported by this factory.">GetProtocol</ref>()<sp/>&lt;&lt;<sp/><ref refid="group__group__funcmacro__string_1ga437ea6ba615b75dac8603e96ec864160" kindref="member" tooltip="This macro can be used with character and string literals (in other words, &amp;#39;x&amp;#39;...">wxT</ref>(</highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>list<sp/>&lt;&lt;<sp/>factory-&gt;<ref refid="classwx_archive_class_factory_1a771c29d666830289a903efee2ceb559e" kindref="member" tooltip="Returns the wxFileSystem protocol supported by this factory.">GetProtocol</ref>()<sp/>&lt;&lt;<sp/><ref refid="group__group__funcmacro__string_1ga437ea6ba615b75dac8603e96ec864160" kindref="member" tooltip="This macro can be used with character and string literals (in other words, &amp;#39;x&amp;#39; or &amp;quot;foo&amp;quot;) to automatic...">wxT</ref>(</highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>factory<sp/>=<sp/>factory-&gt;<ref refid="classwx_archive_class_factory_1adafe1f5baee50e34416a382a77825ab8" kindref="member" tooltip="GetFirst and GetNext can be used to enumerate the available factories.">GetNext</ref>();</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 </programlisting></para><para><ref refid="classwx_archive_class_factory_1a4550c0581291ca6255b7eb0cb917a8ce" kindref="member">GetFirst()</ref> and <ref refid="classwx_archive_class_factory_1adafe1f5baee50e34416a382a77825ab8" kindref="member">GetNext()</ref> return a pointer to a factory or NULL if no more are available. They do not give away ownership of the factory. </para>        </detaileddescription>
@@ -36,11 +35,11 @@
         <briefdescription>
 <para>GetFirst and GetNext can be used to enumerate the available factories. </para>        </briefdescription>
         <detaileddescription>
-<para>For example, to list them:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change...">wxString</ref><sp/>list;</highlight></codeline>
+<para>For example, to list them:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change was actually the m...">wxString</ref><sp/>list;</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classwx_archive_class_factory" kindref="compound" tooltip="Allows the creation of streams to handle archive formats such as zip and tar.">wxArchiveClassFactory</ref><sp/>*factory<sp/>=<sp/><ref refid="classwx_archive_class_factory_1a4550c0581291ca6255b7eb0cb917a8ce" kindref="member" tooltip="GetFirst and GetNext can be used to enumerate the available factories.">wxArchiveClassFactory::GetFirst</ref>();</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(factory)<sp/>{</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>list<sp/>&lt;&lt;<sp/>factory-&gt;<ref refid="classwx_archive_class_factory_1a771c29d666830289a903efee2ceb559e" kindref="member" tooltip="Returns the wxFileSystem protocol supported by this factory.">GetProtocol</ref>()<sp/>&lt;&lt;<sp/><ref refid="group__group__funcmacro__string_1ga437ea6ba615b75dac8603e96ec864160" kindref="member" tooltip="This macro can be used with character and string literals (in other words, &amp;#39;x&amp;#39;...">wxT</ref>(</highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>list<sp/>&lt;&lt;<sp/>factory-&gt;<ref refid="classwx_archive_class_factory_1a771c29d666830289a903efee2ceb559e" kindref="member" tooltip="Returns the wxFileSystem protocol supported by this factory.">GetProtocol</ref>()<sp/>&lt;&lt;<sp/><ref refid="group__group__funcmacro__string_1ga437ea6ba615b75dac8603e96ec864160" kindref="member" tooltip="This macro can be used with character and string literals (in other words, &amp;#39;x&amp;#39; or &amp;quot;foo&amp;quot;) to automatic...">wxT</ref>(</highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>factory<sp/>=<sp/>factory-&gt;<ref refid="classwx_archive_class_factory_1adafe1f5baee50e34416a382a77825ab8" kindref="member" tooltip="GetFirst and GetNext can be used to enumerate the available factories.">GetNext</ref>();</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 </programlisting></para><para><ref refid="classwx_archive_class_factory_1a4550c0581291ca6255b7eb0cb917a8ce" kindref="member">GetFirst()</ref> and <ref refid="classwx_archive_class_factory_1adafe1f5baee50e34416a382a77825ab8" kindref="member">GetNext()</ref> return a pointer to a factory or NULL if no more are available. They do not give away ownership of the factory. </para>        </detaileddescription>
@@ -50,7 +49,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_archive_class_factory_1a658607861fc4bd7a8e787a8de35e89fb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_archive_input_stream" kindref="compound">wxArchiveInputStream</ref> *</type>
         <definition>wxArchiveInputStream* wxArchiveClassFactory::NewStream</definition>
@@ -203,7 +201,7 @@
         <briefdescription>
 <para>Returns the <ref refid="classwx_file_system" kindref="compound">wxFileSystem</ref> protocol supported by this factory. </para>        </briefdescription>
         <detaileddescription>
-<para>Equivalent to <programlisting><codeline><highlight class="normal"><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change...">wxString</ref>(*<ref refid="classwx_archive_class_factory_1acab270a64690103ec5179aa17386fce4" kindref="member" tooltip="Returns the protocols, MIME types or file extensions supported by this factory, as...">GetProtocols</ref>())<sp/></highlight></codeline>
+<para>Equivalent to <programlisting><codeline><highlight class="normal"><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change was actually the m...">wxString</ref>(*<ref refid="classwx_archive_class_factory_1acab270a64690103ec5179aa17386fce4" kindref="member" tooltip="Returns the protocols, MIME types or file extensions supported by this factory, as an array of null t...">GetProtocols</ref>())<sp/></highlight></codeline>
 </programlisting>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -222,11 +220,11 @@
         <briefdescription>
 <para>Returns the protocols, MIME types or file extensions supported by this factory, as an array of null terminated strings. </para>        </briefdescription>
         <detaileddescription>
-<para>It does not give away ownership of the array or strings. For example, to list the file extensions a factory supports:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change...">wxString</ref><sp/>list;</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__group__funcmacro__string_1gad42f64d8c82f1ce4ae58773a89b2d6a7" kindref="member" tooltip="wxChar is defined to bechar when wxUSE_UNICODE==0wchar_t when wxUSE_UNICODE==1 (the...">wxChar</ref><sp/>*</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>*p;</highlight></codeline>
+<para>It does not give away ownership of the array or strings. For example, to list the file extensions a factory supports:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change was actually the m...">wxString</ref><sp/>list;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__group__funcmacro__string_1gad42f64d8c82f1ce4ae58773a89b2d6a7" kindref="member" tooltip="wxChar is defined to be">wxChar</ref><sp/>*</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>*p;</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(p<sp/>=<sp/>factory-&gt;<ref refid="classwx_archive_class_factory_1acab270a64690103ec5179aa17386fce4" kindref="member" tooltip="Returns the protocols, MIME types or file extensions supported by this factory, as...">GetProtocols</ref>(<ref refid="interface_2wx_2stream_8h_1af43964582cc2e87658bf792727dceff8a6a7551247424d0c62b240da47daee204" kindref="member" tooltip="File extensions the stream handles.">wxSTREAM_FILEEXT</ref>);<sp/>*p;<sp/>p++)</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>list<sp/>&lt;&lt;<sp/>*p<sp/>&lt;&lt;<sp/><ref refid="group__group__funcmacro__string_1ga437ea6ba615b75dac8603e96ec864160" kindref="member" tooltip="This macro can be used with character and string literals (in other words, &amp;#39;x&amp;#39;...">wxT</ref>(</highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(p<sp/>=<sp/>factory-&gt;<ref refid="classwx_archive_class_factory_1acab270a64690103ec5179aa17386fce4" kindref="member" tooltip="Returns the protocols, MIME types or file extensions supported by this factory, as an array of null t...">GetProtocols</ref>(<ref refid="interface_2wx_2stream_8h_1af43964582cc2e87658bf792727dceff8a6a7551247424d0c62b240da47daee204" kindref="member" tooltip="File extensions the stream handles.">wxSTREAM_FILEEXT</ref>);<sp/>*p;<sp/>p++)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>list<sp/>&lt;&lt;<sp/>*p<sp/>&lt;&lt;<sp/><ref refid="group__group__funcmacro__string_1ga437ea6ba615b75dac8603e96ec864160" kindref="member" tooltip="This macro can be used with character and string literals (in other words, &amp;#39;x&amp;#39; or &amp;quot;foo&amp;quot;) to automatic...">wxT</ref>(</highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
 </programlisting> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -299,42 +297,21 @@
     <briefdescription>
 <para>Allows the creation of streams to handle archive formats such as zip and tar. </para>    </briefdescription>
     <detaileddescription>
-<para>For example, given a filename you can search for a factory that will handle it and create a stream to read it:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>factory<sp/>=<sp/><ref refid="classwx_archive_class_factory_1ad9f083561596ee377cea71a0125d3c3b" kindref="member" tooltip="A static member that finds a factory that can handle a given protocol, MIME type...">wxArchiveClassFactory::Find</ref>(filename,<sp/><ref refid="interface_2wx_2stream_8h_1af43964582cc2e87658bf792727dceff8a6a7551247424d0c62b240da47daee204" kindref="member" tooltip="File extensions the stream handles.">wxSTREAM_FILEEXT</ref>);</highlight></codeline>
+<para>For example, given a filename you can search for a factory that will handle it and create a stream to read it:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>factory<sp/>=<sp/><ref refid="classwx_archive_class_factory_1ad9f083561596ee377cea71a0125d3c3b" kindref="member" tooltip="A static member that finds a factory that can handle a given protocol, MIME type or file extension...">wxArchiveClassFactory::Find</ref>(filename,<sp/><ref refid="interface_2wx_2stream_8h_1af43964582cc2e87658bf792727dceff8a6a7551247424d0c62b240da47daee204" kindref="member" tooltip="File extensions the stream handles.">wxSTREAM_FILEEXT</ref>);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(factory)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stream<sp/>=<sp/>factory-&gt;<ref refid="classwx_archive_class_factory_1a658607861fc4bd7a8e787a8de35e89fb" kindref="member" tooltip="Create a new input or output stream to read or write an archive.">NewStream</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classwx_f_file_input_stream" kindref="compound" tooltip="This class represents data read in from a file.">wxFFileInputStream</ref>(filename));</highlight></codeline>
 </programlisting></para><para><ref refid="classwx_archive_class_factory_1ad9f083561596ee377cea71a0125d3c3b" kindref="member">wxArchiveClassFactory::Find</ref> can also search for a factory by MIME type or <ref refid="classwx_file_system" kindref="compound">wxFileSystem</ref> protocol.</para><para>The available factories can be enumerated using <ref refid="classwx_archive_class_factory_1a4550c0581291ca6255b7eb0cb917a8ce" kindref="member">wxArchiveClassFactory::GetFirst()</ref> and <ref refid="classwx_archive_class_factory_1adafe1f5baee50e34416a382a77825ab8" kindref="member">wxArchiveClassFactory::GetNext()</ref>.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__archive" kindref="compound">Archive support</ref>, <ref refid="group__group__class__streams" kindref="compound">Streams</ref></para><para><simplesect kind="see"><para><ref refid="overview__archive" kindref="compound">Archive Formats</ref>, <ref refid="overview__archive_1overview_archive_generic" kindref="member">Generic Archive Programming</ref>, <ref refid="classwx_archive_entry" kindref="compound">wxArchiveEntry</ref>, <ref refid="classwx_archive_input_stream" kindref="compound">wxArchiveInputStream</ref>, <ref refid="classwx_archive_output_stream" kindref="compound">wxArchiveOutputStream</ref>, <ref refid="classwx_filter_class_factory" kindref="compound">wxFilterClassFactory</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__archive" kindref="compound">Archive support</ref>, <ref refid="group__group__class__streams" kindref="compound">Streams</ref></para><para><simplesect kind="see"><para><ref refid="overview_archive" kindref="compound">Archive Formats</ref>, <ref refid="overview_archive_1overview_archive_generic" kindref="member">Generic Archive Programming</ref>, <ref refid="classwx_archive_entry" kindref="compound">wxArchiveEntry</ref>, <ref refid="classwx_archive_input_stream" kindref="compound">wxArchiveInputStream</ref>, <ref refid="classwx_archive_output_stream" kindref="compound">wxArchiveOutputStream</ref>, <ref refid="classwx_filter_class_factory" kindref="compound">wxFilterClassFactory</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="4303">
-        <label>wxObject</label>
-        <link refid="classwx_object"/>
-      </node>
-      <node id="4305">
-        <label>wxZipClassFactory</label>
-        <link refid="classwx_zip_class_factory"/>
-        <childnode refid="4302" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4302">
-        <label>wxArchiveClassFactory</label>
-        <link refid="classwx_archive_class_factory"/>
-        <childnode refid="4303" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4304">
-        <label>wxTarClassFactory</label>
-        <link refid="classwx_tar_class_factory"/>
-        <childnode refid="4302" relation="public-inheritance">
-        </childnode>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
       <node id="4307">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="4308" relation="usage">
-          <edgelabel>m_refData</edgelabel>
+      </node>
+      <node id="4309">
+        <label>wxZipClassFactory</label>
+        <link refid="classwx_zip_class_factory"/>
+        <childnode refid="4306" relation="public-inheritance">
         </childnode>
       </node>
       <node id="4306">
@@ -344,6 +321,27 @@
         </childnode>
       </node>
       <node id="4308">
+        <label>wxTarClassFactory</label>
+        <link refid="classwx_tar_class_factory"/>
+        <childnode refid="4306" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4311">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="4312" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="4310">
+        <label>wxArchiveClassFactory</label>
+        <link refid="classwx_archive_class_factory"/>
+        <childnode refid="4311" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4312">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

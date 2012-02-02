@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="dir_0b624461dd51d3a5efeee47245e018cc" kind="dir">
+    <compoundname>interface/wx/persist/</compoundname>
+    <innerfile refid="interface_2wx_2persist_2bookctrl_8h">bookctrl.h</innerfile>
+    <innerfile refid="persist_2toplevel_8h">toplevel.h</innerfile>
+    <innerfile refid="persist_2treebook_8h">treebook.h</innerfile>
+    <innerfile refid="persist_2window_8h">window.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/persist/"/>
+  </compounddef>
+</doxygen>

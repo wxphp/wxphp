@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_tree_item_data" kind="class" prot="public">
     <compoundname>wxTreeItemData</compoundname>
     <basecompoundref refid="classwx_client_data" prot="public" virt="non-virtual">wxClientData</basecompoundref>
@@ -70,29 +70,29 @@
 <para><ref refid="classwx_tree_item_data" kindref="compound">wxTreeItemData</ref> is some (arbitrary) user class associated with some item. </para>    </briefdescription>
     <detaileddescription>
 <para>The main advantage of having this class is that <ref refid="classwx_tree_item_data" kindref="compound">wxTreeItemData</ref> objects are destroyed automatically by the tree and, as this class has virtual destructor, it means that the memory and any other resources associated with a tree item will be automatically freed when it is deleted. Note that we don&apos;t use <ref refid="classwx_object" kindref="compound">wxObject</ref> as the base class for <ref refid="classwx_tree_item_data" kindref="compound">wxTreeItemData</ref> because the size of this class is critical: in many applications, each tree leaf will have <ref refid="classwx_tree_item_data" kindref="compound">wxTreeItemData</ref> associated with it and the number of leaves may be quite big.</para><para>Also please note that because the objects of this class are deleted by the tree using the operator <computeroutput>delete</computeroutput>, they must always be allocated on the heap using <computeroutput>new</computeroutput>.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__containers" kindref="compound">Containers</ref></para><para><simplesect kind="see"><para><ref refid="classwx_tree_ctrl" kindref="compound">wxTreeCtrl</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__containers" kindref="compound">Containers</ref></para><para><simplesect kind="see"><para><ref refid="classwx_tree_ctrl" kindref="compound">wxTreeCtrl</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="11152">
+      <node id="11213">
         <label>wxClientData</label>
         <link refid="classwx_client_data"/>
       </node>
-      <node id="11151">
+      <node id="11212">
         <label>wxTreeItemData</label>
         <link refid="classwx_tree_item_data"/>
-        <childnode refid="11152" relation="public-inheritance">
+        <childnode refid="11213" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="11154">
+      <node id="11215">
         <label>wxClientData</label>
         <link refid="classwx_client_data"/>
       </node>
-      <node id="11153">
+      <node id="11214">
         <label>wxTreeItemData</label>
         <link refid="classwx_tree_item_data"/>
-        <childnode refid="11154" relation="public-inheritance">
+        <childnode refid="11215" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>

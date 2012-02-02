@@ -1,11 +1,10 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_tar_input_stream" kind="class" prot="public">
     <compoundname>wxTarInputStream</compoundname>
     <basecompoundref refid="classwx_archive_input_stream" prot="public" virt="non-virtual">wxArchiveInputStream</basecompoundref>
     <includes local="no">wx/tarstrm.h</includes>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_tar_input_stream_1a0bc98eeda030e2587de196173d79d325" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
         <definition>wxTarInputStream::wxTarInputStream</definition>
@@ -102,65 +101,65 @@
 <para>Input stream for reading tar files. </para>    </briefdescription>
     <detaileddescription>
 <para><ref refid="classwx_tar_input_stream_1a2caf9fbd8b60d18422852e2c77f8d3b1" kindref="member">wxTarInputStream::GetNextEntry()</ref> returns a <ref refid="classwx_tar_entry" kindref="compound">wxTarEntry</ref> object containing the meta-data for the next entry in the tar (and gives away ownership). Reading from the <ref refid="classwx_tar_input_stream" kindref="compound">wxTarInputStream</ref> then returns the entry&apos;s data. <ref refid="classwx_input_stream_1a177bb52eb500be28c8d41f959b0fb6be" kindref="member">wxTarInputStream::Eof()</ref> becomes true after an attempt has been made to read past the end of the entry&apos;s data.</para><para>When there are no more entries, <ref refid="classwx_tar_input_stream_1a2caf9fbd8b60d18422852e2c77f8d3b1" kindref="member">wxTarInputStream::GetNextEntry()</ref> returns NULL and sets <ref refid="classwx_input_stream_1a177bb52eb500be28c8d41f959b0fb6be" kindref="member">wxTarInputStream::Eof()</ref>.</para><para>Tar entries are seekable if the parent stream is seekable. In practice this usually means they are only seekable if the tar is stored as a local file and is not compressed.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__archive" kindref="compound">Archive support</ref>, <ref refid="group__group__class__streams" kindref="compound">Streams</ref></para><para><simplesect kind="see"><para><ref refid="overview__archive_1overview_archive_byname" kindref="member">Looking Up an Archive Entry by Name</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__archive" kindref="compound">Archive support</ref>, <ref refid="group__group__class__streams" kindref="compound">Streams</ref></para><para><simplesect kind="see"><para><ref refid="overview_archive_1overview_archive_byname" kindref="member">Looking Up an Archive Entry by Name</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10623">
+      <node id="10683">
         <label>wxInputStream</label>
         <link refid="classwx_input_stream"/>
-        <childnode refid="10624" relation="public-inheritance">
+        <childnode refid="10684" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10621">
+      <node id="10681">
         <label>wxArchiveInputStream</label>
         <link refid="classwx_archive_input_stream"/>
-        <childnode refid="10622" relation="public-inheritance">
+        <childnode refid="10682" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10624">
+      <node id="10684">
         <label>wxStreamBase</label>
         <link refid="classwx_stream_base"/>
       </node>
-      <node id="10622">
+      <node id="10682">
         <label>wxFilterInputStream</label>
         <link refid="classwx_filter_input_stream"/>
-        <childnode refid="10623" relation="public-inheritance">
+        <childnode refid="10683" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10620">
+      <node id="10680">
         <label>wxTarInputStream</label>
         <link refid="classwx_tar_input_stream"/>
-        <childnode refid="10621" relation="public-inheritance">
+        <childnode refid="10681" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10628">
+      <node id="10688">
         <label>wxInputStream</label>
         <link refid="classwx_input_stream"/>
-        <childnode refid="10629" relation="public-inheritance">
+        <childnode refid="10689" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10626">
+      <node id="10686">
         <label>wxArchiveInputStream</label>
         <link refid="classwx_archive_input_stream"/>
-        <childnode refid="10627" relation="public-inheritance">
+        <childnode refid="10687" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10629">
+      <node id="10689">
         <label>wxStreamBase</label>
         <link refid="classwx_stream_base"/>
       </node>
-      <node id="10627">
+      <node id="10687">
         <label>wxFilterInputStream</label>
         <link refid="classwx_filter_input_stream"/>
-        <childnode refid="10628" relation="public-inheritance">
+        <childnode refid="10688" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10625">
+      <node id="10685">
         <label>wxTarInputStream</label>
         <link refid="classwx_tar_input_stream"/>
-        <childnode refid="10626" relation="public-inheritance">
+        <childnode refid="10686" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>

@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="overview_refcount" kind="page">
+    <compoundname>overview_refcount</compoundname>
+    <title>Reference Counting</title>
+    <detaileddescription>
+<para><itemizedlist>
+<listitem><para><ref refid="overview_refcount_1overview_refcount_ignore" kindref="member">Why You Shouldn&apos;t Care About It</ref> </para></listitem>
+<listitem><para><ref refid="overview_refcount_1overview_refcount_equality" kindref="member">Object Comparison</ref> </para></listitem>
+<listitem><para><ref refid="overview_refcount_1overview_refcount_destruct" kindref="member">Object Destruction</ref> </para></listitem>
+<listitem><para><ref refid="overview_refcount_1overview_refcount_list" kindref="member">List of Reference Counted Classes</ref> </para></listitem>
+<listitem><para><ref refid="overview_refcount_1overview_refcount_object" kindref="member">Making Your Own Reference Counted Class</ref></para></listitem>
+</itemizedlist>
+<hruler/>
+</para><sect1 id="overview_refcount_1overview_refcount_ignore">
+<title>Why You Shouldn&apos;t Care About It</title>
+<para>Many wxWidgets objects use a technique known as <emphasis>reference counting</emphasis>, also known as <emphasis>copy on write</emphasis> (COW). This means that when an object is assigned to another, no copying really takes place. Only the reference count on the shared object data is incremented and both objects share the same data (a very fast operation).</para><para>But as soon as one of the two (or more) objects is modified, the data has to be copied because the changes to one of the objects shouldn&apos;t be seen in the others. As data copying only happens when the object is written to, this is known as COW.</para><para>What is important to understand is that all this happens absolutely transparently to the class users and that whether an object is shared or not is not seen from the outside of the class - in any case, the result of any operation on it is the same.</para></sect1>
+<sect1 id="overview_refcount_1overview_refcount_equality">
+<title>Object Comparison</title>
+<para>The == and != operators of <ref refid="overview_refcount_1overview_refcount_list" kindref="member">the reference counted classes</ref> always do a <emphasis>deep comparison</emphasis>. This means that the equality operator will return true if two objects are identical and not only if they share the same data.</para><para>Note that wxWidgets follows the <emphasis>STL philosophy</emphasis>: when a comparison operator cannot be implemented efficiently (like for e.g. wxImage&apos;s == operator which would need to compare the entire image&apos;s data, pixel-by-pixel), it&apos;s not implemented at all. That&apos;s why not all reference counted classes provide comparison operators.</para><para>Also note that if you only need to do a <computeroutput>shallow</computeroutput> comparison between two <ref refid="classwx_object" kindref="compound">wxObject</ref> derived classes, you should not use the == and != operators but rather the <ref refid="classwx_object_1a80a1a3fda7b14396a9ddd3d7a46a88bd" kindref="member">wxObject::IsSameAs()</ref> function.</para></sect1>
+<sect1 id="overview_refcount_1overview_refcount_destruct">
+<title>Object Destruction</title>
+<para>When a COW object destructor is called, it may not delete the data: if it&apos;s shared, the destructor will just decrement the shared data&apos;s reference count without destroying it. Only when the destructor of the last object owning the data is called, the data is really destroyed. Just like all other COW-things, this happens transparently to the class users so that you shouldn&apos;t care about it.</para></sect1>
+<sect1 id="overview_refcount_1overview_refcount_list">
+<title>List of Reference Counted Classes</title>
+<para>The following classes in wxWidgets have efficient (i.e. fast) assignment operators and copy constructors since they are reference-counted:</para><para><itemizedlist>
+<listitem><para><ref refid="classwx_accelerator_table" kindref="compound">wxAcceleratorTable</ref> </para></listitem>
+<listitem><para><ref refid="classwx_animation" kindref="compound">wxAnimation</ref> </para></listitem>
+<listitem><para><ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> </para></listitem>
+<listitem><para><ref refid="classwx_brush" kindref="compound">wxBrush</ref> </para></listitem>
+<listitem><para><ref refid="classwx_cursor" kindref="compound">wxCursor</ref> </para></listitem>
+<listitem><para><ref refid="classwx_font" kindref="compound">wxFont</ref> </para></listitem>
+<listitem><para><ref refid="classwx_graphics_brush" kindref="compound">wxGraphicsBrush</ref> </para></listitem>
+<listitem><para><ref refid="classwx_graphics_context" kindref="compound">wxGraphicsContext</ref> </para></listitem>
+<listitem><para><ref refid="classwx_graphics_font" kindref="compound">wxGraphicsFont</ref> </para></listitem>
+<listitem><para><ref refid="classwx_graphics_matrix" kindref="compound">wxGraphicsMatrix</ref> </para></listitem>
+<listitem><para><ref refid="classwx_graphics_path" kindref="compound">wxGraphicsPath</ref> </para></listitem>
+<listitem><para><ref refid="classwx_graphics_pen" kindref="compound">wxGraphicsPen</ref> </para></listitem>
+<listitem><para><ref refid="classwx_icon" kindref="compound">wxIcon</ref> </para></listitem>
+<listitem><para><ref refid="classwx_image" kindref="compound">wxImage</ref> </para></listitem>
+<listitem><para><ref refid="classwx_metafile" kindref="compound">wxMetafile</ref> </para></listitem>
+<listitem><para><ref refid="classwx_palette" kindref="compound">wxPalette</ref> </para></listitem>
+<listitem><para><ref refid="classwx_pen" kindref="compound">wxPen</ref> </para></listitem>
+<listitem><para><ref refid="classwx_region" kindref="compound">wxRegion</ref> </para></listitem>
+<listitem><para><ref refid="classwx_string" kindref="compound">wxString</ref> </para></listitem>
+<listitem><para><ref refid="classwx_variant" kindref="compound">wxVariant</ref> </para></listitem>
+<listitem><para><ref refid="classwx_variant_data" kindref="compound">wxVariantData</ref></para></listitem>
+</itemizedlist>
+Note that the list above reports the objects which are reference counted in all ports of wxWidgets; some ports may use this technique also for other classes.</para><para>All the objects implement a function <bold>IsOk()</bold> to test if they are referencing valid data; when the objects are in uninitialized state, you can only use the <bold>IsOk()</bold> getter; trying to call any other getter, e.g. <ref refid="classwx_brush_1aa417c1eaa67e4476652fbf949a46c26a" kindref="member">wxBrush::GetStyle()</ref> on the <ref refid="brush_8h_1a9919a44109f2c6091c71aece17ca7013" kindref="member">wxNullBrush</ref> object, will result in an assert failure in debug builds.</para></sect1>
+<sect1 id="overview_refcount_1overview_refcount_object">
+<title>Making Your Own Reference Counted Class</title>
+<para>Reference counting can be implemented easily using <ref refid="classwx_object" kindref="compound">wxObject</ref> or using the intermediate <ref refid="classwx_ref_counter" kindref="compound">wxRefCounter</ref> class directly. Alternatively, you can also use the <ref refid="classwx_object_data_ptr_3_01_t_01_4" kindref="compound">wxObjectDataPtr&lt;T&gt;</ref> template.</para><para>First, derive a new class from <ref refid="classwx_ref_counter" kindref="compound">wxRefCounter</ref> (or <ref refid="classwx_object_ref_data" kindref="compound">wxObjectRefData</ref> when using a <ref refid="classwx_object" kindref="compound">wxObject</ref> derived class) and put the memory-consuming data in it.</para><para>Then derive a new class from <ref refid="classwx_object" kindref="compound">wxObject</ref> and implement there the public interface which will be seen by the user of your class. You&apos;ll probably want to add a function to your class which does the cast from <ref refid="classwx_object_ref_data" kindref="compound">wxObjectRefData</ref> to your class-specific shared data. For example:</para><para><programlisting><codeline><highlight class="normal">MyClassRefData*<sp/>GetData()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__group__funcmacro__rtti_1gaa3a4a52303d4a1fa3d3346e762638c64" kindref="member" tooltip="Same as static_cast&amp;lt;T&amp;gt;(x) if the compiler supports static cast or (T)x for old compilers.">wx_static_cast</ref>(MyClassRefData*,<sp/>m_refData);</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting></para><para>In fact, any time you need to read the data from your wxObject-derived class, you will need to call this function.</para><para><simplesect kind="note"><para>Any time you need to actually modify the data placed inside your <ref refid="classwx_object" kindref="compound">wxObject</ref> derived class, you must first call the <ref refid="classwx_object_1a74b40e42d19a4b9e9bec0b57d62a5725" kindref="member">wxObject::UnShare()</ref> function to ensure that the modifications won&apos;t affect other instances which are eventually sharing your object&apos;s data. </para></simplesect>
+</para></sect1>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

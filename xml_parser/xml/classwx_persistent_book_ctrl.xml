@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_persistent_book_ctrl" kind="class" prot="public">
     <compoundname>wxPersistentBookCtrl</compoundname>
     <basecompoundref refid="classwx_persistent_window" prot="public" virt="non-virtual">wxPersistentWindow&lt; wxBookCtrlBase &gt;</basecompoundref>
@@ -68,43 +68,43 @@
 <para>This adapter handles the selected page of <ref refid="classwx_book_ctrl_base" kindref="compound">wxBookCtrlBase</ref>, i.e. it saves its value when the associated book control is destroyed and restores it when it is recreated.</para><para><simplesect kind="see"><para>wxPersistentTreeBookCtrl </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="8600">
+      <node id="8608">
         <label>wxPersistentBookCtrl</label>
         <link refid="classwx_persistent_book_ctrl"/>
-        <childnode refid="8601" relation="public-inheritance">
+        <childnode refid="8609" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8603">
+      <node id="8611">
         <label>wxPersistentTreeBook</label>
         <link refid="classwx_persistent_tree_book"/>
-        <childnode refid="8600" relation="public-inheritance">
+        <childnode refid="8608" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8601">
+      <node id="8609">
         <label>wxPersistentWindow&lt; wxBookCtrlBase &gt;</label>
         <link refid="classwx_persistent_window"/>
-        <childnode refid="8602" relation="public-inheritance">
+        <childnode refid="8610" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8602">
+      <node id="8610">
         <label>wxPersistentObject</label>
         <link refid="classwx_persistent_object"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="8604">
+      <node id="8612">
         <label>wxPersistentBookCtrl</label>
         <link refid="classwx_persistent_book_ctrl"/>
-        <childnode refid="8605" relation="public-inheritance">
+        <childnode refid="8613" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8605">
+      <node id="8613">
         <label>wxPersistentWindow&lt; wxBookCtrlBase &gt;</label>
         <link refid="classwx_persistent_window"/>
-        <childnode refid="8606" relation="public-inheritance">
+        <childnode refid="8614" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8606">
+      <node id="8614">
         <label>wxPersistentObject</label>
         <link refid="classwx_persistent_object"/>
       </node>

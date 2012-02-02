@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_datagram_socket" kind="class" prot="public">
     <compoundname>wxDatagramSocket</compoundname>
     <basecompoundref refid="classwx_socket_base" prot="public" virt="non-virtual">wxSocketBase</basecompoundref>
@@ -108,47 +108,47 @@
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-<para><xrefsect id="todo_1_todo000060"><xreftitle>Todo</xreftitle><xrefdescription><para>docme</para></xrefdescription></xrefsect><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxnet" kindref="member">wxNet</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__net" kindref="compound">Networking</ref> </para>    </detaileddescription>
+<para><xrefsect id="todo_1_todo000059"><xreftitle>Todo</xreftitle><xrefdescription><para>docme</para></xrefdescription></xrefsect></para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxnet" kindref="member">wxNet</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__net" kindref="compound">Networking</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="5231">
+      <node id="5235">
         <label>wxSocketBase</label>
         <link refid="classwx_socket_base"/>
-        <childnode refid="5232" relation="public-inheritance">
+        <childnode refid="5236" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5232">
+      <node id="5236">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="5230">
+      <node id="5234">
         <label>wxDatagramSocket</label>
         <link refid="classwx_datagram_socket"/>
-        <childnode refid="5231" relation="public-inheritance">
+        <childnode refid="5235" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="5234">
+      <node id="5238">
         <label>wxSocketBase</label>
         <link refid="classwx_socket_base"/>
-        <childnode refid="5235" relation="public-inheritance">
+        <childnode refid="5239" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5235">
+      <node id="5239">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="5236" relation="usage">
+        <childnode refid="5240" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="5233">
+      <node id="5237">
         <label>wxDatagramSocket</label>
         <link refid="classwx_datagram_socket"/>
-        <childnode refid="5234" relation="public-inheritance">
+        <childnode refid="5238" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5236">
+      <node id="5240">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

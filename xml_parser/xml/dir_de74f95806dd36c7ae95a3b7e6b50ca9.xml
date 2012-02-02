@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="dir_de74f95806dd36c7ae95a3b7e6b50ca9" kind="dir">
+    <compoundname>docs/</compoundname>
+    <innerdir refid="dir_a832ae9f3375926ff5a2b1b4f12a4c9c">docs/doxygen/</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-svn/docs/"/>
+  </compounddef>
+</doxygen>

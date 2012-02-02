@@ -1,10 +1,9 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_hash_set" kind="class" prot="public">
     <compoundname>wxHashSet</compoundname>
     <includes local="no">wx/hashset.h</includes>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_hash_set_1af71a133692e70c51624551d353094263" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const_iterator</type>
         <definition>const_iterator wxHashSet::begin</definition>
@@ -33,7 +32,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_hash_set_1a7f9fc908c787551edaca580b6364d573" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const_iterator</type>
         <definition>const_iterator wxHashSet::end</definition>
@@ -62,7 +60,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_hash_set_1a0a2addc247305cffdc9bea89fe17ffb9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void wxHashSet::erase</definition>
@@ -99,7 +96,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_hash_set_1a64240455373cd5d418b2c1998f86aa33" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>iterator</type>
         <definition>iterator wxHashSet::find</definition>
@@ -275,7 +271,7 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>same,<sp/>with<sp/>int<sp/>keys</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>WX_DECLARE_HASH_SET(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/>wxIntegerHash,<sp/>wxIntegerEqual,<sp/>MySet2<sp/>);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>declare<sp/>a<sp/>hash<sp/>set<sp/>with<sp/>string<sp/>keys</highlight><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>WX_DECLARE_HASH_SET(<sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change...">wxString</ref>,<sp/>wxStringHash,<sp/>wxStringEqual,<sp/>MySet3<sp/>);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>WX_DECLARE_HASH_SET(<sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change was actually the m...">wxString</ref>,<sp/>wxStringHash,<sp/>wxStringEqual,<sp/>MySet3<sp/>);</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MySet1<sp/>h1;</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MySet2<sp/>h1;</highlight></codeline>
@@ -297,7 +293,7 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MySet3::iterator<sp/>it;</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(<sp/>it<sp/>=<sp/>h3.begin();<sp/>it<sp/>!=<sp/>h3.end();<sp/>++it<sp/>)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change...">wxString</ref><sp/>key<sp/>=<sp/>*it;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change was actually the m...">wxString</ref><sp/>key<sp/>=<sp/>*it;</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>do<sp/>something<sp/>useful<sp/>with<sp/>key</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 </programlisting></para><sect1 id="classwx_hash_set_1hashset_declaringnew">
@@ -354,7 +350,7 @@
 <sect1 id="classwx_hash_set_1hashset_iter">
 <title>Iterators</title>
 <para>An iterator is similar to a pointer, and so you can use the usual pointer operations: ++it ( and it++ ) to move to the next element, *it to access the element pointed to, *it to access the value of the element pointed to. Hash sets provide forward only iterators, this means that you can&apos;t use --it, it + 3, it1 - it2.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__containers" kindref="compound">Containers</ref> </para></sect1>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__containers" kindref="compound">Containers</ref> </para></sect1>
     </detaileddescription>
     <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/hashset.h" line="142" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/hashset.h" bodystart="141" bodyend="230"/>
     <listofallmembers>

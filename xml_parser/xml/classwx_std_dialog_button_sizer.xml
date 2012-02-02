@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_std_dialog_button_sizer" kind="class" prot="public">
     <compoundname>wxStdDialogButtonSizer</compoundname>
     <basecompoundref refid="classwx_box_sizer" prot="public" virt="non-virtual">wxBoxSizer</basecompoundref>
@@ -134,59 +134,59 @@
 <para>This class creates button layouts which conform to the standard button spacing and ordering defined by the platform or toolkit&apos;s user interface guidelines (if such things exist). </para>    </briefdescription>
     <detaileddescription>
 <para>By using this class, you can ensure that all your standard dialogs look correct on all major platforms. Currently it conforms to the Windows, GTK+ and Mac OS X human interface guidelines.</para><para>When there aren&apos;t interface guidelines defined for a particular platform or toolkit, <ref refid="classwx_std_dialog_button_sizer" kindref="compound">wxStdDialogButtonSizer</ref> reverts to the Windows implementation.</para><para>To use this class, first add buttons to the sizer by calling <ref refid="classwx_std_dialog_button_sizer_1ad86379fdfdeeb02f77019ea9e1250688" kindref="member">wxStdDialogButtonSizer::AddButton</ref> (or <ref refid="classwx_std_dialog_button_sizer_1a523a7a8ffe4d45d35a6a9a6859978e0c" kindref="member">wxStdDialogButtonSizer::SetAffirmativeButton</ref>, <ref refid="classwx_std_dialog_button_sizer_1a2e3771a7f1b826a38f51f888210a5d85" kindref="member">wxStdDialogButtonSizer::SetNegativeButton</ref> or <ref refid="classwx_std_dialog_button_sizer_1afc8000cf3148cd7feb96a1a906e7ceed" kindref="member">wxStdDialogButtonSizer::SetCancelButton</ref>) and then call Realize in order to create the actual button layout used. Other than these special operations, this sizer works like any other sizer.</para><para>If you add a button with wxID_SAVE, on Mac OS X the button will be renamed to &quot;Save&quot; and the wxID_NO button will be renamed to &quot;Don&apos;t Save&quot; in accordance with the Mac OS X Human Interface Guidelines.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__winlayout" kindref="compound">Window Layout</ref></para><para><simplesect kind="see"><para><ref refid="classwx_sizer" kindref="compound">wxSizer</ref>, <ref refid="overview__sizer" kindref="compound">Sizers Overview</ref>, <ref refid="classwx_dialog_1ae362b7c61430593ef8ac5034f1bd92c8" kindref="member">wxDialog::CreateButtonSizer</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__winlayout" kindref="compound">Window Layout</ref></para><para><simplesect kind="see"><para><ref refid="classwx_sizer" kindref="compound">wxSizer</ref>, <ref refid="overview_sizer" kindref="compound">Sizers Overview</ref>, <ref refid="classwx_dialog_1ae362b7c61430593ef8ac5034f1bd92c8" kindref="member">wxDialog::CreateButtonSizer</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10466">
+      <node id="10526">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="10463">
+      <node id="10523">
         <label>wxStdDialogButtonSizer</label>
         <link refid="classwx_std_dialog_button_sizer"/>
-        <childnode refid="10464" relation="public-inheritance">
+        <childnode refid="10524" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10464">
+      <node id="10524">
         <label>wxBoxSizer</label>
         <link refid="classwx_box_sizer"/>
-        <childnode refid="10465" relation="public-inheritance">
+        <childnode refid="10525" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10465">
+      <node id="10525">
         <label>wxSizer</label>
         <link refid="classwx_sizer"/>
-        <childnode refid="10466" relation="public-inheritance">
+        <childnode refid="10526" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10470">
+      <node id="10530">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="10471" relation="usage">
+        <childnode refid="10531" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="10467">
+      <node id="10527">
         <label>wxStdDialogButtonSizer</label>
         <link refid="classwx_std_dialog_button_sizer"/>
-        <childnode refid="10468" relation="public-inheritance">
+        <childnode refid="10528" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10468">
+      <node id="10528">
         <label>wxBoxSizer</label>
         <link refid="classwx_box_sizer"/>
-        <childnode refid="10469" relation="public-inheritance">
+        <childnode refid="10529" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10469">
+      <node id="10529">
         <label>wxSizer</label>
         <link refid="classwx_sizer"/>
-        <childnode refid="10470" relation="public-inheritance">
+        <childnode refid="10530" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10471">
+      <node id="10531">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

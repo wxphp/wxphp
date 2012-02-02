@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_log_text_ctrl" kind="class" prot="public">
     <compoundname>wxLogTextCtrl</compoundname>
     <basecompoundref refid="classwx_log" prot="public" virt="non-virtual">wxLog</basecompoundref>
@@ -27,29 +27,29 @@
 <para>Using these target all the log messages can be redirected to a text control. </para>    </briefdescription>
     <detaileddescription>
 <para>The text control must have been created with <computeroutput>wxTE_MULTILINE</computeroutput> style by the caller previously.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__logging" kindref="compound">Logging</ref></para><para><simplesect kind="see"><para><ref refid="classwx_text_ctrl" kindref="compound">wxTextCtrl</ref>, <ref refid="classwx_stream_to_text_redirector" kindref="compound">wxStreamToTextRedirector</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__logging" kindref="compound">Logging</ref></para><para><simplesect kind="see"><para><ref refid="classwx_text_ctrl" kindref="compound">wxTextCtrl</ref>, <ref refid="classwx_stream_to_text_redirector" kindref="compound">wxStreamToTextRedirector</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7538">
+      <node id="7544">
         <label>wxLog</label>
         <link refid="classwx_log"/>
       </node>
-      <node id="7537">
+      <node id="7543">
         <label>wxLogTextCtrl</label>
         <link refid="classwx_log_text_ctrl"/>
-        <childnode refid="7538" relation="public-inheritance">
+        <childnode refid="7544" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7540">
+      <node id="7546">
         <label>wxLog</label>
         <link refid="classwx_log"/>
       </node>
-      <node id="7539">
+      <node id="7545">
         <label>wxLogTextCtrl</label>
         <link refid="classwx_log_text_ctrl"/>
-        <childnode refid="7540" relation="public-inheritance">
+        <childnode refid="7546" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
@@ -79,6 +79,7 @@
       <member refid="classwx_log_1a14a562556933276939cedbb470f149cb" prot="public" virt="non-virtual"><scope>wxLogTextCtrl</scope><name>Resume</name></member>
       <member refid="classwx_log_1ac7ea85f71c8d3ecd4247f412be410505" prot="public" virt="non-virtual"><scope>wxLogTextCtrl</scope><name>SetActiveTarget</name></member>
       <member refid="classwx_log_1a7ae244e71dff20efd3a37b3718841a39" prot="public" virt="non-virtual"><scope>wxLogTextCtrl</scope><name>SetComponentLevel</name></member>
+      <member refid="classwx_log_1a9f316422df6930c549db80a5e4bf36a2" prot="public" virt="non-virtual"><scope>wxLogTextCtrl</scope><name>SetFormatter</name></member>
       <member refid="classwx_log_1a4ea68379469ca27f645d5f91c2d42b3b" prot="public" virt="non-virtual"><scope>wxLogTextCtrl</scope><name>SetLogLevel</name></member>
       <member refid="classwx_log_1ae814f9b9b4c8b4a52e34d7c919f98296" prot="public" virt="non-virtual"><scope>wxLogTextCtrl</scope><name>SetRepetitionCounting</name></member>
       <member refid="classwx_log_1a2525bf54fa3f31dc50e6e3cd8651e71d" prot="public" virt="non-virtual"><scope>wxLogTextCtrl</scope><name>SetThreadActiveTarget</name></member>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_navigation_enabled" kind="class" prot="public">
     <compoundname>wxNavigationEnabled</compoundname>
     <includes local="no">wx/containr.h</includes>
@@ -50,7 +50,7 @@
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Non-default<sp/>constructor<sp/>can&apos;t<sp/>use<sp/>wxControl<sp/>ctor<sp/>any<sp/>more<sp/>as</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>wxControl<sp/>is<sp/>not<sp/>its<sp/>direct<sp/>base<sp/>class,<sp/>but<sp/>it<sp/>can<sp/>use<sp/>Create().</highlight><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MyControlWithSubChildren(<ref refid="classwx_window" kindref="compound" tooltip="wxWindow is the base class for all windows and represents any visible object on screen...">wxWindow</ref><sp/>*parent,<sp/><ref refid="windowid_8h_1ae8091432cc2cb2485d45f2302fb51133" kindref="member" tooltip="The type of unique identifiers (ID) used for wxWindow-derived classes.">wxWindowID</ref><sp/>winid)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MyControlWithSubChildren(<ref refid="classwx_window" kindref="compound" tooltip="wxWindow is the base class for all windows and represents any visible object on screen.">wxWindow</ref><sp/>*parent,<sp/><ref refid="windowid_8h_1ae8091432cc2cb2485d45f2302fb51133" kindref="member" tooltip="The type of unique identifiers (ID) used for wxWindow-derived classes.">wxWindowID</ref><sp/>winid)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_control_1abe23789c94c86907463a0e8434be822a" kindref="member">wxControl::Create</ref>(parent,<sp/>winid);</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
@@ -60,7 +60,7 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Everything<sp/>else<sp/>as<sp/>usual<sp/>...</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
 </programlisting></para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para><simplesect kind="since"><para>2.9.3 </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para><simplesect kind="since"><para>2.9.3 </para></simplesect>
 </para>    </detaileddescription>
     <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/containr.h" line="48" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/containr.h" bodystart="47" bodyend="68"/>
     <listofallmembers>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_data_view_model" kind="class" prot="public">
     <compoundname>wxDataViewModel</compoundname>
     <basecompoundref refid="classwx_ref_counter" prot="public" virt="non-virtual">wxRefCounter</basecompoundref>
@@ -210,12 +210,12 @@
 </parameteritem>
 </parameterlist>
 <simplesect kind="return"><para>true if this item should be enabled, false otherwise.</para></simplesect>
-<simplesect kind="note"><para>Currently disabling items is fully implemented only for the native control implementation in wxOSX/Cocoa and wxGTK. This feature is only partially supported in the generic version (used by wxMSW) and not supported by the wxOSX/Carbon implementation.</para></simplesect>
+<simplesect kind="note"><para>Currently disabling items is not supported by the wxOSX/Carbon implementation.</para></simplesect>
 <simplesect kind="since"><para>2.9.2 </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="195"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="192"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_model_1a945bbb0523166c6b092af62c7ba7b2ac" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type>unsigned int</type>
@@ -236,7 +236,7 @@
 <para>Returns the number of items. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="202"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="199"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_model_1adbdf03c45af02bce54d6f979a831e728" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type>unsigned int</type>
@@ -250,7 +250,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="207"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="204"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_model_1ae370253a221d44db0c230127404858ab" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -268,7 +268,7 @@
 <para>This should return a string indicating the type of data as reported by <ref refid="classwx_variant" kindref="compound">wxVariant</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="215"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="212"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_model_1a4e12a582dffdc40bf043a48e1c12a9fb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type><ref refid="classwx_data_view_item" kindref="compound">wxDataViewItem</ref></type>
@@ -285,7 +285,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="222"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="219"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_model_1a74d9f0ac2dd9935b7132da11c008c67f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -310,7 +310,7 @@
 <para>A <ref refid="classwx_variant" kindref="compound">wxVariant</ref> is used to store the data. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="229"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="226"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_model_1ac4a3bef32f653e3f39cfde9caaec3c3d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -327,7 +327,7 @@
 <para>By default returns false. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="236"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="233"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_model_1a12cb8879f54b0fb6049cd1bc050f3f6b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -340,7 +340,7 @@
 <para>Usually, the user clicks on a column header for sorting, the data will be sorted alphanumerically.</para><para>If any other order (e.g. by index or order of appearance) is required, then this should be used. See <ref refid="classwx_data_view_index_list_model" kindref="compound">wxDataViewIndexListModel</ref> for a model which makes use of this. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="248"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="245"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_model_1a406ff115bc47bde666605776affbd7d2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -362,7 +362,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="262"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="259"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_model_1a2c61a09270fdda6720966742f0e4f09c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type>bool</type>
@@ -379,7 +379,7 @@
 <para>if it can have child items. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="268"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="265"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_model_1a37f9bf080fb368c6e964dc03aee46e5c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -400,7 +400,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="274"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="271"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_model_1abd4be4a8981cceaab024e0f69111e2f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -417,7 +417,7 @@
 <para>This will eventually emit a <computeroutput>wxEVT_DATAVIEW_ITEM_VALUE_CHANGED</computeroutput> event (in which the column fields will not be set) to the user. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="282"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="279"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_model_1a8bdcc58bf0e606c473ecd06c93ff0812" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -438,7 +438,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="288"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="285"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_model_1a23b737d08f3a2249e7780c4a97e4277d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -459,7 +459,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="294"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="291"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_model_1a9a3c99b9200ed1a72990973df07f4b1d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -476,7 +476,7 @@
 <para>This will eventually emit <computeroutput>wxEVT_DATAVIEW_ITEM_VALUE_CHANGED</computeroutput> events (in which the column fields will not be set) to the user. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="302"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="299"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_model_1af472d2e95b0e062045785cab17e72383" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -497,7 +497,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="308"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="305"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_model_1ae0ce5ec556a84b6fd8612d36b0078d63" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -514,7 +514,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="313"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="310"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_model_1a2c2c525bd1617b19f34bc286a638b293" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -527,7 +527,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="318"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="315"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_model_1a136dbef49beb09df1ffe5aa884a9c022" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>bool</type>
@@ -552,7 +552,7 @@
 <para>The most common scenario is that the <ref refid="classwx_data_view_ctrl" kindref="compound">wxDataViewCtrl</ref> calls this method after the user changed some data in the view.</para><para>This is the function you need to override in your derived class but if you want to call it, <ref refid="classwx_data_view_model_1ab52b55596d0724047be8cf62184f4468" kindref="member">ChangeValue()</ref> is usually more convenient as otherwise you need to manually call <ref refid="classwx_data_view_model_1a29418c077b554d0e87d509806fffc67d" kindref="member">ValueChanged()</ref> to update the control itself. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="333"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="330"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_model_1a29418c077b554d0e87d509806fffc67d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -573,7 +573,7 @@
 <para>This is also called from wxDataViewCtrl&apos;s internal editing code, e.g. when editing a text field in the control.</para><para>This will eventually emit a <computeroutput>wxEVT_DATAVIEW_ITEM_VALUE_CHANGED</computeroutput> event to the user. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="344"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="341"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-func">
@@ -588,7 +588,7 @@
 <para>This should not be called directly. Use <ref refid="classwx_ref_counter_1a803eb5be907b1a342082ceb59c01d8c5" kindref="member">DecRef()</ref> instead. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="351"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="348"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -598,76 +598,76 @@
 <listitem><para><ref refid="classwx_data_view_model_1a29418c077b554d0e87d509806fffc67d" kindref="member">wxDataViewModel::ValueChanged</ref>,</para></listitem><listitem><para><ref refid="classwx_data_view_model_1a37f9bf080fb368c6e964dc03aee46e5c" kindref="member">wxDataViewModel::ItemAdded</ref>,</para></listitem><listitem><para><ref refid="classwx_data_view_model_1a8bdcc58bf0e606c473ecd06c93ff0812" kindref="member">wxDataViewModel::ItemDeleted</ref>,</para></listitem><listitem><para><ref refid="classwx_data_view_model_1abd4be4a8981cceaab024e0f69111e2f2" kindref="member">wxDataViewModel::ItemChanged</ref>,</para></listitem><listitem><para><ref refid="classwx_data_view_model_1ad7f3023ee6166eb6f5bafececb4fff0c" kindref="member">wxDataViewModel::Cleared</ref>.</para></listitem></itemizedlist>
 </para><para>There are plural forms for notification of addition, change or removal of several item at once. See:<itemizedlist>
 <listitem><para><ref refid="classwx_data_view_model_1a23b737d08f3a2249e7780c4a97e4277d" kindref="member">wxDataViewModel::ItemsAdded</ref>,</para></listitem><listitem><para><ref refid="classwx_data_view_model_1af472d2e95b0e062045785cab17e72383" kindref="member">wxDataViewModel::ItemsDeleted</ref>,</para></listitem><listitem><para><ref refid="classwx_data_view_model_1a9a3c99b9200ed1a72990973df07f4b1d" kindref="member">wxDataViewModel::ItemsChanged</ref>.</para></listitem></itemizedlist>
-</para><para>This class maintains a list of <ref refid="classwx_data_view_model_notifier" kindref="compound">wxDataViewModelNotifier</ref> which link this class to the specific implementations on the supported platforms so that e.g. calling <ref refid="classwx_data_view_model_1a29418c077b554d0e87d509806fffc67d" kindref="member">wxDataViewModel::ValueChanged</ref> on this model will just call <ref refid="classwx_data_view_model_notifier_1a0c99e0ae9e1becff0cdedc0a8f3374c4" kindref="member">wxDataViewModelNotifier::ValueChanged</ref> for each notifier that has been added. You can also add your own notifier in order to get informed about any changes to the data in the list model.</para><para>Currently wxWidgets provides the following models apart from the base model: <ref refid="classwx_data_view_index_list_model" kindref="compound">wxDataViewIndexListModel</ref>, <ref refid="classwx_data_view_virtual_list_model" kindref="compound">wxDataViewVirtualListModel</ref>, <ref refid="classwx_data_view_tree_store" kindref="compound">wxDataViewTreeStore</ref>, <ref refid="classwx_data_view_list_store" kindref="compound">wxDataViewListStore</ref>.</para><para>Note that <ref refid="classwx_data_view_model" kindref="compound">wxDataViewModel</ref> is reference counted, derives from <ref refid="classwx_ref_counter" kindref="compound">wxRefCounter</ref> and cannot be deleted directly as it can be shared by several wxDataViewCtrls. This implies that you need to decrease the reference count after associating the model with a control like this:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_data_view_ctrl" kindref="compound" tooltip="wxDataViewCtrl is a control to display data either in a tree like fashion or in a...">wxDataViewCtrl</ref><sp/>*musicCtrl<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classwx_data_view_ctrl" kindref="compound" tooltip="wxDataViewCtrl is a control to display data either in a tree like fashion or in a...">wxDataViewCtrl</ref>(<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/><ref refid="defs_8h_1ac66d0a09761e7d86b2ac0b2e0c6a8cbba1f375b01ea03a713bbb7e32a36a2589c" kindref="member" tooltip="Any id: means that we don&amp;#39;t care about the id, whether when installing an event...">wxID_ANY</ref><sp/>);</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_data_view_model" kindref="compound" tooltip="wxDataViewModel is the base class for all data model to be displayed by a wxDataViewCtrl...">wxDataViewModel</ref><sp/>*musicModel<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>MyMusicModel;</highlight></codeline>
+</para><para>This class maintains a list of <ref refid="classwx_data_view_model_notifier" kindref="compound">wxDataViewModelNotifier</ref> which link this class to the specific implementations on the supported platforms so that e.g. calling <ref refid="classwx_data_view_model_1a29418c077b554d0e87d509806fffc67d" kindref="member">wxDataViewModel::ValueChanged</ref> on this model will just call <ref refid="classwx_data_view_model_notifier_1a0c99e0ae9e1becff0cdedc0a8f3374c4" kindref="member">wxDataViewModelNotifier::ValueChanged</ref> for each notifier that has been added. You can also add your own notifier in order to get informed about any changes to the data in the list model.</para><para>Currently wxWidgets provides the following models apart from the base model: <ref refid="classwx_data_view_index_list_model" kindref="compound">wxDataViewIndexListModel</ref>, <ref refid="classwx_data_view_virtual_list_model" kindref="compound">wxDataViewVirtualListModel</ref>, <ref refid="classwx_data_view_tree_store" kindref="compound">wxDataViewTreeStore</ref>, <ref refid="classwx_data_view_list_store" kindref="compound">wxDataViewListStore</ref>.</para><para>Note that <ref refid="classwx_data_view_model" kindref="compound">wxDataViewModel</ref> is reference counted, derives from <ref refid="classwx_ref_counter" kindref="compound">wxRefCounter</ref> and cannot be deleted directly as it can be shared by several wxDataViewCtrls. This implies that you need to decrease the reference count after associating the model with a control like this:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_data_view_ctrl" kindref="compound" tooltip="wxDataViewCtrl is a control to display data either in a tree like fashion or in a tabular form or bot...">wxDataViewCtrl</ref><sp/>*musicCtrl<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classwx_data_view_ctrl" kindref="compound" tooltip="wxDataViewCtrl is a control to display data either in a tree like fashion or in a tabular form or bot...">wxDataViewCtrl</ref>(<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/><ref refid="defs_8h_1ac66d0a09761e7d86b2ac0b2e0c6a8cbba1f375b01ea03a713bbb7e32a36a2589c" kindref="member" tooltip="Any id: means that we don&amp;#39;t care about the id, whether when installing an event handler or when creat...">wxID_ANY</ref><sp/>);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_data_view_model" kindref="compound" tooltip="wxDataViewModel is the base class for all data model to be displayed by a wxDataViewCtrl.">wxDataViewModel</ref><sp/>*musicModel<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>MyMusicModel;</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_musicCtrl-&gt;AssociateModel(<sp/>musicModel<sp/>);</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>musicModel-&gt;<ref refid="classwx_ref_counter_1a803eb5be907b1a342082ceb59c01d8c5" kindref="member" tooltip="Decrements the reference count associated with this shared data and, if it reaches...">DecRef</ref>();<sp/><sp/></highlight><highlight class="comment">//<sp/>avoid<sp/>memory<sp/>leak<sp/>!!</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>musicModel-&gt;<ref refid="classwx_ref_counter_1a803eb5be907b1a342082ceb59c01d8c5" kindref="member" tooltip="Decrements the reference count associated with this shared data and, if it reaches zero...">DecRef</ref>();<sp/><sp/></highlight><highlight class="comment">//<sp/>avoid<sp/>memory<sp/>leak<sp/>!!</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>add<sp/>columns<sp/>now</highlight></codeline>
 </programlisting></para><para>A potentially better way to avoid memory leaks is to use wxObjectDataPtr</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wxObjectDataPtr&lt;MyMusicModel&gt;<sp/>musicModel;</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_data_view_ctrl" kindref="compound" tooltip="wxDataViewCtrl is a control to display data either in a tree like fashion or in a...">wxDataViewCtrl</ref><sp/>*musicCtrl<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classwx_data_view_ctrl" kindref="compound" tooltip="wxDataViewCtrl is a control to display data either in a tree like fashion or in a...">wxDataViewCtrl</ref>(<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/><ref refid="defs_8h_1ac66d0a09761e7d86b2ac0b2e0c6a8cbba1f375b01ea03a713bbb7e32a36a2589c" kindref="member" tooltip="Any id: means that we don&amp;#39;t care about the id, whether when installing an event...">wxID_ANY</ref><sp/>);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_data_view_ctrl" kindref="compound" tooltip="wxDataViewCtrl is a control to display data either in a tree like fashion or in a tabular form or bot...">wxDataViewCtrl</ref><sp/>*musicCtrl<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classwx_data_view_ctrl" kindref="compound" tooltip="wxDataViewCtrl is a control to display data either in a tree like fashion or in a tabular form or bot...">wxDataViewCtrl</ref>(<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/><ref refid="defs_8h_1ac66d0a09761e7d86b2ac0b2e0c6a8cbba1f375b01ea03a713bbb7e32a36a2589c" kindref="member" tooltip="Any id: means that we don&amp;#39;t care about the id, whether when installing an event handler or when creat...">wxID_ANY</ref><sp/>);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>musicModel<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>MyMusicModel;</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_musicCtrl-&gt;AssociateModel(<sp/>musicModel.get()<sp/>);</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>add<sp/>columns<sp/>now</highlight></codeline>
 </programlisting></para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__dvc" kindref="compound">wxDataViewCtrl Related Classes</ref> </para>    </detaileddescription>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__dvc" kindref="compound">wxDataViewCtrl Related Classes</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="5387">
+      <node id="5391">
         <label>wxDataViewListStore</label>
         <link refid="classwx_data_view_list_store"/>
-        <childnode refid="5386" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="5384">
-        <label>wxRefCounter</label>
-        <link refid="classwx_ref_counter"/>
-      </node>
-      <node id="5386">
-        <label>wxDataViewIndexListModel</label>
-        <link refid="classwx_data_view_index_list_model"/>
-        <childnode refid="5385" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="5383">
-        <label>wxDataViewModel</label>
-        <link refid="classwx_data_view_model"/>
-        <childnode refid="5384" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="5389">
-        <label>wxDataViewTreeStore</label>
-        <link refid="classwx_data_view_tree_store"/>
-        <childnode refid="5383" relation="public-inheritance">
+        <childnode refid="5390" relation="public-inheritance">
         </childnode>
       </node>
       <node id="5388">
-        <label>wxDataViewVirtualListModel</label>
-        <link refid="classwx_data_view_virtual_list_model"/>
-        <childnode refid="5385" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="5385">
-        <label>wxDataViewListModel</label>
-        <link refid="classwx_data_view_list_model"/>
-        <childnode refid="5383" relation="public-inheritance">
-        </childnode>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
-      <node id="5391">
         <label>wxRefCounter</label>
         <link refid="classwx_ref_counter"/>
       </node>
       <node id="5390">
+        <label>wxDataViewIndexListModel</label>
+        <link refid="classwx_data_view_index_list_model"/>
+        <childnode refid="5389" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5387">
         <label>wxDataViewModel</label>
         <link refid="classwx_data_view_model"/>
-        <childnode refid="5391" relation="public-inheritance">
+        <childnode refid="5388" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5393">
+        <label>wxDataViewTreeStore</label>
+        <link refid="classwx_data_view_tree_store"/>
+        <childnode refid="5387" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5392">
+        <label>wxDataViewVirtualListModel</label>
+        <link refid="classwx_data_view_virtual_list_model"/>
+        <childnode refid="5389" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5389">
+        <label>wxDataViewListModel</label>
+        <link refid="classwx_data_view_list_model"/>
+        <childnode refid="5387" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="5395">
+        <label>wxRefCounter</label>
+        <link refid="classwx_ref_counter"/>
+      </node>
+      <node id="5394">
+        <label>wxDataViewModel</label>
+        <link refid="classwx_data_view_model"/>
+        <childnode refid="5395" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="98" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" bodystart="97" bodyend="352"/>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="98" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" bodystart="97" bodyend="349"/>
     <listofallmembers>
       <member refid="classwx_data_view_model_1af975c0a3afb970a21b9691a92f44c6c8" prot="public" virt="non-virtual"><scope>wxDataViewModel</scope><name>AddNotifier</name></member>
       <member refid="classwx_data_view_model_1ab52b55596d0724047be8cf62184f4468" prot="public" virt="non-virtual"><scope>wxDataViewModel</scope><name>ChangeValue</name></member>

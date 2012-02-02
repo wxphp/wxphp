@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_html_cell" kind="class" prot="public">
     <compoundname>wxHtmlCell</compoundname>
     <basecompoundref refid="classwx_object" prot="public" virt="non-virtual">wxObject</basecompoundref>
@@ -546,53 +546,53 @@
 <para>Internal data structure. </para>    </briefdescription>
     <detaileddescription>
 <para>It represents fragments of parsed HTML page, the so-called <bold>cell</bold> - a word, picture, table, horizontal line and so on. It is used by <ref refid="classwx_html_window" kindref="compound">wxHtmlWindow</ref> and <ref refid="classwx_html_win_parser" kindref="compound">wxHtmlWinParser</ref> to represent HTML page in memory.</para><para>You can divide cells into two groups : <emphasis>visible</emphasis> cells with non-zero width and height and <emphasis>helper</emphasis> cells (usually with zero width and height) that perform special actions such as color or font change.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxhtml" kindref="member">wxHTML</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__html" kindref="compound">HTML</ref></para><para><simplesect kind="see"><para><ref refid="overview__html_1overview_html_cells" kindref="member">Cells and Containers</ref>, <ref refid="classwx_html_container_cell" kindref="compound">wxHtmlContainerCell</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxhtml" kindref="member">wxHTML</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__html" kindref="compound">HTML</ref></para><para><simplesect kind="see"><para><ref refid="overview_html_1overview_html_cells" kindref="member">Cells and Containers</ref>, <ref refid="classwx_html_container_cell" kindref="compound">wxHtmlContainerCell</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="6962">
+      <node id="6966">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="6961">
+      <node id="6965">
         <label>wxHtmlCell</label>
         <link refid="classwx_html_cell"/>
-        <childnode refid="6962" relation="public-inheritance">
+        <childnode refid="6966" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6965">
+      <node id="6969">
         <label>wxHtmlWidgetCell</label>
         <link refid="classwx_html_widget_cell"/>
-        <childnode refid="6961" relation="public-inheritance">
+        <childnode refid="6965" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6964">
+      <node id="6968">
         <label>wxHtmlContainerCell</label>
         <link refid="classwx_html_container_cell"/>
-        <childnode refid="6961" relation="public-inheritance">
+        <childnode refid="6965" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6963">
+      <node id="6967">
         <label>wxHtmlColourCell</label>
         <link refid="classwx_html_colour_cell"/>
-        <childnode refid="6961" relation="public-inheritance">
+        <childnode refid="6965" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="6967">
+      <node id="6971">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="6968" relation="usage">
+        <childnode refid="6972" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="6966">
+      <node id="6970">
         <label>wxHtmlCell</label>
         <link refid="classwx_html_cell"/>
-        <childnode refid="6967" relation="public-inheritance">
+        <childnode refid="6971" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6968">
+      <node id="6972">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

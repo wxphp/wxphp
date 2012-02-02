@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_calculate_layout_event" kind="class" prot="public">
     <compoundname>wxCalculateLayoutEvent</compoundname>
     <basecompoundref refid="classwx_event" prot="public" virt="non-virtual">wxEvent</basecompoundref>
@@ -92,47 +92,47 @@
 <listitem><para>EVT_CALCULATE_LAYOUT(func): Process a <computeroutput>wxEVT_CALCULATE_LAYOUT</computeroutput> event, which asks the window to take a &apos;bite&apos; out of a rectangle provided by the algorithm. </para></listitem>
 </itemizedlist>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="classwx_query_layout_info_event" kindref="compound">wxQueryLayoutInfoEvent</ref>, <ref refid="classwx_sash_layout_window" kindref="compound">wxSashLayoutWindow</ref>, <ref refid="classwx_layout_algorithm" kindref="compound">wxLayoutAlgorithm</ref>. </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="classwx_query_layout_info_event" kindref="compound">wxQueryLayoutInfoEvent</ref>, <ref refid="classwx_sash_layout_window" kindref="compound">wxSashLayoutWindow</ref>, <ref refid="classwx_layout_algorithm" kindref="compound">wxLayoutAlgorithm</ref>. </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="4654">
+      <node id="4658">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="4652">
+      <node id="4656">
         <label>wxCalculateLayoutEvent</label>
         <link refid="classwx_calculate_layout_event"/>
-        <childnode refid="4653" relation="public-inheritance">
+        <childnode refid="4657" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4653">
+      <node id="4657">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="4654" relation="public-inheritance">
+        <childnode refid="4658" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="4657">
+      <node id="4661">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="4658" relation="usage">
+        <childnode refid="4662" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="4655">
+      <node id="4659">
         <label>wxCalculateLayoutEvent</label>
         <link refid="classwx_calculate_layout_event"/>
-        <childnode refid="4656" relation="public-inheritance">
+        <childnode refid="4660" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4656">
+      <node id="4660">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="4657" relation="public-inheritance">
+        <childnode refid="4661" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4658">
+      <node id="4662">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

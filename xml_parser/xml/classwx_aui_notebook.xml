@@ -1,11 +1,10 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_aui_notebook" kind="class" prot="public">
     <compoundname>wxAuiNotebook</compoundname>
     <basecompoundref refid="classwx_book_ctrl_base" prot="public" virt="non-virtual">wxBookCtrlBase</basecompoundref>
     <includes local="no">wx/aui/auibook.h</includes>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_aui_notebook_1ae08a7c4367b3979d79962fc2ecb57f79" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
         <definition>virtual void wxAuiNotebook::SetUniformBitmapSize</definition>
@@ -222,7 +221,7 @@
         <briefdescription>
 <para>Changes the selection for the given page, returning the previous selection. </para>        </briefdescription>
         <detaileddescription>
-<para>This function behaves as <ref refid="classwx_aui_notebook_1a39e9e72d5feacebdd49b8746e34f7c8c" kindref="member">SetSelection()</ref> but does <emphasis>not</emphasis> generate the page changing events.</para><para>See <ref refid="overview__events_1overview_events_prog" kindref="member">User Generated Events vs Programmatically Generated Events</ref> for more information. <simplesect kind="since"><para>2.9.3 </para></simplesect>
+<para>This function behaves as <ref refid="classwx_aui_notebook_1a39e9e72d5feacebdd49b8746e34f7c8c" kindref="member">SetSelection()</ref> but does <emphasis>not</emphasis> generate the page changing events.</para><para>See <ref refid="overview_events_1overview_events_prog" kindref="member">User Generated Events vs Programmatically Generated Events</ref> for more information. <simplesect kind="since"><para>2.9.3 </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -787,7 +786,7 @@
     <briefdescription>
 <para><ref refid="classwx_aui_notebook" kindref="compound">wxAuiNotebook</ref> is part of the wxAUI class framework. </para>    </briefdescription>
     <detaileddescription>
-<para>See also <ref refid="overview__aui" kindref="compound">wxAUI Overview</ref>.</para><para><ref refid="classwx_aui_notebook" kindref="compound">wxAuiNotebook</ref> is a notebook control which implements many features common in applications with dockable panes. Specifically, <ref refid="classwx_aui_notebook" kindref="compound">wxAuiNotebook</ref> implements functionality which allows the user to rearrange tab order via drag-and-drop, split the tab window into many different splitter configurations, and toggle through different themes to customize the control&apos;s look and feel.</para><para>The default theme that is used is wxAuiDefaultTabArt, which provides a modern, glossy look and feel. The theme can be changed by calling <ref refid="classwx_aui_notebook_1ab1b3740da86630f7f1a7e3f5c7f308d2" kindref="member">wxAuiNotebook::SetArtProvider</ref>.</para><para><heading level="2">Styles</heading>
+<para>See also <ref refid="overview_aui" kindref="compound">wxAUI Overview</ref>.</para><para><ref refid="classwx_aui_notebook" kindref="compound">wxAuiNotebook</ref> is a notebook control which implements many features common in applications with dockable panes. Specifically, <ref refid="classwx_aui_notebook" kindref="compound">wxAuiNotebook</ref> implements functionality which allows the user to rearrange tab order via drag-and-drop, split the tab window into many different splitter configurations, and toggle through different themes to customize the control&apos;s look and feel.</para><para>The default theme that is used is wxAuiDefaultTabArt, which provides a modern, glossy look and feel. The theme can be changed by calling <ref refid="classwx_aui_notebook_1ab1b3740da86630f7f1a7e3f5c7f308d2" kindref="member">wxAuiNotebook::SetArtProvider</ref>.</para><para><heading level="2">Styles</heading>
 </para><para>This class supports the following styles: <itemizedlist>
 <listitem><para>wxAUI_NB_DEFAULT_STYLE: Defined as wxAUI_NB_TOP | wxAUI_NB_TAB_SPLIT | wxAUI_NB_TAB_MOVE | wxAUI_NB_SCROLL_BUTTONS | wxAUI_NB_CLOSE_ON_ACTIVE_TAB. </para></listitem>
 <listitem><para>wxAUI_NB_TAB_SPLIT: Allows the tab control to be split by dragging a tab. </para></listitem>
@@ -814,106 +813,106 @@
 <listitem><para>EVT_AUINOTEBOOK_ALLOW_DND(id,  func): Whether to allow a tab to be dropped. Processes a <computeroutput>wxEVT_COMMAND_AUINOTEBOOK_ALLOW_DND</computeroutput> event. This event must be specially allowed. </para></listitem>
 </itemizedlist>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxaui" kindref="member">wxAui</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__aui" kindref="compound">Window Docking (wxAUI)</ref> </para>    </detaileddescription>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxaui" kindref="member">wxAui</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__aui" kindref="compound">Window Docking (wxAUI)</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="4373">
+      <node id="4377">
         <label>wxAuiNotebook</label>
         <link refid="classwx_aui_notebook"/>
-        <childnode refid="4374" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4374">
-        <label>wxBookCtrlBase</label>
-        <link refid="classwx_book_ctrl_base"/>
-        <childnode refid="4375" relation="public-inheritance">
-        </childnode>
-        <childnode refid="4380" relation="public-inheritance">
+        <childnode refid="4378" relation="public-inheritance">
         </childnode>
       </node>
       <node id="4378">
+        <label>wxBookCtrlBase</label>
+        <link refid="classwx_book_ctrl_base"/>
+        <childnode refid="4379" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4384" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4382">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="4377">
+      <node id="4381">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="4378" relation="public-inheritance">
+        <childnode refid="4382" relation="public-inheritance">
         </childnode>
-        <childnode refid="4379" relation="public-inheritance">
+        <childnode refid="4383" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4379">
+      <node id="4383">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="4375">
+      <node id="4379">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="4376" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4376">
-        <label>wxWindow</label>
-        <link refid="classwx_window"/>
-        <childnode refid="4377" relation="public-inheritance">
+        <childnode refid="4380" relation="public-inheritance">
         </childnode>
       </node>
       <node id="4380">
+        <label>wxWindow</label>
+        <link refid="classwx_window"/>
+        <childnode refid="4381" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4384">
         <label>wxWithImages</label>
         <link refid="classwx_with_images"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="4381">
+      <node id="4385">
         <label>wxAuiNotebook</label>
         <link refid="classwx_aui_notebook"/>
-        <childnode refid="4382" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4382">
-        <label>wxBookCtrlBase</label>
-        <link refid="classwx_book_ctrl_base"/>
-        <childnode refid="4383" relation="public-inheritance">
-        </childnode>
-        <childnode refid="4389" relation="public-inheritance">
+        <childnode refid="4386" relation="public-inheritance">
         </childnode>
       </node>
       <node id="4386">
+        <label>wxBookCtrlBase</label>
+        <link refid="classwx_book_ctrl_base"/>
+        <childnode refid="4387" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4393" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4390">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="4387" relation="usage">
+        <childnode refid="4391" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="4385">
+      <node id="4389">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="4386" relation="public-inheritance">
+        <childnode refid="4390" relation="public-inheritance">
         </childnode>
+        <childnode refid="4392" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4392">
+        <label>wxTrackable</label>
+        <link refid="classwx_trackable"/>
+      </node>
+      <node id="4387">
+        <label>wxControl</label>
+        <link refid="classwx_control"/>
         <childnode refid="4388" relation="public-inheritance">
         </childnode>
       </node>
       <node id="4388">
-        <label>wxTrackable</label>
-        <link refid="classwx_trackable"/>
-      </node>
-      <node id="4383">
-        <label>wxControl</label>
-        <link refid="classwx_control"/>
-        <childnode refid="4384" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4384">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="4385" relation="public-inheritance">
+        <childnode refid="4389" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4389">
+      <node id="4393">
         <label>wxWithImages</label>
         <link refid="classwx_with_images"/>
       </node>
-      <node id="4387">
+      <node id="4391">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

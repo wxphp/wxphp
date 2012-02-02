@@ -1,13 +1,13 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_date_time_work_days" kind="class" prot="public">
     <compoundname>wxDateTimeWorkDays</compoundname>
     <includes local="no">wx/datetime.h</includes>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-<para><xrefsect id="todo_1_todo000023"><xreftitle>Todo</xreftitle><xrefdescription><para>Write <ref refid="classwx_date_time_work_days" kindref="compound">wxDateTimeWorkDays</ref> documentation.</para></xrefdescription></xrefsect><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__data" kindref="compound">Data Structures</ref> </para>    </detaileddescription>
+<para><xrefsect id="todo_1_todo000022"><xreftitle>Todo</xreftitle><xrefdescription><para>Write <ref refid="classwx_date_time_work_days" kindref="compound">wxDateTimeWorkDays</ref> documentation.</para></xrefdescription></xrefsect></para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__data" kindref="compound">Data Structures</ref> </para>    </detaileddescription>
     <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1517" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" bodystart="1516" bodyend="1520"/>
     <listofallmembers>
     </listofallmembers>

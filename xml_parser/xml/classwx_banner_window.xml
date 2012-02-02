@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_banner_window" kind="class" prot="public">
     <compoundname>wxBannerWindow</compoundname>
     <basecompoundref refid="classwx_window" prot="public" virt="non-virtual">wxWindow</basecompoundref>
@@ -208,86 +208,86 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...<sp/>create<sp/>the<sp/>frame<sp/>itself<sp/>...</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>and<sp/>initialize<sp/>the<sp/>banner.</highlight><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_banner_window" kindref="compound" tooltip="A simple banner window showing either a bitmap or text.">wxBannerWindow</ref>*<sp/>banner<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classwx_banner_window" kindref="compound" tooltip="A simple banner window showing either a bitmap or text.">wxBannerWindow</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/><ref refid="defs_8h_1ac0f30319732dcceda470516918ff3556a2c9453664f068ee652a5b61a8248f000" kindref="member">wxTOP</ref>);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_banner_window" kindref="compound" tooltip="A simple banner window showing either a bitmap or text.">wxBannerWindow</ref>*<sp/>banner<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classwx_banner_window_1a29260797c824b361163f18519994c2f7" kindref="member" tooltip="Default constructor, use Create() later.">wxBannerWindow</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/><ref refid="defs_8h_1ac0f30319732dcceda470516918ff3556a2c9453664f068ee652a5b61a8248f000" kindref="member">wxTOP</ref>);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>banner-&gt;<ref refid="classwx_banner_window_1aa2dcae1c87dbf15486f34042cae575f6" kindref="member" tooltip="Set the text to display.">SetText</ref>(</highlight><highlight class="stringliteral">&quot;Welcome<sp/>to<sp/>my<sp/>wonderful<sp/>program&quot;</highlight><highlight class="normal">,</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/><sp/>Before<sp/>doing<sp/>anything<sp/>else,<sp/>you<sp/>need<sp/>to<sp/>connect<sp/>to<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;the<sp/>online<sp/>server.\n&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/><sp/>Please<sp/>enter<sp/>your<sp/>credentials<sp/>in<sp/>the<sp/>controls<sp/>below.&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>And<sp/>position<sp/>it<sp/>along<sp/>the<sp/>left<sp/>edge<sp/>of<sp/>the<sp/>window.</highlight><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_sizer" kindref="compound" tooltip="wxSizer is the abstract base class used for laying out subwindows in a window.">wxSizer</ref>*<sp/>sizer<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classwx_box_sizer" kindref="compound" tooltip="The basic idea behind a box sizer is that windows will most often be laid out in...">wxBoxSizer</ref>(<ref refid="defs_8h_1a1e6994f40bd9cb140e292afb165af971a2134d1cb8cf605532880c118190695b5" kindref="member">wxVERTICAL</ref>);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_sizer" kindref="compound" tooltip="wxSizer is the abstract base class used for laying out subwindows in a window.">wxSizer</ref>*<sp/>sizer<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classwx_box_sizer" kindref="compound" tooltip="The basic idea behind a box sizer is that windows will most often be laid out in rather simple basic ...">wxBoxSizer</ref>(<ref refid="defs_8h_1a1e6994f40bd9cb140e292afb165af971a2134d1cb8cf605532880c118190695b5" kindref="member">wxVERTICAL</ref>);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sizer-&gt;<ref refid="classwx_sizer_1a4e2122f2749261473c21cb192d00709f" kindref="member" tooltip="Appends a child to the sizer.">Add</ref>(banner,<sp/><ref refid="classwx_sizer_flags" kindref="compound" tooltip="Container for sizer items flags providing readable names for them.">wxSizerFlags</ref>().Expand());</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...<sp/>add<sp/>the<sp/>rest<sp/>of<sp/>the<sp/>window<sp/>contents<sp/>to<sp/>the<sp/>same<sp/>sizer<sp/>...</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SetSizerAndFit(sizer);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_window_1a29938af9828fd35da666536cdfb6b73c" kindref="member" tooltip="This method calls SetSizer() and then wxSizer::SetSizeHints which sets the initial window size to the...">SetSizerAndFit</ref>(sizer);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 </programlisting></para><para>This class is currently implemented generically and so looks the same under all platforms.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__miscwnd" kindref="compound">Miscellaneous Windows</ref> <htmlonly> &lt;br&gt;&lt;div&gt;&lt;span class=&apos;appearance&apos;&gt;Appearance:&lt;/span&gt;&lt;br&gt;&lt;table class=&apos;appearance&apos;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&apos;generic/bannerwindow.png&apos; alt=&apos;Generic appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt; </htmlonly></para><para><simplesect kind="since"><para>2.9.3 </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__miscwnd" kindref="compound">Miscellaneous Windows</ref> <htmlonly> &lt;br&gt;&lt;div&gt;&lt;span class=&apos;appearance&apos;&gt;Appearance:&lt;/span&gt;&lt;br&gt;&lt;table class=&apos;appearance&apos;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&apos;generic/bannerwindow.png&apos; alt=&apos;Generic appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt; </htmlonly></para><para><simplesect kind="since"><para>2.9.3 </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="4457">
+      <node id="4461">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="4456">
+      <node id="4460">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="4457" relation="public-inheritance">
+        <childnode refid="4461" relation="public-inheritance">
         </childnode>
-        <childnode refid="4458" relation="public-inheritance">
+        <childnode refid="4462" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4458">
+      <node id="4462">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="4455">
+      <node id="4459">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="4456" relation="public-inheritance">
+        <childnode refid="4460" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4454">
+      <node id="4458">
         <label>wxBannerWindow</label>
         <link refid="classwx_banner_window"/>
-        <childnode refid="4455" relation="public-inheritance">
+        <childnode refid="4459" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="4462">
+      <node id="4466">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="4463" relation="usage">
+        <childnode refid="4467" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="4461">
+      <node id="4465">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="4462" relation="public-inheritance">
+        <childnode refid="4466" relation="public-inheritance">
         </childnode>
-        <childnode refid="4464" relation="public-inheritance">
+        <childnode refid="4468" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4464">
+      <node id="4468">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="4460">
+      <node id="4464">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="4461" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4459">
-        <label>wxBannerWindow</label>
-        <link refid="classwx_banner_window"/>
-        <childnode refid="4460" relation="public-inheritance">
+        <childnode refid="4465" relation="public-inheritance">
         </childnode>
       </node>
       <node id="4463">
+        <label>wxBannerWindow</label>
+        <link refid="classwx_banner_window"/>
+        <childnode refid="4464" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4467">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

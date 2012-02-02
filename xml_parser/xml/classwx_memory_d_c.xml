@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_memory_d_c" kind="class" prot="public">
     <compoundname>wxMemoryDC</compoundname>
     <basecompoundref refid="classwx_d_c" prot="public" virt="non-virtual">wxDC</basecompoundref>
@@ -65,7 +65,7 @@
         <briefdescription>
 <para>Works exactly like <ref refid="classwx_memory_d_c_1a148ceba1c29d4a78fca6026a90e2ee5f" kindref="member">SelectObjectAsSource()</ref> but this is the function you should use when you select a bitmap because you want to modify it, e.g. </para>        </briefdescription>
         <detaileddescription>
-<para>drawing on this DC.</para><para>Using <ref refid="classwx_memory_d_c_1a148ceba1c29d4a78fca6026a90e2ee5f" kindref="member">SelectObjectAsSource()</ref> when modifying the bitmap may incur some problems related to <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> being a reference counted object (see <ref refid="overview__refcount" kindref="compound">Reference Counting</ref>).</para><para>Before using the updated bitmap data, make sure to select it out of context first either by selecting <ref refid="interface_2wx_2bitmap_8h_1a2947690e84b8fdb2e37b79a4af8f8a21" kindref="member">wxNullBitmap</ref> into the device context or destroying the device context entirely.</para><para>If the bitmap is already selected in this device context, nothing is done. If it is selected in another context, the function asserts and drawing on the bitmap won&apos;t work correctly.</para><para><simplesect kind="see"><para><ref refid="classwx_d_c_1af982eb2d3b10c5617ef3559d51a1defc" kindref="member">wxDC::DrawBitmap()</ref> </para></simplesect>
+<para>drawing on this DC.</para><para>Using <ref refid="classwx_memory_d_c_1a148ceba1c29d4a78fca6026a90e2ee5f" kindref="member">SelectObjectAsSource()</ref> when modifying the bitmap may incur some problems related to <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> being a reference counted object (see <ref refid="overview_refcount" kindref="compound">Reference Counting</ref>).</para><para>Before using the updated bitmap data, make sure to select it out of context first either by selecting <ref refid="interface_2wx_2bitmap_8h_1a2947690e84b8fdb2e37b79a4af8f8a21" kindref="member">wxNullBitmap</ref> into the device context or destroying the device context entirely.</para><para>If the bitmap is already selected in this device context, nothing is done. If it is selected in another context, the function asserts and drawing on the bitmap won&apos;t work correctly.</para><para><simplesect kind="see"><para><ref refid="classwx_d_c_1af982eb2d3b10c5617ef3559d51a1defc" kindref="member">wxDC::DrawBitmap()</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -94,63 +94,36 @@
     <detaileddescription>
 <para>When drawing in to a mono-bitmap, using <computeroutput>wxWHITE</computeroutput>, <computeroutput>wxWHITE_PEN</computeroutput> and <computeroutput>wxWHITE_BRUSH</computeroutput> will draw the background colour (i.e. 0) whereas all other colours will draw the foreground colour (i.e. 1).</para><para>A bitmap must be selected into the new memory DC before it may be used for anything. Typical usage is as follows:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>a<sp/>memory<sp/>DC</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_memory_d_c" kindref="compound" tooltip="A memory device context provides a means to draw graphics onto a bitmap.">wxMemoryDC</ref><sp/>temp_dc;</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>temp_dc.<ref refid="classwx_memory_d_c_1a93d218796ba9359eb4aec2ae46a813e6" kindref="member" tooltip="Works exactly like SelectObjectAsSource() but this is the function you should use...">SelectObject</ref>(test_bitmap);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>temp_dc.<ref refid="classwx_memory_d_c_1a93d218796ba9359eb4aec2ae46a813e6" kindref="member" tooltip="Works exactly like SelectObjectAsSource() but this is the function you should use when you select a b...">SelectObject</ref>(test_bitmap);</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>We<sp/>can<sp/>now<sp/>draw<sp/>into<sp/>the<sp/>memory<sp/>DC...</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Copy<sp/>from<sp/>this<sp/>DC<sp/>to<sp/>another<sp/>DC.</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>old_dc.Blit(250,<sp/>50,<sp/>BITMAP_WIDTH,<sp/>BITMAP_HEIGHT,<sp/>temp_dc,<sp/>0,<sp/>0);</highlight></codeline>
-</programlisting></para><para>Note that the memory DC must be deleted (or the bitmap selected out of it) before a bitmap can be reselected into another memory DC.</para><para>And, before performing any other operations on the bitmap data, the bitmap must be selected out of the memory DC:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/>temp_dc.<ref refid="classwx_memory_d_c_1a93d218796ba9359eb4aec2ae46a813e6" kindref="member" tooltip="Works exactly like SelectObjectAsSource() but this is the function you should use...">SelectObject</ref>(<ref refid="interface_2wx_2bitmap_8h_1a2947690e84b8fdb2e37b79a4af8f8a21" kindref="member" tooltip="An empty wxBitmap object.">wxNullBitmap</ref>);</highlight></codeline>
+</programlisting></para><para>Note that the memory DC must be deleted (or the bitmap selected out of it) before a bitmap can be reselected into another memory DC.</para><para>And, before performing any other operations on the bitmap data, the bitmap must be selected out of the memory DC:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/>temp_dc.<ref refid="classwx_memory_d_c_1a93d218796ba9359eb4aec2ae46a813e6" kindref="member" tooltip="Works exactly like SelectObjectAsSource() but this is the function you should use when you select a b...">SelectObject</ref>(<ref refid="interface_2wx_2bitmap_8h_1a2947690e84b8fdb2e37b79a4af8f8a21" kindref="member" tooltip="An empty wxBitmap object.">wxNullBitmap</ref>);</highlight></codeline>
 </programlisting></para><para>This happens automatically when <ref refid="classwx_memory_d_c" kindref="compound">wxMemoryDC</ref> object goes out of scope.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__dc" kindref="compound">Device Contexts</ref></para><para><simplesect kind="see"><para><ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref>, <ref refid="classwx_d_c" kindref="compound">wxDC</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__dc" kindref="compound">Device Contexts</ref></para><para><simplesect kind="see"><para><ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref>, <ref refid="classwx_d_c" kindref="compound">wxDC</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7669">
-        <label>wxObject</label>
-        <link refid="classwx_object"/>
-      </node>
-      <node id="7667">
-        <label>wxMemoryDC</label>
-        <link refid="classwx_memory_d_c"/>
-        <childnode refid="7668" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="7671">
-        <label>wxBufferedPaintDC</label>
-        <link refid="classwx_buffered_paint_d_c"/>
-        <childnode refid="7670" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="7670">
-        <label>wxBufferedDC</label>
-        <link refid="classwx_buffered_d_c"/>
-        <childnode refid="7667" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="7668">
-        <label>wxDC</label>
-        <link refid="classwx_d_c"/>
-        <childnode refid="7669" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="7672">
-        <label>wxAutoBufferedPaintDC</label>
-        <link refid="classwx_auto_buffered_paint_d_c"/>
-        <childnode refid="7671" relation="public-inheritance">
-        </childnode>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
       <node id="7675">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="7676" relation="usage">
-          <edgelabel>m_refData</edgelabel>
-        </childnode>
       </node>
       <node id="7673">
         <label>wxMemoryDC</label>
         <link refid="classwx_memory_d_c"/>
         <childnode refid="7674" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7677">
+        <label>wxBufferedPaintDC</label>
+        <link refid="classwx_buffered_paint_d_c"/>
+        <childnode refid="7676" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7676">
+        <label>wxBufferedDC</label>
+        <link refid="classwx_buffered_d_c"/>
+        <childnode refid="7673" relation="public-inheritance">
         </childnode>
       </node>
       <node id="7674">
@@ -159,7 +132,34 @@
         <childnode refid="7675" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7676">
+      <node id="7678">
+        <label>wxAutoBufferedPaintDC</label>
+        <link refid="classwx_auto_buffered_paint_d_c"/>
+        <childnode refid="7677" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="7681">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="7682" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="7679">
+        <label>wxMemoryDC</label>
+        <link refid="classwx_memory_d_c"/>
+        <childnode refid="7680" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7680">
+        <label>wxDC</label>
+        <link refid="classwx_d_c"/>
+        <childnode refid="7681" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7682">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

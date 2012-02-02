@@ -1,409 +1,11 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_platform_info" kind="class" prot="public">
     <compoundname>wxPlatformInfo</compoundname>
     <includes local="no">wx/platinfo.h</includes>
       <sectiondef kind="user-defined">
-      <header>Getters</header>
-      <description><para><anchor id="_1amgrpc9fd0bcb5385a65354c37f1bb504399d"/> </para></description>
-      <memberdef kind="function" id="classwx_platform_info_1a9fd3beb1951943388600e4364cd12e80" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="platinfo_8h_1ab2b4836af7d22393b06c1d4f110bdb4c" kindref="member">wxArchitecture</ref></type>
-        <definition>wxArchitecture wxPlatformInfo::GetArchitecture</definition>
-        <argsstring>() const </argsstring>
-        <name>GetArchitecture</name>
-        <briefdescription>
-<para>Returns the architecture ID of this <ref refid="classwx_platform_info" kindref="compound">wxPlatformInfo</ref> instance. </para>        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="343"/>
-      </memberdef>
-      <memberdef kind="function" id="classwx_platform_info_1a231a99f2c187c6bf876cd83dc33c8829" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="platinfo_8h_1a604702957b3c219643e1c989766f7047" kindref="member">wxEndianness</ref></type>
-        <definition>wxEndianness wxPlatformInfo::GetEndianness</definition>
-        <argsstring>() const </argsstring>
-        <name>GetEndianness</name>
-        <briefdescription>
-<para>Returns the endianness ID of this <ref refid="classwx_platform_info" kindref="compound">wxPlatformInfo</ref> instance. </para>        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="348"/>
-      </memberdef>
-      <memberdef kind="function" id="classwx_platform_info_1ab95e9c7889ae224744cce280d84fe01a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type>int</type>
-        <definition>int wxPlatformInfo::GetOSMajorVersion</definition>
-        <argsstring>() const </argsstring>
-        <name>GetOSMajorVersion</name>
-        <briefdescription>
-<para>Returns the run-time major version of the OS associated with this <ref refid="classwx_platform_info" kindref="compound">wxPlatformInfo</ref> instance. </para>        </briefdescription>
-        <detaileddescription>
-<para><simplesect kind="see"><para><ref refid="group__group__funcmacro__networkuseros_1ga2ca585c288b956d80511478dc7b01533" kindref="member">wxGetOsVersion()</ref>, <ref refid="classwx_platform_info_1a985a4b626e245e6c427605ab12202655" kindref="member">CheckOSVersion()</ref> </para></simplesect>
-</para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="356"/>
-      </memberdef>
-      <memberdef kind="function" id="classwx_platform_info_1aa9bc289303d4e13ad9f186d738e1d528" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type>int</type>
-        <definition>int wxPlatformInfo::GetOSMinorVersion</definition>
-        <argsstring>() const </argsstring>
-        <name>GetOSMinorVersion</name>
-        <briefdescription>
-<para>Returns the run-time minor version of the OS associated with this <ref refid="classwx_platform_info" kindref="compound">wxPlatformInfo</ref> instance. </para>        </briefdescription>
-        <detaileddescription>
-<para><simplesect kind="see"><para><ref refid="group__group__funcmacro__networkuseros_1ga2ca585c288b956d80511478dc7b01533" kindref="member">wxGetOsVersion()</ref>, <ref refid="classwx_platform_info_1a985a4b626e245e6c427605ab12202655" kindref="member">CheckOSVersion()</ref> </para></simplesect>
-</para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="364"/>
-      </memberdef>
-      <memberdef kind="function" id="classwx_platform_info_1ab70a9c0bac9a38f05930e5f05a153cff" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="platinfo_8h_1ae1234f6be0bdb09c90c9ba78251056fd" kindref="member">wxOperatingSystemId</ref></type>
-        <definition>wxOperatingSystemId wxPlatformInfo::GetOperatingSystemId</definition>
-        <argsstring>() const </argsstring>
-        <name>GetOperatingSystemId</name>
-        <briefdescription>
-<para>Returns the operating system ID of this <ref refid="classwx_platform_info" kindref="compound">wxPlatformInfo</ref> instance. </para>        </briefdescription>
-        <detaileddescription>
-<para>See <ref refid="group__group__funcmacro__networkuseros_1ga2ca585c288b956d80511478dc7b01533" kindref="member">wxGetOsVersion()</ref> for more info. </para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="371"/>
-      </memberdef>
-      <memberdef kind="function" id="classwx_platform_info_1a6bf561b3421cf7f29c0100a8cf0daa1c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
-        <definition>wxString wxPlatformInfo::GetOperatingSystemDescription</definition>
-        <argsstring>() const </argsstring>
-        <name>GetOperatingSystemDescription</name>
-        <briefdescription>
-<para>Returns the description of the operating system of this <ref refid="classwx_platform_info" kindref="compound">wxPlatformInfo</ref> instance. </para>        </briefdescription>
-        <detaileddescription>
-<para>See wxGetOSDescription() for more info. </para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="378"/>
-      </memberdef>
-      <memberdef kind="function" id="classwx_platform_info_1accb2703f09fe6e28497b47e67630e856" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="platinfo_8h_1a4acbc14b366d6ce2875f809be384757b" kindref="member">wxPortId</ref></type>
-        <definition>wxPortId wxPlatformInfo::GetPortId</definition>
-        <argsstring>() const </argsstring>
-        <name>GetPortId</name>
-        <briefdescription>
-<para>Returns the wxWidgets port ID associated with this <ref refid="classwx_platform_info" kindref="compound">wxPlatformInfo</ref> instance. </para>        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="383"/>
-      </memberdef>
-      <memberdef kind="function" id="classwx_platform_info_1a79be6e7e9749940c41f208bb29acee3d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="structwx_linux_distribution_info" kindref="compound">wxLinuxDistributionInfo</ref></type>
-        <definition>wxLinuxDistributionInfo wxPlatformInfo::GetLinuxDistributionInfo</definition>
-        <argsstring>() const </argsstring>
-        <name>GetLinuxDistributionInfo</name>
-        <briefdescription>
-<para>Returns the Linux distribution info associated with this <ref refid="classwx_platform_info" kindref="compound">wxPlatformInfo</ref> instance. </para>        </briefdescription>
-        <detaileddescription>
-<para>See <ref refid="group__group__funcmacro__networkuseros_1ga06f6fb212c396bd20865ee4e2f69aa1f" kindref="member">wxGetLinuxDistributionInfo()</ref> for more info. </para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="390"/>
-      </memberdef>
-      <memberdef kind="function" id="classwx_platform_info_1a063a96305c6bd54569b1fa50d8a3d49b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
-        <definition>wxString wxPlatformInfo::GetDesktopEnvironment</definition>
-        <argsstring>() const </argsstring>
-        <name>GetDesktopEnvironment</name>
-        <briefdescription>
-<para>Returns the desktop environment associated with this <ref refid="classwx_platform_info" kindref="compound">wxPlatformInfo</ref> instance. </para>        </briefdescription>
-        <detaileddescription>
-<para>See <ref refid="classwx_app_traits_1ad333680437446304014c087d2fffedcf" kindref="member">wxAppTraits::GetDesktopEnvironment()</ref> for more info. </para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="397"/>
-      </memberdef>
-      <memberdef kind="function" id="classwx_platform_info_1aaae61e2fafb958b19da3738916cb032d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type>int</type>
-        <definition>int wxPlatformInfo::GetToolkitMajorVersion</definition>
-        <argsstring>() const </argsstring>
-        <name>GetToolkitMajorVersion</name>
-        <briefdescription>
-<para>Returns the run-time major version of the toolkit associated with this <ref refid="classwx_platform_info" kindref="compound">wxPlatformInfo</ref> instance. </para>        </briefdescription>
-        <detaileddescription>
-<para>Note that if <ref refid="classwx_platform_info_1a71cf9ba7a98812378a253735043dc72e" kindref="member">GetPortId()</ref> returns <computeroutput>wxPORT_BASE</computeroutput>, then this value is zero (unless externally modified with <ref refid="classwx_platform_info_1a79d44037394eecbb3880cf9748305ac1" kindref="member">SetToolkitVersion()</ref>); that is, no native toolkit is in use. See <ref refid="classwx_app_traits_1ad956ddb5731f7cac51f1430ed53bb0f1" kindref="member">wxAppTraits::GetToolkitVersion()</ref> for more info.</para><para><simplesect kind="see"><para><ref refid="classwx_platform_info_1aeba41fd25f2b4ff6b33aa8dfa67b102d" kindref="member">CheckToolkitVersion()</ref> </para></simplesect>
-</para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="410"/>
-      </memberdef>
-      <memberdef kind="function" id="classwx_platform_info_1a248fe81a2d7d04dc44edc6eb966a4dad" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type>int</type>
-        <definition>int wxPlatformInfo::GetToolkitMinorVersion</definition>
-        <argsstring>() const </argsstring>
-        <name>GetToolkitMinorVersion</name>
-        <briefdescription>
-<para>Returns the run-time minor version of the toolkit associated with this <ref refid="classwx_platform_info" kindref="compound">wxPlatformInfo</ref> instance. </para>        </briefdescription>
-        <detaileddescription>
-<para>Note that if <ref refid="classwx_platform_info_1a71cf9ba7a98812378a253735043dc72e" kindref="member">GetPortId()</ref> returns <computeroutput>wxPORT_BASE</computeroutput>, then this value is zero (unless externally modified with <ref refid="classwx_platform_info_1a79d44037394eecbb3880cf9748305ac1" kindref="member">SetToolkitVersion()</ref>); that is, no native toolkit is in use. See <ref refid="classwx_app_traits_1ad956ddb5731f7cac51f1430ed53bb0f1" kindref="member">wxAppTraits::GetToolkitVersion()</ref> for more info.</para><para><simplesect kind="see"><para><ref refid="classwx_platform_info_1aeba41fd25f2b4ff6b33aa8dfa67b102d" kindref="member">CheckToolkitVersion()</ref> </para></simplesect>
-</para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="423"/>
-      </memberdef>
-      </sectiondef>
-      <sectiondef kind="user-defined">
-      <header>String-form getters</header>
-      <description><para><anchor id="_1amgrp6a7db8ec7c1b6b408bb0707ee22866ad"/> </para></description>
-      <memberdef kind="function" id="classwx_platform_info_1ab50e8b3a0eefdc167875fbb680654ae5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
-        <definition>wxString wxPlatformInfo::GetArchName</definition>
-        <argsstring>() const </argsstring>
-        <name>GetArchName</name>
-        <briefdescription>
-<para>Returns the name for the architecture of this <ref refid="classwx_platform_info" kindref="compound">wxPlatformInfo</ref> instance. </para>        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="436"/>
-      </memberdef>
-      <memberdef kind="function" id="classwx_platform_info_1aff68c13a9018c27a985827fc64dbba10" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
-        <definition>wxString wxPlatformInfo::GetEndiannessName</definition>
-        <argsstring>() const </argsstring>
-        <name>GetEndiannessName</name>
-        <briefdescription>
-<para>Returns the name for the endianness of this <ref refid="classwx_platform_info" kindref="compound">wxPlatformInfo</ref> instance. </para>        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="441"/>
-      </memberdef>
-      <memberdef kind="function" id="classwx_platform_info_1ac275e051d3141036bd921e6a585c1ce4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
-        <definition>wxString wxPlatformInfo::GetOperatingSystemFamilyName</definition>
-        <argsstring>() const </argsstring>
-        <name>GetOperatingSystemFamilyName</name>
-        <briefdescription>
-<para>Returns the operating system family name of the OS associated with this <ref refid="classwx_platform_info" kindref="compound">wxPlatformInfo</ref> instance. </para>        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="447"/>
-      </memberdef>
-      <memberdef kind="function" id="classwx_platform_info_1ae7c90aca295c74184737e50cc673d3fb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
-        <definition>wxString wxPlatformInfo::GetOperatingSystemIdName</definition>
-        <argsstring>() const </argsstring>
-        <name>GetOperatingSystemIdName</name>
-        <briefdescription>
-<para>Returns the operating system name of the OS associated with this <ref refid="classwx_platform_info" kindref="compound">wxPlatformInfo</ref> instance. </para>        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="453"/>
-      </memberdef>
-      <memberdef kind="function" id="classwx_platform_info_1a58ebd975d5da5f8ab956fb0d8e105d3c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
-        <definition>wxString wxPlatformInfo::GetPortIdName</definition>
-        <argsstring>() const </argsstring>
-        <name>GetPortIdName</name>
-        <briefdescription>
-<para>Returns the name of the wxWidgets port ID associated with this <ref refid="classwx_platform_info" kindref="compound">wxPlatformInfo</ref> instance. </para>        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="459"/>
-      </memberdef>
-      <memberdef kind="function" id="classwx_platform_info_1af0f9bd0622aee3aeca59cf4fb3d649ce" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
-        <definition>wxString wxPlatformInfo::GetPortIdShortName</definition>
-        <argsstring>() const </argsstring>
-        <name>GetPortIdShortName</name>
-        <briefdescription>
-<para>Returns the short name of the wxWidgets port ID associated with this <ref refid="classwx_platform_info" kindref="compound">wxPlatformInfo</ref> instance. </para>        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="465"/>
-      </memberdef>
-      </sectiondef>
-      <sectiondef kind="user-defined">
-      <header>Setters</header>
-      <description><para><anchor id="_1amgrp6e47466b75bb957a603aa54c079ac8bf"/> </para></description>
-      <memberdef kind="function" id="classwx_platform_info_1ad2038a9778e0ff8b57020f3cf3403fd4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void wxPlatformInfo::SetArchitecture</definition>
-        <argsstring>(wxArchitecture n)</argsstring>
-        <name>SetArchitecture</name>
-        <param>
-          <type><ref refid="platinfo_8h_1ab2b4836af7d22393b06c1d4f110bdb4c" kindref="member">wxArchitecture</ref></type>
-          <declname>n</declname>
-        </param>
-        <briefdescription>
-<para>Sets the architecture enum value associated with this <ref refid="classwx_platform_info" kindref="compound">wxPlatformInfo</ref> instance. </para>        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="479"/>
-      </memberdef>
-      <memberdef kind="function" id="classwx_platform_info_1aa8c63894983b04e8db7fb46a896464a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void wxPlatformInfo::SetEndianness</definition>
-        <argsstring>(wxEndianness n)</argsstring>
-        <name>SetEndianness</name>
-        <param>
-          <type><ref refid="platinfo_8h_1a604702957b3c219643e1c989766f7047" kindref="member">wxEndianness</ref></type>
-          <declname>n</declname>
-        </param>
-        <briefdescription>
-<para>Sets the endianness enum value associated with this <ref refid="classwx_platform_info" kindref="compound">wxPlatformInfo</ref> instance. </para>        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="484"/>
-      </memberdef>
-      <memberdef kind="function" id="classwx_platform_info_1a5ef41076a7ef19ef5ffebbf7613d1f69" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void wxPlatformInfo::SetOSVersion</definition>
-        <argsstring>(int major, int minor)</argsstring>
-        <name>SetOSVersion</name>
-        <param>
-          <type>int</type>
-          <declname>major</declname>
-        </param>
-        <param>
-          <type>int</type>
-          <declname>minor</declname>
-        </param>
-        <briefdescription>
-<para>Sets the version of the operating system associated with this <ref refid="classwx_platform_info" kindref="compound">wxPlatformInfo</ref> instance. </para>        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="490"/>
-      </memberdef>
-      <memberdef kind="function" id="classwx_platform_info_1a573b7a06315e62379186dfdd60ee6b86" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void wxPlatformInfo::SetOperatingSystemId</definition>
-        <argsstring>(wxOperatingSystemId n)</argsstring>
-        <name>SetOperatingSystemId</name>
-        <param>
-          <type><ref refid="platinfo_8h_1ae1234f6be0bdb09c90c9ba78251056fd" kindref="member">wxOperatingSystemId</ref></type>
-          <declname>n</declname>
-        </param>
-        <briefdescription>
-<para>Sets the operating system associated with this <ref refid="classwx_platform_info" kindref="compound">wxPlatformInfo</ref> instance. </para>        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="495"/>
-      </memberdef>
-      <memberdef kind="function" id="classwx_platform_info_1ae3a93e4ad2948a54b9e3f9eb69bfc9fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void wxPlatformInfo::SetPortId</definition>
-        <argsstring>(wxPortId n)</argsstring>
-        <name>SetPortId</name>
-        <param>
-          <type><ref refid="platinfo_8h_1a4acbc14b366d6ce2875f809be384757b" kindref="member">wxPortId</ref></type>
-          <declname>n</declname>
-        </param>
-        <briefdescription>
-<para>Sets the wxWidgets port ID associated with this <ref refid="classwx_platform_info" kindref="compound">wxPlatformInfo</ref> instance. </para>        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="500"/>
-      </memberdef>
-      <memberdef kind="function" id="classwx_platform_info_1a79d44037394eecbb3880cf9748305ac1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void wxPlatformInfo::SetToolkitVersion</definition>
-        <argsstring>(int major, int minor)</argsstring>
-        <name>SetToolkitVersion</name>
-        <param>
-          <type>int</type>
-          <declname>major</declname>
-        </param>
-        <param>
-          <type>int</type>
-          <declname>minor</declname>
-        </param>
-        <briefdescription>
-<para>Sets the version of the toolkit associated with this <ref refid="classwx_platform_info" kindref="compound">wxPlatformInfo</ref> instance. </para>        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="505"/>
-      </memberdef>
-      <memberdef kind="function" id="classwx_platform_info_1a0609911ec48b004aac3f89a69e8537b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void wxPlatformInfo::SetOperatingSystemDescription</definition>
-        <argsstring>(const wxString &amp;desc)</argsstring>
-        <name>SetOperatingSystemDescription</name>
-        <param>
-          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
-          <declname>desc</declname>
-        </param>
-        <briefdescription>
-<para>Sets the operating system description associated with this <ref refid="classwx_platform_info" kindref="compound">wxPlatformInfo</ref> instance. </para>        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="510"/>
-      </memberdef>
-      <memberdef kind="function" id="classwx_platform_info_1a8355d5c12d826b85502c8c431a105bfb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void wxPlatformInfo::SetDesktopEnvironment</definition>
-        <argsstring>(const wxString &amp;de)</argsstring>
-        <name>SetDesktopEnvironment</name>
-        <param>
-          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
-          <declname>de</declname>
-        </param>
-        <briefdescription>
-<para>Sets the desktop environment associated with this <ref refid="classwx_platform_info" kindref="compound">wxPlatformInfo</ref> instance. </para>        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="515"/>
-      </memberdef>
-      <memberdef kind="function" id="classwx_platform_info_1a7eab116cfe3bd22cd2c189ec95d39f84" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void wxPlatformInfo::SetLinuxDistributionInfo</definition>
-        <argsstring>(const wxLinuxDistributionInfo &amp;di)</argsstring>
-        <name>SetLinuxDistributionInfo</name>
-        <param>
-          <type>const <ref refid="structwx_linux_distribution_info" kindref="compound">wxLinuxDistributionInfo</ref> &amp;</type>
-          <declname>di</declname>
-        </param>
-        <briefdescription>
-<para>Sets the linux distribution info associated with this <ref refid="classwx_platform_info" kindref="compound">wxPlatformInfo</ref> instance. </para>        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="520"/>
-      </memberdef>
-      </sectiondef>
-      <sectiondef kind="user-defined">
       <header>Static enum getters</header>
-      <description><para><anchor id="_1amgrpf9c0598780774ad258a7885e09801d18"/>These getters allow for easy string-to-enumeration-value conversion. </para></description>
+      <description><para>These getters allow for easy string-to-enumeration-value conversion. </para></description>
       <memberdef kind="function" id="classwx_platform_info_1a973411fc736a2af8b47058043700d7ff" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="platinfo_8h_1ab2b4836af7d22393b06c1d4f110bdb4c" kindref="member">wxArchitecture</ref></type>
         <definition>static wxArchitecture wxPlatformInfo::GetArch</definition>
@@ -419,7 +21,7 @@
 <para>does not contain nor <computeroutput>32</computeroutput> nor <computeroutput>64</computeroutput> strings). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="249"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="247"/>
       </memberdef>
       <memberdef kind="function" id="classwx_platform_info_1acd8eae1ec948e2f08a12cdb79a234df6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="platinfo_8h_1a604702957b3c219643e1c989766f7047" kindref="member">wxEndianness</ref></type>
@@ -436,7 +38,7 @@
 <para>does not contain nor little nor big strings). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="256"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="254"/>
       </memberdef>
       <memberdef kind="function" id="classwx_platform_info_1aa8f121eec76070bb530e20cb201975cb" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="platinfo_8h_1ae1234f6be0bdb09c90c9ba78251056fd" kindref="member">wxOperatingSystemId</ref></type>
@@ -453,7 +55,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="262"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="260"/>
       </memberdef>
       <memberdef kind="function" id="classwx_platform_info_1a71cf9ba7a98812378a253735043dc72e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="platinfo_8h_1a4acbc14b366d6ce2875f809be384757b" kindref="member">wxPortId</ref></type>
@@ -470,12 +72,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="269"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="267"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
       <header>Static string-form getters</header>
-      <description><para><anchor id="_1amgrp3ba933d93ceebabcff12af3e855cb5f2"/>These getters allow for easy enumeration-value-to-string conversion. </para></description>
+      <description><para>These getters allow for easy enumeration-value-to-string conversion. </para></description>
       <memberdef kind="function" id="classwx_platform_info_1a981f95a16df7c173da1f72a4dca5b3d8" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
         <definition>static wxString wxPlatformInfo::GetArchName</definition>
@@ -491,7 +93,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="284"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="282"/>
       </memberdef>
       <memberdef kind="function" id="classwx_platform_info_1a4562d7febedc9e8dbadcc8acdb7d129b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -508,7 +110,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="289"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="287"/>
       </memberdef>
       <memberdef kind="function" id="classwx_platform_info_1aaa7f7f09e9378bb43d2849b13dbc1f91" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -525,7 +127,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="296"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="294"/>
       </memberdef>
       <memberdef kind="function" id="classwx_platform_info_1a0a46c56d316ab6e2d2d5a900fb11f847" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -542,7 +144,7 @@
 <para>This can be a long name (e.g. <computeroutput>Microsoft Windows NT</computeroutput>); use <ref refid="classwx_platform_info_1aaa7f7f09e9378bb43d2849b13dbc1f91" kindref="member">GetOperatingSystemFamilyName()</ref> to retrieve a short, generic name. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="304"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="302"/>
       </memberdef>
       <memberdef kind="function" id="classwx_platform_info_1ae02f6e50237f1c73e8385bb89c289e17" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -563,7 +165,7 @@
 <para>The <emphasis>usingUniversal</emphasis> argument specifies whether the port is in its native or wxUniversal variant.</para><para>The returned string always starts with the &quot;wx&quot; prefix and is a mixed-case string. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="313"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="311"/>
       </memberdef>
       <memberdef kind="function" id="classwx_platform_info_1a0a9f18069fc682528866887ddf5cdd37" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -584,7 +186,7 @@
 <para>The <emphasis>usingUniversal</emphasis> argument specifies whether the port is in its native or wxUniversal variant.</para><para>The returned string does not start with the &quot;wx&quot; prefix and is always lower case. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="323"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="321"/>
       </memberdef>
       <memberdef kind="function" id="classwx_platform_info_1acafecf367278fceae4fc205d03fb695c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -597,7 +199,402 @@
 <para>See <ref refid="group__group__funcmacro__file_1ga26e222d4250fd4cab65f03fc89b7ec45" kindref="member">wxGetOSDirectory()</ref> for more info. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="330"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="328"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Getters</header>
+      <memberdef kind="function" id="classwx_platform_info_1a9fd3beb1951943388600e4364cd12e80" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="platinfo_8h_1ab2b4836af7d22393b06c1d4f110bdb4c" kindref="member">wxArchitecture</ref></type>
+        <definition>wxArchitecture wxPlatformInfo::GetArchitecture</definition>
+        <argsstring>() const </argsstring>
+        <name>GetArchitecture</name>
+        <briefdescription>
+<para>Returns the architecture ID of this <ref refid="classwx_platform_info" kindref="compound">wxPlatformInfo</ref> instance. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="341"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_platform_info_1a231a99f2c187c6bf876cd83dc33c8829" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="platinfo_8h_1a604702957b3c219643e1c989766f7047" kindref="member">wxEndianness</ref></type>
+        <definition>wxEndianness wxPlatformInfo::GetEndianness</definition>
+        <argsstring>() const </argsstring>
+        <name>GetEndianness</name>
+        <briefdescription>
+<para>Returns the endianness ID of this <ref refid="classwx_platform_info" kindref="compound">wxPlatformInfo</ref> instance. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="346"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_platform_info_1ab95e9c7889ae224744cce280d84fe01a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxPlatformInfo::GetOSMajorVersion</definition>
+        <argsstring>() const </argsstring>
+        <name>GetOSMajorVersion</name>
+        <briefdescription>
+<para>Returns the run-time major version of the OS associated with this <ref refid="classwx_platform_info" kindref="compound">wxPlatformInfo</ref> instance. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="group__group__funcmacro__networkuseros_1ga2ca585c288b956d80511478dc7b01533" kindref="member">wxGetOsVersion()</ref>, <ref refid="classwx_platform_info_1a985a4b626e245e6c427605ab12202655" kindref="member">CheckOSVersion()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="354"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_platform_info_1aa9bc289303d4e13ad9f186d738e1d528" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxPlatformInfo::GetOSMinorVersion</definition>
+        <argsstring>() const </argsstring>
+        <name>GetOSMinorVersion</name>
+        <briefdescription>
+<para>Returns the run-time minor version of the OS associated with this <ref refid="classwx_platform_info" kindref="compound">wxPlatformInfo</ref> instance. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="group__group__funcmacro__networkuseros_1ga2ca585c288b956d80511478dc7b01533" kindref="member">wxGetOsVersion()</ref>, <ref refid="classwx_platform_info_1a985a4b626e245e6c427605ab12202655" kindref="member">CheckOSVersion()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="362"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_platform_info_1ab70a9c0bac9a38f05930e5f05a153cff" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="platinfo_8h_1ae1234f6be0bdb09c90c9ba78251056fd" kindref="member">wxOperatingSystemId</ref></type>
+        <definition>wxOperatingSystemId wxPlatformInfo::GetOperatingSystemId</definition>
+        <argsstring>() const </argsstring>
+        <name>GetOperatingSystemId</name>
+        <briefdescription>
+<para>Returns the operating system ID of this <ref refid="classwx_platform_info" kindref="compound">wxPlatformInfo</ref> instance. </para>        </briefdescription>
+        <detaileddescription>
+<para>See <ref refid="group__group__funcmacro__networkuseros_1ga2ca585c288b956d80511478dc7b01533" kindref="member">wxGetOsVersion()</ref> for more info. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="369"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_platform_info_1a6bf561b3421cf7f29c0100a8cf0daa1c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxPlatformInfo::GetOperatingSystemDescription</definition>
+        <argsstring>() const </argsstring>
+        <name>GetOperatingSystemDescription</name>
+        <briefdescription>
+<para>Returns the description of the operating system of this <ref refid="classwx_platform_info" kindref="compound">wxPlatformInfo</ref> instance. </para>        </briefdescription>
+        <detaileddescription>
+<para>See wxGetOSDescription() for more info. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="376"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_platform_info_1accb2703f09fe6e28497b47e67630e856" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="platinfo_8h_1a4acbc14b366d6ce2875f809be384757b" kindref="member">wxPortId</ref></type>
+        <definition>wxPortId wxPlatformInfo::GetPortId</definition>
+        <argsstring>() const </argsstring>
+        <name>GetPortId</name>
+        <briefdescription>
+<para>Returns the wxWidgets port ID associated with this <ref refid="classwx_platform_info" kindref="compound">wxPlatformInfo</ref> instance. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="381"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_platform_info_1a79be6e7e9749940c41f208bb29acee3d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structwx_linux_distribution_info" kindref="compound">wxLinuxDistributionInfo</ref></type>
+        <definition>wxLinuxDistributionInfo wxPlatformInfo::GetLinuxDistributionInfo</definition>
+        <argsstring>() const </argsstring>
+        <name>GetLinuxDistributionInfo</name>
+        <briefdescription>
+<para>Returns the Linux distribution info associated with this <ref refid="classwx_platform_info" kindref="compound">wxPlatformInfo</ref> instance. </para>        </briefdescription>
+        <detaileddescription>
+<para>See <ref refid="group__group__funcmacro__networkuseros_1ga06f6fb212c396bd20865ee4e2f69aa1f" kindref="member">wxGetLinuxDistributionInfo()</ref> for more info. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="388"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_platform_info_1a063a96305c6bd54569b1fa50d8a3d49b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxPlatformInfo::GetDesktopEnvironment</definition>
+        <argsstring>() const </argsstring>
+        <name>GetDesktopEnvironment</name>
+        <briefdescription>
+<para>Returns the desktop environment associated with this <ref refid="classwx_platform_info" kindref="compound">wxPlatformInfo</ref> instance. </para>        </briefdescription>
+        <detaileddescription>
+<para>See <ref refid="classwx_app_traits_1ad333680437446304014c087d2fffedcf" kindref="member">wxAppTraits::GetDesktopEnvironment()</ref> for more info. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="395"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_platform_info_1aaae61e2fafb958b19da3738916cb032d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxPlatformInfo::GetToolkitMajorVersion</definition>
+        <argsstring>() const </argsstring>
+        <name>GetToolkitMajorVersion</name>
+        <briefdescription>
+<para>Returns the run-time major version of the toolkit associated with this <ref refid="classwx_platform_info" kindref="compound">wxPlatformInfo</ref> instance. </para>        </briefdescription>
+        <detaileddescription>
+<para>Note that if <ref refid="classwx_platform_info_1a71cf9ba7a98812378a253735043dc72e" kindref="member">GetPortId()</ref> returns <computeroutput>wxPORT_BASE</computeroutput>, then this value is zero (unless externally modified with <ref refid="classwx_platform_info_1a79d44037394eecbb3880cf9748305ac1" kindref="member">SetToolkitVersion()</ref>); that is, no native toolkit is in use. See <ref refid="classwx_app_traits_1ad956ddb5731f7cac51f1430ed53bb0f1" kindref="member">wxAppTraits::GetToolkitVersion()</ref> for more info.</para><para><simplesect kind="see"><para><ref refid="classwx_platform_info_1aeba41fd25f2b4ff6b33aa8dfa67b102d" kindref="member">CheckToolkitVersion()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="408"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_platform_info_1a248fe81a2d7d04dc44edc6eb966a4dad" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxPlatformInfo::GetToolkitMinorVersion</definition>
+        <argsstring>() const </argsstring>
+        <name>GetToolkitMinorVersion</name>
+        <briefdescription>
+<para>Returns the run-time minor version of the toolkit associated with this <ref refid="classwx_platform_info" kindref="compound">wxPlatformInfo</ref> instance. </para>        </briefdescription>
+        <detaileddescription>
+<para>Note that if <ref refid="classwx_platform_info_1a71cf9ba7a98812378a253735043dc72e" kindref="member">GetPortId()</ref> returns <computeroutput>wxPORT_BASE</computeroutput>, then this value is zero (unless externally modified with <ref refid="classwx_platform_info_1a79d44037394eecbb3880cf9748305ac1" kindref="member">SetToolkitVersion()</ref>); that is, no native toolkit is in use. See <ref refid="classwx_app_traits_1ad956ddb5731f7cac51f1430ed53bb0f1" kindref="member">wxAppTraits::GetToolkitVersion()</ref> for more info.</para><para><simplesect kind="see"><para><ref refid="classwx_platform_info_1aeba41fd25f2b4ff6b33aa8dfa67b102d" kindref="member">CheckToolkitVersion()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="421"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>String-form getters</header>
+      <memberdef kind="function" id="classwx_platform_info_1ab50e8b3a0eefdc167875fbb680654ae5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxPlatformInfo::GetArchName</definition>
+        <argsstring>() const </argsstring>
+        <name>GetArchName</name>
+        <briefdescription>
+<para>Returns the name for the architecture of this <ref refid="classwx_platform_info" kindref="compound">wxPlatformInfo</ref> instance. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="434"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_platform_info_1aff68c13a9018c27a985827fc64dbba10" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxPlatformInfo::GetEndiannessName</definition>
+        <argsstring>() const </argsstring>
+        <name>GetEndiannessName</name>
+        <briefdescription>
+<para>Returns the name for the endianness of this <ref refid="classwx_platform_info" kindref="compound">wxPlatformInfo</ref> instance. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="439"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_platform_info_1ac275e051d3141036bd921e6a585c1ce4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxPlatformInfo::GetOperatingSystemFamilyName</definition>
+        <argsstring>() const </argsstring>
+        <name>GetOperatingSystemFamilyName</name>
+        <briefdescription>
+<para>Returns the operating system family name of the OS associated with this <ref refid="classwx_platform_info" kindref="compound">wxPlatformInfo</ref> instance. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="445"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_platform_info_1ae7c90aca295c74184737e50cc673d3fb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxPlatformInfo::GetOperatingSystemIdName</definition>
+        <argsstring>() const </argsstring>
+        <name>GetOperatingSystemIdName</name>
+        <briefdescription>
+<para>Returns the operating system name of the OS associated with this <ref refid="classwx_platform_info" kindref="compound">wxPlatformInfo</ref> instance. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="451"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_platform_info_1a58ebd975d5da5f8ab956fb0d8e105d3c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxPlatformInfo::GetPortIdName</definition>
+        <argsstring>() const </argsstring>
+        <name>GetPortIdName</name>
+        <briefdescription>
+<para>Returns the name of the wxWidgets port ID associated with this <ref refid="classwx_platform_info" kindref="compound">wxPlatformInfo</ref> instance. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="457"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_platform_info_1af0f9bd0622aee3aeca59cf4fb3d649ce" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxPlatformInfo::GetPortIdShortName</definition>
+        <argsstring>() const </argsstring>
+        <name>GetPortIdShortName</name>
+        <briefdescription>
+<para>Returns the short name of the wxWidgets port ID associated with this <ref refid="classwx_platform_info" kindref="compound">wxPlatformInfo</ref> instance. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="463"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Setters</header>
+      <memberdef kind="function" id="classwx_platform_info_1ad2038a9778e0ff8b57020f3cf3403fd4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxPlatformInfo::SetArchitecture</definition>
+        <argsstring>(wxArchitecture n)</argsstring>
+        <name>SetArchitecture</name>
+        <param>
+          <type><ref refid="platinfo_8h_1ab2b4836af7d22393b06c1d4f110bdb4c" kindref="member">wxArchitecture</ref></type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>Sets the architecture enum value associated with this <ref refid="classwx_platform_info" kindref="compound">wxPlatformInfo</ref> instance. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="477"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_platform_info_1aa8c63894983b04e8db7fb46a896464a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxPlatformInfo::SetEndianness</definition>
+        <argsstring>(wxEndianness n)</argsstring>
+        <name>SetEndianness</name>
+        <param>
+          <type><ref refid="platinfo_8h_1a604702957b3c219643e1c989766f7047" kindref="member">wxEndianness</ref></type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>Sets the endianness enum value associated with this <ref refid="classwx_platform_info" kindref="compound">wxPlatformInfo</ref> instance. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="482"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_platform_info_1a5ef41076a7ef19ef5ffebbf7613d1f69" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxPlatformInfo::SetOSVersion</definition>
+        <argsstring>(int major, int minor)</argsstring>
+        <name>SetOSVersion</name>
+        <param>
+          <type>int</type>
+          <declname>major</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>minor</declname>
+        </param>
+        <briefdescription>
+<para>Sets the version of the operating system associated with this <ref refid="classwx_platform_info" kindref="compound">wxPlatformInfo</ref> instance. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="488"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_platform_info_1a573b7a06315e62379186dfdd60ee6b86" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxPlatformInfo::SetOperatingSystemId</definition>
+        <argsstring>(wxOperatingSystemId n)</argsstring>
+        <name>SetOperatingSystemId</name>
+        <param>
+          <type><ref refid="platinfo_8h_1ae1234f6be0bdb09c90c9ba78251056fd" kindref="member">wxOperatingSystemId</ref></type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>Sets the operating system associated with this <ref refid="classwx_platform_info" kindref="compound">wxPlatformInfo</ref> instance. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="493"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_platform_info_1ae3a93e4ad2948a54b9e3f9eb69bfc9fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxPlatformInfo::SetPortId</definition>
+        <argsstring>(wxPortId n)</argsstring>
+        <name>SetPortId</name>
+        <param>
+          <type><ref refid="platinfo_8h_1a4acbc14b366d6ce2875f809be384757b" kindref="member">wxPortId</ref></type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>Sets the wxWidgets port ID associated with this <ref refid="classwx_platform_info" kindref="compound">wxPlatformInfo</ref> instance. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="498"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_platform_info_1a79d44037394eecbb3880cf9748305ac1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxPlatformInfo::SetToolkitVersion</definition>
+        <argsstring>(int major, int minor)</argsstring>
+        <name>SetToolkitVersion</name>
+        <param>
+          <type>int</type>
+          <declname>major</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>minor</declname>
+        </param>
+        <briefdescription>
+<para>Sets the version of the toolkit associated with this <ref refid="classwx_platform_info" kindref="compound">wxPlatformInfo</ref> instance. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="503"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_platform_info_1a0609911ec48b004aac3f89a69e8537b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxPlatformInfo::SetOperatingSystemDescription</definition>
+        <argsstring>(const wxString &amp;desc)</argsstring>
+        <name>SetOperatingSystemDescription</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>desc</declname>
+        </param>
+        <briefdescription>
+<para>Sets the operating system description associated with this <ref refid="classwx_platform_info" kindref="compound">wxPlatformInfo</ref> instance. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="508"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_platform_info_1a8355d5c12d826b85502c8c431a105bfb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxPlatformInfo::SetDesktopEnvironment</definition>
+        <argsstring>(const wxString &amp;de)</argsstring>
+        <name>SetDesktopEnvironment</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>de</declname>
+        </param>
+        <briefdescription>
+<para>Sets the desktop environment associated with this <ref refid="classwx_platform_info" kindref="compound">wxPlatformInfo</ref> instance. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="513"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_platform_info_1a7eab116cfe3bd22cd2c189ec95d39f84" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxPlatformInfo::SetLinuxDistributionInfo</definition>
+        <argsstring>(const wxLinuxDistributionInfo &amp;di)</argsstring>
+        <name>SetLinuxDistributionInfo</name>
+        <param>
+          <type>const <ref refid="structwx_linux_distribution_info" kindref="compound">wxLinuxDistributionInfo</ref> &amp;</type>
+          <declname>di</declname>
+        </param>
+        <briefdescription>
+<para>Sets the linux distribution info associated with this <ref refid="classwx_platform_info" kindref="compound">wxPlatformInfo</ref> instance. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="518"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -613,7 +610,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="179"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="177"/>
       </memberdef>
       <memberdef kind="function" id="classwx_platform_info_1ae3f8caf189cacc367ba867c8ad480f16" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -665,7 +662,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="191"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="189"/>
       </memberdef>
       <memberdef kind="function" id="classwx_platform_info_1a985a4b626e245e6c427605ab12202655" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -687,7 +684,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="200"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="198"/>
       </memberdef>
       <memberdef kind="function" id="classwx_platform_info_1aeba41fd25f2b4ff6b33aa8dfa67b102d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -709,7 +706,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="208"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="206"/>
       </memberdef>
       <memberdef kind="function" id="classwx_platform_info_1a4d9b774fe3d04983b86d840761c89999" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -722,7 +719,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="214"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="212"/>
       </memberdef>
       <memberdef kind="function" id="classwx_platform_info_1a180dec50a9037acc1f3d71f3ea188ad4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -735,7 +732,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="219"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="217"/>
       </memberdef>
       <memberdef kind="function" id="classwx_platform_info_1a026496f60d29c419eacf39247842969d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -752,7 +749,7 @@
 <para>Tests all class&apos; internal variables. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="224"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="222"/>
       </memberdef>
       <memberdef kind="function" id="classwx_platform_info_1a24d4c5e9de8bfbd38b760e84dca00efb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -769,7 +766,7 @@
 <para>Tests all class&apos; internal variables. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="229"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="227"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -784,18 +781,18 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="235"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="233"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para>This class holds informations about the operating system, the toolkit and the basic architecture of the machine where the application is currently running. </para>    </briefdescription>
     <detaileddescription>
 <para>This class does not only have <emphasis>getters</emphasis> for the informations above, it also has <emphasis>setters</emphasis>. This allows you to e.g. save the current platform informations in a data file (maybe in string form) so that when you later load it, you can easily retrieve (see the static getters for string-&gt;enum conversion functions) and store inside a <ref refid="classwx_platform_info" kindref="compound">wxPlatformInfo</ref> instance (using its setters) the signature of the system which generated it.</para><para>In general however you only need to use the static <ref refid="classwx_platform_info_1a094f23606729a3325b5e303eb31ad0b3" kindref="member">Get()</ref> function and then access the various informations for the current platform: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__log_1ga249358701f3c2d410088ddf7a61d8564" kindref="member" tooltip="For all normal, informational messages.">wxLogMessage</ref>(</highlight><highlight class="stringliteral">&quot;This<sp/>application<sp/>is<sp/>running<sp/>under<sp/>%s.&quot;</highlight><highlight class="normal">,</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_platform_info_1a094f23606729a3325b5e303eb31ad0b3" kindref="member" tooltip="Returns the global wxPlatformInfo object, initialized with the values for the currently...">wxPlatformInfo::Get</ref>().<ref refid="classwx_platform_info_1ae7c90aca295c74184737e50cc673d3fb" kindref="member" tooltip="Returns the operating system name of the OS associated with this wxPlatformInfo instance...">GetOperatingSystemIdName</ref>());</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_platform_info_1a094f23606729a3325b5e303eb31ad0b3" kindref="member" tooltip="Returns the global wxPlatformInfo object, initialized with the values for the currently running platf...">wxPlatformInfo::Get</ref>().<ref refid="classwx_platform_info_1ae7c90aca295c74184737e50cc673d3fb" kindref="member" tooltip="Returns the operating system name of the OS associated with this wxPlatformInfo instance.">GetOperatingSystemIdName</ref>());</highlight></codeline>
 </programlisting></para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__cfg" kindref="compound">Application and System configuration</ref></para><para><simplesect kind="see"><para><ref refid="group__group__funcmacro__networkuseros_1ga2ca585c288b956d80511478dc7b01533" kindref="member">wxGetOsVersion()</ref>, <ref refid="group__group__funcmacro__networkuseros_1gaccf71bf91abcb6469e6b812acf40bd38" kindref="member">wxIsPlatformLittleEndian()</ref>, <ref refid="group__group__funcmacro__networkuseros_1ga56083f0f3875e40b13aa6094e283584e" kindref="member">wxIsPlatform64Bit()</ref>, <ref refid="classwx_app_traits" kindref="compound">wxAppTraits</ref>, <ref refid="group__group__funcmacro__networkuseros" kindref="compound">Network, User and OS</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__cfg" kindref="compound">Application and System configuration</ref></para><para><simplesect kind="see"><para><ref refid="group__group__funcmacro__networkuseros_1ga2ca585c288b956d80511478dc7b01533" kindref="member">wxGetOsVersion()</ref>, <ref refid="group__group__funcmacro__networkuseros_1gaccf71bf91abcb6469e6b812acf40bd38" kindref="member">wxIsPlatformLittleEndian()</ref>, <ref refid="group__group__funcmacro__networkuseros_1ga56083f0f3875e40b13aa6094e283584e" kindref="member">wxIsPlatform64Bit()</ref>, <ref refid="classwx_app_traits" kindref="compound">wxAppTraits</ref>, <ref refid="group__group__funcmacro__networkuseros" kindref="compound">Network, User and OS</ref> </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="167" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" bodystart="166" bodyend="523"/>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="165" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" bodystart="164" bodyend="521"/>
     <listofallmembers>
       <member refid="classwx_platform_info_1a985a4b626e245e6c427605ab12202655" prot="public" virt="non-virtual"><scope>wxPlatformInfo</scope><name>CheckOSVersion</name></member>
       <member refid="classwx_platform_info_1aeba41fd25f2b4ff6b33aa8dfa67b102d" prot="public" virt="non-virtual"><scope>wxPlatformInfo</scope><name>CheckToolkitVersion</name></member>

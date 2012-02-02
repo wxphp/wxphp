@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_socket_input_stream" kind="class" prot="public">
     <compoundname>wxSocketInputStream</compoundname>
     <basecompoundref refid="classwx_input_stream" prot="public" virt="non-virtual">wxInputStream</basecompoundref>
@@ -27,40 +27,40 @@
 <para>This class implements an input stream which reads data from a connected socket. </para>    </briefdescription>
     <detaileddescription>
 <para>Note that this stream is purely sequential and it does not support seeking.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxnet" kindref="member">wxNet</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__net" kindref="compound">Networking</ref>, <ref refid="group__group__class__streams" kindref="compound">Streams</ref></para><para><simplesect kind="see"><para><ref refid="classwx_socket_base" kindref="compound">wxSocketBase</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxnet" kindref="member">wxNet</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__net" kindref="compound">Networking</ref>, <ref refid="group__group__class__streams" kindref="compound">Streams</ref></para><para><simplesect kind="see"><para><ref refid="classwx_socket_base" kindref="compound">wxSocketBase</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10250">
+      <node id="10310">
         <label>wxInputStream</label>
         <link refid="classwx_input_stream"/>
-        <childnode refid="10251" relation="public-inheritance">
+        <childnode refid="10311" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10249">
+      <node id="10309">
         <label>wxSocketInputStream</label>
         <link refid="classwx_socket_input_stream"/>
-        <childnode refid="10250" relation="public-inheritance">
+        <childnode refid="10310" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10251">
+      <node id="10311">
         <label>wxStreamBase</label>
         <link refid="classwx_stream_base"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10253">
+      <node id="10313">
         <label>wxInputStream</label>
         <link refid="classwx_input_stream"/>
-        <childnode refid="10254" relation="public-inheritance">
+        <childnode refid="10314" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10252">
+      <node id="10312">
         <label>wxSocketInputStream</label>
         <link refid="classwx_socket_input_stream"/>
-        <childnode refid="10253" relation="public-inheritance">
+        <childnode refid="10313" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10254">
+      <node id="10314">
         <label>wxStreamBase</label>
         <link refid="classwx_stream_base"/>
       </node>

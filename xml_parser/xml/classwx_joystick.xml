@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_joystick" kind="class" prot="public">
     <compoundname>wxJoystick</compoundname>
     <basecompoundref refid="classwx_object" prot="public" virt="non-virtual">wxObject</basecompoundref>
@@ -645,35 +645,35 @@
 <para><ref refid="classwx_joystick" kindref="compound">wxJoystick</ref> allows an application to control one or more joysticks. </para>    </briefdescription>
     <detaileddescription>
 <para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__misc" kindref="compound">Miscellaneous</ref></para><para><simplesect kind="see"><para><ref refid="classwx_joystick_event" kindref="compound">wxJoystickEvent</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__misc" kindref="compound">Miscellaneous</ref></para><para><simplesect kind="see"><para><ref refid="classwx_joystick_event" kindref="compound">wxJoystickEvent</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7354">
+      <node id="7358">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="7353">
+      <node id="7357">
         <label>wxJoystick</label>
         <link refid="classwx_joystick"/>
-        <childnode refid="7354" relation="public-inheritance">
+        <childnode refid="7358" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7356">
+      <node id="7360">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="7357" relation="usage">
+        <childnode refid="7361" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="7355">
+      <node id="7359">
         <label>wxJoystick</label>
         <link refid="classwx_joystick"/>
-        <childnode refid="7356" relation="public-inheritance">
+        <childnode refid="7360" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7357">
+      <node id="7361">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

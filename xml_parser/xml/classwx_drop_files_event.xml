@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_drop_files_event" kind="class" prot="public">
     <compoundname>wxDropFilesEvent</compoundname>
     <basecompoundref refid="classwx_event" prot="public" virt="non-virtual">wxEvent</basecompoundref>
@@ -31,7 +31,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2559"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2580"/>
       </memberdef>
       <memberdef kind="function" id="classwx_drop_files_event_1ac0d7ad82ffbfa635f745818edff55306" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref> *</type>
@@ -44,7 +44,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2564"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2585"/>
       </memberdef>
       <memberdef kind="function" id="classwx_drop_files_event_1a5495ee4dca291671f132dcc493aeb6c1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -57,7 +57,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2569"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2590"/>
       </memberdef>
       <memberdef kind="function" id="classwx_drop_files_event_1ae958700b1bed1e7142ac2526fd89b0f9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_point" kindref="compound">wxPoint</ref></type>
@@ -70,63 +70,63 @@
 <para>Returns an array of filenames. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2575"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2596"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para>This class is used for drop files events, that is, when files have been dropped onto the window. </para>    </briefdescription>
     <detaileddescription>
-<para>This functionality is currently only available under Windows.</para><para>The window must have previously been enabled for dropping by calling <ref refid="classwx_window_1a7e7015bc61bd79b6821d2dccaecf9eda" kindref="member">wxWindow::DragAcceptFiles()</ref>.</para><para>Important note: this is a separate implementation to the more general drag and drop implementation documented in the <ref refid="overview__dnd" kindref="compound">Drag and Drop Overview</ref>. It uses the older, Windows message-based approach of dropping files.</para><para><heading level="2">Events using this class</heading>
+<para>This functionality is currently only available under Windows.</para><para>The window must have previously been enabled for dropping by calling <ref refid="classwx_window_1a7e7015bc61bd79b6821d2dccaecf9eda" kindref="member">wxWindow::DragAcceptFiles()</ref>.</para><para>Important note: this is a separate implementation to the more general drag and drop implementation documented in the <ref refid="overview_dnd" kindref="compound">Drag and Drop Overview</ref>. It uses the older, Windows message-based approach of dropping files.</para><para><heading level="2">Events using this class</heading>
 </para><para>The following event handler macros redirect the events to member function handlers &apos;<bold>func</bold>&apos; with prototypes like: void<nonbreakablespace/>handlerFuncName(<ref refid="classwx_drop_files_event" kindref="compound">wxDropFilesEvent</ref>&amp;<nonbreakablespace/>event)Event macros: <itemizedlist>
 <listitem><para>EVT_DROP_FILES(func): Process a <computeroutput>wxEVT_DROP_FILES</computeroutput> event. </para></listitem>
 </itemizedlist>
-Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page__port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor> </para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="overview__events" kindref="compound">Events and Event Handling</ref> </para></simplesect>
+Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page_port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor> </para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="overview_events" kindref="compound">Events and Event Handling</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="5783">
+      <node id="5787">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="5781">
+      <node id="5785">
         <label>wxDropFilesEvent</label>
         <link refid="classwx_drop_files_event"/>
-        <childnode refid="5782" relation="public-inheritance">
+        <childnode refid="5786" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5782">
+      <node id="5786">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="5783" relation="public-inheritance">
+        <childnode refid="5787" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="5786">
+      <node id="5790">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="5787" relation="usage">
+        <childnode refid="5791" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="5784">
+      <node id="5788">
         <label>wxDropFilesEvent</label>
         <link refid="classwx_drop_files_event"/>
-        <childnode refid="5785" relation="public-inheritance">
+        <childnode refid="5789" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5785">
+      <node id="5789">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="5786" relation="public-inheritance">
+        <childnode refid="5790" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5787">
+      <node id="5791">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2553" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="2552" bodyend="2576"/>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2574" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="2573" bodyend="2597"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxDropFilesEvent</scope><name>AllocExclusive</name></member>
       <member refid="classwx_event_1a26878097a702e8d0368da150125d4158" prot="public" virt="pure-virtual"><scope>wxDropFilesEvent</scope><name>Clone</name></member>

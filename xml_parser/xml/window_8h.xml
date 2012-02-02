@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="window_8h" kind="file">
     <compoundname>window.h</compoundname>
     <innerclass refid="structwx_visual_attributes" prot="public">wxVisualAttributes</innerclass>
@@ -105,21 +105,21 @@
         <enumvalue id="window_8h_1a879bccd2c987fedf06030a8abcbba8acae2464600524a02b7703e33bf5d1ed1c7" prot="public">
           <name>wxWINDOW_VARIANT_SMALL</name>
           <briefdescription>
-<para>Smaller size (about 25 % smaller than normal). </para>          </briefdescription>
+<para>Smaller size (about 25 % smaller than normal) </para>          </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
         <enumvalue id="window_8h_1a879bccd2c987fedf06030a8abcbba8aca6478e4b1d493795db08ed3d2cbee7277" prot="public">
           <name>wxWINDOW_VARIANT_MINI</name>
           <briefdescription>
-<para>Mini size (about 33 % smaller than normal). </para>          </briefdescription>
+<para>Mini size (about 33 % smaller than normal) </para>          </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
         <enumvalue id="window_8h_1a879bccd2c987fedf06030a8abcbba8aca5c060252b2e605be48966d5108c9dace" prot="public">
           <name>wxWINDOW_VARIANT_LARGE</name>
           <briefdescription>
-<para>Large size (about 25 % larger than normal). </para>          </briefdescription>
+<para>Large size (about 25 % larger than normal) </para>          </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
@@ -152,7 +152,7 @@
         <briefdescription>
 <para>Find the deepest window at the mouse pointer position, returning the window and current pointer position in screen coordinates. </para>        </briefdescription>
         <detaileddescription>
-<para>Include file: <verbatim>#include &lt;wx/window.h&gt; </verbatim> </para>        </detaileddescription>
+<para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/window.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/window.h" line="3472"/>
@@ -165,7 +165,7 @@
         <briefdescription>
 <para>Gets the currently active window (implemented for MSW and GTK only currently, always returns NULL in the other ports). </para>        </briefdescription>
         <detaileddescription>
-<para>Include file: <verbatim>#include &lt;wx/window.h&gt; </verbatim> </para>        </detaileddescription>
+<para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/window.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/window.h" line="3480"/>
@@ -182,7 +182,7 @@
         <briefdescription>
 <para>Returns the first top level parent of the given window, or in other words, the frame or dialog containing it, or NULL. </para>        </briefdescription>
         <detaileddescription>
-<para>Include file: <verbatim>#include &lt;wx/window.h&gt; </verbatim> </para>        </detaileddescription>
+<para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/window.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/window.h" line="3488"/>

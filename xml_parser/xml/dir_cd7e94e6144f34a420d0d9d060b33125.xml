@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="dir_cd7e94e6144f34a420d0d9d060b33125" kind="dir">
+    <compoundname>interface/wx/protocol/</compoundname>
+    <innerfile refid="ftp_8h">ftp.h</innerfile>
+    <innerfile refid="http_8h">http.h</innerfile>
+    <innerfile refid="interface_2wx_2protocol_2log_8h">log.h</innerfile>
+    <innerfile refid="protocol_8h">protocol.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/protocol/"/>
+  </compounddef>
+</doxygen>

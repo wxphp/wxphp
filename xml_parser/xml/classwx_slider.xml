@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_slider" kind="class" prot="public">
     <compoundname>wxSlider</compoundname>
     <basecompoundref refid="classwx_control" prot="public" virt="non-virtual">wxControl</basecompoundref>
@@ -169,7 +169,7 @@
         <briefdescription>
 <para>Clears the selection, for a slider with the <bold>wxSL_SELRANGE</bold> style. </para>        </briefdescription>
         <detaileddescription>
-<para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page__port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor>  </para>        </detaileddescription>
+<para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page_port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor>  </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/slider.h" line="198"/>
@@ -182,7 +182,7 @@
         <briefdescription>
 <para>Clears the ticks. </para>        </briefdescription>
         <detaileddescription>
-<para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page__port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor>  </para>        </detaileddescription>
+<para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page_port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor>  </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/slider.h" line="205"/>
@@ -309,7 +309,7 @@
         <briefdescription>
 <para>Returns the selection end point. </para>        </briefdescription>
         <detaileddescription>
-<para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page__port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor> </para><para><simplesect kind="see"><para><ref refid="classwx_slider_1aa09045fb2d314864c95945b968b8aa19" kindref="member">GetSelStart()</ref>, <ref refid="classwx_slider_1a3477bd700151d3c04e42ae53311a18f0" kindref="member">SetSelection()</ref> </para></simplesect>
+<para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page_port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor> </para><para><simplesect kind="see"><para><ref refid="classwx_slider_1aa09045fb2d314864c95945b968b8aa19" kindref="member">GetSelStart()</ref>, <ref refid="classwx_slider_1a3477bd700151d3c04e42ae53311a18f0" kindref="member">SetSelection()</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -323,7 +323,7 @@
         <briefdescription>
 <para>Returns the selection start point. </para>        </briefdescription>
         <detaileddescription>
-<para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page__port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor> </para><para><simplesect kind="see"><para><ref refid="classwx_slider_1a1837de02b10ab0ab83cf49e1eae9a955" kindref="member">GetSelEnd()</ref>, <ref refid="classwx_slider_1a3477bd700151d3c04e42ae53311a18f0" kindref="member">SetSelection()</ref> </para></simplesect>
+<para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page_port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor> </para><para><simplesect kind="see"><para><ref refid="classwx_slider_1a1837de02b10ab0ab83cf49e1eae9a955" kindref="member">GetSelEnd()</ref>, <ref refid="classwx_slider_1a3477bd700151d3c04e42ae53311a18f0" kindref="member">SetSelection()</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -337,7 +337,7 @@
         <briefdescription>
 <para>Returns the thumb length. </para>        </briefdescription>
         <detaileddescription>
-<para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page__port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor> </para><para><simplesect kind="see"><para><ref refid="classwx_slider_1a2b093450d2e09568f12b92b4a2ec8b74" kindref="member">SetThumbLength()</ref> </para></simplesect>
+<para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page_port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor> </para><para><simplesect kind="see"><para><ref refid="classwx_slider_1a2b093450d2e09568f12b92b4a2ec8b74" kindref="member">SetThumbLength()</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -351,7 +351,7 @@
         <briefdescription>
 <para>Returns the tick frequency. </para>        </briefdescription>
         <detaileddescription>
-<para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page__port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor> </para><para><simplesect kind="see"><para><ref refid="classwx_slider_1a6fbaed71e8be9fbb7fa03a26b3a6df94" kindref="member">SetTickFreq()</ref> </para></simplesect>
+<para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page_port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor> </para><para><simplesect kind="see"><para><ref refid="classwx_slider_1a6fbaed71e8be9fbb7fa03a26b3a6df94" kindref="member">SetTickFreq()</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -476,7 +476,7 @@
 <para>The selection end position.</para></parameterdescription>
 </parameteritem>
 </parameterlist>
-Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page__port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor> </para><para><simplesect kind="see"><para><ref refid="classwx_slider_1aa09045fb2d314864c95945b968b8aa19" kindref="member">GetSelStart()</ref>, <ref refid="classwx_slider_1a1837de02b10ab0ab83cf49e1eae9a955" kindref="member">GetSelEnd()</ref> </para></simplesect>
+Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page_port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor> </para><para><simplesect kind="see"><para><ref refid="classwx_slider_1aa09045fb2d314864c95945b968b8aa19" kindref="member">GetSelStart()</ref>, <ref refid="classwx_slider_1a1837de02b10ab0ab83cf49e1eae9a955" kindref="member">GetSelEnd()</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -502,7 +502,7 @@ Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref
 <para>The thumb length.</para></parameterdescription>
 </parameteritem>
 </parameterlist>
-Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page__port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor> </para><para><simplesect kind="see"><para><ref refid="classwx_slider_1abb186599789c0605833a3e1c13ef7721" kindref="member">GetThumbLength()</ref> </para></simplesect>
+Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page_port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor> </para><para><simplesect kind="see"><para><ref refid="classwx_slider_1abb186599789c0605833a3e1c13ef7721" kindref="member">GetThumbLength()</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -528,7 +528,7 @@ Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref
 <para>The tick position.</para></parameterdescription>
 </parameteritem>
 </parameterlist>
-Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page__port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor> </para><para><simplesect kind="see"><para><ref refid="classwx_slider_1a6fbaed71e8be9fbb7fa03a26b3a6df94" kindref="member">SetTickFreq()</ref> </para></simplesect>
+Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page_port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor> </para><para><simplesect kind="see"><para><ref refid="classwx_slider_1a6fbaed71e8be9fbb7fa03a26b3a6df94" kindref="member">SetTickFreq()</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -554,7 +554,7 @@ Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref
 <para>Frequency. For example, if the frequency is set to two, a tick mark is displayed for every other increment in the slider&apos;s range.</para></parameterdescription>
 </parameteritem>
 </parameterlist>
-Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page__port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor> </para><para><simplesect kind="see"><para><ref refid="classwx_slider_1a061c2ee97937ef2f0814b104b6f4a27d" kindref="member">GetTickFreq()</ref> </para></simplesect>
+Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page_port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor> </para><para><simplesect kind="see"><para><ref refid="classwx_slider_1a061c2ee97937ef2f0814b104b6f4a27d" kindref="member">GetTickFreq()</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -631,84 +631,84 @@ Notice that <computeroutput>wxSL_LEFT</computeroutput>, <computeroutput>wxSL_TOP
 </para><sect1 id="classwx_slider_1slider_diff">
 <title>The difference between EVT_SCROLL_THUMBRELEASE and EVT_SCROLL_CHANGED</title>
 <para>The EVT_SCROLL_THUMBRELEASE event is only emitted when actually dragging the thumb using the mouse and releasing it (This EVT_SCROLL_THUMBRELEASE event is also followed by an EVT_SCROLL_CHANGED event).</para><para>The EVT_SCROLL_CHANGED event also occurs when using the keyboard to change the thumb position, and when clicking next to the thumb (In all these cases the EVT_SCROLL_THUMBRELEASE event does not happen). In short, the EVT_SCROLL_CHANGED event is triggered when scrolling/ moving has finished independently of the way it had started. Please see the widgets sample (&quot;Slider&quot; page) to see the difference between EVT_SCROLL_THUMBRELEASE and EVT_SCROLL_CHANGED in action.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref> <htmlonly> &lt;br&gt;&lt;div&gt;&lt;span class=&apos;appearance&apos;&gt;Appearance:&lt;/span&gt;&lt;br&gt;&lt;table class=&apos;appearance&apos;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&apos;wxmsw/slider.png&apos; alt=&apos;wxMSW appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxgtk/slider.png&apos; alt=&apos;wxGTK appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxmac/slider.png&apos; alt=&apos;wxMac appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;wxMSW appearance&lt;/td&gt;&lt;td&gt;wxGTK appearance&lt;/td&gt;&lt;td&gt;wxMac appearance&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt; </htmlonly></para><para><simplesect kind="see"><para><ref refid="overview__events" kindref="compound">Events and Event Handling</ref>, <ref refid="classwx_scroll_bar" kindref="compound">wxScrollBar</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref> <htmlonly> &lt;br&gt;&lt;div&gt;&lt;span class=&apos;appearance&apos;&gt;Appearance:&lt;/span&gt;&lt;br&gt;&lt;table class=&apos;appearance&apos;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&apos;wxmsw/slider.png&apos; alt=&apos;wxMSW appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxgtk/slider.png&apos; alt=&apos;wxGTK appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxmac/slider.png&apos; alt=&apos;wxMac appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;wxMSW appearance&lt;/td&gt;&lt;td&gt;wxGTK appearance&lt;/td&gt;&lt;td&gt;wxMac appearance&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt; </htmlonly></para><para><simplesect kind="see"><para><ref refid="overview_events" kindref="compound">Events and Event Handling</ref>, <ref refid="classwx_scroll_bar" kindref="compound">wxScrollBar</ref> </para></simplesect>
 </para></sect1>
     </detaileddescription>
     <inheritancegraph>
-      <node id="10205">
+      <node id="10265">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="10204">
+      <node id="10264">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="10205" relation="public-inheritance">
+        <childnode refid="10265" relation="public-inheritance">
         </childnode>
-        <childnode refid="10206" relation="public-inheritance">
+        <childnode refid="10266" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10206">
+      <node id="10266">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="10202">
+      <node id="10262">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="10203" relation="public-inheritance">
+        <childnode refid="10263" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10203">
+      <node id="10263">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="10204" relation="public-inheritance">
+        <childnode refid="10264" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10201">
+      <node id="10261">
         <label>wxSlider</label>
         <link refid="classwx_slider"/>
-        <childnode refid="10202" relation="public-inheritance">
+        <childnode refid="10262" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10211">
+      <node id="10271">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="10212" relation="usage">
+        <childnode refid="10272" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="10210">
+      <node id="10270">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="10211" relation="public-inheritance">
+        <childnode refid="10271" relation="public-inheritance">
         </childnode>
-        <childnode refid="10213" relation="public-inheritance">
+        <childnode refid="10273" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10213">
+      <node id="10273">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="10208">
+      <node id="10268">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="10209" relation="public-inheritance">
+        <childnode refid="10269" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10209">
+      <node id="10269">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="10210" relation="public-inheritance">
+        <childnode refid="10270" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10207">
+      <node id="10267">
         <label>wxSlider</label>
         <link refid="classwx_slider"/>
-        <childnode refid="10208" relation="public-inheritance">
+        <childnode refid="10268" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10212">
+      <node id="10272">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

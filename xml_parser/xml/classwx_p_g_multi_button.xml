@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_p_g_multi_button" kind="class" prot="public">
     <compoundname>wxPGMultiButton</compoundname>
     <basecompoundref refid="classwx_window" prot="public" virt="non-virtual">wxWindow</basecompoundref>
@@ -187,33 +187,33 @@
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">wxSampleMultiButtonEditor<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>wxPGTextCtrlEditor</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__rtti_1ga9c252d076397bec5ac241272a7a60747" kindref="member" tooltip="Used inside a class declaration to make the class known to wxWidgets RTTI system...">wxDECLARE_DYNAMIC_CLASS</ref>(wxSampleMultiButtonEditor);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__rtti_1ga9c252d076397bec5ac241272a7a60747" kindref="member" tooltip="Used inside a class declaration to make the class known to wxWidgets RTTI system and also declare tha...">wxDECLARE_DYNAMIC_CLASS</ref>(wxSampleMultiButtonEditor);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wxSampleMultiButtonEditor()<sp/>{}</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>~wxSampleMultiButtonEditor()<sp/>{}</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change...">wxString</ref><sp/><ref refid="classwx_window_1aab1b302c4bdabd134ce8d401dbaaf990" kindref="member" tooltip="Returns the window&amp;#39;s name.">GetName</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;SampleMultiButtonEditor&quot;</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change was actually the m...">wxString</ref><sp/><ref refid="classwx_window_1aab1b302c4bdabd134ce8d401dbaaf990" kindref="member" tooltip="Returns the window&amp;#39;s name.">GetName</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;SampleMultiButtonEditor&quot;</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>wxPGWindowList<sp/>CreateControls(<sp/><ref refid="classwx_property_grid" kindref="compound" tooltip="wxPropertyGrid is a specialized grid for editing properties - in other words name...">wxPropertyGrid</ref>*<sp/>propGrid,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>wxPGWindowList<sp/>CreateControls(<sp/><ref refid="classwx_property_grid" kindref="compound" tooltip="wxPropertyGrid is a specialized grid for editing properties - in other words name = value pairs...">wxPropertyGrid</ref>*<sp/>propGrid,</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_p_g_property" kindref="compound" tooltip="wxPGProperty is base class for all wxPropertyGrid properties.">wxPGProperty</ref>*<sp/>property,</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classwx_point" kindref="compound" tooltip="A wxPoint is a useful data structure for graphics operations.">wxPoint</ref>&amp;<sp/>pos,</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classwx_size" kindref="compound" tooltip="A wxSize is a useful data structure for graphics operations.">wxSize</ref>&amp;<sp/>sz<sp/>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>OnEvent(<sp/><ref refid="classwx_property_grid" kindref="compound" tooltip="wxPropertyGrid is a specialized grid for editing properties - in other words name...">wxPropertyGrid</ref>*<sp/>propGrid,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>OnEvent(<sp/><ref refid="classwx_property_grid" kindref="compound" tooltip="wxPropertyGrid is a specialized grid for editing properties - in other words name = value pairs...">wxPropertyGrid</ref>*<sp/>propGrid,</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_p_g_property" kindref="compound" tooltip="wxPGProperty is base class for all wxPropertyGrid properties.">wxPGProperty</ref>*<sp/>property,</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_window" kindref="compound" tooltip="wxWindow is the base class for all windows and represents any visible object on screen...">wxWindow</ref>*<sp/>ctrl,</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_event" kindref="compound" tooltip="An event is a structure holding information about an event passed to a callback or...">wxEvent</ref>&amp;<sp/>event<sp/>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_window" kindref="compound" tooltip="wxWindow is the base class for all windows and represents any visible object on screen.">wxWindow</ref>*<sp/>ctrl,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_event" kindref="compound" tooltip="An event is a structure holding information about an event passed to a callback or member function...">wxEvent</ref>&amp;<sp/>event<sp/>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__rtti_1ga4cbf0c21eb5986eb489dc67450eab1d1" kindref="member" tooltip="Used in a C++ implementation file to complete the declaration of a class that has...">wxIMPLEMENT_DYNAMIC_CLASS</ref>(wxSampleMultiButtonEditor,<sp/>wxPGTextCtrlEditor);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__rtti_1ga4cbf0c21eb5986eb489dc67450eab1d1" kindref="member" tooltip="Used in a C++ implementation file to complete the declaration of a class that has run-time type infor...">wxIMPLEMENT_DYNAMIC_CLASS</ref>(wxSampleMultiButtonEditor,<sp/>wxPGTextCtrlEditor);</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>wxPGWindowList<sp/>wxSampleMultiButtonEditor::CreateControls(<sp/><ref refid="classwx_property_grid" kindref="compound" tooltip="wxPropertyGrid is a specialized grid for editing properties - in other words name...">wxPropertyGrid</ref>*<sp/>propGrid,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>wxPGWindowList<sp/>wxSampleMultiButtonEditor::CreateControls(<sp/><ref refid="classwx_property_grid" kindref="compound" tooltip="wxPropertyGrid is a specialized grid for editing properties - in other words name = value pairs...">wxPropertyGrid</ref>*<sp/>propGrid,</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_p_g_property" kindref="compound" tooltip="wxPGProperty is base class for all wxPropertyGrid properties.">wxPGProperty</ref>*<sp/>property,</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classwx_point" kindref="compound" tooltip="A wxPoint is a useful data structure for graphics operations.">wxPoint</ref>&amp;<sp/>pos,</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classwx_size" kindref="compound" tooltip="A wxSize is a useful data structure for graphics operations.">wxSize</ref>&amp;<sp/>sz<sp/>)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
 <codeline><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>and<sp/>populate<sp/>buttons-subwindow</highlight><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_p_g_multi_button" kindref="compound" tooltip="This class can be used to have multiple buttons in a property editor.">wxPGMultiButton</ref>*<sp/>buttons<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classwx_p_g_multi_button" kindref="compound" tooltip="This class can be used to have multiple buttons in a property editor.">wxPGMultiButton</ref>(<sp/>propGrid,<sp/>sz<sp/>);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_p_g_multi_button" kindref="compound" tooltip="This class can be used to have multiple buttons in a property editor.">wxPGMultiButton</ref>*<sp/>buttons<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classwx_p_g_multi_button_1aa2fe9ce10254f56e7a2894c45a7f36c5" kindref="member" tooltip="Constructor.">wxPGMultiButton</ref>(<sp/>propGrid,<sp/>sz<sp/>);</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Add<sp/>two<sp/>regular<sp/>buttons</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>buttons-&gt;<ref refid="classwx_p_g_multi_button_1a552a07b4c393f715a4c41c7831191f07" kindref="member" tooltip="Adds new button, with given label.">Add</ref>(<sp/></highlight><highlight class="stringliteral">&quot;...&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
@@ -224,22 +224,22 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>the<sp/>&apos;primary&apos;<sp/>editor<sp/>control<sp/>(textctrl<sp/>in<sp/>this<sp/>case)</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wxPGWindowList<sp/>wndList<sp/>=<sp/>wxPGTextCtrlEditor::CreateControls</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(<sp/>propGrid,<sp/>property,<sp/>pos,</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>buttons-&gt;<ref refid="classwx_p_g_multi_button_1a9f6e4cce4afba9fbf4f175724f887df4" kindref="member" tooltip="Returns size of primary editor control, as appropriately reduced by number of buttons...">GetPrimarySize</ref>()<sp/>);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>buttons-&gt;<ref refid="classwx_p_g_multi_button_1a9f6e4cce4afba9fbf4f175724f887df4" kindref="member" tooltip="Returns size of primary editor control, as appropriately reduced by number of buttons present...">GetPrimarySize</ref>()<sp/>);</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Finally,<sp/>move<sp/>buttons-subwindow<sp/>to<sp/>correct<sp/>position<sp/>and<sp/>make<sp/>sure</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>returned<sp/>wxPGWindowList<sp/>contains<sp/>our<sp/>custom<sp/>button<sp/>list.</highlight><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>buttons-&gt;<ref refid="classwx_p_g_multi_button_1ac3ecf2ccd1cd97b7916ccabeabebc803" kindref="member" tooltip="Call this in CreateControls() of your custom editor class after all buttons have...">Finalize</ref>(propGrid,<sp/>pos);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>buttons-&gt;<ref refid="classwx_p_g_multi_button_1ac3ecf2ccd1cd97b7916ccabeabebc803" kindref="member" tooltip="Call this in CreateControls() of your custom editor class after all buttons have been added...">Finalize</ref>(propGrid,<sp/>pos);</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wndList.SetSecondary(<sp/>buttons<sp/>);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>wndList;</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>wxSampleMultiButtonEditor::OnEvent(<sp/><ref refid="classwx_property_grid" kindref="compound" tooltip="wxPropertyGrid is a specialized grid for editing properties - in other words name...">wxPropertyGrid</ref>*<sp/>propGrid,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>wxSampleMultiButtonEditor::OnEvent(<sp/><ref refid="classwx_property_grid" kindref="compound" tooltip="wxPropertyGrid is a specialized grid for editing properties - in other words name = value pairs...">wxPropertyGrid</ref>*<sp/>propGrid,</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_p_g_property" kindref="compound" tooltip="wxPGProperty is base class for all wxPropertyGrid properties.">wxPGProperty</ref>*<sp/>property,</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_window" kindref="compound" tooltip="wxWindow is the base class for all windows and represents any visible object on screen...">wxWindow</ref>*<sp/>ctrl,</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_event" kindref="compound" tooltip="An event is a structure holding information about an event passed to a callback or...">wxEvent</ref>&amp;<sp/>event<sp/>)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_window" kindref="compound" tooltip="wxWindow is the base class for all windows and represents any visible object on screen.">wxWindow</ref>*<sp/>ctrl,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_event" kindref="compound" tooltip="An event is a structure holding information about an event passed to a callback or member function...">wxEvent</ref>&amp;<sp/>event<sp/>)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
 <codeline><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>event.<ref refid="classwx_event_1ac1e62dc3000d4bff0ebbd90a3d290695" kindref="member" tooltip="Returns the identifier of the given event type, such as wxEVT_COMMAND_BUTTON_CLICKED...">GetEventType</ref>()<sp/>==<sp/><ref refid="group__group__funcmacro__events_1gad4219768fc12379d138fc7dbba84118a" kindref="member">wxEVT_COMMAND_BUTTON_CLICKED</ref><sp/>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>event.<ref refid="classwx_event_1ac1e62dc3000d4bff0ebbd90a3d290695" kindref="member" tooltip="Returns the identifier of the given event type, such as wxEVT_COMMAND_BUTTON_CLICKED.">GetEventType</ref>()<sp/>==<sp/><ref refid="group__group__funcmacro__events_1gad4219768fc12379d138fc7dbba84118a" kindref="member">wxEVT_COMMAND_BUTTON_CLICKED</ref><sp/>)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_p_g_multi_button" kindref="compound" tooltip="This class can be used to have multiple buttons in a property editor.">wxPGMultiButton</ref>*<sp/>buttons<sp/>=<sp/>(<ref refid="classwx_p_g_multi_button" kindref="compound" tooltip="This class can be used to have multiple buttons in a property editor.">wxPGMultiButton</ref>*)<sp/>propGrid-&gt;GetEditorControlSecondary();</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
@@ -272,70 +272,70 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Change<sp/>property<sp/>to<sp/>use<sp/>editor<sp/>created<sp/>in<sp/>the<sp/>previous<sp/>code<sp/>segment</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>propGrid-&gt;<ref refid="classwx_property_grid_interface_1aff961af9dd2787fb97f510ea5ce46407" kindref="member" tooltip="Sets editor for a property.">SetPropertyEditor</ref>(<sp/></highlight><highlight class="stringliteral">&quot;MultipleButtons&quot;</highlight><highlight class="normal">,<sp/>multiButtonEditor<sp/>);</highlight></codeline>
 </programlisting></para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxpropgrid" kindref="member">wxPropertyGrid</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__propgrid" kindref="compound">wxPropertyGrid</ref> </para>    </detaileddescription>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxpropgrid" kindref="member">wxPropertyGrid</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__propgrid" kindref="compound">wxPropertyGrid</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="8648">
+      <node id="8656">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="8647">
+      <node id="8655">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="8648" relation="public-inheritance">
+        <childnode refid="8656" relation="public-inheritance">
         </childnode>
-        <childnode refid="8649" relation="public-inheritance">
+        <childnode refid="8657" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8645">
+      <node id="8653">
         <label>wxPGMultiButton</label>
         <link refid="classwx_p_g_multi_button"/>
-        <childnode refid="8646" relation="public-inheritance">
+        <childnode refid="8654" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8649">
+      <node id="8657">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="8646">
+      <node id="8654">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="8647" relation="public-inheritance">
+        <childnode refid="8655" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="8653">
+      <node id="8661">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="8654" relation="usage">
+        <childnode refid="8662" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="8652">
+      <node id="8660">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="8653" relation="public-inheritance">
+        <childnode refid="8661" relation="public-inheritance">
         </childnode>
-        <childnode refid="8655" relation="public-inheritance">
+        <childnode refid="8663" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8650">
+      <node id="8658">
         <label>wxPGMultiButton</label>
         <link refid="classwx_p_g_multi_button"/>
-        <childnode refid="8651" relation="public-inheritance">
+        <childnode refid="8659" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8655">
+      <node id="8663">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="8651">
+      <node id="8659">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="8652" relation="public-inheritance">
+        <childnode refid="8660" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8654">
+      <node id="8662">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

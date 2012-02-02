@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_preview_control_bar" kind="class" prot="public">
     <compoundname>wxPreviewControlBar</compoundname>
     <basecompoundref refid="classwx_panel" prot="public" virt="non-virtual">wxPanel</basecompoundref>
@@ -78,7 +78,7 @@
         <briefdescription>
 <para>Creates buttons, according to value of the button style flags. </para>        </briefdescription>
         <detaileddescription>
-<para><xrefsect id="todo_1_todo000045"><xreftitle>Todo</xreftitle><xrefdescription><para>which flags?? </para></xrefdescription></xrefsect></para>        </detaileddescription>
+<para><xrefsect id="todo_1_todo000044"><xreftitle>Todo</xreftitle><xrefdescription><para>which flags?? </para></xrefdescription></xrefsect></para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/print.h" line="65"/>
@@ -131,83 +131,83 @@
 <para>This is the default implementation of the preview control bar, a panel with buttons and a zoom control. </para>    </briefdescription>
     <detaileddescription>
 <para>You can derive a new class from this and override some or all member functions to change the behaviour and appearance; or you can leave it as it is.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__printing" kindref="compound">Printing Framework</ref></para><para><simplesect kind="see"><para><ref refid="classwx_preview_frame" kindref="compound">wxPreviewFrame</ref>, <ref refid="classwx_preview_canvas" kindref="compound">wxPreviewCanvas</ref>, <ref refid="classwx_print_preview" kindref="compound">wxPrintPreview</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__printing" kindref="compound">Printing Framework</ref></para><para><simplesect kind="see"><para><ref refid="classwx_preview_frame" kindref="compound">wxPreviewFrame</ref>, <ref refid="classwx_preview_canvas" kindref="compound">wxPreviewCanvas</ref>, <ref refid="classwx_print_preview" kindref="compound">wxPrintPreview</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="8741">
+      <node id="8749">
         <label>wxPreviewControlBar</label>
         <link refid="classwx_preview_control_bar"/>
-        <childnode refid="8742" relation="public-inheritance">
+        <childnode refid="8750" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8745">
+      <node id="8753">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="8744">
+      <node id="8752">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="8745" relation="public-inheritance">
+        <childnode refid="8753" relation="public-inheritance">
         </childnode>
-        <childnode refid="8746" relation="public-inheritance">
+        <childnode refid="8754" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8742">
+      <node id="8750">
         <label>wxPanel</label>
         <link refid="classwx_panel"/>
-        <childnode refid="8743" relation="public-inheritance">
+        <childnode refid="8751" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8746">
+      <node id="8754">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="8743">
+      <node id="8751">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="8744" relation="public-inheritance">
+        <childnode refid="8752" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="8747">
+      <node id="8755">
         <label>wxPreviewControlBar</label>
         <link refid="classwx_preview_control_bar"/>
-        <childnode refid="8748" relation="public-inheritance">
+        <childnode refid="8756" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8751">
+      <node id="8759">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="8752" relation="usage">
+        <childnode refid="8760" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="8750">
+      <node id="8758">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="8751" relation="public-inheritance">
+        <childnode refid="8759" relation="public-inheritance">
         </childnode>
-        <childnode refid="8753" relation="public-inheritance">
+        <childnode refid="8761" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8748">
+      <node id="8756">
         <label>wxPanel</label>
         <link refid="classwx_panel"/>
-        <childnode refid="8749" relation="public-inheritance">
+        <childnode refid="8757" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8753">
+      <node id="8761">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="8749">
+      <node id="8757">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="8750" relation="public-inheritance">
+        <childnode refid="8758" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8752">
+      <node id="8760">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

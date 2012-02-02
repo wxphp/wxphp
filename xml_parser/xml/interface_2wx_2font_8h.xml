@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="interface_2wx_2font_8h" kind="file">
     <compoundname>font.h</compoundname>
     <innerclass refid="classwx_font" prot="public">wxFont</innerclass>
@@ -292,7 +292,7 @@
           <name>wxFONTFLAG_UNDERLINED</name>
           <initializer> 1 &lt;&lt; 6</initializer>
           <briefdescription>
-<para>underlined/strikethrough flags (default: no lines) </para>          </briefdescription>
+<para>Underlined style (not underlined by default). </para>          </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
@@ -300,7 +300,7 @@
           <name>wxFONTFLAG_STRIKETHROUGH</name>
           <initializer> 1 &lt;&lt; 7</initializer>
           <briefdescription>
-          </briefdescription>
+<para>Strike-through style (only supported in wxMSW and wxGTK currently). </para>          </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
@@ -325,7 +325,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="99" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" bodystart="98" bodyend="128"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="99" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" bodystart="98" bodyend="130"/>
       </memberdef>
       <memberdef kind="enum" id="interface_2wx_2font_8h_1a09016a7497d1ec6defdf13fd6439acca" prot="public" static="no">
         <name>wxFontEncoding</name>
@@ -347,28 +347,28 @@
         <enumvalue id="interface_2wx_2font_8h_1a09016a7497d1ec6defdf13fd6439accaa67f00a71472bd431586ee79f5ac10ab9" prot="public">
           <name>wxFONTENCODING_ISO8859_1</name>
           <briefdescription>
-<para>West European (Latin1). </para>          </briefdescription>
+<para>West European (Latin1) </para>          </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
         <enumvalue id="interface_2wx_2font_8h_1a09016a7497d1ec6defdf13fd6439accaa40474478deaf585a00a9c515eac8e7e3" prot="public">
           <name>wxFONTENCODING_ISO8859_2</name>
           <briefdescription>
-<para>Central and East European (Latin2). </para>          </briefdescription>
+<para>Central and East European (Latin2) </para>          </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
         <enumvalue id="interface_2wx_2font_8h_1a09016a7497d1ec6defdf13fd6439accaa0f7e6ce0555d30a9ba7e606dcb74e707" prot="public">
           <name>wxFONTENCODING_ISO8859_3</name>
           <briefdescription>
-<para>Esperanto (Latin3). </para>          </briefdescription>
+<para>Esperanto (Latin3) </para>          </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
         <enumvalue id="interface_2wx_2font_8h_1a09016a7497d1ec6defdf13fd6439accaa4c8aa3b3f2f2ab8a5f3fb57bb9f8b1f5" prot="public">
           <name>wxFONTENCODING_ISO8859_4</name>
           <briefdescription>
-<para>Baltic (old) (Latin4). </para>          </briefdescription>
+<para>Baltic (old) (Latin4) </para>          </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
@@ -403,14 +403,14 @@
         <enumvalue id="interface_2wx_2font_8h_1a09016a7497d1ec6defdf13fd6439accaa469404ecfb558bef5b059745e9a1d5f3" prot="public">
           <name>wxFONTENCODING_ISO8859_9</name>
           <briefdescription>
-<para>Turkish (Latin5). </para>          </briefdescription>
+<para>Turkish (Latin5) </para>          </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
         <enumvalue id="interface_2wx_2font_8h_1a09016a7497d1ec6defdf13fd6439accaa1b9fb52cdf9b8f875126b48b2b55133a" prot="public">
           <name>wxFONTENCODING_ISO8859_10</name>
           <briefdescription>
-<para>Variation of Latin4 (Latin6). </para>          </briefdescription>
+<para>Variation of Latin4 (Latin6) </para>          </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
@@ -431,7 +431,7 @@
         <enumvalue id="interface_2wx_2font_8h_1a09016a7497d1ec6defdf13fd6439accaaf112489cbd2a039849245306318611c3" prot="public">
           <name>wxFONTENCODING_ISO8859_13</name>
           <briefdescription>
-<para>Baltic (Latin7). </para>          </briefdescription>
+<para>Baltic (Latin7) </para>          </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
@@ -445,7 +445,7 @@
         <enumvalue id="interface_2wx_2font_8h_1a09016a7497d1ec6defdf13fd6439accaad02f5704666163c45b016cd1001fdd09" prot="public">
           <name>wxFONTENCODING_ISO8859_15</name>
           <briefdescription>
-<para>Latin9 (a.k.a. Latin0, includes euro). </para>          </briefdescription>
+<para>Latin9 (a.k.a. Latin0, includes euro) </para>          </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
@@ -529,28 +529,28 @@
         <enumvalue id="interface_2wx_2font_8h_1a09016a7497d1ec6defdf13fd6439accaa33b59a9455df91d96e8af40f3dd6e801" prot="public">
           <name>wxFONTENCODING_CP932</name>
           <briefdescription>
-<para>Japanese (shift-JIS). </para>          </briefdescription>
+<para>Japanese (shift-JIS) </para>          </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
         <enumvalue id="interface_2wx_2font_8h_1a09016a7497d1ec6defdf13fd6439accaa282dfca846f997991b1e7c92213db9e5" prot="public">
           <name>wxFONTENCODING_CP936</name>
           <briefdescription>
-<para>Chinese simplified (GB). </para>          </briefdescription>
+<para>Chinese simplified (GB) </para>          </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
         <enumvalue id="interface_2wx_2font_8h_1a09016a7497d1ec6defdf13fd6439accaad4b648f64ca90b0ebb6cf8a3a8b73fcc" prot="public">
           <name>wxFONTENCODING_CP949</name>
           <briefdescription>
-<para>Korean (Hangul charset). </para>          </briefdescription>
+<para>Korean (Hangul charset) </para>          </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
         <enumvalue id="interface_2wx_2font_8h_1a09016a7497d1ec6defdf13fd6439accaabed6baa11eeb9f1df1cbc675a7ba38d4" prot="public">
           <name>wxFONTENCODING_CP950</name>
           <briefdescription>
-<para>Chinese (traditional - Big5). </para>          </briefdescription>
+<para>Chinese (traditional - Big5) </para>          </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
@@ -578,7 +578,7 @@
         <enumvalue id="interface_2wx_2font_8h_1a09016a7497d1ec6defdf13fd6439accaacc99d1ff53f70756015b7cb15cfa0d9c" prot="public">
           <name>wxFONTENCODING_CP1253</name>
           <briefdescription>
-<para>WinGreek (8859-7). </para>          </briefdescription>
+<para>WinGreek (8859-7) </para>          </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
@@ -606,7 +606,7 @@
         <enumvalue id="interface_2wx_2font_8h_1a09016a7497d1ec6defdf13fd6439accaa48872949bbefd3b1447ed3f4668068a1" prot="public">
           <name>wxFONTENCODING_CP1257</name>
           <briefdescription>
-<para>WinBaltic (same as Latin 7). </para>          </briefdescription>
+<para>WinBaltic (same as Latin 7) </para>          </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
@@ -993,7 +993,7 @@
         <enumvalue id="interface_2wx_2font_8h_1a09016a7497d1ec6defdf13fd6439accaaf1efc586ef777e431ee3a60b4244846e" prot="public">
           <name>wxFONTENCODING_UNICODE</name>
           <briefdescription>
-<para>Alias for the native Unicode encoding on this platform (this is used by <ref refid="classwx_encoding_converter" kindref="compound">wxEncodingConverter</ref> and wxUTFFile only for now). </para>          </briefdescription>
+<para>Alias for the native Unicode encoding on this platform (this is used by <ref refid="classwx_encoding_converter" kindref="compound">wxEncodingConverter</ref> and wxUTFFile only for now) </para>          </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
@@ -1035,7 +1035,7 @@
 <para>See <ref refid="classwx_font_1af8dd83a8ab30564d53e643d5bfe0bd57" kindref="member">wxFont::SetEncoding()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="138" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" bodystart="137" bodyend="264"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="140" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" bodystart="139" bodyend="266"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="var">
@@ -1050,7 +1050,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="946" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" bodystart="946" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="1012" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" bodystart="1012" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="interface_2wx_2font_8h_1a3d7653ceb6b4f01e64fcfce0aec79a5a" prot="public" static="no" mutable="no">
         <type><ref refid="classwx_font" kindref="compound">wxFont</ref></type>
@@ -1064,7 +1064,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="953" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" bodystart="953" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="1019" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" bodystart="1019" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="interface_2wx_2font_8h_1a717f06a50bfc94b1b0e5a5cf18f85e9f" prot="public" static="no" mutable="no">
         <type><ref refid="classwx_font" kindref="compound">wxFont</ref></type>
@@ -1077,7 +1077,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="959" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" bodystart="959" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="1025" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" bodystart="1025" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="interface_2wx_2font_8h_1a0105413f0c4164745a0102ed3ee8177a" prot="public" static="no" mutable="no">
         <type><ref refid="classwx_font" kindref="compound">wxFont</ref></type>
@@ -1090,7 +1090,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="965" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" bodystart="965" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="1031" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" bodystart="1031" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="interface_2wx_2font_8h_1a45e210182a5159f343998b151ef0c813" prot="public" static="no" mutable="no">
         <type><ref refid="classwx_font" kindref="compound">wxFont</ref></type>
@@ -1103,7 +1103,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="971" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" bodystart="971" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="1037" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" bodystart="1037" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="interface_2wx_2font_8h_1a7f6d6164fe33b3a8234b26229bd8c516" prot="public" static="no" mutable="no">
         <type><ref refid="classwx_font_list" kindref="compound">wxFontList</ref> *</type>
@@ -1116,7 +1116,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="1016" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" bodystart="1016" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="1082" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" bodystart="1082" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -1137,10 +1137,10 @@
 <para>Converts string to a <ref refid="classwx_font" kindref="compound">wxFont</ref> best represented by the given string. </para>        </briefdescription>
         <detaileddescription>
 <para>Returns true on success.</para><para><simplesect kind="see"><para><ref refid="group__group__funcmacro__misc_1ga73a6a41930ee5544077c6dd4df77ea06" kindref="member">wxToString(const wxFont&amp;)</ref></para></simplesect>
-Include file: <verbatim>#include &lt;wx/font.h&gt; </verbatim> </para>        </detaileddescription>
+Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/font.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="1034"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="1100"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__misc_1ga73a6a41930ee5544077c6dd4df77ea06" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -1155,10 +1155,10 @@ Include file: <verbatim>#include &lt;wx/font.h&gt; </verbatim> </para>        </
 <para>Converts the given <ref refid="classwx_font" kindref="compound">wxFont</ref> into a string. </para>        </briefdescription>
         <detaileddescription>
 <para><simplesect kind="see"><para><ref refid="group__group__funcmacro__misc_1gaa7f39827f935fb7ba342a35dc1fb45dd" kindref="member">wxFromString(const wxString&amp;, wxFont*)</ref></para></simplesect>
-Include file: <verbatim>#include &lt;wx/font.h&gt; </verbatim> </para>        </detaileddescription>
+Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/font.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="1043"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="1109"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

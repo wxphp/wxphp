@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_object_ref_data" kind="class" prot="public">
     <compoundname>wxObjectRefData</compoundname>
     <derivedcompoundref refid="classwx_variant_data" prot="public" virt="non-virtual">wxVariantData</derivedcompoundref>
@@ -30,7 +30,7 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classwx_object_ref_data" kindref="compound" tooltip="This class is just a typedef to wxRefCounter and is used by wxObject.">wxObjectRefData</ref><sp/>*CreateRefData()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classwx_object_ref_data" kindref="compound" tooltip="This class is just a typedef to wxRefCounter and is used by wxObject.">wxObjectRefData</ref><sp/>*CloneRefData(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classwx_object_ref_data" kindref="compound" tooltip="This class is just a typedef to wxRefCounter and is used by wxObject.">wxObjectRefData</ref><sp/>*data)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__rtti_1ga9c252d076397bec5ac241272a7a60747" kindref="member" tooltip="Used inside a class declaration to make the class known to wxWidgets RTTI system...">wxDECLARE_DYNAMIC_CLASS</ref>(MyCar)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__rtti_1ga9c252d076397bec5ac241272a7a60747" kindref="member" tooltip="Used inside a class declaration to make the class known to wxWidgets RTTI system and also declare tha...">wxDECLARE_DYNAMIC_CLASS</ref>(MyCar)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
@@ -71,7 +71,7 @@
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>M_CARDATA<sp/>((MyCarRefData<sp/>*)m_refData)</highlight></codeline>
-<codeline><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__rtti_1ga4cbf0c21eb5986eb489dc67450eab1d1" kindref="member" tooltip="Used in a C++ implementation file to complete the declaration of a class that has...">wxIMPLEMENT_DYNAMIC_CLASS</ref>(MyCar,<sp/><ref refid="classwx_object" kindref="compound" tooltip="This is the root class of many of the wxWidgets classes.">wxObject</ref>);</highlight></codeline>
+<codeline><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__rtti_1ga4cbf0c21eb5986eb489dc67450eab1d1" kindref="member" tooltip="Used in a C++ implementation file to complete the declaration of a class that has run-time type infor...">wxIMPLEMENT_DYNAMIC_CLASS</ref>(MyCar,<sp/><ref refid="classwx_object" kindref="compound" tooltip="This is the root class of many of the wxWidgets classes.">wxObject</ref>);</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>MyCar::MyCar(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>price<sp/>)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
@@ -80,12 +80,12 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>M_CARDATA-&gt;m_price<sp/>=<sp/>price;</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_object_ref_data" kindref="compound" tooltip="This class is just a typedef to wxRefCounter and is used by wxObject.">wxObjectRefData</ref><sp/>*<ref refid="classwx_object_1a95c6a5e4e1e03ff23c7b9efe4cff0c1a" kindref="member" tooltip="Creates a new instance of the wxObjectRefData-derived class specific to this object...">MyCar::CreateRefData</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_object_ref_data" kindref="compound" tooltip="This class is just a typedef to wxRefCounter and is used by wxObject.">wxObjectRefData</ref><sp/>*MyCar::CreateRefData()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
 <codeline><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>MyCarRefData;</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_object_ref_data" kindref="compound" tooltip="This class is just a typedef to wxRefCounter and is used by wxObject.">wxObjectRefData</ref><sp/>*<ref refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" kindref="member" tooltip="Creates a new instance of the wxObjectRefData-derived class specific to this object...">MyCar::CloneRefData</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classwx_object_ref_data" kindref="compound" tooltip="This class is just a typedef to wxRefCounter and is used by wxObject.">wxObjectRefData</ref><sp/>*data)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_object_ref_data" kindref="compound" tooltip="This class is just a typedef to wxRefCounter and is used by wxObject.">wxObjectRefData</ref><sp/>*MyCar::CloneRefData(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classwx_object_ref_data" kindref="compound" tooltip="This class is just a typedef to wxRefCounter and is used by wxObject.">wxObjectRefData</ref><sp/>*data)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
 <codeline><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>MyCarRefData(*(MyCarRefData<sp/>*)data);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
@@ -117,22 +117,22 @@
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>MyCar::GetPrice()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
 <codeline><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__debug_1ga4822a2ea9fdd0bc98caa3ff42587743e" kindref="member" tooltip="Checks that the condition is true, returns with the given return value if not (stops...">wxCHECK_MSG</ref>(<sp/>IsOk(),<sp/>-1,<sp/></highlight><highlight class="stringliteral">&quot;invalid<sp/>car&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__debug_1ga4822a2ea9fdd0bc98caa3ff42587743e" kindref="member" tooltip="Checks that the condition is true, returns with the given return value if not (stops execution in deb...">wxCHECK_MSG</ref>(<sp/>IsOk(),<sp/>-1,<sp/></highlight><highlight class="stringliteral">&quot;invalid<sp/>car&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>M_CARDATA-&gt;m_price;</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 </programlisting></para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__rtti" kindref="compound">Runtime Type Information (RTTI)</ref></para><para><simplesect kind="see"><para><ref refid="classwx_object" kindref="compound">wxObject</ref>, <ref refid="classwx_object_data_ptr_3_01_t_01_4" kindref="compound">wxObjectDataPtr&lt;T&gt;</ref>, <ref refid="overview__refcount" kindref="compound">Reference Counting</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__rtti" kindref="compound">Runtime Type Information (RTTI)</ref></para><para><simplesect kind="see"><para><ref refid="classwx_object" kindref="compound">wxObject</ref>, <ref refid="classwx_object_data_ptr_3_01_t_01_4" kindref="compound">wxObjectDataPtr&lt;T&gt;</ref>, <ref refid="overview_refcount" kindref="compound">Reference Counting</ref> </para></simplesect>
 </para></sect1>
     </detaileddescription>
     <inheritancegraph>
-      <node id="8453">
+      <node id="8461">
         <label>wxVariantData</label>
         <link refid="classwx_variant_data"/>
-        <childnode refid="8452" relation="public-inheritance">
+        <childnode refid="8460" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8452">
+      <node id="8460">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

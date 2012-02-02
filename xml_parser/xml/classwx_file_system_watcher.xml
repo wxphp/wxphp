@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_file_system_watcher" kind="class" prot="public">
     <compoundname>wxFileSystemWatcher</compoundname>
     <basecompoundref refid="classwx_evt_handler" prot="public" virt="non-virtual">wxEvtHandler</basecompoundref>
@@ -196,33 +196,9 @@
     <detaileddescription>
 <para><simplesect kind="note"><para>Implementation limitations: this class is currently implemented for MSW, OS X and GTK ports but doesn&apos;t detect all changes correctly everywhere: under MSW accessing the file is not detected (only modifying it is) and under OS X neither accessing nor modifying is detected (only creating and deleting files is). Moreover, OS X version doesn&apos;t currently collapse pairs of create/delete events in a rename event, unlike the other ones.</para></simplesect>
 For the full list of change types that are reported see wxFSWFlags.</para><para>This class notifies the application about the file system changes by sending events of <ref refid="classwx_file_system_watcher_event" kindref="compound">wxFileSystemWatcherEvent</ref> class. By default these events are sent to the <ref refid="classwx_file_system_watcher" kindref="compound">wxFileSystemWatcher</ref> object itself so you can derive from it and use the event table <computeroutput>EVT_FSWATCHER</computeroutput> macro to handle these events in a derived class method. Alternatively, you can use <ref refid="classwx_file_system_watcher_1a70156ba21bd8b6ee2753d2ee437dcbfe" kindref="member">wxFileSystemWatcher::SetOwner()</ref> to send the events to another object. Or you could use <ref refid="classwx_evt_handler_1a78719e8b82c9f9c6e4056b3449df1943" kindref="member">wxEvtHandler::Connect()</ref> with <computeroutput>wxEVT_FSWATCHER</computeroutput> to handle these events in any other object. See the fswatcher sample for an example of the latter approach.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__file" kindref="compound">File Handling</ref></para><para><simplesect kind="since"><para>2.9.1 </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__file" kindref="compound">File Handling</ref></para><para><simplesect kind="since"><para>2.9.1 </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="6257">
-        <label>wxFileSystemWatcher</label>
-        <link refid="classwx_file_system_watcher"/>
-        <childnode refid="6258" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="6259">
-        <label>wxObject</label>
-        <link refid="classwx_object"/>
-      </node>
-      <node id="6258">
-        <label>wxEvtHandler</label>
-        <link refid="classwx_evt_handler"/>
-        <childnode refid="6259" relation="public-inheritance">
-        </childnode>
-        <childnode refid="6260" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="6260">
-        <label>wxTrackable</label>
-        <link refid="classwx_trackable"/>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
       <node id="6261">
         <label>wxFileSystemWatcher</label>
         <link refid="classwx_file_system_watcher"/>
@@ -232,23 +208,47 @@ For the full list of change types that are reported see wxFSWFlags.</para><para>
       <node id="6263">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="6264" relation="usage">
-          <edgelabel>m_refData</edgelabel>
-        </childnode>
       </node>
       <node id="6262">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
         <childnode refid="6263" relation="public-inheritance">
         </childnode>
-        <childnode refid="6265" relation="public-inheritance">
+        <childnode refid="6264" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6265">
+      <node id="6264">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="6264">
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="6265">
+        <label>wxFileSystemWatcher</label>
+        <link refid="classwx_file_system_watcher"/>
+        <childnode refid="6266" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6267">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="6268" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="6266">
+        <label>wxEvtHandler</label>
+        <link refid="classwx_evt_handler"/>
+        <childnode refid="6267" relation="public-inheritance">
+        </childnode>
+        <childnode refid="6269" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6269">
+        <label>wxTrackable</label>
+        <link refid="classwx_trackable"/>
+      </node>
+      <node id="6268">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

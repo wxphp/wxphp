@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_ribbon_art_provider" kind="class" prot="public">
     <compoundname>wxRibbonArtProvider</compoundname>
     <includes local="no">wx/ribbon/art.h</includes>
@@ -1882,7 +1882,7 @@
 <para><ref refid="classwx_ribbon_art_provider" kindref="compound">wxRibbonArtProvider</ref> is responsible for drawing all the components of the ribbon interface. </para>    </briefdescription>
     <detaileddescription>
 <para>This allows a ribbon bar to have a pluggable look-and-feel, while retaining the same underlying behaviour. As a single art provider is used for all ribbon components, a ribbon bar usually has a consistent (though unique) appearance.</para><para>By default, a <ref refid="classwx_ribbon_bar" kindref="compound">wxRibbonBar</ref> uses an instance of this class called <computeroutput>wxRibbonDefaultArtProvider</computeroutput>, which resolves to <computeroutput>wxRibbonAUIArtProvider</computeroutput>, <computeroutput>wxRibbonMSWArtProvider</computeroutput>, or <computeroutput>wxRibbonOSXArtProvider</computeroutput> - whichever is most appropriate to the current platform. These art providers are all slightly configurable with regard to colours and fonts, but for larger modifications, you can derive from one of these classes, or write a completely new art provider class. Call <ref refid="classwx_ribbon_bar_1adba2da31cb9ec4b9f0e80629c96ea691" kindref="member">wxRibbonBar::SetArtProvider</ref> to change the art provider being used.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxribbon" kindref="member">wxRibbon</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ribbon" kindref="compound">Ribbon User Interface</ref></para><para><simplesect kind="see"><para><ref refid="classwx_ribbon_bar" kindref="compound">wxRibbonBar</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxribbon" kindref="member">wxRibbon</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ribbon" kindref="compound">Ribbon User Interface</ref></para><para><simplesect kind="see"><para><ref refid="classwx_ribbon_bar" kindref="compound">wxRibbonBar</ref> </para></simplesect>
 </para>    </detaileddescription>
     <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h" line="208" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h" bodystart="207" bodyend="947"/>
     <listofallmembers>

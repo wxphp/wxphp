@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_bitmap_data_object" kind="class" prot="public">
     <compoundname>wxBitmapDataObject</compoundname>
     <basecompoundref refid="classwx_data_object_simple" prot="public" virt="non-virtual">wxDataObjectSimple</basecompoundref>
@@ -58,41 +58,41 @@
 <para><ref refid="classwx_bitmap_data_object" kindref="compound">wxBitmapDataObject</ref> is a specialization of <ref refid="classwx_data_object" kindref="compound">wxDataObject</ref> for bitmap data. </para>    </briefdescription>
     <detaileddescription>
 <para>It can be used without change to paste data into the <ref refid="classwx_clipboard" kindref="compound">wxClipboard</ref> or a <ref refid="classwx_drop_source" kindref="compound">wxDropSource</ref>. A user may wish to derive a new class from this class for providing a bitmap on-demand in order to minimize memory consumption when offering data in several formats, such as a bitmap and GIF.</para><para>This class may be used as is, but <ref refid="classwx_bitmap_data_object_1af7af566b046324011cedcb56cfca60af" kindref="member">GetBitmap()</ref> may be overridden to increase efficiency.</para><para><bold>wxPython Note:</bold> If you wish to create a derived <ref refid="classwx_bitmap_data_object" kindref="compound">wxBitmapDataObject</ref> class in wxPython you should derive the class from wxPyBitmapDataObject in order to get Python-aware capabilities for the various virtual methods.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__dnd" kindref="compound">Clipboard and Drag &amp; Drop</ref></para><para><simplesect kind="see"><para><ref refid="overview__dnd" kindref="compound">Drag and Drop Overview</ref>, <ref refid="classwx_data_object" kindref="compound">wxDataObject</ref>, <ref refid="classwx_data_object_simple" kindref="compound">wxDataObjectSimple</ref>, <ref refid="classwx_file_data_object" kindref="compound">wxFileDataObject</ref>, <ref refid="classwx_text_data_object" kindref="compound">wxTextDataObject</ref>, <ref refid="classwx_data_object" kindref="compound">wxDataObject</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__dnd" kindref="compound">Clipboard and Drag &amp; Drop</ref></para><para><simplesect kind="see"><para><ref refid="overview_dnd" kindref="compound">Drag and Drop Overview</ref>, <ref refid="classwx_data_object" kindref="compound">wxDataObject</ref>, <ref refid="classwx_data_object_simple" kindref="compound">wxDataObjectSimple</ref>, <ref refid="classwx_file_data_object" kindref="compound">wxFileDataObject</ref>, <ref refid="classwx_text_data_object" kindref="compound">wxTextDataObject</ref>, <ref refid="classwx_data_object" kindref="compound">wxDataObject</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="4513">
+      <node id="4517">
         <label>wxDataObject</label>
         <link refid="classwx_data_object"/>
       </node>
-      <node id="4511">
+      <node id="4515">
         <label>wxBitmapDataObject</label>
         <link refid="classwx_bitmap_data_object"/>
-        <childnode refid="4512" relation="public-inheritance">
+        <childnode refid="4516" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4512">
+      <node id="4516">
         <label>wxDataObjectSimple</label>
         <link refid="classwx_data_object_simple"/>
-        <childnode refid="4513" relation="public-inheritance">
+        <childnode refid="4517" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="4516">
+      <node id="4520">
         <label>wxDataObject</label>
         <link refid="classwx_data_object"/>
       </node>
-      <node id="4514">
+      <node id="4518">
         <label>wxBitmapDataObject</label>
         <link refid="classwx_bitmap_data_object"/>
-        <childnode refid="4515" relation="public-inheritance">
+        <childnode refid="4519" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4515">
+      <node id="4519">
         <label>wxDataObjectSimple</label>
         <link refid="classwx_data_object_simple"/>
-        <childnode refid="4516" relation="public-inheritance">
+        <childnode refid="4520" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>

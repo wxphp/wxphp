@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="gdicmn_8h" kind="file">
     <compoundname>gdicmn.h</compoundname>
     <innerclass refid="classwx_real_point" prot="public">wxRealPoint</innerclass>
@@ -14,8 +14,8 @@
         <briefdescription>
 <para>This macro loads a bitmap from either application resources (on the platforms for which they exist, i.e. </para>        </briefdescription>
         <detaileddescription>
-<para>Windows and OS2) or from an XPM file. This can help to avoid using #ifdef when creating bitmaps.</para><para><simplesect kind="see"><para><ref refid="overview__bitmap" kindref="compound">Bitmaps and Icons</ref>, <ref refid="group__group__funcmacro__gdi_1ga1f22eefa44998cbeb8f018978cf5d375" kindref="member">wxICON()</ref></para></simplesect>
-Include file: <verbatim>#include &lt;wx/gdicmn.h&gt; </verbatim> </para>        </detaileddescription>
+<para>Windows and OS2) or from an XPM file. This can help to avoid using #ifdef when creating bitmaps.</para><para><simplesect kind="see"><para><ref refid="overview_bitmap" kindref="compound">Bitmaps and Icons</ref>, <ref refid="group__group__funcmacro__gdi_1ga1f22eefa44998cbeb8f018978cf5d375" kindref="member">wxICON()</ref></para></simplesect>
+Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/gdicmn.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="974" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" bodystart="974" bodyend="-1"/>
@@ -26,8 +26,8 @@ Include file: <verbatim>#include &lt;wx/gdicmn.h&gt; </verbatim> </para>        
         <briefdescription>
 <para>This macro loads an icon from either application resources (on the platforms for which they exist, i.e. </para>        </briefdescription>
         <detaileddescription>
-<para>Windows and OS2) or from an XPM file. This can help to avoid using #ifdef when creating icons.</para><para><simplesect kind="see"><para><ref refid="overview__bitmap" kindref="compound">Bitmaps and Icons</ref>, <ref refid="group__group__funcmacro__gdi_1ga309f860d17c1a8c4cc54c6e772a2fd09" kindref="member">wxBITMAP()</ref></para></simplesect>
-Include file: <verbatim>#include &lt;wx/gdicmn.h&gt; </verbatim> </para>        </detaileddescription>
+<para>Windows and OS2) or from an XPM file. This can help to avoid using #ifdef when creating icons.</para><para><simplesect kind="see"><para><ref refid="overview_bitmap" kindref="compound">Bitmaps and Icons</ref>, <ref refid="group__group__funcmacro__gdi_1ga309f860d17c1a8c4cc54c6e772a2fd09" kindref="member">wxBITMAP()</ref></para></simplesect>
+Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/gdicmn.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="985" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" bodystart="985" bodyend="-1"/>
@@ -631,7 +631,7 @@ Include file: <verbatim>#include &lt;wx/gdicmn.h&gt; </verbatim> </para>        
         <briefdescription>
 <para>Returns true if the display is colour, false otherwise. </para>        </briefdescription>
         <detaileddescription>
-<para>Include file: <verbatim>#include &lt;wx/gdicmn.h&gt; </verbatim> </para>        </detaileddescription>
+<para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/gdicmn.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="992"/>
@@ -644,7 +644,7 @@ Include file: <verbatim>#include &lt;wx/gdicmn.h&gt; </verbatim> </para>        
         <briefdescription>
 <para>Returns the depth of the display (a value of 1 denotes a monochrome display). </para>        </briefdescription>
         <detaileddescription>
-<para>Include file: <verbatim>#include &lt;wx/gdicmn.h&gt; </verbatim> </para>        </detaileddescription>
+<para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/gdicmn.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="1000"/>
@@ -662,7 +662,7 @@ Include file: <verbatim>#include &lt;wx/gdicmn.h&gt; </verbatim> </para>        
 <para>Globally sets the cursor; only has an effect on Windows, Mac and GTK+. </para>        </briefdescription>
         <detaileddescription>
 <para>You should call this function with wxNullCursor to restore the system cursor.</para><para><simplesect kind="see"><para><ref refid="classwx_cursor" kindref="compound">wxCursor</ref>, <ref refid="classwx_window_1ad83f9c51c6f31e0e05f598b47a19ed98" kindref="member">wxWindow::SetCursor()</ref></para></simplesect>
-Include file: <verbatim>#include &lt;wx/gdicmn.h&gt; </verbatim> </para>        </detaileddescription>
+Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/gdicmn.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="1010"/>
@@ -691,7 +691,7 @@ Include file: <verbatim>#include &lt;wx/gdicmn.h&gt; </verbatim> </para>        
         <briefdescription>
 <para>Returns the dimensions of the work area on the display. </para>        </briefdescription>
         <detaileddescription>
-<para>On Windows this means the area not covered by the taskbar, etc. Other platforms are currently defaulting to the whole display until a way is found to provide this info for all window managers, etc.</para><para>Include file: <verbatim>#include &lt;wx/gdicmn.h&gt; </verbatim> </para>        </detaileddescription>
+<para>On Windows this means the area not covered by the taskbar, etc. Other platforms are currently defaulting to the whole display until a way is found to provide this info for all window managers, etc.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/gdicmn.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="1024"/>
@@ -717,7 +717,7 @@ Include file: <verbatim>#include &lt;wx/gdicmn.h&gt; </verbatim> </para>        
         <briefdescription>
 <para>Returns the display resolution in pixels per inch. </para>        </briefdescription>
         <detaileddescription>
-<para>The <computeroutput>x</computeroutput> component of the returned <ref refid="classwx_size" kindref="compound">wxSize</ref> object contains the horizontal resolution and the <computeroutput>y</computeroutput> one -- the vertical resolution.</para><para>Include file: <verbatim>#include &lt;wx/gdicmn.h&gt; </verbatim></para><para><simplesect kind="since"><para>2.9.0 </para></simplesect>
+<para>The <computeroutput>x</computeroutput> component of the returned <ref refid="classwx_size" kindref="compound">wxSize</ref> object contains the horizontal resolution and the <computeroutput>y</computeroutput> one -- the vertical resolution.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/gdicmn.h&gt; </verbatim></para><para><simplesect kind="since"><para>2.9.0 </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -739,7 +739,7 @@ Include file: <verbatim>#include &lt;wx/gdicmn.h&gt; </verbatim> </para>        
         <briefdescription>
 <para>Returns the display size in pixels. </para>        </briefdescription>
         <detaileddescription>
-<para>For the version taking <emphasis>width</emphasis> and <emphasis>header</emphasis> arguments, either of them can be NULL if the caller is not interested in the returned value.</para><para>Include file: <verbatim>#include &lt;wx/gdicmn.h&gt; </verbatim> </para>        </detaileddescription>
+<para>For the version taking <emphasis>width</emphasis> and <emphasis>header</emphasis> arguments, either of them can be NULL if the caller is not interested in the returned value.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/gdicmn.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="1053"/>
@@ -774,7 +774,7 @@ Include file: <verbatim>#include &lt;wx/gdicmn.h&gt; </verbatim> </para>        
 <para>Returns the display size in millimeters. </para>        </briefdescription>
         <detaileddescription>
 <para>For the version taking <emphasis>width</emphasis> and <emphasis>header</emphasis> arguments, either of them can be NULL if the caller is not interested in the returned value.</para><para><simplesect kind="see"><para><ref refid="group__group__funcmacro__gdi_1ga84d60564b0cd90909000b53eba457cfa" kindref="member">wxGetDisplayPPI()</ref></para></simplesect>
-Include file: <verbatim>#include &lt;wx/gdicmn.h&gt; </verbatim> </para>        </detaileddescription>
+Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/gdicmn.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="1069"/>

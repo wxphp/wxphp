@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_condition" kind="class" prot="public">
     <compoundname>wxCondition</compoundname>
     <includes local="no">wx/thread.h</includes>
@@ -125,7 +125,7 @@
 <para>This example shows how a main thread may launch a worker thread which starts running and then waits until the main thread signals it to continue:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">MySignallingThread<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classwx_thread" kindref="compound" tooltip="A thread is basically a path of execution through a program.">wxThread</ref></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MySignallingThread(<ref refid="classwx_mutex" kindref="compound" tooltip="A mutex object is a synchronization object whose state is set to signaled when it...">wxMutex</ref><sp/>*mutex,<sp/><ref refid="classwx_condition" kindref="compound" tooltip="wxCondition variables correspond to pthread conditions or to Win32 event objects...">wxCondition</ref><sp/>*condition)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MySignallingThread(<ref refid="classwx_mutex" kindref="compound" tooltip="A mutex object is a synchronization object whose state is set to signaled when it is not owned by any...">wxMutex</ref><sp/>*mutex,<sp/><ref refid="classwx_condition" kindref="compound" tooltip="wxCondition variables correspond to pthread conditions or to Win32 event objects.">wxCondition</ref><sp/>*condition)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_mutex<sp/>=<sp/>mutex;</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_condition<sp/>=<sp/>condition;</highlight></codeline>
@@ -147,14 +147,14 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_condition" kindref="compound" tooltip="wxCondition variables correspond to pthread conditions or to Win32 event objects...">wxCondition</ref><sp/>*m_condition;</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_mutex" kindref="compound" tooltip="A mutex object is a synchronization object whose state is set to signaled when it...">wxMutex</ref><sp/>*m_mutex;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_condition" kindref="compound" tooltip="wxCondition variables correspond to pthread conditions or to Win32 event objects.">wxCondition</ref><sp/>*m_condition;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_mutex" kindref="compound" tooltip="A mutex object is a synchronization object whose state is set to signaled when it is not owned by any...">wxMutex</ref><sp/>*m_mutex;</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>main()</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_mutex" kindref="compound" tooltip="A mutex object is a synchronization object whose state is set to signaled when it...">wxMutex</ref><sp/>mutex;</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_condition" kindref="compound" tooltip="wxCondition variables correspond to pthread conditions or to Win32 event objects...">wxCondition</ref><sp/>condition(mutex);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_mutex" kindref="compound" tooltip="A mutex object is a synchronization object whose state is set to signaled when it is not owned by any...">wxMutex</ref><sp/>mutex;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_condition" kindref="compound" tooltip="wxCondition variables correspond to pthread conditions or to Win32 event objects.">wxCondition</ref><sp/>condition(mutex);</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>mutex<sp/>should<sp/>be<sp/>initially<sp/>locked</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mutex.<ref refid="classwx_mutex_1a5291e0e421262f420051390421ba0d09" kindref="member" tooltip="Locks the mutex object.">Lock</ref>();</highlight></codeline>
@@ -173,7 +173,7 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 </programlisting></para><para>Of course, here it would be much better to simply use a joinable thread and call <ref refid="classwx_thread_1a62ee778033013d3a4754b71b8cf2902e" kindref="member">wxThread::Wait</ref> on it, but this example does illustrate the importance of properly locking the mutex when using <ref refid="classwx_condition" kindref="compound">wxCondition</ref>.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__threading" kindref="compound">Threading</ref></para><para><simplesect kind="see"><para><ref refid="classwx_thread" kindref="compound">wxThread</ref>, <ref refid="classwx_mutex" kindref="compound">wxMutex</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__threading" kindref="compound">Threading</ref></para><para><simplesect kind="see"><para><ref refid="classwx_thread" kindref="compound">wxThread</ref>, <ref refid="classwx_mutex" kindref="compound">wxMutex</ref> </para></simplesect>
 </para></sect1>
     </detaileddescription>
     <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="109" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" bodystart="108" bodyend="189"/>

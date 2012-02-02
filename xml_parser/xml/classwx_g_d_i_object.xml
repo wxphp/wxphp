@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_g_d_i_object" kind="class" prot="public">
     <compoundname>wxGDIObject</compoundname>
     <basecompoundref refid="classwx_object" prot="public" virt="non-virtual">wxObject</basecompoundref>
@@ -33,95 +33,95 @@
 <para>This class allows platforms to implement functionality to optimise GDI objects, such as <ref refid="classwx_pen" kindref="compound">wxPen</ref>, <ref refid="classwx_brush" kindref="compound">wxBrush</ref> and <ref refid="classwx_font" kindref="compound">wxFont</ref>. </para>    </briefdescription>
     <detaileddescription>
 <para>On Windows, the underling GDI objects are a scarce resource and are cleaned up when a usage count goes to zero. On some platforms this class may not have any special functionality.</para><para>Since the functionality of this class is platform-specific, it is not documented here in detail.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__gdi" kindref="compound">Graphics Device Interface (GDI)</ref></para><para><simplesect kind="see"><para><ref refid="classwx_pen" kindref="compound">wxPen</ref>, <ref refid="classwx_brush" kindref="compound">wxBrush</ref>, <ref refid="classwx_font" kindref="compound">wxFont</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__gdi" kindref="compound">Graphics Device Interface (GDI)</ref></para><para><simplesect kind="see"><para><ref refid="classwx_pen" kindref="compound">wxPen</ref>, <ref refid="classwx_brush" kindref="compound">wxBrush</ref>, <ref refid="classwx_font" kindref="compound">wxFont</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="6498">
+      <node id="6502">
         <label>wxAnimation</label>
         <link refid="classwx_animation"/>
-        <childnode refid="6496" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="6503">
-        <label>wxIcon</label>
-        <link refid="classwx_icon"/>
-        <childnode refid="6496" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="6505">
-        <label>wxPalette</label>
-        <link refid="classwx_palette"/>
-        <childnode refid="6496" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="6497">
-        <label>wxObject</label>
-        <link refid="classwx_object"/>
-      </node>
-      <node id="6506">
-        <label>wxPen</label>
-        <link refid="classwx_pen"/>
-        <childnode refid="6496" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="6499">
-        <label>wxBitmap</label>
-        <link refid="classwx_bitmap"/>
-        <childnode refid="6496" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="6496">
-        <label>wxGDIObject</label>
-        <link refid="classwx_g_d_i_object"/>
-        <childnode refid="6497" relation="public-inheritance">
+        <childnode refid="6500" relation="public-inheritance">
         </childnode>
       </node>
       <node id="6507">
-        <label>wxRegion</label>
-        <link refid="classwx_region"/>
-        <childnode refid="6496" relation="public-inheritance">
+        <label>wxIcon</label>
+        <link refid="classwx_icon"/>
+        <childnode refid="6500" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6502">
-        <label>wxFont</label>
-        <link refid="classwx_font"/>
-        <childnode refid="6496" relation="public-inheritance">
+      <node id="6509">
+        <label>wxPalette</label>
+        <link refid="classwx_palette"/>
+        <childnode refid="6500" relation="public-inheritance">
         </childnode>
       </node>
       <node id="6501">
-        <label>wxCursor</label>
-        <link refid="classwx_cursor"/>
-        <childnode refid="6496" relation="public-inheritance">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+      </node>
+      <node id="6510">
+        <label>wxPen</label>
+        <link refid="classwx_pen"/>
+        <childnode refid="6500" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6504">
-        <label>wxIconBundle</label>
-        <link refid="classwx_icon_bundle"/>
-        <childnode refid="6496" relation="public-inheritance">
+      <node id="6503">
+        <label>wxBitmap</label>
+        <link refid="classwx_bitmap"/>
+        <childnode refid="6500" relation="public-inheritance">
         </childnode>
       </node>
       <node id="6500">
+        <label>wxGDIObject</label>
+        <link refid="classwx_g_d_i_object"/>
+        <childnode refid="6501" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6511">
+        <label>wxRegion</label>
+        <link refid="classwx_region"/>
+        <childnode refid="6500" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6506">
+        <label>wxFont</label>
+        <link refid="classwx_font"/>
+        <childnode refid="6500" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6505">
+        <label>wxCursor</label>
+        <link refid="classwx_cursor"/>
+        <childnode refid="6500" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6508">
+        <label>wxIconBundle</label>
+        <link refid="classwx_icon_bundle"/>
+        <childnode refid="6500" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6504">
         <label>wxBrush</label>
         <link refid="classwx_brush"/>
-        <childnode refid="6496" relation="public-inheritance">
+        <childnode refid="6500" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="6509">
+      <node id="6513">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="6510" relation="usage">
+        <childnode refid="6514" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="6508">
+      <node id="6512">
         <label>wxGDIObject</label>
         <link refid="classwx_g_d_i_object"/>
-        <childnode refid="6509" relation="public-inheritance">
+        <childnode refid="6513" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6510">
+      <node id="6514">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

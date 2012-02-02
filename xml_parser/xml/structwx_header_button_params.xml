@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="structwx_header_button_params" kind="struct" prot="public">
     <compoundname>wxHeaderButtonParams</compoundname>
     <includes local="no">wx/renderer.h</includes>
@@ -115,62 +115,62 @@
 <para>This <computeroutput>struct</computeroutput> can optionally be used with <ref refid="classwx_renderer_native_1a65c10b87b311b5278890026b26c525b1" kindref="member">wxRendererNative::DrawHeaderButton()</ref> to specify custom values used to draw the text or bitmap label. </para>    </briefdescription>
     <detaileddescription>
 <para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__gdi" kindref="compound">Graphics Device Interface (GDI)</ref> </para>    </detaileddescription>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__gdi" kindref="compound">Graphics Device Interface (GDI)</ref> </para>    </detaileddescription>
     <collaborationgraph>
-      <node id="6869">
+      <node id="6873">
         <label>wxString</label>
         <link refid="classwx_string"/>
       </node>
-      <node id="6863">
+      <node id="6867">
         <label>wxHeaderButtonParams</label>
         <link refid="structwx_header_button_params"/>
-        <childnode refid="6864" relation="usage">
+        <childnode refid="6868" relation="usage">
           <edgelabel>m_arrowColour</edgelabel>
           <edgelabel>m_labelColour</edgelabel>
           <edgelabel>m_selectionColour</edgelabel>
         </childnode>
-        <childnode refid="6867" relation="usage">
+        <childnode refid="6871" relation="usage">
           <edgelabel>m_labelBitmap</edgelabel>
         </childnode>
-        <childnode refid="6869" relation="usage">
+        <childnode refid="6873" relation="usage">
           <edgelabel>m_labelText</edgelabel>
         </childnode>
-        <childnode refid="6870" relation="usage">
+        <childnode refid="6874" relation="usage">
           <edgelabel>m_labelFont</edgelabel>
         </childnode>
       </node>
-      <node id="6865">
+      <node id="6869">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="6866" relation="usage">
+        <childnode refid="6870" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="6864">
+      <node id="6868">
         <label>wxColour</label>
         <link refid="classwx_colour"/>
-        <childnode refid="6865" relation="public-inheritance">
+        <childnode refid="6869" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6867">
+      <node id="6871">
         <label>wxBitmap</label>
         <link refid="classwx_bitmap"/>
-        <childnode refid="6868" relation="public-inheritance">
+        <childnode refid="6872" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6868">
+      <node id="6872">
         <label>wxGDIObject</label>
         <link refid="classwx_g_d_i_object"/>
-        <childnode refid="6865" relation="public-inheritance">
+        <childnode refid="6869" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6874">
+        <label>wxFont</label>
+        <link refid="classwx_font"/>
+        <childnode refid="6872" relation="public-inheritance">
         </childnode>
       </node>
       <node id="6870">
-        <label>wxFont</label>
-        <link refid="classwx_font"/>
-        <childnode refid="6868" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="6866">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
