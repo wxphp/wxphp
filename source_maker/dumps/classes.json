@@ -1372,28 +1372,6 @@
 				]
 			}
 		],
-		"EnableCloseButton":[
-			{
-				"return_type":"bool",
-				"constant":false,
-				"virtual":true,
-				"pure_virtual":false,
-				"static":false,
-				"protected":false,
-				"parameters_type":[
-					"bool"
-				],
-				"parameters_name":[
-					"enable"
-				],
-				"parameters_required":[
-					
-				],
-				"parameters_default_value":[
-					"true"
-				]
-			}
-		],
 		"GetDefaultItem":[
 			{
 				"return_type":"wxWindow*",

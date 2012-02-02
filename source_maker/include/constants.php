@@ -560,12 +560,10 @@ $defConsts["wxSL_VERTICAL"] = true;
 //wxRadioButton
 $defConsts["wxRB_GROUP"] = true;
 $defConsts["wxRB_SINGLE"] = true;
-$defConsts["wxRB_USE_CHECKBOX"] = true;
 	
 //wxRadionBox
 $defConsts["wxRA_SPECIFY_COLS"] = true;
 $defConsts["wxRA_SPECIFY_ROWS"] = true;
-$defConsts["wxRA_USE_CHECKBOX"] = true;
 	
 //wxStaticLine
 $defConsts["wxLI_HORIZONTAL"] = true;
