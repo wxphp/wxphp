@@ -55,6 +55,9 @@ if(file_exists("dumps/includes.json"))
 {
 	$defIncludes = unserialize_json(file_get_contents("dumps/includes.json"));
 	
+	//for wxAbort()
+	$defIncludes["wx/debug.h"] = 1;
+	
 	//blacklist include files
 	unset($defIncludes["wx/msw/ole/activex.h"]);
 	unset($defIncludes["wx/aui/toolbar.h"]);

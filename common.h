@@ -370,6 +370,7 @@
 #include <wx/xrc/xmlres.h>
 #include <wx/zipstrm.h>
 #include <wx/zstream.h>
+#include <wx/debug.h>
 // <--- entries
 
 

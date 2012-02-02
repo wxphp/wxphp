@@ -377,6 +377,13 @@ class wxVideoMode_php: public wxVideoMode{
 		
 		
 	void InitProperties(){
+		properties = new void*[4];
+
+		properties[0] = &w;
+		properties[1] = &h;
+		properties[2] = &bpp;
+		properties[3] = &refresh;
+		
 	}
 	
 	zval *evnArray;
@@ -396,6 +403,7 @@ static function_entry php_wxVideoMode_functions[] = {
 	PHP_ME(php_wxVideoMode, GetWidth, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxVideoMode, GetHeight, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxVideoMode, GetDepth, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxVideoMode, __get, wxphp_cfg_get_args, ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
 

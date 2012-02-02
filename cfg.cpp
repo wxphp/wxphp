@@ -12694,6 +12694,78 @@ PHP_METHOD(php_wxVideoMode, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+PHP_METHOD(php_wxVideoMode, __get)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxVideoMode::__get\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zval **tmp;
+	int rsrc_type;
+	int parent_rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	
+	int arguments_received = ZEND_NUM_ARGS();
+	void *_this;
+	
+	char* name;
+	int name_len;
+	
+	//Get pointer of object that called this method if not a static method
+	if (getThis() != NULL) 
+	{
+		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		{
+			zend_error(E_ERROR, "Failed to get the parent object that called wxVideoMode::wxVideoMode\n");
+			
+			return;
+		}
+		else
+		{
+			id_to_find = Z_RESVAL_P(*tmp);
+			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+		}
+	}
+	else
+	{
+		zend_error(E_ERROR, "Could not process __get call as static\n");
+	}
+	
+	if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "s", &name, &name_len ) == FAILURE)
+	{
+		RETVAL_NULL();
+	}
+	
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Property to get: %s\n", name);
+	php_printf("===========================================\n\n");
+	#endif
+	
+	if(false){}
+	else if(strcmp("w", name) == 0)
+	{
+		RETVAL_LONG(*((int*)((wxVideoMode_php*) _this)->properties[0]));
+	}
+	else if(strcmp("h", name) == 0)
+	{
+		RETVAL_LONG(*((int*)((wxVideoMode_php*) _this)->properties[1]));
+	}
+	else if(strcmp("bpp", name) == 0)
+	{
+		RETVAL_LONG(*((int*)((wxVideoMode_php*) _this)->properties[2]));
+	}
+	else if(strcmp("refresh", name) == 0)
+	{
+		RETVAL_LONG(*((int*)((wxVideoMode_php*) _this)->properties[3]));
+	}
+	else
+	{
+		RETVAL_NULL();
+	}
+	
+}
 PHP_METHOD(php_wxVideoMode, Matches)
 {
 	#ifdef USE_WXPHP_DEBUG
