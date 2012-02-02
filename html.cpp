@@ -11959,43 +11959,9 @@ PHP_METHOD(php_wxHtmlTag, GetParamAsInt)
 void php_wxHtmlWindow_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling php_wxHtmlWindow_destruction_handler on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
-	php_printf("===========================================\n");
+	php_printf("Obviate php_wxHtmlWindow_destruction_handler call on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
+	php_printf("===========================================\n\n");
 	#endif
-	
-	
-	wxHtmlWindow_php* object = (wxHtmlWindow_php*)rsrc->ptr;
-	
-	if(rsrc->ptr != NULL)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
-		#endif
-		
-		if(object->references.IsUserInitialized())
-		{	
-	
-			#ifdef USE_WXPHP_DEBUG
-			php_printf("Deleting object by calling destroy\n");
-			#endif
-			
-			object->Destroy();
-			
-			rsrc->ptr = NULL;
-		}
-		
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Deletion of wxHtmlWindow done\n");
-		php_printf("===========================================\n\n");
-		#endif
-	}
-	else
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Not user space initialized\n");
-		#endif
-	}
 }
 PHP_METHOD(php_wxHtmlWindow, AppendToPage)
 {
