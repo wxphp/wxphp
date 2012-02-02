@@ -15977,43 +15977,9 @@ PHP_METHOD(php_wxToolBar, RemoveTool)
 void php_wxHScrolledWindow_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling php_wxHScrolledWindow_destruction_handler on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
-	php_printf("===========================================\n");
+	php_printf("Obviate php_wxHScrolledWindow_destruction_handler call on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
+	php_printf("===========================================\n\n");
 	#endif
-	
-	
-	wxHScrolledWindow_php* object = (wxHScrolledWindow_php*)rsrc->ptr;
-	
-	if(rsrc->ptr != NULL)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
-		#endif
-		
-		if(object->references.IsUserInitialized())
-		{	
-	
-			#ifdef USE_WXPHP_DEBUG
-			php_printf("Deleting object by calling destroy\n");
-			#endif
-			
-			object->Destroy();
-			
-			rsrc->ptr = NULL;
-		}
-		
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Deletion of wxHScrolledWindow done\n");
-		php_printf("===========================================\n\n");
-		#endif
-	}
-	else
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Not user space initialized\n");
-		#endif
-	}
 }
 PHP_METHOD(php_wxHScrolledWindow, Create)
 {
@@ -86696,43 +86662,9 @@ PHP_METHOD(php_wxWindow, SetWindowVariant)
 void php_wxWizardPage_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling php_wxWizardPage_destruction_handler on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
-	php_printf("===========================================\n");
+	php_printf("Obviate php_wxWizardPage_destruction_handler call on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
+	php_printf("===========================================\n\n");
 	#endif
-	
-	
-	wxWizardPage_php* object = (wxWizardPage_php*)rsrc->ptr;
-	
-	if(rsrc->ptr != NULL)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
-		#endif
-		
-		if(object->references.IsUserInitialized())
-		{	
-	
-			#ifdef USE_WXPHP_DEBUG
-			php_printf("Deleting object by calling destroy\n");
-			#endif
-			
-			object->Destroy();
-			
-			rsrc->ptr = NULL;
-		}
-		
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Deletion of wxWizardPage done\n");
-		php_printf("===========================================\n\n");
-		#endif
-	}
-	else
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Not user space initialized\n");
-		#endif
-	}
 }
 PHP_METHOD(php_wxWizardPage, GetBitmap)
 {
@@ -87091,43 +87023,9 @@ wxWizardPage* wxWizardPage_php::GetNext()const
 void php_wxWizardPageSimple_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling php_wxWizardPageSimple_destruction_handler on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
-	php_printf("===========================================\n");
+	php_printf("Obviate php_wxWizardPageSimple_destruction_handler call on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
+	php_printf("===========================================\n\n");
 	#endif
-	
-	
-	wxWizardPageSimple_php* object = (wxWizardPageSimple_php*)rsrc->ptr;
-	
-	if(rsrc->ptr != NULL)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
-		#endif
-		
-		if(object->references.IsUserInitialized())
-		{	
-	
-			#ifdef USE_WXPHP_DEBUG
-			php_printf("Deleting object by calling destroy\n");
-			#endif
-			
-			object->Destroy();
-			
-			rsrc->ptr = NULL;
-		}
-		
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Deletion of wxWizardPageSimple done\n");
-		php_printf("===========================================\n\n");
-		#endif
-	}
-	else
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Not user space initialized\n");
-		#endif
-	}
 }
 PHP_METHOD(php_wxWizardPageSimple, Chain)
 {

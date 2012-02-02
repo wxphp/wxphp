@@ -5052,42 +5052,9 @@ void wxAuiDockArt_php::DrawBackground(wxDC& dc, wxWindow* window, int orientatio
 void php_wxAuiManager_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling php_wxAuiManager_destruction_handler on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
-	php_printf("===========================================\n");
+	php_printf("Obviate php_wxAuiManager_destruction_handler call on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
+	php_printf("===========================================\n\n");
 	#endif
-	
-	
-	wxAuiManager_php* object = (wxAuiManager_php*)rsrc->ptr;
-	
-	if(rsrc->ptr != NULL)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
-		#endif
-		
-		if(object->references.IsUserInitialized())
-		{	
-			#ifdef USE_WXPHP_DEBUG
-			php_printf("Deleting pointer with delete\n");
-			#endif
-			
-			delete object;
-			
-			rsrc->ptr = NULL;
-		}
-		
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Deletion of wxAuiManager done\n");
-		php_printf("===========================================\n\n");
-		#endif
-	}
-	else
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Not user space initialized\n");
-		#endif
-	}
 }
 PHP_METHOD(php_wxAuiManager, __construct)
 {
