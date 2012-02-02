@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="interface_2wx_2log_8h" kind="file">
     <compoundname>log.h</compoundname>
     <innerclass refid="classwx_log_record_info" prot="public">wxLogRecordInfo</innerclass>
@@ -12,6 +12,7 @@
     <innerclass refid="classwx_log_buffer" prot="public">wxLogBuffer</innerclass>
     <innerclass refid="classwx_log_interposer" prot="public">wxLogInterposer</innerclass>
     <innerclass refid="classwx_log_text_ctrl" prot="public">wxLogTextCtrl</innerclass>
+    <innerclass refid="classwx_log_formatter" prot="public">wxLogFormatter</innerclass>
     <innerclass refid="classwx_log" prot="public">wxLog</innerclass>
     <innerclass refid="classwx_log_null" prot="public">wxLogNull</innerclass>
       <sectiondef kind="define">
@@ -21,12 +22,12 @@
         <briefdescription>
 <para>Use this macro to disable logging at debug and trace levels in release build when not using <ref refid="group__group__funcmacro__rtti_1ga967aafaa261481fe2d2e1cf599e3e003" kindref="member">wxIMPLEMENT_APP()</ref>. </para>        </briefdescription>
         <detaileddescription>
-<para><simplesect kind="see"><para><ref refid="group__group__funcmacro__debug_1ga8db18cbe95b3b42c3017a8bf048b0839" kindref="member">wxDISABLE_DEBUG_SUPPORT()</ref>, <ref refid="group__group__funcmacro__debug_1ga96e17e1bb37bec44a6608d0521abe22e" kindref="member">wxDISABLE_ASSERTS_IN_RELEASE_BUILD()</ref>, <ref refid="overview__debugging" kindref="compound">Debugging</ref></para></simplesect>
+<para><simplesect kind="see"><para><ref refid="group__group__funcmacro__debug_1ga8db18cbe95b3b42c3017a8bf048b0839" kindref="member">wxDISABLE_DEBUG_SUPPORT()</ref>, <ref refid="group__group__funcmacro__debug_1ga96e17e1bb37bec44a6608d0521abe22e" kindref="member">wxDISABLE_ASSERTS_IN_RELEASE_BUILD()</ref>, <ref refid="overview_debugging" kindref="compound">Debugging</ref></para></simplesect>
 <simplesect kind="since"><para>2.9.1</para></simplesect>
-Include file: <verbatim>#include &lt;wx/log.h&gt; </verbatim> </para>        </detaileddescription>
+Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/log.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1326" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" bodystart="1326" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1446" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" bodystart="1446" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="enum">
@@ -112,9 +113,9 @@ Include file: <verbatim>#include &lt;wx/log.h&gt; </verbatim> </para>        </d
           </detaileddescription>
         </enumvalue>
         <briefdescription>
-<para>Different standard log levels (you may also define your own) used with by standard <ref refid="classwx_log" kindref="compound">wxLog</ref> functions <ref refid="group__group__funcmacro__log_1gac47036f8bd8f711bf4646418c71828a5" kindref="member">wxLogGeneric()</ref>, <ref refid="group__group__funcmacro__log_1ga0dd3c633f990f794e76065c9a7af4c87" kindref="member">wxLogError()</ref>, <ref refid="group__group__funcmacro__log_1ga0c2b19580ef6721508e6d69534b10e90" kindref="member">wxLogWarning()</ref>, etc. </para>        </briefdescription>
+<para>Different standard log levels (you may also define your own) used with by standard <ref refid="classwx_log" kindref="compound">wxLog</ref> functions <ref refid="group__group__funcmacro__log_1gac47036f8bd8f711bf4646418c71828a5" kindref="member">wxLogGeneric()</ref>, <ref refid="group__group__funcmacro__log_1ga0dd3c633f990f794e76065c9a7af4c87" kindref="member">wxLogError()</ref>, <ref refid="group__group__funcmacro__log_1ga0c2b19580ef6721508e6d69534b10e90" kindref="member">wxLogWarning()</ref>, etc... </para>        </briefdescription>
         <detaileddescription>
-<para>.. </para>        </detaileddescription>
+        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="15" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" bodystart="14" bodyend="27"/>
@@ -168,10 +169,10 @@ Include file: <verbatim>#include &lt;wx/log.h&gt; </verbatim> </para>        </d
 </parameteritem>
 </parameterlist>
 <simplesect kind="see"><para><ref refid="group__group__funcmacro__log_1ga4ae39c06cbeaa5461cd1b5c293a31403" kindref="member">wxLogFatalError()</ref></para></simplesect>
-Include file: <verbatim>#include &lt;wx/log.h&gt; </verbatim> </para>        </detaileddescription>
+Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/log.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1092"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1212"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__log_1gaec3640fa3b46c970ff0c86fe354e59ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>unsigned long</type>
@@ -182,10 +183,10 @@ Include file: <verbatim>#include &lt;wx/log.h&gt; </verbatim> </para>        </d
 <para>Returns the error code from the last system call. </para>        </briefdescription>
         <detaileddescription>
 <para>This function uses <computeroutput>errno</computeroutput> on Unix platforms and <computeroutput>GetLastError</computeroutput> under Win32.</para><para><simplesect kind="see"><para><ref refid="group__group__funcmacro__log_1ga281928cbfd83d3558148fa75795bd48a" kindref="member">wxSysErrorMsg()</ref>, <ref refid="group__group__funcmacro__log_1ga28f01715af5aaf37caffdc5bc00fde3f" kindref="member">wxLogSysError()</ref></para></simplesect>
-Include file: <verbatim>#include &lt;wx/log.h&gt; </verbatim> </para>        </detaileddescription>
+Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/log.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1102"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1222"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__log_1ga281928cbfd83d3558148fa75795bd48a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="group__group__funcmacro__string_1gad42f64d8c82f1ce4ae58773a89b2d6a7" kindref="member">wxChar</ref> *</type>
@@ -201,10 +202,10 @@ Include file: <verbatim>#include &lt;wx/log.h&gt; </verbatim> </para>        </d
 <para>Returns the error message corresponding to the given system error code. </para>        </briefdescription>
         <detaileddescription>
 <para>If <emphasis>errCode</emphasis> is 0 (default), the last error code (as returned by <ref refid="group__group__funcmacro__log_1gaec3640fa3b46c970ff0c86fe354e59ff" kindref="member">wxSysErrorCode()</ref>) is used.</para><para><simplesect kind="see"><para><ref refid="group__group__funcmacro__log_1gaec3640fa3b46c970ff0c86fe354e59ff" kindref="member">wxSysErrorCode()</ref>, <ref refid="group__group__funcmacro__log_1ga28f01715af5aaf37caffdc5bc00fde3f" kindref="member">wxLogSysError()</ref></para></simplesect>
-Include file: <verbatim>#include &lt;wx/log.h&gt; </verbatim> </para>        </detaileddescription>
+Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/log.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1113"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1233"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__log_1gac47036f8bd8f711bf4646418c71828a5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -225,10 +226,10 @@ Include file: <verbatim>#include &lt;wx/log.h&gt; </verbatim> </para>        </d
         <briefdescription>
 <para>Logs a message with the given wxLogLevel. </para>        </briefdescription>
         <detaileddescription>
-<para>E.g. using <computeroutput>wxLOG_Message</computeroutput> as first argument, this function behaves like <ref refid="group__group__funcmacro__log_1ga249358701f3c2d410088ddf7a61d8564" kindref="member">wxLogMessage()</ref>.</para><para>Include file: <verbatim>#include &lt;wx/log.h&gt; </verbatim> </para>        </detaileddescription>
+<para>E.g. using <computeroutput>wxLOG_Message</computeroutput> as first argument, this function behaves like <ref refid="group__group__funcmacro__log_1ga249358701f3c2d410088ddf7a61d8564" kindref="member">wxLogMessage()</ref>.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/log.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1125"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1245"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__log_1gaf7fb6625d3aad758275121ed2d20808c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -253,7 +254,7 @@ Include file: <verbatim>#include &lt;wx/log.h&gt; </verbatim> </para>        </d
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1126"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1246"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__log_1ga249358701f3c2d410088ddf7a61d8564" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -270,10 +271,10 @@ Include file: <verbatim>#include &lt;wx/log.h&gt; </verbatim> </para>        </d
         <briefdescription>
 <para>For all normal, informational messages. </para>        </briefdescription>
         <detaileddescription>
-<para>They also appear in a message box by default (but it can be changed).</para><para>Include file: <verbatim>#include &lt;wx/log.h&gt; </verbatim> </para>        </detaileddescription>
+<para>They also appear in a message box by default (but it can be changed).</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/log.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1137"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1257"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__log_1gaf24c602f58052639c81ac6f9a8a50206" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -294,7 +295,7 @@ Include file: <verbatim>#include &lt;wx/log.h&gt; </verbatim> </para>        </d
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1138"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1258"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__log_1gaf57b7e28ab76bacf10b3be044e8bd634" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -311,10 +312,10 @@ Include file: <verbatim>#include &lt;wx/log.h&gt; </verbatim> </para>        </d
         <briefdescription>
 <para>For verbose output. </para>        </briefdescription>
         <detaileddescription>
-<para>Normally, it is suppressed, but might be activated if the user wishes to know more details about the program progress (another, but possibly confusing name for the same function could be <computeroutput>wxLogInfo</computeroutput>).</para><para>Include file: <verbatim>#include &lt;wx/log.h&gt; </verbatim> </para>        </detaileddescription>
+<para>Normally, it is suppressed, but might be activated if the user wishes to know more details about the program progress (another, but possibly confusing name for the same function could be <computeroutput>wxLogInfo</computeroutput>).</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/log.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1150"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1270"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__log_1ga6fdd51c170ae7c81341aa4e3ee1841ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -335,7 +336,7 @@ Include file: <verbatim>#include &lt;wx/log.h&gt; </verbatim> </para>        </d
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1151"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1271"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__log_1ga0c2b19580ef6721508e6d69534b10e90" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -352,10 +353,10 @@ Include file: <verbatim>#include &lt;wx/log.h&gt; </verbatim> </para>        </d
         <briefdescription>
 <para>For warnings - they are also normally shown to the user, but don&apos;t interrupt the program work. </para>        </briefdescription>
         <detaileddescription>
-<para>Include file: <verbatim>#include &lt;wx/log.h&gt; </verbatim> </para>        </detaileddescription>
+<para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/log.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1162"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1282"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__log_1ga580ff3e0c308e8f05d2c71fdb5adeb09" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -376,7 +377,7 @@ Include file: <verbatim>#include &lt;wx/log.h&gt; </verbatim> </para>        </d
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1163"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1283"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__log_1ga4ae39c06cbeaa5461cd1b5c293a31403" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -393,10 +394,10 @@ Include file: <verbatim>#include &lt;wx/log.h&gt; </verbatim> </para>        </d
         <briefdescription>
 <para>Like <ref refid="group__group__funcmacro__log_1ga0dd3c633f990f794e76065c9a7af4c87" kindref="member">wxLogError()</ref>, but also terminates the program with the exit code 3. </para>        </briefdescription>
         <detaileddescription>
-<para>Using <emphasis>abort()</emphasis> standard function also terminates the program with this exit code.</para><para>Include file: <verbatim>#include &lt;wx/log.h&gt; </verbatim> </para>        </detaileddescription>
+<para>Using <emphasis>abort()</emphasis> standard function also terminates the program with this exit code.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/log.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1175"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1295"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__log_1gaa5e94fb56d124f4a0cb1110818e0eac9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -417,7 +418,7 @@ Include file: <verbatim>#include &lt;wx/log.h&gt; </verbatim> </para>        </d
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1176"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1296"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__log_1ga0dd3c633f990f794e76065c9a7af4c87" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -434,10 +435,10 @@ Include file: <verbatim>#include &lt;wx/log.h&gt; </verbatim> </para>        </d
         <briefdescription>
 <para>The functions to use for error messages, i.e. </para>        </briefdescription>
         <detaileddescription>
-<para>the messages that must be shown to the user. The default processing is to pop up a message box to inform the user about it.</para><para>Include file: <verbatim>#include &lt;wx/log.h&gt; </verbatim> </para>        </detaileddescription>
+<para>the messages that must be shown to the user. The default processing is to pop up a message box to inform the user about it.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/log.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1188"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1308"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__log_1gab29663f34ac598748687e51b77155827" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -458,7 +459,7 @@ Include file: <verbatim>#include &lt;wx/log.h&gt; </verbatim> </para>        </d
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1189"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1309"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__log_1ga947e317db477914c12b13c4534867ec9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -479,7 +480,7 @@ Include file: <verbatim>#include &lt;wx/log.h&gt; </verbatim> </para>        </d
         <briefdescription>
 <para>Log a message at <computeroutput>wxLOG_Trace</computeroutput> log level (see <ref refid="interface_2wx_2log_8h_1aacf1e0ade132ca66e9414ee658c94887" kindref="member">wxLogLevelValues</ref> enum). </para>        </briefdescription>
         <detaileddescription>
-<para>Notice that the use of trace masks is not recommended any more as setting the log components (please see <ref refid="overview__log_1overview_log_enable" kindref="member">Log Messages Selection</ref>) provides a way to do the same thing for log messages of any level, and not just the tracing ones.</para><para>Like <ref refid="group__group__funcmacro__log_1ga9c530ae20eb423744f90874d2c97d02b" kindref="member">wxLogDebug()</ref>, trace functions only do something in debug builds and expand to nothing in the release one. The reason for making it a separate function is that usually there are a lot of trace messages, so it might make sense to separate them from other debug messages.</para><para>Trace messages can be separated into different categories; these functions in facts only log the message if the given <emphasis>mask</emphasis> is currently enabled in <ref refid="classwx_log" kindref="compound">wxLog</ref>. This lets you selectively trace only some operations and not others by enabling the desired trace masks with <ref refid="classwx_log_1a4c11ee23ce5264b6c5921a17610cda13" kindref="member">wxLog::AddTraceMask()</ref> or by setting the <ref refid="overview__envvars" kindref="compound"><computeroutput>WXTRACE</computeroutput> environment variable</ref>.</para><para>The predefined string trace masks used by wxWidgets are:</para><para><table rows="5" cols="2"><row>
+<para>Notice that the use of trace masks is not recommended any more as setting the log components (please see <ref refid="overview_log_1overview_log_enable" kindref="member">Log Messages Selection</ref>) provides a way to do the same thing for log messages of any level, and not just the tracing ones.</para><para>Like <ref refid="group__group__funcmacro__log_1ga9c530ae20eb423744f90874d2c97d02b" kindref="member">wxLogDebug()</ref>, trace functions only do something in debug builds and expand to nothing in the release one. The reason for making it a separate function is that usually there are a lot of trace messages, so it might make sense to separate them from other debug messages.</para><para>Trace messages can be separated into different categories; these functions in facts only log the message if the given <emphasis>mask</emphasis> is currently enabled in <ref refid="classwx_log" kindref="compound">wxLog</ref>. This lets you selectively trace only some operations and not others by enabling the desired trace masks with <ref refid="classwx_log_1a4c11ee23ce5264b6c5921a17610cda13" kindref="member">wxLog::AddTraceMask()</ref> or by setting the <ref refid="overview_envvars" kindref="compound"><computeroutput>WXTRACE</computeroutput> environment variable</ref>.</para><para>The predefined string trace masks used by wxWidgets are:</para><para><table rows="5" cols="2"><row>
 <entry thead="no"><para> wxTRACE_MemAlloc </para></entry><entry thead="no"><para>Trace memory allocation (new/delete)  </para></entry></row>
 <row>
 <entry thead="no"><para> wxTRACE_Messages </para></entry><entry thead="no"><para>Trace window messages/X callbacks  </para></entry></row>
@@ -490,10 +491,10 @@ Include file: <verbatim>#include &lt;wx/log.h&gt; </verbatim> </para>        </d
 <row>
 <entry thead="no"><para> wxTRACE_OleCalls </para></entry><entry thead="no"><para>Trace OLE method calls (Win32 only)  </para></entry></row>
 </table>
-</para><para>Include file: <verbatim>#include &lt;wx/log.h&gt; </verbatim> </para>        </detaileddescription>
+</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/log.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1225"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1345"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__log_1ga61890f9e44dff168137195c6f2aefe72" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -518,7 +519,7 @@ Include file: <verbatim>#include &lt;wx/log.h&gt; </verbatim> </para>        </d
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1226"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1346"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__log_1gae28a46b220921cd87a6f75f0842294c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -539,7 +540,7 @@ Include file: <verbatim>#include &lt;wx/log.h&gt; </verbatim> </para>        </d
         <briefdescription>
 <para>Like <ref refid="group__group__funcmacro__log_1ga9c530ae20eb423744f90874d2c97d02b" kindref="member">wxLogDebug()</ref>, trace functions only do something in debug builds and expand to nothing in the release one. </para>        </briefdescription>
         <detaileddescription>
-<para>The reason for making it a separate function is that usually there are a lot of trace messages, so it might make sense to separate them from other debug messages.</para><para><xrefsect id="deprecated_1_deprecated000030"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This version of <ref refid="group__group__funcmacro__log_1ga947e317db477914c12b13c4534867ec9" kindref="member">wxLogTrace()</ref> only logs the message if all the bits corresponding to the <emphasis>mask</emphasis> are set in the <ref refid="classwx_log" kindref="compound">wxLog</ref> trace mask which can be set by calling wxLog::SetTraceMask(). This version is less flexible than wxLogTrace(const char*,const char*,...) because it doesn&apos;t allow defining the user trace masks easily. This is why it is deprecated in favour of using string trace masks.</para></xrefdescription></xrefsect>The following bitmasks are defined for wxTraceMask:</para><para><table rows="5" cols="2"><row>
+<para>The reason for making it a separate function is that usually there are a lot of trace messages, so it might make sense to separate them from other debug messages.</para><para><xrefsect id="deprecated_1_deprecated000030"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This version of <ref refid="group__group__funcmacro__log_1ga947e317db477914c12b13c4534867ec9" kindref="member">wxLogTrace()</ref> only logs the message if all the bits corresponding to the <emphasis>mask</emphasis> are set in the <ref refid="classwx_log" kindref="compound">wxLog</ref> trace mask which can be set by calling wxLog::SetTraceMask(). This version is less flexible than wxLogTrace(const char*,const char*,...) because it doesn&apos;t allow defining the user trace masks easily. This is why it is deprecated in favour of using string trace masks.</para></xrefdescription></xrefsect></para><para>The following bitmasks are defined for wxTraceMask:</para><para><table rows="5" cols="2"><row>
 <entry thead="no"><para> wxTraceMemAlloc </para></entry><entry thead="no"><para>Trace memory allocation (new/delete)  </para></entry></row>
 <row>
 <entry thead="no"><para> wxTraceMessages </para></entry><entry thead="no"><para>Trace window messages/X callbacks  </para></entry></row>
@@ -550,10 +551,10 @@ Include file: <verbatim>#include &lt;wx/log.h&gt; </verbatim> </para>        </d
 <row>
 <entry thead="no"><para> wxTraceOleCalls </para></entry><entry thead="no"><para>Trace OLE method calls (Win32 only)  </para></entry></row>
 </table>
-</para><para>Include file: <verbatim>#include &lt;wx/log.h&gt; </verbatim> </para>        </detaileddescription>
+</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/log.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1257"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1377"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__log_1ga4e9ae81531ebbdba35a989afe5f16bd3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -578,7 +579,7 @@ Include file: <verbatim>#include &lt;wx/log.h&gt; </verbatim> </para>        </d
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1258"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1378"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__log_1ga9c530ae20eb423744f90874d2c97d02b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -595,10 +596,10 @@ Include file: <verbatim>#include &lt;wx/log.h&gt; </verbatim> </para>        </d
         <briefdescription>
 <para>The right functions for debug output. </para>        </briefdescription>
         <detaileddescription>
-<para>They only do something in debug mode (when the preprocessor symbol <computeroutput>__WXDEBUG__</computeroutput> is defined) and expand to nothing in release mode (otherwise).</para><para>Include file: <verbatim>#include &lt;wx/log.h&gt; </verbatim> </para>        </detaileddescription>
+<para>They only do something in debug mode (when the preprocessor symbol <computeroutput>__WXDEBUG__</computeroutput> is defined) and expand to nothing in release mode (otherwise).</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/log.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1270"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1390"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__log_1ga3cc30f9f86cfadf7433ad8608c80ab13" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -619,7 +620,7 @@ Include file: <verbatim>#include &lt;wx/log.h&gt; </verbatim> </para>        </d
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1271"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1391"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__log_1gac241ed1e5d13c7a552f58307c7f16691" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -640,10 +641,10 @@ Include file: <verbatim>#include &lt;wx/log.h&gt; </verbatim> </para>        </d
         <briefdescription>
 <para>Messages logged by this function will appear in the statusbar of the <emphasis>frame</emphasis> or of the top level application window by default (i.e. </para>        </briefdescription>
         <detaileddescription>
-<para>when using the second version of the functions).</para><para>If the target frame doesn&apos;t have a statusbar, the message will be lost.</para><para>Include file: <verbatim>#include &lt;wx/log.h&gt; </verbatim> </para>        </detaileddescription>
+<para>when using the second version of the functions).</para><para>If the target frame doesn&apos;t have a statusbar, the message will be lost.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/log.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1285"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1405"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__log_1gaee20d65aac7d45f58b5a02c8dfbca441" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -668,7 +669,7 @@ Include file: <verbatim>#include &lt;wx/log.h&gt; </verbatim> </para>        </d
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1286"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1406"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__log_1gadbec1e3fe9fea084a5ec8e6db40771c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -688,7 +689,7 @@ Include file: <verbatim>#include &lt;wx/log.h&gt; </verbatim> </para>        </d
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1287"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1407"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__log_1ga8bd4574562557296dc6f090543933571" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -709,7 +710,7 @@ Include file: <verbatim>#include &lt;wx/log.h&gt; </verbatim> </para>        </d
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1288"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1408"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__log_1ga28f01715af5aaf37caffdc5bc00fde3f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -727,10 +728,10 @@ Include file: <verbatim>#include &lt;wx/log.h&gt; </verbatim> </para>        </d
 <para>Mostly used by wxWidgets itself, but might be handy for logging errors after system call (API function) failure. </para>        </briefdescription>
         <detaileddescription>
 <para>It logs the specified message text as well as the last system error code (<emphasis>errno</emphasis> or <emphasis>GetLastError()</emphasis> depending on the platform) and the corresponding error message. The second form of this function takes the error code explicitly as the first argument.</para><para><simplesect kind="see"><para><ref refid="group__group__funcmacro__log_1gaec3640fa3b46c970ff0c86fe354e59ff" kindref="member">wxSysErrorCode()</ref>, <ref refid="group__group__funcmacro__log_1ga281928cbfd83d3558148fa75795bd48a" kindref="member">wxSysErrorMsg()</ref></para></simplesect>
-Include file: <verbatim>#include &lt;wx/log.h&gt; </verbatim> </para>        </detaileddescription>
+Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/log.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1305"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1425"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__log_1ga538567f50381dd09a5c91938dff7f3c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -751,7 +752,7 @@ Include file: <verbatim>#include &lt;wx/log.h&gt; </verbatim> </para>        </d
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1306"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1426"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

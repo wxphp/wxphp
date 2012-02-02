@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_activate_event" kind="class" prot="public">
     <compoundname>wxActivateEvent</compoundname>
     <basecompoundref refid="classwx_event" prot="public" virt="non-virtual">wxEvent</basecompoundref>
@@ -31,7 +31,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2810"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2831"/>
       </memberdef>
       <memberdef kind="function" id="classwx_activate_event_1acfb02665add62f2400c812905c4903fb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -44,7 +44,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2815"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2836"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -57,52 +57,52 @@
 <listitem><para>EVT_HIBERNATE(func): Process a hibernate event, supplying the member function. This event applies to <ref refid="classwx_app" kindref="compound">wxApp</ref> only, and only on Windows SmartPhone and PocketPC. It is generated when the system is low on memory; the application should free up as much memory as possible, and restore full working state when it receives a <computeroutput>wxEVT_ACTIVATE</computeroutput> or <computeroutput>wxEVT_ACTIVATE_APP</computeroutput> event. </para></listitem>
 </itemizedlist>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="overview__events" kindref="compound">Events and Event Handling</ref>, <ref refid="classwx_app_1aa3e51f8e47abc31ee00b0cdfd29b9bdf" kindref="member">wxApp::IsActive</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="overview_events" kindref="compound">Events and Event Handling</ref>, <ref refid="classwx_app_1aa3e51f8e47abc31ee00b0cdfd29b9bdf" kindref="member">wxApp::IsActive</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="4201">
+      <node id="4205">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="4200">
+      <node id="4204">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="4201" relation="public-inheritance">
+        <childnode refid="4205" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4199">
+      <node id="4203">
         <label>wxActivateEvent</label>
         <link refid="classwx_activate_event"/>
-        <childnode refid="4200" relation="public-inheritance">
+        <childnode refid="4204" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="4204">
+      <node id="4208">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="4205" relation="usage">
+        <childnode refid="4209" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="4203">
+      <node id="4207">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="4204" relation="public-inheritance">
+        <childnode refid="4208" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4202">
+      <node id="4206">
         <label>wxActivateEvent</label>
         <link refid="classwx_activate_event"/>
-        <childnode refid="4203" relation="public-inheritance">
+        <childnode refid="4207" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4205">
+      <node id="4209">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2804" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="2803" bodyend="2816"/>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2825" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="2824" bodyend="2837"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxActivateEvent</scope><name>AllocExclusive</name></member>
       <member refid="classwx_event_1a26878097a702e8d0368da150125d4158" prot="public" virt="pure-virtual"><scope>wxActivateEvent</scope><name>Clone</name></member>

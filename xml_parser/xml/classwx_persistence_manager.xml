@@ -1,11 +1,10 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_persistence_manager" kind="class" prot="public">
     <compoundname>wxPersistenceManager</compoundname>
     <includes local="no">wx/persist.h</includes>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
-      <memberdef kind="function" id="classwx_persistence_manager_1aa6a195c6e56cb6e325d2f07afb0e0a44" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classwx_persistence_manager_1aa6a195c6e56cb6e325d2f07afb0e0a44" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
           <param>
             <type>class T</type>
@@ -111,7 +110,7 @@
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/persist.h" line="70"/>
       </memberdef>
-      <memberdef kind="function" id="classwx_persistence_manager_1a94e205e486abe0001ebd15af9e81dc63" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classwx_persistence_manager_1a94e205e486abe0001ebd15af9e81dc63" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
           <param>
             <type>class T</type>
@@ -344,9 +343,9 @@
     <briefdescription>
 <para>Provides support for automatically saving and restoring object properties to persistent storage. </para>    </briefdescription>
     <detaileddescription>
-<para>This class is the central element of wxWidgets persistence framework, see <ref refid="overview__persistence" kindref="compound">Persistent Objects Overview</ref> for its overview.</para><para>This is a singleton class and its unique instance can be retrieved using <ref refid="classwx_persistence_manager_1a1d594b5905ef1c7a11ccadf348325f5b" kindref="member">Get()</ref> method.</para><para><simplesect kind="since"><para>2.9.0</para></simplesect>
+<para>This class is the central element of wxWidgets persistence framework, see <ref refid="overview_persistence" kindref="compound">Persistent Objects Overview</ref> for its overview.</para><para>This is a singleton class and its unique instance can be retrieved using <ref refid="classwx_persistence_manager_1a1d594b5905ef1c7a11ccadf348325f5b" kindref="member">Get()</ref> method.</para><para><simplesect kind="since"><para>2.9.0</para></simplesect>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref> </para>    </detaileddescription>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref> </para>    </detaileddescription>
     <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/persist.h" line="25" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/persist.h" bodystart="24" bodyend="203"/>
     <listofallmembers>
       <member refid="classwx_persistence_manager_1a5e9404d609b1ac51b3cde7d5fff29e8f" prot="public" virt="non-virtual"><scope>wxPersistenceManager</scope><name>DisableRestoring</name></member>

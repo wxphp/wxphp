@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_image_list" kind="class" prot="public">
     <compoundname>wxImageList</compoundname>
     <basecompoundref refid="classwx_object" prot="public" virt="non-virtual">wxObject</basecompoundref>
@@ -178,7 +178,7 @@
 </parameterlist>
 <simplesect kind="return"><para>The new zero-based image index.</para></simplesect>
 <simplesect kind="remark"><para>The original bitmap or icon is not affected by the <ref refid="classwx_image_list_1a697f268509e3a8d45da7506349b7533d" kindref="member">Add()</ref> operation, and can be deleted afterwards. If the bitmap is wider than the images in the list, then the bitmap will automatically be split into smaller images, each matching the dimensions of the image list. This does not apply when adding icons.</para></simplesect>
-Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page__port_1page_port_wxmsw" kindref="member">wxMSW</ref>, <ref refid="page__port_1page_port_wxosx" kindref="member">wxOSX</ref> ports.  <onlyfor>wxmsw,wxosx</onlyfor>  </para>        </detaileddescription>
+Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page_port_1page_port_wxmsw" kindref="member">wxMSW</ref>, <ref refid="page_port_1page_port_wxosx" kindref="member">wxOSX</ref> ports.  <onlyfor>wxmsw,wxosx</onlyfor>  </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/imaglist.h" line="125"/>
@@ -506,7 +506,7 @@ Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref
 </parameterlist>
 <simplesect kind="return"><para>true if the replacement was successful, false otherwise.</para></simplesect>
 <simplesect kind="remark"><para>The original bitmap or icon is not affected by the <ref refid="classwx_image_list_1ada78532ad344127e0917d363a34783a4" kindref="member">Replace()</ref> operation, and can be deleted afterwards.</para></simplesect>
-Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page__port_1page_port_wxmsw" kindref="member">wxMSW</ref>, <ref refid="page__port_1page_port_wxosx" kindref="member">wxOSX</ref> ports.  <onlyfor>wxmsw,wxosx</onlyfor>  </para>        </detaileddescription>
+Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page_port_1page_port_wxmsw" kindref="member">wxMSW</ref>, <ref refid="page_port_1page_port_wxosx" kindref="member">wxOSX</ref> ports.  <onlyfor>wxmsw,wxosx</onlyfor>  </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/imaglist.h" line="233"/>
@@ -516,35 +516,35 @@ Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref
 <para>A <ref refid="classwx_image_list" kindref="compound">wxImageList</ref> contains a list of images, which are stored in an unspecified form. </para>    </briefdescription>
     <detaileddescription>
 <para>Images can have masks for transparent drawing, and can be made from a variety of sources including bitmaps and icons.</para><para><ref refid="classwx_image_list" kindref="compound">wxImageList</ref> is used principally in conjunction with <ref refid="classwx_tree_ctrl" kindref="compound">wxTreeCtrl</ref> and <ref refid="classwx_list_ctrl" kindref="compound">wxListCtrl</ref> classes.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__gdi" kindref="compound">Graphics Device Interface (GDI)</ref></para><para><simplesect kind="see"><para><ref refid="classwx_tree_ctrl" kindref="compound">wxTreeCtrl</ref>, <ref refid="classwx_list_ctrl" kindref="compound">wxListCtrl</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__gdi" kindref="compound">Graphics Device Interface (GDI)</ref></para><para><simplesect kind="see"><para><ref refid="classwx_tree_ctrl" kindref="compound">wxTreeCtrl</ref>, <ref refid="classwx_list_ctrl" kindref="compound">wxListCtrl</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7251">
+      <node id="7255">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="7250">
+      <node id="7254">
         <label>wxImageList</label>
         <link refid="classwx_image_list"/>
-        <childnode refid="7251" relation="public-inheritance">
+        <childnode refid="7255" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7253">
+      <node id="7257">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="7254" relation="usage">
+        <childnode refid="7258" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="7252">
+      <node id="7256">
         <label>wxImageList</label>
         <link refid="classwx_image_list"/>
-        <childnode refid="7253" relation="public-inheritance">
+        <childnode refid="7257" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7254">
+      <node id="7258">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

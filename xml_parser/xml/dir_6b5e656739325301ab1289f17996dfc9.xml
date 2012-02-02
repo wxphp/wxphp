@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="dir_6b5e656739325301ab1289f17996dfc9" kind="dir">
+    <compoundname>docs/doxygen/overviews/</compoundname>
+    <innerfile refid="docs_2doxygen_2overviews_2app_8h">app.h</innerfile>
+    <innerfile refid="docs_2doxygen_2overviews_2archive_8h">archive.h</innerfile>
+    <innerfile refid="aui_8h">aui.h</innerfile>
+    <innerfile refid="backwardcompatibility_8h">backwardcompatibility.h</innerfile>
+    <innerfile refid="docs_2doxygen_2overviews_2bitmap_8h">bitmap.h</innerfile>
+    <innerfile refid="docs_2doxygen_2overviews_2bookctrl_8h">bookctrl.h</innerfile>
+    <innerfile refid="bufferclasses_8h">bufferclasses.h</innerfile>
+    <innerfile refid="changes__since28_8h">changes_since28.h</innerfile>
+    <innerfile refid="commondialogs_8h">commondialogs.h</innerfile>
+    <innerfile refid="docs_2doxygen_2overviews_2config_8h">config.h</innerfile>
+    <innerfile refid="container_8h">container.h</innerfile>
+    <innerfile refid="cpprttidisabled_8h">cpprttidisabled.h</innerfile>
+    <innerfile refid="customwidgets_8h">customwidgets.h</innerfile>
+    <innerfile refid="dataobject_8h">dataobject.h</innerfile>
+    <innerfile refid="docs_2doxygen_2overviews_2datetime_8h">datetime.h</innerfile>
+    <innerfile refid="docs_2doxygen_2overviews_2dc_8h">dc.h</innerfile>
+    <innerfile refid="debugging_8h">debugging.h</innerfile>
+    <innerfile refid="docs_2doxygen_2overviews_2dialog_8h">dialog.h</innerfile>
+    <innerfile refid="docs_2doxygen_2overviews_2dnd_8h">dnd.h</innerfile>
+    <innerfile refid="docs_2doxygen_2overviews_2docview_8h">docview.h</innerfile>
+    <innerfile refid="envvars_8h">envvars.h</innerfile>
+    <innerfile refid="eventhandling_8h">eventhandling.h</innerfile>
+    <innerfile refid="exceptions_8h">exceptions.h</innerfile>
+    <innerfile refid="docs_2doxygen_2overviews_2file_8h">file.h</innerfile>
+    <innerfile refid="filesystem_8h">filesystem.h</innerfile>
+    <innerfile refid="docs_2doxygen_2overviews_2font_8h">font.h</innerfile>
+    <innerfile refid="fontencoding_8h">fontencoding.h</innerfile>
+    <innerfile refid="docs_2doxygen_2overviews_2grid_8h">grid.h</innerfile>
+    <innerfile refid="helloworld_8h">helloworld.h</innerfile>
+    <innerfile refid="html_8h">html.h</innerfile>
+    <innerfile refid="internationalization_8h">internationalization.h</innerfile>
+    <innerfile refid="docs_2doxygen_2overviews_2ipc_8h">ipc.h</innerfile>
+    <innerfile refid="docs_2doxygen_2overviews_2listctrl_8h">listctrl.h</innerfile>
+    <innerfile refid="docs_2doxygen_2overviews_2log_8h">log.h</innerfile>
+    <innerfile refid="mbconvclasses_8h">mbconvclasses.h</innerfile>
+    <innerfile refid="nonenglish_8h">nonenglish.h</innerfile>
+    <innerfile refid="persistence_8h">persistence.h</innerfile>
+    <innerfile refid="printing_8h">printing.h</innerfile>
+    <innerfile refid="docs_2doxygen_2overviews_2propgrid_8h">propgrid.h</innerfile>
+    <innerfile refid="python_8h">python.h</innerfile>
+    <innerfile refid="refcount_8h">refcount.h</innerfile>
+    <innerfile refid="referencenotes_8h">referencenotes.h</innerfile>
+    <innerfile refid="resyntax_8h">resyntax.h</innerfile>
+    <innerfile refid="docs_2doxygen_2overviews_2richtextctrl_8h">richtextctrl.h</innerfile>
+    <innerfile refid="roughguide_8h">roughguide.h</innerfile>
+    <innerfile refid="runtimeclass_8h">runtimeclass.h</innerfile>
+    <innerfile refid="scrolling_8h">scrolling.h</innerfile>
+    <innerfile refid="docs_2doxygen_2overviews_2sizer_8h">sizer.h</innerfile>
+    <innerfile refid="splitterwindow_8h">splitterwindow.h</innerfile>
+    <innerfile refid="docs_2doxygen_2overviews_2stream_8h">stream.h</innerfile>
+    <innerfile refid="docs_2doxygen_2overviews_2string_8h">string.h</innerfile>
+    <innerfile refid="docs_2doxygen_2overviews_2thread_8h">thread.h</innerfile>
+    <innerfile refid="tips_8h">tips.h</innerfile>
+    <innerfile refid="docs_2doxygen_2overviews_2toolbar_8h">toolbar.h</innerfile>
+    <innerfile refid="docs_2doxygen_2overviews_2treectrl_8h">treectrl.h</innerfile>
+    <innerfile refid="unicode_8h">unicode.h</innerfile>
+    <innerfile refid="unixprinting_8h">unixprinting.h</innerfile>
+    <innerfile refid="validator_8h">validator.h</innerfile>
+    <innerfile refid="windowdeletion_8h">windowdeletion.h</innerfile>
+    <innerfile refid="windowids_8h">windowids.h</innerfile>
+    <innerfile refid="windowsizing_8h">windowsizing.h</innerfile>
+    <innerfile refid="windowstyles_8h">windowstyles.h</innerfile>
+    <innerfile refid="xrc_8h">xrc.h</innerfile>
+    <innerfile refid="xrc__format_8h">xrc_format.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-svn/docs/doxygen/overviews/"/>
+  </compounddef>
+</doxygen>

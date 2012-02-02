@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_metafile_d_c" kind="class" prot="public">
     <compoundname>wxMetafileDC</compoundname>
     <basecompoundref refid="classwx_d_c" prot="public" virt="non-virtual">wxDC</basecompoundref>
@@ -54,47 +54,47 @@
 <para>This is a type of device context that allows a metafile object to be created (Windows only), and has most of the characteristics of a normal <bold><ref refid="classwx_d_c" kindref="compound">wxDC</ref></bold>. </para>    </briefdescription>
     <detaileddescription>
 <para>The <ref refid="classwx_metafile_d_c_1a33b05bb7da88ada1bd4f3d4b05b1baf5" kindref="member">wxMetafileDC::Close</ref> member must be called after drawing into the device context, to return a metafile. The only purpose for this at present is to allow the metafile to be copied to the clipboard (see <ref refid="classwx_metafile" kindref="compound">wxMetafile</ref>).</para><para>Adding metafile capability to an application should be easy if you already write to a <ref refid="classwx_d_c" kindref="compound">wxDC</ref>; simply pass the <ref refid="classwx_metafile_d_c" kindref="compound">wxMetafileDC</ref> to your drawing function instead. You may wish to conditionally compile this code so it is not compiled under X (although no harm will result if you leave it in).</para><para>Note that a metafile saved to disk is in standard Windows metafile format, and cannot be imported into most applications. To make it importable, call the function <ref refid="group__group__funcmacro__gdi_1gab1948435f8ba3c1cac214e6599595c4f" kindref="member">wxMakeMetafilePlaceable</ref> after closing your disk-based metafile device context.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__dc" kindref="compound">Device Contexts</ref></para><para><simplesect kind="see"><para><ref refid="classwx_metafile" kindref="compound">wxMetafile</ref>, <ref refid="classwx_d_c" kindref="compound">wxDC</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__dc" kindref="compound">Device Contexts</ref></para><para><simplesect kind="see"><para><ref refid="classwx_metafile" kindref="compound">wxMetafile</ref>, <ref refid="classwx_d_c" kindref="compound">wxDC</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7782">
+      <node id="7788">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="7780">
+      <node id="7786">
         <label>wxMetafileDC</label>
         <link refid="classwx_metafile_d_c"/>
-        <childnode refid="7781" relation="public-inheritance">
+        <childnode refid="7787" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7781">
+      <node id="7787">
         <label>wxDC</label>
         <link refid="classwx_d_c"/>
-        <childnode refid="7782" relation="public-inheritance">
+        <childnode refid="7788" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7785">
+      <node id="7791">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="7786" relation="usage">
+        <childnode refid="7792" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="7783">
+      <node id="7789">
         <label>wxMetafileDC</label>
         <link refid="classwx_metafile_d_c"/>
-        <childnode refid="7784" relation="public-inheritance">
+        <childnode refid="7790" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7784">
+      <node id="7790">
         <label>wxDC</label>
         <link refid="classwx_d_c"/>
-        <childnode refid="7785" relation="public-inheritance">
+        <childnode refid="7791" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7786">
+      <node id="7792">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

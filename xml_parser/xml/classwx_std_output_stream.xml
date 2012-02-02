@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_std_output_stream" kind="class" prot="public">
     <compoundname>wxStdOutputStream</compoundname>
     <includes local="no">wx/stdstream.h</includes>
@@ -48,11 +48,11 @@
     <detaileddescription>
 <para>Example: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_f_file_output_stream" kindref="compound" tooltip="This class represents data written to a file.">wxFFileOutputStream</ref><sp/>file(</highlight><highlight class="stringliteral">&quot;out.txt.gz&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_zlib_output_stream" kindref="compound" tooltip="This stream compresses all data written to it.">wxZlibOutputStream</ref><sp/>gzipOutput(file,<sp/>-1,<sp/><ref refid="zstream_8h_1a64bea75633419f58a90931e19349c384af7aa5280cec791d2ee89d8fa62a6eae9" kindref="member" tooltip="gzip header and checksum, requires zlib 1.2.1+">wxZLIB_GZIP</ref>);</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_std_output_stream" kindref="compound" tooltip="wxStdOutputStream is a std::ostream derived stream which writes to a wxOutputStream...">wxStdOutputStream</ref><sp/>out(gzipOutput);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_std_output_stream" kindref="compound" tooltip="wxStdOutputStream is a std::ostream derived stream which writes to a wxOutputStream.">wxStdOutputStream</ref><sp/>out(gzipOutput);</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>out<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Hello<sp/>world!&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
 </programlisting></para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__streams" kindref="compound">Streams</ref></para><para><simplesect kind="see"><para><ref refid="classwx_output_stream" kindref="compound">wxOutputStream</ref>, <ref refid="classwx_std_output_stream_buffer" kindref="compound">wxStdOutputStreamBuffer</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__streams" kindref="compound">Streams</ref></para><para><simplesect kind="see"><para><ref refid="classwx_output_stream" kindref="compound">wxOutputStream</ref>, <ref refid="classwx_std_output_stream_buffer" kindref="compound">wxStdOutputStreamBuffer</ref> </para></simplesect>
 </para>    </detaileddescription>
     <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stdstream.h" line="175" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stdstream.h" bodystart="174" bodyend="190"/>
     <listofallmembers>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_html_parser" kind="class" prot="public">
     <compoundname>wxHtmlParser</compoundname>
     <derivedcompoundref refid="classwx_html_win_parser" prot="public" virt="non-virtual">wxHtmlWinParser</derivedcompoundref>
@@ -271,7 +271,7 @@ Example:</para><para>Imagine you want to parse following pseudo-html structure: 
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>...something...</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_Parser<sp/>-&gt;<sp/><ref refid="classwx_html_parser_1a80498b0ad245e26f6041915e9bae934a" kindref="member" tooltip="Forces the handler to handle additional tags (not returned by wxHtmlTagHandler::GetSupportedTags)...">PushTagHandler</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;PARAM&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_Parser<sp/>-&gt;<sp/><ref refid="classwx_html_parser_1a80498b0ad245e26f6041915e9bae934a" kindref="member" tooltip="Forces the handler to handle additional tags (not returned by wxHtmlTagHandler::GetSupportedTags).">PushTagHandler</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;PARAM&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ParseInner(tag);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_Parser<sp/>-&gt;<sp/><ref refid="classwx_html_parser_1a8cc9ec3e59aa0d12116988831d4708dd" kindref="member" tooltip="Restores parser&amp;#39;s state before last call to PushTagHandler().">PopTagHandler</ref>();</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
@@ -337,16 +337,16 @@ Example:</para><para>Imagine you want to parse following pseudo-html structure: 
 <para>Classes derived from this handle the <bold>generic</bold> parsing of HTML documents: it scans the document and divide it into blocks of tags (where one block consists of beginning and ending tag and of text between these two tags). </para>    </briefdescription>
     <detaileddescription>
 <para>It is independent from <ref refid="classwx_html_window" kindref="compound">wxHtmlWindow</ref> and can be used as stand-alone parser.</para><para>It uses system of tag handlers to parse the HTML document. Tag handlers are not statically shared by all instances but are created for each <ref refid="classwx_html_parser" kindref="compound">wxHtmlParser</ref> instance. The reason is that the handler may contain document-specific temporary data used during parsing (e.g. complicated structures like tables).</para><para>Typically the user calls only the <ref refid="classwx_html_parser_1ad2a0f4c4a60f7745f31a0b0bac9ceac5" kindref="member">wxHtmlParser::Parse</ref> method.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxhtml" kindref="member">wxHTML</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__html" kindref="compound">HTML</ref></para><para><simplesect kind="see"><para><ref refid="overview__html_1overview_html_cells" kindref="member">Cells and Containers</ref>, <ref refid="overview__html_1overview_html_handlers" kindref="member">Tag Handlers</ref>, <ref refid="classwx_html_tag" kindref="compound">wxHtmlTag</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxhtml" kindref="member">wxHTML</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__html" kindref="compound">HTML</ref></para><para><simplesect kind="see"><para><ref refid="overview_html_1overview_html_cells" kindref="member">Cells and Containers</ref>, <ref refid="overview_html_1overview_html_handlers" kindref="member">Tag Handlers</ref>, <ref refid="classwx_html_tag" kindref="compound">wxHtmlTag</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7099">
+      <node id="7103">
         <label>wxHtmlWinParser</label>
         <link refid="classwx_html_win_parser"/>
-        <childnode refid="7098" relation="public-inheritance">
+        <childnode refid="7102" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7098">
+      <node id="7102">
         <label>wxHtmlParser</label>
         <link refid="classwx_html_parser"/>
       </node>

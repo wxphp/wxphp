@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_archive_output_stream" kind="class" prot="public">
     <compoundname>wxArchiveOutputStream</compoundname>
     <basecompoundref refid="classwx_filter_output_stream" prot="public" virt="non-virtual">wxFilterOutputStream</basecompoundref>
@@ -165,65 +165,65 @@
 <para>This is an abstract base class which serves as a common interface to archive output streams such as <ref refid="classwx_zip_output_stream" kindref="compound">wxZipOutputStream</ref>. </para>    </briefdescription>
     <detaileddescription>
 <para><ref refid="classwx_archive_output_stream_1a4a5dd11b0dbd57b78a94315c9e841ceb" kindref="member">wxArchiveOutputStream::PutNextEntry</ref> is used to create a new entry in the output archive, then the entry&apos;s data is written to the <ref refid="classwx_archive_output_stream" kindref="compound">wxArchiveOutputStream</ref>. Another call to <ref refid="classwx_archive_output_stream_1a4a5dd11b0dbd57b78a94315c9e841ceb" kindref="member">PutNextEntry()</ref> closes the current entry and begins the next.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__archive" kindref="compound">Archive support</ref>, <ref refid="group__group__class__streams" kindref="compound">Streams</ref></para><para><simplesect kind="see"><para><ref refid="overview__archive" kindref="compound">Archive Formats</ref>, <ref refid="classwx_archive_entry" kindref="compound">wxArchiveEntry</ref>, <ref refid="classwx_archive_input_stream" kindref="compound">wxArchiveInputStream</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__archive" kindref="compound">Archive support</ref>, <ref refid="group__group__class__streams" kindref="compound">Streams</ref></para><para><simplesect kind="see"><para><ref refid="overview_archive" kindref="compound">Archive Formats</ref>, <ref refid="classwx_archive_entry" kindref="compound">wxArchiveEntry</ref>, <ref refid="classwx_archive_input_stream" kindref="compound">wxArchiveInputStream</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="4335">
+      <node id="4339">
         <label>wxZipOutputStream</label>
         <link refid="classwx_zip_output_stream"/>
-        <childnode refid="4330" relation="public-inheritance">
+        <childnode refid="4334" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4333">
+      <node id="4337">
         <label>wxStreamBase</label>
         <link refid="classwx_stream_base"/>
       </node>
-      <node id="4334">
+      <node id="4338">
         <label>wxTarOutputStream</label>
         <link refid="classwx_tar_output_stream"/>
-        <childnode refid="4330" relation="public-inheritance">
+        <childnode refid="4334" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4331">
+      <node id="4335">
         <label>wxFilterOutputStream</label>
         <link refid="classwx_filter_output_stream"/>
-        <childnode refid="4332" relation="public-inheritance">
+        <childnode refid="4336" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4332">
+      <node id="4336">
         <label>wxOutputStream</label>
         <link refid="classwx_output_stream"/>
-        <childnode refid="4333" relation="public-inheritance">
+        <childnode refid="4337" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4330">
+      <node id="4334">
         <label>wxArchiveOutputStream</label>
         <link refid="classwx_archive_output_stream"/>
-        <childnode refid="4331" relation="public-inheritance">
+        <childnode refid="4335" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="4339">
+      <node id="4343">
         <label>wxStreamBase</label>
         <link refid="classwx_stream_base"/>
       </node>
-      <node id="4337">
+      <node id="4341">
         <label>wxFilterOutputStream</label>
         <link refid="classwx_filter_output_stream"/>
-        <childnode refid="4338" relation="public-inheritance">
+        <childnode refid="4342" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4338">
+      <node id="4342">
         <label>wxOutputStream</label>
         <link refid="classwx_output_stream"/>
-        <childnode refid="4339" relation="public-inheritance">
+        <childnode refid="4343" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4336">
+      <node id="4340">
         <label>wxArchiveOutputStream</label>
         <link refid="classwx_archive_output_stream"/>
-        <childnode refid="4337" relation="public-inheritance">
+        <childnode refid="4341" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>

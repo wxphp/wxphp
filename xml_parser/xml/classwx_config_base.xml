@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_config_base" kind="class" prot="public">
     <compoundname>wxConfigBase</compoundname>
     <basecompoundref refid="classwx_object" prot="public" virt="non-virtual">wxObject</basecompoundref>
@@ -8,7 +8,7 @@
     <includes local="no">wx/config.h</includes>
       <sectiondef kind="user-defined">
       <header>Path Management</header>
-      <description><para><anchor id="_1amgrp574b1f3ef8fd8991e750e8b4fcd8a28d"/>See <ref refid="classwx_config_base_1configbase_paths" kindref="member">Path Management</ref> </para></description>
+      <description><para>See <ref refid="classwx_config_base_1configbase_paths" kindref="member">Path Management</ref> </para></description>
       <memberdef kind="function" id="classwx_config_base_1a2c76e8a110cecc4d89d3af1565044e15" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
         <definition>virtual const wxString&amp; wxConfigBase::GetPath</definition>
@@ -45,7 +45,7 @@
       </sectiondef>
       <sectiondef kind="user-defined">
       <header>Enumeration</header>
-      <description><para><anchor id="_1amgrp2958e521f3da6b41059c4369a34a2a23"/>See <ref refid="classwx_config_base_1configbase_enumeration" kindref="member">Enumeration</ref> </para></description>
+      <description><para>See <ref refid="classwx_config_base_1configbase_enumeration" kindref="member">Enumeration</ref> </para></description>
       <memberdef kind="function" id="classwx_config_base_1a1f8338dd47972d196c6475e7e1140ae7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type>bool</type>
         <definition>virtual bool wxConfigBase::GetFirstEntry</definition>
@@ -175,7 +175,6 @@
       </sectiondef>
       <sectiondef kind="user-defined">
       <header>Tests of Existence</header>
-      <description><para><anchor id="_1amgrpaac4582f8d08a695551b3ac58d926f98"/> </para></description>
       <memberdef kind="function" id="classwx_config_base_1a2ff94abfcc4907c08f5c326b6c224abd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
         <definition>bool wxConfigBase::Exists</definition>
@@ -252,7 +251,6 @@
       </sectiondef>
       <sectiondef kind="user-defined">
       <header>Miscellaneous Functions</header>
-      <description><para><anchor id="_1amgrpf5be5219a55995e13d6b8d7bf99ed653"/> </para></description>
       <memberdef kind="function" id="classwx_config_base_1a2fc0ab0516143b52a239cd2d37165c24" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
         <definition>wxString wxConfigBase::GetAppName</definition>
@@ -282,7 +280,7 @@
       </sectiondef>
       <sectiondef kind="user-defined">
       <header>Key Access</header>
-      <description><para><anchor id="_1amgrp4f021807a22a04ca258c6bdba68a1f1f"/>See <ref refid="classwx_config_base_1configbase_keyaccess" kindref="member">Key Access</ref> </para></description>
+      <description><para>See <ref refid="classwx_config_base_1configbase_keyaccess" kindref="member">Key Access</ref> </para></description>
       <memberdef kind="function" id="classwx_config_base_1a0b8cfc81de4d2534e8ab980b0fc6b9b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>bool</type>
         <definition>virtual bool wxConfigBase::Flush</definition>
@@ -484,11 +482,11 @@
         <briefdescription>
 <para>Reads a float value, returning true if the value was found. </para>        </briefdescription>
         <detaileddescription>
-<para>With the second overload, if the value was not found, <emphasis>defaultVal</emphasis> is used instead.</para><para>Notice that the value is read as a double but must be in a valid range for floats for the function to return true.</para><para><simplesect kind="since"><para>2.9.1</para></simplesect>
+<para>If the value was not found, <emphasis>f</emphasis> is not changed.</para><para>Notice that the value is read as a double but must be in a valid range for floats for the function to return true.</para><para><simplesect kind="since"><para>2.9.1</para></simplesect>
 <bold>wxPerl Note:</bold> Not supported by wxPerl. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/config.h" line="612"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/config.h" line="610"/>
       </memberdef>
       <memberdef kind="function" id="classwx_config_base_1aebbe5df968baea47a2722f5617c3e6f3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -508,17 +506,344 @@
           <declname>defaultVal</declname>
         </param>
         <briefdescription>
-<para>Permanently writes all changes (otherwise, they&apos;re only written from object&apos;s destructor). </para>        </briefdescription>
+<para>Reads a float value, returning true if the value was found. </para>        </briefdescription>
+        <detaileddescription>
+<para>If the value was not found, <emphasis>defaultVal</emphasis> is used instead.</para><para>Notice that the value is read as a double but must be in a valid range for floats for the function to return true.</para><para><simplesect kind="since"><para>2.9.1</para></simplesect>
+<bold>wxPerl Note:</bold> Not supported by wxPerl. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/config.h" line="625"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_config_base_1ae5a5e4486d889d3ba3d738f376ddd4fc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxConfigBase::Read</definition>
+        <argsstring>(const wxString &amp;key, bool *b) const </argsstring>
+        <name>Read</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>bool *</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+<para>Reads a boolean value, returning true if the value was found. </para>        </briefdescription>
+        <detaileddescription>
+<para>If the value was not found, <emphasis>b</emphasis> is not changed.</para><para><simplesect kind="since"><para>2.9.1</para></simplesect>
+<bold>wxPerl Note:</bold> Not supported by wxPerl. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/config.h" line="637"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_config_base_1acd9d5f95b52a1cf59f63d0ba39879bb0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxConfigBase::Read</definition>
+        <argsstring>(const wxString &amp;key, bool *d, bool defaultVal) const </argsstring>
+        <name>Read</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>bool *</type>
+          <declname>d</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>defaultVal</declname>
+        </param>
+        <briefdescription>
+<para>Reads a boolean value, returning true if the value was found. </para>        </briefdescription>
+        <detaileddescription>
+<para>If the value was not found, <emphasis>defaultVal</emphasis> is used instead.</para><para><bold>wxPerl Note:</bold> In wxPerl, this can be called as:<itemizedlist>
+<listitem><para>ReadBool(key): returns false if no key is found</para></listitem><listitem><para>ReadBool(key, default): returns the default value if no key is found </para></listitem></itemizedlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/config.h" line="649"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_config_base_1aeb402d8571388d67bf85d5abd0dd6641" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxConfigBase::Read</definition>
+        <argsstring>(const wxString &amp;key, wxMemoryBuffer *buf) const </argsstring>
+        <name>Read</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_memory_buffer" kindref="compound">wxMemoryBuffer</ref> *</type>
+          <declname>buf</declname>
+        </param>
+        <briefdescription>
+<para>Reads a binary block, returning true if the value was found. </para>        </briefdescription>
+        <detaileddescription>
+<para>If the value was not found, <emphasis>buf</emphasis> is not changed. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/config.h" line="654"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_config_base_1a453771fa3ba928f72d9ef6975c2e76de" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxConfigBase::Read</definition>
+        <argsstring>(const wxString &amp;key, T *value) const </argsstring>
+        <name>Read</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>T *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Reads a value of type T, for which function <ref refid="group__group__funcmacro__misc_1ga598ae7504c6436af325490b41f4b5e90" kindref="member">wxFromString()</ref> is defined, returning true if the value was found. </para>        </briefdescription>
+        <detaileddescription>
+<para>If the value was not found, <emphasis>value</emphasis> is not changed. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/config.h" line="660"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_config_base_1ac1206cb2c544b23fa9d2c983802114b5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxConfigBase::Read</definition>
+        <argsstring>(const wxString &amp;key, T *value, const T &amp;defaultVal) const </argsstring>
+        <name>Read</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>T *</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>const T &amp;</type>
+          <declname>defaultVal</declname>
+        </param>
+        <briefdescription>
+<para>Reads a value of type T, for which function <ref refid="group__group__funcmacro__misc_1ga598ae7504c6436af325490b41f4b5e90" kindref="member">wxFromString()</ref> is defined, returning true if the value was found. </para>        </briefdescription>
+        <detaileddescription>
+<para>If the value was not found, <emphasis>defaultVal</emphasis> is used instead. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/config.h" line="667"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_config_base_1a6c933c93b00ac59ffcf16f5a2e3c47a9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxConfigBase::ReadBool</definition>
+        <argsstring>(const wxString &amp;key, bool defaultVal) const </argsstring>
+        <name>ReadBool</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>defaultVal</declname>
+        </param>
+        <briefdescription>
+<para>Reads a bool value from the key and returns it. </para>        </briefdescription>
+        <detaileddescription>
+<para><emphasis>defaultVal</emphasis> is returned if the key is not found. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/config.h" line="673"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_config_base_1a82413d25fca2d006def607f14b6d45f4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double wxConfigBase::ReadDouble</definition>
+        <argsstring>(const wxString &amp;key, double defaultVal) const </argsstring>
+        <name>ReadDouble</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>defaultVal</declname>
+        </param>
+        <briefdescription>
+<para>Reads a double value from the key and returns it. </para>        </briefdescription>
+        <detaileddescription>
+<para><emphasis>defaultVal</emphasis> is returned if the key is not found. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/config.h" line="679"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_config_base_1ab876635fe7cefe7eae38a1ef330a4c49" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>long</type>
+        <definition>long wxConfigBase::ReadLong</definition>
+        <argsstring>(const wxString &amp;key, long defaultVal) const </argsstring>
+        <name>ReadLong</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>defaultVal</declname>
+        </param>
+        <briefdescription>
+<para>Reads a long value from the key and returns it. </para>        </briefdescription>
+        <detaileddescription>
+<para><emphasis>defaultVal</emphasis> is returned if the key is not found. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/config.h" line="685"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_config_base_1ac88afa67847dcf8a962e847dfaf5972a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>T</type>
+        <definition>T wxConfigBase::ReadObject</definition>
+        <argsstring>(const wxString &amp;key, T const &amp;defaultVal) const </argsstring>
+        <name>ReadObject</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>T const &amp;</type>
+          <declname>defaultVal</declname>
+        </param>
+        <briefdescription>
+<para>Reads a value of type T (for which the function <ref refid="group__group__funcmacro__misc_1ga598ae7504c6436af325490b41f4b5e90" kindref="member">wxFromString()</ref> must be defined) from the key and returns it. </para>        </briefdescription>
+        <detaileddescription>
+<para><emphasis>defaultVal</emphasis> is returned if the key is not found. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/config.h" line="692"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_config_base_1ace24f1478e71ac309ecf1d9273f19ce3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxConfigBase::Write</definition>
+        <argsstring>(const wxString &amp;key, const wxString &amp;value)</argsstring>
+        <name>Write</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Writes the <ref refid="classwx_string" kindref="compound">wxString</ref> value to the config file and returns true on success. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/config.h" line="613"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/config.h" line="698"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_config_base_1a052e7e5df90589f8094f860a9bdfd8a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxConfigBase::Write</definition>
+        <argsstring>(const wxString &amp;key, long value)</argsstring>
+        <name>Write</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Writes the long value to the config file and returns true on success. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/config.h" line="702"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_config_base_1a108d7427200466a240f8ea835e74db7b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxConfigBase::Write</definition>
+        <argsstring>(const wxString &amp;key, double value)</argsstring>
+        <name>Write</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Writes the double value to the config file and returns true on success. </para>        </briefdescription>
+        <detaileddescription>
+<para>Notice that if floating point numbers are saved as strings (as is the case with the configuration files used by <ref refid="classwx_file_config" kindref="compound">wxFileConfig</ref>), this function uses the C locale for writing out the number, i.e. it will always use a period as the decimal separator, irrespectively of the current locale. This behaviour is new since wxWidgets 2.9.1 as the current locale was used before, but the change should be transparent because both C and current locales are tried when reading the numbers back. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/config.h" line="715"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_config_base_1a97465083477038dc7d01e363c511f6cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxConfigBase::Write</definition>
+        <argsstring>(const wxString &amp;key, bool value)</argsstring>
+        <name>Write</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Writes the bool value to the config file and returns true on success. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/config.h" line="719"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_config_base_1a83efe80538c9f3e4056ae6d44d362f49" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxConfigBase::Write</definition>
+        <argsstring>(const wxString &amp;key, const wxMemoryBuffer &amp;buf)</argsstring>
+        <name>Write</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_memory_buffer" kindref="compound">wxMemoryBuffer</ref> &amp;</type>
+          <declname>buf</declname>
+        </param>
+        <briefdescription>
+<para>Writes the <ref refid="classwx_memory_buffer" kindref="compound">wxMemoryBuffer</ref> value to the config file and returns true on success. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/config.h" line="724"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_config_base_1a9ac693bd370a81d7fd0cad255869a041" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxConfigBase::Write</definition>
+        <argsstring>(const wxString &amp;key, T const &amp;buf)</argsstring>
+        <name>Write</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>T const &amp;</type>
+          <declname>buf</declname>
+        </param>
+        <briefdescription>
+<para>Writes the specified value to the config file and returns true on success. </para>        </briefdescription>
+        <detaileddescription>
+<para>The function <ref refid="group__group__funcmacro__misc_1ga0adf8026ea8ed126420a2e7ef9edc678" kindref="member">wxToString()</ref> must be defined for type <emphasis>T</emphasis>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/config.h" line="729"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
       <header>Rename Entries/Groups</header>
-      <description><para><anchor id="_1amgrp531b6090e339f16a18e9262de8c681a2"/>These functions allow renaming entries or subgroups of the current group.</para><para>They will return false on error, typically because either the entry/group with the original name doesn&apos;t exist, because the entry/group with the new name already exists or because the function is not supported in this wxConfig implementation. </para></description>
+      <description><para>These functions allow renaming entries or subgroups of the current group.</para><para>They will return false on error, typically because either the entry/group with the original name doesn&apos;t exist, because the entry/group with the new name already exists or because the function is not supported in this wxConfig implementation. </para></description>
       <memberdef kind="function" id="classwx_config_base_1a1871d5f0aec990c1552242203c5ed0c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>bool</type>
         <definition>virtual bool wxConfigBase::RenameEntry</definition>
@@ -540,7 +865,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/config.h" line="743"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/config.h" line="754"/>
       </memberdef>
       <memberdef kind="function" id="classwx_config_base_1a4f85e2947979146ccc77b42c15409834" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>bool</type>
@@ -563,12 +888,12 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/config.h" line="754"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/config.h" line="765"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
       <header>Delete Entries/Groups</header>
-      <description><para><anchor id="_1amgrp1cddafb134313fabd30e7ff7012218e7"/>These functions delete entries and/or groups of entries from the config file.</para><para><ref refid="classwx_config_base_1af2dd5ec6b56f89decf0e96b057c4846f" kindref="member">DeleteAll()</ref> is especially useful if you want to erase all traces of your program presence: for example, when you uninstall it. </para></description>
+      <description><para>These functions delete entries and/or groups of entries from the config file.</para><para><ref refid="classwx_config_base_1af2dd5ec6b56f89decf0e96b057c4846f" kindref="member">DeleteAll()</ref> is especially useful if you want to erase all traces of your program presence: for example, when you uninstall it. </para></description>
       <memberdef kind="function" id="classwx_config_base_1af2dd5ec6b56f89decf0e96b057c4846f" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>bool</type>
         <definition>virtual bool wxConfigBase::DeleteAll</definition>
@@ -576,12 +901,12 @@
         <name>DeleteAll</name>
         <reimplementedby refid="classwx_file_config_1aeb7cd89ccb242ed30506e63fd79ed82f">DeleteAll</reimplementedby>
         <briefdescription>
-<para>Delete the whole underlying object (disk file, registry key, . </para>        </briefdescription>
+<para>Delete the whole underlying object (disk file, registry key, ...). </para>        </briefdescription>
         <detaileddescription>
-<para>..). Primarily for use by uninstallation routine. </para>        </detaileddescription>
+<para>Primarily for use by uninstallation routine. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/config.h" line="772"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/config.h" line="783"/>
       </memberdef>
       <memberdef kind="function" id="classwx_config_base_1a4032a0432b4a7f956ec30dfc4f4b8593" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>bool</type>
@@ -604,7 +929,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/config.h" line="779"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/config.h" line="790"/>
       </memberdef>
       <memberdef kind="function" id="classwx_config_base_1ac66bcb140f09c8cb522d3117aa1aa0e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>bool</type>
@@ -622,17 +947,17 @@
 <para>If the current path is under the group being deleted it is changed to its deepest still existing component. E.g. if the current path is <computeroutput>&quot;/A/B/C/D&quot;</computeroutput> and the group <computeroutput>C</computeroutput> is deleted, the path becomes <computeroutput>&quot;/A/B&quot;</computeroutput>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/config.h" line="787"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/config.h" line="798"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
       <header>Options</header>
-      <description><para><anchor id="_1amgrpdae8ace18bdcbcc6ae5aece263e14fe8"/>Some aspects of <ref refid="classwx_config_base" kindref="compound">wxConfigBase</ref> behaviour can be changed during run-time.</para><para>The first of them is the expansion of environment variables in the string values read from the config file: for example, if you have the following in your config file:</para><para><programlisting><codeline><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>config<sp/>file<sp/>for<sp/>my<sp/>program</highlight></codeline>
+      <description><para>Some aspects of <ref refid="classwx_config_base" kindref="compound">wxConfigBase</ref> behaviour can be changed during run-time.</para><para>The first of them is the expansion of environment variables in the string values read from the config <ulink url="file:">file:</ulink> for example, if you have the following in your config <ulink url="file:">file:</ulink></para><para><programlisting><codeline><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>config<sp/>file<sp/>for<sp/>my<sp/>program</highlight></codeline>
 <codeline><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UserData<sp/>=<sp/>$HOME/data</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>the<sp/>following<sp/>syntax<sp/>is<sp/>valud<sp/>only<sp/>under<sp/>Windows</highlight></codeline>
 <codeline><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UserData<sp/>=<sp/>%windir%\\data.dat</highlight></codeline>
-</programlisting></para><para>The call to Read(&quot;UserData&quot;) will return something like <computeroutput>&quot;/home/zeitlin/data&quot;</computeroutput> on linux for example.</para><para>Although this feature is very useful, it may be annoying if you read a value which containts &apos;$&apos; or &apos;&apos; symbols (% is used for environment variables expansion under Windows) which are not used for environment variable expansion. In this situation you may call SetExpandEnvVars(false) just before reading this value and SetExpandEnvVars(true) just after. Another solution would be to prefix the offending symbols with a backslash. </para></description>
+</programlisting></para><para>The call to Read(&quot;UserData&quot;) will return something like <computeroutput>&quot;/home/zeitlin/data&quot;</computeroutput> on linux for example.</para><para>Although this feature is very useful, it may be annoying if you read a value which containts &apos;$&apos; or &apos;%&apos; symbols (% is used for environment variables expansion under Windows) which are not used for environment variable expansion. In this situation you may call SetExpandEnvVars(false) just before reading this value and SetExpandEnvVars(true) just after. Another solution would be to prefix the offending symbols with a backslash. </para></description>
       <memberdef kind="function" id="classwx_config_base_1a1d8cbd33d9d85caeea77de753cb25548" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
         <definition>bool wxConfigBase::IsExpandingEnvVars</definition>
@@ -644,7 +969,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/config.h" line="824"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/config.h" line="835"/>
       </memberdef>
       <memberdef kind="function" id="classwx_config_base_1ab1bc59054ac75ae688c61cd767ba6083" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -657,7 +982,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/config.h" line="829"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/config.h" line="840"/>
       </memberdef>
       <memberdef kind="function" id="classwx_config_base_1a3a8c651d2bdde14e6248b0cd85062476" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -675,7 +1000,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/config.h" line="835"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/config.h" line="846"/>
       </memberdef>
       <memberdef kind="function" id="classwx_config_base_1a80bff71cc742251419ba499ce7b4da3c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -693,7 +1018,7 @@
 <para>If on (default is off) all default values for the settings used by the program are written back to the config file. This allows the user to see what config options may be changed and is probably useful only for <ref refid="classwx_file_config" kindref="compound">wxFileConfig</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/config.h" line="846"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/config.h" line="857"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-type">
@@ -819,7 +1144,7 @@
  The style interpretation depends on the config class and is ignored by some implementations. For <ref refid="classwx_file_config" kindref="compound">wxFileConfig</ref>, these styles determine whether a local or global config file is created or used: if <computeroutput>wxCONFIG_USE_GLOBAL_FILE</computeroutput> is used, then settings are read from the global config file and if <computeroutput>wxCONFIG_USE_LOCAL_FILE</computeroutput> is used, settings are read from and written to local config file (if they are both set, global file is read first, then local file, overwriting global settings). If the flag is present but the parameter is empty, the parameter will be set to a default. If the parameter is present but the style flag not, the relevant flag will be added to the style. For <ref refid="classwx_reg_config" kindref="compound">wxRegConfig</ref>, the GLOBAL flag refers to the <computeroutput>HKLM</computeroutput> key while LOCAL one is for the usual <computeroutput>HKCU</computeroutput> one. <linebreak/>
  For <ref refid="classwx_file_config" kindref="compound">wxFileConfig</ref> you can also add <computeroutput>wxCONFIG_USE_RELATIVE_PATH</computeroutput> by logically or&apos;ing it to either of the _FILE options to tell <ref refid="classwx_file_config" kindref="compound">wxFileConfig</ref> to use relative instead of absolute paths. <linebreak/>
  On non-VMS Unix systems, the default local configuration file is &quot;~/.appname&quot;. However, this path may be also used as user data directory (see <ref refid="classwx_standard_paths_1a4752213ef4d7bdc71170b9e5c3691f0f" kindref="member">wxStandardPaths::GetUserDataDir()</ref>) if the application has several data files. In this case <computeroutput>wxCONFIG_USE_SUBDIR</computeroutput> flag, which changes the default local configuration file to &quot;~/.appname/appname&quot; should be used. Notice that this flag is ignored if <emphasis>localFilename</emphasis> is provided. <computeroutput>wxCONFIG_USE_SUBDIR</computeroutput> is new since wxWidgets version 2.8.2. <linebreak/>
- For <ref refid="classwx_file_config" kindref="compound">wxFileConfig</ref>, you can also add <computeroutput>wxCONFIG_USE_NO_ESCAPE_CHARACTERS</computeroutput> which will turn off character escaping for the values of entries stored in the config file: for example a foo key with some backslash characters will be stored as &quot;foo=C:\mydir&quot; instead of the usual storage of &quot;foo=C:\\mydir&quot;. <linebreak/>
+ For <ref refid="classwx_file_config" kindref="compound">wxFileConfig</ref>, you can also add <computeroutput>wxCONFIG_USE_NO_ESCAPE_CHARACTERS</computeroutput> which will turn off character escaping for the values of entries stored in the config <ulink url="file:">file:</ulink> for example a foo key with some backslash characters will be stored as &quot;foo=C:\mydir&quot; instead of the usual storage of &quot;foo=C:\\mydir&quot;. <linebreak/>
  The <computeroutput>wxCONFIG_USE_NO_ESCAPE_CHARACTERS</computeroutput> style can be helpful if your config file must be read or written to by a non-wxWidgets program (which might not understand the escape characters). Note, however, that if <computeroutput>wxCONFIG_USE_NO_ESCAPE_CHARACTERS</computeroutput> style is used, it is now your application&apos;s responsibility to ensure that there is no newline or other illegal characters in a value, before writing that value to the file. </para></parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -849,332 +1174,6 @@
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/config.h" line="339"/>
       </memberdef>
-      <memberdef kind="function" id="classwx_config_base_1ae5a5e4486d889d3ba3d738f376ddd4fc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type>bool</type>
-        <definition>bool wxConfigBase::Read</definition>
-        <argsstring>(const wxString &amp;key, bool *b) const </argsstring>
-        <name>Read</name>
-        <param>
-          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
-          <declname>key</declname>
-        </param>
-        <param>
-          <type>bool *</type>
-          <declname>b</declname>
-        </param>
-        <briefdescription>
-<para>Reads a float value, returning true if the value was found. </para>        </briefdescription>
-        <detaileddescription>
-<para>If the value was not found, <emphasis>b</emphasis> is not changed.</para><para><simplesect kind="since"><para>2.9.1</para></simplesect>
-<bold>wxPerl Note:</bold> Not supported by wxPerl. </para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/config.h" line="626"/>
-      </memberdef>
-      <memberdef kind="function" id="classwx_config_base_1acd9d5f95b52a1cf59f63d0ba39879bb0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type>bool</type>
-        <definition>bool wxConfigBase::Read</definition>
-        <argsstring>(const wxString &amp;key, bool *d, bool defaultVal) const </argsstring>
-        <name>Read</name>
-        <param>
-          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
-          <declname>key</declname>
-        </param>
-        <param>
-          <type>bool *</type>
-          <declname>d</declname>
-        </param>
-        <param>
-          <type>bool</type>
-          <declname>defaultVal</declname>
-        </param>
-        <briefdescription>
-<para>Reads a bool value, returning true if the value was found. </para>        </briefdescription>
-        <detaileddescription>
-<para>If the value was not found, <emphasis>defaultVal</emphasis> is used instead.</para><para><bold>wxPerl Note:</bold> In wxPerl, this can be called as:<itemizedlist>
-<listitem><para>ReadBool(key): returns false if no key is found</para></listitem><listitem><para>ReadBool(key, default): returns the default value if no key is found </para></listitem></itemizedlist>
-</para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/config.h" line="638"/>
-      </memberdef>
-      <memberdef kind="function" id="classwx_config_base_1aeb402d8571388d67bf85d5abd0dd6641" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type>bool</type>
-        <definition>bool wxConfigBase::Read</definition>
-        <argsstring>(const wxString &amp;key, wxMemoryBuffer *buf) const </argsstring>
-        <name>Read</name>
-        <param>
-          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
-          <declname>key</declname>
-        </param>
-        <param>
-          <type><ref refid="classwx_memory_buffer" kindref="compound">wxMemoryBuffer</ref> *</type>
-          <declname>buf</declname>
-        </param>
-        <briefdescription>
-<para>Reads a binary block, returning true if the value was found. </para>        </briefdescription>
-        <detaileddescription>
-<para>If the value was not found, <emphasis>buf</emphasis> is not changed. </para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/config.h" line="643"/>
-      </memberdef>
-      <memberdef kind="function" id="classwx_config_base_1a453771fa3ba928f72d9ef6975c2e76de" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type>bool</type>
-        <definition>bool wxConfigBase::Read</definition>
-        <argsstring>(const wxString &amp;key, T *value) const </argsstring>
-        <name>Read</name>
-        <param>
-          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
-          <declname>key</declname>
-        </param>
-        <param>
-          <type>T *</type>
-          <declname>value</declname>
-        </param>
-        <briefdescription>
-<para>Reads a value of type T, for which function <ref refid="group__group__funcmacro__misc_1ga598ae7504c6436af325490b41f4b5e90" kindref="member">wxFromString()</ref> is defined, returning true if the value was found. </para>        </briefdescription>
-        <detaileddescription>
-<para>If the value was not found, <emphasis>value</emphasis> is not changed. </para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/config.h" line="649"/>
-      </memberdef>
-      <memberdef kind="function" id="classwx_config_base_1ac1206cb2c544b23fa9d2c983802114b5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type>bool</type>
-        <definition>bool wxConfigBase::Read</definition>
-        <argsstring>(const wxString &amp;key, T *value, const T &amp;defaultVal) const </argsstring>
-        <name>Read</name>
-        <param>
-          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
-          <declname>key</declname>
-        </param>
-        <param>
-          <type>T *</type>
-          <declname>value</declname>
-        </param>
-        <param>
-          <type>const T &amp;</type>
-          <declname>defaultVal</declname>
-        </param>
-        <briefdescription>
-<para>Reads a value of type T, for which function <ref refid="group__group__funcmacro__misc_1ga598ae7504c6436af325490b41f4b5e90" kindref="member">wxFromString()</ref> is defined, returning true if the value was found. </para>        </briefdescription>
-        <detaileddescription>
-<para>If the value was not found, <emphasis>defaultVal</emphasis> is used instead. </para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/config.h" line="656"/>
-      </memberdef>
-      <memberdef kind="function" id="classwx_config_base_1a6c933c93b00ac59ffcf16f5a2e3c47a9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type>bool</type>
-        <definition>bool wxConfigBase::ReadBool</definition>
-        <argsstring>(const wxString &amp;key, bool defaultVal) const </argsstring>
-        <name>ReadBool</name>
-        <param>
-          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
-          <declname>key</declname>
-        </param>
-        <param>
-          <type>bool</type>
-          <declname>defaultVal</declname>
-        </param>
-        <briefdescription>
-<para>Reads a bool value from the key and returns it. </para>        </briefdescription>
-        <detaileddescription>
-<para><emphasis>defaultVal</emphasis> is returned if the key is not found. </para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/config.h" line="662"/>
-      </memberdef>
-      <memberdef kind="function" id="classwx_config_base_1a82413d25fca2d006def607f14b6d45f4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type>double</type>
-        <definition>double wxConfigBase::ReadDouble</definition>
-        <argsstring>(const wxString &amp;key, double defaultVal) const </argsstring>
-        <name>ReadDouble</name>
-        <param>
-          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
-          <declname>key</declname>
-        </param>
-        <param>
-          <type>double</type>
-          <declname>defaultVal</declname>
-        </param>
-        <briefdescription>
-<para>Reads a double value from the key and returns it. </para>        </briefdescription>
-        <detaileddescription>
-<para><emphasis>defaultVal</emphasis> is returned if the key is not found. </para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/config.h" line="668"/>
-      </memberdef>
-      <memberdef kind="function" id="classwx_config_base_1ab876635fe7cefe7eae38a1ef330a4c49" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type>long</type>
-        <definition>long wxConfigBase::ReadLong</definition>
-        <argsstring>(const wxString &amp;key, long defaultVal) const </argsstring>
-        <name>ReadLong</name>
-        <param>
-          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
-          <declname>key</declname>
-        </param>
-        <param>
-          <type>long</type>
-          <declname>defaultVal</declname>
-        </param>
-        <briefdescription>
-<para>Reads a long value from the key and returns it. </para>        </briefdescription>
-        <detaileddescription>
-<para><emphasis>defaultVal</emphasis> is returned if the key is not found. </para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/config.h" line="674"/>
-      </memberdef>
-      <memberdef kind="function" id="classwx_config_base_1ac88afa67847dcf8a962e847dfaf5972a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type>T</type>
-        <definition>T wxConfigBase::ReadObject</definition>
-        <argsstring>(const wxString &amp;key, T const &amp;defaultVal) const </argsstring>
-        <name>ReadObject</name>
-        <param>
-          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
-          <declname>key</declname>
-        </param>
-        <param>
-          <type>T const &amp;</type>
-          <declname>defaultVal</declname>
-        </param>
-        <briefdescription>
-<para>Reads a value of type T (for which the function <ref refid="group__group__funcmacro__misc_1ga598ae7504c6436af325490b41f4b5e90" kindref="member">wxFromString()</ref> must be defined) from the key and returns it. </para>        </briefdescription>
-        <detaileddescription>
-<para><emphasis>defaultVal</emphasis> is returned if the key is not found. </para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/config.h" line="681"/>
-      </memberdef>
-      <memberdef kind="function" id="classwx_config_base_1ace24f1478e71ac309ecf1d9273f19ce3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>bool</type>
-        <definition>bool wxConfigBase::Write</definition>
-        <argsstring>(const wxString &amp;key, const wxString &amp;value)</argsstring>
-        <name>Write</name>
-        <param>
-          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
-          <declname>key</declname>
-        </param>
-        <param>
-          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
-          <declname>value</declname>
-        </param>
-        <briefdescription>
-<para>Writes the <ref refid="classwx_string" kindref="compound">wxString</ref> value to the config file and returns true on success. </para>        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/config.h" line="687"/>
-      </memberdef>
-      <memberdef kind="function" id="classwx_config_base_1a052e7e5df90589f8094f860a9bdfd8a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>bool</type>
-        <definition>bool wxConfigBase::Write</definition>
-        <argsstring>(const wxString &amp;key, long value)</argsstring>
-        <name>Write</name>
-        <param>
-          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
-          <declname>key</declname>
-        </param>
-        <param>
-          <type>long</type>
-          <declname>value</declname>
-        </param>
-        <briefdescription>
-<para>Writes the long value to the config file and returns true on success. </para>        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/config.h" line="691"/>
-      </memberdef>
-      <memberdef kind="function" id="classwx_config_base_1a108d7427200466a240f8ea835e74db7b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>bool</type>
-        <definition>bool wxConfigBase::Write</definition>
-        <argsstring>(const wxString &amp;key, double value)</argsstring>
-        <name>Write</name>
-        <param>
-          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
-          <declname>key</declname>
-        </param>
-        <param>
-          <type>double</type>
-          <declname>value</declname>
-        </param>
-        <briefdescription>
-<para>Writes the double value to the config file and returns true on success. </para>        </briefdescription>
-        <detaileddescription>
-<para>Notice that if floating point numbers are saved as strings (as is the case with the configuration files used by <ref refid="classwx_file_config" kindref="compound">wxFileConfig</ref>), this function uses the C locale for writing out the number, i.e. it will always use a period as the decimal separator, irrespectively of the current locale. This behaviour is new since wxWidgets 2.9.1 as the current locale was used before, but the change should be transparent because both C and current locales are tried when reading the numbers back. </para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/config.h" line="704"/>
-      </memberdef>
-      <memberdef kind="function" id="classwx_config_base_1a97465083477038dc7d01e363c511f6cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>bool</type>
-        <definition>bool wxConfigBase::Write</definition>
-        <argsstring>(const wxString &amp;key, bool value)</argsstring>
-        <name>Write</name>
-        <param>
-          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
-          <declname>key</declname>
-        </param>
-        <param>
-          <type>bool</type>
-          <declname>value</declname>
-        </param>
-        <briefdescription>
-<para>Writes the bool value to the config file and returns true on success. </para>        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/config.h" line="708"/>
-      </memberdef>
-      <memberdef kind="function" id="classwx_config_base_1a83efe80538c9f3e4056ae6d44d362f49" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>bool</type>
-        <definition>bool wxConfigBase::Write</definition>
-        <argsstring>(const wxString &amp;key, const wxMemoryBuffer &amp;buf)</argsstring>
-        <name>Write</name>
-        <param>
-          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
-          <declname>key</declname>
-        </param>
-        <param>
-          <type>const <ref refid="classwx_memory_buffer" kindref="compound">wxMemoryBuffer</ref> &amp;</type>
-          <declname>buf</declname>
-        </param>
-        <briefdescription>
-<para>Writes the <ref refid="classwx_memory_buffer" kindref="compound">wxMemoryBuffer</ref> value to the config file and returns true on success. </para>        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/config.h" line="713"/>
-      </memberdef>
-      <memberdef kind="function" id="classwx_config_base_1a9ac693bd370a81d7fd0cad255869a041" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>bool</type>
-        <definition>bool wxConfigBase::Write</definition>
-        <argsstring>(const wxString &amp;key, T const &amp;buf)</argsstring>
-        <name>Write</name>
-        <param>
-          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
-          <declname>key</declname>
-        </param>
-        <param>
-          <type>T const &amp;</type>
-          <declname>buf</declname>
-        </param>
-        <briefdescription>
-<para>Writes the specified value to the config file and returns true on success. </para>        </briefdescription>
-        <detaileddescription>
-<para>The function <ref refid="group__group__funcmacro__misc_1ga0adf8026ea8ed126420a2e7ef9edc678" kindref="member">wxToString()</ref> must be defined for type <emphasis>T</emphasis>. </para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/config.h" line="718"/>
-      </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
       <memberdef kind="function" id="classwx_config_base_1aa7d633935adabe1bf11b5a028f8b3355" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -1188,7 +1187,7 @@
 <para>This function will create the most appropriate implementation of wxConfig available for the current platform. By default this means that the system registry will be used for storing the configuration information under MSW and a file under the user home directory (see <ref refid="classwx_standard_paths_1a7c7cf595d94d29147360d031647476b0" kindref="member">wxStandardPaths::GetUserConfigDir()</ref>) elsewhere.</para><para>If you prefer to use the configuration files everywhere, you can define <computeroutput>wxUSE_CONFIG_NATIVE</computeroutput> to 0 when compiling wxWidgets. Or you can simply always create <ref refid="classwx_file_config" kindref="compound">wxFileConfig</ref> explicitly.</para><para>Finally, if you want to create a custom wxConfig subclass you may change this function behaviour by overriding <ref refid="classwx_app_traits_1a548e252e1b2feec51a0e6f32cb69c8cd" kindref="member">wxAppTraits::CreateConfig()</ref> to create it. An example when this could be useful could be an application which could be installed either normally (in which case the default behaviour of using <ref refid="classwx_reg_config" kindref="compound">wxRegConfig</ref> is appropriate) or in a &quot;portable&quot; way in which case a <ref refid="classwx_file_config" kindref="compound">wxFileConfig</ref> with a file in the program directory would be used and the choice would be done in CreateConfig() at run-time. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/config.h" line="873"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/config.h" line="884"/>
       </memberdef>
       <memberdef kind="function" id="classwx_config_base_1a0e8ad0cb0c5b374a99b99ea6212e496b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1201,7 +1200,7 @@
 <para>It might be useful to call it near the program end to prevent &quot;accidental&quot; creation of a new config object. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/config.h" line="881"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/config.h" line="892"/>
       </memberdef>
       <memberdef kind="function" id="classwx_config_base_1a61bfb04c1c133190b3e851b252ed1c60" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_config_base" kindref="compound">wxConfigBase</ref> *</type>
@@ -1219,7 +1218,7 @@
 <para>If there is no current object and <emphasis>CreateOnDemand</emphasis> is true, this creates one (using <ref refid="classwx_config_base_1aa7d633935adabe1bf11b5a028f8b3355" kindref="member">Create()</ref>) unless <ref refid="classwx_config_base_1a0e8ad0cb0c5b374a99b99ea6212e496b" kindref="member">DontCreateOnDemand()</ref> was called previously. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/config.h" line="888"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/config.h" line="899"/>
       </memberdef>
       <memberdef kind="function" id="classwx_config_base_1a8e2ca739326f32379d6816522a5d1907" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_config_base" kindref="compound">wxConfigBase</ref> *</type>
@@ -1236,13 +1235,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/config.h" line="895"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/config.h" line="906"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para><ref refid="classwx_config_base" kindref="compound">wxConfigBase</ref> defines the basic interface of all config classes. </para>    </briefdescription>
     <detaileddescription>
-<para>It cannot be used by itself (it is an abstract base class) and you will always use one of its derivations: <ref refid="classwx_file_config" kindref="compound">wxFileConfig</ref>, <ref refid="classwx_reg_config" kindref="compound">wxRegConfig</ref> or any other.</para><para>However, usually you don&apos;t even need to know the precise nature of the class you&apos;re working with but you would just use the <ref refid="classwx_config_base" kindref="compound">wxConfigBase</ref> methods. This allows you to write the same code regardless of whether you&apos;re working with the registry under Windows or text-based config files under Unix. To make writing the portable code even easier, wxWidgets provides a typedef wxConfig which is mapped onto the native <ref refid="classwx_config_base" kindref="compound">wxConfigBase</ref> implementation on the given platform: i.e. <ref refid="classwx_reg_config" kindref="compound">wxRegConfig</ref> under Windows and <ref refid="classwx_file_config" kindref="compound">wxFileConfig</ref> otherwise.</para><para>See <ref refid="overview__config" kindref="compound">wxConfig Overview</ref> for a description of all features of this class.</para><para>It is highly recommended to use static functions <ref refid="classwx_config_base_1a61bfb04c1c133190b3e851b252ed1c60" kindref="member">Get()</ref> and/or <ref refid="classwx_config_base_1a8e2ca739326f32379d6816522a5d1907" kindref="member">Set()</ref>, so please have a look at them.</para><para>Related Include Files:</para><para><itemizedlist>
+<para>It cannot be used by itself (it is an abstract base class) and you will always use one of its derivations: <ref refid="classwx_file_config" kindref="compound">wxFileConfig</ref>, <ref refid="classwx_reg_config" kindref="compound">wxRegConfig</ref> or any other.</para><para>However, usually you don&apos;t even need to know the precise nature of the class you&apos;re working with but you would just use the <ref refid="classwx_config_base" kindref="compound">wxConfigBase</ref> methods. This allows you to write the same code regardless of whether you&apos;re working with the registry under Windows or text-based config files under Unix. To make writing the portable code even easier, wxWidgets provides a typedef wxConfig which is mapped onto the native <ref refid="classwx_config_base" kindref="compound">wxConfigBase</ref> implementation on the given platform: i.e. <ref refid="classwx_reg_config" kindref="compound">wxRegConfig</ref> under Windows and <ref refid="classwx_file_config" kindref="compound">wxFileConfig</ref> otherwise.</para><para>See <ref refid="overview_config" kindref="compound">wxConfig Overview</ref> for a description of all features of this class.</para><para>It is highly recommended to use static functions <ref refid="classwx_config_base_1a61bfb04c1c133190b3e851b252ed1c60" kindref="member">Get()</ref> and/or <ref refid="classwx_config_base_1a8e2ca739326f32379d6816522a5d1907" kindref="member">Set()</ref>, so please have a look at them.</para><para>Related Include Files:</para><para><itemizedlist>
 <listitem><para><computeroutput>&lt;<ref refid="interface_2wx_2config_8h" kindref="compound">wx/config.h</ref>&gt;</computeroutput> - Let wxWidgets choose a wxConfig class for your platform. </para></listitem>
 <listitem><para><computeroutput>&lt;wx/confbase.h&gt;</computeroutput> - Base config class. </para></listitem>
 <listitem><para><computeroutput>&lt;<ref refid="fileconf_8h" kindref="compound">wx/fileconf.h</ref>&gt;</computeroutput> - <ref refid="classwx_file_config" kindref="compound">wxFileConfig</ref> class. </para></listitem>
@@ -1254,7 +1253,7 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>portability<sp/>of<sp/>the<sp/>code</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>wxConfig<sp/>*config<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>wxConfig(</highlight><highlight class="stringliteral">&quot;MyAppName&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change...">wxString</ref><sp/>str;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change was actually the m...">wxString</ref><sp/>str;</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>config-&gt;Read(</highlight><highlight class="stringliteral">&quot;LastPrompt&quot;</highlight><highlight class="normal">,<sp/>&amp;str)<sp/>)<sp/>{</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>last<sp/>prompt<sp/>was<sp/>found<sp/>in<sp/>the<sp/>config<sp/>file/registry<sp/>and<sp/>its<sp/>value<sp/>is</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>now<sp/>in<sp/>str</highlight><highlight class="normal"></highlight></codeline>
@@ -1282,7 +1281,7 @@
 </para></sect1>
 <sect1 id="classwx_config_base_1configbase_paths">
 <title>Path Management</title>
-<para>As explained in the <ref refid="overview__config" kindref="compound">config overview</ref>, the config classes support a file system-like hierarchy of keys (files) and groups (directories). As in the file system case, to specify a key in the config class you must use a path to it. Config classes also support the notion of the current group, which makes it possible to use the relative paths. To clarify all this, here is an example (it is only for the sake of demonstration, it doesn&apos;t do anything sensible!):</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/>wxConfig<sp/>*config<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>wxConfig(</highlight><highlight class="stringliteral">&quot;FooBarApp&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<para>As explained in the <ref refid="overview_config" kindref="compound">config overview</ref>, the config classes support a file system-like hierarchy of keys (files) and groups (directories). As in the file system case, to specify a key in the config class you must use a path to it. Config classes also support the notion of the current group, which makes it possible to use the relative paths. To clarify all this, here is an example (it is only for the sake of demonstration, it doesn&apos;t do anything sensible!):</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/>wxConfig<sp/>*config<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>wxConfig(</highlight><highlight class="stringliteral">&quot;FooBarApp&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>right<sp/>now<sp/>the<sp/>current<sp/>path<sp/>is<sp/>&apos;/&apos;</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>conf-&gt;Write(</highlight><highlight class="stringliteral">&quot;RootEntry&quot;</highlight><highlight class="normal">,<sp/>1);</highlight></codeline>
@@ -1303,12 +1302,12 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__debug_1ga204cc264ee560b67e6c6467ba8ffee5f" kindref="member" tooltip="Assert macro.">wxASSERT</ref>(<sp/>conf-&gt;ReadLong(</highlight><highlight class="stringliteral">&quot;/RootEntry&quot;</highlight><highlight class="normal">,<sp/>0)<sp/>==<sp/>1<sp/>);</highlight></codeline>
 </programlisting></para><para>It is highly recommended that you restore the path to its old value on function exit:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>foo(<ref refid="classwx_config_base" kindref="compound" tooltip="wxConfigBase defines the basic interface of all config classes.">wxConfigBase</ref><sp/>*config)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change...">wxString</ref><sp/>strOldPath<sp/>=<sp/>config-&gt;<ref refid="classwx_config_base_1a2c76e8a110cecc4d89d3af1565044e15" kindref="member" tooltip="Retrieve the current path (always as absolute path).">GetPath</ref>();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change was actually the m...">wxString</ref><sp/>strOldPath<sp/>=<sp/>config-&gt;<ref refid="classwx_config_base_1a2c76e8a110cecc4d89d3af1565044e15" kindref="member" tooltip="Retrieve the current path (always as absolute path).">GetPath</ref>();</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>config-&gt;<ref refid="classwx_config_base_1ad290d3fe7fad4f39a4bb2959db89b379" kindref="member" tooltip="Set current path: if the first character is &amp;#39;/&amp;#39;, it is the absolute path...">SetPath</ref>(</highlight><highlight class="stringliteral">&quot;/Foo/Data&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>config-&gt;<ref refid="classwx_config_base_1ad290d3fe7fad4f39a4bb2959db89b379" kindref="member" tooltip="Set current path: if the first character is &amp;#39;/&amp;#39;, it is the absolute path, otherwise it is a relative ...">SetPath</ref>(</highlight><highlight class="stringliteral">&quot;/Foo/Data&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>...</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>config-&gt;<ref refid="classwx_config_base_1ad290d3fe7fad4f39a4bb2959db89b379" kindref="member" tooltip="Set current path: if the first character is &amp;#39;/&amp;#39;, it is the absolute path...">SetPath</ref>(strOldPath);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>config-&gt;<ref refid="classwx_config_base_1ad290d3fe7fad4f39a4bb2959db89b379" kindref="member" tooltip="Set current path: if the first character is &amp;#39;/&amp;#39;, it is the absolute path, otherwise it is a relative ...">SetPath</ref>(strOldPath);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 </programlisting></para><para>Otherwise the assert in the following example will surely fail (we suppose here that the foo() function is the same as above except that it doesn’t save and restore the path):</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>bar(<ref refid="classwx_config_base" kindref="compound" tooltip="wxConfigBase defines the basic interface of all config classes.">wxConfigBase</ref><sp/>*config)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
@@ -1326,13 +1325,13 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_array_string" kindref="compound" tooltip="wxArrayString is an efficient container for storing wxString objects.">wxArrayString</ref><sp/>aNames;</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>enumeration<sp/>variables</highlight><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change...">wxString</ref><sp/>str;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change was actually the m...">wxString</ref><sp/>str;</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>dummy;</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>first<sp/>enum<sp/>all<sp/>entries</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>bCont<sp/>=<sp/>config-&gt;<ref refid="classwx_config_base_1a1f8338dd47972d196c6475e7e1140ae7" kindref="member" tooltip="Gets the first entry.">GetFirstEntry</ref>(str,<sp/>dummy);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(<sp/>bCont<sp/>)<sp/>{</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>aNames.<ref refid="classwx_array_string_1af06b61455118d83a24183c3a9f6854b1" kindref="member" tooltip="Appends the given number of copies of the new item str to the array and returns the...">Add</ref>(str);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>aNames.<ref refid="classwx_array_string_1af06b61455118d83a24183c3a9f6854b1" kindref="member" tooltip="Appends the given number of copies of the new item str to the array and returns the index of the firs...">Add</ref>(str);</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bCont<sp/>=<sp/>GetConfig()-&gt;GetNextEntry(str,<sp/>dummy);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
@@ -1342,7 +1341,7 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>now<sp/>all<sp/>groups...</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>bCont<sp/>=<sp/>GetConfig()-&gt;GetFirstGroup(str,<sp/>dummy);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(<sp/>bCont<sp/>)<sp/>{</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>aNames.<ref refid="classwx_array_string_1af06b61455118d83a24183c3a9f6854b1" kindref="member" tooltip="Appends the given number of copies of the new item str to the array and returns the...">Add</ref>(str);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>aNames.<ref refid="classwx_array_string_1af06b61455118d83a24183c3a9f6854b1" kindref="member" tooltip="Appends the given number of copies of the new item str to the array and returns the index of the firs...">Add</ref>(str);</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bCont<sp/>=<sp/>GetConfig()-&gt;GetNextGroup(str,<sp/>dummy);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
@@ -1354,53 +1353,53 @@
 <para>The key access functions are the core of <ref refid="classwx_config_base" kindref="compound">wxConfigBase</ref> class: they allow you to read and write config file data. All <ref refid="classwx_config_base_1af89fb6c338f200bec028480ac0f3b1d8" kindref="member">Read()</ref> functions take a default value which will be returned if the specified key is not found in the config file.</para><para>Currently, supported types of data are: <ref refid="classwx_string" kindref="compound">wxString</ref>, <computeroutput>long</computeroutput>, <computeroutput>double</computeroutput>, <computeroutput>bool</computeroutput>, <ref refid="classwx_colour" kindref="compound">wxColour</ref> and any other types for which the functions <ref refid="group__group__funcmacro__misc_1ga0adf8026ea8ed126420a2e7ef9edc678" kindref="member">wxToString()</ref> and <ref refid="group__group__funcmacro__misc_1ga598ae7504c6436af325490b41f4b5e90" kindref="member">wxFromString()</ref> are defined.</para><para>Try not to read long values into string variables and vice versa: although it just might work with <ref refid="classwx_file_config" kindref="compound">wxFileConfig</ref>, you will get a system error with <ref refid="classwx_reg_config" kindref="compound">wxRegConfig</ref> because in the Windows registry the different types of entries are indeed used.</para><para>Final remark: the <emphasis>szKey</emphasis> parameter for all these functions can contain an arbitrary path (either relative or absolute), not just the key name.</para><para><bold>wxPython Note:</bold> In place of a single overloaded method name, wxPython implements the following methods:<itemizedlist>
 <listitem><para>Read(key, default=&quot;&quot;) - Returns a string.</para></listitem><listitem><para>ReadInt(key, default=0) - Returns an integer.</para></listitem><listitem><para>ReadFloat(key, default=0.0) - Returns a floating point number.</para></listitem><listitem><para>ReadBool(key, default=0) - Returns a boolean.</para></listitem><listitem><para>Write(key, value) - Writes a string.</para></listitem><listitem><para>WriteInt(key, value) - Writes an int.</para></listitem><listitem><para>WriteFloat(key, value) - Writes a floating point number.</para></listitem></itemizedlist>
 </para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__cfg" kindref="compound">Application and System configuration</ref></para><para><simplesect kind="see"><para><ref refid="classwx_config_path_changer" kindref="compound">wxConfigPathChanger</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__cfg" kindref="compound">Application and System configuration</ref></para><para><simplesect kind="see"><para><ref refid="classwx_config_path_changer" kindref="compound">wxConfigPathChanger</ref> </para></simplesect>
 </para></sect1>
     </detaileddescription>
     <inheritancegraph>
-      <node id="5032">
-        <label>wxConfigBase</label>
-        <link refid="classwx_config_base"/>
-        <childnode refid="5033" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="5034">
-        <label>wxFileConfig</label>
-        <link refid="classwx_file_config"/>
-        <childnode refid="5032" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="5033">
-        <label>wxObject</label>
-        <link refid="classwx_object"/>
-      </node>
-      <node id="5035">
-        <label>wxRegConfig</label>
-        <link refid="classwx_reg_config"/>
-        <childnode refid="5032" relation="public-inheritance">
-        </childnode>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
       <node id="5036">
         <label>wxConfigBase</label>
         <link refid="classwx_config_base"/>
         <childnode refid="5037" relation="public-inheritance">
         </childnode>
       </node>
+      <node id="5038">
+        <label>wxFileConfig</label>
+        <link refid="classwx_file_config"/>
+        <childnode refid="5036" relation="public-inheritance">
+        </childnode>
+      </node>
       <node id="5037">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="5038" relation="usage">
+      </node>
+      <node id="5039">
+        <label>wxRegConfig</label>
+        <link refid="classwx_reg_config"/>
+        <childnode refid="5036" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="5040">
+        <label>wxConfigBase</label>
+        <link refid="classwx_config_base"/>
+        <childnode refid="5041" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5041">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="5042" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="5038">
+      <node id="5042">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/config.h" line="262" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/config.h" bodystart="261" bodyend="896"/>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/config.h" line="262" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/config.h" bodystart="261" bodyend="907"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxConfigBase</scope><name>AllocExclusive</name></member>
       <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxConfigBase</scope><name>CloneRefData</name></member>

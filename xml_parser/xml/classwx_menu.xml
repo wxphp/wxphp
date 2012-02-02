@@ -1,11 +1,10 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_menu" kind="class" prot="public">
     <compoundname>wxMenu</compoundname>
     <basecompoundref refid="classwx_evt_handler" prot="public" virt="non-virtual">wxEvtHandler</basecompoundref>
     <includes local="no">wx/menu.h</includes>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_menu_1a5266450b24b4bf492a94a3f4dbaa4083" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>wxMenuItemList &amp;</type>
         <definition>wxMenuItemList&amp; wxMenu::GetMenuItems</definition>
@@ -17,7 +16,7 @@
 <para>wxMenuItemList is a pseudo-template list class containing <ref refid="classwx_menu_item" kindref="compound">wxMenuItem</ref> pointers, see wxList. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="810"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="819"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_1aff5d3dc4b171e18bbe2747bbf383f924" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const wxMenuItemList &amp;</type>
@@ -30,7 +29,7 @@
 <para>wxMenuItemList is a pseudo-template list class containing <ref refid="classwx_menu_item" kindref="compound">wxMenuItem</ref> pointers, see wxList. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="811"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="820"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -45,7 +44,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="487"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="496"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_1a462f0ad758ef3d32b8a6a2a1d9c5c43f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -70,7 +69,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="495"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="504"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_1a9a6afd553257ebd8040305f21ec6094e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -107,7 +106,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="505"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="514"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_1aae41b3780cb9e0966fbfb4d67438be78" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -121,7 +120,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="518"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="527"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_1ab8b9fe9baabeb67cf3eaa70df072f7c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_menu_item" kindref="compound">wxMenuItem</ref> *</type>
@@ -186,7 +185,7 @@ Example: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="554"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="563"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_1a8e321445e4f0449fc7e1e9db2d191c56" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_menu_item" kindref="compound">wxMenuItem</ref> *</type>
@@ -213,7 +212,7 @@ Example: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/
         <briefdescription>
 <para>Adds a submenu. </para>        </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000039"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This function is deprecated, use <ref refid="classwx_menu_1a6e5821042919502670e8fdab77a5f7a8" kindref="member">AppendSubMenu()</ref> instead.</para></xrefdescription></xrefsect><parameterlist kind="param"><parameteritem>
+<para><xrefsect id="deprecated_1_deprecated000039"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This function is deprecated, use <ref refid="classwx_menu_1a6e5821042919502670e8fdab77a5f7a8" kindref="member">AppendSubMenu()</ref> instead.</para></xrefdescription></xrefsect></para><para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>id</parametername>
 </parameternamelist>
@@ -246,7 +245,7 @@ Example: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="577"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="586"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_1a72f5110d10ac1b3253e651cc9baa02da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_menu_item" kindref="compound">wxMenuItem</ref> *</type>
@@ -273,7 +272,7 @@ Example: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="598"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="607"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_1a0e2986e5c03907990504337493221baf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_menu_item" kindref="compound">wxMenuItem</ref> *</type>
@@ -300,7 +299,7 @@ Example: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="606"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="615"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_1a3ec8da997f0969d6df4f2394af6a9580" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_menu_item" kindref="compound">wxMenuItem</ref> *</type>
@@ -328,7 +327,7 @@ Example: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="618"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="627"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_1ac4027fc18854f535171ea32f416fc667" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_menu_item" kindref="compound">wxMenuItem</ref> *</type>
@@ -342,7 +341,7 @@ Example: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="625"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="634"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_1a6e5821042919502670e8fdab77a5f7a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_menu_item" kindref="compound">wxMenuItem</ref> *</type>
@@ -368,7 +367,7 @@ Example: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/
 <para><emphasis>text</emphasis> is the text shown in the menu for it and <emphasis>help</emphasis> is the help string shown in the status bar when the submenu item is selected. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="633"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="642"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_1a3728d2f96ee825b042e0b6d0e08d21d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -381,7 +380,7 @@ Example: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="639"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="648"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_1a3a5a76d1ee332a40919941870529b49f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -418,7 +417,7 @@ Example: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="651"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="660"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_1ad0478a386aa0f55b568686fc8837d00e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -444,7 +443,7 @@ Example: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="662"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="671"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_1a8d88695161c09b8a43d2b1cf98defd85" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -470,7 +469,7 @@ Example: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="673"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="682"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_1ab30d479e9c8651d64b7c8fc30701aa8d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -496,7 +495,7 @@ Example: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="685"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="694"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_1a72bf5c0fa9af6227245930a06afdc19b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -522,7 +521,7 @@ Example: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="697"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="706"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_1ae2a468532c454371d556d61efca7c002" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -559,7 +558,7 @@ Example: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="709"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="718"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_1a6b881350060c42800192cf21cbf5a306" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_menu_item" kindref="compound">wxMenuItem</ref> *</type>
@@ -597,7 +596,7 @@ Example: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="726"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="735"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_1a99e2de0d3f273049de7413f09f289311" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>int</type>
@@ -624,7 +623,7 @@ Example: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="739"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="748"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_1ae8844fd2df14981d8699792c3a405806" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_menu_item" kindref="compound">wxMenuItem</ref> *</type>
@@ -662,7 +661,7 @@ Example: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="753"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="762"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_1aa9f61cb5c2b0340ddefb2951aeb5220d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_menu_item" kindref="compound">wxMenuItem</ref> *</type>
@@ -679,7 +678,7 @@ Example: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="758"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="767"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_1a45ae0ae8a1ceed683cbdb0e311989316" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -706,7 +705,7 @@ Example: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="771"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="780"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_1ae912f9dec96a0bd585fe562938447d7d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -733,7 +732,7 @@ Example: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="783"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="792"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_1a4e7e80816f09526dc2e0a5982b597fb5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -760,7 +759,7 @@ Example: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="796"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="805"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_1a8679baecdcb22c6a38fd1ed9f4e8b00a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -773,7 +772,7 @@ Example: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="801"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="810"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_1a4350ea455980ea08d4d3104f69ef4bcb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -787,7 +786,7 @@ Example: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="819"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="828"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_1aec84d928bf461c59739e0e4fc7a27bbe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_menu_item" kindref="compound">wxMenuItem</ref> *</type>
@@ -809,7 +808,7 @@ Example: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="829"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="838"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_1ae8dc1329976f47eeb01449854de0fa64" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_menu_item" kindref="compound">wxMenuItem</ref> *</type>
@@ -846,7 +845,7 @@ Example: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="842"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="851"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_1a0f1f3c5b9c349381cf89169c74251461" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_menu_item" kindref="compound">wxMenuItem</ref> *</type>
@@ -877,7 +876,7 @@ Example: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="850"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="859"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_1a1016a10b8df49297cf4ccc970d5106aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_menu_item" kindref="compound">wxMenuItem</ref> *</type>
@@ -908,7 +907,7 @@ Example: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="858"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="867"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_1a77b3060d593f1f971edb5a321c5bd9bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_menu_item" kindref="compound">wxMenuItem</ref> *</type>
@@ -926,7 +925,7 @@ Example: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="865"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="874"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_1a088f0097e2077518e60200f80232e291" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -953,7 +952,7 @@ Example: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="877"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="886"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_1a1a89a50690ce163d6190c7f5612e4150" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -980,7 +979,7 @@ Example: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="889"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="898"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_1a90dcfb20e389dc012bdf16c6ffefcfc9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_menu_item" kindref="compound">wxMenuItem</ref> *</type>
@@ -998,7 +997,7 @@ Example: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="897"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="906"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_1ae471a4163a4e7728b9606401fb83ca30" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_menu_item" kindref="compound">wxMenuItem</ref> *</type>
@@ -1031,7 +1030,7 @@ Example: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="907"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="916"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_1a78e1f3d62ab06ceab597a9ce9417aaad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_menu_item" kindref="compound">wxMenuItem</ref> *</type>
@@ -1058,7 +1057,7 @@ Example: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="915"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="924"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_1ad9ded06125e436b72cb7feb1e09e3ebd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_menu_item" kindref="compound">wxMenuItem</ref> *</type>
@@ -1085,7 +1084,7 @@ Example: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="923"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="932"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_1a39fda27c82a2b27c11cfbc947c3aa822" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_menu_item" kindref="compound">wxMenuItem</ref> *</type>
@@ -1099,7 +1098,7 @@ Example: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="930"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="939"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_1a6ff3ffdbc67efce1f8d1752a5b86f6f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_menu_item" kindref="compound">wxMenuItem</ref> *</type>
@@ -1125,7 +1124,7 @@ Example: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="942"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="951"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_1a322767cb3c67a51354b5410c4ab61823" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_menu_item" kindref="compound">wxMenuItem</ref> *</type>
@@ -1151,7 +1150,7 @@ Example: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="954"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="963"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_1afaad5f31ec3abcf830ecdf2532c6e98b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -1188,7 +1187,7 @@ Example: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="966"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="975"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_1aec7c82f4c6fa18187c25b3797590a9d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1225,7 +1224,7 @@ Example: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="978"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="987"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_1aa8b3117231c244d4952a641fb3e9a272" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -1252,7 +1251,7 @@ Example: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="992"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="1001"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_1aedd1c1536176ffec144f7e8bea85bd89" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1270,7 +1269,7 @@ Example: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/
 <para>This is called just before the menu is popped up with <ref refid="classwx_window_1a8f715d238cf74a845488b0e2645e98df" kindref="member">wxWindow::PopupMenu</ref>, but the application may call it at other times if required. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="1001"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="1010"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_1a1c459fa87f5c52afc7b5d717e846cce4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1287,7 +1286,7 @@ Example: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="1004"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="1013"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_1a8def14f7694a66397a79c62307502dfd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
@@ -1300,7 +1299,7 @@ Example: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="1005"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="1014"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_1ae69e4bd42e9e806a269143f10845d2d4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
@@ -1313,7 +1312,7 @@ Example: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="1006"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="1015"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_1ac45bbbfb4955c62a9af1982aed661856" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>long</type>
@@ -1326,7 +1325,7 @@ Example: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="1007"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="1016"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_1a7873255a269c036348d6af33629d118b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1343,7 +1342,7 @@ Example: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="1008"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="1017"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_1abfba34a537e6a69ee6531e333dfbeacb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_menu" kindref="compound">wxMenu</ref> *</type>
@@ -1356,7 +1355,7 @@ Example: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="1009"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="1018"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_1a15faea06e13e6751f561d4edd6b1052e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -1373,7 +1372,7 @@ Example: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="1011"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="1020"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_1a19a7de8fd10b2cd24c6387b02762fecd" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -1386,7 +1385,7 @@ Example: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="1012"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="1021"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_1a61bfe5dbf23efd8d98af0cd5101b9359" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1399,13 +1398,13 @@ Example: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="1013"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="1022"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para>A menu is a popup (or pull down) list of items, one of which may be selected before the menu goes away (clicking elsewhere dismisses the menu). </para>    </briefdescription>
     <detaileddescription>
-<para>Menus may be used to construct either menu bars or popup menus.</para><para>A menu item has an integer ID associated with it which can be used to identify the selection, or to change the menu item in some way. A menu item with a special identifier <emphasis>wxID_SEPARATOR</emphasis> is a separator item and doesn&apos;t have an associated command but just makes a separator line appear in the menu.</para><para><simplesect kind="note"><para>Please note that <emphasis>wxID_ABOUT</emphasis> and <emphasis>wxID_EXIT</emphasis> are predefined by wxWidgets and have a special meaning since entries using these IDs will be taken out of the normal menus under MacOS X and will be inserted into the system menu (following the appropriate MacOS X interface guideline). On PalmOS <emphasis>wxID_EXIT</emphasis> is disabled according to Palm OS Companion guidelines.</para></simplesect>
+<para>Menus may be used to construct either menu bars or popup menus.</para><para>A menu item has an integer ID associated with it which can be used to identify the selection, or to change the menu item in some way. A menu item with a special identifier <emphasis>wxID_SEPARATOR</emphasis> is a separator item and doesn&apos;t have an associated command but just makes a separator line appear in the menu.</para><para><simplesect kind="note"><para>Please note that <emphasis>wxID_ABOUT</emphasis> and <emphasis>wxID_EXIT</emphasis> are predefined by wxWidgets and have a special meaning since entries using these IDs will be taken out of the normal menus under MacOS X and will be inserted into the system menu (following the appropriate MacOS X interface guideline).</para></simplesect>
 Menu items may be either <emphasis>normal</emphasis> items, <emphasis>check</emphasis> items or <emphasis>radio</emphasis> items. Normal items don&apos;t have any special properties while the check items have a boolean flag associated to them and they show a checkmark in the menu when the flag is set. wxWidgets automatically toggles the flag value when the item is clicked and its value may be retrieved using either <ref refid="classwx_menu_1a088f0097e2077518e60200f80232e291" kindref="member">wxMenu::IsChecked</ref> method of <ref refid="classwx_menu" kindref="compound">wxMenu</ref> or <ref refid="classwx_menu_bar" kindref="compound">wxMenuBar</ref> itself or by using wxEvent::IsChecked when you get the menu notification for the item in question.</para><para>The radio items are similar to the check items except that all the other items in the same radio group are unchecked when a radio item is checked. The radio group is formed by a contiguous range of radio items, i.e. it starts at the first item of this kind and ends with the first item of a different kind (or the end of the menu). Notice that because the radio groups are defined in terms of the item positions inserting or removing the items in the menu containing the radio items risks to not work correctly.</para><sect1 id="classwx_menu_1menu_allocation">
 <title>Allocation strategy</title>
 <para>All menus must be created on the <bold>heap</bold> because all menus attached to a menubar or to another menu will be deleted by their parent when it is deleted. The only exception to this rule are the popup menus (i.e. menus used with <ref refid="classwx_window_1a8f715d238cf74a845488b0e2645e98df" kindref="member">wxWindow::PopupMenu()</ref>) as wxWidgets does not destroy them to allow reusing the same menu more than once. But the exception applies only to the menus themselves and not to any submenus of popup menus which are still destroyed by wxWidgets as usual and so must be heap-allocated.</para><para>As the frame menubar is deleted by the frame itself, it means that normally all menus used are deleted automatically.</para></sect1>
@@ -1413,66 +1412,66 @@ Menu items may be either <emphasis>normal</emphasis> items, <emphasis>check</emp
 <title>Event handling</title>
 <para>If the menu is part of a menubar, then <ref refid="classwx_menu_bar" kindref="compound">wxMenuBar</ref> event processing is used.</para><para>With a popup menu (see <ref refid="classwx_window_1a8f715d238cf74a845488b0e2645e98df" kindref="member">wxWindow::PopupMenu</ref>), there is a variety of ways to handle a menu selection event (<computeroutput>wxEVT_COMMAND_MENU_SELECTED</computeroutput>):<itemizedlist>
 <listitem><para>Provide <computeroutput>EVT_MENU</computeroutput> handlers in the window which pops up the menu, or in an ancestor of that window (the simplest method);</para></listitem><listitem><para>Derive a new class from <ref refid="classwx_menu" kindref="compound">wxMenu</ref> and define event table entries using the <computeroutput>EVT_MENU</computeroutput> macro;</para></listitem><listitem><para>Set a new event handler for <ref refid="classwx_menu" kindref="compound">wxMenu</ref>, through <ref refid="classwx_evt_handler_1a68e2ef2d2b7d68c4c9c18ca92933031b" kindref="member">wxEvtHandler::SetNextHandler</ref>, specifying an object whose class has <computeroutput>EVT_MENU</computeroutput> entries;</para></listitem></itemizedlist>
-</para><para>Note that instead of static <computeroutput>EVT_MENU</computeroutput> macros you can also use dynamic connection; see <ref refid="overview__events_1overview_events_bind" kindref="member">Dynamic Event Handling</ref>.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__menus" kindref="compound">Menus</ref></para><para><simplesect kind="see"><para><ref refid="classwx_menu_bar" kindref="compound">wxMenuBar</ref>, <ref refid="classwx_window_1a8f715d238cf74a845488b0e2645e98df" kindref="member">wxWindow::PopupMenu</ref>, <ref refid="overview__events" kindref="compound">Events and Event Handling</ref>, <ref refid="classwx_file_history" kindref="compound">wxFileHistory (most recently used files menu)</ref> </para></simplesect>
+</para><para>Note that instead of static <computeroutput>EVT_MENU</computeroutput> macros you can also use dynamic connection; see <ref refid="overview_events_1overview_events_bind" kindref="member">Dynamic Event Handling</ref>.</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__menus" kindref="compound">Menus</ref></para><para><simplesect kind="see"><para><ref refid="classwx_menu_bar" kindref="compound">wxMenuBar</ref>, <ref refid="classwx_window_1a8f715d238cf74a845488b0e2645e98df" kindref="member">wxWindow::PopupMenu</ref>, <ref refid="overview_events" kindref="compound">Events and Event Handling</ref>, <ref refid="classwx_file_history" kindref="compound">wxFileHistory (most recently used files menu)</ref> </para></simplesect>
 </para></sect1>
     </detaileddescription>
     <inheritancegraph>
-      <node id="7698">
+      <node id="7704">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="7697">
+      <node id="7703">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="7698" relation="public-inheritance">
+        <childnode refid="7704" relation="public-inheritance">
         </childnode>
-        <childnode refid="7699" relation="public-inheritance">
+        <childnode refid="7705" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7699">
+      <node id="7705">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="7696">
+      <node id="7702">
         <label>wxMenu</label>
         <link refid="classwx_menu"/>
-        <childnode refid="7697" relation="public-inheritance">
+        <childnode refid="7703" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7702">
+      <node id="7708">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="7703" relation="usage">
+        <childnode refid="7709" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="7701">
+      <node id="7707">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="7702" relation="public-inheritance">
+        <childnode refid="7708" relation="public-inheritance">
         </childnode>
-        <childnode refid="7704" relation="public-inheritance">
+        <childnode refid="7710" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7704">
+      <node id="7710">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="7700">
+      <node id="7706">
         <label>wxMenu</label>
         <link refid="classwx_menu"/>
-        <childnode refid="7701" relation="public-inheritance">
+        <childnode refid="7707" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7703">
+      <node id="7709">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="481" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" bodystart="480" bodyend="1015"/>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" line="490" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menu.h" bodystart="489" bodyend="1024"/>
     <listofallmembers>
       <member refid="classwx_evt_handler_1a7dc3c701781f4044372049de5004137e" prot="public" virt="non-virtual"><scope>wxMenu</scope><name>AddFilter</name></member>
       <member refid="classwx_evt_handler_1a0737c6d2cbcd5ded4b1ecdd53ed0def3" prot="public" virt="virtual"><scope>wxMenu</scope><name>AddPendingEvent</name></member>

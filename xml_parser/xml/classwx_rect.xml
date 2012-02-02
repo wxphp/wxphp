@@ -1,10 +1,9 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_rect" kind="class" prot="public">
     <compoundname>wxRect</compoundname>
     <includes local="no">wx/gdicmn.h</includes>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_rect_1a93c3b1008b8e35396cdc979cbcf0074a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_rect" kindref="compound">wxRect</ref></type>
         <definition>wxRect wxRect::CentreIn</definition>
@@ -51,7 +50,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_rect_1ae06d8b6c01e87c37b6b1c6f71a2c1533" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_rect" kindref="compound">wxRect</ref> &amp;</type>
         <definition>wxRect&amp; wxRect::Deflate</definition>
@@ -130,7 +128,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_rect_1acc7657b99635a18702941bd9879ff6d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_rect" kindref="compound">wxRect</ref> &amp;</type>
         <definition>wxRect&amp; wxRect::Inflate</definition>
@@ -221,7 +218,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_rect_1a90f2b9450cf08cf81afe66e502814902" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void wxRect::Offset</definition>
@@ -262,7 +258,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_rect_1a95e3855565f269bd2c4c080f35150cc9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_rect" kindref="compound">wxRect</ref></type>
         <definition>wxRect wxRect::Union</definition>
@@ -299,7 +294,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_rect_1adfaa87d437f100daeff323aaade49509" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_rect" kindref="compound">wxRect</ref></type>
         <definition>wxRect wxRect::operator+</definition>
@@ -340,7 +334,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_rect_1a93f30b20426ff0231ba3da0099a792ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_rect" kindref="compound">wxRect</ref></type>
         <definition>wxRect wxRect::operator*</definition>
@@ -989,7 +982,7 @@
 <para>A class for manipulating rectangles. </para>    </briefdescription>
     <detaileddescription>
 <para>Note that the x, y coordinates and the width and height stored inside a <ref refid="classwx_rect" kindref="compound">wxRect</ref> object may be negative and that <ref refid="classwx_rect" kindref="compound">wxRect</ref> functions do not perform any check against negative values.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__data" kindref="compound">Data Structures</ref></para><para><simplesect kind="see"><para><ref refid="classwx_point" kindref="compound">wxPoint</ref>, <ref refid="classwx_size" kindref="compound">wxSize</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__data" kindref="compound">Data Structures</ref></para><para><simplesect kind="see"><para><ref refid="classwx_point" kindref="compound">wxPoint</ref>, <ref refid="classwx_size" kindref="compound">wxSize</ref> </para></simplesect>
 </para>    </detaileddescription>
     <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="212" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" bodystart="211" bodyend="507"/>
     <listofallmembers>

@@ -1,11 +1,10 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_text_attr" kind="class" prot="public">
     <compoundname>wxTextAttr</compoundname>
     <derivedcompoundref refid="classwx_rich_text_attr" prot="public" virt="non-virtual">wxRichTextAttr</derivedcompoundref>
     <includes local="no">wx/textctrl.h</includes>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_text_attr_1a7870ad57a4430b83a9478adeda20c6ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
         <definition>wxTextAttr::wxTextAttr</definition>
@@ -17,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="261"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="263"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1a5b170edc90897e56fcf2b0338b3c2d04" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -49,7 +48,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="265"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="267"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1a56e913249eb032aa4184f26ebdbca454" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -66,12 +65,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="266"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="268"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
       <header>GetXXX functions</header>
-      <description><para><anchor id="_1amgrp50f10800930dea0e58f4014dc8428c13"/> </para></description>
       <memberdef kind="function" id="classwx_text_attr_1ab0f49cffe224ce8acd62471db15b277b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="textctrl_8h_1acf93ad4eb51199602dc2af60ca78b4e5" kindref="member">wxTextAttrAlignment</ref></type>
         <definition>wxTextAttrAlignment wxTextAttr::GetAlignment</definition>
@@ -83,7 +81,7 @@
 <para>See <ref refid="textctrl_8h_1acf93ad4eb51199602dc2af60ca78b4e5" kindref="member">wxTextAttrAlignment</ref> for a list of available styles. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="301"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="303"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1a0b3f4382033cd5e1b95e366cb9c86ead" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_colour" kindref="compound">wxColour</ref> &amp;</type>
@@ -96,7 +94,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="306"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="308"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1a733d80f70f89ecd0003a7ea669956cb4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -109,7 +107,7 @@
 <para>Only valid for attributes with wxTEXT_ATTR_BULLET_SYMBOL. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="312"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="314"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1a21f8a11195c05e1aefa78ed1906be90e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -125,7 +123,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="330"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="332"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1aca52c79660aa10e103ebeeeb666264ba" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -138,7 +136,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="335"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="337"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1a634074fb2f2f599b81c02bfb58ff4d55" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -151,7 +149,7 @@
 <para>See <ref refid="textctrl_8h_1a99ffd353a510e2b6aea0c58e27d25d16" kindref="member">wxTextAttrBulletStyle</ref> for a list of available styles. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="341"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="343"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1a8d8caeba84fd76427d56041cccca1455" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -164,7 +162,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="347"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="349"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1ad542a59be4d4738ab94a9e02e2784658" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -177,7 +175,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="352"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="354"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1a1747861ffa52bf1d2715b5acdb8a9ae0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>long</type>
@@ -190,7 +188,7 @@
 <para>See <ref refid="classwx_text_attr_1a315ebbc5a41840a0777a7716fc19f5f0" kindref="member">SetFlags()</ref> for a list of available flags. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="358"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="360"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1a3137309e77a7816651e3d13edb25ae3e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_font" kindref="compound">wxFont</ref></type>
@@ -203,7 +201,7 @@
 <para>Note that <ref refid="classwx_text_attr" kindref="compound">wxTextAttr</ref> does not store a <ref refid="classwx_font" kindref="compound">wxFont</ref> object, so this is only a temporary font.</para><para>For greater efficiency, access the font attributes directly. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="367"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="369"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1a1d7e71c2dbee4ceb320befbef52db965" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -225,7 +223,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="374"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="376"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1a27336a62dae57ede252ba6edf5ddd6f2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="interface_2wx_2font_8h_1a09016a7497d1ec6defdf13fd6439acca" kindref="member">wxFontEncoding</ref></type>
@@ -238,7 +236,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="379"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="381"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1a9b80f0310ee7fbdbbd5fd3c31559b6db" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -251,7 +249,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="384"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="386"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1a0a8f439132bf4d924015742df5ac1165" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="interface_2wx_2font_8h_1a0cd7bfd21a4f901245d3c86d8ea0c080" kindref="member">wxFontFamily</ref></type>
@@ -264,7 +262,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="389"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="391"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1a8c064bc2a9c62117942d4b21acc2d5d9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -277,7 +275,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="394"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="396"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1acfeb3e3d91c68e7621c875beece0905c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="interface_2wx_2font_8h_1ab8f87d0b928ad1f8cba7d1c01f5f7a55" kindref="member">wxFontStyle</ref></type>
@@ -290,7 +288,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="399"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="401"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1a1d91cca5f166286357650dc03c4668cd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -303,7 +301,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="404"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="406"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1ab37ab9c6031901a24b7fdeebb803ab90" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="interface_2wx_2font_8h_1a7cc37d08c7e84370f4fcc175b557a022" kindref="member">wxFontWeight</ref></type>
@@ -316,7 +314,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="409"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="411"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1a89763b698abc881f696dca4526a29b66" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>long</type>
@@ -329,7 +327,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="414"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="416"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1a310743501608c0b4f54dbd17d86a4b5b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>long</type>
@@ -342,7 +340,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="419"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="421"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1a9d12bfd2004b6801040df91f32eb4793" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -355,7 +353,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="424"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="426"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1ae6b61f98f2f1bdf0f502e41d2f1d1151" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -368,7 +366,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="429"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="431"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1ad447907f035271ceee06be92a5a3359e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -381,7 +379,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="434"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="436"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1a5b886080622061e5bba79629849d41b9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -394,7 +392,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="439"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="441"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1a2ab594c6a1cd35643378cf096831d5b4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -407,7 +405,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="444"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="446"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1a0d3f3c73730d831baaed961774996a57" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -420,7 +418,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="449"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="451"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1a437dd8fd73f6574302929dcb634e52ee" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>long</type>
@@ -433,7 +431,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="454"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="456"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1aa919eeacdd5441b6bc3ff47ebda83614" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="dynarray_8h_1add87f199292e36ee87efd6d7f0d4ee66" kindref="member">wxArrayInt</ref> &amp;</type>
@@ -446,7 +444,7 @@
 <para>Each stop is measured from the left margin and therefore each value must be larger than the last. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="462"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="464"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1a1546950cb567f3b79185dd447c076260" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_colour" kindref="compound">wxColour</ref> &amp;</type>
@@ -459,7 +457,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="467"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="469"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1affabbaf788dbe38beba220c7cf276ef9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -472,7 +470,7 @@
 <para>See <ref refid="classwx_text_attr_1a315ebbc5a41840a0777a7716fc19f5f0" kindref="member">SetFlags()</ref> for further information. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="473"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="475"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1a8fda642aac717eb3838ae974dd4d6c4a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -485,7 +483,7 @@
 <para>See <ref refid="classwx_text_attr_1a218521c1b968212fc97e474dd5a563ef" kindref="member">SetTextEffects()</ref> for details. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="479"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="481"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1a9b482db6269b8cc296b30cb611a13774" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -498,12 +496,11 @@
 <para>Content with <emphasis>wxTEXT_ATTR_URL</emphasis> style causes <ref refid="classwx_rich_text_ctrl" kindref="compound">wxRichTextCtrl</ref> to show a hand cursor over it, and <ref refid="classwx_rich_text_ctrl" kindref="compound">wxRichTextCtrl</ref> generates a wxTextUrlEvent when the content is clicked. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="488"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="490"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
       <header>HasXXX and IsXXX functions</header>
-      <description><para><anchor id="_1amgrp4f29107f86641c3f05e4b7289ceb520e"/> </para></description>
       <memberdef kind="function" id="classwx_text_attr_1ac631934ecced3ecf78b80aa191281b9c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
         <definition>bool wxTextAttr::HasAlignment</definition>
@@ -515,7 +512,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="503"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="505"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1ab4270cbdbd5e8f3d408718158b5a1494" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -528,7 +525,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="508"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="510"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1aebf5e3983d6ec7efa9180d9008a86b2c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -541,7 +538,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="513"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="515"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1a43854424d7fde9de0405a327257f6df1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -554,7 +551,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="518"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="520"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1aa93ddcf79d276ecf7002b63588e9d77d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -567,7 +564,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="523"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="525"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1a686728380a5c0e6a4a71a9fccf111235" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -580,7 +577,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="529"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="531"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1aeb4d8384250f68a954817a2cfeae0028" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -593,7 +590,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="534"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="536"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1ae594ec9754c87ef29fc777eb2fae3189" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -610,7 +607,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="540"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="542"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1a2c431011c991a4586cfa917b88c84218" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -623,7 +620,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="545"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="547"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1a3d77963186b8f731fdf84c3b291c2a98" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -636,7 +633,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="550"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="552"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1a770789977995d48030a665ab4645620f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -649,7 +646,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="555"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="557"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1adc1f72b1ba35c1025747358d327eb777" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -662,7 +659,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="560"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="562"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1aab6bd38be197524352bb973899006ba1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -675,7 +672,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="565"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="567"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1a4ac79bebd390cdb034005bc0f7f7f7a3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -688,7 +685,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="570"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="572"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1a2a1f85a77cd2c21b6a1740bbbbb73797" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -701,7 +698,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="576"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="578"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1a33be0ba8ca34d3565d625387eedc9fe5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -714,7 +711,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="582"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="584"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1ac39f84707dee3b3d4e6bf402caade666" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -727,7 +724,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="587"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="589"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1a5193a83e4723a8e2a4a264b23d334322" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -740,7 +737,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="592"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="594"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1adec8f24dc80322380d06e05d0acb5fc7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -753,7 +750,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="597"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="599"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1a3332b547d28ecbd6d08f6d5459c2490f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -766,7 +763,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="602"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="604"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1abe497ee08d188f66846cff474d48f539" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -779,7 +776,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="608"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="610"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1a8a44886d5f6e045d63baa8f700ecf167" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -792,7 +789,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="613"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="615"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1a92be5b65fb96e04e6b818bb958384cf6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -805,7 +802,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="618"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="620"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1a0df20af39510522a8c1ecf6c89b0f03b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -818,7 +815,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="623"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="625"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1a8678885d78a0066ddbb12bd35efcdb0f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -831,7 +828,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="628"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="630"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1aa9c16a77e22066bf76d88a42934debc1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -844,7 +841,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="633"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="635"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1a20fcaab9d88003757a3ffd9a99d435a9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -857,7 +854,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="638"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="640"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1a3d87d267f90ecbd642ceb1557115e690" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -870,7 +867,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="643"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="645"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1a1e3e9571437aa092d61222190da3a533" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -883,7 +880,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="648"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="650"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1a7f06104958808cec1e35d41b4fa1e4c8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -896,7 +893,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="654"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="656"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1af00ba72e7fac57ad295292afcb53131e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -909,7 +906,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="659"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="661"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1a627204d5ac26c49695510e3c2261a41c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -922,12 +919,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="666"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="668"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
       <header>SetXXX functions</header>
-      <description><para><anchor id="_1amgrpb6f9327ea053e1fb4bbc00d992d1b19b"/> </para></description>
       <memberdef kind="function" id="classwx_text_attr_1ad22769d681321bd8b7d51bff12c238c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void wxTextAttr::SetAlignment</definition>
@@ -943,7 +939,7 @@
 <para>See <ref refid="textctrl_8h_1acf93ad4eb51199602dc2af60ca78b4e5" kindref="member">wxTextAttrAlignment</ref> enumeration values.</para><para>Of these, wxTEXT_ALIGNMENT_JUSTIFIED is unimplemented. In future justification may be supported when printing or previewing, only. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="683"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="685"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1a3d904c5febccbd613c732715df6cd21a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -960,7 +956,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="688"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="690"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1a274986a65fd546e4218fa6a44aae7598" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -977,7 +973,7 @@
 <para>Only valid for attributes with wxTEXT_ATTR_BULLET_SYMBOL. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="694"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="696"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1a3b8e03167ff4decd0191c5bff1772edd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -994,7 +990,7 @@
 <para>See <ref refid="classwx_text_attr_1a21f8a11195c05e1aefa78ed1906be90e" kindref="member">GetBulletName()</ref> for a list of supported names, and how to expand the range of supported types. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="703"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="705"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1ad6ac93c015e64cc539d319b69b8cc5da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1011,7 +1007,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="708"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="710"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1a90b42b4243c71f3c9a7eb5a2bbdbbb3f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1028,7 +1024,7 @@
 <para>The <ref refid="textctrl_8h_1a99ffd353a510e2b6aea0c58e27d25d16" kindref="member">wxTextAttrBulletStyle</ref> enumeration values are all supported, except for wxTEXT_ATTR_BULLET_STYLE_BITMAP. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="716"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="718"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1ab11b0110911a8fe9784da56080ae1da2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1045,7 +1041,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="722"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="724"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1ac1bff41f48307ba58f2cc5713ca10bd3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1062,7 +1058,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="727"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="729"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1a315ebbc5a41840a0777a7716fc19f5f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1079,7 +1075,7 @@
 <para>The <ref refid="textctrl_8h_1a5544b853914845e9d6453501951d60c2" kindref="member">wxTextAttrFlags</ref> values can be passed in a bitlist. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="733"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="735"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1a12d6cd64d373280777f47813fe24c7b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1101,7 +1097,7 @@
 <para>Note that <ref refid="classwx_text_attr" kindref="compound">wxTextAttr</ref> does not store an actual <ref refid="classwx_font" kindref="compound">wxFont</ref> object. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="739"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="741"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1adf26b0a5f9b8afe389821bfddf661a01" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1118,7 +1114,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="744"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="746"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1a5465b67ad2924cbc4730a6c2343e6562" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1135,7 +1131,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="749"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="751"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1a41aaad6d92c1bda6e3494878616dc940" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1152,7 +1148,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="754"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="756"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1a914d5bcb7725c7893d6fb938d9bf5e85" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1169,7 +1165,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="759"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="761"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1a9be42b1260cdfa3af4cea0a60a76b3d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1186,7 +1182,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="764"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="766"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1a9bdb4ac861b4892d57069d976c552fdc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1203,7 +1199,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="769"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="771"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1ae26221f629f2ebc146ba1433a67d2b6b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1220,7 +1216,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="774"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="776"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1a090d97a13d48d9455d5d9e449f7a4072" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1242,7 +1238,7 @@
 <para>The sub-indent is an offset from the left of the paragraph, and is used for all but the first line in a paragraph.</para><para>A positive value will cause the first line to appear to the left of the subsequent lines, and a negative value will cause the first line to be indented relative to the subsequent lines.</para><para><ref refid="classwx_rich_text_buffer" kindref="compound">wxRichTextBuffer</ref> uses indentation to render a bulleted item. The left indent is the distance between the margin and the bullet. The content of the paragraph, including the first line, starts at leftMargin + leftSubIndent. So the distance between the left edge of the bullet and the left of the actual paragraph is leftSubIndent. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="792"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="794"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1a469fe33ac4acd9f83a00d621c2bd6cf6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1259,7 +1255,7 @@
 <para><emphasis>spacing</emphasis> is a multiple, where 10 means single-spacing, 15 means 1.5 spacing, and 20 means double spacing. The <ref refid="textctrl_8h_1a52a6f973ecbac9d2a4249d1ca58bd172" kindref="member">wxTextAttrLineSpacing</ref> values are defined for convenience. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="799"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="801"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1a9b7939948ed563c3ab0c02aa832cc743" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1276,7 +1272,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="804"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="806"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1a24d5f8a632dcd1a09eb3910207816963" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1293,7 +1289,7 @@
 <para>Zero represents normal text. At present, the outline level is not used, but may be used in future for determining list levels and for applications that need to store document structure information. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="812"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="814"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1a47bf936ecf8d900eb6b5798cd45d8474" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1311,7 +1307,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="817"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="819"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1aaf87a0f02c53ded0a2b8a34e6ff6ff1c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1328,7 +1324,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="822"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="824"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1a78f2cfaa80010b4470b42404d5fa7cb8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1345,7 +1341,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="827"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="829"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1adfa8e1c11e933576314546316d28e37d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1362,7 +1358,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="832"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="834"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1a7fd4f5eb19852c6908ca173c4e350887" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1379,7 +1375,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="837"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="839"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1ad21e66c498c5a60e3603d71938b8c772" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1396,7 +1392,7 @@
 <para>Each stop is measured from the left margin and therefore each value must be larger than the last. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="844"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="846"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1ae3d74ce2e7057146911eb0360d451082" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1413,7 +1409,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="849"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="851"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1aaa361390da3d932aaa6a1c67875aff02" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1430,7 +1426,7 @@
 <para>You should also pass wxTEXT_ATTR_EFFECTS to <ref refid="classwx_text_attr_1a315ebbc5a41840a0777a7716fc19f5f0" kindref="member">SetFlags()</ref>. See <ref refid="classwx_text_attr_1a315ebbc5a41840a0777a7716fc19f5f0" kindref="member">SetFlags()</ref> for further information. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="857"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="859"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1a218521c1b968212fc97e474dd5a563ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1447,7 +1443,7 @@
 <para>The <ref refid="textctrl_8h_1a7c69f4858cb8754f2c36a03e86f8cb31" kindref="member">wxTextAttrEffects</ref> enumeration values can be used.</para><para>Of these, only wxTEXT_ATTR_EFFECT_CAPITALS, wxTEXT_ATTR_EFFECT_STRIKETHROUGH, wxTEXT_ATTR_EFFECT_SUPERSCRIPT and wxTEXT_ATTR_EFFECT_SUBSCRIPT are implemented.</para><para>wxTEXT_ATTR_EFFECT_CAPITALS capitalises text when displayed (leaving the case of the actual buffer text unchanged), and wxTEXT_ATTR_EFFECT_STRIKETHROUGH draws a line through text.</para><para>To set effects, you should also pass wxTEXT_ATTR_EFFECTS to <ref refid="classwx_text_attr_1a315ebbc5a41840a0777a7716fc19f5f0" kindref="member">SetFlags()</ref>, and call <ref refid="classwx_text_attr_1aaa361390da3d932aaa6a1c67875aff02" kindref="member">SetTextEffectFlags()</ref> with the styles (taken from the above set) that you are interested in setting. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="874"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="876"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1aad62bd5f3d6f1b9ea78360f06947a8c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1464,7 +1460,7 @@
 <para>Sets the wxTEXT_ATTR_URL style; content with this style causes <ref refid="classwx_rich_text_ctrl" kindref="compound">wxRichTextCtrl</ref> to show a hand cursor over it, and <ref refid="classwx_rich_text_ctrl" kindref="compound">wxRichTextCtrl</ref> generates a wxTextUrlEvent when the content is clicked. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="881"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="883"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -1488,7 +1484,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="274"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="276"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1a591d90d4a675dcbdcd57bbef5557669b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1505,7 +1501,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="279"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="281"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_1a164c2ebff039d5c4ed0dff275e15ad95" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1523,7 +1519,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="889"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="891"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -1546,28 +1542,28 @@
 <para>Properties defined in <emphasis>overlay</emphasis> take precedence over those in <emphasis>base</emphasis>. Properties undefined/invalid in both are undefined in the result. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="288"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="290"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para><ref refid="classwx_text_attr" kindref="compound">wxTextAttr</ref> represents the character and paragraph attributes, or style, for a range of text in a <ref refid="classwx_text_ctrl" kindref="compound">wxTextCtrl</ref> or <ref refid="classwx_rich_text_ctrl" kindref="compound">wxRichTextCtrl</ref>. </para>    </briefdescription>
     <detaileddescription>
 <para>When setting up a <ref refid="classwx_text_attr" kindref="compound">wxTextAttr</ref> object, pass a bitlist mask to <ref refid="classwx_text_attr_1a315ebbc5a41840a0777a7716fc19f5f0" kindref="member">wxTextAttr::SetFlags()</ref> to indicate which style elements should be changed. As a convenience, when you call a setter such as SetFont, the relevant bit will be set.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__richtext" kindref="compound">Rich Text</ref></para><para><simplesect kind="see"><para><ref refid="classwx_text_ctrl" kindref="compound">wxTextCtrl</ref>, <ref refid="classwx_rich_text_ctrl" kindref="compound">wxRichTextCtrl</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__richtext" kindref="compound">Rich Text</ref></para><para><simplesect kind="see"><para><ref refid="classwx_text_ctrl" kindref="compound">wxTextCtrl</ref>, <ref refid="classwx_rich_text_ctrl" kindref="compound">wxRichTextCtrl</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10679">
+      <node id="10739">
         <label>wxTextAttr</label>
         <link refid="classwx_text_attr"/>
       </node>
-      <node id="10680">
+      <node id="10740">
         <label>wxRichTextAttr</label>
         <link refid="classwx_rich_text_attr"/>
-        <childnode refid="10679" relation="public-inheritance">
+        <childnode refid="10739" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="255" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" bodystart="254" bodyend="890"/>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="257" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" bodystart="256" bodyend="892"/>
     <listofallmembers>
       <member refid="classwx_text_attr_1a9601bfb3fb57a4595f122617c525d9fc" prot="public" virt="non-virtual"><scope>wxTextAttr</scope><name>Apply</name></member>
       <member refid="classwx_text_attr_1ab0f49cffe224ce8acd62471db15b277b" prot="public" virt="non-virtual"><scope>wxTextAttr</scope><name>GetAlignment</name></member>

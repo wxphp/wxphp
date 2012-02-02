@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_accessible" kind="class" prot="public">
     <compoundname>wxAccessible</compoundname>
     <basecompoundref refid="classwx_object" prot="public" virt="non-virtual">wxObject</basecompoundref>
@@ -483,36 +483,36 @@
     <briefdescription>
 <para>The <ref refid="classwx_accessible" kindref="compound">wxAccessible</ref> class allows wxWidgets applications, and wxWidgets itself, to return extended information about user interface elements to client applications such as screen readers. </para>    </briefdescription>
     <detaileddescription>
-<para>This is the main way in which wxWidgets implements accessibility features.</para><para>At present, only Microsoft Active Accessibility is supported by this class.</para><para>To use this class, derive from <ref refid="classwx_accessible" kindref="compound">wxAccessible</ref>, implement appropriate functions, and associate an object of the class with a window using <ref refid="classwx_window_1a413220ead41f05a2ec2cfe10b3d573df" kindref="member">wxWindow::SetAccessible</ref>.</para><para>All functions return an indication of success, failure, or not implemented using values of the wxAccStatus enum type.</para><para>If you return <computeroutput>wxACC_NOT_IMPLEMENTED</computeroutput> from any function, the system will try to implement the appropriate functionality. However this will not work with all functions.</para><para>Most functions work with an object <emphasis>id</emphasis>, which can be zero to refer to &apos;this&apos; UI element, or greater than zero to refer to the nth child element. This allows you to specify elements that don&apos;t have a corresponding <ref refid="classwx_window" kindref="compound">wxWindow</ref> or <ref refid="classwx_accessible" kindref="compound">wxAccessible</ref>; for example, the sash of a splitter window.</para><para>For details on the semantics of functions and types, please refer to the Microsoft Active Accessibility 1.2 documentation.</para><para>This class is compiled into wxWidgets only if the wxUSE_ACCESSIBILITY setup symbol is set to 1.</para><para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page__port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor> </para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__misc" kindref="compound">Miscellaneous</ref></para><para><simplesect kind="see"><para><ref refid="page__samples_1page_samples_access" kindref="member">Accessibility Sample</ref> </para></simplesect>
+<para>This is the main way in which wxWidgets implements accessibility features.</para><para>At present, only Microsoft Active Accessibility is supported by this class.</para><para>To use this class, derive from <ref refid="classwx_accessible" kindref="compound">wxAccessible</ref>, implement appropriate functions, and associate an object of the class with a window using <ref refid="classwx_window_1a413220ead41f05a2ec2cfe10b3d573df" kindref="member">wxWindow::SetAccessible</ref>.</para><para>All functions return an indication of success, failure, or not implemented using values of the wxAccStatus enum type.</para><para>If you return <computeroutput>wxACC_NOT_IMPLEMENTED</computeroutput> from any function, the system will try to implement the appropriate functionality. However this will not work with all functions.</para><para>Most functions work with an object <emphasis>id</emphasis>, which can be zero to refer to &apos;this&apos; UI element, or greater than zero to refer to the nth child element. This allows you to specify elements that don&apos;t have a corresponding <ref refid="classwx_window" kindref="compound">wxWindow</ref> or <ref refid="classwx_accessible" kindref="compound">wxAccessible</ref>; for example, the sash of a splitter window.</para><para>For details on the semantics of functions and types, please refer to the Microsoft Active Accessibility 1.2 documentation.</para><para>This class is compiled into wxWidgets only if the wxUSE_ACCESSIBILITY setup symbol is set to 1.</para><para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page_port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor> </para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__misc" kindref="compound">Miscellaneous</ref></para><para><simplesect kind="see"><para><ref refid="page_samples_1page_samples_access" kindref="member">Accessibility Sample</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="4194">
+      <node id="4198">
         <label>wxAccessible</label>
         <link refid="classwx_accessible"/>
-        <childnode refid="4195" relation="public-inheritance">
+        <childnode refid="4199" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4195">
+      <node id="4199">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="4196">
+      <node id="4200">
         <label>wxAccessible</label>
         <link refid="classwx_accessible"/>
-        <childnode refid="4197" relation="public-inheritance">
+        <childnode refid="4201" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4197">
+      <node id="4201">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="4198" relation="usage">
+        <childnode refid="4202" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="4198">
+      <node id="4202">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

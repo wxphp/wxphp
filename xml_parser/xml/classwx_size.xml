@@ -1,10 +1,9 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_size" kind="class" prot="public">
     <compoundname>wxSize</compoundname>
     <includes local="no">wx/gdicmn.h</includes>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_size_1a7f1e3a02453f5b97c53322031b07d36d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void wxSize::DecBy</definition>
@@ -83,7 +82,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_size_1a0ce7f06029d8d884e673d6115180ed9c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void wxSize::IncBy</definition>
@@ -163,7 +161,7 @@
       </sectiondef>
       <sectiondef kind="user-defined">
       <header>Miscellaneous operators</header>
-      <description><para><anchor id="_1amgrpe09e661963a51ecc56ad0a00cbd2649b"/>Note that these operators are documented as class members (to make them easier to find) but, as their prototype shows, they are implemented as global operators; note that this is transparent to the user but it helps to understand why the following functions are documented to take the <ref refid="classwx_size" kindref="compound">wxSize</ref> they operate on as an explicit argument. </para></description>
+      <description><para>Note that these operators are documented as class members (to make them easier to find) but, as their prototype shows, they are implemented as global operators; note that this is transparent to the user but it helps to understand why the following functions are documented to take the <ref refid="classwx_size" kindref="compound">wxSize</ref> they operate on as an explicit argument. </para></description>
       <memberdef kind="function" id="classwx_size_1a832bba08ddb172eca2181e4e100d35ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_size" kindref="compound">wxSize</ref> &amp;</type>
         <definition>wxSize&amp; wxSize::operator=</definition>
@@ -562,7 +560,7 @@
         <briefdescription>
 <para>Combine this size object with another one replacing the default (i.e. </para>        </briefdescription>
         <detaileddescription>
-<para>equal to -1) components of this object with those of the other. It is typically used like this:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>!size.<ref refid="classwx_size_1a17f2470fd03db979e9d28755e5f85df9" kindref="member" tooltip="Returns true if neither of the size object components is equal to -1, which is used...">IsFullySpecified</ref>()<sp/>)</highlight></codeline>
+<para>equal to -1) components of this object with those of the other. It is typically used like this:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>!size.<ref refid="classwx_size_1a17f2470fd03db979e9d28755e5f85df9" kindref="member" tooltip="Returns true if neither of the size object components is equal to -1, which is used as default for th...">IsFullySpecified</ref>()<sp/>)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>size.<ref refid="classwx_size_1aa0666752c5721566e4d80a82cf60c99a" kindref="member" tooltip="Combine this size object with another one replacing the default (i.e.">SetDefaults</ref>(GetDefaultSize());</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
@@ -611,7 +609,7 @@
 <para>A <ref refid="classwx_size" kindref="compound">wxSize</ref> is a useful data structure for graphics operations. </para>    </briefdescription>
     <detaileddescription>
 <para>It simply contains integer <emphasis>width</emphasis> and <emphasis>height</emphasis> members.</para><para>Note that the width and height stored inside a <ref refid="classwx_size" kindref="compound">wxSize</ref> object may be negative and that <ref refid="classwx_size" kindref="compound">wxSize</ref> functions do not perform any check against negative values (this is used to e.g. store the special -1 value in <ref refid="gdicmn_8h_1a33a012cdb075e9f78c93f63bec2dc27b" kindref="member">wxDefaultSize</ref> instance). See also <ref refid="classwx_size_1a17f2470fd03db979e9d28755e5f85df9" kindref="member">IsFullySpecified()</ref> and <ref refid="classwx_size_1aa0666752c5721566e4d80a82cf60c99a" kindref="member">SetDefaults()</ref> for utility functions regarding the special -1 value.</para><para><ref refid="classwx_size" kindref="compound">wxSize</ref> is used throughout wxWidgets as well as <ref refid="classwx_point" kindref="compound">wxPoint</ref> which, although almost equivalent to <ref refid="classwx_size" kindref="compound">wxSize</ref>, has a different meaning: <ref refid="classwx_point" kindref="compound">wxPoint</ref> represents a position while <ref refid="classwx_size" kindref="compound">wxSize</ref> represents the size.</para><para><bold>wxPython Note:</bold> wxPython defines aliases for the <emphasis>x</emphasis> and <emphasis>y</emphasis> members named <emphasis>width</emphasis> and <emphasis>height</emphasis> since it makes much more sense for sizes.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__data" kindref="compound">Data Structures</ref></para><para>Predefined objects/pointers: <ref refid="gdicmn_8h_1a33a012cdb075e9f78c93f63bec2dc27b" kindref="member">wxDefaultSize</ref></para><para><simplesect kind="see"><para><ref refid="classwx_point" kindref="compound">wxPoint</ref>, <ref refid="classwx_real_point" kindref="compound">wxRealPoint</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__data" kindref="compound">Data Structures</ref></para><para>Predefined objects/pointers: <ref refid="gdicmn_8h_1a33a012cdb075e9f78c93f63bec2dc27b" kindref="member">wxDefaultSize</ref></para><para><simplesect kind="see"><para><ref refid="classwx_point" kindref="compound">wxPoint</ref>, <ref refid="classwx_real_point" kindref="compound">wxRealPoint</ref> </para></simplesect>
 </para>    </detaileddescription>
     <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="808" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" bodystart="807" bodyend="948"/>
     <listofallmembers>

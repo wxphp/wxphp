@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_doc_m_d_i_child_frame" kind="class" prot="public">
     <compoundname>wxDocMDIChildFrame</compoundname>
     <basecompoundref refid="classwx_m_d_i_child_frame" prot="public" virt="non-virtual">wxMDIChildFrame</basecompoundref>
@@ -170,119 +170,119 @@
 <para>The <ref refid="classwx_doc_m_d_i_child_frame" kindref="compound">wxDocMDIChildFrame</ref> class provides a default frame for displaying documents on separate windows. </para>    </briefdescription>
     <detaileddescription>
 <para>This class can only be used for MDI child frames.</para><para>The class is part of the document/view framework supported by wxWidgets, and cooperates with the <ref refid="classwx_view" kindref="compound">wxView</ref>, <ref refid="classwx_document" kindref="compound">wxDocument</ref>, <ref refid="classwx_doc_manager" kindref="compound">wxDocManager</ref> and <ref refid="classwx_doc_template" kindref="compound">wxDocTemplate</ref> classes.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__docview" kindref="compound">Document/View Framework</ref></para><para><simplesect kind="see"><para><ref refid="overview__docview" kindref="compound">Document/View Framework</ref>, <ref refid="page__samples_1page_samples_docview" kindref="member">Document/View Sample</ref>, <ref refid="classwx_m_d_i_child_frame" kindref="compound">wxMDIChildFrame</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__docview" kindref="compound">Document/View Framework</ref></para><para><simplesect kind="see"><para><ref refid="overview_docview" kindref="compound">Document/View Framework</ref>, <ref refid="page_samples_1page_samples_docview" kindref="member">Document/View Sample</ref>, <ref refid="classwx_m_d_i_child_frame" kindref="compound">wxMDIChildFrame</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="5705">
+      <node id="5709">
         <label>wxNonOwnedWindow</label>
         <link refid="classwx_non_owned_window"/>
-        <childnode refid="5706" relation="public-inheritance">
+        <childnode refid="5710" relation="public-inheritance">
         </childnode>
-      </node>
-      <node id="5702">
-        <label>wxMDIChildFrame</label>
-        <link refid="classwx_m_d_i_child_frame"/>
-        <childnode refid="5703" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="5708">
-        <label>wxObject</label>
-        <link refid="classwx_object"/>
-      </node>
-      <node id="5707">
-        <label>wxEvtHandler</label>
-        <link refid="classwx_evt_handler"/>
-        <childnode refid="5708" relation="public-inheritance">
-        </childnode>
-        <childnode refid="5709" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="5709">
-        <label>wxTrackable</label>
-        <link refid="classwx_trackable"/>
       </node>
       <node id="5706">
-        <label>wxWindow</label>
-        <link refid="classwx_window"/>
+        <label>wxMDIChildFrame</label>
+        <link refid="classwx_m_d_i_child_frame"/>
         <childnode refid="5707" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5703">
-        <label>wxFrame</label>
-        <link refid="classwx_frame"/>
-        <childnode refid="5704" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="5704">
-        <label>wxTopLevelWindow</label>
-        <link refid="classwx_top_level_window"/>
-        <childnode refid="5705" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="5701">
-        <label>wxDocMDIChildFrame</label>
-        <link refid="classwx_doc_m_d_i_child_frame"/>
-        <childnode refid="5702" relation="public-inheritance">
-        </childnode>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
-      <node id="5714">
-        <label>wxNonOwnedWindow</label>
-        <link refid="classwx_non_owned_window"/>
-        <childnode refid="5715" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="5711">
-        <label>wxMDIChildFrame</label>
-        <link refid="classwx_m_d_i_child_frame"/>
-        <childnode refid="5712" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="5717">
+      <node id="5712">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="5718" relation="usage">
-          <edgelabel>m_refData</edgelabel>
-        </childnode>
       </node>
-      <node id="5716">
+      <node id="5711">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="5717" relation="public-inheritance">
+        <childnode refid="5712" relation="public-inheritance">
         </childnode>
-        <childnode refid="5719" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="5719">
-        <label>wxTrackable</label>
-        <link refid="classwx_trackable"/>
-      </node>
-      <node id="5715">
-        <label>wxWindow</label>
-        <link refid="classwx_window"/>
-        <childnode refid="5716" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="5712">
-        <label>wxFrame</label>
-        <link refid="classwx_frame"/>
         <childnode refid="5713" relation="public-inheritance">
         </childnode>
       </node>
       <node id="5713">
-        <label>wxTopLevelWindow</label>
-        <link refid="classwx_top_level_window"/>
-        <childnode refid="5714" relation="public-inheritance">
-        </childnode>
+        <label>wxTrackable</label>
+        <link refid="classwx_trackable"/>
       </node>
       <node id="5710">
-        <label>wxDocMDIChildFrame</label>
-        <link refid="classwx_doc_m_d_i_child_frame"/>
+        <label>wxWindow</label>
+        <link refid="classwx_window"/>
         <childnode refid="5711" relation="public-inheritance">
         </childnode>
       </node>
+      <node id="5707">
+        <label>wxFrame</label>
+        <link refid="classwx_frame"/>
+        <childnode refid="5708" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5708">
+        <label>wxTopLevelWindow</label>
+        <link refid="classwx_top_level_window"/>
+        <childnode refid="5709" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5705">
+        <label>wxDocMDIChildFrame</label>
+        <link refid="classwx_doc_m_d_i_child_frame"/>
+        <childnode refid="5706" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
       <node id="5718">
+        <label>wxNonOwnedWindow</label>
+        <link refid="classwx_non_owned_window"/>
+        <childnode refid="5719" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5715">
+        <label>wxMDIChildFrame</label>
+        <link refid="classwx_m_d_i_child_frame"/>
+        <childnode refid="5716" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5721">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="5722" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="5720">
+        <label>wxEvtHandler</label>
+        <link refid="classwx_evt_handler"/>
+        <childnode refid="5721" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5723" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5723">
+        <label>wxTrackable</label>
+        <link refid="classwx_trackable"/>
+      </node>
+      <node id="5719">
+        <label>wxWindow</label>
+        <link refid="classwx_window"/>
+        <childnode refid="5720" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5716">
+        <label>wxFrame</label>
+        <link refid="classwx_frame"/>
+        <childnode refid="5717" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5717">
+        <label>wxTopLevelWindow</label>
+        <link refid="classwx_top_level_window"/>
+        <childnode refid="5718" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5714">
+        <label>wxDocMDIChildFrame</label>
+        <link refid="classwx_doc_m_d_i_child_frame"/>
+        <childnode refid="5715" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5722">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
@@ -603,6 +603,7 @@
       <member refid="classwx_window_1a81f23590239934fa10fded0566a65d8c" prot="public" virt="non-virtual"><scope>wxDocMDIChildFrame</scope><name>SetPosition</name></member>
       <member refid="classwx_window_1a07f5f7ed3f78e0ef7b3dee3f4da81001" prot="public" virt="virtual"><scope>wxDocMDIChildFrame</scope><name>SetPreviousHandler</name></member>
       <member refid="classwx_object_1afab780710f2adc1bb33310e27590140b" prot="public" virt="non-virtual"><scope>wxDocMDIChildFrame</scope><name>SetRefData</name></member>
+      <member refid="classwx_top_level_window_1a82afa6f09dd5faef6330807ef59374e8" prot="public" virt="virtual"><scope>wxDocMDIChildFrame</scope><name>SetRepresentedFilename</name></member>
       <member refid="classwx_top_level_window_1a98e95b1b10f44b80f9b29a03ab09a879" prot="public" virt="non-virtual"><scope>wxDocMDIChildFrame</scope><name>SetRightMenu</name></member>
       <member refid="classwx_window_1aa842d59529f873683e55cd8392ec46e9" prot="public" virt="virtual"><scope>wxDocMDIChildFrame</scope><name>SetScrollbar</name></member>
       <member refid="classwx_window_1afbf4dc9064cf70cfe6884554b97a27bf" prot="public" virt="virtual"><scope>wxDocMDIChildFrame</scope><name>SetScrollPos</name></member>

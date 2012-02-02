@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_data_view_date_renderer" kind="class" prot="public">
     <compoundname>wxDataViewDateRenderer</compoundname>
     <basecompoundref refid="classwx_data_view_renderer" prot="public" virt="non-virtual">wxDataViewRenderer</basecompoundref>
@@ -31,58 +31,58 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="1705"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="1741"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para>This class is used by <ref refid="classwx_data_view_ctrl" kindref="compound">wxDataViewCtrl</ref> to render calendar controls. </para>    </briefdescription>
     <detaileddescription>
 <para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__dvc" kindref="compound">wxDataViewCtrl Related Classes</ref> </para>    </detaileddescription>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__dvc" kindref="compound">wxDataViewCtrl Related Classes</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="5307">
+      <node id="5311">
         <label>wxDataViewRenderer</label>
         <link refid="classwx_data_view_renderer"/>
-        <childnode refid="5308" relation="public-inheritance">
+        <childnode refid="5312" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5308">
+      <node id="5312">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="5306">
+      <node id="5310">
         <label>wxDataViewDateRenderer</label>
         <link refid="classwx_data_view_date_renderer"/>
-        <childnode refid="5307" relation="public-inheritance">
+        <childnode refid="5311" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="5310">
+      <node id="5314">
         <label>wxDataViewRenderer</label>
         <link refid="classwx_data_view_renderer"/>
-        <childnode refid="5311" relation="public-inheritance">
+        <childnode refid="5315" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5311">
+      <node id="5315">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="5312" relation="usage">
+        <childnode refid="5316" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="5309">
+      <node id="5313">
         <label>wxDataViewDateRenderer</label>
         <link refid="classwx_data_view_date_renderer"/>
-        <childnode refid="5310" relation="public-inheritance">
+        <childnode refid="5314" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5312">
+      <node id="5316">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="1698" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" bodystart="1697" bodyend="1706"/>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="1734" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" bodystart="1733" bodyend="1742"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxDataViewDateRenderer</scope><name>AllocExclusive</name></member>
       <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxDataViewDateRenderer</scope><name>CloneRefData</name></member>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_renderer_native" kind="class" prot="public">
     <compoundname>wxRendererNative</compoundname>
     <derivedcompoundref refid="classwx_delegate_renderer_native" prot="public" virt="non-virtual">wxDelegateRendererNative</derivedcompoundref>
@@ -218,9 +218,9 @@
           <defval>NULL</defval>
         </param>
         <briefdescription>
-<para>Draw the contents of a header control button (label, sort arrows, etc. </para>        </briefdescription>
+<para>Draw the contents of a header control button (label, sort arrows, etc.). </para>        </briefdescription>
         <detaileddescription>
-<para>). This function is normally only called by <ref refid="classwx_renderer_native_1a65c10b87b311b5278890026b26c525b1" kindref="member">DrawHeaderButton()</ref>.</para><para>Depending on platforms the <emphasis>flags</emphasis> parameter may support the <computeroutput>wxCONTROL_SELECTED</computeroutput> <computeroutput>wxCONTROL_DISABLED</computeroutput> and <computeroutput>wxCONTROL_CURRENT</computeroutput> bits, see <ref refid="renderer_8h_1wxCONTROL_FLAGS" kindref="member">wxCONTROL_FLAGS</ref>.</para><para><simplesect kind="return"><para>The optimal width to contain the unabbreviated label text or bitmap, the sort arrow if present, and internal margins. </para></simplesect>
+<para>This function is normally only called by <ref refid="classwx_renderer_native_1a65c10b87b311b5278890026b26c525b1" kindref="member">DrawHeaderButton()</ref>.</para><para>Depending on platforms the <emphasis>flags</emphasis> parameter may support the <computeroutput>wxCONTROL_SELECTED</computeroutput> <computeroutput>wxCONTROL_DISABLED</computeroutput> and <computeroutput>wxCONTROL_CURRENT</computeroutput> bits, see <ref refid="renderer_8h_1wxCONTROL_FLAGS" kindref="member">wxCONTROL_FLAGS</ref>.</para><para><simplesect kind="return"><para>The optimal width to contain the unabbreviated label text or bitmap, the sort arrow if present, and internal margins. </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -711,22 +711,22 @@
     <briefdescription>
 <para>First, a brief introduction to <ref refid="classwx_renderer_native" kindref="compound">wxRendererNative</ref> and why it is needed. </para>    </briefdescription>
     <detaileddescription>
-<para>Usually wxWidgets uses the underlying low level GUI system to draw all the controls - this is what we mean when we say that it is a &quot;native&quot; framework. However not all controls exist under all (or even any) platforms and in this case wxWidgets provides a default, generic, implementation of them written in wxWidgets itself.</para><para>These controls don&apos;t have the native appearance if only the standard line drawing and other graphics primitives are used, because the native appearance is different under different platforms while the lines are always drawn in the same way.</para><para>This is why we have renderers: <ref refid="classwx_renderer_native" kindref="compound">wxRendererNative</ref> is a class which virtualizes the drawing, i.e. it abstracts the drawing operations and allows you to draw say, a button, without caring about exactly how this is done. Of course, as we can draw the button differently in different renderers, this also allows us to emulate the native look and feel.</para><para>So the renderers work by exposing a large set of high-level drawing functions which are used by the generic controls. There is always a default global renderer but it may be changed or extended by the user, see <ref refid="page__samples_1page_samples_render" kindref="member">Render Sample</ref>.</para><para>All drawing functions take some standard parameters:</para><para><itemizedlist>
+<para>Usually wxWidgets uses the underlying low level GUI system to draw all the controls - this is what we mean when we say that it is a &quot;native&quot; framework. However not all controls exist under all (or even any) platforms and in this case wxWidgets provides a default, generic, implementation of them written in wxWidgets itself.</para><para>These controls don&apos;t have the native appearance if only the standard line drawing and other graphics primitives are used, because the native appearance is different under different platforms while the lines are always drawn in the same way.</para><para>This is why we have renderers: <ref refid="classwx_renderer_native" kindref="compound">wxRendererNative</ref> is a class which virtualizes the drawing, i.e. it abstracts the drawing operations and allows you to draw say, a button, without caring about exactly how this is done. Of course, as we can draw the button differently in different renderers, this also allows us to emulate the native look and feel.</para><para>So the renderers work by exposing a large set of high-level drawing functions which are used by the generic controls. There is always a default global renderer but it may be changed or extended by the user, see <ref refid="page_samples_1page_samples_render" kindref="member">Render Sample</ref>.</para><para>All drawing functions take some standard parameters:</para><para><itemizedlist>
 <listitem><para><emphasis>win</emphasis> - The window being drawn. It is normally not used and when it is it should only be used as a generic <ref refid="classwx_window" kindref="compound">wxWindow</ref> (in order to get its low level handle, for example), but you should not assume that it is of some given type as the same renderer function may be reused for drawing different kinds of control. </para></listitem>
 <listitem><para><emphasis>dc</emphasis> - The <ref refid="classwx_d_c" kindref="compound">wxDC</ref> to draw on. Only this device context should be used for drawing. It is not necessary to restore pens and brushes for it on function exit but, on the other hand, you shouldn&apos;t assume that it is in any specific state on function entry: the rendering functions should always prepare it. </para></listitem>
 <listitem><para><emphasis>rect</emphasis> - The bounding rectangle for the element to be drawn. </para></listitem>
 <listitem><para><emphasis>flags</emphasis> - The optional flags (none by default) which can be a combination of the <ref refid="renderer_8h_1wxCONTROL_FLAGS" kindref="member">wxCONTROL_FLAGS</ref>.</para></listitem>
 </itemizedlist>
 Note that each drawing function restores the <ref refid="classwx_d_c" kindref="compound">wxDC</ref> attributes if it changes them, so it is safe to assume that the same pen, brush and colours that were active before the call to this function are still in effect after it.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__gdi" kindref="compound">Graphics Device Interface (GDI)</ref> </para>    </detaileddescription>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__gdi" kindref="compound">Graphics Device Interface (GDI)</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="9070">
+      <node id="9078">
         <label>wxDelegateRendererNative</label>
         <link refid="classwx_delegate_renderer_native"/>
-        <childnode refid="9069" relation="public-inheritance">
+        <childnode refid="9077" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9069">
+      <node id="9077">
         <label>wxRendererNative</label>
         <link refid="classwx_renderer_native"/>
       </node>

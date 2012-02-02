@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_recursion_guard" kind="class" prot="public">
     <compoundname>wxRecursionGuard</compoundname>
     <includes local="no">wx/recguard.h</includes>
@@ -54,8 +54,8 @@
     <detaileddescription>
 <para>It is not thread-safe and so should be used only in single-threaded programs or in combination with some thread synchronization mechanisms.</para><para><ref refid="classwx_recursion_guard" kindref="compound">wxRecursionGuard</ref> is always used together with the <ref refid="classwx_recursion_guard_flag" kindref="compound">wxRecursionGuardFlag</ref> like in this example:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Foo()</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classwx_recursion_guard_flag" kindref="compound" tooltip="This is a completely opaque class which exists only to be used with wxRecursionGuard...">wxRecursionGuardFlag</ref><sp/>s_flag;</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_recursion_guard" kindref="compound" tooltip="wxRecursionGuard is a very simple class which can be used to prevent reentrancy problems...">wxRecursionGuard</ref><sp/>guard(s_flag);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classwx_recursion_guard_flag" kindref="compound" tooltip="This is a completely opaque class which exists only to be used with wxRecursionGuard, please see the example in that class&amp;#39; documentation.">wxRecursionGuardFlag</ref><sp/>s_flag;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_recursion_guard" kindref="compound" tooltip="wxRecursionGuard is a very simple class which can be used to prevent reentrancy problems in a functio...">wxRecursionGuard</ref><sp/>guard(s_flag);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>guard.IsInside()<sp/>)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>don&apos;t<sp/>allow<sp/>reentrancy</highlight><highlight class="normal"></highlight></codeline>
@@ -65,7 +65,7 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 </programlisting></para><para>As you can see, <ref refid="classwx_recursion_guard" kindref="compound">wxRecursionGuard</ref> simply tests the flag value and sets it to true if it hadn&apos;t been already set. <ref refid="classwx_recursion_guard_1a82df654ab0277174eef32eae3bcd02d1" kindref="member">IsInside()</ref> allows testing the old flag value. The advantage of using this class compared to directly manipulating the flag is that the flag is always reset in the <ref refid="classwx_recursion_guard" kindref="compound">wxRecursionGuard</ref> destructor and so you don&apos;t risk to forget to do it even if the function returns in an unexpected way (for example because an exception has been thrown).</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__misc" kindref="compound">Miscellaneous</ref> </para>    </detaileddescription>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__misc" kindref="compound">Miscellaneous</ref> </para>    </detaileddescription>
     <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/recguard.h" line="69" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/recguard.h" bodystart="68" bodyend="97"/>
     <listofallmembers>
       <member refid="classwx_recursion_guard_1a82df654ab0277174eef32eae3bcd02d1" prot="public" virt="non-virtual"><scope>wxRecursionGuard</scope><name>IsInside</name></member>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_move_event" kind="class" prot="public">
     <compoundname>wxMoveEvent</compoundname>
     <basecompoundref refid="classwx_event" prot="public" virt="non-virtual">wxEvent</basecompoundref>
@@ -25,7 +25,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4016"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4040"/>
       </memberdef>
       <memberdef kind="function" id="classwx_move_event_1aae1abe1ef8e03554decf996cf128668d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_point" kindref="compound">wxPoint</ref></type>
@@ -38,7 +38,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4021"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4045"/>
       </memberdef>
       <memberdef kind="function" id="classwx_move_event_1a760543bd576ee94440c68c42de54a78f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_rect" kindref="compound">wxRect</ref></type>
@@ -51,7 +51,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4023"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4047"/>
       </memberdef>
       <memberdef kind="function" id="classwx_move_event_1a8a497be8943285a6cbc031b466dda914" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -68,7 +68,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4024"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4048"/>
       </memberdef>
       <memberdef kind="function" id="classwx_move_event_1a4abd7f5e82edbc613cbddca16d54f4ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -85,7 +85,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4025"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4049"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -98,52 +98,52 @@
 <listitem><para>EVT_MOVE_END(func): Process a <computeroutput>wxEVT_MOVE_END</computeroutput> event, which is generated when the user stops moving or sizing a window. wxMSW only. </para></listitem>
 </itemizedlist>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="classwx_point" kindref="compound">wxPoint</ref>, <ref refid="overview__events" kindref="compound">Events and Event Handling</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="classwx_point" kindref="compound">wxPoint</ref>, <ref refid="overview_events" kindref="compound">Events and Event Handling</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7858">
+      <node id="7864">
         <label>wxMoveEvent</label>
         <link refid="classwx_move_event"/>
-        <childnode refid="7859" relation="public-inheritance">
+        <childnode refid="7865" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7860">
+      <node id="7866">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="7859">
+      <node id="7865">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="7860" relation="public-inheritance">
+        <childnode refid="7866" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7861">
+      <node id="7867">
         <label>wxMoveEvent</label>
         <link refid="classwx_move_event"/>
-        <childnode refid="7862" relation="public-inheritance">
+        <childnode refid="7868" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7863">
+      <node id="7869">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="7864" relation="usage">
+        <childnode refid="7870" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="7862">
+      <node id="7868">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="7863" relation="public-inheritance">
+        <childnode refid="7869" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7864">
+      <node id="7870">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4011" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4010" bodyend="4026"/>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4035" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4034" bodyend="4050"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxMoveEvent</scope><name>AllocExclusive</name></member>
       <member refid="classwx_event_1a26878097a702e8d0368da150125d4158" prot="public" virt="pure-virtual"><scope>wxMoveEvent</scope><name>Clone</name></member>

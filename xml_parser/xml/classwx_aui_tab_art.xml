@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_aui_tab_art" kind="class" prot="public">
     <compoundname>wxAuiTabArt</compoundname>
     <includes local="no">wx/aui/auibook.h</includes>
@@ -346,8 +346,8 @@
     <briefdescription>
 <para>Tab art class. </para>    </briefdescription>
     <detaileddescription>
-<para><xrefsect id="todo_1_todo000010"><xreftitle>Todo</xreftitle><xrefdescription><para>BETTER DESCRIPTION NEEDED</para></xrefdescription></xrefsect><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxaui" kindref="member">wxAui</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__aui" kindref="compound">Window Docking (wxAUI)</ref> </para>    </detaileddescription>
+<para><xrefsect id="todo_1_todo000010"><xreftitle>Todo</xreftitle><xrefdescription><para>BETTER DESCRIPTION NEEDED</para></xrefdescription></xrefsect></para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxaui" kindref="member">wxAui</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__aui" kindref="compound">Window Docking (wxAUI)</ref> </para>    </detaileddescription>
     <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/auibook.h" line="349" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/auibook.h" bodystart="348" bodyend="435"/>
     <listofallmembers>
       <member refid="classwx_aui_tab_art_1afc9b9d6e617e887772f36bee18edce36" prot="public" virt="pure-virtual"><scope>wxAuiTabArt</scope><name>Clone</name></member>

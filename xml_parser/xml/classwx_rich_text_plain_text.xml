@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_rich_text_plain_text" kind="class" prot="public">
     <compoundname>wxRichTextPlainText</compoundname>
     <basecompoundref refid="classwx_rich_text_object" prot="public" virt="non-virtual">wxRichTextObject</basecompoundref>
@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="3527" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="3527" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="3706" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="3706" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -46,7 +46,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="3450"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="3629"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_plain_text_1a91e5b680e391a548aac2290dc05c4d87" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -63,17 +63,21 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="3455" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="3455" bodyend="3455"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="3634" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="3634" bodyend="3634"/>
       </memberdef>
-      <memberdef kind="function" id="classwx_rich_text_plain_text_1aaf37704ecdb0f487be81af34742615c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+      <memberdef kind="function" id="classwx_rich_text_plain_text_1a15077930622c966174956ea72c6376a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
         <definition>virtual bool wxRichTextPlainText::Draw</definition>
-        <argsstring>(wxDC &amp;dc, const wxRichTextRange &amp;range, const wxRichTextSelection &amp;selection, const wxRect &amp;rect, int descent, int style)</argsstring>
+        <argsstring>(wxDC &amp;dc, wxRichTextDrawingContext &amp;context, const wxRichTextRange &amp;range, const wxRichTextSelection &amp;selection, const wxRect &amp;rect, int descent, int style)</argsstring>
         <name>Draw</name>
-        <reimplements refid="classwx_rich_text_object_1a15ed1ffc48a0f1a93f38d4d6a3cd304d">Draw</reimplements>
+        <reimplements refid="classwx_rich_text_object_1a6b38fa20816060d1272c5b7f4678a843">Draw</reimplements>
         <param>
           <type><ref refid="classwx_d_c" kindref="compound">wxDC</ref> &amp;</type>
           <declname>dc</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_rich_text_drawing_context" kindref="compound">wxRichTextDrawingContext</ref> &amp;</type>
+          <declname>context</declname>
         </param>
         <param>
           <type>const <ref refid="classwx_rich_text_range" kindref="compound">wxRichTextRange</ref> &amp;</type>
@@ -101,21 +105,29 @@
 <para>Some objects may ignore the range (for example paragraphs) while others must obey it (lines, to implement wrapping) </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="3459"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="3638"/>
       </memberdef>
-      <memberdef kind="function" id="classwx_rich_text_plain_text_1a9523de3c016a8fd4ecf2c097669363a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+      <memberdef kind="function" id="classwx_rich_text_plain_text_1a2859bba9bebba925dcb8120ea0a12bf7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
         <definition>virtual bool wxRichTextPlainText::Layout</definition>
-        <argsstring>(wxDC &amp;dc, const wxRect &amp;rect, int style)</argsstring>
+        <argsstring>(wxDC &amp;dc, wxRichTextDrawingContext &amp;context, const wxRect &amp;rect, const wxRect &amp;parentRect, int style)</argsstring>
         <name>Layout</name>
-        <reimplements refid="classwx_rich_text_object_1a2318dc938bcba8aee7116f179a4a3501">Layout</reimplements>
+        <reimplements refid="classwx_rich_text_object_1a4dc323418f095b5a68c0629c77f77d9d">Layout</reimplements>
         <param>
           <type><ref refid="classwx_d_c" kindref="compound">wxDC</ref> &amp;</type>
           <declname>dc</declname>
         </param>
         <param>
+          <type><ref refid="classwx_rich_text_drawing_context" kindref="compound">wxRichTextDrawingContext</ref> &amp;</type>
+          <declname>context</declname>
+        </param>
+        <param>
           <type>const <ref refid="classwx_rect" kindref="compound">wxRect</ref> &amp;</type>
           <declname>rect</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_rect" kindref="compound">wxRect</ref> &amp;</type>
+          <declname>parentRect</declname>
         </param>
         <param>
           <type>int</type>
@@ -124,17 +136,17 @@
         <briefdescription>
 <para>Lay the item out at the specified position with the given size constraint. </para>        </briefdescription>
         <detaileddescription>
-<para>Layout must set the cached size. </para>        </detaileddescription>
+<para>Layout must set the cached size.  is the available space for the object, and <emphasis>parentRect</emphasis> is the container that is used to determine a relative size or position (for example if a text box must be 50% of the parent text box). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="3461"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="3640"/>
       </memberdef>
-      <memberdef kind="function" id="classwx_rich_text_plain_text_1a02519d7e4d0b100bd857d654ccca64c5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+      <memberdef kind="function" id="classwx_rich_text_plain_text_1a6a59046f873a3d708d9e1d1b3b739543" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
         <definition>virtual bool wxRichTextPlainText::GetRangeSize</definition>
-        <argsstring>(const wxRichTextRange &amp;range, wxSize &amp;size, int &amp;descent, wxDC &amp;dc, int flags, wxPoint position=wxPoint(0, 0), wxArrayInt *partialExtents=NULL) const </argsstring>
+        <argsstring>(const wxRichTextRange &amp;range, wxSize &amp;size, int &amp;descent, wxDC &amp;dc, wxRichTextDrawingContext &amp;context, int flags, wxPoint position=wxPoint(0, 0), wxArrayInt *partialExtents=NULL) const </argsstring>
         <name>GetRangeSize</name>
-        <reimplements refid="classwx_rich_text_object_1af8e09b3678fab90f275748bd8c15469a">GetRangeSize</reimplements>
+        <reimplements refid="classwx_rich_text_object_1a3e5e332184d7a7c2825db6fd7dbb01fd">GetRangeSize</reimplements>
         <param>
           <type>const <ref refid="classwx_rich_text_range" kindref="compound">wxRichTextRange</ref> &amp;</type>
           <declname>range</declname>
@@ -150,6 +162,10 @@
         <param>
           <type><ref refid="classwx_d_c" kindref="compound">wxDC</ref> &amp;</type>
           <declname>dc</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_rich_text_drawing_context" kindref="compound">wxRichTextDrawingContext</ref> &amp;</type>
+          <declname>context</declname>
         </param>
         <param>
           <type>int</type>
@@ -171,7 +187,7 @@
 <para>Returns false if the range is invalid for this object. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="3463"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="3642"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_plain_text_1abaffa4336404fc025be377efb6caf5a3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -188,7 +204,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="3465"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="3644"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_plain_text_1a74ffa84d8f99e4baa8e0b30a56380cf7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_rich_text_object" kindref="compound">wxRichTextObject</ref> *</type>
@@ -205,7 +221,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="3467"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="3646"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_plain_text_1a2bd6712bc8492e3a350e1a67eb6ba26a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -227,7 +243,7 @@
 <para>By default, guess that the object is 1 unit long. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="3469"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="3648"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_plain_text_1a92a03c2b1c3bf327238fc2f6607bb0b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -244,7 +260,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="3471"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="3650"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_plain_text_1a0ead5f8239767e8ca0c6c8bdff4a940b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
         <type>bool</type>
@@ -258,7 +274,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="3473" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="3473" bodyend="3473"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="3652" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="3652" bodyend="3652"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_plain_text_1a7db03be717cd2025f0d3845f5ac05783" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -275,7 +291,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="3475"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="3654"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_plain_text_1ac96f874b909fb9db515ae9aab1c9d994" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -292,7 +308,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="3477"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="3656"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_plain_text_1abe69509224f51b02e6a2f4a0c99952fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -310,7 +326,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="3479"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="3658"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_plain_text_1a245f211bd3166184264fd8f04d361812" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>long</type>
@@ -327,7 +343,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="3484"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="3663"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_plain_text_1ade0c3cc8f2a203ae01160e4c4cbf460a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
         <type>bool</type>
@@ -341,7 +357,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="3487" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="3487" bodyend="3487"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="3666" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="3666" bodyend="3666"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_plain_text_1ac5d49b1a7094dcff4d4e4e198faf9a5f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -355,7 +371,7 @@
 <para>This must be overridden for wxXmlNode-base XML export to work. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="3501" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="3501" bodyend="3501"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="3680" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="3680" bodyend="3680"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_plain_text_1a1dc9b7ed6b91335eb8df5bc689acf582" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -368,7 +384,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="3508" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="3508" bodyend="3508"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="3687" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="3687" bodyend="3687"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_plain_text_1a52a0b8373c9eadbe7060b5efe2792452" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -385,7 +401,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="3513" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="3513" bodyend="3513"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="3692" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="3692" bodyend="3692"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_plain_text_1a29dcaccdfe432ee269dbe7199d19329f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -402,7 +418,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="3518"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="3697"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_plain_text_1a1fc0d77c31ab20ba39676f5ee2b461a2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
         <type><ref refid="classwx_rich_text_object" kindref="compound">wxRichTextObject</ref> *</type>
@@ -416,7 +432,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="3521" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="3521" bodyend="3521"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="3700" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="3700" bodyend="3700"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -459,176 +475,181 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="3524"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="3703"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para>This object represents a single piece of text. </para>    </briefdescription>
     <detaileddescription>
 <para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxrichtext" kindref="member">wxRichText</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__richtext" kindref="compound">Rich Text</ref></para><para><simplesect kind="see"><para><ref refid="classwx_rich_text_buffer" kindref="compound">wxRichTextBuffer</ref>, <ref refid="classwx_rich_text_ctrl" kindref="compound">wxRichTextCtrl</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxrichtext" kindref="member">wxRichText</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__richtext" kindref="compound">Rich Text</ref></para><para><simplesect kind="see"><para><ref refid="classwx_rich_text_buffer" kindref="compound">wxRichTextBuffer</ref>, <ref refid="classwx_rich_text_ctrl" kindref="compound">wxRichTextCtrl</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="9745">
+      <node id="9805">
         <label>wxRichTextObject</label>
         <link refid="classwx_rich_text_object"/>
-        <childnode refid="9746" relation="public-inheritance">
+        <childnode refid="9806" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9746">
+      <node id="9806">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="9744">
+      <node id="9804">
         <label>wxRichTextPlainText</label>
         <link refid="classwx_rich_text_plain_text"/>
-        <childnode refid="9745" relation="public-inheritance">
+        <childnode refid="9805" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="9763">
+      <node id="9819">
         <label>wxString</label>
         <link refid="classwx_string"/>
       </node>
-      <node id="9748">
+      <node id="9808">
         <label>wxRichTextObject</label>
         <link refid="classwx_rich_text_object"/>
-        <childnode refid="9749" relation="public-inheritance">
+        <childnode refid="9809" relation="public-inheritance">
         </childnode>
-        <childnode refid="9751" relation="usage">
+        <childnode refid="9811" relation="usage">
           <edgelabel>m_size</edgelabel>
           <edgelabel>m_minSize</edgelabel>
           <edgelabel>m_maxSize</edgelabel>
         </childnode>
-        <childnode refid="9752" relation="usage">
+        <childnode refid="9812" relation="usage">
           <edgelabel>m_pos</edgelabel>
         </childnode>
-        <childnode refid="9753" relation="usage">
+        <childnode refid="9813" relation="usage">
           <edgelabel>m_attributes</edgelabel>
         </childnode>
-        <childnode refid="9761" relation="usage">
+        <childnode refid="9822" relation="usage">
           <edgelabel>m_properties</edgelabel>
         </childnode>
-        <childnode refid="9748" relation="usage">
+        <childnode refid="9808" relation="usage">
           <edgelabel>m_parent</edgelabel>
         </childnode>
-        <childnode refid="9762" relation="usage">
+        <childnode refid="9823" relation="usage">
           <edgelabel>m_ownRange</edgelabel>
           <edgelabel>m_range</edgelabel>
         </childnode>
       </node>
-      <node id="9760">
+      <node id="9821">
         <label>wxTextAttrBorder</label>
         <link refid="classwx_text_attr_border"/>
-        <childnode refid="9757" relation="usage">
+        <childnode refid="9817" relation="usage">
           <edgelabel>m_borderWidth</edgelabel>
         </childnode>
       </node>
-      <node id="9749">
+      <node id="9809">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="9750" relation="usage">
+        <childnode refid="9810" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="9761">
+      <node id="9822">
         <label>wxRichTextProperties</label>
         <link refid="classwx_rich_text_properties"/>
-        <childnode refid="9749" relation="public-inheritance">
+        <childnode refid="9809" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9762">
+      <node id="9823">
         <label>wxRichTextRange</label>
         <link refid="classwx_rich_text_range"/>
       </node>
-      <node id="9751">
+      <node id="9811">
         <label>wxSize</label>
         <link refid="classwx_size"/>
       </node>
-      <node id="9754">
+      <node id="9814">
         <label>wxTextAttr</label>
         <link refid="classwx_text_attr"/>
       </node>
-      <node id="9753">
+      <node id="9813">
         <label>wxRichTextAttr</label>
         <link refid="classwx_rich_text_attr"/>
-        <childnode refid="9754" relation="public-inheritance">
+        <childnode refid="9814" relation="public-inheritance">
         </childnode>
-        <childnode refid="9755" relation="usage">
+        <childnode refid="9815" relation="usage">
           <edgelabel>m_textBoxAttr</edgelabel>
         </childnode>
       </node>
-      <node id="9755">
+      <node id="9815">
         <label>wxTextBoxAttr</label>
         <link refid="classwx_text_box_attr"/>
-        <childnode refid="9756" relation="usage">
+        <childnode refid="9816" relation="usage">
           <edgelabel>m_size</edgelabel>
+          <edgelabel>m_minSize</edgelabel>
+          <edgelabel>m_maxSize</edgelabel>
         </childnode>
-        <childnode refid="9758" relation="usage">
+        <childnode refid="9818" relation="usage">
           <edgelabel>m_margins</edgelabel>
           <edgelabel>m_padding</edgelabel>
           <edgelabel>m_position</edgelabel>
         </childnode>
-        <childnode refid="9759" relation="usage">
+        <childnode refid="9819" relation="usage">
+          <edgelabel>m_boxStyleName</edgelabel>
+        </childnode>
+        <childnode refid="9820" relation="usage">
           <edgelabel>m_border</edgelabel>
           <edgelabel>m_outline</edgelabel>
         </childnode>
       </node>
-      <node id="9758">
+      <node id="9818">
         <label>wxTextAttrDimensions</label>
         <link refid="classwx_text_attr_dimensions"/>
-        <childnode refid="9757" relation="usage">
+        <childnode refid="9817" relation="usage">
           <edgelabel>m_left</edgelabel>
           <edgelabel>m_bottom</edgelabel>
           <edgelabel>m_top</edgelabel>
           <edgelabel>m_right</edgelabel>
         </childnode>
       </node>
-      <node id="9756">
+      <node id="9816">
         <label>wxTextAttrSize</label>
         <link refid="classwx_text_attr_size"/>
-        <childnode refid="9757" relation="usage">
+        <childnode refid="9817" relation="usage">
           <edgelabel>m_width</edgelabel>
           <edgelabel>m_height</edgelabel>
         </childnode>
       </node>
-      <node id="9747">
+      <node id="9807">
         <label>wxRichTextPlainText</label>
         <link refid="classwx_rich_text_plain_text"/>
-        <childnode refid="9748" relation="public-inheritance">
+        <childnode refid="9808" relation="public-inheritance">
         </childnode>
-        <childnode refid="9763" relation="usage">
+        <childnode refid="9819" relation="usage">
           <edgelabel>m_text</edgelabel>
         </childnode>
       </node>
-      <node id="9757">
+      <node id="9817">
         <label>wxTextAttrDimension</label>
         <link refid="classwx_text_attr_dimension"/>
       </node>
-      <node id="9752">
+      <node id="9812">
         <label>wxPoint</label>
         <link refid="classwx_point"/>
       </node>
-      <node id="9759">
+      <node id="9820">
         <label>wxTextAttrBorders</label>
         <link refid="classwx_text_attr_borders"/>
-        <childnode refid="9760" relation="usage">
+        <childnode refid="9821" relation="usage">
           <edgelabel>m_left</edgelabel>
           <edgelabel>m_bottom</edgelabel>
           <edgelabel>m_top</edgelabel>
           <edgelabel>m_right</edgelabel>
         </childnode>
       </node>
-      <node id="9750">
+      <node id="9810">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="3442" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="3441" bodyend="3528"/>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="3621" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="3620" bodyend="3707"/>
     <listofallmembers>
       <member refid="classwx_rich_text_object_1ae42498f572d7a1859748605dbeb4a2a2" prot="public" virt="virtual"><scope>wxRichTextPlainText</scope><name>AcceptsFocus</name></member>
-      <member refid="classwx_rich_text_object_1aa9b97e61b11885bd82d506e6ea714e45" prot="public" virt="non-virtual"><scope>wxRichTextPlainText</scope><name>AdjustAvailableSpace</name></member>
+      <member refid="classwx_rich_text_object_1adc43eb3cd639c5b0934fbed69d528127" prot="public" virt="non-virtual"><scope>wxRichTextPlainText</scope><name>AdjustAvailableSpace</name></member>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxRichTextPlainText</scope><name>AllocExclusive</name></member>
       <member refid="classwx_rich_text_plain_text_1a2bd6712bc8492e3a350e1a67eb6ba26a" prot="public" virt="virtual"><scope>wxRichTextPlainText</scope><name>CalculateRange</name></member>
       <member refid="classwx_rich_text_object_1a86ceb93a7e960fecf5239a814c88be7d" prot="public" virt="virtual"><scope>wxRichTextPlainText</scope><name>CanEditProperties</name></member>
@@ -648,17 +669,17 @@
       <member refid="classwx_rich_text_object_1a7ff137a3eea87599a9d29a34f236664e" prot="public" virt="non-virtual"><scope>wxRichTextPlainText</scope><name>Dereference</name></member>
       <member refid="classwx_rich_text_plain_text_1a74ffa84d8f99e4baa8e0b30a56380cf7" prot="public" virt="virtual"><scope>wxRichTextPlainText</scope><name>DoSplit</name></member>
       <member refid="classwx_rich_text_object_1a2fc1b222b76acdd934067b4918cbe6a6" prot="public" virt="virtual" ambiguityscope="wxRichTextObject::"><scope>wxRichTextPlainText</scope><name>DoSplit</name></member>
-      <member refid="classwx_rich_text_plain_text_1aaf37704ecdb0f487be81af34742615c3" prot="public" virt="virtual"><scope>wxRichTextPlainText</scope><name>Draw</name></member>
+      <member refid="classwx_rich_text_plain_text_1a15077930622c966174956ea72c6376a3" prot="public" virt="virtual"><scope>wxRichTextPlainText</scope><name>Draw</name></member>
       <member refid="classwx_rich_text_object_1a4f415917e184888f4471d752d0353031" prot="public" virt="non-virtual"><scope>wxRichTextPlainText</scope><name>DrawBorder</name></member>
       <member refid="classwx_rich_text_object_1a247f00b530db41c841e35a38b0c83817" prot="public" virt="non-virtual"><scope>wxRichTextPlainText</scope><name>DrawBoxAttributes</name></member>
       <member refid="classwx_rich_text_plain_text_1a8bb64f83822b9fa76212e880f1883b9f" prot="private" virt="non-virtual"><scope>wxRichTextPlainText</scope><name>DrawTabbedString</name></member>
       <member refid="classwx_rich_text_plain_text_1abe69509224f51b02e6a2f4a0c99952fc" prot="public" virt="virtual"><scope>wxRichTextPlainText</scope><name>Dump</name></member>
       <member refid="classwx_rich_text_object_1a75496c3dfc6db05f65ae97eb09a269c9" prot="public" virt="virtual"><scope>wxRichTextPlainText</scope><name>EditProperties</name></member>
-      <member refid="classwx_rich_text_object_1abde24ad42ea8988732d5d7d6eadc8e61" prot="public" virt="virtual"><scope>wxRichTextPlainText</scope><name>FindPosition</name></member>
+      <member refid="classwx_rich_text_object_1a59a4f8fc6a6c956696fc5b29288fd6bb" prot="public" virt="virtual"><scope>wxRichTextPlainText</scope><name>FindPosition</name></member>
       <member refid="classwx_rich_text_object_1afae796ddc642a73a426a4f6fd31042d0" prot="public" virt="virtual"><scope>wxRichTextPlainText</scope><name>GetAbsolutePosition</name></member>
       <member refid="classwx_rich_text_object_1a06681b58bbab76937f874495ecacda81" prot="public" virt="non-virtual"><scope>wxRichTextPlainText</scope><name>GetAttributes</name></member>
       <member refid="classwx_rich_text_object_1a1c2402da5ebb3f20cdd820b615838933" prot="public" virt="non-virtual"><scope>wxRichTextPlainText</scope><name>GetAttributes</name></member>
-      <member refid="classwx_rich_text_object_1a900c59aef28fa1162ffab91bfa686b17" prot="public" virt="virtual"><scope>wxRichTextPlainText</scope><name>GetAvailableContentArea</name></member>
+      <member refid="classwx_rich_text_object_1a2f1288842f7aced3b4803a0d43cc97f5" prot="public" virt="virtual"><scope>wxRichTextPlainText</scope><name>GetAvailableContentArea</name></member>
       <member refid="classwx_rich_text_object_1a4d6ac303aa5bde56f5495e9d424cf98d" prot="public" virt="virtual"><scope>wxRichTextPlainText</scope><name>GetBestSize</name></member>
       <member refid="classwx_rich_text_object_1aff4222bad06b440a43f5486a2f14ae23" prot="public" virt="virtual"><scope>wxRichTextPlainText</scope><name>GetBottomMargin</name></member>
       <member refid="classwx_rich_text_object_1a83fbb3a582041933320491c304716c19" prot="public" virt="non-virtual"><scope>wxRichTextPlainText</scope><name>GetBoxRects</name></member>
@@ -685,7 +706,7 @@
       <member refid="classwx_rich_text_object_1ae28b43263d92734c5893c87ee11167ee" prot="public" virt="virtual"><scope>wxRichTextPlainText</scope><name>GetPropertiesMenuLabel</name></member>
       <member refid="classwx_rich_text_object_1a245c6057de8bd3f986d167c114751574" prot="public" virt="non-virtual"><scope>wxRichTextPlainText</scope><name>GetRange</name></member>
       <member refid="classwx_rich_text_object_1a9156b00beb79c9e581612389ddd48f75" prot="public" virt="non-virtual"><scope>wxRichTextPlainText</scope><name>GetRange</name></member>
-      <member refid="classwx_rich_text_plain_text_1a02519d7e4d0b100bd857d654ccca64c5" prot="public" virt="virtual"><scope>wxRichTextPlainText</scope><name>GetRangeSize</name></member>
+      <member refid="classwx_rich_text_plain_text_1a6a59046f873a3d708d9e1d1b3b739543" prot="public" virt="virtual"><scope>wxRichTextPlainText</scope><name>GetRangeSize</name></member>
       <member refid="classwx_rich_text_object_1a0e204b066e6befdb357a57204f1e7c7c" prot="public" virt="virtual"><scope>wxRichTextPlainText</scope><name>GetRect</name></member>
       <member refid="classwx_object_1aabdb4fc957226544a8408167844e4f42" prot="public" virt="non-virtual"><scope>wxRichTextPlainText</scope><name>GetRefData</name></member>
       <member refid="classwx_rich_text_object_1ad378f629420b99890bd1525f5e98400b" prot="public" virt="virtual"><scope>wxRichTextPlainText</scope><name>GetRightMargin</name></member>
@@ -697,7 +718,7 @@
       <member refid="classwx_rich_text_object_1a53bd3bc25232fe0147be88d480732628" prot="public" virt="non-virtual"><scope>wxRichTextPlainText</scope><name>GetTotalMargin</name></member>
       <member refid="classwx_rich_text_plain_text_1ac5d49b1a7094dcff4d4e4e198faf9a5f" prot="public" virt="virtual"><scope>wxRichTextPlainText</scope><name>GetXMLNodeName</name></member>
       <member refid="classwx_rich_text_object_1a747d48c460a7a6d73742479a9fb08d14" prot="public" virt="virtual"><scope>wxRichTextPlainText</scope><name>HandlesChildSelections</name></member>
-      <member refid="classwx_rich_text_object_1a96304dae44064386bc2e2017189c7734" prot="public" virt="virtual"><scope>wxRichTextPlainText</scope><name>HitTest</name></member>
+      <member refid="classwx_rich_text_object_1a89d7b260744b3b6ba2caa0ccd7cab3ce" prot="public" virt="virtual"><scope>wxRichTextPlainText</scope><name>HitTest</name></member>
       <member refid="classwx_rich_text_object_1ae28afefb6baa08aeb426d36d9e605ae0" prot="public" virt="virtual"><scope>wxRichTextPlainText</scope><name>Invalidate</name></member>
       <member refid="classwx_rich_text_object_1ab5eaf0ad5ee4b7484a0120d3f7aef651" prot="public" virt="virtual"><scope>wxRichTextPlainText</scope><name>IsComposite</name></member>
       <member refid="classwx_rich_text_plain_text_1a0ead5f8239767e8ca0c6c8bdff4a940b" prot="public" virt="virtual"><scope>wxRichTextPlainText</scope><name>IsEmpty</name></member>
@@ -707,8 +728,8 @@
       <member refid="classwx_object_1a80a1a3fda7b14396a9ddd3d7a46a88bd" prot="public" virt="non-virtual"><scope>wxRichTextPlainText</scope><name>IsSameAs</name></member>
       <member refid="classwx_rich_text_object_1a1a057dac98a311dfe65deb1a1979f4fe" prot="public" virt="non-virtual"><scope>wxRichTextPlainText</scope><name>IsShown</name></member>
       <member refid="classwx_rich_text_object_1a4a47bfc7235804ef07a291fd6da9ad3b" prot="public" virt="virtual"><scope>wxRichTextPlainText</scope><name>IsTopLevel</name></member>
-      <member refid="classwx_rich_text_plain_text_1a9523de3c016a8fd4ecf2c097669363a4" prot="public" virt="virtual"><scope>wxRichTextPlainText</scope><name>Layout</name></member>
-      <member refid="classwx_rich_text_object_1a02060e000aee99aeb08d5456edb477a3" prot="public" virt="virtual"><scope>wxRichTextPlainText</scope><name>LayoutToBestSize</name></member>
+      <member refid="classwx_rich_text_plain_text_1a2859bba9bebba925dcb8120ea0a12bf7" prot="public" virt="virtual"><scope>wxRichTextPlainText</scope><name>Layout</name></member>
+      <member refid="classwx_rich_text_object_1a207fff9a88e3bde658309d615bd29518" prot="public" virt="virtual"><scope>wxRichTextPlainText</scope><name>LayoutToBestSize</name></member>
       <member refid="classwx_rich_text_object_1abfda428cbcad6e98bb5c3b5e1e1fdbeb" prot="protected" virt="non-virtual"><scope>wxRichTextPlainText</scope><name>m_attributes</name></member>
       <member refid="classwx_rich_text_object_1a11d2eb57124f37163e3380752f29ae3b" prot="protected" virt="non-virtual"><scope>wxRichTextPlainText</scope><name>m_descent</name></member>
       <member refid="classwx_rich_text_object_1a1de7d6f9a0161940337499f3e2c435af" prot="protected" virt="non-virtual"><scope>wxRichTextPlainText</scope><name>m_maxSize</name></member>

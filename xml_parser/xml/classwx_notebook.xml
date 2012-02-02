@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_notebook" kind="class" prot="public">
     <compoundname>wxNotebook</compoundname>
     <basecompoundref refid="classwx_book_ctrl_base" prot="public" virt="non-virtual">wxBookCtrlBase</basecompoundref>
@@ -345,7 +345,7 @@
         <briefdescription>
 <para>Changes the selection for the given page, returning the previous selection. </para>        </briefdescription>
         <detaileddescription>
-<para>This function behaves as <ref refid="classwx_notebook_1a140d1743bc93c3aff36fe2c9f1cb2bc8" kindref="member">SetSelection()</ref> but does <emphasis>not</emphasis> generate the page changing events.</para><para>See <ref refid="overview__events_1overview_events_prog" kindref="member">User Generated Events vs Programmatically Generated Events</ref> for more information. </para>        </detaileddescription>
+<para>This function behaves as <ref refid="classwx_notebook_1a140d1743bc93c3aff36fe2c9f1cb2bc8" kindref="member">SetSelection()</ref> but does <emphasis>not</emphasis> generate the page changing events.</para><para>See <ref refid="overview_events_1overview_events_prog" kindref="member">User Generated Events vs Programmatically Generated Events</ref> for more information. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/notebook.h" line="197"/>
@@ -448,114 +448,114 @@ The styles wxNB_LEFT, RIGHT and BOTTOM are not supported under Microsoft Windows
 </para><sect1 id="classwx_notebook_1notebook_bg">
 <title>Page backgrounds</title>
 <para>On Windows XP, the default theme paints a gradient on the notebook&apos;s pages. If you wish to suppress this theme, for aesthetic or performance reasons, there are three ways of doing it. You can use <computeroutput>wxNB_NOPAGETHEME</computeroutput> to disable themed drawing for a particular notebook, you can call <ref refid="classwx_system_options_1aa04043bfa0ffee30aaf09f2e436f6208" kindref="member">wxSystemOptions::SetOption</ref> to disable it for the whole application, or you can disable it for individual pages by using <ref refid="classwx_window_1a37219df52734626e23401fd83b25d8a0" kindref="member">SetBackgroundColour()</ref>.</para><para>To disable themed pages globally: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_system_options_1aa04043bfa0ffee30aaf09f2e436f6208" kindref="member" tooltip="Sets an option.">wxSystemOptions::SetOption</ref>(</highlight><highlight class="stringliteral">&quot;msw.notebook.themed-background&quot;</highlight><highlight class="normal">,<sp/>0);</highlight></codeline>
-</programlisting></para><para>Set the value to 1 to enable it again. To give a single page a solid background that more or less fits in with the overall theme, use: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_colour" kindref="compound" tooltip="A colour is an object representing a combination of Red, Green, and Blue (RGB) intensity...">wxColour</ref><sp/>col<sp/>=<sp/>notebook-&gt;GetThemeBackgroundColour();</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(col.<ref refid="classwx_colour_1a5616c16dbc5f312421adb50a49720320" kindref="member" tooltip="Returns true if the colour object is valid (the colour has been initialised with...">IsOk</ref>())</highlight></codeline>
+</programlisting></para><para>Set the value to 1 to enable it again. To give a single page a solid background that more or less fits in with the overall theme, use: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_colour" kindref="compound" tooltip="A colour is an object representing a combination of Red, Green, and Blue (RGB) intensity values...">wxColour</ref><sp/>col<sp/>=<sp/>notebook-&gt;GetThemeBackgroundColour();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(col.<ref refid="classwx_colour_1a5616c16dbc5f312421adb50a49720320" kindref="member" tooltip="Returns true if the colour object is valid (the colour has been initialised with RGB values)...">IsOk</ref>())</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>page-&gt;SetBackgroundColour(col);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 </programlisting></para><para>On platforms other than Windows, or if the application is not using Windows themes, <ref refid="classwx_notebook_1af6bb90cac2b838e2b6460c373b927066" kindref="member">GetThemeBackgroundColour()</ref> will return an uninitialised colour object, and the above code will therefore work on all platforms.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__bookctrl" kindref="compound">Book Controls</ref> <htmlonly> &lt;br&gt;&lt;div&gt;&lt;span class=&apos;appearance&apos;&gt;Appearance:&lt;/span&gt;&lt;br&gt;&lt;table class=&apos;appearance&apos;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&apos;wxmsw/notebook.png&apos; alt=&apos;wxMSW appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxgtk/notebook.png&apos; alt=&apos;wxGTK appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxmac/notebook.png&apos; alt=&apos;wxMac appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;wxMSW appearance&lt;/td&gt;&lt;td&gt;wxGTK appearance&lt;/td&gt;&lt;td&gt;wxMac appearance&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt; </htmlonly></para><para><simplesect kind="see"><para><ref refid="interface_2wx_2bookctrl_8h_1ab367c06ea9df73f0d3bf3c464afdb7d6" kindref="member">wxBookCtrl</ref>, <ref refid="classwx_book_ctrl_event" kindref="compound">wxBookCtrlEvent</ref>, <ref refid="classwx_image_list" kindref="compound">wxImageList</ref>, <ref refid="page__samples_1page_samples_notebook" kindref="member">Notebook Sample</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__bookctrl" kindref="compound">Book Controls</ref> <htmlonly> &lt;br&gt;&lt;div&gt;&lt;span class=&apos;appearance&apos;&gt;Appearance:&lt;/span&gt;&lt;br&gt;&lt;table class=&apos;appearance&apos;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&apos;wxmsw/notebook.png&apos; alt=&apos;wxMSW appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxgtk/notebook.png&apos; alt=&apos;wxGTK appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxmac/notebook.png&apos; alt=&apos;wxMac appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;wxMSW appearance&lt;/td&gt;&lt;td&gt;wxGTK appearance&lt;/td&gt;&lt;td&gt;wxMac appearance&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt; </htmlonly></para><para><simplesect kind="see"><para><ref refid="interface_2wx_2bookctrl_8h_1ab367c06ea9df73f0d3bf3c464afdb7d6" kindref="member">wxBookCtrl</ref>, <ref refid="classwx_book_ctrl_event" kindref="compound">wxBookCtrlEvent</ref>, <ref refid="classwx_image_list" kindref="compound">wxImageList</ref>, <ref refid="page_samples_1page_samples_notebook" kindref="member">Notebook Sample</ref> </para></simplesect>
 </para></sect1>
     </detaileddescription>
     <inheritancegraph>
-      <node id="7947">
+      <node id="7953">
         <label>wxBookCtrlBase</label>
         <link refid="classwx_book_ctrl_base"/>
-        <childnode refid="7948" relation="public-inheritance">
+        <childnode refid="7954" relation="public-inheritance">
         </childnode>
-        <childnode refid="7953" relation="public-inheritance">
+        <childnode refid="7959" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7951">
+      <node id="7957">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="7950">
+      <node id="7956">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="7951" relation="public-inheritance">
+        <childnode refid="7957" relation="public-inheritance">
         </childnode>
-        <childnode refid="7952" relation="public-inheritance">
+        <childnode refid="7958" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7952">
+      <node id="7958">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="7948">
+      <node id="7954">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="7949" relation="public-inheritance">
+        <childnode refid="7955" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7949">
+      <node id="7955">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="7950" relation="public-inheritance">
+        <childnode refid="7956" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7946">
+      <node id="7952">
         <label>wxNotebook</label>
         <link refid="classwx_notebook"/>
-        <childnode refid="7947" relation="public-inheritance">
+        <childnode refid="7953" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7953">
+      <node id="7959">
         <label>wxWithImages</label>
         <link refid="classwx_with_images"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7955">
+      <node id="7961">
         <label>wxBookCtrlBase</label>
         <link refid="classwx_book_ctrl_base"/>
-        <childnode refid="7956" relation="public-inheritance">
-        </childnode>
         <childnode refid="7962" relation="public-inheritance">
         </childnode>
+        <childnode refid="7968" relation="public-inheritance">
+        </childnode>
       </node>
-      <node id="7959">
+      <node id="7965">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="7960" relation="usage">
+        <childnode refid="7966" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="7958">
+      <node id="7964">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="7959" relation="public-inheritance">
+        <childnode refid="7965" relation="public-inheritance">
         </childnode>
-        <childnode refid="7961" relation="public-inheritance">
+        <childnode refid="7967" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7961">
+      <node id="7967">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="7956">
+      <node id="7962">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="7957" relation="public-inheritance">
+        <childnode refid="7963" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7957">
+      <node id="7963">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="7958" relation="public-inheritance">
+        <childnode refid="7964" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7954">
+      <node id="7960">
         <label>wxNotebook</label>
         <link refid="classwx_notebook"/>
-        <childnode refid="7955" relation="public-inheritance">
+        <childnode refid="7961" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7962">
+      <node id="7968">
         <label>wxWithImages</label>
         <link refid="classwx_with_images"/>
       </node>
-      <node id="7960">
+      <node id="7966">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="overview_app" kind="page">
+    <compoundname>overview_app</compoundname>
+    <title>wxApp Overview</title>
+    <detaileddescription>
+<para>Classes: <ref refid="classwx_app" kindref="compound">wxApp</ref></para><para><itemizedlist>
+<listitem><para><ref refid="overview_app_1overview_app_intro" kindref="member">Introduction</ref> </para></listitem>
+<listitem><para><ref refid="overview_app_1overview_app_shutdown" kindref="member">Application Shutdown</ref></para></listitem>
+</itemizedlist>
+<hruler/>
+</para><sect1 id="overview_app_1overview_app_intro">
+<title>Introduction</title>
+<para>A wxWidgets application does not have a <emphasis>main</emphasis> procedure; the equivalent is the <ref refid="classwx_app_console_1a99953775a2fd83fa2456e390779afe15" kindref="member">wxApp::OnInit</ref> member defined for a class derived from <ref refid="classwx_app" kindref="compound">wxApp</ref>.</para><para><emphasis>OnInit</emphasis> will usually create a top window as a bare minimum. Unlike in earlier versions of wxWidgets, OnInit does not return a frame. Instead it returns a boolean value which indicates whether processing should continue (true) or not (false).</para><para>Note that the program&apos;s command line arguments, represented by <emphasis>argc</emphasis> and <emphasis>argv</emphasis>, are available from within <ref refid="classwx_app" kindref="compound">wxApp</ref> member functions.</para><para>An application closes by destroying all windows. Because all frames must be destroyed for the application to exit, it is advisable to use parent frames wherever possible when creating new frames, so that deleting the top level frame will automatically delete child frames. The alternative is to explicitly delete child frames in the top-level frame&apos;s <ref refid="classwx_close_event" kindref="compound">wxCloseEvent</ref> handler.</para><para>In emergencies the wxExit function can be called to kill the application however normally the application shuts down automatically, see <ref refid="overview_app_1overview_app_shutdown" kindref="member">Application Shutdown</ref>.</para><para>An example of defining an application follows:</para><para><programlisting><codeline><highlight class="keyword">class<sp/></highlight><highlight class="normal">DerivedApp<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classwx_app" kindref="compound" tooltip="The wxApp class represents the application itself when wxUSE_GUI=1.">wxApp</ref></highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classwx_app_console_1a99953775a2fd83fa2456e390779afe15" kindref="member" tooltip="This must be provided by the application, and will usually create the application&amp;#39;s main window...">OnInit</ref>();</highlight></codeline>
+<codeline><highlight class="normal">};</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">IMPLEMENT_APP(DerivedApp)</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">bool<sp/>DerivedApp::OnInit()</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_frame" kindref="compound" tooltip="A frame is a window whose size and position can (usually) be changed by the user.">wxFrame</ref><sp/>*the_frame<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classwx_frame" kindref="compound" tooltip="A frame is a window whose size and position can (usually) be changed by the user.">wxFrame</ref>(NULL,<sp/>ID_MYFRAME,<sp/>argv[0]);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>the_frame-&gt;<ref refid="classwx_window_1a7fbc92ce240a8d4f6956b6e0276ef07f" kindref="member" tooltip="Shows or hides the window.">Show</ref>(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting></para><para>Note the use of IMPLEMENT_APP(appClass), which allows wxWidgets to dynamically create an instance of the application object at the appropriate point in wxWidgets initialization. Previous versions of wxWidgets used to rely on the creation of a global application object, but this is no longer recommended, because required global initialization may not have been performed at application object construction time.</para><para>You can also use DECLARE_APP(appClass) in a header file to declare the wxGetApp function which returns a reference to the application object. Otherwise you can only use the global <computeroutput>wxTheApp</computeroutput> pointer which is of type <computeroutput>wxApp*</computeroutput>.</para></sect1>
+<sect1 id="overview_app_1overview_app_shutdown">
+<title>Application Shutdown</title>
+<para>The application normally shuts down when the last of its top level windows is closed. This is normally the expected behaviour and means that it is enough to call <ref refid="classwx_window_1a3e44f4a494fc9ef4346c4fba70c8de0c" kindref="member">wxWindow::Close()</ref> in response to the &quot;Exit&quot; menu command if your program has a single top level window. If this behaviour is not desirable <ref refid="classwx_app_1aceb948ece9ba286f738ec3379a18bc52" kindref="member">wxApp::SetExitOnFrameDelete</ref> can be called to change it.</para><para>Note that such logic doesn&apos;t apply for the windows shown before the program enters the main loop: in other words, you can safely show a dialog from <ref refid="classwx_app_console_1a99953775a2fd83fa2456e390779afe15" kindref="member">wxApp::OnInit</ref> and not be afraid that your application terminates when this dialog -- which is the last top level window for the moment -- is closed.</para><para>Another aspect of the application shutdown is <ref refid="classwx_app_console_1a5ee60051c92b0b2933258799626a0485" kindref="member">wxApp::OnExit</ref> which is called when the application exits but <emphasis>before</emphasis> wxWidgets cleans up its internal structures. You should delete all wxWidgets object that you created by the time OnExit finishes.</para><para>In particular, do <bold>not</bold> destroy them from application class&apos; destructor! For example, this code may crash:</para><para><programlisting><codeline><highlight class="keyword">class<sp/></highlight><highlight class="normal">MyApp<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classwx_app" kindref="compound" tooltip="The wxApp class represents the application itself when wxUSE_GUI=1.">wxApp</ref></highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>wxCHMHelpController<sp/>m_helpCtrl;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>...</highlight></codeline>
+<codeline><highlight class="normal">};</highlight></codeline>
+</programlisting></para><para>The reason for that is that <computeroutput>m_helpCtrl</computeroutput> is a member object and is thus destroyed from MyApp destructor. But MyApp object is deleted after wxWidgets structures that wxCHMHelpController depends on were uninitialized! The solution is to destroy HelpCtrl in <emphasis>OnExit:</emphasis> </para><para><programlisting><codeline><highlight class="keyword">class<sp/></highlight><highlight class="normal">MyApp<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classwx_app" kindref="compound" tooltip="The wxApp class represents the application itself when wxUSE_GUI=1.">wxApp</ref></highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>wxCHMHelpController<sp/>*m_helpCtrl;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>...</highlight></codeline>
+<codeline><highlight class="normal">};</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classwx_app_console_1a99953775a2fd83fa2456e390779afe15" kindref="member" tooltip="This must be provided by the application, and will usually create the application&amp;#39;s main window...">MyApp::OnInit</ref>()</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>m_helpCtrl<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>wxCHMHelpController;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>...</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classwx_app_console_1a5ee60051c92b0b2933258799626a0485" kindref="member" tooltip="Override this member function for any processing which needs to be done as the application is about t...">MyApp::OnExit</ref>()</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>m_helpCtrl;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> </para></sect1>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

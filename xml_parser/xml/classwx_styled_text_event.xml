@@ -1,11 +1,10 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_styled_text_event" kind="class" prot="public">
     <compoundname>wxStyledTextEvent</compoundname>
     <basecompoundref refid="classwx_command_event" prot="public" virt="non-virtual">wxCommandEvent</basecompoundref>
     <includes local="no">wx/stc/stc.h</includes>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_styled_text_event_1a28d0d22f9a9bec05e8c8b7c83b1eea3b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
         <definition>wxStyledTextEvent::wxStyledTextEvent</definition>
@@ -691,59 +690,59 @@
     <briefdescription>
 <para>The type of events sent from <ref refid="classwx_styled_text_ctrl" kindref="compound">wxStyledTextCtrl</ref>. </para>    </briefdescription>
     <detaileddescription>
-<para><xrefsect id="todo_1_todo000061"><xreftitle>Todo</xreftitle><xrefdescription><para>list styled text ctrl events.</para></xrefdescription></xrefsect><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref>, <ref refid="group__group__class__stc" kindref="compound">Scintilla Text Editor</ref> </para>    </detaileddescription>
+<para><xrefsect id="todo_1_todo000060"><xreftitle>Todo</xreftitle><xrefdescription><para>list styled text ctrl events.</para></xrefdescription></xrefsect></para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref>, <ref refid="group__group__class__stc" kindref="compound">Scintilla Text Editor</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10559">
+      <node id="10619">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="10557">
+      <node id="10617">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="10558" relation="public-inheritance">
+        <childnode refid="10618" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10556">
+      <node id="10616">
         <label>wxStyledTextEvent</label>
         <link refid="classwx_styled_text_event"/>
-        <childnode refid="10557" relation="public-inheritance">
+        <childnode refid="10617" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10558">
+      <node id="10618">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="10559" relation="public-inheritance">
+        <childnode refid="10619" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10563">
+      <node id="10623">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="10564" relation="usage">
+        <childnode refid="10624" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="10561">
+      <node id="10621">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="10562" relation="public-inheritance">
+        <childnode refid="10622" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10560">
+      <node id="10620">
         <label>wxStyledTextEvent</label>
         <link refid="classwx_styled_text_event"/>
-        <childnode refid="10561" relation="public-inheritance">
+        <childnode refid="10621" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10562">
+      <node id="10622">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="10563" relation="public-inheritance">
+        <childnode refid="10623" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10564">
+      <node id="10624">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

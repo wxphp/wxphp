@@ -1,12 +1,11 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="valnum_8h" kind="file">
     <compoundname>valnum.h</compoundname>
     <innerclass refid="classwx_num_validator" prot="public">wxNumValidator</innerclass>
     <innerclass refid="classwx_integer_validator" prot="public">wxIntegerValidator</innerclass>
     <innerclass refid="classwx_floating_point_validator" prot="public">wxFloatingPointValidator</innerclass>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="valnum_8h_1aeee397843c4f2e53abd67ca3ec1589f8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
           <param>
@@ -113,7 +112,7 @@ Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
-      <memberdef kind="function" id="valnum_8h_1a9d2ba1b6ccfcfa65586cb54cd517e9fb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="valnum_8h_1a9d2ba1b6ccfcfa65586cb54cd517e9fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
           <param>
             <type>typename T</type>

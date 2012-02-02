@@ -1,11 +1,10 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_colour_picker_ctrl" kind="class" prot="public">
     <compoundname>wxColourPickerCtrl</compoundname>
     <basecompoundref refid="classwx_picker_base" prot="public" virt="non-virtual">wxPickerBase</basecompoundref>
     <includes local="no">wx/clrpicker.h</includes>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_colour_picker_ctrl_1a5dc2a4de5662ca009800551b738feb7e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void wxColourPickerCtrl::SetColour</definition>
@@ -230,96 +229,96 @@
 <listitem><para>EVT_COLOURPICKER_CHANGED(id,  func): The user changed the colour selected in the control either using the button or using text control (see <computeroutput>wxCLRP_USE_TEXTCTRL</computeroutput>; note that in this case the event is fired only if the user’s input is valid, i.e. recognizable). </para></listitem>
 </itemizedlist>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__pickers" kindref="compound">Picker Controls</ref> <htmlonly> &lt;br&gt;&lt;div&gt;&lt;span class=&apos;appearance&apos;&gt;Appearance:&lt;/span&gt;&lt;br&gt;&lt;table class=&apos;appearance&apos;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&apos;wxmsw/colourpickerctrl.png&apos; alt=&apos;wxMSW appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxgtk/colourpickerctrl.png&apos; alt=&apos;wxGTK appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxmac/colourpickerctrl.png&apos; alt=&apos;wxMac appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;wxMSW appearance&lt;/td&gt;&lt;td&gt;wxGTK appearance&lt;/td&gt;&lt;td&gt;wxMac appearance&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt; </htmlonly></para><para><simplesect kind="see"><para><ref refid="classwx_colour_dialog" kindref="compound">wxColourDialog</ref>, <ref refid="classwx_colour_picker_event" kindref="compound">wxColourPickerEvent</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__pickers" kindref="compound">Picker Controls</ref> <htmlonly> &lt;br&gt;&lt;div&gt;&lt;span class=&apos;appearance&apos;&gt;Appearance:&lt;/span&gt;&lt;br&gt;&lt;table class=&apos;appearance&apos;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&apos;wxmsw/colourpickerctrl.png&apos; alt=&apos;wxMSW appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxgtk/colourpickerctrl.png&apos; alt=&apos;wxGTK appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxmac/colourpickerctrl.png&apos; alt=&apos;wxMac appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;wxMSW appearance&lt;/td&gt;&lt;td&gt;wxGTK appearance&lt;/td&gt;&lt;td&gt;wxMac appearance&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt; </htmlonly></para><para><simplesect kind="see"><para><ref refid="classwx_colour_dialog" kindref="compound">wxColourDialog</ref>, <ref refid="classwx_colour_picker_event" kindref="compound">wxColourPickerEvent</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="4881">
-        <label>wxObject</label>
-        <link refid="classwx_object"/>
-      </node>
-      <node id="4880">
-        <label>wxEvtHandler</label>
-        <link refid="classwx_evt_handler"/>
-        <childnode refid="4881" relation="public-inheritance">
-        </childnode>
-        <childnode refid="4882" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4882">
-        <label>wxTrackable</label>
-        <link refid="classwx_trackable"/>
-      </node>
-      <node id="4876">
-        <label>wxColourPickerCtrl</label>
-        <link refid="classwx_colour_picker_ctrl"/>
-        <childnode refid="4877" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4878">
-        <label>wxControl</label>
-        <link refid="classwx_control"/>
-        <childnode refid="4879" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4879">
-        <label>wxWindow</label>
-        <link refid="classwx_window"/>
-        <childnode refid="4880" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4877">
-        <label>wxPickerBase</label>
-        <link refid="classwx_picker_base"/>
-        <childnode refid="4878" relation="public-inheritance">
-        </childnode>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
-      <node id="4888">
-        <label>wxObject</label>
-        <link refid="classwx_object"/>
-        <childnode refid="4889" relation="usage">
-          <edgelabel>m_refData</edgelabel>
-        </childnode>
-      </node>
-      <node id="4887">
-        <label>wxEvtHandler</label>
-        <link refid="classwx_evt_handler"/>
-        <childnode refid="4888" relation="public-inheritance">
-        </childnode>
-        <childnode refid="4890" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4890">
-        <label>wxTrackable</label>
-        <link refid="classwx_trackable"/>
-      </node>
-      <node id="4883">
-        <label>wxColourPickerCtrl</label>
-        <link refid="classwx_colour_picker_ctrl"/>
-        <childnode refid="4884" relation="public-inheritance">
-        </childnode>
-      </node>
       <node id="4885">
-        <label>wxControl</label>
-        <link refid="classwx_control"/>
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+      </node>
+      <node id="4884">
+        <label>wxEvtHandler</label>
+        <link refid="classwx_evt_handler"/>
+        <childnode refid="4885" relation="public-inheritance">
+        </childnode>
         <childnode refid="4886" relation="public-inheritance">
         </childnode>
       </node>
       <node id="4886">
+        <label>wxTrackable</label>
+        <link refid="classwx_trackable"/>
+      </node>
+      <node id="4880">
+        <label>wxColourPickerCtrl</label>
+        <link refid="classwx_colour_picker_ctrl"/>
+        <childnode refid="4881" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4882">
+        <label>wxControl</label>
+        <link refid="classwx_control"/>
+        <childnode refid="4883" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4883">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="4887" relation="public-inheritance">
+        <childnode refid="4884" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4881">
+        <label>wxPickerBase</label>
+        <link refid="classwx_picker_base"/>
+        <childnode refid="4882" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4892">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="4893" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="4891">
+        <label>wxEvtHandler</label>
+        <link refid="classwx_evt_handler"/>
+        <childnode refid="4892" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4894" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4894">
+        <label>wxTrackable</label>
+        <link refid="classwx_trackable"/>
+      </node>
+      <node id="4887">
+        <label>wxColourPickerCtrl</label>
+        <link refid="classwx_colour_picker_ctrl"/>
+        <childnode refid="4888" relation="public-inheritance">
         </childnode>
       </node>
       <node id="4889">
+        <label>wxControl</label>
+        <link refid="classwx_control"/>
+        <childnode refid="4890" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4890">
+        <label>wxWindow</label>
+        <link refid="classwx_window"/>
+        <childnode refid="4891" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4893">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
-      <node id="4884">
+      <node id="4888">
         <label>wxPickerBase</label>
         <link refid="classwx_picker_base"/>
-        <childnode refid="4885" relation="public-inheritance">
+        <childnode refid="4889" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>

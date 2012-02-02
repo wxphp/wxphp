@@ -45,6 +45,64 @@
 			"public":true
 		}
 	},
+	"wxDateTime::Tm":{
+		"msec":{
+			"type":"wxDateTime_t",
+			"static":false,
+			"mutable":false,
+			"protected":false,
+			"public":true
+		},
+		"sec":{
+			"type":"wxDateTime_t",
+			"static":false,
+			"mutable":false,
+			"protected":false,
+			"public":true
+		},
+		"min":{
+			"type":"wxDateTime_t",
+			"static":false,
+			"mutable":false,
+			"protected":false,
+			"public":true
+		},
+		"hour":{
+			"type":"wxDateTime_t",
+			"static":false,
+			"mutable":false,
+			"protected":false,
+			"public":true
+		},
+		"mday":{
+			"type":"wxDateTime_t",
+			"static":false,
+			"mutable":false,
+			"protected":false,
+			"public":true
+		},
+		"yday":{
+			"type":"wxDateTime_t",
+			"static":false,
+			"mutable":false,
+			"protected":false,
+			"public":true
+		},
+		"mon":{
+			"type":"Month",
+			"static":false,
+			"mutable":false,
+			"protected":false,
+			"public":true
+		},
+		"year":{
+			"type":"int",
+			"static":false,
+			"mutable":false,
+			"protected":false,
+			"public":true
+		}
+	},
 	"wxAppConsole":{
 		"argc":{
 			"type":"int",
@@ -55,6 +113,50 @@
 		},
 		"argv":{
 			"type":"wxChar **",
+			"static":false,
+			"mutable":false,
+			"protected":false,
+			"public":true
+		}
+	},
+	"wxCmdLineEntryDesc":{
+		"kind":{
+			"type":"wxCmdLineEntryType",
+			"static":false,
+			"mutable":false,
+			"protected":false,
+			"public":true
+		},
+		"shortName":{
+			"type":"const char *",
+			"static":false,
+			"mutable":false,
+			"protected":false,
+			"public":true
+		},
+		"longName":{
+			"type":"const char *",
+			"static":false,
+			"mutable":false,
+			"protected":false,
+			"public":true
+		},
+		"description":{
+			"type":"const char *",
+			"static":false,
+			"mutable":false,
+			"protected":false,
+			"public":true
+		},
+		"type":{
+			"type":"wxCmdLineParamType",
+			"static":false,
+			"mutable":false,
+			"protected":false,
+			"public":true
+		},
+		"flags":{
+			"type":"int",
 			"static":false,
 			"mutable":false,
 			"protected":false,
@@ -262,6 +364,66 @@
 			"public":false
 		}
 	},
+	"wxExecuteEnv":{
+		"cwd":{
+			"type":"wxString",
+			"static":false,
+			"mutable":false,
+			"protected":false,
+			"public":true
+		},
+		"env":{
+			"type":"wxEnvVariableHashMap",
+			"static":false,
+			"mutable":false,
+			"protected":false,
+			"public":true
+		}
+	},
+	"wxFontMetrics":{
+		"height":{
+			"type":"int",
+			"static":false,
+			"mutable":false,
+			"protected":false,
+			"public":true
+		},
+		"ascent":{
+			"type":"int",
+			"static":false,
+			"mutable":false,
+			"protected":false,
+			"public":true
+		},
+		"descent":{
+			"type":"int",
+			"static":false,
+			"mutable":false,
+			"protected":false,
+			"public":true
+		},
+		"internalLeading":{
+			"type":"int",
+			"static":false,
+			"mutable":false,
+			"protected":false,
+			"public":true
+		},
+		"externalLeading":{
+			"type":"int",
+			"static":false,
+			"mutable":false,
+			"protected":false,
+			"public":true
+		},
+		"averageWidth":{
+			"type":"int",
+			"static":false,
+			"mutable":false,
+			"protected":false,
+			"public":true
+		}
+	},
 	"wxGridSizesInfo":{
 		"m_sizeDefault":{
 			"type":"int",
@@ -272,6 +434,57 @@
 		},
 		"m_customSizes":{
 			"type":"wxUnsignedToIntHashMap",
+			"static":false,
+			"mutable":false,
+			"protected":false,
+			"public":true
+		}
+	},
+	"wxHeaderButtonParams":{
+		"m_arrowColour":{
+			"type":"wxColour",
+			"static":false,
+			"mutable":false,
+			"protected":false,
+			"public":true
+		},
+		"m_selectionColour":{
+			"type":"wxColour",
+			"static":false,
+			"mutable":false,
+			"protected":false,
+			"public":true
+		},
+		"m_labelText":{
+			"type":"wxString",
+			"static":false,
+			"mutable":false,
+			"protected":false,
+			"public":true
+		},
+		"m_labelFont":{
+			"type":"wxFont",
+			"static":false,
+			"mutable":false,
+			"protected":false,
+			"public":true
+		},
+		"m_labelColour":{
+			"type":"wxColour",
+			"static":false,
+			"mutable":false,
+			"protected":false,
+			"public":true
+		},
+		"m_labelBitmap":{
+			"type":"wxBitmap",
+			"static":false,
+			"mutable":false,
+			"protected":false,
+			"public":true
+		},
+		"m_labelAlignment":{
+			"type":"int",
 			"static":false,
 			"mutable":false,
 			"protected":false,
@@ -294,6 +507,50 @@
 			"mutable":false,
 			"protected":true,
 			"public":false
+		}
+	},
+	"wxLanguageInfo":{
+		"WinLang":{
+			"type":"wxUint32",
+			"static":false,
+			"mutable":false,
+			"protected":false,
+			"public":true
+		},
+		"WinSublang":{
+			"type":"wxUint32",
+			"static":false,
+			"mutable":false,
+			"protected":false,
+			"public":true
+		},
+		"Language":{
+			"type":"int",
+			"static":false,
+			"mutable":false,
+			"protected":false,
+			"public":true
+		},
+		"CanonicalName":{
+			"type":"wxString",
+			"static":false,
+			"mutable":false,
+			"protected":false,
+			"public":true
+		},
+		"Description":{
+			"type":"wxString",
+			"static":false,
+			"mutable":false,
+			"protected":false,
+			"public":true
+		},
+		"LayoutDirection":{
+			"type":"wxLayoutDirection",
+			"static":false,
+			"mutable":false,
+			"protected":false,
+			"public":true
 		}
 	},
 	"wxLayoutConstraints":{
@@ -348,6 +605,36 @@
 		},
 		"centreY":{
 			"type":"wxIndividualLayoutConstraint",
+			"static":false,
+			"mutable":false,
+			"protected":false,
+			"public":true
+		}
+	},
+	"wxLinuxDistributionInfo":{
+		"Id":{
+			"type":"wxString",
+			"static":false,
+			"mutable":false,
+			"protected":false,
+			"public":true
+		},
+		"Release":{
+			"type":"wxString",
+			"static":false,
+			"mutable":false,
+			"protected":false,
+			"public":true
+		},
+		"CodeName":{
+			"type":"wxString",
+			"static":false,
+			"mutable":false,
+			"protected":false,
+			"public":true
+		},
+		"Description":{
+			"type":"wxString",
 			"static":false,
 			"mutable":false,
 			"protected":false,
@@ -531,6 +818,36 @@
 			"public":true
 		}
 	},
+	"wxPropertyGridHitTestResult":{
+		"column":{
+			"type":"int",
+			"static":false,
+			"mutable":false,
+			"protected":false,
+			"public":true
+		},
+		"splitter":{
+			"type":"int",
+			"static":false,
+			"mutable":false,
+			"protected":false,
+			"public":true
+		},
+		"splitterHitOffset":{
+			"type":"int",
+			"static":false,
+			"mutable":false,
+			"protected":false,
+			"public":true
+		},
+		"property":{
+			"type":"wxPGProperty *",
+			"static":false,
+			"mutable":false,
+			"protected":false,
+			"public":false
+		}
+	},
 	"wxRealPoint":{
 		"x":{
 			"type":"double",
@@ -631,6 +948,22 @@
 		},
 		"m_height":{
 			"type":"wxInt32",
+			"static":false,
+			"mutable":false,
+			"protected":false,
+			"public":true
+		}
+	},
+	"wxRendererVersion":{
+		"age":{
+			"type":"const int",
+			"static":false,
+			"mutable":false,
+			"protected":false,
+			"public":true
+		},
+		"version":{
+			"type":"const int",
 			"static":false,
 			"mutable":false,
 			"protected":false,
@@ -831,6 +1164,13 @@
 			"protected":true,
 			"public":false
 		},
+		"sm_drawingHandlers":{
+			"type":"wxList",
+			"static":true,
+			"mutable":false,
+			"protected":true,
+			"public":false
+		},
 		"sm_renderer":{
 			"type":"wxRichTextRenderer *",
 			"static":true,
@@ -892,147 +1232,158 @@
 			"type":"wxRichTextBuffer",
 			"static":false,
 			"mutable":false,
-			"protected":false,
+			"protected":true,
 			"public":false
 		},
 		"m_contextMenu":{
 			"type":"wxMenu *",
 			"static":false,
 			"mutable":false,
-			"protected":false,
+			"protected":true,
 			"public":false
 		},
 		"m_caretPosition":{
 			"type":"long",
 			"static":false,
 			"mutable":false,
-			"protected":false,
+			"protected":true,
 			"public":false
 		},
 		"m_caretPositionForDefaultStyle":{
 			"type":"long",
 			"static":false,
 			"mutable":false,
-			"protected":false,
+			"protected":true,
 			"public":false
 		},
 		"m_selection":{
 			"type":"wxRichTextSelection",
 			"static":false,
 			"mutable":false,
-			"protected":false,
+			"protected":true,
 			"public":false
 		},
 		"m_selectionState":{
 			"type":"wxRichTextCtrlSelectionState",
 			"static":false,
 			"mutable":false,
-			"protected":false,
+			"protected":true,
 			"public":false
 		},
 		"m_selectionAnchor":{
 			"type":"long",
 			"static":false,
 			"mutable":false,
-			"protected":false,
+			"protected":true,
 			"public":false
 		},
 		"m_selectionAnchorObject":{
 			"type":"wxRichTextObject *",
 			"static":false,
 			"mutable":false,
-			"protected":false,
+			"protected":true,
 			"public":false
 		},
 		"m_editable":{
 			"type":"bool",
 			"static":false,
 			"mutable":false,
-			"protected":false,
+			"protected":true,
 			"public":false
 		},
 		"m_caretAtLineStart":{
 			"type":"bool",
 			"static":false,
 			"mutable":false,
-			"protected":false,
+			"protected":true,
 			"public":false
 		},
 		"m_dragging":{
 			"type":"bool",
 			"static":false,
 			"mutable":false,
-			"protected":false,
-			"public":false
-		},
-		"m_dragStart":{
-			"type":"wxPoint",
-			"static":false,
-			"mutable":false,
-			"protected":false,
+			"protected":true,
 			"public":false
 		},
 		"m_fullLayoutRequired":{
 			"type":"bool",
 			"static":false,
 			"mutable":false,
-			"protected":false,
+			"protected":true,
 			"public":false
 		},
 		"m_fullLayoutTime":{
 			"type":"wxLongLong",
 			"static":false,
 			"mutable":false,
-			"protected":false,
+			"protected":true,
 			"public":false
 		},
 		"m_fullLayoutSavedPosition":{
 			"type":"long",
 			"static":false,
 			"mutable":false,
-			"protected":false,
+			"protected":true,
 			"public":false
 		},
 		"m_delayedLayoutThreshold":{
 			"type":"long",
 			"static":false,
 			"mutable":false,
-			"protected":false,
+			"protected":true,
 			"public":false
 		},
 		"m_textCursor":{
 			"type":"wxCursor",
 			"static":false,
 			"mutable":false,
-			"protected":false,
+			"protected":true,
 			"public":false
 		},
 		"m_urlCursor":{
 			"type":"wxCursor",
 			"static":false,
 			"mutable":false,
-			"protected":false,
+			"protected":true,
 			"public":false
 		},
 		"m_contextMenuPropertiesInfo":{
 			"type":"wxRichTextContextMenuPropertiesInfo",
 			"static":false,
 			"mutable":false,
-			"protected":false,
+			"protected":true,
 			"public":false
 		},
 		"m_focusObject":{
 			"type":"wxRichTextParagraphLayoutBox *",
 			"static":false,
 			"mutable":false,
-			"protected":false,
+			"protected":true,
 			"public":false
 		},
 		"sm_availableFontNames":{
 			"type":"wxArrayString",
 			"static":true,
 			"mutable":false,
+			"protected":true,
+			"public":false
+		}
+	},
+	"wxRichTextDrawingContext":{
+		"m_buffer":{
+			"type":"wxRichTextBuffer *",
+			"static":false,
+			"mutable":false,
 			"protected":false,
+			"public":true
+		}
+	},
+	"wxRichTextDrawingHandler":{
+		"m_name":{
+			"type":"wxString",
+			"static":false,
+			"mutable":false,
+			"protected":true,
 			"public":false
 		}
 	},
@@ -1435,6 +1786,29 @@
 			"public":false
 		}
 	},
+	"wxSplitterRenderParams":{
+		"border":{
+			"type":"const wxCoord",
+			"static":false,
+			"mutable":false,
+			"protected":false,
+			"public":true
+		},
+		"isHotSensitive":{
+			"type":"const bool",
+			"static":false,
+			"mutable":false,
+			"protected":false,
+			"public":true
+		},
+		"widthSash":{
+			"type":"const wxCoord",
+			"static":false,
+			"mutable":false,
+			"protected":false,
+			"public":true
+		}
+	},
 	"wxString":{
 		"npos":{
 			"type":"const size_t",
@@ -1625,6 +1999,20 @@
 			"protected":false,
 			"public":true
 		},
+		"m_minSize":{
+			"type":"wxTextAttrSize",
+			"static":false,
+			"mutable":false,
+			"protected":false,
+			"public":true
+		},
+		"m_maxSize":{
+			"type":"wxTextAttrSize",
+			"static":false,
+			"mutable":false,
+			"protected":false,
+			"public":true
+		},
 		"m_border":{
 			"type":"wxTextAttrBorders",
 			"static":false,
@@ -1666,6 +2054,13 @@
 			"mutable":false,
 			"protected":false,
 			"public":true
+		},
+		"m_boxStyleName":{
+			"type":"wxString",
+			"static":false,
+			"mutable":false,
+			"protected":false,
+			"public":true
 		}
 	},
 	"wxTextFile":{
@@ -1681,6 +2076,36 @@
 		"NO_IMAGE":{
 			"type":"const int",
 			"static":true,
+			"mutable":false,
+			"protected":false,
+			"public":true
+		}
+	},
+	"wxVideoMode":{
+		"w":{
+			"type":"int",
+			"static":false,
+			"mutable":false,
+			"protected":false,
+			"public":true
+		},
+		"h":{
+			"type":"int",
+			"static":false,
+			"mutable":false,
+			"protected":false,
+			"public":true
+		},
+		"bpp":{
+			"type":"int",
+			"static":false,
+			"mutable":false,
+			"protected":false,
+			"public":true
+		},
+		"refresh":{
+			"type":"int",
+			"static":false,
 			"mutable":false,
 			"protected":false,
 			"public":true
@@ -1703,6 +2128,29 @@
 		},
 		"m_viewTypeName":{
 			"type":"wxString",
+			"static":false,
+			"mutable":false,
+			"protected":false,
+			"public":true
+		}
+	},
+	"wxVisualAttributes":{
+		"font":{
+			"type":"wxFont",
+			"static":false,
+			"mutable":false,
+			"protected":false,
+			"public":true
+		},
+		"colFg":{
+			"type":"wxColour",
+			"static":false,
+			"mutable":false,
+			"protected":false,
+			"public":true
+		},
+		"colBg":{
+			"type":"wxColour",
 			"static":false,
 			"mutable":false,
 			"protected":false,

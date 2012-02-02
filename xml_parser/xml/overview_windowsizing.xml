@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="overview_windowsizing" kind="page">
+    <compoundname>overview_windowsizing</compoundname>
+    <title>Window Sizing Overview</title>
+    <detaileddescription>
+<para>It can sometimes be confusing to keep track of the various size-related attributes of a <ref refid="classwx_window" kindref="compound">wxWindow</ref>, how they relate to each other, and how they interact with sizers.</para><para>This document will attempt to clear the fog a little, and give some simple explanations of things.</para><para><itemizedlist>
+<listitem><para><ref refid="overview_windowsizing_1overview_windowsizing_glossary" kindref="member">Glossary</ref> </para></listitem>
+<listitem><para><ref refid="overview_windowsizing_1overview_windowsizing_func" kindref="member">Functions related to sizing</ref></para></listitem>
+</itemizedlist>
+<hruler/>
+</para><sect1 id="overview_windowsizing_1overview_windowsizing_glossary">
+<title>Glossary</title>
+<para><itemizedlist>
+<listitem><para><bold>&quot;Best Size&quot;</bold>: the best size of a widget depends on what kind of widget it is, and usually also on the contents of the widget. For example a wxListBox&apos;s best size will be calculated based on how many items it has, up to a certain limit, or a wxButton&apos;s best size will be calculated based on its label size, but normally won&apos;t be smaller than the platform default button size (unless a style flag overrides that). There is a special virtual method in the C++ window classes called <ref refid="classwx_window_1a01e7604ab0f0b2b1a8e322a630a4669e" kindref="member">wxWindow::DoGetBestSize()</ref> that a class needs to override if it wants to calculate its own best size based on its content.</para></listitem>
+</itemizedlist>
+<itemizedlist>
+<listitem><para><bold>&quot;Minimal Size&quot;</bold>: the minimal size of a widget is a size that is normally explicitly set by the programmer either with the <ref refid="classwx_window_1a3fc066f4d8083319f004ac43811d545d" kindref="member">wxWindow::SetMinSize()</ref> method or with the <ref refid="classwx_window_1a307329dc3b10f5584aeb2cbce9293ffd" kindref="member">wxWindow::SetSizeHints()</ref> method. Most controls will also set the minimal size to the size given in the control&apos;s constructor if a non-default value is passed. Top-level windows such as <ref refid="classwx_frame" kindref="compound">wxFrame</ref> will not allow the user to resize the frame below the minimal size.</para></listitem>
+</itemizedlist>
+<itemizedlist>
+<listitem><para><bold>&quot;Maximum Size&quot;</bold>: just like for the minimal size, the maximum size is normally explicitly set by the programmer with the <ref refid="classwx_window_1a38b496214d728a3212afadee5ed51606" kindref="member">wxWindow::SetMaxSize()</ref> method or with <ref refid="classwx_window_1a307329dc3b10f5584aeb2cbce9293ffd" kindref="member">wxWindow::SetSizeHints()</ref>. Top-level windows such as <ref refid="classwx_frame" kindref="compound">wxFrame</ref> will not allow the user to resize the frame above the maximum size.</para></listitem>
+</itemizedlist>
+<itemizedlist>
+<listitem><para><bold>&quot;Size&quot;</bold>: the size of a widget can be explicitly set or fetched with the <ref refid="classwx_window_1a180312d5ad4a4a5ad805b8d52d67a74e" kindref="member">wxWindow::SetSize()</ref> or <ref refid="classwx_window_1a124c12cff1e7b6e96a5e1fd3e48dca34" kindref="member">wxWindow::GetSize()</ref> methods. This size value is the size that the widget is currently using on screen and is the way to change the size of something that is not being managed by a sizer.</para></listitem>
+</itemizedlist>
+<itemizedlist>
+<listitem><para><bold>&quot;Client Size&quot;</bold>: the client size represents the widget&apos;s area inside of any borders belonging to the widget and is the area that can be drawn upon in a <computeroutput>EVT_PAINT</computeroutput> event. If a widget doesn&apos;t have a border then its client size is the same as its size.</para></listitem>
+</itemizedlist>
+<itemizedlist>
+<listitem><para><bold>&quot;Initial Size&quot;</bold>: the initial size of a widget is the size given to the constructor of the widget, if any. As mentioned above most controls will also set this size value as the control&apos;s minimal size. If the size passed to the constructor is the default <ref refid="gdicmn_8h_1a33a012cdb075e9f78c93f63bec2dc27b" kindref="member">wxDefaultSize</ref>, or if the size is not fully specified (such as <ref refid="classwx_size" kindref="compound">wxSize</ref>(150,-1)) then most controls will fill in the missing size components using the best size and will set the initial size of the control to the resulting size.</para></listitem>
+</itemizedlist>
+<itemizedlist>
+<listitem><para><bold>&quot;Virtual Size&quot;</bold>: the virtual size is the size of the potentially viewable area of the widget. The virtual size of a widget may be larger than its actual size and in this case scrollbars will appear to the let the user &apos;explore&apos; the full contents of the widget. See <ref refid="classwx_scrolled" kindref="compound">wxScrolled</ref> for more info.</para></listitem>
+</itemizedlist>
+</para></sect1>
+<sect1 id="overview_windowsizing_1overview_windowsizing_func">
+<title>Functions related to sizing</title>
+<para><itemizedlist>
+<listitem><para><ref refid="classwx_window_1a1a54fcda8d52986482e030bd54739e9f" kindref="member">wxWindow::GetEffectiveMinSize()</ref>: returns a blending of the widget&apos;s minimal size and best size, giving precedence to the minimal size. For example, if a widget&apos;s min size is set to (150, -1) and the best size is (80, 22) then the best fitting size is (150, 22). If the min size is (50, 20) then the best fitting size is (50, 20). This method is what is called by the sizers when determining what the requirements of each item in the sizer is, and is used for calculating the overall minimum needs of the sizer.</para></listitem>
+</itemizedlist>
+<itemizedlist>
+<listitem><para><ref refid="classwx_window_1a1b309ca50ba87e34f968c83b79af1397" kindref="member">wxWindow::SetInitialSize()</ref>: this is a little different than the typical size setters. Rather than just setting an &quot;initial size&quot; attribute it actually sets the minimal size to the value passed in, blends that value with the best size, and then sets the size of the widget to be the result. So you can consider this method to be a &quot;Smart SetSize&quot;. This method is what is called by the constructor of most controls to set the minimal size and the initial size of the control.</para></listitem>
+</itemizedlist>
+<itemizedlist>
+<listitem><para><ref refid="classwx_window_1a2bf38a6cbd1f82fb46f274396f482994" kindref="member">wxWindow::Fit()</ref>: this method sets the size of a window to fit around its children. If it has no children then nothing is done, if it does have children then the size of the window is set to the window&apos;s best size.</para></listitem>
+</itemizedlist>
+<itemizedlist>
+<listitem><para><ref refid="classwx_sizer_1abad9cedc0cbe9ade2c799da23462d17e" kindref="member">wxSizer::Fit()</ref>: this sets the size of the window to be large enough to accommodate the minimum size needed by the sizer, (along with a few other constraints...). If the sizer is the one that is assigned to the window then this should be equivalent to <ref refid="classwx_window_1a2bf38a6cbd1f82fb46f274396f482994" kindref="member">wxWindow::Fit()</ref>.</para></listitem>
+</itemizedlist>
+<itemizedlist>
+<listitem><para><ref refid="classwx_sizer_1a1ea8589882944f8ac78b6ff8abde1554" kindref="member">wxSizer::Layout()</ref>: recalculates the minimum space needed by each item in the sizer, and then lays out the items within the space currently allotted to the sizer.</para></listitem>
+</itemizedlist>
+<itemizedlist>
+<listitem><para><ref refid="classwx_window_1a1b143c3e72bd0af533b76db4830a6113" kindref="member">wxWindow::Layout()</ref>: if the window has a sizer then it sets the space given to the sizer to the current size of the window, which results in a call to <ref refid="classwx_sizer_1a1ea8589882944f8ac78b6ff8abde1554" kindref="member">wxSizer::Layout()</ref>. If the window has layout constraints instead of a sizer then the constraints algorithm is run. The <computeroutput>Layout()</computeroutput> method is what is called by the default <computeroutput>EVT_SIZE</computeroutput> handler for container windows. </para></listitem>
+</itemizedlist>
+</para></sect1>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

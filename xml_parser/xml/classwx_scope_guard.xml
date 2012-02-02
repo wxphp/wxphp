@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_scope_guard" kind="class" prot="public">
     <compoundname>wxScopeGuard</compoundname>
     <includes local="no">wx/scopeguard.h</includes>
@@ -16,7 +16,7 @@
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>ensure<sp/>that<sp/>changes<sp/>done<sp/>so<sp/>far<sp/>are<sp/>rolled<sp/>back<sp/>if<sp/>the<sp/>next</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>operation<sp/>throws</highlight><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_scope_guard" kindref="compound" tooltip="Scope guard is an object which allows executing an action on scope exit.">wxScopeGuard</ref><sp/>guard<sp/>=<sp/><ref refid="group__group__funcmacro__misc_1ga24290da88c13d315efe19c0ed480477f" kindref="member" tooltip="Returns a scope guard object which will call the specified function with the given...">wxMakeGuard</ref>(RollBack);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_scope_guard" kindref="compound" tooltip="Scope guard is an object which allows executing an action on scope exit.">wxScopeGuard</ref><sp/>guard<sp/>=<sp/><ref refid="group__group__funcmacro__misc_1ga24290da88c13d315efe19c0ed480477f" kindref="member" tooltip="Returns a scope guard object which will call the specified function with the given parameters on scop...">wxMakeGuard</ref>(RollBack);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Update2();</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>it<sp/>didn&apos;t<sp/>throw<sp/>so<sp/>commit<sp/>the<sp/>changes,<sp/>i.e.<sp/>avoid<sp/>rolling<sp/>back</highlight><highlight class="normal"></highlight></codeline>

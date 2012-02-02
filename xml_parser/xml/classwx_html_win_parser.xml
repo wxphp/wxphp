@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_html_win_parser" kind="class" prot="public">
     <compoundname>wxHtmlWinParser</compoundname>
     <basecompoundref refid="classwx_html_parser" prot="public" virt="non-virtual">wxHtmlParser</basecompoundref>
@@ -29,7 +29,7 @@
         <argsstring>()</argsstring>
         <name>CloseContainer</name>
         <briefdescription>
-<para>Closes the container, sets actual container to the parent one and returns pointer to it (see <ref refid="overview__html_1overview_html_cells" kindref="member">Cells and Containers</ref>). </para>        </briefdescription>
+<para>Closes the container, sets actual container to the parent one and returns pointer to it (see <ref refid="overview_html_1overview_html_cells" kindref="member">Cells and Containers</ref>). </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -109,7 +109,7 @@
         <argsstring>() const </argsstring>
         <name>GetContainer</name>
         <briefdescription>
-<para>Returns pointer to the currently opened container (see <ref refid="overview__html_1overview_html_cells" kindref="member">Cells and Containers</ref>). </para>        </briefdescription>
+<para>Returns pointer to the currently opened container (see <ref refid="overview_html_1overview_html_cells" kindref="member">Cells and Containers</ref>). </para>        </briefdescription>
         <detaileddescription>
 <para>Common use: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_WParser<sp/>-&gt;<sp/><ref refid="classwx_html_win_parser_1aae7e19af3ac1b42fa57113f9bcbe997c" kindref="member" tooltip="Returns pointer to the currently opened container (see Cells and Containers).">GetContainer</ref>()<sp/>-&gt;<sp/>InsertCell(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>...);</highlight></codeline>
 </programlisting> </para>        </detaileddescription>
@@ -201,7 +201,7 @@
         <argsstring>() const </argsstring>
         <name>GetFontSize</name>
         <briefdescription>
-<para>Returns actual font size (HTML size varies from -2 to +4). </para>        </briefdescription>
+<para>Returns actual font size (HTML size varies from -2 to +4) </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -292,7 +292,7 @@
         <argsstring>()</argsstring>
         <name>OpenContainer</name>
         <briefdescription>
-<para>Opens new container and returns pointer to it (see <ref refid="overview__html_1overview_html_cells" kindref="member">Cells and Containers</ref>). </para>        </briefdescription>
+<para>Opens new container and returns pointer to it (see <ref refid="overview_html_1overview_html_cells" kindref="member">Cells and Containers</ref>). </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -576,28 +576,28 @@
     <detaileddescription>
 <para>It uses a special <ref refid="classwx_html_win_tag_handler" kindref="compound">wxHtmlWinTagHandler</ref>.</para><para><simplesect kind="note"><para>The product of parsing is a <ref refid="classwx_html_cell" kindref="compound">wxHtmlCell</ref> (resp. wxHtmlContainer) object.</para></simplesect>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxhtml" kindref="member">wxHTML</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__html" kindref="compound">HTML</ref></para><para><simplesect kind="see"><para><ref refid="overview__html_1overview_html_handlers" kindref="member">Tag Handlers</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxhtml" kindref="member">wxHTML</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__html" kindref="compound">HTML</ref></para><para><simplesect kind="see"><para><ref refid="overview_html_1overview_html_handlers" kindref="member">Tag Handlers</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7139">
+      <node id="7143">
         <label>wxHtmlWinParser</label>
         <link refid="classwx_html_win_parser"/>
-        <childnode refid="7140" relation="public-inheritance">
+        <childnode refid="7144" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7140">
+      <node id="7144">
         <label>wxHtmlParser</label>
         <link refid="classwx_html_parser"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7141">
+      <node id="7145">
         <label>wxHtmlWinParser</label>
         <link refid="classwx_html_win_parser"/>
-        <childnode refid="7142" relation="public-inheritance">
+        <childnode refid="7146" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7142">
+      <node id="7146">
         <label>wxHtmlParser</label>
         <link refid="classwx_html_parser"/>
       </node>

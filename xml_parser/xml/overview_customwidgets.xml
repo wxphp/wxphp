@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="overview_customwidgets" kind="page">
+    <compoundname>overview_customwidgets</compoundname>
+    <title>Creating a custom widget</title>
+    <detaileddescription>
+<para><itemizedlist>
+<listitem><para><ref refid="overview_customwidgets_1overview_customwidgets_whenwhy" kindref="member">When and why you should write your custom widget</ref> </para></listitem>
+<listitem><para><ref refid="overview_customwidgets_1overview_customwidgets_how" kindref="member">How to write the custom widget</ref></para></listitem>
+</itemizedlist>
+<hruler/>
+</para><sect1 id="overview_customwidgets_1overview_customwidgets_whenwhy">
+<title>When and why you should write your custom widget</title>
+<para>Typically combining the existing <ref refid="group__group__class__ctrl" kindref="compound">Controls</ref> controls in wxDialogs and wxFrames is sufficient to fullfill any GUI design. Using the wxWidgets standard controls makes your GUI looks native on all ports and is obviously easier and faster.</para><para>However there are situations where you need to show some particular kind of data which is not suited to any existing control. In these cases rather than hacking an existing control for something it has not been conceived for, it&apos;s better to write a new widget.</para></sect1>
+<sect1 id="overview_customwidgets_1overview_customwidgets_how">
+<title>How to write the custom widget</title>
+<para>There are at least two very different ways to implement a new widget.</para><para>The first is to build it upon wxWidgets existing classes, thus deriving it from <ref refid="classwx_control" kindref="compound">wxControl</ref> or <ref refid="classwx_window" kindref="compound">wxWindow</ref>. In this way you&apos;ll get a <bold>generic</bold> widget. This method has the advantage that writing a single implementation works on all ports; the disadvantage is that it the widget will look the same on all platforms, and thus it may not integrate well with the native look and feel.</para><para>The second method is to build it directly upon the native toolkits of the platforms you want to support (e.g. GTK+, Carbon and GDI). In this way you&apos;ll get a <bold>native</bold> widget. This method in fact has the advantage of a native look and feel but requires different implementations and thus more work.</para><para>In both cases you&apos;ll want to better explore some hot topics like:<itemizedlist>
+<listitem><para><ref refid="overview_windowsizing" kindref="compound">Window Sizing Overview</ref></para></listitem><listitem><para><ref refid="overview_events_1overview_events_custom" kindref="member">Custom Event Summary</ref> to implement your custom widget&apos;s events. You will probably need also to gain some familiarity with the wxWidgets sources, since you&apos;ll need to interface with some undocumented wxWidgets internal mechanisms.</para></listitem></itemizedlist>
+</para><sect2 id="overview_customwidgets_1overview_customwidgets_how_generic">
+<title>Writing a generic widget</title>
+<para>Generic widgets are typically derived from <ref refid="classwx_control" kindref="compound">wxControl</ref> or <ref refid="classwx_window" kindref="compound">wxWindow</ref>. They are easy to write. The typical &quot;template&quot; is as follows:</para><para><programlisting><codeline><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>MySpecialWidgetStyles</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>SWS_LOOK_CRAZY<sp/>=<sp/>1,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>SWS_LOOK_SERIOUS<sp/>=<sp/>2,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>SWS_SHOW_BUTTON<sp/>=<sp/>4,</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>SWS_DEFAULT_STYLE<sp/>=<sp/>(SWS_SHOW_BUTTON|SWS_LOOK_SERIOUS)</highlight></codeline>
+<codeline><highlight class="normal">};</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">MySpecialWidget<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classwx_control" kindref="compound" tooltip="This is the base class for a control or &amp;quot;widget&amp;quot;.">wxControl</ref></highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>MySpecialWidget()<sp/>{<sp/>Init();<sp/>}</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>MySpecialWidget(<ref refid="classwx_window" kindref="compound" tooltip="wxWindow is the base class for all windows and represents any visible object on screen.">wxWindow</ref><sp/>*parent,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="windowid_8h_1ae8091432cc2cb2485d45f2302fb51133" kindref="member" tooltip="The type of unique identifiers (ID) used for wxWindow-derived classes.">wxWindowID</ref><sp/>winid,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change was actually the m...">wxString</ref>&amp;<sp/>label,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classwx_point" kindref="compound" tooltip="A wxPoint is a useful data structure for graphics operations.">wxPoint</ref>&amp;<sp/>pos<sp/>=<sp/><ref refid="gdicmn_8h_1af5a90c753eaf3d3e3e5068a19ec3c1d0" kindref="member" tooltip="Global instance of a wxPoint initialized with values (-1,-1).">wxDefaultPosition</ref>,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classwx_size" kindref="compound" tooltip="A wxSize is a useful data structure for graphics operations.">wxSize</ref>&amp;<sp/>size<sp/>=<sp/><ref refid="gdicmn_8h_1a33a012cdb075e9f78c93f63bec2dc27b" kindref="member" tooltip="Global instance of a wxSize object initialized to (-1,-1).">wxDefaultSize</ref>,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>style<sp/>=<sp/>SWS_DEFAULT_STYLE,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classwx_validator" kindref="compound" tooltip="wxValidator is the base class for a family of validator classes that mediate between a class of contr...">wxValidator</ref>&amp;<sp/>val<sp/>=<sp/><ref refid="validate_8h_1af1e90d8aa1824fd2ce4024ef7e40703c" kindref="member" tooltip="An empty, &amp;quot;null&amp;quot; wxValidator instance.">wxDefaultValidator</ref>,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change was actually the m...">wxString</ref>&amp;<sp/>name<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;MySpecialWidget&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Init();</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_control_1abe23789c94c86907463a0e8434be822a" kindref="member">Create</ref>(parent,<sp/>winid,<sp/>label,<sp/>pos,<sp/>size,<sp/>style,<sp/>val,<sp/>name);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classwx_control_1abe23789c94c86907463a0e8434be822a" kindref="member">Create</ref>(<ref refid="classwx_window" kindref="compound" tooltip="wxWindow is the base class for all windows and represents any visible object on screen.">wxWindow</ref><sp/>*parent,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="windowid_8h_1ae8091432cc2cb2485d45f2302fb51133" kindref="member" tooltip="The type of unique identifiers (ID) used for wxWindow-derived classes.">wxWindowID</ref><sp/>winid,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change was actually the m...">wxString</ref>&amp;<sp/>label,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classwx_point" kindref="compound" tooltip="A wxPoint is a useful data structure for graphics operations.">wxPoint</ref>&amp;<sp/>pos<sp/>=<sp/><ref refid="gdicmn_8h_1af5a90c753eaf3d3e3e5068a19ec3c1d0" kindref="member" tooltip="Global instance of a wxPoint initialized with values (-1,-1).">wxDefaultPosition</ref>,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classwx_size" kindref="compound" tooltip="A wxSize is a useful data structure for graphics operations.">wxSize</ref>&amp;<sp/>size<sp/>=<sp/><ref refid="gdicmn_8h_1a33a012cdb075e9f78c93f63bec2dc27b" kindref="member" tooltip="Global instance of a wxSize object initialized to (-1,-1).">wxDefaultSize</ref>,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>style<sp/>=<sp/>SWS_DEFAULT_STYLE,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classwx_validator" kindref="compound" tooltip="wxValidator is the base class for a family of validator classes that mediate between a class of contr...">wxValidator</ref>&amp;<sp/>val<sp/>=<sp/><ref refid="validate_8h_1af1e90d8aa1824fd2ce4024ef7e40703c" kindref="member" tooltip="An empty, &amp;quot;null&amp;quot; wxValidator instance.">wxDefaultValidator</ref>,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change was actually the m...">wxString</ref>&amp;<sp/>name<sp/>=<sp/>wxCollapsiblePaneNameStr);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>accessors...</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Init()<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>init<sp/>widget&apos;s<sp/>internals...</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classwx_size" kindref="compound" tooltip="A wxSize is a useful data structure for graphics operations.">wxSize</ref><sp/><ref refid="classwx_window_1a01e7604ab0f0b2b1a8e322a630a4669e" kindref="member" tooltip="Gets the size which best suits the window: for a control, it would be the minimal size which doesn&amp;#39;t ...">DoGetBestSize</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>we<sp/>need<sp/>to<sp/>calculate<sp/>and<sp/>return<sp/>the<sp/>best<sp/>size<sp/>of<sp/>the<sp/>widget...</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>OnPaint(<ref refid="classwx_paint_event" kindref="compound" tooltip="A paint event is sent when a window&amp;#39;s contents needs to be repainted.">wxPaintEvent</ref>&amp;)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>draw<sp/>the<sp/>widget<sp/>on<sp/>a<sp/>wxDC...</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>DECLARE_DYNAMIC_CLASS(MySpecialWidget)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>DECLARE_EVENT_TABLE()</highlight></codeline>
+<codeline><highlight class="normal">};</highlight></codeline>
+</programlisting></para></sect2>
+<sect2 id="overview_customwidgets_1overview_customwidgets_how_native">
+<title>Writing a native widget</title>
+<para>Writing a native widget is typically more difficult as it requires you to know the APIs of the platforms you want to support. See <ref refid="page_port_1page_port_nativedocs" kindref="member">Documentation for the native toolkits</ref> for links to the documentation manuals of the various toolkits.</para><para>The organization used by wxWidgets consists in:<itemizedlist>
+<listitem><para>declaring the common interface of the control in a generic header, using the &apos;Base&apos; postfix; e.g. MySpecialWidgetBase. See for example the wxWidgets&apos; <computeroutput>&quot;wx/button.h&quot;</computeroutput> file.</para></listitem></itemizedlist>
+</para><para><itemizedlist>
+<listitem><para>declaring the real widget class inheriting from the Base version in platform-specific headers; see for example the wxWidgets&apos; <computeroutput>&quot;wx/gtk/button.h&quot;</computeroutput> file.</para></listitem></itemizedlist>
+</para><para><itemizedlist>
+<listitem><para>separating the different implementations in different source files, putting all common stuff in a separate source. See for example the wxWidgets&apos; <computeroutput>&quot;src/common/btncmn.cpp&quot;</computeroutput>, <computeroutput>&quot;src/gtk/button.cpp&quot;</computeroutput> and <computeroutput>&quot;src/msw/button.cpp&quot;</computeroutput> files. </para></listitem></itemizedlist>
+</para></sect2>
+</sect1>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_buffered_input_stream" kind="class" prot="public">
     <compoundname>wxBufferedInputStream</compoundname>
     <basecompoundref refid="classwx_filter_input_stream" prot="public" virt="non-virtual">wxFilterInputStream</basecompoundref>
@@ -97,33 +97,9 @@
 <para>This stream acts as a cache. </para>    </briefdescription>
     <detaileddescription>
 <para>It caches the bytes read from the specified input stream (see <ref refid="classwx_filter_input_stream" kindref="compound">wxFilterInputStream</ref>). It uses <ref refid="classwx_stream_buffer" kindref="compound">wxStreamBuffer</ref> and sets the default in-buffer size to 1024 bytes. This class may not be used without some other stream to read the data from (such as a file stream or a memory stream).</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__streams" kindref="compound">Streams</ref></para><para><simplesect kind="see"><para><ref refid="classwx_stream_buffer" kindref="compound">wxStreamBuffer</ref>, <ref refid="classwx_input_stream" kindref="compound">wxInputStream</ref>, <ref refid="classwx_buffered_output_stream" kindref="compound">wxBufferedOutputStream</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__streams" kindref="compound">Streams</ref></para><para><simplesect kind="see"><para><ref refid="classwx_stream_buffer" kindref="compound">wxStreamBuffer</ref>, <ref refid="classwx_input_stream" kindref="compound">wxInputStream</ref>, <ref refid="classwx_buffered_output_stream" kindref="compound">wxBufferedOutputStream</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="4604">
-        <label>wxInputStream</label>
-        <link refid="classwx_input_stream"/>
-        <childnode refid="4605" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4605">
-        <label>wxStreamBase</label>
-        <link refid="classwx_stream_base"/>
-      </node>
-      <node id="4603">
-        <label>wxFilterInputStream</label>
-        <link refid="classwx_filter_input_stream"/>
-        <childnode refid="4604" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4602">
-        <label>wxBufferedInputStream</label>
-        <link refid="classwx_buffered_input_stream"/>
-        <childnode refid="4603" relation="public-inheritance">
-        </childnode>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
       <node id="4608">
         <label>wxInputStream</label>
         <link refid="classwx_input_stream"/>
@@ -144,6 +120,30 @@
         <label>wxBufferedInputStream</label>
         <link refid="classwx_buffered_input_stream"/>
         <childnode refid="4607" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4612">
+        <label>wxInputStream</label>
+        <link refid="classwx_input_stream"/>
+        <childnode refid="4613" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4613">
+        <label>wxStreamBase</label>
+        <link refid="classwx_stream_base"/>
+      </node>
+      <node id="4611">
+        <label>wxFilterInputStream</label>
+        <link refid="classwx_filter_input_stream"/>
+        <childnode refid="4612" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4610">
+        <label>wxBufferedInputStream</label>
+        <link refid="classwx_buffered_input_stream"/>
+        <childnode refid="4611" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>

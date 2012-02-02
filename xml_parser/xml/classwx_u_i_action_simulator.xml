@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_u_i_action_simulator" kind="class" prot="public">
     <compoundname>wxUIActionSimulator</compoundname>
     <includes local="no">wx/uiaction.h</includes>
@@ -392,9 +392,9 @@
     <briefdescription>
 <para><ref refid="classwx_u_i_action_simulator" kindref="compound">wxUIActionSimulator</ref> is a class used to simulate user interface actions such as a mouse click or a key press. </para>    </briefdescription>
     <detaileddescription>
-<para>Common usage for this class would be to provide playback and record (aka macro recording) functionality for users, or to drive unit tests by simulating user sessions.</para><para>See the <ref refid="page__samples_1page_samples_uiaction" kindref="member">wxUIActionSimulator Sample</ref> for an example of using this class.</para><para><simplesect kind="since"><para>2.9.2</para></simplesect>
+<para>Common usage for this class would be to provide playback and record (aka macro recording) functionality for users, or to drive unit tests by simulating user sessions.</para><para>See the <ref refid="page_samples_1page_samples_uiaction" kindref="member">wxUIActionSimulator Sample</ref> for an example of using this class.</para><para><simplesect kind="since"><para>2.9.2</para></simplesect>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref> </para>    </detaileddescription>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref> </para>    </detaileddescription>
     <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/uiaction.h" line="27" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/uiaction.h" bodystart="26" bodyend="159"/>
     <listofallmembers>
       <member refid="classwx_u_i_action_simulator_1a573e464dc75d6168564a6372f6b9aa21" prot="public" virt="non-virtual"><scope>wxUIActionSimulator</scope><name>Char</name></member>

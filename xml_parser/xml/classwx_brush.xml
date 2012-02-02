@@ -1,11 +1,10 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_brush" kind="class" prot="public">
     <compoundname>wxBrush</compoundname>
     <basecompoundref refid="classwx_g_d_i_object" prot="public" virt="non-virtual">wxGDIObject</basecompoundref>
     <includes local="no">wx/brush.h</includes>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_brush_1ab1b04a52bb694853168a88c4deab53b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
         <definition>virtual void wxBrush::SetColour</definition>
@@ -129,7 +128,7 @@
           <declname>brush</declname>
         </param>
         <briefdescription>
-<para>Copy constructor, uses <ref refid="overview__refcount" kindref="compound">reference counting</ref>. </para>        </briefdescription>
+<para>Copy constructor, uses <ref refid="overview_refcount" kindref="compound">reference counting</ref>. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -144,7 +143,7 @@
         <briefdescription>
 <para>Destructor. </para>        </briefdescription>
         <detaileddescription>
-<para>See <ref refid="overview__refcount_1overview_refcount_destruct" kindref="member">Object Destruction</ref> for more info.</para><para><simplesect kind="remark"><para>Although all remaining brushes are deleted when the application exits, the application should try to clean up all brushes itself. This is because wxWidgets cannot know if a pointer to the brush object is stored in an application data structure, and there is a risk of double deletion. </para></simplesect>
+<para>See <ref refid="overview_refcount_1overview_refcount_destruct" kindref="member">Object Destruction</ref> for more info.</para><para><simplesect kind="remark"><para>Although all remaining brushes are deleted when the application exits, the application should try to clean up all brushes itself. This is because wxWidgets cannot know if a pointer to the brush object is stored in an application data structure, and there is a risk of double deletion. </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -314,7 +313,7 @@
         <briefdescription>
 <para>Inequality operator. </para>        </briefdescription>
         <detaileddescription>
-<para>See <ref refid="overview__refcount_1overview_refcount_equality" kindref="member">Object Comparison</ref> for more info. </para>        </detaileddescription>
+<para>See <ref refid="overview_refcount_1overview_refcount_equality" kindref="member">Object Comparison</ref> for more info. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" line="254"/>
@@ -331,7 +330,7 @@
         <briefdescription>
 <para>Equality operator. </para>        </briefdescription>
         <detaileddescription>
-<para>See <ref refid="overview__refcount_1overview_refcount_equality" kindref="member">Object Comparison</ref> for more info. </para>        </detaileddescription>
+<para>See <ref refid="overview_refcount_1overview_refcount_equality" kindref="member">Object Comparison</ref> for more info. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" line="260"/>
@@ -341,7 +340,7 @@
 <para>A brush is a drawing tool for filling in areas. </para>    </briefdescription>
     <detaileddescription>
 <para>It is used for painting the background of rectangles, ellipses, etc. It has a colour and a style.</para><para>On a monochrome display, wxWidgets shows all brushes as white unless the colour is really black.</para><para>Do not initialize objects on the stack before the program commences, since other required structures may not have been set up yet. Instead, define global pointers to objects and create them in <ref refid="classwx_app_console_1a99953775a2fd83fa2456e390779afe15" kindref="member">wxApp::OnInit</ref> or when required.</para><para>An application may wish to create brushes with different characteristics dynamically, and there is the consequent danger that a large number of duplicate brushes will be created. Therefore an application may wish to get a pointer to a brush by using the global list of brushes <ref refid="brush_8h_1acb7c7a277d9b428fc6cdfd97437d6ef8" kindref="member">wxTheBrushList</ref>, and calling the member function <ref refid="classwx_brush_list_1abca9ea5d90152ea4369f575e96c8317a" kindref="member">wxBrushList::FindOrCreateBrush()</ref>.</para><para>This class uses reference counting and copy-on-write internally so that assignments between two instances of this class are very cheap. You can therefore use actual objects instead of pointers without efficiency problems. If an instance of this class is changed it will create its own data internally so that other instances, which previously shared the data using the reference counting, are not affected.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__gdi" kindref="compound">Graphics Device Interface (GDI)</ref></para><para>Predefined objects/pointers: <itemizedlist>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__gdi" kindref="compound">Graphics Device Interface (GDI)</ref></para><para>Predefined objects/pointers: <itemizedlist>
 <listitem><para><ref refid="brush_8h_1a9919a44109f2c6091c71aece17ca7013" kindref="member">wxNullBrush</ref> </para></listitem>
 <listitem><para><ref refid="brush_8h_1a69faad3dd0814b86866bd36d0963d598" kindref="member">wxBLACK_BRUSH</ref> </para></listitem>
 <listitem><para><ref refid="brush_8h_1a59deb993532ba47750c074a6539c557d" kindref="member">wxBLUE_BRUSH</ref> </para></listitem>
@@ -358,45 +357,45 @@
 <simplesect kind="see"><para><ref refid="classwx_brush_list" kindref="compound">wxBrushList</ref>, <ref refid="classwx_d_c" kindref="compound">wxDC</ref>, <ref refid="classwx_d_c_1a13978b2624116987a59ff729c4f81a96" kindref="member">wxDC::SetBrush</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="4584">
+      <node id="4588">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="4583">
+      <node id="4587">
         <label>wxGDIObject</label>
         <link refid="classwx_g_d_i_object"/>
-        <childnode refid="4584" relation="public-inheritance">
+        <childnode refid="4588" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4582">
+      <node id="4586">
         <label>wxBrush</label>
         <link refid="classwx_brush"/>
-        <childnode refid="4583" relation="public-inheritance">
+        <childnode refid="4587" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="4587">
+      <node id="4591">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="4588" relation="usage">
+        <childnode refid="4592" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="4586">
+      <node id="4590">
         <label>wxGDIObject</label>
         <link refid="classwx_g_d_i_object"/>
-        <childnode refid="4587" relation="public-inheritance">
+        <childnode refid="4591" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4588">
+      <node id="4592">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
-      <node id="4585">
+      <node id="4589">
         <label>wxBrush</label>
         <link refid="classwx_brush"/>
-        <childnode refid="4586" relation="public-inheritance">
+        <childnode refid="4590" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>

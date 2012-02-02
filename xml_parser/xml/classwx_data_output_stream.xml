@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_data_output_stream" kind="class" prot="public">
     <compoundname>wxDataOutputStream</compoundname>
     <includes local="no">wx/datstrm.h</includes>
@@ -313,7 +313,7 @@
 <para>This class provides functions that write binary data types in a portable way. </para>    </briefdescription>
     <detaileddescription>
 <para>Data can be written in either big-endian or little-endian format, little-endian being the default on all architectures.</para><para>If you want to write data to text files (or streams) use <ref refid="classwx_text_output_stream" kindref="compound">wxTextOutputStream</ref> instead.</para><para>The &quot;&lt;&lt;&quot; operator is overloaded and you can use this class like a standard C++ iostream. See <ref refid="classwx_data_input_stream" kindref="compound">wxDataInputStream</ref> for its usage and caveats.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__streams" kindref="compound">Streams</ref></para><para><simplesect kind="see"><para><ref refid="classwx_data_input_stream" kindref="compound">wxDataInputStream</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__streams" kindref="compound">Streams</ref></para><para><simplesect kind="see"><para><ref refid="classwx_data_input_stream" kindref="compound">wxDataInputStream</ref> </para></simplesect>
 </para>    </detaileddescription>
     <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datstrm.h" line="28" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datstrm.h" bodystart="27" bodyend="135"/>
     <listofallmembers>

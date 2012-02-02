@@ -1,12 +1,11 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_encoding_converter" kind="class" prot="public">
     <compoundname>wxEncodingConverter</compoundname>
     <basecompoundref refid="classwx_object" prot="public" virt="non-virtual">wxObject</basecompoundref>
     <includes local="no">wx/encconv.h</includes>
       <sectiondef kind="user-defined">
       <header>Conversion functions</header>
-      <description><para><anchor id="_1amgrp9c2e8a06d85d2c9b83b5a0d27e85d535"/> </para></description>
       <memberdef kind="function" id="classwx_encoding_converter_1acf0e559e30d55628f0df2b166b005eba" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
         <definition>bool wxEncodingConverter::Convert</definition>
@@ -105,12 +104,12 @@
           <declname>str</declname>
         </param>
         <briefdescription>
-<para>Convert input string according to settings passed to <ref refid="classwx_encoding_converter_1a03398eb316e755f35dba0793bb11afe2" kindref="member">Init()</ref> in-place, i.e. </para>        </briefdescription>
+<para>Convert input string according to settings passed to <ref refid="classwx_encoding_converter_1a03398eb316e755f35dba0793bb11afe2" kindref="member">Init()</ref> in-place. </para>        </briefdescription>
         <detaileddescription>
-<para>write the result to the same memory area.</para><para>See the <ref refid="classwx_encoding_converter_1acf0e559e30d55628f0df2b166b005eba" kindref="member">Convert(const char*,char*) const </ref>overload for more info. </para>        </detaileddescription>
+<para>With this overload, the conversion result is written to the same memory area from which the input is read.</para><para>See the <ref refid="classwx_encoding_converter_1acf0e559e30d55628f0df2b166b005eba" kindref="member">Convert(const char*,char*) const </ref>overload for more info. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/encconv.h" line="78"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/encconv.h" line="80"/>
       </memberdef>
       <memberdef kind="function" id="classwx_encoding_converter_1a99ed7cb33aa5e60a9af67da6646456f0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -122,13 +121,12 @@
           <declname>str</declname>
         </param>
         <briefdescription>
-<para>Convert input string according to settings passed to <ref refid="classwx_encoding_converter_1a03398eb316e755f35dba0793bb11afe2" kindref="member">Init()</ref> and writes the result to output. </para>        </briefdescription>
+<para>Convert input string according to settings passed to <ref refid="classwx_encoding_converter_1a03398eb316e755f35dba0793bb11afe2" kindref="member">Init()</ref> in-place. </para>        </briefdescription>
         <detaileddescription>
-<para>All the <ref refid="classwx_encoding_converter_1acf0e559e30d55628f0df2b166b005eba" kindref="member">Convert()</ref> function overloads return true if the conversion was lossless and false if at least one of the characters couldn&apos;t be converted was and replaced with &apos;?&apos; in the output.</para><para>Note that if <computeroutput>wxCONVERT_SUBSTITUTE</computeroutput> was passed to <ref refid="classwx_encoding_converter_1a03398eb316e755f35dba0793bb11afe2" kindref="member">Init()</ref>, substitution is considered a lossless operation.</para><para><simplesect kind="note"><para>You must call <ref refid="classwx_encoding_converter_1a03398eb316e755f35dba0793bb11afe2" kindref="member">Init()</ref> before using this method! </para></simplesect>
-</para>        </detaileddescription>
+<para>With this overload, the conversion result is written to the same memory area from which the input is read.</para><para>See the <ref refid="classwx_encoding_converter_1af8d49c317333738879c5f0528ae113fe" kindref="member">Convert(const wchar_t*,wchar_t*) const </ref>overload for more info. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/encconv.h" line="79"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/encconv.h" line="90"/>
       </memberdef>
       <memberdef kind="function" id="classwx_encoding_converter_1a3ae44d25cc00cb1468af36665f830ef1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -145,7 +143,7 @@
 <para>See the <ref refid="classwx_encoding_converter_1acf0e559e30d55628f0df2b166b005eba" kindref="member">Convert(const char*,char*) const </ref>overload for more info. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/encconv.h" line="86"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/encconv.h" line="97"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -191,7 +189,7 @@ Both modes guarantee that output string will have same length as input string.</
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/encconv.h" line="179"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/encconv.h" line="190"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -231,7 +229,7 @@ Both modes guarantee that output string will have same length as input string.</
 <para>This platform&apos;s encodings are before others in the array. And again, if <emphasis>enc</emphasis> is in the array, it is the very first item in it. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/encconv.h" line="97"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/encconv.h" line="108"/>
       </memberdef>
       <memberdef kind="function" id="classwx_encoding_converter_1a9c34d0a5a8063352facfdb79a2ea55e4" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>wxFontEncodingArray</type>
@@ -268,7 +266,7 @@ wxPLATFORM_CURRENT means the platform this binary was compiled for.</para><para>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/encconv.h" line="145"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/encconv.h" line="156"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -276,40 +274,40 @@ wxPLATFORM_CURRENT means the platform this binary was compiled for.</para><para>
     <detaileddescription>
 <para>It can also convert from/to Unicode.</para><para>Only a limited subset of encodings is supported by <ref refid="classwx_encoding_converter" kindref="compound">wxEncodingConverter</ref>: <computeroutput>wxFONTENCODING_ISO8859_1</computeroutput>..15, <computeroutput>wxFONTENCODING_CP1250</computeroutput>..1257 and <computeroutput>wxFONTENCODING_KOI8</computeroutput>.</para><para><simplesect kind="note"><para>Please use <ref refid="classwx_m_b_conv" kindref="compound">wxMBConv</ref> classes instead if possible. <ref refid="classwx_c_s_conv" kindref="compound">wxCSConv</ref> has much better support for various encodings than <ref refid="classwx_encoding_converter" kindref="compound">wxEncodingConverter</ref>. <ref refid="classwx_encoding_converter" kindref="compound">wxEncodingConverter</ref> is useful only if you rely on wxCONVERT_SUBSTITUTE mode of operation (see <ref refid="classwx_encoding_converter_1a03398eb316e755f35dba0793bb11afe2" kindref="member">wxEncodingConverter::Init()</ref>).</para></simplesect>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__conv" kindref="compound">Text Conversion</ref></para><para><simplesect kind="see"><para><ref refid="classwx_font_mapper" kindref="compound">wxFontMapper</ref>, <ref refid="classwx_m_b_conv" kindref="compound">wxMBConv</ref>, <ref refid="overview__nonenglish" kindref="compound">Writing Non-English Applications</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__conv" kindref="compound">Text Conversion</ref></para><para><simplesect kind="see"><para><ref refid="classwx_font_mapper" kindref="compound">wxFontMapper</ref>, <ref refid="classwx_m_b_conv" kindref="compound">wxMBConv</ref>, <ref refid="overview_nonenglish" kindref="compound">Writing Non-English Applications</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="5811">
+      <node id="5815">
         <label>wxEncodingConverter</label>
         <link refid="classwx_encoding_converter"/>
-        <childnode refid="5812" relation="public-inheritance">
+        <childnode refid="5816" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5812">
+      <node id="5816">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="5813">
+      <node id="5817">
         <label>wxEncodingConverter</label>
         <link refid="classwx_encoding_converter"/>
-        <childnode refid="5814" relation="public-inheritance">
+        <childnode refid="5818" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5814">
+      <node id="5818">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="5815" relation="usage">
+        <childnode refid="5819" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="5815">
+      <node id="5819">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/encconv.h" line="31" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/encconv.h" bodystart="30" bodyend="180"/>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/encconv.h" line="31" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/encconv.h" bodystart="30" bodyend="191"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxEncodingConverter</scope><name>AllocExclusive</name></member>
       <member refid="classwx_encoding_converter_1aca7518e9cebb979aa982ee13e4dd68a8" prot="public" virt="non-virtual"><scope>wxEncodingConverter</scope><name>CanConvert</name></member>

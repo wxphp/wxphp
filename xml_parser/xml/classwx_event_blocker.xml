@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_event_blocker" kind="class" prot="public">
     <compoundname>wxEventBlocker</compoundname>
     <basecompoundref refid="classwx_evt_handler" prot="public" virt="non-virtual">wxEvtHandler</basecompoundref>
@@ -66,7 +66,7 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>block<sp/>all<sp/>events<sp/>directed<sp/>to<sp/>this<sp/>window<sp/>while</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>we<sp/>do<sp/>the<sp/>1000<sp/>FunctionWhichSendsEvents()<sp/>calls</highlight><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_event_blocker" kindref="compound" tooltip="This class is a special event handler which allows to discard any event (or a set...">wxEventBlocker</ref><sp/>blocker(</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_event_blocker" kindref="compound" tooltip="This class is a special event handler which allows to discard any event (or a set of event types) dir...">wxEventBlocker</ref><sp/>blocker(</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/><sp/>1000;<sp/>i++<sp/>)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FunctionWhichSendsEvents(i);</highlight></codeline>
@@ -77,33 +77,9 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FunctionWhichSendsEvents(0)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 </programlisting></para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="overview__events_1overview_events_processing" kindref="member">How Events are Processed</ref>, <ref refid="classwx_evt_handler" kindref="compound">wxEvtHandler</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="overview_events_1overview_events_processing" kindref="member">How Events are Processed</ref>, <ref refid="classwx_evt_handler" kindref="compound">wxEvtHandler</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="5912">
-        <label>wxEventBlocker</label>
-        <link refid="classwx_event_blocker"/>
-        <childnode refid="5913" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="5914">
-        <label>wxObject</label>
-        <link refid="classwx_object"/>
-      </node>
-      <node id="5913">
-        <label>wxEvtHandler</label>
-        <link refid="classwx_evt_handler"/>
-        <childnode refid="5914" relation="public-inheritance">
-        </childnode>
-        <childnode refid="5915" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="5915">
-        <label>wxTrackable</label>
-        <link refid="classwx_trackable"/>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
       <node id="5916">
         <label>wxEventBlocker</label>
         <link refid="classwx_event_blocker"/>
@@ -113,23 +89,47 @@
       <node id="5918">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="5919" relation="usage">
-          <edgelabel>m_refData</edgelabel>
-        </childnode>
       </node>
       <node id="5917">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
         <childnode refid="5918" relation="public-inheritance">
         </childnode>
-        <childnode refid="5920" relation="public-inheritance">
+        <childnode refid="5919" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5920">
+      <node id="5919">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="5919">
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="5920">
+        <label>wxEventBlocker</label>
+        <link refid="classwx_event_blocker"/>
+        <childnode refid="5921" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5922">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="5923" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="5921">
+        <label>wxEvtHandler</label>
+        <link refid="classwx_evt_handler"/>
+        <childnode refid="5922" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5924" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5924">
+        <label>wxTrackable</label>
+        <link refid="classwx_trackable"/>
+      </node>
+      <node id="5923">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

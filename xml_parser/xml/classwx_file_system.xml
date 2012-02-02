@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_file_system" kind="class" prot="public">
     <compoundname>wxFileSystem</compoundname>
     <basecompoundref refid="classwx_object" prot="public" virt="non-virtual">wxObject</basecompoundref>
@@ -189,7 +189,7 @@ All these commands change the path to &quot;dir/subdir/&quot;:</para><para><prog
         <briefdescription>
 <para>Opens the file and returns a pointer to a <ref refid="classwx_f_s_file" kindref="compound">wxFSFile</ref> object or NULL if failed. </para>        </briefdescription>
         <detaileddescription>
-<para>It first tries to open the file in relative scope (based on value passed to <ref refid="classwx_file_system_1ad491d9cb899dcdd3b9960c1974e34da0" kindref="member">ChangePathTo()</ref> method) and then as an absolute path.</para><para>Note that the user is responsible for deleting the returned <ref refid="classwx_f_s_file" kindref="compound">wxFSFile</ref>. <emphasis>flags</emphasis> can be one or more of the <ref refid="filesys_8h_1abe38fc3ba01ed25545f0c841da8c2942" kindref="member">wxFileSystemOpenFlags</ref> values combined together.</para><para>A stream opened with just the default <emphasis>wxFS_READ</emphasis> flag may or may not be seekable depending on the underlying source.</para><para>Passing <emphasis>&quot;wxFS_READ | wxFS_SEEKABLE&quot;</emphasis> for <emphasis>flags</emphasis> will back a stream that is not natively seekable with memory or a file and return a stream that is always seekable.</para><para><simplesect kind="note"><para>The <emphasis>location</emphasis> argument is, despite this method&apos;s name <emphasis>not</emphasis> a filename. It is a &quot;location&quot;, aka <ref refid="classwx_file_system" kindref="compound">wxFileSystem</ref> URL (see <ref refid="overview__fs" kindref="compound">wxFileSystem Overview</ref>). </para></simplesect>
+<para>It first tries to open the file in relative scope (based on value passed to <ref refid="classwx_file_system_1ad491d9cb899dcdd3b9960c1974e34da0" kindref="member">ChangePathTo()</ref> method) and then as an absolute path.</para><para>Note that the user is responsible for deleting the returned <ref refid="classwx_f_s_file" kindref="compound">wxFSFile</ref>. <emphasis>flags</emphasis> can be one or more of the <ref refid="filesys_8h_1abe38fc3ba01ed25545f0c841da8c2942" kindref="member">wxFileSystemOpenFlags</ref> values combined together.</para><para>A stream opened with just the default <emphasis>wxFS_READ</emphasis> flag may or may not be seekable depending on the underlying source.</para><para>Passing <emphasis>&quot;wxFS_READ | wxFS_SEEKABLE&quot;</emphasis> for <emphasis>flags</emphasis> will back a stream that is not natively seekable with memory or a file and return a stream that is always seekable.</para><para><simplesect kind="note"><para>The <emphasis>location</emphasis> argument is, despite this method&apos;s name <emphasis>not</emphasis> a filename. It is a &quot;location&quot;, aka <ref refid="classwx_file_system" kindref="compound">wxFileSystem</ref> URL (see <ref refid="overview_fs" kindref="compound">wxFileSystem Overview</ref>). </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -209,7 +209,7 @@ All these commands change the path to &quot;dir/subdir/&quot;:</para><para><prog
         <briefdescription>
 <para>This static function adds new handler into the list of handlers (see <ref refid="classwx_file_system_handler" kindref="compound">wxFileSystemHandler</ref>) which provide access to virtual FS. </para>        </briefdescription>
         <detaileddescription>
-<para>Note that if two handlers for the same protocol are added, the last added one takes precedence.</para><para><simplesect kind="note"><para>You can call: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_file_system_1a442d841b2baa5a0eb83c3a985b1e3119" kindref="member" tooltip="This static function adds new handler into the list of handlers (see wxFileSystemHandler)...">wxFileSystem::AddHandler</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>My_FS_Handler);</highlight></codeline>
+<para>Note that if two handlers for the same protocol are added, the last added one takes precedence.</para><para><simplesect kind="note"><para>You can call: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_file_system_1a442d841b2baa5a0eb83c3a985b1e3119" kindref="member" tooltip="This static function adds new handler into the list of handlers (see wxFileSystemHandler) which provi...">wxFileSystem::AddHandler</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>My_FS_Handler);</highlight></codeline>
 </programlisting> This is because (a) AddHandler is a static method, and (b) the handlers are deleted in wxFileSystem&apos;s destructor so that you don&apos;t have to care about it. </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
@@ -273,35 +273,35 @@ All these commands change the path to &quot;dir/subdir/&quot;:</para><para><prog
 <para>This class provides an interface for opening files on different file systems. </para>    </briefdescription>
     <detaileddescription>
 <para>It can handle absolute and/or local filenames.</para><para>It uses a system of handlers (see <ref refid="classwx_file_system_handler" kindref="compound">wxFileSystemHandler</ref>) to provide access to user-defined virtual file systems.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__vfs" kindref="compound">Virtual File System</ref></para><para><simplesect kind="see"><para><ref refid="classwx_file_system_handler" kindref="compound">wxFileSystemHandler</ref>, <ref refid="classwx_f_s_file" kindref="compound">wxFSFile</ref>, <ref refid="overview__fs" kindref="compound">wxFileSystem Overview</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__vfs" kindref="compound">Virtual File System</ref></para><para><simplesect kind="see"><para><ref refid="classwx_file_system_handler" kindref="compound">wxFileSystemHandler</ref>, <ref refid="classwx_f_s_file" kindref="compound">wxFSFile</ref>, <ref refid="overview_fs" kindref="compound">wxFileSystem Overview</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="6246">
+      <node id="6250">
         <label>wxFileSystem</label>
         <link refid="classwx_file_system"/>
-        <childnode refid="6247" relation="public-inheritance">
+        <childnode refid="6251" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6247">
+      <node id="6251">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="6248">
+      <node id="6252">
         <label>wxFileSystem</label>
         <link refid="classwx_file_system"/>
-        <childnode refid="6249" relation="public-inheritance">
+        <childnode refid="6253" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6249">
+      <node id="6253">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="6250" relation="usage">
+        <childnode refid="6254" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="6250">
+      <node id="6254">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

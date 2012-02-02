@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_styled_text_ctrl" kind="class" prot="public">
     <compoundname>wxStyledTextCtrl</compoundname>
     <basecompoundref refid="classwx_control" prot="public" virt="non-virtual">wxControl</basecompoundref>
@@ -1856,9 +1856,9 @@
         <argsstring>()</argsstring>
         <name>GetCurrentLine</name>
         <briefdescription>
-<para>END of generated section Others. </para>        </briefdescription>
+<para>END of generated section Others... </para>        </briefdescription>
         <detaileddescription>
-<para>.. Returns the line number of the line with the caret. </para>        </detaileddescription>
+<para>Returns the line number of the line with the caret. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stc/stc.h" line="957"/>
@@ -8944,83 +8944,83 @@
 <listitem><para>EVT_STC_AUTOCOMP_CHAR_DELETED(id,  fn): TOWRITE </para></listitem>
 </itemizedlist>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__stc" kindref="compound">Scintilla Text Editor</ref></para><para><simplesect kind="see"><para><ref refid="classwx_styled_text_event" kindref="compound">wxStyledTextEvent</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__stc" kindref="compound">Scintilla Text Editor</ref></para><para><simplesect kind="see"><para><ref refid="classwx_styled_text_event" kindref="compound">wxStyledTextEvent</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10547">
+      <node id="10607">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="10546">
+      <node id="10606">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="10547" relation="public-inheritance">
+        <childnode refid="10607" relation="public-inheritance">
         </childnode>
-        <childnode refid="10548" relation="public-inheritance">
+        <childnode refid="10608" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10548">
+      <node id="10608">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="10544">
+      <node id="10604">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="10545" relation="public-inheritance">
+        <childnode refid="10605" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10545">
+      <node id="10605">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="10546" relation="public-inheritance">
+        <childnode refid="10606" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10543">
+      <node id="10603">
         <label>wxStyledTextCtrl</label>
         <link refid="classwx_styled_text_ctrl"/>
-        <childnode refid="10544" relation="public-inheritance">
+        <childnode refid="10604" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10553">
+      <node id="10613">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="10554" relation="usage">
+        <childnode refid="10614" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="10552">
+      <node id="10612">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="10553" relation="public-inheritance">
+        <childnode refid="10613" relation="public-inheritance">
         </childnode>
-        <childnode refid="10555" relation="public-inheritance">
+        <childnode refid="10615" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10555">
+      <node id="10615">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="10550">
+      <node id="10610">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="10551" relation="public-inheritance">
+        <childnode refid="10611" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10551">
+      <node id="10611">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="10552" relation="public-inheritance">
+        <childnode refid="10612" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10549">
+      <node id="10609">
         <label>wxStyledTextCtrl</label>
         <link refid="classwx_styled_text_ctrl"/>
-        <childnode refid="10550" relation="public-inheritance">
+        <childnode refid="10610" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10554">
+      <node id="10614">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

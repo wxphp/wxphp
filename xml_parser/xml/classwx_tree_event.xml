@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_tree_event" kind="class" prot="public">
     <compoundname>wxTreeEvent</compoundname>
     <basecompoundref refid="classwx_notify_event" prot="public" virt="non-virtual">wxNotifyEvent</basecompoundref>
@@ -168,71 +168,71 @@
 <listitem><para>EVT_TREE_STATE_IMAGE_CLICK(id,  func): The state image has been clicked. </para></listitem>
 </itemizedlist>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="classwx_tree_ctrl" kindref="compound">wxTreeCtrl</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="classwx_tree_ctrl" kindref="compound">wxTreeCtrl</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="11144">
+      <node id="11205">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="11142">
+      <node id="11203">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="11143" relation="public-inheritance">
+        <childnode refid="11204" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11141">
+      <node id="11202">
         <label>wxNotifyEvent</label>
         <link refid="classwx_notify_event"/>
-        <childnode refid="11142" relation="public-inheritance">
+        <childnode refid="11203" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11140">
+      <node id="11201">
         <label>wxTreeEvent</label>
         <link refid="classwx_tree_event"/>
-        <childnode refid="11141" relation="public-inheritance">
+        <childnode refid="11202" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11143">
+      <node id="11204">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="11144" relation="public-inheritance">
+        <childnode refid="11205" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="11149">
+      <node id="11210">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="11150" relation="usage">
+        <childnode refid="11211" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="11147">
+      <node id="11208">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="11148" relation="public-inheritance">
+        <childnode refid="11209" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11146">
+      <node id="11207">
         <label>wxNotifyEvent</label>
         <link refid="classwx_notify_event"/>
-        <childnode refid="11147" relation="public-inheritance">
+        <childnode refid="11208" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11145">
+      <node id="11206">
         <label>wxTreeEvent</label>
         <link refid="classwx_tree_event"/>
-        <childnode refid="11146" relation="public-inheritance">
+        <childnode refid="11207" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11148">
+      <node id="11209">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="11149" relation="public-inheritance">
+        <childnode refid="11210" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11150">
+      <node id="11211">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

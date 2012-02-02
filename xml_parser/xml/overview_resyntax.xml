@@ -1,0 +1,419 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="overview_resyntax" kind="page">
+    <compoundname>overview_resyntax</compoundname>
+    <title>Regular Expressions</title>
+    <detaileddescription>
+<para>A <emphasis>regular expression</emphasis> describes strings of characters.</para><para>It&apos;s a pattern that matches certain strings and doesn&apos;t match others.</para><para><itemizedlist>
+<listitem><para><ref refid="overview_resyntax_1overview_resyntax_differentflavors" kindref="member">Different Flavors of Regular Expressions</ref> </para></listitem>
+<listitem><para><ref refid="overview_resyntax_1overview_resyntax_syntax" kindref="member">Regular Expression Syntax</ref> </para></listitem>
+<listitem><para><ref refid="overview_resyntax_1overview_resyntax_bracket" kindref="member">Bracket Expressions</ref> </para></listitem>
+<listitem><para><ref refid="overview_resyntax_1overview_resyntax_escapes" kindref="member">Escapes</ref> </para></listitem>
+<listitem><para><ref refid="overview_resyntax_1overview_resyntax_metasyntax" kindref="member">Metasyntax</ref> </para></listitem>
+<listitem><para><ref refid="overview_resyntax_1overview_resyntax_matching" kindref="member">Matching</ref> </para></listitem>
+<listitem><para><ref refid="overview_resyntax_1overview_resyntax_limits" kindref="member">Limits and Compatibility</ref> </para></listitem>
+<listitem><para><ref refid="overview_resyntax_1overview_resyntax_bre" kindref="member">Basic Regular Expressions</ref> </para></listitem>
+<listitem><para><ref refid="overview_resyntax_1overview_resyntax_characters" kindref="member">Regular Expression Character Names</ref></para></listitem>
+</itemizedlist>
+<simplesect kind="see"><para></para></simplesect>
+<itemizedlist>
+<listitem><para><ref refid="classwx_reg_ex" kindref="compound">wxRegEx</ref></para></listitem>
+</itemizedlist>
+<hruler/>
+</para><sect1 id="overview_resyntax_1overview_resyntax_differentflavors">
+<title>Different Flavors of Regular Expressions</title>
+<para>Regular expressions (RE), as defined by POSIX, come in two flavors: <emphasis>extended regular expressions</emphasis> (ERE) and <emphasis>basic regular expressions</emphasis> (BRE). EREs are roughly those of the traditional <emphasis>egrep</emphasis>, while BREs are roughly those of the traditional <emphasis>ed</emphasis>. This implementation adds a third flavor: <emphasis>advanced regular expressions</emphasis> (ARE), basically EREs with some significant extensions.</para><para>This manual page primarily describes AREs. BREs mostly exist for backward compatibility in some old programs. POSIX EREs are almost an exact subset of AREs. Features of AREs that are not present in EREs will be indicated.</para></sect1>
+<sect1 id="overview_resyntax_1overview_resyntax_syntax">
+<title>Regular Expression Syntax</title>
+<para>These regular expressions are implemented using the package written by Henry Spencer, based on the 1003.2 spec and some (not quite all) of the Perl5 extensions (thanks, Henry!). Much of the description of regular expressions below is copied verbatim from his manual entry.</para><para>An ARE is one or more <emphasis>branches</emphasis>, separated by &quot;|&quot;, matching anything that matches any of the branches.</para><para>A branch is zero or more <emphasis>constraints</emphasis> or <emphasis>quantified</emphasis> atoms, concatenated. It matches a match for the first, followed by a match for the second, etc; an empty branch matches the empty string.</para><para>A quantified atom is an <emphasis>atom</emphasis> possibly followed by a single <emphasis>quantifier</emphasis>. Without a quantifier, it matches a match for the atom. The quantifiers, and what a so-quantified atom matches, are:</para><para><table rows="7" cols="2"><row>
+<entry thead="no"><para><computeroutput>*</computeroutput>  </para></entry><entry thead="no"><para>A sequence of 0 or more matches of the atom.  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>+</computeroutput>  </para></entry><entry thead="no"><para>A sequence of 1 or more matches of the atom.  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>?</computeroutput>  </para></entry><entry thead="no"><para>A sequence of 0 or 1 matches of the atom.  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>{m}</computeroutput>  </para></entry><entry thead="no"><para>A sequence of exactly <emphasis>m</emphasis> matches of the atom.  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>{m,}</computeroutput>  </para></entry><entry thead="no"><para>A sequence of <emphasis>m</emphasis> or more matches of the atom.  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>{m,n}</computeroutput>  </para></entry><entry thead="no"><para>A sequence of <emphasis>m</emphasis> through <emphasis>n</emphasis> (inclusive) matches of the atom; <emphasis>m</emphasis> may not exceed <emphasis>n</emphasis>.  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>*? +? ?? {m}? {m,}? {m,n}?</computeroutput>  </para></entry><entry thead="no"><para><emphasis>Non-greedy</emphasis> quantifiers, which match the same possibilities, but prefer the smallest number rather than the largest number of matches (see <ref refid="overview_resyntax_1overview_resyntax_matching" kindref="member">Matching</ref>).  </para></entry></row>
+</table>
+</para><para>The forms using <bold>{</bold> and <bold>}</bold> are known as <emphasis>bounds</emphasis>. The numbers <emphasis>m</emphasis> and <emphasis>n</emphasis> are unsigned decimal integers with permissible values from 0 to 255 inclusive. An atom is one of:</para><para><table rows="10" cols="2"><row>
+<entry thead="no"><para><computeroutput>(re)</computeroutput>  </para></entry><entry thead="no"><para>Where <emphasis>re</emphasis> is any regular expression, matches for <emphasis>re</emphasis>, with the match captured for possible reporting.  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>(?:re)</computeroutput>  </para></entry><entry thead="no"><para>As previous, but does no reporting (a &quot;non-capturing&quot; set of parentheses).  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>()</computeroutput>  </para></entry><entry thead="no"><para>Matches an empty string, captured for possible reporting.  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>(?:)</computeroutput>  </para></entry><entry thead="no"><para>Matches an empty string, without reporting.  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>[chars]</computeroutput>  </para></entry><entry thead="no"><para>A <emphasis>bracket expression</emphasis>, matching any one of the <emphasis>chars</emphasis> (see <ref refid="overview_resyntax_1overview_resyntax_bracket" kindref="member">Bracket Expressions</ref> for more details).  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>.</computeroutput>  </para></entry><entry thead="no"><para>Matches any single character.  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>\k</computeroutput>  </para></entry><entry thead="no"><para>Where <emphasis>k</emphasis> is a non-alphanumeric character, matches that character taken as an ordinary character, e.g. \\ matches a backslash character.  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>\c</computeroutput>  </para></entry><entry thead="no"><para>Where <emphasis>c</emphasis> is alphanumeric (possibly followed by other characters), an <emphasis>escape</emphasis> (AREs only), see <ref refid="overview_resyntax_1overview_resyntax_escapes" kindref="member">Escapes</ref> below.  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>{</computeroutput>  </para></entry><entry thead="no"><para>When followed by a character other than a digit, matches the left-brace character &quot;{&quot;; when followed by a digit, it is the beginning of a <emphasis>bound</emphasis> (see above).  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>x</computeroutput>  </para></entry><entry thead="no"><para>Where <emphasis>x</emphasis> is a single character with no other significance, matches that character.  </para></entry></row>
+</table>
+</para><para>A <emphasis>constraint</emphasis> matches an empty string when specific conditions are met. A constraint may not be followed by a quantifier. The simple constraints are as follows; some more constraints are described later, under <ref refid="overview_resyntax_1overview_resyntax_escapes" kindref="member">Escapes</ref>.</para><para><table rows="4" cols="2"><row>
+<entry thead="no"><para><computeroutput>^</computeroutput>  </para></entry><entry thead="no"><para>Matches at the beginning of a line.  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>$</computeroutput>  </para></entry><entry thead="no"><para>Matches at the end of a line.  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>(?=re)</computeroutput>  </para></entry><entry thead="no"><para><emphasis>Positive</emphasis> lookahead (AREs only), matches at any point where a substring matching <emphasis>re</emphasis> begins.  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>(?!re)</computeroutput>  </para></entry><entry thead="no"><para><emphasis>Negative</emphasis> lookahead (AREs only), matches at any point where no substring matching <emphasis>re</emphasis> begins.  </para></entry></row>
+</table>
+</para><para>The lookahead constraints may not contain back references (see later), and all parentheses within them are considered non-capturing. A RE may not end with &quot;\&quot;.</para></sect1>
+<sect1 id="overview_resyntax_1overview_resyntax_bracket">
+<title>Bracket Expressions</title>
+<para>A <emphasis>bracket expression</emphasis> is a list of characters enclosed in <computeroutput>[]</computeroutput>. It normally matches any single character from the list (but see below). If the list begins with <computeroutput>^</computeroutput>, it matches any single character (but see below) <emphasis>not</emphasis> from the rest of the list.</para><para>If two characters in the list are separated by <computeroutput>-</computeroutput>, this is shorthand for the full <emphasis>range</emphasis> of characters between those two (inclusive) in the collating sequence, e.g. <computeroutput>[0-9]</computeroutput> in ASCII matches any decimal digit. Two ranges may not share an endpoint, so e.g. <computeroutput>a-c-e</computeroutput> is illegal. Ranges are very collating-sequence-dependent, and portable programs should avoid relying on them.</para><para>To include a literal <computeroutput>]</computeroutput> or <computeroutput>-</computeroutput> in the list, the simplest method is to enclose it in <computeroutput>[.</computeroutput> and <computeroutput>.]</computeroutput> to make it a collating element (see below). Alternatively, make it the first character (following a possible <computeroutput>^</computeroutput>), or (AREs only) precede it with <computeroutput>\</computeroutput>. Alternatively, for <computeroutput>-</computeroutput>, make it the last character, or the second endpoint of a range. To use a literal <computeroutput>-</computeroutput> as the first endpoint of a range, make it a collating element or (AREs only) precede it with <computeroutput>\</computeroutput>. With the exception of these, some combinations using <computeroutput>[</computeroutput> (see next paragraphs), and escapes, all other special characters lose their special significance within a bracket expression.</para><para>Within a bracket expression, a collating element (a character, a multi-character sequence that collates as if it were a single character, or a collating-sequence name for either) enclosed in <computeroutput>[.</computeroutput> and <computeroutput>.]</computeroutput> stands for the sequence of characters of that collating element.</para><para><emphasis>wxWidgets:</emphasis> Currently no multi-character collating elements are defined. So in <computeroutput>[.X.]</computeroutput>, <computeroutput>X</computeroutput> can either be a single character literal or the name of a character. For example, the following are both identical: <computeroutput>[[.0.]-[.9.]]</computeroutput> and <computeroutput>[[.zero.]-[.nine.]]</computeroutput> and mean the same as <computeroutput>[0-9]</computeroutput>. See <ref refid="overview_resyntax_1overview_resyntax_characters" kindref="member">Regular Expression Character Names</ref>.</para><para>Within a bracket expression, a collating element enclosed in <computeroutput>[=</computeroutput> and <computeroutput>=]</computeroutput> is an equivalence class, standing for the sequences of characters of all collating elements equivalent to that one, including itself. An equivalence class may not be an endpoint of a range.</para><para><emphasis>wxWidgets:</emphasis> Currently no equivalence classes are defined, so <computeroutput>[=X=]</computeroutput> stands for just the single character <computeroutput>X</computeroutput>. <computeroutput>X</computeroutput> can either be a single character literal or the name of a character, see <ref refid="overview_resyntax_1overview_resyntax_characters" kindref="member">Regular Expression Character Names</ref>.</para><para>Within a bracket expression, the name of a <emphasis>character</emphasis> class enclosed in <computeroutput>[:</computeroutput> and <computeroutput>:]</computeroutput> stands for the list of all characters (not all collating elements!) belonging to that class. Standard character classes are:</para><para><table rows="12" cols="2"><row>
+<entry thead="no"><para><computeroutput>alpha</computeroutput>  </para></entry><entry thead="no"><para>A letter.  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>upper</computeroutput>  </para></entry><entry thead="no"><para>An upper-case letter.  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>lower</computeroutput>  </para></entry><entry thead="no"><para>A lower-case letter.  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>digit</computeroutput>  </para></entry><entry thead="no"><para>A decimal digit.  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>xdigit</computeroutput>  </para></entry><entry thead="no"><para>A hexadecimal digit.  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>alnum</computeroutput>  </para></entry><entry thead="no"><para>An alphanumeric (letter or digit).  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>print</computeroutput>  </para></entry><entry thead="no"><para>An alphanumeric (same as alnum).  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>blank</computeroutput>  </para></entry><entry thead="no"><para>A space or tab character.  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>space</computeroutput>  </para></entry><entry thead="no"><para>A character producing white space in displayed text.  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>punct</computeroutput>  </para></entry><entry thead="no"><para>A punctuation character.  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>graph</computeroutput>  </para></entry><entry thead="no"><para>A character with a visible representation.  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>cntrl</computeroutput>  </para></entry><entry thead="no"><para>A control character.  </para></entry></row>
+</table>
+</para><para>A character class may not be used as an endpoint of a range.</para><para><emphasis>wxWidgets:</emphasis> In a non-Unicode build, these character classifications depend on the current locale, and correspond to the values return by the ANSI C &quot;is&quot; functions: <computeroutput>isalpha</computeroutput>, <computeroutput>isupper</computeroutput>, etc. In Unicode mode they are based on Unicode classifications, and are not affected by the current locale.</para><para>There are two special cases of bracket expressions: the bracket expressions <computeroutput>[[:&lt;:]]</computeroutput> and <computeroutput>[[:&gt;:]]</computeroutput> are constraints, matching empty strings at the beginning and end of a word respectively. A word is defined as a sequence of word characters that is neither preceded nor followed by word characters. A word character is an <emphasis>alnum</emphasis> character or an underscore (_). These special bracket expressions are deprecated; users of AREs should use constraint escapes instead (see escapes below).</para></sect1>
+<sect1 id="overview_resyntax_1overview_resyntax_escapes">
+<title>Escapes</title>
+<para>Escapes (AREs only), which begin with a <computeroutput>\</computeroutput> followed by an alphanumeric character, come in several varieties: character entry, class shorthands, constraint escapes, and back references. A <computeroutput>\</computeroutput> followed by an alphanumeric character but not constituting a valid escape is illegal in AREs. In EREs, there are no escapes: outside a bracket expression, a <computeroutput>\</computeroutput> followed by an alphanumeric character merely stands for that character as an ordinary character, and inside a bracket expression, <computeroutput>\</computeroutput> is an ordinary character. (The latter is the one actual incompatibility between EREs and AREs.)</para><para>Character-entry escapes (AREs only) exist to make it easier to specify non-printing and otherwise inconvenient characters in REs:</para><para><table rows="16" cols="2"><row>
+<entry thead="no"><para><computeroutput>\a</computeroutput>  </para></entry><entry thead="no"><para>Alert (bell) character, as in C.  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>\b</computeroutput>  </para></entry><entry thead="no"><para>Backspace, as in C.  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>\B</computeroutput>  </para></entry><entry thead="no"><para>Synonym for <computeroutput>\</computeroutput> to help reduce backslash doubling in some applications where there are multiple levels of backslash processing.  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>\cX</computeroutput>  </para></entry><entry thead="no"><para>The character whose low-order 5 bits are the same as those of <emphasis>X</emphasis>, and whose other bits are all zero, where <emphasis>X</emphasis> is any character.  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>\e</computeroutput>  </para></entry><entry thead="no"><para>The character whose collating-sequence name is <computeroutput>ESC</computeroutput>, or failing that, the character with octal value 033.  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>\f</computeroutput>  </para></entry><entry thead="no"><para>Formfeed, as in C.  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>\n</computeroutput>  </para></entry><entry thead="no"><para>Newline, as in C.  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>\r</computeroutput>  </para></entry><entry thead="no"><para>Carriage return, as in C.  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>\t</computeroutput>  </para></entry><entry thead="no"><para>Horizontal tab, as in C.  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>\uwxyz</computeroutput>  </para></entry><entry thead="no"><para>The Unicode character <computeroutput>U+wxyz</computeroutput> in the local byte ordering, where <emphasis>wxyz</emphasis> is exactly four hexadecimal digits.  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>\Ustuvwxyz</computeroutput>  </para></entry><entry thead="no"><para>Reserved for a somewhat-hypothetical Unicode extension to 32 bits, where <emphasis>stuvwxyz</emphasis> is exactly eight hexadecimal digits.  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>\v</computeroutput>  </para></entry><entry thead="no"><para>Vertical tab, as in C are all available.  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>\xhhh</computeroutput>  </para></entry><entry thead="no"><para>The single character whose hexadecimal value is <emphasis>0xhhh</emphasis>, where <emphasis>hhh</emphasis> is any sequence of hexadecimal digits.  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>\0</computeroutput>  </para></entry><entry thead="no"><para>The character whose value is 0.  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>\xy</computeroutput>  </para></entry><entry thead="no"><para>The character whose octal value is <emphasis>0xy</emphasis>, where <emphasis>xy</emphasis> is exactly two octal digits, and is not a <emphasis>back reference</emphasis> (see below).  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>\xyz</computeroutput>  </para></entry><entry thead="no"><para>The character whose octal value is <emphasis>0xyz</emphasis>, where <emphasis>xyz</emphasis> is exactly three octal digits, and is not a <emphasis>back reference</emphasis> (see below).  </para></entry></row>
+</table>
+</para><para>Hexadecimal digits are 0-9, a-f, and A-F. Octal digits are 0-7.</para><para>The character-entry escapes are always taken as ordinary characters. For example, <computeroutput>\135</computeroutput> is <computeroutput>]</computeroutput> in ASCII, but <computeroutput>\135</computeroutput> does not terminate a bracket expression. Beware, however, that some applications (e.g., C compilers) interpret such sequences themselves before the regular-expression package gets to see them, which may require doubling (quadrupling, etc.) the &apos;<computeroutput>\</computeroutput>&apos;.</para><para>Class-shorthand escapes (AREs only) provide shorthands for certain commonly-used character classes:</para><para><table rows="6" cols="2"><row>
+<entry thead="no"><para><computeroutput>\d</computeroutput>  </para></entry><entry thead="no"><para><computeroutput>[[:digit:]]</computeroutput>  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>\s</computeroutput>  </para></entry><entry thead="no"><para><computeroutput>[[:space:]]</computeroutput>  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>\w</computeroutput>  </para></entry><entry thead="no"><para><computeroutput>[[:alnum:]_]</computeroutput> (note underscore)  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>\D</computeroutput>  </para></entry><entry thead="no"><para><computeroutput>[^[:digit:]]</computeroutput>  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>\S</computeroutput>  </para></entry><entry thead="no"><para><computeroutput>[^[:space:]]</computeroutput>  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>\W</computeroutput>  </para></entry><entry thead="no"><para><computeroutput>[^[:alnum:]_]</computeroutput> (note underscore)  </para></entry></row>
+</table>
+</para><para>Within bracket expressions, <computeroutput>\d</computeroutput>, <computeroutput>\s</computeroutput>, and <computeroutput>\w</computeroutput> lose their outer brackets, and <computeroutput>\D</computeroutput>, <computeroutput>\S</computeroutput>, <computeroutput>\W</computeroutput> are illegal. So, for example, <computeroutput>[a-c\d]</computeroutput> is equivalent to <computeroutput>[a-c[:digit:]]</computeroutput>. Also, <computeroutput>[a-c\D]</computeroutput>, which is equivalent to <computeroutput>[a-c^[:digit:]]</computeroutput>, is illegal.</para><para>A constraint escape (AREs only) is a constraint, matching the empty string if specific conditions are met, written as an escape:</para><para><table rows="8" cols="2"><row>
+<entry thead="no"><para><computeroutput>\A</computeroutput>  </para></entry><entry thead="no"><para>Matches only at the beginning of the string, see <ref refid="overview_resyntax_1overview_resyntax_matching" kindref="member">Matching</ref> for how this differs from <computeroutput>^</computeroutput>.  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>\m</computeroutput>  </para></entry><entry thead="no"><para>Matches only at the beginning of a word.  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>\M</computeroutput>  </para></entry><entry thead="no"><para>Matches only at the end of a word.  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>\y</computeroutput>  </para></entry><entry thead="no"><para>Matches only at the beginning or end of a word.  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>\Y</computeroutput>  </para></entry><entry thead="no"><para>Matches only at a point that is not the beginning or end of a word.  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>\Z</computeroutput>  </para></entry><entry thead="no"><para>Matches only at the end of the string, see <ref refid="overview_resyntax_1overview_resyntax_matching" kindref="member">Matching</ref> for how this differs from <computeroutput>$</computeroutput>.  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>\m</computeroutput>  </para></entry><entry thead="no"><para>A <emphasis>back reference</emphasis>, where <emphasis>m</emphasis> is a non-zero digit. See below.  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>\mnn</computeroutput>  </para></entry><entry thead="no"><para>A <emphasis>back reference</emphasis>, where <emphasis>m</emphasis> is a nonzero digit, and <emphasis>nn</emphasis> is some more digits, and the decimal value <emphasis>mnn</emphasis> is not greater than the number of closing capturing parentheses seen so far. See below.  </para></entry></row>
+</table>
+</para><para>A word is defined as in the specification of <computeroutput>[[:&lt;:]]</computeroutput> and <computeroutput>[[:&gt;:]]</computeroutput> above. Constraint escapes are illegal within bracket expressions.</para><para>A back reference (AREs only) matches the same string matched by the parenthesized subexpression specified by the number. For example, &quot;([bc])\1&quot; matches &quot;bb&quot; or &quot;cc&quot; but not &quot;bc&quot;. The subexpression must entirely precede the back reference in the RE.Subexpressions are numbered in the order of their leading parentheses. Non-capturing parentheses do not define subexpressions.</para><para>There is an inherent historical ambiguity between octal character-entry escapes and back references, which is resolved by heuristics, as hinted at above. A leading zero always indicates an octal escape. A single non-zero digit, not followed by another digit, is always taken as a back reference. A multi-digit sequence not starting with a zero is taken as a back reference if it comes after a suitable subexpression (i.e. the number is in the legal range for a back reference), and otherwise is taken as octal.</para></sect1>
+<sect1 id="overview_resyntax_1overview_resyntax_metasyntax">
+<title>Metasyntax</title>
+<para>In addition to the main syntax described above, there are some special forms and miscellaneous syntactic facilities available.</para><para>Normally the flavor of RE being used is specified by application-dependent means. However, this can be overridden by a <emphasis>director</emphasis>. If an RE of any flavor begins with <computeroutput>***:</computeroutput>, the rest of the RE is an ARE. If an RE of any flavor begins with <computeroutput>***=</computeroutput>, the rest of the RE is taken to be a literal string, with all characters considered ordinary characters.</para><para>An ARE may begin with <emphasis>embedded options</emphasis>: a sequence <computeroutput>(?xyz)</computeroutput> (where <emphasis>xyz</emphasis> is one or more alphabetic characters) specifies options affecting the rest of the RE. These supplement, and can override, any options specified by the application. The available option letters are:</para><para><table rows="12" cols="2"><row>
+<entry thead="no"><para><computeroutput>b</computeroutput>  </para></entry><entry thead="no"><para>Rest of RE is a BRE.  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>c</computeroutput>  </para></entry><entry thead="no"><para>Case-sensitive matching (usual default).  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>e</computeroutput>  </para></entry><entry thead="no"><para>Rest of RE is an ERE.  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>i</computeroutput>  </para></entry><entry thead="no"><para>Case-insensitive matching (see <ref refid="overview_resyntax_1overview_resyntax_matching" kindref="member">Matching</ref>, below).  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>m</computeroutput>  </para></entry><entry thead="no"><para>Historical synonym for <emphasis>n</emphasis>.  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>n</computeroutput>  </para></entry><entry thead="no"><para>Newline-sensitive matching (see <ref refid="overview_resyntax_1overview_resyntax_matching" kindref="member">Matching</ref>, below).  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>p</computeroutput>  </para></entry><entry thead="no"><para>Partial newline-sensitive matching (see <ref refid="overview_resyntax_1overview_resyntax_matching" kindref="member">Matching</ref>, below).  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>q</computeroutput>  </para></entry><entry thead="no"><para>Rest of RE is a literal (&quot;quoted&quot;) string, all ordinary characters.  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>s</computeroutput>  </para></entry><entry thead="no"><para>Non-newline-sensitive matching (usual default).  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>t</computeroutput>  </para></entry><entry thead="no"><para>Tight syntax (usual default; see below).  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>w</computeroutput>  </para></entry><entry thead="no"><para>Inverse partial newline-sensitive (&quot;weird&quot;) matching (see <ref refid="overview_resyntax_1overview_resyntax_matching" kindref="member">Matching</ref>, below).  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>x</computeroutput>  </para></entry><entry thead="no"><para>Expanded syntax (see below).  </para></entry></row>
+</table>
+</para><para>Embedded options take effect at the <computeroutput>)</computeroutput> terminating the sequence. They are available only at the start of an ARE, and may not be used later within it.</para><para>In addition to the usual (<emphasis>tight</emphasis>) RE syntax, in which all characters are significant, there is an <emphasis>expanded</emphasis> syntax, available in AREs with the embedded x option. In the expanded syntax, white-space characters are ignored and all characters between a <computeroutput>#</computeroutput> and the following newline (or the end of the RE) are ignored, permitting paragraphing and commenting a complex RE. There are three exceptions to that basic rule:</para><para><itemizedlist>
+<listitem><para>A white-space character or <computeroutput>#</computeroutput> preceded by <computeroutput>\</computeroutput> is retained. </para></listitem>
+<listitem><para>White space or <computeroutput>#</computeroutput> within a bracket expression is retained. </para></listitem>
+<listitem><para>White space and comments are illegal within multi-character symbols like the ARE <computeroutput>(?:</computeroutput> or the BRE <computeroutput>\(</computeroutput>.</para></listitem>
+</itemizedlist>
+Expanded-syntax white-space characters are blank, tab, newline, and any character that belongs to the <emphasis>space</emphasis> character class.</para><para>Finally, in an ARE, outside bracket expressions, the sequence <computeroutput>(?#ttt)</computeroutput> (where <emphasis>ttt</emphasis> is any text not containing a <computeroutput>)</computeroutput>) is a comment, completely ignored. Again, this is not allowed between the characters of multi-character symbols like <computeroutput>(?:</computeroutput>. Such comments are more a historical artifact than a useful facility, and their use is deprecated; use the expanded syntax instead.</para><para><emphasis>None</emphasis> of these metasyntax extensions is available if the application (or an initial <computeroutput>***=</computeroutput> director) has specified that the user&apos;s input be treated as a literal string rather than as an RE.</para></sect1>
+<sect1 id="overview_resyntax_1overview_resyntax_matching">
+<title>Matching</title>
+<para>In the event that an RE could match more than one substring of a given string, the RE matches the one starting earliest in the string. If the RE could match more than one substring starting at that point, the choice is determined by it&apos;s <emphasis>preference:</emphasis> either the longest substring, or the shortest.</para><para>Most atoms, and all constraints, have no preference. A parenthesized RE has the same preference (possibly none) as the RE. A quantified atom with quantifier <computeroutput>{m}</computeroutput> or <computeroutput>{m}?</computeroutput> has the same preference (possibly none) as the atom itself. A quantified atom with other normal quantifiers (including <computeroutput>{m,n}</computeroutput> with <emphasis>m</emphasis> equal to <emphasis>n</emphasis>) prefers longest match. A quantified atom with other non-greedy quantifiers (including <computeroutput>{m,n}?</computeroutput> with <emphasis>m</emphasis> equal to <emphasis>n</emphasis>) prefers shortest match. A branch has the same preference as the first quantified atom in it which has a preference. An RE consisting of two or more branches connected by the <computeroutput></computeroutput>| operator prefers longest match.</para><para>Subject to the constraints imposed by the rules for matching the whole RE, subexpressions also match the longest or shortest possible substrings, based on their preferences, with subexpressions starting earlier in the RE taking priority over ones starting later. Note that outer subexpressions thus take priority over their component subexpressions.</para><para>Note that the quantifiers <computeroutput>{1,1}</computeroutput> and <computeroutput>{1,1}?</computeroutput> can be used to force longest and shortest preference, respectively, on a subexpression or a whole RE.</para><para>Match lengths are measured in characters, not collating elements. An empty string is considered longer than no match at all. For example, <computeroutput>bb*</computeroutput> matches the three middle characters of &quot;abbbc&quot;, <computeroutput>(week|wee)(night|knights)</computeroutput> matches all ten characters of &quot;weeknights&quot;, when <computeroutput>(.*).*</computeroutput> is matched against &quot;abc&quot; the parenthesized subexpression matches all three characters, and when <computeroutput>(a*)*</computeroutput> is matched against &quot;bc&quot; both the whole RE and the parenthesized subexpression match an empty string.</para><para>If case-independent matching is specified, the effect is much as if all case distinctions had vanished from the alphabet. When an alphabetic that exists in multiple cases appears as an ordinary character outside a bracket expression, it is effectively transformed into a bracket expression containing both cases, so that <computeroutput>x</computeroutput> becomes <computeroutput></computeroutput>[xX]. When it appears inside a bracket expression, all case counterparts of it are added to the bracket expression, so that <computeroutput></computeroutput>[x] becomes <computeroutput></computeroutput>[xX] and <computeroutput></computeroutput>[^x] becomes <computeroutput></computeroutput>[^xX].</para><para>If newline-sensitive matching is specified, &quot;.&quot; and bracket expressions using &quot;^&quot; will never match the newline character (so that matches will never cross newlines unless the RE explicitly arranges it) and &quot;^&quot; and &quot;$&quot; will match the empty string after and before a newline respectively, in addition to matching at beginning and end of string respectively. ARE <computeroutput>\A</computeroutput> and <computeroutput>\Z</computeroutput> continue to match beginning or end of string <emphasis>only</emphasis>.</para><para>If partial newline-sensitive matching is specified, this affects &quot;.&quot; and bracket expressions as with newline-sensitive matching, but not &quot;^&quot; and &quot;$&quot;.</para><para>If inverse partial newline-sensitive matching is specified, this affects &quot;^&quot; and &quot;$&quot; as with newline-sensitive matching, but not &quot;.&quot; and bracket expressions. This isn&apos;t very useful but is provided for symmetry.</para></sect1>
+<sect1 id="overview_resyntax_1overview_resyntax_limits">
+<title>Limits and Compatibility</title>
+<para>No particular limit is imposed on the length of REs. Programs intended to be highly portable should not employ REs longer than 256 bytes, as a POSIX-compliant implementation can refuse to accept such REs.</para><para>The only feature of AREs that is actually incompatible with POSIX EREs is that <computeroutput>\</computeroutput> does not lose its special significance inside bracket expressions. All other ARE features use syntax which is illegal or has undefined or unspecified effects in POSIX EREs; the <computeroutput>***</computeroutput> syntax of directors likewise is outside the POSIX syntax for both BREs and EREs.</para><para>Many of the ARE extensions are borrowed from Perl, but some have been changed to clean them up, and a few Perl extensions are not present. Incompatibilities of note include <computeroutput>\b</computeroutput>, <computeroutput>\B</computeroutput>, the lack of special treatment for a trailing newline, the addition of complemented bracket expressions to the things affected by newline-sensitive matching, the restrictions on parentheses and back references in lookahead constraints, and the longest/shortest-match (rather than first-match) matching semantics.</para><para>The matching rules for REs containing both normal and non-greedy quantifiers have changed since early beta-test versions of this package. The new rules are much simpler and cleaner, but don&apos;t work as hard at guessing the user&apos;s real intentions.</para><para>Henry Spencer&apos;s original 1986 <emphasis>regexp</emphasis> package, still in widespread use, implemented an early version of today&apos;s EREs. There are four incompatibilities between <emphasis>regexp&apos;s</emphasis> near-EREs (RREs for short) and AREs. In roughly increasing order of significance:</para><para><itemizedlist>
+<listitem><para>In AREs, <computeroutput>\</computeroutput> followed by an alphanumeric character is either an escape or an error, while in RREs, it was just another way of writing the alphanumeric. This should not be a problem because there was no reason to write such a sequence in RREs. </para></listitem>
+<listitem><para><computeroutput>{</computeroutput> followed by a digit in an ARE is the beginning of a bound, while in RREs, <computeroutput>{</computeroutput> was always an ordinary character. Such sequences should be rare, and will often result in an error because following characters will not look like a valid bound. </para></listitem>
+<listitem><para>In AREs, <computeroutput>\</computeroutput> remains a special character within <computeroutput></computeroutput>[], so a literal <computeroutput>\</computeroutput> within <computeroutput></computeroutput>[] must be written as <computeroutput>\\</computeroutput>. <computeroutput>\\</computeroutput> also gives a literal <computeroutput>\</computeroutput> within <computeroutput></computeroutput>[] in RREs, but only truly paranoid programmers routinely doubled the backslash. </para></listitem>
+<listitem><para>AREs report the longest/shortest match for the RE, rather than the first found in a specified search order. This may affect some RREs which were written in the expectation that the first match would be reported. The careful crafting of RREs to optimize the search order for fast matching is obsolete (AREs examine all possible matches in parallel, and their performance is largely insensitive to their complexity) but cases where the search order was exploited to deliberately find a match which was <emphasis>not</emphasis> the longest/shortest will need rewriting.</para></listitem>
+</itemizedlist>
+</para></sect1>
+<sect1 id="overview_resyntax_1overview_resyntax_bre">
+<title>Basic Regular Expressions</title>
+<para>BREs differ from EREs in several respects. <computeroutput></computeroutput>|, <computeroutput>+</computeroutput>, and <computeroutput></computeroutput>? are ordinary characters and there is no equivalent for their functionality. The delimiters for bounds are <computeroutput>\{</computeroutput> and <computeroutput>\}</computeroutput>, with <computeroutput>{</computeroutput> and <computeroutput>}</computeroutput> by themselves ordinary characters. The parentheses for nested subexpressions are <computeroutput>\</computeroutput>( and <computeroutput>\</computeroutput>), with <computeroutput></computeroutput>( and <computeroutput></computeroutput>) by themselves ordinary characters. <computeroutput>^</computeroutput> is an ordinary character except at the beginning of the RE or the beginning of a parenthesized subexpression, <computeroutput>$</computeroutput> is an ordinary character except at the end of the RE or the end of a parenthesized subexpression, and <computeroutput>*</computeroutput> is an ordinary character if it appears at the beginning of the RE or the beginning of a parenthesized subexpression (after a possible leading <computeroutput>^</computeroutput>). Finally, single-digit back references are available, and <computeroutput>\&lt;</computeroutput> and <computeroutput>\&gt;</computeroutput> are synonyms for <computeroutput>[[:&lt;:]]</computeroutput> and <computeroutput>[[:&gt;:]]</computeroutput> respectively; no other escapes are available.</para></sect1>
+<sect1 id="overview_resyntax_1overview_resyntax_characters">
+<title>Regular Expression Character Names</title>
+<para>Note that the character names are case sensitive.</para><para><center><table rows="1" cols="5"><row>
+<entry thead="no"><para><table rows="19" cols="2"><row>
+<entry thead="no"><para><computeroutput>NUL</computeroutput>  </para></entry><entry thead="no"><para>\0  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>SOH</computeroutput>  </para></entry><entry thead="no"><para>\001  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>STX</computeroutput>  </para></entry><entry thead="no"><para>\002  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>ETX</computeroutput>  </para></entry><entry thead="no"><para>\003  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>EOT</computeroutput>  </para></entry><entry thead="no"><para>\004  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>ENQ</computeroutput>  </para></entry><entry thead="no"><para>\005  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>ACK</computeroutput>  </para></entry><entry thead="no"><para>\006  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>BEL</computeroutput>  </para></entry><entry thead="no"><para>\007  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>alert</computeroutput>  </para></entry><entry thead="no"><para>\007  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>BS</computeroutput>  </para></entry><entry thead="no"><para>\010  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>backspace</computeroutput>  </para></entry><entry thead="no"><para>\b  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>HT</computeroutput>  </para></entry><entry thead="no"><para>\011  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>tab</computeroutput>  </para></entry><entry thead="no"><para>\t  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>LF</computeroutput>  </para></entry><entry thead="no"><para>\012  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>newline</computeroutput>  </para></entry><entry thead="no"><para>\n  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>VT</computeroutput>  </para></entry><entry thead="no"><para>\013  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>vertical-tab</computeroutput>  </para></entry><entry thead="no"><para>\v  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>FF</computeroutput>  </para></entry><entry thead="no"><para>\014  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>form-feed</computeroutput>  </para></entry><entry thead="no"><para>\f  </para></entry></row>
+</table>
+</para><para></para></entry><entry thead="no"><para><table rows="19" cols="2"><row>
+<entry thead="no"><para><computeroutput>CR</computeroutput>  </para></entry><entry thead="no"><para>\015  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>carriage-return</computeroutput>  </para></entry><entry thead="no"><para>\r  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>SO</computeroutput>  </para></entry><entry thead="no"><para>\016  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>SI</computeroutput>  </para></entry><entry thead="no"><para>\017  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>DLE</computeroutput>  </para></entry><entry thead="no"><para>\020  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>DC1</computeroutput>  </para></entry><entry thead="no"><para>\021  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>DC2</computeroutput>  </para></entry><entry thead="no"><para>\022  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>DC3</computeroutput>  </para></entry><entry thead="no"><para>\023  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>DC4</computeroutput>  </para></entry><entry thead="no"><para>\024  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>NAK</computeroutput>  </para></entry><entry thead="no"><para>\025  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>SYN</computeroutput>  </para></entry><entry thead="no"><para>\026  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>ETB</computeroutput>  </para></entry><entry thead="no"><para>\027  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>CAN</computeroutput>  </para></entry><entry thead="no"><para>\030  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>EM</computeroutput>  </para></entry><entry thead="no"><para>\031  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>SUB</computeroutput>  </para></entry><entry thead="no"><para>\032  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>ESC</computeroutput>  </para></entry><entry thead="no"><para>\033  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>IS4</computeroutput>  </para></entry><entry thead="no"><para>\034  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>FS</computeroutput>  </para></entry><entry thead="no"><para>\034  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>IS3</computeroutput>  </para></entry><entry thead="no"><para>\035  </para></entry></row>
+</table>
+</para><para></para></entry><entry thead="no"><para><table rows="19" cols="2"><row>
+<entry thead="no"><para><computeroutput>GS</computeroutput>  </para></entry><entry thead="no"><para>\035  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>IS2</computeroutput>  </para></entry><entry thead="no"><para>\036  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>RS</computeroutput>  </para></entry><entry thead="no"><para>\036  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>IS1</computeroutput>  </para></entry><entry thead="no"><para>\037  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>US</computeroutput>  </para></entry><entry thead="no"><para>\037  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>space</computeroutput>  </para></entry><entry thead="no"><para>&quot; &quot; (space)  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>exclamation-mark</computeroutput>  </para></entry><entry thead="no"><para>!  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>quotation-mark</computeroutput>  </para></entry><entry thead="no"><para>"  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>number-sign</computeroutput>  </para></entry><entry thead="no"><para>#  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>dollar-sign</computeroutput>  </para></entry><entry thead="no"><para>$  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>percent-sign</computeroutput>  </para></entry><entry thead="no"><para>%  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>ampersand</computeroutput>  </para></entry><entry thead="no"><para>&amp;  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>apostrophe</computeroutput>  </para></entry><entry thead="no"><para>&apos;  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>left-parenthesis</computeroutput>  </para></entry><entry thead="no"><para>(  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>right-parenthesis</computeroutput>  </para></entry><entry thead="no"><para>)  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>asterisk</computeroutput>  </para></entry><entry thead="no"><para>*  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>plus-sign</computeroutput>  </para></entry><entry thead="no"><para>+  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>comma</computeroutput>  </para></entry><entry thead="no"><para>,  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>hyphen</computeroutput>  </para></entry><entry thead="no"><para>-  </para></entry></row>
+</table>
+</para><para></para></entry><entry thead="no"><para><table rows="19" cols="2"><row>
+<entry thead="no"><para><computeroutput>hyphen-minus</computeroutput>  </para></entry><entry thead="no"><para>-  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>period</computeroutput>  </para></entry><entry thead="no"><para>.  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>full-stop</computeroutput>  </para></entry><entry thead="no"><para>.  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>slash</computeroutput>  </para></entry><entry thead="no"><para>/  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>solidus</computeroutput>  </para></entry><entry thead="no"><para>/  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>zero</computeroutput>  </para></entry><entry thead="no"><para>0  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>one</computeroutput>  </para></entry><entry thead="no"><para>1  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>two</computeroutput>  </para></entry><entry thead="no"><para>2  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>three</computeroutput>  </para></entry><entry thead="no"><para>3  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>four</computeroutput>  </para></entry><entry thead="no"><para>4  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>five</computeroutput>  </para></entry><entry thead="no"><para>5  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>six</computeroutput>  </para></entry><entry thead="no"><para>6  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>seven</computeroutput>  </para></entry><entry thead="no"><para>7  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>eight</computeroutput>  </para></entry><entry thead="no"><para>8  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>nine</computeroutput>  </para></entry><entry thead="no"><para>9  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>colon</computeroutput>  </para></entry><entry thead="no"><para>:  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>semicolon</computeroutput>  </para></entry><entry thead="no"><para>;  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>less-than-sign</computeroutput>  </para></entry><entry thead="no"><para>&lt;  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>equals-sign</computeroutput>  </para></entry><entry thead="no"><para>=  </para></entry></row>
+</table>
+</para><para></para></entry><entry thead="no"><para><table rows="19" cols="2"><row>
+<entry thead="no"><para><computeroutput>greater-than-sign</computeroutput>  </para></entry><entry thead="no"><para>&gt;  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>question-mark</computeroutput>  </para></entry><entry thead="no"><para>?  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>commercial-at</computeroutput>  </para></entry><entry thead="no"><para>@  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>left-square-bracket</computeroutput>  </para></entry><entry thead="no"><para>[  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>backslash</computeroutput>  </para></entry><entry thead="no"><para>\  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>reverse-solidus</computeroutput>  </para></entry><entry thead="no"><para>\  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>right-square-bracket</computeroutput>  </para></entry><entry thead="no"><para>]  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>circumflex</computeroutput>  </para></entry><entry thead="no"><para>^  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>circumflex-accent</computeroutput>  </para></entry><entry thead="no"><para>^  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>underscore</computeroutput>  </para></entry><entry thead="no"><para>_  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>low-line</computeroutput>  </para></entry><entry thead="no"><para>_  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>grave-accent</computeroutput>  </para></entry><entry thead="no"><para>&apos;  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>left-brace</computeroutput>  </para></entry><entry thead="no"><para>{  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>left-curly-bracket</computeroutput>  </para></entry><entry thead="no"><para>{  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>vertical-line</computeroutput>  </para></entry><entry thead="no"><para>|  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>right-brace</computeroutput>  </para></entry><entry thead="no"><para>}  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>right-curly-bracket</computeroutput>  </para></entry><entry thead="no"><para>}  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>tilde</computeroutput>  </para></entry><entry thead="no"><para>~  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>DEL</computeroutput>  </para></entry><entry thead="no"><para>\177  </para></entry></row>
+</table>
+</para><para></para></entry></row>
+</table>
+</center> </para></sect1>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

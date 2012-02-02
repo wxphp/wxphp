@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_brush_list" kind="class" prot="public">
     <compoundname>wxBrushList</compoundname>
     <includes local="no">wx/brush.h</includes>
@@ -46,7 +46,7 @@
 <para>A brush list is a list containing all brushes which have been created. </para>    </briefdescription>
     <detaileddescription>
 <para>The application should not construct its own brush list: it should use the object pointer <ref refid="brush_8h_1acb7c7a277d9b428fc6cdfd97437d6ef8" kindref="member">wxTheBrushList</ref>.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__gdi" kindref="compound">Graphics Device Interface (GDI)</ref></para><para><simplesect kind="see"><para><ref refid="classwx_brush" kindref="compound">wxBrush</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__gdi" kindref="compound">Graphics Device Interface (GDI)</ref></para><para><simplesect kind="see"><para><ref refid="classwx_brush" kindref="compound">wxBrush</ref> </para></simplesect>
 </para>    </detaileddescription>
     <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" line="362" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" bodystart="361" bodyend="375"/>
     <listofallmembers>

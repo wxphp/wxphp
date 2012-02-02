@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="dir_ed2ec7c8bc01f002872fd7f5e7e15b86" kind="dir">
     <compoundname>interface/wx/xrc/</compoundname>
     <innerfile refid="xh__sizer_8h">xh_sizer.h</innerfile>

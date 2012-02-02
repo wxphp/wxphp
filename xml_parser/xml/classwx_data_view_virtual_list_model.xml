@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_data_view_virtual_list_model" kind="class" prot="public">
     <compoundname>wxDataViewVirtualListModel</compoundname>
     <basecompoundref refid="classwx_data_view_list_model" prot="public" virt="non-virtual">wxDataViewListModel</basecompoundref>
@@ -21,7 +21,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="547"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="544"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -29,32 +29,8 @@
     <detaileddescription>
 <para>The important difference is that under platforms other than OS X, using this model will result in a truly virtual control able to handle millions of items as the control doesn&apos;t store any item (a feature not supported by OS X).</para><para><simplesect kind="see"><para><ref refid="classwx_data_view_list_model" kindref="compound">wxDataViewListModel</ref> for the API.</para></simplesect>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__dvc" kindref="compound">wxDataViewCtrl Related Classes</ref> </para>    </detaileddescription>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__dvc" kindref="compound">wxDataViewCtrl Related Classes</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="5462">
-        <label>wxRefCounter</label>
-        <link refid="classwx_ref_counter"/>
-      </node>
-      <node id="5461">
-        <label>wxDataViewModel</label>
-        <link refid="classwx_data_view_model"/>
-        <childnode refid="5462" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="5459">
-        <label>wxDataViewVirtualListModel</label>
-        <link refid="classwx_data_view_virtual_list_model"/>
-        <childnode refid="5460" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="5460">
-        <label>wxDataViewListModel</label>
-        <link refid="classwx_data_view_list_model"/>
-        <childnode refid="5461" relation="public-inheritance">
-        </childnode>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
       <node id="5466">
         <label>wxRefCounter</label>
         <link refid="classwx_ref_counter"/>
@@ -77,8 +53,32 @@
         <childnode refid="5465" relation="public-inheritance">
         </childnode>
       </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="5470">
+        <label>wxRefCounter</label>
+        <link refid="classwx_ref_counter"/>
+      </node>
+      <node id="5469">
+        <label>wxDataViewModel</label>
+        <link refid="classwx_data_view_model"/>
+        <childnode refid="5470" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5467">
+        <label>wxDataViewVirtualListModel</label>
+        <link refid="classwx_data_view_virtual_list_model"/>
+        <childnode refid="5468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5468">
+        <label>wxDataViewListModel</label>
+        <link refid="classwx_data_view_list_model"/>
+        <childnode refid="5469" relation="public-inheritance">
+        </childnode>
+      </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="542" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" bodystart="541" bodyend="549"/>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="539" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" bodystart="538" bodyend="546"/>
     <listofallmembers>
       <member refid="classwx_data_view_model_1af975c0a3afb970a21b9691a92f44c6c8" prot="public" virt="non-virtual"><scope>wxDataViewVirtualListModel</scope><name>AddNotifier</name></member>
       <member refid="classwx_data_view_model_1ab52b55596d0724047be8cf62184f4468" prot="public" virt="non-virtual"><scope>wxDataViewVirtualListModel</scope><name>ChangeValue</name></member>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_help_event" kind="class" prot="public">
     <compoundname>wxHelpEvent</compoundname>
     <basecompoundref refid="classwx_command_event" prot="public" virt="non-virtual">wxCommandEvent</basecompoundref>
@@ -34,7 +34,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3268" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="3267" bodyend="3275"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3289" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="3288" bodyend="3296"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -69,7 +69,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3283"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3304"/>
       </memberdef>
       <memberdef kind="function" id="classwx_help_event_1a55ce4340d1254116a80cb6a8352d33ae" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_help_event_1a29fe3ca1a548472f0abd0ae94b5def0c" kindref="member">wxHelpEvent::Origin</ref></type>
@@ -77,13 +77,13 @@
         <argsstring>() const </argsstring>
         <name>GetOrigin</name>
         <briefdescription>
-<para>Returns the origin of the help event which is one of the wxHelpEventOrigin values. </para>        </briefdescription>
+<para>Returns the origin of the help event which is one of the ::wxHelpEventOrigin values. </para>        </briefdescription>
         <detaileddescription>
 <para>The application may handle events generated using the keyboard or mouse differently, e.g. by using <ref refid="group__group__funcmacro__misc_1ga00fef3cd1a110189e737ad7bf948a3d0" kindref="member">wxGetMousePosition()</ref> for the mouse events.</para><para><simplesect kind="see"><para><ref refid="classwx_help_event_1a3f3a0117b04b112fe1b7cad13233674f" kindref="member">SetOrigin()</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3294"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3315"/>
       </memberdef>
       <memberdef kind="function" id="classwx_help_event_1a1de0f5ddb487e5d31edc00a397eae475" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_point" kindref="compound">wxPoint</ref> &amp;</type>
@@ -96,7 +96,7 @@
 <para>This allows the application to position the help appropriately. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3300"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3321"/>
       </memberdef>
       <memberdef kind="function" id="classwx_help_event_1a3f3a0117b04b112fe1b7cad13233674f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -114,7 +114,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3307"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3328"/>
       </memberdef>
       <memberdef kind="function" id="classwx_help_event_1aceef2981ed1c48fa1ba55cff9c185e81" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -131,7 +131,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3312"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3333"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -143,39 +143,12 @@
 <listitem><para>EVT_HELP_RANGE(id1,  id2,  func): Process a <computeroutput>wxEVT_HELP</computeroutput> event for a range of ids. </para></listitem>
 </itemizedlist>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="classwx_context_help" kindref="compound">wxContextHelp</ref>, <ref refid="classwx_dialog" kindref="compound">wxDialog</ref>, <ref refid="overview__events" kindref="compound">Events and Event Handling</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="classwx_context_help" kindref="compound">wxContextHelp</ref>, <ref refid="classwx_dialog" kindref="compound">wxDialog</ref>, <ref refid="overview_events" kindref="compound">Events and Event Handling</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="6934">
-        <label>wxObject</label>
-        <link refid="classwx_object"/>
-      </node>
-      <node id="6932">
-        <label>wxCommandEvent</label>
-        <link refid="classwx_command_event"/>
-        <childnode refid="6933" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="6933">
-        <label>wxEvent</label>
-        <link refid="classwx_event"/>
-        <childnode refid="6934" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="6931">
-        <label>wxHelpEvent</label>
-        <link refid="classwx_help_event"/>
-        <childnode refid="6932" relation="public-inheritance">
-        </childnode>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
       <node id="6938">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="6939" relation="usage">
-          <edgelabel>m_refData</edgelabel>
-        </childnode>
       </node>
       <node id="6936">
         <label>wxCommandEvent</label>
@@ -195,12 +168,39 @@
         <childnode refid="6936" relation="public-inheritance">
         </childnode>
       </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="6942">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="6943" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="6940">
+        <label>wxCommandEvent</label>
+        <link refid="classwx_command_event"/>
+        <childnode refid="6941" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6941">
+        <label>wxEvent</label>
+        <link refid="classwx_event"/>
+        <childnode refid="6942" relation="public-inheritance">
+        </childnode>
+      </node>
       <node id="6939">
+        <label>wxHelpEvent</label>
+        <link refid="classwx_help_event"/>
+        <childnode refid="6940" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6943">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3262" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="3261" bodyend="3313"/>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3283" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="3282" bodyend="3334"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxHelpEvent</scope><name>AllocExclusive</name></member>
       <member refid="classwx_event_1a26878097a702e8d0368da150125d4158" prot="public" virt="pure-virtual"><scope>wxHelpEvent</scope><name>Clone</name></member>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="colordlg_8h" kind="file">
     <compoundname>colordlg.h</compoundname>
     <innerclass refid="classwx_colour_dialog" prot="public">wxColourDialog</innerclass>
@@ -59,7 +59,7 @@
 <para>Optional object storing additional colour dialog settings, such as custom colours. If none is provided the same settings as the last time are used.</para></parameterdescription>
 </parameteritem>
 </parameterlist>
-Include file: <verbatim>#include &lt;wx/colordlg.h&gt; </verbatim> </para>        </detaileddescription>
+Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/colordlg.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colordlg.h" line="89"/>

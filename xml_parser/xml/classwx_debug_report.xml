@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_debug_report" kind="class" prot="public">
     <compoundname>wxDebugReport</compoundname>
     <derivedcompoundref refid="classwx_debug_report_compress" prot="public" virt="non-virtual">wxDebugReportCompress</derivedcompoundref>
@@ -404,31 +404,31 @@
     <briefdescription>
 <para><ref refid="classwx_debug_report" kindref="compound">wxDebugReport</ref> is used to generate a debug report, containing information about the program current state. </para>    </briefdescription>
     <detaileddescription>
-<para>It is usually used from <ref refid="classwx_app_console_1a927931aafbb7aec4debdfc02ee6f6f9d" kindref="member">wxApp::OnFatalException()</ref> as shown in the <ref refid="page__samples_1page_samples_debugrpt" kindref="member">Debug Reporter Sample</ref>.</para><para>A <ref refid="classwx_debug_report" kindref="compound">wxDebugReport</ref> object contains one or more files. A few of them can be created by the class itself but more can be created from the outside and then added to the report. Also note that several virtual functions may be overridden to further customize the class behaviour.</para><para>Once a report is fully assembled, it can simply be left in the temporary directory so that the user can email it to the developers (in which case you should still use <ref refid="classwx_debug_report_compress" kindref="compound">wxDebugReportCompress</ref> to compress it in a single file) or uploaded to a Web server using <ref refid="classwx_debug_report_upload" kindref="compound">wxDebugReportUpload</ref> (setting up the Web server to accept uploads is your responsibility, of course). Other handlers, for example for automatically emailing the report, can be defined as well but are not currently included in wxWidgets.</para><para>A typical usage example:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_debug_report" kindref="compound" tooltip="wxDebugReport is used to generate a debug report, containing information about the...">wxDebugReport</ref><sp/>report;</highlight></codeline>
+<para>It is usually used from <ref refid="classwx_app_console_1a927931aafbb7aec4debdfc02ee6f6f9d" kindref="member">wxApp::OnFatalException()</ref> as shown in the <ref refid="page_samples_1page_samples_debugrpt" kindref="member">Debug Reporter Sample</ref>.</para><para>A <ref refid="classwx_debug_report" kindref="compound">wxDebugReport</ref> object contains one or more files. A few of them can be created by the class itself but more can be created from the outside and then added to the report. Also note that several virtual functions may be overridden to further customize the class behaviour.</para><para>Once a report is fully assembled, it can simply be left in the temporary directory so that the user can email it to the developers (in which case you should still use <ref refid="classwx_debug_report_compress" kindref="compound">wxDebugReportCompress</ref> to compress it in a single file) or uploaded to a Web server using <ref refid="classwx_debug_report_upload" kindref="compound">wxDebugReportUpload</ref> (setting up the Web server to accept uploads is your responsibility, of course). Other handlers, for example for automatically emailing the report, can be defined as well but are not currently included in wxWidgets.</para><para>A typical usage example:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_debug_report" kindref="compound" tooltip="wxDebugReport is used to generate a debug report, containing information about the program current st...">wxDebugReport</ref><sp/>report;</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_debug_report_preview_std" kindref="compound" tooltip="wxDebugReportPreviewStd is a standard debug report preview window.">wxDebugReportPreviewStd</ref><sp/>preview;</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>report.<ref refid="classwx_debug_report_1a239a2a49a7e951fcffc40c05f3cd0ab2" kindref="member" tooltip="The same as calling AddContext(Context_Current).">AddCurrentContext</ref>();<sp/><sp/></highlight><highlight class="comment">//<sp/>could<sp/>also<sp/>use<sp/>AddAll()</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>report.<ref refid="classwx_debug_report_1aea719d012f378d470c75183339b3c542" kindref="member" tooltip="The same as calling AddDump(Context_Current).">AddCurrentDump</ref>();<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>to<sp/>do<sp/>both<sp/>at<sp/>once</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>preview.<ref refid="classwx_debug_report_preview_std_1a5b6ea5f83145afd8904fe2af5d19074b" kindref="member" tooltip="Shows the dialog.">Show</ref>(report)<sp/>)</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>report.<ref refid="classwx_debug_report_1a3ec35bb65b88aac386a399b27ef940a5" kindref="member" tooltip="Processes this report: the base class simply notifies the user that the report has...">Process</ref>();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>report.<ref refid="classwx_debug_report_1a3ec35bb65b88aac386a399b27ef940a5" kindref="member" tooltip="Processes this report: the base class simply notifies the user that the report has been generated...">Process</ref>();</highlight></codeline>
 </programlisting></para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxqa" kindref="member">wxQA</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__debugging" kindref="compound">Debugging</ref> </para>    </detaileddescription>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxqa" kindref="member">wxQA</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__debugging" kindref="compound">Debugging</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="5545">
+      <node id="5549">
         <label>wxDebugReportUpload</label>
         <link refid="classwx_debug_report_upload"/>
-        <childnode refid="5544" relation="public-inheritance">
+        <childnode refid="5548" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5543">
+      <node id="5547">
         <label>wxDebugReport</label>
         <link refid="classwx_debug_report"/>
       </node>
-      <node id="5544">
+      <node id="5548">
         <label>wxDebugReportCompress</label>
         <link refid="classwx_debug_report_compress"/>
-        <childnode refid="5543" relation="public-inheritance">
+        <childnode refid="5547" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>

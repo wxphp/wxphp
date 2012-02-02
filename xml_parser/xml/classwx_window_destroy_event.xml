@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_window_destroy_event" kind="class" prot="public">
     <compoundname>wxWindowDestroyEvent</compoundname>
     <basecompoundref refid="classwx_command_event" prot="public" virt="non-virtual">wxCommandEvent</basecompoundref>
@@ -21,7 +21,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3584"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3605"/>
       </memberdef>
       <memberdef kind="function" id="classwx_window_destroy_event_1aa9e056b4c4d0cd8cb25f864a302246b4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
@@ -34,71 +34,71 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3587"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3608"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para>This event is sent as early as possible during the window destruction process. </para>    </briefdescription>
     <detaileddescription>
 <para>For the top level windows, as early as possible means that this is done by <ref refid="classwx_frame" kindref="compound">wxFrame</ref> or <ref refid="classwx_dialog" kindref="compound">wxDialog</ref> destructor, i.e. after the destructor of the derived class was executed and so any methods specific to the derived class can&apos;t be called any more from this event handler. If you need to do this, you must call <ref refid="classwx_window_1a7e21eb6a0819281b29134a6432d064fe" kindref="member">wxWindow::SendDestroyEvent()</ref> from your derived class destructor.</para><para>For the child windows, this event is generated just before deleting the window from <ref refid="classwx_window_1a6bf0c5be864544d9ce0560087667b7fc" kindref="member">wxWindow::Destroy()</ref> (which is also called when the parent window is deleted) or from the window destructor if operator <computeroutput>delete</computeroutput> was used directly (which is not recommended for this very reason).</para><para>It is usually pointless to handle this event in the window itself but it ca be very useful to receive notifications about the window destruction in the parent window or in any other object interested in this window.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="overview__events" kindref="compound">Events and Event Handling</ref>, <ref refid="classwx_window_create_event" kindref="compound">wxWindowCreateEvent</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="overview_events" kindref="compound">Events and Event Handling</ref>, <ref refid="classwx_window_create_event" kindref="compound">wxWindowCreateEvent</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="11570">
+      <node id="11631">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="11568">
+      <node id="11629">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="11569" relation="public-inheritance">
+        <childnode refid="11630" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11569">
+      <node id="11630">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="11570" relation="public-inheritance">
+        <childnode refid="11631" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11567">
+      <node id="11628">
         <label>wxWindowDestroyEvent</label>
         <link refid="classwx_window_destroy_event"/>
-        <childnode refid="11568" relation="public-inheritance">
+        <childnode refid="11629" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="11574">
+      <node id="11635">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="11575" relation="usage">
+        <childnode refid="11636" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="11572">
+      <node id="11633">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="11573" relation="public-inheritance">
+        <childnode refid="11634" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11573">
+      <node id="11634">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="11574" relation="public-inheritance">
+        <childnode refid="11635" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11575">
+      <node id="11636">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
-      <node id="11571">
+      <node id="11632">
         <label>wxWindowDestroyEvent</label>
         <link refid="classwx_window_destroy_event"/>
-        <childnode refid="11572" relation="public-inheritance">
+        <childnode refid="11633" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3579" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="3578" bodyend="3588"/>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3600" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="3599" bodyend="3609"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxWindowDestroyEvent</scope><name>AllocExclusive</name></member>
       <member refid="classwx_event_1a26878097a702e8d0368da150125d4158" prot="public" virt="pure-virtual"><scope>wxWindowDestroyEvent</scope><name>Clone</name></member>

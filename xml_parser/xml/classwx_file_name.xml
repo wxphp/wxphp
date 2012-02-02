@@ -1,73 +1,9 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_file_name" kind="class" prot="public">
     <compoundname>wxFileName</compoundname>
     <includes local="no">wx/filename.h</includes>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
-      <memberdef kind="function" id="classwx_file_name_1abc3e8d14a555ac691d56b6edc506f351" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
-        <definition>wxString wxFileName::GetHumanReadableSize</definition>
-        <argsstring>(const wxString &amp;failmsg=_(&quot;Not available&quot;), int precision=1, wxSizeConvention conv=wxSIZE_CONV_TRADITIONAL) const </argsstring>
-        <name>GetHumanReadableSize</name>
-        <param>
-          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
-          <declname>failmsg</declname>
-          <defval>_(&quot;Not available&quot;)</defval>
-        </param>
-        <param>
-          <type>int</type>
-          <declname>precision</declname>
-          <defval>1</defval>
-        </param>
-        <param>
-          <type><ref refid="filename_8h_1a75d2cf906e06263544e2ec219c91388e" kindref="member">wxSizeConvention</ref></type>
-          <declname>conv</declname>
-          <defval>wxSIZE_CONV_TRADITIONAL</defval>
-        </param>
-        <briefdescription>
-<para>Returns the representation of the file size in a human-readable form. </para>        </briefdescription>
-        <detaileddescription>
-<para>In the first version, the size of this file is used. In the second one, the specified size <emphasis>bytes</emphasis> is used.</para><para>If the file size could not be retrieved or <emphasis>bytes</emphasis> is <ref refid="filename_8h_1a454ab49e582fff5adb3cec515d03b162" kindref="member">wxInvalidSize</ref> or zero, the <computeroutput>failmsg</computeroutput> string is returned.</para><para>Otherwise the returned string is a floating-point number with <computeroutput>precision</computeroutput> decimal digits followed by the abbreviation of the unit used. By default the traditional, although incorrect, convention of using SI units for multiples of 1024 is used, i.e. returned string will use suffixes of B, KB, MB, GB, TB for bytes, kilobytes, megabytes, gigabytes and terabytes respectively. With the IEC convention the names of the units are changed to B, KiB, MiB, GiB and TiB for bytes, kibibytes, mebibytes, gibibytes and tebibytes. Finally, with SI convention the same B, KB, MB, GB and TB suffixes are used but in their correct SI meaning, i.e. as multiples of 1000 and not 1024.</para><para>Support for the different size conventions is new in wxWidgets 2.9.1, in previous versions only the traditional convention was implemented. </para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="571"/>
-      </memberdef>
-      <memberdef kind="function" id="classwx_file_name_1a91caf872b17d6d775cdcd36161b5c470" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
-        <definition>static wxString wxFileName::GetHumanReadableSize</definition>
-        <argsstring>(const wxULongLong &amp;bytes, const wxString &amp;nullsize=_(&quot;Not available&quot;), int precision=1, wxSizeConvention conv=wxSIZE_CONV_TRADITIONAL)</argsstring>
-        <name>GetHumanReadableSize</name>
-        <param>
-          <type>const <ref refid="classwx_u_long_long" kindref="compound">wxULongLong</ref> &amp;</type>
-          <declname>bytes</declname>
-        </param>
-        <param>
-          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
-          <declname>nullsize</declname>
-          <defval>_(&quot;Not available&quot;)</defval>
-        </param>
-        <param>
-          <type>int</type>
-          <declname>precision</declname>
-          <defval>1</defval>
-        </param>
-        <param>
-          <type><ref refid="filename_8h_1a75d2cf906e06263544e2ec219c91388e" kindref="member">wxSizeConvention</ref></type>
-          <declname>conv</declname>
-          <defval>wxSIZE_CONV_TRADITIONAL</defval>
-        </param>
-        <briefdescription>
-<para>Returns the representation of the file size in a human-readable form. </para>        </briefdescription>
-        <detaileddescription>
-<para>In the first version, the size of this file is used. In the second one, the specified size <emphasis>bytes</emphasis> is used.</para><para>If the file size could not be retrieved or <emphasis>bytes</emphasis> is <ref refid="filename_8h_1a454ab49e582fff5adb3cec515d03b162" kindref="member">wxInvalidSize</ref> or zero, the <computeroutput>failmsg</computeroutput> string is returned.</para><para>Otherwise the returned string is a floating-point number with <computeroutput>precision</computeroutput> decimal digits followed by the abbreviation of the unit used. By default the traditional, although incorrect, convention of using SI units for multiples of 1024 is used, i.e. returned string will use suffixes of B, KB, MB, GB, TB for bytes, kilobytes, megabytes, gigabytes and terabytes respectively. With the IEC convention the names of the units are changed to B, KiB, MiB, GiB and TiB for bytes, kibibytes, mebibytes, gibibytes and tebibytes. Finally, with SI convention the same B, KB, MB, GB and TB suffixes are used but in their correct SI meaning, i.e. as multiples of 1000 and not 1024.</para><para>Support for the different size conventions is new in wxWidgets 2.9.1, in previous versions only the traditional convention was implemented. </para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="577"/>
-      </memberdef>
-      </sectiondef>
-      <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_file_name_1a416af84fddd624a3b457dbffbe174317" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
         <definition>static wxString wxFileName::CreateTempFileName</definition>
@@ -146,7 +82,68 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
+      <memberdef kind="function" id="classwx_file_name_1abc3e8d14a555ac691d56b6edc506f351" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxFileName::GetHumanReadableSize</definition>
+        <argsstring>(const wxString &amp;failmsg=_(&quot;Not available&quot;), int precision=1, wxSizeConvention conv=wxSIZE_CONV_TRADITIONAL) const </argsstring>
+        <name>GetHumanReadableSize</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>failmsg</declname>
+          <defval>_(&quot;Not available&quot;)</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>precision</declname>
+          <defval>1</defval>
+        </param>
+        <param>
+          <type><ref refid="filename_8h_1a75d2cf906e06263544e2ec219c91388e" kindref="member">wxSizeConvention</ref></type>
+          <declname>conv</declname>
+          <defval>wxSIZE_CONV_TRADITIONAL</defval>
+        </param>
+        <briefdescription>
+<para>Returns the representation of the file size in a human-readable form. </para>        </briefdescription>
+        <detaileddescription>
+<para>In the first version, the size of this file is used. In the second one, the specified size <emphasis>bytes</emphasis> is used.</para><para>If the file size could not be retrieved or <emphasis>bytes</emphasis> is <ref refid="filename_8h_1a454ab49e582fff5adb3cec515d03b162" kindref="member">wxInvalidSize</ref> or zero, the <computeroutput>failmsg</computeroutput> string is returned.</para><para>Otherwise the returned string is a floating-point number with <computeroutput>precision</computeroutput> decimal digits followed by the abbreviation of the unit used. By default the traditional, although incorrect, convention of using SI units for multiples of 1024 is used, i.e. returned string will use suffixes of B, KB, MB, GB, TB for bytes, kilobytes, megabytes, gigabytes and terabytes respectively. With the IEC convention the names of the units are changed to B, KiB, MiB, GiB and TiB for bytes, kibibytes, mebibytes, gibibytes and tebibytes. Finally, with SI convention the same B, KB, MB, GB and TB suffixes are used but in their correct SI meaning, i.e. as multiples of 1000 and not 1024.</para><para>Support for the different size conventions is new in wxWidgets 2.9.1, in previous versions only the traditional convention was implemented. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="571"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1a91caf872b17d6d775cdcd36161b5c470" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>static wxString wxFileName::GetHumanReadableSize</definition>
+        <argsstring>(const wxULongLong &amp;bytes, const wxString &amp;nullsize=_(&quot;Not available&quot;), int precision=1, wxSizeConvention conv=wxSIZE_CONV_TRADITIONAL)</argsstring>
+        <name>GetHumanReadableSize</name>
+        <param>
+          <type>const <ref refid="classwx_u_long_long" kindref="compound">wxULongLong</ref> &amp;</type>
+          <declname>bytes</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>nullsize</declname>
+          <defval>_(&quot;Not available&quot;)</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>precision</declname>
+          <defval>1</defval>
+        </param>
+        <param>
+          <type><ref refid="filename_8h_1a75d2cf906e06263544e2ec219c91388e" kindref="member">wxSizeConvention</ref></type>
+          <declname>conv</declname>
+          <defval>wxSIZE_CONV_TRADITIONAL</defval>
+        </param>
+        <briefdescription>
+<para>Returns the representation of the file size in a human-readable form. </para>        </briefdescription>
+        <detaileddescription>
+<para>In the first version, the size of this file is used. In the second one, the specified size <emphasis>bytes</emphasis> is used.</para><para>If the file size could not be retrieved or <emphasis>bytes</emphasis> is <ref refid="filename_8h_1a454ab49e582fff5adb3cec515d03b162" kindref="member">wxInvalidSize</ref> or zero, the <computeroutput>failmsg</computeroutput> string is returned.</para><para>Otherwise the returned string is a floating-point number with <computeroutput>precision</computeroutput> decimal digits followed by the abbreviation of the unit used. By default the traditional, although incorrect, convention of using SI units for multiples of 1024 is used, i.e. returned string will use suffixes of B, KB, MB, GB, TB for bytes, kilobytes, megabytes, gigabytes and terabytes respectively. With the IEC convention the names of the units are changed to B, KiB, MiB, GiB and TiB for bytes, kibibytes, mebibytes, gibibytes and tebibytes. Finally, with SI convention the same B, KB, MB, GB and TB suffixes are used but in their correct SI meaning, i.e. as multiples of 1000 and not 1024.</para><para>Support for the different size conventions is new in wxWidgets 2.9.1, in previous versions only the traditional convention was implemented. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="577"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
       <memberdef kind="function" id="classwx_file_name_1a4f06c2499ce10643e41175405b93e61c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>static void wxFileName::SplitPath</definition>
@@ -2408,7 +2405,7 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>MyMethod(<sp/>dirname.GetPath()<sp/>);</highlight></codeline>
 </programlisting></para><para>The same can be done using the static method <ref refid="classwx_file_name_1afed95ad83636ed634bbe09564457bfe2" kindref="member">wxFileName::DirName()</ref>:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_file_name" kindref="compound" tooltip="wxFileName encapsulates a file name.">wxFileName</ref><sp/>dirname<sp/>=<sp/><ref refid="classwx_file_name_1afed95ad83636ed634bbe09564457bfe2" kindref="member" tooltip="Returns the object corresponding to the directory with the given name.">wxFileName::DirName</ref>(<sp/></highlight><highlight class="stringliteral">&quot;C:\mydir&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>MyMethod(<sp/>dirname.<ref refid="classwx_file_name_1a1b313ab21ae9da4e1f9dbdf8a35d9de6" kindref="member" tooltip="Returns the path part of the filename (without the name or extension).">GetPath</ref>()<sp/>);</highlight></codeline>
-</programlisting></para><para>Accordingly, methods dealing with directories or directory names like <ref refid="classwx_file_name_1ad1fccfcfdc93381216fdfc0ebfc44ec0" kindref="member">wxFileName::IsDirReadable()</ref> use <ref refid="classwx_file_name_1a1b313ab21ae9da4e1f9dbdf8a35d9de6" kindref="member">wxFileName::GetPath()</ref> whereas methods dealing with file names like <ref refid="classwx_file_name_1a13effc5ad97b5232390bee8348237bf1" kindref="member">wxFileName::IsFileReadable()</ref> use <ref refid="classwx_file_name_1a8fc8100ba99859a40558c068a841b586" kindref="member">wxFileName::GetFullPath()</ref>.</para><para>If it is not known whether a string contains a directory name or a complete file name (such as when interpreting user input) you need to use the static function <ref refid="classwx_file_name_1a3b539f8ff68649eb24381ae6b3bcae91" kindref="member">wxFileName::DirExists()</ref> (or its identical variants <ref refid="classwx_dir_1ae03564ab50b6b83947f34477d89f0866" kindref="member">wxDir::Exists()</ref> and <ref refid="group__group__funcmacro__file_1ga3e960a6805631320fede18bf1176f278" kindref="member">wxDirExists()</ref>) and construct the <ref refid="classwx_file_name" kindref="compound">wxFileName</ref> instance accordingly. This will only work if the directory actually exists, of course:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change...">wxString</ref><sp/>user_input;</highlight></codeline>
+</programlisting></para><para>Accordingly, methods dealing with directories or directory names like <ref refid="classwx_file_name_1ad1fccfcfdc93381216fdfc0ebfc44ec0" kindref="member">wxFileName::IsDirReadable()</ref> use <ref refid="classwx_file_name_1a1b313ab21ae9da4e1f9dbdf8a35d9de6" kindref="member">wxFileName::GetPath()</ref> whereas methods dealing with file names like <ref refid="classwx_file_name_1a13effc5ad97b5232390bee8348237bf1" kindref="member">wxFileName::IsFileReadable()</ref> use <ref refid="classwx_file_name_1a8fc8100ba99859a40558c068a841b586" kindref="member">wxFileName::GetFullPath()</ref>.</para><para>If it is not known whether a string contains a directory name or a complete file name (such as when interpreting user input) you need to use the static function <ref refid="classwx_file_name_1a3b539f8ff68649eb24381ae6b3bcae91" kindref="member">wxFileName::DirExists()</ref> (or its identical variants <ref refid="classwx_dir_1ae03564ab50b6b83947f34477d89f0866" kindref="member">wxDir::Exists()</ref> and <ref refid="group__group__funcmacro__file_1ga3e960a6805631320fede18bf1176f278" kindref="member">wxDirExists()</ref>) and construct the <ref refid="classwx_file_name" kindref="compound">wxFileName</ref> instance accordingly. This will only work if the directory actually exists, of course:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change was actually the m...">wxString</ref><sp/>user_input;</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>get<sp/>input<sp/>from<sp/>user</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_file_name" kindref="compound" tooltip="wxFileName encapsulates a file name.">wxFileName</ref><sp/>fname;</highlight></codeline>
@@ -2480,7 +2477,7 @@ Other file system operations functions are:</para><para><itemizedlist>
 <listitem><para><ref refid="classwx_file_name_1aa718276c012c7e64a1e2c28b47a1056b" kindref="member">wxFileName::Rmdir()</ref></para></listitem>
 </itemizedlist>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__file" kindref="compound">File Handling</ref> </para></sect1>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__file" kindref="compound">File Handling</ref> </para></sect1>
     </detaileddescription>
     <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="272" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" bodystart="271" bodyend="1273"/>
     <listofallmembers>

@@ -1,10 +1,9 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_long_long" kind="class" prot="public">
     <compoundname>wxLongLong</compoundname>
     <includes local="no">wx/longlong.h</includes>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_long_long_1a2e9ab7a537f48be3be9c0b190ab085c9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_long_long" kindref="compound">wxLongLong</ref></type>
         <definition>wxLongLong wxLongLong::Abs</definition>
@@ -33,7 +32,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_long_long_1a50fd4891f0e083e18caf77be422589b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_long_long" kindref="compound">wxLongLong</ref></type>
         <definition>wxLongLong wxLongLong::operator++</definition>
@@ -65,7 +63,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_long_long_1a9f65aaf7453be2685578727515b7243d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_long_long" kindref="compound">wxLongLong</ref></type>
         <definition>wxLongLong wxLongLong::operator--</definition>
@@ -420,7 +417,7 @@
 <para>It is implemented using the native 64 bit type where available (machines with 64 bit longs or compilers which have (an analog of) <emphasis>long</emphasis> long type) and uses the emulation code in the other cases which ensures that it is the most efficient solution for working with 64 bit integers independently of the architecture.</para><para><ref refid="classwx_long_long" kindref="compound">wxLongLong</ref> defines all usual arithmetic operations such as addition, subtraction, bitwise shifts and logical operations as well as multiplication and division (not yet for the machines without native <emphasis>long</emphasis> long). It also has operators for implicit construction from and conversion to the native <emphasis>long</emphasis> long type if it exists and <emphasis>long</emphasis>.</para><para>You would usually use this type in exactly the same manner as any other (built-in) arithmetic type. Note that <ref refid="classwx_long_long" kindref="compound">wxLongLong</ref> is a signed type, if you want unsigned values use <ref refid="classwx_u_long_long" kindref="compound">wxULongLong</ref> which has exactly the same API as <ref refid="classwx_long_long" kindref="compound">wxLongLong</ref> except when explicitly mentioned otherwise.</para><para>If a native (i.e. supported directly by the compiler) 64 bit integer type was found to exist, <emphasis>wxLongLong_t</emphasis> macro will be defined to correspond to it. Also, in this case only, two additional macros will be defined:<itemizedlist>
 <listitem><para><ref refid="group__group__funcmacro__misc_1ga6203af2f81f7b2a3dd8aa384426631a8" kindref="member">wxLongLongFmtSpec()</ref> for printing 64 bit integers using the standard <computeroutput>printf()</computeroutput> function (but see also <ref refid="classwx_long_long_1ab53c850616c14e473d614110f7d5e7ee" kindref="member">wxLongLong::ToString</ref> for a more portable solution);</para></listitem><listitem><para><ref refid="group__group__funcmacro__misc_1ga8d211f75f18b9dfa770f93a1518e78da" kindref="member">wxLL()</ref> for defining 64 bit integer compile-time constants.</para></listitem></itemizedlist>
 </para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__data" kindref="compound">Data Structures</ref> </para>    </detaileddescription>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__data" kindref="compound">Data Structures</ref> </para>    </detaileddescription>
     <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/longlong.h" line="40" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/longlong.h" bodystart="39" bodyend="184"/>
     <listofallmembers>
       <member refid="classwx_long_long_1a2e9ab7a537f48be3be9c0b190ab085c9" prot="public" virt="non-virtual"><scope>wxLongLong</scope><name>Abs</name></member>

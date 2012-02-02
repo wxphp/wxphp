@@ -3,7 +3,7 @@
      xsltproc combine.xslt index.xml >all.xml
 -->
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
-  <xsl:output method="xml" version="1.0" indent="yes" standalone="yes" />
+  <xsl:output method="xml" version="1.0" indent="no" standalone="yes" />
   <xsl:template match="/">
     <doxygen version="{doxygenindex/@version}">
       <!-- Load all doxgen generated xml files -->

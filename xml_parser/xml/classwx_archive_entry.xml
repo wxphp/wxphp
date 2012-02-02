@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_archive_entry" kind="class" prot="public">
     <compoundname>wxArchiveEntry</compoundname>
     <basecompoundref refid="classwx_object" prot="public" virt="non-virtual">wxObject</basecompoundref>
@@ -147,7 +147,7 @@
         <briefdescription>
 <para>Returns the entry&apos;s filename in the internal format used within the archive. </para>        </briefdescription>
         <detaileddescription>
-<para>The name can include directory components, i.e. it can be a full path.</para><para>The names of directory entries are returned without any trailing path separator. This gives a canonical name that can be used in comparisons.</para><para><simplesect kind="see"><para><ref refid="overview__archive_1overview_archive_byname" kindref="member">Looking Up an Archive Entry by Name</ref> </para></simplesect>
+<para>The name can include directory components, i.e. it can be a full path.</para><para>The names of directory entries are returned without any trailing path separator. This gives a canonical name that can be used in comparisons.</para><para><simplesect kind="see"><para><ref refid="overview_archive_1overview_archive_byname" kindref="member">Looking Up an Archive Entry by Name</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -266,39 +266,15 @@
     <detaileddescription>
 <para>These hold the meta-data (filename, timestamp, etc.), for entries in archive files such as zips and tars.</para><sect1 id="classwx_archive_entry_1archiveentry_nonseekable">
 <title>About non-seekable streams</title>
-<para>This information applies only when reading archives from non-seekable streams. When the stream is seekable GetNextEntry() returns a fully populated <ref refid="classwx_archive_entry" kindref="compound">wxArchiveEntry</ref>. See <ref refid="overview__archive_1overview_archive_noseek" kindref="member">Archives on Non-Seekable Streams</ref> for more information.</para><para>For generic programming, when the worst case must be assumed, you can rely on all the fields of <ref refid="classwx_archive_entry" kindref="compound">wxArchiveEntry</ref> being fully populated when <ref refid="classwx_archive_input_stream_1a87615df48e5f57305aa360098f5dae26" kindref="member">wxArchiveInputStream::GetNextEntry()</ref> returns, with the following exceptions:</para><para><itemizedlist>
+<para>This information applies only when reading archives from non-seekable streams. When the stream is seekable GetNextEntry() returns a fully populated <ref refid="classwx_archive_entry" kindref="compound">wxArchiveEntry</ref>. See <ref refid="overview_archive_1overview_archive_noseek" kindref="member">Archives on Non-Seekable Streams</ref> for more information.</para><para>For generic programming, when the worst case must be assumed, you can rely on all the fields of <ref refid="classwx_archive_entry" kindref="compound">wxArchiveEntry</ref> being fully populated when <ref refid="classwx_archive_input_stream_1a87615df48e5f57305aa360098f5dae26" kindref="member">wxArchiveInputStream::GetNextEntry()</ref> returns, with the following exceptions:</para><para><itemizedlist>
 <listitem><para><ref refid="classwx_archive_entry_1a05d8c0618a80cb1ada5c37a58042ec32" kindref="member">GetSize()</ref>: guaranteed to be available after the entry has been read to Eof(), or CloseEntry() has been called; </para></listitem>
 <listitem><para><ref refid="classwx_archive_entry_1abe30c2532550d23136cf6e1390007073" kindref="member">IsReadOnly()</ref>: guaranteed to be available after the end of the archive has been reached, i.e. after GetNextEntry() returns NULL and Eof() is true.</para></listitem>
 </itemizedlist>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__archive" kindref="compound">Archive support</ref>, <ref refid="group__group__class__streams" kindref="compound">Streams</ref></para><para><simplesect kind="see"><para><ref refid="overview__archive" kindref="compound">Archive Formats</ref>, <ref refid="overview__archive_1overview_archive_generic" kindref="member">Generic Archive Programming</ref>, <ref refid="classwx_archive_input_stream" kindref="compound">wxArchiveInputStream</ref>, <ref refid="classwx_archive_output_stream" kindref="compound">wxArchiveOutputStream</ref>, <ref refid="classwx_archive_notifier" kindref="compound">wxArchiveNotifier</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__archive" kindref="compound">Archive support</ref>, <ref refid="group__group__class__streams" kindref="compound">Streams</ref></para><para><simplesect kind="see"><para><ref refid="overview_archive" kindref="compound">Archive Formats</ref>, <ref refid="overview_archive_1overview_archive_generic" kindref="member">Generic Archive Programming</ref>, <ref refid="classwx_archive_input_stream" kindref="compound">wxArchiveInputStream</ref>, <ref refid="classwx_archive_output_stream" kindref="compound">wxArchiveOutputStream</ref>, <ref refid="classwx_archive_notifier" kindref="compound">wxArchiveNotifier</ref> </para></simplesect>
 </para></sect1>
     </detaileddescription>
     <inheritancegraph>
-      <node id="4309">
-        <label>wxArchiveEntry</label>
-        <link refid="classwx_archive_entry"/>
-        <childnode refid="4310" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4310">
-        <label>wxObject</label>
-        <link refid="classwx_object"/>
-      </node>
-      <node id="4312">
-        <label>wxZipEntry</label>
-        <link refid="classwx_zip_entry"/>
-        <childnode refid="4309" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4311">
-        <label>wxTarEntry</label>
-        <link refid="classwx_tar_entry"/>
-        <childnode refid="4309" relation="public-inheritance">
-        </childnode>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
       <node id="4313">
         <label>wxArchiveEntry</label>
         <link refid="classwx_archive_entry"/>
@@ -308,11 +284,35 @@
       <node id="4314">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="4315" relation="usage">
-          <edgelabel>m_refData</edgelabel>
+      </node>
+      <node id="4316">
+        <label>wxZipEntry</label>
+        <link refid="classwx_zip_entry"/>
+        <childnode refid="4313" relation="public-inheritance">
         </childnode>
       </node>
       <node id="4315">
+        <label>wxTarEntry</label>
+        <link refid="classwx_tar_entry"/>
+        <childnode refid="4313" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4317">
+        <label>wxArchiveEntry</label>
+        <link refid="classwx_archive_entry"/>
+        <childnode refid="4318" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4318">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="4319" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="4319">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

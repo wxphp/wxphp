@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_text_entry_dialog" kind="class" prot="public">
     <compoundname>wxTextEntryDialog</compoundname>
     <basecompoundref refid="classwx_dialog" prot="public" virt="non-virtual">wxDialog</basecompoundref>
@@ -152,113 +152,113 @@
 <para>This class represents a dialog that requests a one-line text string from the user. </para>    </briefdescription>
     <detaileddescription>
 <para>It is implemented as a generic wxWidgets dialog.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__cmndlg" kindref="compound">Common Dialogs</ref></para><para><simplesect kind="see"><para><ref refid="overview__cmndlg_1overview_cmndlg_textentry" kindref="member">wxTextEntryDialog Overview</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__cmndlg" kindref="compound">Common Dialogs</ref></para><para><simplesect kind="see"><para><ref refid="overview_cmndlg_1overview_cmndlg_textentry" kindref="member">wxTextEntryDialog Overview</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10753">
+      <node id="10814">
         <label>wxNonOwnedWindow</label>
         <link refid="classwx_non_owned_window"/>
-        <childnode refid="10754" relation="public-inheritance">
+        <childnode refid="10815" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10756">
+      <node id="10817">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="10755">
+      <node id="10816">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="10756" relation="public-inheritance">
+        <childnode refid="10817" relation="public-inheritance">
         </childnode>
-        <childnode refid="10757" relation="public-inheritance">
+        <childnode refid="10818" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10757">
+      <node id="10818">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="10754">
+      <node id="10815">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="10755" relation="public-inheritance">
+        <childnode refid="10816" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10751">
+      <node id="10812">
         <label>wxDialog</label>
         <link refid="classwx_dialog"/>
-        <childnode refid="10752" relation="public-inheritance">
+        <childnode refid="10813" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10752">
+      <node id="10813">
         <label>wxTopLevelWindow</label>
         <link refid="classwx_top_level_window"/>
-        <childnode refid="10753" relation="public-inheritance">
+        <childnode refid="10814" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10750">
+      <node id="10811">
         <label>wxTextEntryDialog</label>
         <link refid="classwx_text_entry_dialog"/>
-        <childnode refid="10751" relation="public-inheritance">
+        <childnode refid="10812" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10758">
+      <node id="10819">
         <label>wxPasswordEntryDialog</label>
         <link refid="classwx_password_entry_dialog"/>
-        <childnode refid="10750" relation="public-inheritance">
+        <childnode refid="10811" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10762">
+      <node id="10823">
         <label>wxNonOwnedWindow</label>
         <link refid="classwx_non_owned_window"/>
-        <childnode refid="10763" relation="public-inheritance">
+        <childnode refid="10824" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10765">
+      <node id="10826">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="10766" relation="usage">
+        <childnode refid="10827" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="10764">
+      <node id="10825">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="10765" relation="public-inheritance">
+        <childnode refid="10826" relation="public-inheritance">
         </childnode>
-        <childnode refid="10767" relation="public-inheritance">
+        <childnode refid="10828" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10767">
+      <node id="10828">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="10763">
+      <node id="10824">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="10764" relation="public-inheritance">
+        <childnode refid="10825" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10760">
+      <node id="10821">
         <label>wxDialog</label>
         <link refid="classwx_dialog"/>
-        <childnode refid="10761" relation="public-inheritance">
+        <childnode refid="10822" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10761">
+      <node id="10822">
         <label>wxTopLevelWindow</label>
         <link refid="classwx_top_level_window"/>
-        <childnode refid="10762" relation="public-inheritance">
+        <childnode refid="10823" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10759">
+      <node id="10820">
         <label>wxTextEntryDialog</label>
         <link refid="classwx_text_entry_dialog"/>
-        <childnode refid="10760" relation="public-inheritance">
+        <childnode refid="10821" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10766">
+      <node id="10827">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
@@ -590,6 +590,7 @@
       <member refid="classwx_window_1a81f23590239934fa10fded0566a65d8c" prot="public" virt="non-virtual"><scope>wxTextEntryDialog</scope><name>SetPosition</name></member>
       <member refid="classwx_window_1a07f5f7ed3f78e0ef7b3dee3f4da81001" prot="public" virt="virtual"><scope>wxTextEntryDialog</scope><name>SetPreviousHandler</name></member>
       <member refid="classwx_object_1afab780710f2adc1bb33310e27590140b" prot="public" virt="non-virtual"><scope>wxTextEntryDialog</scope><name>SetRefData</name></member>
+      <member refid="classwx_top_level_window_1a82afa6f09dd5faef6330807ef59374e8" prot="public" virt="virtual"><scope>wxTextEntryDialog</scope><name>SetRepresentedFilename</name></member>
       <member refid="classwx_dialog_1a0d04ed85ac5cd271a61514d446340673" prot="public" virt="non-virtual"><scope>wxTextEntryDialog</scope><name>SetReturnCode</name></member>
       <member refid="classwx_top_level_window_1a98e95b1b10f44b80f9b29a03ab09a879" prot="public" virt="non-virtual"><scope>wxTextEntryDialog</scope><name>SetRightMenu</name></member>
       <member refid="classwx_window_1aa842d59529f873683e55cd8392ec46e9" prot="public" virt="virtual"><scope>wxTextEntryDialog</scope><name>SetScrollbar</name></member>

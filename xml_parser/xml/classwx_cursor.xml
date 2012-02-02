@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_cursor" kind="class" prot="public">
     <compoundname>wxCursor</compoundname>
     <basecompoundref refid="classwx_g_d_i_object" prot="public" virt="non-virtual">wxGDIObject</basecompoundref>
@@ -98,7 +98,7 @@
 <para>Bits for a mask bitmap.</para></parameterdescription>
 </parameteritem>
 </parameterlist>
-Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page__port_1page_port_wxgtk" kindref="member">wxGTK</ref>, <ref refid="page__port_1page_port_wxmotif" kindref="member">wxMotif</ref> ports.  <onlyfor>wxgtk,wxmotif</onlyfor> </para><para><bold>wxPerl Note:</bold> In wxPerl use Wx::Cursor-&gt;newData(bits, width, height, hotSpotX = -1, hotSpotY = -1, maskBits = 0). </para>        </detaileddescription>
+Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page_port_1page_port_wxgtk" kindref="member">wxGTK</ref>, <ref refid="page_port_1page_port_wxmotif" kindref="member">wxMotif</ref> ports.  <onlyfor>wxgtk,wxmotif</onlyfor> </para><para><bold>wxPerl Note:</bold> In wxPerl use Wx::Cursor-&gt;newData(bits, width, height, hotSpotX = -1, hotSpotY = -1, maskBits = 0). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cursor.h" line="121"/>
@@ -203,10 +203,12 @@ Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref
         <briefdescription>
 <para>Constructs a cursor from a <ref refid="classwx_image" kindref="compound">wxImage</ref>. </para>        </briefdescription>
         <detaileddescription>
-<para>If cursor are monochrome on the current platform, colors with the RGB elements all greater than 127 will be foreground, colors less than this background. The mask (if any) will be used to specify the transparent area.</para><para>In wxMSW the foreground will be white and the background black. If the cursor is larger than 32x32 it is resized.</para><para>In wxGTK, colour cursors and alpha channel are supported (starting from GTK+ 2.2). Otherwise the two most frequent colors will be used for foreground and background. In any case, the cursor will be displayed at the size of the image.</para><para>In wxMac, if the cursor is larger than 16x16 it is resized and currently only shown as black/white (mask respected). </para>        </detaileddescription>
+<para>If cursor are monochrome on the current platform, colors with the RGB elements all greater than 127 will be foreground, colors less than this background. The mask (if any) will be used to specify the transparent area.</para><para>In wxMSW the foreground will be white and the background black. If the cursor is larger than 32x32 it is resized.</para><para>In wxGTK, colour cursors and alpha channel are supported (starting from GTK+ 2.2). Otherwise the two most frequent colors will be used for foreground and background. In any case, the cursor will be displayed at the size of the image.</para><para>Under wxMac (Cocoa), large cursors are supported.</para><para>Notice that the <emphasis>image</emphasis> can define the cursor hot spot. To set it you need to use <ref refid="classwx_image_1a952ee065b17ee07a8cbee568486e01a4" kindref="member">wxImage::SetOption()</ref> with <computeroutput>wxIMAGE_OPTION_CUR_HOTSPOT_X</computeroutput> or <computeroutput>wxIMAGE_OPTION_CUR_HOTSPOT_Y</computeroutput>, e.g. <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>image.SetOption(<ref refid="image_8h_1a22847044c140504122efa4943b0f6e7f" kindref="member">wxIMAGE_OPTION_CUR_HOTSPOT_X</ref>,<sp/>hotSpotX);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>image.SetOption(<ref refid="image_8h_1a22847044c140504122efa4943b0f6e7f" kindref="member">wxIMAGE_OPTION_CUR_HOTSPOT_X</ref>,<sp/>hotSpotY);</highlight></codeline>
+</programlisting> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cursor.h" line="184"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cursor.h" line="191"/>
       </memberdef>
       <memberdef kind="function" id="classwx_cursor_1a20f3123d9d012427ae1f614e10b9cfb9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -218,7 +220,7 @@ Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref
           <declname>cursor</declname>
         </param>
         <briefdescription>
-<para>Copy constructor, uses <ref refid="overview__refcount" kindref="compound">reference counting</ref>. </para>        </briefdescription>
+<para>Copy constructor, uses <ref refid="overview_refcount" kindref="compound">reference counting</ref>. </para>        </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -231,7 +233,7 @@ Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cursor.h" line="192"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cursor.h" line="199"/>
       </memberdef>
       <memberdef kind="function" id="classwx_cursor_1a67d75f93d7faf5deb2dd45f11ca34677" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -241,10 +243,10 @@ Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref
         <briefdescription>
 <para>Destroys the cursor. </para>        </briefdescription>
         <detaileddescription>
-<para>See <ref refid="overview__refcount_1overview_refcount_destruct" kindref="member">reference-counted object destruction</ref> for more info.</para><para>A cursor can be reused for more than one window, and does not get destroyed when the window is destroyed. wxWidgets destroys all cursors on application exit, although it is best to clean them up explicitly. </para>        </detaileddescription>
+<para>See <ref refid="overview_refcount_1overview_refcount_destruct" kindref="member">reference-counted object destruction</ref> for more info.</para><para>A cursor can be reused for more than one window, and does not get destroyed when the window is destroyed. wxWidgets destroys all cursors on application exit, although it is best to clean them up explicitly. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cursor.h" line="203"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cursor.h" line="210"/>
       </memberdef>
       <memberdef kind="function" id="classwx_cursor_1ac4968a6f7084bfad4cc4525de1c07e7b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -257,7 +259,7 @@ Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cursor.h" line="208"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cursor.h" line="215"/>
       </memberdef>
       <memberdef kind="function" id="classwx_cursor_1af69083ddcd4a854684b260ff62afb7f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_cursor" kindref="compound">wxCursor</ref> &amp;</type>
@@ -269,12 +271,12 @@ Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref
           <declname>cursor</declname>
         </param>
         <briefdescription>
-<para>Assignment operator, using <ref refid="overview__refcount" kindref="compound">reference counting</ref>. </para>        </briefdescription>
+<para>Assignment operator, using <ref refid="overview_refcount" kindref="compound">reference counting</ref>. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cursor.h" line="213"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cursor.h" line="220"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -307,68 +309,68 @@ Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/>0,<sp/>0,<sp/>0,<sp/>0<sp/>};</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#ifdef<sp/>__WXMSW__</highlight></codeline>
-<codeline><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_bitmap" kindref="compound" tooltip="This class encapsulates the concept of a platform-dependent bitmap, either monochrome...">wxBitmap</ref><sp/>down_bitmap(down_bits,<sp/>32,<sp/>32);</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_bitmap" kindref="compound" tooltip="This class encapsulates the concept of a platform-dependent bitmap, either monochrome...">wxBitmap</ref><sp/>down_mask_bitmap(down_mask,<sp/>32,<sp/>32);</highlight></codeline>
+<codeline><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_bitmap" kindref="compound" tooltip="This class encapsulates the concept of a platform-dependent bitmap, either monochrome or colour or co...">wxBitmap</ref><sp/>down_bitmap(down_bits,<sp/>32,<sp/>32);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_bitmap" kindref="compound" tooltip="This class encapsulates the concept of a platform-dependent bitmap, either monochrome or colour or co...">wxBitmap</ref><sp/>down_mask_bitmap(down_mask,<sp/>32,<sp/>32);</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>down_bitmap.SetMask(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classwx_mask" kindref="compound" tooltip="This class encapsulates a monochrome mask bitmap, where the masked area is black...">wxMask</ref>(down_mask_bitmap));</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>down_bitmap.SetMask(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classwx_mask" kindref="compound" tooltip="This class encapsulates a monochrome mask bitmap, where the masked area is black and the unmasked are...">wxMask</ref>(down_mask_bitmap));</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_image" kindref="compound" tooltip="This class encapsulates a platform-independent image.">wxImage</ref><sp/>down_image<sp/>=<sp/>down_bitmap.ConvertToImage();</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>down_image.<ref refid="classwx_image_1a952ee065b17ee07a8cbee568486e01a4" kindref="member" tooltip="Sets a user-defined option.">SetOption</ref>(<ref refid="image_8h_1a22847044c140504122efa4943b0f6e7f" kindref="member">wxIMAGE_OPTION_CUR_HOTSPOT_X</ref>,<sp/>6);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>down_image.<ref refid="classwx_image_1a952ee065b17ee07a8cbee568486e01a4" kindref="member" tooltip="Sets a user-defined option.">SetOption</ref>(<ref refid="image_8h_1a420ba1d2430b0c7d92c9a09ccf41fae8" kindref="member">wxIMAGE_OPTION_CUR_HOTSPOT_Y</ref>,<sp/>14);</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_cursor" kindref="compound" tooltip="A cursor is a small bitmap usually used for denoting where the mouse pointer is,...">wxCursor</ref><sp/>down_cursor<sp/>=<sp/><ref refid="classwx_cursor_1a21735e923430faf941c440c67f13859d" kindref="member" tooltip="Default constructor.">wxCursor</ref>(down_image);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_cursor" kindref="compound" tooltip="A cursor is a small bitmap usually used for denoting where the mouse pointer is, with a picture that ...">wxCursor</ref><sp/>down_cursor<sp/>=<sp/><ref refid="classwx_cursor_1a21735e923430faf941c440c67f13859d" kindref="member" tooltip="Default constructor.">wxCursor</ref>(down_image);</highlight></codeline>
 <codeline><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#elif<sp/>defined(__WXGTK__)<sp/>or<sp/>defined(__WXMOTIF__)</highlight></codeline>
-<codeline><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_cursor" kindref="compound" tooltip="A cursor is a small bitmap usually used for denoting where the mouse pointer is,...">wxCursor</ref><sp/>down_cursor<sp/>=<sp/><ref refid="classwx_cursor_1a21735e923430faf941c440c67f13859d" kindref="member" tooltip="Default constructor.">wxCursor</ref>(down_bits,<sp/>32,<sp/>32,<sp/>6,<sp/>14,</highlight></codeline>
+<codeline><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_cursor" kindref="compound" tooltip="A cursor is a small bitmap usually used for denoting where the mouse pointer is, with a picture that ...">wxCursor</ref><sp/>down_cursor<sp/>=<sp/><ref refid="classwx_cursor_1a21735e923430faf941c440c67f13859d" kindref="member" tooltip="Default constructor.">wxCursor</ref>(down_bits,<sp/>32,<sp/>32,<sp/>6,<sp/>14,</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>down_mask,<sp/><ref refid="colour_8h_1a3b00973fd189d6ddd42d74046bd45694" kindref="member">wxWHITE</ref>,<sp/><ref refid="colour_8h_1a28c9e9208c4907063eb9869ff2332776" kindref="member">wxBLACK</ref>);</highlight></codeline>
 <codeline><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif</highlight></codeline>
 </programlisting></para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__gdi" kindref="compound">Graphics Device Interface (GDI)</ref></para><para>Predefined objects/pointers:<itemizedlist>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__gdi" kindref="compound">Graphics Device Interface (GDI)</ref></para><para>Predefined objects/pointers:<itemizedlist>
 <listitem><para><ref refid="cursor_8h_1ace2643fa7246d855696e3415e344d0ac" kindref="member">wxNullCursor</ref></para></listitem><listitem><para><ref refid="cursor_8h_1ab1951696f347cea0c248d114142d05ce" kindref="member">wxSTANDARD_CURSOR</ref></para></listitem><listitem><para><ref refid="cursor_8h_1aedcab46c717d02f9b5deb151d1fe85f8" kindref="member">wxHOURGLASS_CURSOR</ref></para></listitem><listitem><para><ref refid="cursor_8h_1a807b160c7cbea3c8266f8db2719c299f" kindref="member">wxCROSS_CURSOR</ref></para></listitem></itemizedlist>
 </para><para><simplesect kind="see"><para><ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref>, <ref refid="classwx_icon" kindref="compound">wxIcon</ref>, <ref refid="classwx_window_1ad83f9c51c6f31e0e05f598b47a19ed98" kindref="member">wxWindow::SetCursor()</ref>, <ref refid="group__group__funcmacro__gdi_1ga04d90db090918ad96448b5603d89617b" kindref="member">wxSetCursor()</ref>, <ref refid="gdicmn_8h_1ae668769c0de48b50d4695b279c7c41b2" kindref="member">wxStockCursor</ref> </para></simplesect>
 </para></sect1>
     </detaileddescription>
     <inheritancegraph>
-      <node id="5215">
+      <node id="5219">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="5214">
+      <node id="5218">
         <label>wxGDIObject</label>
         <link refid="classwx_g_d_i_object"/>
-        <childnode refid="5215" relation="public-inheritance">
+        <childnode refid="5219" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5213">
+      <node id="5217">
         <label>wxCursor</label>
         <link refid="classwx_cursor"/>
-        <childnode refid="5214" relation="public-inheritance">
+        <childnode refid="5218" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="5218">
+      <node id="5222">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="5219" relation="usage">
+        <childnode refid="5223" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="5217">
+      <node id="5221">
         <label>wxGDIObject</label>
         <link refid="classwx_g_d_i_object"/>
-        <childnode refid="5218" relation="public-inheritance">
+        <childnode refid="5222" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5216">
+      <node id="5220">
         <label>wxCursor</label>
         <link refid="classwx_cursor"/>
-        <childnode refid="5217" relation="public-inheritance">
+        <childnode refid="5221" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5219">
+      <node id="5223">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cursor.h" line="84" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cursor.h" bodystart="83" bodyend="214"/>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cursor.h" line="84" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cursor.h" bodystart="83" bodyend="221"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxCursor</scope><name>AllocExclusive</name></member>
       <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxCursor</scope><name>CloneRefData</name></member>

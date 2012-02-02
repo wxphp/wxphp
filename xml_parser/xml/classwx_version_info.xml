@@ -1,25 +1,28 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_version_info" kind="class" prot="public">
     <compoundname>wxVersionInfo</compoundname>
     <includes local="no">wx/versioninfo.h</includes>
       <sectiondef kind="public-func">
-      <memberdef kind="function" id="classwx_version_info_1ac33f38de2a8d936eb11b985bdf94c03b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classwx_version_info_1a7af2d0991c5febc8773149e013f4f98c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
         <definition>wxVersionInfo::wxVersionInfo</definition>
-        <argsstring>(const wxString &amp;name, int major, int minor, int micro=0, const wxString &amp;description=wxString(), const wxString &amp;copyright=wxString())</argsstring>
+        <argsstring>(const wxString &amp;name=wxString(), int major=0, int minor=0, int micro=0, const wxString &amp;description=wxString(), const wxString &amp;copyright=wxString())</argsstring>
         <name>wxVersionInfo</name>
         <param>
           <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
           <declname>name</declname>
+          <defval><ref refid="classwx_string" kindref="compound">wxString</ref>()</defval>
         </param>
         <param>
           <type>int</type>
           <declname>major</declname>
+          <defval>0</defval>
         </param>
         <param>
           <type>int</type>
           <declname>minor</declname>
+          <defval>0</defval>
         </param>
         <param>
           <type>int</type>
@@ -151,22 +154,35 @@
         <briefdescription>
 <para>Get the string representation of this version object. </para>        </briefdescription>
         <detaileddescription>
-<para>This function returns the description if it is non-empty or <ref refid="classwx_version_info_1ab17581faa892d8cf5b7647bb87e6f5b8" kindref="member">GetVersionString()</ref> if there is no description.</para><para><simplesect kind="see"><para><ref refid="classwx_version_info_1ada40727f16a9715fd8b3af30c932877d" kindref="member">GetDescription()</ref>, <ref refid="classwx_version_info_1ab17581faa892d8cf5b7647bb87e6f5b8" kindref="member">GetVersionString()</ref> </para></simplesect>
+<para>This function returns the description if it is non-empty or <ref refid="classwx_version_info_1aecd55d444927d33c447349d62b8c0203" kindref="member">GetVersionString()</ref> if there is no description.</para><para><simplesect kind="see"><para><ref refid="classwx_version_info_1ada40727f16a9715fd8b3af30c932877d" kindref="member">GetDescription()</ref>, <ref refid="classwx_version_info_1aecd55d444927d33c447349d62b8c0203" kindref="member">GetVersionString()</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/versioninfo.h" line="86"/>
       </memberdef>
-      <memberdef kind="function" id="classwx_version_info_1ab17581faa892d8cf5b7647bb87e6f5b8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classwx_version_info_1aecd55d444927d33c447349d62b8c0203" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
         <definition>wxString wxVersionInfo::GetVersionString</definition>
-        <argsstring>() const bool HasDescription() const </argsstring>
+        <argsstring>() const </argsstring>
         <name>GetVersionString</name>
         <briefdescription>
 <para>Get the string representation. </para>        </briefdescription>
         <detaileddescription>
-<para>The micro component of the version is ignored/not used if it is 0.</para><para><simplesect kind="return"><para>The version string in the form &quot;name major.minor[.micro]&quot;. Return true if a description string has been specified.</para></simplesect>
-<simplesect kind="see"><para><ref refid="classwx_version_info_1ada40727f16a9715fd8b3af30c932877d" kindref="member">GetDescription()</ref> </para></simplesect>
+<para>The micro component of the version is ignored/not used if it is 0.</para><para><simplesect kind="return"><para>The version string in the form &quot;name major.minor[.micro]&quot;. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/versioninfo.h" line="95"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_version_info_1aabf7e3533fdfdae93dab6750a74c3947" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxVersionInfo::HasDescription</definition>
+        <argsstring>() const </argsstring>
+        <name>HasDescription</name>
+        <briefdescription>
+<para>Return true if a description string has been specified. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classwx_version_info_1ada40727f16a9715fd8b3af30c932877d" kindref="member">GetDescription()</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -219,7 +235,7 @@
 <para><ref refid="classwx_version_info" kindref="compound">wxVersionInfo</ref> contains version information. </para>    </briefdescription>
     <detaileddescription>
 <para>This class is used by wxWidgets to provide version information about the libraries it uses and itself, but you can also apply it in user space, to provide version information about your own libraries, or other libraries that you use.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__data" kindref="compound">Data Structures</ref> Include file: <verbatim>#include &lt;wx/versioninfo.h&gt; </verbatim></para><para><simplesect kind="since"><para>2.9.2 </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__data" kindref="compound">Data Structures</ref></para><para><simplesect kind="since"><para>2.9.2 </para></simplesect>
 </para>    </detaileddescription>
     <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/versioninfo.h" line="26" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/versioninfo.h" bodystart="25" bodyend="128"/>
     <listofallmembers>
@@ -229,10 +245,11 @@
       <member refid="classwx_version_info_1aa68030a2419cbfbec81d1b3e41ef1466" prot="public" virt="non-virtual"><scope>wxVersionInfo</scope><name>GetMicro</name></member>
       <member refid="classwx_version_info_1aaf959a58093e04962b79078a94d66c8f" prot="public" virt="non-virtual"><scope>wxVersionInfo</scope><name>GetMinor</name></member>
       <member refid="classwx_version_info_1afed2db21b2f55b9ba62e022b1051b971" prot="public" virt="non-virtual"><scope>wxVersionInfo</scope><name>GetName</name></member>
-      <member refid="classwx_version_info_1ab17581faa892d8cf5b7647bb87e6f5b8" prot="public" virt="non-virtual"><scope>wxVersionInfo</scope><name>GetVersionString</name></member>
+      <member refid="classwx_version_info_1aecd55d444927d33c447349d62b8c0203" prot="public" virt="non-virtual"><scope>wxVersionInfo</scope><name>GetVersionString</name></member>
       <member refid="classwx_version_info_1a3226154214ef354a196ec96d2634240c" prot="public" virt="non-virtual"><scope>wxVersionInfo</scope><name>HasCopyright</name></member>
+      <member refid="classwx_version_info_1aabf7e3533fdfdae93dab6750a74c3947" prot="public" virt="non-virtual"><scope>wxVersionInfo</scope><name>HasDescription</name></member>
       <member refid="classwx_version_info_1a4954ed97dcb394535948dd4d85e4186d" prot="public" virt="non-virtual"><scope>wxVersionInfo</scope><name>ToString</name></member>
-      <member refid="classwx_version_info_1ac33f38de2a8d936eb11b985bdf94c03b" prot="public" virt="non-virtual"><scope>wxVersionInfo</scope><name>wxVersionInfo</name></member>
+      <member refid="classwx_version_info_1a7af2d0991c5febc8773149e013f4f98c" prot="public" virt="non-virtual"><scope>wxVersionInfo</scope><name>wxVersionInfo</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

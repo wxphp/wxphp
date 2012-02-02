@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="dir_0393f4a4b077338a18a038d71df65254" kind="dir">
+    <compoundname>interface/wx/msw/ole/</compoundname>
+    <innerfile refid="activex_8h">activex.h</innerfile>
+    <innerfile refid="automtn_8h">automtn.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msw/ole/"/>
+  </compounddef>
+</doxygen>

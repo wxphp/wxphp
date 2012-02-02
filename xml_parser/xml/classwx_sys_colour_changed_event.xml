@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_sys_colour_changed_event" kind="class" prot="public">
     <compoundname>wxSysColourChangedEvent</compoundname>
     <basecompoundref refid="classwx_event" prot="public" virt="non-virtual">wxEvent</basecompoundref>
@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="1771"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="1792"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -28,52 +28,52 @@
 <listitem><para>EVT_SYS_COLOUR_CHANGED(func): Process a <computeroutput>wxEVT_SYS_COLOUR_CHANGED</computeroutput> event. </para></listitem>
 </itemizedlist>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="overview__events" kindref="compound">Events and Event Handling</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="overview_events" kindref="compound">Events and Event Handling</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10589">
+      <node id="10649">
         <label>wxSysColourChangedEvent</label>
         <link refid="classwx_sys_colour_changed_event"/>
-        <childnode refid="10590" relation="public-inheritance">
+        <childnode refid="10650" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10591">
+      <node id="10651">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="10590">
+      <node id="10650">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="10591" relation="public-inheritance">
+        <childnode refid="10651" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10592">
+      <node id="10652">
         <label>wxSysColourChangedEvent</label>
         <link refid="classwx_sys_colour_changed_event"/>
-        <childnode refid="10593" relation="public-inheritance">
+        <childnode refid="10653" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10594">
+      <node id="10654">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="10595" relation="usage">
+        <childnode refid="10655" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="10593">
+      <node id="10653">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="10594" relation="public-inheritance">
+        <childnode refid="10654" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10595">
+      <node id="10655">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="1766" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="1765" bodyend="1772"/>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="1787" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="1786" bodyend="1793"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxSysColourChangedEvent</scope><name>AllocExclusive</name></member>
       <member refid="classwx_event_1a26878097a702e8d0368da150125d4158" prot="public" virt="pure-virtual"><scope>wxSysColourChangedEvent</scope><name>Clone</name></member>

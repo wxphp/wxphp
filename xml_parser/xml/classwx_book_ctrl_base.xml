@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_book_ctrl_base" kind="class" prot="public">
     <compoundname>wxBookCtrlBase</compoundname>
     <basecompoundref refid="classwx_control" prot="public" virt="non-virtual">wxControl</basecompoundref>
@@ -13,7 +13,7 @@
     <includes local="no">wx/bookctrl.h</includes>
       <sectiondef kind="user-defined">
       <header>Image list functions</header>
-      <description><para><anchor id="_1amgrp898f0707127d97981fb2a35cfa4b6138"/>Each page may have an attached image.</para><para>The functions of this group manipulate that image. </para></description>
+      <description><para>Each page may have an attached image.</para><para>The functions of this group manipulate that image. </para></description>
       <memberdef kind="function" id="classwx_book_ctrl_base_1a87f9cf7b1a5abc5cca716511277b39f8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type>int</type>
         <definition>virtual int wxBookCtrlBase::GetPageImage</definition>
@@ -58,7 +58,7 @@
       </sectiondef>
       <sectiondef kind="user-defined">
       <header>Page text functions</header>
-      <description><para><anchor id="_1amgrp46af54929c5a47b663c3ab9592664d4b"/>Each page has a text string attached.</para><para>The functions of this group manipulate that text. </para></description>
+      <description><para>Each page has a text string attached.</para><para>The functions of this group manipulate that text. </para></description>
       <memberdef kind="function" id="classwx_book_ctrl_base_1a795e4f831ade0580a391ae876f69fb28" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
         <definition>virtual wxString wxBookCtrlBase::GetPageText</definition>
@@ -104,7 +104,7 @@
       </sectiondef>
       <sectiondef kind="user-defined">
       <header>Selection functions</header>
-      <description><para><anchor id="_1amgrpdbc2c26e991f9f5502949b95b57ae3b0"/>The functions of this group manipulate the selection. </para></description>
+      <description><para>The functions of this group manipulate the selection. </para></description>
       <memberdef kind="function" id="classwx_book_ctrl_base_1a42b7d557ec288a1819b024613adf6315" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type>int</type>
         <definition>virtual int wxBookCtrlBase::GetSelection</definition>
@@ -188,7 +188,7 @@
         <briefdescription>
 <para>Changes the selection for the given page, returning the previous selection. </para>        </briefdescription>
         <detaileddescription>
-<para>This function behaves as <ref refid="classwx_book_ctrl_base_1a522ca472343a07a262de92348e3f2d2c" kindref="member">SetSelection()</ref> but does <emphasis>not</emphasis> generate the page changing events.</para><para>See <ref refid="overview__events_1overview_events_prog" kindref="member">User Generated Events vs Programmatically Generated Events</ref> for more information. </para>        </detaileddescription>
+<para>This function behaves as <ref refid="classwx_book_ctrl_base_1a522ca472343a07a262de92348e3f2d2c" kindref="member">SetSelection()</ref> but does <emphasis>not</emphasis> generate the page changing events.</para><para>See <ref refid="overview_events_1overview_events_prog" kindref="member">User Generated Events vs Programmatically Generated Events</ref> for more information. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bookctrl.h" line="158"/>
@@ -196,7 +196,7 @@
       </sectiondef>
       <sectiondef kind="user-defined">
       <header>Page management functions</header>
-      <description><para><anchor id="_1amgrp3320f6844b0bd59170d0a2de7d26d505"/>Functions for adding/removing pages from this control. </para></description>
+      <description><para>Functions for adding/removing pages from this control. </para></description>
       <memberdef kind="function" id="classwx_book_ctrl_base_1ab47f8935c3705a452fce7d292d8181dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
         <definition>virtual bool wxBookCtrlBase::AddPage</definition>
@@ -621,131 +621,131 @@
 <listitem><para><ref refid="classwx_toolbook" kindref="compound">wxToolbook</ref>: controlled by a <ref refid="classwx_tool_bar" kindref="compound">wxToolBar</ref></para></listitem>
 </itemizedlist>
 This abstract class is the parent of all these book controls, and provides their basic interface. This is a pure virtual class so you cannot allocate it directly.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__bookctrl" kindref="compound">Book Controls</ref></para><para><simplesect kind="see"><para><ref refid="overview__bookctrl" kindref="compound">wxBookCtrl Overview</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__bookctrl" kindref="compound">Book Controls</ref></para><para><simplesect kind="see"><para><ref refid="overview_bookctrl" kindref="compound">wxBookCtrl Overview</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="4546">
+      <node id="4550">
         <label>wxAuiNotebook</label>
         <link refid="classwx_aui_notebook"/>
-        <childnode refid="4539" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4539">
-        <label>wxBookCtrlBase</label>
-        <link refid="classwx_book_ctrl_base"/>
-        <childnode refid="4540" relation="public-inheritance">
-        </childnode>
-        <childnode refid="4545" relation="public-inheritance">
+        <childnode refid="4543" relation="public-inheritance">
         </childnode>
       </node>
       <node id="4543">
-        <label>wxObject</label>
-        <link refid="classwx_object"/>
-      </node>
-      <node id="4542">
-        <label>wxEvtHandler</label>
-        <link refid="classwx_evt_handler"/>
-        <childnode refid="4543" relation="public-inheritance">
-        </childnode>
+        <label>wxBookCtrlBase</label>
+        <link refid="classwx_book_ctrl_base"/>
         <childnode refid="4544" relation="public-inheritance">
         </childnode>
-      </node>
-      <node id="4551">
-        <label>wxTreebook</label>
-        <link refid="classwx_treebook"/>
-        <childnode refid="4539" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4544">
-        <label>wxTrackable</label>
-        <link refid="classwx_trackable"/>
-      </node>
-      <node id="4548">
-        <label>wxListbook</label>
-        <link refid="classwx_listbook"/>
-        <childnode refid="4539" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4540">
-        <label>wxControl</label>
-        <link refid="classwx_control"/>
-        <childnode refid="4541" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4541">
-        <label>wxWindow</label>
-        <link refid="classwx_window"/>
-        <childnode refid="4542" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4550">
-        <label>wxToolbook</label>
-        <link refid="classwx_toolbook"/>
-        <childnode refid="4539" relation="public-inheritance">
+        <childnode refid="4549" relation="public-inheritance">
         </childnode>
       </node>
       <node id="4547">
-        <label>wxChoicebook</label>
-        <link refid="classwx_choicebook"/>
-        <childnode refid="4539" relation="public-inheritance">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+      </node>
+      <node id="4546">
+        <label>wxEvtHandler</label>
+        <link refid="classwx_evt_handler"/>
+        <childnode refid="4547" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4548" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4549">
-        <label>wxNotebook</label>
-        <link refid="classwx_notebook"/>
-        <childnode refid="4539" relation="public-inheritance">
+      <node id="4555">
+        <label>wxTreebook</label>
+        <link refid="classwx_treebook"/>
+        <childnode refid="4543" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4548">
+        <label>wxTrackable</label>
+        <link refid="classwx_trackable"/>
+      </node>
+      <node id="4552">
+        <label>wxListbook</label>
+        <link refid="classwx_listbook"/>
+        <childnode refid="4543" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4544">
+        <label>wxControl</label>
+        <link refid="classwx_control"/>
+        <childnode refid="4545" relation="public-inheritance">
         </childnode>
       </node>
       <node id="4545">
+        <label>wxWindow</label>
+        <link refid="classwx_window"/>
+        <childnode refid="4546" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4554">
+        <label>wxToolbook</label>
+        <link refid="classwx_toolbook"/>
+        <childnode refid="4543" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4551">
+        <label>wxChoicebook</label>
+        <link refid="classwx_choicebook"/>
+        <childnode refid="4543" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4553">
+        <label>wxNotebook</label>
+        <link refid="classwx_notebook"/>
+        <childnode refid="4543" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4549">
         <label>wxWithImages</label>
         <link refid="classwx_with_images"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="4552">
+      <node id="4556">
         <label>wxBookCtrlBase</label>
         <link refid="classwx_book_ctrl_base"/>
-        <childnode refid="4553" relation="public-inheritance">
+        <childnode refid="4557" relation="public-inheritance">
         </childnode>
-        <childnode refid="4559" relation="public-inheritance">
+        <childnode refid="4563" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4556">
+      <node id="4560">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="4557" relation="usage">
+        <childnode refid="4561" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="4555">
+      <node id="4559">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="4556" relation="public-inheritance">
+        <childnode refid="4560" relation="public-inheritance">
         </childnode>
+        <childnode refid="4562" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4562">
+        <label>wxTrackable</label>
+        <link refid="classwx_trackable"/>
+      </node>
+      <node id="4557">
+        <label>wxControl</label>
+        <link refid="classwx_control"/>
         <childnode refid="4558" relation="public-inheritance">
         </childnode>
       </node>
       <node id="4558">
-        <label>wxTrackable</label>
-        <link refid="classwx_trackable"/>
-      </node>
-      <node id="4553">
-        <label>wxControl</label>
-        <link refid="classwx_control"/>
-        <childnode refid="4554" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4554">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="4555" relation="public-inheritance">
+        <childnode refid="4559" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4559">
+      <node id="4563">
         <label>wxWithImages</label>
         <link refid="classwx_with_images"/>
       </node>
-      <node id="4557">
+      <node id="4561">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="scopeguard_8h" kind="file">
     <compoundname>scopeguard.h</compoundname>
     <innerclass refid="classwx_scope_guard" prot="public">wxScopeGuard</innerclass>
@@ -14,7 +14,7 @@
 <para>A typical example of its usage:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*buf<sp/>=<sp/>malloc(size);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__misc_1ga5afb56ecc6c60e4e9e59c5944297abe5" kindref="member">wxON_BLOCK_EXIT1</ref>(free,<sp/>buf);</highlight></codeline>
 </programlisting></para><para>Please see the original article by Andrei Alexandrescu and Petru Marginean published in December 2000 issue of C/C++ Users Journal for more details.</para><para><simplesect kind="see"><para><ref refid="group__group__funcmacro__misc_1gaae97c094a796b8e1bc78efbc325a99cb" kindref="member">wxON_BLOCK_EXIT_OBJ0()</ref></para></simplesect>
-Include file: <verbatim>#include &lt;wx/scopeguard.h&gt; </verbatim> </para>        </detaileddescription>
+Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/scopeguard.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopeguard.h" line="79" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopeguard.h" bodystart="79" bodyend="-1"/>
@@ -77,7 +77,7 @@ Include file: <verbatim>#include &lt;wx/scopeguard.h&gt; </verbatim> </para>    
         <briefdescription>
 <para>This family of macros is similar to <ref refid="group__group__funcmacro__misc_1gac35c626f7edf136246256edd765dcb48" kindref="member">wxON_BLOCK_EXIT()</ref>, but calls a method of the given object instead of a free function. </para>        </briefdescription>
         <detaileddescription>
-<para>Include file: <verbatim>#include &lt;wx/scopeguard.h&gt; </verbatim> </para>        </detaileddescription>
+<para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/scopeguard.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopeguard.h" line="94" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopeguard.h" bodystart="94" bodyend="-1"/>
@@ -143,7 +143,7 @@ Include file: <verbatim>#include &lt;wx/scopeguard.h&gt; </verbatim> </para>    
         <briefdescription>
 <para>This family of macros is similar to wxON_BLOCK_OBJ(), but calls a method of <computeroutput>this</computeroutput> object instead of a method of the specified object. </para>        </briefdescription>
         <detaileddescription>
-<para>Include file: <verbatim>#include &lt;wx/scopeguard.h&gt; </verbatim> </para>        </detaileddescription>
+<para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/scopeguard.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopeguard.h" line="109" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopeguard.h" bodystart="109" bodyend="-1"/>
@@ -215,7 +215,7 @@ Include file: <verbatim>#include &lt;wx/scopeguard.h&gt; </verbatim> </para>    
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...<sp/>isDoingSomething<sp/>is<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal"><sp/>now<sp/>...</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 </programlisting></para><para>Notice that <emphasis>value</emphasis> is copied, i.e. stored by value, so it can be a temporary object returned by a function call, for example.</para><para><simplesect kind="see"><para><ref refid="group__group__funcmacro__misc_1gaae97c094a796b8e1bc78efbc325a99cb" kindref="member">wxON_BLOCK_EXIT_OBJ0()</ref>, <ref refid="group__group__funcmacro__misc_1gabe8231ac62cf9cf4486fe53eec49195a" kindref="member">wxON_BLOCK_EXIT_NULL()</ref></para></simplesect>
-Include file: <verbatim>#include &lt;wx/scopeguard.h&gt; </verbatim> </para>        </detaileddescription>
+Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/scopeguard.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopeguard.h" line="141" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopeguard.h" bodystart="141" bodyend="-1"/>
@@ -226,14 +226,14 @@ Include file: <verbatim>#include &lt;wx/scopeguard.h&gt; </verbatim> </para>    
         <briefdescription>
 <para>This macro sets the pointer passed to it as argument to NULL on scope exit. </para>        </briefdescription>
         <detaileddescription>
-<para>It must be used instead of <ref refid="group__group__funcmacro__misc_1gae42b17d61096fa9aad54dbf329d44372" kindref="member">wxON_BLOCK_EXIT_SET()</ref> when the value being set is <computeroutput>NULL</computeroutput>.</para><para>Include file: <verbatim>#include &lt;wx/scopeguard.h&gt; </verbatim> </para>        </detaileddescription>
+<para>It must be used instead of <ref refid="group__group__funcmacro__misc_1gae42b17d61096fa9aad54dbf329d44372" kindref="member">wxON_BLOCK_EXIT_SET()</ref> when the value being set is <computeroutput>NULL</computeroutput>.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/scopeguard.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopeguard.h" line="151" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopeguard.h" bodystart="151" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
-      <memberdef kind="function" id="group__group__funcmacro__misc_1ga24290da88c13d315efe19c0ed480477f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="group__group__funcmacro__misc_1ga24290da88c13d315efe19c0ed480477f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
           <param>
             <type>typename F</type>

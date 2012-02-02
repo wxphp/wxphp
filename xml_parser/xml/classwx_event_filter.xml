@@ -1,13 +1,13 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_event_filter" kind="class" prot="public">
     <compoundname>wxEventFilter</compoundname>
     <derivedcompoundref refid="classwx_app_console" prot="public" virt="non-virtual">wxAppConsole</derivedcompoundref>
     <includes local="no">wx/eventfilter.h</includes>
       <sectiondef kind="public-type">
-      <memberdef kind="enum" id="classwx_event_filter_1a24ff5a104b4bff9fc8f26752be22d8f9" prot="public" static="no">
-        <name>@4</name>
-        <enumvalue id="classwx_event_filter_1a24ff5a104b4bff9fc8f26752be22d8f9ae3620010ea8dc45c4547052a75fe51da" prot="public">
+      <memberdef kind="enum" id="classwx_event_filter_1a35d6b67209fb2293e927cf19f95e7da1" prot="public" static="no">
+        <name>@6</name>
+        <enumvalue id="classwx_event_filter_1a35d6b67209fb2293e927cf19f95e7da1ae3620010ea8dc45c4547052a75fe51da" prot="public">
           <name>Event_Skip</name>
           <initializer> -1</initializer>
           <briefdescription>
@@ -15,7 +15,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="classwx_event_filter_1a24ff5a104b4bff9fc8f26752be22d8f9aa2b35768d0be474ac339b9162c0db85a" prot="public">
+        <enumvalue id="classwx_event_filter_1a35d6b67209fb2293e927cf19f95e7da1aa2b35768d0be474ac339b9162c0db85a" prot="public">
           <name>Event_Ignore</name>
           <initializer> 0</initializer>
           <briefdescription>
@@ -23,7 +23,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="classwx_event_filter_1a24ff5a104b4bff9fc8f26752be22d8f9a6d508074572ecf366e3c3b537bcba776" prot="public">
+        <enumvalue id="classwx_event_filter_1a35d6b67209fb2293e927cf19f95e7da1a6d508074572ecf366e3c3b537bcba776" prot="public">
           <name>Event_Processed</name>
           <initializer> 1</initializer>
           <briefdescription>
@@ -80,7 +80,7 @@
         <briefdescription>
 <para>Override this method to implement event pre-processing. </para>        </briefdescription>
         <detaileddescription>
-<para>This method allows to filter all the events processed by the program, so you should try to return quickly from it to avoid slowing down the program to the crawl.</para><para>Although the return type of this method is <computeroutput>int</computeroutput>, this is only due to backwards compatibility concerns and the actual return value must be one of the <computeroutput>Event_XXX</computeroutput> constants defined above:<itemizedlist>
+<para>This method allows to filter all the events processed by the program, so you should try to return quickly from it to avoid slowing down the program to a crawl.</para><para>Although the return type of this method is <computeroutput>int</computeroutput>, this is only due to backwards compatibility concerns and the actual return value must be one of the <computeroutput>Event_XXX</computeroutput> constants defined above:<itemizedlist>
 <listitem><para>Event_Skip to continue processing the event normally (this should be used in most cases).</para></listitem><listitem><para>Event_Ignore to not process this event at all (this can be used to suppress some events).</para></listitem><listitem><para>Event_Processed to not process this event normally but indicate that it was already processed by the event filter and so no default processing should take place neither (this should only be used if the filter really did process the event). </para></listitem></itemizedlist>
 </para>        </detaileddescription>
         <inbodydescription>
@@ -93,12 +93,12 @@
     <detaileddescription>
 <para>This is a very simple class which just provides <ref refid="classwx_event_filter_1ae9aee87e6c6c7ff3df84e46a2e3b2c6a" kindref="member">FilterEvent()</ref> virtual method to be called by <ref refid="classwx_evt_handler" kindref="compound">wxEvtHandler</ref> before starting process of any event. Thus, inheriting from this class and overriding <ref refid="classwx_event_filter_1ae9aee87e6c6c7ff3df84e46a2e3b2c6a" kindref="member">FilterEvent()</ref> allows to capture and possibly handle or ignore all the events happening in the program. Of course, having event filters adds additional overhead to every event processing and so should not be used lightly and your <ref refid="classwx_event_filter_1ae9aee87e6c6c7ff3df84e46a2e3b2c6a" kindref="member">FilterEvent()</ref> code should try to return as quickly as possible, especially for the events it is not interested in.</para><para>An example of using this class: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>This<sp/>class<sp/>allows<sp/>to<sp/>determine<sp/>the<sp/>last<sp/>time<sp/>the<sp/>user<sp/>has<sp/>worked<sp/>with</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>this<sp/>application:</highlight><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">LastActivityTimeDetector<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classwx_event_filter" kindref="compound" tooltip="A global event filter for pre-processing all the events generated in the program...">wxEventFilter</ref></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">LastActivityTimeDetector<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classwx_event_filter" kindref="compound" tooltip="A global event filter for pre-processing all the events generated in the program.">wxEventFilter</ref></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LastActivityTimeDetector()</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_evt_handler_1a7dc3c701781f4044372049de5004137e" kindref="member" tooltip="Add an event filter whose FilterEvent() method will be called for each and every...">wxEvtHandler::AddFilter</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_evt_handler_1a7dc3c701781f4044372049de5004137e" kindref="member" tooltip="Add an event filter whose FilterEvent() method will be called for each and every event processed by w...">wxEvtHandler::AddFilter</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_last<sp/>=<sp/><ref refid="classwx_date_time_1a6e6c37a0414bb4831e2cc03b37f498a2" kindref="member" tooltip="Returns the object corresponding to the current time.">wxDateTime::Now</ref>();</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
@@ -108,7 +108,7 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_evt_handler_1a67a57b759c447b121bf70a7c9804c8f2" kindref="member" tooltip="Remove a filter previously installed with AddFilter().">wxEvtHandler::RemoveFilter</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classwx_event_filter_1ae9aee87e6c6c7ff3df84e46a2e3b2c6a" kindref="member" tooltip="Override this method to implement event pre-processing.">FilterEvent</ref>(<ref refid="classwx_event" kindref="compound" tooltip="An event is a structure holding information about an event passed to a callback or...">wxEvent</ref>&amp;<sp/>event)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classwx_event_filter_1ae9aee87e6c6c7ff3df84e46a2e3b2c6a" kindref="member" tooltip="Override this method to implement event pre-processing.">FilterEvent</ref>(<ref refid="classwx_event" kindref="compound" tooltip="An event is a structure holding information about an event passed to a callback or member function...">wxEvent</ref>&amp;<sp/>event)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Update<sp/>the<sp/>last<sp/>user<sp/>activity</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member" tooltip="A value uniquely identifying the type of the event.">wxEventType</ref><sp/>t<sp/>=<sp/></highlight><highlight class="keyword">event</highlight><highlight class="normal">.GetEventType();</highlight></codeline>
@@ -121,7 +121,7 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Continue<sp/>processing<sp/>the<sp/>event<sp/>normally<sp/>as<sp/>well.</highlight><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classwx_event_filter_1a24ff5a104b4bff9fc8f26752be22d8f9ae3620010ea8dc45c4547052a75fe51da" kindref="member" tooltip="Process event as usual.">Event_Skip</ref>;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classwx_event_filter_1a35d6b67209fb2293e927cf19f95e7da1ae3620010ea8dc45c4547052a75fe51da" kindref="member" tooltip="Process event as usual.">Event_Skip</ref>;</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>This<sp/>function<sp/>could<sp/>be<sp/>called<sp/>periodically<sp/>from<sp/>some<sp/>timer<sp/>to</highlight><highlight class="normal"></highlight></codeline>
@@ -138,28 +138,28 @@
 </programlisting></para><para>Notice that <ref refid="classwx_app" kindref="compound">wxApp</ref> derives from <ref refid="classwx_event_filter" kindref="compound">wxEventFilter</ref> and is registered as an event filter during its creation so you may also override <ref refid="classwx_event_filter_1ae9aee87e6c6c7ff3df84e46a2e3b2c6a" kindref="member">FilterEvent()</ref> method in your wxApp-derived class and, in fact, this is often the most convenient way to do it. However creating a new class deriving directly from <ref refid="classwx_event_filter" kindref="compound">wxEventFilter</ref> allows to isolate the event filtering code in its own separate class and also to have several independent filters, if necessary.</para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="since"><para>2.9.3 </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="5923">
+      <node id="5927">
         <label>wxApp</label>
         <link refid="classwx_app"/>
-        <childnode refid="5922" relation="public-inheritance">
+        <childnode refid="5926" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5922">
+      <node id="5926">
         <label>wxAppConsole</label>
         <link refid="classwx_app_console"/>
-        <childnode refid="5921" relation="public-inheritance">
+        <childnode refid="5925" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5921">
+      <node id="5925">
         <label>wxEventFilter</label>
         <link refid="classwx_event_filter"/>
       </node>
     </inheritancegraph>
     <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/eventfilter.h" line="84" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/eventfilter.h" bodystart="83" bodyend="139"/>
     <listofallmembers>
-      <member refid="classwx_event_filter_1a24ff5a104b4bff9fc8f26752be22d8f9aa2b35768d0be474ac339b9162c0db85a" prot="public" virt="non-virtual"><scope>wxEventFilter</scope><name>Event_Ignore</name></member>
-      <member refid="classwx_event_filter_1a24ff5a104b4bff9fc8f26752be22d8f9a6d508074572ecf366e3c3b537bcba776" prot="public" virt="non-virtual"><scope>wxEventFilter</scope><name>Event_Processed</name></member>
-      <member refid="classwx_event_filter_1a24ff5a104b4bff9fc8f26752be22d8f9ae3620010ea8dc45c4547052a75fe51da" prot="public" virt="non-virtual"><scope>wxEventFilter</scope><name>Event_Skip</name></member>
+      <member refid="classwx_event_filter_1a35d6b67209fb2293e927cf19f95e7da1aa2b35768d0be474ac339b9162c0db85a" prot="public" virt="non-virtual"><scope>wxEventFilter</scope><name>Event_Ignore</name></member>
+      <member refid="classwx_event_filter_1a35d6b67209fb2293e927cf19f95e7da1a6d508074572ecf366e3c3b537bcba776" prot="public" virt="non-virtual"><scope>wxEventFilter</scope><name>Event_Processed</name></member>
+      <member refid="classwx_event_filter_1a35d6b67209fb2293e927cf19f95e7da1ae3620010ea8dc45c4547052a75fe51da" prot="public" virt="non-virtual"><scope>wxEventFilter</scope><name>Event_Skip</name></member>
       <member refid="classwx_event_filter_1ae9aee87e6c6c7ff3df84e46a2e3b2c6a" prot="public" virt="pure-virtual"><scope>wxEventFilter</scope><name>FilterEvent</name></member>
       <member refid="classwx_event_filter_1a1bd4a99149877bdac06ec5e20c1b997c" prot="public" virt="non-virtual"><scope>wxEventFilter</scope><name>wxEventFilter</name></member>
       <member refid="classwx_event_filter_1a30dd4950835241d658ee6cc5d99b4abc" prot="public" virt="virtual"><scope>wxEventFilter</scope><name>~wxEventFilter</name></member>

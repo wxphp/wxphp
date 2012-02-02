@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="dir_105eff0d4aa6a60fcaaa756ae8a60ccf" kind="dir">
+    <compoundname>docs/doxygen/mainpages/</compoundname>
+    <innerfile refid="cat__classes_8h">cat_classes.h</innerfile>
+    <innerfile refid="const__cpp_8h">const_cpp.h</innerfile>
+    <innerfile refid="const__stdevtid_8h">const_stdevtid.h</innerfile>
+    <innerfile refid="const__stockitems_8h">const_stockitems.h</innerfile>
+    <innerfile refid="const__wxusedef_8h">const_wxusedef.h</innerfile>
+    <innerfile refid="constants_8h">constants.h</innerfile>
+    <innerfile refid="copyright_8h">copyright.h</innerfile>
+    <innerfile refid="devtips_8h">devtips.h</innerfile>
+    <innerfile refid="introduction_8h">introduction.h</innerfile>
+    <innerfile refid="libs_8h">libs.h</innerfile>
+    <innerfile refid="manual_8h">manual.h</innerfile>
+    <innerfile refid="platdetails_8h">platdetails.h</innerfile>
+    <innerfile refid="samples_8h">samples.h</innerfile>
+    <innerfile refid="topics_8h">topics.h</innerfile>
+    <innerfile refid="translations_8h">translations.h</innerfile>
+    <innerfile refid="utilities_8h">utilities.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-svn/docs/doxygen/mainpages/"/>
+  </compounddef>
+</doxygen>

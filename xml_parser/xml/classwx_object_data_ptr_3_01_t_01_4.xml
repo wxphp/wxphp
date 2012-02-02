@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_object_data_ptr_3_01_t_01_4" kind="class" prot="public">
     <compoundname>wxObjectDataPtr&lt; T &gt;</compoundname>
     <includes local="no">wx/object.h</includes>
@@ -9,7 +9,6 @@
       </param>
     </templateparamlist>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_object_data_ptr_3_01_t_01_4_1a13ee33fc6df54fa843c04a39f74a2c74" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>wxObjectDataPtr&lt; T &gt; &amp;</type>
         <definition>wxObjectDataPtr&lt;T&gt;&amp; wxObjectDataPtr&lt; T &gt;::operator=</definition>
@@ -169,7 +168,7 @@
     <detaileddescription>
 <para>Despite the name this template can actually be used as a smart pointer for any class implementing the reference counting interface which only consists of the two methods <bold>T::IncRef()</bold> and <bold>T::DecRef()</bold>.</para><para>The difference to <ref refid="classwx_shared_ptr_3_01_t_01_4" kindref="compound">wxSharedPtr&lt;T&gt;</ref> is that <ref refid="classwx_object_data_ptr_3_01_t_01_4" kindref="compound">wxObjectDataPtr&lt;T&gt;</ref> relies on the reference counting to be in the class pointed to, where instead <ref refid="classwx_shared_ptr_3_01_t_01_4" kindref="compound">wxSharedPtr&lt;T&gt;</ref> implements the reference counting itself.</para><para>Below is an example illustrating how to implement reference counted data using <ref refid="classwx_ref_counter" kindref="compound">wxRefCounter</ref> and <ref refid="classwx_object_data_ptr_3_01_t_01_4" kindref="compound">wxObjectDataPtr&lt;T&gt;</ref> with copy-on-write semantics.</para><sect1 id="classwx_object_data_ptr_3_01_t_01_4_1objectdataptr_example">
 <title>Example</title>
-<para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">MyCarRefData:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classwx_ref_counter" kindref="compound" tooltip="This class is used to manage reference-counting providing a simple interface and...">wxRefCounter</ref></highlight></codeline>
+<para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">MyCarRefData:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classwx_ref_counter" kindref="compound" tooltip="This class is used to manage reference-counting providing a simple interface and a counter...">wxRefCounter</ref></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MyCarRefData(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>price<sp/>=<sp/>0<sp/>)<sp/>:<sp/>m_price(price)<sp/>{<sp/>}</highlight></codeline>
@@ -235,7 +234,7 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
 </programlisting></para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__rtti" kindref="compound">Runtime Type Information (RTTI)</ref>, <ref refid="group__group__class__smartpointers" kindref="compound">Smart Pointers</ref></para><para><simplesect kind="see"><para><ref refid="classwx_object" kindref="compound">wxObject</ref>, <ref refid="classwx_object_ref_data" kindref="compound">wxObjectRefData</ref>, <ref refid="overview__refcount" kindref="compound">Reference Counting</ref>, <ref refid="classwx_shared_ptr_3_01_t_01_4" kindref="compound">wxSharedPtr&lt;T&gt;</ref>, <ref refid="classwx_scoped_ptr_3_01_t_01_4" kindref="compound">wxScopedPtr&lt;T&gt;</ref>, <ref refid="classwx_weak_ref_3_01_t_01_4" kindref="compound">wxWeakRef&lt;T&gt;</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__rtti" kindref="compound">Runtime Type Information (RTTI)</ref>, <ref refid="group__group__class__smartpointers" kindref="compound">Smart Pointers</ref></para><para><simplesect kind="see"><para><ref refid="classwx_object" kindref="compound">wxObject</ref>, <ref refid="classwx_object_ref_data" kindref="compound">wxObjectRefData</ref>, <ref refid="overview_refcount" kindref="compound">Reference Counting</ref>, <ref refid="classwx_shared_ptr_3_01_t_01_4" kindref="compound">wxSharedPtr&lt;T&gt;</ref>, <ref refid="classwx_scoped_ptr_3_01_t_01_4" kindref="compound">wxScopedPtr&lt;T&gt;</ref>, <ref refid="classwx_weak_ref_3_01_t_01_4" kindref="compound">wxWeakRef&lt;T&gt;</ref> </para></simplesect>
 </para></sect1>
     </detaileddescription>
     <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/object.h" line="579" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/object.h" bodystart="578" bodyend="642"/>

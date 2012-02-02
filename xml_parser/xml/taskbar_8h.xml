@@ -1,9 +1,141 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="taskbar_8h" kind="file">
     <compoundname>taskbar.h</compoundname>
     <innerclass refid="classwx_task_bar_icon_event" prot="public">wxTaskBarIconEvent</innerclass>
     <innerclass refid="classwx_task_bar_icon" prot="public">wxTaskBarIcon</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="taskbar_8h_1a0b116093261d9af5ca0691bbd9b5af44" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_TASKBAR_MOVE</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_TASKBAR_MOVE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/taskbar.h" line="171" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/taskbar.h" bodystart="171" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="taskbar_8h_1a598bba56fafdb6fe058ea7fe14c96d26" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_TASKBAR_LEFT_DOWN</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_TASKBAR_LEFT_DOWN</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/taskbar.h" line="172" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/taskbar.h" bodystart="172" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="taskbar_8h_1a2cde2d72a98b937aaaadff639681c129" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_TASKBAR_LEFT_UP</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_TASKBAR_LEFT_UP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/taskbar.h" line="173" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/taskbar.h" bodystart="173" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="taskbar_8h_1ac8b10cb48a6e83cf1c962da064175229" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_TASKBAR_RIGHT_DOWN</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_TASKBAR_RIGHT_DOWN</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/taskbar.h" line="174" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/taskbar.h" bodystart="174" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="taskbar_8h_1ab5f1f355bad9f9aeef91b1592b899169" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_TASKBAR_RIGHT_UP</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_TASKBAR_RIGHT_UP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/taskbar.h" line="175" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/taskbar.h" bodystart="175" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="taskbar_8h_1a5b2839bddfb81abd2bc697ed2c262e2f" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_TASKBAR_LEFT_DCLICK</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_TASKBAR_LEFT_DCLICK</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/taskbar.h" line="176" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/taskbar.h" bodystart="176" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="taskbar_8h_1a4d8c42b3406875374ed8b7c157422ff6" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_TASKBAR_RIGHT_DCLICK</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_TASKBAR_RIGHT_DCLICK</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/taskbar.h" line="177" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/taskbar.h" bodystart="177" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="taskbar_8h_1a8b47ea4483359433172b651217ed7258" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_TASKBAR_CLICK</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_TASKBAR_CLICK</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/taskbar.h" line="178" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/taskbar.h" bodystart="178" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="taskbar_8h_1ac7936fe03baf9fc9b32d52033b854b58" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_TASKBAR_BALLOON_TIMEOUT</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_TASKBAR_BALLOON_TIMEOUT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/taskbar.h" line="179" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/taskbar.h" bodystart="179" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="taskbar_8h_1a7e24b0be1effd64d04884bdbd53b6be0" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_TASKBAR_BALLOON_CLICK</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_TASKBAR_BALLOON_CLICK</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/taskbar.h" line="180" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/taskbar.h" bodystart="180" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

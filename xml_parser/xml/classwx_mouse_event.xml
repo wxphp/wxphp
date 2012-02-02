@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_mouse_event" kind="class" prot="public">
     <compoundname>wxMouseEvent</compoundname>
     <basecompoundref refid="classwx_event" prot="public" virt="non-virtual">wxEvent</basecompoundref>
@@ -43,7 +43,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2312"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2333"/>
       </memberdef>
       <memberdef kind="function" id="classwx_mouse_event_1aed173e6979ad43305abb006af1ed22a7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -56,7 +56,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2317"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2338"/>
       </memberdef>
       <memberdef kind="function" id="classwx_mouse_event_1a878673fb8c9cc071288bf44725497d0c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -69,7 +69,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2322"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2343"/>
       </memberdef>
       <memberdef kind="function" id="classwx_mouse_event_1a15678b38dd0da742187e01594eec51fb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -82,7 +82,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2327"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2348"/>
       </memberdef>
       <memberdef kind="function" id="classwx_mouse_event_1a8f3a20465afce26b971dd88753dd9382" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -95,7 +95,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2332"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2353"/>
       </memberdef>
       <memberdef kind="function" id="classwx_mouse_event_1a75ab0d1156716ad6512ccd77756221c2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -108,7 +108,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2337"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2358"/>
       </memberdef>
       <memberdef kind="function" id="classwx_mouse_event_1a3bd23e1874ec7feaa385ceed2038e57f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -121,7 +121,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2342"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2363"/>
       </memberdef>
       <memberdef kind="function" id="classwx_mouse_event_1a0fc7793b2a41f16c239e6d806869c70d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -139,7 +139,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2349"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2370"/>
       </memberdef>
       <memberdef kind="function" id="classwx_mouse_event_1a2c2128af7083cec4c5d64c05bd2a2bc0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -157,7 +157,7 @@
 <para>Otherwise the argument specifies which double click event was generated (see <ref refid="classwx_mouse_event_1a0fc7793b2a41f16c239e6d806869c70d" kindref="member">Button()</ref> for the possible values). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2356"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2377"/>
       </memberdef>
       <memberdef kind="function" id="classwx_mouse_event_1af431ddddb0db9978b852285fd620aa1f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -175,7 +175,7 @@
 <para>Otherwise the argument specifies which button-down event was generated (see <ref refid="classwx_mouse_event_1a0fc7793b2a41f16c239e6d806869c70d" kindref="member">Button()</ref> for the possible values). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2363"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2384"/>
       </memberdef>
       <memberdef kind="function" id="classwx_mouse_event_1a9a40c5a070c444bd480a029da0ce0284" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -193,7 +193,7 @@
 <para>Otherwise the argument specifies which button-up event was generated (see <ref refid="classwx_mouse_event_1a0fc7793b2a41f16c239e6d806869c70d" kindref="member">Button()</ref> for the possible values). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2370"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2391"/>
       </memberdef>
       <memberdef kind="function" id="classwx_mouse_event_1aaf32bfc85d51a565b1a9b89189292325" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -207,7 +207,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2377"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2398"/>
       </memberdef>
       <memberdef kind="function" id="classwx_mouse_event_1a58b95f69ebe3207852e7c48715797d83" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -221,7 +221,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2384"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2405"/>
       </memberdef>
       <memberdef kind="function" id="classwx_mouse_event_1ab0f13904b1e38799f357eed6231b5a48" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -234,7 +234,7 @@
 <para>Otherwise <computeroutput>wxMOUSE_BTN_LEFT</computeroutput> is returned for the left button down, up and double click events, <computeroutput>wxMOUSE_BTN_MIDDLE</computeroutput> and <computeroutput>wxMOUSE_BTN_RIGHT</computeroutput> for the same events for the middle and the right buttons respectively. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2393"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2414"/>
       </memberdef>
       <memberdef kind="function" id="classwx_mouse_event_1adc4d39b626fcc62e93d9356a32003273" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -248,7 +248,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2405"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2426"/>
       </memberdef>
       <memberdef kind="function" id="classwx_mouse_event_1a427758709c1e11f9e5e483f05bb991c7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -261,7 +261,7 @@
 <para>Defaults to three. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2411"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2432"/>
       </memberdef>
       <memberdef kind="function" id="classwx_mouse_event_1aa45b2a04b77da6720c48c5b461eb8d98" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_point" kindref="compound">wxPoint</ref></type>
@@ -278,7 +278,7 @@
 <para>translated according to the translation set for the DC, which usually indicates that the window has been scrolled). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2418"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2439"/>
       </memberdef>
       <memberdef kind="function" id="classwx_mouse_event_1a3f53becddee2e82c5b934585b32b48b4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -291,7 +291,7 @@
 <para>This is the threshold for action to be taken, and one such action (for example, scrolling one increment) should occur for each delta. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2426"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2447"/>
       </memberdef>
       <memberdef kind="function" id="classwx_mouse_event_1a0bb1e43dbaa5b1185cdff155e0edf1a2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -304,7 +304,7 @@
 <para>Current devices all send an event when rotation is at least +/-WheelDelta, but finer resolution devices can be created in the future.</para><para>Because of this you shouldn&apos;t assume that one event is equal to 1 line, but you should be able to either do partial line scrolling or wait until several events accumulate before scrolling. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2438"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2459"/>
       </memberdef>
       <memberdef kind="function" id="classwx_mouse_event_1ac47cfff2701bfa40ef00eff20a185a1d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -317,7 +317,7 @@
 <para>Note that only some models of mouse have horizontal wheel axis. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2446"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2467"/>
       </memberdef>
       <memberdef kind="function" id="classwx_mouse_event_1a71c3e4dd2b3ef72fe646e83fd494c669" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -330,7 +330,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2452"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2473"/>
       </memberdef>
       <memberdef kind="function" id="classwx_mouse_event_1a43310add07362bb6737ebb7a91de622a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -343,7 +343,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2458"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2479"/>
       </memberdef>
       <memberdef kind="function" id="classwx_mouse_event_1ad01dba5513421594d0de8d4ad3d5d3af" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -357,7 +357,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2465"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2486"/>
       </memberdef>
       <memberdef kind="function" id="classwx_mouse_event_1a8d9388fa3c6d6a705dfa35747a77f917" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -370,7 +370,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2470"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2491"/>
       </memberdef>
       <memberdef kind="function" id="classwx_mouse_event_1ae32a96eaf5b84dc2d36341169dcd19c7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -383,7 +383,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2475"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2496"/>
       </memberdef>
       <memberdef kind="function" id="classwx_mouse_event_1ab56dcb63ca6b35b3fe2c55d3945ee9e3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -396,7 +396,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2480"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2501"/>
       </memberdef>
       <memberdef kind="function" id="classwx_mouse_event_1ac54b0063ff887f434fee23b5b1d4b518" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -410,7 +410,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2485"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2506"/>
       </memberdef>
       <memberdef kind="function" id="classwx_mouse_event_1a7b72bd9b0aa9e735a14a91b8ff0464cb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -423,7 +423,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2490"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2511"/>
       </memberdef>
       <memberdef kind="function" id="classwx_mouse_event_1aaf49416df9acaea3bb71470b753a1b18" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -436,7 +436,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2495"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2516"/>
       </memberdef>
       <memberdef kind="function" id="classwx_mouse_event_1ac54542740e9bac83c4446846782d7733" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -449,7 +449,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2500"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2521"/>
       </memberdef>
       <memberdef kind="function" id="classwx_mouse_event_1a4ba54065ea560c30d59fc38cec077c1f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -462,7 +462,7 @@
 <para>If any mouse button is held pressed, then this method returns false and <ref refid="classwx_mouse_event_1aaf32bfc85d51a565b1a9b89189292325" kindref="member">Dragging()</ref> returns true. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2507"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2528"/>
       </memberdef>
       <memberdef kind="function" id="classwx_mouse_event_1ae8e105ed730062c87ec41727f41e0b79" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -475,7 +475,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2512"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2533"/>
       </memberdef>
       <memberdef kind="function" id="classwx_mouse_event_1a657461cc8afd3692141d5364a430edbf" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -488,7 +488,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2517"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2538"/>
       </memberdef>
       <memberdef kind="function" id="classwx_mouse_event_1af56e4a8688218895336ce9829ed3e35e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -501,7 +501,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2522"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2543"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -532,67 +532,30 @@
 <listitem><para>EVT_MOUSE_EVENTS(func): Process all mouse events. </para></listitem>
 </itemizedlist>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="classwx_key_event" kindref="compound">wxKeyEvent</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="classwx_key_event" kindref="compound">wxKeyEvent</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7837">
-        <label>wxKeyboardState</label>
-        <link refid="classwx_keyboard_state"/>
-      </node>
-      <node id="7835">
-        <label>wxObject</label>
-        <link refid="classwx_object"/>
-      </node>
-      <node id="7833">
-        <label>wxMouseEvent</label>
-        <link refid="classwx_mouse_event"/>
-        <childnode refid="7834" relation="public-inheritance">
-        </childnode>
-        <childnode refid="7836" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="7834">
-        <label>wxEvent</label>
-        <link refid="classwx_event"/>
-        <childnode refid="7835" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="7836">
-        <label>wxMouseState</label>
-        <link refid="classwx_mouse_state"/>
-        <childnode refid="7837" relation="public-inheritance">
-        </childnode>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
       <node id="7843">
         <label>wxKeyboardState</label>
         <link refid="classwx_keyboard_state"/>
       </node>
-      <node id="7840">
+      <node id="7841">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="7841" relation="usage">
-          <edgelabel>m_refData</edgelabel>
-        </childnode>
       </node>
-      <node id="7838">
+      <node id="7839">
         <label>wxMouseEvent</label>
         <link refid="classwx_mouse_event"/>
-        <childnode refid="7839" relation="public-inheritance">
+        <childnode refid="7840" relation="public-inheritance">
         </childnode>
         <childnode refid="7842" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7839">
+      <node id="7840">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="7840" relation="public-inheritance">
+        <childnode refid="7841" relation="public-inheritance">
         </childnode>
-      </node>
-      <node id="7841">
-        <label>wxObjectRefData</label>
-        <link refid="classwx_object_ref_data"/>
       </node>
       <node id="7842">
         <label>wxMouseState</label>
@@ -600,8 +563,45 @@
         <childnode refid="7843" relation="public-inheritance">
         </childnode>
       </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="7849">
+        <label>wxKeyboardState</label>
+        <link refid="classwx_keyboard_state"/>
+      </node>
+      <node id="7846">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="7847" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="7844">
+        <label>wxMouseEvent</label>
+        <link refid="classwx_mouse_event"/>
+        <childnode refid="7845" relation="public-inheritance">
+        </childnode>
+        <childnode refid="7848" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7845">
+        <label>wxEvent</label>
+        <link refid="classwx_event"/>
+        <childnode refid="7846" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7847">
+        <label>wxObjectRefData</label>
+        <link refid="classwx_object_ref_data"/>
+      </node>
+      <node id="7848">
+        <label>wxMouseState</label>
+        <link refid="classwx_mouse_state"/>
+        <childnode refid="7849" relation="public-inheritance">
+        </childnode>
+      </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2287" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="2285" bodyend="2523"/>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2308" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="2306" bodyend="2544"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxMouseEvent</scope><name>AllocExclusive</name></member>
       <member refid="classwx_keyboard_state_1af71012a9fdbd32bbdc391c984ec5a588" prot="public" virt="non-virtual"><scope>wxMouseEvent</scope><name>AltDown</name></member>

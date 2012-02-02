@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_rich_text_list_style_definition" kind="class" prot="public">
     <compoundname>wxRichTextListStyleDefinition</compoundname>
     <basecompoundref refid="classwx_rich_text_paragraph_style_definition" prot="public" virt="non-virtual">wxRichTextParagraphStyleDefinition</basecompoundref>
@@ -196,58 +196,58 @@
 <para>This class represents a list style definition, usually added to a <ref refid="classwx_rich_text_style_sheet" kindref="compound">wxRichTextStyleSheet</ref>. </para>    </briefdescription>
     <detaileddescription>
 <para>The class inherits paragraph attributes from wxRichTextStyleParagraphDefinition, and adds 10 further attribute objects, one for each level of a list. When applying a list style to a paragraph, the list style&apos;s base and appropriate level attributes are merged with the paragraph&apos;s existing attributes.</para><para>You can apply a list style to one or more paragraphs using <ref refid="classwx_rich_text_ctrl_1a15e151f9cd434826444ab554dd43bef3" kindref="member">wxRichTextCtrl::SetListStyle</ref>. You can also use the functions <ref refid="classwx_rich_text_ctrl_1a23b8f0b42ba7f128127d749c13ede06e" kindref="member">wxRichTextCtrl::NumberList</ref>, <ref refid="classwx_rich_text_ctrl_1a9dd10bf2c0e23dbd51f4d27cc7f2f9f8" kindref="member">wxRichTextCtrl::PromoteList</ref> and <ref refid="classwx_rich_text_ctrl_1a02d1ffb4bf82f96b041889235c4bc441" kindref="member">wxRichTextCtrl::ClearListStyle</ref>.</para><para>As usual, there are <ref refid="classwx_rich_text_buffer" kindref="compound">wxRichTextBuffer</ref> versions of these functions so that you can apply them directly to a buffer without requiring a control.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxrichtext" kindref="member">wxRichText</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__richtext" kindref="compound">Rich Text</ref> </para>    </detaileddescription>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxrichtext" kindref="member">wxRichText</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__richtext" kindref="compound">Rich Text</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="9634">
+      <node id="9692">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="9632">
+      <node id="9690">
         <label>wxRichTextParagraphStyleDefinition</label>
         <link refid="classwx_rich_text_paragraph_style_definition"/>
-        <childnode refid="9633" relation="public-inheritance">
+        <childnode refid="9691" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9631">
+      <node id="9689">
         <label>wxRichTextListStyleDefinition</label>
         <link refid="classwx_rich_text_list_style_definition"/>
-        <childnode refid="9632" relation="public-inheritance">
+        <childnode refid="9690" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9633">
+      <node id="9691">
         <label>wxRichTextStyleDefinition</label>
         <link refid="classwx_rich_text_style_definition"/>
-        <childnode refid="9634" relation="public-inheritance">
+        <childnode refid="9692" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="9638">
+      <node id="9696">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="9639" relation="usage">
+        <childnode refid="9697" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="9636">
+      <node id="9694">
         <label>wxRichTextParagraphStyleDefinition</label>
         <link refid="classwx_rich_text_paragraph_style_definition"/>
-        <childnode refid="9637" relation="public-inheritance">
+        <childnode refid="9695" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9635">
+      <node id="9693">
         <label>wxRichTextListStyleDefinition</label>
         <link refid="classwx_rich_text_list_style_definition"/>
-        <childnode refid="9636" relation="public-inheritance">
+        <childnode refid="9694" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9637">
+      <node id="9695">
         <label>wxRichTextStyleDefinition</label>
         <link refid="classwx_rich_text_style_definition"/>
-        <childnode refid="9638" relation="public-inheritance">
+        <childnode refid="9696" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9639">
+      <node id="9697">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

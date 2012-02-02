@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_bitmap" kind="class" prot="public">
     <compoundname>wxBitmap</compoundname>
     <basecompoundref refid="classwx_g_d_i_object" prot="public" virt="non-virtual">wxGDIObject</basecompoundref>
@@ -28,9 +28,9 @@
           <declname>bitmap</declname>
         </param>
         <briefdescription>
-<para>Copy constructor, uses <ref refid="overview__refcount" kindref="compound">reference counting</ref>. </para>        </briefdescription>
+<para>Copy constructor, uses <ref refid="overview_refcount" kindref="compound">reference counting</ref>. </para>        </briefdescription>
         <detaileddescription>
-<para>To make a real copy, you can use:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_bitmap" kindref="compound" tooltip="This class encapsulates the concept of a platform-dependent bitmap, either monochrome...">wxBitmap</ref><sp/>newBitmap<sp/>=<sp/>oldBitmap.GetSubBitmap(</highlight></codeline>
+<para>To make a real copy, you can use:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_bitmap" kindref="compound" tooltip="This class encapsulates the concept of a platform-dependent bitmap, either monochrome or colour or co...">wxBitmap</ref><sp/>newBitmap<sp/>=<sp/>oldBitmap.<ref refid="classwx_bitmap_1a8745c687705511f1432d9f36ad26f95b" kindref="member" tooltip="Returns a sub bitmap of the current one as long as the rect belongs entirely to the bitmap...">GetSubBitmap</ref>(</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_rect" kindref="compound" tooltip="A class for manipulating rectangles.">wxRect</ref>(0,<sp/>0,<sp/>oldBitmap.GetWidth(),<sp/>oldBitmap.GetHeight()));</highlight></codeline>
 </programlisting> </para>        </detaileddescription>
         <inbodydescription>
@@ -245,7 +245,7 @@
         <briefdescription>
 <para>Destructor. </para>        </briefdescription>
         <detaileddescription>
-<para>See <ref refid="overview__refcount_1overview_refcount_destruct" kindref="member">Object Destruction</ref> for more info.</para><para>If the application omits to delete the bitmap explicitly, the bitmap will be destroyed automatically by wxWidgets when the application exits.</para><para><simplesect kind="warning"><para>Do not delete a bitmap that is selected into a memory device context. </para></simplesect>
+<para>See <ref refid="overview_refcount_1overview_refcount_destruct" kindref="member">Object Destruction</ref> for more info.</para><para>If the application omits to delete the bitmap explicitly, the bitmap will be destroyed automatically by wxWidgets when the application exits.</para><para><simplesect kind="warning"><para>Do not delete a bitmap that is selected into a memory device context. </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -566,7 +566,7 @@
         <briefdescription>
 <para>Sets the depth member (does not affect the bitmap data). </para>        </briefdescription>
         <detaileddescription>
-<para><xrefsect id="todo_1_todo000019"><xreftitle>Todo</xreftitle><xrefdescription><para>since these functions do not affect the bitmap data, why they exist??</para></xrefdescription></xrefsect><parameterlist kind="param"><parameteritem>
+<para><xrefsect id="todo_1_todo000018"><xreftitle>Todo</xreftitle><xrefdescription><para>since these functions do not affect the bitmap data, why they exist??</para></xrefdescription></xrefsect></para><para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>depth</parametername>
 </parameternamelist>
@@ -885,47 +885,47 @@ Note that unlike <ref refid="classwx_image_1ab39fb3747dfb8c2d444eff9fe41fa205" k
 <para>If you need direct access the bitmap data instead going through drawing to it using <ref refid="classwx_memory_d_c" kindref="compound">wxMemoryDC</ref> you need to use the <ref refid="classwx_pixel_data" kindref="compound">wxPixelData</ref> class (either wxNativePixelData for RGB bitmaps or wxAlphaPixelData for bitmaps with an additionaly alpha channel).</para><para>Note that many <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> functions take a <emphasis>type</emphasis> parameter, which is a value of the <ref refid="gdicmn_8h_1a90a1eb6d85b5044a99b706fd979f27f5" kindref="member">wxBitmapType</ref> enumeration. The validity of those values depends however on the platform where your program is running and from the wxWidgets configuration. If all possible wxWidgets settings are used:<itemizedlist>
 <listitem><para>wxMSW supports BMP and ICO files, BMP and ICO resources;</para></listitem><listitem><para>wxGTK supports XPM files;</para></listitem><listitem><para>wxMac supports PICT resources;</para></listitem><listitem><para>wxX11 supports XPM files, XPM data, XBM data;</para></listitem></itemizedlist>
 </para><para>In addition, <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> can load and save all formats that <ref refid="classwx_image" kindref="compound">wxImage</ref> can; see <ref refid="classwx_image" kindref="compound">wxImage</ref> for more info. Of course, you must have loaded the <ref refid="classwx_image" kindref="compound">wxImage</ref> handlers (see <ref refid="group__group__funcmacro__appinitterm_1ga27f6c78d5d13374a28022b7bd44c6823" kindref="member">wxInitAllImageHandlers()</ref> and <ref refid="classwx_image_1ab39fb3747dfb8c2d444eff9fe41fa205" kindref="member">wxImage::AddHandler</ref>). Note that all available wxBitmapHandlers for a given wxWidgets port are automatically loaded at startup so you won&apos;t need to use <ref refid="classwx_bitmap_1a6418825ad15574229188e0c5f97a4f3a" kindref="member">wxBitmap::AddHandler</ref>.</para><para>More on the difference between <ref refid="classwx_image" kindref="compound">wxImage</ref> and <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref>: <ref refid="classwx_image" kindref="compound">wxImage</ref> is just a buffer of RGB bytes with an optional buffer for the alpha bytes. It is all generic, platform independent and image file format independent code. It includes generic code for scaling, resizing, clipping, and other manipulations of the image data. OTOH, <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> is intended to be a wrapper of whatever is the native image format that is quickest/easiest to draw to a DC or to be the target of the drawing operations performed on a <ref refid="classwx_memory_d_c" kindref="compound">wxMemoryDC</ref>. By splitting the responsibilities between wxImage/wxBitmap like this then it&apos;s easier to use generic code shared by all platforms and image types for generic operations and platform specific code where performance or compatibility is needed.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__gdi" kindref="compound">Graphics Device Interface (GDI)</ref></para><para>Predefined objects/pointers: <ref refid="interface_2wx_2bitmap_8h_1a2947690e84b8fdb2e37b79a4af8f8a21" kindref="member">wxNullBitmap</ref></para><para><simplesect kind="see"><para><ref refid="overview__bitmap" kindref="compound">Bitmaps and Icons</ref>, <ref refid="overview__bitmap_1overview_bitmap_supportedformats" kindref="member">Supported Bitmap File Formats</ref>, <ref refid="classwx_d_c_1a12bed94a15136b9080683f4151042a34" kindref="member">wxDC::Blit</ref>, <ref refid="classwx_icon" kindref="compound">wxIcon</ref>, <ref refid="classwx_cursor" kindref="compound">wxCursor</ref>, <ref refid="classwx_memory_d_c" kindref="compound">wxMemoryDC</ref>, <ref refid="classwx_image" kindref="compound">wxImage</ref>, <ref refid="classwx_pixel_data" kindref="compound">wxPixelData</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__gdi" kindref="compound">Graphics Device Interface (GDI)</ref></para><para>Predefined objects/pointers: <ref refid="interface_2wx_2bitmap_8h_1a2947690e84b8fdb2e37b79a4af8f8a21" kindref="member">wxNullBitmap</ref></para><para><simplesect kind="see"><para><ref refid="overview_bitmap" kindref="compound">Bitmaps and Icons</ref>, <ref refid="overview_bitmap_1overview_bitmap_supportedformats" kindref="member">Supported Bitmap File Formats</ref>, <ref refid="classwx_d_c_1a12bed94a15136b9080683f4151042a34" kindref="member">wxDC::Blit</ref>, <ref refid="classwx_icon" kindref="compound">wxIcon</ref>, <ref refid="classwx_cursor" kindref="compound">wxCursor</ref>, <ref refid="classwx_memory_d_c" kindref="compound">wxMemoryDC</ref>, <ref refid="classwx_image" kindref="compound">wxImage</ref>, <ref refid="classwx_pixel_data" kindref="compound">wxPixelData</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="4467">
+      <node id="4471">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="4465">
+      <node id="4469">
         <label>wxBitmap</label>
         <link refid="classwx_bitmap"/>
-        <childnode refid="4466" relation="public-inheritance">
+        <childnode refid="4470" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4466">
+      <node id="4470">
         <label>wxGDIObject</label>
         <link refid="classwx_g_d_i_object"/>
-        <childnode refid="4467" relation="public-inheritance">
+        <childnode refid="4471" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="4470">
+      <node id="4474">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="4471" relation="usage">
+        <childnode refid="4475" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="4468">
+      <node id="4472">
         <label>wxBitmap</label>
         <link refid="classwx_bitmap"/>
-        <childnode refid="4469" relation="public-inheritance">
+        <childnode refid="4473" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4469">
+      <node id="4473">
         <label>wxGDIObject</label>
         <link refid="classwx_g_d_i_object"/>
-        <childnode refid="4470" relation="public-inheritance">
+        <childnode refid="4474" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4471">
+      <node id="4475">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

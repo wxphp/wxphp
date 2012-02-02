@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_floating_point_validator" kind="class" prot="public">
     <compoundname>wxFloatingPointValidator</compoundname>
     <basecompoundref refid="classwx_num_validator" prot="public" virt="non-virtual">wxNumValidator&lt; T &gt;</basecompoundref>
@@ -10,14 +10,13 @@
       </param>
     </templateparamlist>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_floating_point_validator_1a6d71bcbf6a9001c5b4f5a80ae73ff282" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
         <definition>wxFloatingPointValidator&lt; T &gt;::wxFloatingPointValidator</definition>
         <argsstring>(ValueType *value=NULL, int style=wxNUM_VAL_DEFAULT)</argsstring>
         <name>wxFloatingPointValidator</name>
         <param>
-          <type><ref refid="classwx_floating_point_validator_1a75a7c2f5b92933247fa82a33dc3d2e62" kindref="member">ValueType</ref> *</type>
+          <type><ref refid="classwx_num_validator_1a651c1cd4cf84fdcbecb201c474e22afe" kindref="member">ValueType</ref> *</type>
           <declname>value</declname>
           <defval>NULL</defval>
         </param>
@@ -66,7 +65,7 @@
           <declname>precision</declname>
         </param>
         <param>
-          <type><ref refid="classwx_floating_point_validator_1a75a7c2f5b92933247fa82a33dc3d2e62" kindref="member">ValueType</ref> *</type>
+          <type><ref refid="classwx_num_validator_1a651c1cd4cf84fdcbecb201c474e22afe" kindref="member">ValueType</ref> *</type>
           <declname>value</declname>
           <defval>NULL</defval>
         </param>
@@ -144,7 +143,7 @@
     <briefdescription>
 <para>Validator for text entries used for floating point numbers entry. </para>    </briefdescription>
     <detaileddescription>
-<para>This validator can be used with <ref refid="classwx_text_ctrl" kindref="compound">wxTextCtrl</ref> or <ref refid="classwx_combo_box" kindref="compound">wxComboBox</ref> (and potentially any other class implementing <ref refid="classwx_text_entry" kindref="compound">wxTextEntry</ref> interface) to check that only valid floating point values can be entered into them. Currently only fixed format is supported on input, i.e. scientific format with mantissa and exponent is not supported.</para><para>This template class can be instantiated for either <computeroutput>float</computeroutput> or <computeroutput>double</computeroutput>, <computeroutput>long double</computeroutput> values are not currently supported.</para><para>Similarly to wxIntegerValidator&lt;&gt;, the range for the accepted values is by default set appropriately for the type. Additionally, this validator allows to specify the maximum number of digits that can be entered after the decimal separator. By default this is also set appropriately for the type used, e.g. 6 for <computeroutput>float</computeroutput> and 15 for <computeroutput>double</computeroutput> on a typical IEEE-754-based implementation. As with the range, the precision can be restricted after the validator creation if necessary.</para><para>When the validator displays numbers with decimal or thousands separators, the characters used for the separators (usually &quot;.&quot; or &quot;,&quot;) depend on the locale set with <ref refid="classwx_locale" kindref="compound">wxLocale</ref> (note that you shouldn&apos;t change locale with setlocale() as this can result in a mismatch between the separators used by <ref refid="classwx_locale" kindref="compound">wxLocale</ref> and the one used by the run-time library).</para><para>A simple example of using this class: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">MyDialog<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classwx_dialog" kindref="compound" tooltip="A dialog box is a window with a title bar and sometimes a system menu, which can...">wxDialog</ref></highlight></codeline>
+<para>This validator can be used with <ref refid="classwx_text_ctrl" kindref="compound">wxTextCtrl</ref> or <ref refid="classwx_combo_box" kindref="compound">wxComboBox</ref> (and potentially any other class implementing <ref refid="classwx_text_entry" kindref="compound">wxTextEntry</ref> interface) to check that only valid floating point values can be entered into them. Currently only fixed format is supported on input, i.e. scientific format with mantissa and exponent is not supported.</para><para>This template class can be instantiated for either <computeroutput>float</computeroutput> or <computeroutput>double</computeroutput>, <computeroutput>long double</computeroutput> values are not currently supported.</para><para>Similarly to wxIntegerValidator&lt;&gt;, the range for the accepted values is by default set appropriately for the type. Additionally, this validator allows to specify the maximum number of digits that can be entered after the decimal separator. By default this is also set appropriately for the type used, e.g. 6 for <computeroutput>float</computeroutput> and 15 for <computeroutput>double</computeroutput> on a typical IEEE-754-based implementation. As with the range, the precision can be restricted after the validator creation if necessary.</para><para>When the validator displays numbers with decimal or thousands separators, the characters used for the separators (usually &quot;.&quot; or &quot;,&quot;) depend on the locale set with <ref refid="classwx_locale" kindref="compound">wxLocale</ref> (note that you shouldn&apos;t change locale with setlocale() as this can result in a mismatch between the separators used by <ref refid="classwx_locale" kindref="compound">wxLocale</ref> and the one used by the run-time library).</para><para>A simple example of using this class: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">MyDialog<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classwx_dialog" kindref="compound" tooltip="A dialog box is a window with a title bar and sometimes a system menu, which can be moved around the ...">wxDialog</ref></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MyDialog()</highlight></codeline>
@@ -163,85 +162,85 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>m_value;</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
-</programlisting></para><para>For more information, please see <ref refid="overview__validator" kindref="compound">wxValidator Overview</ref>.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__validator" kindref="compound">Validators</ref></para><para><simplesect kind="see"><para><ref refid="overview__validator" kindref="compound">wxValidator Overview</ref>, <ref refid="classwx_validator" kindref="compound">wxValidator</ref>, <ref refid="classwx_generic_validator" kindref="compound">wxGenericValidator</ref>, <ref refid="classwx_text_validator" kindref="compound">wxTextValidator</ref>, <ref refid="valnum_8h_1a9d2ba1b6ccfcfa65586cb54cd517e9fb" kindref="member">wxMakeIntegerValidator()</ref></para></simplesect>
+</programlisting></para><para>For more information, please see <ref refid="overview_validator" kindref="compound">wxValidator Overview</ref>.</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__validator" kindref="compound">Validators</ref></para><para><simplesect kind="see"><para><ref refid="overview_validator" kindref="compound">wxValidator Overview</ref>, <ref refid="classwx_validator" kindref="compound">wxValidator</ref>, <ref refid="classwx_generic_validator" kindref="compound">wxGenericValidator</ref>, <ref refid="classwx_text_validator" kindref="compound">wxTextValidator</ref>, <ref refid="valnum_8h_1a9d2ba1b6ccfcfa65586cb54cd517e9fb" kindref="member">wxMakeIntegerValidator()</ref></para></simplesect>
 <simplesect kind="since"><para>2.9.2 </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="6342">
+      <node id="6346">
         <label>wxValidator</label>
         <link refid="classwx_validator"/>
-        <childnode refid="6343" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="6341">
-        <label>wxNumValidator&lt; T &gt;</label>
-        <link refid="classwx_num_validator"/>
-        <childnode refid="6342" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="6344">
-        <label>wxObject</label>
-        <link refid="classwx_object"/>
-      </node>
-      <node id="6343">
-        <label>wxEvtHandler</label>
-        <link refid="classwx_evt_handler"/>
-        <childnode refid="6344" relation="public-inheritance">
-        </childnode>
-        <childnode refid="6345" relation="public-inheritance">
+        <childnode refid="6347" relation="public-inheritance">
         </childnode>
       </node>
       <node id="6345">
+        <label>wxNumValidator&lt; T &gt;</label>
+        <link refid="classwx_num_validator"/>
+        <childnode refid="6346" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6348">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+      </node>
+      <node id="6347">
+        <label>wxEvtHandler</label>
+        <link refid="classwx_evt_handler"/>
+        <childnode refid="6348" relation="public-inheritance">
+        </childnode>
+        <childnode refid="6349" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6349">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="6340">
+      <node id="6344">
         <label>wxFloatingPointValidator&lt; T &gt;</label>
         <link refid="classwx_floating_point_validator"/>
-        <childnode refid="6341" relation="public-inheritance">
+        <childnode refid="6345" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="6348">
+      <node id="6352">
         <label>wxValidator</label>
         <link refid="classwx_validator"/>
-        <childnode refid="6349" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="6347">
-        <label>wxNumValidator&lt; T &gt;</label>
-        <link refid="classwx_num_validator"/>
-        <childnode refid="6348" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="6350">
-        <label>wxObject</label>
-        <link refid="classwx_object"/>
-        <childnode refid="6351" relation="usage">
-          <edgelabel>m_refData</edgelabel>
-        </childnode>
-      </node>
-      <node id="6349">
-        <label>wxEvtHandler</label>
-        <link refid="classwx_evt_handler"/>
-        <childnode refid="6350" relation="public-inheritance">
-        </childnode>
-        <childnode refid="6352" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="6352">
-        <label>wxTrackable</label>
-        <link refid="classwx_trackable"/>
-      </node>
-      <node id="6346">
-        <label>wxFloatingPointValidator&lt; T &gt;</label>
-        <link refid="classwx_floating_point_validator"/>
-        <childnode refid="6347" relation="public-inheritance">
+        <childnode refid="6353" relation="public-inheritance">
         </childnode>
       </node>
       <node id="6351">
+        <label>wxNumValidator&lt; T &gt;</label>
+        <link refid="classwx_num_validator"/>
+        <childnode refid="6352" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6354">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="6355" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="6353">
+        <label>wxEvtHandler</label>
+        <link refid="classwx_evt_handler"/>
+        <childnode refid="6354" relation="public-inheritance">
+        </childnode>
+        <childnode refid="6356" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6356">
+        <label>wxTrackable</label>
+        <link refid="classwx_trackable"/>
+      </node>
+      <node id="6350">
+        <label>wxFloatingPointValidator&lt; T &gt;</label>
+        <link refid="classwx_floating_point_validator"/>
+        <childnode refid="6351" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6355">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

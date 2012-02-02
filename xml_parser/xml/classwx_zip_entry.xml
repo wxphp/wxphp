@@ -1,11 +1,10 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_zip_entry" kind="class" prot="public">
     <compoundname>wxZipEntry</compoundname>
     <basecompoundref refid="classwx_archive_entry" prot="public" virt="non-virtual">wxArchiveEntry</basecompoundref>
     <includes local="no">wx/zipstrm.h</includes>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_zip_entry_1afb03dae8c926b5d1f84eb87c033d85f2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
         <definition>wxString wxZipEntry::GetComment</definition>
@@ -38,7 +37,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_zip_entry_1ab7fa02cb759a2f88f7228f78375cbb54" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="defs_8h_1afdb12e5345c3fae4b537e813df9f02a3" kindref="member">wxUint32</ref></type>
         <definition>wxUint32 wxZipEntry::GetExternalAttributes</definition>
@@ -75,7 +73,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_zip_entry_1a28f82befac4de2276b69330aba7345ba" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const char *</type>
         <definition>const char* wxZipEntry::GetExtra</definition>
@@ -125,7 +122,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_zip_entry_1a61e48ada5c34351f66f1c4966380a288" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const char *</type>
         <definition>const char* wxZipEntry::GetLocalExtra</definition>
@@ -175,7 +171,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_zip_entry_1a7ade92d84586fdcf71fdc8ab5f5f4d91" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
         <definition>int wxZipEntry::GetMethod</definition>
@@ -208,7 +203,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_zip_entry_1ae2d433c12a69d94b563d5975086b6996" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
         <definition>int wxZipEntry::GetMode</definition>
@@ -241,7 +235,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_zip_entry_1a37a7ed180a9fdc9170da8960df6184f6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
         <definition>int wxZipEntry::GetSystemMadeBy</definition>
@@ -274,7 +267,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_zip_entry_1aab5dd8f5bb2d47d2532facd2f1629f25" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
         <definition>wxString wxZipEntry::GetInternalName</definition>
@@ -297,7 +289,7 @@
         <briefdescription>
 <para>A static member that translates a filename into the internal format used within the archive. </para>        </briefdescription>
         <detaileddescription>
-<para>If the third parameter is provided, the bool pointed to is set to indicate whether the name looks like a directory name (i.e. has a trailing path separator).</para><para><simplesect kind="see"><para><ref refid="overview__archive_1overview_archive_byname" kindref="member">Looking Up an Archive Entry by Name</ref> </para></simplesect>
+<para>If the third parameter is provided, the bool pointed to is set to indicate whether the name looks like a directory name (i.e. has a trailing path separator).</para><para><simplesect kind="see"><para><ref refid="overview_archive_1overview_archive_byname" kindref="member">Looking Up an Archive Entry by Name</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -319,7 +311,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_zip_entry_1a8f86278ab564e6aaa4a8ffe4bf2ee1ca" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
         <definition>bool wxZipEntry::IsText</definition>
@@ -353,7 +344,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_zip_entry_1a8f69f8c891a3ae90a0111039ca1feebf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void wxZipEntry::SetNotifier</definition>
@@ -366,7 +356,7 @@
         <briefdescription>
 <para>Sets the notifier (see <ref refid="classwx_zip_notifier" kindref="compound">wxZipNotifier</ref>) for this entry. </para>        </briefdescription>
         <detaileddescription>
-<para>Whenever the <ref refid="classwx_zip_input_stream" kindref="compound">wxZipInputStream</ref> updates this entry, it will then invoke the associated notifier&apos;s <ref refid="classwx_zip_notifier_1a083f9f711200b5d94e7bd1a5512b3d4f" kindref="member">wxZipNotifier::OnEntryUpdated()</ref> method.</para><para>Setting a notifier is not usually necessary. It is used to handle certain cases when modifying an zip in a pipeline (i.e. between non-seekable streams).</para><para><simplesect kind="see"><para><ref refid="overview__archive_1overview_archive_noseek" kindref="member">Archives on Non-Seekable Streams</ref>, <ref refid="classwx_zip_notifier" kindref="compound">wxZipNotifier</ref> </para></simplesect>
+<para>Whenever the <ref refid="classwx_zip_input_stream" kindref="compound">wxZipInputStream</ref> updates this entry, it will then invoke the associated notifier&apos;s <ref refid="classwx_zip_notifier_1a083f9f711200b5d94e7bd1a5512b3d4f" kindref="member">wxZipNotifier::OnEntryUpdated()</ref> method.</para><para>Setting a notifier is not usually necessary. It is used to handle certain cases when modifying an zip in a pipeline (i.e. between non-seekable streams).</para><para><simplesect kind="see"><para><ref refid="overview_archive_1overview_archive_noseek" kindref="member">Archives on Non-Seekable Streams</ref>, <ref refid="classwx_zip_notifier" kindref="compound">wxZipNotifier</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -381,7 +371,7 @@
         <briefdescription>
 <para>Sets the notifier (see <ref refid="classwx_zip_notifier" kindref="compound">wxZipNotifier</ref>) for this entry. </para>        </briefdescription>
         <detaileddescription>
-<para>Whenever the <ref refid="classwx_zip_input_stream" kindref="compound">wxZipInputStream</ref> updates this entry, it will then invoke the associated notifier&apos;s <ref refid="classwx_zip_notifier_1a083f9f711200b5d94e7bd1a5512b3d4f" kindref="member">wxZipNotifier::OnEntryUpdated()</ref> method.</para><para>Setting a notifier is not usually necessary. It is used to handle certain cases when modifying an zip in a pipeline (i.e. between non-seekable streams).</para><para><simplesect kind="see"><para><ref refid="overview__archive_1overview_archive_noseek" kindref="member">Archives on Non-Seekable Streams</ref>, <ref refid="classwx_zip_notifier" kindref="compound">wxZipNotifier</ref> </para></simplesect>
+<para>Whenever the <ref refid="classwx_zip_input_stream" kindref="compound">wxZipInputStream</ref> updates this entry, it will then invoke the associated notifier&apos;s <ref refid="classwx_zip_notifier_1a083f9f711200b5d94e7bd1a5512b3d4f" kindref="member">wxZipNotifier::OnEntryUpdated()</ref> method.</para><para>Setting a notifier is not usually necessary. It is used to handle certain cases when modifying an zip in a pipeline (i.e. between non-seekable streams).</para><para><simplesect kind="see"><para><ref refid="overview_archive_1overview_archive_noseek" kindref="member">Archives on Non-Seekable Streams</ref>, <ref refid="classwx_zip_notifier" kindref="compound">wxZipNotifier</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -530,48 +520,48 @@
 </para><para>The following are stored at the end of the zip, and become available when the end of the zip has been reached, i.e. after GetNextEntry() returns NULL and Eof() is true:<itemizedlist>
 <listitem><para><ref refid="classwx_zip_entry_1afb03dae8c926b5d1f84eb87c033d85f2" kindref="member">wxZipEntry::GetComment</ref></para></listitem><listitem><para><ref refid="classwx_zip_entry_1ab7fa02cb759a2f88f7228f78375cbb54" kindref="member">wxZipEntry::GetExternalAttributes</ref></para></listitem><listitem><para><ref refid="classwx_zip_entry_1a28f82befac4de2276b69330aba7345ba" kindref="member">wxZipEntry::GetExtra</ref></para></listitem><listitem><para><ref refid="classwx_zip_entry_1ae2d433c12a69d94b563d5975086b6996" kindref="member">wxZipEntry::GetMode</ref></para></listitem><listitem><para><ref refid="classwx_zip_entry_1a37a7ed180a9fdc9170da8960df6184f6" kindref="member">wxZipEntry::GetSystemMadeBy</ref></para></listitem><listitem><para><ref refid="classwx_archive_entry_1abe30c2532550d23136cf6e1390007073" kindref="member">wxZipEntry::IsReadOnly</ref></para></listitem><listitem><para><ref refid="classwx_zip_entry_1ae0ba9cdf0ad2957f681f4371ae3ca416" kindref="member">wxZipEntry::IsMadeByUnix</ref></para></listitem><listitem><para><ref refid="classwx_zip_entry_1a8f86278ab564e6aaa4a8ffe4bf2ee1ca" kindref="member">wxZipEntry::IsText</ref></para></listitem></itemizedlist>
 </para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__archive" kindref="compound">Archive support</ref>, <ref refid="group__group__class__streams" kindref="compound">Streams</ref></para><para><simplesect kind="see"><para><ref refid="overview__archive" kindref="compound">Archive Formats</ref>, <ref refid="classwx_zip_input_stream" kindref="compound">wxZipInputStream</ref>, <ref refid="classwx_zip_output_stream" kindref="compound">wxZipOutputStream</ref>, <ref refid="classwx_zip_notifier" kindref="compound">wxZipNotifier</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__archive" kindref="compound">Archive support</ref>, <ref refid="group__group__class__streams" kindref="compound">Streams</ref></para><para><simplesect kind="see"><para><ref refid="overview_archive" kindref="compound">Archive Formats</ref>, <ref refid="classwx_zip_input_stream" kindref="compound">wxZipInputStream</ref>, <ref refid="classwx_zip_output_stream" kindref="compound">wxZipOutputStream</ref>, <ref refid="classwx_zip_notifier" kindref="compound">wxZipNotifier</ref> </para></simplesect>
 </para></sect1>
     </detaileddescription>
     <inheritancegraph>
-      <node id="11694">
+      <node id="11755">
         <label>wxArchiveEntry</label>
         <link refid="classwx_archive_entry"/>
-        <childnode refid="11695" relation="public-inheritance">
+        <childnode refid="11756" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11695">
+      <node id="11756">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="11693">
+      <node id="11754">
         <label>wxZipEntry</label>
         <link refid="classwx_zip_entry"/>
-        <childnode refid="11694" relation="public-inheritance">
+        <childnode refid="11755" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="11697">
+      <node id="11758">
         <label>wxArchiveEntry</label>
         <link refid="classwx_archive_entry"/>
-        <childnode refid="11698" relation="public-inheritance">
+        <childnode refid="11759" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11698">
+      <node id="11759">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="11699" relation="usage">
+        <childnode refid="11760" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="11696">
+      <node id="11757">
         <label>wxZipEntry</label>
         <link refid="classwx_zip_entry"/>
-        <childnode refid="11697" relation="public-inheritance">
+        <childnode refid="11758" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11699">
+      <node id="11760">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

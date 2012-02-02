@@ -1,13 +1,13 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_with_images" kind="class" prot="public">
     <compoundname>wxWithImages</compoundname>
     <derivedcompoundref refid="classwx_book_ctrl_base" prot="public" virt="non-virtual">wxBookCtrlBase</derivedcompoundref>
     <includes local="no">wx/withimages.h</includes>
       <sectiondef kind="public-type">
-      <memberdef kind="enum" id="classwx_with_images_1aec212da53baa77c0ed8bbde57beefdee" prot="public" static="no">
-        <name>@23</name>
-        <enumvalue id="classwx_with_images_1aec212da53baa77c0ed8bbde57beefdeea9c691a3188f0e2d96e1aa83fa5182406" prot="public">
+      <memberdef kind="enum" id="classwx_with_images_1ad1a815c59ab249d922bc3b072508d984" prot="public" static="no">
+        <name>@27</name>
+        <enumvalue id="classwx_with_images_1ad1a815c59ab249d922bc3b072508d984a9c691a3188f0e2d96e1aa83fa5182406" prot="public">
           <name>NO_IMAGE</name>
           <initializer> -1</initializer>
           <briefdescription>
@@ -139,49 +139,49 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="11591">
+      <node id="11652">
         <label>wxAuiNotebook</label>
         <link refid="classwx_aui_notebook"/>
-        <childnode refid="11590" relation="public-inheritance">
+        <childnode refid="11651" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11590">
+      <node id="11651">
         <label>wxBookCtrlBase</label>
         <link refid="classwx_book_ctrl_base"/>
-        <childnode refid="11589" relation="public-inheritance">
+        <childnode refid="11650" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11596">
+      <node id="11657">
         <label>wxTreebook</label>
         <link refid="classwx_treebook"/>
-        <childnode refid="11590" relation="public-inheritance">
+        <childnode refid="11651" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11593">
+      <node id="11654">
         <label>wxListbook</label>
         <link refid="classwx_listbook"/>
-        <childnode refid="11590" relation="public-inheritance">
+        <childnode refid="11651" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11595">
+      <node id="11656">
         <label>wxToolbook</label>
         <link refid="classwx_toolbook"/>
-        <childnode refid="11590" relation="public-inheritance">
+        <childnode refid="11651" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11592">
+      <node id="11653">
         <label>wxChoicebook</label>
         <link refid="classwx_choicebook"/>
-        <childnode refid="11590" relation="public-inheritance">
+        <childnode refid="11651" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11594">
+      <node id="11655">
         <label>wxNotebook</label>
         <link refid="classwx_notebook"/>
-        <childnode refid="11590" relation="public-inheritance">
+        <childnode refid="11651" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11589">
+      <node id="11650">
         <label>wxWithImages</label>
         <link refid="classwx_with_images"/>
       </node>
@@ -192,7 +192,7 @@
       <member refid="classwx_with_images_1a18df9cacf60a39bf0a7fb59d0eb18200" prot="protected" virt="non-virtual"><scope>wxWithImages</scope><name>GetImage</name></member>
       <member refid="classwx_with_images_1a7dab9774f31c09a1fa0837bb384eb106" prot="public" virt="non-virtual"><scope>wxWithImages</scope><name>GetImageList</name></member>
       <member refid="classwx_with_images_1a828e23a0895ed6c664d077918eb7b5ee" prot="protected" virt="non-virtual"><scope>wxWithImages</scope><name>HasImageList</name></member>
-      <member refid="classwx_with_images_1aec212da53baa77c0ed8bbde57beefdeea9c691a3188f0e2d96e1aa83fa5182406" prot="public" virt="non-virtual"><scope>wxWithImages</scope><name>NO_IMAGE</name></member>
+      <member refid="classwx_with_images_1ad1a815c59ab249d922bc3b072508d984a9c691a3188f0e2d96e1aa83fa5182406" prot="public" virt="non-virtual"><scope>wxWithImages</scope><name>NO_IMAGE</name></member>
       <member refid="classwx_with_images_1a8436e7fdc49a5a23fdca2effebd319ef" prot="public" virt="virtual"><scope>wxWithImages</scope><name>SetImageList</name></member>
       <member refid="classwx_with_images_1ace26c8e42e40f25cdbcd05fc9a870484" prot="public" virt="non-virtual"><scope>wxWithImages</scope><name>wxWithImages</name></member>
       <member refid="classwx_with_images_1a931475b0ae296c7d577e76b6d67f01ba" prot="public" virt="virtual"><scope>wxWithImages</scope><name>~wxWithImages</name></member>

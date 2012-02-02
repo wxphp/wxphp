@@ -1,11 +1,10 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_graphics_path" kind="class" prot="public">
     <compoundname>wxGraphicsPath</compoundname>
     <basecompoundref refid="classwx_graphics_object" prot="public" virt="non-virtual">wxGraphicsObject</basecompoundref>
     <includes local="no">wx/graphics.h</includes>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_graphics_path_1a42dfa8d02729f00b4171f2bf83e16dbe" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
         <definition>virtual void wxGraphicsPath::AddArc</definition>
@@ -602,46 +601,46 @@
 <para>A <ref refid="classwx_graphics_path" kindref="compound">wxGraphicsPath</ref> is a native representation of a geometric path. </para>    </briefdescription>
     <detaileddescription>
 <para>The contents are specific an private to the respective renderer. Instances are reference counted and can therefore be assigned as usual. The only way to get a valid instance is by using <ref refid="classwx_graphics_context_1a55c95ed392ed17f6fbd6e83b2a442a80" kindref="member">wxGraphicsContext::CreatePath()</ref> or <ref refid="classwx_graphics_renderer_1acdaf5505ed3833c4cb76112d001b8717" kindref="member">wxGraphicsRenderer::CreatePath()</ref>.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__gdi" kindref="compound">Graphics Device Interface (GDI)</ref> </para>    </detaileddescription>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__gdi" kindref="compound">Graphics Device Interface (GDI)</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="6604">
+      <node id="6608">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="6603">
+      <node id="6607">
         <label>wxGraphicsObject</label>
         <link refid="classwx_graphics_object"/>
-        <childnode refid="6604" relation="public-inheritance">
+        <childnode refid="6608" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6602">
+      <node id="6606">
         <label>wxGraphicsPath</label>
         <link refid="classwx_graphics_path"/>
-        <childnode refid="6603" relation="public-inheritance">
+        <childnode refid="6607" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="6607">
+      <node id="6611">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="6608" relation="usage">
+        <childnode refid="6612" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="6606">
+      <node id="6610">
         <label>wxGraphicsObject</label>
         <link refid="classwx_graphics_object"/>
-        <childnode refid="6607" relation="public-inheritance">
+        <childnode refid="6611" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6605">
+      <node id="6609">
         <label>wxGraphicsPath</label>
         <link refid="classwx_graphics_path"/>
-        <childnode refid="6606" relation="public-inheritance">
+        <childnode refid="6610" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6608">
+      <node id="6612">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

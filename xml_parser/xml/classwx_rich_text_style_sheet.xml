@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_rich_text_style_sheet" kind="class" prot="public">
     <compoundname>wxRichTextStyleSheet</compoundname>
     <basecompoundref refid="classwx_object" prot="public" virt="non-virtual">wxObject</basecompoundref>
@@ -438,34 +438,34 @@
 <para>A style sheet contains named paragraph and character styles that make it easy for a user to apply combinations of attributes to a <ref refid="classwx_rich_text_ctrl" kindref="compound">wxRichTextCtrl</ref>. </para>    </briefdescription>
     <detaileddescription>
 <para>You can use a <ref refid="classwx_rich_text_style_list_box" kindref="compound">wxRichTextStyleListBox</ref> in your user interface to show available styles to the user, and allow application of styles to the control.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxrichtext" kindref="member">wxRichText</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__richtext" kindref="compound">Rich Text</ref> </para>    </detaileddescription>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxrichtext" kindref="member">wxRichText</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__richtext" kindref="compound">Rich Text</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="9921">
+      <node id="9981">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="9920">
+      <node id="9980">
         <label>wxRichTextStyleSheet</label>
         <link refid="classwx_rich_text_style_sheet"/>
-        <childnode refid="9921" relation="public-inheritance">
+        <childnode refid="9981" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="9923">
+      <node id="9983">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="9924" relation="usage">
+        <childnode refid="9984" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="9922">
+      <node id="9982">
         <label>wxRichTextStyleSheet</label>
         <link refid="classwx_rich_text_style_sheet"/>
-        <childnode refid="9923" relation="public-inheritance">
+        <childnode refid="9983" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9924">
+      <node id="9984">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_p_g_cell" kind="class" prot="public">
     <compoundname>wxPGCell</compoundname>
     <basecompoundref refid="classwx_object" prot="public" virt="non-virtual">wxObject</basecompoundref>
@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1768"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1775"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_cell_1aac7bd708cc2b371daf6c309ec91ca725" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -33,7 +33,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1769"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1776"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_cell_1adaad4da8080dfdc8ba69dcc9f0ea63f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -65,7 +65,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1773"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1780"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_cell_1a25c7d5b4d4798dfc0046a385becbc30e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -78,7 +78,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1775"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1782"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_cell_1a4acad1641e35c15286c131e10a328c90" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const wxPGCellData *</type>
@@ -91,7 +91,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1777"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1784"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_cell_1a99eac1a37890a3d9592f88e2fbd893ba" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -104,7 +104,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1782"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1789"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_cell_1aea2453886dc54ec6ac6144acf4d95597" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -121,7 +121,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1787"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1794"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_cell_1a31e284841d67f24055f75a8685ff1f54" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -138,7 +138,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1789"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1796"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_cell_1ad6a147bc54129eb5f86cb523f66ef7cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -155,7 +155,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1790"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1797"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_cell_1a8e7610d45bb42625d8571389f10666b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -172,7 +172,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1791"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1798"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_cell_1aa45a537e70c9471541d8d8663bed6c66" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -190,7 +190,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1804"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1811"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_cell_1abcd054fbe2d8ce6802e23a574c67f244" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -207,7 +207,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1806"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1813"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_cell_1a89d13480d9c2ba5a05797eb16ea1cada" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -220,7 +220,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1808"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1815"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_cell_1a75f615d40c2c16523e6590a15f35fb69" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> &amp;</type>
@@ -233,7 +233,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1809"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1816"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_cell_1aa4e9e99475c999582fc4c029cdd6b928" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_colour" kindref="compound">wxColour</ref> &amp;</type>
@@ -246,7 +246,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1810"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1817"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_cell_1a9b8348e06b765d88c6facb209801caab" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_font" kindref="compound">wxFont</ref> &amp;</type>
@@ -259,7 +259,7 @@
 <para>If no specific font is set for this cell, then the font will be invalid. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1816"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1823"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_cell_1a1be55cf2fbba0f625279d3cdfce4f65a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_colour" kindref="compound">wxColour</ref> &amp;</type>
@@ -272,7 +272,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1818"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1825"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_cell_1a57259e40708d402bec61c65211649511" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_p_g_cell" kindref="compound">wxPGCell</ref> &amp;</type>
@@ -289,46 +289,46 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1820"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1827"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para>Base class for <ref refid="classwx_property_grid" kindref="compound">wxPropertyGrid</ref> cell information. </para>    </briefdescription>
     <detaileddescription>
 <para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxpropgrid" kindref="member">wxPropertyGrid</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__propgrid" kindref="compound">wxPropertyGrid</ref> </para>    </detaileddescription>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxpropgrid" kindref="member">wxPropertyGrid</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__propgrid" kindref="compound">wxPropertyGrid</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="8634">
+      <node id="8642">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="8633">
+      <node id="8641">
         <label>wxPGCell</label>
         <link refid="classwx_p_g_cell"/>
-        <childnode refid="8634" relation="public-inheritance">
+        <childnode refid="8642" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="8636">
+      <node id="8644">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="8637" relation="usage">
+        <childnode refid="8645" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="8635">
+      <node id="8643">
         <label>wxPGCell</label>
         <link refid="classwx_p_g_cell"/>
-        <childnode refid="8636" relation="public-inheritance">
+        <childnode refid="8644" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8637">
+      <node id="8645">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1766" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" bodystart="1765" bodyend="1821"/>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1773" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" bodystart="1772" bodyend="1828"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxPGCell</scope><name>AllocExclusive</name></member>
       <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxPGCell</scope><name>CloneRefData</name></member>

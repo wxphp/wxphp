@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_t_c_p_server" kind="class" prot="public">
     <compoundname>wxTCPServer</compoundname>
     <basecompoundref refid="classwx_object" prot="public" virt="non-virtual">wxObject</basecompoundref>
@@ -57,35 +57,35 @@
 <para>A <ref refid="classwx_t_c_p_server" kindref="compound">wxTCPServer</ref> object represents the server part of a client-server conversation. </para>    </briefdescription>
     <detaileddescription>
 <para>It emulates a DDE-style protocol, but uses TCP/IP which is available on most platforms.</para><para>A DDE-based implementation for Windows is available using <ref refid="classwx_d_d_e_server" kindref="compound">wxDDEServer</ref>.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxnet" kindref="member">wxNet</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__net" kindref="compound">Networking</ref></para><para><simplesect kind="see"><para><ref refid="classwx_t_c_p_client" kindref="compound">wxTCPClient</ref>, <ref refid="classwx_t_c_p_connection" kindref="compound">wxTCPConnection</ref>, <ref refid="overview__ipc" kindref="compound">Interprocess Communication</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxnet" kindref="member">wxNet</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__net" kindref="compound">Networking</ref></para><para><simplesect kind="see"><para><ref refid="classwx_t_c_p_client" kindref="compound">wxTCPClient</ref>, <ref refid="classwx_t_c_p_connection" kindref="compound">wxTCPConnection</ref>, <ref refid="overview_ipc" kindref="compound">Interprocess Communication</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10667">
+      <node id="10727">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="10666">
+      <node id="10726">
         <label>wxTCPServer</label>
         <link refid="classwx_t_c_p_server"/>
-        <childnode refid="10667" relation="public-inheritance">
+        <childnode refid="10727" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10669">
+      <node id="10729">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="10670" relation="usage">
+        <childnode refid="10730" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="10668">
+      <node id="10728">
         <label>wxTCPServer</label>
         <link refid="classwx_t_c_p_server"/>
-        <childnode refid="10669" relation="public-inheritance">
+        <childnode refid="10729" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10670">
+      <node id="10730">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

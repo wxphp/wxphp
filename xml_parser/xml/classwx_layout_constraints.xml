@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_layout_constraints" kind="class" prot="public">
     <compoundname>wxLayoutConstraints</compoundname>
     <basecompoundref refid="classwx_object" prot="public" virt="non-virtual">wxObject</basecompoundref>
@@ -177,37 +177,37 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="7388">
+      <node id="7392">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="7387">
+      <node id="7391">
         <label>wxLayoutConstraints</label>
         <link refid="classwx_layout_constraints"/>
-        <childnode refid="7388" relation="public-inheritance">
+        <childnode refid="7392" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7390">
+      <node id="7394">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="7391" relation="usage">
+        <childnode refid="7395" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="7392">
+      <node id="7396">
         <label>wxIndividualLayoutConstraint</label>
         <link refid="classwx_individual_layout_constraint"/>
-        <childnode refid="7390" relation="public-inheritance">
+        <childnode refid="7394" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7389">
+      <node id="7393">
         <label>wxLayoutConstraints</label>
         <link refid="classwx_layout_constraints"/>
-        <childnode refid="7390" relation="public-inheritance">
+        <childnode refid="7394" relation="public-inheritance">
         </childnode>
-        <childnode refid="7392" relation="usage">
+        <childnode refid="7396" relation="usage">
           <edgelabel>width</edgelabel>
           <edgelabel>right</edgelabel>
           <edgelabel>height</edgelabel>
@@ -218,7 +218,7 @@
           <edgelabel>top</edgelabel>
         </childnode>
       </node>
-      <node id="7391">
+      <node id="7395">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

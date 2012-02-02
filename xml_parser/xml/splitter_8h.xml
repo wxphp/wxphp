@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="splitter_8h" kind="file">
     <compoundname>splitter.h</compoundname>
     <innerclass refid="classwx_splitter_window" prot="public">wxSplitterWindow</innerclass>
@@ -142,23 +142,23 @@
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/splitter.h" line="23" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/splitter.h" bodystart="22" bodyend="26"/>
       </memberdef>
-      <memberdef kind="enum" id="splitter_8h_1a6b7b47dd702d9e331586d485013fd1ea" prot="public" static="no">
-        <name>@18</name>
-        <enumvalue id="splitter_8h_1a6b7b47dd702d9e331586d485013fd1eaa0104a81dc27fa395227f9c44bd82b57c" prot="public">
+      <memberdef kind="enum" id="splitter_8h_1aae05225933a42f81e7c4a9fb286596f9" prot="public" static="no">
+        <name>@21</name>
+        <enumvalue id="splitter_8h_1aae05225933a42f81e7c4a9fb286596f9a0104a81dc27fa395227f9c44bd82b57c" prot="public">
           <name>wxSPLIT_DRAG_NONE</name>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="splitter_8h_1a6b7b47dd702d9e331586d485013fd1eaa6b4b071477f4bd0ae3947979a5ff8ddf" prot="public">
+        <enumvalue id="splitter_8h_1aae05225933a42f81e7c4a9fb286596f9a6b4b071477f4bd0ae3947979a5ff8ddf" prot="public">
           <name>wxSPLIT_DRAG_DRAGGING</name>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="splitter_8h_1a6b7b47dd702d9e331586d485013fd1eaa37a3bfa6b9346a107e91d650f74cf3da" prot="public">
+        <enumvalue id="splitter_8h_1aae05225933a42f81e7c4a9fb286596f9a37a3bfa6b9346a107e91d650f74cf3da" prot="public">
           <name>wxSPLIT_DRAG_LEFT_DOWN</name>
           <briefdescription>
           </briefdescription>

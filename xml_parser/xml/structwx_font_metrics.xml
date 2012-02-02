@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="structwx_font_metrics" kind="struct" prot="public">
     <compoundname>wxFontMetrics</compoundname>
     <includes local="no">wx/dc.h</includes>
@@ -103,7 +103,7 @@
     <detaileddescription>
 <para>This object is returned by <ref refid="classwx_d_c_1a017ad82379a6e52d6b2ba1d212b65950" kindref="member">wxDC::GetFontMetrics()</ref>.</para><para><simplesect kind="since"><para>2.9.2</para></simplesect>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__dc" kindref="compound">Device Contexts</ref>, <ref refid="group__group__class__gdi" kindref="compound">Graphics Device Interface (GDI)</ref> </para>    </detaileddescription>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__dc" kindref="compound">Device Contexts</ref>, <ref refid="group__group__class__gdi" kindref="compound">Graphics Device Interface (GDI)</ref> </para>    </detaileddescription>
     <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="93" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" bodystart="92" bodyend="103"/>
     <listofallmembers>
       <member refid="structwx_font_metrics_1a9533aac68b8db86e4d1b0752edd4af6e" prot="public" virt="non-virtual"><scope>wxFontMetrics</scope><name>ascent</name></member>

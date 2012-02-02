@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="overview_rtti" kind="page">
+    <compoundname>overview_rtti</compoundname>
+    <title>Runtime Type Information (RTTI)</title>
+    <detaileddescription>
+<para><itemizedlist>
+<listitem><para><ref refid="overview_rtti_1overview_rtti_intro" kindref="member">Introduction</ref> </para></listitem>
+<listitem><para><ref refid="overview_rtti_1overview_rtti_classinfo" kindref="member">wxClassInfo</ref> </para></listitem>
+<listitem><para><ref refid="overview_rtti_1overview_rtti_example" kindref="member">Example</ref></para></listitem>
+</itemizedlist>
+<simplesect kind="see"><para></para></simplesect>
+<itemizedlist>
+<listitem><para><ref refid="classwx_object" kindref="compound">wxObject</ref> </para></listitem>
+<listitem><para><ref refid="classwx_class_info" kindref="compound">wxClassInfo</ref></para></listitem>
+</itemizedlist>
+<hruler/>
+</para><sect1 id="overview_rtti_1overview_rtti_intro">
+<title>Introduction</title>
+<para>One of the failings of C++ used to be that no runtime information was provided about a class and its position in the inheritance hierarchy. Another, which still persists, is that instances of a class cannot be created just by knowing the name of a class, which makes facilities such as persistent storage hard to implement.</para><para>Most C++ GUI frameworks overcome these limitations by means of a set of macros and functions and wxWidgets is no exception. As it originated before the addition of RTTI to the C++ standard and as support for it is still missing from some (albeit old) compilers, wxWidgets doesn&apos;t (yet) use it, but provides its own macro-based RTTI system.</para><para>In the future, the standard C++ RTTI will be used though and you&apos;re encouraged to use whenever possible the wxDynamicCast macro which, for the implementations that support it, is defined just as dynamic_cast and uses wxWidgets RTTI for all the others. This macro is limited to wxWidgets classes only and only works with pointers (unlike the real dynamic_cast which also accepts references).</para><para>Each class that you wish to be known to the type system should have a macro such as DECLARE_DYNAMIC_CLASS just inside the class declaration. The macro IMPLEMENT_DYNAMIC_CLASS should be in the implementation file. Note that these are entirely optional; use them if you wish to check object types, or create instances of classes using the class name. However, it is good to get into the habit of adding these macros for all classes.</para><para>Variations on these macros are used for multiple inheritance, and abstract classes that cannot be instantiated dynamically or otherwise.</para><para>DECLARE_DYNAMIC_CLASS inserts a static <ref refid="classwx_class_info" kindref="compound">wxClassInfo</ref> declaration into the class, initialized by IMPLEMENT_DYNAMIC_CLASS. When initialized, the <ref refid="classwx_class_info" kindref="compound">wxClassInfo</ref> object inserts itself into a linked list (accessed through wxClassInfo::first and wxClassInfo::next pointers). The linked list is fully created by the time all global initialisation is done.</para><para>IMPLEMENT_DYNAMIC_CLASS is a macro that not only initialises the static <ref refid="classwx_class_info" kindref="compound">wxClassInfo</ref> member, but defines a global function capable of creating a dynamic object of the class in question. A pointer to this function is stored in <ref refid="classwx_class_info" kindref="compound">wxClassInfo</ref>, and is used when an object should be created dynamically.</para><para><ref refid="classwx_object_1af40d580385cf4f8112fae7713404b01e" kindref="member">wxObject::IsKindOf</ref> uses the linked list of <ref refid="classwx_class_info" kindref="compound">wxClassInfo</ref>. It takes a <ref refid="classwx_class_info" kindref="compound">wxClassInfo</ref> argument, so use CLASSINFO(className) to return an appropriate <ref refid="classwx_class_info" kindref="compound">wxClassInfo</ref> pointer to use in this function.</para><para>The function wxCreateDynamicObject can be used to construct a new object of a given type, by supplying a string name. If you have a pointer to the <ref refid="classwx_class_info" kindref="compound">wxClassInfo</ref> object instead, then you can simply call <ref refid="classwx_class_info_1a754a267b65cd7e2026e6a0beb22ff0a7" kindref="member">wxClassInfo::CreateObject</ref>.</para></sect1>
+<sect1 id="overview_rtti_1overview_rtti_classinfo">
+<title>wxClassInfo</title>
+<para>This class stores meta-information about classes. An application may use macros such as DECLARE_DYNAMIC_CLASS and IMPLEMENT_DYNAMIC_CLASS to record runtime information about a class, including:</para><para><itemizedlist>
+<listitem><para>Its position in the inheritance hierarchy. </para></listitem>
+<listitem><para>The base class name(s) (up to two base classes are permitted). </para></listitem>
+<listitem><para>A string representation of the class name. </para></listitem>
+<listitem><para>A function that can be called to construct an instance of this class.</para></listitem>
+</itemizedlist>
+The DECLARE_... macros declare a static <ref refid="classwx_class_info" kindref="compound">wxClassInfo</ref> variable in a class, which is initialized by macros of the form IMPLEMENT_... in the implementation C++ file. Classes whose instances may be constructed dynamically are given a global constructor function which returns a new object.</para><para>You can get the <ref refid="classwx_class_info" kindref="compound">wxClassInfo</ref> for a class by using the CLASSINFO macro, e.g. CLASSINFO(wxFrame). You can get the <ref refid="classwx_class_info" kindref="compound">wxClassInfo</ref> for an object using <ref refid="classwx_object_1ab3a0c6f723cbaddb47be4e8dd98cc8e2" kindref="member">wxObject::GetClassInfo</ref>.</para><para><simplesect kind="see"><para></para></simplesect>
+<itemizedlist>
+<listitem><para><ref refid="classwx_object" kindref="compound">wxObject</ref> </para></listitem>
+<listitem><para>wxCreateDynamicObject</para></listitem>
+</itemizedlist>
+</para></sect1>
+<sect1 id="overview_rtti_1overview_rtti_example">
+<title>Example</title>
+<para>In a header file <ref refid="frame_8h" kindref="compound">frame.h</ref>:</para><para><programlisting><codeline><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classwx_frame" kindref="compound" tooltip="A frame is a window whose size and position can (usually) be changed by the user.">wxFrame</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classwx_window" kindref="compound" tooltip="wxWindow is the base class for all windows and represents any visible object on screen.">wxWindow</ref></highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>DECLARE_DYNAMIC_CLASS(<ref refid="classwx_frame" kindref="compound" tooltip="A frame is a window whose size and position can (usually) be changed by the user.">wxFrame</ref>)</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">private:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change was actually the m...">wxString</ref><sp/>m_title;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">public:</highlight></codeline>
+<codeline><highlight class="normal">...</highlight></codeline>
+<codeline><highlight class="normal">};</highlight></codeline>
+</programlisting></para><para>In a C++ file frame.cpp:</para><para><programlisting><codeline><highlight class="normal">IMPLEMENT_DYNAMIC_CLASS(<ref refid="classwx_frame" kindref="compound" tooltip="A frame is a window whose size and position can (usually) be changed by the user.">wxFrame</ref>,<sp/><ref refid="classwx_window" kindref="compound" tooltip="wxWindow is the base class for all windows and represents any visible object on screen.">wxWindow</ref>)</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><ref refid="classwx_frame" kindref="compound" tooltip="A frame is a window whose size and position can (usually) be changed by the user.">wxFrame</ref>::<ref refid="classwx_frame" kindref="compound" tooltip="A frame is a window whose size and position can (usually) be changed by the user.">wxFrame</ref>()</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal">...</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> </para></sect1>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

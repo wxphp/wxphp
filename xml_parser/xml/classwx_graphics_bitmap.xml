@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_graphics_bitmap" kind="class" prot="public">
     <compoundname>wxGraphicsBitmap</compoundname>
     <basecompoundref refid="classwx_graphics_object" prot="public" virt="non-virtual">wxGraphicsObject</basecompoundref>
@@ -38,44 +38,44 @@
     <detaileddescription>
 <para>The objects of this class are not created directly but only via <ref refid="classwx_graphics_context" kindref="compound">wxGraphicsContext</ref> or <ref refid="classwx_graphics_renderer" kindref="compound">wxGraphicsRenderer</ref> CreateBitmap(), CreateBitmapFromImage() or CreateSubBitmap() methods. They can subsequently be used with <ref refid="classwx_graphics_context_1aee61e2fbc580d7f6a344daa1d1e13296" kindref="member">wxGraphicsContext::DrawBitmap()</ref>. The only other operation is testing for the bitmap validity which can be performed using <ref refid="classwx_graphics_object_1ada13da4f78271792792050132965777d" kindref="member">IsNull()</ref> method inherited from the base class. </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="6553">
+      <node id="6557">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="6551">
+      <node id="6555">
         <label>wxGraphicsBitmap</label>
         <link refid="classwx_graphics_bitmap"/>
-        <childnode refid="6552" relation="public-inheritance">
+        <childnode refid="6556" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6552">
+      <node id="6556">
         <label>wxGraphicsObject</label>
         <link refid="classwx_graphics_object"/>
-        <childnode refid="6553" relation="public-inheritance">
+        <childnode refid="6557" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="6556">
+      <node id="6560">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="6557" relation="usage">
+        <childnode refid="6561" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="6554">
+      <node id="6558">
         <label>wxGraphicsBitmap</label>
         <link refid="classwx_graphics_bitmap"/>
-        <childnode refid="6555" relation="public-inheritance">
+        <childnode refid="6559" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6555">
+      <node id="6559">
         <label>wxGraphicsObject</label>
         <link refid="classwx_graphics_object"/>
-        <childnode refid="6556" relation="public-inheritance">
+        <childnode refid="6560" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6557">
+      <node id="6561">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

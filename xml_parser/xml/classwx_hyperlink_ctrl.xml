@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_hyperlink_ctrl" kind="class" prot="public">
     <compoundname>wxHyperlinkCtrl</compoundname>
     <basecompoundref refid="classwx_control" prot="public" virt="non-virtual">wxControl</basecompoundref>
@@ -328,83 +328,83 @@
 <listitem><para>EVT_HYPERLINK(id,  func): The hyperlink was (left) clicked. If this event is not handled in user&apos;s code (or it&apos;s skipped; see <ref refid="classwx_event_1a98eb20b76106f9a933c2eb3ee119f66c" kindref="member">wxEvent::Skip</ref>), then a call to wxLaunchDefaultBrowser is done with the hyperlink&apos;s URL. </para></listitem>
 </itemizedlist>
 Currently this class is implemented using native support in wxGTK and wxMSW (under Windows XP and later only) and a generic version is used by the other ports.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref> <htmlonly> &lt;br&gt;&lt;div&gt;&lt;span class=&apos;appearance&apos;&gt;Appearance:&lt;/span&gt;&lt;br&gt;&lt;table class=&apos;appearance&apos;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&apos;wxmsw/hyperlinkctrl.png&apos; alt=&apos;wxMSW appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxgtk/hyperlinkctrl.png&apos; alt=&apos;wxGTK appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxmac/hyperlinkctrl.png&apos; alt=&apos;wxMac appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;wxMSW appearance&lt;/td&gt;&lt;td&gt;wxGTK appearance&lt;/td&gt;&lt;td&gt;wxMac appearance&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt; </htmlonly></para><para><simplesect kind="see"><para><ref refid="classwx_u_r_l" kindref="compound">wxURL</ref>, <ref refid="classwx_hyperlink_event" kindref="compound">wxHyperlinkEvent</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref> <htmlonly> &lt;br&gt;&lt;div&gt;&lt;span class=&apos;appearance&apos;&gt;Appearance:&lt;/span&gt;&lt;br&gt;&lt;table class=&apos;appearance&apos;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&apos;wxmsw/hyperlinkctrl.png&apos; alt=&apos;wxMSW appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxgtk/hyperlinkctrl.png&apos; alt=&apos;wxGTK appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxmac/hyperlinkctrl.png&apos; alt=&apos;wxMac appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;wxMSW appearance&lt;/td&gt;&lt;td&gt;wxGTK appearance&lt;/td&gt;&lt;td&gt;wxMac appearance&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt; </htmlonly></para><para><simplesect kind="see"><para><ref refid="classwx_u_r_l" kindref="compound">wxURL</ref>, <ref refid="classwx_hyperlink_event" kindref="compound">wxHyperlinkEvent</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7188">
+      <node id="7192">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="7187">
+      <node id="7191">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="7188" relation="public-inheritance">
+        <childnode refid="7192" relation="public-inheritance">
         </childnode>
+        <childnode refid="7193" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7193">
+        <label>wxTrackable</label>
+        <link refid="classwx_trackable"/>
+      </node>
+      <node id="7188">
+        <label>wxHyperlinkCtrl</label>
+        <link refid="classwx_hyperlink_ctrl"/>
         <childnode refid="7189" relation="public-inheritance">
         </childnode>
       </node>
       <node id="7189">
-        <label>wxTrackable</label>
-        <link refid="classwx_trackable"/>
-      </node>
-      <node id="7184">
-        <label>wxHyperlinkCtrl</label>
-        <link refid="classwx_hyperlink_ctrl"/>
-        <childnode refid="7185" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="7185">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="7186" relation="public-inheritance">
+        <childnode refid="7190" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7186">
+      <node id="7190">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="7187" relation="public-inheritance">
+        <childnode refid="7191" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7194">
+      <node id="7198">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="7195" relation="usage">
+        <childnode refid="7199" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="7193">
+      <node id="7197">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="7194" relation="public-inheritance">
+        <childnode refid="7198" relation="public-inheritance">
         </childnode>
+        <childnode refid="7200" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7200">
+        <label>wxTrackable</label>
+        <link refid="classwx_trackable"/>
+      </node>
+      <node id="7194">
+        <label>wxHyperlinkCtrl</label>
+        <link refid="classwx_hyperlink_ctrl"/>
+        <childnode refid="7195" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7195">
+        <label>wxControl</label>
+        <link refid="classwx_control"/>
         <childnode refid="7196" relation="public-inheritance">
         </childnode>
       </node>
       <node id="7196">
-        <label>wxTrackable</label>
-        <link refid="classwx_trackable"/>
-      </node>
-      <node id="7190">
-        <label>wxHyperlinkCtrl</label>
-        <link refid="classwx_hyperlink_ctrl"/>
-        <childnode refid="7191" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="7191">
-        <label>wxControl</label>
-        <link refid="classwx_control"/>
-        <childnode refid="7192" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="7192">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="7193" relation="public-inheritance">
+        <childnode refid="7197" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7195">
+      <node id="7199">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

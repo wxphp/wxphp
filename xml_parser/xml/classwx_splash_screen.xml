@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_splash_screen" kind="class" prot="public">
     <compoundname>wxSplashScreen</compoundname>
     <basecompoundref refid="classwx_frame" prot="public" virt="non-virtual">wxFrame</basecompoundref>
@@ -128,116 +128,116 @@
     <briefdescription>
 <para><ref refid="classwx_splash_screen" kindref="compound">wxSplashScreen</ref> shows a window with a thin border, displaying a bitmap describing your application. </para>    </briefdescription>
     <detaileddescription>
-<para>Show it in application initialisation, and then either explicitly destroy it or let it time-out.</para><para>Example usage:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_bitmap" kindref="compound" tooltip="This class encapsulates the concept of a platform-dependent bitmap, either monochrome...">wxBitmap</ref><sp/>bitmap;</highlight></codeline>
+<para>Show it in application initialisation, and then either explicitly destroy it or let it time-out.</para><para>Example usage:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_bitmap" kindref="compound" tooltip="This class encapsulates the concept of a platform-dependent bitmap, either monochrome or colour or co...">wxBitmap</ref><sp/>bitmap;</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(bitmap.<ref refid="classwx_bitmap_1ab4d271d200338e9274cebfee474fbd7f" kindref="member" tooltip="Loads a bitmap from a file or resource.">LoadFile</ref>(</highlight><highlight class="stringliteral">&quot;splash16.png&quot;</highlight><highlight class="normal">,<sp/><ref refid="gdicmn_8h_1a90a1eb6d85b5044a99b706fd979f27f5a1640e623b6d19cc731b6e1d1dddbb799" kindref="member">wxBITMAP_TYPE_PNG</ref>))</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_splash_screen" kindref="compound" tooltip="wxSplashScreen shows a window with a thin border, displaying a bitmap describing...">wxSplashScreen</ref>*<sp/>splash<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classwx_splash_screen_1a05a1d1af1dac400c659d41bd033d8566" kindref="member" tooltip="Construct the splash screen passing a bitmap, a style, a timeout, a window id, optional...">wxSplashScreen</ref>(bitmap,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_splash_screen" kindref="compound" tooltip="wxSplashScreen shows a window with a thin border, displaying a bitmap describing your application...">wxSplashScreen</ref>*<sp/>splash<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classwx_splash_screen_1a05a1d1af1dac400c659d41bd033d8566" kindref="member" tooltip="Construct the splash screen passing a bitmap, a style, a timeout, a window id, optional position and ...">wxSplashScreen</ref>(bitmap,</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wxSPLASH_CENTRE_ON_SCREEN|wxSPLASH_TIMEOUT,</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>6000,<sp/>NULL,<sp/>-1,<sp/><ref refid="gdicmn_8h_1af5a90c753eaf3d3e3e5068a19ec3c1d0" kindref="member" tooltip="Global instance of a wxPoint initialized with values (-1,-1).">wxDefaultPosition</ref>,<sp/><ref refid="gdicmn_8h_1a33a012cdb075e9f78c93f63bec2dc27b" kindref="member" tooltip="Global instance of a wxSize object initialized to (-1,-1).">wxDefaultSize</ref>,</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="defs_8h_1af63c94dff4e3f25a3c5e9d2874456edfafdbaa6eeb6e9b2e80c2ed9c810972721" kindref="member">wxBORDER_SIMPLE</ref>|<ref refid="defs_8h_1a789db2fe465af455e29014cc6f7c0114" kindref="member" tooltip="Top level window styles common to wxFrame and wxDialog.">wxSTAY_ON_TOP</ref>);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__appinitterm_1gac386c89a04e364afc07edce6d848c27a" kindref="member" tooltip="Calls wxAppConsole::Yield.">wxYield</ref>();</highlight></codeline>
 </programlisting></para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__managedwnd" kindref="compound">Managed Windows</ref> </para>    </detaileddescription>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__managedwnd" kindref="compound">Managed Windows</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10341">
+      <node id="10401">
         <label>wxNonOwnedWindow</label>
         <link refid="classwx_non_owned_window"/>
-        <childnode refid="10342" relation="public-inheritance">
+        <childnode refid="10402" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10344">
+      <node id="10404">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="10343">
+      <node id="10403">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="10344" relation="public-inheritance">
+        <childnode refid="10404" relation="public-inheritance">
         </childnode>
-        <childnode refid="10345" relation="public-inheritance">
+        <childnode refid="10405" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10345">
+      <node id="10405">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="10342">
+      <node id="10402">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="10343" relation="public-inheritance">
+        <childnode refid="10403" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10339">
+      <node id="10399">
         <label>wxFrame</label>
         <link refid="classwx_frame"/>
-        <childnode refid="10340" relation="public-inheritance">
+        <childnode refid="10400" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10340">
+      <node id="10400">
         <label>wxTopLevelWindow</label>
         <link refid="classwx_top_level_window"/>
-        <childnode refid="10341" relation="public-inheritance">
+        <childnode refid="10401" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10338">
+      <node id="10398">
         <label>wxSplashScreen</label>
         <link refid="classwx_splash_screen"/>
-        <childnode refid="10339" relation="public-inheritance">
+        <childnode refid="10399" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10349">
+      <node id="10409">
         <label>wxNonOwnedWindow</label>
         <link refid="classwx_non_owned_window"/>
-        <childnode refid="10350" relation="public-inheritance">
+        <childnode refid="10410" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10352">
+      <node id="10412">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="10353" relation="usage">
+        <childnode refid="10413" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="10351">
+      <node id="10411">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="10352" relation="public-inheritance">
+        <childnode refid="10412" relation="public-inheritance">
         </childnode>
-        <childnode refid="10354" relation="public-inheritance">
+        <childnode refid="10414" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10354">
+      <node id="10414">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="10350">
+      <node id="10410">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="10351" relation="public-inheritance">
+        <childnode refid="10411" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10347">
+      <node id="10407">
         <label>wxFrame</label>
         <link refid="classwx_frame"/>
-        <childnode refid="10348" relation="public-inheritance">
+        <childnode refid="10408" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10348">
+      <node id="10408">
         <label>wxTopLevelWindow</label>
         <link refid="classwx_top_level_window"/>
-        <childnode refid="10349" relation="public-inheritance">
+        <childnode refid="10409" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10346">
+      <node id="10406">
         <label>wxSplashScreen</label>
         <link refid="classwx_splash_screen"/>
-        <childnode refid="10347" relation="public-inheritance">
+        <childnode refid="10407" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10353">
+      <node id="10413">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
@@ -553,6 +553,7 @@
       <member refid="classwx_window_1a81f23590239934fa10fded0566a65d8c" prot="public" virt="non-virtual"><scope>wxSplashScreen</scope><name>SetPosition</name></member>
       <member refid="classwx_window_1a07f5f7ed3f78e0ef7b3dee3f4da81001" prot="public" virt="virtual"><scope>wxSplashScreen</scope><name>SetPreviousHandler</name></member>
       <member refid="classwx_object_1afab780710f2adc1bb33310e27590140b" prot="public" virt="non-virtual"><scope>wxSplashScreen</scope><name>SetRefData</name></member>
+      <member refid="classwx_top_level_window_1a82afa6f09dd5faef6330807ef59374e8" prot="public" virt="virtual"><scope>wxSplashScreen</scope><name>SetRepresentedFilename</name></member>
       <member refid="classwx_top_level_window_1a98e95b1b10f44b80f9b29a03ab09a879" prot="public" virt="non-virtual"><scope>wxSplashScreen</scope><name>SetRightMenu</name></member>
       <member refid="classwx_window_1aa842d59529f873683e55cd8392ec46e9" prot="public" virt="virtual"><scope>wxSplashScreen</scope><name>SetScrollbar</name></member>
       <member refid="classwx_window_1afbf4dc9064cf70cfe6884554b97a27bf" prot="public" virt="virtual"><scope>wxSplashScreen</scope><name>SetScrollPos</name></member>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_stream_to_text_redirector" kind="class" prot="public">
     <compoundname>wxStreamToTextRedirector</compoundname>
     <includes local="no">wx/textctrl.h</includes>
@@ -38,7 +38,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="1575"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="1577"/>
       </memberdef>
       <memberdef kind="function" id="classwx_stream_to_text_redirector_1a7e2cac14100ba43aea4acee1a747854c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -51,7 +51,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="1582"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="1584"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -61,7 +61,7 @@
 Example of usage:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std;</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_text_ctrl" kindref="compound" tooltip="A text control allows text to be displayed and edited.">wxTextCtrl</ref>*<sp/>text<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classwx_text_ctrl" kindref="compound" tooltip="A text control allows text to be displayed and edited.">wxTextCtrl</ref>(...);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_stream_to_text_redirector" kindref="compound" tooltip="This class can be used to (temporarily) redirect all output sent to a C++ ostream...">wxStreamToTextRedirector</ref><sp/>redirect(text);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_stream_to_text_redirector" kindref="compound" tooltip="This class can be used to (temporarily) redirect all output sent to a C++ ostream object to a wxTextC...">wxStreamToTextRedirector</ref><sp/>redirect(text);</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>this<sp/>goes<sp/>to<sp/>the<sp/>text<sp/>control</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Hello,<sp/>text!&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
@@ -69,9 +69,9 @@ Example of usage:</para><para><programlisting><codeline><highlight class="normal
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>this<sp/>goes<sp/>somewhere<sp/>else,<sp/>presumably<sp/>to<sp/>stdout</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Hello,<sp/>console!&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
 </programlisting></para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__logging" kindref="compound">Logging</ref></para><para><simplesect kind="see"><para><ref refid="classwx_text_ctrl" kindref="compound">wxTextCtrl</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__logging" kindref="compound">Logging</ref></para><para><simplesect kind="see"><para><ref refid="classwx_text_ctrl" kindref="compound">wxTextCtrl</ref> </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="1564" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" bodystart="1563" bodyend="1583"/>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="1566" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" bodystart="1565" bodyend="1585"/>
     <listofallmembers>
       <member refid="classwx_stream_to_text_redirector_1aaf6717267c8638d0ade7fe5ae143cae0" prot="public" virt="non-virtual"><scope>wxStreamToTextRedirector</scope><name>wxStreamToTextRedirector</name></member>
       <member refid="classwx_stream_to_text_redirector_1a7e2cac14100ba43aea4acee1a747854c" prot="public" virt="non-virtual"><scope>wxStreamToTextRedirector</scope><name>~wxStreamToTextRedirector</name></member>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_sizer" kind="class" prot="public">
     <compoundname>wxSizer</compoundname>
     <basecompoundref refid="classwx_object" prot="public" virt="non-virtual">wxObject</basecompoundref>
@@ -7,7 +7,6 @@
     <derivedcompoundref refid="classwx_grid_sizer" prot="public" virt="non-virtual">wxGridSizer</derivedcompoundref>
     <includes local="no">wx/sizer.h</includes>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_sizer_1a619f8bd8f4fd641819626813b1c1f576" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>wxSizerItemList &amp;</type>
         <definition>wxSizerItemList&amp; wxSizer::GetChildren</definition>
@@ -36,7 +35,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_sizer_1a26fc90231667639d5af7c2f8f7b75c80" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
         <definition>bool wxSizer::SetItemMinSize</definition>
@@ -1541,7 +1539,7 @@
         <briefdescription>
 <para>Removes a child window from the sizer, but does <bold>not</bold> destroy it (because windows are owned by their parent window, not the sizer). </para>        </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000048"><xreftitle>Deprecated</xreftitle><xrefdescription><para>The overload of this method taking a wxWindow* parameter is deprecated as it does not destroy the window as would usually be expected from <ref refid="classwx_sizer_1a06ef74a0bb6aba1f1d3aab02fb402fec" kindref="member">Remove()</ref>. You should use <ref refid="classwx_sizer_1a362d7d556185fe9cd1b5d24004b86518" kindref="member">Detach()</ref> in new code instead. There is currently no <ref refid="classwx_sizer" kindref="compound">wxSizer</ref> method that will both detach and destroy a <ref refid="classwx_window" kindref="compound">wxWindow</ref> item.</para></xrefdescription></xrefsect><simplesect kind="note"><para>This method does not cause any layout or resizing to take place, call <ref refid="classwx_sizer_1a1ea8589882944f8ac78b6ff8abde1554" kindref="member">Layout()</ref> to update the layout &quot;on screen&quot; after removing a child from the sizer.</para></simplesect>
+<para><xrefsect id="deprecated_1_deprecated000048"><xreftitle>Deprecated</xreftitle><xrefdescription><para>The overload of this method taking a wxWindow* parameter is deprecated as it does not destroy the window as would usually be expected from <ref refid="classwx_sizer_1a06ef74a0bb6aba1f1d3aab02fb402fec" kindref="member">Remove()</ref>. You should use <ref refid="classwx_sizer_1a362d7d556185fe9cd1b5d24004b86518" kindref="member">Detach()</ref> in new code instead. There is currently no <ref refid="classwx_sizer" kindref="compound">wxSizer</ref> method that will both detach and destroy a <ref refid="classwx_window" kindref="compound">wxWindow</ref> item.</para></xrefdescription></xrefsect></para><para><simplesect kind="note"><para>This method does not cause any layout or resizing to take place, call <ref refid="classwx_sizer_1a1ea8589882944f8ac78b6ff8abde1554" kindref="member">Layout()</ref> to update the layout &quot;on screen&quot; after removing a child from the sizer.</para></simplesect>
 <simplesect kind="return"><para>true if the child item was found and removed, false otherwise. </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
@@ -1792,7 +1790,7 @@
         <briefdescription>
 <para>Tell the sizer to set the minimal size of the <emphasis>window</emphasis> virtual area to match the sizer&apos;s minimal size. </para>        </briefdescription>
         <detaileddescription>
-<para>For windows with managed scrollbars this will set them appropriately.</para><para><xrefsect id="deprecated_1_deprecated000049"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This is exactly the same as <ref refid="classwx_sizer_1a37904ed600fd389345295ff89aa09fdc" kindref="member">FitInside()</ref> in wxWidgets 2.9 and later, please replace calls to it with <ref refid="classwx_sizer_1a37904ed600fd389345295ff89aa09fdc" kindref="member">FitInside()</ref>.</para></xrefdescription></xrefsect><simplesect kind="see"><para><ref refid="classwx_scrolled_1af5d940f364bb5097f20fee4a8e1210bb" kindref="member">wxScrolled::SetScrollbars()</ref> </para></simplesect>
+<para>For windows with managed scrollbars this will set them appropriately.</para><para><xrefsect id="deprecated_1_deprecated000049"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This is exactly the same as <ref refid="classwx_sizer_1a37904ed600fd389345295ff89aa09fdc" kindref="member">FitInside()</ref> in wxWidgets 2.9 and later, please replace calls to it with <ref refid="classwx_sizer_1a37904ed600fd389345295ff89aa09fdc" kindref="member">FitInside()</ref>.</para></xrefdescription></xrefsect></para><para><simplesect kind="see"><para><ref refid="classwx_scrolled_1af5d940f364bb5097f20fee4a8e1210bb" kindref="member">wxScrolled::SetScrollbars()</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -1910,78 +1908,78 @@
  wxALIGN_CENTRE_HORIZONTAL </para></entry><entry thead="no"><para>The <computeroutput>wxALIGN_*</computeroutput> flags allow you to specify the alignment of the item within the space allotted to it by the sizer, adjusted for the border if any. </para></entry></row>
 </table>
 </para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__winlayout" kindref="compound">Window Layout</ref></para><para><simplesect kind="see"><para><ref refid="overview__sizer" kindref="compound">Sizers Overview</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__winlayout" kindref="compound">Window Layout</ref></para><para><simplesect kind="see"><para><ref refid="overview_sizer" kindref="compound">Sizers Overview</ref> </para></simplesect>
 </para></sect1>
     </detaileddescription>
     <inheritancegraph>
-      <node id="10179">
+      <node id="10239">
         <label>wxWrapSizer</label>
         <link refid="classwx_wrap_sizer"/>
-        <childnode refid="10176" relation="public-inheritance">
+        <childnode refid="10236" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10181">
+      <node id="10241">
         <label>wxFlexGridSizer</label>
         <link refid="classwx_flex_grid_sizer"/>
-        <childnode refid="10180" relation="public-inheritance">
+        <childnode refid="10240" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10175">
+      <node id="10235">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="10182">
+      <node id="10242">
         <label>wxGridBagSizer</label>
         <link refid="classwx_grid_bag_sizer"/>
-        <childnode refid="10181" relation="public-inheritance">
+        <childnode refid="10241" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10178">
+      <node id="10238">
         <label>wxStdDialogButtonSizer</label>
         <link refid="classwx_std_dialog_button_sizer"/>
-        <childnode refid="10176" relation="public-inheritance">
+        <childnode refid="10236" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10177">
+      <node id="10237">
         <label>wxStaticBoxSizer</label>
         <link refid="classwx_static_box_sizer"/>
-        <childnode refid="10176" relation="public-inheritance">
+        <childnode refid="10236" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10176">
+      <node id="10236">
         <label>wxBoxSizer</label>
         <link refid="classwx_box_sizer"/>
-        <childnode refid="10174" relation="public-inheritance">
+        <childnode refid="10234" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10174">
+      <node id="10234">
         <label>wxSizer</label>
         <link refid="classwx_sizer"/>
-        <childnode refid="10175" relation="public-inheritance">
+        <childnode refid="10235" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10180">
+      <node id="10240">
         <label>wxGridSizer</label>
         <link refid="classwx_grid_sizer"/>
-        <childnode refid="10174" relation="public-inheritance">
+        <childnode refid="10234" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10184">
+      <node id="10244">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="10185" relation="usage">
+        <childnode refid="10245" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="10183">
+      <node id="10243">
         <label>wxSizer</label>
         <link refid="classwx_sizer"/>
-        <childnode refid="10184" relation="public-inheritance">
+        <childnode refid="10244" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10185">
+      <node id="10245">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

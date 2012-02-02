@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_i_paddress" kind="class" prot="public">
     <compoundname>wxIPaddress</compoundname>
     <basecompoundref refid="classwx_sock_address" prot="public" virt="non-virtual">wxSockAddress</basecompoundref>
@@ -168,37 +168,16 @@
 <para><ref refid="classwx_i_paddress" kindref="compound">wxIPaddress</ref> is an abstract base class for all internet protocol address objects. </para>    </briefdescription>
     <detaileddescription>
 <para>Currently, only <ref refid="classwx_i_p_v4address" kindref="compound">wxIPV4address</ref> is implemented. An experimental implementation for IPV6, wxIPV6address, is being developed.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__net" kindref="compound">Networking</ref> </para>    </detaileddescription>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__net" kindref="compound">Networking</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7314">
-        <label>wxObject</label>
-        <link refid="classwx_object"/>
-      </node>
-      <node id="7315">
-        <label>wxIPV4address</label>
-        <link refid="classwx_i_p_v4address"/>
-        <childnode refid="7312" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="7312">
-        <label>wxIPaddress</label>
-        <link refid="classwx_i_paddress"/>
-        <childnode refid="7313" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="7313">
-        <label>wxSockAddress</label>
-        <link refid="classwx_sock_address"/>
-        <childnode refid="7314" relation="public-inheritance">
-        </childnode>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
       <node id="7318">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="7319" relation="usage">
-          <edgelabel>m_refData</edgelabel>
+      </node>
+      <node id="7319">
+        <label>wxIPV4address</label>
+        <link refid="classwx_i_p_v4address"/>
+        <childnode refid="7316" relation="public-inheritance">
         </childnode>
       </node>
       <node id="7316">
@@ -213,7 +192,28 @@
         <childnode refid="7318" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7319">
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="7322">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="7323" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="7320">
+        <label>wxIPaddress</label>
+        <link refid="classwx_i_paddress"/>
+        <childnode refid="7321" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7321">
+        <label>wxSockAddress</label>
+        <link refid="classwx_sock_address"/>
+        <childnode refid="7322" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7323">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

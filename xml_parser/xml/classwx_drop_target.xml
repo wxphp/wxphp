@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_drop_target" kind="class" prot="public">
     <compoundname>wxDropTarget</compoundname>
     <derivedcompoundref refid="classwx_file_drop_target" prot="public" virt="non-virtual">wxFileDropTarget</derivedcompoundref>
@@ -245,23 +245,23 @@
 <para>This class represents a target for a drag and drop operation. </para>    </briefdescription>
     <detaileddescription>
 <para>A <ref refid="classwx_data_object" kindref="compound">wxDataObject</ref> can be associated with it and by default, this object will be filled with the data from the drag source, if the data formats supported by the data object match the drag source data format.</para><para>There are various virtual handler functions defined in this class which may be overridden to give visual feedback or react in a more fine-tuned way, e.g. by not accepting data on the whole window area, but only a small portion of it. The normal sequence of calls is <ref refid="classwx_drop_target_1a00de5f93c9d2ef8010ad8bd3475b623a" kindref="member">OnEnter()</ref>, <ref refid="classwx_drop_target_1a2b1ae4317f7079e811060e3745eb0601" kindref="member">OnDragOver()</ref> possibly many times, <ref refid="classwx_drop_target_1a3448cb9505b9dd3f064e9c5208d82ae1" kindref="member">OnDrop()</ref> and finally <ref refid="classwx_drop_target_1a5c27f66d59eb89ab7e014fd153ace093" kindref="member">OnData()</ref>.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__dnd" kindref="compound">Clipboard and Drag &amp; Drop</ref></para><para><simplesect kind="see"><para><ref refid="overview__dnd" kindref="compound">Drag and Drop Overview</ref>, <ref refid="overview__dataobject" kindref="compound">wxDataObject Overview</ref>, <ref refid="classwx_drop_source" kindref="compound">wxDropSource</ref>, <ref refid="classwx_text_drop_target" kindref="compound">wxTextDropTarget</ref>, <ref refid="classwx_file_drop_target" kindref="compound">wxFileDropTarget</ref>, <ref refid="classwx_data_format" kindref="compound">wxDataFormat</ref>, <ref refid="classwx_data_object" kindref="compound">wxDataObject</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__dnd" kindref="compound">Clipboard and Drag &amp; Drop</ref></para><para><simplesect kind="see"><para><ref refid="overview_dnd" kindref="compound">Drag and Drop Overview</ref>, <ref refid="overview_dataobject" kindref="compound">wxDataObject Overview</ref>, <ref refid="classwx_drop_source" kindref="compound">wxDropSource</ref>, <ref refid="classwx_text_drop_target" kindref="compound">wxTextDropTarget</ref>, <ref refid="classwx_file_drop_target" kindref="compound">wxFileDropTarget</ref>, <ref refid="classwx_data_format" kindref="compound">wxDataFormat</ref>, <ref refid="classwx_data_object" kindref="compound">wxDataObject</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="5790">
+      <node id="5794">
         <label>wxDropTarget</label>
         <link refid="classwx_drop_target"/>
       </node>
-      <node id="5791">
+      <node id="5795">
         <label>wxFileDropTarget</label>
         <link refid="classwx_file_drop_target"/>
-        <childnode refid="5790" relation="public-inheritance">
+        <childnode refid="5794" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5792">
+      <node id="5796">
         <label>wxTextDropTarget</label>
         <link refid="classwx_text_drop_target"/>
-        <childnode refid="5790" relation="public-inheritance">
+        <childnode refid="5794" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>

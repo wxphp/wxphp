@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_static_line" kind="class" prot="public">
     <compoundname>wxStaticLine</compoundname>
     <basecompoundref refid="classwx_control" prot="public" virt="non-virtual">wxControl</basecompoundref>
@@ -185,83 +185,83 @@
 <listitem><para>wxLI_VERTICAL: Creates a vertical line. </para></listitem>
 </itemizedlist>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref></para><para><simplesect kind="see"><para><ref refid="classwx_static_box" kindref="compound">wxStaticBox</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref></para><para><simplesect kind="see"><para><ref refid="classwx_static_box" kindref="compound">wxStaticBox</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10426">
+      <node id="10486">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="10425">
+      <node id="10485">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="10426" relation="public-inheritance">
+        <childnode refid="10486" relation="public-inheritance">
         </childnode>
-        <childnode refid="10427" relation="public-inheritance">
+        <childnode refid="10487" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10422">
+      <node id="10482">
         <label>wxStaticLine</label>
         <link refid="classwx_static_line"/>
-        <childnode refid="10423" relation="public-inheritance">
+        <childnode refid="10483" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10427">
+      <node id="10487">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="10423">
+      <node id="10483">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="10424" relation="public-inheritance">
+        <childnode refid="10484" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10424">
+      <node id="10484">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="10425" relation="public-inheritance">
+        <childnode refid="10485" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10432">
+      <node id="10492">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="10433" relation="usage">
+        <childnode refid="10493" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="10431">
+      <node id="10491">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="10432" relation="public-inheritance">
+        <childnode refid="10492" relation="public-inheritance">
         </childnode>
-        <childnode refid="10434" relation="public-inheritance">
+        <childnode refid="10494" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10428">
+      <node id="10488">
         <label>wxStaticLine</label>
         <link refid="classwx_static_line"/>
-        <childnode refid="10429" relation="public-inheritance">
+        <childnode refid="10489" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10434">
+      <node id="10494">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="10429">
+      <node id="10489">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="10430" relation="public-inheritance">
+        <childnode refid="10490" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10430">
+      <node id="10490">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="10431" relation="public-inheritance">
+        <childnode refid="10491" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10433">
+      <node id="10493">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

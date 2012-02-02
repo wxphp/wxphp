@@ -1,12 +1,11 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_v_list_box" kind="class" prot="public">
     <compoundname>wxVListBox</compoundname>
     <basecompoundref refid="classwx_v_scrolled_window" prot="public" virt="non-virtual">wxVScrolledWindow</basecompoundref>
     <derivedcompoundref refid="classwx_html_list_box" prot="public" virt="non-virtual">wxHtmlListBox</derivedcompoundref>
     <includes local="no">wx/vlbox.h</includes>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_v_list_box_1aeabe37f2b1a1887f995c431eb5522921" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void wxVListBox::SetMargins</definition>
@@ -540,7 +539,7 @@ This method is only valid for multi selection listboxes.</para><para><simplesect
 <para>The index of the item to be drawn.</para></parameterdescription>
 </parameteritem>
 </parameterlist>
-<xrefsect id="todo_1_todo000062"><xreftitle>Todo</xreftitle><xrefdescription><para>Change this function signature to non-const. </para></xrefdescription></xrefsect></para>        </detaileddescription>
+<xrefsect id="todo_1_todo000061"><xreftitle>Todo</xreftitle><xrefdescription><para>Change this function signature to non-const. </para></xrefdescription></xrefsect></para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vlbox.h" line="298"/>
@@ -565,7 +564,7 @@ This method is only valid for multi selection listboxes.</para><para><simplesect
         <briefdescription>
 <para>This method is used to draw the items background and, maybe, a border around it. </para>        </briefdescription>
         <detaileddescription>
-<para>The base class version implements a reasonable default behaviour which consists in drawing the selected item with the standard background colour and drawing a border around the item if it is either selected or current.</para><para><xrefsect id="todo_1_todo000063"><xreftitle>Todo</xreftitle><xrefdescription><para>Change this function signature to non-const. </para></xrefdescription></xrefsect></para>        </detaileddescription>
+<para>The base class version implements a reasonable default behaviour which consists in drawing the selected item with the standard background colour and drawing a border around the item if it is either selected or current.</para><para><xrefsect id="todo_1_todo000062"><xreftitle>Todo</xreftitle><xrefdescription><para>Change this function signature to non-const. </para></xrefdescription></xrefsect></para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vlbox.h" line="311"/>
@@ -612,7 +611,7 @@ This method is only valid for multi selection listboxes.</para><para><simplesect
 <para>The index of the item.</para></parameterdescription>
 </parameteritem>
 </parameterlist>
-<xrefsect id="todo_1_todo000064"><xreftitle>Todo</xreftitle><xrefdescription><para>Change this function signature to non-const. </para></xrefdescription></xrefsect></para>        </detaileddescription>
+<xrefsect id="todo_1_todo000063"><xreftitle>Todo</xreftitle><xrefdescription><para>Change this function signature to non-const. </para></xrefdescription></xrefsect></para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vlbox.h" line="329"/>
@@ -639,137 +638,137 @@ This method is only valid for multi selection listboxes.</para><para><simplesect
 <para><ref refid="classwx_v_list_box" kindref="compound">wxVListBox</ref> is a wxListBox-like control with the following two main differences from a regular <ref refid="classwx_list_box" kindref="compound">wxListBox</ref>: it can have an arbitrarily huge number of items because it doesn&apos;t store them itself but uses the <ref refid="classwx_v_list_box_1aa3f4d4f5f0c9f00dd3e671334345b83b" kindref="member">OnDrawItem()</ref> callback to draw them (so it is a virtual listbox) and its items can have variable height as determined by <ref refid="classwx_v_list_box_1a25c651d397f60c62039dd89bd6f92152" kindref="member">OnMeasureItem()</ref> (so it is also a listbox with the lines of variable height). </para>    </briefdescription>
     <detaileddescription>
 <para>Also, as a consequence of its virtual nature, it doesn&apos;t have any methods to append or insert items in it as it isn&apos;t necessary to do it: you just have to call <ref refid="classwx_v_list_box_1a205615c79836dc7999d20e083a4a8ffb" kindref="member">SetItemCount()</ref> to tell the control how many items it should display. Of course, this also means that you will never use this class directly because it has pure virtual functions, but will need to derive your own class from it (for example, <ref refid="classwx_html_list_box" kindref="compound">wxHtmlListBox</ref>).</para><para>However it emits the same events as <ref refid="classwx_list_box" kindref="compound">wxListBox</ref> and the same event macros may be used with it. Since <ref refid="classwx_v_list_box" kindref="compound">wxVListBox</ref> does not store its items itself, the events will only contain the index, not any contents such as the string of an item.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref></para><para><simplesect kind="see"><para><ref refid="classwx_simple_html_list_box" kindref="compound">wxSimpleHtmlListBox</ref>, <ref refid="classwx_html_list_box" kindref="compound">wxHtmlListBox</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref></para><para><simplesect kind="see"><para><ref refid="classwx_simple_html_list_box" kindref="compound">wxSimpleHtmlListBox</ref>, <ref refid="classwx_html_list_box" kindref="compound">wxHtmlListBox</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="11324">
+      <node id="11385">
         <label>wxVarScrollHelperBase</label>
         <link refid="classwx_var_scroll_helper_base"/>
       </node>
-      <node id="11316">
+      <node id="11377">
         <label>wxVListBox</label>
         <link refid="classwx_v_list_box"/>
-        <childnode refid="11317" relation="public-inheritance">
+        <childnode refid="11378" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11321">
+      <node id="11382">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="11327">
+      <node id="11388">
         <label>wxSimpleHtmlListBox</label>
         <link refid="classwx_simple_html_list_box"/>
-        <childnode refid="11325" relation="public-inheritance">
+        <childnode refid="11386" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11317">
+      <node id="11378">
         <label>wxVScrolledWindow</label>
         <link refid="classwx_v_scrolled_window"/>
-        <childnode refid="11318" relation="public-inheritance">
+        <childnode refid="11379" relation="public-inheritance">
         </childnode>
-        <childnode refid="11323" relation="public-inheritance">
+        <childnode refid="11384" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11320">
+      <node id="11381">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="11321" relation="public-inheritance">
+        <childnode refid="11382" relation="public-inheritance">
         </childnode>
-        <childnode refid="11322" relation="public-inheritance">
+        <childnode refid="11383" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11318">
+      <node id="11379">
         <label>wxPanel</label>
         <link refid="classwx_panel"/>
-        <childnode refid="11319" relation="public-inheritance">
+        <childnode refid="11380" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11322">
+      <node id="11383">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="11326">
+      <node id="11387">
         <label>wxRichTextStyleListBox</label>
         <link refid="classwx_rich_text_style_list_box"/>
-        <childnode refid="11325" relation="public-inheritance">
+        <childnode refid="11386" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11319">
+      <node id="11380">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="11320" relation="public-inheritance">
+        <childnode refid="11381" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11325">
+      <node id="11386">
         <label>wxHtmlListBox</label>
         <link refid="classwx_html_list_box"/>
-        <childnode refid="11316" relation="public-inheritance">
+        <childnode refid="11377" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11323">
+      <node id="11384">
         <label>wxVarVScrollHelper</label>
         <link refid="classwx_var_v_scroll_helper"/>
-        <childnode refid="11324" relation="public-inheritance">
+        <childnode refid="11385" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="11337">
+      <node id="11398">
         <label>wxVarScrollHelperBase</label>
         <link refid="classwx_var_scroll_helper_base"/>
       </node>
-      <node id="11328">
+      <node id="11389">
         <label>wxVListBox</label>
         <link refid="classwx_v_list_box"/>
-        <childnode refid="11329" relation="public-inheritance">
+        <childnode refid="11390" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11333">
+      <node id="11394">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="11334" relation="usage">
+        <childnode refid="11395" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="11329">
+      <node id="11390">
         <label>wxVScrolledWindow</label>
         <link refid="classwx_v_scrolled_window"/>
-        <childnode refid="11330" relation="public-inheritance">
+        <childnode refid="11391" relation="public-inheritance">
         </childnode>
-        <childnode refid="11336" relation="public-inheritance">
+        <childnode refid="11397" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11332">
+      <node id="11393">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="11333" relation="public-inheritance">
+        <childnode refid="11394" relation="public-inheritance">
         </childnode>
-        <childnode refid="11335" relation="public-inheritance">
+        <childnode refid="11396" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11330">
+      <node id="11391">
         <label>wxPanel</label>
         <link refid="classwx_panel"/>
-        <childnode refid="11331" relation="public-inheritance">
+        <childnode refid="11392" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11335">
+      <node id="11396">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="11331">
+      <node id="11392">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="11332" relation="public-inheritance">
+        <childnode refid="11393" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11336">
+      <node id="11397">
         <label>wxVarVScrollHelper</label>
         <link refid="classwx_var_v_scroll_helper"/>
-        <childnode refid="11337" relation="public-inheritance">
+        <childnode refid="11398" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11334">
+      <node id="11395">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

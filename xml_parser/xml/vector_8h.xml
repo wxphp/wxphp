@@ -1,11 +1,10 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="vector_8h" kind="file">
     <compoundname>vector.h</compoundname>
     <innerclass refid="classwx_vector_3_01_t_01_4" prot="public">wxVector&lt; T &gt;</innerclass>
-    <innerclass refid="classwx_vector_3_01_t_01_4_1_1reverse__iterator" prot="public">wxVector&lt; T &gt;::reverse_iterator</innerclass>
       <sectiondef kind="func">
-      <memberdef kind="function" id="vector_8h_1a41dfc361588f2e2e8aa2bfcaa863e7ef" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="vector_8h_1a41dfc361588f2e2e8aa2bfcaa863e7ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
           <param>
             <type>typename T</type>
@@ -29,7 +28,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vector.h" line="266"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vector.h" line="241"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

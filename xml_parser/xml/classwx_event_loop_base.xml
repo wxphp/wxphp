@@ -1,11 +1,10 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_event_loop_base" kind="class" prot="public">
     <compoundname>wxEventLoopBase</compoundname>
     <includes local="no">wx/evtloop.h</includes>
       <sectiondef kind="user-defined">
       <header>Dispatch and processing</header>
-      <description><para><anchor id="_1amgrp91b3630419ab8e61a41549c1e4053b7c"/> </para></description>
       <memberdef kind="function" id="classwx_event_loop_base_1a391d73eec67c7c05308368ef1939b330" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>int</type>
         <definition>virtual int wxEventLoopBase::Run</definition>
@@ -136,7 +135,6 @@
       </sectiondef>
       <sectiondef kind="user-defined">
       <header>Idle handling</header>
-      <description><para><anchor id="_1amgrp8d7cc8d2abdab989a9d67b4f092316a3"/> </para></description>
       <memberdef kind="function" id="classwx_event_loop_base_1a07b4fe866e5f267ca50709efb351f606" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
         <definition>virtual void wxEventLoopBase::WakeUpIdle</definition>
@@ -166,7 +164,6 @@
       </sectiondef>
       <sectiondef kind="user-defined">
       <header>Yield-related hooks</header>
-      <description><para><anchor id="_1amgrp7d85bc61bb4c5f35214de329bc03b5d5"/> </para></description>
       <memberdef kind="function" id="classwx_event_loop_base_1a890b327bb21df1aa4989733fccf42fe5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
         <definition>virtual bool wxEventLoopBase::IsYielding</definition>
@@ -301,7 +298,7 @@
 <para>Base class for all event loop implementations. </para>    </briefdescription>
     <detaileddescription>
 <para>An event loop is a class which queries the queue of native events sent to the wxWidgets application and dispatches them to the appropriate wxEvtHandlers.</para><para>An object of this class is created by <ref refid="classwx_app_traits_1a11205b08706b4d83bc83d0170511c909" kindref="member">wxAppTraits::CreateEventLoop()</ref> and used by <ref refid="classwx_app" kindref="compound">wxApp</ref> to run the main application event loop. Temporary event loops are usually created by <ref refid="classwx_dialog_1a6e078c3d0653f75ad3c34a37c0b54637" kindref="member">wxDialog::ShowModal()</ref>.</para><para>You can create your own event loop if you need, provided that you restore the main event loop once yours is destroyed (see <ref refid="classwx_event_loop_activator" kindref="compound">wxEventLoopActivator</ref>).</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__appmanagement" kindref="compound">Application and Process Management</ref></para><para><simplesect kind="see"><para><ref refid="classwx_app" kindref="compound">wxApp</ref>, <ref refid="classwx_event_loop_activator" kindref="compound">wxEventLoopActivator</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__appmanagement" kindref="compound">Application and Process Management</ref></para><para><simplesect kind="see"><para><ref refid="classwx_app" kindref="compound">wxApp</ref>, <ref refid="classwx_event_loop_activator" kindref="compound">wxEventLoopActivator</ref> </para></simplesect>
 </para>    </detaileddescription>
     <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/evtloop.h" line="32" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/evtloop.h" bodystart="31" bodyend="247"/>
     <listofallmembers>

@@ -1,11 +1,10 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_pen" kind="class" prot="public">
     <compoundname>wxPen</compoundname>
     <basecompoundref refid="classwx_g_d_i_object" prot="public" virt="non-virtual">wxGDIObject</basecompoundref>
     <includes local="no">wx/pen.h</includes>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_pen_1a3c45922aa86019a0e2ffdeedd0182931" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
         <definition>virtual void wxPen::SetColour</definition>
@@ -149,7 +148,7 @@
 <para>A stipple bitmap.</para></parameterdescription>
 </parameteritem>
 </parameterlist>
-Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page__port_1page_port_wxmsw" kindref="member">wxMSW</ref>, <ref refid="page__port_1page_port_wxosx" kindref="member">wxOSX</ref> ports.  <onlyfor>wxmsw,wxosx</onlyfor> </para><para><simplesect kind="see"><para><ref refid="classwx_pen_1ad390a7361cd737fcb176db622f5ad039" kindref="member">SetWidth()</ref>, <ref refid="classwx_pen_1acb75ec80dcd9534181f8c17520aca2b0" kindref="member">SetStipple()</ref> </para></simplesect>
+Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page_port_1page_port_wxmsw" kindref="member">wxMSW</ref>, <ref refid="page_port_1page_port_wxosx" kindref="member">wxOSX</ref> ports.  <onlyfor>wxmsw,wxosx</onlyfor> </para><para><simplesect kind="see"><para><ref refid="classwx_pen_1ad390a7361cd737fcb176db622f5ad039" kindref="member">SetWidth()</ref>, <ref refid="classwx_pen_1acb75ec80dcd9534181f8c17520aca2b0" kindref="member">SetStipple()</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -165,7 +164,7 @@ Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref
           <declname>pen</declname>
         </param>
         <briefdescription>
-<para>Copy constructor, uses <ref refid="overview__refcount" kindref="compound">Reference Counting</ref>. </para>        </briefdescription>
+<para>Copy constructor, uses <ref refid="overview_refcount" kindref="compound">Reference Counting</ref>. </para>        </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -188,7 +187,7 @@ Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref
         <briefdescription>
 <para>Destructor. </para>        </briefdescription>
         <detaileddescription>
-<para><simplesect kind="see"><para><ref refid="overview__refcount_1overview_refcount_destruct" kindref="member">reference-counted object destruction</ref></para></simplesect>
+<para><simplesect kind="see"><para><ref refid="overview_refcount_1overview_refcount_destruct" kindref="member">reference-counted object destruction</ref></para></simplesect>
 <simplesect kind="remark"><para>Although all remaining pens are deleted when the application exits, the application should try to clean up all pens itself. This is because wxWidgets cannot know if a pointer to the pen object is stored in an application data structure, and there is a risk of double deletion. </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
@@ -465,7 +464,7 @@ Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref
         <briefdescription>
 <para>Inequality operator. </para>        </briefdescription>
         <detaileddescription>
-<para>See <ref refid="overview__refcount_1overview_refcount_equality" kindref="member">reference-counted object comparison</ref> for more info. </para>        </detaileddescription>
+<para>See <ref refid="overview_refcount_1overview_refcount_equality" kindref="member">reference-counted object comparison</ref> for more info. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" line="380"/>
@@ -480,7 +479,7 @@ Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref
           <declname>pen</declname>
         </param>
         <briefdescription>
-<para>Assignment operator, using <ref refid="overview__refcount" kindref="compound">Reference Counting</ref>. </para>        </briefdescription>
+<para>Assignment operator, using <ref refid="overview_refcount" kindref="compound">Reference Counting</ref>. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -499,7 +498,7 @@ Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref
         <briefdescription>
 <para>Equality operator. </para>        </briefdescription>
         <detaileddescription>
-<para>See <ref refid="overview__refcount_1overview_refcount_equality" kindref="member">reference-counted object comparison</ref> for more info. </para>        </detaileddescription>
+<para>See <ref refid="overview_refcount_1overview_refcount_equality" kindref="member">reference-counted object comparison</ref> for more info. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" line="393"/>
@@ -509,8 +508,8 @@ Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref
 <para>A pen is a drawing tool for drawing outlines. </para>    </briefdescription>
     <detaileddescription>
 <para>It is used for drawing lines and painting the outline of rectangles, ellipses, etc. It has a colour, a width and a style.</para><para><simplesect kind="note"><para>On a monochrome display, wxWidgets shows all non-white pens as black.</para></simplesect>
-Do not initialize objects on the stack before the program commences, since other required structures may not have been set up yet. Instead, define global pointers to objects and create them in <ref refid="classwx_app_console_1a99953775a2fd83fa2456e390779afe15" kindref="member">wxApp::OnInit()</ref> or when required.</para><para>An application may wish to dynamically create pens with different characteristics, and there is the consequent danger that a large number of duplicate pens will be created. Therefore an application may wish to get a pointer to a pen by using the global list of pens <ref refid="pen_8h_1a9eb4c70a69dd5c289c6c53b0da13f48b" kindref="member">wxThePenList</ref>, and calling the member function <ref refid="classwx_pen_list_1ab350d769f4a3b89dc275cef1f6dbd17c" kindref="member">wxPenList::FindOrCreatePen()</ref>. See <ref refid="classwx_pen_list" kindref="compound">wxPenList</ref> for more info.</para><para>This class uses <ref refid="overview__refcount" kindref="compound">reference counting and copy-on-write</ref> internally so that assignments between two instances of this class are very cheap. You can therefore use actual objects instead of pointers without efficiency problems. If an instance of this class is changed it will create its own data internally so that other instances, which previously shared the data using the reference counting, are not affected.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__gdi" kindref="compound">Graphics Device Interface (GDI)</ref></para><para>Predefined objects/pointers: <itemizedlist>
+Do not initialize objects on the stack before the program commences, since other required structures may not have been set up yet. Instead, define global pointers to objects and create them in <ref refid="classwx_app_console_1a99953775a2fd83fa2456e390779afe15" kindref="member">wxApp::OnInit()</ref> or when required.</para><para>An application may wish to dynamically create pens with different characteristics, and there is the consequent danger that a large number of duplicate pens will be created. Therefore an application may wish to get a pointer to a pen by using the global list of pens <ref refid="pen_8h_1a9eb4c70a69dd5c289c6c53b0da13f48b" kindref="member">wxThePenList</ref>, and calling the member function <ref refid="classwx_pen_list_1ab350d769f4a3b89dc275cef1f6dbd17c" kindref="member">wxPenList::FindOrCreatePen()</ref>. See <ref refid="classwx_pen_list" kindref="compound">wxPenList</ref> for more info.</para><para>This class uses <ref refid="overview_refcount" kindref="compound">reference counting and copy-on-write</ref> internally so that assignments between two instances of this class are very cheap. You can therefore use actual objects instead of pointers without efficiency problems. If an instance of this class is changed it will create its own data internally so that other instances, which previously shared the data using the reference counting, are not affected.</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__gdi" kindref="compound">Graphics Device Interface (GDI)</ref></para><para>Predefined objects/pointers: <itemizedlist>
 <listitem><para><ref refid="pen_8h_1a4dbfd18a818b95630453f3d755a1c95d" kindref="member">wxNullPen</ref> </para></listitem>
 <listitem><para><ref refid="pen_8h_1ae1d7305927b56df235753d543ec02b2d" kindref="member">wxBLACK_DASHED_PEN</ref> </para></listitem>
 <listitem><para><ref refid="pen_8h_1a845a77278b675303c61858c18c2bb91b" kindref="member">wxBLACK_PEN</ref> </para></listitem>
@@ -528,44 +527,44 @@ Do not initialize objects on the stack before the program commences, since other
 <simplesect kind="see"><para><ref refid="classwx_pen_list" kindref="compound">wxPenList</ref>, <ref refid="classwx_d_c" kindref="compound">wxDC</ref>, <ref refid="classwx_d_c_1a0d229733fbc83c7e4c483c0714d090b2" kindref="member">wxDC::SetPen()</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="8591">
+      <node id="8599">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="8589">
+      <node id="8597">
         <label>wxPen</label>
         <link refid="classwx_pen"/>
-        <childnode refid="8590" relation="public-inheritance">
+        <childnode refid="8598" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8590">
+      <node id="8598">
         <label>wxGDIObject</label>
         <link refid="classwx_g_d_i_object"/>
-        <childnode refid="8591" relation="public-inheritance">
+        <childnode refid="8599" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="8594">
+      <node id="8602">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="8595" relation="usage">
+        <childnode refid="8603" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="8592">
+      <node id="8600">
         <label>wxPen</label>
         <link refid="classwx_pen"/>
-        <childnode refid="8593" relation="public-inheritance">
+        <childnode refid="8601" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8593">
+      <node id="8601">
         <label>wxGDIObject</label>
         <link refid="classwx_g_d_i_object"/>
-        <childnode refid="8594" relation="public-inheritance">
+        <childnode refid="8602" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8595">
+      <node id="8603">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

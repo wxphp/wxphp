@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_html_link_info" kind="class" prot="public">
     <compoundname>wxHtmlLinkInfo</compoundname>
     <basecompoundref refid="classwx_object" prot="public" virt="non-virtual">wxObject</basecompoundref>
@@ -98,34 +98,34 @@
     <detaileddescription>
 <para>In current implementation it stores URL and target frame name.</para><para><simplesect kind="note"><para>Frames are not currently supported by wxHTML!</para></simplesect>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxhtml" kindref="member">wxHTML</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__html" kindref="compound">HTML</ref> </para>    </detaileddescription>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxhtml" kindref="member">wxHTML</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__html" kindref="compound">HTML</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7069">
+      <node id="7073">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="7068">
+      <node id="7072">
         <label>wxHtmlLinkInfo</label>
         <link refid="classwx_html_link_info"/>
-        <childnode refid="7069" relation="public-inheritance">
+        <childnode refid="7073" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7071">
+      <node id="7075">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="7072" relation="usage">
+        <childnode refid="7076" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="7070">
+      <node id="7074">
         <label>wxHtmlLinkInfo</label>
         <link refid="classwx_html_link_info"/>
-        <childnode refid="7071" relation="public-inheritance">
+        <childnode refid="7075" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7072">
+      <node id="7076">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="overview_bitmap" kind="page">
+    <compoundname>overview_bitmap</compoundname>
+    <title>Bitmaps and Icons</title>
+    <detaileddescription>
+<para>Classes:</para><para><itemizedlist>
+<listitem><para><ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> </para></listitem>
+<listitem><para><ref refid="classwx_bitmap_handler" kindref="compound">wxBitmapHandler</ref> </para></listitem>
+<listitem><para><ref refid="classwx_icon" kindref="compound">wxIcon</ref> </para></listitem>
+<listitem><para><ref refid="classwx_cursor" kindref="compound">wxCursor</ref></para></listitem>
+</itemizedlist>
+The <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> class encapsulates the concept of a platform-dependent bitmap, either monochrome or colour. Platform-specific methods for creating a <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> object from an existing file are catered for, and this is an occasion where conditional compilation will sometimes be required.</para><para>A bitmap created dynamically or loaded from a file can be selected into a memory device context (instance of <ref refid="classwx_memory_d_c" kindref="compound">wxMemoryDC</ref>). This enables the bitmap to be copied to a window or memory device context using <ref refid="classwx_d_c_1a12bed94a15136b9080683f4151042a34" kindref="member">wxDC::Blit()</ref>, or to be used as a drawing surface.</para><para>See <ref refid="classwx_memory_d_c" kindref="compound">wxMemoryDC</ref> for an example of drawing onto a bitmap.</para><para>All wxWidgets platforms support XPMs for small bitmaps and icons. You may include the XPM inline as below, since it&apos;s C code, or you can load it at run-time.</para><para><programlisting><codeline><highlight class="preprocessor">#include<sp/>&quot;sample.xpm&quot;</highlight></codeline>
+</programlisting></para><para>Sometimes you wish to use a .ico resource on Windows, and XPMs on other platforms (for example to take advantage of Windows&apos; support for multiple icon resolutions).</para><para>A macro, <ref refid="group__group__funcmacro__gdi_1ga1f22eefa44998cbeb8f018978cf5d375" kindref="member">wxICON()</ref>, is available which creates an icon using an XPM on the appropriate platform, or an icon resource on Windows:</para><para><programlisting><codeline><highlight class="normal"><ref refid="classwx_icon" kindref="compound" tooltip="An icon is a small rectangular bitmap usually used for denoting a minimized application.">wxIcon</ref><sp/>icon(<ref refid="group__group__funcmacro__gdi_1ga1f22eefa44998cbeb8f018978cf5d375" kindref="member" tooltip="This macro loads an icon from either application resources (on the platforms for which they exist...">wxICON</ref>(sample));</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>The<sp/>above<sp/>line<sp/>is<sp/>equivalent<sp/>to<sp/>this:</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(__WXGTK__)<sp/>||<sp/>defined(__WXMOTIF__)</highlight></codeline>
+<codeline><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_icon" kindref="compound" tooltip="An icon is a small rectangular bitmap usually used for denoting a minimized application.">wxIcon</ref><sp/>icon(sample_xpm);</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(__WXMSW__)</highlight></codeline>
+<codeline><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_icon" kindref="compound" tooltip="An icon is a small rectangular bitmap usually used for denoting a minimized application.">wxIcon</ref><sp/>icon(</highlight><highlight class="stringliteral">&quot;sample&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+</programlisting></para><para>There is also a corresponding <ref refid="group__group__funcmacro__gdi_1ga309f860d17c1a8c4cc54c6e772a2fd09" kindref="member">wxBITMAP()</ref> macro which allows to create the bitmaps in much the same way as <ref refid="group__group__funcmacro__gdi_1ga1f22eefa44998cbeb8f018978cf5d375" kindref="member">wxICON()</ref> creates icons. It assumes that bitmaps live in resources under Windows or OS2 and XPM files under all other platforms (for XPMs, the corresponding file must be included before this macro is used, of course, and the name of the bitmap should be the same as the resource name under Windows with <computeroutput>_xpm</computeroutput> suffix). For example:</para><para><programlisting><codeline><highlight class="comment">//<sp/>an<sp/>easy<sp/>and<sp/>portable<sp/>way<sp/>to<sp/>create<sp/>a<sp/>bitmap</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><ref refid="classwx_bitmap" kindref="compound" tooltip="This class encapsulates the concept of a platform-dependent bitmap, either monochrome or colour or co...">wxBitmap</ref><sp/>bmp(<ref refid="group__group__funcmacro__gdi_1ga309f860d17c1a8c4cc54c6e772a2fd09" kindref="member" tooltip="This macro loads a bitmap from either application resources (on the platforms for which they exist...">wxBITMAP</ref>(bmpname));</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>which<sp/>is<sp/>roughly<sp/>equivalent<sp/>to<sp/>the<sp/>following</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(__WXMSW__)<sp/>||<sp/>defined(__WXPM__)</highlight></codeline>
+<codeline><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_bitmap" kindref="compound" tooltip="This class encapsulates the concept of a platform-dependent bitmap, either monochrome or colour or co...">wxBitmap</ref><sp/>bmp(</highlight><highlight class="stringliteral">&quot;bmpname&quot;</highlight><highlight class="normal">,<sp/><ref refid="gdicmn_8h_1a90a1eb6d85b5044a99b706fd979f27f5aa6e62442a214629e2f34c2ab71e696ff" kindref="member">wxBITMAP_TYPE_BMP_RESOURCE</ref>);</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="preprocessor">#else<sp/>//<sp/>Unix</highlight></codeline>
+<codeline><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_bitmap" kindref="compound" tooltip="This class encapsulates the concept of a platform-dependent bitmap, either monochrome or colour or co...">wxBitmap</ref><sp/>bmp(bmpname_xpm,<sp/><ref refid="gdicmn_8h_1a90a1eb6d85b5044a99b706fd979f27f5a8ec4c227cd732472c3593215edd3dbf0" kindref="member">wxBITMAP_TYPE_XPM</ref>);</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+</programlisting></para><para>You should always use <ref refid="group__group__funcmacro__gdi_1ga1f22eefa44998cbeb8f018978cf5d375" kindref="member">wxICON()</ref> and <ref refid="group__group__funcmacro__gdi_1ga309f860d17c1a8c4cc54c6e772a2fd09" kindref="member">wxBITMAP()</ref> macros because they work for any platform (unlike the code above which doesn&apos;t deal with wxMac, wxX11, ...) and are shorter and more clear than versions with many #ifdef blocks. Even better, use the same XPMs on all platforms.</para><para><itemizedlist>
+<listitem><para><ref refid="overview_bitmap_1overview_bitmap_supportedformats" kindref="member">Supported Bitmap File Formats</ref> </para></listitem>
+<listitem><para><ref refid="overview_bitmap_1overview_bitmap_handlers" kindref="member">Bitmap Format Handlers</ref></para></listitem>
+</itemizedlist>
+<hruler/>
+</para><sect1 id="overview_bitmap_1overview_bitmap_supportedformats">
+<title>Supported Bitmap File Formats</title>
+<para>The following lists the formats handled on different platforms. Note that missing or partially-implemented formats are automatically supplemented by using <ref refid="classwx_image" kindref="compound">wxImage</ref> to load the data, and then converting it to <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> form. Note that using <ref refid="classwx_image" kindref="compound">wxImage</ref> is the preferred way to load images in wxWidgets, with the exception of resources (XPM-files or native Windows resources).</para><para>Writing an image format handler for <ref refid="classwx_image" kindref="compound">wxImage</ref> is also far easier than writing one for <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref>, because <ref refid="classwx_image" kindref="compound">wxImage</ref> has exactly one format on all platforms whereas <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> can store pixel data very differently, depending on colour depths and platform.</para><sect2 id="overview_bitmap_1overview_bitmap_supportedformats_bmp">
+<title>wxBitmap</title>
+<para>Under Windows, <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> may load the following formats:</para><para><itemizedlist>
+<listitem><para>Windows bitmap resource (wxBITMAP_TYPE_BMP_RESOURCE) </para></listitem>
+<listitem><para>Windows bitmap file (wxBITMAP_TYPE_BMP) </para></listitem>
+<listitem><para>XPM data and file (wxBITMAP_TYPE_XPM) </para></listitem>
+<listitem><para>All formats that are supported by the <ref refid="classwx_image" kindref="compound">wxImage</ref> class.</para></listitem>
+</itemizedlist>
+Under wxGTK, <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> may load the following formats:</para><para><itemizedlist>
+<listitem><para>XPM data and file (wxBITMAP_TYPE_XPM) </para></listitem>
+<listitem><para>All formats that are supported by the <ref refid="classwx_image" kindref="compound">wxImage</ref> class.</para></listitem>
+</itemizedlist>
+Under wxMotif and wxX11, <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> may load the following formats:</para><para><itemizedlist>
+<listitem><para>XBM data and file (wxBITMAP_TYPE_XBM) </para></listitem>
+<listitem><para>XPM data and file (wxBITMAP_TYPE_XPM) </para></listitem>
+<listitem><para>All formats that are supported by the <ref refid="classwx_image" kindref="compound">wxImage</ref> class.</para></listitem>
+</itemizedlist>
+</para></sect2>
+<sect2 id="overview_bitmap_1overview_bitmap_supportedformats_icon">
+<title>wxIcon</title>
+<para>Under Windows, <ref refid="classwx_icon" kindref="compound">wxIcon</ref> may load the following formats:</para><para><itemizedlist>
+<listitem><para>Windows icon resource (wxBITMAP_TYPE_ICO_RESOURCE) </para></listitem>
+<listitem><para>Windows icon file (wxBITMAP_TYPE_ICO) </para></listitem>
+<listitem><para>XPM data and file (wxBITMAP_TYPE_XPM)</para></listitem>
+</itemizedlist>
+Under wxGTK, <ref refid="classwx_icon" kindref="compound">wxIcon</ref> may load the following formats:</para><para><itemizedlist>
+<listitem><para>XPM data and file (wxBITMAP_TYPE_XPM) </para></listitem>
+<listitem><para>All formats that are supported by the <ref refid="classwx_image" kindref="compound">wxImage</ref> class.</para></listitem>
+</itemizedlist>
+Under wxMotif and wxX11, <ref refid="classwx_icon" kindref="compound">wxIcon</ref> may load the following formats:</para><para><itemizedlist>
+<listitem><para>XBM data and file (wxBITMAP_TYPE_XBM) </para></listitem>
+<listitem><para>XPM data and file (wxBITMAP_TYPE_XPM) </para></listitem>
+<listitem><para>All formats that are supported by the <ref refid="classwx_image" kindref="compound">wxImage</ref> class.</para></listitem>
+</itemizedlist>
+</para></sect2>
+<sect2 id="overview_bitmap_1overview_bitmap_supportedformats_cursor">
+<title>wxCursor</title>
+<para>Under Windows, <ref refid="classwx_cursor" kindref="compound">wxCursor</ref> may load the following formats:</para><para><itemizedlist>
+<listitem><para>Windows cursor resource (wxBITMAP_TYPE_CUR_RESOURCE) </para></listitem>
+<listitem><para>Windows cursor file (wxBITMAP_TYPE_CUR) </para></listitem>
+<listitem><para>Windows icon file (wxBITMAP_TYPE_ICO) </para></listitem>
+<listitem><para>Windows bitmap file (wxBITMAP_TYPE_BMP)</para></listitem>
+</itemizedlist>
+Under wxGTK, <ref refid="classwx_cursor" kindref="compound">wxCursor</ref> may load the following formats (in addition to stock cursors):</para><para><itemizedlist>
+<listitem><para>None (stock cursors only).</para></listitem>
+</itemizedlist>
+Under wxMotif and wxX11, <ref refid="classwx_cursor" kindref="compound">wxCursor</ref> may load the following formats:</para><para><itemizedlist>
+<listitem><para>XBM data and file (wxBITMAP_TYPE_XBM)</para></listitem>
+</itemizedlist>
+</para></sect2>
+</sect1>
+<sect1 id="overview_bitmap_1overview_bitmap_handlers">
+<title>Bitmap Format Handlers</title>
+<para>To provide extensibility, the functionality for loading and saving bitmap formats is not implemented in the <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> class, but in a number of handler classes, derived from <ref refid="classwx_bitmap_handler" kindref="compound">wxBitmapHandler</ref>. There is a static list of handlers which <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> examines when a file load/save operation is requested.</para><para>Some handlers are provided as standard, but if you have special requirements, you may wish to initialise the <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> class with some extra handlers which you write yourself or receive from a third party.</para><para>To add a handler object to <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref>, your application needs to include the header which implements it, and then call the static function <ref refid="classwx_bitmap_1a6418825ad15574229188e0c5f97a4f3a" kindref="member">wxBitmap::AddHandler()</ref>.</para><para><simplesect kind="note"><para>Bitmap handlers are not implemented on all platforms, and new ones rarely need to be implemented since <ref refid="classwx_image" kindref="compound">wxImage</ref> can be used for loading most formats, as noted earlier. </para></simplesect>
+</para></sect1>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_window_create_event" kind="class" prot="public">
     <compoundname>wxWindowCreateEvent</compoundname>
     <basecompoundref refid="classwx_command_event" prot="public" virt="non-virtual">wxCommandEvent</basecompoundref>
@@ -21,7 +21,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="1801"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="1822"/>
       </memberdef>
       <memberdef kind="function" id="classwx_window_create_event_1a020b3155c29f19df13316d2a886a8a37" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
@@ -34,7 +34,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="1804"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="1825"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -45,64 +45,64 @@
 <listitem><para>EVT_WINDOW_CREATE(func): Process a <computeroutput>wxEVT_CREATE</computeroutput> event. </para></listitem>
 </itemizedlist>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="overview__events" kindref="compound">Events and Event Handling</ref>, <ref refid="classwx_window_destroy_event" kindref="compound">wxWindowDestroyEvent</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="overview_events" kindref="compound">Events and Event Handling</ref>, <ref refid="classwx_window_destroy_event" kindref="compound">wxWindowDestroyEvent</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="11552">
+      <node id="11613">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="11550">
+      <node id="11611">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="11551" relation="public-inheritance">
+        <childnode refid="11612" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11549">
+      <node id="11610">
         <label>wxWindowCreateEvent</label>
         <link refid="classwx_window_create_event"/>
-        <childnode refid="11550" relation="public-inheritance">
+        <childnode refid="11611" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11551">
+      <node id="11612">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="11552" relation="public-inheritance">
+        <childnode refid="11613" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="11556">
+      <node id="11617">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="11557" relation="usage">
+        <childnode refid="11618" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="11554">
+      <node id="11615">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="11555" relation="public-inheritance">
+        <childnode refid="11616" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11553">
+      <node id="11614">
         <label>wxWindowCreateEvent</label>
         <link refid="classwx_window_create_event"/>
-        <childnode refid="11554" relation="public-inheritance">
+        <childnode refid="11615" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11555">
+      <node id="11616">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="11556" relation="public-inheritance">
+        <childnode refid="11617" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11557">
+      <node id="11618">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="1796" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="1795" bodyend="1805"/>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="1817" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="1816" bodyend="1826"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxWindowCreateEvent</scope><name>AllocExclusive</name></member>
       <member refid="classwx_event_1a26878097a702e8d0368da150125d4158" prot="public" virt="pure-virtual"><scope>wxWindowCreateEvent</scope><name>Clone</name></member>

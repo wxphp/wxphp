@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_item_container" kind="class" prot="public">
     <compoundname>wxItemContainer</compoundname>
     <basecompoundref refid="classwx_item_container_immutable" prot="public" virt="non-virtual">wxItemContainerImmutable</basecompoundref>
@@ -8,7 +8,6 @@
     <derivedcompoundref refid="classwx_simple_html_list_box" prot="public" virt="non-virtual">wxSimpleHtmlListBox</derivedcompoundref>
     <includes local="no">wx/ctrlsub.h</includes>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_item_container_1a8fdc0090e3eabc762ff0e49e925f8bc4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
         <definition>int wxItemContainer::Append</definition>
@@ -338,7 +337,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_item_container_1a16be5a072a0fe8f9d90e19c8cfe22139" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void *</type>
         <definition>void* wxItemContainer::GetClientData</definition>
@@ -465,7 +463,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_item_container_1a8844cacec8509fe6e637c6f85eb8b395" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
         <definition>int wxItemContainer::Insert</definition>
@@ -900,7 +897,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_item_container_1a0758ff813749b9dfe4d8c4975778f40d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void wxItemContainer::Set</definition>
@@ -1240,76 +1236,76 @@
 <para>This class is an abstract base class for some wxWidgets controls which contain several items such as <ref refid="classwx_list_box" kindref="compound">wxListBox</ref>, <ref refid="classwx_check_list_box" kindref="compound">wxCheckListBox</ref>, <ref refid="classwx_combo_box" kindref="compound">wxComboBox</ref> or <ref refid="classwx_choice" kindref="compound">wxChoice</ref>. </para>    </briefdescription>
     <detaileddescription>
 <para>It defines an interface which is implemented by all controls which have string subitems each of which may be selected.</para><para><ref refid="classwx_item_container" kindref="compound">wxItemContainer</ref> extends <ref refid="classwx_item_container_immutable" kindref="compound">wxItemContainerImmutable</ref> interface with methods for adding/removing items.</para><para>It defines the methods for accessing the controls items and although each of the derived classes implements them differently, they still all conform to the same interface.</para><para>The items in a <ref refid="classwx_item_container" kindref="compound">wxItemContainer</ref> have (non-empty) string labels and, optionally, client data associated with them. Client data may be of two different kinds: either simple untyped (<computeroutput>void</computeroutput> *) pointers which are simply stored by the control but not used in any way by it, or typed pointers (wxClientData*) which are owned by the control meaning that the typed client data (and only it) will be deleted when an item is deleted using <ref refid="classwx_item_container_1a0e8379f41e9d7b912564000828140a19" kindref="member">Delete()</ref> or the entire control is cleared using <ref refid="classwx_item_container_1aea621d4fdfbc3a06bf24dcc97304e2c1" kindref="member">Clear()</ref>, which also happens when it is destroyed.</para><para>Finally note that in the same control all items must have client data of the same type (typed or untyped), if any. This type is determined by the first call to <ref refid="classwx_item_container_1a8fdc0090e3eabc762ff0e49e925f8bc4" kindref="member">Append()</ref> (the version with client data pointer) or <ref refid="classwx_item_container_1a4316a72acaf30acf9d2c9c457e16a8d9" kindref="member">SetClientData()</ref>.</para><para>Note that this is not a control, it&apos;s a mixin interface that classes have to derive from in addition to <ref refid="classwx_control" kindref="compound">wxControl</ref> or <ref refid="classwx_window" kindref="compound">wxWindow</ref>. Convenience class <ref refid="classwx_control_with_items" kindref="compound">wxControlWithItems</ref> is provided for this purpose.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref></para><para><simplesect kind="see"><para><ref refid="classwx_control_with_items" kindref="compound">wxControlWithItems</ref>, <ref refid="classwx_item_container_immutable" kindref="compound">wxItemContainerImmutable</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref></para><para><simplesect kind="see"><para><ref refid="classwx_control_with_items" kindref="compound">wxControlWithItems</ref>, <ref refid="classwx_item_container_immutable" kindref="compound">wxItemContainerImmutable</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7329">
+      <node id="7333">
         <label>wxItemContainer</label>
         <link refid="classwx_item_container"/>
-        <childnode refid="7330" relation="public-inheritance">
+        <childnode refid="7334" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7335">
+      <node id="7339">
         <label>wxListBox</label>
         <link refid="classwx_list_box"/>
-        <childnode refid="7333" relation="public-inheritance">
+        <childnode refid="7337" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7338">
+      <node id="7342">
         <label>wxSimpleHtmlListBox</label>
         <link refid="classwx_simple_html_list_box"/>
-        <childnode refid="7329" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="7332">
-        <label>wxBitmapComboBox</label>
-        <link refid="classwx_bitmap_combo_box"/>
-        <childnode refid="7331" relation="public-inheritance">
+        <childnode refid="7333" relation="public-inheritance">
         </childnode>
       </node>
       <node id="7336">
-        <label>wxCheckListBox</label>
-        <link refid="classwx_check_list_box"/>
+        <label>wxBitmapComboBox</label>
+        <link refid="classwx_bitmap_combo_box"/>
         <childnode refid="7335" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7337">
-        <label>wxRearrangeList</label>
-        <link refid="classwx_rearrange_list"/>
-        <childnode refid="7336" relation="public-inheritance">
+      <node id="7340">
+        <label>wxCheckListBox</label>
+        <link refid="classwx_check_list_box"/>
+        <childnode refid="7339" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7334">
+      <node id="7341">
+        <label>wxRearrangeList</label>
+        <link refid="classwx_rearrange_list"/>
+        <childnode refid="7340" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7338">
         <label>wxChoice</label>
         <link refid="classwx_choice"/>
+        <childnode refid="7337" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7335">
+        <label>wxComboBox</label>
+        <link refid="classwx_combo_box"/>
         <childnode refid="7333" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7331">
-        <label>wxComboBox</label>
-        <link refid="classwx_combo_box"/>
-        <childnode refid="7329" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="7333">
+      <node id="7337">
         <label>wxControlWithItems</label>
         <link refid="classwx_control_with_items"/>
-        <childnode refid="7329" relation="public-inheritance">
+        <childnode refid="7333" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7330">
+      <node id="7334">
         <label>wxItemContainerImmutable</label>
         <link refid="classwx_item_container_immutable"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7339">
+      <node id="7343">
         <label>wxItemContainer</label>
         <link refid="classwx_item_container"/>
-        <childnode refid="7340" relation="public-inheritance">
+        <childnode refid="7344" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7340">
+      <node id="7344">
         <label>wxItemContainerImmutable</label>
         <link refid="classwx_item_container_immutable"/>
       </node>

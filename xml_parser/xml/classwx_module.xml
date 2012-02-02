@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_module" kind="class" prot="public">
     <compoundname>wxModule</compoundname>
     <basecompoundref refid="classwx_object" prot="public" virt="non-virtual">wxObject</basecompoundref>
@@ -117,7 +117,7 @@
 <para>To define a new kind of module, derive a class from <ref refid="classwx_module" kindref="compound">wxModule</ref>, override the <ref refid="classwx_module_1a297484b97a61428afecdaae4f8854d99" kindref="member">wxModule::OnInit</ref> and <ref refid="classwx_module_1ab7615e407981a1ab0dd2b5f0a6f760c3" kindref="member">wxModule::OnExit</ref> functions, and add the wxDECLARE_DYNAMIC_CLASS and wxIMPLEMENT_DYNAMIC_CLASS to header and implementation files (which can be the same file). On initialization, wxWidgets will find all classes derived from <ref refid="classwx_module" kindref="compound">wxModule</ref>, create an instance of each, and call each <ref refid="classwx_module_1a297484b97a61428afecdaae4f8854d99" kindref="member">wxModule::OnInit</ref> function. On exit, wxWidgets will call the <ref refid="classwx_module_1ab7615e407981a1ab0dd2b5f0a6f760c3" kindref="member">wxModule::OnExit</ref> function for each module instance.</para><para>Note that your module class does not have to be in a header file.</para><para>For example:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>A<sp/>module<sp/>to<sp/>allow<sp/>DDE<sp/>initialization/cleanup</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>without<sp/>calling<sp/>these<sp/>functions<sp/>from<sp/>app.cpp<sp/>or<sp/>from</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>user&apos;s<sp/>application.</highlight><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">wxDDEModule:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classwx_module" kindref="compound" tooltip="The module system is a very simple mechanism to allow applications (and parts of...">wxModule</ref></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">wxDDEModule:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classwx_module" kindref="compound" tooltip="The module system is a very simple mechanism to allow applications (and parts of wxWidgets itself) to...">wxModule</ref></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wxDDEModule()<sp/>{<sp/>}</highlight></codeline>
@@ -125,13 +125,13 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classwx_module_1ab7615e407981a1ab0dd2b5f0a6f760c3" kindref="member" tooltip="Provide this function with appropriate cleanup for your module.">OnExit</ref>()<sp/>{<sp/><ref refid="group__group__funcmacro__misc_1gab8eb5d04fa3c1c12ea4b134b91481772" kindref="member" tooltip="Called when wxWidgets exits, to clean up the DDE system.">wxDDECleanUp</ref>();<sp/>};</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__rtti_1ga9c252d076397bec5ac241272a7a60747" kindref="member" tooltip="Used inside a class declaration to make the class known to wxWidgets RTTI system...">wxDECLARE_DYNAMIC_CLASS</ref>(wxDDEModule);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__rtti_1ga9c252d076397bec5ac241272a7a60747" kindref="member" tooltip="Used inside a class declaration to make the class known to wxWidgets RTTI system and also declare tha...">wxDECLARE_DYNAMIC_CLASS</ref>(wxDDEModule);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__rtti_1ga4cbf0c21eb5986eb489dc67450eab1d1" kindref="member" tooltip="Used in a C++ implementation file to complete the declaration of a class that has...">wxIMPLEMENT_DYNAMIC_CLASS</ref>(wxDDEModule,<sp/><ref refid="classwx_module" kindref="compound" tooltip="The module system is a very simple mechanism to allow applications (and parts of...">wxModule</ref>);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__rtti_1ga4cbf0c21eb5986eb489dc67450eab1d1" kindref="member" tooltip="Used in a C++ implementation file to complete the declaration of a class that has run-time type infor...">wxIMPLEMENT_DYNAMIC_CLASS</ref>(wxDDEModule,<sp/><ref refid="classwx_module" kindref="compound" tooltip="The module system is a very simple mechanism to allow applications (and parts of wxWidgets itself) to...">wxModule</ref>);</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Another<sp/>module<sp/>which<sp/>uses<sp/>DDE<sp/>in<sp/>its<sp/>OnInit()</highlight><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">MyModule:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classwx_module" kindref="compound" tooltip="The module system is a very simple mechanism to allow applications (and parts of...">wxModule</ref></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">MyModule:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classwx_module" kindref="compound" tooltip="The module system is a very simple mechanism to allow applications (and parts of wxWidgets itself) to...">wxModule</ref></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MyModule()<sp/>{<sp/><ref refid="classwx_module_1a943494994b76ddaefebf95345c5a05ec" kindref="member" tooltip="Call this function from the constructor of the derived class.">AddDependency</ref>(<ref refid="group__group__funcmacro__rtti_1gacee897a7d4e704e1aa53568220f2396e" kindref="member" tooltip="Returns a pointer to the wxClassInfo object associated with this class.">wxCLASSINFO</ref>(wxDDEModule));<sp/>}</highlight></codeline>
@@ -139,14 +139,14 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classwx_module_1ab7615e407981a1ab0dd2b5f0a6f760c3" kindref="member" tooltip="Provide this function with appropriate cleanup for your module.">OnExit</ref>()<sp/>{<sp/>...<sp/>}</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__rtti_1ga9c252d076397bec5ac241272a7a60747" kindref="member" tooltip="Used inside a class declaration to make the class known to wxWidgets RTTI system...">wxDECLARE_DYNAMIC_CLASS</ref>(MyModule);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__rtti_1ga9c252d076397bec5ac241272a7a60747" kindref="member" tooltip="Used inside a class declaration to make the class known to wxWidgets RTTI system and also declare tha...">wxDECLARE_DYNAMIC_CLASS</ref>(MyModule);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__rtti_1ga4cbf0c21eb5986eb489dc67450eab1d1" kindref="member" tooltip="Used in a C++ implementation file to complete the declaration of a class that has...">wxIMPLEMENT_DYNAMIC_CLASS</ref>(MyModule,<sp/><ref refid="classwx_module" kindref="compound" tooltip="The module system is a very simple mechanism to allow applications (and parts of...">wxModule</ref>);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__rtti_1ga4cbf0c21eb5986eb489dc67450eab1d1" kindref="member" tooltip="Used in a C++ implementation file to complete the declaration of a class that has run-time type infor...">wxIMPLEMENT_DYNAMIC_CLASS</ref>(MyModule,<sp/><ref refid="classwx_module" kindref="compound" tooltip="The module system is a very simple mechanism to allow applications (and parts of wxWidgets itself) to...">wxModule</ref>);</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Another<sp/>module<sp/>which<sp/>uses<sp/>DDE<sp/>in<sp/>its<sp/>OnInit()</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>but<sp/>uses<sp/>a<sp/>named<sp/>dependency</highlight><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">MyModule2:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classwx_module" kindref="compound" tooltip="The module system is a very simple mechanism to allow applications (and parts of...">wxModule</ref></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">MyModule2:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classwx_module" kindref="compound" tooltip="The module system is a very simple mechanism to allow applications (and parts of wxWidgets itself) to...">wxModule</ref></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MyModule2()<sp/>{<sp/><ref refid="classwx_module_1a943494994b76ddaefebf95345c5a05ec" kindref="member" tooltip="Call this function from the constructor of the derived class.">AddDependency</ref>(</highlight><highlight class="stringliteral">&quot;wxDDEModule&quot;</highlight><highlight class="normal">);<sp/>}</highlight></codeline>
@@ -154,45 +154,45 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classwx_module_1ab7615e407981a1ab0dd2b5f0a6f760c3" kindref="member" tooltip="Provide this function with appropriate cleanup for your module.">OnExit</ref>()<sp/>{<sp/>...<sp/>}</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__rtti_1ga9c252d076397bec5ac241272a7a60747" kindref="member" tooltip="Used inside a class declaration to make the class known to wxWidgets RTTI system...">wxDECLARE_DYNAMIC_CLASS</ref>(MyModule2)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__rtti_1ga9c252d076397bec5ac241272a7a60747" kindref="member" tooltip="Used inside a class declaration to make the class known to wxWidgets RTTI system and also declare tha...">wxDECLARE_DYNAMIC_CLASS</ref>(MyModule2)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__rtti_1ga4cbf0c21eb5986eb489dc67450eab1d1" kindref="member" tooltip="Used in a C++ implementation file to complete the declaration of a class that has...">wxIMPLEMENT_DYNAMIC_CLASS</ref>(MyModule2,<sp/><ref refid="classwx_module" kindref="compound" tooltip="The module system is a very simple mechanism to allow applications (and parts of...">wxModule</ref>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__rtti_1ga4cbf0c21eb5986eb489dc67450eab1d1" kindref="member" tooltip="Used in a C++ implementation file to complete the declaration of a class that has run-time type infor...">wxIMPLEMENT_DYNAMIC_CLASS</ref>(MyModule2,<sp/><ref refid="classwx_module" kindref="compound" tooltip="The module system is a very simple mechanism to allow applications (and parts of wxWidgets itself) to...">wxModule</ref>)</highlight></codeline>
 </programlisting></para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__appmanagement" kindref="compound">Application and Process Management</ref> </para>    </detaileddescription>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__appmanagement" kindref="compound">Application and Process Management</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7814">
+      <node id="7820">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="7813">
+      <node id="7819">
         <label>wxModule</label>
         <link refid="classwx_module"/>
-        <childnode refid="7814" relation="public-inheritance">
+        <childnode refid="7820" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7815">
+      <node id="7821">
         <label>wxHtmlTagsModule</label>
         <link refid="classwx_html_tags_module"/>
-        <childnode refid="7813" relation="public-inheritance">
+        <childnode refid="7819" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7817">
+      <node id="7823">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="7818" relation="usage">
+        <childnode refid="7824" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="7816">
+      <node id="7822">
         <label>wxModule</label>
         <link refid="classwx_module"/>
-        <childnode refid="7817" relation="public-inheritance">
+        <childnode refid="7823" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7818">
+      <node id="7824">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

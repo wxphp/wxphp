@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_html_widget_cell" kind="class" prot="public">
     <compoundname>wxHtmlWidgetCell</compoundname>
     <basecompoundref refid="classwx_html_cell" prot="public" virt="non-virtual">wxHtmlCell</basecompoundref>
@@ -47,46 +47,46 @@
 <para><ref refid="classwx_html_widget_cell" kindref="compound">wxHtmlWidgetCell</ref> is a class that provides a connection between HTML cells and widgets (an object derived from <ref refid="classwx_window" kindref="compound">wxWindow</ref>). </para>    </briefdescription>
     <detaileddescription>
 <para>You can use it to display things like forms, input boxes etc. in an HTML window.</para><para><ref refid="classwx_html_widget_cell" kindref="compound">wxHtmlWidgetCell</ref> takes care of resizing and moving window.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxhtml" kindref="member">wxHTML</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__html" kindref="compound">HTML</ref> </para>    </detaileddescription>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxhtml" kindref="member">wxHTML</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__html" kindref="compound">HTML</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7130">
+      <node id="7134">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="7129">
+      <node id="7133">
         <label>wxHtmlCell</label>
         <link refid="classwx_html_cell"/>
-        <childnode refid="7130" relation="public-inheritance">
+        <childnode refid="7134" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7128">
+      <node id="7132">
         <label>wxHtmlWidgetCell</label>
         <link refid="classwx_html_widget_cell"/>
-        <childnode refid="7129" relation="public-inheritance">
+        <childnode refid="7133" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7133">
+      <node id="7137">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="7134" relation="usage">
+        <childnode refid="7138" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="7132">
+      <node id="7136">
         <label>wxHtmlCell</label>
         <link refid="classwx_html_cell"/>
-        <childnode refid="7133" relation="public-inheritance">
+        <childnode refid="7137" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7131">
+      <node id="7135">
         <label>wxHtmlWidgetCell</label>
         <link refid="classwx_html_widget_cell"/>
-        <childnode refid="7132" relation="public-inheritance">
+        <childnode refid="7136" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7134">
+      <node id="7138">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

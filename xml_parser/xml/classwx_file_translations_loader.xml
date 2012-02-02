@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_file_translations_loader" kind="class" prot="public">
     <compoundname>wxFileTranslationsLoader</compoundname>
     <basecompoundref refid="classwx_translations_loader" prot="public" virt="non-virtual">wxTranslationsLoader</basecompoundref>
@@ -29,25 +29,25 @@
 <para>This finds catalogs in the filesystem, using the standard Unix layout. This is the default unless you change the loader with <ref refid="classwx_translations_1a45c81bf49c3645eebb2032a18fe37056" kindref="member">wxTranslations::SetLoader()</ref>.</para><para>Catalogs are searched for in standard places (current directory first, then the system one), but you may also prepend additional directories to the search path with <ref refid="classwx_file_translations_loader_1aef1c18a8e931eaff259e0d1b84e4bd94" kindref="member">AddCatalogLookupPathPrefix()</ref>.</para><para><simplesect kind="since"><para>2.9.1 </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="6273">
+      <node id="6277">
         <label>wxFileTranslationsLoader</label>
         <link refid="classwx_file_translations_loader"/>
-        <childnode refid="6274" relation="public-inheritance">
+        <childnode refid="6278" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6274">
+      <node id="6278">
         <label>wxTranslationsLoader</label>
         <link refid="classwx_translations_loader"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="6275">
+      <node id="6279">
         <label>wxFileTranslationsLoader</label>
         <link refid="classwx_file_translations_loader"/>
-        <childnode refid="6276" relation="public-inheritance">
+        <childnode refid="6280" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6276">
+      <node id="6280">
         <label>wxTranslationsLoader</label>
         <link refid="classwx_translations_loader"/>
       </node>

@@ -1,11 +1,10 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_owner_drawn_combo_box" kind="class" prot="public">
     <compoundname>wxOwnerDrawnComboBox</compoundname>
     <basecompoundref refid="classwx_combo_ctrl" prot="public" virt="non-virtual">wxComboCtrl</basecompoundref>
     <includes local="no">wx/odcombo.h</includes>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_owner_drawn_combo_box_1a92bdeed6e785aecb9ee37181b2eb3a3e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
         <definition>bool wxOwnerDrawnComboBox::Create</definition>
@@ -607,84 +606,33 @@
 <listitem><para>wxODCB_DCLICK_CYCLES: Double-clicking cycles item if wxCB_READONLY is also used. Synonymous with wxCC_SPECIAL_DCLICK. </para></listitem>
 <listitem><para>wxODCB_STD_CONTROL_PAINT: Control itself is not custom painted using OnDrawItem. Even if this style is not used, writable <ref refid="classwx_owner_drawn_combo_box" kindref="compound">wxOwnerDrawnComboBox</ref> is never custom painted unless <ref refid="classwx_combo_ctrl_1af0b54e5e4f71efc63464ceb44f1497d5" kindref="member">SetCustomPaintWidth()</ref> is called. </para></listitem>
 </itemizedlist>
-<simplesect kind="see"><para><ref refid="classwx_combo_ctrl" kindref="compound">wxComboCtrl</ref> window styles and <ref refid="overview__windowstyles" kindref="compound">Window Styles</ref>.</para></simplesect>
+<simplesect kind="see"><para><ref refid="classwx_combo_ctrl" kindref="compound">wxComboCtrl</ref> window styles and <ref refid="overview_windowstyles" kindref="compound">Window Styles</ref>.</para></simplesect>
 <heading level="2">Events emitted by this class</heading>
 </para><para>The following event handler macros redirect the events to member function handlers &apos;<bold>func</bold>&apos; with prototypes like: void<nonbreakablespace/>handlerFuncName(<ref refid="classwx_command_event" kindref="compound">wxCommandEvent</ref>&amp;<nonbreakablespace/>event)Event macros for events emitted by this class: <itemizedlist>
 <listitem><para>EVT_COMBOBOX(id,  func): Process a wxEVT_COMMAND_COMBOBOX_SELECTED event, when an item on the list is selected. Note that calling <ref refid="classwx_combo_ctrl_1af2c8a92d3a2b1f387432633bed397ef8" kindref="member">GetValue()</ref> returns the new value of selection. </para></listitem>
 </itemizedlist>
 <simplesect kind="see"><para>Events emitted by <ref refid="classwx_combo_ctrl" kindref="compound">wxComboCtrl</ref>.</para></simplesect>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref> <htmlonly> &lt;br&gt;&lt;div&gt;&lt;span class=&apos;appearance&apos;&gt;Appearance:&lt;/span&gt;&lt;br&gt;&lt;table class=&apos;appearance&apos;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&apos;wxmsw/ownerdrawncombobox.png&apos; alt=&apos;wxMSW appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxgtk/ownerdrawncombobox.png&apos; alt=&apos;wxGTK appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxmac/ownerdrawncombobox.png&apos; alt=&apos;wxMac appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;wxMSW appearance&lt;/td&gt;&lt;td&gt;wxGTK appearance&lt;/td&gt;&lt;td&gt;wxMac appearance&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt; </htmlonly></para><para><simplesect kind="see"><para><ref refid="classwx_combo_ctrl" kindref="compound">wxComboCtrl</ref>, <ref refid="classwx_combo_box" kindref="compound">wxComboBox</ref>, <ref refid="classwx_v_list_box" kindref="compound">wxVListBox</ref>, <ref refid="classwx_command_event" kindref="compound">wxCommandEvent</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref> <htmlonly> &lt;br&gt;&lt;div&gt;&lt;span class=&apos;appearance&apos;&gt;Appearance:&lt;/span&gt;&lt;br&gt;&lt;table class=&apos;appearance&apos;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&apos;wxmsw/ownerdrawncombobox.png&apos; alt=&apos;wxMSW appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxgtk/ownerdrawncombobox.png&apos; alt=&apos;wxGTK appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxmac/ownerdrawncombobox.png&apos; alt=&apos;wxMac appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;wxMSW appearance&lt;/td&gt;&lt;td&gt;wxGTK appearance&lt;/td&gt;&lt;td&gt;wxMac appearance&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt; </htmlonly></para><para><simplesect kind="see"><para><ref refid="classwx_combo_ctrl" kindref="compound">wxComboCtrl</ref>, <ref refid="classwx_combo_box" kindref="compound">wxComboBox</ref>, <ref refid="classwx_v_list_box" kindref="compound">wxVListBox</ref>, <ref refid="classwx_command_event" kindref="compound">wxCommandEvent</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="8479">
-        <label>wxObject</label>
-        <link refid="classwx_object"/>
-      </node>
-      <node id="8478">
-        <label>wxEvtHandler</label>
-        <link refid="classwx_evt_handler"/>
-        <childnode refid="8479" relation="public-inheritance">
-        </childnode>
-        <childnode refid="8480" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="8480">
-        <label>wxTrackable</label>
-        <link refid="classwx_trackable"/>
-      </node>
-      <node id="8481">
-        <label>wxTextEntry</label>
-        <link refid="classwx_text_entry"/>
-      </node>
-      <node id="8476">
-        <label>wxControl</label>
-        <link refid="classwx_control"/>
-        <childnode refid="8477" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="8477">
-        <label>wxWindow</label>
-        <link refid="classwx_window"/>
-        <childnode refid="8478" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="8475">
-        <label>wxComboCtrl</label>
-        <link refid="classwx_combo_ctrl"/>
-        <childnode refid="8476" relation="public-inheritance">
-        </childnode>
-        <childnode refid="8481" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="8474">
-        <label>wxOwnerDrawnComboBox</label>
-        <link refid="classwx_owner_drawn_combo_box"/>
-        <childnode refid="8475" relation="public-inheritance">
-        </childnode>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
       <node id="8487">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="8488" relation="usage">
-          <edgelabel>m_refData</edgelabel>
-        </childnode>
       </node>
       <node id="8486">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
         <childnode refid="8487" relation="public-inheritance">
         </childnode>
-        <childnode refid="8489" relation="public-inheritance">
+        <childnode refid="8488" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8489">
+      <node id="8488">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="8490">
+      <node id="8489">
         <label>wxTextEntry</label>
         <link refid="classwx_text_entry"/>
       </node>
@@ -705,7 +653,7 @@
         <link refid="classwx_combo_ctrl"/>
         <childnode refid="8484" relation="public-inheritance">
         </childnode>
-        <childnode refid="8490" relation="public-inheritance">
+        <childnode refid="8489" relation="public-inheritance">
         </childnode>
       </node>
       <node id="8482">
@@ -714,7 +662,58 @@
         <childnode refid="8483" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8488">
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="8495">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="8496" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="8494">
+        <label>wxEvtHandler</label>
+        <link refid="classwx_evt_handler"/>
+        <childnode refid="8495" relation="public-inheritance">
+        </childnode>
+        <childnode refid="8497" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8497">
+        <label>wxTrackable</label>
+        <link refid="classwx_trackable"/>
+      </node>
+      <node id="8498">
+        <label>wxTextEntry</label>
+        <link refid="classwx_text_entry"/>
+      </node>
+      <node id="8492">
+        <label>wxControl</label>
+        <link refid="classwx_control"/>
+        <childnode refid="8493" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8493">
+        <label>wxWindow</label>
+        <link refid="classwx_window"/>
+        <childnode refid="8494" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8491">
+        <label>wxComboCtrl</label>
+        <link refid="classwx_combo_ctrl"/>
+        <childnode refid="8492" relation="public-inheritance">
+        </childnode>
+        <childnode refid="8498" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8490">
+        <label>wxOwnerDrawnComboBox</label>
+        <link refid="classwx_owner_drawn_combo_box"/>
+        <childnode refid="8491" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8496">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

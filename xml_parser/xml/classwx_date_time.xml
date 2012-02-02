@@ -1,15 +1,12 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_date_time" kind="class" prot="public">
     <compoundname>wxDateTime</compoundname>
     <includes local="no">wx/datetime.h</includes>
     <innerclass refid="structwx_date_time_1_1_tm" prot="public">wxDateTime::Tm</innerclass>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
-      </sectiondef>
-      <sectiondef kind="user-defined">
       <header>Constructors, Assignment Operators and Setters</header>
-      <description><para><anchor id="_1amgrp7dcd7e2437bc4b1ec60895a2b9864562"/>Constructors and various <ref refid="classwx_date_time_1a221052d954c072ce56b796eaa4c075d3" kindref="member">Set()</ref> methods are collected here.</para><para>If you construct a date object from separate values for day, month and year, you should use <ref refid="classwx_date_time_1aaff0bd60809b4d03839ddd4c6eb9e84d" kindref="member">IsValid()</ref> method to check that the values were correct as constructors cannot return an error code. </para></description>
+      <description><para>Constructors and various <ref refid="classwx_date_time_1a221052d954c072ce56b796eaa4c075d3" kindref="member">Set()</ref> methods are collected here.</para><para>If you construct a date object from separate values for day, month and year, you should use <ref refid="classwx_date_time_1aaff0bd60809b4d03839ddd4c6eb9e84d" kindref="member">IsValid()</ref> method to check that the values were correct as constructors cannot return an error code. </para></description>
       <memberdef kind="function" id="classwx_date_time_1a4cc372429453a21632d64f34f635d853" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
         <definition>wxDateTime::wxDateTime</definition>
@@ -509,7 +506,7 @@
       </sectiondef>
       <sectiondef kind="user-defined">
       <header>Accessors</header>
-      <description><para><anchor id="_1amgrp04cb611d2bf0c8edd5b113799b30e174"/>Here are the trivial accessors.</para><para>Other functions, which might have to perform some more complicated calculations to find the answer are under the &quot;Date Arithmetics&quot; section. </para></description>
+      <description><para>Here are the trivial accessors.</para><para>Other functions, which might have to perform some more complicated calculations to find the answer are under the &quot;Date Arithmetics&quot; section. </para></description>
       <memberdef kind="function" id="classwx_date_time_1aae2426d8e550a3e8fd0db66a87a9d135" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>long unsigned int</type>
         <definition>long unsigned int wxDateTime::GetAsDOS</definition>
@@ -901,7 +898,7 @@
       </sectiondef>
       <sectiondef kind="user-defined">
       <header>Date Comparison</header>
-      <description><para><anchor id="_1amgrp5e4b3b218996b5876e3a4d90a0a887ad"/>There are several functions to allow date comparison.</para><para>To supplement them, a few global operators, etc taking <ref refid="classwx_date_time" kindref="compound">wxDateTime</ref> are defined. </para></description>
+      <description><para>There are several functions to allow date comparison.</para><para>To supplement them, a few global operators, etc taking <ref refid="classwx_date_time" kindref="compound">wxDateTime</ref> are defined. </para></description>
       <memberdef kind="function" id="classwx_date_time_1a73fc9631cab5db9cc602bb5ec6c1f505" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
         <definition>bool wxDateTime::IsEarlierThan</definition>
@@ -1055,7 +1052,7 @@
       </sectiondef>
       <sectiondef kind="user-defined">
       <header>Date Arithmetics</header>
-      <description><para><anchor id="_1amgrp17cddeac80e0ec5da71ab860273e4363"/>These functions carry out <ref refid="overview__datetime_1overview_datetime_arithmetics" kindref="member">arithmetics</ref> on the <ref refid="classwx_date_time" kindref="compound">wxDateTime</ref> objects.</para><para>As explained in the overview, either <ref refid="classwx_time_span" kindref="compound">wxTimeSpan</ref> or <ref refid="classwx_date_span" kindref="compound">wxDateSpan</ref> may be added to <ref refid="classwx_date_time" kindref="compound">wxDateTime</ref>, hence all functions are overloaded to accept both arguments.</para><para>Also, both <ref refid="classwx_date_time_1a53c8d4e51a784a64b374124a60921f27" kindref="member">Add()</ref> and <ref refid="classwx_date_time_1a99bfe3957c206d71cd4d980b10b400a1" kindref="member">Subtract()</ref> have both const and non-const version. The first one returns a new object which represents the sum/difference of the original one with the argument while the second form modifies the object to which it is applied. The operators &quot;-=&quot; and &quot;+=&quot; are defined to be equivalent to the second forms of these functions. </para></description>
+      <description><para>These functions carry out <ref refid="overview_datetime_1overview_datetime_arithmetics" kindref="member">arithmetics</ref> on the <ref refid="classwx_date_time" kindref="compound">wxDateTime</ref> objects.</para><para>As explained in the overview, either <ref refid="classwx_time_span" kindref="compound">wxTimeSpan</ref> or <ref refid="classwx_date_span" kindref="compound">wxDateSpan</ref> may be added to <ref refid="classwx_date_time" kindref="compound">wxDateTime</ref>, hence all functions are overloaded to accept both arguments.</para><para>Also, both <ref refid="classwx_date_time_1a53c8d4e51a784a64b374124a60921f27" kindref="member">Add()</ref> and <ref refid="classwx_date_time_1a99bfe3957c206d71cd4d980b10b400a1" kindref="member">Subtract()</ref> have both const and non-const version. The first one returns a new object which represents the sum/difference of the original one with the argument while the second form modifies the object to which it is applied. The operators &quot;-=&quot; and &quot;+=&quot; are defined to be equivalent to the second forms of these functions. </para></description>
       <memberdef kind="function" id="classwx_date_time_1a53c8d4e51a784a64b374124a60921f27" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_date_time" kindref="compound">wxDateTime</ref></type>
         <definition>wxDateTime wxDateTime::Add</definition>
@@ -1280,7 +1277,7 @@
       </sectiondef>
       <sectiondef kind="user-defined">
       <header>Date Formatting and Parsing</header>
-      <description><para><anchor id="_1amgrp434c4bafbf5f0fa1d146632bdd6b11f7"/>See <ref refid="classwx_date_time_1datetime_formatting" kindref="member">Date Formatting and Parsing</ref> </para></description>
+      <description><para>See <ref refid="classwx_date_time_1datetime_formatting" kindref="member">Date Formatting and Parsing</ref> </para></description>
       <memberdef kind="function" id="classwx_date_time_1a32377f43a31e29ad4fe70f299650c5f8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
         <definition>wxString wxDateTime::Format</definition>
@@ -1444,14 +1441,14 @@
 <para>This function parses the string <emphasis>date</emphasis> according to the given <emphasis>format</emphasis>. </para>        </briefdescription>
         <detaileddescription>
 <para>The system <computeroutput>strptime(3)</computeroutput> function is used whenever available, but even if it is not, this function is still implemented, although support for locale-dependent format specifiers such as <computeroutput>&quot;%c&quot;</computeroutput>, <computeroutput>&quot;%x&quot;</computeroutput> or <computeroutput>&quot;%X&quot;</computeroutput> may not be perfect and GNU extensions such as <computeroutput>&quot;%z&quot;</computeroutput> and <computeroutput>&quot;%Z&quot;</computeroutput> are not implemented. This function does handle the month and weekday names in the current locale on all platforms, however.</para><para>Please see the description of the ANSI C function <computeroutput>strftime(3)</computeroutput> for the syntax of the format string.</para><para>The <emphasis>dateDef</emphasis> parameter is used to fill in the fields which could not be determined from the format string. For example, if the format is <computeroutput>&quot;%d&quot;</computeroutput> (the day of the month), the month and the year are taken from <emphasis>dateDef</emphasis>. If it is not specified, <ref refid="classwx_date_time_1af730202238b9acd5a5df2977fa40c569" kindref="member">Today()</ref> is used as the default date.</para><para>Example of using this function: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_date_time" kindref="compound" tooltip="wxDateTime class represents an absolute moment in the time.">wxDateTime</ref><sp/>dt;</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change...">wxString</ref><sp/>str<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;...&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change was actually the m...">wxString</ref><sp/>str<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;...&quot;</highlight><highlight class="normal">;</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wxString::const_iterator<sp/>end;</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>!dt.<ref refid="classwx_date_time_1a5d01d56c310d505a093f1a7f25086a1b" kindref="member" tooltip="This function parses the string date according to the given format.">ParseFormat</ref>(str,<sp/></highlight><highlight class="stringliteral">&quot;%Y-%m-%d&quot;</highlight><highlight class="normal">,<sp/>&amp;end)<sp/>)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...<sp/>parsing<sp/>failed<sp/>...</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>end<sp/>==<sp/>str.<ref refid="classwx_string_1a6a0f235fff88df5e6b16b5f0e1e719cc" kindref="member">end</ref>()<sp/>)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...<sp/>entire<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>parsed<sp/>...</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...<sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change...">wxString</ref>(end,<sp/>str.<ref refid="classwx_string_1a6a0f235fff88df5e6b16b5f0e1e719cc" kindref="member">end</ref>())<sp/>left<sp/>over<sp/>...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...<sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change was actually the m...">wxString</ref>(end,<sp/>str.<ref refid="classwx_string_1a6a0f235fff88df5e6b16b5f0e1e719cc" kindref="member">end</ref>())<sp/>left<sp/>over<sp/>...</highlight></codeline>
 </programlisting></para><para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>date</parametername>
@@ -1638,7 +1635,7 @@
       </sectiondef>
       <sectiondef kind="user-defined">
       <header>Calendar Calculations</header>
-      <description><para><anchor id="_1amgrpe0faa76f2be87610c5ba77fca5c07633"/>The functions in this section perform the basic calendar calculations, mostly related to the week days.</para><para>They allow to find the given week day in the week with given number (either in the month or in the year) and so on.</para><para>None of the functions in this section modify the time part of the <ref refid="classwx_date_time" kindref="compound">wxDateTime</ref>, they only work with the date part of it. </para></description>
+      <description><para>The functions in this section perform the basic calendar calculations, mostly related to the week days.</para><para>They allow to find the given week day in the week with given number (either in the month or in the year) and so on.</para><para>None of the functions in this section modify the time part of the <ref refid="classwx_date_time" kindref="compound">wxDateTime</ref>, they only work with the date part of it. </para></description>
       <memberdef kind="function" id="classwx_date_time_1a87f1ede94cfcda2a8b2db7322432f2f2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_date_time" kindref="compound">wxDateTime</ref></type>
         <definition>wxDateTime wxDateTime::GetLastMonthDay</definition>
@@ -1958,7 +1955,7 @@
       </sectiondef>
       <sectiondef kind="user-defined">
       <header>Astronomical/Historical Functions</header>
-      <description><para><anchor id="_1amgrp976900ea1adb0c111b1832c279d28c2c"/>Some degree of support for the date units used in astronomy and/or history is provided.</para><para>You can construct a <ref refid="classwx_date_time" kindref="compound">wxDateTime</ref> object from a JDN and you may also get its JDN, MJD or Rata Die number from it.</para><para>Related functions in other groups: <ref refid="classwx_date_time_1aa2c38922eafec2a94fb5ee9221c0f6b9" kindref="member">wxDateTime(double)</ref>, <ref refid="classwx_date_time_1acfaba2a9f0241f74aff4641304f0a8fb" kindref="member">Set(double)</ref> </para></description>
+      <description><para>Some degree of support for the date units used in astronomy and/or history is provided.</para><para>You can construct a <ref refid="classwx_date_time" kindref="compound">wxDateTime</ref> object from a JDN and you may also get its JDN, MJD or Rata Die number from it.</para><para>Related functions in other groups: <ref refid="classwx_date_time_1aa2c38922eafec2a94fb5ee9221c0f6b9" kindref="member">wxDateTime(double)</ref>, <ref refid="classwx_date_time_1acfaba2a9f0241f74aff4641304f0a8fb" kindref="member">Set(double)</ref> </para></description>
       <memberdef kind="function" id="classwx_date_time_1a0bde25a418d8a7fd3e6e6a4c3941e20f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
         <definition>double wxDateTime::GetJDN</definition>
@@ -2028,7 +2025,7 @@
       </sectiondef>
       <sectiondef kind="user-defined">
       <header>Time Zone and DST Support</header>
-      <description><para><anchor id="_1amgrp6b5f795d691e28fe2e8ed67dcb04d94b"/>Please see the <ref refid="overview__datetime_1overview_datetime_timezones" kindref="member">time zone overview</ref> for more information about time zones.</para><para>Normally, these functions should be rarely used.</para><para>Related functions in other groups: <ref refid="classwx_date_time_1a968bb73469fdccd2903c671b435735d7" kindref="member">GetBeginDST()</ref>, <ref refid="classwx_date_time_1a8c811978a0390f54ffa6012931ecb1af" kindref="member">GetEndDST()</ref> </para></description>
+      <description><para>Please see the <ref refid="overview_datetime_1overview_datetime_timezones" kindref="member">time zone overview</ref> for more information about time zones.</para><para>Normally, these functions should be rarely used.</para><para>Related functions in other groups: <ref refid="classwx_date_time_1a968bb73469fdccd2903c671b435735d7" kindref="member">GetBeginDST()</ref>, <ref refid="classwx_date_time_1a8c811978a0390f54ffa6012931ecb1af" kindref="member">GetEndDST()</ref> </para></description>
       <memberdef kind="function" id="classwx_date_time_1a947daf50d898d95d063777c2cef27feb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_date_time" kindref="compound">wxDateTime</ref></type>
         <definition>wxDateTime wxDateTime::FromTimezone</definition>
@@ -2174,6 +2171,8 @@
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1232"/>
       </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
       </sectiondef>
       <sectiondef kind="public-type">
       <memberdef kind="enum" id="classwx_date_time_1a4db12283a6c06cea4c92528fbb7f88bb" prot="public" static="no">
@@ -2547,7 +2546,7 @@
           <name>A_CST</name>
           <initializer> GMT13 + 1</initializer>
           <briefdescription>
-<para>Central Standard Time (+9.5). </para>          </briefdescription>
+<para>Central Standard Time (+9.5) </para>          </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
@@ -3021,7 +3020,7 @@
         <briefdescription>
 <para>Get the beginning of DST for the given country in the given year (current one by default). </para>        </briefdescription>
         <detaileddescription>
-<para>This function suffers from limitations described in the <ref refid="overview__datetime_1overview_datetime_dst" kindref="member">DST overview</ref>.</para><para><simplesect kind="see"><para><ref refid="classwx_date_time_1a8c811978a0390f54ffa6012931ecb1af" kindref="member">GetEndDST()</ref> </para></simplesect>
+<para>This function suffers from limitations described in the <ref refid="overview_datetime_1overview_datetime_dst" kindref="member">DST overview</ref>.</para><para><simplesect kind="see"><para><ref refid="classwx_date_time_1a8c811978a0390f54ffa6012931ecb1af" kindref="member">GetEndDST()</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -3437,7 +3436,7 @@
 <para>Returns the object corresponding to the current time. </para>        </briefdescription>
         <detaileddescription>
 <para>Example:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_date_time" kindref="compound" tooltip="wxDateTime class represents an absolute moment in the time.">wxDateTime</ref><sp/>now<sp/>=<sp/><ref refid="classwx_date_time_1a6e6c37a0414bb4831e2cc03b37f498a2" kindref="member" tooltip="Returns the object corresponding to the current time.">wxDateTime::Now</ref>();</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Current<sp/>time<sp/>in<sp/>Paris:\t%s\n&quot;</highlight><highlight class="normal">,<sp/>now.<ref refid="classwx_date_time_1a32377f43a31e29ad4fe70f299650c5f8" kindref="member" tooltip="This function does the same as the standard ANSI C strftime(3) function (http://www...">Format</ref>(</highlight><highlight class="stringliteral">&quot;%c&quot;</highlight><highlight class="normal">,<sp/><ref refid="classwx_date_time_1a4db12283a6c06cea4c92528fbb7f88bba768e71f1f3c63c6cf64dd9c9a0f20b0b" kindref="member" tooltip="Central Europe Time.">wxDateTime::CET</ref>).<ref refid="classwx_string_1a6418ec90c6d4ffe0b05702be1b35df4f" kindref="member" tooltip="Returns a lightweight intermediate class which is in turn implicitly convertible...">c_str</ref>());</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Current<sp/>time<sp/>in<sp/>Paris:\t%s\n&quot;</highlight><highlight class="normal">,<sp/>now.<ref refid="classwx_date_time_1a32377f43a31e29ad4fe70f299650c5f8" kindref="member" tooltip="This function does the same as the standard ANSI C strftime(3) function (http://www.cplusplus.com/reference/clibrary/ctime/strftime.html).">Format</ref>(</highlight><highlight class="stringliteral">&quot;%c&quot;</highlight><highlight class="normal">,<sp/><ref refid="classwx_date_time_1a4db12283a6c06cea4c92528fbb7f88bba768e71f1f3c63c6cf64dd9c9a0f20b0b" kindref="member" tooltip="Central Europe Time.">wxDateTime::CET</ref>).<ref refid="classwx_string_1a6418ec90c6d4ffe0b05702be1b35df4f" kindref="member" tooltip="Returns a lightweight intermediate class which is in turn implicitly convertible to both const char* ...">c_str</ref>());</highlight></codeline>
 </programlisting></para><para><simplesect kind="note"><para>This function is accurate up to seconds. <ref refid="classwx_date_time_1a0db1c9bac7b2d27d589cad2a38d1438c" kindref="member">UNow()</ref> should be used for better precision, but it is less efficient and might not be available on all platforms.</para></simplesect>
 <simplesect kind="see"><para><ref refid="classwx_date_time_1af730202238b9acd5a5df2977fa40c569" kindref="member">Today()</ref> </para></simplesect>
 </para>        </detaileddescription>
@@ -3527,9 +3526,9 @@
 <sect1 id="classwx_date_time_1datetime_formatting">
 <title>Date Formatting and Parsing</title>
 <para>The date formatting and parsing functions convert <ref refid="classwx_date_time" kindref="compound">wxDateTime</ref> objects to and from text. The conversions to text are mostly trivial: you can either do it using the default date and time representations for the current locale (<ref refid="classwx_date_time_1ab9886b69761a87ccf77f0ffee7c7f12e" kindref="member">FormatDate()</ref> and <ref refid="classwx_date_time_1a4d3145af33faf443ac9d9fdfc4256c1e" kindref="member">FormatTime()</ref>), using the international standard representation defined by ISO 8601 (<ref refid="classwx_date_time_1a7dc79585261a999dbd43152186e52299" kindref="member">FormatISODate()</ref>, <ref refid="classwx_date_time_1a0f677ffcbc651c733249af36af6bbb3b" kindref="member">FormatISOTime()</ref> and <ref refid="classwx_date_time_1a8d99cfc519de33d2fcf16360a13212f0" kindref="member">FormatISOCombined()</ref>) or by specifying any format at all and using <ref refid="classwx_date_time_1a32377f43a31e29ad4fe70f299650c5f8" kindref="member">Format()</ref> directly.</para><para>The conversions from text are more interesting, as there are much more possibilities to care about. The simplest cases can be taken care of with <ref refid="classwx_date_time_1a5d01d56c310d505a093f1a7f25086a1b" kindref="member">ParseFormat()</ref> which can parse any date in the given (rigid) format. <ref refid="classwx_date_time_1ab0f2485c52d0d3cf0196aaf0062d2f83" kindref="member">ParseRfc822Date()</ref> is another function for parsing dates in predefined format -- the one of RFC 822 which (still...) defines the format of email messages on the Internet. This format cannot be described with <computeroutput>strptime(3)-like</computeroutput> format strings used by <ref refid="classwx_date_time_1a32377f43a31e29ad4fe70f299650c5f8" kindref="member">Format()</ref>, hence the need for a separate function.</para><para>But the most interesting functions are <ref refid="classwx_date_time_1ac903b3227620e1b88019e76b807327e8" kindref="member">ParseTime()</ref>, <ref refid="classwx_date_time_1acdcb88e25b38099994af45b11391c962" kindref="member">ParseDate()</ref> and <ref refid="classwx_date_time_1a332a41f998bc3be6c0a9a81449112485" kindref="member">ParseDateTime()</ref>. They try to parse the date and time (or only one of them) in &apos;free&apos; format, i.e. allow them to be specified in any of possible ways. These functions will usually be used to parse the (interactive) user input which is not bound to be in any predefined format. As an example, <ref refid="classwx_date_time_1acdcb88e25b38099994af45b11391c962" kindref="member">ParseDate()</ref> can parse the strings such as &quot;tomorrow&quot;, &quot;March first&quot; and even &quot;next Sunday&quot;.</para><para>Finally notice that each of the parsing functions is available in several overloads: if the input string is a narrow (<computeroutput>char</computeroutput> *) string, then a narrow pointer is returned. If the input string is a wide string, a wide char pointer is returned. Finally, if the input parameter is a <ref refid="classwx_string" kindref="compound">wxString</ref>, a narrow char pointer is also returned for backwards compatibility but there is also an additional argument of wxString::const_iterator type in which, if it is not NULL, an iterator pointing to the end of the scanned string part is returned.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__data" kindref="compound">Data Structures</ref></para><para>Predefined objects/pointers:<itemizedlist>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__data" kindref="compound">Data Structures</ref></para><para>Predefined objects/pointers:<itemizedlist>
 <listitem><para><ref refid="interface_2wx_2datetime_8h_1ade74a40ef749abadb7c5338e2c9a9321" kindref="member">wxDefaultDateTime</ref></para></listitem></itemizedlist>
-</para><para><simplesect kind="see"><para><ref refid="overview__datetime" kindref="compound">Date and Time</ref>, <ref refid="classwx_time_span" kindref="compound">wxTimeSpan</ref>, <ref refid="classwx_date_span" kindref="compound">wxDateSpan</ref>, <ref refid="classwx_calendar_ctrl" kindref="compound">wxCalendarCtrl</ref> </para></simplesect>
+</para><para><simplesect kind="see"><para><ref refid="overview_datetime" kindref="compound">Date and Time</ref>, <ref refid="classwx_time_span" kindref="compound">wxTimeSpan</ref>, <ref refid="classwx_date_span" kindref="compound">wxDateSpan</ref>, <ref refid="classwx_calendar_ctrl" kindref="compound">wxCalendarCtrl</ref> </para></simplesect>
 </para></sect1>
     </detaileddescription>
     <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="84" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" bodystart="83" bodyend="1492"/>

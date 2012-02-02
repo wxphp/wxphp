@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="overview_envvars" kind="page">
+    <compoundname>overview_envvars</compoundname>
+    <title>Environment Variables</title>
+    <detaileddescription>
+<para>This section describes all environment variables that affect execution of wxWidgets programs.</para><para><table rows="2" cols="2"><row>
+<entry thead="no"><para>WXTRACE </para></entry><entry thead="no"><para>(Debug build only.) This variable can be set to a comma-separated list of trace masks used in wxLogTrace calls; <ref refid="classwx_log_1a4c11ee23ce5264b6c5921a17610cda13" kindref="member">wxLog::AddTraceMask</ref> is called for every mask in the list during wxWidgets initialization. </para></entry></row>
+<row>
+<entry thead="no"><para>WXPREFIX </para></entry><entry thead="no"><para>(Unix only.) Overrides installation prefix. Normally, the prefix is hard-coded and is the same as the value passed to <computeroutput>configure</computeroutput> via the <computeroutput>--prefix</computeroutput> switch when compiling the library (typically <computeroutput>/usr/local</computeroutput> or <computeroutput>/usr</computeroutput>). You can set WXPREFIX if you are for example distributing a binary version of an application and you don&apos;t know in advance where it will be installed. </para></entry></row>
+</table>
+</para>    </detaileddescription>
+  </compounddef>
+</doxygen>

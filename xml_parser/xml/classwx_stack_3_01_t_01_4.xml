@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_stack_3_01_t_01_4" kind="class" prot="public">
     <compoundname>wxStack&lt; T &gt;</compoundname>
     <includes local="no">wx/stack.h</includes>
@@ -9,7 +9,6 @@
       </param>
     </templateparamlist>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_stack_3_01_t_01_4_1ac62fcaaf6d6e262db2f1198a15192ad1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
         <definition>wxStack&lt; T &gt;::wxStack</definition>
@@ -42,7 +41,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_stack_3_01_t_01_4_1a88468b033c07c9e1e6db68f10d405d37" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_stack_3_01_t_01_4_1a9c1bedb7493896bc8e7bfa37c0b1673f" kindref="member">value_type</ref> &amp;</type>
         <definition>value_type&amp; wxStack&lt; T &gt;::top</definition>
@@ -85,7 +83,7 @@
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stack.h" line="38" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stack.h" bodystart="38" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="classwx_stack_3_01_t_01_4_1a3f77c27b43249f4cdb958536b7de9443" prot="public" static="no">
-        <type>container_type::size_type</type>
+        <type><ref refid="classwx_vector_3_01_t_01_4_1a84a2f5af718ce03a212a65b8b5c1cb8a" kindref="member">container_type::size_type</ref></type>
         <definition>typedef container_type::size_type wxStack&lt; T &gt;::size_type</definition>
         <argsstring></argsstring>
         <name>size_type</name>
@@ -98,7 +96,7 @@
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stack.h" line="41" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stack.h" bodystart="41" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="classwx_stack_3_01_t_01_4_1a9c1bedb7493896bc8e7bfa37c0b1673f" prot="public" static="no">
-        <type>container_type::value_type</type>
+        <type><ref refid="classwx_vector_3_01_t_01_4_1a200a710822fc0779945b7d5bf943d9cc" kindref="member">container_type::value_type</ref></type>
         <definition>typedef container_type::value_type wxStack&lt; T &gt;::value_type</definition>
         <argsstring></argsstring>
         <name>value_type</name>
@@ -173,7 +171,7 @@
 <para><ref refid="classwx_stack_3_01_t_01_4" kindref="compound">wxStack&lt;T&gt;</ref> is similar to <computeroutput>std::stack</computeroutput> and can be used exactly like it. </para>    </briefdescription>
     <detaileddescription>
 <para>If wxWidgets is compiled in STL mode, wxStack will just be a typedef to <computeroutput>std::stack</computeroutput> but the advantage of this class is that it is also available on the (rare) platforms where STL is not, so using it makes the code marginally more portable. If you only target the standard desktop platforms, please always use <computeroutput>std::stack</computeroutput> directly instead.</para><para>The main difference of this class compared to the standard version is that it always uses <ref refid="classwx_vector_3_01_t_01_4" kindref="compound">wxVector&lt;T&gt;</ref> as the underlying container and doesn&apos;t allow specifying an alternative container type. Another missing part is that the comparison operators between wxStacks are not currently implemented. Other than that, this class is exactly the same as <computeroutput>std::stack</computeroutput>, so please refer to the STL documentation for further information.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/>None; this class implementation is entirely header-based.</para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__containers" kindref="compound">Containers</ref></para><para><simplesect kind="see"><para><ref refid="overview__container" kindref="compound">Container Classes</ref>, <ref refid="classwx_vector_3_01_t_01_4" kindref="compound">wxVector&lt;T&gt;</ref></para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/>None; this class implementation is entirely header-based.</para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__containers" kindref="compound">Containers</ref></para><para><simplesect kind="see"><para><ref refid="overview_container" kindref="compound">Container Classes</ref>, <ref refid="classwx_vector_3_01_t_01_4" kindref="compound">wxVector&lt;T&gt;</ref></para></simplesect>
 <simplesect kind="since"><para>2.9.2 </para></simplesect>
 </para>    </detaileddescription>
     <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stack.h" line="35" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stack.h" bodystart="34" bodyend="75"/>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_active_x_event" kind="class" prot="public">
     <compoundname>wxActiveXEvent</compoundname>
     <basecompoundref refid="classwx_command_event" prot="public" virt="non-virtual">wxCommandEvent</basecompoundref>
@@ -108,39 +108,12 @@
 </para><para>The following event handler macros redirect the events to member function handlers &apos;<bold>func</bold>&apos; with prototypes like: void<nonbreakablespace/>handlerFuncName(<ref refid="classwx_active_x_event" kindref="compound">wxActiveXEvent</ref>&amp;<nonbreakablespace/>event)Event macros: <itemizedlist>
 <listitem><para>EVT_ACTIVEX(func): Sent when the ActiveX control hosted by <ref refid="classwx_active_x_container" kindref="compound">wxActiveXContainer</ref> receives an ActiveX event. </para></listitem>
 </itemizedlist>
-ActiveX event parameters can get extremely complex and may be beyond the abilities of <ref refid="classwx_variant" kindref="compound">wxVariant</ref>. If &apos;operator[]&apos; fails, prints an error messages or crashes the application, event handlers should use <ref refid="classwx_active_x_event_1af7d71e2433aef27681e6eec254ddf1dc" kindref="member">GetNativeParameters()</ref> instead to obtain the original event information. Calls to operator[] and GetNativeParmeters() can be mixed. It is valid to handle some parameters of an event with operator[] and others directly through <ref refid="classwx_active_x_event_1af7d71e2433aef27681e6eec254ddf1dc" kindref="member">GetNativeParameters()</ref>. It is <bold>not</bold> valid however to manipulate the same parameter using both approaches at the same time.</para><para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page__port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor> </para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref> </para>    </detaileddescription>
+ActiveX event parameters can get extremely complex and may be beyond the abilities of <ref refid="classwx_variant" kindref="compound">wxVariant</ref>. If &apos;operator[]&apos; fails, prints an error messages or crashes the application, event handlers should use <ref refid="classwx_active_x_event_1af7d71e2433aef27681e6eec254ddf1dc" kindref="member">GetNativeParameters()</ref> instead to obtain the original event information. Calls to operator[] and GetNativeParmeters() can be mixed. It is valid to handle some parameters of an event with operator[] and others directly through <ref refid="classwx_active_x_event_1af7d71e2433aef27681e6eec254ddf1dc" kindref="member">GetNativeParameters()</ref>. It is <bold>not</bold> valid however to manipulate the same parameter using both approaches at the same time.</para><para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page_port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor> </para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="4222">
-        <label>wxObject</label>
-        <link refid="classwx_object"/>
-      </node>
-      <node id="4220">
-        <label>wxCommandEvent</label>
-        <link refid="classwx_command_event"/>
-        <childnode refid="4221" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4219">
-        <label>wxActiveXEvent</label>
-        <link refid="classwx_active_x_event"/>
-        <childnode refid="4220" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4221">
-        <label>wxEvent</label>
-        <link refid="classwx_event"/>
-        <childnode refid="4222" relation="public-inheritance">
-        </childnode>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
       <node id="4226">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="4227" relation="usage">
-          <edgelabel>m_refData</edgelabel>
-        </childnode>
       </node>
       <node id="4224">
         <label>wxCommandEvent</label>
@@ -160,7 +133,34 @@ ActiveX event parameters can get extremely complex and may be beyond the abiliti
         <childnode refid="4226" relation="public-inheritance">
         </childnode>
       </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4230">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="4231" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="4228">
+        <label>wxCommandEvent</label>
+        <link refid="classwx_command_event"/>
+        <childnode refid="4229" relation="public-inheritance">
+        </childnode>
+      </node>
       <node id="4227">
+        <label>wxActiveXEvent</label>
+        <link refid="classwx_active_x_event"/>
+        <childnode refid="4228" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4229">
+        <label>wxEvent</label>
+        <link refid="classwx_event"/>
+        <childnode refid="4230" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4231">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

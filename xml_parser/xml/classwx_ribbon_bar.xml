@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_ribbon_bar" kind="class" prot="public">
     <compoundname>wxRibbonBar</compoundname>
     <basecompoundref refid="classwx_ribbon_control" prot="public" virt="non-virtual">wxRibbonControl</basecompoundref>
@@ -328,67 +328,22 @@
 <listitem><para>EVT_RIBBONBAR_TAB_LEFT_DCLICK(id,  func): Triggered when the left mouse button is double clicked on a tab. </para></listitem>
 </itemizedlist>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxribbon" kindref="member">wxRibbon</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ribbon" kindref="compound">Ribbon User Interface</ref> </para>    </detaileddescription>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxribbon" kindref="member">wxRibbon</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ribbon" kindref="compound">Ribbon User Interface</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="9081">
+      <node id="9089">
         <label>wxRibbonControl</label>
         <link refid="classwx_ribbon_control"/>
-        <childnode refid="9082" relation="public-inheritance">
+        <childnode refid="9090" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9085">
+      <node id="9093">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-      </node>
-      <node id="9084">
-        <label>wxEvtHandler</label>
-        <link refid="classwx_evt_handler"/>
-        <childnode refid="9085" relation="public-inheritance">
-        </childnode>
-        <childnode refid="9086" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="9086">
-        <label>wxTrackable</label>
-        <link refid="classwx_trackable"/>
-      </node>
-      <node id="9082">
-        <label>wxControl</label>
-        <link refid="classwx_control"/>
-        <childnode refid="9083" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="9083">
-        <label>wxWindow</label>
-        <link refid="classwx_window"/>
-        <childnode refid="9084" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="9080">
-        <label>wxRibbonBar</label>
-        <link refid="classwx_ribbon_bar"/>
-        <childnode refid="9081" relation="public-inheritance">
-        </childnode>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
-      <node id="9088">
-        <label>wxRibbonControl</label>
-        <link refid="classwx_ribbon_control"/>
-        <childnode refid="9089" relation="public-inheritance">
-        </childnode>
       </node>
       <node id="9092">
-        <label>wxObject</label>
-        <link refid="classwx_object"/>
-        <childnode refid="9093" relation="usage">
-          <edgelabel>m_refData</edgelabel>
-        </childnode>
-      </node>
-      <node id="9091">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="9092" relation="public-inheritance">
+        <childnode refid="9093" relation="public-inheritance">
         </childnode>
         <childnode refid="9094" relation="public-inheritance">
         </childnode>
@@ -397,25 +352,70 @@
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="9089">
+      <node id="9090">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="9090" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="9090">
-        <label>wxWindow</label>
-        <link refid="classwx_window"/>
         <childnode refid="9091" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9087">
-        <label>wxRibbonBar</label>
-        <link refid="classwx_ribbon_bar"/>
-        <childnode refid="9088" relation="public-inheritance">
+      <node id="9091">
+        <label>wxWindow</label>
+        <link refid="classwx_window"/>
+        <childnode refid="9092" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9093">
+      <node id="9088">
+        <label>wxRibbonBar</label>
+        <link refid="classwx_ribbon_bar"/>
+        <childnode refid="9089" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="9096">
+        <label>wxRibbonControl</label>
+        <link refid="classwx_ribbon_control"/>
+        <childnode refid="9097" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9100">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="9101" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="9099">
+        <label>wxEvtHandler</label>
+        <link refid="classwx_evt_handler"/>
+        <childnode refid="9100" relation="public-inheritance">
+        </childnode>
+        <childnode refid="9102" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9102">
+        <label>wxTrackable</label>
+        <link refid="classwx_trackable"/>
+      </node>
+      <node id="9097">
+        <label>wxControl</label>
+        <link refid="classwx_control"/>
+        <childnode refid="9098" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9098">
+        <label>wxWindow</label>
+        <link refid="classwx_window"/>
+        <childnode refid="9099" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9095">
+        <label>wxRibbonBar</label>
+        <link refid="classwx_ribbon_bar"/>
+        <childnode refid="9096" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9101">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

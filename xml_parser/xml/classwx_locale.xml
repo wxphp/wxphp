@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_locale" kind="class" prot="public">
     <compoundname>wxLocale</compoundname>
     <includes local="no">wx/intl.h</includes>
@@ -354,7 +354,7 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000026"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This form is deprecated, use the other one unless you know what you are doing.</para></xrefdescription></xrefsect><parameterlist kind="param"><parameteritem>
+<para><xrefsect id="deprecated_1_deprecated000026"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This form is deprecated, use the other one unless you know what you are doing.</para></xrefdescription></xrefsect></para><para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>name</parametername>
 </parameternamelist>
@@ -644,7 +644,7 @@
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>...</highlight></codeline>
 </programlisting></para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__cfg" kindref="compound">Application and System configuration</ref></para><para><simplesect kind="see"><para><ref refid="overview__i18n" kindref="compound">Internationalization</ref>, <ref refid="page__samples_1page_samples_internat" kindref="member">Internationalization Sample</ref>, <ref refid="classwx_x_locale" kindref="compound">wxXLocale</ref>, <ref refid="classwx_translations" kindref="compound">wxTranslations</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__cfg" kindref="compound">Application and System configuration</ref></para><para><simplesect kind="see"><para><ref refid="overview_i18n" kindref="compound">Internationalization</ref>, <ref refid="page_samples_1page_samples_internat" kindref="member">Internationalization Sample</ref>, <ref refid="classwx_x_locale" kindref="compound">wxXLocale</ref>, <ref refid="classwx_translations" kindref="compound">wxTranslations</ref> </para></simplesect>
 </para>    </detaileddescription>
     <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/intl.h" line="214" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/intl.h" bodystart="213" bodyend="489"/>
     <listofallmembers>

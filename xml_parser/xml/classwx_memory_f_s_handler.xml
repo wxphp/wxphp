@@ -1,11 +1,10 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_memory_f_s_handler" kind="class" prot="public">
     <compoundname>wxMemoryFSHandler</compoundname>
     <basecompoundref refid="classwx_file_system_handler" prot="public" virt="non-virtual">wxFileSystemHandler</basecompoundref>
     <includes local="no">wx/fs_mem.h</includes>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_memory_f_s_handler_1a3f492723f5ae6353c6f2ef8ce8af676b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>static void wxMemoryFSHandler::AddFile</definition>
@@ -62,7 +61,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_memory_f_s_handler_1a1a4c2fa90f2d747eeaf532decd14eda7" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>static void wxMemoryFSHandler::AddFileWithMimeType</definition>
@@ -163,32 +161,32 @@
 <codeline><highlight class="preprocessor"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#include<sp/>&quot;logo.xpm&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif</highlight></codeline>
 <codeline><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>MyFrame::OnAbout(<ref refid="classwx_command_event" kindref="compound" tooltip="This event class contains information about command events, which originate from...">wxCommandEvent</ref>&amp;)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>MyFrame::OnAbout(<ref refid="classwx_command_event" kindref="compound" tooltip="This event class contains information about command events, which originate from a variety of simple ...">wxCommandEvent</ref>&amp;)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_busy_cursor" kindref="compound" tooltip="This class makes it easy to tell your user that the program is temporarily busy.">wxBusyCursor</ref><sp/>bcur;</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_file_system_1a442d841b2baa5a0eb83c3a985b1e3119" kindref="member" tooltip="This static function adds new handler into the list of handlers (see wxFileSystemHandler)...">wxFileSystem::AddHandler</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classwx_memory_f_s_handler" kindref="compound" tooltip="This wxFileSystem handler can store arbitrary data in memory stream and make them...">wxMemoryFSHandler</ref>);</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_memory_f_s_handler_1a3f492723f5ae6353c6f2ef8ce8af676b" kindref="member" tooltip="Adds a file to the list of the files stored in memory.">wxMemoryFSHandler::AddFile</ref>(</highlight><highlight class="stringliteral">&quot;logo.pcx&quot;</highlight><highlight class="normal">,<sp/><ref refid="group__group__funcmacro__gdi_1ga309f860d17c1a8c4cc54c6e772a2fd09" kindref="member" tooltip="This macro loads a bitmap from either application resources (on the platforms for...">wxBITMAP</ref>(logo),<sp/><ref refid="gdicmn_8h_1a90a1eb6d85b5044a99b706fd979f27f5a04cbde804fd7c9ce9b651b56b9f76781" kindref="member">wxBITMAP_TYPE_PCX</ref>);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_file_system_1a442d841b2baa5a0eb83c3a985b1e3119" kindref="member" tooltip="This static function adds new handler into the list of handlers (see wxFileSystemHandler) which provi...">wxFileSystem::AddHandler</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classwx_memory_f_s_handler" kindref="compound" tooltip="This wxFileSystem handler can store arbitrary data in memory stream and make them accessible via an U...">wxMemoryFSHandler</ref>);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_memory_f_s_handler_1a3f492723f5ae6353c6f2ef8ce8af676b" kindref="member" tooltip="Adds a file to the list of the files stored in memory.">wxMemoryFSHandler::AddFile</ref>(</highlight><highlight class="stringliteral">&quot;logo.pcx&quot;</highlight><highlight class="normal">,<sp/><ref refid="group__group__funcmacro__gdi_1ga309f860d17c1a8c4cc54c6e772a2fd09" kindref="member" tooltip="This macro loads a bitmap from either application resources (on the platforms for which they exist...">wxBITMAP</ref>(logo),<sp/><ref refid="gdicmn_8h_1a90a1eb6d85b5044a99b706fd979f27f5a04cbde804fd7c9ce9b651b56b9f76781" kindref="member">wxBITMAP_TYPE_PCX</ref>);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_memory_f_s_handler_1a3f492723f5ae6353c6f2ef8ce8af676b" kindref="member" tooltip="Adds a file to the list of the files stored in memory.">wxMemoryFSHandler::AddFile</ref>(</highlight><highlight class="stringliteral">&quot;about.htm&quot;</highlight><highlight class="normal">,</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;&lt;html&gt;&lt;body&gt;About:<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;&lt;img<sp/>src=\&quot;memory:logo.pcx\&quot;&gt;&lt;/body&gt;&lt;/html&gt;&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_dialog" kindref="compound" tooltip="A dialog box is a window with a title bar and sometimes a system menu, which can...">wxDialog</ref><sp/>dlg(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>-1,<sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change...">wxString</ref>(<ref refid="group__group__funcmacro__string_1ga8a02b8875a521df57263a9e6f090f2d0" kindref="member" tooltip="This macro expands into a call to wxGetTranslation(), so it marks the message for...">_</ref>(</highlight><highlight class="stringliteral">&quot;About&quot;</highlight><highlight class="normal">)));</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_box_sizer" kindref="compound" tooltip="The basic idea behind a box sizer is that windows will most often be laid out in...">wxBoxSizer</ref><sp/>*topsizer;</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_html_window" kindref="compound" tooltip="wxHtmlWindow is probably the only class you will directly use unless you want to...">wxHtmlWindow</ref><sp/>*html;</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>topsizer<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classwx_box_sizer" kindref="compound" tooltip="The basic idea behind a box sizer is that windows will most often be laid out in...">wxBoxSizer</ref>(<ref refid="defs_8h_1a1e6994f40bd9cb140e292afb165af971a2134d1cb8cf605532880c118190695b5" kindref="member">wxVERTICAL</ref>);</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>html<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classwx_html_window" kindref="compound" tooltip="wxHtmlWindow is probably the only class you will directly use unless you want to...">wxHtmlWindow</ref>(&amp;dlg,<sp/>-1,<sp/><ref refid="gdicmn_8h_1af5a90c753eaf3d3e3e5068a19ec3c1d0" kindref="member" tooltip="Global instance of a wxPoint initialized with values (-1,-1).">wxDefaultPosition</ref>,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_dialog" kindref="compound" tooltip="A dialog box is a window with a title bar and sometimes a system menu, which can be moved around the ...">wxDialog</ref><sp/>dlg(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>-1,<sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change was actually the m...">wxString</ref>(<ref refid="group__group__funcmacro__string_1ga8a02b8875a521df57263a9e6f090f2d0" kindref="member" tooltip="This macro expands into a call to wxGetTranslation(), so it marks the message for the extraction by x...">_</ref>(</highlight><highlight class="stringliteral">&quot;About&quot;</highlight><highlight class="normal">)));</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_box_sizer" kindref="compound" tooltip="The basic idea behind a box sizer is that windows will most often be laid out in rather simple basic ...">wxBoxSizer</ref><sp/>*topsizer;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_html_window" kindref="compound" tooltip="wxHtmlWindow is probably the only class you will directly use unless you want to do something special...">wxHtmlWindow</ref><sp/>*html;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>topsizer<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classwx_box_sizer" kindref="compound" tooltip="The basic idea behind a box sizer is that windows will most often be laid out in rather simple basic ...">wxBoxSizer</ref>(<ref refid="defs_8h_1a1e6994f40bd9cb140e292afb165af971a2134d1cb8cf605532880c118190695b5" kindref="member">wxVERTICAL</ref>);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>html<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classwx_html_window" kindref="compound" tooltip="wxHtmlWindow is probably the only class you will directly use unless you want to do something special...">wxHtmlWindow</ref>(&amp;dlg,<sp/>-1,<sp/><ref refid="gdicmn_8h_1af5a90c753eaf3d3e3e5068a19ec3c1d0" kindref="member" tooltip="Global instance of a wxPoint initialized with values (-1,-1).">wxDefaultPosition</ref>,</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_size" kindref="compound" tooltip="A wxSize is a useful data structure for graphics operations.">wxSize</ref>(380,<sp/>160),<sp/>wxHW_SCROLLBAR_NEVER);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>html-&gt;<ref refid="classwx_html_window_1a3e2350cbf8bc74ba8451ab3f953046dc" kindref="member" tooltip="This function sets the space between border of window and HTML contents.">SetBorders</ref>(0);</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>html-&gt;<ref refid="classwx_html_window_1ab7086e665bb533a34dc11ab29465db09" kindref="member" tooltip="Unlike SetPage() this function first loads the HTML page from location and then displays...">LoadPage</ref>(</highlight><highlight class="stringliteral">&quot;memory:about.htm&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>html-&gt;<ref refid="classwx_html_window_1ab7086e665bb533a34dc11ab29465db09" kindref="member" tooltip="Unlike SetPage() this function first loads the HTML page from location and then displays it...">LoadPage</ref>(</highlight><highlight class="stringliteral">&quot;memory:about.htm&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>html-&gt;SetSize(html-&gt;<ref refid="classwx_html_window_1ac58ba50face285ddfd28a89f548f34c9" kindref="member" tooltip="Returns pointer to the top-level container.">GetInternalRepresentation</ref>()-&gt;<ref refid="classwx_html_cell_1a2e8726d5bebf99a3b3f5152af1c01698" kindref="member" tooltip="Returns width of the cell (m_Width member).">GetWidth</ref>(),</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>html-&gt;<ref refid="classwx_html_window_1ac58ba50face285ddfd28a89f548f34c9" kindref="member" tooltip="Returns pointer to the top-level container.">GetInternalRepresentation</ref>()-&gt;<ref refid="classwx_html_cell_1aa4e5f0c1def82d7a9e36cca7b852eef3" kindref="member" tooltip="Returns height of the cell (m_Height member).">GetHeight</ref>());</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>topsizer-&gt;<ref refid="classwx_sizer_1a4e2122f2749261473c21cb192d00709f" kindref="member" tooltip="Appends a child to the sizer.">Add</ref>(html,<sp/>1,<sp/><ref refid="defs_8h_1ac0f30319732dcceda470516918ff3556a066863c82a2c08f6f53b663de87c60b6" kindref="member">wxALL</ref>,<sp/>10);</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>topsizer-&gt;<ref refid="classwx_sizer_1a4e2122f2749261473c21cb192d00709f" kindref="member" tooltip="Appends a child to the sizer.">Add</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classwx_static_line" kindref="compound" tooltip="A static line is just a line which may be used in a dialog to separate the groups...">wxStaticLine</ref>(&amp;dlg,<sp/>-1),<sp/>0,<sp/><ref refid="defs_8h_1a27b6b668631a5f79f24d474af7d9b388a0d831bd6985c81f9bbc4830cc0c2e7df" kindref="member">wxEXPAND</ref><sp/>|<sp/><ref refid="defs_8h_1ac0f30319732dcceda470516918ff3556aab66c1f81b54102c884b1307840d323c" kindref="member">wxLEFT</ref><sp/>|<sp/><ref refid="defs_8h_1ac0f30319732dcceda470516918ff3556a2b2d18b748d21a493f82e589f1a05746" kindref="member">wxRIGHT</ref>,<sp/>10);</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>topsizer-&gt;<ref refid="classwx_sizer_1a4e2122f2749261473c21cb192d00709f" kindref="member" tooltip="Appends a child to the sizer.">Add</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classwx_button" kindref="compound" tooltip="A button is a control that contains a text string, and is one of the most common...">wxButton</ref>(&amp;dlg,<sp/><ref refid="defs_8h_1ac66d0a09761e7d86b2ac0b2e0c6a8cbbaeeb1bdf97306d7f0fdffb62c8af3d02f" kindref="member" tooltip="Standard button and menu IDs.">wxID_OK</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Ok&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>topsizer-&gt;<ref refid="classwx_sizer_1a4e2122f2749261473c21cb192d00709f" kindref="member" tooltip="Appends a child to the sizer.">Add</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classwx_static_line" kindref="compound" tooltip="A static line is just a line which may be used in a dialog to separate the groups of controls...">wxStaticLine</ref>(&amp;dlg,<sp/>-1),<sp/>0,<sp/><ref refid="defs_8h_1a27b6b668631a5f79f24d474af7d9b388a0d831bd6985c81f9bbc4830cc0c2e7df" kindref="member">wxEXPAND</ref><sp/>|<sp/><ref refid="defs_8h_1ac0f30319732dcceda470516918ff3556aab66c1f81b54102c884b1307840d323c" kindref="member">wxLEFT</ref><sp/>|<sp/><ref refid="defs_8h_1ac0f30319732dcceda470516918ff3556a2b2d18b748d21a493f82e589f1a05746" kindref="member">wxRIGHT</ref>,<sp/>10);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>topsizer-&gt;<ref refid="classwx_sizer_1a4e2122f2749261473c21cb192d00709f" kindref="member" tooltip="Appends a child to the sizer.">Add</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classwx_button" kindref="compound" tooltip="A button is a control that contains a text string, and is one of the most common elements of a GUI...">wxButton</ref>(&amp;dlg,<sp/><ref refid="defs_8h_1ac66d0a09761e7d86b2ac0b2e0c6a8cbbaeeb1bdf97306d7f0fdffb62c8af3d02f" kindref="member" tooltip="Standard button and menu IDs.">wxID_OK</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Ok&quot;</highlight><highlight class="normal">),</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/><ref refid="defs_8h_1ac0f30319732dcceda470516918ff3556a066863c82a2c08f6f53b663de87c60b6" kindref="member">wxALL</ref><sp/>|<sp/><ref refid="defs_8h_1a543dd017a172dc316253a8a1f351dde9a0e5767d868ab07b01a162db7fe56e578" kindref="member">wxALIGN_RIGHT</ref>,<sp/>15);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dlg.SetAutoLayout(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dlg.<ref refid="classwx_sizer_item_1a4c4af76c0686e00b50ff9a238288386c" kindref="member" tooltip="Set the sizer tracked by this item.">SetSizer</ref>(topsizer);</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>topsizer-&gt;<ref refid="classwx_sizer_1abad9cedc0cbe9ade2c799da23462d17e" kindref="member" tooltip="Tell the sizer to resize the window so that its client area matches the sizer&amp;#39;s...">Fit</ref>(&amp;dlg);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>topsizer-&gt;<ref refid="classwx_sizer_1abad9cedc0cbe9ade2c799da23462d17e" kindref="member" tooltip="Tell the sizer to resize the window so that its client area matches the sizer&amp;#39;s minimal size (Compute...">Fit</ref>(&amp;dlg);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dlg.Centre();</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dlg.ShowModal();</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
@@ -196,47 +194,47 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_memory_f_s_handler_1ac570d507c7e570153a77fadf416ccacd" kindref="member" tooltip="Removes a file from memory FS and frees the occupied memory.">wxMemoryFSHandler::RemoveFile</ref>(</highlight><highlight class="stringliteral">&quot;about.htm&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 </programlisting></para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__vfs" kindref="compound">Virtual File System</ref></para><para><simplesect kind="see"><para><ref refid="classwx_memory_f_s_handler_1a1a4c2fa90f2d747eeaf532decd14eda7" kindref="member">wxMemoryFSHandler::AddFileWithMimeType</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__vfs" kindref="compound">Virtual File System</ref></para><para><simplesect kind="see"><para><ref refid="classwx_memory_f_s_handler_1a1a4c2fa90f2d747eeaf532decd14eda7" kindref="member">wxMemoryFSHandler::AddFileWithMimeType</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7679">
+      <node id="7685">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="7677">
+      <node id="7683">
         <label>wxMemoryFSHandler</label>
         <link refid="classwx_memory_f_s_handler"/>
-        <childnode refid="7678" relation="public-inheritance">
+        <childnode refid="7684" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7678">
+      <node id="7684">
         <label>wxFileSystemHandler</label>
         <link refid="classwx_file_system_handler"/>
-        <childnode refid="7679" relation="public-inheritance">
+        <childnode refid="7685" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7682">
+      <node id="7688">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="7683" relation="usage">
+        <childnode refid="7689" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="7680">
+      <node id="7686">
         <label>wxMemoryFSHandler</label>
         <link refid="classwx_memory_f_s_handler"/>
-        <childnode refid="7681" relation="public-inheritance">
+        <childnode refid="7687" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7681">
+      <node id="7687">
         <label>wxFileSystemHandler</label>
         <link refid="classwx_file_system_handler"/>
-        <childnode refid="7682" relation="public-inheritance">
+        <childnode refid="7688" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7683">
+      <node id="7689">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

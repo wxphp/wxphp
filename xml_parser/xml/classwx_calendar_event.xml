@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_calendar_event" kind="class" prot="public">
     <compoundname>wxCalendarEvent</compoundname>
     <basecompoundref refid="classwx_date_event" prot="public" virt="non-virtual">wxDateEvent</basecompoundref>
@@ -40,71 +40,71 @@
 <para>The <ref refid="classwx_calendar_event" kindref="compound">wxCalendarEvent</ref> class is used together with <ref refid="classwx_calendar_ctrl" kindref="compound">wxCalendarCtrl</ref>. </para>    </briefdescription>
     <detaileddescription>
 <para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="classwx_calendar_ctrl" kindref="compound">wxCalendarCtrl</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="classwx_calendar_ctrl" kindref="compound">wxCalendarCtrl</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="4678">
+      <node id="4682">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-      </node>
-      <node id="4676">
-        <label>wxCommandEvent</label>
-        <link refid="classwx_command_event"/>
-        <childnode refid="4677" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4675">
-        <label>wxDateEvent</label>
-        <link refid="classwx_date_event"/>
-        <childnode refid="4676" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4674">
-        <label>wxCalendarEvent</label>
-        <link refid="classwx_calendar_event"/>
-        <childnode refid="4675" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4677">
-        <label>wxEvent</label>
-        <link refid="classwx_event"/>
-        <childnode refid="4678" relation="public-inheritance">
-        </childnode>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
-      <node id="4683">
-        <label>wxObject</label>
-        <link refid="classwx_object"/>
-        <childnode refid="4684" relation="usage">
-          <edgelabel>m_refData</edgelabel>
-        </childnode>
-      </node>
-      <node id="4681">
-        <label>wxCommandEvent</label>
-        <link refid="classwx_command_event"/>
-        <childnode refid="4682" relation="public-inheritance">
-        </childnode>
       </node>
       <node id="4680">
-        <label>wxDateEvent</label>
-        <link refid="classwx_date_event"/>
+        <label>wxCommandEvent</label>
+        <link refid="classwx_command_event"/>
         <childnode refid="4681" relation="public-inheritance">
         </childnode>
       </node>
       <node id="4679">
-        <label>wxCalendarEvent</label>
-        <link refid="classwx_calendar_event"/>
+        <label>wxDateEvent</label>
+        <link refid="classwx_date_event"/>
         <childnode refid="4680" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4682">
+      <node id="4678">
+        <label>wxCalendarEvent</label>
+        <link refid="classwx_calendar_event"/>
+        <childnode refid="4679" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4681">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="4683" relation="public-inheritance">
+        <childnode refid="4682" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4687">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="4688" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="4685">
+        <label>wxCommandEvent</label>
+        <link refid="classwx_command_event"/>
+        <childnode refid="4686" relation="public-inheritance">
         </childnode>
       </node>
       <node id="4684">
+        <label>wxDateEvent</label>
+        <link refid="classwx_date_event"/>
+        <childnode refid="4685" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4683">
+        <label>wxCalendarEvent</label>
+        <link refid="classwx_calendar_event"/>
+        <childnode refid="4684" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4686">
+        <label>wxEvent</label>
+        <link refid="classwx_event"/>
+        <childnode refid="4687" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4688">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

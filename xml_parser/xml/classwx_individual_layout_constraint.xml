@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_individual_layout_constraint" kind="class" prot="public">
     <compoundname>wxIndividualLayoutConstraint</compoundname>
     <basecompoundref refid="classwx_object" prot="public" virt="non-virtual">wxObject</basecompoundref>
@@ -506,32 +506,32 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="7256">
+      <node id="7260">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="7255">
+      <node id="7259">
         <label>wxIndividualLayoutConstraint</label>
         <link refid="classwx_individual_layout_constraint"/>
-        <childnode refid="7256" relation="public-inheritance">
+        <childnode refid="7260" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7258">
+      <node id="7262">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="7259" relation="usage">
+        <childnode refid="7263" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="7257">
+      <node id="7261">
         <label>wxIndividualLayoutConstraint</label>
         <link refid="classwx_individual_layout_constraint"/>
-        <childnode refid="7258" relation="public-inheritance">
+        <childnode refid="7262" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7259">
+      <node id="7263">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

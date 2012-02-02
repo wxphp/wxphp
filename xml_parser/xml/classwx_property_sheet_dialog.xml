@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_property_sheet_dialog" kind="class" prot="public">
     <compoundname>wxPropertySheetDialog</compoundname>
     <basecompoundref refid="classwx_dialog" prot="public" virt="non-virtual">wxDialog</basecompoundref>
@@ -264,122 +264,122 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="classwx_property_sheet_dialog_1ad96015ab13fc1e2c364660fafd4121e0" kindref="member" tooltip="Call this from your own Create function, before adding buttons and pages.">wxPropertySheetDialog::Create</ref>(...))</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CreateButtons(<ref refid="defs_8h_1a9c40266b61a27f0124a69a699753889a" kindref="member">wxOK</ref>|<ref refid="defs_8h_1a5580412e224117ac127aacaafd49dc2e" kindref="member">wxCANCEL</ref>|<ref refid="defs_8h_1a111c2b7b06972d742f4708983337825a" kindref="member">wxHELP</ref>);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_property_sheet_dialog_1a74a83482c1a6aa508bcd8240e0461ac9" kindref="member" tooltip="Call this to create the buttons for the dialog.">CreateButtons</ref>(<ref refid="defs_8h_1a9c40266b61a27f0124a69a699753889a" kindref="member">wxOK</ref>|<ref refid="defs_8h_1a5580412e224117ac127aacaafd49dc2e" kindref="member">wxCANCEL</ref>|<ref refid="defs_8h_1a111c2b7b06972d742f4708983337825a" kindref="member">wxHELP</ref>);</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Add<sp/>page</highlight><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_panel" kindref="compound" tooltip="A panel is a window on which controls are placed.">wxPanel</ref>*<sp/>panel<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classwx_panel" kindref="compound" tooltip="A panel is a window on which controls are placed.">wxPanel</ref>(GetBookCtrl(),<sp/>...);</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GetBookCtrl()-&gt;AddPage(panel,<sp/></highlight><highlight class="stringliteral">&quot;General&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_panel" kindref="compound" tooltip="A panel is a window on which controls are placed.">wxPanel</ref>*<sp/>panel<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classwx_panel" kindref="compound" tooltip="A panel is a window on which controls are placed.">wxPanel</ref>(<ref refid="classwx_property_sheet_dialog_1af569c97e00fb9994f7ebaddcc9f32445" kindref="member" tooltip="Returns the book control that will contain your settings pages.">GetBookCtrl</ref>(),<sp/>...);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_property_sheet_dialog_1af569c97e00fb9994f7ebaddcc9f32445" kindref="member" tooltip="Returns the book control that will contain your settings pages.">GetBookCtrl</ref>()-&gt;<ref refid="classwx_book_ctrl_base_1ab47f8935c3705a452fce7d292d8181dd" kindref="member" tooltip="Adds a new page.">AddPage</ref>(panel,<sp/></highlight><highlight class="stringliteral">&quot;General&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LayoutDialog();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_property_sheet_dialog_1a9a15ba6b238d9ef84eb1882108ae72c6" kindref="member" tooltip="Call this to lay out the dialog.">LayoutDialog</ref>();</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-</programlisting></para><para>If necessary, override <ref refid="classwx_property_sheet_dialog_1aab79a662b92281d1f64c606c253ed9b9" kindref="member">CreateBookCtrl()</ref> and <ref refid="classwx_property_sheet_dialog_1a7827bb55364f6daa75fca9775cc0e6a8" kindref="member">AddBookCtrl()</ref> to create and add a different kind of book control. You will then need to use two-step construction for the dialog or change the style of the book control by calling <ref refid="classwx_property_sheet_dialog_1acdfd10705dfdc4517150e5e9e70b9f9a" kindref="member">SetSheetStyle()</ref> before calling <ref refid="classwx_property_sheet_dialog_1ad96015ab13fc1e2c364660fafd4121e0" kindref="member">Create()</ref>.</para><para>The <ref refid="page__samples_1page_samples_dialogs" kindref="member">Dialogs Sample</ref> shows this class being used with notebook and toolbook controllers (for Windows-style and Mac-style settings dialogs).</para><para>To make pages of the dialog scroll when the display is too small to fit the whole dialog, you can switch layout adaptation on globally with <ref refid="classwx_dialog_1a016cfd686f75bcfc5f7b6f127be74c7c" kindref="member">wxDialog::EnableLayoutAdaptation()</ref> or per dialog with <ref refid="classwx_dialog_1a9f949c545ca70571cec8cd2fcbfc0991" kindref="member">wxDialog::SetLayoutAdaptationMode()</ref>.</para><para>For more about layout adaptation, see <ref refid="overview__dialog_1overview_dialog_autoscrolling" kindref="member">Automatic scrolling dialogs</ref>.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__managedwnd" kindref="compound">Managed Windows</ref> </para>    </detaileddescription>
+</programlisting></para><para>If necessary, override <ref refid="classwx_property_sheet_dialog_1aab79a662b92281d1f64c606c253ed9b9" kindref="member">CreateBookCtrl()</ref> and <ref refid="classwx_property_sheet_dialog_1a7827bb55364f6daa75fca9775cc0e6a8" kindref="member">AddBookCtrl()</ref> to create and add a different kind of book control. You will then need to use two-step construction for the dialog or change the style of the book control by calling <ref refid="classwx_property_sheet_dialog_1acdfd10705dfdc4517150e5e9e70b9f9a" kindref="member">SetSheetStyle()</ref> before calling <ref refid="classwx_property_sheet_dialog_1ad96015ab13fc1e2c364660fafd4121e0" kindref="member">Create()</ref>.</para><para>The <ref refid="page_samples_1page_samples_dialogs" kindref="member">Dialogs Sample</ref> shows this class being used with notebook and toolbook controllers (for Windows-style and Mac-style settings dialogs).</para><para>To make pages of the dialog scroll when the display is too small to fit the whole dialog, you can switch layout adaptation on globally with <ref refid="classwx_dialog_1a016cfd686f75bcfc5f7b6f127be74c7c" kindref="member">wxDialog::EnableLayoutAdaptation()</ref> or per dialog with <ref refid="classwx_dialog_1a9f949c545ca70571cec8cd2fcbfc0991" kindref="member">wxDialog::SetLayoutAdaptationMode()</ref>.</para><para>For more about layout adaptation, see <ref refid="overview_dialog_1overview_dialog_autoscrolling" kindref="member">Automatic scrolling dialogs</ref>.</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__managedwnd" kindref="compound">Managed Windows</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="8924">
+      <node id="8932">
         <label>wxNonOwnedWindow</label>
         <link refid="classwx_non_owned_window"/>
-        <childnode refid="8925" relation="public-inheritance">
+        <childnode refid="8933" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8927">
+      <node id="8935">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="8926">
+      <node id="8934">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="8927" relation="public-inheritance">
+        <childnode refid="8935" relation="public-inheritance">
         </childnode>
-        <childnode refid="8928" relation="public-inheritance">
+        <childnode refid="8936" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8928">
+      <node id="8936">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="8925">
+      <node id="8933">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="8926" relation="public-inheritance">
+        <childnode refid="8934" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8922">
+      <node id="8930">
         <label>wxDialog</label>
         <link refid="classwx_dialog"/>
-        <childnode refid="8923" relation="public-inheritance">
+        <childnode refid="8931" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8923">
+      <node id="8931">
         <label>wxTopLevelWindow</label>
         <link refid="classwx_top_level_window"/>
-        <childnode refid="8924" relation="public-inheritance">
+        <childnode refid="8932" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8937">
+        <label>wxRichTextFormattingDialog</label>
+        <link refid="classwx_rich_text_formatting_dialog"/>
+        <childnode refid="8929" relation="public-inheritance">
         </childnode>
       </node>
       <node id="8929">
-        <label>wxRichTextFormattingDialog</label>
-        <link refid="classwx_rich_text_formatting_dialog"/>
-        <childnode refid="8921" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="8921">
         <label>wxPropertySheetDialog</label>
         <link refid="classwx_property_sheet_dialog"/>
-        <childnode refid="8922" relation="public-inheritance">
+        <childnode refid="8930" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="8933">
+      <node id="8941">
         <label>wxNonOwnedWindow</label>
         <link refid="classwx_non_owned_window"/>
-        <childnode refid="8934" relation="public-inheritance">
+        <childnode refid="8942" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8936">
+      <node id="8944">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="8937" relation="usage">
+        <childnode refid="8945" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="8935">
+      <node id="8943">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="8936" relation="public-inheritance">
+        <childnode refid="8944" relation="public-inheritance">
         </childnode>
-        <childnode refid="8938" relation="public-inheritance">
+        <childnode refid="8946" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8938">
+      <node id="8946">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="8934">
+      <node id="8942">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="8935" relation="public-inheritance">
+        <childnode refid="8943" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8931">
+      <node id="8939">
         <label>wxDialog</label>
         <link refid="classwx_dialog"/>
-        <childnode refid="8932" relation="public-inheritance">
+        <childnode refid="8940" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8932">
+      <node id="8940">
         <label>wxTopLevelWindow</label>
         <link refid="classwx_top_level_window"/>
-        <childnode refid="8933" relation="public-inheritance">
+        <childnode refid="8941" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8930">
+      <node id="8938">
         <label>wxPropertySheetDialog</label>
         <link refid="classwx_property_sheet_dialog"/>
-        <childnode refid="8931" relation="public-inheritance">
+        <childnode refid="8939" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8937">
+      <node id="8945">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
@@ -719,6 +719,7 @@
       <member refid="classwx_window_1a81f23590239934fa10fded0566a65d8c" prot="public" virt="non-virtual"><scope>wxPropertySheetDialog</scope><name>SetPosition</name></member>
       <member refid="classwx_window_1a07f5f7ed3f78e0ef7b3dee3f4da81001" prot="public" virt="virtual"><scope>wxPropertySheetDialog</scope><name>SetPreviousHandler</name></member>
       <member refid="classwx_object_1afab780710f2adc1bb33310e27590140b" prot="public" virt="non-virtual"><scope>wxPropertySheetDialog</scope><name>SetRefData</name></member>
+      <member refid="classwx_top_level_window_1a82afa6f09dd5faef6330807ef59374e8" prot="public" virt="virtual"><scope>wxPropertySheetDialog</scope><name>SetRepresentedFilename</name></member>
       <member refid="classwx_dialog_1a0d04ed85ac5cd271a61514d446340673" prot="public" virt="non-virtual"><scope>wxPropertySheetDialog</scope><name>SetReturnCode</name></member>
       <member refid="classwx_top_level_window_1a98e95b1b10f44b80f9b29a03ab09a879" prot="public" virt="non-virtual"><scope>wxPropertySheetDialog</scope><name>SetRightMenu</name></member>
       <member refid="classwx_window_1aa842d59529f873683e55cd8392ec46e9" prot="public" virt="virtual"><scope>wxPropertySheetDialog</scope><name>SetScrollbar</name></member>

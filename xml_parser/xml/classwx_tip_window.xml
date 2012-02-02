@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_tip_window" kind="class" prot="public">
     <compoundname>wxTipWindow</compoundname>
     <basecompoundref refid="classwx_window" prot="public" virt="non-virtual">wxWindow</basecompoundref>
@@ -124,70 +124,70 @@
 <para>Shows simple text in a popup tip window on creation. </para>    </briefdescription>
     <detaileddescription>
 <para>This is used by <ref refid="classwx_simple_help_provider" kindref="compound">wxSimpleHelpProvider</ref> to show popup help. The window automatically destroys itself when the user clicks on it or it loses the focus.</para><para>You may also use this class to emulate the tooltips when you need finer control over them than what the standard tooltips provide.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__managedwnd" kindref="compound">Managed Windows</ref> </para>    </detaileddescription>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__managedwnd" kindref="compound">Managed Windows</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10833">
+      <node id="10894">
         <label>wxTipWindow</label>
         <link refid="classwx_tip_window"/>
-        <childnode refid="10834" relation="public-inheritance">
+        <childnode refid="10895" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10836">
+      <node id="10897">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="10835">
+      <node id="10896">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="10836" relation="public-inheritance">
+        <childnode refid="10897" relation="public-inheritance">
         </childnode>
-        <childnode refid="10837" relation="public-inheritance">
+        <childnode refid="10898" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10837">
+      <node id="10898">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="10834">
+      <node id="10895">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="10835" relation="public-inheritance">
+        <childnode refid="10896" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10838">
+      <node id="10899">
         <label>wxTipWindow</label>
         <link refid="classwx_tip_window"/>
-        <childnode refid="10839" relation="public-inheritance">
+        <childnode refid="10900" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10841">
+      <node id="10902">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="10842" relation="usage">
+        <childnode refid="10903" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="10840">
+      <node id="10901">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="10841" relation="public-inheritance">
+        <childnode refid="10902" relation="public-inheritance">
         </childnode>
-        <childnode refid="10843" relation="public-inheritance">
+        <childnode refid="10904" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10843">
+      <node id="10904">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="10839">
+      <node id="10900">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="10840" relation="public-inheritance">
+        <childnode refid="10901" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10842">
+      <node id="10903">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

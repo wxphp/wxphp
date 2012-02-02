@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_html_container_cell" kind="class" prot="public">
     <compoundname>wxHtmlContainerCell</compoundname>
     <basecompoundref refid="classwx_html_cell" prot="public" virt="non-virtual">wxHtmlCell</basecompoundref>
@@ -421,47 +421,47 @@
 <para>The <ref refid="classwx_html_container_cell" kindref="compound">wxHtmlContainerCell</ref> class is an implementation of a cell that may contain more cells in it. </para>    </briefdescription>
     <detaileddescription>
 <para>It is heavily used in the wxHTML layout algorithm.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxhtml" kindref="member">wxHTML</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__html" kindref="compound">HTML</ref></para><para><simplesect kind="see"><para><ref refid="overview__html_1overview_html_cells" kindref="member">Cells and Containers</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxhtml" kindref="member">wxHTML</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__html" kindref="compound">HTML</ref></para><para><simplesect kind="see"><para><ref refid="overview_html_1overview_html_cells" kindref="member">Cells and Containers</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="6987">
+      <node id="6991">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="6986">
+      <node id="6990">
         <label>wxHtmlCell</label>
         <link refid="classwx_html_cell"/>
-        <childnode refid="6987" relation="public-inheritance">
+        <childnode refid="6991" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6985">
+      <node id="6989">
         <label>wxHtmlContainerCell</label>
         <link refid="classwx_html_container_cell"/>
-        <childnode refid="6986" relation="public-inheritance">
+        <childnode refid="6990" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="6990">
+      <node id="6994">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="6991" relation="usage">
+        <childnode refid="6995" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="6989">
+      <node id="6993">
         <label>wxHtmlCell</label>
         <link refid="classwx_html_cell"/>
-        <childnode refid="6990" relation="public-inheritance">
+        <childnode refid="6994" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6988">
+      <node id="6992">
         <label>wxHtmlContainerCell</label>
         <link refid="classwx_html_container_cell"/>
-        <childnode refid="6989" relation="public-inheritance">
+        <childnode refid="6993" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6991">
+      <node id="6995">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_html_help_window" kind="class" prot="public">
     <compoundname>wxHtmlHelpWindow</compoundname>
     <basecompoundref refid="classwx_window" prot="public" virt="non-virtual">wxWindow</basecompoundref>
@@ -358,77 +358,77 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>m_embeddedHtmlHelp<sp/>is<sp/>a<sp/>wxHtmlHelpController</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>embedded<sp/>HTML<sp/>Help<sp/>window</highlight><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_embeddedHelpWindow<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classwx_html_help_window" kindref="compound" tooltip="This class is used by wxHtmlHelpController to display help within a frame or dialog...">wxHtmlHelpWindow</ref>;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_embeddedHelpWindow<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classwx_html_help_window_1a96d90a254e3ad02bf134e108c4656d67" kindref="member">wxHtmlHelpWindow</ref>;</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_embeddedHtmlHelp.UseConfig(config,<sp/>rootPath);<sp/></highlight><highlight class="comment">//<sp/>Set<sp/>your<sp/>own<sp/>config<sp/>object<sp/>here</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_embeddedHtmlHelp.SetHelpWindow(m_embeddedHelpWindow);</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_embeddedHelpWindow-&gt;Create(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/><ref refid="defs_8h_1ac66d0a09761e7d86b2ac0b2e0c6a8cbba1f375b01ea03a713bbb7e32a36a2589c" kindref="member" tooltip="Any id: means that we don&amp;#39;t care about the id, whether when installing an event...">wxID_ANY</ref>,<sp/><ref refid="gdicmn_8h_1af5a90c753eaf3d3e3e5068a19ec3c1d0" kindref="member" tooltip="Global instance of a wxPoint initialized with values (-1,-1).">wxDefaultPosition</ref>,<sp/><ref refid="classwx_window_1afb9fd4a3b3310b2e11049a5113f749fa" kindref="member" tooltip="This is an overloaded member function, provided for convenience. It differs from...">GetClientSize</ref>(),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_embeddedHelpWindow-&gt;Create(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/><ref refid="defs_8h_1ac66d0a09761e7d86b2ac0b2e0c6a8cbba1f375b01ea03a713bbb7e32a36a2589c" kindref="member" tooltip="Any id: means that we don&amp;#39;t care about the id, whether when installing an event handler or when creat...">wxID_ANY</ref>,<sp/><ref refid="gdicmn_8h_1af5a90c753eaf3d3e3e5068a19ec3c1d0" kindref="member" tooltip="Global instance of a wxPoint initialized with values (-1,-1).">wxDefaultPosition</ref>,<sp/><ref refid="classwx_window_1afb9fd4a3b3310b2e11049a5113f749fa" kindref="member" tooltip="This is an overloaded member function, provided for convenience. It differs from the above function o...">GetClientSize</ref>(),</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="defs_8h_1a80617961a7712edd27988dffbe0e8cca" kindref="member">wxTAB_TRAVERSAL</ref>|<ref refid="defs_8h_1af63c94dff4e3f25a3c5e9d2874456edfaefc06a089c4d7317026613fd8bdf3e22" kindref="member">wxBORDER_NONE</ref>,<sp/>wxHF_DEFAULT_STYLE);</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_embeddedHtmlHelp.AddBook(<ref refid="classwx_file_name" kindref="compound" tooltip="wxFileName encapsulates a file name.">wxFileName</ref>(<ref refid="group__group__funcmacro__string_1ga437ea6ba615b75dac8603e96ec864160" kindref="member" tooltip="This macro can be used with character and string literals (in other words, &amp;#39;x&amp;#39;...">wxT</ref>(</highlight><highlight class="stringliteral">&quot;doc.zip&quot;</highlight><highlight class="normal">)));</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_embeddedHtmlHelp.AddBook(<ref refid="classwx_file_name" kindref="compound" tooltip="wxFileName encapsulates a file name.">wxFileName</ref>(<ref refid="group__group__funcmacro__string_1ga437ea6ba615b75dac8603e96ec864160" kindref="member" tooltip="This macro can be used with character and string literals (in other words, &amp;#39;x&amp;#39; or &amp;quot;foo&amp;quot;) to automatic...">wxT</ref>(</highlight><highlight class="stringliteral">&quot;doc.zip&quot;</highlight><highlight class="normal">)));</highlight></codeline>
 </programlisting></para><para>You should pass the style wxHF_EMBEDDED to the style parameter of <ref refid="classwx_html_help_controller" kindref="compound">wxHtmlHelpController</ref> to allow the embedded window to be destroyed independently of the help controller.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxhtml" kindref="member">wxHTML</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__help" kindref="compound">Help</ref>, <ref refid="group__group__class__html" kindref="compound">HTML</ref> </para>    </detaileddescription>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxhtml" kindref="member">wxHTML</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__help" kindref="compound">Help</ref>, <ref refid="group__group__class__html" kindref="compound">HTML</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7051">
+      <node id="7055">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="7050">
+      <node id="7054">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="7051" relation="public-inheritance">
+        <childnode refid="7055" relation="public-inheritance">
         </childnode>
-        <childnode refid="7052" relation="public-inheritance">
+        <childnode refid="7056" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7052">
+      <node id="7056">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="7049">
+      <node id="7053">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="7050" relation="public-inheritance">
+        <childnode refid="7054" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7048">
+      <node id="7052">
         <label>wxHtmlHelpWindow</label>
         <link refid="classwx_html_help_window"/>
-        <childnode refid="7049" relation="public-inheritance">
+        <childnode refid="7053" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7056">
+      <node id="7060">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="7057" relation="usage">
+        <childnode refid="7061" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="7055">
+      <node id="7059">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="7056" relation="public-inheritance">
+        <childnode refid="7060" relation="public-inheritance">
         </childnode>
-        <childnode refid="7058" relation="public-inheritance">
+        <childnode refid="7062" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7058">
+      <node id="7062">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="7054">
+      <node id="7058">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="7055" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="7053">
-        <label>wxHtmlHelpWindow</label>
-        <link refid="classwx_html_help_window"/>
-        <childnode refid="7054" relation="public-inheritance">
+        <childnode refid="7059" relation="public-inheritance">
         </childnode>
       </node>
       <node id="7057">
+        <label>wxHtmlHelpWindow</label>
+        <link refid="classwx_html_help_window"/>
+        <childnode refid="7058" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7061">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="dir_81331e36020b3b3e6c8118b6eede7e70" kind="dir">
+    <compoundname>interface/wx/ribbon/</compoundname>
+    <innerfile refid="art_8h">art.h</innerfile>
+    <innerfile refid="bar_8h">bar.h</innerfile>
+    <innerfile refid="buttonbar_8h">buttonbar.h</innerfile>
+    <innerfile refid="ribbon_2control_8h">control.h</innerfile>
+    <innerfile refid="gallery_8h">gallery.h</innerfile>
+    <innerfile refid="page_8h">page.h</innerfile>
+    <innerfile refid="ribbon_2panel_8h">panel.h</innerfile>
+    <innerfile refid="interface_2wx_2ribbon_2toolbar_8h">toolbar.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/"/>
+  </compounddef>
+</doxygen>

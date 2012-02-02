@@ -1,11 +1,10 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_zlib_input_stream" kind="class" prot="public">
     <compoundname>wxZlibInputStream</compoundname>
     <basecompoundref refid="classwx_filter_input_stream" prot="public" virt="non-virtual">wxFilterInputStream</basecompoundref>
     <includes local="no">wx/zstream.h</includes>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_zlib_input_stream_1aa2c461d566b1fc1b867a2de4988f2913" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
         <definition>wxZlibInputStream::wxZlibInputStream</definition>
@@ -52,7 +51,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_zlib_input_stream_1aea66084336c668a3d7c79764e05bdf37" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
         <definition>bool wxZlibInputStream::SetDictionary</definition>
@@ -111,53 +109,53 @@
 <para>This filter stream decompresses a stream that is in zlib or gzip format. </para>    </briefdescription>
     <detaileddescription>
 <para>Note that reading the gzip format requires zlib version 1.2.1 or greater, (the builtin version does support gzip format).</para><para>The stream is not seekable, <ref refid="classwx_input_stream_1a989ed0f85fe7340cc0996bbcee03822d" kindref="member">wxInputStream::SeekI</ref> returns <ref refid="group__group__funcmacro__file_1gab184c7199d93541d22ae42e515cbbcb7" kindref="member">wxInvalidOffset</ref>. Also <ref refid="classwx_stream_base_1a6ca6e81329a81252c50ccba1ee9249d8" kindref="member">wxStreamBase::GetSize()</ref> is not supported, it always returns 0.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__archive" kindref="compound">Archive support</ref>, <ref refid="group__group__class__streams" kindref="compound">Streams</ref></para><para><simplesect kind="see"><para><ref refid="classwx_input_stream" kindref="compound">wxInputStream</ref>, <ref refid="classwx_zlib_output_stream" kindref="compound">wxZlibOutputStream</ref>. </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__archive" kindref="compound">Archive support</ref>, <ref refid="group__group__class__streams" kindref="compound">Streams</ref></para><para><simplesect kind="see"><para><ref refid="classwx_input_stream" kindref="compound">wxInputStream</ref>, <ref refid="classwx_zlib_output_stream" kindref="compound">wxZlibOutputStream</ref>. </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="11724">
+      <node id="11785">
         <label>wxInputStream</label>
         <link refid="classwx_input_stream"/>
-        <childnode refid="11725" relation="public-inheritance">
+        <childnode refid="11786" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11722">
+      <node id="11783">
         <label>wxZlibInputStream</label>
         <link refid="classwx_zlib_input_stream"/>
-        <childnode refid="11723" relation="public-inheritance">
+        <childnode refid="11784" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11725">
+      <node id="11786">
         <label>wxStreamBase</label>
         <link refid="classwx_stream_base"/>
       </node>
-      <node id="11723">
+      <node id="11784">
         <label>wxFilterInputStream</label>
         <link refid="classwx_filter_input_stream"/>
-        <childnode refid="11724" relation="public-inheritance">
+        <childnode refid="11785" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="11728">
+      <node id="11789">
         <label>wxInputStream</label>
         <link refid="classwx_input_stream"/>
-        <childnode refid="11729" relation="public-inheritance">
+        <childnode refid="11790" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11726">
+      <node id="11787">
         <label>wxZlibInputStream</label>
         <link refid="classwx_zlib_input_stream"/>
-        <childnode refid="11727" relation="public-inheritance">
+        <childnode refid="11788" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11729">
+      <node id="11790">
         <label>wxStreamBase</label>
         <link refid="classwx_stream_base"/>
       </node>
-      <node id="11727">
+      <node id="11788">
         <label>wxFilterInputStream</label>
         <link refid="classwx_filter_input_stream"/>
-        <childnode refid="11728" relation="public-inheritance">
+        <childnode refid="11789" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_memory_input_stream" kind="class" prot="public">
     <compoundname>wxMemoryInputStream</compoundname>
     <basecompoundref refid="classwx_input_stream" prot="public" virt="non-virtual">wxInputStream</basecompoundref>
@@ -97,7 +97,7 @@
     <detaileddescription>
 <para>Example: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>we&apos;ve<sp/>got<sp/>a<sp/>block<sp/>of<sp/>memory<sp/>containing<sp/>a<sp/>BMP<sp/>image<sp/>and<sp/>we<sp/>want</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>to<sp/>use<sp/>wxImage<sp/>to<sp/>load<sp/>it:</highlight><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_memory_input_stream" kindref="compound" tooltip="This class allows to use all methods taking a wxInputStream reference to read in-memory...">wxMemoryInputStream</ref><sp/>stream(my_memory_block,<sp/>size);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_memory_input_stream" kindref="compound" tooltip="This class allows to use all methods taking a wxInputStream reference to read in-memory data...">wxMemoryInputStream</ref><sp/>stream(my_memory_block,<sp/>size);</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_image" kindref="compound" tooltip="This class encapsulates a platform-independent image.">wxImage</ref><sp/>theBitmap;</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!theBitmap.<ref refid="classwx_image_1aa249e657259fe6518d68a5208b9043d0" kindref="member" tooltip="Loads an image from an input stream.">LoadFile</ref>(stream,<sp/><ref refid="gdicmn_8h_1a90a1eb6d85b5044a99b706fd979f27f5abc0025c3eb363982583934a404706cb0" kindref="member">wxBITMAP_TYPE_BMP</ref>))</highlight></codeline>
@@ -107,40 +107,40 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>has<sp/>been<sp/>decoded<sp/>by<sp/>wxImage:</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>[]<sp/>my_memory_block;</highlight></codeline>
 </programlisting></para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__streams" kindref="compound">Streams</ref></para><para><simplesect kind="see"><para><ref refid="classwx_stream_buffer" kindref="compound">wxStreamBuffer</ref>, <ref refid="classwx_memory_output_stream" kindref="compound">wxMemoryOutputStream</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__streams" kindref="compound">Streams</ref></para><para><simplesect kind="see"><para><ref refid="classwx_stream_buffer" kindref="compound">wxStreamBuffer</ref>, <ref refid="classwx_memory_output_stream" kindref="compound">wxMemoryOutputStream</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7685">
+      <node id="7691">
         <label>wxInputStream</label>
         <link refid="classwx_input_stream"/>
-        <childnode refid="7686" relation="public-inheritance">
+        <childnode refid="7692" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7684">
+      <node id="7690">
         <label>wxMemoryInputStream</label>
         <link refid="classwx_memory_input_stream"/>
-        <childnode refid="7685" relation="public-inheritance">
+        <childnode refid="7691" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7686">
+      <node id="7692">
         <label>wxStreamBase</label>
         <link refid="classwx_stream_base"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7688">
+      <node id="7694">
         <label>wxInputStream</label>
         <link refid="classwx_input_stream"/>
-        <childnode refid="7689" relation="public-inheritance">
+        <childnode refid="7695" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7687">
+      <node id="7693">
         <label>wxMemoryInputStream</label>
         <link refid="classwx_memory_input_stream"/>
-        <childnode refid="7688" relation="public-inheritance">
+        <childnode refid="7694" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7689">
+      <node id="7695">
         <label>wxStreamBase</label>
         <link refid="classwx_stream_base"/>
       </node>

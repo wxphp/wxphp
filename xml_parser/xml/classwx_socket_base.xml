@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_socket_base" kind="class" prot="public">
     <compoundname>wxSocketBase</compoundname>
     <basecompoundref refid="classwx_object" prot="public" virt="non-virtual">wxObject</basecompoundref>
@@ -9,7 +9,6 @@
     <includes local="no">wx/socket.h</includes>
       <sectiondef kind="user-defined">
       <header>Construction and Destruction</header>
-      <description><para><anchor id="_1amgrp4c01d48151768cf79c4dba8cc909606d"/> </para></description>
       <memberdef kind="function" id="classwx_socket_base_1a3bf32997db6732a5b053d8d52b1173f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
         <definition>wxSocketBase::wxSocketBase</definition>
@@ -80,7 +79,6 @@
       </sectiondef>
       <sectiondef kind="user-defined">
       <header>Socket State</header>
-      <description><para><anchor id="_1amgrp11a4b3ca2e7694a5a290b95b97953139"/> </para></description>
       <memberdef kind="function" id="classwx_socket_base_1a1a70bf5e24ccf3a6171ba07c06f8dac9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
         <definition>bool wxSocketBase::Error</definition>
@@ -254,7 +252,7 @@
       </sectiondef>
       <sectiondef kind="user-defined">
       <header>Basic I/O</header>
-      <description><para><anchor id="_1amgrp5962bd3a4e3d75d2eb9b928c8bc68834"/>See also: <ref refid="classwx_socket_server_1a3e0998c069bf8b3ef447167faf00ebae" kindref="member">wxSocketServer::WaitForAccept()</ref>, <ref refid="classwx_socket_client_1a83c92e8c27a72c3610c9eb0b60e92d74" kindref="member">wxSocketClient::WaitOnConnect()</ref> </para></description>
+      <description><para>See also: <ref refid="classwx_socket_server_1a3e0998c069bf8b3ef447167faf00ebae" kindref="member">wxSocketServer::WaitForAccept()</ref>, <ref refid="classwx_socket_client_1a83c92e8c27a72c3610c9eb0b60e92d74" kindref="member">wxSocketClient::WaitOnConnect()</ref> </para></description>
       <memberdef kind="function" id="classwx_socket_base_1a054754d97e15427949ffa30af8ce9945" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
         <definition>virtual bool wxSocketBase::Close</definition>
@@ -302,7 +300,7 @@
         <argsstring>() const </argsstring>
         <name>GetFlags</name>
         <briefdescription>
-<para>Returns current IO flags, as set with <ref refid="classwx_socket_base_1aa11d1db40c87c8e06e3f9849a08abafc" kindref="member">SetFlags()</ref>. </para>        </briefdescription>
+<para>Returns current IO flags, as set with <ref refid="classwx_socket_base_1aa11d1db40c87c8e06e3f9849a08abafc" kindref="member">SetFlags()</ref> </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -786,14 +784,13 @@ The exact behaviour of <ref refid="classwx_socket_base_1a7676f1821d2e17db95de243
       </sectiondef>
       <sectiondef kind="user-defined">
       <header>Handling Socket Events</header>
-      <description><para><anchor id="_1amgrpd94968408a849875ecf1d37ca3788e42"/> </para></description>
       <memberdef kind="function" id="classwx_socket_base_1a9dd69ce31cb441c2c47e374256fabcc4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void *</type>
         <definition>void* wxSocketBase::GetClientData</definition>
         <argsstring>() const </argsstring>
         <name>GetClientData</name>
         <briefdescription>
-<para>Returns a pointer of the client data for this socket, as set with <ref refid="classwx_socket_base_1a5695e6dc7db8e4119caf3c81dcbc7306" kindref="member">SetClientData()</ref>. </para>        </briefdescription>
+<para>Returns a pointer of the client data for this socket, as set with <ref refid="classwx_socket_base_1a5695e6dc7db8e4119caf3c81dcbc7306" kindref="member">SetClientData()</ref> </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -907,71 +904,71 @@ For example:</para><para><programlisting><codeline><highlight class="normal"><sp
 <listitem><para>EVT_SOCKET(id,  func): Process a <computeroutput>wxEVT_SOCKET</computeroutput> event. See <ref refid="socket_8h_1wxSocketEventFlags" kindref="member">wxSocketEventFlags</ref> and <ref refid="socket_8h_1wxSocketFlags" kindref="member">wxSocketFlags</ref> for more info. </para></listitem>
 </itemizedlist>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxnet" kindref="member">wxNet</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__net" kindref="compound">Networking</ref></para><para><simplesect kind="see"><para><ref refid="classwx_socket_event" kindref="compound">wxSocketEvent</ref>, <ref refid="classwx_socket_client" kindref="compound">wxSocketClient</ref>, <ref refid="classwx_socket_server" kindref="compound">wxSocketServer</ref>, <ref refid="page__samples_1page_samples_sockets" kindref="member">Sockets Sample</ref>, <ref refid="socket_8h_1wxSocketFlags" kindref="member">wxSocketFlags</ref>, <ref refid="socket_8h_1a2ec8996eecae7da1c5fa77c88a45a353" kindref="member">wxSocketEventFlags</ref>, <ref refid="socket_8h_1aec4f3fb4ed18dd9b1fe503750ec4e0f6" kindref="member">wxSocketError</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxnet" kindref="member">wxNet</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__net" kindref="compound">Networking</ref></para><para><simplesect kind="see"><para><ref refid="classwx_socket_event" kindref="compound">wxSocketEvent</ref>, <ref refid="classwx_socket_client" kindref="compound">wxSocketClient</ref>, <ref refid="classwx_socket_server" kindref="compound">wxSocketServer</ref>, <ref refid="page_samples_1page_samples_sockets" kindref="member">Sockets Sample</ref>, <ref refid="socket_8h_1wxSocketFlags" kindref="member">wxSocketFlags</ref>, <ref refid="socket_8h_1a2ec8996eecae7da1c5fa77c88a45a353" kindref="member">wxSocketEventFlags</ref>, <ref refid="socket_8h_1aec4f3fb4ed18dd9b1fe503750ec4e0f6" kindref="member">wxSocketError</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10221">
+      <node id="10281">
         <label>wxSocketBase</label>
         <link refid="classwx_socket_base"/>
-        <childnode refid="10222" relation="public-inheritance">
+        <childnode refid="10282" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10222">
+      <node id="10282">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="10223">
+      <node id="10283">
         <label>wxDatagramSocket</label>
         <link refid="classwx_datagram_socket"/>
-        <childnode refid="10221" relation="public-inheritance">
+        <childnode refid="10281" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10224">
+      <node id="10284">
         <label>wxSocketClient</label>
         <link refid="classwx_socket_client"/>
-        <childnode refid="10221" relation="public-inheritance">
+        <childnode refid="10281" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10228">
+      <node id="10288">
         <label>wxSocketServer</label>
         <link refid="classwx_socket_server"/>
-        <childnode refid="10221" relation="public-inheritance">
+        <childnode refid="10281" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10226">
+      <node id="10286">
         <label>wxFTP</label>
         <link refid="classwx_f_t_p"/>
-        <childnode refid="10225" relation="public-inheritance">
+        <childnode refid="10285" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10227">
+      <node id="10287">
         <label>wxHTTP</label>
         <link refid="classwx_h_t_t_p"/>
-        <childnode refid="10225" relation="public-inheritance">
+        <childnode refid="10285" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10225">
+      <node id="10285">
         <label>wxProtocol</label>
         <link refid="classwx_protocol"/>
-        <childnode refid="10224" relation="public-inheritance">
+        <childnode refid="10284" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10229">
+      <node id="10289">
         <label>wxSocketBase</label>
         <link refid="classwx_socket_base"/>
-        <childnode refid="10230" relation="public-inheritance">
+        <childnode refid="10290" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10230">
+      <node id="10290">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="10231" relation="usage">
+        <childnode refid="10291" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="10231">
+      <node id="10291">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_x_locale" kind="class" prot="public">
     <compoundname>wxXLocale</compoundname>
     <includes local="no">wx/xlocale.h</includes>
@@ -104,7 +104,7 @@
 </programlisting> to do it.</para><para>See <ref refid="group__group__funcmacro__locale" kindref="compound">Locale-dependent functions</ref> for a list of wxXLocale-enabled functions.</para><para>Conversely, if a program wanted to output the number in French locale, even if the current locale is different, it could use wxXLocale(wxLANGUAGE_FRENCH).</para><sect1 id="classwx_x_locale_1xlocale_avail">
 <title>Availability</title>
 <para>This class is fully implemented only under the platforms where xlocale POSIX API or equivalent is available. Currently the xlocale API is available under most of the recent Unix systems (including Linux, various BSD and Mac OS X) and Microsoft Visual C++ standard library provides a similar API starting from version 8 (Visual Studio 2005).</para><para>If neither POSIX API nor Microsoft proprietary equivalent are available, this class is still available but works in degraded mode: the only supported locale is the C one and attempts to create <ref refid="classwx_x_locale" kindref="compound">wxXLocale</ref> object for any other locale will fail. You can use the preprocessor macro <computeroutput>wxHAS_XLOCALE_SUPPORT</computeroutput> to test if full xlocale API is available or only skeleton C locale support is present.</para><para>Notice that <ref refid="classwx_x_locale" kindref="compound">wxXLocale</ref> is new in wxWidgets 2.9.0 and is not compiled in if <computeroutput>wxUSE_XLOCALE</computeroutput> was set to 0 during the library compilation.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__cfg" kindref="compound">Application and System configuration</ref></para><para>Predefined objects/pointers: <itemizedlist>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__cfg" kindref="compound">Application and System configuration</ref></para><para>Predefined objects/pointers: <itemizedlist>
 <listitem><para><ref refid="xlocale_8h_1af80db5b763e9056441ffd74bee61ef0e" kindref="member">wxNullXLocale</ref></para></listitem>
 </itemizedlist>
 <simplesect kind="see"><para><ref refid="classwx_locale" kindref="compound">wxLocale</ref> </para></simplesect>

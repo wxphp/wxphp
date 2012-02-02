@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_grid_cell_attr" kind="class" prot="public">
     <compoundname>wxGridCellAttr</compoundname>
     <includes local="no">wx/grid.h</includes>
@@ -426,7 +426,7 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><xrefsect id="todo_1_todo000032"><xreftitle>Todo</xreftitle><xrefdescription><para>Needs documentation. </para></xrefdescription></xrefsect></para>        </detaileddescription>
+<para><xrefsect id="todo_1_todo000031"><xreftitle>Todo</xreftitle><xrefdescription><para>Needs documentation.</para></xrefdescription></xrefsect></para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="888"/>
@@ -522,7 +522,7 @@
 <para>This class can be used to alter the cells&apos; appearance in the grid by changing their attributes from the defaults. </para>    </briefdescription>
     <detaileddescription>
 <para>An object of this class may be returned by <ref refid="classwx_grid_table_base_1af031321a86e3835d23177ffe53eee643" kindref="member">wxGridTableBase::GetAttr()</ref>.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__grid" kindref="compound">Grid Related Classes</ref> </para>    </detaileddescription>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__grid" kindref="compound">Grid Related Classes</ref> </para>    </detaileddescription>
     <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="720" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" bodystart="719" bodyend="915"/>
     <listofallmembers>
       <member refid="classwx_grid_cell_attr_1acc28e22664b1e4d390448c556993c440a64c5695fae5610f4c16e2e34e09a85fd" prot="public" virt="non-virtual"><scope>wxGridCellAttr</scope><name>Any</name></member>

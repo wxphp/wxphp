@@ -1,10 +1,9 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_graphics_gradient_stops" kind="class" prot="public">
     <compoundname>wxGraphicsGradientStops</compoundname>
     <includes local="no">wx/graphics.h</includes>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_graphics_gradient_stops_1ad983c9678da51616ef1107522b9d5f51" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void wxGraphicsGradientStops::Add</definition>
@@ -171,7 +170,7 @@
 <para>Represents a collection of wxGraphicGradientStop values for use with CreateLinearGradientBrush and CreateRadialGradientBrush. </para>    </briefdescription>
     <detaileddescription>
 <para>The stops are maintained in order of position. If two or more stops are added with the same position then the one(s) added later come later. This can be useful for producing discontinuities in the colour gradient.</para><para>Notice that this class is write-once, you can&apos;t modify the stops once they had been added.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__gdi" kindref="compound">Graphics Device Interface (GDI)</ref></para><para><simplesect kind="since"><para>2.9.1 </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__gdi" kindref="compound">Graphics Device Interface (GDI)</ref></para><para><simplesect kind="since"><para>2.9.1 </para></simplesect>
 </para>    </detaileddescription>
     <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" line="877" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" bodystart="876" bodyend="927"/>
     <listofallmembers>

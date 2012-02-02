@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_log_null" kind="class" prot="public">
     <compoundname>wxLogNull</compoundname>
     <includes local="no">wx/log.h</includes>
@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1057"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1177"/>
       </memberdef>
       <memberdef kind="function" id="classwx_log_null_1a407890cf9fe10a1a6f288abdcb9f2508" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -28,7 +28,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1062"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1182"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -48,7 +48,7 @@
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>don&apos;t<sp/>try<sp/>to<sp/>open<sp/>file<sp/>if<sp/>it<sp/>doesn&apos;t<sp/>exist,<sp/>we<sp/>are<sp/>prepared<sp/>to<sp/>deal<sp/>with</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>this<sp/>ourselves<sp/>-<sp/>but<sp/>all<sp/>other<sp/>errors<sp/>are<sp/>not<sp/>expected</highlight><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="classwx_file_1ad6530a4db084b157d81a1314c4a62420" kindref="member" tooltip="Returns true if the given name specifies an existing regular file (not a directory...">wxFile::Exists</ref>(</highlight><highlight class="stringliteral">&quot;bar&quot;</highlight><highlight class="normal">)<sp/>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="classwx_file_1ad6530a4db084b157d81a1314c4a62420" kindref="member" tooltip="Returns true if the given name specifies an existing regular file (not a directory or a link)...">wxFile::Exists</ref>(</highlight><highlight class="stringliteral">&quot;bar&quot;</highlight><highlight class="normal">)<sp/>)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>gives<sp/>an<sp/>error<sp/>message<sp/>if<sp/>the<sp/>file<sp/>couldn&apos;t<sp/>be<sp/>opened</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>file.<ref refid="classwx_file_1a70f2abe0e310dcf77ea6aeaac60df25b" kindref="member" tooltip="Opens the file, returning true if successful.">Open</ref>(</highlight><highlight class="stringliteral">&quot;bar&quot;</highlight><highlight class="normal">);</highlight></codeline>
@@ -58,8 +58,8 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 </programlisting></para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__logging" kindref="compound">Logging</ref> </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1052" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" bodystart="1051" bodyend="1063"/>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__logging" kindref="compound">Logging</ref> </para>    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1172" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" bodystart="1171" bodyend="1183"/>
     <listofallmembers>
       <member refid="classwx_log_null_1a9f137dab25df77f59cae833ceb9cbf44" prot="public" virt="non-virtual"><scope>wxLogNull</scope><name>wxLogNull</name></member>
       <member refid="classwx_log_null_1a407890cf9fe10a1a6f288abdcb9f2508" prot="public" virt="non-virtual"><scope>wxLogNull</scope><name>~wxLogNull</name></member>

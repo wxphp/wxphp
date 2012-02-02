@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_socket_client" kind="class" prot="public">
     <compoundname>wxSocketClient</compoundname>
     <basecompoundref refid="classwx_socket_base" prot="public" virt="non-virtual">wxSocketBase</basecompoundref>
@@ -194,65 +194,65 @@ If <emphasis>wait</emphasis> is false, <ref refid="classwx_socket_client_1a581cd
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-<para><xrefsect id="todo_1_todo000059"><xreftitle>Todo</xreftitle><xrefdescription><para>describe me.</para></xrefdescription></xrefsect><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxnet" kindref="member">wxNet</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__net" kindref="compound">Networking</ref> </para>    </detaileddescription>
+<para><xrefsect id="todo_1_todo000058"><xreftitle>Todo</xreftitle><xrefdescription><para>describe me.</para></xrefdescription></xrefsect></para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxnet" kindref="member">wxNet</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__net" kindref="compound">Networking</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10233">
+      <node id="10293">
         <label>wxSocketBase</label>
         <link refid="classwx_socket_base"/>
-        <childnode refid="10234" relation="public-inheritance">
+        <childnode refid="10294" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10234">
+      <node id="10294">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="10232">
+      <node id="10292">
         <label>wxSocketClient</label>
         <link refid="classwx_socket_client"/>
-        <childnode refid="10233" relation="public-inheritance">
+        <childnode refid="10293" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10236">
+      <node id="10296">
         <label>wxFTP</label>
         <link refid="classwx_f_t_p"/>
-        <childnode refid="10235" relation="public-inheritance">
+        <childnode refid="10295" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10237">
+      <node id="10297">
         <label>wxHTTP</label>
         <link refid="classwx_h_t_t_p"/>
-        <childnode refid="10235" relation="public-inheritance">
+        <childnode refid="10295" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10235">
+      <node id="10295">
         <label>wxProtocol</label>
         <link refid="classwx_protocol"/>
-        <childnode refid="10232" relation="public-inheritance">
+        <childnode refid="10292" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10239">
+      <node id="10299">
         <label>wxSocketBase</label>
         <link refid="classwx_socket_base"/>
-        <childnode refid="10240" relation="public-inheritance">
+        <childnode refid="10300" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10240">
+      <node id="10300">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="10241" relation="usage">
+        <childnode refid="10301" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="10238">
+      <node id="10298">
         <label>wxSocketClient</label>
         <link refid="classwx_socket_client"/>
-        <childnode refid="10239" relation="public-inheritance">
+        <childnode refid="10299" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10241">
+      <node id="10301">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

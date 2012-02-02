@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_font_enumerator" kind="class" prot="public">
     <compoundname>wxFontEnumerator</compoundname>
     <includes local="no">wx/fontenum.h</includes>
@@ -150,7 +150,7 @@
 <para>To do this, you just have to call one of EnumerateXXX() functions - either <ref refid="classwx_font_enumerator_1aa8fe98a0c913864c99f33d5f79cb6879" kindref="member">wxFontEnumerator::EnumerateFacenames()</ref> or <ref refid="classwx_font_enumerator_1a38dfb993bdb5ba19359679eb37f4296b" kindref="member">wxFontEnumerator::EnumerateEncodings()</ref> and the corresponding callback (<ref refid="classwx_font_enumerator_1ad9566d37c45e857c7e885f6d23a66848" kindref="member">wxFontEnumerator::OnFacename()</ref> or <ref refid="classwx_font_enumerator_1a5a100fb6f9cf812d0982ab83a0c07644" kindref="member">wxFontEnumerator::OnFontEncoding()</ref>) will be called repeatedly until either all fonts satisfying the specified criteria are exhausted or the callback returns false.</para><sect1 id="classwx_font_enumerator_1fontenum_virtual">
 <title>Virtual functions to override</title>
 <para>Either OnFacename or OnFontEncoding should be overridden depending on whether you plan to call EnumerateFacenames or EnumerateEncodings. Of course, if you call both of them, you should override both functions.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__gdi" kindref="compound">Graphics Device Interface (GDI)</ref></para><para><simplesect kind="see"><para><ref refid="overview__fontencoding" kindref="compound">Font Encodings</ref>, <ref refid="page__samples_1page_samples_font" kindref="member">Font Sample</ref>, <ref refid="classwx_font" kindref="compound">wxFont</ref>, <ref refid="classwx_font_mapper" kindref="compound">wxFontMapper</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__gdi" kindref="compound">Graphics Device Interface (GDI)</ref></para><para><simplesect kind="see"><para><ref refid="overview_fontencoding" kindref="compound">Font Encodings</ref>, <ref refid="page_samples_1page_samples_font" kindref="member">Font Sample</ref>, <ref refid="classwx_font" kindref="compound">wxFont</ref>, <ref refid="classwx_font_mapper" kindref="compound">wxFontMapper</ref> </para></simplesect>
 </para></sect1>
     </detaileddescription>
     <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fontenum.h" line="36" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fontenum.h" bodystart="35" bodyend="88"/>

@@ -1,12 +1,11 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_key_event" kind="class" prot="public">
     <compoundname>wxKeyEvent</compoundname>
     <basecompoundref refid="classwx_event" prot="public" virt="non-virtual">wxEvent</basecompoundref>
     <basecompoundref refid="classwx_keyboard_state" prot="public" virt="non-virtual">wxKeyboardState</basecompoundref>
     <includes local="no">wx/event.h</includes>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_key_event_1a2d2767963161e62139339a8152d7003b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_point" kindref="compound">wxPoint</ref></type>
         <definition>wxPoint wxKeyEvent::GetPosition</definition>
@@ -225,7 +224,7 @@
 <para>The main information carried by this event is the key being pressed or released. It can be accessed using either <ref refid="classwx_key_event_1a3dccc5a254770931e5d8066ef47e7fb0" kindref="member">GetKeyCode()</ref> function or <ref refid="classwx_key_event_1afc21af89018eaef208ad50ffadc6cf6f" kindref="member">GetUnicodeKey()</ref>. For the printable characters, the latter should be used as it works for any keys, including non-Latin-1 characters that can be entered when using national keyboard layouts. <ref refid="classwx_key_event_1a3dccc5a254770931e5d8066ef47e7fb0" kindref="member">GetKeyCode()</ref> should be used to handle special characters (such as cursor arrows keys or <computeroutput>HOME</computeroutput> or <computeroutput>INS</computeroutput> and so on) which correspond to <ref refid="defs_8h_1a41c4609211685cff198618963ec8f77d" kindref="member">wxKeyCode</ref> enum elements above the <computeroutput>WXK_START</computeroutput> constant. While <ref refid="classwx_key_event_1a3dccc5a254770931e5d8066ef47e7fb0" kindref="member">GetKeyCode()</ref> also returns the character code for Latin-1 keys for compatibility, it doesn&apos;t work for Unicode characters in general and will return <computeroutput>WXK_NONE</computeroutput> for any non-Latin-1 ones. For this reason, it&apos;s recommended to always use <ref refid="classwx_key_event_1afc21af89018eaef208ad50ffadc6cf6f" kindref="member">GetUnicodeKey()</ref> and only fall back to <ref refid="classwx_key_event_1a3dccc5a254770931e5d8066ef47e7fb0" kindref="member">GetKeyCode()</ref> if <ref refid="classwx_key_event_1afc21af89018eaef208ad50ffadc6cf6f" kindref="member">GetUnicodeKey()</ref> returned <computeroutput>WXK_NONE</computeroutput> meaning that the event corresponds to a non-printable special keys.</para><para>While both of these functions can be used with the events of <computeroutput>wxEVT_KEY_DOWN</computeroutput>, <computeroutput>wxEVT_KEY_UP</computeroutput> and <computeroutput>wxEVT_CHAR</computeroutput> types, the values returned by them are different for the first two events and the last one. For the latter, the key returned corresponds to the character that would appear in e.g. a text zone if the user pressed the key in it. As such, its value depends on the current state of the Shift key and, for the letters, on the state of Caps Lock modifier. For example, if <computeroutput>A</computeroutput> key is pressed without Shift being held down, <ref refid="classwx_key_event" kindref="compound">wxKeyEvent</ref> of type <computeroutput>wxEVT_CHAR</computeroutput> generated for this key press will return (from either <ref refid="classwx_key_event_1a3dccc5a254770931e5d8066ef47e7fb0" kindref="member">GetKeyCode()</ref> or <ref refid="classwx_key_event_1afc21af89018eaef208ad50ffadc6cf6f" kindref="member">GetUnicodeKey()</ref> as their meanings coincide for ASCII characters) key code of 97 corresponding the ASCII value of <computeroutput>a</computeroutput>. And if the same key is pressed but with Shift being held (or Caps Lock being active), then the key could would be 65, i.e. ASCII value of capital <computeroutput>A</computeroutput>.</para><para>However for the key down and up events the returned key code will instead be <computeroutput>A</computeroutput> independently of the state of the modifier keys i.e. it depends only on physical key being pressed and is not translated to its logical representation using the current keyboard state. Such untranslated key codes are defined as follows:<itemizedlist>
 <listitem><para>For the letters they correspond to the <emphasis>upper</emphasis> case value of the letter.</para></listitem><listitem><para>For the other alphanumeric keys (e.g. <computeroutput>7</computeroutput> or <computeroutput>+</computeroutput>), the untranslated key code corresponds to the character produced by the key when it is pressed without Shift. E.g. in standard US keyboard layout the untranslated key code for the key <computeroutput>=/+</computeroutput> in the upper right corner of the keyboard is 61 which is the ASCII value of <computeroutput>=</computeroutput>.</para></listitem><listitem><para>For the rest of the keys (i.e. special non-printable keys) it is the same as the normal key code as no translation is used anyhow.</para></listitem></itemizedlist>
 </para><para>Notice that the first rule applies to all Unicode letters, not just the usual Latin-1 ones. However for non-Latin-1 letters only <ref refid="classwx_key_event_1afc21af89018eaef208ad50ffadc6cf6f" kindref="member">GetUnicodeKey()</ref> can be used to retrieve the key code as <ref refid="classwx_key_event_1a3dccc5a254770931e5d8066ef47e7fb0" kindref="member">GetKeyCode()</ref> just returns <computeroutput>WXK_NONE</computeroutput> in this case.</para><para>To summarize: you should handle <computeroutput>wxEVT_CHAR</computeroutput> if you need the translated key and <computeroutput>wxEVT_KEY_DOWN</computeroutput> if you only need the value of the key itself, independent of the current keyboard state.</para><para><simplesect kind="note"><para>Not all key down events may be generated by the user. As an example, <computeroutput>wxEVT_KEY_DOWN</computeroutput> with <computeroutput>=</computeroutput> key code can be generated using the standard US keyboard layout but not using the German one because the <computeroutput>=</computeroutput> key corresponds to Shift-0 key combination in this layout and the key code for it is <computeroutput>0</computeroutput>, not <computeroutput>=</computeroutput>. Because of this you should avoid requiring your users to type key events that might be impossible to enter on their keyboard.</para></simplesect>
-Another difference between key and char events is that another kind of translation is done for the latter ones when the Control key is pressed: char events for ASCII letters in this case carry codes corresponding to the ASCII value of Ctrl-Latter, i.e. 1 for Ctrl-A, 2 for Ctrl-B and so on until 26 for Ctrl-Z. This is convenient for terminal-like applications and can be completely ignored by all the other ones (if you need to handle Ctrl-A it is probably a better idea to use the key event rather than the char one). Notice that currently no translation is done for the presses of <computeroutput></computeroutput>[, <computeroutput>\</computeroutput>, <computeroutput></computeroutput>], <computeroutput>^</computeroutput> and <computeroutput>_</computeroutput> keys which might be mapped to ASCII values from 27 to 31. Since version 2.9.2, the enum values <computeroutput>WXK_CONTROL_A</computeroutput> - <computeroutput>WXK_CONTROL_Z</computeroutput> can be used instead of the non-descriptive constant values 1-26.</para><para>Finally, modifier keys only generate key events but no char events at all. The modifiers keys are <computeroutput>WXK_SHIFT</computeroutput>, <computeroutput>WXK_CONTROL</computeroutput>, <computeroutput>WXK_ALT</computeroutput> and various <computeroutput>WXK_WINDOWS_XXX</computeroutput> from <ref refid="defs_8h_1a41c4609211685cff198618963ec8f77d" kindref="member">wxKeyCode</ref> enum.</para><para>Modifier keys events are special in one additional aspect: usually the keyboard state associated with a key press is well defined, e.g. <ref refid="classwx_keyboard_state_1a63b9ec3a2f30011471a7036853fc38f3" kindref="member">wxKeyboardState::ShiftDown()</ref> returns <computeroutput>true</computeroutput> only if the Shift key was held pressed when the key that generated this event itself was pressed. There is an ambiguity for the key press events for Shift key itself however. By convention, it is considered to be already pressed when it is pressed and already released when it is released. In other words, <computeroutput>wxEVT_KEY_DOWN</computeroutput> event for the Shift key itself will have <computeroutput>wxMOD_SHIFT</computeroutput> in <ref refid="classwx_keyboard_state_1a44b1e849563ebf43e073915a447e4aa5" kindref="member">GetModifiers()</ref> and <ref refid="classwx_keyboard_state_1a63b9ec3a2f30011471a7036853fc38f3" kindref="member">ShiftDown()</ref> will return true while the <computeroutput>wxEVT_KEY_UP</computeroutput> event for Shift itself will not have <computeroutput>wxMOD_SHIFT</computeroutput> in its modifiers and <ref refid="classwx_keyboard_state_1a63b9ec3a2f30011471a7036853fc38f3" kindref="member">ShiftDown()</ref> will return false.</para><para><bold>Tip:</bold> You may discover the key codes and modifiers generated by all the keys on your system interactively by running the <ref refid="page__samples_1page_samples_keyboard" kindref="member">Key Event Sample</ref> wxWidgets sample and pressing some keys in it.</para><para><simplesect kind="note"><para>If a key down (<computeroutput>EVT_KEY_DOWN</computeroutput>) event is caught and the event handler does not call <computeroutput>event.Skip()</computeroutput> then the corresponding char event (<computeroutput>EVT_CHAR</computeroutput>) will not happen. This is by design and enables the programs that handle both types of events to avoid processing the same key twice. As a consequence, if you do not want to suppress the <computeroutput>wxEVT_CHAR</computeroutput> events for the keys you handle, always call <computeroutput>event.Skip()</computeroutput> in your <computeroutput>wxEVT_KEY_DOWN</computeroutput> handler. Not doing may also prevent accelerators defined using this key from working.</para><simplesectsep/><para>If a key is maintained in a pressed state, you will typically get a lot of (automatically generated) key down events but only one key up one at the end when the key is released so it is wrong to assume that there is one up event corresponding to each down one.</para><simplesectsep/><para>For Windows programmers: The key and char events in wxWidgets are similar to but slightly different from Windows <computeroutput>WM_KEYDOWN</computeroutput> and <computeroutput>WM_CHAR</computeroutput> events. In particular, Alt-x combination will generate a char event in wxWidgets (unless it is used as an accelerator) and almost all keys, including ones without ASCII equivalents, generate char events too.</para></simplesect>
+Another difference between key and char events is that another kind of translation is done for the latter ones when the Control key is pressed: char events for ASCII letters in this case carry codes corresponding to the ASCII value of Ctrl-Latter, i.e. 1 for Ctrl-A, 2 for Ctrl-B and so on until 26 for Ctrl-Z. This is convenient for terminal-like applications and can be completely ignored by all the other ones (if you need to handle Ctrl-A it is probably a better idea to use the key event rather than the char one). Notice that currently no translation is done for the presses of <computeroutput></computeroutput>[, <computeroutput>\</computeroutput>, <computeroutput></computeroutput>], <computeroutput>^</computeroutput> and <computeroutput>_</computeroutput> keys which might be mapped to ASCII values from 27 to 31. Since version 2.9.2, the enum values <computeroutput>WXK_CONTROL_A</computeroutput> - <computeroutput>WXK_CONTROL_Z</computeroutput> can be used instead of the non-descriptive constant values 1-26.</para><para>Finally, modifier keys only generate key events but no char events at all. The modifiers keys are <computeroutput>WXK_SHIFT</computeroutput>, <computeroutput>WXK_CONTROL</computeroutput>, <computeroutput>WXK_ALT</computeroutput> and various <computeroutput>WXK_WINDOWS_XXX</computeroutput> from <ref refid="defs_8h_1a41c4609211685cff198618963ec8f77d" kindref="member">wxKeyCode</ref> enum.</para><para>Modifier keys events are special in one additional aspect: usually the keyboard state associated with a key press is well defined, e.g. <ref refid="classwx_keyboard_state_1a63b9ec3a2f30011471a7036853fc38f3" kindref="member">wxKeyboardState::ShiftDown()</ref> returns <computeroutput>true</computeroutput> only if the Shift key was held pressed when the key that generated this event itself was pressed. There is an ambiguity for the key press events for Shift key itself however. By convention, it is considered to be already pressed when it is pressed and already released when it is released. In other words, <computeroutput>wxEVT_KEY_DOWN</computeroutput> event for the Shift key itself will have <computeroutput>wxMOD_SHIFT</computeroutput> in <ref refid="classwx_keyboard_state_1a44b1e849563ebf43e073915a447e4aa5" kindref="member">GetModifiers()</ref> and <ref refid="classwx_keyboard_state_1a63b9ec3a2f30011471a7036853fc38f3" kindref="member">ShiftDown()</ref> will return true while the <computeroutput>wxEVT_KEY_UP</computeroutput> event for Shift itself will not have <computeroutput>wxMOD_SHIFT</computeroutput> in its modifiers and <ref refid="classwx_keyboard_state_1a63b9ec3a2f30011471a7036853fc38f3" kindref="member">ShiftDown()</ref> will return false.</para><para><bold>Tip:</bold> You may discover the key codes and modifiers generated by all the keys on your system interactively by running the <ref refid="page_samples_1page_samples_keyboard" kindref="member">Key Event Sample</ref> wxWidgets sample and pressing some keys in it.</para><para><simplesect kind="note"><para>If a key down (<computeroutput>EVT_KEY_DOWN</computeroutput>) event is caught and the event handler does not call <computeroutput>event.Skip()</computeroutput> then the corresponding char event (<computeroutput>EVT_CHAR</computeroutput>) will not happen. This is by design and enables the programs that handle both types of events to avoid processing the same key twice. As a consequence, if you do not want to suppress the <computeroutput>wxEVT_CHAR</computeroutput> events for the keys you handle, always call <computeroutput>event.Skip()</computeroutput> in your <computeroutput>wxEVT_KEY_DOWN</computeroutput> handler. Not doing may also prevent accelerators defined using this key from working.</para><simplesectsep/><para>If a key is maintained in a pressed state, you will typically get a lot of (automatically generated) key down events but only one key up one at the end when the key is released so it is wrong to assume that there is one up event corresponding to each down one.</para><simplesectsep/><para>For Windows programmers: The key and char events in wxWidgets are similar to but slightly different from Windows <computeroutput>WM_KEYDOWN</computeroutput> and <computeroutput>WM_CHAR</computeroutput> events. In particular, Alt-x combination will generate a char event in wxWidgets (unless it is used as an accelerator) and almost all keys, including ones without ASCII equivalents, generate char events too.</para></simplesect>
 <heading level="2">Events using this class</heading>
 </para><para>The following event handler macros redirect the events to member function handlers &apos;<bold>func</bold>&apos; with prototypes like: void<nonbreakablespace/>handlerFuncName(<ref refid="classwx_key_event" kindref="compound">wxKeyEvent</ref>&amp;<nonbreakablespace/>event)Event macros: <itemizedlist>
 <listitem><para>EVT_KEY_DOWN(func): Process a <computeroutput>wxEVT_KEY_DOWN</computeroutput> event (any key has been pressed). If this event is handled and not skipped, <computeroutput>wxEVT_CHAR</computeroutput> will not be generated at all for this key press (but <computeroutput>wxEVT_KEY_UP</computeroutput> will be). </para></listitem>
@@ -235,33 +234,9 @@ Another difference between key and char events is that another kind of translati
 </itemizedlist>
 <simplesect kind="see"><para><ref refid="classwx_keyboard_state" kindref="compound">wxKeyboardState</ref></para></simplesect>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref> </para>    </detaileddescription>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7373">
-        <label>wxKeyboardState</label>
-        <link refid="classwx_keyboard_state"/>
-      </node>
-      <node id="7370">
-        <label>wxKeyEvent</label>
-        <link refid="classwx_key_event"/>
-        <childnode refid="7371" relation="public-inheritance">
-        </childnode>
-        <childnode refid="7373" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="7372">
-        <label>wxObject</label>
-        <link refid="classwx_object"/>
-      </node>
-      <node id="7371">
-        <label>wxEvent</label>
-        <link refid="classwx_event"/>
-        <childnode refid="7372" relation="public-inheritance">
-        </childnode>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
-      <node id="7378">
+      <node id="7377">
         <label>wxKeyboardState</label>
         <link refid="classwx_keyboard_state"/>
       </node>
@@ -270,15 +245,12 @@ Another difference between key and char events is that another kind of translati
         <link refid="classwx_key_event"/>
         <childnode refid="7375" relation="public-inheritance">
         </childnode>
-        <childnode refid="7378" relation="public-inheritance">
+        <childnode refid="7377" relation="public-inheritance">
         </childnode>
       </node>
       <node id="7376">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="7377" relation="usage">
-          <edgelabel>m_refData</edgelabel>
-        </childnode>
       </node>
       <node id="7375">
         <label>wxEvent</label>
@@ -286,7 +258,34 @@ Another difference between key and char events is that another kind of translati
         <childnode refid="7376" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7377">
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="7382">
+        <label>wxKeyboardState</label>
+        <link refid="classwx_keyboard_state"/>
+      </node>
+      <node id="7378">
+        <label>wxKeyEvent</label>
+        <link refid="classwx_key_event"/>
+        <childnode refid="7379" relation="public-inheritance">
+        </childnode>
+        <childnode refid="7382" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7380">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="7381" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="7379">
+        <label>wxEvent</label>
+        <link refid="classwx_event"/>
+        <childnode refid="7380" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7381">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

@@ -1,0 +1,118 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="page_libs" kind="page">
+    <compoundname>page_libs</compoundname>
+    <title>Library List</title>
+    <detaileddescription>
+<para>wxWidgets can be built either as a single large library (this is called a <emphasis>monolithic build</emphasis>) or as several smaller libraries (<emphasis>multilib build</emphasis>).</para><para>Multilib build is the default.</para><para>wxWidgets library is divided into libraries briefly described below. This diagram shows the dependencies between them:</para><para><dot> 
+digraph Dependancies
+{
+    node [shape = ellipse, fontname = &quot;Courier&quot;, fontsize = 10, style = filled];
+
+    wxBase     [URL = &quot;\ref page_libs_wxbase&quot;];
+
+    wxCore     [fillcolor = deepskyblue, URL = &quot;\ref page_libs_wxcore&quot;];
+    wxNet      [fillcolor = deepskyblue, URL = &quot;\ref page_libs_wxnet&quot;];
+    wxXML      [fillcolor = deepskyblue, URL = &quot;\ref page_libs_wxxml&quot;];
+
+    wxAdvanced [fillcolor = green, URL = &quot;\ref page_libs_wxadv&quot;];
+    wxAUI      [fillcolor = green, URL = &quot;\ref page_libs_wxaui&quot;];
+    wxGL       [fillcolor = green, URL = &quot;\ref page_libs_wxgl&quot;];
+    wxHTML     [fillcolor = green, URL = &quot;\ref page_libs_wxhtml&quot;];
+    wxMedia    [fillcolor = green, URL = &quot;\ref page_libs_wxmedia&quot;];
+    wxPropertyGrid [fillcolor = green, URL = &quot;\ref page_libs_wxpropgrid&quot;];
+    wxQA       [fillcolor = green, URL = &quot;\ref page_libs_wxqa&quot;];
+    wxRibbon   [fillcolor = green, URL = &quot;\ref page_libs_wxribbon&quot;];
+    wxRichText [fillcolor = green, URL = &quot;\ref page_libs_wxrichtext&quot;];
+    wxSTC      [fillcolor = green, URL = &quot;\ref page_libs_wxstc&quot;];
+    wxXRC      [fillcolor = green, URL = &quot;\ref page_libs_wxxrc&quot;];
+    wxWebView  [fillcolor = green, URL = &quot;\ref page_libs_wxwebview&quot;];
+
+    wxCore -&gt; wxBase;
+    wxNet -&gt; wxBase;
+    wxXML -&gt; wxBase;
+
+    wxAdvanced -&gt; wxCore;
+    wxAUI -&gt; wxAdvanced; wxAUI -&gt; wxHTML; wxAUI -&gt; wxXML;
+    wxGL -&gt; wxCore;
+    wxHTML -&gt; wxCore;
+    wxMedia -&gt; wxCore;
+    wxPropertyGrid -&gt; wxAdvanced;
+    wxQA -&gt; wxCore; wxQA -&gt; wxXML;
+    wxRibbon -&gt; wxCore;
+    wxRichText -&gt; wxAdvanced; wxRichText -&gt; wxHTML; wxRichText -&gt; wxXML;
+    wxSTC -&gt; wxCore;
+    wxXRC -&gt; wxAdvanced; wxXRC -&gt; wxHTML; wxXRC -&gt; wxXML;
+    wxWebView -&gt; wxCore;
+}
+</dot></para><para>Please note that arrows indicate the &quot;depends from&quot; relation and that all blue libraries depend on the <ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref> library (i.e. they are non-GUI libraries), and all green libraries depend on the <ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref> library (i.e. they are GUI libraries).</para><sect1 id="page_libs_1page_libs_wxbase">
+<title>wxBase</title>
+<para>Every wxWidgets application must link against this library. It contains mandatory classes that any wxWidgets code depends on (e.g. <ref refid="classwx_string" kindref="compound">wxString</ref>) and portability classes that abstract differences between platforms. wxBase can be used to develop console mode applications, it does not require any GUI libraries or running X Window System on Unix.</para></sect1>
+<sect1 id="page_libs_1page_libs_wxcore">
+<title>wxCore</title>
+<para>Basic GUI classes such as GDI classes or controls are in this library. All wxWidgets GUI applications must link against this library, only console mode applications don&apos;t.</para><para>Requires <ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref>.</para></sect1>
+<sect1 id="page_libs_1page_libs_wxaui">
+<title>wxAui</title>
+<para>This contains the Advanced User Interface docking library.</para><para>Requires <ref refid="page_libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref>, <ref refid="page_libs_1page_libs_wxhtml" kindref="member">wxHTML</ref>, <ref refid="page_libs_1page_libs_wxxml" kindref="member">wxXML</ref>, <ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref>, <ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref>.</para></sect1>
+<sect1 id="page_libs_1page_libs_wxnet">
+<title>wxNet</title>
+<para>Classes for network access:</para><para><itemizedlist>
+<listitem><para>wxSocket classes (<ref refid="classwx_socket_client" kindref="compound">wxSocketClient</ref>, <ref refid="classwx_socket_server" kindref="compound">wxSocketServer</ref> and related classes) </para></listitem>
+<listitem><para><ref refid="classwx_socket_output_stream" kindref="compound">wxSocketOutputStream</ref> and <ref refid="classwx_socket_input_stream" kindref="compound">wxSocketInputStream</ref> </para></listitem>
+<listitem><para>sockets-based IPC classes (<ref refid="classwx_t_c_p_server" kindref="compound">wxTCPServer</ref>, <ref refid="classwx_t_c_p_client" kindref="compound">wxTCPClient</ref> and <ref refid="classwx_t_c_p_connection" kindref="compound">wxTCPConnection</ref>) </para></listitem>
+<listitem><para><ref refid="classwx_u_r_l" kindref="compound">wxURL</ref> </para></listitem>
+<listitem><para>wxInternetFSHandler (a <ref refid="classwx_file_system" kindref="compound">wxFileSystem</ref> handler)</para></listitem>
+</itemizedlist>
+Requires <ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref>.</para></sect1>
+<sect1 id="page_libs_1page_libs_wxpropgrid">
+<title>wxPropertyGrid</title>
+<para>This contains the <ref refid="classwx_property_grid" kindref="compound">wxPropertyGrid</ref> control.</para><para>Requires <ref refid="page_libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref>, <ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref>, <ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref>.</para></sect1>
+<sect1 id="page_libs_1page_libs_wxribbon">
+<title>wxRibbon</title>
+<para>This contains the Ribbon User Interface components library.</para><para>Requires <ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref>, <ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref>.</para></sect1>
+<sect1 id="page_libs_1page_libs_wxrichtext">
+<title>wxRichText</title>
+<para>This contains generic rich text control functionality.</para><para>Requires <ref refid="page_libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref>, <ref refid="page_libs_1page_libs_wxhtml" kindref="member">wxHTML</ref>, <ref refid="page_libs_1page_libs_wxxml" kindref="member">wxXML</ref>, <ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref>, <ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref>.</para></sect1>
+<sect1 id="page_libs_1page_libs_wxxml">
+<title>wxXML</title>
+<para>This library contains simple classes for parsing XML documents.</para><para>Requires <ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref>.</para></sect1>
+<sect1 id="page_libs_1page_libs_wxadv">
+<title>wxAdvanced</title>
+<para>Advanced or rarely used GUI classes:</para><para><itemizedlist>
+<listitem><para><ref refid="classwx_calendar_ctrl" kindref="compound">wxCalendarCtrl</ref> </para></listitem>
+<listitem><para><ref refid="classwx_grid" kindref="compound">wxGrid</ref> classes </para></listitem>
+<listitem><para><ref refid="classwx_joystick" kindref="compound">wxJoystick</ref> </para></listitem>
+<listitem><para><ref refid="classwx_layout_algorithm" kindref="compound">wxLayoutAlgorithm</ref> </para></listitem>
+<listitem><para><ref refid="classwx_splash_screen" kindref="compound">wxSplashScreen</ref> </para></listitem>
+<listitem><para><ref refid="classwx_task_bar_icon" kindref="compound">wxTaskBarIcon</ref> </para></listitem>
+<listitem><para><ref refid="classwx_sound" kindref="compound">wxSound</ref> </para></listitem>
+<listitem><para><ref refid="classwx_wizard" kindref="compound">wxWizard</ref> </para></listitem>
+<listitem><para><ref refid="classwx_sash_layout_window" kindref="compound">wxSashLayoutWindow</ref> </para></listitem>
+<listitem><para><ref refid="classwx_sash_window" kindref="compound">wxSashWindow</ref> </para></listitem>
+<listitem><para>...others</para></listitem>
+</itemizedlist>
+Requires <ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref> and <ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref>.</para></sect1>
+<sect1 id="page_libs_1page_libs_wxmedia">
+<title>wxMedia</title>
+<para>Miscellaneous classes related to multimedia. Currently this library only contains <ref refid="classwx_media_ctrl" kindref="compound">wxMediaCtrl</ref> but more classes will be added in the future.</para><para>Requires <ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref> and <ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref>.</para></sect1>
+<sect1 id="page_libs_1page_libs_wxgl">
+<title>wxGL</title>
+<para>This library contains <ref refid="classwx_g_l_canvas" kindref="compound">wxGLCanvas</ref> class for integrating OpenGL library with wxWidgets. Unlike all others, this library is <bold>not</bold> part of the monolithic library, it is always built as separate library.</para><para>Requires <ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref> and <ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref>.</para></sect1>
+<sect1 id="page_libs_1page_libs_wxhtml">
+<title>wxHTML</title>
+<para>Simple HTML renderer and other <ref refid="overview_html" kindref="compound">wxHTML Overview</ref> are contained in this library, as well as <ref refid="classwx_html_help_controller" kindref="compound">wxHtmlHelpController</ref>, wxBestHelpController and <ref refid="classwx_html_list_box" kindref="compound">wxHtmlListBox</ref>.</para><para>Requires <ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref> and <ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref>.</para></sect1>
+<sect1 id="page_libs_1page_libs_wxqa">
+<title>wxQA</title>
+<para>This is the library containing extra classes for quality assurance. Currently it only contains <ref refid="classwx_debug_report" kindref="compound">wxDebugReport</ref> and related classes, but more will be added to it in the future.</para><para>Requires <ref refid="page_libs_1page_libs_wxxml" kindref="member">wxXML</ref>, <ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref>, <ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref>.</para></sect1>
+<sect1 id="page_libs_1page_libs_wxxrc">
+<title>wxXRC</title>
+<para>This library contains <ref refid="classwx_xml_resource" kindref="compound">wxXmlResource</ref> class that provides access to XML resource files in XRC format.</para><para>Requires <ref refid="page_libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref>, <ref refid="page_libs_1page_libs_wxhtml" kindref="member">wxHTML</ref>, <ref refid="page_libs_1page_libs_wxxml" kindref="member">wxXML</ref>, <ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref>, <ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref>.</para></sect1>
+<sect1 id="page_libs_1page_libs_wxstc">
+<title>wxSTC</title>
+<para>STC (Styled Text Control) is a wrapper around Scintilla, a syntax-highlighting text editor. See &lt;<ulink url="http://www.scintilla.org/">http://www.scintilla.org/</ulink>&gt; for more info about Scintilla.</para><para>Requires <ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref>, <ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref>.</para></sect1>
+<sect1 id="page_libs_1page_libs_wxwebview">
+<title>wxWebView</title>
+<para>The <ref refid="classwx_web_view" kindref="compound">wxWebView</ref> library contains the <ref refid="classwx_web_view" kindref="compound">wxWebView</ref> control and its associated classes.</para><para>Requires <ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref>, <ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref>. </para></sect1>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

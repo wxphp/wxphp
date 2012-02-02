@@ -1,10 +1,9 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="dynarray_8h" kind="file">
     <compoundname>dynarray.h</compoundname>
     <innerclass refid="classwx_array_3_01_t_01_4" prot="public">wxArray&lt; T &gt;</innerclass>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="define" id="dynarray_8h_1a515e9265b474d8a152ec3ec42179abde" prot="public" static="no">
         <name>WX_DECLARE_OBJARRAY</name>
         <param><defname>T</defname></param>
@@ -13,7 +12,7 @@
 <para>This macro declares a new object array class named <emphasis>name</emphasis> and containing the elements of type <emphasis>T</emphasis>. </para>        </briefdescription>
         <detaileddescription>
 <para>An exported array is used when compiling wxWidgets as a DLL under Windows and the array needs to be visible outside the DLL. An user exported array needed for exporting an array from a user DLL.</para><para>Example:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">MyClass;</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dynarray_8h_1a515e9265b474d8a152ec3ec42179abde" kindref="member" tooltip="This macro declares a new object array class named name and containing the elements...">WX_DECLARE_OBJARRAY</ref>(MyClass,<sp/>wxArrayOfMyClass);<sp/></highlight><highlight class="comment">//<sp/>note:<sp/>not<sp/>&quot;MyClass<sp/>*&quot;!</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="richtextbuffer_8h_1ae267bced101176876e1b4792e974e091" kindref="member">WX_DECLARE_OBJARRAY</ref>(MyClass,<sp/>wxArrayOfMyClass);<sp/></highlight><highlight class="comment">//<sp/>note:<sp/>not<sp/>&quot;MyClass<sp/>*&quot;!</highlight></codeline>
 </programlisting></para><para>You must use <ref refid="dynarray_8h_1a52cebddf0dbdeb2d7dbbfb88656f0f79" kindref="member">WX_DEFINE_OBJARRAY()</ref> macro to define the array class, otherwise you would get link errors. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -27,7 +26,7 @@
 <para>This macro declares a new object array class named <emphasis>name</emphasis> and containing the elements of type <emphasis>T</emphasis>. </para>        </briefdescription>
         <detaileddescription>
 <para>An exported array is used when compiling wxWidgets as a DLL under Windows and the array needs to be visible outside the DLL. An user exported array needed for exporting an array from a user DLL.</para><para>Example:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">MyClass;</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dynarray_8h_1a515e9265b474d8a152ec3ec42179abde" kindref="member" tooltip="This macro declares a new object array class named name and containing the elements...">WX_DECLARE_OBJARRAY</ref>(MyClass,<sp/>wxArrayOfMyClass);<sp/></highlight><highlight class="comment">//<sp/>note:<sp/>not<sp/>&quot;MyClass<sp/>*&quot;!</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="richtextbuffer_8h_1ae267bced101176876e1b4792e974e091" kindref="member">WX_DECLARE_OBJARRAY</ref>(MyClass,<sp/>wxArrayOfMyClass);<sp/></highlight><highlight class="comment">//<sp/>note:<sp/>not<sp/>&quot;MyClass<sp/>*&quot;!</highlight></codeline>
 </programlisting></para><para>You must use <ref refid="dynarray_8h_1a52cebddf0dbdeb2d7dbbfb88656f0f79" kindref="member">WX_DEFINE_OBJARRAY()</ref> macro to define the array class, otherwise you would get link errors. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -41,7 +40,7 @@
 <para>This macro declares a new object array class named <emphasis>name</emphasis> and containing the elements of type <emphasis>T</emphasis>. </para>        </briefdescription>
         <detaileddescription>
 <para>An exported array is used when compiling wxWidgets as a DLL under Windows and the array needs to be visible outside the DLL. An user exported array needed for exporting an array from a user DLL.</para><para>Example:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">MyClass;</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dynarray_8h_1a515e9265b474d8a152ec3ec42179abde" kindref="member" tooltip="This macro declares a new object array class named name and containing the elements...">WX_DECLARE_OBJARRAY</ref>(MyClass,<sp/>wxArrayOfMyClass);<sp/></highlight><highlight class="comment">//<sp/>note:<sp/>not<sp/>&quot;MyClass<sp/>*&quot;!</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="richtextbuffer_8h_1ae267bced101176876e1b4792e974e091" kindref="member">WX_DECLARE_OBJARRAY</ref>(MyClass,<sp/>wxArrayOfMyClass);<sp/></highlight><highlight class="comment">//<sp/>note:<sp/>not<sp/>&quot;MyClass<sp/>*&quot;!</highlight></codeline>
 </programlisting></para><para>You must use <ref refid="dynarray_8h_1a52cebddf0dbdeb2d7dbbfb88656f0f79" kindref="member">WX_DEFINE_OBJARRAY()</ref> macro to define the array class, otherwise you would get link errors. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -49,7 +48,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="define" id="dynarray_8h_1aa9c653860ef656116ad6914e79e17340" prot="public" static="no">
         <name>WX_DEFINE_ARRAY</name>
         <param><defname>T</defname></param>
@@ -60,7 +58,7 @@
 <para>An exported array is used when compiling wxWidgets as a DLL under Windows and the array needs to be visible outside the DLL. An user exported array needed for exporting an array from a user DLL.</para><para>Example:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/>WX_DEFINE_ARRAY_INT(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/>MyArrayInt);</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">MyClass;</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dynarray_8h_1aa9c653860ef656116ad6914e79e17340" kindref="member" tooltip="This macro defines a new array class named name and containing the elements of type...">WX_DEFINE_ARRAY</ref>(MyClass<sp/>*,<sp/>ArrayOfMyClass);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dynarray_8h_1aa9c653860ef656116ad6914e79e17340" kindref="member" tooltip="This macro defines a new array class named name and containing the elements of type T...">WX_DEFINE_ARRAY</ref>(MyClass<sp/>*,<sp/>ArrayOfMyClass);</highlight></codeline>
 </programlisting></para><para>Note that wxWidgets predefines the following standard array classes: <bold>wxArrayInt</bold>, <bold>wxArrayLong</bold>, <bold>wxArrayShort</bold>, <bold>wxArrayDouble</bold>, <bold>wxArrayPtrVoid</bold>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -76,7 +74,7 @@
 <para>An exported array is used when compiling wxWidgets as a DLL under Windows and the array needs to be visible outside the DLL. An user exported array needed for exporting an array from a user DLL.</para><para>Example:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/>WX_DEFINE_ARRAY_INT(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/>MyArrayInt);</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">MyClass;</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dynarray_8h_1aa9c653860ef656116ad6914e79e17340" kindref="member" tooltip="This macro defines a new array class named name and containing the elements of type...">WX_DEFINE_ARRAY</ref>(MyClass<sp/>*,<sp/>ArrayOfMyClass);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dynarray_8h_1aa9c653860ef656116ad6914e79e17340" kindref="member" tooltip="This macro defines a new array class named name and containing the elements of type T...">WX_DEFINE_ARRAY</ref>(MyClass<sp/>*,<sp/>ArrayOfMyClass);</highlight></codeline>
 </programlisting></para><para>Note that wxWidgets predefines the following standard array classes: <bold>wxArrayInt</bold>, <bold>wxArrayLong</bold>, <bold>wxArrayShort</bold>, <bold>wxArrayDouble</bold>, <bold>wxArrayPtrVoid</bold>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -93,7 +91,7 @@
 <para>An exported array is used when compiling wxWidgets as a DLL under Windows and the array needs to be visible outside the DLL. An user exported array needed for exporting an array from a user DLL.</para><para>Example:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/>WX_DEFINE_ARRAY_INT(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/>MyArrayInt);</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">MyClass;</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dynarray_8h_1aa9c653860ef656116ad6914e79e17340" kindref="member" tooltip="This macro defines a new array class named name and containing the elements of type...">WX_DEFINE_ARRAY</ref>(MyClass<sp/>*,<sp/>ArrayOfMyClass);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dynarray_8h_1aa9c653860ef656116ad6914e79e17340" kindref="member" tooltip="This macro defines a new array class named name and containing the elements of type T...">WX_DEFINE_ARRAY</ref>(MyClass<sp/>*,<sp/>ArrayOfMyClass);</highlight></codeline>
 </programlisting></para><para>Note that wxWidgets predefines the following standard array classes: <bold>wxArrayInt</bold>, <bold>wxArrayLong</bold>, <bold>wxArrayShort</bold>, <bold>wxArrayDouble</bold>, <bold>wxArrayPtrVoid</bold>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -101,7 +99,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="define" id="dynarray_8h_1a52cebddf0dbdeb2d7dbbfb88656f0f79" prot="public" static="no">
         <name>WX_DEFINE_OBJARRAY</name>
         <param><defname>name</defname></param>
@@ -120,7 +117,7 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#include<sp/>&lt;wx/arrimpl.cpp&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dynarray_8h_1a52cebddf0dbdeb2d7dbbfb88656f0f79" kindref="member" tooltip="This macro defines the methods of the array class name not defined by the WX_DECLARE_OBJARRAY()...">WX_DEFINE_OBJARRAY</ref>(wxArrayOfMyClass);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dynarray_8h_1a52cebddf0dbdeb2d7dbbfb88656f0f79" kindref="member" tooltip="This macro defines the methods of the array class name not defined by the WX_DECLARE_OBJARRAY() macro...">WX_DEFINE_OBJARRAY</ref>(wxArrayOfMyClass);</highlight></codeline>
 </programlisting> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -144,7 +141,7 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#include<sp/>&lt;wx/arrimpl.cpp&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dynarray_8h_1a52cebddf0dbdeb2d7dbbfb88656f0f79" kindref="member" tooltip="This macro defines the methods of the array class name not defined by the WX_DECLARE_OBJARRAY()...">WX_DEFINE_OBJARRAY</ref>(wxArrayOfMyClass);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dynarray_8h_1a52cebddf0dbdeb2d7dbbfb88656f0f79" kindref="member" tooltip="This macro defines the methods of the array class name not defined by the WX_DECLARE_OBJARRAY() macro...">WX_DEFINE_OBJARRAY</ref>(wxArrayOfMyClass);</highlight></codeline>
 </programlisting> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -168,7 +165,7 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#include<sp/>&lt;wx/arrimpl.cpp&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dynarray_8h_1a52cebddf0dbdeb2d7dbbfb88656f0f79" kindref="member" tooltip="This macro defines the methods of the array class name not defined by the WX_DECLARE_OBJARRAY()...">WX_DEFINE_OBJARRAY</ref>(wxArrayOfMyClass);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dynarray_8h_1a52cebddf0dbdeb2d7dbbfb88656f0f79" kindref="member" tooltip="This macro defines the methods of the array class name not defined by the WX_DECLARE_OBJARRAY() macro...">WX_DEFINE_OBJARRAY</ref>(wxArrayOfMyClass);</highlight></codeline>
 </programlisting> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -176,7 +173,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="define" id="dynarray_8h_1a12e1e3d31fcc7973cff20edfaadd8473" prot="public" static="no">
         <name>WX_DEFINE_SORTED_ARRAY</name>
         <param><defname>T</defname></param>
@@ -187,7 +183,7 @@
 <para>An exported array is used when compiling wxWidgets as a DLL under Windows and the array needs to be visible outside the DLL. An user exported array needed for exporting an array from a user DLL.</para><para>Example:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/>WX_DEFINE_SORTED_ARRAY_INT(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/>MySortedArrayInt);</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">MyClass;</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dynarray_8h_1a12e1e3d31fcc7973cff20edfaadd8473" kindref="member" tooltip="This macro defines a new sorted array class named name and containing the elements...">WX_DEFINE_SORTED_ARRAY</ref>(MyClass<sp/>*,<sp/>ArrayOfMyClass);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dynarray_8h_1a12e1e3d31fcc7973cff20edfaadd8473" kindref="member" tooltip="This macro defines a new sorted array class named name and containing the elements of type T...">WX_DEFINE_SORTED_ARRAY</ref>(MyClass<sp/>*,<sp/>ArrayOfMyClass);</highlight></codeline>
 </programlisting></para><para>You will have to initialize the objects of this class by passing a comparison function to the array object constructor like this:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>CompareInts(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n1,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n2)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>n1<sp/>-<sp/>n2;</highlight></codeline>
@@ -217,7 +213,7 @@
 <para>An exported array is used when compiling wxWidgets as a DLL under Windows and the array needs to be visible outside the DLL. An user exported array needed for exporting an array from a user DLL.</para><para>Example:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/>WX_DEFINE_SORTED_ARRAY_INT(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/>MySortedArrayInt);</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">MyClass;</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dynarray_8h_1a12e1e3d31fcc7973cff20edfaadd8473" kindref="member" tooltip="This macro defines a new sorted array class named name and containing the elements...">WX_DEFINE_SORTED_ARRAY</ref>(MyClass<sp/>*,<sp/>ArrayOfMyClass);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dynarray_8h_1a12e1e3d31fcc7973cff20edfaadd8473" kindref="member" tooltip="This macro defines a new sorted array class named name and containing the elements of type T...">WX_DEFINE_SORTED_ARRAY</ref>(MyClass<sp/>*,<sp/>ArrayOfMyClass);</highlight></codeline>
 </programlisting></para><para>You will have to initialize the objects of this class by passing a comparison function to the array object constructor like this:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>CompareInts(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n1,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n2)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>n1<sp/>-<sp/>n2;</highlight></codeline>
@@ -247,7 +243,7 @@
 <para>An exported array is used when compiling wxWidgets as a DLL under Windows and the array needs to be visible outside the DLL. An user exported array needed for exporting an array from a user DLL.</para><para>Example:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/>WX_DEFINE_SORTED_ARRAY_INT(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/>MySortedArrayInt);</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">MyClass;</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dynarray_8h_1a12e1e3d31fcc7973cff20edfaadd8473" kindref="member" tooltip="This macro defines a new sorted array class named name and containing the elements...">WX_DEFINE_SORTED_ARRAY</ref>(MyClass<sp/>*,<sp/>ArrayOfMyClass);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dynarray_8h_1a12e1e3d31fcc7973cff20edfaadd8473" kindref="member" tooltip="This macro defines a new sorted array class named name and containing the elements of type T...">WX_DEFINE_SORTED_ARRAY</ref>(MyClass<sp/>*,<sp/>ArrayOfMyClass);</highlight></codeline>
 </programlisting></para><para>You will have to initialize the objects of this class by passing a comparison function to the array object constructor like this:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>CompareInts(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n1,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n2)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>n1<sp/>-<sp/>n2;</highlight></codeline>
@@ -269,7 +265,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="typedef" id="dynarray_8h_1add87f199292e36ee87efd6d7f0d4ee66" prot="public" static="no">
         <type>wxArray&lt; int &gt;</type>
         <definition>typedef wxArray&lt;int&gt; wxArrayInt</definition>

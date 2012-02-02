@@ -1,11 +1,10 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_tar_entry" kind="class" prot="public">
     <compoundname>wxTarEntry</compoundname>
     <basecompoundref refid="classwx_archive_entry" prot="public" virt="non-virtual">wxArchiveEntry</basecompoundref>
     <includes local="no">wx/tarstrm.h</includes>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_tar_entry_1a54c128b9428e346518db6471d42331c8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_date_time" kindref="compound">wxDateTime</ref></type>
         <definition>wxDateTime wxTarEntry::GetAccessTime</definition>
@@ -38,7 +37,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_tar_entry_1ae0ff801da48871aaf7b6a22fea641115" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_date_time" kindref="compound">wxDateTime</ref></type>
         <definition>wxDateTime wxTarEntry::GetCreateTime</definition>
@@ -71,7 +69,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_tar_entry_1af427c87ca6b875e2840f5d90dc764e1b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
         <definition>int wxTarEntry::GetDevMajor</definition>
@@ -134,7 +131,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_tar_entry_1a1c13e206ebf5bdb8421bab44a1cf7ac6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
         <definition>int wxTarEntry::GetGroupId</definition>
@@ -197,7 +193,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_tar_entry_1ad452783e42c096e021d9534a9247099d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
         <definition>wxString wxTarEntry::GetGroupName</definition>
@@ -260,7 +255,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_tar_entry_1a26c40a9893c4d9b59aaf29addd4df068" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
         <definition>wxString wxTarEntry::GetLinkName</definition>
@@ -293,7 +287,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_tar_entry_1a3f5c0df0fe15ac893920ff7e47002a9d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
         <definition>int wxTarEntry::GetMode</definition>
@@ -326,7 +319,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_tar_entry_1a4c6ea65856ecc69cb3a33753a7f35027" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
         <definition>void wxTarEntry::SetSize</definition>
@@ -361,7 +353,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_tar_entry_1a4655d55a9f6c27e2c36b0d1589efd09c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
         <definition>int wxTarEntry::GetTypeFlag</definition>
@@ -506,48 +497,48 @@
 <sect1 id="classwx_tar_entry_1tarentry_fields">
 <title>Field availability</title>
 <para>The tar format stores all the meta-data for an entry ahead of its data, therefore GetNextEntry() always returns a fully populated <ref refid="classwx_tar_entry" kindref="compound">wxTarEntry</ref> object, both when reading from seekable and non-seekable streams.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__archive" kindref="compound">Archive support</ref>, <ref refid="group__group__class__streams" kindref="compound">Streams</ref></para><para><simplesect kind="see"><para><ref refid="overview__archive" kindref="compound">Archive Formats</ref>, <ref refid="classwx_tar_input_stream" kindref="compound">wxTarInputStream</ref>, <ref refid="classwx_tar_output_stream" kindref="compound">wxTarOutputStream</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__archive" kindref="compound">Archive support</ref>, <ref refid="group__group__class__streams" kindref="compound">Streams</ref></para><para><simplesect kind="see"><para><ref refid="overview_archive" kindref="compound">Archive Formats</ref>, <ref refid="classwx_tar_input_stream" kindref="compound">wxTarInputStream</ref>, <ref refid="classwx_tar_output_stream" kindref="compound">wxTarOutputStream</ref> </para></simplesect>
 </para></sect1>
     </detaileddescription>
     <inheritancegraph>
-      <node id="10614">
+      <node id="10674">
         <label>wxArchiveEntry</label>
         <link refid="classwx_archive_entry"/>
-        <childnode refid="10615" relation="public-inheritance">
+        <childnode refid="10675" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10615">
+      <node id="10675">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="10613">
+      <node id="10673">
         <label>wxTarEntry</label>
         <link refid="classwx_tar_entry"/>
-        <childnode refid="10614" relation="public-inheritance">
+        <childnode refid="10674" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10617">
+      <node id="10677">
         <label>wxArchiveEntry</label>
         <link refid="classwx_archive_entry"/>
-        <childnode refid="10618" relation="public-inheritance">
+        <childnode refid="10678" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10618">
+      <node id="10678">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="10619" relation="usage">
+        <childnode refid="10679" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="10616">
+      <node id="10676">
         <label>wxTarEntry</label>
         <link refid="classwx_tar_entry"/>
-        <childnode refid="10617" relation="public-inheritance">
+        <childnode refid="10677" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10619">
+      <node id="10679">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

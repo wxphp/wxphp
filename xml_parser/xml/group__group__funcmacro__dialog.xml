@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="group__group__funcmacro__dialog" kind="group">
     <compoundname>group_funcmacro_dialog</compoundname>
     <title>Dialogs</title>
@@ -21,17 +21,17 @@
         <briefdescription>
 <para>This function shows the standard about dialog containing the information specified in <emphasis>info</emphasis>. </para>        </briefdescription>
         <detaileddescription>
-<para>If the current platform has a native about dialog which is capable of showing all the fields in <emphasis>info</emphasis>, the native dialog is used, otherwise the function falls back to the generic wxWidgets version of the dialog, i.e. does the same thing as wxGenericAboutBox.</para><para>Here is an example of how this function may be used:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>MyFrame::ShowSimpleAboutDialog(<ref refid="classwx_command_event" kindref="compound" tooltip="This event class contains information about command events, which originate from...">wxCommandEvent</ref>&amp;<sp/>WXUNUSED(event))</highlight></codeline>
+<para>If the current platform has a native about dialog which is capable of showing all the fields in <emphasis>info</emphasis>, the native dialog is used, otherwise the function falls back to the generic wxWidgets version of the dialog, i.e. does the same thing as wxGenericAboutBox.</para><para>Here is an example of how this function may be used:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>MyFrame::ShowSimpleAboutDialog(<ref refid="classwx_command_event" kindref="compound" tooltip="This event class contains information about command events, which originate from a variety of simple ...">wxCommandEvent</ref>&amp;<sp/>WXUNUSED(event))</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_about_dialog_info" kindref="compound" tooltip="wxAboutDialogInfo contains information shown in the standard About dialog displayed...">wxAboutDialogInfo</ref><sp/>info;</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>info.<ref refid="classwx_about_dialog_info_1a5fef05c5e61acb59d9554bda8de26eef" kindref="member" tooltip="Set the name of the program.">SetName</ref>(<ref refid="group__group__funcmacro__string_1ga8a02b8875a521df57263a9e6f090f2d0" kindref="member" tooltip="This macro expands into a call to wxGetTranslation(), so it marks the message for...">_</ref>(</highlight><highlight class="stringliteral">&quot;My<sp/>Program&quot;</highlight><highlight class="normal">));</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>info.<ref refid="classwx_about_dialog_info_1aac5029cab6b04b34dbf8cd6b66fff251" kindref="member" tooltip="Set the version of the program.">SetVersion</ref>(<ref refid="group__group__funcmacro__string_1ga8a02b8875a521df57263a9e6f090f2d0" kindref="member" tooltip="This macro expands into a call to wxGetTranslation(), so it marks the message for...">_</ref>(</highlight><highlight class="stringliteral">&quot;1.2.3<sp/>Beta&quot;</highlight><highlight class="normal">));</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>info.<ref refid="classwx_about_dialog_info_1a47bd84aa96af70cb304a76c6cf3428e3" kindref="member" tooltip="Set brief, but possibly multiline, description of the program.">SetDescription</ref>(<ref refid="group__group__funcmacro__string_1ga8a02b8875a521df57263a9e6f090f2d0" kindref="member" tooltip="This macro expands into a call to wxGetTranslation(), so it marks the message for...">_</ref>(</highlight><highlight class="stringliteral">&quot;This<sp/>program<sp/>does<sp/>something<sp/>great.&quot;</highlight><highlight class="normal">));</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>info.<ref refid="classwx_about_dialog_info_1a10f5d9b8ca9ed69754e54fd2e03c4538" kindref="member" tooltip="Set the short string containing the program copyright information.">SetCopyright</ref>(<ref refid="group__group__funcmacro__string_1ga437ea6ba615b75dac8603e96ec864160" kindref="member" tooltip="This macro can be used with character and string literals (in other words, &amp;#39;x&amp;#39;...">wxT</ref>(</highlight><highlight class="stringliteral">&quot;(C)<sp/>2007<sp/>Me<sp/>&lt;my@email.addre.ss&gt;&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_about_dialog_info" kindref="compound" tooltip="wxAboutDialogInfo contains information shown in the standard About dialog displayed by the wxAboutBox...">wxAboutDialogInfo</ref><sp/>info;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>info.<ref refid="classwx_about_dialog_info_1a5fef05c5e61acb59d9554bda8de26eef" kindref="member" tooltip="Set the name of the program.">SetName</ref>(<ref refid="group__group__funcmacro__string_1ga8a02b8875a521df57263a9e6f090f2d0" kindref="member" tooltip="This macro expands into a call to wxGetTranslation(), so it marks the message for the extraction by x...">_</ref>(</highlight><highlight class="stringliteral">&quot;My<sp/>Program&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>info.<ref refid="classwx_about_dialog_info_1aac5029cab6b04b34dbf8cd6b66fff251" kindref="member" tooltip="Set the version of the program.">SetVersion</ref>(<ref refid="group__group__funcmacro__string_1ga8a02b8875a521df57263a9e6f090f2d0" kindref="member" tooltip="This macro expands into a call to wxGetTranslation(), so it marks the message for the extraction by x...">_</ref>(</highlight><highlight class="stringliteral">&quot;1.2.3<sp/>Beta&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>info.<ref refid="classwx_about_dialog_info_1a47bd84aa96af70cb304a76c6cf3428e3" kindref="member" tooltip="Set brief, but possibly multiline, description of the program.">SetDescription</ref>(<ref refid="group__group__funcmacro__string_1ga8a02b8875a521df57263a9e6f090f2d0" kindref="member" tooltip="This macro expands into a call to wxGetTranslation(), so it marks the message for the extraction by x...">_</ref>(</highlight><highlight class="stringliteral">&quot;This<sp/>program<sp/>does<sp/>something<sp/>great.&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>info.<ref refid="classwx_about_dialog_info_1a10f5d9b8ca9ed69754e54fd2e03c4538" kindref="member" tooltip="Set the short string containing the program copyright information.">SetCopyright</ref>(<ref refid="group__group__funcmacro__string_1ga437ea6ba615b75dac8603e96ec864160" kindref="member" tooltip="This macro can be used with character and string literals (in other words, &amp;#39;x&amp;#39; or &amp;quot;foo&amp;quot;) to automatic...">wxT</ref>(</highlight><highlight class="stringliteral">&quot;(C)<sp/>2007<sp/>Me<sp/>&lt;my@email.addre.ss&gt;&quot;</highlight><highlight class="normal">));</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__dialog_1ga6d8198c95b97786f206abfde010a4d8f" kindref="member" tooltip="This function shows the standard about dialog containing the information specified...">wxAboutBox</ref>(info);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__dialog_1ga6d8198c95b97786f206abfde010a4d8f" kindref="member" tooltip="This function shows the standard about dialog containing the information specified in info...">wxAboutBox</ref>(info);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-</programlisting></para><para>Please see the <ref refid="page__samples_1page_samples_dialogs" kindref="member">Dialogs Sample</ref> for more examples of using this function and <ref refid="classwx_about_dialog_info" kindref="compound">wxAboutDialogInfo</ref> for the description of the information which can be shown in the about dialog.</para><para>Include file: <verbatim>#include &lt;wx/aboutdlg.h&gt; </verbatim> </para>        </detaileddescription>
+</programlisting></para><para>Please see the <ref refid="page_samples_1page_samples_dialogs" kindref="member">Dialogs Sample</ref> for more examples of using this function and <ref refid="classwx_about_dialog_info" kindref="compound">wxAboutDialogInfo</ref> for the description of the information which can be shown in the about dialog.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/aboutdlg.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aboutdlg.h" line="265"/>
@@ -53,8 +53,8 @@
         <briefdescription>
 <para>This function does the same thing as <ref refid="group__group__funcmacro__dialog_1ga6d8198c95b97786f206abfde010a4d8f" kindref="member">wxAboutBox()</ref> except that it always uses the generic wxWidgets version of the dialog instead of the native one. </para>        </briefdescription>
         <detaileddescription>
-<para>This is mainly useful if you need to customize the dialog by e.g. adding custom controls to it (customizing the native dialog is not currently supported).</para><para>See the <ref refid="page__samples_1page_samples_dialogs" kindref="member">Dialogs Sample</ref> for an example of about dialog customization.</para><para><simplesect kind="see"><para><ref refid="classwx_about_dialog_info" kindref="compound">wxAboutDialogInfo</ref></para></simplesect>
-Include file: <verbatim>#include &lt;wx/aboutdlg.h&gt; </verbatim> </para>        </detaileddescription>
+<para>This is mainly useful if you need to customize the dialog by e.g. adding custom controls to it (customizing the native dialog is not currently supported).</para><para>See the <ref refid="page_samples_1page_samples_dialogs" kindref="member">Dialogs Sample</ref> for an example of about dialog customization.</para><para><simplesect kind="see"><para><ref refid="classwx_about_dialog_info" kindref="compound">wxAboutDialogInfo</ref></para></simplesect>
+Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/aboutdlg.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aboutdlg.h" line="282"/>
@@ -114,7 +114,7 @@ Include file: <verbatim>#include &lt;wx/aboutdlg.h&gt; </verbatim> </para>      
         <briefdescription>
 <para>Same as <ref refid="group__group__funcmacro__dialog_1ga1eb11c6b7634d7803110c3c5db3edae0" kindref="member">wxGetSingleChoice()</ref> but returns the index representing the selected string. </para>        </briefdescription>
         <detaileddescription>
-<para>If the user pressed cancel, -1 is returned.</para><para>Include file: <verbatim>#include &lt;wx/choicdlg.h&gt; </verbatim></para><para><bold>wxPerl Note:</bold> Use an array reference for the <emphasis>aChoices</emphasis> parameter. </para>        </detaileddescription>
+<para>If the user pressed cancel, -1 is returned.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/choicdlg.h&gt; </verbatim></para><para><bold>wxPerl Note:</bold> Use an array reference for the <emphasis>aChoices</emphasis> parameter. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/choicdlg.h" line="320"/>
@@ -306,7 +306,7 @@ Include file: <verbatim>#include &lt;wx/aboutdlg.h&gt; </verbatim> </para>      
         <briefdescription>
 <para>Pops up a dialog box containing a message, OK/Cancel buttons and a single-selection listbox. </para>        </briefdescription>
         <detaileddescription>
-<para>The user may choose an item and press OK to return a string or Cancel to return the empty string. Use <ref refid="group__group__funcmacro__dialog_1ga5364146ec10819c6d5d51c28b1137e1d" kindref="member">wxGetSingleChoiceIndex()</ref> if empty string is a valid choice and if you want to be able to detect pressing Cancel reliably.</para><para>You may pass the list of strings to choose from either using <computeroutput>choices</computeroutput> which is an array of <emphasis>n</emphasis> strings for the listbox or by using a single <computeroutput>aChoices</computeroutput> parameter of type <ref refid="classwx_array_string" kindref="compound">wxArrayString</ref>.</para><para>If <computeroutput>centre</computeroutput> is true, the message text (which may include new line characters) is centred; if false, the message is left-justified.</para><para>Include file: <verbatim>#include &lt;wx/choicdlg.h&gt; </verbatim></para><para><bold>wxPerl Note:</bold> Use an array reference for the <emphasis>choices</emphasis> parameter. </para>        </detaileddescription>
+<para>The user may choose an item and press OK to return a string or Cancel to return the empty string. Use <ref refid="group__group__funcmacro__dialog_1ga5364146ec10819c6d5d51c28b1137e1d" kindref="member">wxGetSingleChoiceIndex()</ref> if empty string is a valid choice and if you want to be able to detect pressing Cancel reliably.</para><para>You may pass the list of strings to choose from either using <computeroutput>choices</computeroutput> which is an array of <emphasis>n</emphasis> strings for the listbox or by using a single <computeroutput>aChoices</computeroutput> parameter of type <ref refid="classwx_array_string" kindref="compound">wxArrayString</ref>.</para><para>If <computeroutput>centre</computeroutput> is true, the message text (which may include new line characters) is centred; if false, the message is left-justified.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/choicdlg.h&gt; </verbatim></para><para><bold>wxPerl Note:</bold> Use an array reference for the <emphasis>choices</emphasis> parameter. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/choicdlg.h" line="380"/>
@@ -498,7 +498,7 @@ Include file: <verbatim>#include &lt;wx/aboutdlg.h&gt; </verbatim> </para>      
         <briefdescription>
 <para>Same as wxGetSingleChoice but takes an array of client data pointers corresponding to the strings, and returns one of these pointers or NULL if Cancel was pressed. </para>        </briefdescription>
         <detaileddescription>
-<para>The <computeroutput>client_data</computeroutput> array must have the same number of elements as <computeroutput>choices</computeroutput> or <computeroutput>aChoices!</computeroutput> </para><para>Include file: <verbatim>#include &lt;wx/choicdlg.h&gt; </verbatim></para><para><bold>wxPerl Note:</bold> Use an array reference for the <emphasis>aChoices</emphasis> and <emphasis>client_data</emphasis> parameters. </para>        </detaileddescription>
+<para>The <computeroutput>client_data</computeroutput> array must have the same number of elements as <computeroutput>choices</computeroutput> or <computeroutput>aChoices!</computeroutput> </para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/choicdlg.h&gt; </verbatim></para><para><bold>wxPerl Note:</bold> Use an array reference for the <emphasis>aChoices</emphasis> and <emphasis>client_data</emphasis> parameters. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/choicdlg.h" line="433"/>
@@ -702,7 +702,7 @@ Include file: <verbatim>#include &lt;wx/aboutdlg.h&gt; </verbatim> </para>      
         <briefdescription>
 <para>Pops up a dialog box containing a message, OK/Cancel buttons and a multiple-selection listbox. </para>        </briefdescription>
         <detaileddescription>
-<para>The user may choose an arbitrary (including 0) number of items in the listbox whose indices will be returned in <computeroutput>selections</computeroutput> array. The initial contents of this array will be used to select the items when the dialog is shown. If the user cancels the dialog, the function returns -1 and <computeroutput>selections</computeroutput> array is left unchanged.</para><para>You may pass the list of strings to choose from either using <computeroutput>choices</computeroutput> which is an array of <emphasis>n</emphasis> strings for the listbox or by using a single <computeroutput>aChoices</computeroutput> parameter of type <ref refid="classwx_array_string" kindref="compound">wxArrayString</ref>.</para><para>If <computeroutput>centre</computeroutput> is true, the message text (which may include new line characters) is centred; if false, the message is left-justified.</para><para>Include file: <verbatim>#include &lt;wx/choicdlg.h&gt; </verbatim></para><para><bold>wxPerl Note:</bold> Use an array reference for the <emphasis>choices</emphasis> parameter. In wxPerl there is no <emphasis>selections</emphasis> parameter; the function returns an array containing the user selections. </para>        </detaileddescription>
+<para>The user may choose an arbitrary (including 0) number of items in the listbox whose indices will be returned in <computeroutput>selections</computeroutput> array. The initial contents of this array will be used to select the items when the dialog is shown. If the user cancels the dialog, the function returns -1 and <computeroutput>selections</computeroutput> array is left unchanged.</para><para>You may pass the list of strings to choose from either using <computeroutput>choices</computeroutput> which is an array of <emphasis>n</emphasis> strings for the listbox or by using a single <computeroutput>aChoices</computeroutput> parameter of type <ref refid="classwx_array_string" kindref="compound">wxArrayString</ref>.</para><para>If <computeroutput>centre</computeroutput> is true, the message text (which may include new line characters) is centred; if false, the message is left-justified.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/choicdlg.h&gt; </verbatim></para><para><bold>wxPerl Note:</bold> Use an array reference for the <emphasis>choices</emphasis> parameter. In wxPerl there is no <emphasis>selections</emphasis> parameter; the function returns an array containing the user selections. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/choicdlg.h" line="499"/>
@@ -826,7 +826,7 @@ Include file: <verbatim>#include &lt;wx/aboutdlg.h&gt; </verbatim> </para>      
 <para>Optional object storing additional colour dialog settings, such as custom colours. If none is provided the same settings as the last time are used.</para></parameterdescription>
 </parameteritem>
 </parameterlist>
-Include file: <verbatim>#include &lt;wx/colordlg.h&gt; </verbatim> </para>        </detaileddescription>
+Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/colordlg.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colordlg.h" line="89"/>
@@ -864,15 +864,15 @@ Include file: <verbatim>#include &lt;wx/colordlg.h&gt; </verbatim> </para>      
         <briefdescription>
 <para>Pops up a directory selector dialog. </para>        </briefdescription>
         <detaileddescription>
-<para>The arguments have the same meaning as those of <ref refid="classwx_dir_dialog_1a72322832d7830dd637fb4daa541c267a" kindref="member">wxDirDialog::wxDirDialog()</ref>. The message is displayed at the top, and the default_path, if specified, is set as the initial selection.</para><para>The application must check for an empty return value (if the user pressed Cancel). For example:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change...">wxString</ref>&amp;<sp/>dir<sp/>=<sp/><ref refid="group__group__funcmacro__dialog_1ga0be8769b6d082b6f11102429f879dfd3" kindref="member" tooltip="Pops up a directory selector dialog.">wxDirSelector</ref>(</highlight><highlight class="stringliteral">&quot;Choose<sp/>a<sp/>folder&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<para>The arguments have the same meaning as those of <ref refid="classwx_dir_dialog_1a72322832d7830dd637fb4daa541c267a" kindref="member">wxDirDialog::wxDirDialog()</ref>. The message is displayed at the top, and the default_path, if specified, is set as the initial selection.</para><para>The application must check for an empty return value (if the user pressed Cancel). For example:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change was actually the m...">wxString</ref>&amp;<sp/>dir<sp/>=<sp/><ref refid="group__group__funcmacro__dialog_1ga0be8769b6d082b6f11102429f879dfd3" kindref="member" tooltip="Pops up a directory selector dialog.">wxDirSelector</ref>(</highlight><highlight class="stringliteral">&quot;Choose<sp/>a<sp/>folder&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>!dir.<ref refid="classwx_string_1ac6ae24a8ccc6e4e671f972948fca437c" kindref="member">empty</ref>()<sp/>)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-</programlisting></para><para>Include file: <verbatim>#include &lt;wx/dirdlg.h&gt; </verbatim> </para>        </detaileddescription>
+</programlisting></para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/dirdlg.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dirdlg.h" line="140"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dirdlg.h" line="142"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__dialog_1ga34b2514dafd2823f697c3fe68caecc1c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -928,17 +928,17 @@ Include file: <verbatim>#include &lt;wx/colordlg.h&gt; </verbatim> </para>      
         <detaileddescription>
 <para>In Windows, this is the common file selector dialog. In X, this is a file selector box with the same functionality. The path and filename are distinct elements of a full file pathname. If path is empty, the current directory will be used. If filename is empty, no default filename will be supplied. The wildcard determines what files are displayed in the file selector, and file extension supplies a type extension for the required filename. Flags may be a combination of wxFD_OPEN, wxFD_SAVE, wxFD_OVERWRITE_PROMPT or wxFD_FILE_MUST_EXIST.</para><para><simplesect kind="note"><para>wxFD_MULTIPLE can only be used with <ref refid="classwx_file_dialog" kindref="compound">wxFileDialog</ref> and not here since this function only returns a single file name.</para></simplesect>
 Both the Unix and Windows versions implement a wildcard filter. Typing a filename containing wildcards (*, ?) in the filename text item, and clicking on Ok, will result in only those files matching the pattern being displayed.</para><para>The wildcard may be a specification for multiple types of file with a description for each, such as:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;BMP<sp/>files<sp/>(*.bmp)|*.bmp|GIF<sp/>files<sp/>(*.gif)|*.gif&quot;</highlight></codeline>
-</programlisting></para><para>The application must check for an empty return value (the user pressed Cancel). For example:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change...">wxString</ref><sp/>filename<sp/>=<sp/><ref refid="group__group__funcmacro__dialog_1ga34b2514dafd2823f697c3fe68caecc1c" kindref="member" tooltip="Pops up a file selector box.">wxFileSelector</ref>(</highlight><highlight class="stringliteral">&quot;Choose<sp/>a<sp/>file<sp/>to<sp/>open&quot;</highlight><highlight class="normal">);</highlight></codeline>
+</programlisting></para><para>The application must check for an empty return value (the user pressed Cancel). For example:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change was actually the m...">wxString</ref><sp/>filename<sp/>=<sp/><ref refid="group__group__funcmacro__dialog_1ga34b2514dafd2823f697c3fe68caecc1c" kindref="member" tooltip="Pops up a file selector box.">wxFileSelector</ref>(</highlight><highlight class="stringliteral">&quot;Choose<sp/>a<sp/>file<sp/>to<sp/>open&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>!filename.<ref refid="classwx_string_1ac6ae24a8ccc6e4e671f972948fca437c" kindref="member">empty</ref>()<sp/>)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>work<sp/>with<sp/>the<sp/>file</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//else:<sp/>cancelled<sp/>by<sp/>user</highlight></codeline>
-</programlisting></para><para>Include file: <verbatim>#include &lt;wx/filedlg.h&gt; </verbatim> </para>        </detaileddescription>
+</programlisting></para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/filedlg.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filedlg.h" line="365"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filedlg.h" line="367"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__dialog_1ga0155cfe569b5e6359b4b78c7b2312b1d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_font" kindref="compound">wxFont</ref></type>
@@ -983,7 +983,7 @@ Both the Unix and Windows versions implement a wildcard filter. Typing a filenam
 <para>If given, this will be used for the dialog caption.</para></parameterdescription>
 </parameteritem>
 </parameterlist>
-Include file: <verbatim>#include &lt;wx/fontdlg.h&gt; </verbatim> </para>        </detaileddescription>
+Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/fontdlg.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fontdlg.h" line="103"/>
@@ -1069,13 +1069,13 @@ Include file: <verbatim>#include &lt;wx/fontdlg.h&gt; </verbatim> </para>       
 <parametername>y</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Vertical dialog position (ignored under MSW). Include file: <verbatim>#include &lt;wx/msgdlg.h&gt; </verbatim> </para></parameterdescription>
+<para>Vertical dialog position (ignored under MSW).</para></parameterdescription>
 </parameteritem>
 </parameterlist>
-</para>        </detaileddescription>
+Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/msgdlg.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msgdlg.h" line="287"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msgdlg.h" line="288"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__dialog_1ga358252ede396f8eb59553d7a3efadfd3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>long</type>
@@ -1121,7 +1121,7 @@ Include file: <verbatim>#include &lt;wx/fontdlg.h&gt; </verbatim> </para>       
         <briefdescription>
 <para>Shows a dialog asking the user for numeric input. </para>        </briefdescription>
         <detaileddescription>
-<para>The dialogs title is set to <computeroutput>caption</computeroutput>, it contains a (possibly) multiline <computeroutput>message</computeroutput> above the single line <computeroutput>prompt</computeroutput> and the zone for entering the number.</para><para>The number entered must be in the range <computeroutput>min</computeroutput> to <computeroutput>max</computeroutput> (both of which should be positive) and <computeroutput>value</computeroutput> is the initial value of it. If the user enters an invalid value, it is forced to fall into the specified range. If the user cancels the dialog, the function returns -1.</para><para>Dialog is centered on its <computeroutput>parent</computeroutput> unless an explicit position is given in <computeroutput>pos</computeroutput>.</para><para>Include file: <verbatim>#include &lt;wx/numdlg.h&gt; </verbatim> </para>        </detaileddescription>
+<para>The dialogs title is set to <computeroutput>caption</computeroutput>, it contains a (possibly) multiline <computeroutput>message</computeroutput> above the single line <computeroutput>prompt</computeroutput> and the zone for entering the number.</para><para>The number entered must be in the range <computeroutput>min</computeroutput> to <computeroutput>max</computeroutput> (both of which should be positive) and <computeroutput>value</computeroutput> is the initial value of it. If the user enters an invalid value, it is forced to fall into the specified range. If the user cancels the dialog, the function returns -1.</para><para>Dialog is centered on its <computeroutput>parent</computeroutput> unless an explicit position is given in <computeroutput>pos</computeroutput>.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/numdlg.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/numdlg.h" line="34"/>
@@ -1168,7 +1168,7 @@ Include file: <verbatim>#include &lt;wx/fontdlg.h&gt; </verbatim> </para>       
         <briefdescription>
 <para>Pop up a dialog box with title set to <emphasis>caption</emphasis>, <computeroutput>message</computeroutput>, and a <computeroutput>default_value</computeroutput>. </para>        </briefdescription>
         <detaileddescription>
-<para>The user may type in text and press OK to return this text, or press Cancel to return the empty string.</para><para>If <computeroutput>centre</computeroutput> is true, the message text (which may include new line characters) is centred; if false, the message is left-justified.</para><para>This function is a wrapper around <ref refid="classwx_text_entry_dialog" kindref="compound">wxTextEntryDialog</ref> and while it is usually more convenient to use, using the dialog directly is more flexible, e.g. it allows you to specify the <computeroutput>wxTE_MULTILINE</computeroutput> to allow the user enter multiple lines of text while this function is limited to single line entry only.</para><para>Include file: <verbatim>#include &lt;wx/textdlg.h&gt; </verbatim> </para>        </detaileddescription>
+<para>The user may type in text and press OK to return this text, or press Cancel to return the empty string.</para><para>If <computeroutput>centre</computeroutput> is true, the message text (which may include new line characters) is centred; if false, the message is left-justified.</para><para>This function is a wrapper around <ref refid="classwx_text_entry_dialog" kindref="compound">wxTextEntryDialog</ref> and while it is usually more convenient to use, using the dialog directly is more flexible, e.g. it allows you to specify the <computeroutput>wxTE_MULTILINE</computeroutput> to allow the user enter multiple lines of text while this function is limited to single line entry only.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/textdlg.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textdlg.h" line="147"/>
@@ -1215,7 +1215,7 @@ Include file: <verbatim>#include &lt;wx/fontdlg.h&gt; </verbatim> </para>       
         <briefdescription>
 <para>Similar to <ref refid="group__group__funcmacro__dialog_1ga7ffaac89c7b1be611d61599ec0bc2a8d" kindref="member">wxGetTextFromUser()</ref> but the text entered in the dialog is not shown on screen but replaced with stars. </para>        </briefdescription>
         <detaileddescription>
-<para>This is intended to be used for entering passwords as the function name implies.</para><para>Include file: <verbatim>#include &lt;wx/textdlg.h&gt; </verbatim> </para>        </detaileddescription>
+<para>This is intended to be used for entering passwords as the function name implies.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/textdlg.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textdlg.h" line="162"/>
@@ -1251,8 +1251,8 @@ Include file: <verbatim>#include &lt;wx/fontdlg.h&gt; </verbatim> </para>       
 <para>The index of the first tip to show. Normally this index is remembered between the 2 program runs.</para></parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="see"><para><ref refid="overview__tips" kindref="compound">wxTipProvider Overview</ref></para></simplesect>
-Include file: <verbatim>#include &lt;wx/tipdlg.h&gt; </verbatim> </para>        </detaileddescription>
+<simplesect kind="see"><para><ref refid="overview_tips" kindref="compound">wxTipProvider Overview</ref></para></simplesect>
+Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/tipdlg.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tipdlg.h" line="89"/>
@@ -1300,8 +1300,8 @@ Include file: <verbatim>#include &lt;wx/tipdlg.h&gt; </verbatim> </para>        
 <para>Should be true if startup tips are shown, false otherwise. This is used as the initial value for &quot;Show tips at startup&quot; checkbox which is shown in the tips dialog.</para></parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="see"><para><ref refid="overview__tips" kindref="compound">wxTipProvider Overview</ref></para></simplesect>
-Include file: <verbatim>#include &lt;wx/tipdlg.h&gt; </verbatim> </para>        </detaileddescription>
+<simplesect kind="see"><para><ref refid="overview_tips" kindref="compound">wxTipProvider Overview</ref></para></simplesect>
+Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/tipdlg.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tipdlg.h" line="111"/>
@@ -1320,10 +1320,10 @@ Include file: <verbatim>#include &lt;wx/tipdlg.h&gt; </verbatim> </para>        
 <para>Changes the cursor to the given cursor for all windows in the application. </para>        </briefdescription>
         <detaileddescription>
 <para>Use <ref refid="group__group__funcmacro__dialog_1gaf2331f353059e79d45700a04793a7dd3" kindref="member">wxEndBusyCursor()</ref> to revert the cursor back to its previous state. These two calls can be nested, and a counter ensures that only the outer calls take effect.</para><para><simplesect kind="see"><para><ref refid="group__group__funcmacro__dialog_1gac66e5849170bf4b1f816e0a8c5912e9e" kindref="member">wxIsBusy()</ref>, <ref refid="classwx_busy_cursor" kindref="compound">wxBusyCursor</ref></para></simplesect>
-Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="117"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="167"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__dialog_1gaf2331f353059e79d45700a04793a7dd3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1334,10 +1334,10 @@ Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        <
 <para>Changes the cursor back to the original cursor, for all windows in the application. </para>        </briefdescription>
         <detaileddescription>
 <para>Use with <ref refid="group__group__funcmacro__dialog_1ga1a9c984ef97d76e45b6dad72219e758b" kindref="member">wxBeginBusyCursor()</ref>.</para><para><simplesect kind="see"><para><ref refid="group__group__funcmacro__dialog_1gac66e5849170bf4b1f816e0a8c5912e9e" kindref="member">wxIsBusy()</ref>, <ref refid="classwx_busy_cursor" kindref="compound">wxBusyCursor</ref></para></simplesect>
-Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="127"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="177"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__dialog_1gac66e5849170bf4b1f816e0a8c5912e9e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1348,10 +1348,10 @@ Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        <
 <para>Returns true if between two <ref refid="group__group__funcmacro__dialog_1ga1a9c984ef97d76e45b6dad72219e758b" kindref="member">wxBeginBusyCursor()</ref> and <ref refid="group__group__funcmacro__dialog_1gaf2331f353059e79d45700a04793a7dd3" kindref="member">wxEndBusyCursor()</ref> calls. </para>        </briefdescription>
         <detaileddescription>
 <para><simplesect kind="see"><para><ref refid="classwx_busy_cursor" kindref="compound">wxBusyCursor</ref>.</para></simplesect>
-Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="137"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="187"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__dialog_1ga3267f33060d2ae403862427acb758bab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1362,10 +1362,10 @@ Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        <
 <para>Ring the system bell. </para>        </briefdescription>
         <detaileddescription>
 <para><simplesect kind="note"><para>This function is categorized as a GUI one and so is not thread-safe.</para></simplesect>
-Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="146"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="196"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__dialog_1ga10cbf79d51b2467289d1f6c11a7d0beb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1379,12 +1379,12 @@ Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        <
         <briefdescription>
 <para>Shows a message box with the information about the wxWidgets build used, including its version, most important build parameters and the version of the underlying GUI toolkit. </para>        </briefdescription>
         <detaileddescription>
-<para>This is mainly used for diagnostic purposes and can be invoked by Ctrl-Alt-middle clicking on any <ref refid="classwx_window" kindref="compound">wxWindow</ref> which doesn&apos;t otherwise handle this event.</para><para><simplesect kind="since"><para>2.9.0 </para></simplesect>
-<simplesect kind="see"><para><ref refid="group__group__funcmacro__version_1ga362595d425b3ff956744bcea8e72b374" kindref="member">wxGetLibraryVersionInfo()</ref> Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para></simplesect>
-</para>        </detaileddescription>
+<para>This is mainly used for diagnostic purposes and can be invoked by Ctrl-Alt-middle clicking on any <ref refid="classwx_window" kindref="compound">wxWindow</ref> which doesn&apos;t otherwise handle this event.</para><para><simplesect kind="since"><para>2.9.0</para></simplesect>
+<simplesect kind="see"><para><ref refid="group__group__funcmacro__version_1ga362595d425b3ff956744bcea8e72b374" kindref="member">wxGetLibraryVersionInfo()</ref></para></simplesect>
+Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="159"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="211"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

@@ -1,12 +1,11 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_simple_html_list_box" kind="class" prot="public">
     <compoundname>wxSimpleHtmlListBox</compoundname>
     <basecompoundref refid="classwx_html_list_box" prot="public" virt="non-virtual">wxHtmlListBox</basecompoundref>
     <basecompoundref refid="classwx_item_container" prot="public" virt="non-virtual">wxItemContainer</basecompoundref>
     <includes local="no">wx/htmllbox.h</includes>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_simple_html_list_box_1ad9ca89293dd85e02c349aace4a9c8552" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
         <definition>bool wxSimpleHtmlListBox::Create</definition>
@@ -370,7 +369,7 @@
     <briefdescription>
 <para><ref refid="classwx_simple_html_list_box" kindref="compound">wxSimpleHtmlListBox</ref> is an implementation of <ref refid="classwx_html_list_box" kindref="compound">wxHtmlListBox</ref> which shows HTML content in the listbox rows. </para>    </briefdescription>
     <detaileddescription>
-<para>Unlike <ref refid="classwx_html_list_box" kindref="compound">wxHtmlListBox</ref>, this is not an abstract class and thus it has the advantage that you can use it without deriving your own class from it. However, it also has the disadvantage that this is not a virtual control and thus it&apos;s not well-suited for those cases where you need to show a huge number of items: every time you add/insert a string, it will be stored internally and thus will take memory.</para><para>The interface exposed by <ref refid="classwx_simple_html_list_box" kindref="compound">wxSimpleHtmlListBox</ref> fully implements the <ref refid="classwx_control_with_items" kindref="compound">wxControlWithItems</ref> interface, thus you should refer to wxControlWithItems&apos;s documentation for the API reference for adding/removing/retrieving items in the listbox. Also note that the <ref refid="classwx_v_list_box_1a205615c79836dc7999d20e083a4a8ffb" kindref="member">wxVListBox::SetItemCount</ref> function is <computeroutput>protected</computeroutput> in wxSimpleHtmlListBox&apos;s context so that you cannot call it directly, <ref refid="classwx_simple_html_list_box" kindref="compound">wxSimpleHtmlListBox</ref> will do it for you.</para><para>Note: in case you need to append a lot of items to the control at once, make sure to use the <ref refid="classwx_item_container_1a8fdc0090e3eabc762ff0e49e925f8bc4" kindref="member">Append(const wxArrayString&amp;)</ref> function.</para><para>Thus the only difference between a <ref refid="classwx_list_box" kindref="compound">wxListBox</ref> and a <ref refid="classwx_simple_html_list_box" kindref="compound">wxSimpleHtmlListBox</ref> is that the latter stores strings which can contain HTML fragments (see the list of <ref refid="overview__html_1overview_html_supptags" kindref="member">tags supported by wxHTML</ref>).</para><para>Note that the HTML strings you fetch to <ref refid="classwx_simple_html_list_box" kindref="compound">wxSimpleHtmlListBox</ref> should not contain the <computeroutput>&lt;html&gt;</computeroutput> or <computeroutput>&lt;body&gt;</computeroutput> tags.</para><para><heading level="2">Styles</heading>
+<para>Unlike <ref refid="classwx_html_list_box" kindref="compound">wxHtmlListBox</ref>, this is not an abstract class and thus it has the advantage that you can use it without deriving your own class from it. However, it also has the disadvantage that this is not a virtual control and thus it&apos;s not well-suited for those cases where you need to show a huge number of items: every time you add/insert a string, it will be stored internally and thus will take memory.</para><para>The interface exposed by <ref refid="classwx_simple_html_list_box" kindref="compound">wxSimpleHtmlListBox</ref> fully implements the <ref refid="classwx_control_with_items" kindref="compound">wxControlWithItems</ref> interface, thus you should refer to wxControlWithItems&apos;s documentation for the API reference for adding/removing/retrieving items in the listbox. Also note that the <ref refid="classwx_v_list_box_1a205615c79836dc7999d20e083a4a8ffb" kindref="member">wxVListBox::SetItemCount</ref> function is <computeroutput>protected</computeroutput> in wxSimpleHtmlListBox&apos;s context so that you cannot call it directly, <ref refid="classwx_simple_html_list_box" kindref="compound">wxSimpleHtmlListBox</ref> will do it for you.</para><para>Note: in case you need to append a lot of items to the control at once, make sure to use the <ref refid="classwx_item_container_1a8fdc0090e3eabc762ff0e49e925f8bc4" kindref="member">Append(const wxArrayString&amp;)</ref> function.</para><para>Thus the only difference between a <ref refid="classwx_list_box" kindref="compound">wxListBox</ref> and a <ref refid="classwx_simple_html_list_box" kindref="compound">wxSimpleHtmlListBox</ref> is that the latter stores strings which can contain HTML fragments (see the list of <ref refid="overview_html_1overview_html_supptags" kindref="member">tags supported by wxHTML</ref>).</para><para>Note that the HTML strings you fetch to <ref refid="classwx_simple_html_list_box" kindref="compound">wxSimpleHtmlListBox</ref> should not contain the <computeroutput>&lt;html&gt;</computeroutput> or <computeroutput>&lt;body&gt;</computeroutput> tags.</para><para><heading level="2">Styles</heading>
 </para><para>This class supports the following styles: <itemizedlist>
 <listitem><para>wxHLB_DEFAULT_STYLE: The default style: wxBORDER_SUNKEN </para></listitem>
 <listitem><para>wxHLB_MULTIPLE: Multiple-selection list: the user can toggle multiple items on and off. </para></listitem>
@@ -384,167 +383,167 @@ A <ref refid="classwx_simple_html_list_box" kindref="compound">wxSimpleHtmlListB
 <listitem><para>EVT_HTML_LINK_CLICKED(id,  func): A <ref refid="classwx_html_cell" kindref="compound">wxHtmlCell</ref> which contains an hyperlink was clicked. See <ref refid="classwx_html_link_event" kindref="compound">wxHtmlLinkEvent</ref> </para></listitem>
 </itemizedlist>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxhtml" kindref="member">wxHTML</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref> <htmlonly> &lt;br&gt;&lt;div&gt;&lt;span class=&apos;appearance&apos;&gt;Appearance:&lt;/span&gt;&lt;br&gt;&lt;table class=&apos;appearance&apos;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&apos;wxmsw/simplehtmllistbox.png&apos; alt=&apos;wxMSW appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxgtk/simplehtmllistbox.png&apos; alt=&apos;wxGTK appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxmac/simplehtmllistbox.png&apos; alt=&apos;wxMac appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;wxMSW appearance&lt;/td&gt;&lt;td&gt;wxGTK appearance&lt;/td&gt;&lt;td&gt;wxMac appearance&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt; </htmlonly></para><para><simplesect kind="see"><para><ref refid="classwx_simple_html_list_box_1ad9ca89293dd85e02c349aace4a9c8552" kindref="member">wxSimpleHtmlListBox::Create</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxhtml" kindref="member">wxHTML</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref> <htmlonly> &lt;br&gt;&lt;div&gt;&lt;span class=&apos;appearance&apos;&gt;Appearance:&lt;/span&gt;&lt;br&gt;&lt;table class=&apos;appearance&apos;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&apos;wxmsw/simplehtmllistbox.png&apos; alt=&apos;wxMSW appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxgtk/simplehtmllistbox.png&apos; alt=&apos;wxGTK appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxmac/simplehtmllistbox.png&apos; alt=&apos;wxMac appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;wxMSW appearance&lt;/td&gt;&lt;td&gt;wxGTK appearance&lt;/td&gt;&lt;td&gt;wxMac appearance&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt; </htmlonly></para><para><simplesect kind="see"><para><ref refid="classwx_simple_html_list_box_1ad9ca89293dd85e02c349aace4a9c8552" kindref="member">wxSimpleHtmlListBox::Create</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10130">
+      <node id="10190">
         <label>wxItemContainer</label>
         <link refid="classwx_item_container"/>
-        <childnode refid="10131" relation="public-inheritance">
+        <childnode refid="10191" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10129">
+      <node id="10189">
         <label>wxVarScrollHelperBase</label>
         <link refid="classwx_var_scroll_helper_base"/>
       </node>
-      <node id="10121">
+      <node id="10181">
         <label>wxVListBox</label>
         <link refid="classwx_v_list_box"/>
-        <childnode refid="10122" relation="public-inheritance">
+        <childnode refid="10182" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10126">
+      <node id="10186">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="10119">
+      <node id="10179">
         <label>wxSimpleHtmlListBox</label>
         <link refid="classwx_simple_html_list_box"/>
-        <childnode refid="10120" relation="public-inheritance">
+        <childnode refid="10180" relation="public-inheritance">
         </childnode>
-        <childnode refid="10130" relation="public-inheritance">
+        <childnode refid="10190" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10122">
+      <node id="10182">
         <label>wxVScrolledWindow</label>
         <link refid="classwx_v_scrolled_window"/>
-        <childnode refid="10123" relation="public-inheritance">
+        <childnode refid="10183" relation="public-inheritance">
         </childnode>
-        <childnode refid="10128" relation="public-inheritance">
+        <childnode refid="10188" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10125">
+      <node id="10185">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="10126" relation="public-inheritance">
+        <childnode refid="10186" relation="public-inheritance">
         </childnode>
-        <childnode refid="10127" relation="public-inheritance">
+        <childnode refid="10187" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10123">
+      <node id="10183">
         <label>wxPanel</label>
         <link refid="classwx_panel"/>
-        <childnode refid="10124" relation="public-inheritance">
+        <childnode refid="10184" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10127">
+      <node id="10187">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="10124">
+      <node id="10184">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="10125" relation="public-inheritance">
+        <childnode refid="10185" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10120">
+      <node id="10180">
         <label>wxHtmlListBox</label>
         <link refid="classwx_html_list_box"/>
-        <childnode refid="10121" relation="public-inheritance">
+        <childnode refid="10181" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10128">
+      <node id="10188">
         <label>wxVarVScrollHelper</label>
         <link refid="classwx_var_v_scroll_helper"/>
-        <childnode refid="10129" relation="public-inheritance">
+        <childnode refid="10189" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10131">
+      <node id="10191">
         <label>wxItemContainerImmutable</label>
         <link refid="classwx_item_container_immutable"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10144">
+      <node id="10204">
         <label>wxItemContainer</label>
         <link refid="classwx_item_container"/>
-        <childnode refid="10145" relation="public-inheritance">
+        <childnode refid="10205" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10143">
+      <node id="10203">
         <label>wxVarScrollHelperBase</label>
         <link refid="classwx_var_scroll_helper_base"/>
       </node>
-      <node id="10134">
+      <node id="10194">
         <label>wxVListBox</label>
         <link refid="classwx_v_list_box"/>
-        <childnode refid="10135" relation="public-inheritance">
+        <childnode refid="10195" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10139">
+      <node id="10199">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="10140" relation="usage">
+        <childnode refid="10200" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="10132">
+      <node id="10192">
         <label>wxSimpleHtmlListBox</label>
         <link refid="classwx_simple_html_list_box"/>
-        <childnode refid="10133" relation="public-inheritance">
+        <childnode refid="10193" relation="public-inheritance">
         </childnode>
-        <childnode refid="10144" relation="public-inheritance">
+        <childnode refid="10204" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10135">
+      <node id="10195">
         <label>wxVScrolledWindow</label>
         <link refid="classwx_v_scrolled_window"/>
-        <childnode refid="10136" relation="public-inheritance">
+        <childnode refid="10196" relation="public-inheritance">
         </childnode>
-        <childnode refid="10142" relation="public-inheritance">
+        <childnode refid="10202" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10138">
+      <node id="10198">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="10139" relation="public-inheritance">
+        <childnode refid="10199" relation="public-inheritance">
         </childnode>
-        <childnode refid="10141" relation="public-inheritance">
+        <childnode refid="10201" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10136">
+      <node id="10196">
         <label>wxPanel</label>
         <link refid="classwx_panel"/>
-        <childnode refid="10137" relation="public-inheritance">
+        <childnode refid="10197" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10141">
+      <node id="10201">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="10137">
+      <node id="10197">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="10138" relation="public-inheritance">
+        <childnode refid="10198" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10133">
+      <node id="10193">
         <label>wxHtmlListBox</label>
         <link refid="classwx_html_list_box"/>
-        <childnode refid="10134" relation="public-inheritance">
+        <childnode refid="10194" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10142">
+      <node id="10202">
         <label>wxVarVScrollHelper</label>
         <link refid="classwx_var_v_scroll_helper"/>
-        <childnode refid="10143" relation="public-inheritance">
+        <childnode refid="10203" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10145">
+      <node id="10205">
         <label>wxItemContainerImmutable</label>
         <link refid="classwx_item_container_immutable"/>
       </node>
-      <node id="10140">
+      <node id="10200">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

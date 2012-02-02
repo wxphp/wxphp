@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="link_8h" kind="file">
     <compoundname>link.h</compoundname>
       <sectiondef kind="define">
@@ -9,7 +9,7 @@
         <briefdescription>
 <para>This macro can be used in conjunction with the <ref refid="group__group__funcmacro__byteorder_1ga063c051259bc80da29444f51cfdbfaaa" kindref="member">wxFORCE_LINK_MODULE()</ref> macro to force the linker to include in its output a specific object file. </para>        </briefdescription>
         <detaileddescription>
-<para>In particular, you should use this macro in the source file which you want to force for inclusion. The <computeroutput>moduleName</computeroutput> needs to be a name not already in use in other <ref refid="group__group__funcmacro__byteorder_1ga9d00fa152fe6e580048035a6f8d9379c" kindref="member">wxFORCE_LINK_THIS_MODULE()</ref> macros, but is not required to be e.g. the same name of the source file (even if it&apos;s a good choice).</para><para>Include file: <verbatim>#include &lt;wx/link.h&gt; </verbatim> </para>        </detaileddescription>
+<para>In particular, you should use this macro in the source file which you want to force for inclusion. The <computeroutput>moduleName</computeroutput> needs to be a name not already in use in other <ref refid="group__group__funcmacro__byteorder_1ga9d00fa152fe6e580048035a6f8d9379c" kindref="member">wxFORCE_LINK_THIS_MODULE()</ref> macros, but is not required to be e.g. the same name of the source file (even if it&apos;s a good choice).</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/link.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/link.h" line="23" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/link.h" bodystart="23" bodyend="-1"/>
@@ -20,7 +20,7 @@
         <briefdescription>
 <para>This macro can be used in conjunction with the <ref refid="group__group__funcmacro__byteorder_1ga9d00fa152fe6e580048035a6f8d9379c" kindref="member">wxFORCE_LINK_THIS_MODULE()</ref> macro to force the linker to include in its output a specific object file. </para>        </briefdescription>
         <detaileddescription>
-<para>In particular, you should use this macro in a source file which you know for sure is linked in the output (e.g. the source file containing the <computeroutput>main()</computeroutput> of your app). The <computeroutput>moduleName</computeroutput> is the name of the module you want to forcefully link (i.e. the name you used in the relative <ref refid="group__group__funcmacro__byteorder_1ga9d00fa152fe6e580048035a6f8d9379c" kindref="member">wxFORCE_LINK_THIS_MODULE()</ref> macro.</para><para>Include file: <verbatim>#include &lt;wx/link.h&gt; </verbatim> </para>        </detaileddescription>
+<para>In particular, you should use this macro in a source file which you know for sure is linked in the output (e.g. the source file containing the <computeroutput>main()</computeroutput> of your app). The <computeroutput>moduleName</computeroutput> is the name of the module you want to forcefully link (i.e. the name you used in the relative <ref refid="group__group__funcmacro__byteorder_1ga9d00fa152fe6e580048035a6f8d9379c" kindref="member">wxFORCE_LINK_THIS_MODULE()</ref> macro.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/link.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/link.h" line="37" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/link.h" bodystart="37" bodyend="-1"/>

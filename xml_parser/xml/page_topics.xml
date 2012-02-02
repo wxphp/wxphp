@@ -1,0 +1,182 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="page_topics" kind="page">
+    <compoundname>page_topics</compoundname>
+    <title>Topic Overviews</title>
+    <innerpage refid="overview_referencenotes">Notes on Using this Reference Manual</innerpage>
+    <innerpage refid="overview_roughguide">A Quick Guide to Writing Applications</innerpage>
+    <innerpage refid="overview_helloworld">Hello World Example</innerpage>
+    <innerpage refid="overview_python">wxPython Overview</innerpage>
+    <innerpage refid="overview_changes_since28">Changes Since wxWidgets 2.8</innerpage>
+    <innerpage refid="overview_app">wxApp Overview</innerpage>
+    <innerpage refid="overview_unicode">Unicode Support in wxWidgets</innerpage>
+    <innerpage refid="overview_i18n">Internationalization</innerpage>
+    <innerpage refid="overview_events">Events and Event Handling</innerpage>
+    <innerpage refid="overview_windowsizing">Window Sizing Overview</innerpage>
+    <innerpage refid="overview_windowids">Window IDs</innerpage>
+    <innerpage refid="overview_log">wxLog Classes Overview</innerpage>
+    <innerpage refid="overview_string">wxString Overview</innerpage>
+    <innerpage refid="overview_bufferclasses">Buffer Classes</innerpage>
+    <innerpage refid="overview_datetime">Date and Time</innerpage>
+    <innerpage refid="overview_container">Container Classes</innerpage>
+    <innerpage refid="overview_file">File Classes and Functions</innerpage>
+    <innerpage refid="overview_stream">Stream classes overview</innerpage>
+    <innerpage refid="overview_thread">Multithreading Overview</innerpage>
+    <innerpage refid="overview_config">wxConfig Overview</innerpage>
+    <innerpage refid="overview_persistence">Persistent Objects Overview</innerpage>
+    <innerpage refid="overview_fs">wxFileSystem Overview</innerpage>
+    <innerpage refid="overview_resyntax">Regular Expressions</innerpage>
+    <innerpage refid="overview_archive">Archive Formats</innerpage>
+    <innerpage refid="overview_ipc">Interprocess Communication</innerpage>
+    <innerpage refid="overview_dc">Device Contexts</innerpage>
+    <innerpage refid="overview_bitmap">Bitmaps and Icons</innerpage>
+    <innerpage refid="overview_font">wxFont Overview</innerpage>
+    <innerpage refid="overview_fontencoding">Font Encodings</innerpage>
+    <innerpage refid="overview_printing">Printing Framework Overview</innerpage>
+    <innerpage refid="overview_unixprinting">Printing Under Unix (GTK+)</innerpage>
+    <innerpage refid="overview_sizer">Sizers Overview</innerpage>
+    <innerpage refid="overview_xrc">XML Based Resource System (XRC)</innerpage>
+    <innerpage refid="overview_xrcformat">XRC File Format</innerpage>
+    <innerpage refid="overview_scrolling">Scrolled Windows</innerpage>
+    <innerpage refid="overview_dialog">wxDialog Overview</innerpage>
+    <innerpage refid="overview_validator">wxValidator Overview</innerpage>
+    <innerpage refid="overview_dataobject">wxDataObject Overview</innerpage>
+    <innerpage refid="overview_dnd">Drag and Drop Overview</innerpage>
+    <innerpage refid="overview_html">wxHTML Overview</innerpage>
+    <innerpage refid="overview_richtextctrl">wxRichTextCtrl Overview</innerpage>
+    <innerpage refid="overview_aui">wxAUI Overview</innerpage>
+    <innerpage refid="overview_propgrid">wxPropertyGrid Overview</innerpage>
+    <innerpage refid="overview_cmndlg">Common Dialogs</innerpage>
+    <innerpage refid="overview_toolbar">Toolbar Overview</innerpage>
+    <innerpage refid="overview_grid">wxGrid Overview</innerpage>
+    <innerpage refid="overview_treectrl">wxTreeCtrl Overview</innerpage>
+    <innerpage refid="overview_listctrl">wxListCtrl Overview</innerpage>
+    <innerpage refid="overview_splitterwindow">wxSplitterWindow Overview</innerpage>
+    <innerpage refid="overview_bookctrl">wxBookCtrl Overview</innerpage>
+    <innerpage refid="overview_tips">wxTipProvider Overview</innerpage>
+    <innerpage refid="overview_docview">Document/View Framework</innerpage>
+    <innerpage refid="overview_backwardcompat">Backwards Compatibility</innerpage>
+    <innerpage refid="overview_exceptions">C++ Exceptions</innerpage>
+    <innerpage refid="overview_rtti">Runtime Type Information (RTTI)</innerpage>
+    <innerpage refid="overview_cpp_rtti_disabled">Caveats When Not Using C++ RTTI</innerpage>
+    <innerpage refid="overview_refcount">Reference Counting</innerpage>
+    <innerpage refid="overview_mbconv">wxMBConv Overview</innerpage>
+    <innerpage refid="overview_nonenglish">Writing Non-English Applications</innerpage>
+    <innerpage refid="overview_debugging">Debugging</innerpage>
+    <innerpage refid="overview_windowstyles">Window Styles</innerpage>
+    <innerpage refid="overview_windowdeletion">Window Deletion</innerpage>
+    <innerpage refid="overview_envvars">Environment Variables</innerpage>
+    <innerpage refid="overview_customwidgets">Creating a custom widget</innerpage>
+    <detaileddescription>
+<para>This chapter contains a selection of topic overviews.</para><para>The following is a basic categorization of them:</para><para><itemizedlist>
+<listitem><para><ref refid="page_topics_1page_topics_starting" kindref="member">Starting with wxWidgets</ref> </para></listitem>
+<listitem><para><ref refid="page_topics_1page_topics_programming" kindref="member">Important wxWidgets Topics</ref> </para></listitem>
+<listitem><para><ref refid="page_topics_1page_topics_nongui" kindref="member">Non-GUI Classes</ref> </para></listitem>
+<listitem><para><ref refid="page_topics_1page_topics_drawing" kindref="member">Drawing Related Classes</ref> </para></listitem>
+<listitem><para><ref refid="page_topics_1page_topics_gui" kindref="member">GUI Classes</ref> </para></listitem>
+<listitem><para><ref refid="page_topics_1page_topics_indivctrl" kindref="member">Individual Controls</ref> </para></listitem>
+<listitem><para><ref refid="page_topics_1page_topics_other" kindref="member">Other wxWidgets Programming Overviews</ref></para></listitem>
+</itemizedlist>
+<hruler/>
+</para><sect1 id="page_topics_1page_topics_starting">
+<title>Starting with wxWidgets</title>
+<para><itemizedlist>
+<listitem><para><ref refid="overview_referencenotes" kindref="compound">Notes on Using this Reference Manual</ref> </para></listitem>
+<listitem><para><ref refid="overview_roughguide" kindref="compound">A Quick Guide to Writing Applications</ref> </para></listitem>
+<listitem><para><ref refid="overview_helloworld" kindref="compound">Hello World Example</ref> </para></listitem>
+<listitem><para><ref refid="overview_python" kindref="compound">wxPython Overview</ref> </para></listitem>
+<listitem><para><ref refid="overview_changes_since28" kindref="compound">Changes Since wxWidgets 2.8</ref></para></listitem>
+</itemizedlist>
+</para></sect1>
+<sect1 id="page_topics_1page_topics_programming">
+<title>Important wxWidgets Topics</title>
+<para><itemizedlist>
+<listitem><para><ref refid="overview_app" kindref="compound">wxApp Overview</ref> </para></listitem>
+<listitem><para><ref refid="overview_unicode" kindref="compound">Unicode Support in wxWidgets</ref> </para></listitem>
+<listitem><para><ref refid="overview_i18n" kindref="compound">Internationalization</ref> </para></listitem>
+<listitem><para><ref refid="overview_events" kindref="compound">Events and Event Handling</ref> </para></listitem>
+<listitem><para><ref refid="overview_windowsizing" kindref="compound">Window Sizing Overview</ref> </para></listitem>
+<listitem><para><ref refid="overview_windowids" kindref="compound">Window IDs</ref> </para></listitem>
+<listitem><para><ref refid="overview_log" kindref="compound">wxLog Classes Overview</ref></para></listitem>
+</itemizedlist>
+</para></sect1>
+<sect1 id="page_topics_1page_topics_nongui">
+<title>Non-GUI Classes</title>
+<para><itemizedlist>
+<listitem><para><ref refid="overview_string" kindref="compound">wxString Overview</ref> </para></listitem>
+<listitem><para><ref refid="overview_bufferclasses" kindref="compound">Buffer Classes</ref> </para></listitem>
+<listitem><para><ref refid="overview_datetime" kindref="compound">Date and Time</ref> </para></listitem>
+<listitem><para><ref refid="overview_container" kindref="compound">Container Classes</ref> </para></listitem>
+<listitem><para><ref refid="overview_file" kindref="compound">File Classes and Functions</ref> </para></listitem>
+<listitem><para><ref refid="overview_stream" kindref="compound">Stream classes overview</ref> </para></listitem>
+<listitem><para><ref refid="overview_thread" kindref="compound">Multithreading Overview</ref> </para></listitem>
+<listitem><para><ref refid="overview_config" kindref="compound">wxConfig Overview</ref> </para></listitem>
+<listitem><para><ref refid="overview_persistence" kindref="compound">Persistent Objects Overview</ref> </para></listitem>
+<listitem><para><ref refid="overview_fs" kindref="compound">wxFileSystem Overview</ref> </para></listitem>
+<listitem><para><ref refid="overview_resyntax" kindref="compound">Regular Expressions</ref> </para></listitem>
+<listitem><para><ref refid="overview_archive" kindref="compound">Archive Formats</ref> </para></listitem>
+<listitem><para><ref refid="overview_ipc" kindref="compound">Interprocess Communication</ref></para></listitem>
+</itemizedlist>
+</para></sect1>
+<sect1 id="page_topics_1page_topics_drawing">
+<title>Drawing Related Classes</title>
+<para><itemizedlist>
+<listitem><para><ref refid="overview_dc" kindref="compound">Device Contexts</ref> </para></listitem>
+<listitem><para><ref refid="overview_bitmap" kindref="compound">Bitmaps and Icons</ref> </para></listitem>
+<listitem><para><ref refid="overview_font" kindref="compound">wxFont Overview</ref> </para></listitem>
+<listitem><para><ref refid="overview_fontencoding" kindref="compound">Font Encodings</ref> </para></listitem>
+<listitem><para><ref refid="overview_printing" kindref="compound">Printing Framework Overview</ref> </para></listitem>
+<listitem><para><ref refid="overview_unixprinting" kindref="compound">Printing Under Unix (GTK+)</ref></para></listitem>
+</itemizedlist>
+</para></sect1>
+<sect1 id="page_topics_1page_topics_gui">
+<title>GUI Classes</title>
+<para><itemizedlist>
+<listitem><para><ref refid="overview_sizer" kindref="compound">Sizers Overview</ref> </para></listitem>
+<listitem><para><ref refid="overview_xrc" kindref="compound">XML Based Resource System (XRC)</ref> </para></listitem>
+<listitem><para><ref refid="overview_xrcformat" kindref="compound">XRC File Format</ref> </para></listitem>
+<listitem><para><ref refid="overview_scrolling" kindref="compound">Scrolled Windows</ref> </para></listitem>
+<listitem><para><ref refid="overview_dialog" kindref="compound">wxDialog Overview</ref> </para></listitem>
+<listitem><para><ref refid="overview_validator" kindref="compound">wxValidator Overview</ref> </para></listitem>
+<listitem><para><ref refid="overview_dataobject" kindref="compound">wxDataObject Overview</ref> </para></listitem>
+<listitem><para><ref refid="overview_dnd" kindref="compound">Drag and Drop Overview</ref></para></listitem>
+</itemizedlist>
+</para></sect1>
+<sect1 id="page_topics_1page_topics_indivctrl">
+<title>Individual Controls</title>
+<para><itemizedlist>
+<listitem><para><ref refid="overview_html" kindref="compound">wxHTML Overview</ref> </para></listitem>
+<listitem><para><ref refid="overview_richtextctrl" kindref="compound">wxRichTextCtrl Overview</ref> </para></listitem>
+<listitem><para><ref refid="overview_aui" kindref="compound">wxAUI Overview</ref> </para></listitem>
+<listitem><para><ref refid="overview_propgrid" kindref="compound">wxPropertyGrid Overview</ref> </para></listitem>
+<listitem><para><ref refid="overview_cmndlg" kindref="compound">Common Dialogs</ref> </para></listitem>
+<listitem><para><ref refid="overview_toolbar" kindref="compound">Toolbar Overview</ref> </para></listitem>
+<listitem><para><ref refid="overview_grid" kindref="compound">wxGrid Overview</ref> </para></listitem>
+<listitem><para><ref refid="overview_treectrl" kindref="compound">wxTreeCtrl Overview</ref> </para></listitem>
+<listitem><para><ref refid="overview_listctrl" kindref="compound">wxListCtrl Overview</ref> </para></listitem>
+<listitem><para><ref refid="overview_splitterwindow" kindref="compound">wxSplitterWindow Overview</ref> </para></listitem>
+<listitem><para><ref refid="overview_bookctrl" kindref="compound">wxBookCtrl Overview</ref> </para></listitem>
+<listitem><para><ref refid="overview_tips" kindref="compound">wxTipProvider Overview</ref> </para></listitem>
+<listitem><para><ref refid="overview_docview" kindref="compound">Document/View Framework</ref></para></listitem>
+</itemizedlist>
+</para></sect1>
+<sect1 id="page_topics_1page_topics_other">
+<title>Other wxWidgets Programming Overviews</title>
+<para><itemizedlist>
+<listitem><para><ref refid="overview_backwardcompat" kindref="compound">Backwards Compatibility</ref> </para></listitem>
+<listitem><para><ref refid="overview_exceptions" kindref="compound">C++ Exceptions</ref> </para></listitem>
+<listitem><para><ref refid="overview_rtti" kindref="compound">Runtime Type Information (RTTI)</ref> </para></listitem>
+<listitem><para><ref refid="overview_cpp_rtti_disabled" kindref="compound">Caveats When Not Using C++ RTTI</ref> </para></listitem>
+<listitem><para><ref refid="overview_refcount" kindref="compound">Reference Counting</ref> </para></listitem>
+<listitem><para><ref refid="overview_mbconv" kindref="compound">wxMBConv Overview</ref> </para></listitem>
+<listitem><para><ref refid="overview_nonenglish" kindref="compound">Writing Non-English Applications</ref> </para></listitem>
+<listitem><para><ref refid="overview_debugging" kindref="compound">Debugging</ref> </para></listitem>
+<listitem><para><ref refid="overview_windowstyles" kindref="compound">Window Styles</ref> </para></listitem>
+<listitem><para><ref refid="overview_windowdeletion" kindref="compound">Window Deletion</ref> </para></listitem>
+<listitem><para><ref refid="overview_envvars" kindref="compound">Environment Variables</ref> </para></listitem>
+<listitem><para><ref refid="overview_customwidgets" kindref="compound">Creating a custom widget</ref> </para></listitem>
+</itemizedlist>
+</para></sect1>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

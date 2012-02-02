@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_m_d_i_client_window" kind="class" prot="public">
     <compoundname>wxMDIClientWindow</compoundname>
     <basecompoundref refid="classwx_window" prot="public" virt="non-virtual">wxWindow</basecompoundref>
@@ -61,50 +61,17 @@
     <detaileddescription>
 <para><simplesect kind="remark"><para></para></simplesect>
 The client window is the area where MDI child windows exist. It doesn&apos;t have to cover the whole parent frame; other windows such as toolbars and a help window might coexist with it. There can be scrollbars on a client window, which are controlled by the parent window style.</para><para>The <ref refid="classwx_m_d_i_client_window" kindref="compound">wxMDIClientWindow</ref> class is usually adequate without further derivation, and it is created automatically when the MDI parent frame is created. If the application needs to derive a new class, the function <ref refid="classwx_m_d_i_parent_frame_1a218d7f590ee36e9a113b5321eb4a83cd" kindref="member">wxMDIParentFrame::OnCreateClient()</ref> must be overridden in order to give an opportunity to use a different class of client window.</para><para>Under wxMSW, the client window will automatically have a sunken border style when the active child is not maximized, and no border style when a child is maximized.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__managedwnd" kindref="compound">Managed Windows</ref></para><para><simplesect kind="see"><para><ref refid="classwx_m_d_i_child_frame" kindref="compound">wxMDIChildFrame</ref>, <ref refid="classwx_m_d_i_parent_frame" kindref="compound">wxMDIParentFrame</ref>, <ref refid="classwx_frame" kindref="compound">wxFrame</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__managedwnd" kindref="compound">Managed Windows</ref></para><para><simplesect kind="see"><para><ref refid="classwx_m_d_i_child_frame" kindref="compound">wxMDIChildFrame</ref>, <ref refid="classwx_m_d_i_parent_frame" kindref="compound">wxMDIParentFrame</ref>, <ref refid="classwx_frame" kindref="compound">wxFrame</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7615">
+      <node id="7621">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="7614">
-        <label>wxEvtHandler</label>
-        <link refid="classwx_evt_handler"/>
-        <childnode refid="7615" relation="public-inheritance">
-        </childnode>
-        <childnode refid="7616" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="7616">
-        <label>wxTrackable</label>
-        <link refid="classwx_trackable"/>
-      </node>
-      <node id="7613">
-        <label>wxWindow</label>
-        <link refid="classwx_window"/>
-        <childnode refid="7614" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="7612">
-        <label>wxMDIClientWindow</label>
-        <link refid="classwx_m_d_i_client_window"/>
-        <childnode refid="7613" relation="public-inheritance">
-        </childnode>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
       <node id="7620">
-        <label>wxObject</label>
-        <link refid="classwx_object"/>
-        <childnode refid="7621" relation="usage">
-          <edgelabel>m_refData</edgelabel>
-        </childnode>
-      </node>
-      <node id="7619">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="7620" relation="public-inheritance">
+        <childnode refid="7621" relation="public-inheritance">
         </childnode>
         <childnode refid="7622" relation="public-inheritance">
         </childnode>
@@ -113,19 +80,52 @@ The client window is the area where MDI child windows exist. It doesn&apos;t hav
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="7618">
+      <node id="7619">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
+        <childnode refid="7620" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7618">
+        <label>wxMDIClientWindow</label>
+        <link refid="classwx_m_d_i_client_window"/>
         <childnode refid="7619" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7617">
-        <label>wxMDIClientWindow</label>
-        <link refid="classwx_m_d_i_client_window"/>
-        <childnode refid="7618" relation="public-inheritance">
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="7626">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="7627" relation="usage">
+          <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="7621">
+      <node id="7625">
+        <label>wxEvtHandler</label>
+        <link refid="classwx_evt_handler"/>
+        <childnode refid="7626" relation="public-inheritance">
+        </childnode>
+        <childnode refid="7628" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7628">
+        <label>wxTrackable</label>
+        <link refid="classwx_trackable"/>
+      </node>
+      <node id="7624">
+        <label>wxWindow</label>
+        <link refid="classwx_window"/>
+        <childnode refid="7625" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7623">
+        <label>wxMDIClientWindow</label>
+        <link refid="classwx_m_d_i_client_window"/>
+        <childnode refid="7624" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7627">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

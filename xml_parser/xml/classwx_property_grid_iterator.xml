@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_property_grid_iterator" kind="class" prot="public">
     <compoundname>wxPropertyGridIterator</compoundname>
     <includes local="no">wx/propgrid/propgridpagestate.h</includes>
@@ -85,7 +85,7 @@
 <sect1 id="classwx_property_grid_iterator_1propgrid_iterator_class">
 <title>wxPropertyGridIterator</title>
 <para>Preferable way to iterate through contents of <ref refid="classwx_property_grid" kindref="compound">wxPropertyGrid</ref>, <ref refid="classwx_property_grid_manager" kindref="compound">wxPropertyGridManager</ref>, and <ref refid="classwx_property_grid_page" kindref="compound">wxPropertyGridPage</ref>.</para><para>See <ref refid="classwx_property_grid_interface_1a41ab8661411082563c8191f614f91007" kindref="member">wxPropertyGridInterface::GetIterator()</ref> for more information about usage.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxpropgrid" kindref="member">wxPropertyGrid</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__propgrid" kindref="compound">wxPropertyGrid</ref> </para></sect1>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxpropgrid" kindref="member">wxPropertyGrid</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__propgrid" kindref="compound">wxPropertyGrid</ref> </para></sect1>
     </detaileddescription>
     <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridpagestate.h" line="115" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridpagestate.h" bodystart="114" bodyend="138"/>
     <listofallmembers>

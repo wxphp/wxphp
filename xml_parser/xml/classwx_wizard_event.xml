@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_wizard_event" kind="class" prot="public">
     <compoundname>wxWizardEvent</compoundname>
     <basecompoundref refid="classwx_notify_event" prot="public" virt="non-virtual">wxNotifyEvent</basecompoundref>
@@ -78,71 +78,71 @@
 <listitem><para>EVT_WIZARD_FINISHED(id,  func): The wizard finished button was pressed. </para></listitem>
 </itemizedlist>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="classwx_wizard" kindref="compound">wxWizard</ref>, <ref refid="page__samples_1page_samples_wizard" kindref="member">Wizard Sample</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="classwx_wizard" kindref="compound">wxWizard</ref>, <ref refid="page_samples_1page_samples_wizard" kindref="member">Wizard Sample</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="11619">
+      <node id="11680">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="11617">
+      <node id="11678">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="11618" relation="public-inheritance">
+        <childnode refid="11679" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11615">
+      <node id="11676">
         <label>wxWizardEvent</label>
         <link refid="classwx_wizard_event"/>
-        <childnode refid="11616" relation="public-inheritance">
+        <childnode refid="11677" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11616">
+      <node id="11677">
         <label>wxNotifyEvent</label>
         <link refid="classwx_notify_event"/>
-        <childnode refid="11617" relation="public-inheritance">
+        <childnode refid="11678" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11618">
+      <node id="11679">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="11619" relation="public-inheritance">
+        <childnode refid="11680" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="11624">
+      <node id="11685">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="11625" relation="usage">
+        <childnode refid="11686" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="11622">
+      <node id="11683">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="11623" relation="public-inheritance">
+        <childnode refid="11684" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11620">
+      <node id="11681">
         <label>wxWizardEvent</label>
         <link refid="classwx_wizard_event"/>
-        <childnode refid="11621" relation="public-inheritance">
+        <childnode refid="11682" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11621">
+      <node id="11682">
         <label>wxNotifyEvent</label>
         <link refid="classwx_notify_event"/>
-        <childnode refid="11622" relation="public-inheritance">
+        <childnode refid="11683" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11623">
+      <node id="11684">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="11624" relation="public-inheritance">
+        <childnode refid="11685" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11625">
+      <node id="11686">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

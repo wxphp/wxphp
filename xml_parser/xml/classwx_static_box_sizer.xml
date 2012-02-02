@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_static_box_sizer" kind="class" prot="public">
     <compoundname>wxStaticBoxSizer</compoundname>
     <basecompoundref refid="classwx_box_sizer" prot="public" virt="non-virtual">wxBoxSizer</basecompoundref>
@@ -116,65 +116,65 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_panel" kindref="compound" tooltip="A panel is a window on which controls are placed.">wxPanel</ref><sp/>*panel<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classwx_panel" kindref="compound" tooltip="A panel is a window on which controls are placed.">wxPanel</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_static_box_sizer" kindref="compound" tooltip="wxStaticBoxSizer is a sizer derived from wxBoxSizer but adds a static box around...">wxStaticBoxSizer</ref><sp/>*sz<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classwx_static_box_sizer" kindref="compound" tooltip="wxStaticBoxSizer is a sizer derived from wxBoxSizer but adds a static box around...">wxStaticBoxSizer</ref>(<ref refid="defs_8h_1a1e6994f40bd9cb140e292afb165af971a2134d1cb8cf605532880c118190695b5" kindref="member">wxVERTICAL</ref>,<sp/>panel,<sp/></highlight><highlight class="stringliteral">&quot;Box&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sz-&gt;<ref refid="classwx_sizer_1a4e2122f2749261473c21cb192d00709f" kindref="member" tooltip="Appends a child to the sizer.">Add</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classwx_static_text" kindref="compound" tooltip="A static text control displays one or more lines of read-only text.">wxStaticText</ref>(sz-&gt;<ref refid="classwx_static_box_sizer_1a556686a3445d0f7f8aa1b12e962a7494" kindref="member" tooltip="Returns the static box associated with the sizer.">GetStaticBox</ref>(),<sp/><ref refid="defs_8h_1ac66d0a09761e7d86b2ac0b2e0c6a8cbba1f375b01ea03a713bbb7e32a36a2589c" kindref="member" tooltip="Any id: means that we don&amp;#39;t care about the id, whether when installing an event...">wxID_ANY</ref>,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_static_box_sizer" kindref="compound" tooltip="wxStaticBoxSizer is a sizer derived from wxBoxSizer but adds a static box around the sizer...">wxStaticBoxSizer</ref><sp/>*sz<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classwx_static_box_sizer_1a8c2af376122e1093b95331ec1dd17ba5" kindref="member" tooltip="This constructor uses an already existing static box.">wxStaticBoxSizer</ref>(<ref refid="defs_8h_1a1e6994f40bd9cb140e292afb165af971a2134d1cb8cf605532880c118190695b5" kindref="member">wxVERTICAL</ref>,<sp/>panel,<sp/></highlight><highlight class="stringliteral">&quot;Box&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sz-&gt;<ref refid="classwx_sizer_1a4e2122f2749261473c21cb192d00709f" kindref="member" tooltip="Appends a child to the sizer.">Add</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classwx_static_text" kindref="compound" tooltip="A static text control displays one or more lines of read-only text.">wxStaticText</ref>(sz-&gt;<ref refid="classwx_static_box_sizer_1a556686a3445d0f7f8aa1b12e962a7494" kindref="member" tooltip="Returns the static box associated with the sizer.">GetStaticBox</ref>(),<sp/><ref refid="defs_8h_1ac66d0a09761e7d86b2ac0b2e0c6a8cbba1f375b01ea03a713bbb7e32a36a2589c" kindref="member" tooltip="Any id: means that we don&amp;#39;t care about the id, whether when installing an event handler or when creat...">wxID_ANY</ref>,</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;This<sp/>window<sp/>is<sp/>a<sp/>child<sp/>of<sp/>the<sp/>staticbox&quot;</highlight><highlight class="normal">));</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 </programlisting></para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__winlayout" kindref="compound">Window Layout</ref></para><para><simplesect kind="see"><para><ref refid="classwx_sizer" kindref="compound">wxSizer</ref>, <ref refid="classwx_static_box" kindref="compound">wxStaticBox</ref>, <ref refid="classwx_box_sizer" kindref="compound">wxBoxSizer</ref>, <ref refid="overview__sizer" kindref="compound">Sizers Overview</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__winlayout" kindref="compound">Window Layout</ref></para><para><simplesect kind="see"><para><ref refid="classwx_sizer" kindref="compound">wxSizer</ref>, <ref refid="classwx_static_box" kindref="compound">wxStaticBox</ref>, <ref refid="classwx_box_sizer" kindref="compound">wxBoxSizer</ref>, <ref refid="overview_sizer" kindref="compound">Sizers Overview</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10416">
+      <node id="10476">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="10413">
+      <node id="10473">
         <label>wxStaticBoxSizer</label>
         <link refid="classwx_static_box_sizer"/>
-        <childnode refid="10414" relation="public-inheritance">
+        <childnode refid="10474" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10414">
+      <node id="10474">
         <label>wxBoxSizer</label>
         <link refid="classwx_box_sizer"/>
-        <childnode refid="10415" relation="public-inheritance">
+        <childnode refid="10475" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10415">
+      <node id="10475">
         <label>wxSizer</label>
         <link refid="classwx_sizer"/>
-        <childnode refid="10416" relation="public-inheritance">
+        <childnode refid="10476" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10420">
+      <node id="10480">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="10421" relation="usage">
+        <childnode refid="10481" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="10417">
+      <node id="10477">
         <label>wxStaticBoxSizer</label>
         <link refid="classwx_static_box_sizer"/>
-        <childnode refid="10418" relation="public-inheritance">
+        <childnode refid="10478" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10418">
+      <node id="10478">
         <label>wxBoxSizer</label>
         <link refid="classwx_box_sizer"/>
-        <childnode refid="10419" relation="public-inheritance">
+        <childnode refid="10479" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10419">
+      <node id="10479">
         <label>wxSizer</label>
         <link refid="classwx_sizer"/>
-        <childnode refid="10420" relation="public-inheritance">
+        <childnode refid="10480" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10421">
+      <node id="10481">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

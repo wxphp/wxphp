@@ -1,10 +1,9 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_pixel_data_1_1_iterator" kind="class" prot="public">
     <compoundname>wxPixelData::Iterator</compoundname>
     <includes local="no">wx/rawbmp.h</includes>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_pixel_data_1_1_iterator_1ad23430aa71b8e7a6370379b59f5f1486" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>ChannelType &amp;</type>
         <definition>ChannelType&amp; wxPixelData&lt; Image, PixelFormat &gt;::Iterator::Red</definition>

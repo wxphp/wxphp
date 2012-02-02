@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_icon" kind="class" prot="public">
     <compoundname>wxIcon</compoundname>
     <basecompoundref refid="classwx_g_d_i_object" prot="public" virt="non-virtual">wxGDIObject</basecompoundref>
@@ -78,7 +78,7 @@
 <para>The height of the image.</para></parameterdescription>
 </parameteritem>
 </parameterlist>
-<bold>wxPerl Note:</bold> In wxPerl use Wx::Icon-&gt;newBits(bits, width, height, depth = -1);</para><para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page__port_1page_port_wxmsw" kindref="member">wxMSW</ref>, <ref refid="page__port_1page_port_wxosx" kindref="member">wxOSX</ref> ports.  <onlyfor>wxmsw,wxosx</onlyfor>  </para>        </detaileddescription>
+<bold>wxPerl Note:</bold> In wxPerl use Wx::Icon-&gt;newBits(bits, width, height, depth = -1);</para><para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page_port_1page_port_wxmsw" kindref="member">wxMSW</ref>, <ref refid="page_port_1page_port_wxosx" kindref="member">wxOSX</ref> ports.  <onlyfor>wxmsw,wxosx</onlyfor>  </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/icon.h" line="103"/>
@@ -97,16 +97,16 @@
         <detaileddescription>
 <para>To use this constructor, you must first include an XPM file. For example, assuming that the file mybitmap.xpm contains an XPM array of character pointers called <emphasis>mybitmap:</emphasis> </para><para><programlisting><codeline><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#include<sp/>&quot;mybitmap.xpm&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_icon" kindref="compound" tooltip="An icon is a small rectangular bitmap usually used for denoting a minimized application...">wxIcon</ref><sp/>*icon<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classwx_icon_1a1b832f41fcde273eaa4384d2e567aa90" kindref="member" tooltip="Default ctor.">wxIcon</ref>(mybitmap);</highlight></codeline>
-</programlisting></para><para>A macro, wxICON, is available which creates an icon using an XPM on the appropriate platform, or an icon resource on Windows.</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_icon" kindref="compound" tooltip="An icon is a small rectangular bitmap usually used for denoting a minimized application...">wxIcon</ref><sp/>icon(<ref refid="group__group__funcmacro__gdi_1ga1f22eefa44998cbeb8f018978cf5d375" kindref="member" tooltip="This macro loads an icon from either application resources (on the platforms for...">wxICON</ref>(sample));</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_icon" kindref="compound" tooltip="An icon is a small rectangular bitmap usually used for denoting a minimized application.">wxIcon</ref><sp/>*icon<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classwx_icon_1a1b832f41fcde273eaa4384d2e567aa90" kindref="member" tooltip="Default ctor.">wxIcon</ref>(mybitmap);</highlight></codeline>
+</programlisting></para><para>A macro, wxICON, is available which creates an icon using an XPM on the appropriate platform, or an icon resource on Windows.</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_icon" kindref="compound" tooltip="An icon is a small rectangular bitmap usually used for denoting a minimized application.">wxIcon</ref><sp/>icon(<ref refid="group__group__funcmacro__gdi_1ga1f22eefa44998cbeb8f018978cf5d375" kindref="member" tooltip="This macro loads an icon from either application resources (on the platforms for which they exist...">wxICON</ref>(sample));</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Equivalent<sp/>to:</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#if<sp/>defined(__WXGTK__)<sp/>||<sp/>defined(__WXMOTIF__)</highlight></codeline>
-<codeline><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_icon" kindref="compound" tooltip="An icon is a small rectangular bitmap usually used for denoting a minimized application...">wxIcon</ref><sp/>icon(sample_xpm);</highlight></codeline>
+<codeline><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_icon" kindref="compound" tooltip="An icon is a small rectangular bitmap usually used for denoting a minimized application.">wxIcon</ref><sp/>icon(sample_xpm);</highlight></codeline>
 <codeline><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#endif</highlight></codeline>
 <codeline><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#if<sp/>defined(__WXMSW__)</highlight></codeline>
-<codeline><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_icon" kindref="compound" tooltip="An icon is a small rectangular bitmap usually used for denoting a minimized application...">wxIcon</ref><sp/>icon(</highlight><highlight class="stringliteral">&quot;sample&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_icon" kindref="compound" tooltip="An icon is a small rectangular bitmap usually used for denoting a minimized application.">wxIcon</ref><sp/>icon(</highlight><highlight class="stringliteral">&quot;sample&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#endif</highlight></codeline>
 </programlisting></para><para><bold>wxPerl Note:</bold> In wxPerl use Wx::Icon-&gt;newFromXPM(data). </para>        </detaileddescription>
         <inbodydescription>
@@ -200,7 +200,7 @@
         <briefdescription>
 <para>Destructor. </para>        </briefdescription>
         <detaileddescription>
-<para>See <ref refid="overview__refcount_1overview_refcount_destruct" kindref="member">Object Destruction</ref> for more info.</para><para>If the application omits to delete the icon explicitly, the icon will be destroyed automatically by wxWidgets when the application exits.</para><para><simplesect kind="warning"><para>Do not delete an icon that is selected into a memory device context. </para></simplesect>
+<para>See <ref refid="overview_refcount_1overview_refcount_destruct" kindref="member">Object Destruction</ref> for more info.</para><para>If the application omits to delete the icon explicitly, the icon will be destroyed automatically by wxWidgets when the application exits.</para><para><simplesect kind="warning"><para>Do not delete an icon that is selected into a memory device context. </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -444,7 +444,7 @@
           <declname>icon</declname>
         </param>
         <briefdescription>
-<para>Assignment operator, using <ref refid="overview__refcount" kindref="compound">Reference Counting</ref>. </para>        </briefdescription>
+<para>Assignment operator, using <ref refid="overview_refcount" kindref="compound">Reference Counting</ref>. </para>        </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -463,49 +463,49 @@
     <briefdescription>
 <para>An icon is a small rectangular bitmap usually used for denoting a minimized application. </para>    </briefdescription>
     <detaileddescription>
-<para>It differs from a <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> in always having a mask associated with it for transparent drawing. On some platforms, icons and bitmaps are implemented identically, since there is no real distinction between a <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> with a mask and an icon; and there is no specific icon format on some platforms (X-based applications usually standardize on XPMs for small bitmaps and icons). However, some platforms (such as Windows) make the distinction, so a separate class is provided.</para><para><simplesect kind="remark"><para>It is usually desirable to associate a pertinent icon with a frame. Icons can also be used for other purposes, for example with <ref refid="classwx_tree_ctrl" kindref="compound">wxTreeCtrl</ref> and <ref refid="classwx_list_ctrl" kindref="compound">wxListCtrl</ref>. Icons have different formats on different platforms therefore separate icons will usually be created for the different environments. Platform-specific methods for creating a <ref refid="classwx_icon" kindref="compound">wxIcon</ref> structure are catered for, and this is an occasion where conditional compilation will probably be required. Note that a new icon must be created for every time the icon is to be used for a new window. In Windows, the icon will not be reloaded if it has already been used. An icon allocated to a frame will be deleted when the frame is deleted. For more information please see <ref refid="overview__bitmap" kindref="compound">Bitmaps and Icons</ref>.</para></simplesect>
+<para>It differs from a <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> in always having a mask associated with it for transparent drawing. On some platforms, icons and bitmaps are implemented identically, since there is no real distinction between a <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> with a mask and an icon; and there is no specific icon format on some platforms (X-based applications usually standardize on XPMs for small bitmaps and icons). However, some platforms (such as Windows) make the distinction, so a separate class is provided.</para><para><simplesect kind="remark"><para>It is usually desirable to associate a pertinent icon with a frame. Icons can also be used for other purposes, for example with <ref refid="classwx_tree_ctrl" kindref="compound">wxTreeCtrl</ref> and <ref refid="classwx_list_ctrl" kindref="compound">wxListCtrl</ref>. Icons have different formats on different platforms therefore separate icons will usually be created for the different environments. Platform-specific methods for creating a <ref refid="classwx_icon" kindref="compound">wxIcon</ref> structure are catered for, and this is an occasion where conditional compilation will probably be required. Note that a new icon must be created for every time the icon is to be used for a new window. In Windows, the icon will not be reloaded if it has already been used. An icon allocated to a frame will be deleted when the frame is deleted. For more information please see <ref refid="overview_bitmap" kindref="compound">Bitmaps and Icons</ref>.</para></simplesect>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__gdi" kindref="compound">Graphics Device Interface (GDI)</ref></para><para>Predefined objects/pointers: <ref refid="icon_8h_1a953854798a8dfd400777318358dad5b6" kindref="member">wxNullIcon</ref></para><para><simplesect kind="see"><para><ref refid="overview__bitmap" kindref="compound">Bitmaps and Icons</ref>, <ref refid="overview__bitmap_1overview_bitmap_supportedformats" kindref="member">Supported Bitmap File Formats</ref>, <ref refid="classwx_d_c_1a890d011a03308a28039d4940dd04264e" kindref="member">wxDC::DrawIcon</ref>, <ref refid="classwx_cursor" kindref="compound">wxCursor</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__gdi" kindref="compound">Graphics Device Interface (GDI)</ref></para><para>Predefined objects/pointers: <ref refid="icon_8h_1a953854798a8dfd400777318358dad5b6" kindref="member">wxNullIcon</ref></para><para><simplesect kind="see"><para><ref refid="overview_bitmap" kindref="compound">Bitmaps and Icons</ref>, <ref refid="overview_bitmap_1overview_bitmap_supportedformats" kindref="member">Supported Bitmap File Formats</ref>, <ref refid="classwx_d_c_1a890d011a03308a28039d4940dd04264e" kindref="member">wxDC::DrawIcon</ref>, <ref refid="classwx_cursor" kindref="compound">wxCursor</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7206">
-        <label>wxIcon</label>
-        <link refid="classwx_icon"/>
-        <childnode refid="7207" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="7208">
-        <label>wxObject</label>
-        <link refid="classwx_object"/>
-      </node>
-      <node id="7207">
-        <label>wxGDIObject</label>
-        <link refid="classwx_g_d_i_object"/>
-        <childnode refid="7208" relation="public-inheritance">
-        </childnode>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
-      <node id="7209">
-        <label>wxIcon</label>
-        <link refid="classwx_icon"/>
-        <childnode refid="7210" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="7211">
-        <label>wxObject</label>
-        <link refid="classwx_object"/>
-        <childnode refid="7212" relation="usage">
-          <edgelabel>m_refData</edgelabel>
-        </childnode>
-      </node>
       <node id="7210">
-        <label>wxGDIObject</label>
-        <link refid="classwx_g_d_i_object"/>
+        <label>wxIcon</label>
+        <link refid="classwx_icon"/>
         <childnode refid="7211" relation="public-inheritance">
         </childnode>
       </node>
       <node id="7212">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+      </node>
+      <node id="7211">
+        <label>wxGDIObject</label>
+        <link refid="classwx_g_d_i_object"/>
+        <childnode refid="7212" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="7213">
+        <label>wxIcon</label>
+        <link refid="classwx_icon"/>
+        <childnode refid="7214" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7215">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="7216" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="7214">
+        <label>wxGDIObject</label>
+        <link refid="classwx_g_d_i_object"/>
+        <childnode refid="7215" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7216">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

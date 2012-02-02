@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_wizard_page_simple" kind="class" prot="public">
     <compoundname>wxWizardPageSimple</compoundname>
     <basecompoundref refid="classwx_wizard_page" prot="public" virt="non-virtual">wxWizardPage</basecompoundref>
@@ -103,95 +103,95 @@
 <para><ref refid="classwx_wizard_page_simple" kindref="compound">wxWizardPageSimple</ref> is the simplest possible <ref refid="classwx_wizard_page" kindref="compound">wxWizardPage</ref> implementation: it just returns the pointers given to its constructor from <ref refid="classwx_wizard_page_1a90f7e694f3c8680a751a8240a1538a60" kindref="member">wxWizardPage::GetNext()</ref> and <ref refid="classwx_wizard_page_1ab556984170e62541d15bbe892666bc68" kindref="member">wxWizardPage::GetPrev()</ref> functions. </para>    </briefdescription>
     <detaileddescription>
 <para>This makes it very easy to use the objects of this class in the wizards where the pages order is known statically - on the other hand, if this is not the case you must derive your own class from <ref refid="classwx_wizard_page" kindref="compound">wxWizardPage</ref> instead.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__miscwnd" kindref="compound">Miscellaneous Windows</ref></para><para><simplesect kind="see"><para><ref refid="classwx_wizard" kindref="compound">wxWizard</ref>, <ref refid="page__samples_1page_samples_wizard" kindref="member">Wizard Sample</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__miscwnd" kindref="compound">Miscellaneous Windows</ref></para><para><simplesect kind="see"><para><ref refid="classwx_wizard" kindref="compound">wxWizard</ref>, <ref refid="page_samples_1page_samples_wizard" kindref="member">Wizard Sample</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="11645">
+      <node id="11706">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="11644">
+      <node id="11705">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="11645" relation="public-inheritance">
+        <childnode refid="11706" relation="public-inheritance">
         </childnode>
-        <childnode refid="11646" relation="public-inheritance">
+        <childnode refid="11707" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11642">
+      <node id="11703">
         <label>wxPanel</label>
         <link refid="classwx_panel"/>
-        <childnode refid="11643" relation="public-inheritance">
+        <childnode refid="11704" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11646">
+      <node id="11707">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="11643">
+      <node id="11704">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="11644" relation="public-inheritance">
+        <childnode refid="11705" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11640">
+      <node id="11701">
         <label>wxWizardPageSimple</label>
         <link refid="classwx_wizard_page_simple"/>
-        <childnode refid="11641" relation="public-inheritance">
+        <childnode refid="11702" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11641">
+      <node id="11702">
         <label>wxWizardPage</label>
         <link refid="classwx_wizard_page"/>
-        <childnode refid="11642" relation="public-inheritance">
+        <childnode refid="11703" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="11652">
+      <node id="11713">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="11653" relation="usage">
+        <childnode refid="11714" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="11651">
+      <node id="11712">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="11652" relation="public-inheritance">
+        <childnode refid="11713" relation="public-inheritance">
         </childnode>
-        <childnode refid="11654" relation="public-inheritance">
+        <childnode refid="11715" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11649">
+      <node id="11710">
         <label>wxPanel</label>
         <link refid="classwx_panel"/>
-        <childnode refid="11650" relation="public-inheritance">
+        <childnode refid="11711" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11654">
+      <node id="11715">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="11650">
+      <node id="11711">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="11651" relation="public-inheritance">
+        <childnode refid="11712" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11647">
+      <node id="11708">
         <label>wxWizardPageSimple</label>
         <link refid="classwx_wizard_page_simple"/>
-        <childnode refid="11648" relation="public-inheritance">
+        <childnode refid="11709" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11648">
+      <node id="11709">
         <label>wxWizardPage</label>
         <link refid="classwx_wizard_page"/>
-        <childnode refid="11649" relation="public-inheritance">
+        <childnode refid="11710" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11653">
+      <node id="11714">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

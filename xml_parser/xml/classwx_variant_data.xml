@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_variant_data" kind="class" prot="public">
     <compoundname>wxVariantData</compoundname>
     <basecompoundref refid="classwx_object_ref_data" prot="public" virt="non-virtual">wxObjectRefData</basecompoundref>
@@ -190,29 +190,29 @@
     <briefdescription>
 <para>The <ref refid="classwx_variant_data" kindref="compound">wxVariantData</ref> class is used to implement a new type for <ref refid="classwx_variant" kindref="compound">wxVariant</ref>. </para>    </briefdescription>
     <detaileddescription>
-<para>Derive from <ref refid="classwx_variant_data" kindref="compound">wxVariantData</ref>, and override the pure virtual functions.</para><para><ref refid="classwx_variant_data" kindref="compound">wxVariantData</ref> is <ref refid="overview__refcount" kindref="compound">reference counted</ref>, but you don&apos;t normally have to care about this, as <ref refid="classwx_variant" kindref="compound">wxVariant</ref> manages the count automatically. However, in case your application needs to take ownership of <ref refid="classwx_variant_data" kindref="compound">wxVariantData</ref>, be aware that the object is created with a reference count of 1, and passing it to <ref refid="classwx_variant" kindref="compound">wxVariant</ref> will not increase this. In other words, <ref refid="classwx_variant_data_1ae25c62e3451463ed287367a7b709e51d" kindref="member">IncRef()</ref> needs to be called only if you both take ownership of <ref refid="classwx_variant_data" kindref="compound">wxVariantData</ref> and pass it to a <ref refid="classwx_variant" kindref="compound">wxVariant</ref>. Also note that the destructor is protected, so you can never explicitly delete a <ref refid="classwx_variant_data" kindref="compound">wxVariantData</ref> instance. Instead, <ref refid="classwx_variant_data_1a5c90358b8b5d3bc99c0c3410cf565010" kindref="member">DecRef()</ref> will delete the object automatically when the reference count reaches zero.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__data" kindref="compound">Data Structures</ref></para><para><simplesect kind="see"><para><ref refid="classwx_variant" kindref="compound">wxVariant</ref>, <ref refid="group__group__funcmacro__rtti_1ga0c6d4b0411eda94d041198d6385980cb" kindref="member">wxGetVariantCast()</ref> </para></simplesect>
+<para>Derive from <ref refid="classwx_variant_data" kindref="compound">wxVariantData</ref>, and override the pure virtual functions.</para><para><ref refid="classwx_variant_data" kindref="compound">wxVariantData</ref> is <ref refid="overview_refcount" kindref="compound">reference counted</ref>, but you don&apos;t normally have to care about this, as <ref refid="classwx_variant" kindref="compound">wxVariant</ref> manages the count automatically. However, in case your application needs to take ownership of <ref refid="classwx_variant_data" kindref="compound">wxVariantData</ref>, be aware that the object is created with a reference count of 1, and passing it to <ref refid="classwx_variant" kindref="compound">wxVariant</ref> will not increase this. In other words, <ref refid="classwx_variant_data_1ae25c62e3451463ed287367a7b709e51d" kindref="member">IncRef()</ref> needs to be called only if you both take ownership of <ref refid="classwx_variant_data" kindref="compound">wxVariantData</ref> and pass it to a <ref refid="classwx_variant" kindref="compound">wxVariant</ref>. Also note that the destructor is protected, so you can never explicitly delete a <ref refid="classwx_variant_data" kindref="compound">wxVariantData</ref> instance. Instead, <ref refid="classwx_variant_data_1a5c90358b8b5d3bc99c0c3410cf565010" kindref="member">DecRef()</ref> will delete the object automatically when the reference count reaches zero.</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__data" kindref="compound">Data Structures</ref></para><para><simplesect kind="see"><para><ref refid="classwx_variant" kindref="compound">wxVariant</ref>, <ref refid="group__group__funcmacro__rtti_1ga0c6d4b0411eda94d041198d6385980cb" kindref="member">wxGetVariantCast()</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="11258">
+      <node id="11319">
         <label>wxVariantData</label>
         <link refid="classwx_variant_data"/>
-        <childnode refid="11259" relation="public-inheritance">
+        <childnode refid="11320" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11259">
+      <node id="11320">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="11260">
+      <node id="11321">
         <label>wxVariantData</label>
         <link refid="classwx_variant_data"/>
-        <childnode refid="11261" relation="public-inheritance">
+        <childnode refid="11322" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11261">
+      <node id="11322">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

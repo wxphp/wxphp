@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="overview_cpp_rtti_disabled" kind="page">
+    <compoundname>overview_cpp_rtti_disabled</compoundname>
+    <title>Caveats When Not Using C++ RTTI</title>
+    <detaileddescription>
+<para><itemizedlist>
+<listitem><para><ref refid="overview_cpp_rtti_disabled_1overview_cpp_rtti_disabled_intro" kindref="member">Introduction</ref> </para></listitem>
+<listitem><para><ref refid="overview_cpp_rtti_disabled_1overview_cpp_rtti_disabled_bind" kindref="member">Bind() Issues</ref> </para></listitem>
+<listitem><para><ref refid="overview_cpp_rtti_disabled_1overview_cpp_rtti_disabled_wxany" kindref="member">wxAny Issues</ref></para></listitem>
+</itemizedlist>
+<simplesect kind="see"><para></para></simplesect>
+<itemizedlist>
+<listitem><para><ref refid="overview_rtti" kindref="compound">Runtime Type Information (RTTI)</ref> </para></listitem>
+<listitem><para><ref refid="classwx_evt_handler_1a84b1e446053bda8f76f13336839e8b64" kindref="member">wxEvtHandler::Bind()</ref> </para></listitem>
+<listitem><para><ref refid="classwx_any" kindref="compound">wxAny</ref></para></listitem>
+</itemizedlist>
+<hruler/>
+</para><sect1 id="overview_cpp_rtti_disabled_1overview_cpp_rtti_disabled_intro">
+<title>Introduction</title>
+<para><simplesect kind="note"><para>C++ RTTI is usually enabled by default in most wxWidgets builds. If you do not know if your build has C++ RTTI enabled or not, then it probably is enabled, and you should not worry about anything mentioned in this section.</para></simplesect>
+While in general wxWidgets standard <ref refid="overview_rtti" kindref="compound">Runtime Type Information (RTTI)</ref> is used throughout the library, there are some places where it won&apos;t work. One of those places is template classes.</para><para>When available, C++ RTTI is used to address this issue. If you have built the library with C++ RTTI disabled, an internal RTTI system is substituted. However, this system is not perfect and one proven scenario where it may break is a shared library or DLL build. More specifically, a template class instance created in one physical binary may not be recognized as its correct type when used in another one.</para></sect1>
+<sect1 id="overview_cpp_rtti_disabled_1overview_cpp_rtti_disabled_bind">
+<title>Bind() Issues</title>
+<para>wxWidgets 2.9.0 introduced a new <ref refid="overview_events_1overview_events_bind" kindref="member">Dynamic Event Handling</ref> system, using <ref refid="classwx_evt_handler_1a84b1e446053bda8f76f13336839e8b64" kindref="member">wxEvtHandler::Bind&lt;&gt;()</ref> and Unbind&lt;&gt;(). This functionality uses templates behind the scenes and therefore is vulnerable to breakage in shared library builds, as described above.</para><para>Currently only Unbind&lt;&gt;() needs the type information, so you should be immune to this problem simply if you only need to use Bind&lt;&gt;() and not Unbind&lt;&gt;().</para><para>Also, if you only bind and unbind same event handler inside same binary, you should be fine.</para></sect1>
+<sect1 id="overview_cpp_rtti_disabled_1overview_cpp_rtti_disabled_wxany">
+<title>wxAny Issues</title>
+<para><ref refid="classwx_any" kindref="compound">wxAny</ref> is a dynamic type class which transparently uses templates to generate data type handlers, and therefore is vulnerable to breakage in shared library builds, as described above</para><para>You should be fine if you only create and use <ref refid="classwx_any" kindref="compound">wxAny</ref> instances inside same physical binary. However, if you do need to be able to use <ref refid="classwx_any" kindref="compound">wxAny</ref> freely across binary boundaries, (and for sake of code-safety, you probably do), then specializations for wxAnyValueTypeImpl&lt;&gt; templates need to be defined in one of your shared library (DLL) files. One specialization is required for every data type you use with <ref refid="classwx_any" kindref="compound">wxAny</ref>. Easiest way to do this is using macros provided in <ref refid="any_8h" kindref="compound">wx/any.h</ref>. Note that you <bold>do</bold> <bold>not</bold> need to define specializations for C built-in types, nor for <ref refid="classwx_string" kindref="compound">wxString</ref> or <ref refid="classwx_date_time" kindref="compound">wxDateTime</ref>, because these are already provided in wxBase. However, you <bold>do</bold> need to define specializations for all pointer types except char* and wchar_t*.</para><para>Let&apos;s define a specialization for imaginary type &apos;MyClass&apos;. In your shared library source code you will need to have this line:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/>WX_IMPLEMENT_ANY_VALUE_TYPE(wxAnyValueTypeImpl&lt;MyClass&gt;)</highlight></codeline>
+</programlisting></para><para>In your header file you will need the following:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/>wxDECLARE_ANY_TYPE(MyClass,<sp/>WXIMPORT_OR_WXEXPORT)</highlight></codeline>
+</programlisting></para><para>Where WXIMPORT_OR_WXEXPORT is WXEXPORT when being included from the shared library that called the WX_IMPLEMENT_ANY_VALUE_TYPE() macro, and WXIMPORT otherwise. </para></sect1>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

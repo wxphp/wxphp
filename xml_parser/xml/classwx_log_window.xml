@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_log_window" kind="class" prot="public">
     <compoundname>wxLogWindow</compoundname>
     <basecompoundref refid="classwx_log_interposer" prot="public" virt="non-virtual">wxLogInterposer</basecompoundref>
@@ -153,52 +153,52 @@
 <para>This class represents a background log window: to be precise, it collects all log messages in the log frame which it manages but also passes them on to the log target which was active at the moment of its creation. </para>    </briefdescription>
     <detaileddescription>
 <para>This allows you, for example, to show all the log messages in a frame but still continue to process them normally by showing the standard log dialog.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__logging" kindref="compound">Logging</ref></para><para><simplesect kind="see"><para><ref refid="classwx_log_text_ctrl" kindref="compound">wxLogTextCtrl</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__logging" kindref="compound">Logging</ref></para><para><simplesect kind="see"><para><ref refid="classwx_log_text_ctrl" kindref="compound">wxLogTextCtrl</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7541">
+      <node id="7547">
         <label>wxLogWindow</label>
         <link refid="classwx_log_window"/>
-        <childnode refid="7542" relation="public-inheritance">
+        <childnode refid="7548" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7542">
+      <node id="7548">
         <label>wxLogInterposer</label>
         <link refid="classwx_log_interposer"/>
-        <childnode refid="7543" relation="public-inheritance">
+        <childnode refid="7549" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7543">
+      <node id="7549">
         <label>wxLogChain</label>
         <link refid="classwx_log_chain"/>
-        <childnode refid="7544" relation="public-inheritance">
+        <childnode refid="7550" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7544">
+      <node id="7550">
         <label>wxLog</label>
         <link refid="classwx_log"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7545">
+      <node id="7551">
         <label>wxLogWindow</label>
         <link refid="classwx_log_window"/>
-        <childnode refid="7546" relation="public-inheritance">
+        <childnode refid="7552" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7546">
+      <node id="7552">
         <label>wxLogInterposer</label>
         <link refid="classwx_log_interposer"/>
-        <childnode refid="7547" relation="public-inheritance">
+        <childnode refid="7553" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7547">
+      <node id="7553">
         <label>wxLogChain</label>
         <link refid="classwx_log_chain"/>
-        <childnode refid="7548" relation="public-inheritance">
+        <childnode refid="7554" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7548">
+      <node id="7554">
         <label>wxLog</label>
         <link refid="classwx_log"/>
       </node>
@@ -237,6 +237,7 @@
       <member refid="classwx_log_1a14a562556933276939cedbb470f149cb" prot="public" virt="non-virtual"><scope>wxLogWindow</scope><name>Resume</name></member>
       <member refid="classwx_log_1ac7ea85f71c8d3ecd4247f412be410505" prot="public" virt="non-virtual"><scope>wxLogWindow</scope><name>SetActiveTarget</name></member>
       <member refid="classwx_log_1a7ae244e71dff20efd3a37b3718841a39" prot="public" virt="non-virtual"><scope>wxLogWindow</scope><name>SetComponentLevel</name></member>
+      <member refid="classwx_log_1a9f316422df6930c549db80a5e4bf36a2" prot="public" virt="non-virtual"><scope>wxLogWindow</scope><name>SetFormatter</name></member>
       <member refid="classwx_log_chain_1aecfefb1a2435a5372d4a317353b8a7e9" prot="public" virt="non-virtual"><scope>wxLogWindow</scope><name>SetLog</name></member>
       <member refid="classwx_log_1a4ea68379469ca27f645d5f91c2d42b3b" prot="public" virt="non-virtual"><scope>wxLogWindow</scope><name>SetLogLevel</name></member>
       <member refid="classwx_log_1ae814f9b9b4c8b4a52e34d7c919f98296" prot="public" virt="non-virtual"><scope>wxLogWindow</scope><name>SetRepetitionCounting</name></member>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_message_output_best" kind="class" prot="public">
     <compoundname>wxMessageOutputBest</compoundname>
     <basecompoundref refid="classwx_message_output_stderr" prot="public" virt="non-virtual">wxMessageOutputStderr</basecompoundref>
@@ -36,40 +36,40 @@
 <para>Output messages in the best possible way. </para>    </briefdescription>
     <detaileddescription>
 <para>Some systems (e.g. MSW) are capable of showing message boxes even from console programs. If this is the case, this class will use message box if standard error stream is not available (e.g. running console program not from console under Windows) or possibly even always, depending on the value of flags constructor argument.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__logging" kindref="compound">Logging</ref> </para>    </detaileddescription>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__logging" kindref="compound">Logging</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7752">
+      <node id="7758">
         <label>wxMessageOutputStderr</label>
         <link refid="classwx_message_output_stderr"/>
-        <childnode refid="7753" relation="public-inheritance">
+        <childnode refid="7759" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7753">
+      <node id="7759">
         <label>wxMessageOutput</label>
         <link refid="classwx_message_output"/>
       </node>
-      <node id="7751">
+      <node id="7757">
         <label>wxMessageOutputBest</label>
         <link refid="classwx_message_output_best"/>
-        <childnode refid="7752" relation="public-inheritance">
+        <childnode refid="7758" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7755">
+      <node id="7761">
         <label>wxMessageOutputStderr</label>
         <link refid="classwx_message_output_stderr"/>
-        <childnode refid="7756" relation="public-inheritance">
+        <childnode refid="7762" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7756">
+      <node id="7762">
         <label>wxMessageOutput</label>
         <link refid="classwx_message_output"/>
       </node>
-      <node id="7754">
+      <node id="7760">
         <label>wxMessageOutputBest</label>
         <link refid="classwx_message_output_best"/>
-        <childnode refid="7755" relation="public-inheritance">
+        <childnode refid="7761" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>

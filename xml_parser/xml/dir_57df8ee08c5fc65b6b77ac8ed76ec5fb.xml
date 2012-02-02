@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="dir_57df8ee08c5fc65b6b77ac8ed76ec5fb" kind="dir">
+    <compoundname>interface/wx/richtext/</compoundname>
+    <innerfile refid="richtextbuffer_8h">richtextbuffer.h</innerfile>
+    <innerfile refid="interface_2wx_2richtext_2richtextctrl_8h">richtextctrl.h</innerfile>
+    <innerfile refid="richtextformatdlg_8h">richtextformatdlg.h</innerfile>
+    <innerfile refid="richtexthtml_8h">richtexthtml.h</innerfile>
+    <innerfile refid="richtextprint_8h">richtextprint.h</innerfile>
+    <innerfile refid="richtextstyledlg_8h">richtextstyledlg.h</innerfile>
+    <innerfile refid="richtextstyles_8h">richtextstyles.h</innerfile>
+    <innerfile refid="richtextsymboldlg_8h">richtextsymboldlg.h</innerfile>
+    <innerfile refid="richtextxml_8h">richtextxml.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/"/>
+  </compounddef>
+</doxygen>

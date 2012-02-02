@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="overview_splitterwindow" kind="page">
+    <compoundname>overview_splitterwindow</compoundname>
+    <title>wxSplitterWindow Overview</title>
+    <detaileddescription>
+<para>Classes: <ref refid="classwx_splitter_window" kindref="compound">wxSplitterWindow</ref></para><para><itemizedlist>
+<listitem><para><ref refid="overview_splitterwindow_1overview_splitterwindow_appearance" kindref="member">Appearance</ref> </para></listitem>
+<listitem><para><ref refid="overview_splitterwindow_1overview_splitterwindow_example" kindref="member">Example</ref></para></listitem>
+</itemizedlist>
+<hruler/>
+</para><sect1 id="overview_splitterwindow_1overview_splitterwindow_appearance">
+<title>Appearance</title>
+<para>The following screenshot shows the appearance of a splitter window with a horizontal split.</para><para>The style wxSP_3D has been used to show a 3D border and 3D sash.</para><para><image type="html" name="overview_splitter_3d.png"></image>
+</para></sect1>
+<sect1 id="overview_splitterwindow_1overview_splitterwindow_example">
+<title>Example</title>
+<para>The following fragment shows how to create a splitter window, creating two subwindows and hiding one of them.</para><para><programlisting><codeline><highlight class="normal">splitter<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classwx_splitter_window" kindref="compound" tooltip="This class manages up to two subwindows.">wxSplitterWindow</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>-1,<sp/><ref refid="classwx_point" kindref="compound" tooltip="A wxPoint is a useful data structure for graphics operations.">wxPoint</ref>(0,<sp/>0),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_size" kindref="compound" tooltip="A wxSize is a useful data structure for graphics operations.">wxSize</ref>(400,<sp/>400),<sp/><ref refid="splitter_8h_1a2ed822e3d8affe4727f294271377c425" kindref="member">wxSP_3D</ref>);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">leftWindow<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>MyWindow(splitter);</highlight></codeline>
+<codeline><highlight class="normal">leftWindow-&gt;SetScrollbars(20,<sp/>20,<sp/>50,<sp/>50);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">rightWindow<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>MyWindow(splitter);</highlight></codeline>
+<codeline><highlight class="normal">rightWindow-&gt;SetScrollbars(20,<sp/>20,<sp/>50,<sp/>50);</highlight></codeline>
+<codeline><highlight class="normal">rightWindow-&gt;Show(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">splitter-&gt;Initialize(leftWindow);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>Set<sp/>this<sp/>to<sp/>prevent<sp/>unsplitting</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>splitter-&gt;SetMinimumPaneSize(20);</highlight></codeline>
+</programlisting></para><para>The next fragment shows how the splitter window can be manipulated after creation.</para><para><programlisting><codeline><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>MyFrame::OnSplitVertical(<ref refid="classwx_command_event" kindref="compound" tooltip="This event class contains information about command events, which originate from a variety of simple ...">wxCommandEvent</ref>&amp;<sp/>event)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>splitter-&gt;IsSplit()<sp/>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>splitter-&gt;Unsplit();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>leftWindow-&gt;Show(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>rightWindow-&gt;Show(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>splitter-&gt;SplitVertically(<sp/>leftWindow,<sp/>rightWindow<sp/>);</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>MyFrame::OnSplitHorizontal(<ref refid="classwx_command_event" kindref="compound" tooltip="This event class contains information about command events, which originate from a variety of simple ...">wxCommandEvent</ref>&amp;<sp/>event)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>splitter-&gt;IsSplit()<sp/>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>splitter-&gt;Unsplit();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>leftWindow-&gt;Show(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>rightWindow-&gt;Show(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>splitter-&gt;SplitHorizontally(<sp/>leftWindow,<sp/>rightWindow<sp/>);</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>MyFrame::OnUnsplit(<ref refid="classwx_command_event" kindref="compound" tooltip="This event class contains information about command events, which originate from a variety of simple ...">wxCommandEvent</ref>&amp;<sp/>event)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>splitter-&gt;IsSplit()<sp/>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>splitter-&gt;Unsplit();</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> </para></sect1>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

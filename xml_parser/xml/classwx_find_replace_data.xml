@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_find_replace_data" kind="class" prot="public">
     <compoundname>wxFindReplaceData</compoundname>
     <basecompoundref refid="classwx_object" prot="public" virt="non-virtual">wxObject</basecompoundref>
@@ -118,34 +118,34 @@
 <para><ref refid="classwx_find_replace_data" kindref="compound">wxFindReplaceData</ref> holds the data for <ref refid="classwx_find_replace_dialog" kindref="compound">wxFindReplaceDialog</ref>. </para>    </briefdescription>
     <detaileddescription>
 <para>It is used to initialize the dialog with the default values and will keep the last values from the dialog when it is closed. It is also updated each time a wxFindDialogEvent is generated so instead of using the wxFindDialogEvent methods you can also directly query this object.</para><para>Note that all <computeroutput>SetXXX()</computeroutput> methods may only be called before showing the dialog and calling them has no effect later.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__cmndlg" kindref="compound">Common Dialogs</ref>, <ref refid="group__group__class__data" kindref="compound">Data Structures</ref> </para>    </detaileddescription>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__cmndlg" kindref="compound">Common Dialogs</ref>, <ref refid="group__group__class__data" kindref="compound">Data Structures</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="6309">
+      <node id="6313">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="6308">
+      <node id="6312">
         <label>wxFindReplaceData</label>
         <link refid="classwx_find_replace_data"/>
-        <childnode refid="6309" relation="public-inheritance">
+        <childnode refid="6313" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="6311">
+      <node id="6315">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="6312" relation="usage">
+        <childnode refid="6316" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="6310">
+      <node id="6314">
         <label>wxFindReplaceData</label>
         <link refid="classwx_find_replace_data"/>
-        <childnode refid="6311" relation="public-inheritance">
+        <childnode refid="6315" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6312">
+      <node id="6316">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

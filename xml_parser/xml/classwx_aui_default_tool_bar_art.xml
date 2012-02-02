@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_aui_default_tool_bar_art" kind="class" prot="public">
     <compoundname>wxAuiDefaultToolBarArt</compoundname>
     <basecompoundref refid="classwx_aui_tool_bar_art" prot="public" virt="non-virtual">wxAuiToolBarArt</basecompoundref>
@@ -487,28 +487,28 @@
     <briefdescription>
 <para><ref refid="classwx_aui_default_tool_bar_art" kindref="compound">wxAuiDefaultToolBarArt</ref> is part of the wxAUI class framework. </para>    </briefdescription>
     <detaileddescription>
-<para>See also <ref refid="classwx_aui_tool_bar_art" kindref="compound">wxAuiToolBarArt</ref> , <ref refid="classwx_aui_tool_bar" kindref="compound">wxAuiToolBar</ref> and <ref refid="overview__aui" kindref="compound">wxAUI Overview</ref>.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxaui" kindref="member">wxAui</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__aui" kindref="compound">Window Docking (wxAUI)</ref> </para>    </detaileddescription>
+<para>See also <ref refid="classwx_aui_tool_bar_art" kindref="compound">wxAuiToolBarArt</ref> , <ref refid="classwx_aui_tool_bar" kindref="compound">wxAuiToolBar</ref> and <ref refid="overview_aui" kindref="compound">wxAUI Overview</ref>.</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxaui" kindref="member">wxAui</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__aui" kindref="compound">Window Docking (wxAUI)</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="4351">
+      <node id="4355">
         <label>wxAuiDefaultToolBarArt</label>
         <link refid="classwx_aui_default_tool_bar_art"/>
-        <childnode refid="4352" relation="public-inheritance">
+        <childnode refid="4356" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4352">
+      <node id="4356">
         <label>wxAuiToolBarArt</label>
         <link refid="classwx_aui_tool_bar_art"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="4353">
+      <node id="4357">
         <label>wxAuiDefaultToolBarArt</label>
         <link refid="classwx_aui_default_tool_bar_art"/>
-        <childnode refid="4354" relation="public-inheritance">
+        <childnode refid="4358" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4354">
+      <node id="4358">
         <label>wxAuiToolBarArt</label>
         <link refid="classwx_aui_tool_bar_art"/>
       </node>

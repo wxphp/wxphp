@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_art_provider" kind="class" prot="public">
     <compoundname>wxArtProvider</compoundname>
     <basecompoundref refid="classwx_object" prot="public" virt="non-virtual">wxObject</basecompoundref>
@@ -220,7 +220,7 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000003"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="classwx_art_provider_1a55fe50769f0aeae2cf49860ef0b168d2" kindref="member">PushBack()</ref> instead. </para></xrefdescription></xrefsect></para>        </detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000003"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="classwx_art_provider_1a55fe50769f0aeae2cf49860ef0b168d2" kindref="member">PushBack()</ref> instead.</para></xrefdescription></xrefsect></para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/artprov.h" line="276"/>
@@ -371,12 +371,12 @@
 <para>When wxWidgets needs to display an icon or a bitmap (e.g. in the standard file dialog), it does not use a hard-coded resource but asks <ref refid="classwx_art_provider" kindref="compound">wxArtProvider</ref> for it instead. This way users can plug in their own <ref refid="classwx_art_provider" kindref="compound">wxArtProvider</ref> class and easily replace standard art with their own version.</para><para>All that is needed is to derive a class from <ref refid="classwx_art_provider" kindref="compound">wxArtProvider</ref>, override either its <ref refid="classwx_art_provider_1a7605cdbfeac3b04094ab05cfa9aba0bc" kindref="member">wxArtProvider::CreateBitmap()</ref> and/or its <ref refid="classwx_art_provider_1a0bb64950e85d0cc36977c01f864fdef8" kindref="member">wxArtProvider::CreateIconBundle()</ref> methods and register the provider with <ref refid="classwx_art_provider_1a6af5625b194423247ff3845e1f0f61d6" kindref="member">wxArtProvider::Push()</ref>:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">MyProvider<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classwx_art_provider" kindref="compound" tooltip="wxArtProvider class is used to customize the look of wxWidgets application.">wxArtProvider</ref></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_bitmap" kindref="compound" tooltip="This class encapsulates the concept of a platform-dependent bitmap, either monochrome...">wxBitmap</ref><sp/><ref refid="classwx_art_provider_1a7605cdbfeac3b04094ab05cfa9aba0bc" kindref="member" tooltip="Derived art provider classes must override this method to create requested art resource...">CreateBitmap</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="artprov_8h_1a372ff88c4a78144bc9fb36a413facdb4" kindref="member" tooltip="This type identifies a specific art object which can be requested to wxArtProvider...">wxArtID</ref>&amp;<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_bitmap" kindref="compound" tooltip="This class encapsulates the concept of a platform-dependent bitmap, either monochrome or colour or co...">wxBitmap</ref><sp/><ref refid="classwx_art_provider_1a7605cdbfeac3b04094ab05cfa9aba0bc" kindref="member" tooltip="Derived art provider classes must override this method to create requested art resource.">CreateBitmap</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="artprov_8h_1a372ff88c4a78144bc9fb36a413facdb4" kindref="member" tooltip="This type identifies a specific art object which can be requested to wxArtProvider.">wxArtID</ref>&amp;<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="artprov_8h_1ad9c24b799a686f312c2bb64f47b6ef95" kindref="member" tooltip="This type identifies the client of the art objects requested to wxArtProvider.">wxArtClient</ref>&amp;<sp/>client,</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classwx_size" kindref="compound" tooltip="A wxSize is a useful data structure for graphics operations.">wxSize</ref><sp/>size)</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>optionally<sp/>override<sp/>this<sp/>one<sp/>as<sp/>well</highlight><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_icon_bundle" kindref="compound" tooltip="This class contains multiple copies of an icon in different sizes.">wxIconBundle</ref><sp/><ref refid="classwx_art_provider_1a0bb64950e85d0cc36977c01f864fdef8" kindref="member" tooltip="This method is similar to CreateBitmap() but can be used when a bitmap (or an icon)...">CreateIconBundle</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="artprov_8h_1a372ff88c4a78144bc9fb36a413facdb4" kindref="member" tooltip="This type identifies a specific art object which can be requested to wxArtProvider...">wxArtID</ref>&amp;<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_icon_bundle" kindref="compound" tooltip="This class contains multiple copies of an icon in different sizes.">wxIconBundle</ref><sp/><ref refid="classwx_art_provider_1a0bb64950e85d0cc36977c01f864fdef8" kindref="member" tooltip="This method is similar to CreateBitmap() but can be used when a bitmap (or an icon) exists in several...">CreateIconBundle</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="artprov_8h_1a372ff88c4a78144bc9fb36a413facdb4" kindref="member" tooltip="This type identifies a specific art object which can be requested to wxArtProvider.">wxArtID</ref>&amp;<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="artprov_8h_1ad9c24b799a686f312c2bb64f47b6ef95" kindref="member" tooltip="This type identifies the client of the art objects requested to wxArtProvider.">wxArtClient</ref>&amp;<sp/>client)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>...<sp/>}</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
@@ -384,7 +384,7 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_art_provider_1a6af5625b194423247ff3845e1f0f61d6" kindref="member" tooltip="Register new art provider and add it to the top of providers stack (i.e.">wxArtProvider::Push</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>MyProvider);</highlight></codeline>
 </programlisting></para><para>If you need bitmap images (of the same artwork) that should be displayed at different sizes you should probably consider overriding <ref refid="classwx_art_provider_1a0bb64950e85d0cc36977c01f864fdef8" kindref="member">wxArtProvider::CreateIconBundle</ref> and supplying icon bundles that contain different bitmap sizes.</para><para>There&apos;s another way of taking advantage of this class: you can use it in your code and use platform native icons as provided by <ref refid="classwx_art_provider_1a405ecf7cdead6dbfb092376a51a856c4" kindref="member">wxArtProvider::GetBitmap</ref> or <ref refid="classwx_art_provider_1ac9bd0ba166e5ef9515c68542bb96da09" kindref="member">wxArtProvider::GetIcon</ref>.</para><sect1 id="classwx_art_provider_1artprovider_identify">
 <title>Identifying art resources</title>
-<para>Every bitmap and icon bundle are known to <ref refid="classwx_art_provider" kindref="compound">wxArtProvider</ref> under an unique ID that is used when requesting a resource from it. The ID is represented by the <ref refid="artprov_8h_1a372ff88c4a78144bc9fb36a413facdb4" kindref="member">wxArtID</ref> type and can have one of these predefined values (you can see bitmaps represented by these constants in the <ref refid="page__samples_1page_samples_artprov" kindref="member">Art Provider Sample</ref>):</para><para><table rows="1" cols="3"><row>
+<para>Every bitmap and icon bundle are known to <ref refid="classwx_art_provider" kindref="compound">wxArtProvider</ref> under an unique ID that is used when requesting a resource from it. The ID is represented by the <ref refid="artprov_8h_1a372ff88c4a78144bc9fb36a413facdb4" kindref="member">wxArtID</ref> type and can have one of these predefined values (you can see bitmaps represented by these constants in the <ref refid="page_samples_1page_samples_artprov" kindref="member">Art Provider Sample</ref>):</para><para><table rows="1" cols="3"><row>
 <entry thead="no"><para><itemizedlist>
 <listitem><para><computeroutput>wxART_ERROR</computeroutput> </para></listitem>
 <listitem><para><computeroutput>wxART_QUESTION</computeroutput> </para></listitem>
@@ -447,7 +447,7 @@
 </para></entry></row>
 </table>
 </para><para>Additionally, any string recognized by custom art providers registered using <ref refid="classwx_art_provider_1a6af5625b194423247ff3845e1f0f61d6" kindref="member">wxArtProvider::Push</ref> may be used.</para><para><simplesect kind="note"><para>When running under GTK+ 2, GTK+ stock item IDs (e.g. <computeroutput>&quot;gtk-cdrom&quot;</computeroutput>) may be used as well: <programlisting><codeline><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#ifdef<sp/>__WXGTK__</highlight></codeline>
-<codeline><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_bitmap" kindref="compound" tooltip="This class encapsulates the concept of a platform-dependent bitmap, either monochrome...">wxBitmap</ref><sp/>bmp<sp/>=<sp/><ref refid="classwx_art_provider_1a405ecf7cdead6dbfb092376a51a856c4" kindref="member" tooltip="Query registered providers for bitmap with given ID.">wxArtProvider::GetBitmap</ref>(</highlight><highlight class="stringliteral">&quot;gtk-cdrom&quot;</highlight><highlight class="normal">,<sp/>wxART_MENU);</highlight></codeline>
+<codeline><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_bitmap" kindref="compound" tooltip="This class encapsulates the concept of a platform-dependent bitmap, either monochrome or colour or co...">wxBitmap</ref><sp/>bmp<sp/>=<sp/><ref refid="classwx_art_provider_1a405ecf7cdead6dbfb092376a51a856c4" kindref="member" tooltip="Query registered providers for bitmap with given ID.">wxArtProvider::GetBitmap</ref>(</highlight><highlight class="stringliteral">&quot;gtk-cdrom&quot;</highlight><highlight class="normal">,<sp/>wxART_MENU);</highlight></codeline>
 <codeline><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif</highlight></codeline>
 </programlisting> For a list of the GTK+ stock items please refer to the <ulink url="http://library.gnome.org/devel/gtk/stable/gtk-Stock-Items.html">GTK+ documentation page</ulink>. It is also possible to load icons from the current icon theme by specifying their name (without extension and directory components). Icon themes recognized by GTK+ follow the freedesktop.org <ulink url="http://freedesktop.org/Standards/icon-theme-spec">Icon Themes specification</ulink>. Note that themes are not guaranteed to contain all icons, so <ref refid="classwx_art_provider" kindref="compound">wxArtProvider</ref> may return <ref refid="interface_2wx_2bitmap_8h_1a2947690e84b8fdb2e37b79a4af8f8a21" kindref="member">wxNullBitmap</ref> or <ref refid="icon_8h_1a953854798a8dfd400777318358dad5b6" kindref="member">wxNullIcon</ref>. The default theme is typically installed in <computeroutput>/usr/share/icons/hicolor</computeroutput>.</para></simplesect>
 </para></sect1>
@@ -464,36 +464,36 @@
 <listitem><para><computeroutput>wxART_OTHER</computeroutput> (used for all requests that don&apos;t fit into any of the categories above)</para></listitem>
 </itemizedlist>
 Client ID serve as a hint to <ref refid="classwx_art_provider" kindref="compound">wxArtProvider</ref> that is supposed to help it to choose the best looking bitmap. For example it is often desirable to use slightly different icons in menus and toolbars even though they represent the same action (e.g. wxART_FILE_OPEN). Remember that this is really only a hint for <ref refid="classwx_art_provider" kindref="compound">wxArtProvider</ref> -- it is common that <ref refid="classwx_art_provider_1a405ecf7cdead6dbfb092376a51a856c4" kindref="member">wxArtProvider::GetBitmap</ref> returns identical bitmap for different client values!</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__misc" kindref="compound">Miscellaneous</ref></para><para><simplesect kind="see"><para><ref refid="page__samples_1page_samples_artprov" kindref="member">Art Provider Sample</ref> for an example of <ref refid="classwx_art_provider" kindref="compound">wxArtProvider</ref> usage; <ref refid="page__stockitems" kindref="compound">stock ID list</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__misc" kindref="compound">Miscellaneous</ref></para><para><simplesect kind="see"><para><ref refid="page_samples_1page_samples_artprov" kindref="member">Art Provider Sample</ref> for an example of <ref refid="classwx_art_provider" kindref="compound">wxArtProvider</ref> usage; <ref refid="page_stockitems" kindref="compound">stock ID list</ref> </para></simplesect>
 </para></sect1>
     </detaileddescription>
     <inheritancegraph>
-      <node id="4347">
+      <node id="4351">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="4346">
+      <node id="4350">
         <label>wxArtProvider</label>
         <link refid="classwx_art_provider"/>
-        <childnode refid="4347" relation="public-inheritance">
+        <childnode refid="4351" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="4349">
+      <node id="4353">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="4350" relation="usage">
+        <childnode refid="4354" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="4348">
+      <node id="4352">
         <label>wxArtProvider</label>
         <link refid="classwx_art_provider"/>
-        <childnode refid="4349" relation="public-inheritance">
+        <childnode refid="4353" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4350">
+      <node id="4354">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="group__group__funcmacro__env" kind="group">
     <compoundname>group_funcmacro_env</compoundname>
     <title>Environment</title>
@@ -13,10 +13,10 @@
 <para>A map type containing environment variables names and values. </para>        </briefdescription>
         <detaileddescription>
 <para>This type is used with <ref refid="group__group__funcmacro__env_1ga147974e23a77dadf95a67317774ada4d" kindref="member">wxGetEnvMap()</ref> function and <ref refid="structwx_execute_env" kindref="compound">wxExecuteEnv</ref> structure optionally passed to <ref refid="group__group__funcmacro__procctrl_1gaa276e9e676e26bafeec3141b73399b33" kindref="member">wxExecute()</ref>.</para><para><simplesect kind="since"><para>2.9.2</para></simplesect>
-Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="193" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" bodystart="193" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="248" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" bodystart="248" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -32,10 +32,10 @@ Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        <
         <briefdescription>
 <para>This is a macro defined as <computeroutput>getenv()</computeroutput> or its wide char version in Unicode mode. </para>        </briefdescription>
         <detaileddescription>
-<para>Note that under Win32 it may not return correct value for the variables set with <ref refid="group__group__funcmacro__env_1gaaf7e73120ba323e10ea2d3724f1927b8" kindref="member">wxSetEnv()</ref>, use <ref refid="group__group__funcmacro__env_1ga077a7602cf1adee6ceea300731f245dc" kindref="member">wxGetEnv()</ref> function instead.</para><para>Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+<para>Note that under Win32 it may not return correct value for the variables set with <ref refid="group__group__funcmacro__env_1gaaf7e73120ba323e10ea2d3724f1927b8" kindref="member">wxSetEnv()</ref>, use <ref refid="group__group__funcmacro__env_1ga077a7602cf1adee6ceea300731f245dc" kindref="member">wxGetEnv()</ref> function instead.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="204"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="259"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__env_1ga077a7602cf1adee6ceea300731f245dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -53,10 +53,10 @@ Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        <
         <briefdescription>
 <para>Returns the current value of the environment variable <emphasis>var</emphasis> in <emphasis>value</emphasis>. </para>        </briefdescription>
         <detaileddescription>
-<para><emphasis>value</emphasis> may be NULL if you just want to know if the variable exists and are not interested in its value.</para><para>Returns true if the variable exists, false otherwise.</para><para>Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+<para><emphasis>value</emphasis> may be NULL if you just want to know if the variable exists and are not interested in its value.</para><para>Returns true if the variable exists, false otherwise.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="216"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="271"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__env_1gaaf7e73120ba323e10ea2d3724f1927b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -91,10 +91,10 @@ Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        <
 </parameterlist>
 <simplesect kind="return"><para>true on success or false if changing the value failed.</para></simplesect>
 <simplesect kind="see"><para><ref refid="group__group__funcmacro__env_1ga4a72b083dad08150adcf9f950677284c" kindref="member">wxUnsetEnv()</ref></para></simplesect>
-Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="243"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="298"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__env_1ga4a72b083dad08150adcf9f950677284c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -108,10 +108,10 @@ Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        <
         <briefdescription>
 <para>Removes the variable <emphasis>var</emphasis> from the environment. </para>        </briefdescription>
         <detaileddescription>
-<para><ref refid="group__group__funcmacro__env_1ga077a7602cf1adee6ceea300731f245dc" kindref="member">wxGetEnv()</ref> will return NULL after the call to this function.</para><para>Returns true on success.</para><para>Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+<para><ref refid="group__group__funcmacro__env_1ga077a7602cf1adee6ceea300731f245dc" kindref="member">wxGetEnv()</ref> will return NULL after the call to this function.</para><para>Returns true on success.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="254"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="309"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__env_1ga147974e23a77dadf95a67317774ada4d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -134,16 +134,16 @@ Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        <
 </parameteritem>
 </parameterlist>
 <simplesect kind="return"><para>true if environment was successfully retrieved or false otherwise.</para></simplesect>
-Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim></para><para><simplesect kind="since"><para>2.9.2 </para></simplesect>
+Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim></para><para><simplesect kind="since"><para>2.9.2 </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="271"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="326"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para>These functions allow access to get or change the values of environment variables in a portable way. </para>    </briefdescription>
     <detaileddescription>
-<para>They are currently implemented under Win32 and POSIX-like systems (Unix).</para><para>Remember that these functions add/change/delete environment variables of the current process only. Child processes copy the environment variables of the parent but do not share them (a <ref refid="group__group__funcmacro__env_1gaaf7e73120ba323e10ea2d3724f1927b8" kindref="member">wxSetEnv()</ref> in the parent process won&apos;t change the value returned by <ref refid="group__group__funcmacro__env_1ga077a7602cf1adee6ceea300731f245dc" kindref="member">wxGetEnv()</ref> in the child process and viceversa).</para><para>For more evoluted interprocess communication tecniques see <ref refid="overview__ipc" kindref="compound">Interprocess Communication</ref>. </para>    </detaileddescription>
+<para>They are currently implemented under Win32 and POSIX-like systems (Unix).</para><para>Remember that these functions add/change/delete environment variables of the current process only. Child processes copy the environment variables of the parent but do not share them (a <ref refid="group__group__funcmacro__env_1gaaf7e73120ba323e10ea2d3724f1927b8" kindref="member">wxSetEnv()</ref> in the parent process won&apos;t change the value returned by <ref refid="group__group__funcmacro__env_1ga077a7602cf1adee6ceea300731f245dc" kindref="member">wxGetEnv()</ref> in the child process and viceversa).</para><para>For more evoluted interprocess communication tecniques see <ref refid="overview_ipc" kindref="compound">Interprocess Communication</ref>. </para>    </detaileddescription>
   </compounddef>
 </doxygen>

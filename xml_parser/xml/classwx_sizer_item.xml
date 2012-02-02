@@ -1,12 +1,11 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_sizer_item" kind="class" prot="public">
     <compoundname>wxSizerItem</compoundname>
     <basecompoundref refid="classwx_object" prot="public" virt="non-virtual">wxObject</basecompoundref>
     <derivedcompoundref refid="classwx_g_b_sizer_item" prot="public" virt="non-virtual">wxGBSizerItem</derivedcompoundref>
     <includes local="no">wx/sizer.h</includes>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_sizer_item_1a4c858f9b3ae6e1d9e96602959d5d7ff2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
         <definition>wxSizerItem::wxSizerItem</definition>
@@ -67,7 +66,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_sizer_item_1af321a97190675a193212131d5f11523f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
         <definition>wxSizerItem::wxSizerItem</definition>
@@ -128,7 +126,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_sizer_item_1ad6e478ed2a645b8f18642d7d3194278a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void wxSizerItem::AssignSpacer</definition>
@@ -169,7 +166,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_sizer_item_1ae761aa97de98f606d86419dbced0672d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void wxSizerItem::SetRatio</definition>
@@ -701,7 +697,7 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><xrefsect id="todo_1_todo000056"><xreftitle>Todo</xreftitle><xrefdescription><para>docme. </para></xrefdescription></xrefsect></para>        </detaileddescription>
+<para><xrefsect id="todo_1_todo000055"><xreftitle>Todo</xreftitle><xrefdescription><para>docme.</para></xrefdescription></xrefsect></para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="1213"/>
@@ -786,7 +782,7 @@
         <briefdescription>
 <para>Set the window to be tracked by this item. </para>        </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000052"><xreftitle>Deprecated</xreftitle><xrefdescription></xrefdescription></xrefsect><xrefsect id="todo_1_todo000057"><xreftitle>Todo</xreftitle><xrefdescription><para>provide deprecation description </para></xrefdescription></xrefsect></para>        </detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000052"><xreftitle>Deprecated</xreftitle><xrefdescription></xrefdescription></xrefsect><xrefsect id="todo_1_todo000056"><xreftitle>Todo</xreftitle><xrefdescription><para>provide deprecation description </para></xrefdescription></xrefsect></para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="1251"/>
@@ -813,40 +809,40 @@
 <para>The <ref refid="classwx_sizer_item" kindref="compound">wxSizerItem</ref> class is used to track the position, size and other attributes of each item managed by a <ref refid="classwx_sizer" kindref="compound">wxSizer</ref>. </para>    </briefdescription>
     <detaileddescription>
 <para>It is not usually necessary to use this class because the sizer elements can also be identified by their positions or window or sizer pointers but sometimes it may be more convenient to use it directly.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__winlayout" kindref="compound">Window Layout</ref> </para>    </detaileddescription>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__winlayout" kindref="compound">Window Layout</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10189">
+      <node id="10249">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="10190">
+      <node id="10250">
         <label>wxGBSizerItem</label>
         <link refid="classwx_g_b_sizer_item"/>
-        <childnode refid="10188" relation="public-inheritance">
+        <childnode refid="10248" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10188">
+      <node id="10248">
         <label>wxSizerItem</label>
         <link refid="classwx_sizer_item"/>
-        <childnode refid="10189" relation="public-inheritance">
+        <childnode refid="10249" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10192">
+      <node id="10252">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="10193" relation="usage">
+        <childnode refid="10253" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="10191">
+      <node id="10251">
         <label>wxSizerItem</label>
         <link refid="classwx_sizer_item"/>
-        <childnode refid="10192" relation="public-inheritance">
+        <childnode refid="10252" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10193">
+      <node id="10253">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

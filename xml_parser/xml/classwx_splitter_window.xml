@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_splitter_window" kind="class" prot="public">
     <compoundname>wxSplitterWindow</compoundname>
     <basecompoundref refid="classwx_window" prot="public" virt="non-virtual">wxWindow</basecompoundref>
@@ -698,71 +698,71 @@
 <listitem><para>EVT_SPLITTER_DCLICK(id,  func): The sash was double clicked. The default behaviour is to unsplit the window when this happens (unless the minimum pane size has been set to a value greater than zero). Processes a <computeroutput>wxEVT_COMMAND_SPLITTER_DOUBLECLICKED</computeroutput> event. </para></listitem>
 </itemizedlist>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__miscwnd" kindref="compound">Miscellaneous Windows</ref></para><para><simplesect kind="see"><para><ref refid="classwx_splitter_event" kindref="compound">wxSplitterEvent</ref>, <ref refid="overview__splitterwindow" kindref="compound">wxSplitterWindow Overview</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__miscwnd" kindref="compound">Miscellaneous Windows</ref></para><para><simplesect kind="see"><para><ref refid="classwx_splitter_event" kindref="compound">wxSplitterEvent</ref>, <ref refid="overview_splitterwindow" kindref="compound">wxSplitterWindow Overview</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10371">
+      <node id="10431">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="10370">
+      <node id="10430">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="10371" relation="public-inheritance">
+        <childnode refid="10431" relation="public-inheritance">
         </childnode>
-        <childnode refid="10372" relation="public-inheritance">
+        <childnode refid="10432" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10368">
+      <node id="10428">
         <label>wxSplitterWindow</label>
         <link refid="classwx_splitter_window"/>
-        <childnode refid="10369" relation="public-inheritance">
+        <childnode refid="10429" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10372">
+      <node id="10432">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="10369">
+      <node id="10429">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="10370" relation="public-inheritance">
+        <childnode refid="10430" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10376">
+      <node id="10436">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="10377" relation="usage">
+        <childnode refid="10437" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="10375">
+      <node id="10435">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="10376" relation="public-inheritance">
+        <childnode refid="10436" relation="public-inheritance">
         </childnode>
-        <childnode refid="10378" relation="public-inheritance">
+        <childnode refid="10438" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10373">
+      <node id="10433">
         <label>wxSplitterWindow</label>
         <link refid="classwx_splitter_window"/>
-        <childnode refid="10374" relation="public-inheritance">
+        <childnode refid="10434" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10378">
+      <node id="10438">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="10374">
+      <node id="10434">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="10375" relation="public-inheritance">
+        <childnode refid="10435" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10377">
+      <node id="10437">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

@@ -1,11 +1,10 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_choicebook" kind="class" prot="public">
     <compoundname>wxChoicebook</compoundname>
     <basecompoundref refid="classwx_book_ctrl_base" prot="public" virt="non-virtual">wxBookCtrlBase</basecompoundref>
     <includes local="no">wx/choicebk.h</includes>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_choicebook_1aa06ad50928a63e7067e9e496e4fbcf08" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
         <definition>wxChoicebook::wxChoicebook</definition>
@@ -79,7 +78,7 @@
     <briefdescription>
 <para><ref refid="classwx_choicebook" kindref="compound">wxChoicebook</ref> is a class similar to <ref refid="classwx_notebook" kindref="compound">wxNotebook</ref>, but uses a <ref refid="classwx_choice" kindref="compound">wxChoice</ref> control to show the labels instead of the tabs. </para>    </briefdescription>
     <detaileddescription>
-<para>For usage documentation of this class, please refer to the base abstract class wxBookCtrl. You can also use the <ref refid="page__samples_1page_samples_notebook" kindref="member">Notebook Sample</ref> to see <ref refid="classwx_choicebook" kindref="compound">wxChoicebook</ref> in action.</para><para><ref refid="classwx_choicebook" kindref="compound">wxChoicebook</ref> allows the use of wxBookCtrlBase::GetControlSizer(), allowing a program to add other controls next to the choice control. This is particularly useful when screen space is restricted, as it often is when <ref refid="classwx_choicebook" kindref="compound">wxChoicebook</ref> is being employed.</para><para><heading level="2">Styles</heading>
+<para>For usage documentation of this class, please refer to the base abstract class wxBookCtrl. You can also use the <ref refid="page_samples_1page_samples_notebook" kindref="member">Notebook Sample</ref> to see <ref refid="classwx_choicebook" kindref="compound">wxChoicebook</ref> in action.</para><para><ref refid="classwx_choicebook" kindref="compound">wxChoicebook</ref> allows the use of wxBookCtrlBase::GetControlSizer(), allowing a program to add other controls next to the choice control. This is particularly useful when screen space is restricted, as it often is when <ref refid="classwx_choicebook" kindref="compound">wxChoicebook</ref> is being employed.</para><para><heading level="2">Styles</heading>
 </para><para>This class supports the following styles: <itemizedlist>
 <listitem><para>wxCHB_DEFAULT: Choose the default location for the labels depending on the current platform (left everywhere except Mac where it is top). </para></listitem>
 <listitem><para>wxCHB_TOP: Place labels above the page area. </para></listitem>
@@ -93,107 +92,107 @@
 <listitem><para>EVT_CHOICEBOOK_PAGE_CHANGING(id,  func): The page selection is about to be changed. Processes a <computeroutput>wxEVT_COMMAND_CHOICEBOOK_PAGE_CHANGING</computeroutput> event. This event can be vetoed (using <ref refid="classwx_notify_event_1a49e4502414a11e273f51a34a21d2acd3" kindref="member">wxNotifyEvent::Veto()</ref>). </para></listitem>
 </itemizedlist>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__bookctrl" kindref="compound">Book Controls</ref> <htmlonly> &lt;br&gt;&lt;div&gt;&lt;span class=&apos;appearance&apos;&gt;Appearance:&lt;/span&gt;&lt;br&gt;&lt;table class=&apos;appearance&apos;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&apos;wxmsw/choicebook.png&apos; alt=&apos;wxMSW appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxgtk/choicebook.png&apos; alt=&apos;wxGTK appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxmac/choicebook.png&apos; alt=&apos;wxMac appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;wxMSW appearance&lt;/td&gt;&lt;td&gt;wxGTK appearance&lt;/td&gt;&lt;td&gt;wxMac appearance&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt; </htmlonly></para><para><simplesect kind="see"><para><ref refid="overview__bookctrl" kindref="compound">wxBookCtrl Overview</ref>, <ref refid="classwx_notebook" kindref="compound">wxNotebook</ref>, <ref refid="page__samples_1page_samples_notebook" kindref="member">Notebook Sample</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__bookctrl" kindref="compound">Book Controls</ref> <htmlonly> &lt;br&gt;&lt;div&gt;&lt;span class=&apos;appearance&apos;&gt;Appearance:&lt;/span&gt;&lt;br&gt;&lt;table class=&apos;appearance&apos;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&apos;wxmsw/choicebook.png&apos; alt=&apos;wxMSW appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxgtk/choicebook.png&apos; alt=&apos;wxGTK appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxmac/choicebook.png&apos; alt=&apos;wxMac appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;wxMSW appearance&lt;/td&gt;&lt;td&gt;wxGTK appearance&lt;/td&gt;&lt;td&gt;wxMac appearance&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt; </htmlonly></para><para><simplesect kind="see"><para><ref refid="overview_bookctrl" kindref="compound">wxBookCtrl Overview</ref>, <ref refid="classwx_notebook" kindref="compound">wxNotebook</ref>, <ref refid="page_samples_1page_samples_notebook" kindref="member">Notebook Sample</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="4761">
+      <node id="4765">
         <label>wxBookCtrlBase</label>
         <link refid="classwx_book_ctrl_base"/>
-        <childnode refid="4762" relation="public-inheritance">
+        <childnode refid="4766" relation="public-inheritance">
         </childnode>
-        <childnode refid="4767" relation="public-inheritance">
+        <childnode refid="4771" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4765">
+      <node id="4769">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="4764">
+      <node id="4768">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="4765" relation="public-inheritance">
+        <childnode refid="4769" relation="public-inheritance">
         </childnode>
-        <childnode refid="4766" relation="public-inheritance">
+        <childnode refid="4770" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4766">
+      <node id="4770">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="4762">
+      <node id="4766">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="4763" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4763">
-        <label>wxWindow</label>
-        <link refid="classwx_window"/>
-        <childnode refid="4764" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4760">
-        <label>wxChoicebook</label>
-        <link refid="classwx_choicebook"/>
-        <childnode refid="4761" relation="public-inheritance">
+        <childnode refid="4767" relation="public-inheritance">
         </childnode>
       </node>
       <node id="4767">
+        <label>wxWindow</label>
+        <link refid="classwx_window"/>
+        <childnode refid="4768" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4764">
+        <label>wxChoicebook</label>
+        <link refid="classwx_choicebook"/>
+        <childnode refid="4765" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4771">
         <label>wxWithImages</label>
         <link refid="classwx_with_images"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="4769">
+      <node id="4773">
         <label>wxBookCtrlBase</label>
         <link refid="classwx_book_ctrl_base"/>
-        <childnode refid="4770" relation="public-inheritance">
+        <childnode refid="4774" relation="public-inheritance">
         </childnode>
-        <childnode refid="4776" relation="public-inheritance">
+        <childnode refid="4780" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4773">
+      <node id="4777">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="4774" relation="usage">
+        <childnode refid="4778" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="4772">
+      <node id="4776">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="4773" relation="public-inheritance">
+        <childnode refid="4777" relation="public-inheritance">
         </childnode>
+        <childnode refid="4779" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4779">
+        <label>wxTrackable</label>
+        <link refid="classwx_trackable"/>
+      </node>
+      <node id="4774">
+        <label>wxControl</label>
+        <link refid="classwx_control"/>
         <childnode refid="4775" relation="public-inheritance">
         </childnode>
       </node>
       <node id="4775">
-        <label>wxTrackable</label>
-        <link refid="classwx_trackable"/>
-      </node>
-      <node id="4770">
-        <label>wxControl</label>
-        <link refid="classwx_control"/>
-        <childnode refid="4771" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4771">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="4772" relation="public-inheritance">
+        <childnode refid="4776" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4768">
+      <node id="4772">
         <label>wxChoicebook</label>
         <link refid="classwx_choicebook"/>
-        <childnode refid="4769" relation="public-inheritance">
+        <childnode refid="4773" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4776">
+      <node id="4780">
         <label>wxWithImages</label>
         <link refid="classwx_with_images"/>
       </node>
-      <node id="4774">
+      <node id="4778">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

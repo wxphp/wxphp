@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_html_modal_help" kind="class" prot="public">
     <compoundname>wxHtmlModalHelp</compoundname>
     <includes local="no">wx/html/helpctrl.h</includes>
@@ -72,7 +72,7 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>user<sp/>quits<sp/>the<sp/>help,<sp/>program<sp/>execution<sp/>will<sp/>continue.</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_html_modal_help" kindref="compound" tooltip="This class uses wxHtmlHelpController to display help in a modal dialog.">wxHtmlModalHelp</ref><sp/>help(parent,<sp/></highlight><highlight class="stringliteral">&quot;help&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;My<sp/>topic&quot;</highlight><highlight class="normal">);</highlight></codeline>
 </programlisting></para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxhtml" kindref="member">wxHTML</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__help" kindref="compound">Help</ref>, <ref refid="group__group__class__html" kindref="compound">HTML</ref> </para>    </detaileddescription>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxhtml" kindref="member">wxHTML</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__help" kindref="compound">Help</ref>, <ref refid="group__group__class__html" kindref="compound">HTML</ref> </para>    </detaileddescription>
     <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/helpctrl.h" line="265" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/helpctrl.h" bodystart="264" bodyend="283"/>
     <listofallmembers>
       <member refid="classwx_html_modal_help_1a4d16248f91685234b066edca4993a665" prot="public" virt="non-virtual"><scope>wxHtmlModalHelp</scope><name>wxHtmlModalHelp</name></member>

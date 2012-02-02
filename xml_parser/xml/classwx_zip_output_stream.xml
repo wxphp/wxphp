@@ -1,11 +1,10 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_zip_output_stream" kind="class" prot="public">
     <compoundname>wxZipOutputStream</compoundname>
     <basecompoundref refid="classwx_archive_output_stream" prot="public" virt="non-virtual">wxArchiveOutputStream</basecompoundref>
     <includes local="no">wx/zipstrm.h</includes>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_zip_output_stream_1ad22d73c10ed4f1082f0fc6488b94e72d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
         <definition>wxZipOutputStream::wxZipOutputStream</definition>
@@ -62,7 +61,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_zip_output_stream_1a67f4b3cee08828bb153b6b78da92d56c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
         <definition>int wxZipOutputStream::GetLevel</definition>
@@ -95,7 +93,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_zip_output_stream_1a3ef78370a66ac4c0030164df04eec61d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
         <definition>bool wxZipOutputStream::PutNextEntry</definition>
@@ -267,65 +264,65 @@
 <para>Output stream for writing zip files. </para>    </briefdescription>
     <detaileddescription>
 <para><ref refid="classwx_zip_output_stream_1a3ef78370a66ac4c0030164df04eec61d" kindref="member">wxZipOutputStream::PutNextEntry()</ref> is used to create a new entry in the output zip, then the entry&apos;s data is written to the <ref refid="classwx_zip_output_stream" kindref="compound">wxZipOutputStream</ref>. Another call to <ref refid="classwx_zip_output_stream_1a3ef78370a66ac4c0030164df04eec61d" kindref="member">wxZipOutputStream::PutNextEntry()</ref> closes the current entry and begins the next.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__archive" kindref="compound">Archive support</ref>, <ref refid="group__group__class__streams" kindref="compound">Streams</ref></para><para><simplesect kind="see"><para><ref refid="overview__archive" kindref="compound">Archive Formats</ref>, <ref refid="classwx_zip_entry" kindref="compound">wxZipEntry</ref>, <ref refid="classwx_zip_input_stream" kindref="compound">wxZipInputStream</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__archive" kindref="compound">Archive support</ref>, <ref refid="group__group__class__streams" kindref="compound">Streams</ref></para><para><simplesect kind="see"><para><ref refid="overview_archive" kindref="compound">Archive Formats</ref>, <ref refid="classwx_zip_entry" kindref="compound">wxZipEntry</ref>, <ref refid="classwx_zip_input_stream" kindref="compound">wxZipInputStream</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="11712">
+      <node id="11773">
         <label>wxZipOutputStream</label>
         <link refid="classwx_zip_output_stream"/>
-        <childnode refid="11713" relation="public-inheritance">
+        <childnode refid="11774" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11716">
+      <node id="11777">
         <label>wxStreamBase</label>
         <link refid="classwx_stream_base"/>
       </node>
-      <node id="11714">
+      <node id="11775">
         <label>wxFilterOutputStream</label>
         <link refid="classwx_filter_output_stream"/>
-        <childnode refid="11715" relation="public-inheritance">
+        <childnode refid="11776" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11715">
+      <node id="11776">
         <label>wxOutputStream</label>
         <link refid="classwx_output_stream"/>
-        <childnode refid="11716" relation="public-inheritance">
+        <childnode refid="11777" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11713">
+      <node id="11774">
         <label>wxArchiveOutputStream</label>
         <link refid="classwx_archive_output_stream"/>
-        <childnode refid="11714" relation="public-inheritance">
+        <childnode refid="11775" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="11717">
+      <node id="11778">
         <label>wxZipOutputStream</label>
         <link refid="classwx_zip_output_stream"/>
-        <childnode refid="11718" relation="public-inheritance">
+        <childnode refid="11779" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11721">
+      <node id="11782">
         <label>wxStreamBase</label>
         <link refid="classwx_stream_base"/>
       </node>
-      <node id="11719">
+      <node id="11780">
         <label>wxFilterOutputStream</label>
         <link refid="classwx_filter_output_stream"/>
-        <childnode refid="11720" relation="public-inheritance">
+        <childnode refid="11781" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11720">
+      <node id="11781">
         <label>wxOutputStream</label>
         <link refid="classwx_output_stream"/>
-        <childnode refid="11721" relation="public-inheritance">
+        <childnode refid="11782" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11718">
+      <node id="11779">
         <label>wxArchiveOutputStream</label>
         <link refid="classwx_archive_output_stream"/>
-        <childnode refid="11719" relation="public-inheritance">
+        <childnode refid="11780" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>

@@ -1,10 +1,9 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="access_8h" kind="file">
     <compoundname>access.h</compoundname>
     <innerclass refid="classwx_accessible" prot="public">wxAccessible</innerclass>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="define" id="access_8h_1a1aa16360b865d4a814bdf068afedcb39" prot="public" static="no">
         <name>wxACC_STATE_SYSTEM_ALERT_HIGH</name>
         <initializer>0x00000001</initializer>
@@ -293,7 +292,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="define" id="access_8h_1afc22f3acfb1d7fd648112508f899ae75" prot="public" static="no">
         <name>wxACC_EVENT_SYSTEM_SOUND</name>
         <initializer>0x0001</initializer>

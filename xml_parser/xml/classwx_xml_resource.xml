@@ -1,11 +1,10 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_xml_resource" kind="class" prot="public">
     <compoundname>wxXmlResource</compoundname>
     <basecompoundref refid="classwx_object" prot="public" virt="non-virtual">wxObject</basecompoundref>
     <includes local="no">wx/xrc/xmlres.h</includes>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_xml_resource_1af2080732fd3df5f34227d56a4c0e06ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_menu_bar" kindref="compound">wxMenuBar</ref> *</type>
         <definition>wxMenuBar* wxXmlResource::LoadMenuBar</definition>
@@ -46,7 +45,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_xml_resource_1a92fb76bed2c93c283c940c0a02e0a543" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_object" kindref="compound">wxObject</ref> *</type>
         <definition>wxObject* wxXmlResource::LoadObject</definition>
@@ -103,7 +101,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_xml_resource_1a510cc9435736fec110c0c941ad35f5df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_object" kindref="compound">wxObject</ref> *</type>
         <definition>wxObject* wxXmlResource::LoadObjectRecursively</definition>
@@ -894,36 +891,36 @@
     <briefdescription>
 <para>This is the main class for interacting with the XML-based resource system. </para>    </briefdescription>
     <detaileddescription>
-<para>The class holds XML resources from one or more .xml files, binary files or zip archive files.</para><para>Note that this is a singleton class and you&apos;ll never allocate/deallocate it. Just use the static <ref refid="classwx_xml_resource_1ae9a487479dcd6204d12fbbf7be497561" kindref="member">wxXmlResource::Get()</ref> getter.</para><para><simplesect kind="see"><para><ref refid="overview__xrc" kindref="compound">XML Based Resource System (XRC)</ref>, <ref refid="overview__xrcformat" kindref="compound">XRC File Format</ref></para></simplesect>
+<para>The class holds XML resources from one or more .xml files, binary files or zip archive files.</para><para>Note that this is a singleton class and you&apos;ll never allocate/deallocate it. Just use the static <ref refid="classwx_xml_resource_1ae9a487479dcd6204d12fbbf7be497561" kindref="member">wxXmlResource::Get()</ref> getter.</para><para><simplesect kind="see"><para><ref refid="overview_xrc" kindref="compound">XML Based Resource System (XRC)</ref>, <ref refid="overview_xrcformat" kindref="compound">XRC File Format</ref></para></simplesect>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxxrc" kindref="member">wxXRC</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__xrc" kindref="compound">XML Based Resource System (XRC)</ref> </para>    </detaileddescription>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxxrc" kindref="member">wxXRC</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__xrc" kindref="compound">XML Based Resource System (XRC)</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="11676">
+      <node id="11737">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="11675">
+      <node id="11736">
         <label>wxXmlResource</label>
         <link refid="classwx_xml_resource"/>
-        <childnode refid="11676" relation="public-inheritance">
+        <childnode refid="11737" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="11678">
+      <node id="11739">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="11679" relation="usage">
+        <childnode refid="11740" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="11677">
+      <node id="11738">
         <label>wxXmlResource</label>
         <link refid="classwx_xml_resource"/>
-        <childnode refid="11678" relation="public-inheritance">
+        <childnode refid="11739" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11679">
+      <node id="11740">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

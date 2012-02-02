@@ -1,11 +1,10 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_sorted_array_string" kind="class" prot="public">
     <compoundname>wxSortedArrayString</compoundname>
     <basecompoundref refid="classwx_array_string" prot="public" virt="non-virtual">wxArrayString</basecompoundref>
     <includes local="no">wx/arrstr.h</includes>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_sorted_array_string_1abecc9015c35ee342e594c5fa9f76a927" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void wxSortedArrayString::Sort</definition>
@@ -150,29 +149,29 @@
     <briefdescription>
 <para><ref refid="classwx_sorted_array_string" kindref="compound">wxSortedArrayString</ref> is an efficient container for storing <ref refid="classwx_string" kindref="compound">wxString</ref> objects which always keeps the string in alphabetical order. </para>    </briefdescription>
     <detaileddescription>
-<para><ref refid="classwx_sorted_array_string" kindref="compound">wxSortedArrayString</ref> uses binary search in its <ref refid="classwx_array_string_1a87d29ec37fca50c5b289c242fbaad2f5" kindref="member">wxArrayString::Index()</ref> function (instead of linear search for <ref refid="classwx_array_string_1a87d29ec37fca50c5b289c242fbaad2f5" kindref="member">wxArrayString::Index()</ref>) which makes it much more efficient if you add strings to the array rarely (because, of course, you have to pay for <ref refid="classwx_sorted_array_string_1a1a9c971831f25c01ababe0a1d5ce8d33" kindref="member">Index()</ref> efficiency by having <ref refid="classwx_sorted_array_string_1ae23142317aff290ee6363f02d67ca2cc" kindref="member">Add()</ref> be slower) but search for them often. Several methods should not be used with sorted array (basically, all those which break the order of items) which is mentioned in their description.</para><para><xrefsect id="todo_1_todo000009"><xreftitle>Todo</xreftitle><xrefdescription><para>what about STL? who does it integrates?</para></xrefdescription></xrefsect><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__containers" kindref="compound">Containers</ref></para><para><simplesect kind="see"><para>wxArray, <ref refid="classwx_string" kindref="compound">wxString</ref>, <ref refid="overview__string" kindref="compound">wxString Overview</ref> </para></simplesect>
+<para><ref refid="classwx_sorted_array_string" kindref="compound">wxSortedArrayString</ref> uses binary search in its <ref refid="classwx_array_string_1a87d29ec37fca50c5b289c242fbaad2f5" kindref="member">wxArrayString::Index()</ref> function (instead of linear search for <ref refid="classwx_array_string_1a87d29ec37fca50c5b289c242fbaad2f5" kindref="member">wxArrayString::Index()</ref>) which makes it much more efficient if you add strings to the array rarely (because, of course, you have to pay for <ref refid="classwx_sorted_array_string_1a1a9c971831f25c01ababe0a1d5ce8d33" kindref="member">Index()</ref> efficiency by having <ref refid="classwx_sorted_array_string_1ae23142317aff290ee6363f02d67ca2cc" kindref="member">Add()</ref> be slower) but search for them often. Several methods should not be used with sorted array (basically, all those which break the order of items) which is mentioned in their description.</para><para><xrefsect id="todo_1_todo000009"><xreftitle>Todo</xreftitle><xrefdescription><para>what about STL? who does it integrates?</para></xrefdescription></xrefsect></para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__containers" kindref="compound">Containers</ref></para><para><simplesect kind="see"><para>wxArray, <ref refid="classwx_string" kindref="compound">wxString</ref>, <ref refid="overview_string" kindref="compound">wxString Overview</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10268">
+      <node id="10328">
         <label>wxSortedArrayString</label>
         <link refid="classwx_sorted_array_string"/>
-        <childnode refid="10269" relation="public-inheritance">
+        <childnode refid="10329" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10269">
+      <node id="10329">
         <label>wxArrayString</label>
         <link refid="classwx_array_string"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10270">
+      <node id="10330">
         <label>wxSortedArrayString</label>
         <link refid="classwx_sorted_array_string"/>
-        <childnode refid="10271" relation="public-inheritance">
+        <childnode refid="10331" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10271">
+      <node id="10331">
         <label>wxArrayString</label>
         <link refid="classwx_array_string"/>
       </node>

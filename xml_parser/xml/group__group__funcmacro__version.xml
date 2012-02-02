@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="group__group__funcmacro__version" kind="group">
     <compoundname>group_funcmacro_version</compoundname>
     <title>Versioning</title>
@@ -12,13 +12,13 @@
         <briefdescription>
 <para>Get wxWidgets version information. </para>        </briefdescription>
         <detaileddescription>
-<para><simplesect kind="since"><para>2.9.2 </para></simplesect>
-<simplesect kind="see"><para><ref refid="classwx_version_info" kindref="compound">wxVersionInfo</ref> Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> <heading level="2"></heading>
-</para></simplesect>
-Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref> </para>        </detaileddescription>
+<para><simplesect kind="since"><para>2.9.2</para></simplesect>
+<simplesect kind="see"><para><ref refid="classwx_version_info" kindref="compound">wxVersionInfo</ref></para></simplesect>
+Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim></para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="174"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="229"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="define">
@@ -29,7 +29,7 @@ Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_lib
         <briefdescription>
 <para>Returns true if the compiler being used is GNU C++ and its version is at least major.minor or greater. </para>        </briefdescription>
         <detaileddescription>
-<para>Returns false otherwise.</para><para>Include file: <verbatim>#include &lt;wx/platform.h&gt; </verbatim> </para>        </detaileddescription>
+<para>Returns false otherwise.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/platform.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platform.h" line="18" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platform.h" bodystart="18" bodyend="-1"/>
@@ -41,7 +41,7 @@ Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_lib
         <briefdescription>
 <para>Returns true if the compiler being used is Sun CC Pro and its version is at least major.minor or greater. </para>        </briefdescription>
         <detaileddescription>
-<para>Returns false otherwise.</para><para>Include file: <verbatim>#include &lt;wx/platform.h&gt; </verbatim> </para>        </detaileddescription>
+<para>Returns false otherwise.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/platform.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platform.h" line="26" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platform.h" bodystart="26" bodyend="-1"/>
@@ -52,7 +52,7 @@ Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_lib
         <briefdescription>
 <para>Returns true if the compiler being used is Visual C++ and its version is at least major or greater. </para>        </briefdescription>
         <detaileddescription>
-<para>Returns false otherwise.</para><para>Include file: <verbatim>#include &lt;wx/platform.h&gt; </verbatim> </para>        </detaileddescription>
+<para>Returns false otherwise.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/platform.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platform.h" line="34" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platform.h" bodystart="34" bodyend="-1"/>
@@ -64,7 +64,7 @@ Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_lib
         <briefdescription>
 <para>Returns true if the version of w32api headers used is major.minor or greater. </para>        </briefdescription>
         <detaileddescription>
-<para>Otherwise, and also if we are not compiling with MinGW32/Cygwin under Win32 at all, returns false.</para><para>Include file: <verbatim>#include &lt;wx/platform.h&gt; </verbatim> </para>        </detaileddescription>
+<para>Otherwise, and also if we are not compiling with MinGW32/Cygwin under Win32 at all, returns false.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/platform.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platform.h" line="43" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platform.h" bodystart="43" bodyend="-1"/>
@@ -77,16 +77,16 @@ Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_lib
         <briefdescription>
 <para>This is a macro which evaluates to true if the current wxWidgets version is at least major.minor.release. </para>        </briefdescription>
         <detaileddescription>
-<para>For example, to test if the program is compiled with wxWidgets 2.2 or higher, the following can be done:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change...">wxString</ref><sp/>s;</highlight></codeline>
+<para>For example, to test if the program is compiled with wxWidgets 2.2 or higher, the following can be done:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change was actually the m...">wxString</ref><sp/>s;</highlight></codeline>
 <codeline><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#if<sp/>wxCHECK_VERSION(2,<sp/>2,<sp/>0)</highlight></codeline>
-<codeline><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>s.<ref refid="classwx_string_1a627b084ee8088734e1b28ee23d67f7bb" kindref="member" tooltip="This function can be used to test if the string starts with the specified prefix...">StartsWith</ref>(</highlight><highlight class="stringliteral">&quot;foo&quot;</highlight><highlight class="normal">)<sp/>)</highlight></codeline>
+<codeline><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>s.<ref refid="classwx_string_1a627b084ee8088734e1b28ee23d67f7bb" kindref="member" tooltip="This function can be used to test if the string starts with the specified prefix.">StartsWith</ref>(</highlight><highlight class="stringliteral">&quot;foo&quot;</highlight><highlight class="normal">)<sp/>)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>#</highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">//<sp/>replacement<sp/>code<sp/>for<sp/>old<sp/>version</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>strncmp(s,<sp/></highlight><highlight class="stringliteral">&quot;foo&quot;</highlight><highlight class="normal">,<sp/>3)<sp/>==<sp/>0<sp/>)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>#endif</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-</programlisting></para><para>Include file: <verbatim>#include &lt;wx/version.h&gt; </verbatim> </para>        </detaileddescription>
+</programlisting></para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/version.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/version.h" line="33" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/version.h" bodystart="33" bodyend="-1"/>
@@ -100,7 +100,7 @@ Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_lib
         <briefdescription>
 <para>Same as <ref refid="group__group__funcmacro__version_1gae7a4bbd65402259b17a664fe87f2ec17" kindref="member">wxCHECK_VERSION()</ref> but also checks that wxSUBRELEASE_NUMBER is at least subrel. </para>        </briefdescription>
         <detaileddescription>
-<para>Include file: <verbatim>#include &lt;wx/version.h&gt; </verbatim> </para>        </detaileddescription>
+<para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/version.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/version.h" line="41" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/version.h" bodystart="41" bodyend="-1"/>
@@ -118,6 +118,6 @@ Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_lib
 <row>
 <entry thead="no"><para> wxSUBRELEASE_NUMBER </para></entry><entry thead="no"><para>The subrelease number which is 0 for all official releases  </para></entry></row>
 </table>
-</para><para>For example, the values or these constants for wxWidgets 2.8.7 are 2, 8, 7 and 0.</para><para>Additionally, wxVERSION_STRING is a user-readable string containing the full wxWidgets version and wxVERSION_NUMBER is a combination of the three version numbers above: for 2.1.15, it is 2115 and it is 2200 for wxWidgets 2.2.</para><para>The subrelease number is only used for the sources in between official releases and so normally is not useful.</para><para>Include file: <verbatim>#include &lt;wx/version.h&gt; </verbatim> </para>    </detaileddescription>
+</para><para>For example, the values or these constants for wxWidgets 2.8.7 are 2, 8, 7 and 0.</para><para>Additionally, wxVERSION_STRING is a user-readable string containing the full wxWidgets version and wxVERSION_NUMBER is a combination of the three version numbers above: for 2.1.15, it is 2115 and it is 2200 for wxWidgets 2.2.</para><para>The subrelease number is only used for the sources in between official releases and so normally is not useful.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/version.h&gt; </verbatim> </para>    </detaileddescription>
   </compounddef>
 </doxygen>

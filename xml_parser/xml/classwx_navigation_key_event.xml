@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_navigation_key_event" kind="class" prot="public">
     <compoundname>wxNavigationKeyEvent</compoundname>
     <basecompoundref refid="classwx_event" prot="public" virt="non-virtual">wxEvent</basecompoundref>
@@ -45,7 +45,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3619" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="3618" bodyend="3624"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3640" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="3639" bodyend="3645"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -60,7 +60,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3626"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3647"/>
       </memberdef>
       <memberdef kind="function" id="classwx_navigation_key_event_1ac54bb8927f61f701a4e6a354ae4d938e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -77,7 +77,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3627"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3648"/>
       </memberdef>
       <memberdef kind="function" id="classwx_navigation_key_event_1a19020a70a2aa7163db30a8fde2aac1ce" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
@@ -90,7 +90,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3632"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3653"/>
       </memberdef>
       <memberdef kind="function" id="classwx_navigation_key_event_1ad63cac7eca4b8c7f0d00cb8d08ff1f69" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -103,7 +103,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3637"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3658"/>
       </memberdef>
       <memberdef kind="function" id="classwx_navigation_key_event_1ac6c63620fe49438d6552d257263bec73" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -116,7 +116,7 @@
 <para>This is required for proper navigation over radio buttons. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3643"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3664"/>
       </memberdef>
       <memberdef kind="function" id="classwx_navigation_key_event_1a335ebe373668856efa32573024416370" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -129,7 +129,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3649"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3670"/>
       </memberdef>
       <memberdef kind="function" id="classwx_navigation_key_event_1a0b477f5fe9e89d241fba97010c60b7da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -146,7 +146,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3654"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3675"/>
       </memberdef>
       <memberdef kind="function" id="classwx_navigation_key_event_1a675370a7c37cc27c43b6b6c2122184fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -163,7 +163,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3660"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3681"/>
       </memberdef>
       <memberdef kind="function" id="classwx_navigation_key_event_1aace60aab1dad2b0e1e0671cef98925ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -177,10 +177,10 @@
         <briefdescription>
 <para>Sets the flags for this event. </para>        </briefdescription>
         <detaileddescription>
-<para>The <emphasis>flags</emphasis> can be a combination of the wxNavigationKeyEventFlags values. </para>        </detaileddescription>
+<para>The <emphasis>flags</emphasis> can be a combination of the ::wxNavigationKeyEventFlags values. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3666"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3687"/>
       </memberdef>
       <memberdef kind="function" id="classwx_navigation_key_event_1a282313445152c58d55702cca26422bb5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -197,7 +197,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3671"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3692"/>
       </memberdef>
       <memberdef kind="function" id="classwx_navigation_key_event_1a355fccd120e343b6ebea4c75b39f098f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -214,7 +214,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3676"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3697"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -225,52 +225,52 @@
 <listitem><para>EVT_NAVIGATION_KEY(func): Process a navigation key event. </para></listitem>
 </itemizedlist>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="classwx_window_1a86904f6785df4af6036b33383490a805" kindref="member">wxWindow::Navigate</ref>, <ref refid="classwx_window_1aa58039c8fc65e19160becf510ee1d1d5" kindref="member">wxWindow::NavigateIn</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="classwx_window_1a86904f6785df4af6036b33383490a805" kindref="member">wxWindow::Navigate</ref>, <ref refid="classwx_window_1aa58039c8fc65e19160becf510ee1d1d5" kindref="member">wxWindow::NavigateIn</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7894">
+      <node id="7900">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="7892">
+      <node id="7898">
         <label>wxNavigationKeyEvent</label>
         <link refid="classwx_navigation_key_event"/>
-        <childnode refid="7893" relation="public-inheritance">
+        <childnode refid="7899" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7893">
+      <node id="7899">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="7894" relation="public-inheritance">
+        <childnode refid="7900" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7897">
+      <node id="7903">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="7898" relation="usage">
+        <childnode refid="7904" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="7895">
+      <node id="7901">
         <label>wxNavigationKeyEvent</label>
         <link refid="classwx_navigation_key_event"/>
-        <childnode refid="7896" relation="public-inheritance">
+        <childnode refid="7902" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7896">
+      <node id="7902">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="7897" relation="public-inheritance">
+        <childnode refid="7903" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7898">
+      <node id="7904">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3613" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="3612" bodyend="3677"/>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3634" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="3633" bodyend="3698"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxNavigationKeyEvent</scope><name>AllocExclusive</name></member>
       <member refid="classwx_event_1a26878097a702e8d0368da150125d4158" prot="public" virt="pure-virtual"><scope>wxNavigationKeyEvent</scope><name>Clone</name></member>

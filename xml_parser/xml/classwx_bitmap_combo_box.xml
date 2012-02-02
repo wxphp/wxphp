@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_bitmap_combo_box" kind="class" prot="public">
     <compoundname>wxBitmapComboBox</compoundname>
     <basecompoundref refid="classwx_combo_box" prot="public" virt="non-virtual">wxComboBox</basecompoundref>
@@ -610,138 +610,138 @@
 <listitem><para>wxCB_SORT: Sorts the entries in the list alphabetically. </para></listitem>
 <listitem><para>wxTE_PROCESS_ENTER: The control will generate the event wxEVT_COMMAND_TEXT_ENTER (otherwise pressing Enter key is either processed internally by the control or used for navigation between dialog controls). Windows only. </para></listitem>
 </itemizedlist>
-<xrefsect id="todo_1_todo000020"><xreftitle>Todo</xreftitle><xrefdescription><para>create wxCB_PROCESS_ENTER rather than reusing wxTE_PROCESS_ENTER!</para></xrefdescription></xrefsect><heading level="2">Events emitted by this class</heading>
+<xrefsect id="todo_1_todo000019"><xreftitle>Todo</xreftitle><xrefdescription><para>create wxCB_PROCESS_ENTER rather than reusing wxTE_PROCESS_ENTER!</para></xrefdescription></xrefsect></para><para><heading level="2">Events emitted by this class</heading>
 </para><para>The following event handler macros redirect the events to member function handlers &apos;<bold>func</bold>&apos; with prototypes like: void<nonbreakablespace/>handlerFuncName(<ref refid="classwx_command_event" kindref="compound">wxCommandEvent</ref>&amp;<nonbreakablespace/>event)Event macros for events emitted by this class: <itemizedlist>
 <listitem><para>EVT_COMBOBOX(id,  func): Process a <computeroutput>wxEVT_COMMAND_COMBOBOX_SELECTED</computeroutput> event, when an item on the list is selected. </para></listitem>
 <listitem><para>EVT_TEXT(id,  func): Process a <computeroutput>wxEVT_COMMAND_TEXT_UPDATED</computeroutput> event, when the combobox text changes. </para></listitem>
 <listitem><para>EVT_TEXT_ENTER(id,  func): Process a <computeroutput>wxEVT_COMMAND_TEXT_ENTER</computeroutput> event, when RETURN is pressed in the combobox. </para></listitem>
 </itemizedlist>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref> <htmlonly> &lt;br&gt;&lt;div&gt;&lt;span class=&apos;appearance&apos;&gt;Appearance:&lt;/span&gt;&lt;br&gt;&lt;table class=&apos;appearance&apos;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&apos;wxmsw/bitmapcombobox.png&apos; alt=&apos;wxMSW appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxgtk/bitmapcombobox.png&apos; alt=&apos;wxGTK appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxmac/bitmapcombobox.png&apos; alt=&apos;wxMac appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;wxMSW appearance&lt;/td&gt;&lt;td&gt;wxGTK appearance&lt;/td&gt;&lt;td&gt;wxMac appearance&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt; </htmlonly></para><para><simplesect kind="see"><para><ref refid="classwx_combo_box" kindref="compound">wxComboBox</ref>, <ref refid="classwx_choice" kindref="compound">wxChoice</ref>, <ref refid="classwx_owner_drawn_combo_box" kindref="compound">wxOwnerDrawnComboBox</ref>, <ref refid="classwx_command_event" kindref="compound">wxCommandEvent</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref> <htmlonly> &lt;br&gt;&lt;div&gt;&lt;span class=&apos;appearance&apos;&gt;Appearance:&lt;/span&gt;&lt;br&gt;&lt;table class=&apos;appearance&apos;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&apos;wxmsw/bitmapcombobox.png&apos; alt=&apos;wxMSW appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxgtk/bitmapcombobox.png&apos; alt=&apos;wxGTK appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxmac/bitmapcombobox.png&apos; alt=&apos;wxMac appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;wxMSW appearance&lt;/td&gt;&lt;td&gt;wxGTK appearance&lt;/td&gt;&lt;td&gt;wxMac appearance&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt; </htmlonly></para><para><simplesect kind="see"><para><ref refid="classwx_combo_box" kindref="compound">wxComboBox</ref>, <ref refid="classwx_choice" kindref="compound">wxChoice</ref>, <ref refid="classwx_owner_drawn_combo_box" kindref="compound">wxOwnerDrawnComboBox</ref>, <ref refid="classwx_command_event" kindref="compound">wxCommandEvent</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="4497">
+      <node id="4501">
         <label>wxItemContainer</label>
         <link refid="classwx_item_container"/>
+        <childnode refid="4502" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4499">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+      </node>
+      <node id="4494">
+        <label>wxBitmapComboBox</label>
+        <link refid="classwx_bitmap_combo_box"/>
+        <childnode refid="4495" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4498">
+        <label>wxEvtHandler</label>
+        <link refid="classwx_evt_handler"/>
+        <childnode refid="4499" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4500" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4500">
+        <label>wxTrackable</label>
+        <link refid="classwx_trackable"/>
+      </node>
+      <node id="4503">
+        <label>wxTextEntry</label>
+        <link refid="classwx_text_entry"/>
+      </node>
+      <node id="4496">
+        <label>wxControl</label>
+        <link refid="classwx_control"/>
+        <childnode refid="4497" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4497">
+        <label>wxWindow</label>
+        <link refid="classwx_window"/>
         <childnode refid="4498" relation="public-inheritance">
         </childnode>
       </node>
       <node id="4495">
-        <label>wxObject</label>
-        <link refid="classwx_object"/>
-      </node>
-      <node id="4490">
-        <label>wxBitmapComboBox</label>
-        <link refid="classwx_bitmap_combo_box"/>
-        <childnode refid="4491" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4494">
-        <label>wxEvtHandler</label>
-        <link refid="classwx_evt_handler"/>
-        <childnode refid="4495" relation="public-inheritance">
-        </childnode>
-        <childnode refid="4496" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4496">
-        <label>wxTrackable</label>
-        <link refid="classwx_trackable"/>
-      </node>
-      <node id="4499">
-        <label>wxTextEntry</label>
-        <link refid="classwx_text_entry"/>
-      </node>
-      <node id="4492">
-        <label>wxControl</label>
-        <link refid="classwx_control"/>
-        <childnode refid="4493" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4493">
-        <label>wxWindow</label>
-        <link refid="classwx_window"/>
-        <childnode refid="4494" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4491">
         <label>wxComboBox</label>
         <link refid="classwx_combo_box"/>
-        <childnode refid="4492" relation="public-inheritance">
+        <childnode refid="4496" relation="public-inheritance">
         </childnode>
-        <childnode refid="4497" relation="public-inheritance">
+        <childnode refid="4501" relation="public-inheritance">
         </childnode>
-        <childnode refid="4499" relation="public-inheritance">
+        <childnode refid="4503" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4498">
+      <node id="4502">
         <label>wxItemContainerImmutable</label>
         <link refid="classwx_item_container_immutable"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="4508">
+      <node id="4512">
         <label>wxItemContainer</label>
         <link refid="classwx_item_container"/>
-        <childnode refid="4509" relation="public-inheritance">
+        <childnode refid="4513" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4505">
+      <node id="4509">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="4506" relation="usage">
+        <childnode refid="4510" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="4500">
+      <node id="4504">
         <label>wxBitmapComboBox</label>
         <link refid="classwx_bitmap_combo_box"/>
-        <childnode refid="4501" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4504">
-        <label>wxEvtHandler</label>
-        <link refid="classwx_evt_handler"/>
         <childnode refid="4505" relation="public-inheritance">
         </childnode>
+      </node>
+      <node id="4508">
+        <label>wxEvtHandler</label>
+        <link refid="classwx_evt_handler"/>
+        <childnode refid="4509" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4511" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4511">
+        <label>wxTrackable</label>
+        <link refid="classwx_trackable"/>
+      </node>
+      <node id="4514">
+        <label>wxTextEntry</label>
+        <link refid="classwx_text_entry"/>
+      </node>
+      <node id="4506">
+        <label>wxControl</label>
+        <link refid="classwx_control"/>
         <childnode refid="4507" relation="public-inheritance">
         </childnode>
       </node>
       <node id="4507">
-        <label>wxTrackable</label>
-        <link refid="classwx_trackable"/>
-      </node>
-      <node id="4510">
-        <label>wxTextEntry</label>
-        <link refid="classwx_text_entry"/>
-      </node>
-      <node id="4502">
-        <label>wxControl</label>
-        <link refid="classwx_control"/>
-        <childnode refid="4503" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4503">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="4504" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4501">
-        <label>wxComboBox</label>
-        <link refid="classwx_combo_box"/>
-        <childnode refid="4502" relation="public-inheritance">
-        </childnode>
         <childnode refid="4508" relation="public-inheritance">
         </childnode>
-        <childnode refid="4510" relation="public-inheritance">
+      </node>
+      <node id="4505">
+        <label>wxComboBox</label>
+        <link refid="classwx_combo_box"/>
+        <childnode refid="4506" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4512" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4514" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4509">
+      <node id="4513">
         <label>wxItemContainerImmutable</label>
         <link refid="classwx_item_container_immutable"/>
       </node>
-      <node id="4506">
+      <node id="4510">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
@@ -1118,7 +1118,6 @@
       <member refid="classwx_window_1afbf4dc9064cf70cfe6884554b97a27bf" prot="public" virt="virtual"><scope>wxBitmapComboBox</scope><name>SetScrollPos</name></member>
       <member refid="classwx_combo_box_1a110d8b94ae2655ab28488b22843b47b1" prot="public" virt="virtual"><scope>wxBitmapComboBox</scope><name>SetSelection</name></member>
       <member refid="classwx_combo_box_1a28ec184571590745a26a1be7fa2dfc72" prot="public" virt="virtual"><scope>wxBitmapComboBox</scope><name>SetSelection</name></member>
-      <member refid="classwx_combo_box_1a110d8b94ae2655ab28488b22843b47b1" prot="public" virt="virtual"><scope>wxBitmapComboBox</scope><name>SetSelection</name></member>
       <member refid="classwx_window_1a180312d5ad4a4a5ad805b8d52d67a74e" prot="public" virt="non-virtual"><scope>wxBitmapComboBox</scope><name>SetSize</name></member>
       <member refid="classwx_window_1a8e383bc6d5ca008965922a36c676aea0" prot="public" virt="non-virtual"><scope>wxBitmapComboBox</scope><name>SetSize</name></member>
       <member refid="classwx_window_1a030a928cd854de3def97c5720f14695b" prot="public" virt="non-virtual"><scope>wxBitmapComboBox</scope><name>SetSize</name></member>

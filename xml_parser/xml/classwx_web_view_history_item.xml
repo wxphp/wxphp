@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_web_view_history_item" kind="class" prot="public">
     <compoundname>wxWebViewHistoryItem</compoundname>
     <includes local="no">wx/webview.h</includes>
@@ -59,7 +59,7 @@
     <detaileddescription>
 <para><simplesect kind="since"><para>2.9.3 <heading level="2"></heading>
 </para></simplesect>
-Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxwebview" kindref="member">wxWebView</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__webview" kindref="compound">WebView</ref></para><para><simplesect kind="see"><para><ref refid="classwx_web_view" kindref="compound">wxWebView</ref> </para></simplesect>
+Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxwebview" kindref="member">wxWebView</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__webview" kindref="compound">WebView</ref></para><para><simplesect kind="see"><para><ref refid="classwx_web_view" kindref="compound">wxWebView</ref> </para></simplesect>
 </para>    </detaileddescription>
     <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="102" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" bodystart="101" bodyend="118"/>
     <listofallmembers>

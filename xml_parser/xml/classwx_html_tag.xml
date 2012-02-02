@@ -1,10 +1,9 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_html_tag" kind="class" prot="public">
     <compoundname>wxHtmlTag</compoundname>
     <includes local="no">wx/html/htmltag.h</includes>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_html_tag_1ae30db92928fe3d5e3a67d02978d7352d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
         <definition>int wxHtmlTag::ScanParam</definition>
@@ -163,7 +162,7 @@
         <detaileddescription>
 <para>See explanation (returned position is marked with &apos;|&apos;): <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bla<sp/>bla<sp/>bla<sp/>&lt;MYTAG&gt;<sp/>bla<sp/>bla<sp/></highlight><highlight class="keyword">internal</highlight><highlight class="normal"><sp/>text&lt;/MYTAG&gt;<sp/>bla<sp/>bla</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|</highlight></codeline>
-</programlisting></para><para><xrefsect id="deprecated_1_deprecated000022"><xreftitle>Deprecated</xreftitle><xrefdescription></xrefdescription></xrefsect><xrefsect id="todo_1_todo000035"><xreftitle>Todo</xreftitle><xrefdescription><para>provide deprecation description </para></xrefdescription></xrefsect></para>        </detaileddescription>
+</programlisting></para><para><xrefsect id="deprecated_1_deprecated000022"><xreftitle>Deprecated</xreftitle><xrefdescription></xrefdescription></xrefsect><xrefsect id="todo_1_todo000034"><xreftitle>Todo</xreftitle><xrefdescription><para>provide deprecation description </para></xrefdescription></xrefsect></para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmltag.h" line="48"/>
@@ -178,7 +177,7 @@
         <detaileddescription>
 <para>See explanation (returned position is marked with &apos;|&apos;): <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bla<sp/>bla<sp/>bla<sp/>&lt;MYTAG&gt;<sp/>bla<sp/>bla<sp/></highlight><highlight class="keyword">internal</highlight><highlight class="normal"><sp/>text&lt;/MYTAG&gt;<sp/>bla<sp/>bla</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|</highlight></codeline>
-</programlisting></para><para><xrefsect id="deprecated_1_deprecated000023"><xreftitle>Deprecated</xreftitle><xrefdescription></xrefdescription></xrefsect><xrefsect id="todo_1_todo000036"><xreftitle>Todo</xreftitle><xrefdescription><para>provide deprecation description </para></xrefdescription></xrefsect></para>        </detaileddescription>
+</programlisting></para><para><xrefsect id="deprecated_1_deprecated000023"><xreftitle>Deprecated</xreftitle><xrefdescription></xrefdescription></xrefsect><xrefsect id="todo_1_todo000035"><xreftitle>Todo</xreftitle><xrefdescription><para>provide deprecation description </para></xrefdescription></xrefsect></para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmltag.h" line="60"/>
@@ -193,7 +192,7 @@
         <detaileddescription>
 <para>See explanation (returned position is marked with &apos;|&apos;): <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bla<sp/>bla<sp/>bla<sp/>&lt;MYTAG&gt;<sp/>bla<sp/>bla<sp/></highlight><highlight class="keyword">internal</highlight><highlight class="normal"><sp/>text&lt;/MYTAG&gt;<sp/>bla<sp/>bla</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|</highlight></codeline>
-</programlisting></para><para><xrefsect id="deprecated_1_deprecated000024"><xreftitle>Deprecated</xreftitle><xrefdescription></xrefdescription></xrefsect><xrefsect id="todo_1_todo000037"><xreftitle>Todo</xreftitle><xrefdescription><para>provide deprecation description </para></xrefdescription></xrefsect></para>        </detaileddescription>
+</programlisting></para><para><xrefsect id="deprecated_1_deprecated000024"><xreftitle>Deprecated</xreftitle><xrefdescription></xrefdescription></xrefsect><xrefsect id="todo_1_todo000036"><xreftitle>Todo</xreftitle><xrefdescription><para>provide deprecation description </para></xrefdescription></xrefsect></para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmltag.h" line="72"/>
@@ -374,8 +373,8 @@ Example: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/
     <briefdescription>
 <para>This class represents a single HTML tag. </para>    </briefdescription>
     <detaileddescription>
-<para>It is used by <ref refid="overview__html_1overview_html_handlers" kindref="member">tag handlers</ref>.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxhtml" kindref="member">wxHTML</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__html" kindref="compound">HTML</ref> </para>    </detaileddescription>
+<para>It is used by <ref refid="overview_html_1overview_html_handlers" kindref="member">tag handlers</ref>.</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxhtml" kindref="member">wxHTML</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__html" kindref="compound">HTML</ref> </para>    </detaileddescription>
     <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmltag.h" line="19" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmltag.h" bodystart="18" bodyend="185"/>
     <listofallmembers>
       <member refid="classwx_html_tag_1a2361ea1ece9b127aa06d5d2fa262c2d4" prot="public" virt="non-virtual"><scope>wxHtmlTag</scope><name>GetAllParams</name></member>

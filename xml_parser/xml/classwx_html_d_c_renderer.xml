@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_html_d_c_renderer" kind="class" prot="public">
     <compoundname>wxHtmlDCRenderer</compoundname>
     <basecompoundref refid="classwx_object" prot="public" virt="non-virtual">wxObject</basecompoundref>
@@ -98,7 +98,7 @@
 <para></para></parameterdescription>
 </parameteritem>
 </parameterlist>
-<xrefsect id="todo_1_todo000038"><xreftitle>Todo</xreftitle><xrefdescription><para>docme </para></xrefdescription></xrefsect><parameterlist kind="param"><parameteritem>
+<xrefsect id="todo_1_todo000037"><xreftitle>Todo</xreftitle><xrefdescription><para>docme </para></xrefdescription></xrefsect><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>from</parametername>
 </parameternamelist>
@@ -325,34 +325,34 @@ Default font sizes are defined by constants wxHTML_FONT_SIZE_1, wxHTML_FONT_SIZE
 <para>This class can render HTML document into a specified area of a DC. </para>    </briefdescription>
     <detaileddescription>
 <para>You can use it in your own printing code, although use of <ref refid="classwx_html_easy_printing" kindref="compound">wxHtmlEasyPrinting</ref> or <ref refid="classwx_html_printout" kindref="compound">wxHtmlPrintout</ref> is strongly recommended.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxhtml" kindref="member">wxHTML</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__html" kindref="compound">HTML</ref> </para>    </detaileddescription>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxhtml" kindref="member">wxHTML</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__html" kindref="compound">HTML</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="6993">
+      <node id="6997">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="6992">
+      <node id="6996">
         <label>wxHtmlDCRenderer</label>
         <link refid="classwx_html_d_c_renderer"/>
-        <childnode refid="6993" relation="public-inheritance">
+        <childnode refid="6997" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="6995">
+      <node id="6999">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="6996" relation="usage">
+        <childnode refid="7000" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="6994">
+      <node id="6998">
         <label>wxHtmlDCRenderer</label>
         <link refid="classwx_html_d_c_renderer"/>
-        <childnode refid="6995" relation="public-inheritance">
+        <childnode refid="6999" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6996">
+      <node id="7000">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

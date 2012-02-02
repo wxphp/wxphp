@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_command" kind="class" prot="public">
     <compoundname>wxCommand</compoundname>
     <basecompoundref refid="classwx_object" prot="public" virt="non-virtual">wxObject</basecompoundref>
@@ -121,41 +121,41 @@
 <para><ref refid="classwx_command" kindref="compound">wxCommand</ref> is a base class for modelling an application command, which is an action usually performed by selecting a menu item, pressing a toolbar button or any other means provided by the application to change the data or view. </para>    </briefdescription>
     <detaileddescription>
 <para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__docview" kindref="compound">Document/View Framework</ref></para><para><simplesect kind="see"><para><ref refid="overview__docview_1overview_docview_wxcommand" kindref="member">wxCommand overview</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__docview" kindref="compound">Document/View Framework</ref></para><para><simplesect kind="see"><para><ref refid="overview_docview_1overview_docview_wxcommand" kindref="member">wxCommand overview</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="4951">
+      <node id="4955">
         <label>wxRichTextCommand</label>
         <link refid="classwx_rich_text_command"/>
-        <childnode refid="4949" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4950">
-        <label>wxObject</label>
-        <link refid="classwx_object"/>
-      </node>
-      <node id="4949">
-        <label>wxCommand</label>
-        <link refid="classwx_command"/>
-        <childnode refid="4950" relation="public-inheritance">
-        </childnode>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
-      <node id="4953">
-        <label>wxObject</label>
-        <link refid="classwx_object"/>
-        <childnode refid="4954" relation="usage">
-          <edgelabel>m_refData</edgelabel>
-        </childnode>
-      </node>
-      <node id="4952">
-        <label>wxCommand</label>
-        <link refid="classwx_command"/>
         <childnode refid="4953" relation="public-inheritance">
         </childnode>
       </node>
       <node id="4954">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+      </node>
+      <node id="4953">
+        <label>wxCommand</label>
+        <link refid="classwx_command"/>
+        <childnode refid="4954" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4957">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="4958" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="4956">
+        <label>wxCommand</label>
+        <link refid="classwx_command"/>
+        <childnode refid="4957" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4958">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

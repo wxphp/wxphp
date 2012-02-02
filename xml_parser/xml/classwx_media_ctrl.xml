@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_media_ctrl" kind="class" prot="public">
     <compoundname>wxMediaCtrl</compoundname>
     <basecompoundref refid="classwx_control" prot="public" virt="non-virtual">wxControl</basecompoundref>
@@ -469,7 +469,7 @@
         <briefdescription>
 <para>Seeks to a position within the movie. </para>        </briefdescription>
         <detaileddescription>
-<para><xrefsect id="todo_1_todo000040"><xreftitle>Todo</xreftitle><xrefdescription><para>Document the wxSeekMode parameter <emphasis>mode</emphasis>, and perhaps also the wxFileOffset and wxSeekMode themselves. </para></xrefdescription></xrefsect></para>        </detaileddescription>
+<para><xrefsect id="todo_1_todo000039"><xreftitle>Todo</xreftitle><xrefdescription><para>Document the wxSeekMode parameter <emphasis>mode</emphasis>, and perhaps also the wxFileOffset and wxSeekMode themselves. </para></xrefdescription></xrefsect></para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mediactrl.h" line="379"/>
@@ -563,7 +563,7 @@
 <sect1 id="classwx_media_ctrl_1mediactrl_operation">
 <title>Operation</title>
 <para>When <ref refid="classwx_media_ctrl" kindref="compound">wxMediaCtrl</ref> plays a file, it plays until the stop position is reached (currently the end of the file/stream). Right before it hits the end of the stream, it fires off a <computeroutput>EVT_MEDIA_STOP</computeroutput> event to its parent window, at which point the event handler can choose to veto the event, preventing the stream from actually stopping.</para><para>Example:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//connect<sp/>to<sp/>the<sp/>media<sp/>event</highlight><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="classwx_evt_handler_1a78719e8b82c9f9c6e4056b3449df1943" kindref="member" tooltip="Connects the given function dynamically with the event handler, id and event type...">Connect</ref>(wxMY_ID,<sp/>wxEVT_MEDIA_STOP,<sp/>(wxObjectEventFunction)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="classwx_evt_handler_1a78719e8b82c9f9c6e4056b3449df1943" kindref="member" tooltip="Connects the given function dynamically with the event handler, id and event type.">Connect</ref>(wxMY_ID,<sp/>wxEVT_MEDIA_STOP,<sp/>(wxObjectEventFunction)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>(wxEventFunction)(wxMediaEventFunction)<sp/>&amp;MyFrame::OnMediaStop);</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//...</highlight><highlight class="normal"></highlight></codeline>
@@ -592,62 +592,23 @@
 <sect1 id="classwx_media_ctrl_1mediactrl_creating_backend">
 <title>Creating a backend</title>
 <para>Creating a backend for <ref refid="classwx_media_ctrl" kindref="compound">wxMediaCtrl</ref> is a rather simple process. Simply derive from wxMediaBackendCommonBase and implement the methods you want. The methods in wxMediaBackend correspond to those in <ref refid="classwx_media_ctrl" kindref="compound">wxMediaCtrl</ref> except for wxMediaCtrl::CreateControl which does the actual creation of the control, in cases where a custom control is not needed you may simply call <ref refid="classwx_control_1abe23789c94c86907463a0e8434be822a" kindref="member">wxControl::Create()</ref>.</para><para>You need to make sure to use the <computeroutput>DECLARE_CLASS</computeroutput> and <computeroutput>IMPLEMENT_CLASS</computeroutput> macros.</para><para>The only real tricky part is that you need to make sure the file in compiled in, which if there are just backends in there will not happen and you may need to use a force link hack (see <ulink url="http://www.wxwidgets.org/wiki/index.php/RTTI">http://www.wxwidgets.org/wiki/index.php/RTTI</ulink>).</para><para>This is a rather simple example of how to create a backend in the <ref refid="classwx_active_x_container" kindref="compound">wxActiveXContainer</ref> documentation.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxmedia" kindref="member">wxMedia</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__media" kindref="compound">Multimedia</ref></para><para><simplesect kind="see"><para><ref refid="classwx_media_event" kindref="compound">wxMediaEvent</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxmedia" kindref="member">wxMedia</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__media" kindref="compound">Multimedia</ref></para><para><simplesect kind="see"><para><ref refid="classwx_media_event" kindref="compound">wxMediaEvent</ref> </para></simplesect>
 </para></sect1>
     </detaileddescription>
     <inheritancegraph>
-      <node id="7645">
-        <label>wxObject</label>
-        <link refid="classwx_object"/>
-      </node>
-      <node id="7644">
-        <label>wxEvtHandler</label>
-        <link refid="classwx_evt_handler"/>
-        <childnode refid="7645" relation="public-inheritance">
-        </childnode>
-        <childnode refid="7646" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="7646">
-        <label>wxTrackable</label>
-        <link refid="classwx_trackable"/>
-      </node>
-      <node id="7642">
-        <label>wxControl</label>
-        <link refid="classwx_control"/>
-        <childnode refid="7643" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="7643">
-        <label>wxWindow</label>
-        <link refid="classwx_window"/>
-        <childnode refid="7644" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="7641">
-        <label>wxMediaCtrl</label>
-        <link refid="classwx_media_ctrl"/>
-        <childnode refid="7642" relation="public-inheritance">
-        </childnode>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
       <node id="7651">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="7652" relation="usage">
-          <edgelabel>m_refData</edgelabel>
-        </childnode>
       </node>
       <node id="7650">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
         <childnode refid="7651" relation="public-inheritance">
         </childnode>
-        <childnode refid="7653" relation="public-inheritance">
+        <childnode refid="7652" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7653">
+      <node id="7652">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
@@ -669,7 +630,46 @@
         <childnode refid="7648" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7652">
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="7657">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="7658" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="7656">
+        <label>wxEvtHandler</label>
+        <link refid="classwx_evt_handler"/>
+        <childnode refid="7657" relation="public-inheritance">
+        </childnode>
+        <childnode refid="7659" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7659">
+        <label>wxTrackable</label>
+        <link refid="classwx_trackable"/>
+      </node>
+      <node id="7654">
+        <label>wxControl</label>
+        <link refid="classwx_control"/>
+        <childnode refid="7655" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7655">
+        <label>wxWindow</label>
+        <link refid="classwx_window"/>
+        <childnode refid="7656" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7653">
+        <label>wxMediaCtrl</label>
+        <link refid="classwx_media_ctrl"/>
+        <childnode refid="7654" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7658">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

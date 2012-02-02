@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_panel" kind="class" prot="public">
     <compoundname>wxPanel</compoundname>
     <basecompoundref refid="classwx_window" prot="public" virt="non-virtual">wxWindow</basecompoundref>
@@ -281,143 +281,143 @@
 <listitem><para>EVT_NAVIGATION_KEY(func): Process a navigation key event. </para></listitem>
 </itemizedlist>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__miscwnd" kindref="compound">Miscellaneous Windows</ref></para><para><simplesect kind="see"><para><ref refid="classwx_dialog" kindref="compound">wxDialog</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__miscwnd" kindref="compound">Miscellaneous Windows</ref></para><para><simplesect kind="see"><para><ref refid="classwx_dialog" kindref="compound">wxDialog</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="8549">
+      <node id="8557">
         <label>wxHScrolledWindow</label>
         <link refid="classwx_h_scrolled_window"/>
-        <childnode refid="8543" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="8551">
-        <label>wxPreviewControlBar</label>
-        <link refid="classwx_preview_control_bar"/>
-        <childnode refid="8543" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="8554">
-        <label>wxVListBox</label>
-        <link refid="classwx_v_list_box"/>
-        <childnode refid="8553" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="8546">
-        <label>wxObject</label>
-        <link refid="classwx_object"/>
-      </node>
-      <node id="8557">
-        <label>wxSimpleHtmlListBox</label>
-        <link refid="classwx_simple_html_list_box"/>
-        <childnode refid="8555" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="8553">
-        <label>wxVScrolledWindow</label>
-        <link refid="classwx_v_scrolled_window"/>
-        <childnode refid="8543" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="8545">
-        <label>wxEvtHandler</label>
-        <link refid="classwx_evt_handler"/>
-        <childnode refid="8546" relation="public-inheritance">
-        </childnode>
-        <childnode refid="8547" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="8543">
-        <label>wxPanel</label>
-        <link refid="classwx_panel"/>
-        <childnode refid="8544" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="8547">
-        <label>wxTrackable</label>
-        <link refid="classwx_trackable"/>
-      </node>
-      <node id="8556">
-        <label>wxRichTextStyleListBox</label>
-        <link refid="classwx_rich_text_style_list_box"/>
-        <childnode refid="8555" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="8544">
-        <label>wxWindow</label>
-        <link refid="classwx_window"/>
-        <childnode refid="8545" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="8555">
-        <label>wxHtmlListBox</label>
-        <link refid="classwx_html_list_box"/>
-        <childnode refid="8554" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="8550">
-        <label>wxHVScrolledWindow</label>
-        <link refid="classwx_h_v_scrolled_window"/>
-        <childnode refid="8543" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="8552">
-        <label>wxPropertyGridManager</label>
-        <link refid="classwx_property_grid_manager"/>
-        <childnode refid="8543" relation="public-inheritance">
+        <childnode refid="8551" relation="public-inheritance">
         </childnode>
       </node>
       <node id="8559">
-        <label>wxWizardPageSimple</label>
-        <link refid="classwx_wizard_page_simple"/>
-        <childnode refid="8558" relation="public-inheritance">
+        <label>wxPreviewControlBar</label>
+        <link refid="classwx_preview_control_bar"/>
+        <childnode refid="8551" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8548">
-        <label>wxEditableListBox</label>
-        <link refid="classwx_editable_list_box"/>
-        <childnode refid="8543" relation="public-inheritance">
+      <node id="8562">
+        <label>wxVListBox</label>
+        <link refid="classwx_v_list_box"/>
+        <childnode refid="8561" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8554">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+      </node>
+      <node id="8565">
+        <label>wxSimpleHtmlListBox</label>
+        <link refid="classwx_simple_html_list_box"/>
+        <childnode refid="8563" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8561">
+        <label>wxVScrolledWindow</label>
+        <link refid="classwx_v_scrolled_window"/>
+        <childnode refid="8551" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8553">
+        <label>wxEvtHandler</label>
+        <link refid="classwx_evt_handler"/>
+        <childnode refid="8554" relation="public-inheritance">
+        </childnode>
+        <childnode refid="8555" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8551">
+        <label>wxPanel</label>
+        <link refid="classwx_panel"/>
+        <childnode refid="8552" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8555">
+        <label>wxTrackable</label>
+        <link refid="classwx_trackable"/>
+      </node>
+      <node id="8564">
+        <label>wxRichTextStyleListBox</label>
+        <link refid="classwx_rich_text_style_list_box"/>
+        <childnode refid="8563" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8552">
+        <label>wxWindow</label>
+        <link refid="classwx_window"/>
+        <childnode refid="8553" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8563">
+        <label>wxHtmlListBox</label>
+        <link refid="classwx_html_list_box"/>
+        <childnode refid="8562" relation="public-inheritance">
         </childnode>
       </node>
       <node id="8558">
+        <label>wxHVScrolledWindow</label>
+        <link refid="classwx_h_v_scrolled_window"/>
+        <childnode refid="8551" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8560">
+        <label>wxPropertyGridManager</label>
+        <link refid="classwx_property_grid_manager"/>
+        <childnode refid="8551" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8567">
+        <label>wxWizardPageSimple</label>
+        <link refid="classwx_wizard_page_simple"/>
+        <childnode refid="8566" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8556">
+        <label>wxEditableListBox</label>
+        <link refid="classwx_editable_list_box"/>
+        <childnode refid="8551" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8566">
         <label>wxWizardPage</label>
         <link refid="classwx_wizard_page"/>
-        <childnode refid="8543" relation="public-inheritance">
+        <childnode refid="8551" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="8563">
+      <node id="8571">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="8564" relation="usage">
+        <childnode refid="8572" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="8562">
+      <node id="8570">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="8563" relation="public-inheritance">
+        <childnode refid="8571" relation="public-inheritance">
         </childnode>
-        <childnode refid="8565" relation="public-inheritance">
+        <childnode refid="8573" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8560">
+      <node id="8568">
         <label>wxPanel</label>
         <link refid="classwx_panel"/>
-        <childnode refid="8561" relation="public-inheritance">
+        <childnode refid="8569" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8565">
+      <node id="8573">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="8561">
+      <node id="8569">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="8562" relation="public-inheritance">
+        <childnode refid="8570" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8564">
+      <node id="8572">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

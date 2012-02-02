@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_scroll_bar" kind="class" prot="public">
     <compoundname>wxScrollBar</compoundname>
     <basecompoundref refid="classwx_control" prot="public" virt="non-virtual">wxControl</basecompoundref>
@@ -330,6 +330,19 @@
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scrolbar.h" line="242"/>
       </memberdef>
+      <memberdef kind="function" id="classwx_scroll_bar_1a8bfc3d79b68fbc4cc67c81bdc39e253a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxScrollBar::IsVertical</definition>
+        <argsstring>() const </argsstring>
+        <name>IsVertical</name>
+        <briefdescription>
+<para>Returns true for scrollbars that have the vertical style set. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scrolbar.h" line="247"/>
+      </memberdef>
       </sectiondef>
     <briefdescription>
 <para>A <ref refid="classwx_scroll_bar" kindref="compound">wxScrollBar</ref> is a control that represents a horizontal or vertical scrollbar. </para>    </briefdescription>
@@ -366,89 +379,89 @@
 </para><sect1 id="classwx_scroll_bar_1scrollbar_diff">
 <title>The difference between EVT_SCROLL_THUMBRELEASE and EVT_SCROLL_CHANGED</title>
 <para>The EVT_SCROLL_THUMBRELEASE event is only emitted when actually dragging the thumb using the mouse and releasing it (This EVT_SCROLL_THUMBRELEASE event is also followed by an EVT_SCROLL_CHANGED event).</para><para>The EVT_SCROLL_CHANGED event also occurs when using the keyboard to change the thumb position, and when clicking next to the thumb (In all these cases the EVT_SCROLL_THUMBRELEASE event does not happen).</para><para>In short, the EVT_SCROLL_CHANGED event is triggered when scrolling/moving has finished independently of the way it had started. Please see the widgets sample (&quot;Slider&quot; page) to see the difference between EVT_SCROLL_THUMBRELEASE and EVT_SCROLL_CHANGED in action.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref> <htmlonly> &lt;br&gt;&lt;div&gt;&lt;span class=&apos;appearance&apos;&gt;Appearance:&lt;/span&gt;&lt;br&gt;&lt;table class=&apos;appearance&apos;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&apos;wxmsw/scrollbar.png&apos; alt=&apos;wxMSW appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxgtk/scrollbar.png&apos; alt=&apos;wxGTK appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxmac/scrollbar.png&apos; alt=&apos;wxMac appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;wxMSW appearance&lt;/td&gt;&lt;td&gt;wxGTK appearance&lt;/td&gt;&lt;td&gt;wxMac appearance&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt; </htmlonly></para><para><simplesect kind="see"><para><ref refid="overview__scrolling" kindref="compound">Scrolled Windows</ref>, <ref refid="overview__events" kindref="compound">Events and Event Handling</ref>, <ref refid="classwx_scrolled" kindref="compound">wxScrolled</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref> <htmlonly> &lt;br&gt;&lt;div&gt;&lt;span class=&apos;appearance&apos;&gt;Appearance:&lt;/span&gt;&lt;br&gt;&lt;table class=&apos;appearance&apos;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&apos;wxmsw/scrollbar.png&apos; alt=&apos;wxMSW appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxgtk/scrollbar.png&apos; alt=&apos;wxGTK appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxmac/scrollbar.png&apos; alt=&apos;wxMac appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;wxMSW appearance&lt;/td&gt;&lt;td&gt;wxGTK appearance&lt;/td&gt;&lt;td&gt;wxMac appearance&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt; </htmlonly></para><para><simplesect kind="see"><para><ref refid="overview_scrolling" kindref="compound">Scrolled Windows</ref>, <ref refid="overview_events" kindref="compound">Events and Event Handling</ref>, <ref refid="classwx_scrolled" kindref="compound">wxScrolled</ref> </para></simplesect>
 </para></sect1>
     </detaileddescription>
     <inheritancegraph>
-      <node id="10041">
+      <node id="10101">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="10037">
+      <node id="10097">
         <label>wxScrollBar</label>
         <link refid="classwx_scroll_bar"/>
-        <childnode refid="10038" relation="public-inheritance">
+        <childnode refid="10098" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10040">
+      <node id="10100">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="10041" relation="public-inheritance">
+        <childnode refid="10101" relation="public-inheritance">
         </childnode>
-        <childnode refid="10042" relation="public-inheritance">
+        <childnode refid="10102" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10042">
+      <node id="10102">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="10038">
+      <node id="10098">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="10039" relation="public-inheritance">
+        <childnode refid="10099" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10039">
+      <node id="10099">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="10040" relation="public-inheritance">
+        <childnode refid="10100" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10047">
+      <node id="10107">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="10048" relation="usage">
+        <childnode refid="10108" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="10043">
+      <node id="10103">
         <label>wxScrollBar</label>
         <link refid="classwx_scroll_bar"/>
-        <childnode refid="10044" relation="public-inheritance">
+        <childnode refid="10104" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10046">
+      <node id="10106">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="10047" relation="public-inheritance">
+        <childnode refid="10107" relation="public-inheritance">
         </childnode>
-        <childnode refid="10049" relation="public-inheritance">
+        <childnode refid="10109" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10049">
+      <node id="10109">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="10044">
+      <node id="10104">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="10045" relation="public-inheritance">
+        <childnode refid="10105" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10045">
+      <node id="10105">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="10046" relation="public-inheritance">
+        <childnode refid="10106" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10048">
+      <node id="10108">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scrolbar.h" line="113" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scrolbar.h" bodystart="112" bodyend="243"/>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scrolbar.h" line="113" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scrolbar.h" bodystart="112" bodyend="248"/>
     <listofallmembers>
       <member refid="classwx_window_1a3afbd49b1ea2f8275e3600dcac102923" prot="public" virt="virtual"><scope>wxScrollBar</scope><name>AcceptsFocus</name></member>
       <member refid="classwx_window_1a2370bdd3ab08e7ef3c7555c6aa8301b8" prot="public" virt="virtual"><scope>wxScrollBar</scope><name>AcceptsFocusFromKeyboard</name></member>
@@ -632,6 +645,7 @@
       <member refid="classwx_window_1a657ef8b6055eb06df894ac5e6ddfecf8" prot="public" virt="non-virtual"><scope>wxScrollBar</scope><name>IsThisEnabled</name></member>
       <member refid="classwx_window_1a0002826ad05f2a5661b4c8995713f37f" prot="public" virt="virtual"><scope>wxScrollBar</scope><name>IsTopLevel</name></member>
       <member refid="classwx_evt_handler_1a360fdeefcf53b62fb49fb828406bb8a6" prot="public" virt="non-virtual"><scope>wxScrollBar</scope><name>IsUnlinked</name></member>
+      <member refid="classwx_scroll_bar_1a8bfc3d79b68fbc4cc67c81bdc39e253a" prot="public" virt="non-virtual"><scope>wxScrollBar</scope><name>IsVertical</name></member>
       <member refid="classwx_window_1a1b143c3e72bd0af533b76db4830a6113" prot="public" virt="virtual"><scope>wxScrollBar</scope><name>Layout</name></member>
       <member refid="classwx_window_1ade808784f0e64d9985e2f279b5ca8c02" prot="public" virt="non-virtual"><scope>wxScrollBar</scope><name>LineDown</name></member>
       <member refid="classwx_window_1afc0816a174ceee6d36d1995c6824a273" prot="public" virt="non-virtual"><scope>wxScrollBar</scope><name>LineUp</name></member>

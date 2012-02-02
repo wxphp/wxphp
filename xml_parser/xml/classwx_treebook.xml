@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_treebook" kind="class" prot="public">
     <compoundname>wxTreebook</compoundname>
     <basecompoundref refid="classwx_book_ctrl_base" prot="public" virt="non-virtual">wxBookCtrlBase</basecompoundref>
@@ -409,107 +409,107 @@
 <listitem><para>EVT_TREEBOOK_NODE_EXPANDED(id,  func): The page node is going to be expanded. Processes a <computeroutput>wxEVT_COMMAND_TREEBOOK_NODE_EXPANDED</computeroutput> event. </para></listitem>
 </itemizedlist>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__bookctrl" kindref="compound">Book Controls</ref></para><para><simplesect kind="see"><para><ref refid="interface_2wx_2bookctrl_8h_1ab367c06ea9df73f0d3bf3c464afdb7d6" kindref="member">wxBookCtrl</ref>, <ref refid="classwx_book_ctrl_event" kindref="compound">wxBookCtrlEvent</ref>, <ref refid="classwx_notebook" kindref="compound">wxNotebook</ref>, <ref refid="classwx_tree_ctrl" kindref="compound">wxTreeCtrl</ref>, <ref refid="classwx_image_list" kindref="compound">wxImageList</ref>, <ref refid="overview__bookctrl" kindref="compound">wxBookCtrl Overview</ref>, <ref refid="page__samples_1page_samples_notebook" kindref="member">Notebook Sample</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__bookctrl" kindref="compound">Book Controls</ref></para><para><simplesect kind="see"><para><ref refid="interface_2wx_2bookctrl_8h_1ab367c06ea9df73f0d3bf3c464afdb7d6" kindref="member">wxBookCtrl</ref>, <ref refid="classwx_book_ctrl_event" kindref="compound">wxBookCtrlEvent</ref>, <ref refid="classwx_notebook" kindref="compound">wxNotebook</ref>, <ref refid="classwx_tree_ctrl" kindref="compound">wxTreeCtrl</ref>, <ref refid="classwx_image_list" kindref="compound">wxImageList</ref>, <ref refid="overview_bookctrl" kindref="compound">wxBookCtrl Overview</ref>, <ref refid="page_samples_1page_samples_notebook" kindref="member">Notebook Sample</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="11111">
+      <node id="11172">
         <label>wxBookCtrlBase</label>
         <link refid="classwx_book_ctrl_base"/>
-        <childnode refid="11112" relation="public-inheritance">
+        <childnode refid="11173" relation="public-inheritance">
         </childnode>
-        <childnode refid="11117" relation="public-inheritance">
+        <childnode refid="11178" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11115">
+      <node id="11176">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="11114">
+      <node id="11175">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="11115" relation="public-inheritance">
+        <childnode refid="11176" relation="public-inheritance">
         </childnode>
-        <childnode refid="11116" relation="public-inheritance">
+        <childnode refid="11177" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11110">
+      <node id="11171">
         <label>wxTreebook</label>
         <link refid="classwx_treebook"/>
-        <childnode refid="11111" relation="public-inheritance">
+        <childnode refid="11172" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11116">
+      <node id="11177">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="11112">
+      <node id="11173">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="11113" relation="public-inheritance">
+        <childnode refid="11174" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11113">
+      <node id="11174">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="11114" relation="public-inheritance">
+        <childnode refid="11175" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11117">
+      <node id="11178">
         <label>wxWithImages</label>
         <link refid="classwx_with_images"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="11119">
+      <node id="11180">
         <label>wxBookCtrlBase</label>
         <link refid="classwx_book_ctrl_base"/>
-        <childnode refid="11120" relation="public-inheritance">
+        <childnode refid="11181" relation="public-inheritance">
         </childnode>
-        <childnode refid="11126" relation="public-inheritance">
+        <childnode refid="11187" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11123">
+      <node id="11184">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="11124" relation="usage">
+        <childnode refid="11185" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="11122">
+      <node id="11183">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="11123" relation="public-inheritance">
+        <childnode refid="11184" relation="public-inheritance">
         </childnode>
-        <childnode refid="11125" relation="public-inheritance">
+        <childnode refid="11186" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11118">
+      <node id="11179">
         <label>wxTreebook</label>
         <link refid="classwx_treebook"/>
-        <childnode refid="11119" relation="public-inheritance">
+        <childnode refid="11180" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11125">
+      <node id="11186">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="11120">
+      <node id="11181">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="11121" relation="public-inheritance">
+        <childnode refid="11182" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11121">
+      <node id="11182">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="11122" relation="public-inheritance">
+        <childnode refid="11183" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11126">
+      <node id="11187">
         <label>wxWithImages</label>
         <link refid="classwx_with_images"/>
       </node>
-      <node id="11124">
+      <node id="11185">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

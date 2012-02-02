@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_gauge" kind="class" prot="public">
     <compoundname>wxGauge</compoundname>
     <basecompoundref refid="classwx_control" prot="public" virt="non-virtual">wxControl</basecompoundref>
@@ -366,83 +366,83 @@
 <listitem><para>wxGA_SMOOTH: Creates smooth progress bar with one pixel wide update step (not supported by all platforms). </para></listitem>
 </itemizedlist>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref> <htmlonly> &lt;br&gt;&lt;div&gt;&lt;span class=&apos;appearance&apos;&gt;Appearance:&lt;/span&gt;&lt;br&gt;&lt;table class=&apos;appearance&apos;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&apos;wxmsw/gauge.png&apos; alt=&apos;wxMSW appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxgtk/gauge.png&apos; alt=&apos;wxGTK appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxmac/gauge.png&apos; alt=&apos;wxMac appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;wxMSW appearance&lt;/td&gt;&lt;td&gt;wxGTK appearance&lt;/td&gt;&lt;td&gt;wxMac appearance&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt; </htmlonly></para><para><simplesect kind="see"><para><ref refid="classwx_slider" kindref="compound">wxSlider</ref>, <ref refid="classwx_scroll_bar" kindref="compound">wxScrollBar</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref> <htmlonly> &lt;br&gt;&lt;div&gt;&lt;span class=&apos;appearance&apos;&gt;Appearance:&lt;/span&gt;&lt;br&gt;&lt;table class=&apos;appearance&apos;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&apos;wxmsw/gauge.png&apos; alt=&apos;wxMSW appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxgtk/gauge.png&apos; alt=&apos;wxGTK appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxmac/gauge.png&apos; alt=&apos;wxMac appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;wxMSW appearance&lt;/td&gt;&lt;td&gt;wxGTK appearance&lt;/td&gt;&lt;td&gt;wxMac appearance&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt; </htmlonly></para><para><simplesect kind="see"><para><ref refid="classwx_slider" kindref="compound">wxSlider</ref>, <ref refid="classwx_scroll_bar" kindref="compound">wxScrollBar</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="6469">
+      <node id="6473">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="6468">
+      <node id="6472">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="6469" relation="public-inheritance">
+        <childnode refid="6473" relation="public-inheritance">
         </childnode>
-        <childnode refid="6470" relation="public-inheritance">
+        <childnode refid="6474" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6470">
+      <node id="6474">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="6466">
+      <node id="6470">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="6467" relation="public-inheritance">
+        <childnode refid="6471" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6465">
+      <node id="6469">
         <label>wxGauge</label>
         <link refid="classwx_gauge"/>
-        <childnode refid="6466" relation="public-inheritance">
+        <childnode refid="6470" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6467">
+      <node id="6471">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="6468" relation="public-inheritance">
+        <childnode refid="6472" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="6475">
+      <node id="6479">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="6476" relation="usage">
+        <childnode refid="6480" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="6474">
+      <node id="6478">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="6475" relation="public-inheritance">
+        <childnode refid="6479" relation="public-inheritance">
         </childnode>
-        <childnode refid="6477" relation="public-inheritance">
+        <childnode refid="6481" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6477">
+      <node id="6481">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="6472">
+      <node id="6476">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="6473" relation="public-inheritance">
+        <childnode refid="6477" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6471">
+      <node id="6475">
         <label>wxGauge</label>
         <link refid="classwx_gauge"/>
-        <childnode refid="6472" relation="public-inheritance">
+        <childnode refid="6476" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6473">
+      <node id="6477">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="6474" relation="public-inheritance">
+        <childnode refid="6478" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6476">
+      <node id="6480">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

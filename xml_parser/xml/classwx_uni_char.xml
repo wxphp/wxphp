@@ -1,10 +1,9 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_uni_char" kind="class" prot="public">
     <compoundname>wxUniChar</compoundname>
     <includes local="no">wx/unichar.h</includes>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_uni_char_1a647fb6c5e9bf0bce95ad3593a99e6b24" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
         <definition>wxUniChar::wxUniChar</definition>
@@ -41,7 +40,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_uni_char_1a40495a76028f6f2f8193994985f9c5b8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type></type>
         <definition>wxUniChar::operator char</definition>
@@ -161,7 +159,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_uni_char_1aaf6575553d1096ad56edf57f9c534c4c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_uni_char" kindref="compound">wxUniChar</ref> &amp;</type>
         <definition>wxUniChar&amp; wxUniChar::operator=</definition>
@@ -557,7 +554,7 @@
 <para>This class represents a single Unicode character. </para>    </briefdescription>
     <detaileddescription>
 <para>It can be converted to and from <computeroutput>char</computeroutput> or <computeroutput>wchar_t</computeroutput> and implements commonly used character operations.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__data" kindref="compound">Data Structures</ref> </para>    </detaileddescription>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__data" kindref="compound">Data Structures</ref> </para>    </detaileddescription>
     <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/unichar.h" line="19" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/unichar.h" bodystart="18" bodyend="118"/>
     <listofallmembers>
       <member refid="classwx_uni_char_1a47afeef71d421805e40aaee1869ba6aa" prot="public" virt="non-virtual"><scope>wxUniChar</scope><name>GetAsChar</name></member>

@@ -1,8 +1,41 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="wrapsizer_8h" kind="file">
     <compoundname>wrapsizer.h</compoundname>
     <innerclass refid="classwx_wrap_sizer" prot="public">wxWrapSizer</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="wrapsizer_8h_1a5d76b81b0ad4c19007a781d4edb8181f" prot="public" static="no">
+        <name>@28</name>
+        <enumvalue id="wrapsizer_8h_1a5d76b81b0ad4c19007a781d4edb8181fad506117318cea82c1019b7ae37b63b5b" prot="public">
+          <name>wxEXTEND_LAST_ON_EACH_LINE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="wrapsizer_8h_1a5d76b81b0ad4c19007a781d4edb8181fa0e0fc36ca329e79a6dd14314abefc437" prot="public">
+          <name>wxREMOVE_LEADING_SPACES</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="wrapsizer_8h_1a5d76b81b0ad4c19007a781d4edb8181fab1da419f2b505b5fd2450f49b997ce39" prot="public">
+          <name>wxWRAPSIZER_DEFAULT_FLAGS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wrapsizer.h" line="11" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wrapsizer.h" bodystart="10" bodyend="15"/>
+      </memberdef>
+      </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

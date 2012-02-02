@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="notebook_8h" kind="file">
     <compoundname>notebook.h</compoundname>
     <innerclass refid="classwx_notebook" prot="public">wxNotebook</innerclass>
@@ -105,9 +105,9 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="enum">
-      <memberdef kind="enum" id="notebook_8h_1a05589fbab0657f08285ebdfe93f5ec9e" prot="public" static="no">
-        <name>@13</name>
-        <enumvalue id="notebook_8h_1a05589fbab0657f08285ebdfe93f5ec9eab10830616b962f888b58ef019ecbe171" prot="public">
+      <memberdef kind="enum" id="notebook_8h_1aaf105ae5beaca1dee30ae54530691fce" prot="public" static="no">
+        <name>@16</name>
+        <enumvalue id="notebook_8h_1aaf105ae5beaca1dee30ae54530691fceab10830616b962f888b58ef019ecbe171" prot="public">
           <name>wxNB_HITTEST_NOWHERE</name>
           <initializer> wxBK_HITTEST_NOWHERE</initializer>
           <briefdescription>
@@ -115,7 +115,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="notebook_8h_1a05589fbab0657f08285ebdfe93f5ec9ea3ebf1a3fe4fec8c6b4edd7e08b8dbd5b" prot="public">
+        <enumvalue id="notebook_8h_1aaf105ae5beaca1dee30ae54530691fcea3ebf1a3fe4fec8c6b4edd7e08b8dbd5b" prot="public">
           <name>wxNB_HITTEST_ONICON</name>
           <initializer> wxBK_HITTEST_ONICON</initializer>
           <briefdescription>
@@ -123,7 +123,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="notebook_8h_1a05589fbab0657f08285ebdfe93f5ec9ea6ea1c33cb76591d471819120aff186e9" prot="public">
+        <enumvalue id="notebook_8h_1aaf105ae5beaca1dee30ae54530691fcea6ea1c33cb76591d471819120aff186e9" prot="public">
           <name>wxNB_HITTEST_ONLABEL</name>
           <initializer> wxBK_HITTEST_ONLABEL</initializer>
           <briefdescription>
@@ -131,7 +131,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="notebook_8h_1a05589fbab0657f08285ebdfe93f5ec9ea905db9814f7dca27fc67cc8579826587" prot="public">
+        <enumvalue id="notebook_8h_1aaf105ae5beaca1dee30ae54530691fcea905db9814f7dca27fc67cc8579826587" prot="public">
           <name>wxNB_HITTEST_ONITEM</name>
           <initializer> wxBK_HITTEST_ONITEM</initializer>
           <briefdescription>
@@ -139,7 +139,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="notebook_8h_1a05589fbab0657f08285ebdfe93f5ec9ea1cbb20cbdeabc3428dc481826f55b7f8" prot="public">
+        <enumvalue id="notebook_8h_1aaf105ae5beaca1dee30ae54530691fcea1cbb20cbdeabc3428dc481826f55b7f8" prot="public">
           <name>wxNB_HITTEST_ONPAGE</name>
           <initializer> wxBK_HITTEST_ONPAGE</initializer>
           <briefdescription>

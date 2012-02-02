@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_m_d_i_parent_frame" kind="class" prot="public">
     <compoundname>wxMDIParentFrame</compoundname>
     <basecompoundref refid="classwx_frame" prot="public" virt="non-virtual">wxFrame</basecompoundref>
@@ -356,113 +356,113 @@ You might wish to derive from <ref refid="classwx_m_d_i_client_window" kindref="
 <para>MDI is a user-interface model in which all the window reside inside the single parent window as opposed to being separate from each other. It remains popular despite dire warnings from Microsoft itself (which popularized this model in the first model) that MDI is obsolete.</para><para>An MDI parent frame always has a <ref refid="classwx_m_d_i_client_window" kindref="compound">wxMDIClientWindow</ref> associated with it, which is the parent for MDI child frames. In the simplest case, the client window takes up the entire parent frame area but it is also possible to resize it to be smaller in order to have other windows in the frame, a typical example is using a sidebar along one of the window edges.</para><para>The appearance of MDI applications differs between different ports. The classic MDI model, with child windows which can be independently moved, resized etc, is only available under MSW, which provides native support for it. In Mac ports, multiple top level windows are used for the MDI children too and the MDI parent frame itself is invisible, to accommodate the native look and feel requirements. In all the other ports, a tab-based MDI implementation (sometimes called TDI) is used and so at most one MDI child is visible at any moment (child frames are always maximized).</para><para><simplesect kind="remark"><para></para></simplesect>
 Although it is possible to have multiple MDI parent frames, a typical MDI application has a single MDI parent frame window inside which multiple MDI child frames, i.e. objects of class <ref refid="classwx_m_d_i_child_frame" kindref="compound">wxMDIChildFrame</ref>, can be created.</para><para><heading level="2">Styles</heading>
 </para><para>This class supports the following styles:</para><para> There are no special styles for this class, all <ref refid="classwx_frame" kindref="compound">wxFrame</ref> styles apply to it in the usual way. The only exception is that wxHSCROLL and wxVSCROLL styles apply not to the frame itself but to the client window, so that using them enables horizontal and vertical scrollbars for this window and not the frame.</para><para> </para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__managedwnd" kindref="compound">Managed Windows</ref></para><para><simplesect kind="see"><para><ref refid="classwx_m_d_i_child_frame" kindref="compound">wxMDIChildFrame</ref>, <ref refid="classwx_m_d_i_client_window" kindref="compound">wxMDIClientWindow</ref>, <ref refid="classwx_frame" kindref="compound">wxFrame</ref>, <ref refid="classwx_dialog" kindref="compound">wxDialog</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__managedwnd" kindref="compound">Managed Windows</ref></para><para><simplesect kind="see"><para><ref refid="classwx_m_d_i_child_frame" kindref="compound">wxMDIChildFrame</ref>, <ref refid="classwx_m_d_i_client_window" kindref="compound">wxMDIClientWindow</ref>, <ref refid="classwx_frame" kindref="compound">wxFrame</ref>, <ref refid="classwx_dialog" kindref="compound">wxDialog</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7626">
+      <node id="7632">
         <label>wxNonOwnedWindow</label>
         <link refid="classwx_non_owned_window"/>
-        <childnode refid="7627" relation="public-inheritance">
+        <childnode refid="7633" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7629">
+      <node id="7635">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="7628">
+      <node id="7634">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="7629" relation="public-inheritance">
+        <childnode refid="7635" relation="public-inheritance">
         </childnode>
-        <childnode refid="7630" relation="public-inheritance">
+        <childnode refid="7636" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7630">
+      <node id="7636">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="7627">
+      <node id="7633">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="7628" relation="public-inheritance">
+        <childnode refid="7634" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7637">
+        <label>wxDocMDIParentFrame</label>
+        <link refid="classwx_doc_m_d_i_parent_frame"/>
+        <childnode refid="7629" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7630">
+        <label>wxFrame</label>
+        <link refid="classwx_frame"/>
+        <childnode refid="7631" relation="public-inheritance">
         </childnode>
       </node>
       <node id="7631">
-        <label>wxDocMDIParentFrame</label>
-        <link refid="classwx_doc_m_d_i_parent_frame"/>
-        <childnode refid="7623" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="7624">
-        <label>wxFrame</label>
-        <link refid="classwx_frame"/>
-        <childnode refid="7625" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="7625">
         <label>wxTopLevelWindow</label>
         <link refid="classwx_top_level_window"/>
-        <childnode refid="7626" relation="public-inheritance">
+        <childnode refid="7632" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7623">
+      <node id="7629">
         <label>wxMDIParentFrame</label>
         <link refid="classwx_m_d_i_parent_frame"/>
-        <childnode refid="7624" relation="public-inheritance">
+        <childnode refid="7630" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7635">
+      <node id="7641">
         <label>wxNonOwnedWindow</label>
         <link refid="classwx_non_owned_window"/>
-        <childnode refid="7636" relation="public-inheritance">
+        <childnode refid="7642" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7638">
+      <node id="7644">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="7639" relation="usage">
+        <childnode refid="7645" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="7637">
+      <node id="7643">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="7638" relation="public-inheritance">
+        <childnode refid="7644" relation="public-inheritance">
         </childnode>
+        <childnode refid="7646" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7646">
+        <label>wxTrackable</label>
+        <link refid="classwx_trackable"/>
+      </node>
+      <node id="7642">
+        <label>wxWindow</label>
+        <link refid="classwx_window"/>
+        <childnode refid="7643" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7639">
+        <label>wxFrame</label>
+        <link refid="classwx_frame"/>
         <childnode refid="7640" relation="public-inheritance">
         </childnode>
       </node>
       <node id="7640">
-        <label>wxTrackable</label>
-        <link refid="classwx_trackable"/>
-      </node>
-      <node id="7636">
-        <label>wxWindow</label>
-        <link refid="classwx_window"/>
-        <childnode refid="7637" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="7633">
-        <label>wxFrame</label>
-        <link refid="classwx_frame"/>
-        <childnode refid="7634" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="7634">
         <label>wxTopLevelWindow</label>
         <link refid="classwx_top_level_window"/>
-        <childnode refid="7635" relation="public-inheritance">
+        <childnode refid="7641" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7632">
+      <node id="7638">
         <label>wxMDIParentFrame</label>
         <link refid="classwx_m_d_i_parent_frame"/>
-        <childnode refid="7633" relation="public-inheritance">
+        <childnode refid="7639" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7639">
+      <node id="7645">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
@@ -783,6 +783,7 @@ Although it is possible to have multiple MDI parent frames, a typical MDI applic
       <member refid="classwx_window_1a81f23590239934fa10fded0566a65d8c" prot="public" virt="non-virtual"><scope>wxMDIParentFrame</scope><name>SetPosition</name></member>
       <member refid="classwx_window_1a07f5f7ed3f78e0ef7b3dee3f4da81001" prot="public" virt="virtual"><scope>wxMDIParentFrame</scope><name>SetPreviousHandler</name></member>
       <member refid="classwx_object_1afab780710f2adc1bb33310e27590140b" prot="public" virt="non-virtual"><scope>wxMDIParentFrame</scope><name>SetRefData</name></member>
+      <member refid="classwx_top_level_window_1a82afa6f09dd5faef6330807ef59374e8" prot="public" virt="virtual"><scope>wxMDIParentFrame</scope><name>SetRepresentedFilename</name></member>
       <member refid="classwx_top_level_window_1a98e95b1b10f44b80f9b29a03ab09a879" prot="public" virt="non-virtual"><scope>wxMDIParentFrame</scope><name>SetRightMenu</name></member>
       <member refid="classwx_window_1aa842d59529f873683e55cd8392ec46e9" prot="public" virt="virtual"><scope>wxMDIParentFrame</scope><name>SetScrollbar</name></member>
       <member refid="classwx_window_1afbf4dc9064cf70cfe6884554b97a27bf" prot="public" virt="virtual"><scope>wxMDIParentFrame</scope><name>SetScrollPos</name></member>

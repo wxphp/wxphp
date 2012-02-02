@@ -1,10 +1,9 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_tree_item_id" kind="class" prot="public">
     <compoundname>wxTreeItemId</compoundname>
     <includes local="no">wx/treebase.h</includes>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_tree_item_id_1a4d03fd8b37a19ed1e04a8e9140763f2b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
         <definition>bool wxTreeItemId::operator==</definition>
@@ -85,7 +84,7 @@
 <para>An opaque reference to a tree item. </para>    </briefdescription>
     <detaileddescription>
 <para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__data" kindref="compound">Data Structures</ref></para><para><simplesect kind="see"><para><ref refid="classwx_tree_ctrl" kindref="compound">wxTreeCtrl</ref>, <ref refid="classwx_tree_item_data" kindref="compound">wxTreeItemData</ref>, <ref refid="overview__treectrl" kindref="compound">wxTreeCtrl Overview</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__data" kindref="compound">Data Structures</ref></para><para><simplesect kind="see"><para><ref refid="classwx_tree_ctrl" kindref="compound">wxTreeCtrl</ref>, <ref refid="classwx_tree_item_data" kindref="compound">wxTreeItemData</ref>, <ref refid="overview_treectrl" kindref="compound">wxTreeCtrl Overview</ref> </para></simplesect>
 </para>    </detaileddescription>
     <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treebase.h" line="20" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treebase.h" bodystart="19" bodyend="46"/>
     <listofallmembers>

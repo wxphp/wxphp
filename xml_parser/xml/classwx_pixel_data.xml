@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_pixel_data" kind="class" prot="public">
     <compoundname>wxPixelData</compoundname>
     <includes local="no">wx/rawbmp.h</includes>
@@ -194,7 +194,7 @@
 Implemented everywhere: <itemizedlist>
 <listitem><para>wxImagePixelData: Class to access to wxImage&apos;s internal data with alpha channel (RGBA).</para></listitem>
 </itemizedlist>
-Example:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_bitmap" kindref="compound" tooltip="This class encapsulates the concept of a platform-dependent bitmap, either monochrome...">wxBitmap</ref><sp/>bmp;</highlight></codeline>
+Example:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_bitmap" kindref="compound" tooltip="This class encapsulates the concept of a platform-dependent bitmap, either monochrome or colour or co...">wxBitmap</ref><sp/>bmp;</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>wxNativePixelData<sp/>data(bmp);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>!data<sp/>)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
@@ -228,7 +228,7 @@ Example:</para><para><programlisting><codeline><highlight class="normal"><sp/><s
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p.OffsetY(data,<sp/>1);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 </programlisting></para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__gdi" kindref="compound">Graphics Device Interface (GDI)</ref></para><para><simplesect kind="see"><para><ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref>, <ref refid="classwx_image" kindref="compound">wxImage</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__gdi" kindref="compound">Graphics Device Interface (GDI)</ref></para><para><simplesect kind="see"><para><ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref>, <ref refid="classwx_image" kindref="compound">wxImage</ref> </para></simplesect>
 </para>    </detaileddescription>
     <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/rawbmp.h" line="74" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/rawbmp.h" bodystart="72" bodyend="213"/>
     <listofallmembers>

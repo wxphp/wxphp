@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_set_cursor_event" kind="class" prot="public">
     <compoundname>wxSetCursorEvent</compoundname>
     <basecompoundref refid="classwx_event" prot="public" virt="non-virtual">wxEvent</basecompoundref>
@@ -26,7 +26,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4112"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4136"/>
       </memberdef>
       <memberdef kind="function" id="classwx_set_cursor_event_1a57f10dd022c9775c67a510b37660549d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_cursor" kindref="compound">wxCursor</ref> &amp;</type>
@@ -39,7 +39,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4117"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4141"/>
       </memberdef>
       <memberdef kind="function" id="classwx_set_cursor_event_1a22c034969d2dc9c19cf3ad7092878451" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="defs_8h_1a11f6efc0e8d8d680f3ec8e82aa4f1770" kindref="member">wxCoord</ref></type>
@@ -52,7 +52,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4122"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4146"/>
       </memberdef>
       <memberdef kind="function" id="classwx_set_cursor_event_1a87e86a5b22c62920ed52f110c80d5a7e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="defs_8h_1a11f6efc0e8d8d680f3ec8e82aa4f1770" kindref="member">wxCoord</ref></type>
@@ -65,7 +65,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4127"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4151"/>
       </memberdef>
       <memberdef kind="function" id="classwx_set_cursor_event_1affb7eecda7f96997ecf9930590a0a3d8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -79,7 +79,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4135"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4159"/>
       </memberdef>
       <memberdef kind="function" id="classwx_set_cursor_event_1a7400d6ad61fa844ed63b8ab02da2c164" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -96,7 +96,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4140"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4164"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -107,52 +107,52 @@
 <listitem><para>EVT_SET_CURSOR(func): Process a <computeroutput>wxEVT_SET_CURSOR</computeroutput> event. </para></listitem>
 </itemizedlist>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="group__group__funcmacro__gdi_1ga04d90db090918ad96448b5603d89617b" kindref="member">wxSetCursor</ref>, <ref refid="group__group__funcmacro__gdi_1ga04d90db090918ad96448b5603d89617b" kindref="member">wxWindow::wxSetCursor</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="group__group__funcmacro__gdi_1ga04d90db090918ad96448b5603d89617b" kindref="member">wxSetCursor</ref>, wxWindow::wxSetCursor </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10094">
+      <node id="10154">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="10092">
+      <node id="10152">
         <label>wxSetCursorEvent</label>
         <link refid="classwx_set_cursor_event"/>
-        <childnode refid="10093" relation="public-inheritance">
+        <childnode refid="10153" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10093">
+      <node id="10153">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="10094" relation="public-inheritance">
+        <childnode refid="10154" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10097">
+      <node id="10157">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="10098" relation="usage">
+        <childnode refid="10158" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="10095">
+      <node id="10155">
         <label>wxSetCursorEvent</label>
         <link refid="classwx_set_cursor_event"/>
-        <childnode refid="10096" relation="public-inheritance">
+        <childnode refid="10156" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10096">
+      <node id="10156">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="10097" relation="public-inheritance">
+        <childnode refid="10157" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10098">
+      <node id="10158">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4106" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4105" bodyend="4141"/>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4130" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4129" bodyend="4165"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxSetCursorEvent</scope><name>AllocExclusive</name></member>
       <member refid="classwx_event_1a26878097a702e8d0368da150125d4158" prot="public" virt="pure-virtual"><scope>wxSetCursorEvent</scope><name>Clone</name></member>

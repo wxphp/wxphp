@@ -1,11 +1,10 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_hash_table" kind="class" prot="public">
     <compoundname>wxHashTable</compoundname>
     <basecompoundref refid="classwx_object" prot="public" virt="non-virtual">wxObject</basecompoundref>
     <includes local="no">wx/hash.h</includes>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_hash_table_1a0f34a4036abaee734629f5ede3ec00cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_object" kindref="compound">wxObject</ref> *</type>
         <definition>wxObject* wxHashTable::Delete</definition>
@@ -42,7 +41,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_hash_table_1a5fc53c8d664abdccfd096f7f6aa9fa92" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_object" kindref="compound">wxObject</ref> *</type>
         <definition>wxObject* wxHashTable::Get</definition>
@@ -79,7 +77,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_hash_table_1a778c39dd4f605dada3a8d5f0ac26860d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void wxHashTable::Put</definition>
@@ -252,7 +249,7 @@
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000020"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Please note that this class is retained for backward compatibility reasons; you should use <ref refid="classwx_hash_map" kindref="compound">wxHashMap</ref>.</para></xrefdescription></xrefsect>This class provides hash table functionality for wxWidgets, and for an application if it wishes. Data can be hashed on an integer or string key.</para><para>Example: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_hash_table" kindref="compound">wxHashTable</ref><sp/>table(wxKEY_STRING);</highlight></codeline>
+<para><xrefsect id="deprecated_1_deprecated000020"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Please note that this class is retained for backward compatibility reasons; you should use <ref refid="classwx_hash_map" kindref="compound">wxHashMap</ref>.</para></xrefdescription></xrefsect></para><para>This class provides hash table functionality for wxWidgets, and for an application if it wishes. Data can be hashed on an integer or string key.</para><para>Example: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_hash_table" kindref="compound">wxHashTable</ref><sp/>table(wxKEY_STRING);</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_point" kindref="compound" tooltip="A wxPoint is a useful data structure for graphics operations.">wxPoint</ref><sp/>*point<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classwx_point" kindref="compound" tooltip="A wxPoint is a useful data structure for graphics operations.">wxPoint</ref>(100,<sp/>200);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>table.Put(</highlight><highlight class="stringliteral">&quot;point<sp/>1&quot;</highlight><highlight class="normal">,<sp/>point);</highlight></codeline>
@@ -261,35 +258,35 @@
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_point" kindref="compound" tooltip="A wxPoint is a useful data structure for graphics operations.">wxPoint</ref><sp/>*found_point<sp/>=<sp/>(<ref refid="classwx_point" kindref="compound" tooltip="A wxPoint is a useful data structure for graphics operations.">wxPoint</ref><sp/>*)table.Get(</highlight><highlight class="stringliteral">&quot;point<sp/>1&quot;</highlight><highlight class="normal">);</highlight></codeline>
 </programlisting></para><para>A hash table is implemented as an array of pointers to lists. When no data has been stored, the hash table takes only a little more space than this array (default size is 1000). When a data item is added, an integer is constructed from the integer or string key that is within the bounds of the array. If the array element is NULL, a new (keyed) list is created for the element. Then the data object is appended to the list, storing the key in case other data objects need to be stored in the list also (when a &apos;collision&apos; occurs).</para><para>Retrieval involves recalculating the array index from the key, and searching along the keyed list for the data object whose stored key matches the passed key. Obviously this is quicker when there are fewer collisions, so hashing will become inefficient if the number of items to be stored greatly exceeds the size of the hash table.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__containers" kindref="compound">Containers</ref></para><para><simplesect kind="see"><para>wxList </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__containers" kindref="compound">Containers</ref></para><para><simplesect kind="see"><para>wxList </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="6858">
+      <node id="6862">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="6857">
+      <node id="6861">
         <label>wxHashTable</label>
         <link refid="classwx_hash_table"/>
-        <childnode refid="6858" relation="public-inheritance">
+        <childnode refid="6862" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="6860">
+      <node id="6864">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="6861" relation="usage">
+        <childnode refid="6865" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="6859">
+      <node id="6863">
         <label>wxHashTable</label>
         <link refid="classwx_hash_table"/>
-        <childnode refid="6860" relation="public-inheritance">
+        <childnode refid="6864" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6861">
+      <node id="6865">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

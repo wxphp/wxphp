@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_t_c_p_client" kind="class" prot="public">
     <compoundname>wxTCPClient</compoundname>
     <basecompoundref refid="classwx_object" prot="public" virt="non-virtual">wxObject</basecompoundref>
@@ -78,35 +78,35 @@
 <para>A <ref refid="classwx_t_c_p_client" kindref="compound">wxTCPClient</ref> object represents the client part of a client-server conversation. </para>    </briefdescription>
     <detaileddescription>
 <para>It emulates a DDE-style protocol, but uses TCP/IP which is available on most platforms.</para><para>A DDE-based implementation for Windows is available using <ref refid="classwx_d_d_e_client" kindref="compound">wxDDEClient</ref>.</para><para>To create a client which can communicate with a suitable server, you need to derive a class from <ref refid="classwx_t_c_p_connection" kindref="compound">wxTCPConnection</ref> and another from <ref refid="classwx_t_c_p_client" kindref="compound">wxTCPClient</ref>. The custom <ref refid="classwx_t_c_p_connection" kindref="compound">wxTCPConnection</ref> class will intercept communications in a &apos;conversation&apos; with a server, and the custom <ref refid="classwx_t_c_p_server" kindref="compound">wxTCPServer</ref> is required so that a user-overridden <ref refid="classwx_t_c_p_client_1a23359471eace5dca485aad4a3e24680f" kindref="member">wxTCPClient::OnMakeConnection()</ref> member can return a <ref refid="classwx_t_c_p_connection" kindref="compound">wxTCPConnection</ref> of the required class, when a connection is made.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxnet" kindref="member">wxNet</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__net" kindref="compound">Networking</ref></para><para><simplesect kind="see"><para><ref refid="classwx_t_c_p_server" kindref="compound">wxTCPServer</ref>, <ref refid="classwx_t_c_p_connection" kindref="compound">wxTCPConnection</ref>, <ref refid="overview__ipc" kindref="compound">Interprocess Communication</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxnet" kindref="member">wxNet</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__net" kindref="compound">Networking</ref></para><para><simplesect kind="see"><para><ref refid="classwx_t_c_p_server" kindref="compound">wxTCPServer</ref>, <ref refid="classwx_t_c_p_connection" kindref="compound">wxTCPConnection</ref>, <ref refid="overview_ipc" kindref="compound">Interprocess Communication</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10657">
+      <node id="10717">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="10656">
+      <node id="10716">
         <label>wxTCPClient</label>
         <link refid="classwx_t_c_p_client"/>
-        <childnode refid="10657" relation="public-inheritance">
+        <childnode refid="10717" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10659">
+      <node id="10719">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="10660" relation="usage">
+        <childnode refid="10720" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="10658">
+      <node id="10718">
         <label>wxTCPClient</label>
         <link refid="classwx_t_c_p_client"/>
-        <childnode refid="10659" relation="public-inheritance">
+        <childnode refid="10719" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10660">
+      <node id="10720">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_html_filter" kind="class" prot="public">
     <compoundname>wxHtmlFilter</compoundname>
     <basecompoundref refid="classwx_object" prot="public" virt="non-virtual">wxObject</basecompoundref>
@@ -51,7 +51,7 @@
         <briefdescription>
 <para>Reads the file and returns string with HTML document. </para>        </briefdescription>
         <detaileddescription>
-<para>Example: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change...">wxString</ref><sp/><ref refid="classwx_html_filter_1a46e613725041e97a8934ce37da2e620f" kindref="member" tooltip="Reads the file and returns string with HTML document.">MyImgFilter::ReadFile</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classwx_f_s_file" kindref="compound" tooltip="This class represents a single file opened by wxFileSystem.">wxFSFile</ref>&amp;<sp/>file)</highlight></codeline>
+<para>Example: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change was actually the m...">wxString</ref><sp/><ref refid="classwx_html_filter_1a46e613725041e97a8934ce37da2e620f" kindref="member" tooltip="Reads the file and returns string with HTML document.">MyImgFilter::ReadFile</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classwx_f_s_file" kindref="compound" tooltip="This class represents a single file opened by wxFileSystem.">wxFSFile</ref>&amp;<sp/>file)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;&lt;html&gt;&lt;body&gt;&lt;img<sp/>src=\&quot;&quot;</highlight><highlight class="normal"><sp/>+<sp/>file.<ref refid="classwx_f_s_file_1a1f66063fc26adc1ede01ff072f46af5d" kindref="member" tooltip="Returns full location of the file, including path and protocol.">GetLocation</ref>()<sp/>+</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;\&quot;&gt;&lt;/body&gt;&lt;/html&gt;&quot;</highlight><highlight class="normal">;</highlight></codeline>
@@ -66,35 +66,35 @@
 <para>This class is the parent class of input filters for <ref refid="classwx_html_window" kindref="compound">wxHtmlWindow</ref>. </para>    </briefdescription>
     <detaileddescription>
 <para>It allows you to read and display files of different file formats.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxhtml" kindref="member">wxHTML</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__html" kindref="compound">HTML</ref></para><para><simplesect kind="see"><para><ref refid="overview__html_1overview_html_filters" kindref="member">Input Filters</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxhtml" kindref="member">wxHTML</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__html" kindref="compound">HTML</ref></para><para><simplesect kind="see"><para><ref refid="overview_html_1overview_html_filters" kindref="member">Input Filters</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7003">
+      <node id="7007">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="7002">
+      <node id="7006">
         <label>wxHtmlFilter</label>
         <link refid="classwx_html_filter"/>
-        <childnode refid="7003" relation="public-inheritance">
+        <childnode refid="7007" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7005">
+      <node id="7009">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="7006" relation="usage">
+        <childnode refid="7010" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="7004">
+      <node id="7008">
         <label>wxHtmlFilter</label>
         <link refid="classwx_html_filter"/>
-        <childnode refid="7005" relation="public-inheritance">
+        <childnode refid="7009" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7006">
+      <node id="7010">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

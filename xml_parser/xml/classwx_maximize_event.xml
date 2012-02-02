@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_maximize_event" kind="class" prot="public">
     <compoundname>wxMaximizeEvent</compoundname>
     <basecompoundref refid="classwx_event" prot="public" virt="non-virtual">wxEvent</basecompoundref>
@@ -21,7 +21,7 @@
 <para>Only used by wxWidgets internally. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="1922"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="1943"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -32,52 +32,52 @@
 <listitem><para>EVT_MAXIMIZE(func): Process a <computeroutput>wxEVT_MAXIMIZE</computeroutput> event. </para></listitem>
 </itemizedlist>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="overview__events" kindref="compound">Events and Event Handling</ref>, <ref refid="classwx_top_level_window_1addb1612e9f00ac82c2e19c2bac6ffc4f" kindref="member">wxTopLevelWindow::Maximize</ref>, <ref refid="classwx_top_level_window_1a0cefec818c018b44435d32a5cb78893c" kindref="member">wxTopLevelWindow::IsMaximized</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="overview_events" kindref="compound">Events and Event Handling</ref>, <ref refid="classwx_top_level_window_1addb1612e9f00ac82c2e19c2bac6ffc4f" kindref="member">wxTopLevelWindow::Maximize</ref>, <ref refid="classwx_top_level_window_1a0cefec818c018b44435d32a5cb78893c" kindref="member">wxTopLevelWindow::IsMaximized</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7560">
+      <node id="7566">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="7558">
+      <node id="7564">
         <label>wxMaximizeEvent</label>
         <link refid="classwx_maximize_event"/>
-        <childnode refid="7559" relation="public-inheritance">
+        <childnode refid="7565" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7559">
+      <node id="7565">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="7560" relation="public-inheritance">
+        <childnode refid="7566" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7563">
+      <node id="7569">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="7564" relation="usage">
+        <childnode refid="7570" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="7561">
+      <node id="7567">
         <label>wxMaximizeEvent</label>
         <link refid="classwx_maximize_event"/>
-        <childnode refid="7562" relation="public-inheritance">
+        <childnode refid="7568" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7562">
+      <node id="7568">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="7563" relation="public-inheritance">
+        <childnode refid="7569" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7564">
+      <node id="7570">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="1917" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="1916" bodyend="1923"/>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="1938" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="1937" bodyend="1944"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxMaximizeEvent</scope><name>AllocExclusive</name></member>
       <member refid="classwx_event_1a26878097a702e8d0368da150125d4158" prot="public" virt="pure-virtual"><scope>wxMaximizeEvent</scope><name>Clone</name></member>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_combo_popup" kind="class" prot="public">
     <compoundname>wxComboPopup</compoundname>
     <includes local="no">wx/combo.h</includes>
@@ -340,60 +340,60 @@
 <para>In order to use a custom popup with <ref refid="classwx_combo_ctrl" kindref="compound">wxComboCtrl</ref>, an interface class must be derived from <ref refid="classwx_combo_popup" kindref="compound">wxComboPopup</ref>. </para>    </briefdescription>
     <detaileddescription>
 <para>For more information on how to use it, see <ref refid="classwx_combo_ctrl_1comboctrl_custompopup" kindref="member">Setting Custom Popup for wxComboCtrl</ref>.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref></para><para><simplesect kind="see"><para><ref refid="classwx_combo_ctrl" kindref="compound">wxComboCtrl</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref></para><para><simplesect kind="see"><para><ref refid="classwx_combo_ctrl" kindref="compound">wxComboCtrl</ref> </para></simplesect>
 </para>    </detaileddescription>
     <collaborationgraph>
-      <node id="4945">
+      <node id="4949">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="4946" relation="usage">
+        <childnode refid="4950" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="4944">
+      <node id="4948">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="4945" relation="public-inheritance">
+        <childnode refid="4949" relation="public-inheritance">
         </childnode>
+        <childnode refid="4951" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4951">
+        <label>wxTrackable</label>
+        <link refid="classwx_trackable"/>
+      </node>
+      <node id="4952">
+        <label>wxTextEntry</label>
+        <link refid="classwx_text_entry"/>
+      </node>
+      <node id="4946">
+        <label>wxControl</label>
+        <link refid="classwx_control"/>
         <childnode refid="4947" relation="public-inheritance">
         </childnode>
       </node>
       <node id="4947">
-        <label>wxTrackable</label>
-        <link refid="classwx_trackable"/>
-      </node>
-      <node id="4948">
-        <label>wxTextEntry</label>
-        <link refid="classwx_text_entry"/>
-      </node>
-      <node id="4942">
-        <label>wxControl</label>
-        <link refid="classwx_control"/>
-        <childnode refid="4943" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4943">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="4944" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4941">
-        <label>wxComboCtrl</label>
-        <link refid="classwx_combo_ctrl"/>
-        <childnode refid="4942" relation="public-inheritance">
-        </childnode>
         <childnode refid="4948" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4940">
+      <node id="4945">
+        <label>wxComboCtrl</label>
+        <link refid="classwx_combo_ctrl"/>
+        <childnode refid="4946" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4952" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4944">
         <label>wxComboPopup</label>
         <link refid="classwx_combo_popup"/>
-        <childnode refid="4941" relation="usage">
+        <childnode refid="4945" relation="usage">
           <edgelabel>m_combo</edgelabel>
         </childnode>
       </node>
-      <node id="4946">
+      <node id="4950">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

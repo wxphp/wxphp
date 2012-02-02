@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_splitter_event" kind="class" prot="public">
     <compoundname>wxSplitterEvent</compoundname>
     <basecompoundref refid="classwx_notify_event" prot="public" virt="non-virtual">wxNotifyEvent</basecompoundref>
@@ -117,71 +117,71 @@
 <listitem><para>EVT_SPLITTER_DCLICK(id,  func): The sash was double clicked. The default behaviour is to unsplit the window when this happens (unless the minimum pane size has been set to a value greater than zero). Processes a <computeroutput>wxEVT_COMMAND_SPLITTER_DOUBLECLICKED</computeroutput> event. </para></listitem>
 </itemizedlist>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="classwx_splitter_window" kindref="compound">wxSplitterWindow</ref>, <ref refid="overview__events" kindref="compound">Events and Event Handling</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="classwx_splitter_window" kindref="compound">wxSplitterWindow</ref>, <ref refid="overview_events" kindref="compound">Events and Event Handling</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10359">
+      <node id="10419">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="10357">
+      <node id="10417">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="10358" relation="public-inheritance">
+        <childnode refid="10418" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10355">
+      <node id="10415">
         <label>wxSplitterEvent</label>
         <link refid="classwx_splitter_event"/>
-        <childnode refid="10356" relation="public-inheritance">
+        <childnode refid="10416" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10356">
+      <node id="10416">
         <label>wxNotifyEvent</label>
         <link refid="classwx_notify_event"/>
-        <childnode refid="10357" relation="public-inheritance">
+        <childnode refid="10417" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10358">
+      <node id="10418">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="10359" relation="public-inheritance">
+        <childnode refid="10419" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10364">
+      <node id="10424">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="10365" relation="usage">
+        <childnode refid="10425" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="10362">
+      <node id="10422">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="10363" relation="public-inheritance">
+        <childnode refid="10423" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10360">
+      <node id="10420">
         <label>wxSplitterEvent</label>
         <link refid="classwx_splitter_event"/>
-        <childnode refid="10361" relation="public-inheritance">
+        <childnode refid="10421" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10361">
+      <node id="10421">
         <label>wxNotifyEvent</label>
         <link refid="classwx_notify_event"/>
-        <childnode refid="10362" relation="public-inheritance">
+        <childnode refid="10422" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10363">
+      <node id="10423">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="10364" relation="public-inheritance">
+        <childnode refid="10424" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10365">
+      <node id="10425">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

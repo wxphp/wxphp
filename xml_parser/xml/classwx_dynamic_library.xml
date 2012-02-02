@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_dynamic_library" kind="class" prot="public">
     <compoundname>wxDynamicLibrary</compoundname>
     <includes local="no">wx/dynlib.h</includes>
@@ -87,7 +87,7 @@
         <briefdescription>
 <para>This function is available only under Windows as it is only useful when dynamically loading symbols from standard Windows DLLs. </para>        </briefdescription>
         <detaileddescription>
-<para>Such functions have either <computeroutput>&apos;A&apos;</computeroutput> (in ANSI build) or <computeroutput>&apos;W&apos;</computeroutput> (in Unicode, or wide character build) suffix if they take string parameters. Using this function, you can use just the base name of the function and the correct suffix is appended automatically depending on the current build. Otherwise, this method is identical to <ref refid="classwx_dynamic_library_1a8326e2a1f6ff322f965137ec66c900ee" kindref="member">GetSymbol()</ref>.</para><para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page__port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor>  </para>        </detaileddescription>
+<para>Such functions have either <computeroutput>&apos;A&apos;</computeroutput> (in ANSI build) or <computeroutput>&apos;W&apos;</computeroutput> (in Unicode, or wide character build) suffix if they take string parameters. Using this function, you can use just the base name of the function and the correct suffix is appended automatically depending on the current build. Otherwise, this method is identical to <ref refid="classwx_dynamic_library_1a8326e2a1f6ff322f965137ec66c900ee" kindref="member">GetSymbol()</ref>.</para><para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page_port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor>  </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynlib.h" line="172"/>
@@ -262,7 +262,7 @@
 <listitem><para>wxDL_QUIET: Don&apos;t log an error message if the library couldn&apos;t be loaded. </para></listitem>
 </itemizedlist>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__appmanagement" kindref="compound">Application and Process Management</ref> </para>    </detaileddescription>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__appmanagement" kindref="compound">Application and Process Management</ref> </para>    </detaileddescription>
     <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynlib.h" line="110" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynlib.h" bodystart="109" bodyend="224"/>
     <listofallmembers>
       <member refid="classwx_dynamic_library_1a2d61b9a60e0c804c06e2fc6a5d53fb3c" prot="public" virt="non-virtual"><scope>wxDynamicLibrary</scope><name>CanonicalizeName</name></member>

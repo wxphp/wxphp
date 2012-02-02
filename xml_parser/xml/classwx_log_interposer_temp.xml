@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_log_interposer_temp" kind="class" prot="public">
     <compoundname>wxLogInterposerTemp</compoundname>
     <basecompoundref refid="classwx_log_chain" prot="public" virt="non-virtual">wxLogChain</basecompoundref>
@@ -23,39 +23,39 @@
 <para>A special version of <ref refid="classwx_log_chain" kindref="compound">wxLogChain</ref> which uses itself as the new log target. </para>    </briefdescription>
     <detaileddescription>
 <para>It forwards log messages to the previously installed one in addition to processing them itself. Unlike <ref refid="classwx_log_interposer" kindref="compound">wxLogInterposer</ref>, it doesn&apos;t delete the old target which means it can be used to temporarily redirect log output.</para><para>As per <ref refid="classwx_log_interposer" kindref="compound">wxLogInterposer</ref>, this class must be derived from to implement wxLog::DoLog and/or wxLog::DoLogString methods.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__logging" kindref="compound">Logging</ref> </para>    </detaileddescription>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__logging" kindref="compound">Logging</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7519">
+      <node id="7525">
         <label>wxLogInterposerTemp</label>
         <link refid="classwx_log_interposer_temp"/>
-        <childnode refid="7520" relation="public-inheritance">
+        <childnode refid="7526" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7520">
+      <node id="7526">
         <label>wxLogChain</label>
         <link refid="classwx_log_chain"/>
-        <childnode refid="7521" relation="public-inheritance">
+        <childnode refid="7527" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7521">
+      <node id="7527">
         <label>wxLog</label>
         <link refid="classwx_log"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7522">
+      <node id="7528">
         <label>wxLogInterposerTemp</label>
         <link refid="classwx_log_interposer_temp"/>
-        <childnode refid="7523" relation="public-inheritance">
+        <childnode refid="7529" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7523">
+      <node id="7529">
         <label>wxLogChain</label>
         <link refid="classwx_log_chain"/>
-        <childnode refid="7524" relation="public-inheritance">
+        <childnode refid="7530" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7524">
+      <node id="7530">
         <label>wxLog</label>
         <link refid="classwx_log"/>
       </node>
@@ -90,6 +90,7 @@
       <member refid="classwx_log_1a14a562556933276939cedbb470f149cb" prot="public" virt="non-virtual"><scope>wxLogInterposerTemp</scope><name>Resume</name></member>
       <member refid="classwx_log_1ac7ea85f71c8d3ecd4247f412be410505" prot="public" virt="non-virtual"><scope>wxLogInterposerTemp</scope><name>SetActiveTarget</name></member>
       <member refid="classwx_log_1a7ae244e71dff20efd3a37b3718841a39" prot="public" virt="non-virtual"><scope>wxLogInterposerTemp</scope><name>SetComponentLevel</name></member>
+      <member refid="classwx_log_1a9f316422df6930c549db80a5e4bf36a2" prot="public" virt="non-virtual"><scope>wxLogInterposerTemp</scope><name>SetFormatter</name></member>
       <member refid="classwx_log_chain_1aecfefb1a2435a5372d4a317353b8a7e9" prot="public" virt="non-virtual"><scope>wxLogInterposerTemp</scope><name>SetLog</name></member>
       <member refid="classwx_log_1a4ea68379469ca27f645d5f91c2d42b3b" prot="public" virt="non-virtual"><scope>wxLogInterposerTemp</scope><name>SetLogLevel</name></member>
       <member refid="classwx_log_1ae814f9b9b4c8b4a52e34d7c919f98296" prot="public" virt="non-virtual"><scope>wxLogInterposerTemp</scope><name>SetRepetitionCounting</name></member>

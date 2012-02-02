@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_data_object" kind="class" prot="public">
     <compoundname>wxDataObject</compoundname>
     <derivedcompoundref refid="classwx_data_object_composite" prot="public" virt="non-virtual">wxDataObjectComposite</derivedcompoundref>
@@ -12,7 +12,7 @@
           <name>Get</name>
           <initializer> 0x01</initializer>
           <briefdescription>
-<para>Format is supported by <ref refid="classwx_data_object_1aa48761390b25d797d4cad393db752568" kindref="member">GetDataHere()</ref>. </para>          </briefdescription>
+<para>Format is supported by <ref refid="classwx_data_object_1aa48761390b25d797d4cad393db752568" kindref="member">GetDataHere()</ref> </para>          </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
@@ -20,7 +20,7 @@
           <name>Set</name>
           <initializer> 0x02</initializer>
           <briefdescription>
-<para>Format is supported by <ref refid="classwx_data_object_1ab73fa5f1cb933c67df20ddb1fad99071" kindref="member">SetData()</ref>. </para>          </briefdescription>
+<para>Format is supported by <ref refid="classwx_data_object_1ab73fa5f1cb933c67df20ddb1fad99071" kindref="member">SetData()</ref> </para>          </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
@@ -28,7 +28,7 @@
           <name>Both</name>
           <initializer> 0x03</initializer>
           <briefdescription>
-<para>Format is supported by both <ref refid="classwx_data_object_1aa48761390b25d797d4cad393db752568" kindref="member">GetDataHere()</ref> and <ref refid="classwx_data_object_1ab73fa5f1cb933c67df20ddb1fad99071" kindref="member">SetData()</ref> (unused currently). </para>          </briefdescription>
+<para>Format is supported by both <ref refid="classwx_data_object_1aa48761390b25d797d4cad393db752568" kindref="member">GetDataHere()</ref> and <ref refid="classwx_data_object_1ab73fa5f1cb933c67df20ddb1fad99071" kindref="member">SetData()</ref> (unused currently) </para>          </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
@@ -250,53 +250,53 @@
 <listitem><para>This is the solution for maximum flexibility and efficiency, but it is also the most difficult to implement.</para></listitem></itemizedlist>
 </para></listitem></orderedlist>
 </para><para>Please note that the easiest way to use drag and drop and the clipboard with multiple formats is by using <ref refid="classwx_data_object_composite" kindref="compound">wxDataObjectComposite</ref>, but it is not the most efficient one as each <ref refid="classwx_data_object_simple" kindref="compound">wxDataObjectSimple</ref> would contain the whole data in its respective formats. Now imagine that you want to paste 200 pages of text in your proprietary format, as well as Word, RTF, HTML, Unicode and plain text to the clipboard and even today&apos;s computers are in trouble. For this case, you will have to derive from <ref refid="classwx_data_object" kindref="compound">wxDataObject</ref> directly and make it enumerate its formats and provide the data in the requested format on demand.</para><para>Note that neither the GTK+ data transfer mechanisms for clipboard and drag and drop, nor OLE data transfer, <emphasis>copies</emphasis> any data until another application actually requests the data. This is in contrast to the &apos;feel&apos; offered to the user of a program who would normally think that the data resides in the clipboard after having pressed &apos;Copy&apos; - in reality it is only declared to be <emphasis>available</emphasis>.</para><para>You may also derive your own data object classes from <ref refid="classwx_custom_data_object" kindref="compound">wxCustomDataObject</ref> for user-defined types. The format of user-defined data is given as a mime-type string literal, such as &quot;application/word&quot; or &quot;image/png&quot;. These strings are used as they are under Unix (so far only GTK+) to identify a format and are translated into their Windows equivalent under Win32 (using the OLE IDataObject for data exchange to and from the clipboard and for drag and drop). Note that the format string translation under Windows is not yet finished.</para><para>Each class derived directly from <ref refid="classwx_data_object" kindref="compound">wxDataObject</ref> must override and implement all of its functions which are pure virtual in the base class. The data objects which only render their data or only set it (i.e. work in only one direction), should return 0 from <ref refid="classwx_data_object_1a3f82815810bf4dcc34e1a5783c9b8a62" kindref="member">GetFormatCount()</ref>.</para><para><bold>wxPython Note:</bold> At this time this class is not directly usable from wxPython. Derive a class from wxPyDataObjectSimple() instead.</para><para><bold>wxPerl Note:</bold> This class is not currently usable from wxPerl; you may use Wx::PlDataObjectSimple instead.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__dnd" kindref="compound">Clipboard and Drag &amp; Drop</ref></para><para><simplesect kind="see"><para><ref refid="overview__dnd" kindref="compound">Drag and Drop Overview</ref>, <ref refid="page__samples_1page_samples_dnd" kindref="member">Drag &amp; Drop Sample</ref>, <ref refid="classwx_file_data_object" kindref="compound">wxFileDataObject</ref>, <ref refid="classwx_text_data_object" kindref="compound">wxTextDataObject</ref>, <ref refid="classwx_bitmap_data_object" kindref="compound">wxBitmapDataObject</ref>, <ref refid="classwx_custom_data_object" kindref="compound">wxCustomDataObject</ref>, <ref refid="classwx_drop_target" kindref="compound">wxDropTarget</ref>, <ref refid="classwx_drop_source" kindref="compound">wxDropSource</ref>, <ref refid="classwx_text_drop_target" kindref="compound">wxTextDropTarget</ref>, <ref refid="classwx_file_drop_target" kindref="compound">wxFileDropTarget</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__dnd" kindref="compound">Clipboard and Drag &amp; Drop</ref></para><para><simplesect kind="see"><para><ref refid="overview_dnd" kindref="compound">Drag and Drop Overview</ref>, <ref refid="page_samples_1page_samples_dnd" kindref="member">Drag &amp; Drop Sample</ref>, <ref refid="classwx_file_data_object" kindref="compound">wxFileDataObject</ref>, <ref refid="classwx_text_data_object" kindref="compound">wxTextDataObject</ref>, <ref refid="classwx_bitmap_data_object" kindref="compound">wxBitmapDataObject</ref>, <ref refid="classwx_custom_data_object" kindref="compound">wxCustomDataObject</ref>, <ref refid="classwx_drop_target" kindref="compound">wxDropTarget</ref>, <ref refid="classwx_drop_source" kindref="compound">wxDropSource</ref>, <ref refid="classwx_text_drop_target" kindref="compound">wxTextDropTarget</ref>, <ref refid="classwx_file_drop_target" kindref="compound">wxFileDropTarget</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="5246">
+      <node id="5250">
         <label>wxURLDataObject</label>
         <link refid="classwx_u_r_l_data_object"/>
-        <childnode refid="5245" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="5240">
-        <label>wxDataObjectComposite</label>
-        <link refid="classwx_data_object_composite"/>
-        <childnode refid="5239" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="5239">
-        <label>wxDataObject</label>
-        <link refid="classwx_data_object"/>
-      </node>
-      <node id="5245">
-        <label>wxTextDataObject</label>
-        <link refid="classwx_text_data_object"/>
-        <childnode refid="5241" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="5243">
-        <label>wxCustomDataObject</label>
-        <link refid="classwx_custom_data_object"/>
-        <childnode refid="5241" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="5242">
-        <label>wxBitmapDataObject</label>
-        <link refid="classwx_bitmap_data_object"/>
-        <childnode refid="5241" relation="public-inheritance">
+        <childnode refid="5249" relation="public-inheritance">
         </childnode>
       </node>
       <node id="5244">
-        <label>wxFileDataObject</label>
-        <link refid="classwx_file_data_object"/>
-        <childnode refid="5241" relation="public-inheritance">
+        <label>wxDataObjectComposite</label>
+        <link refid="classwx_data_object_composite"/>
+        <childnode refid="5243" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5241">
+      <node id="5243">
+        <label>wxDataObject</label>
+        <link refid="classwx_data_object"/>
+      </node>
+      <node id="5249">
+        <label>wxTextDataObject</label>
+        <link refid="classwx_text_data_object"/>
+        <childnode refid="5245" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5247">
+        <label>wxCustomDataObject</label>
+        <link refid="classwx_custom_data_object"/>
+        <childnode refid="5245" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5246">
+        <label>wxBitmapDataObject</label>
+        <link refid="classwx_bitmap_data_object"/>
+        <childnode refid="5245" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5248">
+        <label>wxFileDataObject</label>
+        <link refid="classwx_file_data_object"/>
+        <childnode refid="5245" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5245">
         <label>wxDataObjectSimple</label>
         <link refid="classwx_data_object_simple"/>
-        <childnode refid="5239" relation="public-inheritance">
+        <childnode refid="5243" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>

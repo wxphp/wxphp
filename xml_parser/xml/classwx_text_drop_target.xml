@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_text_drop_target" kind="class" prot="public">
     <compoundname>wxTextDropTarget</compoundname>
     <basecompoundref refid="classwx_drop_target" prot="public" virt="non-virtual">wxDropTarget</basecompoundref>
@@ -92,29 +92,29 @@ Return true to accept the data, or false to veto the operation. </para>        <
 <para>A predefined drop target for dealing with text data. </para>    </briefdescription>
     <detaileddescription>
 <para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__dnd" kindref="compound">Clipboard and Drag &amp; Drop</ref></para><para><simplesect kind="see"><para><ref refid="overview__dnd" kindref="compound">Drag and Drop Overview</ref>, <ref refid="classwx_drop_source" kindref="compound">wxDropSource</ref>, <ref refid="classwx_drop_target" kindref="compound">wxDropTarget</ref>, <ref refid="classwx_file_drop_target" kindref="compound">wxFileDropTarget</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__dnd" kindref="compound">Clipboard and Drag &amp; Drop</ref></para><para><simplesect kind="see"><para><ref refid="overview_dnd" kindref="compound">Drag and Drop Overview</ref>, <ref refid="classwx_drop_source" kindref="compound">wxDropSource</ref>, <ref refid="classwx_drop_target" kindref="compound">wxDropTarget</ref>, <ref refid="classwx_file_drop_target" kindref="compound">wxFileDropTarget</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10738">
+      <node id="10799">
         <label>wxDropTarget</label>
         <link refid="classwx_drop_target"/>
       </node>
-      <node id="10737">
+      <node id="10798">
         <label>wxTextDropTarget</label>
         <link refid="classwx_text_drop_target"/>
-        <childnode refid="10738" relation="public-inheritance">
+        <childnode refid="10799" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10740">
+      <node id="10801">
         <label>wxDropTarget</label>
         <link refid="classwx_drop_target"/>
       </node>
-      <node id="10739">
+      <node id="10800">
         <label>wxTextDropTarget</label>
         <link refid="classwx_text_drop_target"/>
-        <childnode refid="10740" relation="public-inheritance">
+        <childnode refid="10801" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>

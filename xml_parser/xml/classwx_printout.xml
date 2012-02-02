@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_printout" kind="class" prot="public">
     <compoundname>wxPrintout</compoundname>
     <basecompoundref refid="classwx_object" prot="public" virt="non-virtual">wxObject</basecompoundref>
@@ -286,7 +286,7 @@
         <briefdescription>
 <para>Returns the title of the printout. </para>        </briefdescription>
         <detaileddescription>
-<para><xrefsect id="todo_1_todo000046"><xreftitle>Todo</xreftitle><xrefdescription><para>the python note here was wrong </para></xrefdescription></xrefsect></para>        </detaileddescription>
+<para><xrefsect id="todo_1_todo000045"><xreftitle>Todo</xreftitle><xrefdescription><para>the python note here was wrong </para></xrefdescription></xrefsect></para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/print.h" line="756"/>
@@ -536,47 +536,47 @@
 <para>This class encapsulates the functionality of printing out an application document. </para>    </briefdescription>
     <detaileddescription>
 <para>A new class must be derived and members overridden to respond to calls such as <ref refid="classwx_printout_1abac930e68b063cd609059fa9d96e7831" kindref="member">OnPrintPage()</ref> and <ref refid="classwx_printout_1a7829a7066a496a14d677d4958e28079f" kindref="member">HasPage()</ref> and to render the print image onto an associated <ref refid="classwx_d_c" kindref="compound">wxDC</ref>. Instances of this class are passed to <ref refid="classwx_printer_1a59e6d69be017dfa033e116bdf749bab3" kindref="member">wxPrinter::Print()</ref> or to a <ref refid="classwx_print_preview" kindref="compound">wxPrintPreview</ref> object to initiate printing or previewing.</para><para>Your derived <ref refid="classwx_printout" kindref="compound">wxPrintout</ref> is responsible for drawing both the preview image and the printed page. If your windows&apos; drawing routines accept an arbitrary DC as an argument, you can re-use those routines within your <ref refid="classwx_printout" kindref="compound">wxPrintout</ref> subclass to draw the printout image. You may also add additional drawing elements within your <ref refid="classwx_printout" kindref="compound">wxPrintout</ref> subclass, like headers, footers, and/or page numbers. However, the image on the printed page will often differ from the image drawn on the screen, as will the print preview image -- not just in the presence of headers and footers, but typically in scale. A high-resolution printer presents a much larger drawing surface (i.e., a higher-resolution DC); a zoomed-out preview image presents a much smaller drawing surface (lower-resolution DC). By using the routines FitThisSizeToXXX() and/or MapScreenSizeToXXX() within your <ref refid="classwx_printout" kindref="compound">wxPrintout</ref> subclass to set the user scale and origin of the associated DC, you can easily use a single drawing routine to draw on your application&apos;s windows, to create the print preview image, and to create the printed paper image, and achieve a common appearance to the preview image and the printed page.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__printing" kindref="compound">Printing Framework</ref></para><para><simplesect kind="see"><para><ref refid="overview__printing" kindref="compound">Printing Framework Overview</ref>, <ref refid="classwx_printer_d_c" kindref="compound">wxPrinterDC</ref>, <ref refid="classwx_print_dialog" kindref="compound">wxPrintDialog</ref>, <ref refid="classwx_page_setup_dialog" kindref="compound">wxPageSetupDialog</ref>, <ref refid="classwx_printer" kindref="compound">wxPrinter</ref>, <ref refid="classwx_print_preview" kindref="compound">wxPrintPreview</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__printing" kindref="compound">Printing Framework</ref></para><para><simplesect kind="see"><para><ref refid="overview_printing" kindref="compound">Printing Framework Overview</ref>, <ref refid="classwx_printer_d_c" kindref="compound">wxPrinterDC</ref>, <ref refid="classwx_print_dialog" kindref="compound">wxPrintDialog</ref>, <ref refid="classwx_page_setup_dialog" kindref="compound">wxPageSetupDialog</ref>, <ref refid="classwx_printer" kindref="compound">wxPrinter</ref>, <ref refid="classwx_print_preview" kindref="compound">wxPrintPreview</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="8811">
+      <node id="8819">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="8810">
+      <node id="8818">
         <label>wxPrintout</label>
         <link refid="classwx_printout"/>
-        <childnode refid="8811" relation="public-inheritance">
+        <childnode refid="8819" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8813">
+      <node id="8821">
         <label>wxRichTextPrintout</label>
         <link refid="classwx_rich_text_printout"/>
-        <childnode refid="8810" relation="public-inheritance">
+        <childnode refid="8818" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8812">
+      <node id="8820">
         <label>wxHtmlPrintout</label>
         <link refid="classwx_html_printout"/>
-        <childnode refid="8810" relation="public-inheritance">
+        <childnode refid="8818" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="8815">
+      <node id="8823">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="8816" relation="usage">
+        <childnode refid="8824" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="8814">
+      <node id="8822">
         <label>wxPrintout</label>
         <link refid="classwx_printout"/>
-        <childnode refid="8815" relation="public-inheritance">
+        <childnode refid="8823" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8816">
+      <node id="8824">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

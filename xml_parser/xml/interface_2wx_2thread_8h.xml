@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="interface_2wx_2thread_8h" kind="file">
     <compoundname>thread.h</compoundname>
     <innerclass refid="classwx_condition" prot="public">wxCondition</innerclass>
@@ -17,7 +17,7 @@
         <briefdescription>
 <para>This macro declares a (static) critical section object named <emphasis>cs</emphasis> if <computeroutput>wxUSE_THREADS</computeroutput> is 1 and does nothing if it is 0. </para>        </briefdescription>
         <detaileddescription>
-<para>Include file: <verbatim>#include &lt;wx/thread.h&gt; </verbatim> </para>        </detaileddescription>
+<para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/thread.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="1679" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" bodystart="1679" bodyend="-1"/>
@@ -28,7 +28,7 @@
         <briefdescription>
 <para>This macro declares a critical section object named <emphasis>cs</emphasis> if <computeroutput>wxUSE_THREADS</computeroutput> is 1 and does nothing if it is 0. </para>        </briefdescription>
         <detaileddescription>
-<para>As it doesn&apos;t include the <computeroutput>static</computeroutput> keyword (unlike <ref refid="group__group__funcmacro__thread_1ga79ee915c6353e705958843a57a5148e2" kindref="member">wxCRIT_SECT_DECLARE()</ref>), it can be used to declare a class or struct member which explains its name.</para><para>Include file: <verbatim>#include &lt;wx/thread.h&gt; </verbatim> </para>        </detaileddescription>
+<para>As it doesn&apos;t include the <computeroutput>static</computeroutput> keyword (unlike <ref refid="group__group__funcmacro__thread_1ga79ee915c6353e705958843a57a5148e2" kindref="member">wxCRIT_SECT_DECLARE()</ref>), it can be used to declare a class or struct member which explains its name.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/thread.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="1689" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" bodystart="1689" bodyend="-1"/>
@@ -40,7 +40,7 @@
         <briefdescription>
 <para>This macro creates a <ref refid="classwx_critical_section_locker" kindref="compound">wxCriticalSectionLocker</ref> named <emphasis>name</emphasis> and associated with the critical section <emphasis>cs</emphasis> if <computeroutput>wxUSE_THREADS</computeroutput> is 1 and does nothing if it is 0. </para>        </briefdescription>
         <detaileddescription>
-<para>Include file: <verbatim>#include &lt;wx/thread.h&gt; </verbatim> </para>        </detaileddescription>
+<para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/thread.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="1698" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" bodystart="1698" bodyend="-1"/>
@@ -55,11 +55,11 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>s_counter<sp/>=<sp/>0;</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__thread_1ga3b0ab821a03aeecc1a7ddfcecb581355" kindref="member" tooltip="This macro combines wxCRIT_SECT_DECLARE() and wxCRIT_SECT_LOCKER(): it creates a...">wxCRITICAL_SECTION</ref>(counter);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__thread_1ga3b0ab821a03aeecc1a7ddfcecb581355" kindref="member" tooltip="This macro combines wxCRIT_SECT_DECLARE() and wxCRIT_SECT_LOCKER(): it creates a static critical sect...">wxCRITICAL_SECTION</ref>(counter);</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>++s_counter;</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-</programlisting></para><para>Note that this example assumes that the function is called the first time from the main thread so that the critical section object is initialized correctly by the time other threads start calling it, if this is not the case this approach can <bold>not</bold> be used and the critical section must be made a global instead.</para><para>Include file: <verbatim>#include &lt;wx/thread.h&gt; </verbatim> </para>        </detaileddescription>
+</programlisting></para><para>Note that this example assumes that the function is called the first time from the main thread so that the critical section object is initialized correctly by the time other threads start calling it, if this is not the case this approach can <bold>not</bold> be used and the critical section must be made a global instead.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/thread.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="1725" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" bodystart="1725" bodyend="-1"/>
@@ -70,7 +70,7 @@
         <briefdescription>
 <para>This macro is equivalent to <ref refid="classwx_critical_section_1a9710ab7240b29a653fd9233c12aadba6" kindref="member">critical_section.Leave()</ref> if <computeroutput>wxUSE_THREADS</computeroutput> is 1 and does nothing if it is 0. </para>        </briefdescription>
         <detaileddescription>
-<para>Include file: <verbatim>#include &lt;wx/thread.h&gt; </verbatim> </para>        </detaileddescription>
+<para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/thread.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="1734" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" bodystart="1734" bodyend="-1"/>
@@ -81,7 +81,7 @@
         <briefdescription>
 <para>This macro is equivalent to <ref refid="classwx_critical_section_1afa80c7cb306d72884ebcc4e60ea61d39" kindref="member">critical_section.Enter()</ref> if <computeroutput>wxUSE_THREADS</computeroutput> is 1 and does nothing if it is 0. </para>        </briefdescription>
         <detaileddescription>
-<para>Include file: <verbatim>#include &lt;wx/thread.h&gt; </verbatim> </para>        </detaileddescription>
+<para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/thread.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="1743" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" bodystart="1743" bodyend="-1"/>
@@ -261,9 +261,9 @@
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="658" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" bodystart="657" bodyend="676"/>
       </memberdef>
-      <memberdef kind="enum" id="interface_2wx_2thread_8h_1af9bdc3014f3d54c426b6d2df10de4960" prot="public" static="no">
-        <name>@19</name>
-        <enumvalue id="interface_2wx_2thread_8h_1af9bdc3014f3d54c426b6d2df10de4960aea44fc3114b0a70adba408c33f0fbdb8" prot="public">
+      <memberdef kind="enum" id="interface_2wx_2thread_8h_1a39fca1837c5ce7715cbf571669660c13" prot="public" static="no">
+        <name>@22</name>
+        <enumvalue id="interface_2wx_2thread_8h_1a39fca1837c5ce7715cbf571669660c13aea44fc3114b0a70adba408c33f0fbdb8" prot="public">
           <name>WXTHREAD_MIN_PRIORITY</name>
           <initializer> 0u</initializer>
           <briefdescription>
@@ -271,7 +271,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="interface_2wx_2thread_8h_1af9bdc3014f3d54c426b6d2df10de4960a28fc72e65a5bec39136189f51654b835" prot="public">
+        <enumvalue id="interface_2wx_2thread_8h_1a39fca1837c5ce7715cbf571669660c13a28fc72e65a5bec39136189f51654b835" prot="public">
           <name>WXTHREAD_DEFAULT_PRIORITY</name>
           <initializer> 50u</initializer>
           <briefdescription>
@@ -279,7 +279,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="interface_2wx_2thread_8h_1af9bdc3014f3d54c426b6d2df10de4960ad28b90e80e00f10dc6ec1bc335bd567d" prot="public">
+        <enumvalue id="interface_2wx_2thread_8h_1a39fca1837c5ce7715cbf571669660c13ad28b90e80e00f10dc6ec1bc335bd567d" prot="public">
           <name>WXTHREAD_MAX_PRIORITY</name>
           <initializer> 100u</initializer>
           <briefdescription>
@@ -442,7 +442,7 @@
         <briefdescription>
 <para>Returns true if this thread is the main one. </para>        </briefdescription>
         <detaileddescription>
-<para>Always returns true if <computeroutput>wxUSE_THREADS</computeroutput> is 0.</para><para>Include file: <verbatim>#include &lt;wx/thread.h&gt; </verbatim> </para>        </detaileddescription>
+<para>Always returns true if <computeroutput>wxUSE_THREADS</computeroutput> is 0.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/thread.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="1751"/>
@@ -460,7 +460,7 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>before<sp/>doing<sp/>any<sp/>GUI<sp/>calls<sp/>we<sp/>must<sp/>ensure<sp/>that</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>this<sp/>thread<sp/>is<sp/>the<sp/>only<sp/>one<sp/>doing<sp/>it!</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__thread_1ga6671c1599fd4ccf6a7c7bb90b2304709" kindref="member" tooltip="This function must be called when any thread other than the main GUI thread wants...">wxMutexGuiEnter</ref>();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__thread_1ga6671c1599fd4ccf6a7c7bb90b2304709" kindref="member" tooltip="This function must be called when any thread other than the main GUI thread wants to get access to th...">wxMutexGuiEnter</ref>();</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Call<sp/>GUI<sp/>here:</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>my_window-&gt;DrawSomething();</highlight></codeline>
@@ -468,7 +468,7 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__thread_1gaddfdb2956953480a379d998ea7ced5b5" kindref="member" tooltip="This function is only defined on platforms which support preemptive threads.">wxMutexGuiLeave</ref>();</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 </programlisting></para><para>This function is only defined on platforms which support preemptive threads and only works under some ports (wxMSW currently).</para><para><simplesect kind="note"><para>Under GTK, no creation of top-level windows is allowed in any thread but the main one.</para></simplesect>
-Include file: <verbatim>#include &lt;wx/thread.h&gt; </verbatim> </para>        </detaileddescription>
+Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/thread.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="1787"/>
@@ -482,7 +482,7 @@ Include file: <verbatim>#include &lt;wx/thread.h&gt; </verbatim> </para>        
 <para>This function is only defined on platforms which support preemptive threads. </para>        </briefdescription>
         <detaileddescription>
 <para><simplesect kind="see"><para><ref refid="group__group__funcmacro__thread_1ga6671c1599fd4ccf6a7c7bb90b2304709" kindref="member">wxMutexGuiEnter()</ref></para></simplesect>
-Include file: <verbatim>#include &lt;wx/thread.h&gt; </verbatim> </para>        </detaileddescription>
+Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/thread.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="1797"/>

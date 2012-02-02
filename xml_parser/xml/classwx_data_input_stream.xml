@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_data_input_stream" kind="class" prot="public">
     <compoundname>wxDataInputStream</compoundname>
     <includes local="no">wx/datstrm.h</includes>
@@ -291,15 +291,15 @@
     <detaileddescription>
 <para>Data can be read in either big-endian or little-endian format, little-endian being the default on all architectures.</para><para>If you want to read data from text files (or streams) use <ref refid="classwx_text_input_stream" kindref="compound">wxTextInputStream</ref> instead.</para><para>The &quot;&gt;&gt;&quot; operator is overloaded and you can use this class like a standard C++ iostream. Note, however, that the arguments are the fixed size types wxUint32, wxInt32 etc and on a typical 32-bit computer, none of these match to the &quot;long&quot; type (wxInt32 is defined as signed int on 32-bit architectures) so that you cannot use long. To avoid problems (here and elsewhere), make use of the wxInt32, wxUint32, etc types.</para><para>For example:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_file_input_stream" kindref="compound" tooltip="This class represents data read in from a file.">wxFileInputStream</ref><sp/>input(<sp/></highlight><highlight class="stringliteral">&quot;mytext.dat&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_data_input_stream" kindref="compound" tooltip="This class provides functions that read binary data types in a portable way.">wxDataInputStream</ref><sp/>store(<sp/>input<sp/>);</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="defs_8h_1aad88e290b822df511ad8025ee2e45263" kindref="member" tooltip="8 bit type (the mapping is more complex than a simple typedef and is not shown here)...">wxUint8</ref><sp/>i1;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="defs_8h_1aad88e290b822df511ad8025ee2e45263" kindref="member" tooltip="8 bit type (the mapping is more complex than a simple typedef and is not shown here).">wxUint8</ref><sp/>i1;</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>f2;</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change...">wxString</ref><sp/>line;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change was actually the m...">wxString</ref><sp/>line;</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>store<sp/>&gt;&gt;<sp/>i1;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>read<sp/>a<sp/>8<sp/>bit<sp/>integer.</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>store<sp/>&gt;&gt;<sp/>i1<sp/>&gt;&gt;<sp/>f2;<sp/></highlight><highlight class="comment">//<sp/>read<sp/>a<sp/>8<sp/>bit<sp/>integer<sp/>followed<sp/>by<sp/>float.</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>store<sp/>&gt;&gt;<sp/>line;<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>read<sp/>a<sp/>text<sp/>line</highlight></codeline>
 </programlisting></para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__streams" kindref="compound">Streams</ref></para><para><simplesect kind="see"><para><ref refid="classwx_data_output_stream" kindref="compound">wxDataOutputStream</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__streams" kindref="compound">Streams</ref></para><para><simplesect kind="see"><para><ref refid="classwx_data_output_stream" kindref="compound">wxDataOutputStream</ref> </para></simplesect>
 </para>    </detaileddescription>
     <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datstrm.h" line="176" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datstrm.h" bodystart="175" bodyend="286"/>
     <listofallmembers>

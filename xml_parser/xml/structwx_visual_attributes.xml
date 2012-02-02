@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="structwx_visual_attributes" kind="struct" prot="public">
     <compoundname>wxVisualAttributes</compoundname>
     <includes local="no">wx/window.h</includes>
@@ -49,43 +49,43 @@
     <detaileddescription>
     </detaileddescription>
     <collaborationgraph>
-      <node id="11312">
+      <node id="11373">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="11313" relation="usage">
+        <childnode refid="11374" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="11310">
+      <node id="11371">
         <label>wxVisualAttributes</label>
         <link refid="structwx_visual_attributes"/>
-        <childnode refid="11311" relation="usage">
+        <childnode refid="11372" relation="usage">
           <edgelabel>colFg</edgelabel>
           <edgelabel>colBg</edgelabel>
         </childnode>
-        <childnode refid="11314" relation="usage">
+        <childnode refid="11375" relation="usage">
           <edgelabel>font</edgelabel>
         </childnode>
       </node>
-      <node id="11311">
+      <node id="11372">
         <label>wxColour</label>
         <link refid="classwx_colour"/>
-        <childnode refid="11312" relation="public-inheritance">
+        <childnode refid="11373" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11315">
+      <node id="11376">
         <label>wxGDIObject</label>
         <link refid="classwx_g_d_i_object"/>
-        <childnode refid="11312" relation="public-inheritance">
+        <childnode refid="11373" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11314">
+      <node id="11375">
         <label>wxFont</label>
         <link refid="classwx_font"/>
-        <childnode refid="11315" relation="public-inheritance">
+        <childnode refid="11376" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11313">
+      <node id="11374">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

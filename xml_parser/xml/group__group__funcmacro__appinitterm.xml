@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="group__group__funcmacro__appinitterm" kind="group">
     <compoundname>group_funcmacro_appinitterm</compoundname>
     <title>Application Initialization and Termination</title>
@@ -12,7 +12,7 @@
         <briefdescription>
 <para>This function doesn&apos;t exist in wxWidgets but it is created by using the <ref refid="group__group__funcmacro__rtti_1ga967aafaa261481fe2d2e1cf599e3e003" kindref="member">wxIMPLEMENT_APP()</ref> macro. </para>        </briefdescription>
         <detaileddescription>
-<para>Thus, before using it anywhere but in the same module where this macro is used, you must make it available using <ref refid="group__group__funcmacro__rtti_1ga1523a2d553dea288d66cd35e8a0ffd5c" kindref="member">wxDECLARE_APP()</ref>.</para><para>The advantage of using this function compared to directly using the global <ref refid="interface_2wx_2app_8h_1a01fd2cb0a8fbaade87800e71a50e855d" kindref="member">wxTheApp</ref> pointer is that the latter is of type wxApp* and so wouldn&apos;t allow you to access the functions specific to your application class but not present in <ref refid="classwx_app" kindref="compound">wxApp</ref> while <ref refid="group__group__funcmacro__appinitterm_1gac387a69e740a149f9888e4992a3a4c6c" kindref="member">wxGetApp()</ref> returns the object of the right type.</para><para>Include file: <verbatim>#include &lt;wx/app.h&gt; </verbatim> </para>        </detaileddescription>
+<para>Thus, before using it anywhere but in the same module where this macro is used, you must make it available using <ref refid="group__group__funcmacro__rtti_1ga1523a2d553dea288d66cd35e8a0ffd5c" kindref="member">wxDECLARE_APP()</ref>.</para><para>The advantage of using this function compared to directly using the global <ref refid="interface_2wx_2app_8h_1a01fd2cb0a8fbaade87800e71a50e855d" kindref="member">wxTheApp</ref> pointer is that the latter is of type wxApp* and so wouldn&apos;t allow you to access the functions specific to your application class but not present in <ref refid="classwx_app" kindref="compound">wxApp</ref> while <ref refid="group__group__funcmacro__appinitterm_1gac387a69e740a149f9888e4992a3a4c6c" kindref="member">wxGetApp()</ref> returns the object of the right type.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/app.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" line="946"/>
@@ -30,7 +30,7 @@
         <briefdescription>
 <para>If <emphasis>doIt</emphasis> is true, the fatal exceptions (also known as general protection faults under Windows or segmentation violations in the Unix world) will be caught and passed to <ref refid="classwx_app_console_1a927931aafbb7aec4debdfc02ee6f6f9d" kindref="member">wxApp::OnFatalException</ref>. </para>        </briefdescription>
         <detaileddescription>
-<para>By default, i.e. before this function is called, they will be handled in the normal way which usually just means that the application will be terminated. Calling <ref refid="group__group__funcmacro__appinitterm_1ga28a4fb827b93fa6bac18c9666c23ee10" kindref="member">wxHandleFatalExceptions()</ref> with <emphasis>doIt</emphasis> equal to false will restore this default behaviour.</para><para>Notice that this function is only available if <computeroutput>wxUSE_ON_FATAL_EXCEPTION</computeroutput> is 1 and under Windows platform this requires a compiler with support for SEH (structured exception handling) which currently means only Microsoft Visual C++ or a recent Borland C++ version.</para><para>Include file: <verbatim>#include &lt;wx/app.h&gt; </verbatim> </para>        </detaileddescription>
+<para>By default, i.e. before this function is called, they will be handled in the normal way which usually just means that the application will be terminated. Calling <ref refid="group__group__funcmacro__appinitterm_1ga28a4fb827b93fa6bac18c9666c23ee10" kindref="member">wxHandleFatalExceptions()</ref> with <emphasis>doIt</emphasis> equal to false will restore this default behaviour.</para><para>Notice that this function is only available if <computeroutput>wxUSE_ON_FATAL_EXCEPTION</computeroutput> is 1 and under Windows platform this requires a compiler with support for SEH (structured exception handling) which currently means only Microsoft Visual C++ or a recent Borland C++ version.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/app.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" line="965"/>
@@ -43,7 +43,7 @@
         <briefdescription>
 <para>This function is used in wxBase only and only if you don&apos;t create <ref refid="classwx_app" kindref="compound">wxApp</ref> object at all. </para>        </briefdescription>
         <detaileddescription>
-<para>In this case you must call it from your <computeroutput>main()</computeroutput> function before calling any other wxWidgets functions.</para><para>If the function returns false the initialization could not be performed, in this case the library cannot be used and <ref refid="group__group__funcmacro__appinitterm_1ga6aa1674945da924183f65de703aeafa3" kindref="member">wxUninitialize()</ref> shouldn&apos;t be called neither.</para><para>This function may be called several times but <ref refid="group__group__funcmacro__appinitterm_1ga6aa1674945da924183f65de703aeafa3" kindref="member">wxUninitialize()</ref> must be called for each successful call to this function.</para><para>Include file: <verbatim>#include &lt;wx/app.h&gt; </verbatim> </para>        </detaileddescription>
+<para>In this case you must call it from your <computeroutput>main()</computeroutput> function before calling any other wxWidgets functions.</para><para>If the function returns false the initialization could not be performed, in this case the library cannot be used and <ref refid="group__group__funcmacro__appinitterm_1ga6aa1674945da924183f65de703aeafa3" kindref="member">wxUninitialize()</ref> shouldn&apos;t be called neither.</para><para>This function may be called several times but <ref refid="group__group__funcmacro__appinitterm_1ga6aa1674945da924183f65de703aeafa3" kindref="member">wxUninitialize()</ref> must be called for each successful call to this function.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/app.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" line="981"/>
@@ -56,7 +56,7 @@
         <briefdescription>
 <para>This function is for use in console (wxBase) programs only. </para>        </briefdescription>
         <detaileddescription>
-<para>Clean up; the library can&apos;t be used any more after the last call to <ref refid="group__group__funcmacro__appinitterm_1ga6aa1674945da924183f65de703aeafa3" kindref="member">wxUninitialize()</ref>.</para><para>It must be called once for each previous successful call to <ref refid="group__group__funcmacro__appinitterm_1gaa7b284f57a94442126d1e45faca5b4ad" kindref="member">wxInitialize()</ref>.</para><para>Include file: <verbatim>#include &lt;wx/app.h&gt; </verbatim></para><para>See <ref refid="group__group__funcmacro__appinitterm_1gaa7b284f57a94442126d1e45faca5b4ad" kindref="member">wxInitialize()</ref> for more info.</para><para>Include file: <verbatim>#include &lt;wx/init.h&gt; </verbatim> </para>        </detaileddescription>
+<para>Clean up; the library can&apos;t be used any more after the last call to <ref refid="group__group__funcmacro__appinitterm_1ga6aa1674945da924183f65de703aeafa3" kindref="member">wxUninitialize()</ref>.</para><para>It must be called once for each previous successful call to <ref refid="group__group__funcmacro__appinitterm_1gaa7b284f57a94442126d1e45faca5b4ad" kindref="member">wxInitialize()</ref>.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/app.h&gt; </verbatim></para><para>See <ref refid="group__group__funcmacro__appinitterm_1gaa7b284f57a94442126d1e45faca5b4ad" kindref="member">wxInitialize()</ref> for more info.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/init.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" line="989"/>
@@ -69,7 +69,7 @@
         <briefdescription>
 <para>This function wakes up the (internal and platform dependent) idle system, i.e. </para>        </briefdescription>
         <detaileddescription>
-<para>it will force the system to send an idle event even if the system currently <emphasis>is</emphasis> idle and thus would not send any idle event until after some other event would get sent. This is also useful for sending events between two threads and is used by the corresponding functions <ref refid="group__group__funcmacro__events_1ga0cf60a1ad3a5f1e659f7ae591570f58d" kindref="member">wxPostEvent()</ref> and <ref refid="classwx_evt_handler_1a0737c6d2cbcd5ded4b1ecdd53ed0def3" kindref="member">wxEvtHandler::AddPendingEvent()</ref>.</para><para>Include file: <verbatim>#include &lt;wx/app.h&gt; </verbatim> </para>        </detaileddescription>
+<para>it will force the system to send an idle event even if the system currently <emphasis>is</emphasis> idle and thus would not send any idle event until after some other event would get sent. This is also useful for sending events between two threads and is used by the corresponding functions <ref refid="group__group__funcmacro__events_1ga0cf60a1ad3a5f1e659f7ae591570f58d" kindref="member">wxPostEvent()</ref> and <ref refid="classwx_evt_handler_1a0737c6d2cbcd5ded4b1ecdd53ed0def3" kindref="member">wxEvtHandler::AddPendingEvent()</ref>.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/app.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" line="1001"/>
@@ -82,7 +82,7 @@
         <briefdescription>
 <para>Calls <ref refid="classwx_app_console_1a302adeb701f247bf8cac1570efc25020" kindref="member">wxAppConsole::Yield</ref>. </para>        </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000001"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This function is kept only for backwards compatibility. Please use the <ref refid="classwx_app_console_1a302adeb701f247bf8cac1570efc25020" kindref="member">wxAppConsole::Yield</ref> method instead in any new code.</para></xrefdescription></xrefsect>Include file: <verbatim>#include &lt;wx/app.h&gt; </verbatim> </para>        </detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000001"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This function is kept only for backwards compatibility. Please use the <ref refid="classwx_app_console_1a302adeb701f247bf8cac1570efc25020" kindref="member">wxAppConsole::Yield</ref> method instead in any new code.</para></xrefdescription></xrefsect></para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/app.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" line="1012"/>
@@ -105,7 +105,7 @@
         <briefdescription>
 <para>Calls <ref refid="classwx_app_1a81cc0e2724a7adbc0cc8b0aeeb5a072f" kindref="member">wxApp::SafeYield</ref>. </para>        </briefdescription>
         <detaileddescription>
-<para>Include file: <verbatim>#include &lt;wx/app.h&gt; </verbatim> </para>        </detaileddescription>
+<para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/app.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" line="1019"/>
@@ -128,7 +128,7 @@
         <detaileddescription>
 <para>Use this if you are not using the default wxWidgets entry code (e.g. main or WinMain).</para><para>For example, you can initialize wxWidgets from an Microsoft Foundation Classes (MFC) application using this function.</para><para><simplesect kind="note"><para>This overload of wxEntry is available under all platforms.</para></simplesect>
 <simplesect kind="see"><para><ref refid="group__group__funcmacro__appinitterm_1gac81f7fea72a17cc744d8c8785864c78a" kindref="member">wxEntryStart()</ref></para></simplesect>
-Include file: <verbatim>#include &lt;wx/app.h&gt; </verbatim> </para>        </detaileddescription>
+Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/app.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" line="1034"/>
@@ -163,13 +163,13 @@ Include file: <verbatim>#include &lt;wx/app.h&gt; </verbatim> </para>        </d
 <para>Notice that under Windows CE platform, and only there, the type of <emphasis>pCmdLine</emphasis> is <computeroutput>wchar_t</computeroutput> *, otherwise it is <computeroutput>char</computeroutput> *, even in Unicode build.</para><para><simplesect kind="remark"><para>To clean up wxWidgets, call <ref refid="classwx_app_console_1a5ee60051c92b0b2933258799626a0485" kindref="member">wxApp::OnExit</ref> followed by the static function wxApp::CleanUp. For example, if exiting from an MFC application that also uses wxWidgets: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>CTheApp::ExitInstance()</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>OnExit<sp/>isn&apos;t<sp/>called<sp/>by<sp/>CleanUp<sp/>so<sp/>must<sp/>be<sp/>called<sp/>explicitly.</highlight><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="interface_2wx_2app_8h_1a01fd2cb0a8fbaade87800e71a50e855d" kindref="member" tooltip="The global pointer to the singleton wxApp object.">wxTheApp</ref>-&gt;<ref refid="classwx_app_console_1a5ee60051c92b0b2933258799626a0485" kindref="member" tooltip="Override this member function for any processing which needs to be done as the application...">OnExit</ref>();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="interface_2wx_2app_8h_1a01fd2cb0a8fbaade87800e71a50e855d" kindref="member" tooltip="The global pointer to the singleton wxApp object.">wxTheApp</ref>-&gt;<ref refid="classwx_app_console_1a5ee60051c92b0b2933258799626a0485" kindref="member" tooltip="Override this member function for any processing which needs to be done as the application is about t...">OnExit</ref>();</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wxApp::CleanUp();</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>CWinApp::ExitInstance();</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 </programlisting></para></simplesect>
-Include file: <verbatim>#include &lt;wx/app.h&gt; </verbatim> </para>        </detaileddescription>
+Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/app.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" line="1061"/>
@@ -183,10 +183,10 @@ Include file: <verbatim>#include &lt;wx/app.h&gt; </verbatim> </para>        </d
 <para>Initializes all available image handlers. </para>        </briefdescription>
         <detaileddescription>
 <para>This function calls <ref refid="classwx_image_1ab39fb3747dfb8c2d444eff9fe41fa205" kindref="member">wxImage::AddHandler()</ref> for all the available image handlers (see <ref refid="classwx_image_1image_handlers" kindref="member">Available image handlers</ref> for the full list). Calling it is the simplest way to initialize <ref refid="classwx_image" kindref="compound">wxImage</ref> but it creates and registers even the handlers your program may not use. If you want to avoid the overhead of doing this you need to call <ref refid="classwx_image_1ab39fb3747dfb8c2d444eff9fe41fa205" kindref="member">wxImage::AddHandler()</ref> manually just for the handlers that you do want to use.</para><para><simplesect kind="see"><para><ref refid="classwx_image" kindref="compound">wxImage</ref>, <ref refid="classwx_image_handler" kindref="compound">wxImageHandler</ref></para></simplesect>
-Include file: <verbatim>#include &lt;wx/image.h&gt; </verbatim> </para>        </detaileddescription>
+Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/image.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="1948"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="1951"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__appinitterm_1gac81f7fea72a17cc744d8c8785864c78a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -204,7 +204,7 @@ Include file: <verbatim>#include &lt;wx/image.h&gt; </verbatim> </para>        <
         <briefdescription>
 <para>This function can be used to perform the initialization of wxWidgets if you can&apos;t use the default initialization code for any reason. </para>        </briefdescription>
         <detaileddescription>
-<para>If the function returns true, the initialization was successful and the global <ref refid="classwx_app" kindref="compound">wxApp</ref> object <ref refid="interface_2wx_2app_8h_1a01fd2cb0a8fbaade87800e71a50e855d" kindref="member">wxTheApp</ref> has been created. Moreover, <ref refid="group__group__funcmacro__appinitterm_1gaca1c6e45c8241bb2b16bee8f09401bc8" kindref="member">wxEntryCleanup()</ref> must be called afterwards. If the function returns false, a catastrophic initialization error occured and (at least the GUI part of) the library can&apos;t be used at all.</para><para>Notice that parameters <computeroutput>argc</computeroutput> and <computeroutput>argv</computeroutput> may be modified by this function.</para><para>Include file: <verbatim>#include &lt;wx/init.h&gt; </verbatim> </para>        </detaileddescription>
+<para>If the function returns true, the initialization was successful and the global <ref refid="classwx_app" kindref="compound">wxApp</ref> object <ref refid="interface_2wx_2app_8h_1a01fd2cb0a8fbaade87800e71a50e855d" kindref="member">wxTheApp</ref> has been created. Moreover, <ref refid="group__group__funcmacro__appinitterm_1gaca1c6e45c8241bb2b16bee8f09401bc8" kindref="member">wxEntryCleanup()</ref> must be called afterwards. If the function returns false, a catastrophic initialization error occured and (at least the GUI part of) the library can&apos;t be used at all.</para><para>Notice that parameters <computeroutput>argc</computeroutput> and <computeroutput>argv</computeroutput> may be modified by this function.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/init.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/init.h" line="62"/>
@@ -237,7 +237,7 @@ Include file: <verbatim>#include &lt;wx/image.h&gt; </verbatim> </para>        <
 <para>See <ref refid="group__group__funcmacro__appinitterm_1gac81f7fea72a17cc744d8c8785864c78a" kindref="member">wxEntryStart(int&amp;,wxChar**)</ref> for more info about this function. </para>        </briefdescription>
         <detaileddescription>
 <para>This is an additional overload of <ref refid="group__group__funcmacro__appinitterm_1gac81f7fea72a17cc744d8c8785864c78a" kindref="member">wxEntryStart()</ref> provided under MSW only. It is meant to be called with the parameters passed to WinMain().</para><para><simplesect kind="note"><para>Under Windows CE platform, and only there, the type of <emphasis>pCmdLine</emphasis> is <computeroutput>wchar_t</computeroutput> *, otherwise it is <computeroutput>char</computeroutput> *, even in Unicode build.</para></simplesect>
-Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page__port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor> </para><para>Include file: <verbatim>#include &lt;wx/init.h&gt; </verbatim> </para>        </detaileddescription>
+Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page_port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor> </para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/init.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/init.h" line="80"/>
@@ -250,7 +250,7 @@ Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref
         <briefdescription>
 <para>Free resources allocated by a successful call to <ref refid="group__group__funcmacro__appinitterm_1gac81f7fea72a17cc744d8c8785864c78a" kindref="member">wxEntryStart()</ref>. </para>        </briefdescription>
         <detaileddescription>
-<para>Include file: <verbatim>#include &lt;wx/init.h&gt; </verbatim> </para>        </detaileddescription>
+<para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/init.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/init.h" line="87"/>
@@ -273,7 +273,7 @@ Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref
         <briefdescription>
 <para>Initialize the library (may be called as many times as needed, but each call to <ref refid="group__group__funcmacro__appinitterm_1gaa7b284f57a94442126d1e45faca5b4ad" kindref="member">wxInitialize()</ref> must be matched by <ref refid="group__group__funcmacro__appinitterm_1ga6aa1674945da924183f65de703aeafa3" kindref="member">wxUninitialize()</ref>). </para>        </briefdescription>
         <detaileddescription>
-<para>With this function you may avoid <ref refid="group__group__funcmacro__rtti_1ga1523a2d553dea288d66cd35e8a0ffd5c" kindref="member">wxDECLARE_APP()</ref> and <ref refid="group__group__funcmacro__rtti_1ga967aafaa261481fe2d2e1cf599e3e003" kindref="member">wxIMPLEMENT_APP()</ref> macros and use <ref refid="group__group__funcmacro__appinitterm_1gaa7b284f57a94442126d1e45faca5b4ad" kindref="member">wxInitialize()</ref> and <ref refid="group__group__funcmacro__appinitterm_1ga6aa1674945da924183f65de703aeafa3" kindref="member">wxUninitialize()</ref> dynamically in the program startup and termination.</para><para>Include file: <verbatim>#include &lt;wx/init.h&gt; </verbatim> </para>        </detaileddescription>
+<para>With this function you may avoid <ref refid="group__group__funcmacro__rtti_1ga1523a2d553dea288d66cd35e8a0ffd5c" kindref="member">wxDECLARE_APP()</ref> and <ref refid="group__group__funcmacro__rtti_1ga967aafaa261481fe2d2e1cf599e3e003" kindref="member">wxIMPLEMENT_APP()</ref> macros and use <ref refid="group__group__funcmacro__appinitterm_1gaa7b284f57a94442126d1e45faca5b4ad" kindref="member">wxInitialize()</ref> and <ref refid="group__group__funcmacro__appinitterm_1ga6aa1674945da924183f65de703aeafa3" kindref="member">wxUninitialize()</ref> dynamically in the program startup and termination.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/init.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/init.h" line="99"/>

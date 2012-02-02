@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_data_view_tree_store" kind="class" prot="public">
     <compoundname>wxDataViewTreeStore</compoundname>
     <basecompoundref refid="classwx_data_view_model" prot="public" virt="non-virtual">wxDataViewModel</basecompoundref>
@@ -16,7 +16,7 @@
 <para>Creates the invisible root node internally. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2667"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2703"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_tree_store_1a3865ddb13306f567a748fbffce8dd3ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2672"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2708"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_tree_store_1a551ec90883034bb81e805afdf7a07eaa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_data_view_item" kindref="compound">wxDataViewItem</ref></type>
@@ -65,7 +65,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2681"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2717"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_tree_store_1af0818ef372152299fe5d049cdf1e9633" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_data_view_item" kindref="compound">wxDataViewItem</ref></type>
@@ -96,7 +96,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2689"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2725"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_tree_store_1a78222decc7d85840e1e880b07ee55fb4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -109,7 +109,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2694"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2730"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_tree_store_1a5a9b7add7ce1a12bf8b8ef4b4723e598" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -126,7 +126,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2699"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2735"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_tree_store_1ac241f1385f4ff8f9cb5675aa3afdd193" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -143,7 +143,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2704"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2740"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_tree_store_1a9873954e4099904a04407f59bfb74dae" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -160,7 +160,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2709"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2745"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_tree_store_1abc6309aa50cac052cb3f59a78b24f339" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_client_data" kindref="compound">wxClientData</ref> *</type>
@@ -177,7 +177,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2714"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2750"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_tree_store_1ad9547f54eba18f5c5c2890b4b10978aa" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_icon" kindref="compound">wxIcon</ref> &amp;</type>
@@ -194,7 +194,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2719"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2755"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_tree_store_1a574c7b0f01426c38e903ff106b387cda" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_icon" kindref="compound">wxIcon</ref> &amp;</type>
@@ -211,7 +211,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2724"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2760"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_tree_store_1a84130388ff00a1fc247401a9b75510b0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -228,7 +228,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2729"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2765"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_tree_store_1afbafea7a28ffed9e32a4743f5ff02d9d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_data_view_item" kindref="compound">wxDataViewItem</ref></type>
@@ -249,7 +249,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2735"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2771"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_tree_store_1a2886ec44cf5ebf4bf368e43331b8b85c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_data_view_item" kindref="compound">wxDataViewItem</ref></type>
@@ -289,7 +289,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2745"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2781"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_tree_store_1a23ff27442d17f696e06551548d624f3e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_data_view_item" kindref="compound">wxDataViewItem</ref></type>
@@ -324,7 +324,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2754"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2790"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_tree_store_1a7c1d67616ed8e5275ad1b4b8016b4b1b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_data_view_item" kindref="compound">wxDataViewItem</ref></type>
@@ -360,7 +360,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2763"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2799"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_tree_store_1a05b02028a01f8bded745e8bc2f0229cc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_data_view_item" kindref="compound">wxDataViewItem</ref></type>
@@ -391,7 +391,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2771"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2807"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_tree_store_1aabe65f7e0a908d616d13f459af8b1fdb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -412,7 +412,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2776"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2812"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_tree_store_1a67f2f38a19ea902177a5f940169891d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -433,7 +433,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2782"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2818"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_tree_store_1a36dbdece687f1d2f2a92e6e6cab450fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -454,51 +454,51 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2787"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2823"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para><ref refid="classwx_data_view_tree_store" kindref="compound">wxDataViewTreeStore</ref> is a specialised <ref refid="classwx_data_view_model" kindref="compound">wxDataViewModel</ref> for storing simple trees very much like <ref refid="classwx_tree_ctrl" kindref="compound">wxTreeCtrl</ref> does and it offers a similar API. </para>    </briefdescription>
     <detaileddescription>
 <para>This class actually stores the entire tree and the values (therefore its name) and implements all virtual methods from the base class so it can be used directly without having to derive any class from it, but it is mostly used from within <ref refid="classwx_data_view_tree_ctrl" kindref="compound">wxDataViewTreeCtrl</ref>.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__dvc" kindref="compound">wxDataViewCtrl Related Classes</ref> </para>    </detaileddescription>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__dvc" kindref="compound">wxDataViewCtrl Related Classes</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="5455">
+      <node id="5459">
         <label>wxRefCounter</label>
         <link refid="classwx_ref_counter"/>
       </node>
-      <node id="5454">
+      <node id="5458">
         <label>wxDataViewModel</label>
         <link refid="classwx_data_view_model"/>
-        <childnode refid="5455" relation="public-inheritance">
+        <childnode refid="5459" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5453">
+      <node id="5457">
         <label>wxDataViewTreeStore</label>
         <link refid="classwx_data_view_tree_store"/>
-        <childnode refid="5454" relation="public-inheritance">
+        <childnode refid="5458" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="5458">
+      <node id="5462">
         <label>wxRefCounter</label>
         <link refid="classwx_ref_counter"/>
       </node>
-      <node id="5457">
+      <node id="5461">
         <label>wxDataViewModel</label>
         <link refid="classwx_data_view_model"/>
-        <childnode refid="5458" relation="public-inheritance">
+        <childnode refid="5462" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5456">
+      <node id="5460">
         <label>wxDataViewTreeStore</label>
         <link refid="classwx_data_view_tree_store"/>
-        <childnode refid="5457" relation="public-inheritance">
+        <childnode refid="5461" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2662" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" bodystart="2661" bodyend="2788"/>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2698" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" bodystart="2697" bodyend="2824"/>
     <listofallmembers>
       <member refid="classwx_data_view_model_1af975c0a3afb970a21b9691a92f44c6c8" prot="public" virt="non-virtual"><scope>wxDataViewTreeStore</scope><name>AddNotifier</name></member>
       <member refid="classwx_data_view_tree_store_1a551ec90883034bb81e805afdf7a07eaa" prot="public" virt="non-virtual"><scope>wxDataViewTreeStore</scope><name>AppendContainer</name></member>

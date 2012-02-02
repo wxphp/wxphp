@@ -1,11 +1,10 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_sound" kind="class" prot="public">
     <compoundname>wxSound</compoundname>
     <basecompoundref refid="classwx_object" prot="public" virt="non-virtual">wxObject</basecompoundref>
     <includes local="no">wx/sound.h</includes>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_sound_1aca197e390cb89d6654bd3b368afbc681" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
         <definition>bool wxSound::Play</definition>
@@ -237,34 +236,34 @@
 <para>This class represents a short sound (loaded from Windows WAV file), that can be stored in memory and played. </para>    </briefdescription>
     <detaileddescription>
 <para>Currently this class is implemented on Windows and Unix (and uses either Open Sound System or Simple DirectMedia Layer).</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__media" kindref="compound">Multimedia</ref> </para>    </detaileddescription>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__media" kindref="compound">Multimedia</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10273">
+      <node id="10333">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="10272">
+      <node id="10332">
         <label>wxSound</label>
         <link refid="classwx_sound"/>
-        <childnode refid="10273" relation="public-inheritance">
+        <childnode refid="10333" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10275">
+      <node id="10335">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="10276" relation="usage">
+        <childnode refid="10336" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="10274">
+      <node id="10334">
         <label>wxSound</label>
         <link refid="classwx_sound"/>
-        <childnode refid="10275" relation="public-inheritance">
+        <childnode refid="10335" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10276">
+      <node id="10336">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

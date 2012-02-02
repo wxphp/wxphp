@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_m_b_conv_file" kind="class" prot="public">
     <compoundname>wxMBConvFile</compoundname>
     <basecompoundref refid="classwx_m_b_conv" prot="public" virt="non-virtual">wxMBConv</basecompoundref>
@@ -7,31 +7,31 @@
     <briefdescription>
 <para>This class used to define the class instance <bold>wxConvFileName</bold>, but nowadays <bold>wxConvFileName</bold> is either of type wxConvLibc (on most platforms) or wxConvUTF8 (on MacOS X). </para>    </briefdescription>
     <detaileddescription>
-<para><bold>wxConvFileName</bold> converts filenames between filesystem multibyte encoding and Unicode. <bold>wxConvFileName</bold> can also be set to a something else at run-time which is used e.g. by wxGTK to use a class which checks the environment variable <bold>G_FILESYSTEM_ENCODING</bold> indicating that filenames should not be interpreted as UTF8 and also for converting invalid UTF8 characters (e.g. if there is a filename in iso8859_1) to strings with octal values.</para><para>Since some platforms (such as Win32) use Unicode in the filenames, and others (such as Unix) use multibyte encodings, this class should only be used directly if wxMBFILES is defined to 1. A convenience macro, <computeroutput>wxFNCONV</computeroutput>, is defined to <computeroutput>wxConvFileName-&gt;cWX2MB</computeroutput> in this case. You could use it like this:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__string_1gad42f64d8c82f1ce4ae58773a89b2d6a7" kindref="member" tooltip="wxChar is defined to bechar when wxUSE_UNICODE==0wchar_t when wxUSE_UNICODE==1 (the...">wxChar</ref><sp/>*name<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;rawfile.doc&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<para><bold>wxConvFileName</bold> converts filenames between filesystem multibyte encoding and Unicode. <bold>wxConvFileName</bold> can also be set to a something else at run-time which is used e.g. by wxGTK to use a class which checks the environment variable <bold>G_FILESYSTEM_ENCODING</bold> indicating that filenames should not be interpreted as UTF8 and also for converting invalid UTF8 characters (e.g. if there is a filename in iso8859_1) to strings with octal values.</para><para>Since some platforms (such as Win32) use Unicode in the filenames, and others (such as Unix) use multibyte encodings, this class should only be used directly if wxMBFILES is defined to 1. A convenience macro, <computeroutput>wxFNCONV</computeroutput>, is defined to <computeroutput>wxConvFileName-&gt;cWX2MB</computeroutput> in this case. You could use it like this:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__string_1gad42f64d8c82f1ce4ae58773a89b2d6a7" kindref="member" tooltip="wxChar is defined to be">wxChar</ref><sp/>*name<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;rawfile.doc&quot;</highlight><highlight class="normal">;</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>FILE<sp/>*fil<sp/>=<sp/>fopen(wxFNCONV(name),<sp/></highlight><highlight class="stringliteral">&quot;r&quot;</highlight><highlight class="normal">);</highlight></codeline>
 </programlisting></para><para>(although it would be better to just use wxFopen(name, &quot;r&quot;) in this particular case, you only need to use this class for functions taking file names not wrapped by wxWidgets.)</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__conv" kindref="compound">Text Conversion</ref></para><para><simplesect kind="see"><para><ref refid="overview__mbconv" kindref="compound">wxMBConv Overview</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__conv" kindref="compound">Text Conversion</ref></para><para><simplesect kind="see"><para><ref refid="overview_mbconv" kindref="compound">wxMBConv Overview</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7574">
+      <node id="7580">
         <label>wxMBConvFile</label>
         <link refid="classwx_m_b_conv_file"/>
-        <childnode refid="7575" relation="public-inheritance">
+        <childnode refid="7581" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7575">
+      <node id="7581">
         <label>wxMBConv</label>
         <link refid="classwx_m_b_conv"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7576">
+      <node id="7582">
         <label>wxMBConvFile</label>
         <link refid="classwx_m_b_conv_file"/>
-        <childnode refid="7577" relation="public-inheritance">
+        <childnode refid="7583" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7577">
+      <node id="7583">
         <label>wxMBConv</label>
         <link refid="classwx_m_b_conv"/>
       </node>

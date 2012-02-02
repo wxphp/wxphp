@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_scoped_ptr" kind="class" prot="public">
     <compoundname>wxScopedPtr</compoundname>
     <derivedcompoundref refid="classwx_scoped_tied_ptr" prot="public" virt="non-virtual">wxScopedTiedPtr</derivedcompoundref>
@@ -146,7 +146,7 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>create<sp/>an<sp/>object<sp/>with<sp/>a<sp/>new<sp/>pointer<sp/>to<sp/>MyClass</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>wxMyClassPtr<sp/>theObj(new<sp/>MyClass());</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>reset<sp/>the<sp/>pointer<sp/>(deletes<sp/>the<sp/>previous<sp/>one)</highlight><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>theObj.<ref refid="classwx_scoped_ptr_1a56e9edc9ce458e8170c8cc7f51eb6e6d" kindref="member" tooltip="Deletes the currently held pointer and sets it to p or to NULL if no arguments are...">reset</ref>(new<sp/>MyClass());</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>theObj.<ref refid="classwx_scoped_ptr_1a56e9edc9ce458e8170c8cc7f51eb6e6d" kindref="member" tooltip="Deletes the currently held pointer and sets it to p or to NULL if no arguments are specified...">reset</ref>(new<sp/>MyClass());</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>access<sp/>the<sp/>pointer</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>theObj-&gt;MyFunc();</highlight></codeline>
@@ -163,18 +163,18 @@
 </programlisting> And later, when <computeroutput>TYPE</computeroutput> is fully defined, you must also use <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wxDEFINE_SCOPED_PTR(<sp/>TYPE,<sp/>CLASSNAME<sp/>);</highlight></codeline>
 </programlisting> to implement the scoped pointer class.</para><para>The first argument of these macro is the pointer type, the second is the name of the new smart pointer class being created. Below we will use <ref refid="classwx_scoped_ptr" kindref="compound">wxScopedPtr</ref> to represent the scoped pointer class, but the user may create the class with any legal name.</para><para>Alternatively, if you don&apos;t have to separate the point of declaration and definition of this class and if you accept the standard naming convention, that is that the scoped pointer for the class <computeroutput>Foo</computeroutput> is called <computeroutput>FooPtr</computeroutput>, you can use a single macro which replaces two macros above: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wxDEFINE_SCOPED_PTR_TYPE(<sp/>TYPE<sp/>);</highlight></codeline>
 </programlisting> Once again, in this cass <computeroutput>CLASSNAME</computeroutput> will be <computeroutput>TYPEPtr</computeroutput>.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__smartpointers" kindref="compound">Smart Pointers</ref></para><para><simplesect kind="see"><para><ref refid="classwx_scoped_array" kindref="compound">wxScopedArray</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__smartpointers" kindref="compound">Smart Pointers</ref></para><para><simplesect kind="see"><para><ref refid="classwx_scoped_array" kindref="compound">wxScopedArray</ref> </para></simplesect>
 </para></sect1>
     </detaileddescription>
     <inheritancegraph>
-      <node id="10019">
+      <node id="10079">
         <label>wxScopedPtr</label>
         <link refid="classwx_scoped_ptr"/>
       </node>
-      <node id="10020">
+      <node id="10080">
         <label>wxScopedTiedPtr</label>
         <link refid="classwx_scoped_tied_ptr"/>
-        <childnode refid="10019" relation="public-inheritance">
+        <childnode refid="10079" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>

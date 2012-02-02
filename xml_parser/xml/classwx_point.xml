@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_point" kind="class" prot="public">
     <compoundname>wxPoint</compoundname>
     <includes local="no">wx/gdicmn.h</includes>
       <sectiondef kind="user-defined">
       <header>Miscellaneous operators</header>
-      <description><para><anchor id="_1amgrpe09e661963a51ecc56ad0a00cbd2649b"/>Note that these operators are documented as class members (to make them easier to find) but, as their prototype shows, they are implemented as global operators; note that this is transparent to the user but it helps to understand why the following functions are documented to take the <ref refid="classwx_point" kindref="compound">wxPoint</ref> they operate on as an explicit argument. </para></description>
+      <description><para>Note that these operators are documented as class members (to make them easier to find) but, as their prototype shows, they are implemented as global operators; note that this is transparent to the user but it helps to understand why the following functions are documented to take the <ref refid="classwx_point" kindref="compound">wxPoint</ref> they operate on as an explicit argument. </para></description>
       <memberdef kind="function" id="classwx_point_1a40d4fd764cc42ef70d987485acdc57cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_point" kindref="compound">wxPoint</ref> &amp;</type>
         <definition>wxPoint&amp; wxPoint::operator=</definition>
@@ -359,7 +359,7 @@
       </sectiondef>
       <sectiondef kind="user-defined">
       <header>Defaults handling.</header>
-      <description><para><anchor id="_1amgrp48b2d940b37340fce72793e5d4a72e22"/>Test for and set non-specified <ref refid="classwx_point" kindref="compound">wxPoint</ref> components.</para><para>Although a <ref refid="classwx_point" kindref="compound">wxPoint</ref> is always initialized to (0, 0), wxWidgets commonly uses wxDefaultCoord (defined as <computeroutput>-1</computeroutput>) to indicate that a point hasn&apos;t been initialized or specified. In particular, <ref refid="gdicmn_8h_1af5a90c753eaf3d3e3e5068a19ec3c1d0" kindref="member">wxDefaultPosition</ref> is used in many places with this meaning. </para></description>
+      <description><para>Test for and set non-specified <ref refid="classwx_point" kindref="compound">wxPoint</ref> components.</para><para>Although a <ref refid="classwx_point" kindref="compound">wxPoint</ref> is always initialized to (0, 0), wxWidgets commonly uses wxDefaultCoord (defined as <computeroutput>-1</computeroutput>) to indicate that a point hasn&apos;t been initialized or specified. In particular, <ref refid="gdicmn_8h_1af5a90c753eaf3d3e3e5068a19ec3c1d0" kindref="member">wxDefaultPosition</ref> is used in many places with this meaning. </para></description>
       <memberdef kind="function" id="classwx_point_1a99ee1aa6625e555a8c63626681c52ba9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
         <definition>bool wxPoint::IsFullySpecified</definition>
@@ -483,7 +483,7 @@
 <para>A <ref refid="classwx_point" kindref="compound">wxPoint</ref> is a useful data structure for graphics operations. </para>    </briefdescription>
     <detaileddescription>
 <para>It contains integer <emphasis>x</emphasis> and <emphasis>y</emphasis> members. See <ref refid="classwx_real_point" kindref="compound">wxRealPoint</ref> for a floating point version.</para><para>Note that the width and height stored inside a <ref refid="classwx_point" kindref="compound">wxPoint</ref> object may be negative and that <ref refid="classwx_point" kindref="compound">wxPoint</ref> functions do not perform any check against negative values (this is used to e.g. store the special -1 value in <ref refid="gdicmn_8h_1af5a90c753eaf3d3e3e5068a19ec3c1d0" kindref="member">wxDefaultPosition</ref> instance).</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__data" kindref="compound">Data Structures</ref></para><para>Predefined objects/pointers: <ref refid="gdicmn_8h_1af5a90c753eaf3d3e3e5068a19ec3c1d0" kindref="member">wxDefaultPosition</ref></para><para><simplesect kind="see"><para><ref refid="classwx_real_point" kindref="compound">wxRealPoint</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__data" kindref="compound">Data Structures</ref></para><para>Predefined objects/pointers: <ref refid="gdicmn_8h_1af5a90c753eaf3d3e3e5068a19ec3c1d0" kindref="member">wxDefaultPosition</ref></para><para><simplesect kind="see"><para><ref refid="classwx_real_point" kindref="compound">wxRealPoint</ref> </para></simplesect>
 </para>    </detaileddescription>
     <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="532" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" bodystart="531" bodyend="640"/>
     <listofallmembers>

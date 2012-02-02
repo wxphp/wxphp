@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="dir_83b0a1517f4a65b8291e5ceb7ae8bc50" kind="dir">
+    <compoundname>interface/wx/msw/</compoundname>
+    <innerdir refid="dir_0393f4a4b077338a18a038d71df65254">interface/wx/msw/ole/</innerdir>
+    <innerfile refid="regconf_8h">regconf.h</innerfile>
+    <innerfile refid="registry_8h">registry.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msw/"/>
+  </compounddef>
+</doxygen>

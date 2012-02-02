@@ -1,9 +1,8 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="defs_8h" kind="file">
     <compoundname>defs.h</compoundname>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="define" id="defs_8h_1a5ca7bb9c778fe2d44b4a1af3ceed8355" prot="public" static="no">
         <name>wxINT8_MIN</name>
         <initializer>CHAR_MIN</initializer>
@@ -13,7 +12,7 @@
 <para>For each <computeroutput>n</computeroutput> in the set 8, 16, 32, 64 we define <computeroutput>wxINTn_MIN</computeroutput>, <computeroutput>wxINTn_MAX</computeroutput> and <computeroutput>wxUINTc_MAX</computeroutput> (<computeroutput>wxUINTc_MIN</computeroutput> is always 0 and so is not defined). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1231" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1231" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1246" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1246" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="defs_8h_1a9480891dafcb26fd60fed170529404a9" prot="public" static="no">
         <name>wxINT8_MAX</name>
@@ -24,7 +23,7 @@
 <para>For each <computeroutput>n</computeroutput> in the set 8, 16, 32, 64 we define <computeroutput>wxINTn_MIN</computeroutput>, <computeroutput>wxINTn_MAX</computeroutput> and <computeroutput>wxUINTc_MAX</computeroutput> (<computeroutput>wxUINTc_MIN</computeroutput> is always 0 and so is not defined). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1232" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1232" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1247" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1247" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="defs_8h_1aa84028bf30a13eaf55ea0f9414bc8941" prot="public" static="no">
         <name>wxUINT8_MAX</name>
@@ -35,7 +34,7 @@
 <para>For each <computeroutput>n</computeroutput> in the set 8, 16, 32, 64 we define <computeroutput>wxINTn_MIN</computeroutput>, <computeroutput>wxINTn_MAX</computeroutput> and <computeroutput>wxUINTc_MAX</computeroutput> (<computeroutput>wxUINTc_MIN</computeroutput> is always 0 and so is not defined). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1233" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1233" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1248" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1248" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="defs_8h_1a2a3dd0038d7736771a0ad785754ba038" prot="public" static="no">
         <name>wxINT16_MIN</name>
@@ -46,7 +45,7 @@
 <para>For each <computeroutput>n</computeroutput> in the set 8, 16, 32, 64 we define <computeroutput>wxINTn_MIN</computeroutput>, <computeroutput>wxINTn_MAX</computeroutput> and <computeroutput>wxUINTc_MAX</computeroutput> (<computeroutput>wxUINTc_MIN</computeroutput> is always 0 and so is not defined). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1235" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1235" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1250" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1250" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="defs_8h_1af7aea90078c87aaf3ab500fb48a661c7" prot="public" static="no">
         <name>wxINT16_MAX</name>
@@ -57,7 +56,7 @@
 <para>For each <computeroutput>n</computeroutput> in the set 8, 16, 32, 64 we define <computeroutput>wxINTn_MIN</computeroutput>, <computeroutput>wxINTn_MAX</computeroutput> and <computeroutput>wxUINTc_MAX</computeroutput> (<computeroutput>wxUINTc_MIN</computeroutput> is always 0 and so is not defined). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1236" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1236" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1251" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1251" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="defs_8h_1a78bd1fdfc61245bc7fa2649cf2bbffe5" prot="public" static="no">
         <name>wxUINT16_MAX</name>
@@ -68,7 +67,7 @@
 <para>For each <computeroutput>n</computeroutput> in the set 8, 16, 32, 64 we define <computeroutput>wxINTn_MIN</computeroutput>, <computeroutput>wxINTn_MAX</computeroutput> and <computeroutput>wxUINTc_MAX</computeroutput> (<computeroutput>wxUINTc_MIN</computeroutput> is always 0 and so is not defined). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1237" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1237" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1252" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1252" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="defs_8h_1a5598a5d4e34e9e7c812682090c801bc6" prot="public" static="no">
         <name>wxINT32_MIN</name>
@@ -79,7 +78,7 @@
 <para>For each <computeroutput>n</computeroutput> in the set 8, 16, 32, 64 we define <computeroutput>wxINTn_MIN</computeroutput>, <computeroutput>wxINTn_MAX</computeroutput> and <computeroutput>wxUINTc_MAX</computeroutput> (<computeroutput>wxUINTc_MIN</computeroutput> is always 0 and so is not defined). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1239" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1239" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1254" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1254" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="defs_8h_1a79870a703883a6930a92b3506a06934d" prot="public" static="no">
         <name>wxINT32_MAX</name>
@@ -90,7 +89,7 @@
 <para>For each <computeroutput>n</computeroutput> in the set 8, 16, 32, 64 we define <computeroutput>wxINTn_MIN</computeroutput>, <computeroutput>wxINTn_MAX</computeroutput> and <computeroutput>wxUINTc_MAX</computeroutput> (<computeroutput>wxUINTc_MIN</computeroutput> is always 0 and so is not defined). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1240" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1240" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1255" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1255" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="defs_8h_1a4e9cc13c22b491fc67cc6af99b86dc0e" prot="public" static="no">
         <name>wxUINT32_MAX</name>
@@ -101,7 +100,7 @@
 <para>For each <computeroutput>n</computeroutput> in the set 8, 16, 32, 64 we define <computeroutput>wxINTn_MIN</computeroutput>, <computeroutput>wxINTn_MAX</computeroutput> and <computeroutput>wxUINTc_MAX</computeroutput> (<computeroutput>wxUINTc_MIN</computeroutput> is always 0 and so is not defined). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1241" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1241" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1256" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1256" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="defs_8h_1a311d99d6dd5f2b34ae678953b5b6e0f3" prot="public" static="no">
         <name>wxINT64_MIN</name>
@@ -112,7 +111,7 @@
 <para>For each <computeroutput>n</computeroutput> in the set 8, 16, 32, 64 we define <computeroutput>wxINTn_MIN</computeroutput>, <computeroutput>wxINTn_MAX</computeroutput> and <computeroutput>wxUINTc_MAX</computeroutput> (<computeroutput>wxUINTc_MIN</computeroutput> is always 0 and so is not defined). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1243" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1243" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1258" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1258" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="defs_8h_1aa73acc33b6aca848f58568e8545bda00" prot="public" static="no">
         <name>wxINT64_MAX</name>
@@ -123,7 +122,7 @@
 <para>For each <computeroutput>n</computeroutput> in the set 8, 16, 32, 64 we define <computeroutput>wxINTn_MIN</computeroutput>, <computeroutput>wxINTn_MAX</computeroutput> and <computeroutput>wxUINTc_MAX</computeroutput> (<computeroutput>wxUINTc_MIN</computeroutput> is always 0 and so is not defined). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1244" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1244" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1259" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1259" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="defs_8h_1a420d874e3ce2cd064b9b489059cee0d6" prot="public" static="no">
         <name>wxUINT64_MAX</name>
@@ -134,11 +133,10 @@
 <para>For each <computeroutput>n</computeroutput> in the set 8, 16, 32, 64 we define <computeroutput>wxINTn_MIN</computeroutput>, <computeroutput>wxINTn_MAX</computeroutput> and <computeroutput>wxUINTc_MAX</computeroutput> (<computeroutput>wxUINTc_MIN</computeroutput> is always 0 and so is not defined). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1245" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1245" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1260" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1260" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="typedef" id="defs_8h_1a7569603c57eac28d9f20098191f936d7" prot="public" static="no">
         <type>signed char</type>
         <definition>typedef signed char wxInt8</definition>
@@ -150,7 +148,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1260" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1260" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1275" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1275" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="defs_8h_1aad88e290b822df511ad8025ee2e45263" prot="public" static="no">
         <type>unsigned char</type>
@@ -163,7 +161,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1261" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1261" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1276" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1276" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="defs_8h_1a02052a0390b909998c03fe2371d8e83e" prot="public" static="no">
         <type><ref refid="defs_8h_1aad88e290b822df511ad8025ee2e45263" kindref="member">wxUint8</ref></type>
@@ -176,11 +174,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1262" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1262" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1277" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1277" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="typedef" id="defs_8h_1ab69f92e8af201f1d324252e771e8ab5d" prot="public" static="no">
         <type>signed short</type>
         <definition>typedef signed short wxInt16</definition>
@@ -192,7 +189,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1267" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1267" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1282" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1282" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="defs_8h_1a8e9363c460a79dd550df544fab96e16d" prot="public" static="no">
         <type>unsigned short</type>
@@ -205,7 +202,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1268" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1268" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1283" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1283" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="defs_8h_1a0e2c658d7b7e25ea93c8a128dc3f224b" prot="public" static="no">
         <type><ref refid="defs_8h_1a8e9363c460a79dd550df544fab96e16d" kindref="member">wxUint16</ref></type>
@@ -218,7 +215,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1269" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1269" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1284" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1284" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="defs_8h_1a0027c315f48bab34105edcddf8492c97" prot="public" static="no">
         <type><ref refid="defs_8h_1a8e9363c460a79dd550df544fab96e16d" kindref="member">wxUint16</ref></type>
@@ -231,11 +228,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1270" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1270" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1285" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1285" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="typedef" id="defs_8h_1a5c084575ef1ffaa7586dda7e4b22d78a" prot="public" static="no">
         <type>int</type>
         <definition>typedef int wxInt32</definition>
@@ -247,7 +243,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1275" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1275" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1290" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1290" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="defs_8h_1afdb12e5345c3fae4b537e813df9f02a3" prot="public" static="no">
         <type>unsigned int</type>
@@ -260,7 +256,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1276" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1276" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1291" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1291" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="defs_8h_1a92034169f91e52ead8f1673faeb32799" prot="public" static="no">
         <type><ref refid="defs_8h_1afdb12e5345c3fae4b537e813df9f02a3" kindref="member">wxUint32</ref></type>
@@ -273,7 +269,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1277" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1277" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1292" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1292" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="defs_8h_1a94acd29728ad5f87ff9379fe9248b216" prot="public" static="no">
         <type><ref refid="defs_8h_1afdb12e5345c3fae4b537e813df9f02a3" kindref="member">wxUint32</ref></type>
@@ -286,11 +282,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1278" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1278" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1293" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1293" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="typedef" id="defs_8h_1a83fffb0d0376abc87f8a45be7c1c05e5" prot="public" static="no">
         <type>wxLongLong_t</type>
         <definition>typedef wxLongLong_t wxInt64</definition>
@@ -302,7 +297,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1283" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1283" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1298" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1298" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="defs_8h_1a356b5511a759210b8138b6433ed8b1fc" prot="public" static="no">
         <type>wxULongLong_t</type>
@@ -315,11 +310,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1284" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1284" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1299" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1299" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="typedef" id="defs_8h_1adc7fafddfefae454021d2e0660c96487" prot="public" static="no">
         <type>ssize_t</type>
         <definition>typedef ssize_t wxIntPtr</definition>
@@ -331,7 +325,7 @@
 <para>(The mapping is more complex than a simple <computeroutput>typedef</computeroutput> and is not shown here). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1293" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1293" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1308" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1308" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="defs_8h_1a74cc3a4753ec135e9e2ee6b155c97216" prot="public" static="no">
         <type>size_t</type>
@@ -344,7 +338,7 @@
 <para>(The mapping is more complex than a simple <computeroutput>typedef</computeroutput> and is not shown here). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1294" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1294" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1309" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1309" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="define">
@@ -1087,17 +1081,6 @@
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="400" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="400" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="define" id="defs_8h_1a8bdf5a3ef9e0b50a981925513fa956d1" prot="public" static="no">
-        <name>wxRA_USE_CHECKBOX</name>
-        <initializer>0x0010</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="401" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="401" bodyend="-1"/>
-      </memberdef>
       <memberdef kind="define" id="defs_8h_1a44dfb7c2162114b497e60867c44eb386" prot="public" static="no">
         <name>wxRB_GROUP</name>
         <initializer>0x0004</initializer>
@@ -1107,7 +1090,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="406" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="406" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="405" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="405" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="defs_8h_1a8d6ce548f3057ca5f867c8b1b77f2e5a" prot="public" static="no">
         <name>wxRB_SINGLE</name>
@@ -1118,18 +1101,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="407" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="407" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="defs_8h_1a11526b3c9c8ae16122fd3570c3e2f833" prot="public" static="no">
-        <name>wxRB_USE_CHECKBOX</name>
-        <initializer>0x0010</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="408" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="408" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="406" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="406" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="defs_8h_1a85dfdd080f72cab52f079308fc79b27d" prot="public" static="no">
         <name>wxSB_HORIZONTAL</name>
@@ -1140,7 +1112,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="413" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="413" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="411" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="411" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="defs_8h_1a9f9cacab0566d7cb62c0ff97cabbc521" prot="public" static="no">
         <name>wxSB_VERTICAL</name>
@@ -1151,7 +1123,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="414" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="414" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="412" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="412" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="defs_8h_1a0ae62af4c493f2177126f2ce27208407" prot="public" static="no">
         <name>wxSP_HORIZONTAL</name>
@@ -1162,7 +1134,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="423" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="423" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="421" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="421" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="defs_8h_1a402fb0c1bd09666915bb82fb946eab45" prot="public" static="no">
         <name>wxSP_VERTICAL</name>
@@ -1173,7 +1145,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="424" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="424" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="422" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="422" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="defs_8h_1a0e9e01979a8a7d4f2d7fbe8f7a91c6fa" prot="public" static="no">
         <name>wxSP_ARROW_KEYS</name>
@@ -1184,7 +1156,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="425" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="425" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="423" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="423" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="defs_8h_1aba8a38567226df8c6a33ae48d2f4a8c2" prot="public" static="no">
         <name>wxSP_WRAP</name>
@@ -1195,7 +1167,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="426" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="426" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="424" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="424" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="defs_8h_1a673af4fbda61f878235bd174415b31db" prot="public" static="no">
         <name>wxTC_RIGHTJUSTIFY</name>
@@ -1206,7 +1178,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="431" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="431" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="429" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="429" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="defs_8h_1a9e4b1cb9f4939859914c84f2972209ca" prot="public" static="no">
         <name>wxTC_FIXEDWIDTH</name>
@@ -1217,7 +1189,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="432" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="432" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="430" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="430" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="defs_8h_1a105ba471539295833f6e28561fc95c0e" prot="public" static="no">
         <name>wxTC_TOP</name>
@@ -1228,7 +1200,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="433" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="433" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="431" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="431" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="defs_8h_1aeb7c3c56fafb3b7011c612191c331c09" prot="public" static="no">
         <name>wxTC_LEFT</name>
@@ -1239,7 +1211,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="434" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="434" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="432" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="432" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="defs_8h_1ab882aef22bb5bc33a62d1f457c162192" prot="public" static="no">
         <name>wxTC_RIGHT</name>
@@ -1250,7 +1222,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="435" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="435" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="433" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="433" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="defs_8h_1a5d69747e950d44261fe3f269d61003bc" prot="public" static="no">
         <name>wxTC_BOTTOM</name>
@@ -1261,7 +1233,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="436" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="436" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="434" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="434" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="defs_8h_1ab098b2a9de7f76d6b0be155823c27616" prot="public" static="no">
         <name>wxTC_MULTILINE</name>
@@ -1272,7 +1244,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="437" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="437" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="435" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="435" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="defs_8h_1acb714c39e0f8e70717ad3c542e7b7e02" prot="public" static="no">
         <name>wxTC_OWNERDRAW</name>
@@ -1283,7 +1255,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="438" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="438" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="436" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="436" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="defs_8h_1a61ce75737df5cba6dadb73d59938ec6b" prot="public" static="no">
         <name>wxBI_EXPAND</name>
@@ -1294,7 +1266,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="443" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="443" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="441" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="441" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="defs_8h_1ab296dc76e1f988224490c0c00ebc7152" prot="public" static="no">
         <name>wxLI_HORIZONTAL</name>
@@ -1305,7 +1277,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="448" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="448" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="446" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="446" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="defs_8h_1a69a5bf544f0109d04995cb111a8aadc6" prot="public" static="no">
         <name>wxLI_VERTICAL</name>
@@ -1316,7 +1288,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="449" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="449" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="447" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="447" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="defs_8h_1ab38ccd9aa8aa47f9df32a75c96bb3000" prot="public" static="no">
         <name>wxYES</name>
@@ -1327,7 +1299,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="460" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="460" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="458" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="458" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="defs_8h_1a9c40266b61a27f0124a69a699753889a" prot="public" static="no">
         <name>wxOK</name>
@@ -1338,7 +1310,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="461" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="461" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="459" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="459" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="defs_8h_1ab1e324ba2871ccdef2d95fb718c8d479" prot="public" static="no">
         <name>wxNO</name>
@@ -1349,7 +1321,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="462" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="462" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="460" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="460" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="defs_8h_1a5ba00a09cea0417a2ef7c4a4c2b0012c" prot="public" static="no">
         <name>wxYES_NO</name>
@@ -1360,7 +1332,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="463" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="463" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="461" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="461" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="defs_8h_1a5580412e224117ac127aacaafd49dc2e" prot="public" static="no">
         <name>wxCANCEL</name>
@@ -1371,7 +1343,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="464" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="464" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="462" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="462" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="defs_8h_1a8a497b31dbbaedb8194f5eb95034bceb" prot="public" static="no">
         <name>wxAPPLY</name>
@@ -1382,7 +1354,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="465" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="465" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="463" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="463" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="defs_8h_1a1b2bd0a9957b93804c6346f4a63ef80c" prot="public" static="no">
         <name>wxCLOSE</name>
@@ -1393,7 +1365,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="466" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="466" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="464" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="464" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="defs_8h_1abd18f6add27c877187f7277667c5f1e8" prot="public" static="no">
         <name>wxOK_DEFAULT</name>
@@ -1404,7 +1376,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="468" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="468" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="466" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="466" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="defs_8h_1a7eb220c75e3632b1752f822335cde941" prot="public" static="no">
         <name>wxYES_DEFAULT</name>
@@ -1415,7 +1387,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="469" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="469" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="467" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="467" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="defs_8h_1ab4d4aadda843596c418ee4e9aca8582e" prot="public" static="no">
         <name>wxNO_DEFAULT</name>
@@ -1426,7 +1398,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="470" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="470" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="468" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="468" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="defs_8h_1afff9aa09554ff8625d65a980d7f9c574" prot="public" static="no">
         <name>wxCANCEL_DEFAULT</name>
@@ -1437,7 +1409,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="471" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="471" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="469" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="469" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="defs_8h_1aa85a61a6c9bb6c8dc161a476ee792e5b" prot="public" static="no">
         <name>wxICON_EXCLAMATION</name>
@@ -1448,7 +1420,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="473" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="473" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="471" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="471" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="defs_8h_1acdd26d2a28ff7d9fd848bc4d52e039d4" prot="public" static="no">
         <name>wxICON_HAND</name>
@@ -1459,7 +1431,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="474" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="474" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="472" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="472" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="defs_8h_1a2b7290c6fea9862351d15a8f695147b5" prot="public" static="no">
         <name>wxICON_WARNING</name>
@@ -1470,7 +1442,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="475" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="475" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="473" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="473" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="defs_8h_1aa9a9276fdb8aefda276954e26423283a" prot="public" static="no">
         <name>wxICON_ERROR</name>
@@ -1481,7 +1453,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="476" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="476" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="474" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="474" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="defs_8h_1a01d0612a961327f6038a91e5f94fa44a" prot="public" static="no">
         <name>wxICON_QUESTION</name>
@@ -1492,7 +1464,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="477" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="477" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="475" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="475" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="defs_8h_1a6ad4380c48ee0854f49c171b1a2514eb" prot="public" static="no">
         <name>wxICON_INFORMATION</name>
@@ -1503,7 +1475,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="478" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="478" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="476" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="476" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="defs_8h_1a89908a70945b51883ed280480ac0e9f9" prot="public" static="no">
         <name>wxICON_STOP</name>
@@ -1514,7 +1486,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="479" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="479" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="477" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="477" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="defs_8h_1a784976d5a216ad3856afbb01ea1febb7" prot="public" static="no">
         <name>wxICON_ASTERISK</name>
@@ -1525,7 +1497,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="480" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="480" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="478" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="478" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="defs_8h_1a111c2b7b06972d742f4708983337825a" prot="public" static="no">
         <name>wxHELP</name>
@@ -1536,7 +1508,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="482" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="482" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="480" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="480" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="defs_8h_1a377404cd3089fa8d10dadc683d00e4ce" prot="public" static="no">
         <name>wxFORWARD</name>
@@ -1547,7 +1519,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="483" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="483" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="481" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="481" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="defs_8h_1ab0c64a1e5db9084bddfba2cf2817275d" prot="public" static="no">
         <name>wxBACKWARD</name>
@@ -1558,7 +1530,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="484" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="484" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="482" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="482" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="defs_8h_1ab9a08edf428a106648444d14dcf09d67" prot="public" static="no">
         <name>wxRESET</name>
@@ -1569,7 +1541,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="485" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="485" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="483" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="483" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="defs_8h_1aaee38b3b3ceee5886cd2b9ca8a7ae3a9" prot="public" static="no">
         <name>wxMORE</name>
@@ -1580,7 +1552,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="486" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="486" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="484" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="484" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="defs_8h_1a6771addb384bfe3ff47876507c8f7129" prot="public" static="no">
         <name>wxSETUP</name>
@@ -1591,7 +1563,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="487" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="487" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="485" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="485" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="defs_8h_1a138956ba458ca66aeac27af2f8d94415" prot="public" static="no">
         <name>wxICON_NONE</name>
@@ -1602,7 +1574,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="488" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="488" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="486" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="486" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="defs_8h_1adc0118588f6854b5c18ca65eec6ebb12" prot="public" static="no">
         <name>wxICON_MASK</name>
@@ -1613,7 +1585,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="491" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="490" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="489" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="488" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="defs_8h_1a89de5e6353fc7812991b085e12263e98" prot="public" static="no">
         <name>wxNOT_FOUND</name>
@@ -1624,7 +1596,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="496" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="496" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="494" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="494" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="defs_8h_1a789db2fe465af455e29014cc6f7c0114" prot="public" static="no">
         <name>wxSTAY_ON_TOP</name>
@@ -1635,7 +1607,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1209" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1209" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1224" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1224" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="defs_8h_1a8dd8a3b1da393539bbf97740cf8e15a9" prot="public" static="no">
         <name>wxICONIZE</name>
@@ -1646,7 +1618,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1210" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1210" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1225" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1225" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="defs_8h_1a393b987efad72e2ca72cc5cb83f163a3" prot="public" static="no">
         <name>wxMINIMIZE</name>
@@ -1657,7 +1629,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1211" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1211" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1226" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1226" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="defs_8h_1ab5d7f145ee47ebe1ed926272cbfbb344" prot="public" static="no">
         <name>wxMAXIMIZE</name>
@@ -1668,7 +1640,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1212" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1212" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1227" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1227" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="defs_8h_1a2d65b3190850686bf65daabec30482ab" prot="public" static="no">
         <name>wxCLOSE_BOX</name>
@@ -1679,7 +1651,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1213" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1213" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1228" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1228" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="defs_8h_1a91d9a8267007044d4baf172e6173009d" prot="public" static="no">
         <name>wxSYSTEM_MENU</name>
@@ -1690,7 +1662,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1215" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1215" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1230" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1230" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="defs_8h_1a58a06afb75f2d7eaf75678be07cd1bb9" prot="public" static="no">
         <name>wxMINIMIZE_BOX</name>
@@ -1701,7 +1673,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1216" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1216" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1231" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1231" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="defs_8h_1a8968324afeca5856872724521f199e04" prot="public" static="no">
         <name>wxMAXIMIZE_BOX</name>
@@ -1712,7 +1684,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1217" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1217" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1232" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1232" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="defs_8h_1aa9949c0258f4ca2b625c98805998fa35" prot="public" static="no">
         <name>wxTINY_CAPTION</name>
@@ -1723,7 +1695,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1219" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1219" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1234" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1234" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="defs_8h_1ab2e7b3533b073e1df781c5b60ccc92d5" prot="public" static="no">
         <name>wxRESIZE_BORDER</name>
@@ -1734,7 +1706,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1220" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1220" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1235" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1235" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__byteorder_1ga792af6eedb7fcbb58d4825c797578fef" prot="public" static="no">
         <name>wxINT32_SWAP_ALWAYS</name>
@@ -1742,10 +1714,10 @@
         <briefdescription>
 <para>This macro will swap the bytes of the <emphasis>value</emphasis> variable from little endian to big endian or vice versa unconditionally, i.e. </para>        </briefdescription>
         <detaileddescription>
-<para>independently of the current platform.</para><para>Include file: <verbatim>#include &lt;wx/defs.h&gt; </verbatim> </para>        </detaileddescription>
+<para>independently of the current platform.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/defs.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1335" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1335" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1350" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1350" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__byteorder_1gaf62355f7ea859dd5c91c24a6dcda1491" prot="public" static="no">
         <name>wxUINT32_SWAP_ALWAYS</name>
@@ -1756,7 +1728,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1336" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1336" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1351" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1351" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__byteorder_1gab39197057c6b8c010dd52c433ce78be4" prot="public" static="no">
         <name>wxINT16_SWAP_ALWAYS</name>
@@ -1767,7 +1739,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1337" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1337" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1352" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1352" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__byteorder_1ga073af84d075d9d5c5f3d1e59b787d1f9" prot="public" static="no">
         <name>wxUINT16_SWAP_ALWAYS</name>
@@ -1778,7 +1750,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1338" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1338" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1353" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1353" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__byteorder_1ga94c702b6b822a137769dd7018322699d" prot="public" static="no">
         <name>wxINT32_SWAP_ON_BE</name>
@@ -1786,10 +1758,10 @@
         <briefdescription>
 <para>This macro will swap the bytes of the <emphasis>value</emphasis> variable from little endian to big endian or vice versa if the program is compiled on a big-endian architecture (such as Sun work stations). </para>        </briefdescription>
         <detaileddescription>
-<para>If the program has been compiled on a little-endian architecture, the value will be unchanged.</para><para>Use these macros to read data from and write data to a file that stores data in little-endian (for example Intel i386) format.</para><para>Include file: <verbatim>#include &lt;wx/defs.h&gt; </verbatim> </para>        </detaileddescription>
+<para>If the program has been compiled on a little-endian architecture, the value will be unchanged.</para><para>Use these macros to read data from and write data to a file that stores data in little-endian (for example Intel i386) format.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/defs.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1356" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1356" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1371" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1371" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__byteorder_1ga8171e345d7a0c9cfa10b373313eefde9" prot="public" static="no">
         <name>wxUINT32_SWAP_ON_BE</name>
@@ -1800,7 +1772,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1357" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1357" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1372" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1372" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__byteorder_1gacce1065c78eac38833366478bb0b77b6" prot="public" static="no">
         <name>wxINT16_SWAP_ON_BE</name>
@@ -1811,7 +1783,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1358" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1358" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1373" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1373" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__byteorder_1ga86a9bc83b8b6d632a009199d8ec4ec6c" prot="public" static="no">
         <name>wxUINT16_SWAP_ON_BE</name>
@@ -1822,7 +1794,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1359" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1359" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1374" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1374" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__byteorder_1gadb0e11cd0754cd1ab63debb5426ed1ce" prot="public" static="no">
         <name>wxINT32_SWAP_ON_LE</name>
@@ -1830,10 +1802,10 @@
         <briefdescription>
 <para>This macro will swap the bytes of the <emphasis>value</emphasis> variable from little endian to big endian or vice versa if the program is compiled on a little-endian architecture (such as Intel PCs). </para>        </briefdescription>
         <detaileddescription>
-<para>If the program has been compiled on a big-endian architecture, the value will be unchanged.</para><para>Use these macros to read data from and write data to a file that stores data in big-endian format.</para><para>Include file: <verbatim>#include &lt;wx/defs.h&gt; </verbatim> </para>        </detaileddescription>
+<para>If the program has been compiled on a big-endian architecture, the value will be unchanged.</para><para>Use these macros to read data from and write data to a file that stores data in big-endian format.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/defs.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1377" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1377" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1392" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1392" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__byteorder_1gaffb29e541cc7e6adec85a9ee5f6044b6" prot="public" static="no">
         <name>wxUINT32_SWAP_ON_LE</name>
@@ -1844,7 +1816,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1378" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1378" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1393" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1393" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__byteorder_1ga3b04f074d4e7bf61f3d6ce002f7200d2" prot="public" static="no">
         <name>wxINT16_SWAP_ON_LE</name>
@@ -1855,7 +1827,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1379" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1379" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1394" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1394" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__byteorder_1gaf02d68a36a349dd7311a73f76ab93316" prot="public" static="no">
         <name>wxUINT16_SWAP_ON_LE</name>
@@ -1866,7 +1838,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1380" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1380" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1395" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1395" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__misc_1ga235fb9f070237c2d1e6e275b12a313ee" prot="public" static="no">
         <name>wxDECLARE_NO_ASSIGN_CLASS</name>
@@ -1878,7 +1850,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1400" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1400" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1415" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1415" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__misc_1ga9ed5b52d604f9eb46c775986ea7ed48c" prot="public" static="no">
         <name>wxDECLARE_NO_COPY_CLASS</name>
@@ -1894,13 +1866,13 @@
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>widgets<sp/>can&apos;t<sp/>be<sp/>copied</highlight><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__misc_1ga9ed5b52d604f9eb46c775986ea7ed48c" kindref="member" tooltip="This macro can be used in a class declaration to disable the generation of default...">wxDECLARE_NO_COPY_CLASS</ref>(FooWidget);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__misc_1ga9ed5b52d604f9eb46c775986ea7ed48c" kindref="member" tooltip="This macro can be used in a class declaration to disable the generation of default copy ctor and assi...">wxDECLARE_NO_COPY_CLASS</ref>(FooWidget);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
 </programlisting></para><para>Notice that a semicolon must be used after this macro and that it changes the access specifier to private internally so it is better to use it at the end of the class declaration.</para><para><simplesect kind="see"><para><ref refid="group__group__funcmacro__misc_1ga235fb9f070237c2d1e6e275b12a313ee" kindref="member">wxDECLARE_NO_ASSIGN_CLASS()</ref>, <ref refid="group__group__funcmacro__misc_1gaa12aaa924b3e1eb622d1b5fa920ab650" kindref="member">wxDECLARE_NO_COPY_TEMPLATE_CLASS()</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1435" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1435" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1450" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1450" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__misc_1gaa12aaa924b3e1eb622d1b5fa920ab650" prot="public" static="no">
         <name>wxDECLARE_NO_COPY_TEMPLATE_CLASS</name>
@@ -1928,7 +1900,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1449" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1449" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1464" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1464" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__misc_1gab5479598285a610e4565c18d927ca299" prot="public" static="no">
         <name>wxDECLARE_NO_COPY_TEMPLATE_CLASS_2</name>
@@ -1964,7 +1936,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1465" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1465" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1480" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1480" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__misc_1gae7670c39825278bd22677b42f1589daa" prot="public" static="no">
         <name>wxDEPRECATED</name>
@@ -1973,14 +1945,14 @@
 <para>This macro can be used around a function declaration to generate warnings indicating that this function is deprecated (i.e. </para>        </briefdescription>
         <detaileddescription>
 <para>obsolete and planned to be removed in the future) when it is used. Only Visual C++ 7 and higher and g++ compilers currently support this functionality.</para><para>Example of use:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>old<sp/>function,<sp/>use<sp/>wxString<sp/>version<sp/>instead</highlight><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__misc_1gae7670c39825278bd22677b42f1589daa" kindref="member" tooltip="This macro can be used around a function declaration to generate warnings indicating...">wxDEPRECATED</ref>(<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>wxGetSomething(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*buf,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len)<sp/>);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__misc_1gae7670c39825278bd22677b42f1589daa" kindref="member" tooltip="This macro can be used around a function declaration to generate warnings indicating that this functi...">wxDEPRECATED</ref>(<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>wxGetSomething(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*buf,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len)<sp/>);</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>...</highlight><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change...">wxString</ref><sp/>wxGetSomething();</highlight></codeline>
-</programlisting></para><para>Include file: <verbatim>#include &lt;wx/defs.h&gt; </verbatim> </para>        </detaileddescription>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change was actually the m...">wxString</ref><sp/>wxGetSomething();</highlight></codeline>
+</programlisting></para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/defs.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1523" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1523" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1538" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1538" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__misc_1ga539e5db26516d824523d77ed599fa063" prot="public" static="no">
         <name>wxDEPRECATED_BUT_USED_INTERNALLY</name>
@@ -1988,10 +1960,10 @@
         <briefdescription>
 <para>This is a special version of <ref refid="group__group__funcmacro__misc_1gae7670c39825278bd22677b42f1589daa" kindref="member">wxDEPRECATED()</ref> macro which only does something when the deprecated function is used from the code outside wxWidgets itself but doesn&apos;t generate warnings when it is used from wxWidgets. </para>        </briefdescription>
         <detaileddescription>
-<para>It is used with the virtual functions which are called by the library itself -- even if such function is deprecated the library still has to call it to ensure that the existing code overriding it continues to work, but the use of this macro ensures that a deprecation warning will be generated if this function is used from the user code or, in case of Visual C++, even when it is simply overridden.</para><para>Include file: <verbatim>#include &lt;wx/defs.h&gt; </verbatim> </para>        </detaileddescription>
+<para>It is used with the virtual functions which are called by the library itself -- even if such function is deprecated the library still has to call it to ensure that the existing code overriding it continues to work, but the use of this macro ensures that a deprecation warning will be generated if this function is used from the user code or, in case of Visual C++, even when it is simply overridden.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/defs.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1539" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1539" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1554" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1554" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__misc_1ga541c593a183ed38d6d132dd19fe7bad7" prot="public" static="no">
         <name>wxDEPRECATED_INLINE</name>
@@ -2005,12 +1977,12 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>OldMethod()<sp/>is<sp/>deprecated,<sp/>use<sp/>NewMethod()<sp/>instead</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>NewMethod();</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__misc_1ga541c593a183ed38d6d132dd19fe7bad7" kindref="member" tooltip="This macro is similar to wxDEPRECATED() but can be used to not only declare the function...">wxDEPRECATED_INLINE</ref>(<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>OldMethod(),<sp/>NewMethod();<sp/>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__misc_1ga541c593a183ed38d6d132dd19fe7bad7" kindref="member" tooltip="This macro is similar to wxDEPRECATED() but can be used to not only declare the function function as ...">wxDEPRECATED_INLINE</ref>(<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>OldMethod(),<sp/>NewMethod();<sp/>)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
-</programlisting></para><para>Include file: <verbatim>#include &lt;wx/defs.h&gt; </verbatim> </para>        </detaileddescription>
+</programlisting></para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/defs.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1560" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1560" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1575" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1575" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__misc_1ga432cb09293293bc49f0b8fc96f2ca050" prot="public" static="no">
         <name>wxDEPRECATED_ACCESSOR</name>
@@ -2033,7 +2005,7 @@
 </programlisting> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1583" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1583" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1598" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1598" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__misc_1ga51a5d09e22172b45f6f26bdc5233bdd5" prot="public" static="no">
         <name>wxDEPRECATED_BUT_USED_INTERNALLY_INLINE</name>
@@ -2042,20 +2014,20 @@
         <briefdescription>
 <para>Combination of <ref refid="group__group__funcmacro__misc_1ga539e5db26516d824523d77ed599fa063" kindref="member">wxDEPRECATED_BUT_USED_INTERNALLY()</ref> and <ref refid="group__group__funcmacro__misc_1ga541c593a183ed38d6d132dd19fe7bad7" kindref="member">wxDEPRECATED_INLINE()</ref>. </para>        </briefdescription>
         <detaileddescription>
-<para>This macro should be used for deprecated functions called by the library itself (usually for backwards compatibility reasons) and which are defined inline.</para><para>Include file: <verbatim>#include &lt;wx/defs.h&gt; </verbatim> </para>        </detaileddescription>
+<para>This macro should be used for deprecated functions called by the library itself (usually for backwards compatibility reasons) and which are defined inline.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/defs.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1594" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1594" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1609" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1609" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__misc_1ga8d9d8ac2fab72355f168e80b00d15908" prot="public" static="no">
         <name>wxEXPLICIT</name>
         <briefdescription>
 <para><computeroutput>wxEXPLICIT</computeroutput> is a macro which expands to the C++ <computeroutput>explicit</computeroutput> keyword if the compiler supports it or nothing otherwise. </para>        </briefdescription>
         <detaileddescription>
-<para>Thus, it can be used even in the code which might have to be compiled with an old compiler without support for this language feature but still take advantage of it when it is available.</para><para>Include file: <verbatim>#include &lt;wx/defs.h&gt; </verbatim> </para>        </detaileddescription>
+<para>Thus, it can be used even in the code which might have to be compiled with an old compiler without support for this language feature but still take advantage of it when it is available.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/defs.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1605" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1605" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1620" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1620" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__misc_1ga08cfc270b9a263fc5a46929d5f85a569" prot="public" static="no">
         <name>wxSUPPRESS_GCC_PRIVATE_DTOR_WARNING</name>
@@ -2075,10 +2047,10 @@
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wxSUPPRESS_GCC_PRIVATE_DTOR(RefCounted)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
-</programlisting></para><para>Notice that there should be no semicolon after this macro.</para><para>Include file: <verbatim>#include &lt;wx/defs.h&gt; </verbatim> </para>        </detaileddescription>
+</programlisting></para><para>Notice that there should be no semicolon after this macro.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/defs.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1637" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1637" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1652" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1652" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="enum">
@@ -2597,7 +2569,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="504" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="503" bodyend="554"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="502" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="501" bodyend="552"/>
       </memberdef>
       <memberdef kind="enum" id="defs_8h_1ac66d0a09761e7d86b2ac0b2e0c6a8cbb" prot="public" static="no">
         <name>wxStandardID</name>
@@ -3547,7 +3519,7 @@
           <name>wxID_FILEDLGG</name>
           <initializer> 5900</initializer>
           <briefdescription>
-<para>IDs used by generic file dialog (13 consecutive starting from this value). </para>          </briefdescription>
+<para>IDs used by generic file dialog (13 consecutive starting from this value) </para>          </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
@@ -3555,7 +3527,7 @@
           <name>wxID_FILECTRL</name>
           <initializer> 5950</initializer>
           <briefdescription>
-<para>IDs used by generic file ctrl (4 consecutive starting from this value). </para>          </briefdescription>
+<para>IDs used by generic file ctrl (4 consecutive starting from this value) </para>          </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
@@ -3570,10 +3542,10 @@
         <briefdescription>
 <para>Standard IDs. </para>        </briefdescription>
         <detaileddescription>
-<para>Notice that some, but <emphasis>not</emphasis> all, of these IDs are also stock IDs, i.e. you can use them for the button or menu items without specifying the label which will be provided by the underlying platform itself. See <ref refid="page__stockitems" kindref="compound">the</ref> list of stock items" for the subset of standard IDs which are stock IDs as well. </para>        </detaileddescription>
+<para>Notice that some, but <emphasis>not</emphasis> all, of these IDs are also stock IDs, i.e. you can use them for the button or menu items without specifying the label which will be provided by the underlying platform itself. See <ref refid="page_stockitems" kindref="compound">the</ref> list of stock items" for the subset of standard IDs which are stock IDs as well. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="566" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="565" bodyend="743"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="564" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="563" bodyend="741"/>
       </memberdef>
       <memberdef kind="enum" id="defs_8h_1abd0c640814a55e4adda3bce698646d2d" prot="public" static="no">
         <name>wxItemKind</name>
@@ -3630,7 +3602,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="751" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="750" bodyend="785"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="749" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="748" bodyend="783"/>
       </memberdef>
       <memberdef kind="enum" id="defs_8h_1a9b85a92dd590efbbe1248e0a9fc90024" prot="public" static="no">
         <name>wxHitTest</name>
@@ -3753,7 +3725,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="791" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="790" bodyend="813"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="789" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="788" bodyend="811"/>
       </memberdef>
       <memberdef kind="enum" id="defs_8h_1a263109c79f708754bf656c7768b27047" prot="public" static="no">
         <name>wxDataFormatId</name>
@@ -3922,7 +3894,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="819" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="818" bodyend="840"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="817" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="816" bodyend="838"/>
       </memberdef>
       <memberdef kind="enum" id="defs_8h_1a41c4609211685cff198618963ec8f77d" prot="public" static="no">
         <name>wxKeyCode</name>
@@ -4043,9 +4015,16 @@
         <enumvalue id="defs_8h_1a41c4609211685cff198618963ec8f77da12012e9dbb08c875c2ad12e73735bb1a" prot="public">
           <name>WXK_CONTROL</name>
           <briefdescription>
-          </briefdescription>
+<para>Note that under Mac OS X, to improve compatibility with other systems, &apos;WXK_CONTROL&apos; represents the &apos;Command&apos; key. </para>          </briefdescription>
           <detaileddescription>
-          </detaileddescription>
+<para>Use this constant to work with keyboard shortcuts. See &apos;WXK_RAW_CONTROL&apos; to get the state of the actual &apos;Control&apos; key. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="defs_8h_1a41c4609211685cff198618963ec8f77dad81095a1ef15619ec06c67be9a99a6d8" prot="public">
+          <name>WXK_RAW_CONTROL</name>
+          <briefdescription>
+<para>Under Mac OS X, where the &apos;Command&apos; key is mapped to &apos;Control&apos; to improve compatibility with other systems, WXK_RAW_CONTROL may be used to obtain the state of the actual &apos;Control&apos; key (&apos;WXK_CONTROL&apos; would obtain the status of the &apos;Command&apos; key). </para>          </briefdescription>
+          <detaileddescription>
+<para>Under Windows/Linux/Others, this is equivalent to WXK_CONTROL </para>          </detaileddescription>
         </enumvalue>
         <enumvalue id="defs_8h_1a41c4609211685cff198618963ec8f77daef703fcf8ba013e79de282305ca0f281" prot="public">
           <name>WXK_MENU</name>
@@ -4659,9 +4638,9 @@
         <enumvalue id="defs_8h_1a41c4609211685cff198618963ec8f77dae0fff7bac5cd68090a3b6d2fc64b0b97" prot="public">
           <name>WXK_COMMAND</name>
           <briefdescription>
-          </briefdescription>
+<para>This special key code was used to represent the key used for keyboard shortcuts. </para>          </briefdescription>
           <detaileddescription>
-          </detaileddescription>
+<para>Under Mac OS X, this key maps to the &apos;Command&apos; (aka logo or &apos;Apple&apos;) key, whereas on Linux/Windows/others this is the Control key, with the new semantic of WXK_CONTROL, WXK_COMMAND is not needed anymore </para>          </detaileddescription>
         </enumvalue>
         <enumvalue id="defs_8h_1a41c4609211685cff198618963ec8f77dabde23340ad1723b2b641cc10fd319bb0" prot="public">
           <name>WXK_SPECIAL1</name>
@@ -4810,7 +4789,7 @@
 <para>Note that the range <computeroutput>0..255</computeroutput> corresponds to the characters of the current locale, in particular the <computeroutput>32..127</computeroutput> subrange is for the ASCII symbols, and all the special key values such as <computeroutput>WXK_END</computeroutput> lie above this range. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="851" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="850" bodyend="1003"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="849" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="848" bodyend="1018"/>
       </memberdef>
       <memberdef kind="enum" id="defs_8h_1a5b81968ab866f5874cabc504490ae5cd" prot="public" static="no">
         <name>wxKeyModifier</name>
@@ -4899,7 +4878,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1009" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1008" bodyend="1026"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1024" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1023" bodyend="1041"/>
       </memberdef>
       <memberdef kind="enum" id="defs_8h_1a2f01b8ae721520dff55dee68a882629a" prot="public" static="no">
         <name>wxPaperSize</name>
@@ -5729,7 +5708,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1034" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1033" bodyend="1156"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1049" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1048" bodyend="1171"/>
       </memberdef>
       <memberdef kind="enum" id="defs_8h_1a128bbdf96d08a0414f9ac6c762ee5b8f" prot="public" static="no">
         <name>wxPrintOrientation</name>
@@ -5753,7 +5732,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1163" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1162" bodyend="1166"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1178" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1177" bodyend="1181"/>
       </memberdef>
       <memberdef kind="enum" id="defs_8h_1a0f2596c210e8f39fb074cd2fb312ccf2" prot="public" static="no">
         <name>wxDuplexMode</name>
@@ -5784,7 +5763,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1172" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1171" bodyend="1176"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1187" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1186" bodyend="1191"/>
       </memberdef>
       <memberdef kind="enum" id="defs_8h_1a3cf8d66263026e614130c9da8d19179d" prot="public" static="no">
         <name>wxPrintMode</name>
@@ -5834,7 +5813,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1182" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1181" bodyend="1188"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1197" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1196" bodyend="1203"/>
       </memberdef>
       <memberdef kind="enum" id="defs_8h_1a125d733e58da75b9609114a226e4d81c" prot="public" static="no">
         <name>wxUpdateUI</name>
@@ -5865,7 +5844,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1194" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1193" bodyend="1198"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1209" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1208" bodyend="1213"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="typedef">
@@ -5880,7 +5859,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1253" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1253" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1268" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1268" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="defs_8h_1afafdbd6c4f83699868fdd71c1f565db2" prot="public" static="no">
         <type>float</type>
@@ -5893,7 +5872,7 @@
 <para>(The mapping is more complex than a simple <computeroutput>typedef</computeroutput> and is not shown here). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1302" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1302" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1317" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1317" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="defs_8h_1a99e112176d161558aa025fa6d9d217e0" prot="public" static="no">
         <type>double</type>
@@ -5906,7 +5885,7 @@
 <para>(The mapping is more complex than a simple <computeroutput>typedef</computeroutput> and is not shown here). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1309" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1309" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1324" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1324" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="defs_8h_1a75a450a943d1f217d7cf24f2b9eeed2e" prot="public" static="no">
         <type>double</type>
@@ -5919,7 +5898,7 @@
 <para>(The mapping is more complex than a simple <computeroutput>typedef</computeroutput> and is not shown here). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1316" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1316" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1331" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1331" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="var">
@@ -5935,11 +5914,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1256" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1256" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1271" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1271" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
-      <memberdef kind="function" id="group__group__funcmacro__misc_1gac97f2b9872d977f30368231c75dd1059" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="group__group__funcmacro__misc_1gac97f2b9872d977f30368231c75dd1059" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
           <param>
             <type>typename T</type>
@@ -5960,12 +5939,12 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__misc_1gac97f2b9872d977f30368231c75dd1059" kindref="member" tooltip="A function which deletes and nulls the pointer.">wxDELETE</ref>(ptr);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__debug_1ga204cc264ee560b67e6c6467ba8ffee5f" kindref="member" tooltip="Assert macro.">wxASSERT</ref>(!ptr);</highlight></codeline>
-</programlisting></para><para>Include file: <verbatim>#include &lt;wx/defs.h&gt; </verbatim> </para>        </detaileddescription>
+</programlisting></para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/defs.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1483"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1498"/>
       </memberdef>
-      <memberdef kind="function" id="group__group__funcmacro__misc_1ga2a54307a1463c69c594b55e9d8d9987e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="group__group__funcmacro__misc_1ga2a54307a1463c69c594b55e9d8d9987e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
           <param>
             <type>typename T</type>
@@ -5987,12 +5966,12 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__misc_1ga2a54307a1463c69c594b55e9d8d9987e" kindref="member" tooltip="A function which deletes and nulls the pointer.">wxDELETEA</ref>(array);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__debug_1ga204cc264ee560b67e6c6467ba8ffee5f" kindref="member" tooltip="Assert macro.">wxASSERT</ref>(!array);</highlight></codeline>
 </programlisting></para><para><simplesect kind="see"><para><ref refid="group__group__funcmacro__misc_1gac97f2b9872d977f30368231c75dd1059" kindref="member">wxDELETE()</ref></para></simplesect>
-Include file: <verbatim>#include &lt;wx/defs.h&gt; </verbatim> </para>        </detaileddescription>
+Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/defs.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1503"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1518"/>
       </memberdef>
-      <memberdef kind="function" id="group__group__funcmacro__misc_1gab9080ca47d718deecb196aa10fa3b8d7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="group__group__funcmacro__misc_1gab9080ca47d718deecb196aa10fa3b8d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
           <param>
             <type>typename T</type>
@@ -6020,7 +5999,7 @@ Include file: <verbatim>#include &lt;wx/defs.h&gt; </verbatim> </para>        </
 </programlisting> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1656"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1671"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__misc_1ga14782857e2432e5836ceb510bc72211c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -6038,10 +6017,10 @@ Include file: <verbatim>#include &lt;wx/defs.h&gt; </verbatim> </para>        </
         <briefdescription>
 <para>This macro is the same as the standard C99 <computeroutput>va_copy</computeroutput> for the compilers which support it or its replacement for those that don&apos;t. </para>        </briefdescription>
         <detaileddescription>
-<para>It must be used to preserve the value of a <computeroutput>va_list</computeroutput> object if you need to use it after passing it to another function because it can be modified by the latter.</para><para>As with <computeroutput>va_start</computeroutput>, each call to <computeroutput>wxVaCopy</computeroutput> must have a matching <computeroutput>va_end</computeroutput>.</para><para>Include file: <verbatim>#include &lt;wx/defs.h&gt; </verbatim> </para>        </detaileddescription>
+<para>It must be used to preserve the value of a <computeroutput>va_list</computeroutput> object if you need to use it after passing it to another function because it can be modified by the latter.</para><para>As with <computeroutput>va_start</computeroutput>, each call to <computeroutput>wxVaCopy</computeroutput> must have a matching <computeroutput>va_end</computeroutput>.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/defs.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1669"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1684"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

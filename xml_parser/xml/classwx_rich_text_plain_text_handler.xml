@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_rich_text_plain_text_handler" kind="class" prot="public">
     <compoundname>wxRichTextPlainTextHandler</compoundname>
     <basecompoundref refid="classwx_rich_text_file_handler" prot="public" virt="non-virtual">wxRichTextFileHandler</basecompoundref>
@@ -31,7 +31,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="5252" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="5248" bodyend="5252"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="5464" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="5460" bodyend="5464"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_plain_text_handler_1a00903125bf1cb8a6c0073098c9613155" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
         <type>bool</type>
@@ -45,7 +45,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="5255" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="5255" bodyend="5255"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="5467" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="5467" bodyend="5467"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_plain_text_handler_1a66d4c0f17ab55d010310ad9d0c7ef949" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
         <type>bool</type>
@@ -59,68 +59,68 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="5258" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="5258" bodyend="5258"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="5470" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="5470" bodyend="5470"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para>Implements saving a buffer to plain text. </para>    </briefdescription>
     <detaileddescription>
 <para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxrichtext" kindref="member">wxRichText</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__richtext" kindref="compound">Rich Text</ref></para><para><simplesect kind="see"><para><ref refid="classwx_rich_text_file_handler" kindref="compound">wxRichTextFileHandler</ref>, <ref refid="classwx_rich_text_buffer" kindref="compound">wxRichTextBuffer</ref>, <ref refid="classwx_rich_text_ctrl" kindref="compound">wxRichTextCtrl</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxrichtext" kindref="member">wxRichText</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__richtext" kindref="compound">Rich Text</ref></para><para><simplesect kind="see"><para><ref refid="classwx_rich_text_file_handler" kindref="compound">wxRichTextFileHandler</ref>, <ref refid="classwx_rich_text_buffer" kindref="compound">wxRichTextBuffer</ref>, <ref refid="classwx_rich_text_ctrl" kindref="compound">wxRichTextCtrl</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="9765">
+      <node id="9825">
         <label>wxRichTextFileHandler</label>
         <link refid="classwx_rich_text_file_handler"/>
-        <childnode refid="9766" relation="public-inheritance">
+        <childnode refid="9826" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9766">
+      <node id="9826">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="9764">
+      <node id="9824">
         <label>wxRichTextPlainTextHandler</label>
         <link refid="classwx_rich_text_plain_text_handler"/>
-        <childnode refid="9765" relation="public-inheritance">
+        <childnode refid="9825" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="9771">
+      <node id="9831">
         <label>wxString</label>
         <link refid="classwx_string"/>
       </node>
-      <node id="9768">
+      <node id="9828">
         <label>wxRichTextFileHandler</label>
         <link refid="classwx_rich_text_file_handler"/>
-        <childnode refid="9769" relation="public-inheritance">
+        <childnode refid="9829" relation="public-inheritance">
         </childnode>
-        <childnode refid="9771" relation="usage">
+        <childnode refid="9831" relation="usage">
           <edgelabel>m_encoding</edgelabel>
           <edgelabel>m_extension</edgelabel>
           <edgelabel>m_name</edgelabel>
         </childnode>
       </node>
-      <node id="9769">
+      <node id="9829">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="9770" relation="usage">
+        <childnode refid="9830" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="9767">
+      <node id="9827">
         <label>wxRichTextPlainTextHandler</label>
         <link refid="classwx_rich_text_plain_text_handler"/>
-        <childnode refid="9768" relation="public-inheritance">
+        <childnode refid="9828" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9770">
+      <node id="9830">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="5245" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="5244" bodyend="5267"/>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="5457" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="5456" bodyend="5479"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxRichTextPlainTextHandler</scope><name>AllocExclusive</name></member>
       <member refid="classwx_rich_text_file_handler_1aa20fea9876f9f1b1c80991939d30473f" prot="public" virt="virtual"><scope>wxRichTextPlainTextHandler</scope><name>CanHandle</name></member>

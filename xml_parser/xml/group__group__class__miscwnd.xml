@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="group__group__class__miscwnd" kind="group">
     <compoundname>group_class_miscwnd</compoundname>
     <title>Miscellaneous Windows</title>
@@ -35,7 +35,7 @@
         <detaileddescription>
 <para>See <ref refid="classwx_scrolled" kindref="compound">wxScrolled</ref> for detailed description.</para><para><simplesect kind="note"><para>Note that because this class derives from <ref refid="classwx_panel" kindref="compound">wxPanel</ref>, it shares its behaviour with regard to TAB traversal and focus handling (in particular, it forwards focus to its children). If you don&apos;t want this behaviour, use <ref refid="group__group__class__miscwnd_1ga6b205af0f8759231eab11f15f7d4a098" kindref="member">wxScrolledCanvas</ref> instead.</para><simplesectsep/><para><ref refid="group__group__class__miscwnd_1ga695bec5996cd4d5512d1a01cfdcf96a5" kindref="member">wxScrolledWindow</ref> is an alias for wxScrolled&lt;wxPanel&gt; since version 2.9.0. In older versions, it was a standalone class.</para></simplesect>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__miscwnd" kindref="compound">Miscellaneous Windows</ref></para><para><simplesect kind="see"><para><ref refid="classwx_scrolled" kindref="compound">wxScrolled</ref>, <ref refid="group__group__class__miscwnd_1ga6b205af0f8759231eab11f15f7d4a098" kindref="member">wxScrolledCanvas</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__miscwnd" kindref="compound">Miscellaneous Windows</ref></para><para><simplesect kind="see"><para><ref refid="classwx_scrolled" kindref="compound">wxScrolled</ref>, <ref refid="group__group__class__miscwnd_1ga6b205af0f8759231eab11f15f7d4a098" kindref="member">wxScrolledCanvas</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -51,7 +51,7 @@
         <detaileddescription>
 <para>Scrolled window that doesn&apos;t have children and so doesn&apos;t need or want special handling of TAB traversal.</para><para><simplesect kind="since"><para>2.9.0</para></simplesect>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__miscwnd" kindref="compound">Miscellaneous Windows</ref></para><para><simplesect kind="see"><para><ref refid="classwx_scrolled" kindref="compound">wxScrolled</ref>, <ref refid="group__group__class__miscwnd_1ga695bec5996cd4d5512d1a01cfdcf96a5" kindref="member">wxScrolledWindow</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__miscwnd" kindref="compound">Miscellaneous Windows</ref></para><para><simplesect kind="see"><para><ref refid="classwx_scrolled" kindref="compound">wxScrolled</ref>, <ref refid="group__group__class__miscwnd_1ga695bec5996cd4d5512d1a01cfdcf96a5" kindref="member">wxScrolledWindow</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>

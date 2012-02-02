@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="page_stdevtid" kind="page">
+    <compoundname>page_stdevtid</compoundname>
+    <title>Standard event identifiers</title>
+    <detaileddescription>
+<para>wxWidgets defines a special identifier value <computeroutput>wxID_ANY</computeroutput> which is used in the following two situations:</para><para><itemizedlist>
+<listitem><para>when creating a new window you may specify <computeroutput>wxID_ANY</computeroutput> to let wxWidgets assign an unused identifier to it automatically </para></listitem>
+<listitem><para>when installing an event handler using either the event table macros or <ref refid="classwx_evt_handler_1a78719e8b82c9f9c6e4056b3449df1943" kindref="member">wxEvtHandler::Connect</ref>, you may use it to indicate that you want to handle the events coming from any control, regardless of its identifier</para></listitem>
+</itemizedlist>
+Another standard special identifier value is <computeroutput>wxID_NONE:</computeroutput> this is a value which is not matched by any other id.</para><para>wxWidgets also defines a few standard command identifiers which may be used by the user code and also are sometimes used by wxWidgets itself. These reserved identifiers are all in the range between <computeroutput>wxID_LOWEST</computeroutput> and <computeroutput>wxID_HIGHEST</computeroutput> and, accordingly, the user code should avoid defining its own constants in this range (e.g. by using <ref refid="group__group__funcmacro__misc_1gaef162e1ba5d17a839b2f7912424bc822" kindref="member">wxNewId()</ref>).</para><para>Refer to <ref refid="page_stockitems" kindref="compound">the list of stock items</ref> for the subset of standard IDs which are stock IDs as well. </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

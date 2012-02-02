@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_log" kind="class" prot="public">
     <compoundname>wxLog</compoundname>
     <derivedcompoundref refid="classwx_log_buffer" prot="public" virt="non-virtual">wxLogBuffer</derivedcompoundref>
@@ -11,7 +11,6 @@
     <includes local="no">wx/log.h</includes>
       <sectiondef kind="user-defined">
       <header>Trace mask functions</header>
-      <description><para><anchor id="_1amgrp10599b001dbf352d188d93ce27382c4e"/> </para></description>
       <memberdef kind="function" id="classwx_log_1a4c11ee23ce5264b6c5921a17610cda13" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>static void wxLog::AddTraceMask</definition>
@@ -28,7 +27,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="620"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="716"/>
       </memberdef>
       <memberdef kind="function" id="classwx_log_1ac6b25e807e4948795aea21def6b5c1e4" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -42,7 +41,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="627"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="723"/>
       </memberdef>
       <memberdef kind="function" id="classwx_log_1a899ccb4d60fe3d096e4c8c713774ba5c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_array_string" kindref="compound">wxArrayString</ref> &amp;</type>
@@ -56,7 +55,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="634"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="730"/>
       </memberdef>
       <memberdef kind="function" id="classwx_log_1a28fece055f6d4eb97455b216bc042ee4" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -73,7 +72,7 @@
 <para>See also: <ref refid="classwx_log_1a4c11ee23ce5264b6c5921a17610cda13" kindref="member">AddTraceMask()</ref>, <ref refid="classwx_log_1ab2d378dce2d927e36b7e09618c61fa05" kindref="member">RemoveTraceMask()</ref> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="641"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="737"/>
       </memberdef>
       <memberdef kind="function" id="classwx_log_1ab2d378dce2d927e36b7e09618c61fa05" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -91,12 +90,11 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="649"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="745"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
       <header>Log target functions</header>
-      <description><para><anchor id="_1amgrpad6ace407c940bd072f43abff1fcd7f4"/> </para></description>
       <memberdef kind="function" id="classwx_log_1af51afebbfa375827936ba3c93c78857a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>static void wxLog::DontCreateOnDemand</definition>
@@ -108,7 +106,7 @@
 <para>(Almost) for internal use only: it is supposed to be called by the application shutdown code (where you don&apos;t want the log target to be automatically created anymore).</para><para>Note that this function also calls <ref refid="classwx_log_1ac6b25e807e4948795aea21def6b5c1e4" kindref="member">ClearTraceMasks()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="670"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="766"/>
       </memberdef>
       <memberdef kind="function" id="classwx_log_1aabbef40bf3aa7ba2c71b33932d4854ec" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_log" kindref="compound">wxLog</ref> *</type>
@@ -121,7 +119,7 @@
 <para>Notice that if <ref refid="classwx_log_1ac7ea85f71c8d3ecd4247f412be410505" kindref="member">SetActiveTarget()</ref> hadn&apos;t been previously explicitly called, this function will by default try to create a log target by calling <ref refid="classwx_app_traits_1aae9e62a6b5364fb9a230888a637eb378" kindref="member">wxAppTraits::CreateLogTarget()</ref> which may be overridden in a user-defined traits class to change the default behaviour. You may also call <ref refid="classwx_log_1af51afebbfa375827936ba3c93c78857a" kindref="member">DontCreateOnDemand()</ref> to disable this behaviour.</para><para>When this function is called from threads other than main one, auto-creation doesn&apos;t happen. But if the thread has a thread-specific log target previously set by <ref refid="classwx_log_1a2525bf54fa3f31dc50e6e3cd8651e71d" kindref="member">SetThreadActiveTarget()</ref>, it is returned instead of the global one. Otherwise, the global log target is returned. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="687"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="783"/>
       </memberdef>
       <memberdef kind="function" id="classwx_log_1ac7ea85f71c8d3ecd4247f412be410505" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_log" kindref="compound">wxLog</ref> *</type>
@@ -139,7 +137,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="699"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="795"/>
       </memberdef>
       <memberdef kind="function" id="classwx_log_1a2525bf54fa3f31dc50e6e3cd8651e71d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_log" kindref="compound">wxLog</ref> *</type>
@@ -166,7 +164,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="725"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="821"/>
       </memberdef>
       <memberdef kind="function" id="classwx_log_1ab0808092c4ec1d503e261d9d226d7e90" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -179,7 +177,7 @@
 <para>When this method is called from the main thread context, it also flushes any previously buffered messages logged by the other threads. When it is called from the other threads it simply calls <ref refid="classwx_log_1a21f8a2a7d83bd17a0e89bbe7dd7e6feb" kindref="member">Flush()</ref> on the currently active log target, so it mostly makes sense to do this if a thread has its own logger set with <ref refid="classwx_log_1a2525bf54fa3f31dc50e6e3cd8651e71d" kindref="member">SetThreadActiveTarget()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="736"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="832"/>
       </memberdef>
       <memberdef kind="function" id="classwx_log_1a14a562556933276939cedbb470f149cb" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -192,7 +190,7 @@
 <para>All messages logged in the meanwhile will be flushed soon. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="742"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="838"/>
       </memberdef>
       <memberdef kind="function" id="classwx_log_1ac563b1d13ec717fb7d5ccf4590e35308" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -206,12 +204,11 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="758"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="854"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
       <header>Log level functions</header>
-      <description><para><anchor id="_1amgrpd6853e3e1dd09a6883332fae9517547f"/> </para></description>
       <memberdef kind="function" id="classwx_log_1a474ba0555bce38b182d7bc8e152d128a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="interface_2wx_2log_8h_1ae0480cde4ec31e0f2e502e6e3082e74c" kindref="member">wxLogLevel</ref></type>
         <definition>static wxLogLevel wxLog::GetLogLevel</definition>
@@ -224,7 +221,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="777"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="873"/>
       </memberdef>
       <memberdef kind="function" id="classwx_log_1a9376ab96ed687a54068ed7f0d7639c16" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -247,7 +244,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="790"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="886"/>
       </memberdef>
       <memberdef kind="function" id="classwx_log_1a7ae244e71dff20efd3a37b3718841a39" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -285,7 +282,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="812"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="908"/>
       </memberdef>
       <memberdef kind="function" id="classwx_log_1a4ea68379469ca27f645d5f91c2d42b3b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -303,12 +300,11 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="820"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="916"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
       <header>Enable/disable features functions</header>
-      <description><para><anchor id="_1amgrp3ba77c02f7b3aa992b891a37ba75a274"/> </para></description>
       <memberdef kind="function" id="classwx_log_1a58bbfc0831eb47f0d88c9350d1f6e02d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
         <definition>static bool wxLog::EnableLogging</definition>
@@ -327,7 +323,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="843"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="939"/>
       </memberdef>
       <memberdef kind="function" id="classwx_log_1a386ce41902b74521a31f4b0de7e1007f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -341,7 +337,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="850"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="946"/>
       </memberdef>
       <memberdef kind="function" id="classwx_log_1add8fb43f08799998e68251e9b77020d7" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -354,7 +350,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="855"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="951"/>
       </memberdef>
       <memberdef kind="function" id="classwx_log_1ae814f9b9b4c8b4a52e34d7c919f98296" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -372,7 +368,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="862"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="958"/>
       </memberdef>
       <memberdef kind="function" id="classwx_log_1a872a55302394dfc42d0035e987156622" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -382,10 +378,10 @@
         <briefdescription>
 <para>Returns the current timestamp format string. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>Notice that the current time stamp is only used by the default log formatter and custom formatters may ignore this format. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="867"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="966"/>
       </memberdef>
       <memberdef kind="function" id="classwx_log_1a9d0193f89e127de5cc996a32d75cf5c0" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -399,10 +395,10 @@
         <briefdescription>
 <para>Sets the timestamp format prepended by the default log targets to all messages. </para>        </briefdescription>
         <detaileddescription>
-<para>The string may contain any normal characters as well as % prefixed format specifiers, see <emphasis>strftime()</emphasis> manual for details. Passing an empty string to this function disables message time stamping. </para>        </detaileddescription>
+<para>The string may contain any normal characters as well as % prefixed format specifiers, see <emphasis>strftime()</emphasis> manual for details. Passing an empty string to this function disables message time stamping.</para><para>Notice that the current time stamp is only used by the default log formatter and custom formatters may ignore this format. You can also define a custom <ref refid="classwx_log_formatter" kindref="compound">wxLogFormatter</ref> to customize the time stamp handling beyond changing its format. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="875"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="979"/>
       </memberdef>
       <memberdef kind="function" id="classwx_log_1a9df108f087542c81daf3a00bbeab0aa5" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -412,11 +408,11 @@
         <briefdescription>
 <para>Disables time stamping of the log messages. </para>        </briefdescription>
         <detaileddescription>
-<para><simplesect kind="since"><para>2.9.0 </para></simplesect>
+<para>Notice that the current time stamp is only used by the default log formatter and custom formatters may ignore calls to this function.</para><para><simplesect kind="since"><para>2.9.0 </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="882"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="989"/>
       </memberdef>
       <memberdef kind="function" id="classwx_log_1ae67871e92f85fcf92a0eb885d0684777" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -429,7 +425,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="887"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="994"/>
       </memberdef>
       <memberdef kind="function" id="classwx_log_1a854c6f60a72ef046b4f54953287534e6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -444,16 +440,16 @@
         <briefdescription>
 <para>Activates or deactivates verbose mode in which the verbose messages are logged as the normal ones instead of being silently dropped. </para>        </briefdescription>
         <detaileddescription>
-<para>The verbose messages are the trace messages which are not disabled in the release mode and are generated by <ref refid="group__group__funcmacro__log_1gaf57b7e28ab76bacf10b3be044e8bd634" kindref="member">wxLogVerbose()</ref>.</para><para><simplesect kind="see"><para><ref refid="overview__log" kindref="compound">wxLog Classes Overview</ref> </para></simplesect>
+<para>The verbose messages are the trace messages which are not disabled in the release mode and are generated by <ref refid="group__group__funcmacro__log_1gaf57b7e28ab76bacf10b3be044e8bd634" kindref="member">wxLogVerbose()</ref>.</para><para><simplesect kind="see"><para><ref refid="overview_log" kindref="compound">wxLog Classes Overview</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="898"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1005"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
       <header>Logging callbacks.</header>
-      <description><para><anchor id="_1amgrp36447b957eb4cba7a90d399a2ff952a0"/>The functions which should be overridden by custom log targets.</para><para>When defining a new log target, you have a choice between overriding <ref refid="classwx_log_1aede0ff7812690d487de845b7f3095dfd" kindref="member">DoLogRecord()</ref>, which provides maximal flexibility, <ref refid="classwx_log_1a3fafbd3b87ff2d08dfdd1378d35013bb" kindref="member">DoLogTextAtLevel()</ref> which can be used if you don&apos;t intend to change the default log messages formatting but want to handle log messages of different levels differently or, in the simplest case, <ref refid="classwx_log_1a18c877e0038afe284757512b866b0aac" kindref="member">DoLogText()</ref>. </para></description>
+      <description><para>The functions which should be overridden by custom log targets.</para><para>When defining a new log target, you have a choice between overriding <ref refid="classwx_log_1aede0ff7812690d487de845b7f3095dfd" kindref="member">DoLogRecord()</ref>, which provides maximal flexibility, <ref refid="classwx_log_1a3fafbd3b87ff2d08dfdd1378d35013bb" kindref="member">DoLogTextAtLevel()</ref> which can be used if you don&apos;t intend to change the default log messages formatting but want to handle log messages of different levels differently or, in the simplest case, <ref refid="classwx_log_1a18c877e0038afe284757512b866b0aac" kindref="member">DoLogText()</ref>. </para></description>
       <memberdef kind="function" id="classwx_log_1aede0ff7812690d487de845b7f3095dfd" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
         <definition>virtual void wxLog::DoLogRecord</definition>
@@ -477,7 +473,7 @@
 <para>Any log message created by wxLogXXX() functions is passed to this method of the active log target. The default implementation prepends the timestamp and, for some log levels (e.g. error and warning), the corresponding prefix to <emphasis>msg</emphasis> and passes it to <ref refid="classwx_log_1a3fafbd3b87ff2d08dfdd1378d35013bb" kindref="member">DoLogTextAtLevel()</ref>.</para><para>You may override this method to implement custom formatting of the log messages or to implement custom filtering of log messages (e.g. you could discard all log messages coming from the given source file). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="975"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1095"/>
       </memberdef>
       <memberdef kind="function" id="classwx_log_1a3fafbd3b87ff2d08dfdd1378d35013bb" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -498,7 +494,7 @@
 <para>The base class versions logs debug and trace messages on the system default debug output channel and passes all the other messages to <ref refid="classwx_log_1a18c877e0038afe284757512b866b0aac" kindref="member">DoLogText()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="984"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1104"/>
       </memberdef>
       <memberdef kind="function" id="classwx_log_1a18c877e0038afe284757512b866b0aac" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -515,10 +511,36 @@
 <para>A simple implementation might just send the string to <computeroutput>stdout</computeroutput> or <computeroutput>stderr</computeroutput> or save it in a file (of course, the already existing <ref refid="classwx_log_stderr" kindref="compound">wxLogStderr</ref> can be used for this).</para><para>The base class version of this function asserts so it must be overridden if you don&apos;t override <ref refid="classwx_log_1aede0ff7812690d487de845b7f3095dfd" kindref="member">DoLogRecord()</ref> or <ref refid="classwx_log_1a3fafbd3b87ff2d08dfdd1378d35013bb" kindref="member">DoLogTextAtLevel()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="996"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1116"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_log_1a9f316422df6930c549db80a5e4bf36a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_log_formatter" kindref="compound">wxLogFormatter</ref> *</type>
+        <definition>wxLogFormatter* wxLog::SetFormatter</definition>
+        <argsstring>(wxLogFormatter *formatter)</argsstring>
+        <name>SetFormatter</name>
+        <param>
+          <type><ref refid="classwx_log_formatter" kindref="compound">wxLogFormatter</ref> *</type>
+          <declname>formatter</declname>
+        </param>
+        <briefdescription>
+<para>Sets the specified formatter as the active one. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>formatter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new formatter. If NULL, reset to the default formatter.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+Returns the pointer to the previous formatter. You must delete it if you don&apos;t plan to attach it again to a <ref refid="classwx_log" kindref="compound">wxLog</ref> object later.</para><para><simplesect kind="since"><para>2.9.4 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1021"/>
+      </memberdef>
       <memberdef kind="function" id="classwx_log_1a21f8a2a7d83bd17a0e89bbe7dd7e6feb" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
         <definition>virtual void wxLog::Flush</definition>
@@ -532,7 +554,7 @@
 <para>This function shows them all and clears the buffer contents. If the buffer is already empty, nothing happens.</para><para>If you override this method in a derived class, call the base class version first, before doing anything else. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="914"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1034"/>
       </memberdef>
       <memberdef kind="function" id="classwx_log_1a99bd499a7375bb627ecbc22ff057ec04" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -555,7 +577,7 @@
 <para>Log the given record. </para>        </briefdescription>
         <detaileddescription>
 <para>This function should only be called from the DoLog() implementations in the derived classes if they need to call <ref refid="classwx_log_1aede0ff7812690d487de845b7f3095dfd" kindref="member">DoLogRecord()</ref> on another log object (they can, of course, just use <ref refid="classwx_log_1aede0ff7812690d487de845b7f3095dfd" kindref="member">wxLog::DoLogRecord()</ref> call syntax to call it on the object itself). It should not be used for logging new messages which can be only sent to the currently active logger using OnLog() which also checks if the logging (for this level) is enabled while this method just directly calls DoLog().</para><para>Example of use of this class from <ref refid="classwx_log_chain" kindref="compound">wxLogChain</ref>: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classwx_log_1aede0ff7812690d487de845b7f3095dfd" kindref="member" tooltip="Called to log a new record.">wxLogChain::DoLogRecord</ref>(<ref refid="interface_2wx_2log_8h_1ae0480cde4ec31e0f2e502e6e3082e74c" kindref="member" tooltip="The type used to specify a log level.">wxLogLevel</ref><sp/>level,</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change...">wxString</ref>&amp;<sp/>msg,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change was actually the m...">wxString</ref>&amp;<sp/>msg,</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classwx_log_record_info" kindref="compound" tooltip="Information about a log record (unit of the log output).">wxLogRecordInfo</ref>&amp;<sp/>info)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>let<sp/>the<sp/>previous<sp/>logger<sp/>show<sp/>it</highlight><highlight class="normal"></highlight></codeline>
@@ -570,77 +592,77 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="945"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1065"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
-<para><ref refid="classwx_log" kindref="compound">wxLog</ref> class defines the interface for the <emphasis>log targets</emphasis> used by wxWidgets logging functions as explained in the <ref refid="overview__log" kindref="compound">wxLog Classes Overview</ref>. </para>    </briefdescription>
+<para><ref refid="classwx_log" kindref="compound">wxLog</ref> class defines the interface for the <emphasis>log targets</emphasis> used by wxWidgets logging functions as explained in the <ref refid="overview_log" kindref="compound">wxLog Classes Overview</ref>. </para>    </briefdescription>
     <detaileddescription>
 <para>The only situations when you need to directly use this class is when you want to derive your own log target because the existing ones don&apos;t satisfy your needs.</para><para>Otherwise, it is completely hidden behind the <ref refid="group__group__funcmacro__log" kindref="compound">wxLogXXX() functions</ref> and you may not even know about its existence.</para><para><simplesect kind="note"><para>For console-mode applications, the default target is <ref refid="classwx_log_stderr" kindref="compound">wxLogStderr</ref>, so that all <emphasis>wxLogXXX()</emphasis> functions print on <computeroutput>stderr</computeroutput> when <computeroutput>wxUSE_GUI</computeroutput> = 0.</para></simplesect>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__logging" kindref="compound">Logging</ref></para><para><simplesect kind="see"><para><ref refid="overview__log" kindref="compound">wxLog Classes Overview</ref>, <ref refid="group__group__funcmacro__log" kindref="compound">wxLogXXX() functions</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__logging" kindref="compound">Logging</ref></para><para><simplesect kind="see"><para><ref refid="overview_log" kindref="compound">wxLog Classes Overview</ref>, <ref refid="group__group__funcmacro__log" kindref="compound">wxLogXXX() functions</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7489">
+      <node id="7493">
         <label>wxLogWindow</label>
         <link refid="classwx_log_window"/>
-        <childnode refid="7488" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="7488">
-        <label>wxLogInterposer</label>
-        <link refid="classwx_log_interposer"/>
-        <childnode refid="7487" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="7486">
-        <label>wxLogBuffer</label>
-        <link refid="classwx_log_buffer"/>
-        <childnode refid="7485" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="7490">
-        <label>wxLogInterposerTemp</label>
-        <link refid="classwx_log_interposer_temp"/>
-        <childnode refid="7487" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="7487">
-        <label>wxLogChain</label>
-        <link refid="classwx_log_chain"/>
-        <childnode refid="7485" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="7485">
-        <label>wxLog</label>
-        <link refid="classwx_log"/>
-      </node>
-      <node id="7494">
-        <label>wxLogTextCtrl</label>
-        <link refid="classwx_log_text_ctrl"/>
-        <childnode refid="7485" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="7491">
-        <label>wxLogGui</label>
-        <link refid="classwx_log_gui"/>
-        <childnode refid="7485" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="7493">
-        <label>wxLogStream</label>
-        <link refid="classwx_log_stream"/>
-        <childnode refid="7485" relation="public-inheritance">
+        <childnode refid="7492" relation="public-inheritance">
         </childnode>
       </node>
       <node id="7492">
+        <label>wxLogInterposer</label>
+        <link refid="classwx_log_interposer"/>
+        <childnode refid="7491" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7490">
+        <label>wxLogBuffer</label>
+        <link refid="classwx_log_buffer"/>
+        <childnode refid="7489" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7494">
+        <label>wxLogInterposerTemp</label>
+        <link refid="classwx_log_interposer_temp"/>
+        <childnode refid="7491" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7491">
+        <label>wxLogChain</label>
+        <link refid="classwx_log_chain"/>
+        <childnode refid="7489" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7489">
+        <label>wxLog</label>
+        <link refid="classwx_log"/>
+      </node>
+      <node id="7498">
+        <label>wxLogTextCtrl</label>
+        <link refid="classwx_log_text_ctrl"/>
+        <childnode refid="7489" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7495">
+        <label>wxLogGui</label>
+        <link refid="classwx_log_gui"/>
+        <childnode refid="7489" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7497">
+        <label>wxLogStream</label>
+        <link refid="classwx_log_stream"/>
+        <childnode refid="7489" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7496">
         <label>wxLogStderr</label>
         <link refid="classwx_log_stderr"/>
-        <childnode refid="7485" relation="public-inheritance">
+        <childnode refid="7489" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="608" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" bodystart="607" bodyend="999"/>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="704" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" bodystart="703" bodyend="1119"/>
     <listofallmembers>
       <member refid="classwx_log_1a4c11ee23ce5264b6c5921a17610cda13" prot="public" virt="non-virtual"><scope>wxLog</scope><name>AddTraceMask</name></member>
       <member refid="classwx_log_1ac6b25e807e4948795aea21def6b5c1e4" prot="public" virt="non-virtual"><scope>wxLog</scope><name>ClearTraceMasks</name></member>
@@ -666,6 +688,7 @@
       <member refid="classwx_log_1a14a562556933276939cedbb470f149cb" prot="public" virt="non-virtual"><scope>wxLog</scope><name>Resume</name></member>
       <member refid="classwx_log_1ac7ea85f71c8d3ecd4247f412be410505" prot="public" virt="non-virtual"><scope>wxLog</scope><name>SetActiveTarget</name></member>
       <member refid="classwx_log_1a7ae244e71dff20efd3a37b3718841a39" prot="public" virt="non-virtual"><scope>wxLog</scope><name>SetComponentLevel</name></member>
+      <member refid="classwx_log_1a9f316422df6930c549db80a5e4bf36a2" prot="public" virt="non-virtual"><scope>wxLog</scope><name>SetFormatter</name></member>
       <member refid="classwx_log_1a4ea68379469ca27f645d5f91c2d42b3b" prot="public" virt="non-virtual"><scope>wxLog</scope><name>SetLogLevel</name></member>
       <member refid="classwx_log_1ae814f9b9b4c8b4a52e34d7c919f98296" prot="public" virt="non-virtual"><scope>wxLog</scope><name>SetRepetitionCounting</name></member>
       <member refid="classwx_log_1a2525bf54fa3f31dc50e6e3cd8651e71d" prot="public" virt="non-virtual"><scope>wxLog</scope><name>SetThreadActiveTarget</name></member>

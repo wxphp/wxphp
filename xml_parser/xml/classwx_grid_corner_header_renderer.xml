@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_grid_corner_header_renderer" kind="class" prot="public">
     <compoundname>wxGridCornerHeaderRenderer</compoundname>
     <derivedcompoundref refid="classwx_grid_corner_header_renderer_default" prot="public" virt="non-virtual">wxGridCornerHeaderRendererDefault</derivedcompoundref>
@@ -64,44 +64,44 @@
 <simplesect kind="since"><para>2.9.1 </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="6760">
+      <node id="6764">
         <label>wxGridHeaderLabelsRenderer</label>
         <link refid="classwx_grid_header_labels_renderer"/>
-        <childnode refid="6758" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="6758">
-        <label>wxGridCornerHeaderRenderer</label>
-        <link refid="classwx_grid_corner_header_renderer"/>
-      </node>
-      <node id="6759">
-        <label>wxGridCornerHeaderRendererDefault</label>
-        <link refid="classwx_grid_corner_header_renderer_default"/>
-        <childnode refid="6758" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="6761">
-        <label>wxGridColumnHeaderRenderer</label>
-        <link refid="classwx_grid_column_header_renderer"/>
-        <childnode refid="6760" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="6763">
-        <label>wxGridRowHeaderRenderer</label>
-        <link refid="classwx_grid_row_header_renderer"/>
-        <childnode refid="6760" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="6764">
-        <label>wxGridRowHeaderRendererDefault</label>
-        <link refid="classwx_grid_row_header_renderer_default"/>
-        <childnode refid="6763" relation="public-inheritance">
+        <childnode refid="6762" relation="public-inheritance">
         </childnode>
       </node>
       <node id="6762">
+        <label>wxGridCornerHeaderRenderer</label>
+        <link refid="classwx_grid_corner_header_renderer"/>
+      </node>
+      <node id="6763">
+        <label>wxGridCornerHeaderRendererDefault</label>
+        <link refid="classwx_grid_corner_header_renderer_default"/>
+        <childnode refid="6762" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6765">
+        <label>wxGridColumnHeaderRenderer</label>
+        <link refid="classwx_grid_column_header_renderer"/>
+        <childnode refid="6764" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6767">
+        <label>wxGridRowHeaderRenderer</label>
+        <link refid="classwx_grid_row_header_renderer"/>
+        <childnode refid="6764" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6768">
+        <label>wxGridRowHeaderRendererDefault</label>
+        <link refid="classwx_grid_row_header_renderer_default"/>
+        <childnode refid="6767" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6766">
         <label>wxGridColumnHeaderRendererDefault</label>
         <link refid="classwx_grid_column_header_renderer_default"/>
-        <childnode refid="6761" relation="public-inheritance">
+        <childnode refid="6765" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>

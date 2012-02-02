@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_sash_window" kind="class" prot="public">
     <compoundname>wxSashWindow</compoundname>
     <basecompoundref refid="classwx_window" prot="public" virt="non-virtual">wxWindow</basecompoundref>
@@ -378,78 +378,78 @@
 <listitem><para>EVT_SASH_DRAGGED_RANGE(id1,  id2,  func): Process a <computeroutput>wxEVT_SASH_DRAGGED_RANGE</computeroutput> event, when the user has finished dragging a sash. The event handler is called when windows with ids in the given range have their sashes dragged. </para></listitem>
 </itemizedlist>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__miscwnd" kindref="compound">Miscellaneous Windows</ref></para><para><simplesect kind="see"><para><ref refid="classwx_sash_event" kindref="compound">wxSashEvent</ref>, <ref refid="classwx_sash_layout_window" kindref="compound">wxSashLayoutWindow</ref>, <ref refid="overview__events" kindref="compound">Events and Event Handling</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__miscwnd" kindref="compound">Miscellaneous Windows</ref></para><para><simplesect kind="see"><para><ref refid="classwx_sash_event" kindref="compound">wxSashEvent</ref>, <ref refid="classwx_sash_layout_window" kindref="compound">wxSashLayoutWindow</ref>, <ref refid="overview_events" kindref="compound">Events and Event Handling</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10007">
+      <node id="10067">
         <label>wxSashLayoutWindow</label>
         <link refid="classwx_sash_layout_window"/>
-        <childnode refid="10002" relation="public-inheritance">
+        <childnode refid="10062" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10005">
+      <node id="10065">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="10004">
+      <node id="10064">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="10005" relation="public-inheritance">
+        <childnode refid="10065" relation="public-inheritance">
         </childnode>
-        <childnode refid="10006" relation="public-inheritance">
+        <childnode refid="10066" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10006">
+      <node id="10066">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="10003">
+      <node id="10063">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="10004" relation="public-inheritance">
+        <childnode refid="10064" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10002">
+      <node id="10062">
         <label>wxSashWindow</label>
         <link refid="classwx_sash_window"/>
-        <childnode refid="10003" relation="public-inheritance">
+        <childnode refid="10063" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10011">
+      <node id="10071">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="10012" relation="usage">
+        <childnode refid="10072" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="10010">
+      <node id="10070">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="10011" relation="public-inheritance">
+        <childnode refid="10071" relation="public-inheritance">
         </childnode>
-        <childnode refid="10013" relation="public-inheritance">
+        <childnode refid="10073" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10013">
+      <node id="10073">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="10009">
+      <node id="10069">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="10010" relation="public-inheritance">
+        <childnode refid="10070" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10012">
+      <node id="10072">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
-      <node id="10008">
+      <node id="10068">
         <label>wxSashWindow</label>
         <link refid="classwx_sash_window"/>
-        <childnode refid="10009" relation="public-inheritance">
+        <childnode refid="10069" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>

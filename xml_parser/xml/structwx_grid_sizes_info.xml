@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="structwx_grid_sizes_info" kind="class" prot="public">
     <compoundname>wxGridSizesInfo</compoundname>
     <includes local="no">wx/grid.h</includes>
@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="1659" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" bodystart="1659" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="1662" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" bodystart="1662" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structwx_grid_sizes_info_1a03a92563dc8984fad157d4446fd5c64f" prot="public" static="no" mutable="no">
         <type>wxUnsignedToIntHashMap</type>
@@ -28,7 +28,7 @@
 <para>This map only contains the elements with non-default size. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="1666" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" bodystart="1666" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="1669" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" bodystart="1669" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -43,7 +43,7 @@
 <para>m_sizeDefault and m_customSizes must be initialized later. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="1630"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="1633"/>
       </memberdef>
       <memberdef kind="function" id="structwx_grid_sizes_info_1ab8c53bebb94ead9d003e98e43112d473" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -79,7 +79,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="1644"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="1647"/>
       </memberdef>
       <memberdef kind="function" id="structwx_grid_sizes_info_1afa51f33feb584e7a418877fa7e46a0de" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -105,15 +105,15 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="1655"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="1658"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para><ref refid="structwx_grid_sizes_info" kindref="compound">wxGridSizesInfo</ref> stores information about sizes of all <ref refid="classwx_grid" kindref="compound">wxGrid</ref> rows or columns. </para>    </briefdescription>
     <detaileddescription>
 <para>It assumes that most of the rows or columns (which are both called elements here as the difference between them doesn&apos;t matter at this class level) have the default size and so stores it separately. And it uses a <ref refid="classwx_hash_map" kindref="compound">wxHashMap</ref> to store the sizes of all elements which have the non-default size.</para><para>This structure is particularly useful for serializing the sizes of all <ref refid="classwx_grid" kindref="compound">wxGrid</ref> elements at once.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__grid" kindref="compound">Grid Related Classes</ref> </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="1624" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" bodystart="1623" bodyend="1667"/>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__grid" kindref="compound">Grid Related Classes</ref> </para>    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="1627" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" bodystart="1626" bodyend="1670"/>
     <listofallmembers>
       <member refid="structwx_grid_sizes_info_1afa51f33feb584e7a418877fa7e46a0de" prot="public" virt="non-virtual"><scope>wxGridSizesInfo</scope><name>GetSize</name></member>
       <member refid="structwx_grid_sizes_info_1a03a92563dc8984fad157d4446fd5c64f" prot="public" virt="non-virtual"><scope>wxGridSizesInfo</scope><name>m_customSizes</name></member>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_property_grid_event" kind="class" prot="public">
     <compoundname>wxPropertyGridEvent</compoundname>
     <basecompoundref refid="classwx_command_event" prot="public" virt="non-virtual">wxCommandEvent</basecompoundref>
@@ -259,58 +259,58 @@
 <para>A property grid event holds information about events associated with <ref refid="classwx_property_grid" kindref="compound">wxPropertyGrid</ref> objects. </para>    </briefdescription>
     <detaileddescription>
 <para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxpropgrid" kindref="member">wxPropertyGrid</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__propgrid" kindref="compound">wxPropertyGrid</ref> </para>    </detaileddescription>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxpropgrid" kindref="member">wxPropertyGrid</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__propgrid" kindref="compound">wxPropertyGrid</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="8877">
+      <node id="8885">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="8875">
+      <node id="8883">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="8876" relation="public-inheritance">
+        <childnode refid="8884" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8874">
+      <node id="8882">
         <label>wxPropertyGridEvent</label>
         <link refid="classwx_property_grid_event"/>
-        <childnode refid="8875" relation="public-inheritance">
+        <childnode refid="8883" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8876">
+      <node id="8884">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="8877" relation="public-inheritance">
+        <childnode refid="8885" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="8881">
+      <node id="8889">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="8882" relation="usage">
+        <childnode refid="8890" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="8879">
+      <node id="8887">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="8880" relation="public-inheritance">
+        <childnode refid="8888" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8878">
+      <node id="8886">
         <label>wxPropertyGridEvent</label>
         <link refid="classwx_property_grid_event"/>
-        <childnode refid="8879" relation="public-inheritance">
+        <childnode refid="8887" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8880">
+      <node id="8888">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="8881" relation="public-inheritance">
+        <childnode refid="8889" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8882">
+      <node id="8890">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

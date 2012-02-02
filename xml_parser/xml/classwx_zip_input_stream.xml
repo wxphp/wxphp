@@ -1,11 +1,10 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_zip_input_stream" kind="class" prot="public">
     <compoundname>wxZipInputStream</compoundname>
     <basecompoundref refid="classwx_archive_input_stream" prot="public" virt="non-virtual">wxArchiveInputStream</basecompoundref>
     <includes local="no">wx/zipstrm.h</includes>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_zip_input_stream_1a58ceb489b3b77a43001c04f692ae225c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
         <definition>wxZipInputStream::wxZipInputStream</definition>
@@ -68,7 +67,7 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000070"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Compatibility constructor (requires WXWIN_COMPATIBILITY_2_6). When this constructor is used, an emulation of seeking is switched on for compatibility with previous versions. Note however, that it is deprecated. </para></xrefdescription></xrefsect></para>        </detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000070"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Compatibility constructor (requires WXWIN_COMPATIBILITY_2_6).</para></xrefdescription></xrefsect>When this constructor is used, an emulation of seeking is switched on for compatibility with previous versions. Note however, that it is deprecated. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/zipstrm.h" line="396"/>
@@ -150,65 +149,65 @@
 <para>Input stream for reading zip files. </para>    </briefdescription>
     <detaileddescription>
 <para><ref refid="classwx_zip_input_stream_1adb03dfdea3a632c3ce9fd788ce26b99e" kindref="member">wxZipInputStream::GetNextEntry()</ref> returns a <ref refid="classwx_zip_entry" kindref="compound">wxZipEntry</ref> object containing the meta-data for the next entry in the zip (and gives away ownership). Reading from the <ref refid="classwx_zip_input_stream" kindref="compound">wxZipInputStream</ref> then returns the entry&apos;s data. <ref refid="classwx_input_stream_1a177bb52eb500be28c8d41f959b0fb6be" kindref="member">Eof()</ref> becomes true after an attempt has been made to read past the end of the entry&apos;s data. When there are no more entries, <ref refid="classwx_zip_input_stream_1adb03dfdea3a632c3ce9fd788ce26b99e" kindref="member">GetNextEntry()</ref> returns NULL and sets <ref refid="classwx_input_stream_1a177bb52eb500be28c8d41f959b0fb6be" kindref="member">Eof()</ref>.</para><para>Note that in general zip entries are not seekable, and <ref refid="classwx_input_stream_1a989ed0f85fe7340cc0996bbcee03822d" kindref="member">wxZipInputStream::SeekI()</ref> always returns <ref refid="group__group__funcmacro__file_1gab184c7199d93541d22ae42e515cbbcb7" kindref="member">wxInvalidOffset</ref>.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__archive" kindref="compound">Archive support</ref>, <ref refid="group__group__class__streams" kindref="compound">Streams</ref></para><para><simplesect kind="see"><para><ref refid="overview__archive" kindref="compound">Archive Formats</ref>, <ref refid="classwx_zip_entry" kindref="compound">wxZipEntry</ref>, <ref refid="classwx_zip_output_stream" kindref="compound">wxZipOutputStream</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__archive" kindref="compound">Archive support</ref>, <ref refid="group__group__class__streams" kindref="compound">Streams</ref></para><para><simplesect kind="see"><para><ref refid="overview_archive" kindref="compound">Archive Formats</ref>, <ref refid="classwx_zip_entry" kindref="compound">wxZipEntry</ref>, <ref refid="classwx_zip_output_stream" kindref="compound">wxZipOutputStream</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="11703">
+      <node id="11764">
         <label>wxInputStream</label>
         <link refid="classwx_input_stream"/>
-        <childnode refid="11704" relation="public-inheritance">
+        <childnode refid="11765" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11701">
+      <node id="11762">
         <label>wxArchiveInputStream</label>
         <link refid="classwx_archive_input_stream"/>
-        <childnode refid="11702" relation="public-inheritance">
+        <childnode refid="11763" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11704">
+      <node id="11765">
         <label>wxStreamBase</label>
         <link refid="classwx_stream_base"/>
       </node>
-      <node id="11702">
+      <node id="11763">
         <label>wxFilterInputStream</label>
         <link refid="classwx_filter_input_stream"/>
-        <childnode refid="11703" relation="public-inheritance">
+        <childnode refid="11764" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11700">
+      <node id="11761">
         <label>wxZipInputStream</label>
         <link refid="classwx_zip_input_stream"/>
-        <childnode refid="11701" relation="public-inheritance">
+        <childnode refid="11762" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="11708">
+      <node id="11769">
         <label>wxInputStream</label>
         <link refid="classwx_input_stream"/>
-        <childnode refid="11709" relation="public-inheritance">
+        <childnode refid="11770" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11706">
+      <node id="11767">
         <label>wxArchiveInputStream</label>
         <link refid="classwx_archive_input_stream"/>
-        <childnode refid="11707" relation="public-inheritance">
+        <childnode refid="11768" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11709">
+      <node id="11770">
         <label>wxStreamBase</label>
         <link refid="classwx_stream_base"/>
       </node>
-      <node id="11707">
+      <node id="11768">
         <label>wxFilterInputStream</label>
         <link refid="classwx_filter_input_stream"/>
-        <childnode refid="11708" relation="public-inheritance">
+        <childnode refid="11769" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11705">
+      <node id="11766">
         <label>wxZipInputStream</label>
         <link refid="classwx_zip_input_stream"/>
-        <childnode refid="11706" relation="public-inheritance">
+        <childnode refid="11767" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>

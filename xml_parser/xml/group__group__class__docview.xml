@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="group__group__class__docview" kind="group">
     <compoundname>group_class_docview</compoundname>
     <title>Document/View Framework</title>
@@ -17,6 +17,6 @@
     <briefdescription>
 <para>wxWidgets supports a document/view framework which provides housekeeping for a document-centric application. </para>    </briefdescription>
     <detaileddescription>
-<para>Related Overviews: <ref refid="overview__docview" kindref="compound">Document/View Framework</ref> </para>    </detaileddescription>
+<para>Related Overviews: <ref refid="overview_docview" kindref="compound">Document/View Framework</ref> </para>    </detaileddescription>
   </compounddef>
 </doxygen>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_command_processor" kind="class" prot="public">
     <compoundname>wxCommandProcessor</compoundname>
     <basecompoundref refid="classwx_object" prot="public" virt="non-virtual">wxObject</basecompoundref>
@@ -375,35 +375,35 @@
 <para><ref refid="classwx_command_processor" kindref="compound">wxCommandProcessor</ref> is a class that maintains a history of wxCommands, with undo/redo functionality built-in. </para>    </briefdescription>
     <detaileddescription>
 <para>Derive a new class from this if you want different behaviour.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__docview" kindref="compound">Document/View Framework</ref></para><para><simplesect kind="see"><para><ref refid="overview__docview_1overview_docview_wxcommandproc" kindref="member">wxCommandProcessor overview</ref>, <ref refid="classwx_command" kindref="compound">wxCommand</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__docview" kindref="compound">Document/View Framework</ref></para><para><simplesect kind="see"><para><ref refid="overview_docview_1overview_docview_wxcommandproc" kindref="member">wxCommandProcessor overview</ref>, <ref refid="classwx_command" kindref="compound">wxCommand</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="5025">
+      <node id="5029">
         <label>wxCommandProcessor</label>
         <link refid="classwx_command_processor"/>
-        <childnode refid="5026" relation="public-inheritance">
+        <childnode refid="5030" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5026">
+      <node id="5030">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="5027">
+      <node id="5031">
         <label>wxCommandProcessor</label>
         <link refid="classwx_command_processor"/>
-        <childnode refid="5028" relation="public-inheritance">
+        <childnode refid="5032" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5028">
+      <node id="5032">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="5029" relation="usage">
+        <childnode refid="5033" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="5029">
+      <node id="5033">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

@@ -1,11 +1,10 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_h_t_t_p" kind="class" prot="public">
     <compoundname>wxHTTP</compoundname>
     <basecompoundref refid="classwx_protocol" prot="public" virt="non-virtual">wxProtocol</basecompoundref>
     <includes local="no">wx/protocol/http.h</includes>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_h_t_t_p_1a85e43675edc71571813287df96b165bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
         <definition>virtual bool wxHTTP::Connect</definition>
@@ -196,98 +195,170 @@
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/http.h" line="110"/>
       </memberdef>
-      <memberdef kind="function" id="classwx_h_t_t_p_1a56c6d2d3729bf661cb31b2f6bda6bfff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void wxHTTP::SetPostBuffer</definition>
-        <argsstring>(const wxString &amp;post_buf)</argsstring>
+      <memberdef kind="function" id="classwx_h_t_t_p_1ac4acb133b80ff1b50c8877eedecd66c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxHTTP::SetPostBuffer</definition>
+        <argsstring>(const wxString &amp;contentType, const wxMemoryBuffer &amp;data)</argsstring>
         <name>SetPostBuffer</name>
         <param>
           <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
-          <declname>post_buf</declname>
+          <declname>contentType</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_memory_buffer" kindref="compound">wxMemoryBuffer</ref> &amp;</type>
+          <declname>data</declname>
         </param>
         <briefdescription>
-<para>Set the data to be posted to the server. </para>        </briefdescription>
+<para>Set the binary data to be posted to the server. </para>        </briefdescription>
         <detaileddescription>
-<para>If a non-empty string is passed to this method, the next request will be an HTTP <computeroutput>POST</computeroutput> instead of the default HTTP <computeroutput>GET</computeroutput> and the data from <emphasis>post_buf</emphasis> will be posted as the body of this request. </para>        </detaileddescription>
+<para>If a non-empty buffer is passed to this method, the next request will be an HTTP <computeroutput>POST</computeroutput> instead of the default HTTP <computeroutput>GET</computeroutput> and the given <emphasis>data</emphasis> will be posted as the body of this request.</para><para>For textual data a more convenient <ref refid="classwx_h_t_t_p_1a093776860284bbdc4ac50c12314dae61" kindref="member">SetPostText()</ref> can be used instead.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>contentType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value of HTTP &quot;Content-Type&quot; header, e.g. &quot;image/png&quot;. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The data to post. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if any data was passed in or false if the buffer was empty.</para></simplesect>
+<simplesect kind="since"><para>2.9.4 </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/http.h" line="119"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/http.h" line="130"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_h_t_t_p_1a093776860284bbdc4ac50c12314dae61" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxHTTP::SetPostText</definition>
+        <argsstring>(const wxString &amp;contentType, const wxString &amp;data, const wxMBConv &amp;conv=wxConvUTF8)</argsstring>
+        <name>SetPostText</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>contentType</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_m_b_conv" kindref="compound">wxMBConv</ref> &amp;</type>
+          <declname>conv</declname>
+          <defval>wxConvUTF8</defval>
+        </param>
+        <briefdescription>
+<para>Set the text to be posted to the server. </para>        </briefdescription>
+        <detaileddescription>
+<para>After a successful call to this method, the request will use HTTP <computeroutput>POST</computeroutput> instead of the default <computeroutput>GET</computeroutput> when it&apos;s executed.</para><para>Use <ref refid="classwx_h_t_t_p_1ac4acb133b80ff1b50c8877eedecd66c4" kindref="member">SetPostBuffer()</ref> if you need to post non-textual data.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>contentType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value of HTTP &quot;Content-Type&quot; header, e.g. &quot;text/html;
+            charset=UTF-8&quot;. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The data to post. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>conv</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The conversion to use to convert <emphasis>data</emphasis> contents to a byte stream. Its value should be consistent with the charset parameter specified in <emphasis>contentType</emphasis>. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if string was non-empty and was successfully converted using the given <emphasis>conv</emphasis> or false otherwise (in this case this request won&apos;t be <computeroutput>POST&apos;ed</computeroutput> correctly).</para></simplesect>
+<simplesect kind="since"><para>2.9.4 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/http.h" line="158"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para><ref refid="classwx_h_t_t_p" kindref="compound">wxHTTP</ref> can be used to establish a connection to an HTTP server. </para>    </briefdescription>
     <detaileddescription>
 <para><ref refid="classwx_h_t_t_p" kindref="compound">wxHTTP</ref> can thus be used to create a (basic) HTTP <bold>client</bold>.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxnet" kindref="member">wxNet</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__net" kindref="compound">Networking</ref></para><para><simplesect kind="see"><para><ref refid="classwx_socket_base" kindref="compound">wxSocketBase</ref>, <ref refid="classwx_u_r_l" kindref="compound">wxURL</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxnet" kindref="member">wxNet</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__net" kindref="compound">Networking</ref></para><para><simplesect kind="see"><para><ref refid="classwx_socket_base" kindref="compound">wxSocketBase</ref>, <ref refid="classwx_u_r_l" kindref="compound">wxURL</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7155">
+      <node id="7159">
         <label>wxSocketBase</label>
         <link refid="classwx_socket_base"/>
-        <childnode refid="7156" relation="public-inheritance">
+        <childnode refid="7160" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7156">
+      <node id="7160">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="7154">
+      <node id="7158">
         <label>wxSocketClient</label>
         <link refid="classwx_socket_client"/>
-        <childnode refid="7155" relation="public-inheritance">
+        <childnode refid="7159" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7152">
+      <node id="7156">
         <label>wxHTTP</label>
         <link refid="classwx_h_t_t_p"/>
-        <childnode refid="7153" relation="public-inheritance">
+        <childnode refid="7157" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7153">
+      <node id="7157">
         <label>wxProtocol</label>
         <link refid="classwx_protocol"/>
-        <childnode refid="7154" relation="public-inheritance">
+        <childnode refid="7158" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7160">
+      <node id="7164">
         <label>wxSocketBase</label>
         <link refid="classwx_socket_base"/>
-        <childnode refid="7161" relation="public-inheritance">
+        <childnode refid="7165" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7161">
+      <node id="7165">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="7162" relation="usage">
+        <childnode refid="7166" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="7159">
+      <node id="7163">
         <label>wxSocketClient</label>
         <link refid="classwx_socket_client"/>
-        <childnode refid="7160" relation="public-inheritance">
+        <childnode refid="7164" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7157">
+      <node id="7161">
         <label>wxHTTP</label>
         <link refid="classwx_h_t_t_p"/>
-        <childnode refid="7158" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="7158">
-        <label>wxProtocol</label>
-        <link refid="classwx_protocol"/>
-        <childnode refid="7159" relation="public-inheritance">
+        <childnode refid="7162" relation="public-inheritance">
         </childnode>
       </node>
       <node id="7162">
+        <label>wxProtocol</label>
+        <link refid="classwx_protocol"/>
+        <childnode refid="7163" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7166">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/http.h" line="22" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/http.h" bodystart="21" bodyend="120"/>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/http.h" line="22" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/http.h" bodystart="21" bodyend="159"/>
     <listofallmembers>
       <member refid="classwx_protocol_1a251f4c7e9d13fc23a863540bbbedd81b" prot="public" virt="pure-virtual"><scope>wxHTTP</scope><name>Abort</name></member>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxHTTP</scope><name>AllocExclusive</name></member>
@@ -349,7 +420,8 @@
       <member refid="classwx_protocol_1aad66b5f4dd52e5a34fe80ef44d4fab52" prot="public" virt="non-virtual"><scope>wxHTTP</scope><name>SetLog</name></member>
       <member refid="classwx_socket_base_1a4a3883a253c29e0f0027d279c647dbe0" prot="public" virt="non-virtual"><scope>wxHTTP</scope><name>SetNotify</name></member>
       <member refid="classwx_protocol_1adde2801803a01311e8911e9f5c30607b" prot="public" virt="virtual"><scope>wxHTTP</scope><name>SetPassword</name></member>
-      <member refid="classwx_h_t_t_p_1a56c6d2d3729bf661cb31b2f6bda6bfff" prot="public" virt="non-virtual"><scope>wxHTTP</scope><name>SetPostBuffer</name></member>
+      <member refid="classwx_h_t_t_p_1ac4acb133b80ff1b50c8877eedecd66c4" prot="public" virt="non-virtual"><scope>wxHTTP</scope><name>SetPostBuffer</name></member>
+      <member refid="classwx_h_t_t_p_1a093776860284bbdc4ac50c12314dae61" prot="public" virt="non-virtual"><scope>wxHTTP</scope><name>SetPostText</name></member>
       <member refid="classwx_object_1afab780710f2adc1bb33310e27590140b" prot="public" virt="non-virtual"><scope>wxHTTP</scope><name>SetRefData</name></member>
       <member refid="classwx_socket_base_1ac24247e3f866154825c14de46a911e50" prot="public" virt="non-virtual"><scope>wxHTTP</scope><name>SetTimeout</name></member>
       <member refid="classwx_protocol_1ab1f11044077ce6755e17eab0b0b461a1" prot="public" virt="virtual"><scope>wxHTTP</scope><name>SetUser</name></member>

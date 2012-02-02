@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_region_iterator" kind="class" prot="public">
     <compoundname>wxRegionIterator</compoundname>
     <basecompoundref refid="classwx_object" prot="public" virt="non-virtual">wxObject</basecompoundref>
@@ -200,35 +200,35 @@
 <para>This class is used to iterate through the rectangles in a region, typically when examining the damaged regions of a window within an OnPaint call. </para>    </briefdescription>
     <detaileddescription>
 <para>To use it, construct an iterator object on the stack and loop through the regions, testing the object and incrementing the iterator at the end of the loop.</para><para>See <ref refid="classwx_paint_event" kindref="compound">wxPaintEvent</ref> for an example of use.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__gdi" kindref="compound">Graphics Device Interface (GDI)</ref></para><para>Predefined objects/pointers: <ref refid="region_8h_1a0e08242adcd1d3280b44543545b0a3ef" kindref="member">wxNullRegion</ref></para><para><simplesect kind="see"><para><ref refid="classwx_paint_event" kindref="compound">wxPaintEvent</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__gdi" kindref="compound">Graphics Device Interface (GDI)</ref></para><para>Predefined objects/pointers: <ref refid="region_8h_1a0e08242adcd1d3280b44543545b0a3ef" kindref="member">wxNullRegion</ref></para><para><simplesect kind="see"><para><ref refid="classwx_paint_event" kindref="compound">wxPaintEvent</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="9062">
+      <node id="9070">
         <label>wxRegionIterator</label>
         <link refid="classwx_region_iterator"/>
-        <childnode refid="9063" relation="public-inheritance">
+        <childnode refid="9071" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9063">
+      <node id="9071">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="9064">
+      <node id="9072">
         <label>wxRegionIterator</label>
         <link refid="classwx_region_iterator"/>
-        <childnode refid="9065" relation="public-inheritance">
+        <childnode refid="9073" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9065">
+      <node id="9073">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="9066" relation="usage">
+        <childnode refid="9074" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="9066">
+      <node id="9074">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

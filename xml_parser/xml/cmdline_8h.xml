@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="cmdline_8h" kind="file">
     <compoundname>cmdline.h</compoundname>
     <innerclass refid="structwx_cmd_line_entry_desc" prot="public">wxCmdLineEntryDesc</innerclass>
@@ -51,7 +51,7 @@
           <name>wxCMD_LINE_SWITCH_NEGATABLE</name>
           <initializer> 0x20</initializer>
           <briefdescription>
-<para>This switch can be negated (e.g. /S-). </para>          </briefdescription>
+<para>This switch can be negated (e.g. /S-) </para>          </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>

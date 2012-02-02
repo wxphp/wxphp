@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_show_event" kind="class" prot="public">
     <compoundname>wxShowEvent</compoundname>
     <basecompoundref refid="classwx_event" prot="public" virt="non-virtual">wxEvent</basecompoundref>
@@ -26,7 +26,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3924"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3948"/>
       </memberdef>
       <memberdef kind="function" id="classwx_show_event_1ab6ea5da561c6d5f19b5e06437c84fea1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -43,7 +43,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3929"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3953"/>
       </memberdef>
       <memberdef kind="function" id="classwx_show_event_1ad0a8487dc98ac0f438b756265e2ad094" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -56,7 +56,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3935"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3959"/>
       </memberdef>
       <memberdef kind="function" id="classwx_show_event_1a6d1f627a71553fff292f1a643ffb36df" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -66,66 +66,66 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000011"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This function is deprecated in favour of <ref refid="classwx_show_event_1ad0a8487dc98ac0f438b756265e2ad094" kindref="member">IsShown()</ref>. </para></xrefdescription></xrefsect></para>        </detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000011"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This function is deprecated in favour of <ref refid="classwx_show_event_1ad0a8487dc98ac0f438b756265e2ad094" kindref="member">IsShown()</ref>.</para></xrefdescription></xrefsect></para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3940"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3964"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para>An event being sent when the window is shown or hidden. </para>    </briefdescription>
     <detaileddescription>
-<para>The event is triggered by calls to <ref refid="classwx_window_1a7fbc92ce240a8d4f6956b6e0276ef07f" kindref="member">wxWindow::Show()</ref>, and any user action showing a previously hidden window or vice versa (if allowed by the current platform and/or window manager). Notice that the event is not triggered when the application is iconized (minimized) or restored under wxMSW.</para><para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page__port_1page_port_wxmsw" kindref="member">wxMSW</ref>, <ref refid="page__port_1page_port_wxgtk" kindref="member">wxGTK</ref>, <ref refid="page__port_1page_port_wxos2" kindref="member">wxOS2</ref> ports.  <onlyfor>wxmsw,wxgtk,wxos2</onlyfor> </para><para><heading level="2">Events using this class</heading>
+<para>The event is triggered by calls to <ref refid="classwx_window_1a7fbc92ce240a8d4f6956b6e0276ef07f" kindref="member">wxWindow::Show()</ref>, and any user action showing a previously hidden window or vice versa (if allowed by the current platform and/or window manager). Notice that the event is not triggered when the application is iconized (minimized) or restored under wxMSW.</para><para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page_port_1page_port_wxmsw" kindref="member">wxMSW</ref>, <ref refid="page_port_1page_port_wxgtk" kindref="member">wxGTK</ref>, <ref refid="page_port_1page_port_wxos2" kindref="member">wxOS2</ref> ports.  <onlyfor>wxmsw,wxgtk,wxos2</onlyfor> </para><para><heading level="2">Events using this class</heading>
 </para><para>The following event handler macros redirect the events to member function handlers &apos;<bold>func</bold>&apos; with prototypes like: void<nonbreakablespace/>handlerFuncName(<ref refid="classwx_show_event" kindref="compound">wxShowEvent</ref>&amp;<nonbreakablespace/>event)Event macros: <itemizedlist>
 <listitem><para>EVT_SHOW(func): Process a <computeroutput>wxEVT_SHOW</computeroutput> event. </para></listitem>
 </itemizedlist>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="overview__events" kindref="compound">Events and Event Handling</ref>, <ref refid="classwx_window_1a7fbc92ce240a8d4f6956b6e0276ef07f" kindref="member">wxWindow::Show</ref>, <ref refid="classwx_window_1a95af3a39aa422580dae156ed281a7e88" kindref="member">wxWindow::IsShown</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="overview_events" kindref="compound">Events and Event Handling</ref>, <ref refid="classwx_window_1a7fbc92ce240a8d4f6956b6e0276ef07f" kindref="member">wxWindow::Show</ref>, <ref refid="classwx_window_1a95af3a39aa422580dae156ed281a7e88" kindref="member">wxWindow::IsShown</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10109">
+      <node id="10169">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="10108">
+      <node id="10168">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="10109" relation="public-inheritance">
+        <childnode refid="10169" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10107">
+      <node id="10167">
         <label>wxShowEvent</label>
         <link refid="classwx_show_event"/>
-        <childnode refid="10108" relation="public-inheritance">
+        <childnode refid="10168" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10112">
+      <node id="10172">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="10113" relation="usage">
+        <childnode refid="10173" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="10111">
+      <node id="10171">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="10112" relation="public-inheritance">
+        <childnode refid="10172" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10113">
+      <node id="10173">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
-      <node id="10110">
+      <node id="10170">
         <label>wxShowEvent</label>
         <link refid="classwx_show_event"/>
-        <childnode refid="10111" relation="public-inheritance">
+        <childnode refid="10171" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3919" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="3918" bodyend="3941"/>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3943" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="3942" bodyend="3965"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxShowEvent</scope><name>AllocExclusive</name></member>
       <member refid="classwx_event_1a26878097a702e8d0368da150125d4158" prot="public" virt="pure-virtual"><scope>wxShowEvent</scope><name>Clone</name></member>

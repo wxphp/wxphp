@@ -1,11 +1,10 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_data_view_list_ctrl" kind="class" prot="public">
     <compoundname>wxDataViewListCtrl</compoundname>
     <basecompoundref refid="classwx_data_view_ctrl" prot="public" virt="non-virtual">wxDataViewCtrl</basecompoundref>
     <includes local="no">wx/dataview.h</includes>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_data_view_list_ctrl_1a7810328264669defcd89164b92b6bb04" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_data_view_list_store" kindref="compound">wxDataViewListStore</ref> *</type>
         <definition>wxDataViewListStore* wxDataViewListCtrl::GetStore</definition>
@@ -17,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2091"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2127"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_list_ctrl_1ae12ceb8f41bb3adcb18856cb454eca64" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_data_view_list_store" kindref="compound">wxDataViewListStore</ref> *</type>
@@ -30,12 +29,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2092"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2128"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
       <header>Selection handling functions</header>
-      <description><para><anchor id="_1amgrpf8790f410807de32a5494a0be8dd7944"/> </para></description>
       <memberdef kind="function" id="classwx_data_view_list_ctrl_1ab1565beeacaa2020c3dfd0285c0f5d50" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
         <definition>int wxDataViewListCtrl::GetSelectedRow</definition>
@@ -49,7 +47,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2122"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2158"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_list_ctrl_1a0f77aa5bdb114a8e35b8f0302eb2146d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -68,7 +66,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2131"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2167"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_list_ctrl_1a9c36a0e7bf17d2f7f86334c400a1d3cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -87,7 +85,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2140"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2176"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_list_ctrl_1ae38dcc133251d43cb8a9f2494d09a081" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -106,12 +104,11 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2149"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2185"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
       <header>Column management functions</header>
-      <description><para><anchor id="_1amgrp1a83a43b950ded39263214ec8e80ceac"/> </para></description>
       <memberdef kind="function" id="classwx_data_view_list_ctrl_1aed2d25b109397b172c5e1dbd2fe6f529" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
         <definition>virtual void wxDataViewListCtrl::AppendColumn</definition>
@@ -128,7 +125,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2162"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2198"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_list_ctrl_1a5fd5947a11eafbc2aee55bc6644aa63f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -149,7 +146,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2168"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2204"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_list_ctrl_1aeee5d1a5fcbdc078bbac4fa8f8769b46" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_data_view_column" kindref="compound">wxDataViewColumn</ref> *</type>
@@ -186,7 +183,7 @@
 <para>See <ref refid="classwx_data_view_column_1aa56f4df8543bf14713a2852af471c768" kindref="member">wxDataViewColumn::wxDataViewColumn</ref> for more info about the parameters. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2179"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2215"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_list_ctrl_1ab807ab981d016dfdf3a4a22f02d7262c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_data_view_column" kindref="compound">wxDataViewColumn</ref> *</type>
@@ -223,7 +220,7 @@
 <para>See <ref refid="classwx_data_view_column_1aa56f4df8543bf14713a2852af471c768" kindref="member">wxDataViewColumn::wxDataViewColumn</ref> for more info about the parameters. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2190"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2226"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_list_ctrl_1aa85d9f052abb3fbb5e2dc0a18755e1c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_data_view_column" kindref="compound">wxDataViewColumn</ref> *</type>
@@ -260,7 +257,7 @@
 <para>See <ref refid="classwx_data_view_column_1aa56f4df8543bf14713a2852af471c768" kindref="member">wxDataViewColumn::wxDataViewColumn</ref> for more info about the parameters. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2201"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2237"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_list_ctrl_1a43c56adf652604f7af6267f86efe5b9c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_data_view_column" kindref="compound">wxDataViewColumn</ref> *</type>
@@ -297,7 +294,7 @@
 <para>See <ref refid="classwx_data_view_column_1aa56f4df8543bf14713a2852af471c768" kindref="member">wxDataViewColumn::wxDataViewColumn</ref> for more info about the parameters. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2212"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2248"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_list_ctrl_1ad8b1edbc9a5feaf9492c6fa772bb16d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -319,7 +316,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2218"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2254"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_list_ctrl_1a567c4f18f053f5e5fb0cda261c390967" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -344,7 +341,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2225"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2261"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_list_ctrl_1a05a43dae07bb498db1090252fd473f6e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -362,7 +359,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2231"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2267"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_list_ctrl_1af346caea02e8f0a5f7f83222a207cbd0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -383,12 +380,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2237"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2273"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
       <header>Item management functions</header>
-      <description><para><anchor id="_1amgrp8232a3069270c833714dd47f69810d82"/> </para></description>
       <memberdef kind="function" id="classwx_data_view_list_ctrl_1ab9e106740eaf641bcb5b01c0de816cbb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void wxDataViewListCtrl::AppendItem</definition>
@@ -409,7 +405,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2250"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2286"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_list_ctrl_1ac4f54783a79bdbb0c1a7ff6029d201bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -431,7 +427,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2255"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2291"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_list_ctrl_1ac6aa4cbe69f234d16e9a0be3bb134468" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -457,7 +453,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2260"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2296"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_list_ctrl_1ac983f9ef441d4f87d2fc52e53c6323e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -474,7 +470,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2265"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2301"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_list_ctrl_1a3ff47949696f77f816851c22d1427177" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -487,7 +483,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2270"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2306"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_list_ctrl_1afa48329e396067530253546a847bf83a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -512,7 +508,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2275"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2311"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_list_ctrl_1ab741f9e6c0ba81270aeee26c2e90f8c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -537,7 +533,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2280"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2316"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_list_ctrl_1afd747df820204b181026519827ed6234" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -562,7 +558,7 @@
 <para>This method assumes that the string is stored in respective column. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2288"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2324"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_list_ctrl_1a6ed4985e56c7b5fe84a6b1fce8d29daa" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -583,7 +579,7 @@
 <para>This method assumes that the string is stored in respective column. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2296"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2332"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_list_ctrl_1a59fbc031d37a719a0e18b97dc5bcb97b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -608,7 +604,7 @@
 <para>This method assumes that the boolean value is stored in respective column. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2304"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2340"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_list_ctrl_1af20e6cbe0429fd6286b490a5884610ba" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -629,7 +625,7 @@
 <para>This method assumes that the boolean value is stored in respective column. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2312"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2348"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -644,7 +640,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2064"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2100"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_list_ctrl_1af7a2515b02e8b5e4aa27cc1831c3686b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -685,7 +681,7 @@
 <para>Calls <ref refid="classwx_data_view_list_ctrl_1a4528ac9c75b75d438cb73a5340fea99a" kindref="member">Create()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2072"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2108"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_list_ctrl_1af19c9dbfd45fb62eec7df213ae1fa363" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -698,7 +694,7 @@
 <para>Deletes the image list if any. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2077"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2113"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_list_ctrl_1a4528ac9c75b75d438cb73a5340fea99a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -739,7 +735,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2085"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2121"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_list_ctrl_1afbd455f7947acc1b9f570bad30be241f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -757,7 +753,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2101"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2137"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_list_ctrl_1a0a213786b6aeec514ee25fff6b2f7fd5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_data_view_item" kindref="compound">wxDataViewItem</ref></type>
@@ -775,13 +771,13 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2108"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2144"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para>This class is a <ref refid="classwx_data_view_ctrl" kindref="compound">wxDataViewCtrl</ref> which internally uses a <ref refid="classwx_data_view_list_store" kindref="compound">wxDataViewListStore</ref> and forwards most of its API to that class. </para>    </briefdescription>
     <detaileddescription>
-<para>The purpose of this class is to offer a simple way to display and edit a small table of data without having to write your own <ref refid="classwx_data_view_model" kindref="compound">wxDataViewModel</ref>.</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_data_view_list_ctrl" kindref="compound" tooltip="This class is a wxDataViewCtrl which internally uses a wxDataViewListStore and forwards...">wxDataViewListCtrl</ref><sp/>*listctrl<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classwx_data_view_list_ctrl_1ae4ccb1d19929c49a81d3870a10d11765" kindref="member" tooltip="Default ctor.">wxDataViewListCtrl</ref>(<sp/>parent,<sp/><ref refid="defs_8h_1ac66d0a09761e7d86b2ac0b2e0c6a8cbba1f375b01ea03a713bbb7e32a36a2589c" kindref="member" tooltip="Any id: means that we don&amp;#39;t care about the id, whether when installing an event...">wxID_ANY</ref><sp/>);</highlight></codeline>
+<para>The purpose of this class is to offer a simple way to display and edit a small table of data without having to write your own <ref refid="classwx_data_view_model" kindref="compound">wxDataViewModel</ref>.</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_data_view_list_ctrl" kindref="compound" tooltip="This class is a wxDataViewCtrl which internally uses a wxDataViewListStore and forwards most of its A...">wxDataViewListCtrl</ref><sp/>*listctrl<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classwx_data_view_list_ctrl_1ae4ccb1d19929c49a81d3870a10d11765" kindref="member" tooltip="Default ctor.">wxDataViewListCtrl</ref>(<sp/>parent,<sp/><ref refid="defs_8h_1ac66d0a09761e7d86b2ac0b2e0c6a8cbba1f375b01ea03a713bbb7e32a36a2589c" kindref="member" tooltip="Any id: means that we don&amp;#39;t care about the id, whether when installing an event handler or when creat...">wxID_ANY</ref><sp/>);</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>listctrl-&gt;<ref refid="classwx_data_view_list_ctrl_1ab807ab981d016dfdf3a4a22f02d7262c" kindref="member" tooltip="Appends a toggle column to the control and the store.">AppendToggleColumn</ref>(<sp/></highlight><highlight class="stringliteral">&quot;Toggle&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>listctrl-&gt;<ref refid="classwx_data_view_list_ctrl_1aeee5d1a5fcbdc078bbac4fa8f8769b46" kindref="member" tooltip="Appends a text column to the control and the store.">AppendTextColumn</ref>(<sp/></highlight><highlight class="stringliteral">&quot;Text&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
@@ -798,99 +794,99 @@
 </programlisting></para><para><heading level="2">Styles</heading>
 </para><para>This class supports the following styles: See <ref refid="classwx_data_view_ctrl" kindref="compound">wxDataViewCtrl</ref> for the list of supported styles. </para><para><heading level="2">Events emitted by this class</heading>
 </para><para>Event macros for events emitted by this class: See <ref refid="classwx_data_view_ctrl" kindref="compound">wxDataViewCtrl</ref> for the list of events emitted by this class. </para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref>, <ref refid="group__group__class__dvc" kindref="compound">wxDataViewCtrl Related Classes</ref> </para>    </detaileddescription>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref>, <ref refid="group__group__class__dvc" kindref="compound">wxDataViewCtrl Related Classes</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="5354">
-        <label>wxObject</label>
-        <link refid="classwx_object"/>
-      </node>
-      <node id="5353">
-        <label>wxEvtHandler</label>
-        <link refid="classwx_evt_handler"/>
-        <childnode refid="5354" relation="public-inheritance">
-        </childnode>
-        <childnode refid="5355" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="5355">
-        <label>wxTrackable</label>
-        <link refid="classwx_trackable"/>
-      </node>
-      <node id="5349">
-        <label>wxDataViewListCtrl</label>
-        <link refid="classwx_data_view_list_ctrl"/>
-        <childnode refid="5350" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="5351">
-        <label>wxControl</label>
-        <link refid="classwx_control"/>
-        <childnode refid="5352" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="5352">
-        <label>wxWindow</label>
-        <link refid="classwx_window"/>
-        <childnode refid="5353" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="5350">
-        <label>wxDataViewCtrl</label>
-        <link refid="classwx_data_view_ctrl"/>
-        <childnode refid="5351" relation="public-inheritance">
-        </childnode>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
-      <node id="5361">
-        <label>wxObject</label>
-        <link refid="classwx_object"/>
-        <childnode refid="5362" relation="usage">
-          <edgelabel>m_refData</edgelabel>
-        </childnode>
-      </node>
-      <node id="5360">
-        <label>wxEvtHandler</label>
-        <link refid="classwx_evt_handler"/>
-        <childnode refid="5361" relation="public-inheritance">
-        </childnode>
-        <childnode refid="5363" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="5363">
-        <label>wxTrackable</label>
-        <link refid="classwx_trackable"/>
-      </node>
-      <node id="5356">
-        <label>wxDataViewListCtrl</label>
-        <link refid="classwx_data_view_list_ctrl"/>
-        <childnode refid="5357" relation="public-inheritance">
-        </childnode>
-      </node>
       <node id="5358">
-        <label>wxControl</label>
-        <link refid="classwx_control"/>
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+      </node>
+      <node id="5357">
+        <label>wxEvtHandler</label>
+        <link refid="classwx_evt_handler"/>
+        <childnode refid="5358" relation="public-inheritance">
+        </childnode>
         <childnode refid="5359" relation="public-inheritance">
         </childnode>
       </node>
       <node id="5359">
-        <label>wxWindow</label>
-        <link refid="classwx_window"/>
-        <childnode refid="5360" relation="public-inheritance">
+        <label>wxTrackable</label>
+        <link refid="classwx_trackable"/>
+      </node>
+      <node id="5353">
+        <label>wxDataViewListCtrl</label>
+        <link refid="classwx_data_view_list_ctrl"/>
+        <childnode refid="5354" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5357">
+      <node id="5355">
+        <label>wxControl</label>
+        <link refid="classwx_control"/>
+        <childnode refid="5356" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5356">
+        <label>wxWindow</label>
+        <link refid="classwx_window"/>
+        <childnode refid="5357" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5354">
         <label>wxDataViewCtrl</label>
         <link refid="classwx_data_view_ctrl"/>
-        <childnode refid="5358" relation="public-inheritance">
+        <childnode refid="5355" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="5365">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="5366" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="5364">
+        <label>wxEvtHandler</label>
+        <link refid="classwx_evt_handler"/>
+        <childnode refid="5365" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5367" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5367">
+        <label>wxTrackable</label>
+        <link refid="classwx_trackable"/>
+      </node>
+      <node id="5360">
+        <label>wxDataViewListCtrl</label>
+        <link refid="classwx_data_view_list_ctrl"/>
+        <childnode refid="5361" relation="public-inheritance">
         </childnode>
       </node>
       <node id="5362">
+        <label>wxControl</label>
+        <link refid="classwx_control"/>
+        <childnode refid="5363" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5363">
+        <label>wxWindow</label>
+        <link refid="classwx_window"/>
+        <childnode refid="5364" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5361">
+        <label>wxDataViewCtrl</label>
+        <link refid="classwx_data_view_ctrl"/>
+        <childnode refid="5362" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5366">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2059" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" bodystart="2058" bodyend="2315"/>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2095" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" bodystart="2094" bodyend="2351"/>
     <listofallmembers>
       <member refid="classwx_window_1a3afbd49b1ea2f8275e3600dcac102923" prot="public" virt="virtual"><scope>wxDataViewListCtrl</scope><name>AcceptsFocus</name></member>
       <member refid="classwx_window_1a2370bdd3ab08e7ef3c7555c6aa8301b8" prot="public" virt="virtual"><scope>wxDataViewListCtrl</scope><name>AcceptsFocusFromKeyboard</name></member>
@@ -964,6 +960,7 @@
       <member refid="classwx_window_1a01e7604ab0f0b2b1a8e322a630a4669e" prot="protected" virt="virtual"><scope>wxDataViewListCtrl</scope><name>DoGetBestSize</name></member>
       <member refid="classwx_window_1ae8a84a80645e99f4d24a22e5c386f626" prot="public" virt="virtual"><scope>wxDataViewListCtrl</scope><name>DoUpdateWindowUI</name></member>
       <member refid="classwx_window_1a7e7015bc61bd79b6821d2dccaecf9eda" prot="public" virt="virtual"><scope>wxDataViewListCtrl</scope><name>DragAcceptFiles</name></member>
+      <member refid="classwx_data_view_ctrl_1a546fd8f32823ea2587ebaffbce984ce0" prot="public" virt="virtual"><scope>wxDataViewListCtrl</scope><name>EditItem</name></member>
       <member refid="classwx_control_1a0bb834cae2a8986aceddb89f84ef4ed1" prot="public" virt="non-virtual"><scope>wxDataViewListCtrl</scope><name>Ellipsize</name></member>
       <member refid="classwx_window_1a4e933aa891f42fbb3b87438057c573af" prot="public" virt="virtual"><scope>wxDataViewListCtrl</scope><name>Enable</name></member>
       <member refid="classwx_data_view_ctrl_1ac5af3c3fc5990c7b4e3de87cc1087c96" prot="public" virt="virtual"><scope>wxDataViewListCtrl</scope><name>EnableDragSource</name></member>
@@ -1009,6 +1006,7 @@
       <member refid="classwx_data_view_ctrl_1a04805ff86066e21269453f28b1bde4eb" prot="public" virt="virtual"><scope>wxDataViewListCtrl</scope><name>GetColumnPosition</name></member>
       <member refid="classwx_window_1ac5664c7cd26848b5eebfaded2ecde7be" prot="public" virt="non-virtual"><scope>wxDataViewListCtrl</scope><name>GetConstraints</name></member>
       <member refid="classwx_window_1ade8de9a91bb5bf49c3a52e5262a5ffea" prot="public" virt="non-virtual"><scope>wxDataViewListCtrl</scope><name>GetContainingSizer</name></member>
+      <member refid="classwx_data_view_ctrl_1a4d344a647826ff9117825ac2cf059884" prot="public" virt="non-virtual"><scope>wxDataViewListCtrl</scope><name>GetCurrentColumn</name></member>
       <member refid="classwx_data_view_ctrl_1a594aa75f0a1e3fdab253c9ec9978a45e" prot="public" virt="non-virtual"><scope>wxDataViewListCtrl</scope><name>GetCurrentItem</name></member>
       <member refid="classwx_window_1ad7ce1e9af33e6be0b608813eff2d349c" prot="public" virt="non-virtual"><scope>wxDataViewListCtrl</scope><name>GetCursor</name></member>
       <member refid="classwx_window_1a24e7b8f717e91f4590d148140e853dc5" prot="public" virt="virtual"><scope>wxDataViewListCtrl</scope><name>GetDefaultAttributes</name></member>
@@ -1263,7 +1261,6 @@
       <member refid="classwx_window_1a0c43a27fa04f9c17cc28fde71fdba490" prot="public" virt="virtual"><scope>wxDataViewListCtrl</scope><name>ShouldInheritColours</name></member>
       <member refid="classwx_window_1a7fbc92ce240a8d4f6956b6e0276ef07f" prot="public" virt="virtual"><scope>wxDataViewListCtrl</scope><name>Show</name></member>
       <member refid="classwx_window_1a596b1715edfc7609f352b2e000ecbaec" prot="public" virt="virtual"><scope>wxDataViewListCtrl</scope><name>ShowWithEffect</name></member>
-      <member refid="classwx_data_view_ctrl_1ae6098ef2fa80628319da119d0fdf01d5" prot="public" virt="virtual"><scope>wxDataViewListCtrl</scope><name>StartEditor</name></member>
       <member refid="classwx_window_1a279a532124073261b28131b6afb59a1e" prot="public" virt="non-virtual"><scope>wxDataViewListCtrl</scope><name>Thaw</name></member>
       <member refid="classwx_window_1a8a4fa47129de552bfec37db8c69688a2" prot="public" virt="non-virtual"><scope>wxDataViewListCtrl</scope><name>ToggleWindowStyle</name></member>
       <member refid="classwx_window_1ab8e51f36e7d8790b361c8d8c6f37b1ad" prot="public" virt="virtual"><scope>wxDataViewListCtrl</scope><name>TransferDataFromWindow</name></member>

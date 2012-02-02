@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_web_view_handler" kind="class" prot="public">
     <compoundname>wxWebViewHandler</compoundname>
     <derivedcompoundref refid="classwx_web_view_archive_handler" prot="public" virt="non-virtual">wxWebViewArchiveHandler</derivedcompoundref>
@@ -61,16 +61,16 @@
     <detaileddescription>
 <para><simplesect kind="since"><para>2.9.3 <heading level="2"></heading>
 </para></simplesect>
-Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxwebview" kindref="member">wxWebView</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__webview" kindref="compound">WebView</ref></para><para><simplesect kind="see"><para><ref refid="classwx_web_view" kindref="compound">wxWebView</ref> </para></simplesect>
+Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxwebview" kindref="member">wxWebView</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__webview" kindref="compound">WebView</ref></para><para><simplesect kind="see"><para><ref refid="classwx_web_view" kindref="compound">wxWebView</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="11398">
+      <node id="11459">
         <label>wxWebViewArchiveHandler</label>
         <link refid="classwx_web_view_archive_handler"/>
-        <childnode refid="11397" relation="public-inheritance">
+        <childnode refid="11458" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11397">
+      <node id="11458">
         <label>wxWebViewHandler</label>
         <link refid="classwx_web_view_handler"/>
       </node>

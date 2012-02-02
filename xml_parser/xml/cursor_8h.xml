@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="cursor_8h" kind="file">
     <compoundname>cursor.h</compoundname>
     <innerclass refid="classwx_cursor" prot="public">wxCursor</innerclass>
       <sectiondef kind="user-defined">
       <header>Predefined cursors.</header>
-      <description><para><anchor id="_1amgrpbeccc3f1eb7aa93b65fedaaf905223a4"/><simplesect kind="see"><para><ref refid="gdicmn_8h_1ae668769c0de48b50d4695b279c7c41b2" kindref="member">wxStockCursor</ref> </para></simplesect>
+      <description><para><simplesect kind="see"><para><ref refid="gdicmn_8h_1ae668769c0de48b50d4695b279c7c41b2" kindref="member">wxStockCursor</ref> </para></simplesect>
 </para></description>
       <memberdef kind="variable" id="cursor_8h_1ace2643fa7246d855696e3415e344d0ac" prot="public" static="no" mutable="no">
         <type><ref refid="classwx_cursor" kindref="compound">wxCursor</ref></type>
@@ -18,7 +18,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cursor.h" line="223" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cursor.h" bodystart="223" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cursor.h" line="230" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cursor.h" bodystart="230" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="cursor_8h_1ab1951696f347cea0c248d114142d05ce" prot="public" static="no" mutable="no">
         <type><ref refid="classwx_cursor" kindref="compound">wxCursor</ref> *</type>
@@ -31,7 +31,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cursor.h" line="224" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cursor.h" bodystart="224" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cursor.h" line="231" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cursor.h" bodystart="231" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="cursor_8h_1aedcab46c717d02f9b5deb151d1fe85f8" prot="public" static="no" mutable="no">
         <type><ref refid="classwx_cursor" kindref="compound">wxCursor</ref> *</type>
@@ -44,7 +44,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cursor.h" line="225" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cursor.h" bodystart="225" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cursor.h" line="232" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cursor.h" bodystart="232" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="cursor_8h_1a807b160c7cbea3c8266f8db2719c299f" prot="public" static="no" mutable="no">
         <type><ref refid="classwx_cursor" kindref="compound">wxCursor</ref> *</type>
@@ -57,7 +57,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cursor.h" line="226" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cursor.h" bodystart="226" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cursor.h" line="233" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cursor.h" bodystart="233" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

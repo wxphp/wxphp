@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_html_help_dialog" kind="class" prot="public">
     <compoundname>wxHtmlHelpDialog</compoundname>
     <basecompoundref refid="classwx_frame" prot="public" virt="non-virtual">wxFrame</basecompoundref>
@@ -163,106 +163,106 @@
 <para>This class is used by <ref refid="classwx_html_help_controller" kindref="compound">wxHtmlHelpController</ref> to display help. </para>    </briefdescription>
     <detaileddescription>
 <para>It is an internal class and should not be used directly - except for the case when you&apos;re writing your own HTML help controller.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxhtml" kindref="member">wxHTML</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__help" kindref="compound">Help</ref>, <ref refid="group__group__class__html" kindref="compound">HTML</ref> </para>    </detaileddescription>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxhtml" kindref="member">wxHTML</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__help" kindref="compound">Help</ref>, <ref refid="group__group__class__html" kindref="compound">HTML</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7017">
+      <node id="7021">
         <label>wxNonOwnedWindow</label>
         <link refid="classwx_non_owned_window"/>
-        <childnode refid="7018" relation="public-inheritance">
+        <childnode refid="7022" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7020">
+      <node id="7024">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="7019">
+      <node id="7023">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="7020" relation="public-inheritance">
+        <childnode refid="7024" relation="public-inheritance">
         </childnode>
-        <childnode refid="7021" relation="public-inheritance">
+        <childnode refid="7025" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7021">
+      <node id="7025">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="7018">
+      <node id="7022">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
+        <childnode refid="7023" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7019">
+        <label>wxFrame</label>
+        <link refid="classwx_frame"/>
+        <childnode refid="7020" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7018">
+        <label>wxHtmlHelpDialog</label>
+        <link refid="classwx_html_help_dialog"/>
         <childnode refid="7019" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7015">
-        <label>wxFrame</label>
-        <link refid="classwx_frame"/>
-        <childnode refid="7016" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="7014">
-        <label>wxHtmlHelpDialog</label>
-        <link refid="classwx_html_help_dialog"/>
-        <childnode refid="7015" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="7016">
+      <node id="7020">
         <label>wxTopLevelWindow</label>
         <link refid="classwx_top_level_window"/>
-        <childnode refid="7017" relation="public-inheritance">
+        <childnode refid="7021" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7025">
+      <node id="7029">
         <label>wxNonOwnedWindow</label>
         <link refid="classwx_non_owned_window"/>
-        <childnode refid="7026" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="7028">
-        <label>wxObject</label>
-        <link refid="classwx_object"/>
-        <childnode refid="7029" relation="usage">
-          <edgelabel>m_refData</edgelabel>
-        </childnode>
-      </node>
-      <node id="7027">
-        <label>wxEvtHandler</label>
-        <link refid="classwx_evt_handler"/>
-        <childnode refid="7028" relation="public-inheritance">
-        </childnode>
         <childnode refid="7030" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7030">
+      <node id="7032">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="7033" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="7031">
+        <label>wxEvtHandler</label>
+        <link refid="classwx_evt_handler"/>
+        <childnode refid="7032" relation="public-inheritance">
+        </childnode>
+        <childnode refid="7034" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7034">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="7026">
+      <node id="7030">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
+        <childnode refid="7031" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7027">
+        <label>wxFrame</label>
+        <link refid="classwx_frame"/>
+        <childnode refid="7028" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7026">
+        <label>wxHtmlHelpDialog</label>
+        <link refid="classwx_html_help_dialog"/>
         <childnode refid="7027" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7023">
-        <label>wxFrame</label>
-        <link refid="classwx_frame"/>
-        <childnode refid="7024" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="7022">
-        <label>wxHtmlHelpDialog</label>
-        <link refid="classwx_html_help_dialog"/>
-        <childnode refid="7023" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="7024">
+      <node id="7028">
         <label>wxTopLevelWindow</label>
         <link refid="classwx_top_level_window"/>
-        <childnode refid="7025" relation="public-inheritance">
+        <childnode refid="7029" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7029">
+      <node id="7033">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
@@ -578,6 +578,7 @@
       <member refid="classwx_window_1a81f23590239934fa10fded0566a65d8c" prot="public" virt="non-virtual"><scope>wxHtmlHelpDialog</scope><name>SetPosition</name></member>
       <member refid="classwx_window_1a07f5f7ed3f78e0ef7b3dee3f4da81001" prot="public" virt="virtual"><scope>wxHtmlHelpDialog</scope><name>SetPreviousHandler</name></member>
       <member refid="classwx_object_1afab780710f2adc1bb33310e27590140b" prot="public" virt="non-virtual"><scope>wxHtmlHelpDialog</scope><name>SetRefData</name></member>
+      <member refid="classwx_top_level_window_1a82afa6f09dd5faef6330807ef59374e8" prot="public" virt="virtual"><scope>wxHtmlHelpDialog</scope><name>SetRepresentedFilename</name></member>
       <member refid="classwx_top_level_window_1a98e95b1b10f44b80f9b29a03ab09a879" prot="public" virt="non-virtual"><scope>wxHtmlHelpDialog</scope><name>SetRightMenu</name></member>
       <member refid="classwx_window_1aa842d59529f873683e55cd8392ec46e9" prot="public" virt="virtual"><scope>wxHtmlHelpDialog</scope><name>SetScrollbar</name></member>
       <member refid="classwx_window_1afbf4dc9064cf70cfe6884554b97a27bf" prot="public" virt="virtual"><scope>wxHtmlHelpDialog</scope><name>SetScrollPos</name></member>

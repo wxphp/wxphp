@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_standard_paths" kind="class" prot="public">
     <compoundname>wxStandardPaths</compoundname>
     <includes local="no">wx/stdpaths.h</includes>
@@ -228,11 +228,11 @@
         <argsstring>() const </argsstring>
         <name>GetUserConfigDir</name>
         <briefdescription>
-<para>Return the directory for the user config files:<itemizedlist>
-<listitem><para>Unix: <computeroutput>~</computeroutput> (the home directory)</para></listitem><listitem><para>Windows: <computeroutput>&quot;C:\Documents and Settings\username\Application Data&quot;</computeroutput> </para></listitem><listitem><para>Mac: <computeroutput>~/Library/Preferences</computeroutput>. </para></listitem></itemizedlist>
-</para>        </briefdescription>
+<para>Return the directory for the user config files: </para>        </briefdescription>
         <detaileddescription>
-<para>Only use this method if you have a single configuration file to put in this directory, otherwise <ref refid="classwx_standard_paths_1a4752213ef4d7bdc71170b9e5c3691f0f" kindref="member">GetUserDataDir()</ref> is more appropriate. </para>        </detaileddescription>
+<para><itemizedlist>
+<listitem><para>Unix: <computeroutput>~</computeroutput> (the home directory)</para></listitem><listitem><para>Windows: <computeroutput>&quot;C:\Documents and Settings\username\Application Data&quot;</computeroutput> </para></listitem><listitem><para>Mac: <computeroutput>~/Library/Preferences</computeroutput> </para></listitem></itemizedlist>
+</para><para>Only use this method if you have a single configuration file to put in this directory, otherwise <ref refid="classwx_standard_paths_1a4752213ef4d7bdc71170b9e5c3691f0f" kindref="member">GetUserDataDir()</ref> is more appropriate. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stdpaths.h" line="242"/>
@@ -243,11 +243,11 @@
         <argsstring>() const </argsstring>
         <name>GetUserDataDir</name>
         <briefdescription>
-<para>Return the directory for the user-dependent application data files:<itemizedlist>
-<listitem><para>Unix: <computeroutput>~/</computeroutput>.appinfo</para></listitem><listitem><para>Windows: <computeroutput>&quot;C:\Documents and Settings\username\Application Data\appinfo&quot;</computeroutput> </para></listitem><listitem><para>Mac: <computeroutput>&quot;~/Library/Application Support/appinfo&quot;</computeroutput>. </para></listitem></itemizedlist>
-</para>        </briefdescription>
+<para>Return the directory for the user-dependent application data files: </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><itemizedlist>
+<listitem><para>Unix: <computeroutput>~/</computeroutput>.appinfo</para></listitem><listitem><para>Windows: <computeroutput>&quot;C:\Documents and Settings\username\Application Data\appinfo&quot;</computeroutput> </para></listitem><listitem><para>Mac: <computeroutput>&quot;~/Library/Application Support/appinfo&quot;</computeroutput> </para></listitem></itemizedlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stdpaths.h" line="250"/>
@@ -377,7 +377,7 @@
         <detaileddescription>
 <para>This function is, by definition, MSW-specific. It can be used to access pre-defined shell directories not covered by the existing methods of this class, e.g.: <programlisting><codeline><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#ifdef<sp/>__WXMSW__</highlight></codeline>
 <codeline><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>get<sp/>the<sp/>location<sp/>of<sp/>files<sp/>waiting<sp/>to<sp/>be<sp/>burned<sp/>on<sp/>a<sp/>CD</highlight><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change...">wxString</ref><sp/>cdburnArea<sp/>=</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change was actually the m...">wxString</ref><sp/>cdburnArea<sp/>=</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_standard_paths_1a5a523db5b6aca46154ac76d264d2bb57" kindref="member" tooltip="Returns location of Windows shell special folder.">wxStandardPaths::MSWGetShellDir</ref>(CSIDL_CDBURN_AREA);</highlight></codeline>
 <codeline><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#endif<sp/>//<sp/>__WXMSW__</highlight></codeline>
 </programlisting></para><para><parameterlist kind="param"><parameteritem>
@@ -399,7 +399,7 @@
 <para><ref refid="classwx_standard_paths" kindref="compound">wxStandardPaths</ref> returns the standard locations in the file system and should be used by applications to find their data files in a portable way. </para>    </briefdescription>
     <detaileddescription>
 <para>Note that you must not create objects of class <ref refid="classwx_standard_paths" kindref="compound">wxStandardPaths</ref> directly, but use the global standard paths object returned by <ref refid="classwx_standard_paths_1a19601f7f8ed84aa28a0a0942dafb19c9" kindref="member">wxStandardPaths::Get()</ref> (which can be of a type derived from <ref refid="classwx_standard_paths" kindref="compound">wxStandardPaths</ref> and not of exactly this type) and call the methods you need on it. The object returned by <ref refid="classwx_standard_paths_1a19601f7f8ed84aa28a0a0942dafb19c9" kindref="member">Get()</ref> may be customized by overriding <ref refid="classwx_app_traits_1ae9bd1317e78e21695c394220873b2cdc" kindref="member">wxAppTraits::GetStandardPaths()</ref> methods.</para><para>In the description of the methods below, the example return values are given for the Unix, Windows and Mac OS X systems, however please note that these are just the examples and the actual values may differ. For example, under Windows: the system administrator may change the standard directories locations, e.g. the Windows directory may be named <computeroutput>&quot;W:\Win2003&quot;</computeroutput> instead of the default <computeroutput>&quot;C:\Windows&quot;</computeroutput>.</para><para>Notice that in the examples below the string <computeroutput>appinfo</computeroutput> may be either just the application name (as returned by <ref refid="classwx_app_console_1a2bfe9c53c57d61f8b115705796f258eb" kindref="member">wxApp::GetAppName()</ref>) or a combination of the vendor name (<ref refid="classwx_app_console_1af73ec0d186dd10b7fdabb57cf097bef8" kindref="member">wxApp::GetVendorName()</ref>) and the application name, with a path separator between them. By default, only the application name is used, use <ref refid="classwx_standard_paths_1ada72c782dcab502f17c348c0e5d3874c" kindref="member">UseAppInfo()</ref> to change this.</para><para>The other placeholders should be self-explanatory: the string <computeroutput>username</computeroutput> should be replaced with the value the name of the currently logged in user. and <computeroutput>prefix</computeroutput> is only used under Unix and is <computeroutput>/usr/local</computeroutput> by default but may be changed using <ref refid="classwx_standard_paths_1a80af124a7df05bf1a1f7bee7406d278f" kindref="member">wxStandardPaths::SetInstallPrefix()</ref>.</para><para>The directories returned by the methods of this class may or may not exist. If they don&apos;t exist, it&apos;s up to the caller to create them, <ref refid="classwx_standard_paths" kindref="compound">wxStandardPaths</ref> doesn&apos;t do it.</para><para>Finally note that these functions only work with standardly packaged applications. I.e. under Unix you should follow the standard installation conventions and under Mac you should create your application bundle according to the Apple guidelines. Again, this class doesn&apos;t help you to do it.</para><para>This class is MT-safe: its methods may be called concurrently from different threads without additional locking.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__file" kindref="compound">File Handling</ref></para><para><simplesect kind="see"><para><ref refid="classwx_file_config" kindref="compound">wxFileConfig</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__file" kindref="compound">File Handling</ref></para><para><simplesect kind="see"><para><ref refid="classwx_file_config" kindref="compound">wxFileConfig</ref> </para></simplesect>
 </para>    </detaileddescription>
     <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stdpaths.h" line="58" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stdpaths.h" bodystart="57" bodyend="359"/>
     <listofallmembers>

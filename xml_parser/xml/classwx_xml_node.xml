@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_xml_node" kind="class" prot="public">
     <compoundname>wxXmlNode</compoundname>
     <includes local="no">wx/xml/xml.h</includes>
@@ -726,7 +726,7 @@
 <para>Represents a node in an XML document. </para>    </briefdescription>
     <detaileddescription>
 <para>See <ref refid="classwx_xml_document" kindref="compound">wxXmlDocument</ref>.</para><para>Node has a name and may have content and attributes.</para><para>Most common node types are <computeroutput>wxXML_TEXT_NODE</computeroutput> (name and attributes are irrelevant) and <computeroutput>wxXML_ELEMENT_NODE</computeroutput>.</para><para>Example: in <computeroutput>&lt;title&gt;hi&lt;/title&gt;</computeroutput> there is an element with the name <computeroutput>title</computeroutput> and irrelevant content and one child of type <computeroutput>wxXML_TEXT_NODE</computeroutput> with <computeroutput>hi</computeroutput> as content.</para><para>The <computeroutput>wxXML_PI_NODE</computeroutput> type sets the name to the PI target and the contents to the instructions. Note that whilst the PI instructions are often in the form of pseudo-attributes these do not use the nodes attribute system. It is the users responsibility to code and decode the instruction text.</para><para>If <computeroutput>wxUSE_UNICODE</computeroutput> is 0, all strings are encoded in the encoding given to <ref refid="classwx_xml_document_1af0dfc897ac9fd69d67a0d8b5f00d23c2" kindref="member">wxXmlDocument::Load</ref> (default is UTF-8).</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxxml" kindref="member">wxXML</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__xml" kindref="compound">XML</ref></para><para><simplesect kind="see"><para><ref refid="classwx_xml_document" kindref="compound">wxXmlDocument</ref>, <ref refid="classwx_xml_attribute" kindref="compound">wxXmlAttribute</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxxml" kindref="member">wxXML</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__xml" kindref="compound">XML</ref></para><para><simplesect kind="see"><para><ref refid="classwx_xml_document" kindref="compound">wxXmlDocument</ref>, <ref refid="classwx_xml_attribute" kindref="compound">wxXmlAttribute</ref> </para></simplesect>
 </para>    </detaileddescription>
     <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xml/xml.h" line="57" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xml/xml.h" bodystart="56" bodyend="368"/>
     <listofallmembers>

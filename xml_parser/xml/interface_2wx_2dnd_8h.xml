@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="interface_2wx_2dnd_8h" kind="file">
     <compoundname>dnd.h</compoundname>
     <innerclass refid="classwx_text_drop_target" prot="public">wxTextDropTarget</innerclass>
@@ -13,11 +13,11 @@
         <briefdescription>
 <para>This macro creates either a cursor (MSW) or an icon (elsewhere) with the given <emphasis>name</emphasis> (of type <computeroutput>const char*</computeroutput>). </para>        </briefdescription>
         <detaileddescription>
-<para>Under MSW, the cursor is loaded from the resource file and the icon is loaded from XPM file under other platforms.</para><para>This macro should be used with <ref refid="classwx_drop_source_1a06dbcfe97a0615d59c97d0be7d11f6e5" kindref="member">wxDropSource::wxDropSource()</ref>.</para><para><simplesect kind="return"><para><ref refid="classwx_cursor" kindref="compound">wxCursor</ref> on MSW, otherwise returns a <ref refid="classwx_icon" kindref="compound">wxIcon</ref></para></simplesect>
-Include file: <verbatim>#include &lt;wx/dnd.h&gt; </verbatim> </para>        </detaileddescription>
+<para>Under MSW, the cursor is loaded from the resource file and the icon is loaded from XPM file under other platforms.</para><para>This macro should be used with <ref refid="classwx_drop_source_1a18ebb798180a16972f3d5157fdcdac20" kindref="member">wxDropSource::wxDropSource()</ref>.</para><para><simplesect kind="return"><para><ref refid="classwx_cursor" kindref="compound">wxCursor</ref> on MSW, otherwise returns a <ref refid="classwx_icon" kindref="compound">wxIcon</ref></para></simplesect>
+Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/dnd.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dnd.h" line="409" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dnd.h" bodystart="409" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dnd.h" line="400" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dnd.h" bodystart="400" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="enum">

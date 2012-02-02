@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_initializer" kind="class" prot="public">
     <compoundname>wxInitializer</compoundname>
     <includes local="no">wx/init.h</includes>
@@ -33,7 +33,7 @@
         <argsstring>() const </argsstring>
         <name>IsOk</name>
         <briefdescription>
-<para>Has the initialization been successful? (explicit test). </para>        </briefdescription>
+<para>Has the initialization been successful? (explicit test) </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -58,7 +58,7 @@
 <para>Create an object of this class on the stack to initialize/cleanup the library automatically. </para>    </briefdescription>
     <detaileddescription>
 <para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__appmanagement" kindref="compound">Application and Process Management</ref></para><para><simplesect kind="see"><para><ref refid="classwx_g_l_context" kindref="compound">wxGLContext</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__appmanagement" kindref="compound">Application and Process Management</ref></para><para><simplesect kind="see"><para><ref refid="classwx_g_l_context" kindref="compound">wxGLContext</ref> </para></simplesect>
 </para>    </detaileddescription>
     <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/init.h" line="22" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/init.h" bodystart="21" bodyend="40"/>
     <listofallmembers>

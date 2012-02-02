@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_simple_help_provider" kind="class" prot="public">
     <compoundname>wxSimpleHelpProvider</compoundname>
     <basecompoundref refid="classwx_help_provider" prot="public" virt="non-virtual">wxHelpProvider</basecompoundref>
@@ -9,35 +9,35 @@
 <para><ref refid="classwx_simple_help_provider" kindref="compound">wxSimpleHelpProvider</ref> is an implementation of <ref refid="classwx_help_provider" kindref="compound">wxHelpProvider</ref> which supports only plain text help strings, and shows the string associated with the control (if any) in a tooltip. </para>    </briefdescription>
     <detaileddescription>
 <para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__help" kindref="compound">Help</ref></para><para><simplesect kind="see"><para><ref refid="classwx_help_provider" kindref="compound">wxHelpProvider</ref>, <ref refid="classwx_help_controller_help_provider" kindref="compound">wxHelpControllerHelpProvider</ref>, <ref refid="classwx_context_help" kindref="compound">wxContextHelp</ref>, <ref refid="classwx_window_1a4c1a2cbc7363237b3a7c70af4e702c72" kindref="member">wxWindow::SetHelpText()</ref>(, <ref refid="classwx_window_1afa448f4e01bedc4a5e3d4324929e5d5d" kindref="member">wxWindow::GetHelpTextAtPoint()</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__help" kindref="compound">Help</ref></para><para><simplesect kind="see"><para><ref refid="classwx_help_provider" kindref="compound">wxHelpProvider</ref>, <ref refid="classwx_help_controller_help_provider" kindref="compound">wxHelpControllerHelpProvider</ref>, <ref refid="classwx_context_help" kindref="compound">wxContextHelp</ref>, <ref refid="classwx_window_1a4c1a2cbc7363237b3a7c70af4e702c72" kindref="member">wxWindow::SetHelpText()</ref>(, <ref refid="classwx_window_1afa448f4e01bedc4a5e3d4324929e5d5d" kindref="member">wxWindow::GetHelpTextAtPoint()</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10115">
+      <node id="10175">
         <label>wxHelpProvider</label>
         <link refid="classwx_help_provider"/>
       </node>
-      <node id="10114">
+      <node id="10174">
         <label>wxSimpleHelpProvider</label>
         <link refid="classwx_simple_help_provider"/>
-        <childnode refid="10115" relation="public-inheritance">
+        <childnode refid="10175" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10116">
+      <node id="10176">
         <label>wxHelpControllerHelpProvider</label>
         <link refid="classwx_help_controller_help_provider"/>
-        <childnode refid="10114" relation="public-inheritance">
+        <childnode refid="10174" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10118">
+      <node id="10178">
         <label>wxHelpProvider</label>
         <link refid="classwx_help_provider"/>
       </node>
-      <node id="10117">
+      <node id="10177">
         <label>wxSimpleHelpProvider</label>
         <link refid="classwx_simple_help_provider"/>
-        <childnode refid="10118" relation="public-inheritance">
+        <childnode refid="10178" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>

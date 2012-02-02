@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_web_view_archive_handler" kind="class" prot="public">
     <compoundname>wxWebViewArchiveHandler</compoundname>
     <basecompoundref refid="classwx_web_view_handler" prot="public" virt="non-virtual">wxWebViewHandler</basecompoundref>
@@ -47,28 +47,28 @@
     <detaileddescription>
 <para>The syntax for <ref refid="classwx_web_view_archive_handler" kindref="compound">wxWebViewArchiveHandler</ref> differs from virtual file systems in the rest of wxWidgets by using a syntax such as <computeroutput> scheme:///C:/exmaple/docs.zip;protocol=zip/main.htm </computeroutput> Currently the only supported protocol is <computeroutput>zip</computeroutput>.</para><para><simplesect kind="since"><para>2.9.3 <heading level="2"></heading>
 </para></simplesect>
-Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxwebview" kindref="member">wxWebView</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__webview" kindref="compound">WebView</ref></para><para><simplesect kind="see"><para><ref refid="classwx_web_view" kindref="compound">wxWebView</ref>, <ref refid="classwx_web_view_handler" kindref="compound">wxWebViewHandler</ref> </para></simplesect>
+Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxwebview" kindref="member">wxWebView</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__webview" kindref="compound">WebView</ref></para><para><simplesect kind="see"><para><ref refid="classwx_web_view" kindref="compound">wxWebView</ref>, <ref refid="classwx_web_view_handler" kindref="compound">wxWebViewHandler</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="11382">
+      <node id="11443">
         <label>wxWebViewArchiveHandler</label>
         <link refid="classwx_web_view_archive_handler"/>
-        <childnode refid="11383" relation="public-inheritance">
+        <childnode refid="11444" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11383">
+      <node id="11444">
         <label>wxWebViewHandler</label>
         <link refid="classwx_web_view_handler"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="11384">
+      <node id="11445">
         <label>wxWebViewArchiveHandler</label>
         <link refid="classwx_web_view_archive_handler"/>
-        <childnode refid="11385" relation="public-inheritance">
+        <childnode refid="11446" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11385">
+      <node id="11446">
         <label>wxWebViewHandler</label>
         <link refid="classwx_web_view_handler"/>
       </node>

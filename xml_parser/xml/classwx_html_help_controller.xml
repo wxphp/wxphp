@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_html_help_controller" kind="class" prot="public">
     <compoundname>wxHtmlHelpController</compoundname>
     <includes local="no">wx/html/helpctrl.h</includes>
@@ -61,7 +61,7 @@
         <briefdescription>
 <para>Adds a book (i.e. </para>        </briefdescription>
         <detaileddescription>
-<para>a <ref refid="overview__html_1overview_html_helpformats" kindref="member">.hhp file</ref>; an HTML Help Workshop project file) into the list of loaded books.</para><para>This must be called at least once before displaying any help. <emphasis>bookFile</emphasis> or <emphasis>bookUrl</emphasis> may be either <computeroutput>&quot;.hhp&quot;</computeroutput> file or a ZIP archive that contains an arbitrary number of <computeroutput>&quot;.hhp&quot;</computeroutput> files in its top-level directory. This ZIP archive must have <computeroutput>&quot;.zip&quot;</computeroutput> or <computeroutput>&quot;.htb&quot;</computeroutput> extension (the latter stands for &quot;HTML book&quot;). In other words, <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_html_help_controller_1aff569d5ea7135ef2ee60f0028519de73" kindref="member" tooltip="Adds a book (i.e.">AddBook</ref>(<ref refid="classwx_file_name" kindref="compound" tooltip="wxFileName encapsulates a file name.">wxFileName</ref>(</highlight><highlight class="stringliteral">&quot;help.zip&quot;</highlight><highlight class="normal">))</highlight></codeline>
+<para>a <ref refid="overview_html_1overview_html_helpformats" kindref="member">.hhp file</ref>; an HTML Help Workshop project file) into the list of loaded books.</para><para>This must be called at least once before displaying any help. <emphasis>bookFile</emphasis> or <emphasis>bookUrl</emphasis> may be either <computeroutput>&quot;.hhp&quot;</computeroutput> file or a ZIP archive that contains an arbitrary number of <computeroutput>&quot;.hhp&quot;</computeroutput> files in its top-level directory. This ZIP archive must have <computeroutput>&quot;.zip&quot;</computeroutput> or <computeroutput>&quot;.htb&quot;</computeroutput> extension (the latter stands for &quot;HTML book&quot;). In other words, <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_html_help_controller_1aff569d5ea7135ef2ee60f0028519de73" kindref="member" tooltip="Adds a book (i.e.">AddBook</ref>(<ref refid="classwx_file_name" kindref="compound" tooltip="wxFileName encapsulates a file name.">wxFileName</ref>(</highlight><highlight class="stringliteral">&quot;help.zip&quot;</highlight><highlight class="normal">))</highlight></codeline>
 </programlisting> is possible and is the recommended way.</para><para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>bookFile</parametername>
@@ -99,7 +99,7 @@
         <briefdescription>
 <para>Adds a book (i.e. </para>        </briefdescription>
         <detaileddescription>
-<para>a <ref refid="overview__html_1overview_html_helpformats" kindref="member">.hhp file</ref>; an HTML Help Workshop project file) into the list of loaded books.</para><para>See the other overload for additional info.</para><para><parameterlist kind="param"><parameteritem>
+<para>a <ref refid="overview_html_1overview_html_helpformats" kindref="member">.hhp file</ref>; an HTML Help Workshop project file) into the list of loaded books.</para><para>See the other overload for additional info.</para><para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>bookUrl</parametername>
 </parameternamelist>
@@ -221,9 +221,9 @@
           <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
         </param>
         <briefdescription>
-<para>Reads the controller&apos;s setting (position of window, etc. </para>        </briefdescription>
+<para>Reads the controller&apos;s setting (position of window, etc.) </para>        </briefdescription>
         <detaileddescription>
-<para>) </para>        </detaileddescription>
+        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/helpctrl.h" line="172"/>
@@ -318,9 +318,9 @@
           <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
         </param>
         <briefdescription>
-<para>Stores controllers setting (position of window etc. </para>        </briefdescription>
+<para>Stores controllers setting (position of window etc.) </para>        </briefdescription>
         <detaileddescription>
-<para>) </para>        </detaileddescription>
+        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/helpctrl.h" line="227"/>
@@ -363,10 +363,10 @@
       </memberdef>
       </sectiondef>
     <briefdescription>
-<para>This help controller provides an easy way of displaying HTML help in your application (see <ref refid="page__samples_1page_samples_html" kindref="member">HTML Sample</ref>, test example). </para>    </briefdescription>
+<para>This help controller provides an easy way of displaying HTML help in your application (see <ref refid="page_samples_1page_samples_html" kindref="member">HTML Sample</ref>, test example). </para>    </briefdescription>
     <detaileddescription>
-<para>The help system is based on <bold>books</bold> (see <ref refid="classwx_html_help_controller_1aff569d5ea7135ef2ee60f0028519de73" kindref="member">wxHtmlHelpController::AddBook</ref>). A book is a logical section of documentation (for example &quot;User&apos;s Guide&quot; or &quot;Programmer&apos;s Guide&quot; or &quot;C++ Reference&quot; or &quot;wxWidgets Reference&quot;). The help controller can handle as many books as you want.</para><para>Although this class has an API compatible with other wxWidgets help controllers as documented by <ref refid="classwx_help_controller" kindref="compound">wxHelpController</ref>, it is recommended that you use the enhanced capabilities of wxHtmlHelpController&apos;s API.</para><para>wxHTML uses Microsoft&apos;s HTML Help Workshop project files (.hhp, .hhk, .hhc) as its native format. The file format is described in <ref refid="overview__html_1overview_html_helpformats" kindref="member">Help Files Format</ref>. The directory <computeroutput>helpfiles</computeroutput> in the <ref refid="page__samples_1page_samples_html" kindref="member">HTML Sample</ref> contains sample project files.</para><para>Note that the Microsoft&apos;s HTML Help Workshop (<ulink url="http://www.microsoft.com/downloads/details.aspx?FamilyID=00535334-c8a6-452f-9aa0-d597d16580cc">http://www.microsoft.com/downloads/details.aspx?FamilyID=00535334-c8a6-452f-9aa0-d597d16580cc</ulink>) also runs on other platforms using WINE (<ulink url="http://www.winehq.org/">http://www.winehq.org/</ulink>) and it can be used to create the .hpp, .hhk and .hhc files through a friendly GUI. The commercial tool HelpBlocks (<ulink url="http://www.helpblocks.com">http://www.helpblocks.com</ulink>) can also create these files.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxhtml" kindref="member">wxHTML</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__help" kindref="compound">Help</ref>, <ref refid="group__group__class__html" kindref="compound">HTML</ref></para><para><simplesect kind="see"><para>wxBestHelpController, <ref refid="classwx_html_help_frame" kindref="compound">wxHtmlHelpFrame</ref>, <ref refid="classwx_html_help_dialog" kindref="compound">wxHtmlHelpDialog</ref>, <ref refid="classwx_html_help_window" kindref="compound">wxHtmlHelpWindow</ref>, <ref refid="classwx_html_modal_help" kindref="compound">wxHtmlModalHelp</ref> </para></simplesect>
+<para>The help system is based on <bold>books</bold> (see <ref refid="classwx_html_help_controller_1aff569d5ea7135ef2ee60f0028519de73" kindref="member">wxHtmlHelpController::AddBook</ref>). A book is a logical section of documentation (for example &quot;User&apos;s Guide&quot; or &quot;Programmer&apos;s Guide&quot; or &quot;C++ Reference&quot; or &quot;wxWidgets Reference&quot;). The help controller can handle as many books as you want.</para><para>Although this class has an API compatible with other wxWidgets help controllers as documented by <ref refid="classwx_help_controller" kindref="compound">wxHelpController</ref>, it is recommended that you use the enhanced capabilities of wxHtmlHelpController&apos;s API.</para><para>wxHTML uses Microsoft&apos;s HTML Help Workshop project files (.hhp, .hhk, .hhc) as its native format. The file format is described in <ref refid="overview_html_1overview_html_helpformats" kindref="member">Help Files Format</ref>. The directory <computeroutput>helpfiles</computeroutput> in the <ref refid="page_samples_1page_samples_html" kindref="member">HTML Sample</ref> contains sample project files.</para><para>Note that the Microsoft&apos;s HTML Help Workshop (<ulink url="http://www.microsoft.com/downloads/details.aspx?FamilyID=00535334-c8a6-452f-9aa0-d597d16580cc">http://www.microsoft.com/downloads/details.aspx?FamilyID=00535334-c8a6-452f-9aa0-d597d16580cc</ulink>) also runs on other platforms using WINE (<ulink url="http://www.winehq.org/">http://www.winehq.org/</ulink>) and it can be used to create the .hpp, .hhk and .hhc files through a friendly GUI. The commercial tool HelpBlocks (<ulink url="http://www.helpblocks.com">http://www.helpblocks.com</ulink>) can also create these files.</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxhtml" kindref="member">wxHTML</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__help" kindref="compound">Help</ref>, <ref refid="group__group__class__html" kindref="compound">HTML</ref></para><para><simplesect kind="see"><para>wxBestHelpController, <ref refid="classwx_html_help_frame" kindref="compound">wxHtmlHelpFrame</ref>, <ref refid="classwx_html_help_dialog" kindref="compound">wxHtmlHelpDialog</ref>, <ref refid="classwx_html_help_window" kindref="compound">wxHtmlHelpWindow</ref>, <ref refid="classwx_html_modal_help" kindref="compound">wxHtmlModalHelp</ref> </para></simplesect>
 </para>    </detaileddescription>
     <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/helpctrl.h" line="41" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/helpctrl.h" bodystart="40" bodyend="242"/>
     <listofallmembers>

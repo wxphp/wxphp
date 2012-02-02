@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_rich_text_properties" kind="class" prot="public">
     <compoundname>wxRichTextProperties</compoundname>
     <basecompoundref refid="classwx_object" prot="public" virt="non-virtual">wxObject</basecompoundref>
@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1479" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1479" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1574" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1574" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -31,7 +31,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1346" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1346" bodyend="1346"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1426" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1426" bodyend="1426"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_properties_1aad4dd8eec22687a8beab7cd4c54bd53f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -48,7 +48,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1351" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1351" bodyend="1351"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1431" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1431" bodyend="1431"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_properties_1a5d13463ff112d23e7ad3a1a682d0ae5e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -65,7 +65,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1356" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1356" bodyend="1356"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1436" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1436" bodyend="1436"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_properties_1a8bce8b91c90e13bdd88db16251b3b918" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -82,7 +82,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1361"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1441"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_properties_1a29d0231454654aed178b854ce21e235b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -99,7 +99,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1366" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1366" bodyend="1366"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1446" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1446" bodyend="1446"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_properties_1a350ec5072200910b461b79553bab1724" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>const <ref refid="classwx_variant" kindref="compound">wxVariant</ref> &amp;</type>
@@ -116,7 +116,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1371" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1371" bodyend="1371"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1451" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1451" bodyend="1451"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_properties_1a651561f5c985a2825dc2d5974168ea74" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classwx_variant" kindref="compound">wxVariant</ref> &amp;</type>
@@ -133,7 +133,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1376" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1376" bodyend="1376"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1456" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1456" bodyend="1456"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_properties_1a6991d5010188a4f9c86ffeb5703d3352" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -146,7 +146,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1381" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1381" bodyend="1381"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1461" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1461" bodyend="1461"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_properties_1af0e1dde13861de572e9e4cb395d99169" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>const wxRichTextVariantArray &amp;</type>
@@ -159,7 +159,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1386" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1386" bodyend="1386"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1466" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1466" bodyend="1466"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_properties_1a8fa5cec738b7e139c757013d30e72ac3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>wxRichTextVariantArray &amp;</type>
@@ -172,7 +172,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1391" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1391" bodyend="1391"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1471" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1471" bodyend="1471"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_properties_1afc781ad20c3a15b70adac8e70e5fe94f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -189,7 +189,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1396" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1396" bodyend="1396"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1476" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1476" bodyend="1476"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_properties_1aaa3ec0bf4c962a695280450952b718f1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_array_string" kindref="compound">wxArrayString</ref></type>
@@ -202,7 +202,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1401"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1481"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_properties_1afca0336b53e46c734cb7dd22befc4c49" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>size_t</type>
@@ -215,7 +215,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1406" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1406" bodyend="1406"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1486" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1486" bodyend="1486"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_properties_1a25f1f9aa1b12616280a6c4b77f46bd1e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -232,7 +232,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1411" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1411" bodyend="1411"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1491" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1491" bodyend="1491"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_properties_1ab589faf2d8b8bbd7f5d3400bbc0fa48f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -249,7 +249,24 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1416"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1496"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_text_properties_1a4708558ce28cd6029f658112e56744f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxRichTextProperties::Remove</definition>
+        <argsstring>(const wxString &amp;name)</argsstring>
+        <name>Remove</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Removes the given property. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1501"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_properties_1a6f32371986f1127442adf2af387e4098" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_variant" kindref="compound">wxVariant</ref> &amp;</type>
@@ -266,7 +283,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1421"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1506"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_properties_1ae5a76714975fb98d6597eeb7f3e88a3c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_variant" kindref="compound">wxVariant</ref> *</type>
@@ -283,7 +300,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1426"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1511"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_properties_1a44124f09f3ddca704aa37488018a65a3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -300,7 +317,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1431"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1516"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_properties_1a2a09a0e7fe611c01136515ef5e55a439" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>long</type>
@@ -317,7 +334,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1436"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1521"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_properties_1a10f3b9a579f7655cd9356d3e9a142d4b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -334,7 +351,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1441"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1526"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_properties_1af4a36f4171f56922e28c30540a3c45cb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -351,7 +368,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1446"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1531"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_properties_1acb8374d9dc04aa8eca6b1a2b85788665" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -368,7 +385,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1451"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1536"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_properties_1adc6eca9550cde8bc8574aaa84d596df1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -389,7 +406,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1456"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1541"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_properties_1acf2c47e6321dc166961301bc0acfa2fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -410,7 +427,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1461"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1546"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_properties_1a337968aee725c8a02adc33c8f04536cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -431,7 +448,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1466"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1551"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_properties_1a722b740b2869d42a67d6100f0f6a5ae8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -452,7 +469,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1471"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1556"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_properties_1ac34c33c43b3475c48aacdf6696bdaba8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -473,47 +490,81 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1476"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1561"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_text_properties_1a357f5c01c4d179610be9ba283e758d21" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxRichTextProperties::RemoveProperties</definition>
+        <argsstring>(const wxRichTextProperties &amp;properties)</argsstring>
+        <name>RemoveProperties</name>
+        <param>
+          <type>const <ref refid="classwx_rich_text_properties" kindref="compound">wxRichTextProperties</ref> &amp;</type>
+          <declname>properties</declname>
+        </param>
+        <briefdescription>
+<para>Removes the given properties from these properties. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1566"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_text_properties_1a65fc66fcdd2d8f2687ee8af98304284a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxRichTextProperties::MergeProperties</definition>
+        <argsstring>(const wxRichTextProperties &amp;properties)</argsstring>
+        <name>MergeProperties</name>
+        <param>
+          <type>const <ref refid="classwx_rich_text_properties" kindref="compound">wxRichTextProperties</ref> &amp;</type>
+          <declname>properties</declname>
+        </param>
+        <briefdescription>
+<para>Merges the given properties with these properties. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1571"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para>A simple property class using wxVariants. </para>    </briefdescription>
     <detaileddescription>
 <para>This is used to give each rich text object the ability to store custom properties that can be used by the application.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxrichtext" kindref="member">wxRichText</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__richtext" kindref="compound">Rich Text</ref></para><para><simplesect kind="see"><para><ref refid="classwx_rich_text_buffer" kindref="compound">wxRichTextBuffer</ref>, <ref refid="classwx_rich_text_object" kindref="compound">wxRichTextObject</ref>, <ref refid="classwx_rich_text_ctrl" kindref="compound">wxRichTextCtrl</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxrichtext" kindref="member">wxRichText</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__richtext" kindref="compound">Rich Text</ref></para><para><simplesect kind="see"><para><ref refid="classwx_rich_text_buffer" kindref="compound">wxRichTextBuffer</ref>, <ref refid="classwx_rich_text_object" kindref="compound">wxRichTextObject</ref>, <ref refid="classwx_rich_text_ctrl" kindref="compound">wxRichTextCtrl</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="9785">
+      <node id="9845">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="9784">
+      <node id="9844">
         <label>wxRichTextProperties</label>
         <link refid="classwx_rich_text_properties"/>
-        <childnode refid="9785" relation="public-inheritance">
+        <childnode refid="9845" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="9787">
+      <node id="9847">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="9788" relation="usage">
+        <childnode refid="9848" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="9786">
+      <node id="9846">
         <label>wxRichTextProperties</label>
         <link refid="classwx_rich_text_properties"/>
-        <childnode refid="9787" relation="public-inheritance">
+        <childnode refid="9847" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9788">
+      <node id="9848">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1339" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1338" bodyend="1480"/>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1419" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1418" bodyend="1575"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxRichTextProperties</scope><name>AllocExclusive</name></member>
       <member refid="classwx_rich_text_properties_1a6991d5010188a4f9c86ffeb5703d3352" prot="public" virt="non-virtual"><scope>wxRichTextProperties</scope><name>Clear</name></member>
@@ -538,6 +589,7 @@
       <member refid="classwx_object_1a80a1a3fda7b14396a9ddd3d7a46a88bd" prot="public" virt="non-virtual"><scope>wxRichTextProperties</scope><name>IsSameAs</name></member>
       <member refid="classwx_rich_text_properties_1abce9279c320ab74412b22000d97ca456" prot="protected" virt="non-virtual"><scope>wxRichTextProperties</scope><name>m_properties</name></member>
       <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxRichTextProperties</scope><name>m_refData</name></member>
+      <member refid="classwx_rich_text_properties_1a65fc66fcdd2d8f2687ee8af98304284a" prot="public" virt="non-virtual"><scope>wxRichTextProperties</scope><name>MergeProperties</name></member>
       <member refid="classwx_object_1a07b8f34f5afc5743195c5fed052f55d3" prot="public" virt="non-virtual"><scope>wxRichTextProperties</scope><name>operator delete</name></member>
       <member refid="classwx_object_1a96fa423a1dbc212c8227a5d83825971f" prot="public" virt="non-virtual"><scope>wxRichTextProperties</scope><name>operator new</name></member>
       <member refid="classwx_rich_text_properties_1a5d13463ff112d23e7ad3a1a682d0ae5e" prot="public" virt="non-virtual"><scope>wxRichTextProperties</scope><name>operator=</name></member>
@@ -545,6 +597,8 @@
       <member refid="classwx_rich_text_properties_1a350ec5072200910b461b79553bab1724" prot="public" virt="non-virtual"><scope>wxRichTextProperties</scope><name>operator[]</name></member>
       <member refid="classwx_rich_text_properties_1a651561f5c985a2825dc2d5974168ea74" prot="public" virt="non-virtual"><scope>wxRichTextProperties</scope><name>operator[]</name></member>
       <member refid="classwx_object_1a2f6f1aa51fe9fc2b1415ca4211a90e9e" prot="public" virt="non-virtual"><scope>wxRichTextProperties</scope><name>Ref</name></member>
+      <member refid="classwx_rich_text_properties_1a4708558ce28cd6029f658112e56744f9" prot="public" virt="non-virtual"><scope>wxRichTextProperties</scope><name>Remove</name></member>
+      <member refid="classwx_rich_text_properties_1a357f5c01c4d179610be9ba283e758d21" prot="public" virt="non-virtual"><scope>wxRichTextProperties</scope><name>RemoveProperties</name></member>
       <member refid="classwx_rich_text_properties_1afc781ad20c3a15b70adac8e70e5fe94f" prot="public" virt="non-virtual"><scope>wxRichTextProperties</scope><name>SetProperties</name></member>
       <member refid="classwx_rich_text_properties_1acb8374d9dc04aa8eca6b1a2b85788665" prot="public" virt="non-virtual"><scope>wxRichTextProperties</scope><name>SetProperty</name></member>
       <member refid="classwx_rich_text_properties_1adc6eca9550cde8bc8574aaa84d596df1" prot="public" virt="non-virtual"><scope>wxRichTextProperties</scope><name>SetProperty</name></member>

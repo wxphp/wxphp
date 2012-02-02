@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_font_data" kind="class" prot="public">
     <compoundname>wxFontData</compoundname>
     <basecompoundref refid="classwx_object" prot="public" virt="non-virtual">wxObject</basecompoundref>
@@ -241,35 +241,35 @@
 <para>This class holds a variety of information related to font dialogs. </para>    </briefdescription>
     <detaileddescription>
 <para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__cmndlg" kindref="compound">Common Dialogs</ref>, <ref refid="group__group__class__data" kindref="compound">Data Structures</ref></para><para><simplesect kind="see"><para><ref refid="overview__cmndlg_1overview_cmndlg_font" kindref="member">wxFontDialog Overview</ref>, <ref refid="classwx_font" kindref="compound">wxFont</ref>, <ref refid="classwx_font_dialog" kindref="compound">wxFontDialog</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__cmndlg" kindref="compound">Common Dialogs</ref>, <ref refid="group__group__class__data" kindref="compound">Data Structures</ref></para><para><simplesect kind="see"><para><ref refid="overview_cmndlg_1overview_cmndlg_font" kindref="member">wxFontDialog Overview</ref>, <ref refid="classwx_font" kindref="compound">wxFont</ref>, <ref refid="classwx_font_dialog" kindref="compound">wxFontDialog</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="6367">
+      <node id="6371">
         <label>wxFontData</label>
         <link refid="classwx_font_data"/>
-        <childnode refid="6368" relation="public-inheritance">
+        <childnode refid="6372" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6368">
+      <node id="6372">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="6369">
+      <node id="6373">
         <label>wxFontData</label>
         <link refid="classwx_font_data"/>
-        <childnode refid="6370" relation="public-inheritance">
+        <childnode refid="6374" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6370">
+      <node id="6374">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="6371" relation="usage">
+        <childnode refid="6375" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="6371">
+      <node id="6375">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_xml_document" kind="class" prot="public">
     <compoundname>wxXmlDocument</compoundname>
     <basecompoundref refid="classwx_object" prot="public" virt="non-virtual">wxObject</basecompoundref>
@@ -455,7 +455,7 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(prolog-&gt;<ref refid="classwx_xml_node_1a46a55bf74bc68bb0f6cebcc50aeecb07" kindref="member" tooltip="Returns the type of this node.">GetType</ref>()<sp/>==<sp/><ref refid="xml_8h_1a8439c6a82632b0ef566fcadbcd9e7510adc8217435e23d2e3e9848a494b91c0a3" kindref="member">wxXML_PI_NODE</ref><sp/>&amp;&amp;<sp/>prolog-&gt;<ref refid="classwx_xml_node_1a0698933e2fdd3156d4c0c041327ba730" kindref="member" tooltip="Returns the name of this node.">GetName</ref>()<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;target&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>process<sp/>Process<sp/>Instruction<sp/>contents</highlight><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change...">wxString</ref><sp/>pi<sp/>=<sp/>prolog-&gt;<ref refid="classwx_xml_node_1a630878872d56f8b9db55565bee57a891" kindref="member" tooltip="Returns the content of this node.">GetContent</ref>();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change was actually the m...">wxString</ref><sp/>pi<sp/>=<sp/>prolog-&gt;<ref refid="classwx_xml_node_1a630878872d56f8b9db55565bee57a891" kindref="member" tooltip="Returns the content of this node.">GetContent</ref>();</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
@@ -468,14 +468,14 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(child-&gt;<ref refid="classwx_xml_node_1a0698933e2fdd3156d4c0c041327ba730" kindref="member" tooltip="Returns the name of this node.">GetName</ref>()<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;tag1&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>process<sp/>text<sp/>enclosed<sp/>by<sp/>tag1/tag1</highlight><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change...">wxString</ref><sp/>content<sp/>=<sp/>child-&gt;<ref refid="classwx_xml_node_1a44831c2e36382a642aa88558d8a2d276" kindref="member" tooltip="Returns the content of the first child node of type wxXML_TEXT_NODE or wxXML_CDATA_SECTION_NODE...">GetNodeContent</ref>();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change was actually the m...">wxString</ref><sp/>content<sp/>=<sp/>child-&gt;<ref refid="classwx_xml_node_1a44831c2e36382a642aa88558d8a2d276" kindref="member" tooltip="Returns the content of the first child node of type wxXML_TEXT_NODE or wxXML_CDATA_SECTION_NODE.">GetNodeContent</ref>();</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>process<sp/>attributes<sp/>of<sp/>tag1</highlight><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change...">wxString</ref><sp/>attrvalue1<sp/>=</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change was actually the m...">wxString</ref><sp/>attrvalue1<sp/>=</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>child-&gt;<ref refid="classwx_xml_node_1a17a0abf151a15be11a9bae1d7528d65c" kindref="member" tooltip="Returns true if a attribute named attrName could be found.">GetAttribute</ref>(</highlight><highlight class="stringliteral">&quot;attr1&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;default-value&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change...">wxString</ref><sp/>attrvalue2<sp/>=</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change was actually the m...">wxString</ref><sp/>attrvalue2<sp/>=</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>child-&gt;<ref refid="classwx_xml_node_1a17a0abf151a15be11a9bae1d7528d65c" kindref="member" tooltip="Returns true if a attribute named attrName could be found.">GetAttribute</ref>(</highlight><highlight class="stringliteral">&quot;attr2&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;default-value&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...</highlight></codeline>
@@ -496,35 +496,35 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>doc.<ref refid="classwx_xml_document_1af0dfc897ac9fd69d67a0d8b5f00d23c2" kindref="member" tooltip="Parses filename as an xml document and loads its data.">Load</ref>(</highlight><highlight class="stringliteral">&quot;myfile.xml&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>doc.<ref refid="classwx_xml_document_1aa2bf11ff613c60cc543b536a51e8bd95" kindref="member" tooltip="Saves XML tree creating a file named with given string.">Save</ref>(</highlight><highlight class="stringliteral">&quot;myfile2.xml&quot;</highlight><highlight class="normal">);<sp/><sp/></highlight><highlight class="comment">//<sp/>myfile2.xml<sp/>!=<sp/>myfile.xml</highlight></codeline>
 </programlisting></para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxxml" kindref="member">wxXML</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__xml" kindref="compound">XML</ref></para><para><simplesect kind="see"><para><ref refid="classwx_xml_node" kindref="compound">wxXmlNode</ref>, <ref refid="classwx_xml_attribute" kindref="compound">wxXmlAttribute</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxxml" kindref="member">wxXML</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__xml" kindref="compound">XML</ref></para><para><simplesect kind="see"><para><ref refid="classwx_xml_node" kindref="compound">wxXmlNode</ref>, <ref refid="classwx_xml_attribute" kindref="compound">wxXmlAttribute</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="11669">
+      <node id="11730">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="11668">
+      <node id="11729">
         <label>wxXmlDocument</label>
         <link refid="classwx_xml_document"/>
-        <childnode refid="11669" relation="public-inheritance">
+        <childnode refid="11730" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="11671">
+      <node id="11732">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="11672" relation="usage">
+        <childnode refid="11733" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="11670">
+      <node id="11731">
         <label>wxXmlDocument</label>
         <link refid="classwx_xml_document"/>
-        <childnode refid="11671" relation="public-inheritance">
+        <childnode refid="11732" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11672">
+      <node id="11733">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

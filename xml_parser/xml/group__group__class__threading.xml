@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="group__group__class__threading" kind="group">
     <compoundname>group_class_threading</compoundname>
     <title>Threading</title>
@@ -51,6 +51,6 @@ Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class
     <briefdescription>
 <para>wxWidgets provides a set of classes to make use of the native thread capabilities of the various platforms. </para>    </briefdescription>
     <detaileddescription>
-<para>Related Overviews: <ref refid="overview__thread" kindref="compound">Multithreading Overview</ref></para><para>Related macros/global-functions group: <ref refid="group__group__funcmacro__thread" kindref="compound">Threads</ref> </para>    </detaileddescription>
+<para>Related Overviews: <ref refid="overview_thread" kindref="compound">Multithreading Overview</ref></para><para>Related macros/global-functions group: <ref refid="group__group__funcmacro__thread" kindref="compound">Threads</ref> </para>    </detaileddescription>
   </compounddef>
 </doxygen>

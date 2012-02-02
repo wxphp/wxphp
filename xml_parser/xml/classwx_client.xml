@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_client" kind="class" prot="public">
     <compoundname>wxClient</compoundname>
     <basecompoundref refid="classwx_object" prot="public" virt="non-virtual">wxObject</basecompoundref>
@@ -78,36 +78,36 @@
     <briefdescription>
 <para>A <ref refid="classwx_client" kindref="compound">wxClient</ref> object represents the client part of a client-server DDE-like (Dynamic Data Exchange) conversation. </para>    </briefdescription>
     <detaileddescription>
-<para>The actual DDE-based implementation using <ref refid="classwx_d_d_e_client" kindref="compound">wxDDEClient</ref> is available on Windows only, but a platform-independent, socket-based version of this API is available using <ref refid="classwx_t_c_p_client" kindref="compound">wxTCPClient</ref>, which has the same API.</para><para>To create a client which can communicate with a suitable server, you need to derive a class from <ref refid="classwx_connection" kindref="compound">wxConnection</ref> and another from <ref refid="classwx_client" kindref="compound">wxClient</ref>. The custom <ref refid="classwx_connection" kindref="compound">wxConnection</ref> class will intercept communications in a &apos;conversation&apos; with a server, and the custom <ref refid="classwx_client" kindref="compound">wxClient</ref> is required so that a user-overridden <ref refid="classwx_client_1a71328614681f8f50de8a561b5dcfbbde" kindref="member">wxClient::OnMakeConnection</ref> member can return a <ref refid="classwx_connection" kindref="compound">wxConnection</ref> of the required class, when a connection is made.</para><para>Look at the IPC sample and the <ref refid="overview__ipc" kindref="compound">Interprocess Communication</ref> for an example of how to do this.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ipc" kindref="compound">Interprocess Communication</ref></para><para><simplesect kind="see"><para><ref refid="classwx_server" kindref="compound">wxServer</ref>, <ref refid="classwx_connection" kindref="compound">wxConnection</ref>, <ref refid="overview__ipc" kindref="compound">Interprocess Communication</ref> </para></simplesect>
+<para>The actual DDE-based implementation using <ref refid="classwx_d_d_e_client" kindref="compound">wxDDEClient</ref> is available on Windows only, but a platform-independent, socket-based version of this API is available using <ref refid="classwx_t_c_p_client" kindref="compound">wxTCPClient</ref>, which has the same API.</para><para>To create a client which can communicate with a suitable server, you need to derive a class from <ref refid="classwx_connection" kindref="compound">wxConnection</ref> and another from <ref refid="classwx_client" kindref="compound">wxClient</ref>. The custom <ref refid="classwx_connection" kindref="compound">wxConnection</ref> class will intercept communications in a &apos;conversation&apos; with a server, and the custom <ref refid="classwx_client" kindref="compound">wxClient</ref> is required so that a user-overridden <ref refid="classwx_client_1a71328614681f8f50de8a561b5dcfbbde" kindref="member">wxClient::OnMakeConnection</ref> member can return a <ref refid="classwx_connection" kindref="compound">wxConnection</ref> of the required class, when a connection is made.</para><para>Look at the IPC sample and the <ref refid="overview_ipc" kindref="compound">Interprocess Communication</ref> for an example of how to do this.</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ipc" kindref="compound">Interprocess Communication</ref></para><para><simplesect kind="see"><para><ref refid="classwx_server" kindref="compound">wxServer</ref>, <ref refid="classwx_connection" kindref="compound">wxConnection</ref>, <ref refid="overview_ipc" kindref="compound">Interprocess Communication</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="4780">
+      <node id="4784">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="4779">
+      <node id="4783">
         <label>wxClient</label>
         <link refid="classwx_client"/>
-        <childnode refid="4780" relation="public-inheritance">
+        <childnode refid="4784" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="4782">
+      <node id="4786">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="4783" relation="usage">
+        <childnode refid="4787" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="4781">
+      <node id="4785">
         <label>wxClient</label>
         <link refid="classwx_client"/>
-        <childnode refid="4782" relation="public-inheritance">
+        <childnode refid="4786" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4783">
+      <node id="4787">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

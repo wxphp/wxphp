@@ -1,10 +1,9 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="structwx_language_info" kind="struct" prot="public">
     <compoundname>wxLanguageInfo</compoundname>
     <includes local="no">wx/intl.h</includes>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="variable" id="structwx_language_info_1a0e6313a20c271c736a3341ce0c8a1afc" prot="public" static="no" mutable="no">
         <type><ref refid="defs_8h_1afdb12e5345c3fae4b537e813df9f02a3" kindref="member">wxUint32</ref></type>
         <definition>wxUint32 wxLanguageInfo::WinLang</definition>
@@ -13,7 +12,7 @@
         <briefdescription>
 <para>Win32 language identifiers (LANG_xxxx, SUBLANG_xxxx). </para>        </briefdescription>
         <detaileddescription>
-<para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page__port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor>  </para>        </detaileddescription>
+<para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page_port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor>  </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/intl.h" line="46" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/intl.h" bodystart="46" bodyend="-1"/>
@@ -26,7 +25,7 @@
         <briefdescription>
 <para>Win32 language identifiers (LANG_xxxx, SUBLANG_xxxx). </para>        </briefdescription>
         <detaileddescription>
-<para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page__port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor>  </para>        </detaileddescription>
+<para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page_port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor>  </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/intl.h" line="46" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/intl.h" bodystart="46" bodyend="-1"/>
@@ -95,7 +94,7 @@
         <briefdescription>
 <para>Return the LCID corresponding to this language. </para>        </briefdescription>
         <detaileddescription>
-<para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page__port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor>  </para>        </detaileddescription>
+<para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page_port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor>  </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/intl.h" line="57"/>
@@ -121,14 +120,14 @@
 <listitem><para>Wx::LanguageInfo-&gt;new(language, canonicalName, WinLang, WinSubLang, Description) </para></listitem></itemizedlist>
 </para>    </detaileddescription>
     <collaborationgraph>
-      <node id="7381">
+      <node id="7385">
         <label>wxString</label>
         <link refid="classwx_string"/>
       </node>
-      <node id="7380">
+      <node id="7384">
         <label>wxLanguageInfo</label>
         <link refid="structwx_language_info"/>
-        <childnode refid="7381" relation="usage">
+        <childnode refid="7385" relation="usage">
           <edgelabel>Description</edgelabel>
           <edgelabel>CanonicalName</edgelabel>
         </childnode>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_wizard" kind="class" prot="public">
     <compoundname>wxWizard</compoundname>
     <basecompoundref refid="classwx_dialog" prot="public" virt="non-virtual">wxDialog</basecompoundref>
@@ -396,8 +396,8 @@
 <para>Sets the flags indicating how the wizard or page bitmap should be expanded and positioned to fit the page height. </para>        </briefdescription>
         <detaileddescription>
 <para>By default, placement is 0 (no expansion is done). <emphasis>placement</emphasis> is a bitlist with the following possible values:</para><para><itemizedlist>
-<listitem><para><bold>wxWIZARD_VALIGN_TOP:</bold> Aligns the bitmap at the top.</para></listitem><listitem><para><bold>wxWIZARD_VALIGN_CENTRE:</bold> Centres the bitmap vertically.</para></listitem><listitem><para><bold>wxWIZARD_VALIGN_BOTTOM:</bold> Aligns the bitmap at the bottom.</para></listitem><listitem><para><bold>wxWIZARD_HALIGN_LEFT:</bold> Left-aligns the bitmap.</para></listitem><listitem><para><bold>wxWIZARD_HALIGN_CENTRE:</bold> Centres the bitmap horizontally.</para></listitem><listitem><para><bold>wxWIZARD_HALIGN_RIGHT:</bold> Right-aligns the bitmap.</para></listitem><listitem><para><bold>wxWIZARD_TILE:</bold> <xrefsect id="todo_1_todo000066"><xreftitle>Todo</xreftitle><xrefdescription><para>describe this</para></xrefdescription></xrefsect>See also <ref refid="classwx_wizard_1aacea5d1dc302604fc757bd1eb89b50f3" kindref="member">SetMinimumBitmapWidth()</ref>. </para></listitem></itemizedlist>
-</para>        </detaileddescription>
+<listitem><para><bold>wxWIZARD_VALIGN_TOP:</bold> Aligns the bitmap at the top.</para></listitem><listitem><para><bold>wxWIZARD_VALIGN_CENTRE:</bold> Centres the bitmap vertically.</para></listitem><listitem><para><bold>wxWIZARD_VALIGN_BOTTOM:</bold> Aligns the bitmap at the bottom.</para></listitem><listitem><para><bold>wxWIZARD_HALIGN_LEFT:</bold> Left-aligns the bitmap.</para></listitem><listitem><para><bold>wxWIZARD_HALIGN_CENTRE:</bold> Centres the bitmap horizontally.</para></listitem><listitem><para><bold>wxWIZARD_HALIGN_RIGHT:</bold> Right-aligns the bitmap.</para></listitem><listitem><para><bold>wxWIZARD_TILE:</bold>  todo 65.</para></listitem></itemizedlist>
+</para><para>See also <ref refid="classwx_wizard_1aacea5d1dc302604fc757bd1eb89b50f3" kindref="member">SetMinimumBitmapWidth()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wizard.h" line="469"/>
@@ -457,7 +457,7 @@
     <briefdescription>
 <para><ref refid="classwx_wizard" kindref="compound">wxWizard</ref> is the central class for implementing &apos;wizard-like&apos; dialogs. </para>    </briefdescription>
     <detaileddescription>
-<para>These dialogs are mostly familiar to Windows users and are nothing other than a sequence of &apos;pages&apos;, each displayed inside a dialog which has the buttons to navigate to the next (and previous) pages.</para><para>The wizards are typically used to decompose a complex dialog into several simple steps and are mainly useful to the novice users, hence it is important to keep them as simple as possible.</para><para>To show a wizard dialog, you must first create an instance of the <ref refid="classwx_wizard" kindref="compound">wxWizard</ref> class using either the non-default constructor or a default one followed by call to the <ref refid="classwx_wizard_1a9e862edc50c6319c6750f7503f106e79" kindref="member">wxWizard::Create</ref> function. Then you should add all pages you want the wizard to show and call <ref refid="classwx_wizard_1ae4ed7afb38e10d782a66a1daba8fa83d" kindref="member">wxWizard::RunWizard()</ref>. Finally, don&apos;t forget to call <computeroutput>&quot;wizard-&gt;Destroy()&quot;</computeroutput>, otherwise your application will hang on exit due to an undestroyed window.</para><para>You can supply a bitmap to display on the left of the wizard, either for all pages or for individual pages. If you need to have the bitmap resize to the height of the wizard, call <ref refid="classwx_wizard_1a862344eb45f192916e6b6ca83b588eb6" kindref="member">wxWizard::SetBitmapPlacement()</ref> and if necessary, <ref refid="classwx_wizard_1a7ec9f8483c4c79a76899f61d3719d51d" kindref="member">wxWizard::SetBitmapBackgroundColour()</ref> and <ref refid="classwx_wizard_1aacea5d1dc302604fc757bd1eb89b50f3" kindref="member">wxWizard::SetMinimumBitmapWidth()</ref>.</para><para>To make wizard pages scroll when the display is too small to fit the whole dialog, you can switch layout adaptation on globally with <ref refid="classwx_dialog_1a016cfd686f75bcfc5f7b6f127be74c7c" kindref="member">wxDialog::EnableLayoutAdaptation()</ref> or per dialog with <ref refid="classwx_dialog_1a9f949c545ca70571cec8cd2fcbfc0991" kindref="member">wxDialog::SetLayoutAdaptationMode()</ref>. For more about layout adaptation, see <ref refid="overview__dialog_1overview_dialog_autoscrolling" kindref="member">Automatic scrolling dialogs</ref>.</para><para><heading level="2">Events emitted by this class</heading>
+<para>These dialogs are mostly familiar to Windows users and are nothing other than a sequence of &apos;pages&apos;, each displayed inside a dialog which has the buttons to navigate to the next (and previous) pages.</para><para>The wizards are typically used to decompose a complex dialog into several simple steps and are mainly useful to the novice users, hence it is important to keep them as simple as possible.</para><para>To show a wizard dialog, you must first create an instance of the <ref refid="classwx_wizard" kindref="compound">wxWizard</ref> class using either the non-default constructor or a default one followed by call to the <ref refid="classwx_wizard_1a9e862edc50c6319c6750f7503f106e79" kindref="member">wxWizard::Create</ref> function. Then you should add all pages you want the wizard to show and call <ref refid="classwx_wizard_1ae4ed7afb38e10d782a66a1daba8fa83d" kindref="member">wxWizard::RunWizard()</ref>. Finally, don&apos;t forget to call <computeroutput>&quot;wizard-&gt;Destroy()&quot;</computeroutput>, otherwise your application will hang on exit due to an undestroyed window.</para><para>You can supply a bitmap to display on the left of the wizard, either for all pages or for individual pages. If you need to have the bitmap resize to the height of the wizard, call <ref refid="classwx_wizard_1a862344eb45f192916e6b6ca83b588eb6" kindref="member">wxWizard::SetBitmapPlacement()</ref> and if necessary, <ref refid="classwx_wizard_1a7ec9f8483c4c79a76899f61d3719d51d" kindref="member">wxWizard::SetBitmapBackgroundColour()</ref> and <ref refid="classwx_wizard_1aacea5d1dc302604fc757bd1eb89b50f3" kindref="member">wxWizard::SetMinimumBitmapWidth()</ref>.</para><para>To make wizard pages scroll when the display is too small to fit the whole dialog, you can switch layout adaptation on globally with <ref refid="classwx_dialog_1a016cfd686f75bcfc5f7b6f127be74c7c" kindref="member">wxDialog::EnableLayoutAdaptation()</ref> or per dialog with <ref refid="classwx_dialog_1a9f949c545ca70571cec8cd2fcbfc0991" kindref="member">wxDialog::SetLayoutAdaptationMode()</ref>. For more about layout adaptation, see <ref refid="overview_dialog_1overview_dialog_autoscrolling" kindref="member">Automatic scrolling dialogs</ref>.</para><para><heading level="2">Events emitted by this class</heading>
 </para><para>The following event handler macros redirect the events to member function handlers &apos;<bold>func</bold>&apos; with prototypes like: void<nonbreakablespace/>handlerFuncName(<ref refid="classwx_wizard_event" kindref="compound">wxWizardEvent</ref>&amp;<nonbreakablespace/>event)Event macros for events emitted by this class: For some events, Veto() can be called to prevent the event from happening. <itemizedlist>
 <listitem><para>EVT_WIZARD_PAGE_CHANGED(id,  func): The page has just been changed (this event cannot be vetoed). </para></listitem>
 <listitem><para>EVT_WIZARD_PAGE_CHANGING(id,  func): The page is being changed (this event can be vetoed). </para></listitem>
@@ -474,108 +474,108 @@
 <listitem><para>wxWIZARD_EX_HELPBUTTON: Shows a Help button using wxID_HELP. </para></listitem>
 </itemizedlist>
 See also <ref refid="classwx_dialog" kindref="compound">wxDialog</ref> for other extended styles.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__cmndlg" kindref="compound">Common Dialogs</ref></para><para><simplesect kind="see"><para><ref refid="classwx_wizard_event" kindref="compound">wxWizardEvent</ref>, <ref refid="classwx_wizard_page" kindref="compound">wxWizardPage</ref>, <ref refid="page__samples_1page_samples_wizard" kindref="member">Wizard Sample</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__cmndlg" kindref="compound">Common Dialogs</ref></para><para><simplesect kind="see"><para><ref refid="classwx_wizard_event" kindref="compound">wxWizardEvent</ref>, <ref refid="classwx_wizard_page" kindref="compound">wxWizardPage</ref>, <ref refid="page_samples_1page_samples_wizard" kindref="member">Wizard Sample</ref> </para></simplesect>
 </para></sect1>
     </detaileddescription>
     <inheritancegraph>
-      <node id="11601">
+      <node id="11662">
         <label>wxNonOwnedWindow</label>
         <link refid="classwx_non_owned_window"/>
-        <childnode refid="11602" relation="public-inheritance">
+        <childnode refid="11663" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11604">
+      <node id="11665">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="11603">
+      <node id="11664">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="11604" relation="public-inheritance">
+        <childnode refid="11665" relation="public-inheritance">
         </childnode>
-        <childnode refid="11605" relation="public-inheritance">
+        <childnode refid="11666" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11598">
+      <node id="11659">
         <label>wxWizard</label>
         <link refid="classwx_wizard"/>
-        <childnode refid="11599" relation="public-inheritance">
+        <childnode refid="11660" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11605">
+      <node id="11666">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="11602">
+      <node id="11663">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="11603" relation="public-inheritance">
+        <childnode refid="11664" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11599">
+      <node id="11660">
         <label>wxDialog</label>
         <link refid="classwx_dialog"/>
-        <childnode refid="11600" relation="public-inheritance">
+        <childnode refid="11661" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11600">
+      <node id="11661">
         <label>wxTopLevelWindow</label>
         <link refid="classwx_top_level_window"/>
-        <childnode refid="11601" relation="public-inheritance">
+        <childnode refid="11662" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="11609">
+      <node id="11670">
         <label>wxNonOwnedWindow</label>
         <link refid="classwx_non_owned_window"/>
-        <childnode refid="11610" relation="public-inheritance">
+        <childnode refid="11671" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11612">
+      <node id="11673">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="11613" relation="usage">
+        <childnode refid="11674" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="11611">
+      <node id="11672">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="11612" relation="public-inheritance">
+        <childnode refid="11673" relation="public-inheritance">
         </childnode>
-        <childnode refid="11614" relation="public-inheritance">
+        <childnode refid="11675" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11606">
+      <node id="11667">
         <label>wxWizard</label>
         <link refid="classwx_wizard"/>
-        <childnode refid="11607" relation="public-inheritance">
+        <childnode refid="11668" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11614">
+      <node id="11675">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="11610">
+      <node id="11671">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="11611" relation="public-inheritance">
+        <childnode refid="11672" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11607">
+      <node id="11668">
         <label>wxDialog</label>
         <link refid="classwx_dialog"/>
-        <childnode refid="11608" relation="public-inheritance">
+        <childnode refid="11669" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11608">
+      <node id="11669">
         <label>wxTopLevelWindow</label>
         <link refid="classwx_top_level_window"/>
-        <childnode refid="11609" relation="public-inheritance">
+        <childnode refid="11670" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11613">
+      <node id="11674">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
@@ -924,6 +924,7 @@ See also <ref refid="classwx_dialog" kindref="compound">wxDialog</ref> for other
       <member refid="classwx_window_1a81f23590239934fa10fded0566a65d8c" prot="public" virt="non-virtual"><scope>wxWizard</scope><name>SetPosition</name></member>
       <member refid="classwx_window_1a07f5f7ed3f78e0ef7b3dee3f4da81001" prot="public" virt="virtual"><scope>wxWizard</scope><name>SetPreviousHandler</name></member>
       <member refid="classwx_object_1afab780710f2adc1bb33310e27590140b" prot="public" virt="non-virtual"><scope>wxWizard</scope><name>SetRefData</name></member>
+      <member refid="classwx_top_level_window_1a82afa6f09dd5faef6330807ef59374e8" prot="public" virt="virtual"><scope>wxWizard</scope><name>SetRepresentedFilename</name></member>
       <member refid="classwx_dialog_1a0d04ed85ac5cd271a61514d446340673" prot="public" virt="non-virtual"><scope>wxWizard</scope><name>SetReturnCode</name></member>
       <member refid="classwx_top_level_window_1a98e95b1b10f44b80f9b29a03ab09a879" prot="public" virt="non-virtual"><scope>wxWizard</scope><name>SetRightMenu</name></member>
       <member refid="classwx_window_1aa842d59529f873683e55cd8392ec46e9" prot="public" virt="virtual"><scope>wxWizard</scope><name>SetScrollbar</name></member>

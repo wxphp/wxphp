@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_data_view_item_attr" kind="class" prot="public">
     <compoundname>wxDataViewItemAttr</compoundname>
     <includes local="no">wx/dataview.h</includes>
@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="571"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="568"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_item_attr_1a77799bbfeb4a2d6d2b8dfe1eed63d6b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -32,7 +32,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="576"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="573"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_item_attr_1a4dc2d65d49bf66f6eb82abeae3bdc2c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -49,7 +49,25 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="581"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="578"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_data_view_item_attr_1ae52c06a3fbd22c7b3f6c9310d9fef6be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxDataViewItemAttr::SetBackgroundColour</definition>
+        <argsstring>(const wxColour &amp;colour)</argsstring>
+        <name>SetBackgroundColour</name>
+        <param>
+          <type>const <ref refid="classwx_colour" kindref="compound">wxColour</ref> &amp;</type>
+          <declname>colour</declname>
+        </param>
+        <briefdescription>
+<para>Call this to set the background colour to use. </para>        </briefdescription>
+        <detaileddescription>
+<para>Currently this attribute is only supported in the generic version of <ref refid="classwx_data_view_ctrl" kindref="compound">wxDataViewCtrl</ref> and ignored by the native GTK+ and OS X implementations.</para><para><simplesect kind="since"><para>2.9.4 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="588"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_item_attr_1a4b97a2a572ed409ee487a5a01f550724" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -66,16 +84,17 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="586"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="593"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para>This class is used to indicate to a <ref refid="classwx_data_view_ctrl" kindref="compound">wxDataViewCtrl</ref> that a certain item (see <ref refid="classwx_data_view_item" kindref="compound">wxDataViewItem</ref>) has extra font attributes for its renderer. </para>    </briefdescription>
     <detaileddescription>
 <para>For this, it is required to override <ref refid="classwx_data_view_model_1aa90d4fbc48f42f3c2565a3843dd4c71b" kindref="member">wxDataViewModel::GetAttr</ref>.</para><para>Attributes are currently only supported by wxDataViewTextRendererText.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__dvc" kindref="compound">wxDataViewCtrl Related Classes</ref> </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="566" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" bodystart="565" bodyend="587"/>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__dvc" kindref="compound">wxDataViewCtrl Related Classes</ref> </para>    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="563" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" bodystart="562" bodyend="594"/>
     <listofallmembers>
+      <member refid="classwx_data_view_item_attr_1ae52c06a3fbd22c7b3f6c9310d9fef6be" prot="public" virt="non-virtual"><scope>wxDataViewItemAttr</scope><name>SetBackgroundColour</name></member>
       <member refid="classwx_data_view_item_attr_1a77799bbfeb4a2d6d2b8dfe1eed63d6b8" prot="public" virt="non-virtual"><scope>wxDataViewItemAttr</scope><name>SetBold</name></member>
       <member refid="classwx_data_view_item_attr_1a4dc2d65d49bf66f6eb82abeae3bdc2c1" prot="public" virt="non-virtual"><scope>wxDataViewItemAttr</scope><name>SetColour</name></member>
       <member refid="classwx_data_view_item_attr_1a4b97a2a572ed409ee487a5a01f550724" prot="public" virt="non-virtual"><scope>wxDataViewItemAttr</scope><name>SetItalic</name></member>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_mini_frame" kind="class" prot="public">
     <compoundname>wxMiniFrame</compoundname>
     <basecompoundref refid="classwx_frame" prot="public" virt="non-virtual">wxFrame</basecompoundref>
@@ -178,7 +178,7 @@
     <briefdescription>
 <para>A miniframe is a frame with a small title bar. </para>    </briefdescription>
     <detaileddescription>
-<para>It is suitable for floating toolbars that must not take up too much screen area.</para><para>An example of mini frame can be seen in the <ref refid="page__samples_1page_samples_dialogs" kindref="member">Dialogs Sample</ref> using the &quot;Mini frame&quot; command of the &quot;Generic dialogs&quot; submenu.</para><para><heading level="2">Styles</heading>
+<para>It is suitable for floating toolbars that must not take up too much screen area.</para><para>An example of mini frame can be seen in the <ref refid="page_samples_1page_samples_dialogs" kindref="member">Dialogs Sample</ref> using the &quot;Mini frame&quot; command of the &quot;Generic dialogs&quot; submenu.</para><para><heading level="2">Styles</heading>
 </para><para>This class supports the following styles: <itemizedlist>
 <listitem><para>wxICONIZE: Display the frame iconized (minimized) (Windows only). </para></listitem>
 <listitem><para>wxCAPTION: Puts a caption on the frame. </para></listitem>
@@ -193,107 +193,107 @@
 </itemizedlist>
 <simplesect kind="remark"><para>This class has miniframe functionality under Windows and GTK, i.e. the presence of mini frame will not be noted in the task bar and focus behaviour is different. On other platforms, it behaves like a normal frame.</para></simplesect>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__managedwnd" kindref="compound">Managed Windows</ref></para><para><simplesect kind="see"><para><ref refid="classwx_m_d_i_parent_frame" kindref="compound">wxMDIParentFrame</ref>, <ref refid="classwx_m_d_i_child_frame" kindref="compound">wxMDIChildFrame</ref>, <ref refid="classwx_frame" kindref="compound">wxFrame</ref>, <ref refid="classwx_dialog" kindref="compound">wxDialog</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__managedwnd" kindref="compound">Managed Windows</ref></para><para><simplesect kind="see"><para><ref refid="classwx_m_d_i_parent_frame" kindref="compound">wxMDIParentFrame</ref>, <ref refid="classwx_m_d_i_child_frame" kindref="compound">wxMDIChildFrame</ref>, <ref refid="classwx_frame" kindref="compound">wxFrame</ref>, <ref refid="classwx_dialog" kindref="compound">wxDialog</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7792">
+      <node id="7798">
         <label>wxNonOwnedWindow</label>
         <link refid="classwx_non_owned_window"/>
-        <childnode refid="7793" relation="public-inheritance">
+        <childnode refid="7799" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7795">
+      <node id="7801">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="7794">
+      <node id="7800">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="7795" relation="public-inheritance">
+        <childnode refid="7801" relation="public-inheritance">
         </childnode>
-        <childnode refid="7796" relation="public-inheritance">
+        <childnode refid="7802" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7796">
+      <node id="7802">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="7793">
+      <node id="7799">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="7794" relation="public-inheritance">
+        <childnode refid="7800" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7790">
+      <node id="7796">
         <label>wxFrame</label>
         <link refid="classwx_frame"/>
-        <childnode refid="7791" relation="public-inheritance">
+        <childnode refid="7797" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7789">
+      <node id="7795">
         <label>wxMiniFrame</label>
         <link refid="classwx_mini_frame"/>
-        <childnode refid="7790" relation="public-inheritance">
+        <childnode refid="7796" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7791">
+      <node id="7797">
         <label>wxTopLevelWindow</label>
         <link refid="classwx_top_level_window"/>
-        <childnode refid="7792" relation="public-inheritance">
+        <childnode refid="7798" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7800">
+      <node id="7806">
         <label>wxNonOwnedWindow</label>
         <link refid="classwx_non_owned_window"/>
-        <childnode refid="7801" relation="public-inheritance">
+        <childnode refid="7807" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7803">
+      <node id="7809">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="7804" relation="usage">
+        <childnode refid="7810" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="7802">
+      <node id="7808">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="7803" relation="public-inheritance">
+        <childnode refid="7809" relation="public-inheritance">
         </childnode>
-        <childnode refid="7805" relation="public-inheritance">
+        <childnode refid="7811" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7805">
+      <node id="7811">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="7801">
+      <node id="7807">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="7802" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="7798">
-        <label>wxFrame</label>
-        <link refid="classwx_frame"/>
-        <childnode refid="7799" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="7797">
-        <label>wxMiniFrame</label>
-        <link refid="classwx_mini_frame"/>
-        <childnode refid="7798" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="7799">
-        <label>wxTopLevelWindow</label>
-        <link refid="classwx_top_level_window"/>
-        <childnode refid="7800" relation="public-inheritance">
+        <childnode refid="7808" relation="public-inheritance">
         </childnode>
       </node>
       <node id="7804">
+        <label>wxFrame</label>
+        <link refid="classwx_frame"/>
+        <childnode refid="7805" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7803">
+        <label>wxMiniFrame</label>
+        <link refid="classwx_mini_frame"/>
+        <childnode refid="7804" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7805">
+        <label>wxTopLevelWindow</label>
+        <link refid="classwx_top_level_window"/>
+        <childnode refid="7806" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7810">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
@@ -605,6 +605,7 @@
       <member refid="classwx_window_1a81f23590239934fa10fded0566a65d8c" prot="public" virt="non-virtual"><scope>wxMiniFrame</scope><name>SetPosition</name></member>
       <member refid="classwx_window_1a07f5f7ed3f78e0ef7b3dee3f4da81001" prot="public" virt="virtual"><scope>wxMiniFrame</scope><name>SetPreviousHandler</name></member>
       <member refid="classwx_object_1afab780710f2adc1bb33310e27590140b" prot="public" virt="non-virtual"><scope>wxMiniFrame</scope><name>SetRefData</name></member>
+      <member refid="classwx_top_level_window_1a82afa6f09dd5faef6330807ef59374e8" prot="public" virt="virtual"><scope>wxMiniFrame</scope><name>SetRepresentedFilename</name></member>
       <member refid="classwx_top_level_window_1a98e95b1b10f44b80f9b29a03ab09a879" prot="public" virt="non-virtual"><scope>wxMiniFrame</scope><name>SetRightMenu</name></member>
       <member refid="classwx_window_1aa842d59529f873683e55cd8392ec46e9" prot="public" virt="virtual"><scope>wxMiniFrame</scope><name>SetScrollbar</name></member>
       <member refid="classwx_window_1afbf4dc9064cf70cfe6884554b97a27bf" prot="public" virt="virtual"><scope>wxMiniFrame</scope><name>SetScrollPos</name></member>

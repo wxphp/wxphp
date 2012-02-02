@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_file_data_object" kind="class" prot="public">
     <compoundname>wxFileDataObject</compoundname>
     <basecompoundref refid="classwx_data_object_simple" prot="public" virt="non-virtual">wxDataObjectSimple</basecompoundref>
@@ -54,41 +54,41 @@
     <detaileddescription>
 <para>The program works with it just as if it were a list of absolute file names, but internally it uses the same format as Explorer and other compatible programs under Windows or GNOME/KDE filemanager under Unix which makes it possible to receive files from them using this class.</para><para><simplesect kind="warning"><para>Under all non-Windows platforms this class is currently &quot;input-only&quot;, i.e. you can receive the files from another application, but copying (or dragging) file(s) from a wxWidgets application is not currently supported. PS: GTK2 should work as well.</para></simplesect>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__dnd" kindref="compound">Clipboard and Drag &amp; Drop</ref></para><para><simplesect kind="see"><para><ref refid="classwx_data_object" kindref="compound">wxDataObject</ref>, <ref refid="classwx_data_object_simple" kindref="compound">wxDataObjectSimple</ref>, <ref refid="classwx_text_data_object" kindref="compound">wxTextDataObject</ref>, <ref refid="classwx_bitmap_data_object" kindref="compound">wxBitmapDataObject</ref>, <ref refid="classwx_data_object" kindref="compound">wxDataObject</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__dnd" kindref="compound">Clipboard and Drag &amp; Drop</ref></para><para><simplesect kind="see"><para><ref refid="classwx_data_object" kindref="compound">wxDataObject</ref>, <ref refid="classwx_data_object_simple" kindref="compound">wxDataObjectSimple</ref>, <ref refid="classwx_text_data_object" kindref="compound">wxTextDataObject</ref>, <ref refid="classwx_bitmap_data_object" kindref="compound">wxBitmapDataObject</ref>, <ref refid="classwx_data_object" kindref="compound">wxDataObject</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="6164">
+      <node id="6168">
         <label>wxDataObject</label>
         <link refid="classwx_data_object"/>
       </node>
-      <node id="6162">
+      <node id="6166">
         <label>wxFileDataObject</label>
         <link refid="classwx_file_data_object"/>
-        <childnode refid="6163" relation="public-inheritance">
+        <childnode refid="6167" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6163">
+      <node id="6167">
         <label>wxDataObjectSimple</label>
         <link refid="classwx_data_object_simple"/>
-        <childnode refid="6164" relation="public-inheritance">
+        <childnode refid="6168" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="6167">
+      <node id="6171">
         <label>wxDataObject</label>
         <link refid="classwx_data_object"/>
       </node>
-      <node id="6165">
+      <node id="6169">
         <label>wxFileDataObject</label>
         <link refid="classwx_file_data_object"/>
-        <childnode refid="6166" relation="public-inheritance">
+        <childnode refid="6170" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6166">
+      <node id="6170">
         <label>wxDataObjectSimple</label>
         <link refid="classwx_data_object_simple"/>
-        <childnode refid="6167" relation="public-inheritance">
+        <childnode refid="6171" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>

@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="page_copyright" kind="page">
+    <compoundname>page_copyright</compoundname>
+    <title>Copyrights and Licenses</title>
+    <innerpage refid="page_copyright_wxlicense">wxWindows Library Licence</innerpage>
+    <innerpage refid="page_copyright_gnulicense">GNU Library General Public License</innerpage>
+    <detaileddescription>
+<para>Copyright (c) 1992-2008 Julian Smart, Robert Roebling, Vadim Zeitlin and other members of the wxWidgets team</para><para>Portions (c) 1996 Artificial Intelligence Applications Institute</para><para>Please also see the wxWindows licence files (preamble.txt, lgpl.txt, gpl.txt, licence.txt, licendoc.txt) for conditions of software and documentation use. Note that we use the old name wxWindows in the licence, pending recognition of the new name by OSI.</para><para><itemizedlist>
+<listitem><para><ref refid="page_copyright_wxlicense" kindref="compound">wxWindows Library Licence</ref> </para></listitem>
+<listitem><para><ref refid="page_copyright_gnulicense" kindref="compound">GNU Library General Public License</ref> </para></listitem>
+</itemizedlist>
+</para>    </detaileddescription>
+  </compounddef>
+</doxygen>

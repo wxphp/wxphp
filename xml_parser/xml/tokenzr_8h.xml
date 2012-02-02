@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="tokenzr_8h" kind="file">
     <compoundname>tokenzr.h</compoundname>
     <innerclass refid="classwx_string_tokenizer" prot="public">wxStringTokenizer</innerclass>
@@ -82,7 +82,7 @@
 <para>This is a convenience function wrapping <ref refid="classwx_string_tokenizer" kindref="compound">wxStringTokenizer</ref> which simply returns all tokens found in the given <emphasis>str</emphasis> as an array. </para>        </briefdescription>
         <detaileddescription>
 <para>Please see <ref refid="classwx_string_tokenizer_1a59aa6a8673730d97a235c9a77ee93866" kindref="member">wxStringTokenizer::wxStringTokenizer</ref> for the description of the other parameters.</para><para><simplesect kind="return"><para>The array with the parsed tokens.</para></simplesect>
-Include file: <verbatim>#include &lt;wx/string.h&gt; </verbatim> </para>        </detaileddescription>
+Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/string.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tokenzr.h" line="180"/>

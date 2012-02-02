@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_stream_buffer" kind="class" prot="public">
     <compoundname>wxStreamBuffer</compoundname>
     <includes local="no">wx/stream.h</includes>
@@ -581,7 +581,7 @@ One stream can have many stream buffers but only one is used internally to pass 
 <para><ref refid="classwx_stream_buffer" kindref="compound">wxStreamBuffer</ref> is a cache manager for <ref refid="classwx_stream_base" kindref="compound">wxStreamBase</ref>: it manages a stream buffer linked to a stream. </para>    </briefdescription>
     <detaileddescription>
 <para>Each stream always has one autoinitialized stream buffer, but you may attach more of them to the same stream.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__streams" kindref="compound">Streams</ref></para><para><simplesect kind="see"><para><ref refid="classwx_stream_base" kindref="compound">wxStreamBase</ref>, <ref refid="overview__stream" kindref="compound">Stream classes overview</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__streams" kindref="compound">Streams</ref></para><para><simplesect kind="see"><para><ref refid="classwx_stream_base" kindref="compound">wxStreamBase</ref>, <ref refid="overview_stream" kindref="compound">Stream classes overview</ref> </para></simplesect>
 </para>    </detaileddescription>
     <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stream.h" line="151" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stream.h" bodystart="150" bodyend="442"/>
     <listofallmembers>

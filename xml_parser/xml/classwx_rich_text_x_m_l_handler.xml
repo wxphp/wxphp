@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_rich_text_x_m_l_handler" kind="class" prot="public">
     <compoundname>wxRichTextXMLHandler</compoundname>
     <basecompoundref refid="classwx_rich_text_file_handler" prot="public" virt="non-virtual">wxRichTextFileHandler</basecompoundref>
@@ -323,56 +323,56 @@
 <para>The following flags can be used with this handler, via the handler&apos;s <ref refid="classwx_rich_text_file_handler_1adb45b2376036729d68f9d572f8d1b15f" kindref="member">SetFlags()</ref> function or the buffer or control&apos;s SetHandlerFlags() function:</para><para><itemizedlist>
 <listitem><para>wxRICHTEXT_HANDLER_INCLUDE_STYLESHEET Include the style sheet in loading and saving operations.</para></listitem></itemizedlist>
 </para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxrichtext" kindref="member">wxRichText</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__richtext" kindref="compound">Rich Text</ref> </para></sect1>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxrichtext" kindref="member">wxRichText</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__richtext" kindref="compound">Rich Text</ref> </para></sect1>
     </detaileddescription>
     <inheritancegraph>
-      <node id="9970">
+      <node id="10030">
         <label>wxRichTextXMLHandler</label>
         <link refid="classwx_rich_text_x_m_l_handler"/>
-        <childnode refid="9971" relation="public-inheritance">
+        <childnode refid="10031" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9971">
+      <node id="10031">
         <label>wxRichTextFileHandler</label>
         <link refid="classwx_rich_text_file_handler"/>
-        <childnode refid="9972" relation="public-inheritance">
+        <childnode refid="10032" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9972">
+      <node id="10032">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="9977">
+      <node id="10037">
         <label>wxString</label>
         <link refid="classwx_string"/>
       </node>
-      <node id="9973">
+      <node id="10033">
         <label>wxRichTextXMLHandler</label>
         <link refid="classwx_rich_text_x_m_l_handler"/>
-        <childnode refid="9974" relation="public-inheritance">
+        <childnode refid="10034" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9974">
+      <node id="10034">
         <label>wxRichTextFileHandler</label>
         <link refid="classwx_rich_text_file_handler"/>
-        <childnode refid="9975" relation="public-inheritance">
+        <childnode refid="10035" relation="public-inheritance">
         </childnode>
-        <childnode refid="9977" relation="usage">
+        <childnode refid="10037" relation="usage">
           <edgelabel>m_encoding</edgelabel>
           <edgelabel>m_extension</edgelabel>
           <edgelabel>m_name</edgelabel>
         </childnode>
       </node>
-      <node id="9975">
+      <node id="10035">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="9976" relation="usage">
+        <childnode refid="10036" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="9976">
+      <node id="10036">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

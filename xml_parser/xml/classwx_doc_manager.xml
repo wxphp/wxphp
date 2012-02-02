@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_doc_manager" kind="class" prot="public">
     <compoundname>wxDocManager</compoundname>
     <basecompoundref refid="classwx_evt_handler" prot="public" virt="non-virtual">wxEvtHandler</basecompoundref>
@@ -861,7 +861,7 @@
         <briefdescription>
 <para>Under Windows, pops up a file selector with a list of filters corresponding to document templates. </para>        </briefdescription>
         <detaileddescription>
-<para>The <ref refid="classwx_doc_template" kindref="compound">wxDocTemplate</ref> corresponding to the selected file&apos;s extension is returned.</para><para>On other platforms, if there is more than one document template a choice list is popped up, followed by a file selector.</para><para>This function is used in <ref refid="classwx_doc_manager_1a9464ff43bbb7095ce5fdb2fa60633698" kindref="member">CreateDocument()</ref>.</para><para><bold>wxPerl Note:</bold> In wxPerl <emphasis>templates</emphasis> is a reference to a list of templates. If you override this method in your document manager it must return two values, eg:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(doctemplate,<sp/>path)<sp/>=<sp/>My::DocManager-&gt;<ref refid="classwx_doc_manager_1a453a23981a95bcee042f6e23bd762c7a" kindref="member" tooltip="Under Windows, pops up a file selector with a list of filters corresponding to document...">SelectDocumentPath</ref>(...);</highlight></codeline>
+<para>The <ref refid="classwx_doc_template" kindref="compound">wxDocTemplate</ref> corresponding to the selected file&apos;s extension is returned.</para><para>On other platforms, if there is more than one document template a choice list is popped up, followed by a file selector.</para><para>This function is used in <ref refid="classwx_doc_manager_1a9464ff43bbb7095ce5fdb2fa60633698" kindref="member">CreateDocument()</ref>.</para><para><bold>wxPerl Note:</bold> In wxPerl <emphasis>templates</emphasis> is a reference to a list of templates. If you override this method in your document manager it must return two values, eg:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(doctemplate,<sp/>path)<sp/>=<sp/>My::DocManager-&gt;<ref refid="classwx_doc_manager_1a453a23981a95bcee042f6e23bd762c7a" kindref="member" tooltip="Under Windows, pops up a file selector with a list of filters corresponding to document templates...">SelectDocumentPath</ref>(...);</highlight></codeline>
 </programlisting> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -1041,56 +1041,56 @@
 <para>The <ref refid="classwx_doc_manager" kindref="compound">wxDocManager</ref> class is part of the document/view framework supported by wxWidgets, and cooperates with the <ref refid="classwx_view" kindref="compound">wxView</ref>, <ref refid="classwx_document" kindref="compound">wxDocument</ref> and <ref refid="classwx_doc_template" kindref="compound">wxDocTemplate</ref> classes. </para>    </briefdescription>
     <detaileddescription>
 <para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__docview" kindref="compound">Document/View Framework</ref></para><para><simplesect kind="see"><para><ref refid="overview__docview_1overview_docview_wxdocmanager" kindref="member">wxDocManager overview</ref>, <ref refid="classwx_document" kindref="compound">wxDocument</ref>, <ref refid="classwx_view" kindref="compound">wxView</ref>, <ref refid="classwx_doc_template" kindref="compound">wxDocTemplate</ref>, <ref refid="classwx_file_history" kindref="compound">wxFileHistory</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__docview" kindref="compound">Document/View Framework</ref></para><para><simplesect kind="see"><para><ref refid="overview_docview_1overview_docview_wxdocmanager" kindref="member">wxDocManager overview</ref>, <ref refid="classwx_document" kindref="compound">wxDocument</ref>, <ref refid="classwx_view" kindref="compound">wxView</ref>, <ref refid="classwx_doc_template" kindref="compound">wxDocTemplate</ref>, <ref refid="classwx_file_history" kindref="compound">wxFileHistory</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="5683">
+      <node id="5687">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="5682">
+      <node id="5686">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="5683" relation="public-inheritance">
+        <childnode refid="5687" relation="public-inheritance">
         </childnode>
-        <childnode refid="5684" relation="public-inheritance">
+        <childnode refid="5688" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5684">
+      <node id="5688">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="5681">
+      <node id="5685">
         <label>wxDocManager</label>
         <link refid="classwx_doc_manager"/>
-        <childnode refid="5682" relation="public-inheritance">
+        <childnode refid="5686" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="5693">
+      <node id="5697">
         <label>wxString</label>
         <link refid="classwx_string"/>
       </node>
-      <node id="5694">
+      <node id="5698">
         <label>wxClassInfo</label>
         <link refid="classwx_class_info"/>
       </node>
-      <node id="5695">
+      <node id="5699">
         <label>wxCommandProcessor</label>
         <link refid="classwx_command_processor"/>
-        <childnode refid="5687" relation="public-inheritance">
+        <childnode refid="5691" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5692">
+      <node id="5696">
         <label>wxDocTemplate</label>
         <link refid="classwx_doc_template"/>
-        <childnode refid="5687" relation="public-inheritance">
+        <childnode refid="5691" relation="public-inheritance">
         </childnode>
-        <childnode refid="5692" relation="usage">
+        <childnode refid="5696" relation="usage">
           <edgelabel>m_documentManager</edgelabel>
         </childnode>
-        <childnode refid="5693" relation="usage">
+        <childnode refid="5697" relation="usage">
           <edgelabel>m_defaultExt</edgelabel>
           <edgelabel>m_directory</edgelabel>
           <edgelabel>m_viewTypeName</edgelabel>
@@ -1098,108 +1098,108 @@
           <edgelabel>m_description</edgelabel>
           <edgelabel>m_fileFilter</edgelabel>
         </childnode>
-        <childnode refid="5694" relation="usage">
+        <childnode refid="5698" relation="usage">
           <edgelabel>m_docClassInfo</edgelabel>
           <edgelabel>m_viewClassInfo</edgelabel>
         </childnode>
       </node>
-      <node id="5698">
+      <node id="5702">
         <label>wxNonOwnedWindow</label>
         <link refid="classwx_non_owned_window"/>
-        <childnode refid="5699" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="5687">
-        <label>wxObject</label>
-        <link refid="classwx_object"/>
-        <childnode refid="5688" relation="usage">
-          <edgelabel>m_refData</edgelabel>
-        </childnode>
-      </node>
-      <node id="5690">
-        <label>wxView</label>
-        <link refid="classwx_view"/>
-        <childnode refid="5686" relation="public-inheritance">
-        </childnode>
-        <childnode refid="5691" relation="usage">
-          <edgelabel>m_viewDocument</edgelabel>
-        </childnode>
-        <childnode refid="5693" relation="usage">
-          <edgelabel>m_viewTypeName</edgelabel>
-        </childnode>
-        <childnode refid="5696" relation="usage">
-          <edgelabel>m_viewFrame</edgelabel>
-        </childnode>
-      </node>
-      <node id="5686">
-        <label>wxEvtHandler</label>
-        <link refid="classwx_evt_handler"/>
-        <childnode refid="5687" relation="public-inheritance">
-        </childnode>
-        <childnode refid="5689" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="5689">
-        <label>wxTrackable</label>
-        <link refid="classwx_trackable"/>
-      </node>
-      <node id="5699">
-        <label>wxWindow</label>
-        <link refid="classwx_window"/>
-        <childnode refid="5686" relation="public-inheritance">
+        <childnode refid="5703" relation="public-inheritance">
         </childnode>
       </node>
       <node id="5691">
-        <label>wxDocument</label>
-        <link refid="classwx_document"/>
-        <childnode refid="5686" relation="public-inheritance">
-        </childnode>
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
         <childnode refid="5692" relation="usage">
-          <edgelabel>m_documentTemplate</edgelabel>
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="5694">
+        <label>wxView</label>
+        <link refid="classwx_view"/>
+        <childnode refid="5690" relation="public-inheritance">
         </childnode>
         <childnode refid="5695" relation="usage">
+          <edgelabel>m_viewDocument</edgelabel>
+        </childnode>
+        <childnode refid="5697" relation="usage">
+          <edgelabel>m_viewTypeName</edgelabel>
+        </childnode>
+        <childnode refid="5700" relation="usage">
+          <edgelabel>m_viewFrame</edgelabel>
+        </childnode>
+      </node>
+      <node id="5690">
+        <label>wxEvtHandler</label>
+        <link refid="classwx_evt_handler"/>
+        <childnode refid="5691" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5693" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5693">
+        <label>wxTrackable</label>
+        <link refid="classwx_trackable"/>
+      </node>
+      <node id="5703">
+        <label>wxWindow</label>
+        <link refid="classwx_window"/>
+        <childnode refid="5690" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5695">
+        <label>wxDocument</label>
+        <link refid="classwx_document"/>
+        <childnode refid="5690" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5696" relation="usage">
+          <edgelabel>m_documentTemplate</edgelabel>
+        </childnode>
+        <childnode refid="5699" relation="usage">
           <edgelabel>m_commandProcessor</edgelabel>
         </childnode>
-        <childnode refid="5693" relation="usage">
+        <childnode refid="5697" relation="usage">
           <edgelabel>m_documentTypeName</edgelabel>
           <edgelabel>m_documentTitle</edgelabel>
           <edgelabel>m_documentFile</edgelabel>
         </childnode>
       </node>
-      <node id="5696">
+      <node id="5700">
         <label>wxFrame</label>
         <link refid="classwx_frame"/>
-        <childnode refid="5697" relation="public-inheritance">
+        <childnode refid="5701" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5700">
+      <node id="5704">
         <label>wxFileHistory</label>
         <link refid="classwx_file_history"/>
-        <childnode refid="5687" relation="public-inheritance">
+        <childnode refid="5691" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5697">
+      <node id="5701">
         <label>wxTopLevelWindow</label>
         <link refid="classwx_top_level_window"/>
-        <childnode refid="5698" relation="public-inheritance">
+        <childnode refid="5702" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5685">
+      <node id="5689">
         <label>wxDocManager</label>
         <link refid="classwx_doc_manager"/>
-        <childnode refid="5686" relation="public-inheritance">
+        <childnode refid="5690" relation="public-inheritance">
         </childnode>
-        <childnode refid="5690" relation="usage">
+        <childnode refid="5694" relation="usage">
           <edgelabel>m_currentView</edgelabel>
         </childnode>
-        <childnode refid="5700" relation="usage">
+        <childnode refid="5704" relation="usage">
           <edgelabel>m_fileHistory</edgelabel>
         </childnode>
-        <childnode refid="5693" relation="usage">
+        <childnode refid="5697" relation="usage">
           <edgelabel>m_lastDirectory</edgelabel>
         </childnode>
       </node>
-      <node id="5688">
+      <node id="5692">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

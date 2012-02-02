@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_preview_canvas" kind="class" prot="public">
     <compoundname>wxPreviewCanvas</compoundname>
     <basecompoundref refid="classwx_scrolled" prot="public" virt="non-virtual">wxScrolled&lt; wxPanel &gt;</basecompoundref>
@@ -81,29 +81,29 @@
 <para>A preview canvas is the default canvas used by the print preview system to display the preview. </para>    </briefdescription>
     <detaileddescription>
 <para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__printing" kindref="compound">Printing Framework</ref></para><para><simplesect kind="see"><para><ref refid="classwx_preview_frame" kindref="compound">wxPreviewFrame</ref>, <ref refid="classwx_preview_control_bar" kindref="compound">wxPreviewControlBar</ref>, <ref refid="classwx_print_preview" kindref="compound">wxPrintPreview</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__printing" kindref="compound">Printing Framework</ref></para><para><simplesect kind="see"><para><ref refid="classwx_preview_frame" kindref="compound">wxPreviewFrame</ref>, <ref refid="classwx_preview_control_bar" kindref="compound">wxPreviewControlBar</ref>, <ref refid="classwx_print_preview" kindref="compound">wxPrintPreview</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="8738">
+      <node id="8746">
         <label>wxScrolledWindow</label>
         <link refid="classwx_scrolled"/>
       </node>
-      <node id="8737">
+      <node id="8745">
         <label>wxPreviewCanvas</label>
         <link refid="classwx_preview_canvas"/>
-        <childnode refid="8738" relation="public-inheritance">
+        <childnode refid="8746" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="8740">
+      <node id="8748">
         <label>wxScrolledWindow</label>
         <link refid="classwx_scrolled"/>
       </node>
-      <node id="8739">
+      <node id="8747">
         <label>wxPreviewCanvas</label>
         <link refid="classwx_preview_canvas"/>
-        <childnode refid="8740" relation="public-inheritance">
+        <childnode refid="8748" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>

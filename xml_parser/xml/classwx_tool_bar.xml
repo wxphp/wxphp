@@ -1,11 +1,10 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_tool_bar" kind="class" prot="public">
     <compoundname>wxToolBar</compoundname>
     <basecompoundref refid="classwx_control" prot="public" virt="non-virtual">wxControl</basecompoundref>
     <includes local="no">wx/toolbar.h</includes>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_tool_bar_1acd25fec352f66fb174f7f81a7d834b21" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>wxToolBarToolBase *</type>
         <definition>virtual wxToolBarToolBase* wxToolBar::AddTool</definition>
@@ -217,7 +216,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_tool_bar_1ae286b9b2736021d69b64022b3b7d3bb9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>wxToolBarToolBase *</type>
         <definition>wxToolBarToolBase* wxToolBar::InsertTool</definition>
@@ -295,7 +293,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
       <memberdef kind="function" id="classwx_tool_bar_1af35993e6b491f619b810fbcf084f44e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
         <definition>virtual void wxToolBar::SetMargins</definition>
@@ -1201,7 +1198,7 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000057"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This is the old way of detecting tool right clicks; although it will still work, you should use the EVT_TOOL_RCLICKED() macro instead.</para></xrefdescription></xrefsect>Called when the user clicks on a tool with the right mouse button. The programmer should override this function to detect right tool clicks.</para><para><parameterlist kind="param"><parameteritem>
+<para><xrefsect id="deprecated_1_deprecated000057"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This is the old way of detecting tool right clicks; although it will still work, you should use the EVT_TOOL_RCLICKED() macro instead.</para></xrefdescription></xrefsect></para><para>Called when the user clicks on a tool with the right mouse button. The programmer should override this function to detect right tool clicks.</para><para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>toolId</parametername>
 </parameternamelist>
@@ -1604,7 +1601,7 @@
 <listitem><para>wxTB_BOTTOM: Align the toolbar at the bottom of parent window. </para></listitem>
 <listitem><para>wxTB_RIGHT: Align the toolbar at the right side of parent window. </para></listitem>
 </itemizedlist>
-See also <ref refid="overview__windowstyles" kindref="compound">Window Styles</ref>. Note that the wxMSW native toolbar ignores <computeroutput>wxTB_NOICONS</computeroutput> style. Also, toggling the <computeroutput>wxTB_TEXT</computeroutput> works only if the style was initially on.</para><para><heading level="2">Events emitted by this class</heading>
+See also <ref refid="overview_windowstyles" kindref="compound">Window Styles</ref>. Note that the wxMSW native toolbar ignores <computeroutput>wxTB_NOICONS</computeroutput> style. Also, toggling the <computeroutput>wxTB_TEXT</computeroutput> works only if the style was initially on.</para><para><heading level="2">Events emitted by this class</heading>
 </para><para>The following event handler macros redirect the events to member function handlers &apos;<bold>func</bold>&apos; with prototypes like: void<nonbreakablespace/>handlerFuncName(<ref refid="classwx_command_event" kindref="compound">wxCommandEvent</ref>&amp;<nonbreakablespace/>event)Event macros for events emitted by this class: <itemizedlist>
 <listitem><para>EVT_TOOL(id,  func): Process a <computeroutput>wxEVT_COMMAND_TOOL_CLICKED</computeroutput> event (a synonym for <computeroutput>wxEVT_COMMAND_MENU_SELECTED</computeroutput>). Pass the id of the tool. </para></listitem>
 <listitem><para>EVT_MENU(id,  func): The same as EVT_TOOL(). </para></listitem>
@@ -1616,83 +1613,83 @@ See also <ref refid="overview__windowstyles" kindref="compound">Window Styles</r
 <listitem><para>EVT_TOOL_DROPDOWN(id,  func): Process a <computeroutput>wxEVT_COMMAND_TOOL_DROPDOWN_CLICKED</computeroutput> event. If unhandled, displays the default dropdown menu set using <ref refid="classwx_tool_bar_1a77e36541602e9c0f7daa4e9bf8b6e33e" kindref="member">wxToolBar::SetDropdownMenu()</ref>. </para></listitem>
 </itemizedlist>
 The toolbar class emits menu commands in the same way that a frame menubar does, so you can use one EVT_MENU() macro for both a menu item and a toolbar button. The event handler functions take a <ref refid="classwx_command_event" kindref="compound">wxCommandEvent</ref> argument. For most event macros, the identifier of the tool is passed, but for EVT_TOOL_ENTER() the toolbar window identifier is passed and the tool identifier is retrieved from the <ref refid="classwx_command_event" kindref="compound">wxCommandEvent</ref>. This is because the identifier may be <computeroutput>wxID_ANY</computeroutput> when the mouse moves off a tool, and <computeroutput>wxID_ANY</computeroutput> is not allowed as an identifier in the event system.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__miscwnd" kindref="compound">Miscellaneous Windows</ref></para><para><simplesect kind="see"><para><ref refid="overview__toolbar" kindref="compound">Toolbar Overview</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__miscwnd" kindref="compound">Miscellaneous Windows</ref></para><para><simplesect kind="see"><para><ref refid="overview_toolbar" kindref="compound">Toolbar Overview</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10864">
+      <node id="10925">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="10863">
+      <node id="10924">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="10864" relation="public-inheritance">
+        <childnode refid="10925" relation="public-inheritance">
         </childnode>
-        <childnode refid="10865" relation="public-inheritance">
+        <childnode refid="10926" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10860">
+      <node id="10921">
         <label>wxToolBar</label>
         <link refid="classwx_tool_bar"/>
-        <childnode refid="10861" relation="public-inheritance">
+        <childnode refid="10922" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10865">
+      <node id="10926">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="10861">
+      <node id="10922">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="10862" relation="public-inheritance">
+        <childnode refid="10923" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10862">
+      <node id="10923">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="10863" relation="public-inheritance">
+        <childnode refid="10924" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10870">
+      <node id="10931">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="10871" relation="usage">
+        <childnode refid="10932" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="10869">
+      <node id="10930">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="10870" relation="public-inheritance">
+        <childnode refid="10931" relation="public-inheritance">
         </childnode>
-        <childnode refid="10872" relation="public-inheritance">
+        <childnode refid="10933" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10866">
+      <node id="10927">
         <label>wxToolBar</label>
         <link refid="classwx_tool_bar"/>
-        <childnode refid="10867" relation="public-inheritance">
+        <childnode refid="10928" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10872">
+      <node id="10933">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="10867">
+      <node id="10928">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="10868" relation="public-inheritance">
+        <childnode refid="10929" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10868">
+      <node id="10929">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="10869" relation="public-inheritance">
+        <childnode refid="10930" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10871">
+      <node id="10932">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

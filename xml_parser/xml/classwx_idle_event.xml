@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_idle_event" kind="class" prot="public">
     <compoundname>wxIdleEvent</compoundname>
     <basecompoundref refid="classwx_event" prot="public" virt="non-virtual">wxEvent</basecompoundref>
@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3476"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3497"/>
       </memberdef>
       <memberdef kind="function" id="classwx_idle_event_1a914b7316db91fb71d21c899048666eca" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -30,7 +30,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3493"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3514"/>
       </memberdef>
       <memberdef kind="function" id="classwx_idle_event_1a6fbe979090c15ba40e6509d9c41f2f78" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -49,7 +49,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3508"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3529"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -65,7 +65,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3485"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3506"/>
       </memberdef>
       <memberdef kind="function" id="classwx_idle_event_1a655610b1a5a1c668efc7d475313af2e3" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -90,7 +90,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3518"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3539"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -101,52 +101,52 @@
 <listitem><para>EVT_IDLE(func): Process a <computeroutput>wxEVT_IDLE</computeroutput> event. </para></listitem>
 </itemizedlist>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="overview__events" kindref="compound">Events and Event Handling</ref>, <ref refid="classwx_update_u_i_event" kindref="compound">wxUpdateUIEvent</ref>, <ref refid="classwx_window_1a6b5654c0c6c6245d592c279521f7099c" kindref="member">wxWindow::OnInternalIdle</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="overview_events" kindref="compound">Events and Event Handling</ref>, <ref refid="classwx_update_u_i_event" kindref="compound">wxUpdateUIEvent</ref>, <ref refid="classwx_window_1a6b5654c0c6c6245d592c279521f7099c" kindref="member">wxWindow::OnInternalIdle</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7231">
+      <node id="7235">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="7229">
+      <node id="7233">
         <label>wxIdleEvent</label>
         <link refid="classwx_idle_event"/>
-        <childnode refid="7230" relation="public-inheritance">
+        <childnode refid="7234" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7230">
+      <node id="7234">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="7231" relation="public-inheritance">
+        <childnode refid="7235" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7234">
+      <node id="7238">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="7235" relation="usage">
+        <childnode refid="7239" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="7232">
+      <node id="7236">
         <label>wxIdleEvent</label>
         <link refid="classwx_idle_event"/>
-        <childnode refid="7233" relation="public-inheritance">
+        <childnode refid="7237" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7233">
+      <node id="7237">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="7234" relation="public-inheritance">
+        <childnode refid="7238" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7235">
+      <node id="7239">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3471" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="3470" bodyend="3519"/>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3492" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="3491" bodyend="3540"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxIdleEvent</scope><name>AllocExclusive</name></member>
       <member refid="classwx_event_1a26878097a702e8d0368da150125d4158" prot="public" virt="pure-virtual"><scope>wxIdleEvent</scope><name>Clone</name></member>

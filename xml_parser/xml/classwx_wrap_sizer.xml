@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_wrap_sizer" kind="class" prot="public">
     <compoundname>wxWrapSizer</compoundname>
     <basecompoundref refid="classwx_box_sizer" prot="public" virt="non-virtual">wxBoxSizer</basecompoundref>
@@ -26,7 +26,7 @@
 <para><emphasis>orient</emphasis> determines the primary direction of the sizer (the most common case being <computeroutput>wxHORIZONTAL</computeroutput>). The flags parameter can be a combination of the values <computeroutput>wxEXTEND_LAST_ON_EACH_LINE</computeroutput> which will cause the last item on each line to use any remaining space on that line and <computeroutput>wxREMOVE_LEADING_SPACES</computeroutput> which removes any spacer elements from the beginning of a row.</para><para>Both of these flags are on by default. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wrapsizer.h" line="40"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wrapsizer.h" line="48"/>
       </memberdef>
       <memberdef kind="function" id="classwx_wrap_sizer_1a37961a3c5eb8f0393d035e899a17664c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -52,7 +52,7 @@
 <para>This is the mechanism by which sizers can inform sub-items of the first determined size component. The sub-item can then better determine its size requirements.</para><para>Returns true if the information was used (and the sub-item min size was updated). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wrapsizer.h" line="53"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wrapsizer.h" line="61"/>
       </memberdef>
       <memberdef kind="function" id="classwx_wrap_sizer_1af26c69849c7d91b7bb0976e6cfed90ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -66,7 +66,7 @@
 <para>It is used internally only and must not be called by the user (call <ref refid="classwx_sizer_1a1ea8589882944f8ac78b6ff8abde1554" kindref="member">Layout()</ref> if you want to resize). Documented for information. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wrapsizer.h" line="55"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wrapsizer.h" line="63"/>
       </memberdef>
       <memberdef kind="function" id="classwx_wrap_sizer_1adb0c0f62bae28636b1766bcd51689386" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
@@ -80,7 +80,7 @@
 <para>It is used internally only and must not be called by the user. Documented for information. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wrapsizer.h" line="56"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wrapsizer.h" line="64"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-func">
@@ -99,71 +99,71 @@
 <para>This method is used to determine whether the given <emphasis>item</emphasis> should be considered to be a spacer for the purposes of <computeroutput>wxREMOVE_LEADING_SPACES</computeroutput> implementation. By default only returns true for the real spacers. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wrapsizer.h" line="67"/>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wrapsizer.h" line="75"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para>A wrap sizer lays out its items in a single line, like a box sizer -- as long as there is space available in that direction. </para>    </briefdescription>
     <detaileddescription>
 <para>Once all available space in the primary direction has been used, a new line is added and items are added there.</para><para>So a wrap sizer has a primary orientation for adding items, and adds lines as needed in the secondary direction.</para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__winlayout" kindref="compound">Window Layout</ref></para><para><simplesect kind="see"><para><ref refid="classwx_box_sizer" kindref="compound">wxBoxSizer</ref>, <ref refid="classwx_sizer" kindref="compound">wxSizer</ref>, <ref refid="overview__sizer" kindref="compound">Sizers Overview</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__winlayout" kindref="compound">Window Layout</ref></para><para><simplesect kind="see"><para><ref refid="classwx_box_sizer" kindref="compound">wxBoxSizer</ref>, <ref refid="classwx_sizer" kindref="compound">wxSizer</ref>, <ref refid="overview_sizer" kindref="compound">Sizers Overview</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="11655">
+      <node id="11716">
         <label>wxWrapSizer</label>
         <link refid="classwx_wrap_sizer"/>
-        <childnode refid="11656" relation="public-inheritance">
+        <childnode refid="11717" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11658">
+      <node id="11719">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="11656">
+      <node id="11717">
         <label>wxBoxSizer</label>
         <link refid="classwx_box_sizer"/>
-        <childnode refid="11657" relation="public-inheritance">
+        <childnode refid="11718" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11657">
+      <node id="11718">
         <label>wxSizer</label>
         <link refid="classwx_sizer"/>
-        <childnode refid="11658" relation="public-inheritance">
+        <childnode refid="11719" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="11659">
+      <node id="11720">
         <label>wxWrapSizer</label>
         <link refid="classwx_wrap_sizer"/>
-        <childnode refid="11660" relation="public-inheritance">
+        <childnode refid="11721" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11662">
+      <node id="11723">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="11663" relation="usage">
+        <childnode refid="11724" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="11660">
+      <node id="11721">
         <label>wxBoxSizer</label>
         <link refid="classwx_box_sizer"/>
-        <childnode refid="11661" relation="public-inheritance">
+        <childnode refid="11722" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11661">
+      <node id="11722">
         <label>wxSizer</label>
         <link refid="classwx_sizer"/>
-        <childnode refid="11662" relation="public-inheritance">
+        <childnode refid="11723" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11663">
+      <node id="11724">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wrapsizer.h" line="26" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wrapsizer.h" bodystart="25" bodyend="68"/>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wrapsizer.h" line="34" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wrapsizer.h" bodystart="33" bodyend="76"/>
     <listofallmembers>
       <member refid="classwx_sizer_1a4e2122f2749261473c21cb192d00709f" prot="public" virt="non-virtual"><scope>wxWrapSizer</scope><name>Add</name></member>
       <member refid="classwx_sizer_1a81d21f287c416da96739a73faa54840d" prot="public" virt="non-virtual"><scope>wxWrapSizer</scope><name>Add</name></member>

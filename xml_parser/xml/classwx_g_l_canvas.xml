@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_g_l_canvas" kind="class" prot="public">
     <compoundname>wxGLCanvas</compoundname>
     <basecompoundref refid="classwx_window" prot="public" virt="non-virtual">wxWindow</basecompoundref>
@@ -99,7 +99,7 @@
 <parametername>attribList</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Array of integers. With this parameter you can set the device context attributes associated to this window. This array is zero-terminated: it should be set up using <ref refid="glcanvas_8h_1wxGL_FLAGS" kindref="member">wxGL_FLAGS</ref> constants. If a constant should be followed by a value, put it in the next array position. For example, WX_GL_DEPTH_SIZE should be followed by the value that indicates the number of bits for the depth buffer, e.g.: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>attribList[n++]<sp/>=<sp/><ref refid="glcanvas_8h_1abed82baf7f470b522273a3e37c24c600a82592856bf43fc99e64da03a6433de09" kindref="member" tooltip="Specifies number of bits for Z-buffer (typically 0, 16 or 32).">WX_GL_DEPTH_SIZE</ref>;</highlight></codeline>
+<para>Array of integers. With this parameter you can set the device context attributes associated to this window. This array is zero-terminated: it should be set up using <ref refid="glcanvas_8h_1wxGL_FLAGS" kindref="member">wxGL_FLAGS</ref> constants. If a constant should be followed by a value, put it in the next array position. For example, WX_GL_DEPTH_SIZE should be followed by the value that indicates the number of bits for the depth buffer, e.g.: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>attribList[n++]<sp/>=<sp/><ref refid="glcanvas_8h_1a385c44f6fb256e5716a2302a5b940388a82592856bf43fc99e64da03a6433de09" kindref="member" tooltip="Specifies number of bits for Z-buffer (typically 0, 16 or 32).">WX_GL_DEPTH_SIZE</ref>;</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>attribList[n++]<sp/>=<sp/>32;</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>attribList[n]<sp/>=<sp/>0;<sp/></highlight><highlight class="comment">//<sp/>terminate<sp/>the<sp/>list</highlight></codeline>
 </programlisting> If the attribute list is not specified at all, i.e. if this parameter is NULL, the default attributes including WX_GL_RGBA and WX_GL_DOUBLEBUFFER are used. But notice that if you do specify some attributes you also need to explicitly include these two default attributes in the list if you need them. </para></parameterdescription>
@@ -218,71 +218,71 @@
     <detaileddescription>
 <para>It is always used in conjunction with <ref refid="classwx_g_l_context" kindref="compound">wxGLContext</ref> as the context can only be made current (i.e. active for the OpenGL commands) when it is associated to a <ref refid="classwx_g_l_canvas" kindref="compound">wxGLCanvas</ref>.</para><para>More precisely, you first need to create a <ref refid="classwx_g_l_canvas" kindref="compound">wxGLCanvas</ref> window and then create an instance of a <ref refid="classwx_g_l_context" kindref="compound">wxGLContext</ref> that is initialized with this <ref refid="classwx_g_l_canvas" kindref="compound">wxGLCanvas</ref> and then later use either <ref refid="classwx_g_l_canvas_1a9f9ab3909606484e717904064d4e7b4f" kindref="member">SetCurrent()</ref> with the instance of the <ref refid="classwx_g_l_context" kindref="compound">wxGLContext</ref> or <ref refid="classwx_g_l_context_1a64f2df7d615cbd76093590194867f6ce" kindref="member">wxGLContext::SetCurrent()</ref> with the instance of the <ref refid="classwx_g_l_canvas" kindref="compound">wxGLCanvas</ref> (which might be not the same as was used for the creation of the context) to bind the OpenGL state that is represented by the rendering context to the canvas, and then finally call <ref refid="classwx_g_l_canvas_1a7286a7382972dfa4b323c292cb3a8a18" kindref="member">SwapBuffers()</ref> to swap the buffers of the OpenGL canvas and thus show your current output.</para><para>Notice that versions of wxWidgets previous to 2.9 used to implicitly create a <ref refid="classwx_g_l_context" kindref="compound">wxGLContext</ref> inside <ref refid="classwx_g_l_canvas" kindref="compound">wxGLCanvas</ref> itself. This is still supported in the current version but is deprecated now and will be removed in the future, please update your code to create the rendering contexts explicitly.</para><para>To set up the attributes for the canvas (number of bits for the depth buffer, number of bits for the stencil buffer and so on) you should set up the correct values of the <emphasis>attribList</emphasis> parameter. The values that should be set up and their meanings will be described below.</para><para><simplesect kind="note"><para>On those platforms which use a configure script (e.g. Linux and Mac OS) OpenGL support is automatically enabled if the relative headers and libraries are found. To switch it on under the other platforms (e.g. Windows), you need to edit the <computeroutput>setup.h</computeroutput> file and set <computeroutput>wxUSE_GLCANVAS</computeroutput> to <computeroutput>1</computeroutput> and then also pass <computeroutput>USE_OPENGL=1</computeroutput> to the make utility. You may also need to add <computeroutput>opengl32.lib</computeroutput> and <computeroutput>glu32.lib</computeroutput> to the list of the libraries your program is linked with.</para></simplesect>
 <heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxgl" kindref="member">wxGL</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__gl" kindref="compound">OpenGL</ref></para><para><simplesect kind="see"><para><ref refid="classwx_g_l_context" kindref="compound">wxGLContext</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxgl" kindref="member">wxGL</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__gl" kindref="compound">OpenGL</ref></para><para><simplesect kind="see"><para><ref refid="classwx_g_l_context" kindref="compound">wxGLContext</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="6538">
+      <node id="6542">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="6537">
+      <node id="6541">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="6538" relation="public-inheritance">
+        <childnode refid="6542" relation="public-inheritance">
         </childnode>
-        <childnode refid="6539" relation="public-inheritance">
+        <childnode refid="6543" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6539">
+      <node id="6543">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="6536">
+      <node id="6540">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="6537" relation="public-inheritance">
+        <childnode refid="6541" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6535">
+      <node id="6539">
         <label>wxGLCanvas</label>
         <link refid="classwx_g_l_canvas"/>
-        <childnode refid="6536" relation="public-inheritance">
+        <childnode refid="6540" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="6543">
+      <node id="6547">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="6544" relation="usage">
+        <childnode refid="6548" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="6542">
+      <node id="6546">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="6543" relation="public-inheritance">
+        <childnode refid="6547" relation="public-inheritance">
         </childnode>
-        <childnode refid="6545" relation="public-inheritance">
+        <childnode refid="6549" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6545">
+      <node id="6549">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="6541">
+      <node id="6545">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="6542" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="6540">
-        <label>wxGLCanvas</label>
-        <link refid="classwx_g_l_canvas"/>
-        <childnode refid="6541" relation="public-inheritance">
+        <childnode refid="6546" relation="public-inheritance">
         </childnode>
       </node>
       <node id="6544">
+        <label>wxGLCanvas</label>
+        <link refid="classwx_g_l_canvas"/>
+        <childnode refid="6545" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6548">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>

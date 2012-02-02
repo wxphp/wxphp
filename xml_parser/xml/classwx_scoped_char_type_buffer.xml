@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_scoped_char_type_buffer" kind="class" prot="public">
     <compoundname>wxScopedCharTypeBuffer</compoundname>
     <derivedcompoundref refid="classwx_char_type_buffer" prot="public" virt="non-virtual">wxCharTypeBuffer&lt; T &gt;</derivedcompoundref>
@@ -262,13 +262,13 @@
 <heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/>None; this class implementation is entirely header-based.</para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__data" kindref="compound">Data Structures</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10017">
+      <node id="10077">
         <label>wxCharTypeBuffer&lt; T &gt;</label>
         <link refid="classwx_char_type_buffer"/>
-        <childnode refid="10016" relation="public-inheritance">
+        <childnode refid="10076" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10016">
+      <node id="10076">
         <label>wxScopedCharTypeBuffer&lt; T &gt;</label>
         <link refid="classwx_scoped_char_type_buffer"/>
       </node>

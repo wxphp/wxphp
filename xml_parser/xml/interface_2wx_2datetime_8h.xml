@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="interface_2wx_2datetime_8h" kind="file">
     <compoundname>datetime.h</compoundname>
     <innerclass refid="classwx_date_time" prot="public">wxDateTime</innerclass>
@@ -30,7 +30,7 @@
         <briefdescription>
 <para>Global instance of an empty <ref refid="classwx_date_time" kindref="compound">wxDateTime</ref> object. </para>        </briefdescription>
         <detaileddescription>
-<para><xrefsect id="todo_1_todo000022"><xreftitle>Todo</xreftitle><xrefdescription><para>Would it be better to rename this wxNullDateTime so it&apos;s consistent with the rest of the &quot;empty/invalid/null&quot; global objects? </para></xrefdescription></xrefsect></para>        </detaileddescription>
+<para><xrefsect id="todo_1_todo000021"><xreftitle>Todo</xreftitle><xrefdescription><para>Would it be better to rename this wxNullDateTime so it&apos;s consistent with the rest of the &quot;empty/invalid/null&quot; global objects? </para></xrefdescription></xrefsect></para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1500" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" bodystart="1500" bodyend="-1"/>
