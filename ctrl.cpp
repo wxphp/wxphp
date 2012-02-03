@@ -29636,18 +29636,6 @@ PHP_METHOD(php_wxItemContainerImmutable, FindString)
 				{
 					ZVAL_LONG(return_value, ((wxControlWithItems_php*)_this)->FindString(wxString(string0, wxConvUTF8)));
 				}
-				else if(parent_rsrc_type == le_wxCheckListBox)
-				{
-					ZVAL_LONG(return_value, ((wxCheckListBox_php*)_this)->FindString(wxString(string0, wxConvUTF8)));
-				}
-				else if(parent_rsrc_type == le_wxRearrangeList)
-				{
-					ZVAL_LONG(return_value, ((wxRearrangeList_php*)_this)->FindString(wxString(string0, wxConvUTF8)));
-				}
-				else if(parent_rsrc_type == le_wxBitmapComboBox)
-				{
-					ZVAL_LONG(return_value, ((wxBitmapComboBox_php*)_this)->FindString(wxString(string0, wxConvUTF8)));
-				}
 				else if(parent_rsrc_type == le_wxSimpleHtmlListBox)
 				{
 					ZVAL_LONG(return_value, ((wxSimpleHtmlListBox_php*)_this)->FindString(wxString(string0, wxConvUTF8)));
@@ -29673,18 +29661,6 @@ PHP_METHOD(php_wxItemContainerImmutable, FindString)
 				else if(parent_rsrc_type == le_wxControlWithItems)
 				{
 					ZVAL_LONG(return_value, ((wxControlWithItems_php*)_this)->FindString(wxString(string0, wxConvUTF8), caseSensitive0));
-				}
-				else if(parent_rsrc_type == le_wxCheckListBox)
-				{
-					ZVAL_LONG(return_value, ((wxCheckListBox_php*)_this)->FindString(wxString(string0, wxConvUTF8), caseSensitive0));
-				}
-				else if(parent_rsrc_type == le_wxRearrangeList)
-				{
-					ZVAL_LONG(return_value, ((wxRearrangeList_php*)_this)->FindString(wxString(string0, wxConvUTF8), caseSensitive0));
-				}
-				else if(parent_rsrc_type == le_wxBitmapComboBox)
-				{
-					ZVAL_LONG(return_value, ((wxBitmapComboBox_php*)_this)->FindString(wxString(string0, wxConvUTF8), caseSensitive0));
 				}
 				else if(parent_rsrc_type == le_wxSimpleHtmlListBox)
 				{
@@ -29984,10 +29960,6 @@ PHP_METHOD(php_wxItemContainerImmutable, GetStringSelection)
 				else if(parent_rsrc_type == le_wxChoice)
 				{
 					value_to_return0 = ((wxChoice_php*)_this)->GetStringSelection();
-				}
-				else if(parent_rsrc_type == le_wxBitmapComboBox)
-				{
-					value_to_return0 = ((wxBitmapComboBox_php*)_this)->GetStringSelection();
 				}
 				else if(parent_rsrc_type == le_wxSimpleHtmlListBox)
 				{
@@ -30400,14 +30372,6 @@ PHP_METHOD(php_wxItemContainerImmutable, SetStringSelection)
 				else if(parent_rsrc_type == le_wxControlWithItems)
 				{
 					ZVAL_BOOL(return_value, ((wxControlWithItems_php*)_this)->SetStringSelection(wxString(string0, wxConvUTF8)));
-				}
-				else if(parent_rsrc_type == le_wxCheckListBox)
-				{
-					ZVAL_BOOL(return_value, ((wxCheckListBox_php*)_this)->SetStringSelection(wxString(string0, wxConvUTF8)));
-				}
-				else if(parent_rsrc_type == le_wxRearrangeList)
-				{
-					ZVAL_BOOL(return_value, ((wxRearrangeList_php*)_this)->SetStringSelection(wxString(string0, wxConvUTF8)));
 				}
 				else if(parent_rsrc_type == le_wxChoice)
 				{
@@ -31174,14 +31138,6 @@ PHP_METHOD(php_wxItemContainer, Clear)
 				else if(parent_rsrc_type == le_wxChoice)
 				{
 					((wxChoice_php*)_this)->Clear();
-				}
-				else if(parent_rsrc_type == le_wxComboBox)
-				{
-					((wxComboBox_php*)_this)->Clear();
-				}
-				else if(parent_rsrc_type == le_wxBitmapComboBox)
-				{
-					((wxBitmapComboBox_php*)_this)->Clear();
 				}
 				else if(parent_rsrc_type == le_wxSimpleHtmlListBox)
 				{
@@ -88792,10 +88748,6 @@ PHP_METHOD(php_wxTextEntry, SetValue)
 				{
 					((wxSearchCtrl_php*)_this)->SetValue(wxString(value0, wxConvUTF8));
 				}
-				else if(parent_rsrc_type == le_wxBitmapComboBox)
-				{
-					((wxBitmapComboBox_php*)_this)->SetValue(wxString(value0, wxConvUTF8));
-				}
 				else if(parent_rsrc_type == le_wxTextEntry)
 				{
 					((wxTextEntry_php*)_this)->SetValue(wxString(value0, wxConvUTF8));
@@ -88905,10 +88857,6 @@ PHP_METHOD(php_wxTextEntry, SetSelection)
 				else if(parent_rsrc_type == le_wxSearchCtrl)
 				{
 					((wxSearchCtrl_php*)_this)->SetSelection((long) from0, (long) to0);
-				}
-				else if(parent_rsrc_type == le_wxBitmapComboBox)
-				{
-					((wxBitmapComboBox_php*)_this)->SetSelection((long) from0, (long) to0);
 				}
 				else if(parent_rsrc_type == le_wxTextEntry)
 				{
@@ -90653,10 +90601,6 @@ PHP_METHOD(php_wxTextEntry, GetStringSelection)
 				{
 					value_to_return0 = ((wxSearchCtrl_php*)_this)->GetStringSelection();
 				}
-				else if(parent_rsrc_type == le_wxBitmapComboBox)
-				{
-					value_to_return0 = ((wxBitmapComboBox_php*)_this)->GetStringSelection();
-				}
 				else if(parent_rsrc_type == le_wxComboCtrl)
 				{
 					value_to_return0 = ((wxComboCtrl_php*)_this)->GetStringSelection();
@@ -90779,10 +90723,6 @@ PHP_METHOD(php_wxTextEntry, GetSelection)
 				else if(parent_rsrc_type == le_wxSearchCtrl)
 				{
 					((wxSearchCtrl_php*)_this)->GetSelection((long*) from0, (long*) to0);
-				}
-				else if(parent_rsrc_type == le_wxBitmapComboBox)
-				{
-					((wxBitmapComboBox_php*)_this)->GetSelection((long*) from0, (long*) to0);
 				}
 				else if(parent_rsrc_type == le_wxComboCtrl)
 				{
@@ -91279,10 +91219,6 @@ PHP_METHOD(php_wxTextEntry, GetInsertionPoint)
 				else if(parent_rsrc_type == le_wxSearchCtrl)
 				{
 					ZVAL_LONG(return_value, ((wxSearchCtrl_php*)_this)->GetInsertionPoint());
-				}
-				else if(parent_rsrc_type == le_wxBitmapComboBox)
-				{
-					ZVAL_LONG(return_value, ((wxBitmapComboBox_php*)_this)->GetInsertionPoint());
 				}
 				else if(parent_rsrc_type == le_wxTextEntry)
 				{

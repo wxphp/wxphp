@@ -617,19 +617,7 @@ PHP_METHOD(php_wxDataViewModel, Compare)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxDataViewModel::Compare(*(wxDataViewItem*) object_pointer0_0, *(wxDataViewItem*) object_pointer0_1, (unsigned int) column0, ascending0))\n\n");
 				#endif
-				if(parent_rsrc_type == le_wxDataViewIndexListModel)
-				{
-					ZVAL_LONG(return_value, ((wxDataViewIndexListModel_php*)_this)->Compare(*(wxDataViewItem*) object_pointer0_0, *(wxDataViewItem*) object_pointer0_1, (unsigned int) column0, ascending0));
-				}
-				else if(parent_rsrc_type == le_wxDataViewListStore)
-				{
-					ZVAL_LONG(return_value, ((wxDataViewListStore_php*)_this)->Compare(*(wxDataViewItem*) object_pointer0_0, *(wxDataViewItem*) object_pointer0_1, (unsigned int) column0, ascending0));
-				}
-				else if(parent_rsrc_type == le_wxDataViewVirtualListModel)
-				{
-					ZVAL_LONG(return_value, ((wxDataViewVirtualListModel_php*)_this)->Compare(*(wxDataViewItem*) object_pointer0_0, *(wxDataViewItem*) object_pointer0_1, (unsigned int) column0, ascending0));
-				}
-				else if(parent_rsrc_type == le_wxDataViewTreeStore)
+				if(parent_rsrc_type == le_wxDataViewTreeStore)
 				{
 					ZVAL_LONG(return_value, ((wxDataViewTreeStore_php*)_this)->Compare(*(wxDataViewItem*) object_pointer0_0, *(wxDataViewItem*) object_pointer0_1, (unsigned int) column0, ascending0));
 				}
