@@ -864,7 +864,11 @@ function inherits_method_from_class($method_name, $parent_class_name, $class_nam
 	{
 		foreach($defIni[$class_name]["_implements"] as $class_implement_name)
 		{
-			if($parent_class_name == $class_implement_name && isset($defIni[$class_implement_name][$method_name]))
+			if($parent_class_name != $class_implement_name && isset($defIni[$class_implement_name][$method_name]))
+			{
+				return false; //Should occure if an upper base class implements the method
+			}
+			else if($parent_class_name == $class_implement_name && isset($defIni[$class_implement_name][$method_name]))
 			{
 				return true;
 			}
