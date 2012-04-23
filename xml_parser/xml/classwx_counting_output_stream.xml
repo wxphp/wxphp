@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stream.h" line="710"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stream.h" line="717"/>
       </memberdef>
       <memberdef kind="function" id="classwx_counting_output_stream_1a06e2066c70167cc3d93ac7774cc22ae0" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stream.h" line="715"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stream.h" line="722"/>
       </memberdef>
       <memberdef kind="function" id="classwx_counting_output_stream_1ad85252ff371c85c38ba9c1d36a5f0b67" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>size_t</type>
@@ -43,7 +43,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stream.h" line="720"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stream.h" line="727"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -52,42 +52,42 @@
 <para>This can sometimes be useful or required if some data gets serialized to a stream or compressed by using stream compression and thus the final size of the stream cannot be known other than pretending to write the stream. One case where the resulting size would have to be known is if the data has to be written to a piece of memory and the memory has to be allocated before writing to it (which is probably always the case when writing to a memory stream).</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__streams" kindref="compound">Streams</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="5203">
+      <node id="5298">
         <label>wxCountingOutputStream</label>
         <link refid="classwx_counting_output_stream"/>
-        <childnode refid="5204" relation="public-inheritance">
+        <childnode refid="5299" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5205">
+      <node id="5300">
         <label>wxStreamBase</label>
         <link refid="classwx_stream_base"/>
       </node>
-      <node id="5204">
+      <node id="5299">
         <label>wxOutputStream</label>
         <link refid="classwx_output_stream"/>
-        <childnode refid="5205" relation="public-inheritance">
+        <childnode refid="5300" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="5206">
+      <node id="5301">
         <label>wxCountingOutputStream</label>
         <link refid="classwx_counting_output_stream"/>
-        <childnode refid="5207" relation="public-inheritance">
+        <childnode refid="5302" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5208">
+      <node id="5303">
         <label>wxStreamBase</label>
         <link refid="classwx_stream_base"/>
       </node>
-      <node id="5207">
+      <node id="5302">
         <label>wxOutputStream</label>
         <link refid="classwx_output_stream"/>
-        <childnode refid="5208" relation="public-inheritance">
+        <childnode refid="5303" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stream.h" line="705" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stream.h" bodystart="704" bodyend="721"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stream.h" line="712" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/stream.h" bodystart="711" bodyend="728"/>
     <listofallmembers>
       <member refid="classwx_output_stream_1a1c306ce99990d525921f8f6ae8432083" prot="public" virt="virtual"><scope>wxCountingOutputStream</scope><name>Close</name></member>
       <member refid="classwx_stream_base_1aca7d52699887bc33bec4810bf6fe29ba" prot="public" virt="non-virtual"><scope>wxCountingOutputStream</scope><name>GetLastError</name></member>

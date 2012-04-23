@@ -4,9 +4,9 @@
     <compoundname>colour.h</compoundname>
     <innerclass refid="classwx_colour" prot="public">wxColour</innerclass>
       <sectiondef kind="user-defined">
-      <memberdef kind="enum" id="colour_8h_1a99fb83031ce9923c84392b4e92f956b5" prot="public" static="no">
-        <name>@2</name>
-        <enumvalue id="colour_8h_1a99fb83031ce9923c84392b4e92f956b5a11f9e43cf157a8d4b49c87c957807bea" prot="public">
+      <memberdef kind="enum" id="colour_8h_1adc29c2ff13d900c2f185ee95427fb06c" prot="public" static="no">
+        <name>@4</name>
+        <enumvalue id="colour_8h_1adc29c2ff13d900c2f185ee95427fb06ca11f9e43cf157a8d4b49c87c957807bea" prot="public">
           <name>wxC2S_NAME</name>
           <initializer> 1</initializer>
           <briefdescription>
@@ -14,7 +14,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="colour_8h_1a99fb83031ce9923c84392b4e92f956b5ab47c838efa2889a17a00d8e2713db292" prot="public">
+        <enumvalue id="colour_8h_1adc29c2ff13d900c2f185ee95427fb06cab47c838efa2889a17a00d8e2713db292" prot="public">
           <name>wxC2S_CSS_SYNTAX</name>
           <initializer> 2</initializer>
           <briefdescription>
@@ -22,7 +22,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="colour_8h_1a99fb83031ce9923c84392b4e92f956b5a434fb8012dffb290fb63e0279c216325" prot="public">
+        <enumvalue id="colour_8h_1adc29c2ff13d900c2f185ee95427fb06ca434fb8012dffb290fb63e0279c216325" prot="public">
           <name>wxC2S_HTML_SYNTAX</name>
           <initializer> 4</initializer>
           <briefdescription>
@@ -36,7 +36,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h" line="16" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h" bodystart="16" bodyend="20"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/colour.h" line="16" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/colour.h" bodystart="16" bodyend="20"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -52,7 +52,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h" line="279" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h" bodystart="279" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/colour.h" line="279" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/colour.h" bodystart="279" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="colour_8h_1abf2d471367e1ee194d88bc3e814a7d11" prot="public" static="no" mutable="no">
         <type><ref refid="classwx_colour" kindref="compound">wxColour</ref></type>
@@ -65,7 +65,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h" line="280" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h" bodystart="280" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/colour.h" line="280" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/colour.h" bodystart="280" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="colour_8h_1a28c9e9208c4907063eb9869ff2332776" prot="public" static="no" mutable="no">
         <type><ref refid="classwx_colour" kindref="compound">wxColour</ref> *</type>
@@ -78,7 +78,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h" line="281" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h" bodystart="281" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/colour.h" line="281" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/colour.h" bodystart="281" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="colour_8h_1a6682c822c66afb0c9bec02469b40e58a" prot="public" static="no" mutable="no">
         <type><ref refid="classwx_colour" kindref="compound">wxColour</ref> *</type>
@@ -91,7 +91,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h" line="282" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h" bodystart="282" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/colour.h" line="282" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/colour.h" bodystart="282" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="colour_8h_1ab5873717d157d334f20e0a0b02d8ffa1" prot="public" static="no" mutable="no">
         <type><ref refid="classwx_colour" kindref="compound">wxColour</ref> *</type>
@@ -104,7 +104,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h" line="283" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h" bodystart="283" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/colour.h" line="283" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/colour.h" bodystart="283" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="colour_8h_1a98125a3b5ab1f7bc8dbc7a62e329f142" prot="public" static="no" mutable="no">
         <type><ref refid="classwx_colour" kindref="compound">wxColour</ref> *</type>
@@ -117,7 +117,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h" line="284" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h" bodystart="284" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/colour.h" line="284" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/colour.h" bodystart="284" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="colour_8h_1ab826607ad843990349914e1457a6425a" prot="public" static="no" mutable="no">
         <type><ref refid="classwx_colour" kindref="compound">wxColour</ref> *</type>
@@ -130,7 +130,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h" line="285" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h" bodystart="285" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/colour.h" line="285" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/colour.h" bodystart="285" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="colour_8h_1a76762d1254986a92025f54e7683c3441" prot="public" static="no" mutable="no">
         <type><ref refid="classwx_colour" kindref="compound">wxColour</ref> *</type>
@@ -143,7 +143,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h" line="286" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h" bodystart="286" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/colour.h" line="286" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/colour.h" bodystart="286" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="colour_8h_1a69785ac6d0c5ed3fb4d2053693390e2a" prot="public" static="no" mutable="no">
         <type><ref refid="classwx_colour" kindref="compound">wxColour</ref> *</type>
@@ -156,7 +156,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h" line="287" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h" bodystart="287" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/colour.h" line="287" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/colour.h" bodystart="287" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="colour_8h_1a3b00973fd189d6ddd42d74046bd45694" prot="public" static="no" mutable="no">
         <type><ref refid="classwx_colour" kindref="compound">wxColour</ref> *</type>
@@ -169,7 +169,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h" line="288" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h" bodystart="288" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/colour.h" line="288" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/colour.h" bodystart="288" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="var">
@@ -185,7 +185,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h" line="24" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h" bodystart="24" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/colour.h" line="24" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/colour.h" bodystart="24" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="colour_8h_1ae1306fc09217b01cfec7bfb46eed0d66" prot="public" static="no" mutable="no">
         <type>const unsigned char</type>
@@ -199,7 +199,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h" line="25" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h" bodystart="25" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/colour.h" line="25" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/colour.h" bodystart="25" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -223,7 +223,7 @@
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/colour.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h" line="308"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/colour.h" line="308"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__misc_1ga0adf8026ea8ed126420a2e7ef9edc678" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -241,13 +241,13 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/colour.h&gt; 
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/colour.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h" line="317"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/colour.h" line="317"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/colour.h"/>
   </compounddef>
 </doxygen>

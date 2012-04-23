@@ -19,7 +19,7 @@
 <para>and IMPLEMENT... macros.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/object.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/object.h" line="904"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/object.h" line="904"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="define">
@@ -33,7 +33,7 @@
 </programlisting> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" line="897" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" bodystart="897" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/app.h" line="886" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/app.h" bodystart="886" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__rtti_1ga967aafaa261481fe2d2e1cf599e3e003" prot="public" static="no">
         <name>wxIMPLEMENT_APP</name>
@@ -46,7 +46,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" line="914" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" bodystart="914" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/app.h" line="903" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/app.h" bodystart="903" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__rtti_1gacee897a7d4e704e1aa53568220f2396e" prot="public" static="no">
         <name>wxCLASSINFO</name>
@@ -57,7 +57,7 @@
 <para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/object.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/object.h" line="658" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/object.h" bodystart="658" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/object.h" line="658" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/object.h" bodystart="658" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__rtti_1ga5bbb5821d56ac801da838c42105b72ae" prot="public" static="no">
         <name>wxDECLARE_ABSTRACT_CLASS</name>
@@ -77,7 +77,7 @@
 </programlisting> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/object.h" line="681" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/object.h" bodystart="681" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/object.h" line="681" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/object.h" bodystart="681" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__rtti_1ga9c252d076397bec5ac241272a7a60747" prot="public" static="no">
         <name>wxDECLARE_DYNAMIC_CLASS</name>
@@ -97,7 +97,7 @@
 </programlisting> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/object.h" line="706" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/object.h" bodystart="706" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/object.h" line="706" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/object.h" bodystart="706" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__rtti_1ga20465fc7e022e29a5dacfad46e152e75" prot="public" static="no">
         <name>wxDECLARE_CLASS</name>
@@ -108,7 +108,7 @@
 <para>The same as <ref refid="group__group__funcmacro__rtti_1ga5bbb5821d56ac801da838c42105b72ae" kindref="member">wxDECLARE_ABSTRACT_CLASS()</ref>.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/object.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/object.h" line="717" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/object.h" bodystart="717" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/object.h" line="717" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/object.h" bodystart="717" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__rtti_1ga2f58f4ea4376a2e3994a9e6880509027" prot="public" static="no">
         <name>wxIMPLEMENT_ABSTRACT_CLASS</name>
@@ -126,7 +126,7 @@
 </programlisting> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/object.h" line="736" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/object.h" bodystart="736" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/object.h" line="736" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/object.h" bodystart="736" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__rtti_1ga55f899b6146d26aa5a75a22984fa1895" prot="public" static="no">
         <name>wxIMPLEMENT_ABSTRACT_CLASS2</name>
@@ -139,7 +139,7 @@
 <para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/object.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/object.h" line="744" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/object.h" bodystart="744" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/object.h" line="744" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/object.h" bodystart="744" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__rtti_1ga4cbf0c21eb5986eb489dc67450eab1d1" prot="public" static="no">
         <name>wxIMPLEMENT_DYNAMIC_CLASS</name>
@@ -157,7 +157,7 @@
 </programlisting> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/object.h" line="764" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/object.h" bodystart="764" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/object.h" line="764" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/object.h" bodystart="764" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__rtti_1ga239f80b143bae2085a271fea0b5ed9db" prot="public" static="no">
         <name>wxIMPLEMENT_DYNAMIC_CLASS2</name>
@@ -170,7 +170,7 @@
 <para>Use this for classes derived from two base classes.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/object.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/object.h" line="773" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/object.h" bodystart="773" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/object.h" line="773" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/object.h" bodystart="773" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__rtti_1gaf2d0caedeccc20619218809d4a2a7604" prot="public" static="no">
         <name>wxIMPLEMENT_CLASS</name>
@@ -182,7 +182,7 @@
 <para>The same as <ref refid="group__group__funcmacro__rtti_1ga4cbf0c21eb5986eb489dc67450eab1d1" kindref="member">wxIMPLEMENT_DYNAMIC_CLASS()</ref>.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/object.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/object.h" line="782" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/object.h" bodystart="782" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/object.h" line="782" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/object.h" bodystart="782" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__rtti_1gaf644ef7f6fe628bc447141936f675332" prot="public" static="no">
         <name>wxIMPLEMENT_CLASS2</name>
@@ -195,7 +195,7 @@
 <para>The same as <ref refid="group__group__funcmacro__rtti_1ga239f80b143bae2085a271fea0b5ed9db" kindref="member">wxIMPLEMENT_DYNAMIC_CLASS2()</ref>.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/object.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/object.h" line="791" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/object.h" bodystart="791" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/object.h" line="791" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/object.h" bodystart="791" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__rtti_1gae268e701d1e2aed8539c6003f775dd73" prot="public" static="no">
         <name>wx_const_cast</name>
@@ -208,7 +208,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/object.h" line="802" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/object.h" bodystart="802" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/object.h" line="802" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/object.h" bodystart="802" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__rtti_1ga42cdce9f5bc6dbe6a846a47e9e841e4f" prot="public" static="no">
         <name>wx_reinterpret_cast</name>
@@ -221,7 +221,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/object.h" line="812" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/object.h" bodystart="812" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/object.h" line="812" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/object.h" bodystart="812" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__rtti_1gaa3a4a52303d4a1fa3d3346e762638c64" prot="public" static="no">
         <name>wx_static_cast</name>
@@ -234,7 +234,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/object.h" line="824" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/object.h" bodystart="824" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/object.h" line="824" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/object.h" bodystart="824" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__rtti_1ga092df8a3ee35e20a4c2c7d0b6132592a" prot="public" static="no">
         <name>wx_truncate_cast</name>
@@ -246,7 +246,7 @@
 <para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/defs.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/object.h" line="833" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/object.h" bodystart="833" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/object.h" line="833" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/object.h" bodystart="833" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__rtti_1ga47026a9dcf1318d6934c1e8091f3433e" prot="public" static="no">
         <name>wxConstCast</name>
@@ -259,7 +259,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/object.h" line="843" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/object.h" bodystart="843" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/object.h" line="843" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/object.h" bodystart="843" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__rtti_1ga2606f92f8d5f8e22f4afb44a6df3c38a" prot="public" static="no">
         <name>wxDynamicCast</name>
@@ -282,7 +282,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/object.h" line="872" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/object.h" bodystart="872" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/object.h" line="872" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/object.h" bodystart="872" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__rtti_1ga2f76c7ed5cfc61d7f5e62a1618476af5" prot="public" static="no">
         <name>wxDynamicCastThis</name>
@@ -294,7 +294,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/object.h" line="884" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/object.h" bodystart="884" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/object.h" line="884" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/object.h" bodystart="884" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__rtti_1gaae25db7169be29d37f3451dff0ac7711" prot="public" static="no">
         <name>wxStaticCast</name>
@@ -307,7 +307,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/object.h" line="895" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/object.h" bodystart="895" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/object.h" line="895" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/object.h" bodystart="895" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__rtti_1ga0c6d4b0411eda94d041198d6385980cb" prot="public" static="no">
         <name>wxGetVariantCast</name>
@@ -320,7 +320,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="691" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" bodystart="691" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="691" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" bodystart="691" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

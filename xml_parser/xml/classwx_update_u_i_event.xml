@@ -21,7 +21,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2023"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="2004"/>
       </memberdef>
       <memberdef kind="function" id="classwx_update_u_i_event_1abba131bbbd81478236298a606e3ed3cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -38,7 +38,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2045"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="2026"/>
       </memberdef>
       <memberdef kind="function" id="classwx_update_u_i_event_1a1105167b0e80d6ae19021656c5c404b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -55,7 +55,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2050"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="2031"/>
       </memberdef>
       <memberdef kind="function" id="classwx_update_u_i_event_1a2a55bfa5867263047c079736a100fe2e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -68,7 +68,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2055"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="2036"/>
       </memberdef>
       <memberdef kind="function" id="classwx_update_u_i_event_1a25d9c2e56638b3a5da39006f62f9467b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -81,7 +81,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2060"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="2041"/>
       </memberdef>
       <memberdef kind="function" id="classwx_update_u_i_event_1a429569edeef0c908ec61465273af1209" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -94,7 +94,7 @@
 <para>For wxWidgets internal use only. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2075"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="2056"/>
       </memberdef>
       <memberdef kind="function" id="classwx_update_u_i_event_1ac61d7606adecfe42790e199180572bf5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -107,7 +107,7 @@
 <para>For wxWidgets internal use only. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2081"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="2062"/>
       </memberdef>
       <memberdef kind="function" id="classwx_update_u_i_event_1a8983c44ec3b4398d307cd98e09b7c5c2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -120,7 +120,7 @@
 <para>For wxWidgets internal use only. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2087"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="2068"/>
       </memberdef>
       <memberdef kind="function" id="classwx_update_u_i_event_1a8212fb8f73b47cd5f99d8f7106de6661" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -133,7 +133,7 @@
 <para>For wxWidgets internal use only. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2093"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="2074"/>
       </memberdef>
       <memberdef kind="function" id="classwx_update_u_i_event_1ac536fb92f55435abd1f3459d507de06f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -146,7 +146,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2098"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="2079"/>
       </memberdef>
       <memberdef kind="function" id="classwx_update_u_i_event_1ab0aeaf65ea4fcae740afc061395d6fcd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -159,7 +159,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2103"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="2084"/>
       </memberdef>
       <memberdef kind="function" id="classwx_update_u_i_event_1a157efca52b0a423836610d115b4f69f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -176,7 +176,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2136"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="2117"/>
       </memberdef>
       <memberdef kind="function" id="classwx_update_u_i_event_1a9269df1c4a3345267dc3d7ef8ee8423c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -193,7 +193,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2154"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="2135"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -213,7 +213,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2040"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="2021"/>
       </memberdef>
       <memberdef kind="function" id="classwx_update_u_i_event_1a2c9b40117664969aa4e3458034349840" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="event_8h_1afd2fee4ca28a8255a68a0b06970aae9b" kindref="member">wxUpdateUIMode</ref></type>
@@ -227,7 +227,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2069"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="2050"/>
       </memberdef>
       <memberdef kind="function" id="classwx_update_u_i_event_1af0218813302173f9eb33094f115ed565" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>long</type>
@@ -241,7 +241,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2111"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="2092"/>
       </memberdef>
       <memberdef kind="function" id="classwx_update_u_i_event_1acc9e27c48a04d2f798fd0836bd8c2988" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -255,7 +255,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2121"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="2102"/>
       </memberdef>
       <memberdef kind="function" id="classwx_update_u_i_event_1ab3a94b31cf5c72ae84ffa8b7cc1777e7" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -280,7 +280,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2131"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="2112"/>
       </memberdef>
       <memberdef kind="function" id="classwx_update_u_i_event_1a24daac56f682b866baac592e761ccede" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -297,7 +297,7 @@
 <para>Set to -1 to disable updates, or to 0 to update as frequently as possible. The default is 0.</para><para>Use this to reduce the overhead of UI update events if your application has a lot of windows. If you set the value to -1 or greater than 0, you may also need to call <ref refid="classwx_window_1adf0a4987728bd0bf69f922641b3efbfc" kindref="member">wxWindow::UpdateWindowUI</ref> at appropriate points in your application, such as when a dialog is about to be shown. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2149"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="2130"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -316,61 +316,61 @@ Note that although events are sent in idle time, defining a <ref refid="classwx_
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="overview_events" kindref="compound">Events and Event Handling</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="11255">
+      <node id="11444">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="11252">
+      <node id="11441">
         <label>wxUpdateUIEvent</label>
         <link refid="classwx_update_u_i_event"/>
-        <childnode refid="11253" relation="public-inheritance">
+        <childnode refid="11442" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11253">
+      <node id="11442">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="11254" relation="public-inheritance">
+        <childnode refid="11443" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11254">
+      <node id="11443">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="11255" relation="public-inheritance">
+        <childnode refid="11444" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="11259">
+      <node id="11448">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="11260" relation="usage">
+        <childnode refid="11449" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="11256">
+      <node id="11445">
         <label>wxUpdateUIEvent</label>
         <link refid="classwx_update_u_i_event"/>
-        <childnode refid="11257" relation="public-inheritance">
+        <childnode refid="11446" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11257">
+      <node id="11446">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="11258" relation="public-inheritance">
+        <childnode refid="11447" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11258">
+      <node id="11447">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="11259" relation="public-inheritance">
+        <childnode refid="11448" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11260">
+      <node id="11449">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2018" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="2017" bodyend="2155"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="1999" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="1998" bodyend="2136"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxUpdateUIEvent</scope><name>AllocExclusive</name></member>
       <member refid="classwx_update_u_i_event_1a82d4a0dd8adea9d37d4b04cebe190d5f" prot="public" virt="non-virtual"><scope>wxUpdateUIEvent</scope><name>CanUpdate</name></member>

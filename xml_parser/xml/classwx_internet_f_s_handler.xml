@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="classwx_internet_f_s_handler" kind="class" prot="public">
+    <compoundname>wxInternetFSHandler</compoundname>
+    <basecompoundref refid="classwx_file_system_handler" prot="public" virt="non-virtual">wxFileSystemHandler</basecompoundref>
+    <includes local="no">wx/fs_inet.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_internet_f_s_handler_1a9f78b82dac17f3ebb91612d1efd66dfc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxInternetFSHandler::wxInternetFSHandler</definition>
+        <argsstring>()</argsstring>
+        <name>wxInternetFSHandler</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fs_inet.h" line="17"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A file system handler for accessing files from internet servers. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="7507">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+      </node>
+      <node id="7505">
+        <label>wxInternetFSHandler</label>
+        <link refid="classwx_internet_f_s_handler"/>
+        <childnode refid="7506" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7506">
+        <label>wxFileSystemHandler</label>
+        <link refid="classwx_file_system_handler"/>
+        <childnode refid="7507" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="7510">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="7511" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="7508">
+        <label>wxInternetFSHandler</label>
+        <link refid="classwx_internet_f_s_handler"/>
+        <childnode refid="7509" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7509">
+        <label>wxFileSystemHandler</label>
+        <link refid="classwx_file_system_handler"/>
+        <childnode refid="7510" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7511">
+        <label>wxObjectRefData</label>
+        <link refid="classwx_object_ref_data"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fs_inet.h" line="15" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/fs_inet.h" bodystart="14" bodyend="18"/>
+    <listofallmembers>
+      <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxInternetFSHandler</scope><name>AllocExclusive</name></member>
+      <member refid="classwx_file_system_handler_1a421720c382a63c7117076757567c762f" prot="public" virt="pure-virtual"><scope>wxInternetFSHandler</scope><name>CanOpen</name></member>
+      <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxInternetFSHandler</scope><name>CloneRefData</name></member>
+      <member refid="classwx_object_1a95c6a5e4e1e03ff23c7b9efe4cff0c1a" prot="protected" virt="virtual"><scope>wxInternetFSHandler</scope><name>CreateRefData</name></member>
+      <member refid="classwx_file_system_handler_1a90b7fe424e6c5cd53c9900806b3cacaa" prot="public" virt="virtual"><scope>wxInternetFSHandler</scope><name>FindFirst</name></member>
+      <member refid="classwx_file_system_handler_1a0c07370b4135460f39228d49c3d297a4" prot="public" virt="virtual"><scope>wxInternetFSHandler</scope><name>FindNext</name></member>
+      <member refid="classwx_file_system_handler_1a3b928b08cc72f225b94fed6077c37d52" prot="protected" virt="non-virtual"><scope>wxInternetFSHandler</scope><name>GetAnchor</name></member>
+      <member refid="classwx_object_1ab3a0c6f723cbaddb47be4e8dd98cc8e2" prot="public" virt="virtual"><scope>wxInternetFSHandler</scope><name>GetClassInfo</name></member>
+      <member refid="classwx_file_system_handler_1a3f56ed8be86e2ddaf3af0d20c17aa067" prot="protected" virt="non-virtual"><scope>wxInternetFSHandler</scope><name>GetLeftLocation</name></member>
+      <member refid="classwx_file_system_handler_1a95c04756cd89cc2a5d66116bbbb3acdc" prot="public" virt="non-virtual"><scope>wxInternetFSHandler</scope><name>GetMimeTypeFromExt</name></member>
+      <member refid="classwx_file_system_handler_1adf6e84f1ba33f047c15fb33f343b523a" prot="protected" virt="non-virtual"><scope>wxInternetFSHandler</scope><name>GetProtocol</name></member>
+      <member refid="classwx_object_1aabdb4fc957226544a8408167844e4f42" prot="public" virt="non-virtual"><scope>wxInternetFSHandler</scope><name>GetRefData</name></member>
+      <member refid="classwx_file_system_handler_1a759935b4792339bf97d6c6529bffb966" prot="protected" virt="non-virtual"><scope>wxInternetFSHandler</scope><name>GetRightLocation</name></member>
+      <member refid="classwx_object_1af40d580385cf4f8112fae7713404b01e" prot="public" virt="non-virtual"><scope>wxInternetFSHandler</scope><name>IsKindOf</name></member>
+      <member refid="classwx_object_1a80a1a3fda7b14396a9ddd3d7a46a88bd" prot="public" virt="non-virtual"><scope>wxInternetFSHandler</scope><name>IsSameAs</name></member>
+      <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxInternetFSHandler</scope><name>m_refData</name></member>
+      <member refid="classwx_file_system_handler_1a1295897a496f83c538d4dcf8897301e2" prot="public" virt="pure-virtual"><scope>wxInternetFSHandler</scope><name>OpenFile</name></member>
+      <member refid="classwx_object_1a07b8f34f5afc5743195c5fed052f55d3" prot="public" virt="non-virtual"><scope>wxInternetFSHandler</scope><name>operator delete</name></member>
+      <member refid="classwx_object_1a96fa423a1dbc212c8227a5d83825971f" prot="public" virt="non-virtual"><scope>wxInternetFSHandler</scope><name>operator new</name></member>
+      <member refid="classwx_object_1a2f6f1aa51fe9fc2b1415ca4211a90e9e" prot="public" virt="non-virtual"><scope>wxInternetFSHandler</scope><name>Ref</name></member>
+      <member refid="classwx_object_1afab780710f2adc1bb33310e27590140b" prot="public" virt="non-virtual"><scope>wxInternetFSHandler</scope><name>SetRefData</name></member>
+      <member refid="classwx_object_1af51efc6b1ae632fc7f0cd7ebbce9fa36" prot="public" virt="non-virtual"><scope>wxInternetFSHandler</scope><name>UnRef</name></member>
+      <member refid="classwx_object_1a74b40e42d19a4b9e9bec0b57d62a5725" prot="public" virt="non-virtual"><scope>wxInternetFSHandler</scope><name>UnShare</name></member>
+      <member refid="classwx_file_system_handler_1a81ce16c40bb1309cae25493e90c1bc88" prot="public" virt="non-virtual"><scope>wxInternetFSHandler</scope><name>wxFileSystemHandler</name></member>
+      <member refid="classwx_internet_f_s_handler_1a9f78b82dac17f3ebb91612d1efd66dfc" prot="public" virt="non-virtual"><scope>wxInternetFSHandler</scope><name>wxInternetFSHandler</name></member>
+      <member refid="classwx_object_1acaa378363a28af421ab56ad7b46eadf0" prot="public" virt="non-virtual"><scope>wxInternetFSHandler</scope><name>wxObject</name></member>
+      <member refid="classwx_object_1a4721b4dc9b7aff0f30904ba2ea3954cf" prot="public" virt="non-virtual"><scope>wxInternetFSHandler</scope><name>wxObject</name></member>
+      <member refid="classwx_object_1a2a51aa8bfbab47ca2f051bcf84b3f35b" prot="public" virt="virtual"><scope>wxInternetFSHandler</scope><name>~wxObject</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

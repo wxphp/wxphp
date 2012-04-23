@@ -46,7 +46,7 @@
 <para>If <emphasis>localFilename</emphasis> and/or <emphasis>globalFilename</emphasis> are explicitly specified, they are used as the names of the user and system-wide configuration files (the latter is only read by the program while the former is read from and written to). Otherwise the behaviour depends on <emphasis>style</emphasis> parameter. If it includes ::wxCONFIG_USE_LOCAL_FILE, then the local file name is constructed from the information in <emphasis>appName</emphasis> and <emphasis>vendorName</emphasis> arguments in a system-dependent way. If ::wxCONFIG_USE_GLOBAL_FILE is not specified at all (and <emphasis>globalFilename</emphasis> is empty) then the system-wide file is not used at all. Otherwise its name and path are also constructed in the way appropriate for the current platform from the application and vendor names. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fileconf.h" line="50"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fileconf.h" line="50"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_config_1a98f3c3d151840d9e7dc821586c4c07e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -69,7 +69,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fileconf.h" line="58"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fileconf.h" line="58"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_config_1a6220fdc0f07a7e36e559e58d29965337" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -92,7 +92,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fileconf.h" line="97"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fileconf.h" line="97"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_config_1a709b9d8592d746ca7a0d80abdf20ce95" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -110,7 +110,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fileconf.h" line="108"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fileconf.h" line="108"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_config_1ac2b05e8f651d7390e3c340e5c7feea0e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -129,7 +129,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fileconf.h" line="111"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fileconf.h" line="111"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_config_1a3b14df9f438cf17bcdf06eb0610d35da" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -143,7 +143,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fileconf.h" line="112"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fileconf.h" line="112"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_config_1aecbc6a538ba2b9ad41620fbc00ef2a12" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -162,10 +162,10 @@
         <briefdescription>
 <para>Gets the first group. </para>        </briefdescription>
         <detaileddescription>
-<para><bold>wxPython Note:</bold> The wxPython version of this method returns a 3-tuple consisting of the continue flag, the value string, and the index for the next call.</para><para><bold>wxPerl Note:</bold> In wxPerl this method takes no parameters and returns a 3-element list (continue_flag, string, index_for_getnextentry). </para>        </detaileddescription>
+<para><bold>wxPerl Note:</bold> In wxPerl this method takes no parameters and returns a 3-element list (continue_flag, string, index_for_getnextentry). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fileconf.h" line="114"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fileconf.h" line="114"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_config_1a16fe0dba12a11a0ab3f7a7ceb6306528" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -184,10 +184,10 @@
         <briefdescription>
 <para>Gets the next group. </para>        </briefdescription>
         <detaileddescription>
-<para><bold>wxPython Note:</bold> The wxPython version of this method returns a 3-tuple consisting of the continue flag, the value string, and the index for the next call.</para><para><bold>wxPerl Note:</bold> In wxPerl this method only takes the <emphasis>index</emphasis> parameter and returns a 3-element list (continue_flag, string, index_for_getnextentry). </para>        </detaileddescription>
+<para><bold>wxPerl Note:</bold> In wxPerl this method only takes the <emphasis>index</emphasis> parameter and returns a 3-element list (continue_flag, string, index_for_getnextentry). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fileconf.h" line="115"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fileconf.h" line="115"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_config_1abccd0ec08228de5d433601eca2781b94" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -206,10 +206,10 @@
         <briefdescription>
 <para>Gets the first entry. </para>        </briefdescription>
         <detaileddescription>
-<para><bold>wxPython Note:</bold> The wxPython version of this method returns a 3-tuple consisting of the continue flag, the value string, and the index for the next call.</para><para><bold>wxPerl Note:</bold> In wxPerl this method takes no parameters and returns a 3-element list (continue_flag, string, index_for_getnextentry). </para>        </detaileddescription>
+<para><bold>wxPerl Note:</bold> In wxPerl this method takes no parameters and returns a 3-element list (continue_flag, string, index_for_getnextentry). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fileconf.h" line="116"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fileconf.h" line="116"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_config_1a37612450410cfad01a2ed52702875b37" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -228,10 +228,10 @@
         <briefdescription>
 <para>Gets the next entry. </para>        </briefdescription>
         <detaileddescription>
-<para><bold>wxPython Note:</bold> The wxPython version of this method returns a 3-tuple consisting of the continue flag, the value string, and the index for the next call.</para><para><bold>wxPerl Note:</bold> In wxPerl this method only takes the <emphasis>index</emphasis> parameter and returns a 3-element list (continue_flag, string, index_for_getnextentry). </para>        </detaileddescription>
+<para><bold>wxPerl Note:</bold> In wxPerl this method only takes the <emphasis>index</emphasis> parameter and returns a 3-element list (continue_flag, string, index_for_getnextentry). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fileconf.h" line="117"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fileconf.h" line="117"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_config_1ad0738f455b2ea76e598d1e747576641d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>size_t</type>
@@ -250,7 +250,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fileconf.h" line="119"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fileconf.h" line="119"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_config_1a5dc8869a67cea091376c19438586bdca" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>size_t</type>
@@ -269,7 +269,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fileconf.h" line="120"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fileconf.h" line="120"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_config_1a7e4498d31191ce0917b66094203db17f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -288,7 +288,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fileconf.h" line="122"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fileconf.h" line="122"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_config_1a6151f556961a8c627e1a9cc50ff37631" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -307,7 +307,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fileconf.h" line="123"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fileconf.h" line="123"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_config_1a237986fb7e05f7e5404dec1941da308d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -326,7 +326,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fileconf.h" line="125"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fileconf.h" line="125"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_config_1a562a1b81e23d70c1921c2139dcf5580d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -349,7 +349,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fileconf.h" line="127"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fileconf.h" line="127"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_config_1a3827f9711a31782a2d4f1ea61e1ea592" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -372,7 +372,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fileconf.h" line="128"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fileconf.h" line="128"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_config_1a120130d8a59bbdadf510b658b4d45952" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -395,7 +395,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fileconf.h" line="130"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fileconf.h" line="130"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_config_1aed9b867b366bb656ddd3fdf3108e726d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -413,7 +413,7 @@
 <para>If the current path is under the group being deleted it is changed to its deepest still existing component. E.g. if the current path is <computeroutput>&quot;/A/B/C/D&quot;</computeroutput> and the group <computeroutput>C</computeroutput> is deleted, the path becomes <computeroutput>&quot;/A/B&quot;</computeroutput>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fileconf.h" line="131"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fileconf.h" line="131"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_config_1aeb7cd89ccb242ed30506e63fd79ed82f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -427,7 +427,7 @@
 <para>Primarily for use by uninstallation routine. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fileconf.h" line="132"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fileconf.h" line="132"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -446,7 +446,7 @@
 <para>Notice that this function cannot be used if <emphasis>basename</emphasis> is already a full path name. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fileconf.h" line="67"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fileconf.h" line="67"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_config_1a479f242f67dca8149dfbd7e9b6394fe9" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_file_name" kindref="compound">wxFileName</ref></type>
@@ -468,7 +468,7 @@
 <para><emphasis>style</emphasis> has the same meaning as in <ref refid="classwx_config_base_1a7c3ce1f79df2837bc532c0ff551e7bac" kindref="member">wxConfig constructor</ref> and can contain any combination of styles but only wxCONFIG_USE_SUBDIR bit is examined by this function.</para><para>Notice that this function cannot be used if <emphasis>basename</emphasis> is already a full path name. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fileconf.h" line="80"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fileconf.h" line="80"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_config_1ae70471e1167791f26bdc88175476674f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -485,7 +485,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fileconf.h" line="82"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fileconf.h" line="82"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_config_1a50ecc124ab06aa5e6461e70f0673b06a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -507,7 +507,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fileconf.h" line="83"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fileconf.h" line="83"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -517,49 +517,49 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__cfg" kindref="compound">Application and System configuration</ref></para><para><simplesect kind="see"><para><ref refid="classwx_file_config_1a6220fdc0f07a7e36e559e58d29965337" kindref="member">wxFileConfig::Save</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="6138">
+      <node id="6257">
         <label>wxConfigBase</label>
         <link refid="classwx_config_base"/>
-        <childnode refid="6139" relation="public-inheritance">
+        <childnode refid="6258" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6137">
+      <node id="6256">
         <label>wxFileConfig</label>
         <link refid="classwx_file_config"/>
-        <childnode refid="6138" relation="public-inheritance">
+        <childnode refid="6257" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6139">
+      <node id="6258">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="6141">
+      <node id="6260">
         <label>wxConfigBase</label>
         <link refid="classwx_config_base"/>
-        <childnode refid="6142" relation="public-inheritance">
+        <childnode refid="6261" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6140">
+      <node id="6259">
         <label>wxFileConfig</label>
         <link refid="classwx_file_config"/>
-        <childnode refid="6141" relation="public-inheritance">
+        <childnode refid="6260" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6142">
+      <node id="6261">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="6143" relation="usage">
+        <childnode refid="6262" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="6143">
+      <node id="6262">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fileconf.h" line="28" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fileconf.h" bodystart="27" bodyend="133"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fileconf.h" line="28" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/fileconf.h" bodystart="27" bodyend="133"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxFileConfig</scope><name>AllocExclusive</name></member>
       <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxFileConfig</scope><name>CloneRefData</name></member>

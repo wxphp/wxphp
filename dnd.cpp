@@ -50,6 +50,7 @@
 #include "others.h"
 
 
+
 void php_wxClipboard_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -58,13 +59,13 @@ void php_wxClipboard_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 	#endif
 	
 	
-	wxClipboard_php* object = (wxClipboard_php*)rsrc->ptr;
+	wxClipboard_php* object = static_cast<wxClipboard_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -150,7 +151,8 @@ PHP_METHOD(php_wxClipboard, AddData)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&data0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "z", &data0 ) == SUCCESS)
+		char parse_parameters_string[] = "z";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &data0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(data0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(data0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -161,10 +163,6 @@ PHP_METHOD(php_wxClipboard, AddData)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(data0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(data0);
 				}
 				else if(Z_TYPE_P(data0) != IS_NULL)
 				{
@@ -178,7 +176,6 @@ PHP_METHOD(php_wxClipboard, AddData)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -263,7 +260,6 @@ PHP_METHOD(php_wxClipboard, Clear)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -347,7 +343,6 @@ PHP_METHOD(php_wxClipboard, Close)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -431,7 +426,6 @@ PHP_METHOD(php_wxClipboard, Flush)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -512,7 +506,8 @@ PHP_METHOD(php_wxClipboard, GetData)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&data0, php_wxDataObject_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "O", &data0, php_wxDataObject_entry ) == SUCCESS)
+		char parse_parameters_string[] = "O";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &data0, php_wxDataObject_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(data0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(data0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -523,10 +518,6 @@ PHP_METHOD(php_wxClipboard, GetData)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(data0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(data0);
 				}
 				else if(Z_TYPE_P(data0) != IS_NULL)
 				{
@@ -540,7 +531,6 @@ PHP_METHOD(php_wxClipboard, GetData)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -625,7 +615,6 @@ PHP_METHOD(php_wxClipboard, IsOpened)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -706,7 +695,8 @@ PHP_METHOD(php_wxClipboard, IsSupported)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&format0, php_wxDataFormat_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "O", &format0, php_wxDataFormat_entry ) == SUCCESS)
+		char parse_parameters_string[] = "O";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &format0, php_wxDataFormat_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(format0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(format0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -717,10 +707,6 @@ PHP_METHOD(php_wxClipboard, IsSupported)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(format0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(format0);
 				}
 				else if(Z_TYPE_P(format0) != IS_NULL)
 				{
@@ -734,7 +720,6 @@ PHP_METHOD(php_wxClipboard, IsSupported)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -819,7 +804,6 @@ PHP_METHOD(php_wxClipboard, IsUsingPrimarySelection)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -903,7 +887,6 @@ PHP_METHOD(php_wxClipboard, Open)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -984,7 +967,8 @@ PHP_METHOD(php_wxClipboard, SetData)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&data0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "z", &data0 ) == SUCCESS)
+		char parse_parameters_string[] = "z";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &data0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(data0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(data0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -995,10 +979,6 @@ PHP_METHOD(php_wxClipboard, SetData)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(data0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(data0);
 				}
 				else if(Z_TYPE_P(data0) != IS_NULL)
 				{
@@ -1012,7 +992,6 @@ PHP_METHOD(php_wxClipboard, SetData)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -1093,7 +1072,8 @@ PHP_METHOD(php_wxClipboard, UsePrimarySelection)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|b' (&primary0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|b", &primary0 ) == SUCCESS)
+		char parse_parameters_string[] = "|b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &primary0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -1101,7 +1081,6 @@ PHP_METHOD(php_wxClipboard, UsePrimarySelection)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -1168,7 +1147,6 @@ PHP_METHOD(php_wxClipboard, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -1214,6 +1192,7 @@ PHP_METHOD(php_wxClipboard, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+
 void php_wxDataFormat_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1222,13 +1201,13 @@ void php_wxDataFormat_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 	#endif
 	
 	
-	wxDataFormat_php* object = (wxDataFormat_php*)rsrc->ptr;
+	wxDataFormat_php* object = static_cast<wxDataFormat_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -1317,7 +1296,6 @@ PHP_METHOD(php_wxDataFormat, GetId)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -1407,7 +1385,6 @@ PHP_METHOD(php_wxDataFormat, GetType)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -1488,7 +1465,8 @@ PHP_METHOD(php_wxDataFormat, SetId)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&format0, &format_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "s", &format0, &format_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "s";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &format0, &format_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -1496,7 +1474,6 @@ PHP_METHOD(php_wxDataFormat, SetId)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -1576,7 +1553,8 @@ PHP_METHOD(php_wxDataFormat, SetType)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&type0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &type0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &type0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -1584,7 +1562,6 @@ PHP_METHOD(php_wxDataFormat, SetType)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -1640,7 +1617,8 @@ PHP_METHOD(php_wxDataFormat, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|l' (&format0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|l", &format0 ) == SUCCESS)
+		char parse_parameters_string[] = "|l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &format0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -1655,7 +1633,8 @@ PHP_METHOD(php_wxDataFormat, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&format1, &format_len1)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "s", &format1, &format_len1 ) == SUCCESS)
+		char parse_parameters_string[] = "s";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &format1, &format_len1 ) == SUCCESS)
 		{
 			overload1_called = true;
 			already_called = true;
@@ -1663,7 +1642,6 @@ PHP_METHOD(php_wxDataFormat, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -1691,7 +1669,6 @@ PHP_METHOD(php_wxDataFormat, __construct)
 		}
 	}
 
-	
 	if(overload1_called)
 	{
 		switch(arguments_received)
@@ -1737,6 +1714,7 @@ PHP_METHOD(php_wxDataFormat, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+
 void php_wxDataObject_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1745,13 +1723,13 @@ void php_wxDataObject_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 	#endif
 	
 	
-	wxDataObject_php* object = (wxDataObject_php*)rsrc->ptr;
+	wxDataObject_php* object = static_cast<wxDataObject_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -1777,7 +1755,7 @@ void php_wxDataObject_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
-void wxDataObject_php::GetAllFormats(wxDataFormat* formats, Direction dir=Get)const
+void wxDataObject_php::GetAllFormats(wxDataFormat* formats, Direction dir)const
 {
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxDataObject::GetAllFormats\n");
@@ -1805,7 +1783,7 @@ void wxDataObject_php::GetAllFormats(wxDataFormat* formats, Direction dir=Get)co
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxDataFormat_entry);
-	add_property_resource(arguments[0], _wxResource, zend_list_insert(formats, le_wxDataFormat));
+	add_property_resource(arguments[0], _wxResource, zend_list_insert((void*)formats, le_wxDataFormat));
 	ZVAL_LONG(arguments[1], dir);
 		
 	#ifdef USE_WXPHP_DEBUG
@@ -1866,7 +1844,7 @@ bool wxDataObject_php::GetDataHere(const wxDataFormat& format, void* buf)const
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxDataFormat_entry);
-	add_property_resource(arguments[0], _wxResource, zend_list_insert(&format, le_wxDataFormat));
+	add_property_resource(arguments[0], _wxResource, zend_list_insert((void*)&format, le_wxDataFormat));
 	ZVAL_STRING(arguments[1], (char*) buf, 0);
 		
 	#ifdef USE_WXPHP_DEBUG
@@ -1927,7 +1905,7 @@ size_t wxDataObject_php::GetDataSize(const wxDataFormat& format)const
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxDataFormat_entry);
-	add_property_resource(arguments[0], _wxResource, zend_list_insert(&format, le_wxDataFormat));
+	add_property_resource(arguments[0], _wxResource, zend_list_insert((void*)&format, le_wxDataFormat));
 		
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
@@ -1947,7 +1925,7 @@ size_t wxDataObject_php::GetDataSize(const wxDataFormat& format)const
 		php_printf("Returning userspace value.\n");
 		#endif
 		
-		return Z_LVAL_P(return_value);
+		return (size_t) Z_LVAL_P(return_value);
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -1959,7 +1937,7 @@ size_t wxDataObject_php::GetDataSize(const wxDataFormat& format)const
 	return wxDataObject::GetDataSize(format);
 
 }
-size_t wxDataObject_php::GetFormatCount(Direction dir=Get)const
+size_t wxDataObject_php::GetFormatCount(Direction dir)const
 {
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxDataObject::GetFormatCount\n");
@@ -2006,7 +1984,7 @@ size_t wxDataObject_php::GetFormatCount(Direction dir=Get)const
 		php_printf("Returning userspace value.\n");
 		#endif
 		
-		return Z_LVAL_P(return_value);
+		return (size_t) Z_LVAL_P(return_value);
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -2018,7 +1996,7 @@ size_t wxDataObject_php::GetFormatCount(Direction dir=Get)const
 	return wxDataObject::GetFormatCount(dir);
 
 }
-wxDataFormat wxDataObject_php::GetPreferredFormat(Direction dir=Get)const
+wxDataFormat wxDataObject_php::GetPreferredFormat(Direction dir)const
 {
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxDataObject::GetPreferredFormat\n");
@@ -2069,10 +2047,6 @@ wxDataFormat wxDataObject_php::GetPreferredFormat(Direction dir=Get)const
 		{
 			id_to_find = Z_RESVAL_P(*tmp);
 			return_object = zend_list_find(id_to_find, &rsrc_type);
-		}
-		else if(Z_TYPE_P(return_value) == IS_LONG)
-		{
-			return_object = Z_LVAL_P(return_value);
 		}
 		return *(wxDataFormat*) return_object;
 	}
@@ -2161,7 +2135,8 @@ PHP_METHOD(php_wxDataObject, IsSupported)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O|l' (&format0, php_wxDataFormat_entry, &dir0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "O|l", &format0, php_wxDataFormat_entry, &dir0 ) == SUCCESS)
+		char parse_parameters_string[] = "O|l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &format0, php_wxDataFormat_entry, &dir0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(format0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(format0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -2172,10 +2147,6 @@ PHP_METHOD(php_wxDataObject, IsSupported)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(format0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(format0);
 				}
 				else if(Z_TYPE_P(format0) != IS_NULL)
 				{
@@ -2189,7 +2160,6 @@ PHP_METHOD(php_wxDataObject, IsSupported)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -2300,7 +2270,8 @@ PHP_METHOD(php_wxDataObject, SetData)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'Ols' (&format0, php_wxDataFormat_entry, &len0, &buf0, &buf_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "Ols", &format0, php_wxDataFormat_entry, &len0, &buf0, &buf_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "Ols";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &format0, php_wxDataFormat_entry, &len0, &buf0, &buf_len0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(format0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(format0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -2311,10 +2282,6 @@ PHP_METHOD(php_wxDataObject, SetData)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(format0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(format0);
 				}
 				else if(Z_TYPE_P(format0) != IS_NULL)
 				{
@@ -2328,7 +2295,6 @@ PHP_METHOD(php_wxDataObject, SetData)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -2385,7 +2351,6 @@ PHP_METHOD(php_wxDataObject, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -2431,6 +2396,7 @@ PHP_METHOD(php_wxDataObject, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+
 void php_wxCustomDataObject_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2439,13 +2405,13 @@ void php_wxCustomDataObject_destruction_handler(zend_rsrc_list_entry *rsrc TSRML
 	#endif
 	
 	
-	wxCustomDataObject_php* object = (wxCustomDataObject_php*)rsrc->ptr;
+	wxCustomDataObject_php* object = static_cast<wxCustomDataObject_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -2530,7 +2496,8 @@ PHP_METHOD(php_wxCustomDataObject, Alloc)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&size0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &size0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &size0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -2538,7 +2505,6 @@ PHP_METHOD(php_wxCustomDataObject, Alloc)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -2622,7 +2588,6 @@ PHP_METHOD(php_wxCustomDataObject, Free)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -2706,7 +2671,6 @@ PHP_METHOD(php_wxCustomDataObject, GetData)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -2790,7 +2754,6 @@ PHP_METHOD(php_wxCustomDataObject, GetSize)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -2872,7 +2835,8 @@ PHP_METHOD(php_wxCustomDataObject, SetData)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ls' (&size0, &data0, &data_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ls", &size0, &data0, &data_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "ls";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &size0, &data0, &data_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -2880,7 +2844,6 @@ PHP_METHOD(php_wxCustomDataObject, SetData)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -2963,17 +2926,18 @@ PHP_METHOD(php_wxCustomDataObject, TakeData)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ls' (&size0, &data0, &data_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ls", &size0, &data0, &data_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "ls";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &size0, &data0, &data_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
 
-			zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "zz", &dummy, &data0_ref );
+			char parse_references_string[] = "zz";
+			zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_references_string, &dummy, &data0_ref );
 		}
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -3027,7 +2991,8 @@ PHP_METHOD(php_wxCustomDataObject, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|O' (&format0, php_wxDataFormat_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|O", &format0, php_wxDataFormat_entry ) == SUCCESS)
+		char parse_parameters_string[] = "|O";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &format0, php_wxDataFormat_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(format0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(format0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -3038,10 +3003,6 @@ PHP_METHOD(php_wxCustomDataObject, __construct)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(format0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(format0);
 				}
 				else if(Z_TYPE_P(format0) != IS_NULL)
 				{
@@ -3055,7 +3016,6 @@ PHP_METHOD(php_wxCustomDataObject, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -3112,6 +3072,7 @@ PHP_METHOD(php_wxCustomDataObject, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+
 void php_wxDataObjectComposite_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3120,13 +3081,13 @@ void php_wxDataObjectComposite_destruction_handler(zend_rsrc_list_entry *rsrc TS
 	#endif
 	
 	
-	wxDataObjectComposite_php* object = (wxDataObjectComposite_php*)rsrc->ptr;
+	wxDataObjectComposite_php* object = static_cast<wxDataObjectComposite_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -3213,7 +3174,8 @@ PHP_METHOD(php_wxDataObjectComposite, Add)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z|b' (&dataObject0, &preferred0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "z|b", &dataObject0, &preferred0 ) == SUCCESS)
+		char parse_parameters_string[] = "z|b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dataObject0, &preferred0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(dataObject0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(dataObject0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -3224,10 +3186,6 @@ PHP_METHOD(php_wxDataObjectComposite, Add)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(dataObject0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(dataObject0);
 				}
 				else if(Z_TYPE_P(dataObject0) != IS_NULL)
 				{
@@ -3241,7 +3199,6 @@ PHP_METHOD(php_wxDataObjectComposite, Add)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -3338,7 +3295,6 @@ PHP_METHOD(php_wxDataObjectComposite, GetReceivedFormat)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -3399,7 +3355,6 @@ PHP_METHOD(php_wxDataObjectComposite, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -3445,6 +3400,7 @@ PHP_METHOD(php_wxDataObjectComposite, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+
 void php_wxDataObjectSimple_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3453,13 +3409,13 @@ void php_wxDataObjectSimple_destruction_handler(zend_rsrc_list_entry *rsrc TSRML
 	#endif
 	
 	
-	wxDataObjectSimple_php* object = (wxDataObjectSimple_php*)rsrc->ptr;
+	wxDataObjectSimple_php* object = static_cast<wxDataObjectSimple_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -3556,17 +3512,18 @@ PHP_METHOD(php_wxDataObjectSimple, GetDataHere)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&buf0, &buf_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "s", &buf0, &buf_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "s";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &buf0, &buf_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
 
-			zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "z", &buf0_ref );
+			char parse_references_string[] = "z";
+			zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_references_string, &buf0_ref );
 		}
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -3661,7 +3618,6 @@ PHP_METHOD(php_wxDataObjectSimple, GetDataSize)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -3755,7 +3711,6 @@ PHP_METHOD(php_wxDataObjectSimple, GetFormat)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -3769,8 +3724,8 @@ PHP_METHOD(php_wxDataObjectSimple, GetFormat)
 				value_to_return0 = (wxDataFormat_php*) &((wxDataObjectSimple_php*)_this)->GetFormat();
 
 				if(value_to_return0->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return0->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return0->phpObj != NULL){
+						return_value = value_to_return0->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -3785,7 +3740,6 @@ PHP_METHOD(php_wxDataObjectSimple, GetFormat)
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
 					references->AddReference(return_value);
 				}
-				references->AddReference(return_value);
 
 
 				return;
@@ -3867,7 +3821,8 @@ PHP_METHOD(php_wxDataObjectSimple, SetData)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ls' (&len0, &buf0, &buf_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ls", &len0, &buf0, &buf_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "ls";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &len0, &buf0, &buf_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -3875,7 +3830,6 @@ PHP_METHOD(php_wxDataObjectSimple, SetData)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -3966,7 +3920,8 @@ PHP_METHOD(php_wxDataObjectSimple, SetFormat)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&format0, php_wxDataFormat_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "O", &format0, php_wxDataFormat_entry ) == SUCCESS)
+		char parse_parameters_string[] = "O";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &format0, php_wxDataFormat_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(format0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(format0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -3977,10 +3932,6 @@ PHP_METHOD(php_wxDataObjectSimple, SetFormat)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(format0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(format0);
 				}
 				else if(Z_TYPE_P(format0) != IS_NULL)
 				{
@@ -3994,7 +3945,6 @@ PHP_METHOD(php_wxDataObjectSimple, SetFormat)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -4048,7 +3998,8 @@ PHP_METHOD(php_wxDataObjectSimple, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|O' (&format0, php_wxDataFormat_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|O", &format0, php_wxDataFormat_entry ) == SUCCESS)
+		char parse_parameters_string[] = "|O";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &format0, php_wxDataFormat_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(format0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(format0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -4059,10 +4010,6 @@ PHP_METHOD(php_wxDataObjectSimple, __construct)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(format0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(format0);
 				}
 				else if(Z_TYPE_P(format0) != IS_NULL)
 				{
@@ -4076,7 +4023,6 @@ PHP_METHOD(php_wxDataObjectSimple, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -4133,6 +4079,7 @@ PHP_METHOD(php_wxDataObjectSimple, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+
 void php_wxBitmapDataObject_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4141,13 +4088,13 @@ void php_wxBitmapDataObject_destruction_handler(zend_rsrc_list_entry *rsrc TSRML
 	#endif
 	
 	
-	wxBitmapDataObject_php* object = (wxBitmapDataObject_php*)rsrc->ptr;
+	wxBitmapDataObject_php* object = static_cast<wxBitmapDataObject_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -4236,7 +4183,6 @@ PHP_METHOD(php_wxBitmapDataObject, GetBitmap)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -4322,7 +4268,8 @@ PHP_METHOD(php_wxBitmapDataObject, SetBitmap)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&bitmap0, php_wxBitmap_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "O", &bitmap0, php_wxBitmap_entry ) == SUCCESS)
+		char parse_parameters_string[] = "O";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &bitmap0, php_wxBitmap_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(bitmap0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(bitmap0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -4333,10 +4280,6 @@ PHP_METHOD(php_wxBitmapDataObject, SetBitmap)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(bitmap0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(bitmap0);
 				}
 				else if(Z_TYPE_P(bitmap0) != IS_NULL)
 				{
@@ -4350,7 +4293,6 @@ PHP_METHOD(php_wxBitmapDataObject, SetBitmap)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -4404,7 +4346,8 @@ PHP_METHOD(php_wxBitmapDataObject, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|O' (&bitmap0, php_wxBitmap_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|O", &bitmap0, php_wxBitmap_entry ) == SUCCESS)
+		char parse_parameters_string[] = "|O";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &bitmap0, php_wxBitmap_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(bitmap0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(bitmap0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -4415,10 +4358,6 @@ PHP_METHOD(php_wxBitmapDataObject, __construct)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(bitmap0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(bitmap0);
 				}
 				else if(Z_TYPE_P(bitmap0) != IS_NULL)
 				{
@@ -4432,7 +4371,6 @@ PHP_METHOD(php_wxBitmapDataObject, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -4489,6 +4427,7 @@ PHP_METHOD(php_wxBitmapDataObject, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+
 void php_wxURLDataObject_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4497,13 +4436,13 @@ void php_wxURLDataObject_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_D
 	#endif
 	
 	
-	wxURLDataObject_php* object = (wxURLDataObject_php*)rsrc->ptr;
+	wxURLDataObject_php* object = static_cast<wxURLDataObject_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -4592,7 +4531,6 @@ PHP_METHOD(php_wxURLDataObject, GetURL)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -4679,7 +4617,8 @@ PHP_METHOD(php_wxURLDataObject, SetURL)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&url0, &url_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "s", &url0, &url_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "s";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &url0, &url_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -4687,7 +4626,6 @@ PHP_METHOD(php_wxURLDataObject, SetURL)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -4740,7 +4678,8 @@ PHP_METHOD(php_wxURLDataObject, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|s' (&url0, &url_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|s", &url0, &url_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "|s";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &url0, &url_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -4748,7 +4687,6 @@ PHP_METHOD(php_wxURLDataObject, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -4804,6 +4742,7 @@ PHP_METHOD(php_wxURLDataObject, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+
 void php_wxTextDataObject_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4812,13 +4751,13 @@ void php_wxTextDataObject_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_
 	#endif
 	
 	
-	wxTextDataObject_php* object = (wxTextDataObject_php*)rsrc->ptr;
+	wxTextDataObject_php* object = static_cast<wxTextDataObject_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -4844,7 +4783,7 @@ void php_wxTextDataObject_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_
 		#endif
 	}
 }
-void wxTextDataObject_php::GetAllFormats(wxDataFormat* formats, Direction dir=Get)const
+void wxTextDataObject_php::GetAllFormats(wxDataFormat* formats, Direction dir)const
 {
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxTextDataObject::GetAllFormats\n");
@@ -4872,7 +4811,7 @@ void wxTextDataObject_php::GetAllFormats(wxDataFormat* formats, Direction dir=Ge
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxDataFormat_entry);
-	add_property_resource(arguments[0], _wxResource, zend_list_insert(formats, le_wxDataFormat));
+	add_property_resource(arguments[0], _wxResource, zend_list_insert((void*)formats, le_wxDataFormat));
 	ZVAL_LONG(arguments[1], dir);
 		
 	#ifdef USE_WXPHP_DEBUG
@@ -4970,7 +4909,6 @@ PHP_METHOD(php_wxTextDataObject, GetFormat)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -4984,8 +4922,8 @@ PHP_METHOD(php_wxTextDataObject, GetFormat)
 				value_to_return0 = (wxDataFormat_php*) &((wxTextDataObject_php*)_this)->GetFormat();
 
 				if(value_to_return0->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return0->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return0->phpObj != NULL){
+						return_value = value_to_return0->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -5000,108 +4938,6 @@ PHP_METHOD(php_wxTextDataObject, GetFormat)
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
 					references->AddReference(return_value);
 				}
-				references->AddReference(return_value);
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_METHOD(php_wxTextDataObject, GetFormatCount)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxTextDataObject::GetFormatCount\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	bool return_is_user_initialized = false;
-	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
-	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
-		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxTextDataObject::GetFormatCount\n");
-			
-			return;
-		}
-		else
-		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
-			
-			if(parent_rsrc_type == le_wxTextDataObject)
-				references = &((wxTextDataObject_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxURLDataObject)
-				references = &((wxURLDataObject_php*)_this)->references;
-		}
-	}
-	else
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Processing the method call as static\n");
-		#endif
-	}
-	
-	//Parameters for overload 0
-	long dir0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received >= 0  && arguments_received <= 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '|l' (&dir0)\n");
-		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|l", &dir0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(wxTextDataObject::GetFormatCount())\n\n");
-				#endif
-				ZVAL_LONG(return_value, ((wxTextDataObject_php*)_this)->GetFormatCount());
-
-
-				return;
-				break;
-			}
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(wxTextDataObject::GetFormatCount((wxDataObject::Direction) dir0))\n\n");
-				#endif
-				ZVAL_LONG(return_value, ((wxTextDataObject_php*)_this)->GetFormatCount((wxDataObject::Direction) dir0));
 
 
 				return;
@@ -5177,7 +5013,6 @@ PHP_METHOD(php_wxTextDataObject, GetText)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -5269,7 +5104,6 @@ PHP_METHOD(php_wxTextDataObject, GetTextLength)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -5352,7 +5186,8 @@ PHP_METHOD(php_wxTextDataObject, SetText)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&strText0, &strText_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "s", &strText0, &strText_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "s";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &strText0, &strText_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -5360,7 +5195,6 @@ PHP_METHOD(php_wxTextDataObject, SetText)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -5413,7 +5247,8 @@ PHP_METHOD(php_wxTextDataObject, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|s' (&text0, &text_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|s", &text0, &text_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "|s";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &text0, &text_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -5421,7 +5256,6 @@ PHP_METHOD(php_wxTextDataObject, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -5477,6 +5311,108 @@ PHP_METHOD(php_wxTextDataObject, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+PHP_METHOD(php_wxTextDataObject, GetFormatCount)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxTextDataObject::GetFormatCount\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	//In case the constructor uses objects
+	zval **tmp;
+	int rsrc_type;
+	int parent_rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	
+	//Other variables used thru the code
+	int arguments_received = ZEND_NUM_ARGS();
+	void *_this;
+	zval* dummy;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	bool return_is_user_initialized = false;
+	
+	//Get pointer of object that called this method if not a static method
+	if (getThis() != NULL) 
+	{
+		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		{
+			zend_error(E_ERROR, "Failed to get the parent object that called wxTextDataObject::GetFormatCount\n");
+			
+			return;
+		}
+		else
+		{
+			id_to_find = Z_RESVAL_P(*tmp);
+			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			
+			if(parent_rsrc_type == le_wxTextDataObject)
+				references = &((wxTextDataObject_php*)_this)->references;
+			else if(parent_rsrc_type == le_wxURLDataObject)
+				references = &((wxURLDataObject_php*)_this)->references;
+		}
+	}
+	else
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Processing the method call as static\n");
+		#endif
+	}
+	
+	//Parameters for overload 0
+	long dir0;
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received >= 0  && arguments_received <= 1)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '|l' (&dir0)\n");
+		#endif
+		char parse_parameters_string[] = "|l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dir0 ) == SUCCESS)
+		{
+			overload0_called = true;
+			already_called = true;
+		}
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_LONG(wxTextDataObject::GetFormatCount())\n\n");
+				#endif
+				ZVAL_LONG(return_value, ((wxTextDataObject_php*)_this)->GetFormatCount());
+
+
+				return;
+				break;
+			}
+			case 1:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_LONG(wxTextDataObject::GetFormatCount((wxDataObject::Direction) dir0))\n\n");
+				#endif
+				ZVAL_LONG(return_value, ((wxTextDataObject_php*)_this)->GetFormatCount((wxDataObject::Direction) dir0));
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+}
+
 void php_wxFileDataObject_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5485,13 +5421,13 @@ void php_wxFileDataObject_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_
 	#endif
 	
 	
-	wxFileDataObject_php* object = (wxFileDataObject_php*)rsrc->ptr;
+	wxFileDataObject_php* object = static_cast<wxFileDataObject_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -5577,7 +5513,8 @@ PHP_METHOD(php_wxFileDataObject, AddFile)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&file0, &file_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "s", &file0, &file_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "s";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &file0, &file_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -5585,7 +5522,6 @@ PHP_METHOD(php_wxFileDataObject, AddFile)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -5669,7 +5605,6 @@ PHP_METHOD(php_wxFileDataObject, GetFilenames)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -5735,7 +5670,6 @@ PHP_METHOD(php_wxFileDataObject, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -5781,6 +5715,7 @@ PHP_METHOD(php_wxFileDataObject, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+
 void php_wxTextDropTarget_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5789,13 +5724,13 @@ void php_wxTextDropTarget_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_
 	#endif
 	
 	
-	wxTextDropTarget_php* object = (wxTextDropTarget_php*)rsrc->ptr;
+	wxTextDropTarget_php* object = static_cast<wxTextDropTarget_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -5856,7 +5791,6 @@ PHP_METHOD(php_wxTextDropTarget, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -6025,6 +5959,7 @@ bool wxTextDropTarget_php::OnDrop(wxCoord x, wxCoord y)
 	return wxTextDropTarget::OnDrop(x, y);
 
 }
+
 void php_wxDropTarget_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6033,13 +5968,13 @@ void php_wxDropTarget_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 	#endif
 	
 	
-	wxDropTarget_php* object = (wxDropTarget_php*)rsrc->ptr;
+	wxDropTarget_php* object = static_cast<wxDropTarget_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -6064,154 +5999,6 @@ void php_wxDropTarget_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		php_printf("Not user space initialized\n");
 		#endif
 	}
-}
-PHP_METHOD(php_wxDropTarget, GetData)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxDropTarget::GetData\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	bool return_is_user_initialized = false;
-	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
-	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
-		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxDropTarget::GetData\n");
-			
-			return;
-		}
-		else
-		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
-			
-			if(parent_rsrc_type == le_wxDropTarget)
-				references = &((wxDropTarget_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFileDropTarget)
-				references = &((wxFileDropTarget_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxTextDropTarget)
-				references = &((wxTextDropTarget_php*)_this)->references;
-		}
-	}
-	else
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Processing the method call as static\n");
-		#endif
-	}
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
-		overload0_called = true;
-		already_called = true;
-	}
-
-		
-	
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxDropTarget::GetData())\n\n");
-				#endif
-				ZVAL_BOOL(return_value, ((wxDropTarget_php*)_this)->GetData());
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-wxDragResult wxDropTarget_php::OnData(wxCoord x, wxCoord y, wxDragResult def)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking virtual wxDropTarget::OnData\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zval *arguments[3];
-	
-	//Initilize arguments array
-	for(int i=0; i<3; i++)
-	{
-		MAKE_STD_ZVAL(arguments[i]);
-	}
-
-	zval* return_value;
-	MAKE_STD_ZVAL(return_value);
-	zval function_name;
-	ZVAL_STRING(&function_name, "OnData", 0);
-	char* temp_string;
-	char _wxResource[] = "wxResource";
-	zval **tmp;
-	int id_to_find;
-	void* return_object;
-	int rsrc_type;
-	
-	//Parameters for conversion
-	ZVAL_LONG(arguments[0], x);
-	ZVAL_LONG(arguments[1], y);
-	ZVAL_LONG(arguments[2], def);
-		
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Trying to call user defined method\n");
-	#endif
-	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 3, arguments TSRMLS_CC) == FAILURE)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Invocation of user defined method failed\n");
-		#endif
-		
-	}
-	else
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
-		
-		return Z_LVAL_P(return_value);
-	}
-	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxDropTarget::OnData(x, y, def);
-
 }
 wxDragResult wxDropTarget_php::OnDragOver(wxCoord x, wxCoord y, wxDragResult def)
 {
@@ -6261,7 +6048,7 @@ wxDragResult wxDropTarget_php::OnDragOver(wxCoord x, wxCoord y, wxDragResult def
 		php_printf("Returning userspace value.\n");
 		#endif
 		
-		return Z_LVAL_P(return_value);
+		return (wxDragResult) Z_LVAL_P(return_value);
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -6271,65 +6058,6 @@ wxDragResult wxDropTarget_php::OnDragOver(wxCoord x, wxCoord y, wxDragResult def
 	
 	//Call original method
 	return wxDropTarget::OnDragOver(x, y, def);
-
-}
-bool wxDropTarget_php::OnDrop(wxCoord x, wxCoord y)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking virtual wxDropTarget::OnDrop\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zval *arguments[2];
-	
-	//Initilize arguments array
-	for(int i=0; i<2; i++)
-	{
-		MAKE_STD_ZVAL(arguments[i]);
-	}
-
-	zval* return_value;
-	MAKE_STD_ZVAL(return_value);
-	zval function_name;
-	ZVAL_STRING(&function_name, "OnDrop", 0);
-	char* temp_string;
-	char _wxResource[] = "wxResource";
-	zval **tmp;
-	int id_to_find;
-	void* return_object;
-	int rsrc_type;
-	
-	//Parameters for conversion
-	ZVAL_LONG(arguments[0], x);
-	ZVAL_LONG(arguments[1], y);
-		
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Trying to call user defined method\n");
-	#endif
-	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC) == FAILURE)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Invocation of user defined method failed\n");
-		#endif
-		
-	}
-	else
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
-		
-		return Z_BVAL_P(return_value);
-	}
-	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxDropTarget::OnDrop(x, y);
 
 }
 wxDragResult wxDropTarget_php::OnEnter(wxCoord x, wxCoord y, wxDragResult def)
@@ -6380,7 +6108,7 @@ wxDragResult wxDropTarget_php::OnEnter(wxCoord x, wxCoord y, wxDragResult def)
 		php_printf("Returning userspace value.\n");
 		#endif
 		
-		return Z_LVAL_P(return_value);
+		return (wxDragResult) Z_LVAL_P(return_value);
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -6399,7 +6127,8 @@ void wxDropTarget_php::OnLeave()
 	php_printf("===========================================\n");
 	#endif
 	
-	int arguments = NULL;
+	zval* arguments[1];
+	arguments[0] = NULL;
 
 	zval* return_value;
 	MAKE_STD_ZVAL(return_value);
@@ -6475,7 +6204,8 @@ PHP_METHOD(php_wxDropTarget, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|z' (&data0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|z", &data0 ) == SUCCESS)
+		char parse_parameters_string[] = "|z";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &data0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(data0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(data0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -6486,10 +6216,6 @@ PHP_METHOD(php_wxDropTarget, __construct)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(data0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(data0);
 				}
 				else if(Z_TYPE_P(data0) != IS_NULL)
 				{
@@ -6503,7 +6229,6 @@ PHP_METHOD(php_wxDropTarget, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -6624,7 +6349,8 @@ PHP_METHOD(php_wxDropTarget, SetDataObject)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&data0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "z", &data0 ) == SUCCESS)
+		char parse_parameters_string[] = "z";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &data0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(data0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(data0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -6635,10 +6361,6 @@ PHP_METHOD(php_wxDropTarget, SetDataObject)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(data0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(data0);
 				}
 				else if(Z_TYPE_P(data0) != IS_NULL)
 				{
@@ -6652,7 +6374,6 @@ PHP_METHOD(php_wxDropTarget, SetDataObject)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -6674,6 +6395,181 @@ PHP_METHOD(php_wxDropTarget, SetDataObject)
 
 		
 }
+bool wxDropTarget_php::GetData()
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking virtual wxDropTarget::GetData\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zval* arguments[1];
+	arguments[0] = NULL;
+
+	zval* return_value;
+	MAKE_STD_ZVAL(return_value);
+	zval function_name;
+	ZVAL_STRING(&function_name, "GetData", 0);
+	char* temp_string;
+	char _wxResource[] = "wxResource";
+	zval **tmp;
+	int id_to_find;
+	void* return_object;
+	int rsrc_type;
+	
+	//Parameters for conversion
+		
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Trying to call user defined method\n");
+	#endif
+	
+	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC) == FAILURE)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Invocation of user defined method failed\n");
+		#endif
+		
+		wxMessageBox("Failed to call virtual method 'GetData'!", "Error");
+	}
+	else
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Returning userspace value.\n");
+		#endif
+		
+		return Z_BVAL_P(return_value);
+	}
+	
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Calling original method\n");
+	php_printf("===========================================\n\n");
+	#endif
+	
+	//Call original method
+	return wxDropTarget::GetData();
+
+}
+wxDragResult wxDropTarget_php::OnData(wxCoord x, wxCoord y, wxDragResult def)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking virtual wxDropTarget::OnData\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zval *arguments[3];
+	
+	//Initilize arguments array
+	for(int i=0; i<3; i++)
+	{
+		MAKE_STD_ZVAL(arguments[i]);
+	}
+
+	zval* return_value;
+	MAKE_STD_ZVAL(return_value);
+	zval function_name;
+	ZVAL_STRING(&function_name, "OnData", 0);
+	char* temp_string;
+	char _wxResource[] = "wxResource";
+	zval **tmp;
+	int id_to_find;
+	void* return_object;
+	int rsrc_type;
+	
+	//Parameters for conversion
+	ZVAL_LONG(arguments[0], x);
+	ZVAL_LONG(arguments[1], y);
+	ZVAL_LONG(arguments[2], def);
+		
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Trying to call user defined method\n");
+	#endif
+	
+	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 3, arguments TSRMLS_CC) == FAILURE)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Invocation of user defined method failed\n");
+		#endif
+		
+		wxMessageBox("Failed to call virtual method 'OnData'!", "Error");
+	}
+	else
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Returning userspace value.\n");
+		#endif
+		
+		return (wxDragResult) Z_LVAL_P(return_value);
+	}
+	
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Calling original method\n");
+	php_printf("===========================================\n\n");
+	#endif
+	
+	//Call original method
+	return wxDropTarget::OnData(x, y, def);
+
+}
+bool wxDropTarget_php::OnDrop(wxCoord x, wxCoord y)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking virtual wxDropTarget::OnDrop\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zval *arguments[2];
+	
+	//Initilize arguments array
+	for(int i=0; i<2; i++)
+	{
+		MAKE_STD_ZVAL(arguments[i]);
+	}
+
+	zval* return_value;
+	MAKE_STD_ZVAL(return_value);
+	zval function_name;
+	ZVAL_STRING(&function_name, "OnDrop", 0);
+	char* temp_string;
+	char _wxResource[] = "wxResource";
+	zval **tmp;
+	int id_to_find;
+	void* return_object;
+	int rsrc_type;
+	
+	//Parameters for conversion
+	ZVAL_LONG(arguments[0], x);
+	ZVAL_LONG(arguments[1], y);
+		
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Trying to call user defined method\n");
+	#endif
+	
+	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC) == FAILURE)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Invocation of user defined method failed\n");
+		#endif
+		
+		wxMessageBox("Failed to call virtual method 'OnDrop'!", "Error");
+	}
+	else
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Returning userspace value.\n");
+		#endif
+		
+		return Z_BVAL_P(return_value);
+	}
+	
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Calling original method\n");
+	php_printf("===========================================\n\n");
+	#endif
+	
+	//Call original method
+	return wxDropTarget::OnDrop(x, y);
+
+}
+
 void php_wxFileDropTarget_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6682,13 +6578,13 @@ void php_wxFileDropTarget_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_
 	#endif
 	
 	
-	wxFileDropTarget_php* object = (wxFileDropTarget_php*)rsrc->ptr;
+	wxFileDropTarget_php* object = static_cast<wxFileDropTarget_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -6749,7 +6645,6 @@ PHP_METHOD(php_wxFileDropTarget, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)

@@ -37,7 +37,7 @@
 <para>By default, no modifiers are active. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/kbdstate.h" line="37"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/kbdstate.h" line="37"/>
       </memberdef>
       <memberdef kind="function" id="classwx_keyboard_state_1a44b1e849563ebf43e073915a447e4aa5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -54,7 +54,7 @@
 </programlisting></para><para>with this function. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/kbdstate.h" line="70"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/kbdstate.h" line="70"/>
       </memberdef>
       <memberdef kind="function" id="classwx_keyboard_state_1a85ae7433cada04555d88704066a2f4fb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -67,7 +67,7 @@
 <para>This is equivalent to <computeroutput><ref refid="classwx_keyboard_state_1a44b1e849563ebf43e073915a447e4aa5" kindref="member">GetModifiers()</ref></computeroutput> <computeroutput>!=</computeroutput> <computeroutput>wxMOD_NONE</computeroutput>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/kbdstate.h" line="77"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/kbdstate.h" line="77"/>
       </memberdef>
       <memberdef kind="function" id="classwx_keyboard_state_1ae25436ceab56c88411dac479106b18dd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -80,7 +80,7 @@
 <para>This function doesn&apos;t distinguish between right and left control keys.</para><para>Notice that <ref refid="classwx_keyboard_state_1a44b1e849563ebf43e073915a447e4aa5" kindref="member">GetModifiers()</ref> should usually be used instead of this one. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/kbdstate.h" line="86"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/kbdstate.h" line="86"/>
       </memberdef>
       <memberdef kind="function" id="classwx_keyboard_state_1ab0488a268111109cb6ff0ebd09e91ad1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -93,7 +93,7 @@
 <para>This function doesn&apos;t distinguish between right and left control keys.</para><para>Notice that <ref refid="classwx_keyboard_state_1a44b1e849563ebf43e073915a447e4aa5" kindref="member">GetModifiers()</ref> should usually be used instead of this one. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/kbdstate.h" line="95"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/kbdstate.h" line="95"/>
       </memberdef>
       <memberdef kind="function" id="classwx_keyboard_state_1a63b9ec3a2f30011471a7036853fc38f3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -106,7 +106,7 @@
 <para>This function doesn&apos;t distinguish between right and left shift keys.</para><para>Notice that <ref refid="classwx_keyboard_state_1a44b1e849563ebf43e073915a447e4aa5" kindref="member">GetModifiers()</ref> should usually be used instead of this one. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/kbdstate.h" line="104"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/kbdstate.h" line="104"/>
       </memberdef>
       <memberdef kind="function" id="classwx_keyboard_state_1a8875366f7792d7fd5308cc240f5f0c5f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -121,7 +121,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/kbdstate.h" line="115"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/kbdstate.h" line="115"/>
       </memberdef>
       <memberdef kind="function" id="classwx_keyboard_state_1af71012a9fdbd32bbdc391c984ec5a588" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -134,7 +134,7 @@
 <para>Notice that <ref refid="classwx_keyboard_state_1a44b1e849563ebf43e073915a447e4aa5" kindref="member">GetModifiers()</ref> should usually be used instead of this one. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/kbdstate.h" line="122"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/kbdstate.h" line="122"/>
       </memberdef>
       <memberdef kind="function" id="classwx_keyboard_state_1a05240fdaf0b5cc9db5f8207d0b8062de" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -147,7 +147,7 @@
 <para>Same as <ref refid="classwx_keyboard_state_1ae25436ceab56c88411dac479106b18dd" kindref="member">ControlDown()</ref>. Deprecated.</para><para>Notice that <ref refid="classwx_keyboard_state_1a44b1e849563ebf43e073915a447e4aa5" kindref="member">GetModifiers()</ref> should usually be used instead of this one. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/kbdstate.h" line="130"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/kbdstate.h" line="130"/>
       </memberdef>
       <memberdef kind="function" id="classwx_keyboard_state_1ac9e9f195b68f79f4aac683bb7eb620dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -164,7 +164,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/kbdstate.h" line="133"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/kbdstate.h" line="133"/>
       </memberdef>
       <memberdef kind="function" id="classwx_keyboard_state_1a3a200bfbfaa31597f791e5bd57b99db6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -181,7 +181,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/kbdstate.h" line="134"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/kbdstate.h" line="134"/>
       </memberdef>
       <memberdef kind="function" id="classwx_keyboard_state_1a5a8f8337c65248310363aedf228303e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -198,7 +198,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/kbdstate.h" line="135"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/kbdstate.h" line="135"/>
       </memberdef>
       <memberdef kind="function" id="classwx_keyboard_state_1a6ba12f87c2c95364528ab152fa813de0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -215,7 +215,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/kbdstate.h" line="136"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/kbdstate.h" line="136"/>
       </memberdef>
       <memberdef kind="function" id="classwx_keyboard_state_1adb5578cce4dce054cd24c7eb3cd650e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -232,7 +232,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/kbdstate.h" line="137"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/kbdstate.h" line="137"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -242,30 +242,30 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/>None; this class implementation is entirely header-based.</para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="classwx_key_event" kindref="compound">wxKeyEvent</ref>, <ref refid="classwx_mouse_state" kindref="compound">wxMouseState</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7369">
+      <node id="7567">
         <label>wxKeyboardState</label>
         <link refid="classwx_keyboard_state"/>
       </node>
-      <node id="7370">
+      <node id="7568">
         <label>wxKeyEvent</label>
         <link refid="classwx_key_event"/>
-        <childnode refid="7369" relation="public-inheritance">
+        <childnode refid="7567" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7372">
+      <node id="7570">
         <label>wxMouseEvent</label>
         <link refid="classwx_mouse_event"/>
-        <childnode refid="7371" relation="public-inheritance">
+        <childnode refid="7569" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7371">
+      <node id="7569">
         <label>wxMouseState</label>
         <link refid="classwx_mouse_state"/>
-        <childnode refid="7369" relation="public-inheritance">
+        <childnode refid="7567" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/kbdstate.h" line="27" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/kbdstate.h" bodystart="26" bodyend="139"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/kbdstate.h" line="27" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/kbdstate.h" bodystart="26" bodyend="139"/>
     <listofallmembers>
       <member refid="classwx_keyboard_state_1af71012a9fdbd32bbdc391c984ec5a588" prot="public" virt="non-virtual"><scope>wxKeyboardState</scope><name>AltDown</name></member>
       <member refid="classwx_keyboard_state_1a05240fdaf0b5cc9db5f8207d0b8062de" prot="public" virt="non-virtual"><scope>wxKeyboardState</scope><name>CmdDown</name></member>

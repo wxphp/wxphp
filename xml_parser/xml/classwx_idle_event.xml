@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3497"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="3500"/>
       </memberdef>
       <memberdef kind="function" id="classwx_idle_event_1a914b7316db91fb71d21c899048666eca" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -30,7 +30,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3514"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="3517"/>
       </memberdef>
       <memberdef kind="function" id="classwx_idle_event_1a6fbe979090c15ba40e6509d9c41f2f78" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -49,7 +49,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3529"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="3532"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -65,7 +65,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3506"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="3509"/>
       </memberdef>
       <memberdef kind="function" id="classwx_idle_event_1a655610b1a5a1c668efc7d475313af2e3" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -90,13 +90,13 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3539"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="3542"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para>This class is used for idle events, which are generated when the system becomes idle. </para>    </briefdescription>
     <detaileddescription>
-<para>Note that, unless you do something specifically, the idle events are not sent if the system remains idle once it has become it, e.g. only a single idle event will be generated until something else resulting in more normal events happens and only then is the next idle event sent again.</para><para>If you need to ensure a continuous stream of idle events, you can either use <ref refid="classwx_idle_event_1a6fbe979090c15ba40e6509d9c41f2f78" kindref="member">wxIdleEvent::RequestMore</ref> method in your handler or call <ref refid="group__group__funcmacro__appinitterm_1ga97206743f70b5382f9e2615217604d15" kindref="member">wxWakeUpIdle()</ref> periodically (for example from a timer event handler), but note that both of these approaches (and especially the first one) increase the system load and so should be avoided if possible.</para><para>By default, idle events are sent to all windows (and also <ref refid="classwx_app" kindref="compound">wxApp</ref>, as usual). If this is causing a significant overhead in your application, you can call <ref refid="classwx_idle_event_1a655610b1a5a1c668efc7d475313af2e3" kindref="member">wxIdleEvent::SetMode</ref> with the value wxIDLE_PROCESS_SPECIFIED, and set the wxWS_EX_PROCESS_IDLE extra window style for every window which should receive idle events.</para><para><heading level="2">Events using this class</heading>
+<para>Note that, unless you do something specifically, the idle events are not sent if the system remains idle once it has become it, e.g. only a single idle event will be generated until something else resulting in more normal events happens and only then is the next idle event sent again.</para><para>If you need to ensure a continuous stream of idle events, you can either use <ref refid="classwx_idle_event_1a6fbe979090c15ba40e6509d9c41f2f78" kindref="member">wxIdleEvent::RequestMore</ref> method in your handler or call <ref refid="group__group__funcmacro__appinitterm_1ga97206743f70b5382f9e2615217604d15" kindref="member">wxWakeUpIdle()</ref> periodically (for example from a timer event handler), but note that both of these approaches (and especially the first one) increase the system load and so should be avoided if possible.</para><para>By default, idle events are sent to all windows, including even the hidden ones because they may be shown if some condition is met from their <computeroutput>wxEVT_IDLE</computeroutput> (or related <computeroutput>wxEVT_UPDATE_UI</computeroutput>) handler. The children of hidden windows do not receive idle events however as they can&apos;t change their state in any way noticeable by the user. Finally, the global <ref refid="classwx_app" kindref="compound">wxApp</ref> object also receives these events, as usual, so it can be used for any global idle time processing.</para><para>If sending idle events to all windows is causing a significant overhead in your application, you can call <ref refid="classwx_idle_event_1a655610b1a5a1c668efc7d475313af2e3" kindref="member">wxIdleEvent::SetMode</ref> with the value wxIDLE_PROCESS_SPECIFIED, and set the wxWS_EX_PROCESS_IDLE extra window style for every window which should receive idle events, all the other ones will not receive them in this case.</para><para><heading level="2">Events using this class</heading>
 </para><para>The following event handler macros redirect the events to member function handlers &apos;<bold>func</bold>&apos; with prototypes like: void<nonbreakablespace/>handlerFuncName(<ref refid="classwx_idle_event" kindref="compound">wxIdleEvent</ref>&amp;<nonbreakablespace/>event)Event macros: <itemizedlist>
 <listitem><para>EVT_IDLE(func): Process a <computeroutput>wxEVT_IDLE</computeroutput> event. </para></listitem>
 </itemizedlist>
@@ -104,49 +104,49 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="overview_events" kindref="compound">Events and Event Handling</ref>, <ref refid="classwx_update_u_i_event" kindref="compound">wxUpdateUIEvent</ref>, <ref refid="classwx_window_1a6b5654c0c6c6245d592c279521f7099c" kindref="member">wxWindow::OnInternalIdle</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7235">
+      <node id="7422">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="7233">
+      <node id="7420">
         <label>wxIdleEvent</label>
         <link refid="classwx_idle_event"/>
-        <childnode refid="7234" relation="public-inheritance">
+        <childnode refid="7421" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7234">
+      <node id="7421">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="7235" relation="public-inheritance">
+        <childnode refid="7422" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7238">
+      <node id="7425">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="7239" relation="usage">
+        <childnode refid="7426" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="7236">
+      <node id="7423">
         <label>wxIdleEvent</label>
         <link refid="classwx_idle_event"/>
-        <childnode refid="7237" relation="public-inheritance">
+        <childnode refid="7424" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7237">
+      <node id="7424">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="7238" relation="public-inheritance">
+        <childnode refid="7425" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7239">
+      <node id="7426">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3492" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="3491" bodyend="3540"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="3495" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="3494" bodyend="3543"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxIdleEvent</scope><name>AllocExclusive</name></member>
       <member refid="classwx_event_1a26878097a702e8d0368da150125d4158" prot="public" virt="pure-virtual"><scope>wxIdleEvent</scope><name>Clone</name></member>

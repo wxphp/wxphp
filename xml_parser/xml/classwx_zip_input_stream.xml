@@ -25,7 +25,7 @@
 <para>In a Unicode build the second parameter <emphasis>conv</emphasis> is used to translate the filename and comment fields into Unicode. It has no effect on the stream&apos;s data. If the parent stream is passed as a pointer then the new filter stream takes ownership of it. If it is passed by reference then it does not. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/zipstrm.h" line="383"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/zipstrm.h" line="383"/>
       </memberdef>
       <memberdef kind="function" id="classwx_zip_input_stream_1a9bd264aaf906b5b1c779643aafa8fdd9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -47,7 +47,7 @@
 <para>In a Unicode build the second parameter <emphasis>conv</emphasis> is used to translate the filename and comment fields into Unicode. It has no effect on the stream&apos;s data. If the parent stream is passed as a pointer then the new filter stream takes ownership of it. If it is passed by reference then it does not. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/zipstrm.h" line="385"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/zipstrm.h" line="385"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -67,10 +67,10 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000070"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Compatibility constructor (requires WXWIN_COMPATIBILITY_2_6).</para></xrefdescription></xrefsect>When this constructor is used, an emulation of seeking is switched on for compatibility with previous versions. Note however, that it is deprecated. </para>        </detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000069"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Compatibility constructor (requires WXWIN_COMPATIBILITY_2_6).</para></xrefdescription></xrefsect>When this constructor is used, an emulation of seeking is switched on for compatibility with previous versions. Note however, that it is deprecated. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/zipstrm.h" line="396"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/zipstrm.h" line="396"/>
       </memberdef>
       <memberdef kind="function" id="classwx_zip_input_stream_1a3e1f0d7bc043eb0701346d7985dc8efb" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -84,7 +84,7 @@
 <para>On a non-seekable stream reads to the end of the current entry first. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/zipstrm.h" line="402"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/zipstrm.h" line="402"/>
       </memberdef>
       <memberdef kind="function" id="classwx_zip_input_stream_1ac927daa41e67ff5b7f8195f368f14740" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -97,7 +97,7 @@
 <para>This is stored at the end of the zip, therefore when reading a zip from a non-seekable stream, it returns the empty string until the end of the zip has been reached, i.e. when <ref refid="classwx_zip_input_stream_1adb03dfdea3a632c3ce9fd788ce26b99e" kindref="member">GetNextEntry()</ref> returns NULL. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/zipstrm.h" line="411"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/zipstrm.h" line="411"/>
       </memberdef>
       <memberdef kind="function" id="classwx_zip_input_stream_1adb03dfdea3a632c3ce9fd788ce26b99e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_zip_entry" kindref="compound">wxZipEntry</ref> *</type>
@@ -111,7 +111,7 @@
 <para>The stream is then open and can be read. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/zipstrm.h" line="418"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/zipstrm.h" line="418"/>
       </memberdef>
       <memberdef kind="function" id="classwx_zip_input_stream_1a852fca3d0e54fe65fbd8db9b0e158b87" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -124,7 +124,7 @@
 <para>For zips on non-seekable streams returns the number of entries returned so far by <ref refid="classwx_zip_input_stream_1adb03dfdea3a632c3ce9fd788ce26b99e" kindref="member">GetNextEntry()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/zipstrm.h" line="425"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/zipstrm.h" line="425"/>
       </memberdef>
       <memberdef kind="function" id="classwx_zip_input_stream_1ac6782d9a7fe5ccac9c3ffa2fb56460cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -142,7 +142,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/zipstrm.h" line="436"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/zipstrm.h" line="436"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -152,66 +152,66 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__archive" kindref="compound">Archive support</ref>, <ref refid="group__group__class__streams" kindref="compound">Streams</ref></para><para><simplesect kind="see"><para><ref refid="overview_archive" kindref="compound">Archive Formats</ref>, <ref refid="classwx_zip_entry" kindref="compound">wxZipEntry</ref>, <ref refid="classwx_zip_output_stream" kindref="compound">wxZipOutputStream</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="11764">
+      <node id="11962">
         <label>wxInputStream</label>
         <link refid="classwx_input_stream"/>
-        <childnode refid="11765" relation="public-inheritance">
+        <childnode refid="11963" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11762">
+      <node id="11960">
         <label>wxArchiveInputStream</label>
         <link refid="classwx_archive_input_stream"/>
-        <childnode refid="11763" relation="public-inheritance">
+        <childnode refid="11961" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11765">
+      <node id="11963">
         <label>wxStreamBase</label>
         <link refid="classwx_stream_base"/>
       </node>
-      <node id="11763">
+      <node id="11961">
         <label>wxFilterInputStream</label>
         <link refid="classwx_filter_input_stream"/>
-        <childnode refid="11764" relation="public-inheritance">
+        <childnode refid="11962" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11761">
+      <node id="11959">
         <label>wxZipInputStream</label>
         <link refid="classwx_zip_input_stream"/>
-        <childnode refid="11762" relation="public-inheritance">
+        <childnode refid="11960" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="11769">
+      <node id="11967">
         <label>wxInputStream</label>
         <link refid="classwx_input_stream"/>
-        <childnode refid="11770" relation="public-inheritance">
+        <childnode refid="11968" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11767">
+      <node id="11965">
         <label>wxArchiveInputStream</label>
         <link refid="classwx_archive_input_stream"/>
-        <childnode refid="11768" relation="public-inheritance">
+        <childnode refid="11966" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11770">
+      <node id="11968">
         <label>wxStreamBase</label>
         <link refid="classwx_stream_base"/>
       </node>
-      <node id="11768">
+      <node id="11966">
         <label>wxFilterInputStream</label>
         <link refid="classwx_filter_input_stream"/>
-        <childnode refid="11769" relation="public-inheritance">
+        <childnode refid="11967" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11766">
+      <node id="11964">
         <label>wxZipInputStream</label>
         <link refid="classwx_zip_input_stream"/>
-        <childnode refid="11767" relation="public-inheritance">
+        <childnode refid="11965" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/zipstrm.h" line="371" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/zipstrm.h" bodystart="370" bodyend="437"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/zipstrm.h" line="371" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/zipstrm.h" bodystart="370" bodyend="437"/>
     <listofallmembers>
       <member refid="classwx_input_stream_1a72111c617db403344a2dd6b8c13330c3" prot="public" virt="virtual"><scope>wxZipInputStream</scope><name>CanRead</name></member>
       <member refid="classwx_zip_input_stream_1a3e1f0d7bc043eb0701346d7985dc8efb" prot="public" virt="virtual"><scope>wxZipInputStream</scope><name>CloseEntry</name></member>

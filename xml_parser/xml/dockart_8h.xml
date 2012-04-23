@@ -148,7 +148,7 @@
 <para><xrefsect id="todo_1_todo000011"><xreftitle>Todo</xreftitle><xrefdescription><para>TOWRITE </para></xrefdescription></xrefsect></para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/dockart.h" line="14" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/dockart.h" bodystart="13" bodyend="32"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/dockart.h" line="14" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/dockart.h" bodystart="13" bodyend="32"/>
       </memberdef>
       <memberdef kind="enum" id="dockart_8h_1a615f7ec3429260746a2dd465a14fb1ae" prot="public" static="no">
         <name>wxAuiPaneDockArtGradients</name>
@@ -182,7 +182,7 @@
 <para><xrefsect id="todo_1_todo000012"><xreftitle>Todo</xreftitle><xrefdescription><para>TOWRITE </para></xrefdescription></xrefsect></para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/dockart.h" line="38" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/dockart.h" bodystart="37" bodyend="42"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/dockart.h" line="38" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/dockart.h" bodystart="37" bodyend="42"/>
       </memberdef>
       <memberdef kind="enum" id="dockart_8h_1a6ce0fe49238f90e0c430e5456ea8d852" prot="public" static="no">
         <name>wxAuiPaneButtonState</name>
@@ -216,7 +216,7 @@
 <para><xrefsect id="todo_1_todo000013"><xreftitle>Todo</xreftitle><xrefdescription><para>TOWRITE </para></xrefdescription></xrefsect></para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/dockart.h" line="48" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/dockart.h" bodystart="47" bodyend="52"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/dockart.h" line="48" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/dockart.h" bodystart="47" bodyend="52"/>
       </memberdef>
       <memberdef kind="enum" id="dockart_8h_1a69100375d2c563a9b848f6dd9292bff6" prot="public" static="no">
         <name>wxAuiButtonId</name>
@@ -330,13 +330,13 @@
 <para><xrefsect id="todo_1_todo000014"><xreftitle>Todo</xreftitle><xrefdescription><para>TOWRITE </para></xrefdescription></xrefsect></para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/dockart.h" line="58" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/dockart.h" bodystart="57" bodyend="72"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/dockart.h" line="58" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/dockart.h" bodystart="57" bodyend="72"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/dockart.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/dockart.h"/>
   </compounddef>
 </doxygen>

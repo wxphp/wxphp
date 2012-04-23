@@ -25,7 +25,7 @@
 <para>In a Unicode build the second parameter <emphasis>conv</emphasis> is used to translate fields from the standard tar header into Unicode.</para><para>It has no effect on the stream&apos;s data. <emphasis>conv</emphasis> is only used for the standard tar headers, any pax extended headers are always UTF-8 encoded.</para><para>If the parent stream is passed as a pointer then the new filter stream takes ownership of it. If it is passed by reference then it does not. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" line="69"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/tarstrm.h" line="69"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tar_input_stream_1a6c66866604a8403840226c0996efd959" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -47,7 +47,7 @@
 <para>In a Unicode build the second parameter <emphasis>conv</emphasis> is used to translate fields from the standard tar header into Unicode.</para><para>It has no effect on the stream&apos;s data. <emphasis>conv</emphasis> is only used for the standard tar headers, any pax extended headers are always UTF-8 encoded.</para><para>If the parent stream is passed as a pointer then the new filter stream takes ownership of it. If it is passed by reference then it does not. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" line="71"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/tarstrm.h" line="71"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -63,7 +63,7 @@
 <para>On a non-seekable stream reads to the end of the current entry first. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" line="78"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/tarstrm.h" line="78"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tar_input_stream_1a2caf9fbd8b60d18422852e2c77f8d3b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_tar_entry" kindref="compound">wxTarEntry</ref> *</type>
@@ -77,7 +77,7 @@
 <para>The stream is then open and can be read. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" line="85"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/tarstrm.h" line="85"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tar_input_stream_1a04c4b7aed15a2940a5f9c02ebe70964d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -94,7 +94,7 @@
 <para><emphasis>entry</emphasis> should be from the same tar file, and the tar should be on a seekable stream. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" line="94"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/tarstrm.h" line="94"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -104,66 +104,66 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__archive" kindref="compound">Archive support</ref>, <ref refid="group__group__class__streams" kindref="compound">Streams</ref></para><para><simplesect kind="see"><para><ref refid="overview_archive_1overview_archive_byname" kindref="member">Looking Up an Archive Entry by Name</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10683">
+      <node id="10868">
         <label>wxInputStream</label>
         <link refid="classwx_input_stream"/>
-        <childnode refid="10684" relation="public-inheritance">
+        <childnode refid="10869" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10681">
+      <node id="10866">
         <label>wxArchiveInputStream</label>
         <link refid="classwx_archive_input_stream"/>
-        <childnode refid="10682" relation="public-inheritance">
+        <childnode refid="10867" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10684">
+      <node id="10869">
         <label>wxStreamBase</label>
         <link refid="classwx_stream_base"/>
       </node>
-      <node id="10682">
+      <node id="10867">
         <label>wxFilterInputStream</label>
         <link refid="classwx_filter_input_stream"/>
-        <childnode refid="10683" relation="public-inheritance">
+        <childnode refid="10868" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10680">
+      <node id="10865">
         <label>wxTarInputStream</label>
         <link refid="classwx_tar_input_stream"/>
-        <childnode refid="10681" relation="public-inheritance">
+        <childnode refid="10866" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10688">
+      <node id="10873">
         <label>wxInputStream</label>
         <link refid="classwx_input_stream"/>
-        <childnode refid="10689" relation="public-inheritance">
+        <childnode refid="10874" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10686">
+      <node id="10871">
         <label>wxArchiveInputStream</label>
         <link refid="classwx_archive_input_stream"/>
-        <childnode refid="10687" relation="public-inheritance">
+        <childnode refid="10872" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10689">
+      <node id="10874">
         <label>wxStreamBase</label>
         <link refid="classwx_stream_base"/>
       </node>
-      <node id="10687">
+      <node id="10872">
         <label>wxFilterInputStream</label>
         <link refid="classwx_filter_input_stream"/>
-        <childnode refid="10688" relation="public-inheritance">
+        <childnode refid="10873" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10685">
+      <node id="10870">
         <label>wxTarInputStream</label>
         <link refid="classwx_tar_input_stream"/>
-        <childnode refid="10686" relation="public-inheritance">
+        <childnode refid="10871" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" line="55" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" bodystart="54" bodyend="95"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/tarstrm.h" line="55" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/tarstrm.h" bodystart="54" bodyend="95"/>
     <listofallmembers>
       <member refid="classwx_input_stream_1a72111c617db403344a2dd6b8c13330c3" prot="public" virt="virtual"><scope>wxTarInputStream</scope><name>CanRead</name></member>
       <member refid="classwx_tar_input_stream_1a2f67d0c302c3a73c9b8fe11cf2ae4cdb" prot="public" virt="virtual"><scope>wxTarInputStream</scope><name>CloseEntry</name></member>

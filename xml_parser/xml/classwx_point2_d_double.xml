@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/geometry.h" line="121" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/geometry.h" bodystart="121" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/geometry.h" line="121" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/geometry.h" bodystart="121" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classwx_point2_d_double_1aa52695ed85d1ecb2b58b046b2c5b29dc" prot="public" static="no" mutable="no">
         <type><ref refid="defs_8h_1a75a450a943d1f217d7cf24f2b9eeed2e" kindref="member">wxDouble</ref></type>
@@ -28,7 +28,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/geometry.h" line="122" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/geometry.h" bodystart="122" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/geometry.h" line="122" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/geometry.h" bodystart="122" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -43,7 +43,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/geometry.h" line="82"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/geometry.h" line="82"/>
       </memberdef>
       <memberdef kind="function" id="classwx_point2_d_double_1a64770901a5f5948d23f27a2a9eab5bb6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -64,7 +64,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/geometry.h" line="83"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/geometry.h" line="83"/>
       </memberdef>
       <memberdef kind="function" id="classwx_point2_d_double_1a9839c3617317fcccdfa8d28f390a69e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -81,7 +81,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/geometry.h" line="84"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/geometry.h" line="84"/>
       </memberdef>
       <memberdef kind="function" id="classwx_point2_d_double_1a25479d14bf5f3f2ceda92fe7dc2d8582" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -98,7 +98,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/geometry.h" line="85"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/geometry.h" line="85"/>
       </memberdef>
       <memberdef kind="function" id="classwx_point2_d_double_1ab7ff55a86713332a9c8a29bf11c299d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -115,7 +115,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/geometry.h" line="86"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/geometry.h" line="86"/>
       </memberdef>
       <memberdef kind="function" id="classwx_point2_d_double_1a0e0a5b1379eb75dd2f7ab2199f6f094e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -136,7 +136,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/geometry.h" line="89"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/geometry.h" line="89"/>
       </memberdef>
       <memberdef kind="function" id="classwx_point2_d_double_1a22a9a06396d5c74a6e4d29587e578e0a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -157,7 +157,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/geometry.h" line="90"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/geometry.h" line="90"/>
       </memberdef>
       <memberdef kind="function" id="classwx_point2_d_double_1a32e396609abe72bc5e8213b6e9ff564e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="defs_8h_1a75a450a943d1f217d7cf24f2b9eeed2e" kindref="member">wxDouble</ref></type>
@@ -170,7 +170,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/geometry.h" line="92"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/geometry.h" line="92"/>
       </memberdef>
       <memberdef kind="function" id="classwx_point2_d_double_1a085491697bf7c73bcb3f031dd0ef69a4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="defs_8h_1a75a450a943d1f217d7cf24f2b9eeed2e" kindref="member">wxDouble</ref></type>
@@ -183,7 +183,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/geometry.h" line="93"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/geometry.h" line="93"/>
       </memberdef>
       <memberdef kind="function" id="classwx_point2_d_double_1afaba09e9e341a1dd08e4c1a717d9e220" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -200,7 +200,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/geometry.h" line="94"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/geometry.h" line="94"/>
       </memberdef>
       <memberdef kind="function" id="classwx_point2_d_double_1a81611c1fd268719540b40ccf803057c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -217,7 +217,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/geometry.h" line="95"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/geometry.h" line="95"/>
       </memberdef>
       <memberdef kind="function" id="classwx_point2_d_double_1a3626c42fbf873a289cd15b2fe1f243c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -238,7 +238,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/geometry.h" line="96"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/geometry.h" line="96"/>
       </memberdef>
       <memberdef kind="function" id="classwx_point2_d_double_1af0cbfa1582bc29acbaf728d0eabfde96" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -251,7 +251,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/geometry.h" line="98"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/geometry.h" line="98"/>
       </memberdef>
       <memberdef kind="function" id="classwx_point2_d_double_1afc022d31780e55c1477e54d0bc48cdb2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="defs_8h_1a75a450a943d1f217d7cf24f2b9eeed2e" kindref="member">wxDouble</ref></type>
@@ -268,7 +268,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/geometry.h" line="100"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/geometry.h" line="100"/>
       </memberdef>
       <memberdef kind="function" id="classwx_point2_d_double_1a64fbbead26e1a5cf44848f980827eeb5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="defs_8h_1a75a450a943d1f217d7cf24f2b9eeed2e" kindref="member">wxDouble</ref></type>
@@ -285,7 +285,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/geometry.h" line="101"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/geometry.h" line="101"/>
       </memberdef>
       <memberdef kind="function" id="classwx_point2_d_double_1abd9a17bd6173db32ae9097319b593ddb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="defs_8h_1a75a450a943d1f217d7cf24f2b9eeed2e" kindref="member">wxDouble</ref></type>
@@ -302,7 +302,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/geometry.h" line="102"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/geometry.h" line="102"/>
       </memberdef>
       <memberdef kind="function" id="classwx_point2_d_double_1ac7ec612d12099bb47b33a37cce389a53" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="defs_8h_1a75a450a943d1f217d7cf24f2b9eeed2e" kindref="member">wxDouble</ref></type>
@@ -319,7 +319,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/geometry.h" line="103"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/geometry.h" line="103"/>
       </memberdef>
       <memberdef kind="function" id="classwx_point2_d_double_1af137de3f510204ef7678c8529b8dcbd7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_point2_d_double" kindref="compound">wxPoint2DDouble</ref></type>
@@ -332,7 +332,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/geometry.h" line="106"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/geometry.h" line="106"/>
       </memberdef>
       <memberdef kind="function" id="classwx_point2_d_double_1a975bbfaff22be9a0bb1c24a03984f2d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_point2_d_double" kindref="compound">wxPoint2DDouble</ref> &amp;</type>
@@ -349,7 +349,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/geometry.h" line="108"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/geometry.h" line="108"/>
       </memberdef>
       <memberdef kind="function" id="classwx_point2_d_double_1a7bca9d31e421b829707499c841e2c349" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_point2_d_double" kindref="compound">wxPoint2DDouble</ref> &amp;</type>
@@ -366,7 +366,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/geometry.h" line="109"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/geometry.h" line="109"/>
       </memberdef>
       <memberdef kind="function" id="classwx_point2_d_double_1ac1d6f45fcf8961d272f508dd03f40249" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_point2_d_double" kindref="compound">wxPoint2DDouble</ref> &amp;</type>
@@ -383,7 +383,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/geometry.h" line="110"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/geometry.h" line="110"/>
       </memberdef>
       <memberdef kind="function" id="classwx_point2_d_double_1aa8537e9b10fbb01d983c9cea72f5b9ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_point2_d_double" kindref="compound">wxPoint2DDouble</ref> &amp;</type>
@@ -400,7 +400,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/geometry.h" line="111"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/geometry.h" line="111"/>
       </memberdef>
       <memberdef kind="function" id="classwx_point2_d_double_1a5a1e27b16caabfbc2583139f9d9b3640" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_point2_d_double" kindref="compound">wxPoint2DDouble</ref> &amp;</type>
@@ -417,7 +417,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/geometry.h" line="112"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/geometry.h" line="112"/>
       </memberdef>
       <memberdef kind="function" id="classwx_point2_d_double_1af4531f5a908545472214d0e6379224c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_point2_d_double" kindref="compound">wxPoint2DDouble</ref> &amp;</type>
@@ -434,7 +434,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/geometry.h" line="113"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/geometry.h" line="113"/>
       </memberdef>
       <memberdef kind="function" id="classwx_point2_d_double_1afd1f550f02ace1adea62aa781390dc5a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_point2_d_double" kindref="compound">wxPoint2DDouble</ref> &amp;</type>
@@ -451,7 +451,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/geometry.h" line="114"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/geometry.h" line="114"/>
       </memberdef>
       <memberdef kind="function" id="classwx_point2_d_double_1a5ab2378751bd555038cfad16a61fc6aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_point2_d_double" kindref="compound">wxPoint2DDouble</ref> &amp;</type>
@@ -468,7 +468,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/geometry.h" line="115"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/geometry.h" line="115"/>
       </memberdef>
       <memberdef kind="function" id="classwx_point2_d_double_1a8249e6aeacffa9736fae4e7e13a53754" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_point2_d_double" kindref="compound">wxPoint2DDouble</ref> &amp;</type>
@@ -485,7 +485,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/geometry.h" line="116"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/geometry.h" line="116"/>
       </memberdef>
       <memberdef kind="function" id="classwx_point2_d_double_1ac67f30d687686be17ee8d1acca71c917" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -502,7 +502,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/geometry.h" line="118"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/geometry.h" line="118"/>
       </memberdef>
       <memberdef kind="function" id="classwx_point2_d_double_1a1e095096acc045efa372ebf5677497cb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -519,14 +519,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/geometry.h" line="119"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/geometry.h" line="119"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/geometry.h" line="80" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/geometry.h" bodystart="79" bodyend="123"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/geometry.h" line="80" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/geometry.h" bodystart="79" bodyend="123"/>
     <listofallmembers>
       <member refid="classwx_point2_d_double_1ac7ec612d12099bb47b33a37cce389a53" prot="public" virt="non-virtual"><scope>wxPoint2DDouble</scope><name>GetCrossProduct</name></member>
       <member refid="classwx_point2_d_double_1afc022d31780e55c1477e54d0bc48cdb2" prot="public" virt="non-virtual"><scope>wxPoint2DDouble</scope><name>GetDistance</name></member>

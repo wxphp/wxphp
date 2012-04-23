@@ -19,7 +19,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/zipstrm.h" line="111"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/zipstrm.h" line="111"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -28,7 +28,7 @@
 <para>An instance of your notifier class can then be assigned to <ref refid="classwx_zip_entry" kindref="compound">wxZipEntry</ref> objects, using <ref refid="classwx_zip_entry_1a8f69f8c891a3ae90a0111039ca1feebf" kindref="member">wxZipEntry::SetNotifier()</ref>.</para><para>Setting a notifier is not usually necessary. It is used to handle certain cases when modifying an zip in a pipeline (i.e. between non-seekable streams). See <ref refid="overview_archive_1overview_archive_noseek" kindref="member">Archives on Non-Seekable Streams</ref>.</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__archive" kindref="compound">Archive support</ref>, <ref refid="group__group__class__streams" kindref="compound">Streams</ref></para><para><simplesect kind="see"><para><ref refid="overview_archive_1overview_archive_noseek" kindref="member">Archives on Non-Seekable Streams</ref>, <ref refid="classwx_zip_entry" kindref="compound">wxZipEntry</ref>, <ref refid="classwx_zip_input_stream" kindref="compound">wxZipInputStream</ref>, <ref refid="classwx_zip_output_stream" kindref="compound">wxZipOutputStream</ref> </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/zipstrm.h" line="106" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/zipstrm.h" bodystart="105" bodyend="112"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/zipstrm.h" line="106" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/zipstrm.h" bodystart="105" bodyend="112"/>
     <listofallmembers>
       <member refid="classwx_zip_notifier_1a083f9f711200b5d94e7bd1a5512b3d4f" prot="public" virt="pure-virtual"><scope>wxZipNotifier</scope><name>OnEntryUpdated</name></member>
     </listofallmembers>

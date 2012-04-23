@@ -25,7 +25,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/rawbmp.h" line="79" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/rawbmp.h" bodystart="79" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/rawbmp.h" line="79" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/rawbmp.h" bodystart="79" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -44,7 +44,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/rawbmp.h" line="84"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/rawbmp.h" line="84"/>
       </memberdef>
       <memberdef kind="function" id="classwx_pixel_data_1abc868145e077e1aa6431e18392c3127a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -65,7 +65,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/rawbmp.h" line="91"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/rawbmp.h" line="91"/>
       </memberdef>
       <memberdef kind="function" id="classwx_pixel_data_1a068af31f567fa8b20397ab13ec4bf491" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -90,7 +90,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/rawbmp.h" line="97"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/rawbmp.h" line="97"/>
       </memberdef>
       <memberdef kind="function" id="classwx_pixel_data_1a2e8e54542cbaab3b3ca9a89bf5b4a64c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -103,7 +103,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/rawbmp.h" line="102"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/rawbmp.h" line="102"/>
       </memberdef>
       <memberdef kind="function" id="classwx_pixel_data_1aa121b3c3f5f217afcc7799cdb965b114" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_pixel_data_1_1_iterator" kindref="compound">Iterator</ref></type>
@@ -116,7 +116,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/rawbmp.h" line="107"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/rawbmp.h" line="107"/>
       </memberdef>
       <memberdef kind="function" id="classwx_pixel_data_1ae70c17cb338cbee78655a26e8c0ec75d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_point" kindref="compound">wxPoint</ref></type>
@@ -129,7 +129,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/rawbmp.h" line="112"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/rawbmp.h" line="112"/>
       </memberdef>
       <memberdef kind="function" id="classwx_pixel_data_1ada3a03361a1410251ca9e94ef380d53b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -142,7 +142,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/rawbmp.h" line="117"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/rawbmp.h" line="117"/>
       </memberdef>
       <memberdef kind="function" id="classwx_pixel_data_1af5649967c3f27e1e107e0aced23d29f4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -155,7 +155,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/rawbmp.h" line="122"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/rawbmp.h" line="122"/>
       </memberdef>
       <memberdef kind="function" id="classwx_pixel_data_1ae017e22a68a694662f42a9e0a799d91b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
@@ -168,7 +168,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/rawbmp.h" line="127"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/rawbmp.h" line="127"/>
       </memberdef>
       <memberdef kind="function" id="classwx_pixel_data_1a734c1707b37d44ea0d161ac686240265" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -181,7 +181,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/rawbmp.h" line="132"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/rawbmp.h" line="132"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -230,7 +230,7 @@ Example:</para><para><programlisting><codeline><highlight class="normal"><sp/><s
 </programlisting></para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__gdi" kindref="compound">Graphics Device Interface (GDI)</ref></para><para><simplesect kind="see"><para><ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref>, <ref refid="classwx_image" kindref="compound">wxImage</ref> </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/rawbmp.h" line="74" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/rawbmp.h" bodystart="72" bodyend="213"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/rawbmp.h" line="74" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/rawbmp.h" bodystart="72" bodyend="213"/>
     <listofallmembers>
       <member refid="classwx_pixel_data_1af5649967c3f27e1e107e0aced23d29f4" prot="public" virt="non-virtual"><scope>wxPixelData</scope><name>GetHeight</name></member>
       <member refid="classwx_pixel_data_1ae70c17cb338cbee78655a26e8c0ec75d" prot="public" virt="non-virtual"><scope>wxPixelData</scope><name>GetOrigin</name></member>

@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dir.h" line="156"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dir.h" line="156"/>
       </memberdef>
       <memberdef kind="function" id="classwx_dir_1ac4d7e373292882b38ec367536a0de1d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -32,7 +32,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dir.h" line="160"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dir.h" line="160"/>
       </memberdef>
       <memberdef kind="function" id="classwx_dir_1a5c2ca66526b2c85ac9fba8c44b95fa16" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -45,7 +45,7 @@
 <para>It is not virtual and so this class is not meant to be used polymorphically. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dir.h" line="166"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dir.h" line="166"/>
       </memberdef>
       <memberdef kind="function" id="classwx_dir_1a08bad912e7c04ed2b5f7a4e498f77247" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -72,7 +72,7 @@
 <para>See <ref refid="dir_8h_1aa45988fae9ce0d0c4f8312a6cf026232" kindref="member">wxDirFlags</ref> for the list of the possible flags. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dir.h" line="218"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dir.h" line="218"/>
       </memberdef>
       <memberdef kind="function" id="classwx_dir_1a7beabef18fb36071f16b788824a14e2e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -85,7 +85,7 @@
 <para>The returned string does not have the trailing path separator (slash or backslash). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dir.h" line="224"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dir.h" line="224"/>
       </memberdef>
       <memberdef kind="function" id="classwx_dir_1a231c28d6814d9ab89eb1be1b9545590e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -102,7 +102,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dir.h" line="230"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dir.h" line="230"/>
       </memberdef>
       <memberdef kind="function" id="classwx_dir_1a5c42987615b1a0f9c369f2b8f2a1f88b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -120,7 +120,7 @@
 <para>If <emphasis>filespec</emphasis> is empty, look for any files at all. In any case, even hidden files are taken into account. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dir.h" line="254"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dir.h" line="254"/>
       </memberdef>
       <memberdef kind="function" id="classwx_dir_1ad3970b5191b479fed70b18fe4a457e48" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -138,7 +138,7 @@
 <para>The hidden subdirectories are taken into account as well. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dir.h" line="261"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dir.h" line="261"/>
       </memberdef>
       <memberdef kind="function" id="classwx_dir_1a4746350f9d7fa2971d46e2a19a335868" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -151,7 +151,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dir.h" line="267"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dir.h" line="267"/>
       </memberdef>
       <memberdef kind="function" id="classwx_dir_1a51eb3dd2adf86bfa977aa94526242536" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -168,7 +168,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dir.h" line="282"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dir.h" line="282"/>
       </memberdef>
       <memberdef kind="function" id="classwx_dir_1a7621f55a0dff2a394e6da1a61e427df1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -196,7 +196,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dir.h" line="315"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dir.h" line="315"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -215,7 +215,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dir.h" line="171"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dir.h" line="171"/>
       </memberdef>
       <memberdef kind="function" id="classwx_dir_1a7f61cb07fa58cff063b8acdcaa015bdd" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -242,7 +242,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dir.h" line="188"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dir.h" line="188"/>
       </memberdef>
       <memberdef kind="function" id="classwx_dir_1adf11b6104db3ff8c17902328d0ada848" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -275,7 +275,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dir.h" line="209"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dir.h" line="209"/>
       </memberdef>
       <memberdef kind="function" id="classwx_dir_1acec31249ed7a4dd2d36e8e1011f4ac16" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_u_long_long" kindref="compound">wxULongLong</ref></type>
@@ -298,7 +298,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dir.h" line="247"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dir.h" line="247"/>
       </memberdef>
       <memberdef kind="function" id="classwx_dir_1a97ee8e2dc2154b14bcd4b2f78cb5733d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -325,7 +325,7 @@
 <para>This is just an alias for <ref refid="classwx_file_name_1a852d4f699225e767242d54df53d6f3be" kindref="member">wxFileName::Mkdir()</ref>; refer to that function for more info. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dir.h" line="276"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dir.h" line="276"/>
       </memberdef>
       <memberdef kind="function" id="classwx_dir_1ac72c21a6fc1a1f1e681be21e6538b034" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -347,7 +347,7 @@
 <para>This is just an alias for <ref refid="classwx_file_name_1aa718276c012c7e64a1e2c28b47a1056b" kindref="member">wxFileName::Rmdir()</ref>; refer to that function for more info. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dir.h" line="290"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dir.h" line="290"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -375,7 +375,7 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 </programlisting></para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__file" kindref="compound">File Handling</ref> </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dir.h" line="151" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dir.h" bodystart="150" bodyend="316"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dir.h" line="151" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dir.h" bodystart="150" bodyend="316"/>
     <listofallmembers>
       <member refid="classwx_dir_1ae03564ab50b6b83947f34477d89f0866" prot="public" virt="non-virtual"><scope>wxDir</scope><name>Exists</name></member>
       <member refid="classwx_dir_1a7f61cb07fa58cff063b8acdcaa015bdd" prot="public" virt="non-virtual"><scope>wxDir</scope><name>FindFirst</name></member>

@@ -15,7 +15,7 @@
 <para>The default version creates a registry-based <ref refid="classwx_reg_config" kindref="compound">wxRegConfig</ref> class under MSW and <ref refid="classwx_file_config" kindref="compound">wxFileConfig</ref> under all other platforms.</para><para>The <ref refid="classwx_app_console_1a2bfe9c53c57d61f8b115705796f258eb" kindref="member">wxApp::GetAppName</ref> and <ref refid="classwx_app_console_1af73ec0d186dd10b7fdabb57cf097bef8" kindref="member">wxApp::GetVendorName</ref> methods are used to determine the registry key or file name. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/apptrait.h" line="41"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/apptrait.h" line="41"/>
       </memberdef>
       <memberdef kind="function" id="classwx_app_traits_1a11205b08706b4d83bc83d0170511c909" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type><ref refid="classwx_event_loop_base" kindref="compound">wxEventLoopBase</ref> *</type>
@@ -28,7 +28,7 @@
 <para>The default implementation of this method in wxGUIAppTraits returns the usual platform-specific GUI event loop. The version in wxConsoleAppTraits returns a console-specific event loop which can be used to handle timer and socket events in console programs under Unix and MSW or NULL under the other platforms where console event loops are not supported yet. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/apptrait.h" line="52"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/apptrait.h" line="52"/>
       </memberdef>
       <memberdef kind="function" id="classwx_app_traits_1ae9b8ab276606c83ed40673068ac50a16" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type><ref refid="classwx_font_mapper" kindref="compound">wxFontMapper</ref> *</type>
@@ -41,7 +41,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/apptrait.h" line="57"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/apptrait.h" line="57"/>
       </memberdef>
       <memberdef kind="function" id="classwx_app_traits_1aae9e62a6b5364fb9a230888a637eb378" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type><ref refid="classwx_log" kindref="compound">wxLog</ref> *</type>
@@ -55,7 +55,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/apptrait.h" line="65"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/apptrait.h" line="65"/>
       </memberdef>
       <memberdef kind="function" id="classwx_app_traits_1a53c3290baa711f24d9fcf4883b3363a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type><ref refid="classwx_message_output" kindref="compound">wxMessageOutput</ref> *</type>
@@ -68,7 +68,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/apptrait.h" line="70"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/apptrait.h" line="70"/>
       </memberdef>
       <memberdef kind="function" id="classwx_app_traits_1abd3fb6ba0321b0634bdcdedf5e0e26b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type><ref refid="classwx_renderer_native" kindref="compound">wxRendererNative</ref> *</type>
@@ -82,7 +82,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/apptrait.h" line="80"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/apptrait.h" line="80"/>
       </memberdef>
       <memberdef kind="function" id="classwx_app_traits_1ad333680437446304014c087d2fffedcf" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -95,7 +95,7 @@
 <para>Currently only &quot;KDE&quot; or &quot;GNOME&quot; are supported and the code uses the X11 session protocol vendor name to figure out, which desktop environment is running. The method returns an empty string otherwise and on all other platforms. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/apptrait.h" line="89"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/apptrait.h" line="89"/>
       </memberdef>
       <memberdef kind="function" id="classwx_app_traits_1ae9bd1317e78e21695c394220873b2cdc" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_standard_paths" kindref="compound">wxStandardPaths</ref> &amp;</type>
@@ -109,7 +109,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/apptrait.h" line="100"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/apptrait.h" line="100"/>
       </memberdef>
       <memberdef kind="function" id="classwx_app_traits_1ad956ddb5731f7cac51f1430ed53bb0f1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type><ref refid="platinfo_8h_1a4acbc14b366d6ce2875f809be384757b" kindref="member">wxPortId</ref></type>
@@ -132,7 +132,7 @@
 <para>The version numbers returned are thus detected at run-time and not compile-time (except when this is not possible e.g. wxMotif).</para><para>E.g. if your program is using wxGTK port this function will return wxPORT_GTK and put in given pointers the versions of the GTK library in use. See <ref refid="classwx_platform_info" kindref="compound">wxPlatformInfo</ref> for more details. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/apptrait.h" line="114"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/apptrait.h" line="114"/>
       </memberdef>
       <memberdef kind="function" id="classwx_app_traits_1aade95be9c766338b0344cd46cd04e862" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>bool</type>
@@ -145,7 +145,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/apptrait.h" line="119"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/apptrait.h" line="119"/>
       </memberdef>
       <memberdef kind="function" id="classwx_app_traits_1a8f64cbdae4143f323c0dc359134f0836" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type>bool</type>
@@ -158,7 +158,7 @@
 <para>Always returns false for wxBase-only apps. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/apptrait.h" line="125"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/apptrait.h" line="125"/>
       </memberdef>
       <memberdef kind="function" id="classwx_app_traits_1aa78351c01a20e5b1f4bd50283b4ddfbb" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>bool</type>
@@ -175,7 +175,7 @@
 <para>Returns true to suppress subsequent asserts, false to continue as before. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/apptrait.h" line="132"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/apptrait.h" line="132"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -184,7 +184,7 @@
 <para>You can access it using <ref refid="classwx_app_console_1a75ed8ce022a4ca58785f14f736853e93" kindref="member">wxApp::GetTraits()</ref> function and you can create your own <ref refid="classwx_app_traits" kindref="compound">wxAppTraits</ref> overriding the <ref refid="classwx_app_console_1ab2811644bfee7a93d0564a09397c4408" kindref="member">wxApp::CreateTraits()</ref> function.</para><para>Note that <ref refid="classwx_app_traits" kindref="compound">wxAppTraits</ref> is an abstract class since it contains many pure virtual functions. In fact, by default, wxWidgets creates a <computeroutput>wxConsoleAppTraits</computeroutput> object for console applications (i.e. those applications linked against wxBase library only - see the <ref refid="page_libs" kindref="compound">Library List</ref> page) and a <computeroutput>wxGUIAppTraits</computeroutput> object for GUI applications. Both these classes are derived by <ref refid="classwx_app_traits" kindref="compound">wxAppTraits</ref> and represent concrete implementation of the <ref refid="classwx_app_traits" kindref="compound">wxAppTraits</ref> interface.</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__cfg" kindref="compound">Application and System configuration</ref></para><para><simplesect kind="see"><para><ref refid="overview_app" kindref="compound">wxApp Overview</ref>, <ref refid="classwx_app" kindref="compound">wxApp</ref> </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/apptrait.h" line="31" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/apptrait.h" bodystart="30" bodyend="133"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/apptrait.h" line="31" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/apptrait.h" bodystart="30" bodyend="133"/>
     <listofallmembers>
       <member refid="classwx_app_traits_1a548e252e1b2feec51a0e6f32cb69c8cd" prot="public" virt="virtual"><scope>wxAppTraits</scope><name>CreateConfig</name></member>
       <member refid="classwx_app_traits_1a11205b08706b4d83bc83d0170511c909" prot="public" virt="pure-virtual"><scope>wxAppTraits</scope><name>CreateEventLoop</name></member>

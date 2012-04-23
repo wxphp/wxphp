@@ -77,7 +77,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cshelp.h" line="275"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cshelp.h" line="275"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -87,121 +87,121 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__help" kindref="compound">Help</ref></para><para><simplesect kind="see"><para><ref refid="classwx_bitmap_button" kindref="compound">wxBitmapButton</ref>, <ref refid="classwx_context_help" kindref="compound">wxContextHelp</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="5068">
+      <node id="5161">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="5067">
+      <node id="5160">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="5068" relation="public-inheritance">
+        <childnode refid="5161" relation="public-inheritance">
         </childnode>
-        <childnode refid="5069" relation="public-inheritance">
+        <childnode refid="5162" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5069">
+      <node id="5162">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="5065">
+      <node id="5158">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="5066" relation="public-inheritance">
+        <childnode refid="5159" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5066">
+      <node id="5159">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="5067" relation="public-inheritance">
+        <childnode refid="5160" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5064">
+      <node id="5157">
         <label>wxAnyButton</label>
         <link refid="classwx_any_button"/>
-        <childnode refid="5065" relation="public-inheritance">
+        <childnode refid="5158" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5063">
+      <node id="5156">
         <label>wxButton</label>
         <link refid="classwx_button"/>
-        <childnode refid="5064" relation="public-inheritance">
+        <childnode refid="5157" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5062">
+      <node id="5155">
         <label>wxBitmapButton</label>
         <link refid="classwx_bitmap_button"/>
-        <childnode refid="5063" relation="public-inheritance">
+        <childnode refid="5156" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5061">
+      <node id="5154">
         <label>wxContextHelpButton</label>
         <link refid="classwx_context_help_button"/>
-        <childnode refid="5062" relation="public-inheritance">
+        <childnode refid="5155" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="5077">
+      <node id="5170">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="5078" relation="usage">
+        <childnode refid="5171" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="5076">
+      <node id="5169">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="5077" relation="public-inheritance">
+        <childnode refid="5170" relation="public-inheritance">
         </childnode>
-        <childnode refid="5079" relation="public-inheritance">
+        <childnode refid="5172" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5079">
+      <node id="5172">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="5074">
+      <node id="5167">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="5075" relation="public-inheritance">
+        <childnode refid="5168" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5075">
+      <node id="5168">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="5076" relation="public-inheritance">
+        <childnode refid="5169" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5073">
+      <node id="5166">
         <label>wxAnyButton</label>
         <link refid="classwx_any_button"/>
-        <childnode refid="5074" relation="public-inheritance">
+        <childnode refid="5167" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5072">
+      <node id="5165">
         <label>wxButton</label>
         <link refid="classwx_button"/>
-        <childnode refid="5073" relation="public-inheritance">
+        <childnode refid="5166" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5071">
+      <node id="5164">
         <label>wxBitmapButton</label>
         <link refid="classwx_bitmap_button"/>
-        <childnode refid="5072" relation="public-inheritance">
+        <childnode refid="5165" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5070">
+      <node id="5163">
         <label>wxContextHelpButton</label>
         <link refid="classwx_context_help_button"/>
-        <childnode refid="5071" relation="public-inheritance">
+        <childnode refid="5164" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5078">
+      <node id="5171">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cshelp.h" line="248" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cshelp.h" bodystart="247" bodyend="276"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cshelp.h" line="248" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/cshelp.h" bodystart="247" bodyend="276"/>
     <listofallmembers>
       <member refid="classwx_window_1a3afbd49b1ea2f8275e3600dcac102923" prot="public" virt="virtual"><scope>wxContextHelpButton</scope><name>AcceptsFocus</name></member>
       <member refid="classwx_window_1a2370bdd3ab08e7ef3c7555c6aa8301b8" prot="public" virt="virtual"><scope>wxContextHelpButton</scope><name>AcceptsFocusFromKeyboard</name></member>
@@ -376,6 +376,7 @@
       <member refid="classwx_window_1aa90a260c0a835a133043460b7d0024a8" prot="public" virt="virtual"><scope>wxContextHelpButton</scope><name>InitDialog</name></member>
       <member refid="classwx_window_1ae1b56ca87d8590ee5e576012229a380a" prot="public" virt="non-virtual"><scope>wxContextHelpButton</scope><name>InvalidateBestSize</name></member>
       <member refid="classwx_window_1af918e6fe8565c2d5235973cc3de84a43" prot="public" virt="non-virtual"><scope>wxContextHelpButton</scope><name>IsBeingDeleted</name></member>
+      <member refid="classwx_window_1a469f0881da248d37691440c9d4cc7200" prot="public" virt="non-virtual"><scope>wxContextHelpButton</scope><name>IsDescendant</name></member>
       <member refid="classwx_window_1a9d1be1bbb625ebf87ad4ad47e49a0194" prot="public" virt="virtual"><scope>wxContextHelpButton</scope><name>IsDoubleBuffered</name></member>
       <member refid="classwx_window_1a59452a5bd42f5ea4b31d7fc4aa59644f" prot="public" virt="non-virtual"><scope>wxContextHelpButton</scope><name>IsEnabled</name></member>
       <member refid="classwx_window_1af27ef77c913e32050543f3b0ca435a0d" prot="public" virt="non-virtual"><scope>wxContextHelpButton</scope><name>IsExposed</name></member>
@@ -391,13 +392,13 @@
       <member refid="classwx_window_1a72d70fd14e3565bf782fbcd3271d8930" prot="public" virt="virtual"><scope>wxContextHelpButton</scope><name>IsShownOnScreen</name></member>
       <member refid="classwx_window_1a657ef8b6055eb06df894ac5e6ddfecf8" prot="public" virt="non-virtual"><scope>wxContextHelpButton</scope><name>IsThisEnabled</name></member>
       <member refid="classwx_window_1a0002826ad05f2a5661b4c8995713f37f" prot="public" virt="virtual"><scope>wxContextHelpButton</scope><name>IsTopLevel</name></member>
+      <member refid="classwx_window_1a7940d510c5bdc062a2b109a1022dd8c2" prot="public" virt="virtual"><scope>wxContextHelpButton</scope><name>IsTransparentBackgroundSupported</name></member>
       <member refid="classwx_evt_handler_1a360fdeefcf53b62fb49fb828406bb8a6" prot="public" virt="non-virtual"><scope>wxContextHelpButton</scope><name>IsUnlinked</name></member>
       <member refid="classwx_window_1a1b143c3e72bd0af533b76db4830a6113" prot="public" virt="virtual"><scope>wxContextHelpButton</scope><name>Layout</name></member>
       <member refid="classwx_window_1ade808784f0e64d9985e2f279b5ca8c02" prot="public" virt="non-virtual"><scope>wxContextHelpButton</scope><name>LineDown</name></member>
       <member refid="classwx_window_1afc0816a174ceee6d36d1995c6824a273" prot="public" virt="non-virtual"><scope>wxContextHelpButton</scope><name>LineUp</name></member>
       <member refid="classwx_window_1a124944524f36b71385dad8fddaad8ded" prot="public" virt="virtual"><scope>wxContextHelpButton</scope><name>Lower</name></member>
       <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxContextHelpButton</scope><name>m_refData</name></member>
-      <member refid="classwx_window_1a192fc8b467845d093c16452db96c65c5" prot="public" virt="virtual"><scope>wxContextHelpButton</scope><name>MakeModal</name></member>
       <member refid="classwx_window_1ab1cb98c8d25b9e6ff7b706b1446c3df7" prot="public" virt="non-virtual"><scope>wxContextHelpButton</scope><name>Move</name></member>
       <member refid="classwx_window_1a22a22c1e23ca05776707e7999d8047fe" prot="public" virt="non-virtual"><scope>wxContextHelpButton</scope><name>Move</name></member>
       <member refid="classwx_window_1a79e66079125e8420de269811bdb6f2b6" prot="public" virt="non-virtual"><scope>wxContextHelpButton</scope><name>MoveAfterInTabOrder</name></member>
@@ -529,7 +530,6 @@
       <member refid="classwx_window_1a88cc65e424a129d9b0057756cdb67ec9" prot="public" virt="virtual"><scope>wxContextHelpButton</scope><name>TransferDataToWindow</name></member>
       <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxContextHelpButton</scope><name>TryAfter</name></member>
       <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxContextHelpButton</scope><name>TryBefore</name></member>
-      <member refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" virt="non-virtual"><scope>wxContextHelpButton</scope><name>TryThis</name></member>
       <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxContextHelpButton</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxContextHelpButton</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a22e5db2ec1d19c8252c056fd116975d7" prot="public" virt="non-virtual"><scope>wxContextHelpButton</scope><name>Unlink</name></member>

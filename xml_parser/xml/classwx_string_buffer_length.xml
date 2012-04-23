@@ -23,7 +23,7 @@
 <para>Basically, this is equivalent to calling <ref refid="classwx_string_1a0c87e85cee09e65d314457379e5aba19" kindref="member">wxString::GetWriteBuf</ref> and saving the result. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1709"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1709"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_buffer_length_1adb3669db3097da59589bce0dd9a432d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -36,7 +36,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1715"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1715"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_buffer_length_1a99d1d8c26b452528a05723e713e98077" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -53,7 +53,7 @@
 <para>Must be called before <ref refid="classwx_string_buffer_length" kindref="compound">wxStringBufferLength</ref> destructs. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1723"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1723"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_buffer_length_1aabee47fbe9384792d8e9d876ec9a8f5b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="group__group__funcmacro__string_1gad42f64d8c82f1ce4ae58773a89b2d6a7" kindref="member">wxChar</ref> *</type>
@@ -66,7 +66,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1729"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1729"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -80,7 +80,7 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__log_1ga0dd3c633f990f794e76065c9a7af4c87" kindref="member" tooltip="The functions to use for error messages, i.e.">wxLogError</ref>(</highlight><highlight class="stringliteral">&quot;Something<sp/>is<sp/>very<sp/>wrong!&quot;</highlight><highlight class="normal">);</highlight></codeline>
 </programlisting></para><para>Note that the exact usage of this depends on whether or not wxUSE_STL is enabled. If wxUSE_STL is enabled, <ref refid="classwx_string_buffer" kindref="compound">wxStringBuffer</ref> creates a separate empty character buffer, and if wxUSE_STL is disabled, it uses GetWriteBuf() from <ref refid="classwx_string" kindref="compound">wxString</ref>, keeping the same buffer <ref refid="classwx_string" kindref="compound">wxString</ref> uses intact. In other words, relying on <ref refid="classwx_string_buffer" kindref="compound">wxStringBuffer</ref> containing the old <ref refid="classwx_string" kindref="compound">wxString</ref> data is not a good idea if you want to build your program both with and without wxUSE_STL.</para><para>Note that wxStringBuffer::SetLength <bold>must</bold> be called before <ref refid="classwx_string_buffer_length" kindref="compound">wxStringBufferLength</ref> destructs.</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__data" kindref="compound">Data Structures</ref> </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1700" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" bodystart="1699" bodyend="1730"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1700" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" bodystart="1699" bodyend="1730"/>
     <listofallmembers>
       <member refid="classwx_string_buffer_length_1aabee47fbe9384792d8e9d876ec9a8f5b" prot="public" virt="non-virtual"><scope>wxStringBufferLength</scope><name>operator wxChar *</name></member>
       <member refid="classwx_string_buffer_length_1a99d1d8c26b452528a05723e713e98077" prot="public" virt="non-virtual"><scope>wxStringBufferLength</scope><name>SetLength</name></member>

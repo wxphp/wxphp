@@ -12,13 +12,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/clipbrd.h" line="13" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/clipbrd.h" bodystart="13" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/clipbrd.h" line="13" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/clipbrd.h" bodystart="13" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/clipbrd.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/clipbrd.h"/>
   </compounddef>
 </doxygen>

@@ -21,7 +21,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" line="222"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/brush.h" line="222"/>
       </memberdef>
       <memberdef kind="function" id="classwx_brush_1ac6b7baf1c76783b6eb3bd1fe7bef4f8e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -47,7 +47,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" line="223"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/brush.h" line="223"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -62,7 +62,7 @@
 <para>The brush will be uninitialised, and <ref refid="classwx_brush" kindref="compound">wxBrush</ref>:<ref refid="classwx_brush_1aafe8cee326d90dc7145968370153ba0a" kindref="member">IsOk()</ref> will return false. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" line="109"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/brush.h" line="109"/>
       </memberdef>
       <memberdef kind="function" id="classwx_brush_1a2cfdf97a0785eb608da61a01b8180912" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -99,7 +99,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" line="119"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/brush.h" line="119"/>
       </memberdef>
       <memberdef kind="function" id="classwx_brush_1a0a5c0e09b4637f7749435fbe1acd6412" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -116,7 +116,7 @@
 <para>The brush style will be set to <computeroutput>wxBRUSHSTYLE_STIPPLE</computeroutput>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" line="125"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/brush.h" line="125"/>
       </memberdef>
       <memberdef kind="function" id="classwx_brush_1a6df3fbfc890e8af31fd6bbf2ca38c5e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -133,7 +133,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" line="130"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/brush.h" line="130"/>
       </memberdef>
       <memberdef kind="function" id="classwx_brush_1a41b905436444f31c8cda492a548da62a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -147,7 +147,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" line="143"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/brush.h" line="143"/>
       </memberdef>
       <memberdef kind="function" id="classwx_brush_1af615e0a0654e11a8ac6e202cddec8a9e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_colour" kindref="compound">wxColour</ref></type>
@@ -161,7 +161,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" line="150"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/brush.h" line="150"/>
       </memberdef>
       <memberdef kind="function" id="classwx_brush_1a1f14bcfa5870f18bc8ff980eb7366d1c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> *</type>
@@ -175,7 +175,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" line="158"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/brush.h" line="158"/>
       </memberdef>
       <memberdef kind="function" id="classwx_brush_1aa417c1eaa67e4476652fbf949a46c26a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="brush_8h_1aa8a41c365a383f785e379812dfd367ef" kindref="member">wxBrushStyle</ref></type>
@@ -189,7 +189,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" line="165"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/brush.h" line="165"/>
       </memberdef>
       <memberdef kind="function" id="classwx_brush_1a0d6bf75d8eecbb384d2a85ddde2a479e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -203,7 +203,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" line="172"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/brush.h" line="172"/>
       </memberdef>
       <memberdef kind="function" id="classwx_brush_1aafe8cee326d90dc7145968370153ba0a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -216,7 +216,7 @@
 <para>Notice that an uninitialized brush object can&apos;t be queried for any brush properties and all calls to the accessor methods on it will result in an assert failure. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" line="181"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/brush.h" line="181"/>
       </memberdef>
       <memberdef kind="function" id="classwx_brush_1aa21578fc165c4f188058ad8dbdb8c7fa" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -231,7 +231,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" line="196"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/brush.h" line="196"/>
       </memberdef>
       <memberdef kind="function" id="classwx_brush_1a7647b3dbf6c5d143302d4711724ea920" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -246,7 +246,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" line="213"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/brush.h" line="213"/>
       </memberdef>
       <memberdef kind="function" id="classwx_brush_1a7da8162eda06d522fcde31ae51b5952c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -273,7 +273,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" line="238"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/brush.h" line="238"/>
       </memberdef>
       <memberdef kind="function" id="classwx_brush_1aaefe449c144d41f3c4ab48425b746282" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -299,7 +299,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" line="248"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/brush.h" line="248"/>
       </memberdef>
       <memberdef kind="function" id="classwx_brush_1a58fa3500c20c6a0ae0564530650c138f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -316,7 +316,7 @@
 <para>See <ref refid="overview_refcount_1overview_refcount_equality" kindref="member">Object Comparison</ref> for more info. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" line="254"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/brush.h" line="254"/>
       </memberdef>
       <memberdef kind="function" id="classwx_brush_1a5877ea3d717073c5c62e3d6e836edff7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -333,7 +333,7 @@
 <para>See <ref refid="overview_refcount_1overview_refcount_equality" kindref="member">Object Comparison</ref> for more info. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" line="260"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/brush.h" line="260"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -357,49 +357,49 @@
 <simplesect kind="see"><para><ref refid="classwx_brush_list" kindref="compound">wxBrushList</ref>, <ref refid="classwx_d_c" kindref="compound">wxDC</ref>, <ref refid="classwx_d_c_1a13978b2624116987a59ff729c4f81a96" kindref="member">wxDC::SetBrush</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="4588">
+      <node id="4678">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="4587">
+      <node id="4677">
         <label>wxGDIObject</label>
         <link refid="classwx_g_d_i_object"/>
-        <childnode refid="4588" relation="public-inheritance">
+        <childnode refid="4678" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4586">
+      <node id="4676">
         <label>wxBrush</label>
         <link refid="classwx_brush"/>
-        <childnode refid="4587" relation="public-inheritance">
+        <childnode refid="4677" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="4591">
+      <node id="4681">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="4592" relation="usage">
+        <childnode refid="4682" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="4590">
+      <node id="4680">
         <label>wxGDIObject</label>
         <link refid="classwx_g_d_i_object"/>
-        <childnode refid="4591" relation="public-inheritance">
+        <childnode refid="4681" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4592">
+      <node id="4682">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
-      <node id="4589">
+      <node id="4679">
         <label>wxBrush</label>
         <link refid="classwx_brush"/>
-        <childnode refid="4590" relation="public-inheritance">
+        <childnode refid="4680" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" line="103" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" bodystart="102" bodyend="261"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/brush.h" line="103" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/brush.h" bodystart="102" bodyend="261"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxBrush</scope><name>AllocExclusive</name></member>
       <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxBrush</scope><name>CloneRefData</name></member>

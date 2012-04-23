@@ -20,7 +20,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/containr.h" line="51" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/containr.h" bodystart="51" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/containr.h" line="51" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/containr.h" bodystart="51" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -35,7 +35,7 @@
 <para>This class provides only the default constructor as it&apos;s not possible, in general, to provide all the constructors of the real base class BaseWindowClass.</para><para>This is however not usually a problem for wxWindow-derived classes as, by convention, they always define a Create() method such that calling it on an object initialized using the default constructor is equivalent to using a non-default constructor directly. So the classes inheriting from wxNavigationEnabled&lt;W&gt; should simply call W::Create() in their constructors. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/containr.h" line="67"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/containr.h" line="67"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -62,7 +62,7 @@
 </programlisting></para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para><simplesect kind="since"><para>2.9.3 </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/containr.h" line="48" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/containr.h" bodystart="47" bodyend="68"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/containr.h" line="48" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/containr.h" bodystart="47" bodyend="68"/>
     <listofallmembers>
       <member refid="classwx_navigation_enabled_1a3a24d358148ca311606c826eb4ac881e" prot="public" virt="non-virtual"><scope>wxNavigationEnabled</scope><name>BaseWindowClass</name></member>
       <member refid="classwx_navigation_enabled_1a3fb711de11eeac2ad923a5ba0e9fec88" prot="public" virt="non-virtual"><scope>wxNavigationEnabled</scope><name>wxNavigationEnabled</name></member>

@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ffile.h" line="54"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ffile.h" line="29"/>
       </memberdef>
       <memberdef kind="function" id="classwx_f_file_1a957a84c52a104a88892e647900b666a5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -40,7 +40,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ffile.h" line="62"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ffile.h" line="37"/>
       </memberdef>
       <memberdef kind="function" id="classwx_f_file_1a07a6341e1b5d624064e5d09559e6481b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -77,7 +77,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ffile.h" line="78"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ffile.h" line="53"/>
       </memberdef>
       <memberdef kind="function" id="classwx_f_file_1a60ead93a3fcd003b74ae9fe39694b1fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -91,7 +91,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ffile.h" line="86"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ffile.h" line="61"/>
       </memberdef>
       <memberdef kind="function" id="classwx_f_file_1a7e793b723e47955790b3f381bef450de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -113,7 +113,7 @@
 <para>The descriptor should be already opened and it will be closed by <ref refid="classwx_f_file" kindref="compound">wxFFile</ref> object. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ffile.h" line="93"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ffile.h" line="68"/>
       </memberdef>
       <memberdef kind="function" id="classwx_f_file_1a00f1f75c98adc0a8c401d702006f406a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -126,7 +126,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ffile.h" line="98"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ffile.h" line="73"/>
       </memberdef>
       <memberdef kind="function" id="classwx_f_file_1a70a7d8f33458d53ddf693b2a5edff711" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -139,7 +139,7 @@
 <para><ref refid="classwx_f_file_1a8d957fe6f3c765d0141186e0aac9a7bf" kindref="member">IsOpened()</ref> will return false after call to <ref refid="classwx_f_file_1a70a7d8f33458d53ddf693b2a5edff711" kindref="member">Detach()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ffile.h" line="106"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ffile.h" line="81"/>
       </memberdef>
       <memberdef kind="function" id="classwx_f_file_1a16992b8b1da3d2a06b8be60529f29327" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -149,11 +149,11 @@
         <briefdescription>
 <para>Returns true if an attempt has been made to read <emphasis>past</emphasis> the end of the file. </para>        </briefdescription>
         <detaileddescription>
-<para>Note that the behaviour of the file descriptor based class <ref refid="classwx_file" kindref="compound">wxFile</ref> is different as <ref refid="classwx_file_1ae584442c77415e9d287ca7faec0dcca4" kindref="member">wxFile::Eof()</ref> will return true here as soon as the last byte of the file has been read.</para><para>Also note that this method may only be called for opened files and may crash if the file is not opened.</para><para><xrefsect id="todo_1_todo000028"><xreftitle>Todo</xreftitle><xrefdescription><para>THIS METHOD MAY CRASH? DOESN&apos;T SOUND GOOD</para></xrefdescription></xrefsect></para><para><simplesect kind="see"><para><ref refid="classwx_f_file_1a8d957fe6f3c765d0141186e0aac9a7bf" kindref="member">IsOpened()</ref> </para></simplesect>
+<para>Note that the behaviour of the file descriptor based class <ref refid="classwx_file" kindref="compound">wxFile</ref> is different as <ref refid="classwx_file_1ae584442c77415e9d287ca7faec0dcca4" kindref="member">wxFile::Eof()</ref> will return true here as soon as the last byte of the file has been read.</para><para>Also note that this method may only be called for opened files and may crash if the file is not opened.</para><para><xrefsect id="todo_1_todo000027"><xreftitle>Todo</xreftitle><xrefdescription><para>THIS METHOD MAY CRASH? DOESN&apos;T SOUND GOOD</para></xrefdescription></xrefsect></para><para><simplesect kind="see"><para><ref refid="classwx_f_file_1a8d957fe6f3c765d0141186e0aac9a7bf" kindref="member">IsOpened()</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ffile.h" line="122"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ffile.h" line="97"/>
       </memberdef>
       <memberdef kind="function" id="classwx_f_file_1ad720e6da582c899997ab79c7aa323155" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -163,11 +163,11 @@
         <briefdescription>
 <para>Returns true if an error has occurred on this file, similar to the standard <computeroutput>ferror()</computeroutput> function. </para>        </briefdescription>
         <detaileddescription>
-<para>Please note that this method may only be called for opened files and may crash if the file is not opened.</para><para><xrefsect id="todo_1_todo000029"><xreftitle>Todo</xreftitle><xrefdescription><para>THIS METHOD MAY CRASH? DOESN&apos;T SOUND GOOD</para></xrefdescription></xrefsect></para><para><simplesect kind="see"><para><ref refid="classwx_f_file_1a8d957fe6f3c765d0141186e0aac9a7bf" kindref="member">IsOpened()</ref> </para></simplesect>
+<para>Please note that this method may only be called for opened files and may crash if the file is not opened.</para><para><xrefsect id="todo_1_todo000028"><xreftitle>Todo</xreftitle><xrefdescription><para>THIS METHOD MAY CRASH? DOESN&apos;T SOUND GOOD</para></xrefdescription></xrefsect></para><para><simplesect kind="see"><para><ref refid="classwx_f_file_1a8d957fe6f3c765d0141186e0aac9a7bf" kindref="member">IsOpened()</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ffile.h" line="135"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ffile.h" line="110"/>
       </memberdef>
       <memberdef kind="function" id="classwx_f_file_1a914af50f413957a7decd928ababf1112" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -180,10 +180,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ffile.h" line="140"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ffile.h" line="115"/>
       </memberdef>
       <memberdef kind="function" id="classwx_f_file_1a7d1b48920f6583f9a50f7f21cbaa6b2e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="ffile_8h_1a68af15575db590aaa874d40a1073809d" kindref="member">wxFileKind</ref></type>
+        <type><ref refid="group__group__funcmacro__file_1ga68af15575db590aaa874d40a1073809d" kindref="member">wxFileKind</ref></type>
         <definition>wxFileKind wxFFile::GetKind</definition>
         <argsstring>() const </argsstring>
         <name>GetKind</name>
@@ -194,7 +194,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ffile.h" line="147"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ffile.h" line="122"/>
       </memberdef>
       <memberdef kind="function" id="classwx_f_file_1a3d85586d6b75a9213dea048bab61fc9a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -207,7 +207,7 @@
 <para>This is the name that was specified when the object was constructed or to the last call to <ref refid="classwx_f_file_1a93670081c85d725649660611e5dccb9c" kindref="member">Open()</ref>. Notice that it may be empty if <ref refid="classwx_f_file_1a7e793b723e47955790b3f381bef450de" kindref="member">Attach()</ref> was called without specifying the name. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ffile.h" line="156"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ffile.h" line="131"/>
       </memberdef>
       <memberdef kind="function" id="classwx_f_file_1a8d957fe6f3c765d0141186e0aac9a7bf" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -220,7 +220,7 @@
 <para>Most of the methods of this class may only be used for an opened file. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ffile.h" line="163"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ffile.h" line="138"/>
       </memberdef>
       <memberdef kind="function" id="classwx_f_file_1a0fe2858580e9d94623228ce98afdd116" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="group__group__funcmacro__file_1ga69d831b3febabc149c67b716c8e22de5" kindref="member">wxFileOffset</ref></type>
@@ -233,7 +233,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ffile.h" line="168"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ffile.h" line="143"/>
       </memberdef>
       <memberdef kind="function" id="classwx_f_file_1a93670081c85d725649660611e5dccb9c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -270,7 +270,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ffile.h" line="178"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ffile.h" line="153"/>
       </memberdef>
       <memberdef kind="function" id="classwx_f_file_1affb9aa57da40a29e4ca2d8f0abc804a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -307,7 +307,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ffile.h" line="190"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ffile.h" line="165"/>
       </memberdef>
       <memberdef kind="function" id="classwx_f_file_1af8ac1ea8df8df72d0bfddfb179b40af3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -345,7 +345,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ffile.h" line="203"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ffile.h" line="178"/>
       </memberdef>
       <memberdef kind="function" id="classwx_f_file_1a5b629e330a80275fc8275b8b08a5b40e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -357,7 +357,7 @@
           <declname>ofs</declname>
         </param>
         <param>
-          <type><ref refid="ffile_8h_1ae3981f8632f0391e5c852bf62eb982b0" kindref="member">wxSeekMode</ref></type>
+          <type><ref refid="group__group__funcmacro__file_1gae3981f8632f0391e5c852bf62eb982b0" kindref="member">wxSeekMode</ref></type>
           <declname>mode</declname>
           <defval>wxFromStart</defval>
         </param>
@@ -382,7 +382,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ffile.h" line="213"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ffile.h" line="188"/>
       </memberdef>
       <memberdef kind="function" id="classwx_f_file_1a74fd996691eb2ba0f06371a17ea3dbb4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -408,7 +408,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ffile.h" line="222"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ffile.h" line="197"/>
       </memberdef>
       <memberdef kind="function" id="classwx_f_file_1a1b84187b39d443c83f37727a4e69051f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="group__group__funcmacro__file_1ga69d831b3febabc149c67b716c8e22de5" kindref="member">wxFileOffset</ref></type>
@@ -421,7 +421,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ffile.h" line="227"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ffile.h" line="202"/>
       </memberdef>
       <memberdef kind="function" id="classwx_f_file_1afd41f8e0692c46a31f15b66bbb9bb6e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -443,7 +443,7 @@
 <para>The second argument is only meaningful in Unicode build of wxWidgets when <emphasis>conv</emphasis> is used to convert <emphasis>str</emphasis> to multibyte representation. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ffile.h" line="235"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ffile.h" line="210"/>
       </memberdef>
       <memberdef kind="function" id="classwx_f_file_1a4bf1d6b4ba02051b31c52f091cd6f53e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -480,7 +480,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ffile.h" line="247"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ffile.h" line="222"/>
       </memberdef>
       <memberdef kind="function" id="classwx_f_file_1a6a63fa1dd92a895a4925ad3bafc46636" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>FILE *</type>
@@ -493,7 +493,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ffile.h" line="252"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ffile.h" line="227"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -502,7 +502,7 @@
 <para>This is a very small class designed to minimize the overhead of using it - in fact, there is hardly any overhead at all, but using it brings you automatic error checking and hides differences between platforms and compilers.</para><para>It wraps inside it a <computeroutput>FILE</computeroutput> * handle used by standard C IO library (also known as <computeroutput>stdio</computeroutput>).</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__file" kindref="compound">File Handling</ref></para><para><simplesect kind="see"><para><ref refid="classwx_f_file_1a8d957fe6f3c765d0141186e0aac9a7bf" kindref="member">wxFFile::IsOpened</ref> </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ffile.h" line="52" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ffile.h" bodystart="51" bodyend="253"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ffile.h" line="27" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/ffile.h" bodystart="26" bodyend="228"/>
     <listofallmembers>
       <member refid="classwx_f_file_1a7e793b723e47955790b3f381bef450de" prot="public" virt="non-virtual"><scope>wxFFile</scope><name>Attach</name></member>
       <member refid="classwx_f_file_1a00f1f75c98adc0a8c401d702006f406a" prot="public" virt="non-virtual"><scope>wxFFile</scope><name>Close</name></member>

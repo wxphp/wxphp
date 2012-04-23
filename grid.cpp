@@ -50,6 +50,7 @@
 #include "others.h"
 
 
+
 void php_wxGridCellRenderer_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -58,13 +59,13 @@ void php_wxGridCellRenderer_destruction_handler(zend_rsrc_list_entry *rsrc TSRML
 	#endif
 	
 	
-	wxGridCellRenderer_php* object = (wxGridCellRenderer_php*)rsrc->ptr;
+	wxGridCellRenderer_php* object = static_cast<wxGridCellRenderer_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -118,11 +119,11 @@ wxSize wxGridCellRenderer_php::GetBestSize(wxGrid& grid, wxGridCellAttr& attr, w
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxGrid_entry);
-	add_property_resource(arguments[0], _wxResource, zend_list_insert(&grid, le_wxGrid));
+	add_property_resource(arguments[0], _wxResource, zend_list_insert((void*)&grid, le_wxGrid));
 	object_init_ex(arguments[1], php_wxGridCellAttr_entry);
-	add_property_resource(arguments[1], _wxResource, zend_list_insert(&attr, le_wxGridCellAttr));
+	add_property_resource(arguments[1], _wxResource, zend_list_insert((void*)&attr, le_wxGridCellAttr));
 	object_init_ex(arguments[2], php_wxDC_entry);
-	add_property_resource(arguments[2], _wxResource, zend_list_insert(&dc, le_wxDC));
+	add_property_resource(arguments[2], _wxResource, zend_list_insert((void*)&dc, le_wxDC));
 	ZVAL_LONG(arguments[3], row);
 	ZVAL_LONG(arguments[4], col);
 		
@@ -148,10 +149,6 @@ wxSize wxGridCellRenderer_php::GetBestSize(wxGrid& grid, wxGridCellAttr& attr, w
 		{
 			id_to_find = Z_RESVAL_P(*tmp);
 			return_object = zend_list_find(id_to_find, &rsrc_type);
-		}
-		else if(Z_TYPE_P(return_value) == IS_LONG)
-		{
-			return_object = Z_LVAL_P(return_value);
 		}
 		return *(wxSize*) return_object;
 	}
@@ -193,13 +190,13 @@ void wxGridCellRenderer_php::Draw(wxGrid& grid, wxGridCellAttr& attr, wxDC& dc, 
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxGrid_entry);
-	add_property_resource(arguments[0], _wxResource, zend_list_insert(&grid, le_wxGrid));
+	add_property_resource(arguments[0], _wxResource, zend_list_insert((void*)&grid, le_wxGrid));
 	object_init_ex(arguments[1], php_wxGridCellAttr_entry);
-	add_property_resource(arguments[1], _wxResource, zend_list_insert(&attr, le_wxGridCellAttr));
+	add_property_resource(arguments[1], _wxResource, zend_list_insert((void*)&attr, le_wxGridCellAttr));
 	object_init_ex(arguments[2], php_wxDC_entry);
-	add_property_resource(arguments[2], _wxResource, zend_list_insert(&dc, le_wxDC));
+	add_property_resource(arguments[2], _wxResource, zend_list_insert((void*)&dc, le_wxDC));
 	object_init_ex(arguments[3], php_wxRect_entry);
-	add_property_resource(arguments[3], _wxResource, zend_list_insert(&rect, le_wxRect));
+	add_property_resource(arguments[3], _wxResource, zend_list_insert((void*)&rect, le_wxRect));
 	ZVAL_LONG(arguments[4], row);
 	ZVAL_LONG(arguments[5], col);
 	ZVAL_BOOL(arguments[6], isSelected);
@@ -241,7 +238,8 @@ wxGridCellRenderer* wxGridCellRenderer_php::Clone()const
 	php_printf("===========================================\n");
 	#endif
 	
-	int arguments = NULL;
+	zval* arguments[1];
+	arguments[0] = NULL;
 
 	zval* return_value;
 	MAKE_STD_ZVAL(return_value);
@@ -279,10 +277,6 @@ wxGridCellRenderer* wxGridCellRenderer_php::Clone()const
 			id_to_find = Z_RESVAL_P(*tmp);
 			return_object = zend_list_find(id_to_find, &rsrc_type);
 		}
-		else if(Z_TYPE_P(return_value) == IS_LONG)
-		{
-			return_object = Z_LVAL_P(return_value);
-		}
 		return (wxGridCellRenderer*) return_object;
 	}
 	
@@ -295,6 +289,7 @@ wxGridCellRenderer* wxGridCellRenderer_php::Clone()const
 	return wxGridCellRenderer::Clone();
 
 }
+
 void php_wxGridCellAutoWrapStringRenderer_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -303,13 +298,13 @@ void php_wxGridCellAutoWrapStringRenderer_destruction_handler(zend_rsrc_list_ent
 	#endif
 	
 	
-	wxGridCellAutoWrapStringRenderer_php* object = (wxGridCellAutoWrapStringRenderer_php*)rsrc->ptr;
+	wxGridCellAutoWrapStringRenderer_php* object = static_cast<wxGridCellAutoWrapStringRenderer_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -370,7 +365,6 @@ PHP_METHOD(php_wxGridCellAutoWrapStringRenderer, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -416,6 +410,7 @@ PHP_METHOD(php_wxGridCellAutoWrapStringRenderer, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+
 void php_wxGridCellBoolRenderer_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -424,13 +419,13 @@ void php_wxGridCellBoolRenderer_destruction_handler(zend_rsrc_list_entry *rsrc T
 	#endif
 	
 	
-	wxGridCellBoolRenderer_php* object = (wxGridCellBoolRenderer_php*)rsrc->ptr;
+	wxGridCellBoolRenderer_php* object = static_cast<wxGridCellBoolRenderer_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -491,7 +486,6 @@ PHP_METHOD(php_wxGridCellBoolRenderer, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -537,6 +531,7 @@ PHP_METHOD(php_wxGridCellBoolRenderer, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+
 void php_wxGridCellDateTimeRenderer_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -545,13 +540,13 @@ void php_wxGridCellDateTimeRenderer_destruction_handler(zend_rsrc_list_entry *rs
 	#endif
 	
 	
-	wxGridCellDateTimeRenderer_php* object = (wxGridCellDateTimeRenderer_php*)rsrc->ptr;
+	wxGridCellDateTimeRenderer_php* object = static_cast<wxGridCellDateTimeRenderer_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -637,7 +632,8 @@ PHP_METHOD(php_wxGridCellDateTimeRenderer, SetParameters)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&params0, &params_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "s", &params0, &params_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "s";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &params0, &params_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -645,7 +641,6 @@ PHP_METHOD(php_wxGridCellDateTimeRenderer, SetParameters)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -700,7 +695,8 @@ PHP_METHOD(php_wxGridCellDateTimeRenderer, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|ss' (&outformat0, &outformat_len0, &informat0, &informat_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|ss", &outformat0, &outformat_len0, &informat0, &informat_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "|ss";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &outformat0, &outformat_len0, &informat0, &informat_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -708,7 +704,6 @@ PHP_METHOD(php_wxGridCellDateTimeRenderer, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -774,6 +769,7 @@ PHP_METHOD(php_wxGridCellDateTimeRenderer, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+
 void php_wxGridCellEnumRenderer_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -782,13 +778,13 @@ void php_wxGridCellEnumRenderer_destruction_handler(zend_rsrc_list_entry *rsrc T
 	#endif
 	
 	
-	wxGridCellEnumRenderer_php* object = (wxGridCellEnumRenderer_php*)rsrc->ptr;
+	wxGridCellEnumRenderer_php* object = static_cast<wxGridCellEnumRenderer_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -874,7 +870,8 @@ PHP_METHOD(php_wxGridCellEnumRenderer, SetParameters)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&params0, &params_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "s", &params0, &params_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "s";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &params0, &params_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -882,7 +879,6 @@ PHP_METHOD(php_wxGridCellEnumRenderer, SetParameters)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -935,7 +931,8 @@ PHP_METHOD(php_wxGridCellEnumRenderer, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|s' (&choices0, &choices_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|s", &choices0, &choices_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "|s";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &choices0, &choices_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -943,7 +940,6 @@ PHP_METHOD(php_wxGridCellEnumRenderer, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -999,6 +995,7 @@ PHP_METHOD(php_wxGridCellEnumRenderer, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+
 void php_wxGridCellFloatRenderer_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1007,13 +1004,13 @@ void php_wxGridCellFloatRenderer_destruction_handler(zend_rsrc_list_entry *rsrc 
 	#endif
 	
 	
-	wxGridCellFloatRenderer_php* object = (wxGridCellFloatRenderer_php*)rsrc->ptr;
+	wxGridCellFloatRenderer_php* object = static_cast<wxGridCellFloatRenderer_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -1102,7 +1099,6 @@ PHP_METHOD(php_wxGridCellFloatRenderer, GetFormat)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -1186,7 +1182,6 @@ PHP_METHOD(php_wxGridCellFloatRenderer, GetPrecision)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -1270,7 +1265,6 @@ PHP_METHOD(php_wxGridCellFloatRenderer, GetWidth)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -1350,7 +1344,8 @@ PHP_METHOD(php_wxGridCellFloatRenderer, SetFormat)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&format0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &format0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &format0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -1358,7 +1353,6 @@ PHP_METHOD(php_wxGridCellFloatRenderer, SetFormat)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -1439,7 +1433,8 @@ PHP_METHOD(php_wxGridCellFloatRenderer, SetParameters)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&params0, &params_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "s", &params0, &params_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "s";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &params0, &params_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -1447,7 +1442,6 @@ PHP_METHOD(php_wxGridCellFloatRenderer, SetParameters)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -1527,7 +1521,8 @@ PHP_METHOD(php_wxGridCellFloatRenderer, SetPrecision)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&precision0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &precision0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &precision0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -1535,7 +1530,6 @@ PHP_METHOD(php_wxGridCellFloatRenderer, SetPrecision)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -1615,7 +1609,8 @@ PHP_METHOD(php_wxGridCellFloatRenderer, SetWidth)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&width0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &width0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &width0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -1623,7 +1618,6 @@ PHP_METHOD(php_wxGridCellFloatRenderer, SetWidth)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -1677,7 +1671,8 @@ PHP_METHOD(php_wxGridCellFloatRenderer, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|lll' (&width0, &precision0, &format0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|lll", &width0, &precision0, &format0 ) == SUCCESS)
+		char parse_parameters_string[] = "|lll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &width0, &precision0, &format0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -1685,7 +1680,6 @@ PHP_METHOD(php_wxGridCellFloatRenderer, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -1761,6 +1755,7 @@ PHP_METHOD(php_wxGridCellFloatRenderer, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+
 void php_wxGridCellNumberRenderer_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1769,13 +1764,13 @@ void php_wxGridCellNumberRenderer_destruction_handler(zend_rsrc_list_entry *rsrc
 	#endif
 	
 	
-	wxGridCellNumberRenderer_php* object = (wxGridCellNumberRenderer_php*)rsrc->ptr;
+	wxGridCellNumberRenderer_php* object = static_cast<wxGridCellNumberRenderer_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -1836,7 +1831,6 @@ PHP_METHOD(php_wxGridCellNumberRenderer, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -1882,6 +1876,7 @@ PHP_METHOD(php_wxGridCellNumberRenderer, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+
 void php_wxGridCellStringRenderer_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1890,13 +1885,13 @@ void php_wxGridCellStringRenderer_destruction_handler(zend_rsrc_list_entry *rsrc
 	#endif
 	
 	
-	wxGridCellStringRenderer_php* object = (wxGridCellStringRenderer_php*)rsrc->ptr;
+	wxGridCellStringRenderer_php* object = static_cast<wxGridCellStringRenderer_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -1957,7 +1952,6 @@ PHP_METHOD(php_wxGridCellStringRenderer, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -2003,6 +1997,7 @@ PHP_METHOD(php_wxGridCellStringRenderer, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+
 void php_wxGridCellEditor_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2041,7 +2036,7 @@ void wxGridCellEditor_php::ApplyEdit(int row, int col, wxGrid* grid)
 	ZVAL_LONG(arguments[0], row);
 	ZVAL_LONG(arguments[1], col);
 	object_init_ex(arguments[2], php_wxGrid_entry);
-	add_property_resource(arguments[2], _wxResource, zend_list_insert(grid, le_wxGrid));
+	add_property_resource(arguments[2], _wxResource, zend_list_insert((void*)grid, le_wxGrid));
 		
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
@@ -2103,7 +2098,7 @@ void wxGridCellEditor_php::BeginEdit(int row, int col, wxGrid* grid)
 	ZVAL_LONG(arguments[0], row);
 	ZVAL_LONG(arguments[1], col);
 	object_init_ex(arguments[2], php_wxGrid_entry);
-	add_property_resource(arguments[2], _wxResource, zend_list_insert(grid, le_wxGrid));
+	add_property_resource(arguments[2], _wxResource, zend_list_insert((void*)grid, le_wxGrid));
 		
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
@@ -2142,7 +2137,8 @@ wxGridCellEditor* wxGridCellEditor_php::Clone()const
 	php_printf("===========================================\n");
 	#endif
 	
-	int arguments = NULL;
+	zval* arguments[1];
+	arguments[0] = NULL;
 
 	zval* return_value;
 	MAKE_STD_ZVAL(return_value);
@@ -2179,10 +2175,6 @@ wxGridCellEditor* wxGridCellEditor_php::Clone()const
 		{
 			id_to_find = Z_RESVAL_P(*tmp);
 			return_object = zend_list_find(id_to_find, &rsrc_type);
-		}
-		else if(Z_TYPE_P(return_value) == IS_LONG)
-		{
-			return_object = Z_LVAL_P(return_value);
 		}
 		return (wxGridCellEditor*) return_object;
 	}
@@ -2224,10 +2216,10 @@ void wxGridCellEditor_php::Create(wxWindow* parent, wxWindowID id, wxEvtHandler*
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxWindow_entry);
-	add_property_resource(arguments[0], _wxResource, zend_list_insert(parent, le_wxWindow));
+	add_property_resource(arguments[0], _wxResource, zend_list_insert((void*)parent, le_wxWindow));
 	ZVAL_LONG(arguments[1], id);
 	object_init_ex(arguments[2], php_wxEvtHandler_entry);
-	add_property_resource(arguments[2], _wxResource, zend_list_insert(evtHandler, le_wxEvtHandler));
+	add_property_resource(arguments[2], _wxResource, zend_list_insert((void*)evtHandler, le_wxEvtHandler));
 		
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
@@ -2334,7 +2326,6 @@ PHP_METHOD(php_wxGridCellEditor, Destroy)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -2412,7 +2403,7 @@ bool wxGridCellEditor_php::EndEdit(int row, int col, const wxGrid* grid, const w
 	ZVAL_LONG(arguments[0], row);
 	ZVAL_LONG(arguments[1], col);
 	object_init_ex(arguments[2], php_wxGrid_entry);
-	add_property_resource(arguments[2], _wxResource, zend_list_insert(grid, le_wxGrid));
+	add_property_resource(arguments[2], _wxResource, zend_list_insert((void*)grid, le_wxGrid));
 	temp_string = (char*)malloc(sizeof(wxChar)*(oldval.size()+1));
 	strcpy(temp_string, (const char *) oldval.char_str());
 	ZVAL_STRING(arguments[3], temp_string, 1);
@@ -2524,7 +2515,8 @@ PHP_METHOD(php_wxGridCellEditor, HandleReturn)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&event0, php_wxKeyEvent_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "O", &event0, php_wxKeyEvent_entry ) == SUCCESS)
+		char parse_parameters_string[] = "O";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &event0, php_wxKeyEvent_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(event0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(event0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -2535,10 +2527,6 @@ PHP_METHOD(php_wxGridCellEditor, HandleReturn)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(event0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(event0);
 				}
 				else if(Z_TYPE_P(event0) != IS_NULL)
 				{
@@ -2552,7 +2540,6 @@ PHP_METHOD(php_wxGridCellEditor, HandleReturn)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -2676,7 +2663,6 @@ PHP_METHOD(php_wxGridCellEditor, IsCreated)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -2798,7 +2784,8 @@ PHP_METHOD(php_wxGridCellEditor, PaintBackground)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'Oz' (&rectCell0, php_wxRect_entry, &attr0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "Oz", &rectCell0, php_wxRect_entry, &attr0 ) == SUCCESS)
+		char parse_parameters_string[] = "Oz";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &rectCell0, php_wxRect_entry, &attr0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(rectCell0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(rectCell0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -2809,10 +2796,6 @@ PHP_METHOD(php_wxGridCellEditor, PaintBackground)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(rectCell0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(rectCell0);
 				}
 				else if(Z_TYPE_P(rectCell0) != IS_NULL)
 				{
@@ -2830,10 +2813,6 @@ PHP_METHOD(php_wxGridCellEditor, PaintBackground)
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(attr0) == IS_LONG)
-				{
-					object_pointer0_1 = Z_LVAL_P(attr0);
-				}
 				else if(Z_TYPE_P(attr0) != IS_NULL)
 				{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
@@ -2846,7 +2825,6 @@ PHP_METHOD(php_wxGridCellEditor, PaintBackground)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -2968,7 +2946,8 @@ PHP_METHOD(php_wxGridCellEditor, SetSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&rect0, php_wxRect_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "O", &rect0, php_wxRect_entry ) == SUCCESS)
+		char parse_parameters_string[] = "O";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &rect0, php_wxRect_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(rect0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(rect0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -2979,10 +2958,6 @@ PHP_METHOD(php_wxGridCellEditor, SetSize)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(rect0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(rect0);
 				}
 				else if(Z_TYPE_P(rect0) != IS_NULL)
 				{
@@ -2996,7 +2971,6 @@ PHP_METHOD(php_wxGridCellEditor, SetSize)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -3052,7 +3026,8 @@ void wxGridCellEditor_php::Reset()
 	php_printf("===========================================\n");
 	#endif
 	
-	int arguments = NULL;
+	zval* arguments[1];
+	arguments[0] = NULL;
 
 	zval* return_value;
 	MAKE_STD_ZVAL(return_value);
@@ -3170,7 +3145,8 @@ PHP_METHOD(php_wxGridCellEditor, Show)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b|z' (&show0, &attr0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "b|z", &show0, &attr0 ) == SUCCESS)
+		char parse_parameters_string[] = "b|z";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &show0, &attr0 ) == SUCCESS)
 		{
 			if(arguments_received >= 2){
 				if(Z_TYPE_P(attr0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(attr0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -3181,10 +3157,6 @@ PHP_METHOD(php_wxGridCellEditor, Show)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(attr0) == IS_LONG)
-				{
-					object_pointer0_1 = Z_LVAL_P(attr0);
 				}
 				else if(Z_TYPE_P(attr0) != IS_NULL)
 				{
@@ -3198,7 +3170,6 @@ PHP_METHOD(php_wxGridCellEditor, Show)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -3360,7 +3331,6 @@ PHP_METHOD(php_wxGridCellEditor, StartingClick)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -3480,7 +3450,8 @@ PHP_METHOD(php_wxGridCellEditor, StartingKey)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&event0, php_wxKeyEvent_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "O", &event0, php_wxKeyEvent_entry ) == SUCCESS)
+		char parse_parameters_string[] = "O";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &event0, php_wxKeyEvent_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(event0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(event0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -3491,10 +3462,6 @@ PHP_METHOD(php_wxGridCellEditor, StartingKey)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(event0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(event0);
 				}
 				else if(Z_TYPE_P(event0) != IS_NULL)
 				{
@@ -3508,7 +3475,6 @@ PHP_METHOD(php_wxGridCellEditor, StartingKey)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -3557,6 +3523,7 @@ PHP_METHOD(php_wxGridCellEditor, StartingKey)
 
 		
 }
+
 void php_wxGridCellAutoWrapStringEditor_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3565,13 +3532,13 @@ void php_wxGridCellAutoWrapStringEditor_destruction_handler(zend_rsrc_list_entry
 	#endif
 	
 	
-	wxGridCellAutoWrapStringEditor_php* object = (wxGridCellAutoWrapStringEditor_php*)rsrc->ptr;
+	wxGridCellAutoWrapStringEditor_php* object = static_cast<wxGridCellAutoWrapStringEditor_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -3632,7 +3599,6 @@ PHP_METHOD(php_wxGridCellAutoWrapStringEditor, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -3678,6 +3644,7 @@ PHP_METHOD(php_wxGridCellAutoWrapStringEditor, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+
 void php_wxGridCellBoolEditor_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3686,13 +3653,13 @@ void php_wxGridCellBoolEditor_destruction_handler(zend_rsrc_list_entry *rsrc TSR
 	#endif
 	
 	
-	wxGridCellBoolEditor_php* object = (wxGridCellBoolEditor_php*)rsrc->ptr;
+	wxGridCellBoolEditor_php* object = static_cast<wxGridCellBoolEditor_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -3778,7 +3745,8 @@ PHP_METHOD(php_wxGridCellBoolEditor, IsTrueValue)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&value0, &value_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "s", &value0, &value_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "s";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &value0, &value_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -3786,7 +3754,6 @@ PHP_METHOD(php_wxGridCellBoolEditor, IsTrueValue)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -3870,7 +3837,8 @@ PHP_METHOD(php_wxGridCellBoolEditor, UseStringValues)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|ss' (&valueTrue0, &valueTrue_len0, &valueFalse0, &valueFalse_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|ss", &valueTrue0, &valueTrue_len0, &valueFalse0, &valueFalse_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "|ss";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &valueTrue0, &valueTrue_len0, &valueFalse0, &valueFalse_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -3878,7 +3846,6 @@ PHP_METHOD(php_wxGridCellBoolEditor, UseStringValues)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -3959,7 +3926,6 @@ PHP_METHOD(php_wxGridCellBoolEditor, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -4005,6 +3971,7 @@ PHP_METHOD(php_wxGridCellBoolEditor, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+
 void php_wxGridCellChoiceEditor_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4013,13 +3980,13 @@ void php_wxGridCellChoiceEditor_destruction_handler(zend_rsrc_list_entry *rsrc T
 	#endif
 	
 	
-	wxGridCellChoiceEditor_php* object = (wxGridCellChoiceEditor_php*)rsrc->ptr;
+	wxGridCellChoiceEditor_php* object = static_cast<wxGridCellChoiceEditor_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -4107,7 +4074,8 @@ PHP_METHOD(php_wxGridCellChoiceEditor, SetParameters)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&params0, &params_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "s", &params0, &params_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "s";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &params0, &params_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -4115,7 +4083,6 @@ PHP_METHOD(php_wxGridCellChoiceEditor, SetParameters)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -4168,7 +4135,8 @@ PHP_METHOD(php_wxGridCellChoiceEditor, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'a|b' (&choices0, &allowOthers0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "a|b", &choices0, &allowOthers0 ) == SUCCESS)
+		char parse_parameters_string[] = "a|b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &choices0, &allowOthers0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -4176,11 +4144,11 @@ PHP_METHOD(php_wxGridCellChoiceEditor, __construct)
 	}
 
 		
-	wxArrayString strings_array0_0;
-	bool strings_continue0_0 = true;
-	
 	if(overload0_called)
 	{
+		wxArrayString strings_array0_0;
+		bool strings_continue0_0 = true;
+
 		switch(arguments_received)
 		{
 			case 1:
@@ -4264,6 +4232,7 @@ PHP_METHOD(php_wxGridCellChoiceEditor, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+
 void php_wxGridCellEnumEditor_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4272,13 +4241,13 @@ void php_wxGridCellEnumEditor_destruction_handler(zend_rsrc_list_entry *rsrc TSR
 	#endif
 	
 	
-	wxGridCellEnumEditor_php* object = (wxGridCellEnumEditor_php*)rsrc->ptr;
+	wxGridCellEnumEditor_php* object = static_cast<wxGridCellEnumEditor_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -4336,7 +4305,8 @@ PHP_METHOD(php_wxGridCellEnumEditor, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|s' (&choices0, &choices_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|s", &choices0, &choices_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "|s";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &choices0, &choices_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -4344,7 +4314,6 @@ PHP_METHOD(php_wxGridCellEnumEditor, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -4400,6 +4369,7 @@ PHP_METHOD(php_wxGridCellEnumEditor, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+
 void php_wxGridCellTextEditor_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4408,13 +4378,13 @@ void php_wxGridCellTextEditor_destruction_handler(zend_rsrc_list_entry *rsrc TSR
 	#endif
 	
 	
-	wxGridCellTextEditor_php* object = (wxGridCellTextEditor_php*)rsrc->ptr;
+	wxGridCellTextEditor_php* object = static_cast<wxGridCellTextEditor_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -4475,7 +4445,6 @@ PHP_METHOD(php_wxGridCellTextEditor, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -4585,7 +4554,8 @@ PHP_METHOD(php_wxGridCellTextEditor, SetParameters)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&params0, &params_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "s", &params0, &params_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "s";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &params0, &params_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -4593,7 +4563,6 @@ PHP_METHOD(php_wxGridCellTextEditor, SetParameters)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -4614,6 +4583,7 @@ PHP_METHOD(php_wxGridCellTextEditor, SetParameters)
 
 		
 }
+
 void php_wxGridCellFloatEditor_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4622,13 +4592,13 @@ void php_wxGridCellFloatEditor_destruction_handler(zend_rsrc_list_entry *rsrc TS
 	#endif
 	
 	
-	wxGridCellFloatEditor_php* object = (wxGridCellFloatEditor_php*)rsrc->ptr;
+	wxGridCellFloatEditor_php* object = static_cast<wxGridCellFloatEditor_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -4687,7 +4657,8 @@ PHP_METHOD(php_wxGridCellFloatEditor, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|lll' (&width0, &precision0, &format0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|lll", &width0, &precision0, &format0 ) == SUCCESS)
+		char parse_parameters_string[] = "|lll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &width0, &precision0, &format0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -4695,7 +4666,6 @@ PHP_METHOD(php_wxGridCellFloatEditor, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -4831,7 +4801,8 @@ PHP_METHOD(php_wxGridCellFloatEditor, SetParameters)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&params0, &params_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "s", &params0, &params_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "s";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &params0, &params_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -4839,7 +4810,6 @@ PHP_METHOD(php_wxGridCellFloatEditor, SetParameters)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -4860,6 +4830,7 @@ PHP_METHOD(php_wxGridCellFloatEditor, SetParameters)
 
 		
 }
+
 void php_wxGridCellNumberEditor_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4868,13 +4839,13 @@ void php_wxGridCellNumberEditor_destruction_handler(zend_rsrc_list_entry *rsrc T
 	#endif
 	
 	
-	wxGridCellNumberEditor_php* object = (wxGridCellNumberEditor_php*)rsrc->ptr;
+	wxGridCellNumberEditor_php* object = static_cast<wxGridCellNumberEditor_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -4932,7 +4903,8 @@ PHP_METHOD(php_wxGridCellNumberEditor, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|ll' (&min0, &max0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|ll", &min0, &max0 ) == SUCCESS)
+		char parse_parameters_string[] = "|ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &min0, &max0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -4940,7 +4912,6 @@ PHP_METHOD(php_wxGridCellNumberEditor, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -5066,7 +5037,8 @@ PHP_METHOD(php_wxGridCellNumberEditor, SetParameters)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&params0, &params_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "s", &params0, &params_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "s";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &params0, &params_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -5074,7 +5046,6 @@ PHP_METHOD(php_wxGridCellNumberEditor, SetParameters)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -5095,6 +5066,7 @@ PHP_METHOD(php_wxGridCellNumberEditor, SetParameters)
 
 		
 }
+
 void php_wxGridCellAttr_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5166,7 +5138,6 @@ PHP_METHOD(php_wxGridCellAttr, Clone)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -5183,8 +5154,8 @@ PHP_METHOD(php_wxGridCellAttr, Clone)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return0->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return0->phpObj != NULL){
+						return_value = value_to_return0->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -5272,7 +5243,6 @@ PHP_METHOD(php_wxGridCellAttr, DecRef)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -5355,17 +5325,18 @@ PHP_METHOD(php_wxGridCellAttr, GetAlignment)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (hAlign0, vAlign0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ll", hAlign0, vAlign0 ) == SUCCESS)
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, hAlign0, vAlign0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
 
-			zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "zz", &hAlign0_ref, &vAlign0_ref );
+			char parse_references_string[] = "zz";
+			zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_references_string, &hAlign0_ref, &vAlign0_ref );
 		}
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -5461,7 +5432,6 @@ PHP_METHOD(php_wxGridCellAttr, GetBackgroundColour)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -5475,8 +5445,8 @@ PHP_METHOD(php_wxGridCellAttr, GetBackgroundColour)
 				value_to_return0 = (wxColour_php*) &((wxGridCellAttr_php*)_this)->GetBackgroundColour();
 
 				if(value_to_return0->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return0->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return0->phpObj != NULL){
+						return_value = value_to_return0->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -5491,7 +5461,6 @@ PHP_METHOD(php_wxGridCellAttr, GetBackgroundColour)
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
 					references->AddReference(return_value);
 				}
-				references->AddReference(return_value);
 
 
 				return;
@@ -5564,7 +5533,8 @@ PHP_METHOD(php_wxGridCellAttr, GetEditor)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zll' (&grid0, &row0, &col0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "zll", &grid0, &row0, &col0 ) == SUCCESS)
+		char parse_parameters_string[] = "zll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &grid0, &row0, &col0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(grid0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(grid0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -5575,10 +5545,6 @@ PHP_METHOD(php_wxGridCellAttr, GetEditor)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(grid0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(grid0);
 				}
 				else if(Z_TYPE_P(grid0) != IS_NULL)
 				{
@@ -5592,7 +5558,6 @@ PHP_METHOD(php_wxGridCellAttr, GetEditor)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -5609,8 +5574,8 @@ PHP_METHOD(php_wxGridCellAttr, GetEditor)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return3->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return3->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return3->phpObj != NULL){
+						return_value = value_to_return3->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -5699,7 +5664,6 @@ PHP_METHOD(php_wxGridCellAttr, GetFont)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -5713,8 +5677,8 @@ PHP_METHOD(php_wxGridCellAttr, GetFont)
 				value_to_return0 = (wxFont_php*) &((wxGridCellAttr_php*)_this)->GetFont();
 
 				if(value_to_return0->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return0->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return0->phpObj != NULL){
+						return_value = value_to_return0->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -5729,7 +5693,6 @@ PHP_METHOD(php_wxGridCellAttr, GetFont)
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
 					references->AddReference(return_value);
 				}
-				references->AddReference(return_value);
 
 
 				return;
@@ -5802,17 +5765,18 @@ PHP_METHOD(php_wxGridCellAttr, GetNonDefaultAlignment)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (hAlign0, vAlign0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ll", hAlign0, vAlign0 ) == SUCCESS)
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, hAlign0, vAlign0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
 
-			zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "zz", &hAlign0_ref, &vAlign0_ref );
+			char parse_references_string[] = "zz";
+			zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_references_string, &hAlign0_ref, &vAlign0_ref );
 		}
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -5907,7 +5871,8 @@ PHP_METHOD(php_wxGridCellAttr, GetRenderer)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zll' (&grid0, &row0, &col0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "zll", &grid0, &row0, &col0 ) == SUCCESS)
+		char parse_parameters_string[] = "zll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &grid0, &row0, &col0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(grid0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(grid0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -5918,10 +5883,6 @@ PHP_METHOD(php_wxGridCellAttr, GetRenderer)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(grid0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(grid0);
 				}
 				else if(Z_TYPE_P(grid0) != IS_NULL)
 				{
@@ -5935,7 +5896,6 @@ PHP_METHOD(php_wxGridCellAttr, GetRenderer)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -5952,8 +5912,8 @@ PHP_METHOD(php_wxGridCellAttr, GetRenderer)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return3->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return3->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return3->phpObj != NULL){
+						return_value = value_to_return3->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -6042,7 +6002,6 @@ PHP_METHOD(php_wxGridCellAttr, GetTextColour)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -6056,8 +6015,8 @@ PHP_METHOD(php_wxGridCellAttr, GetTextColour)
 				value_to_return0 = (wxColour_php*) &((wxGridCellAttr_php*)_this)->GetTextColour();
 
 				if(value_to_return0->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return0->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return0->phpObj != NULL){
+						return_value = value_to_return0->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -6072,7 +6031,6 @@ PHP_METHOD(php_wxGridCellAttr, GetTextColour)
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
 					references->AddReference(return_value);
 				}
-				references->AddReference(return_value);
 
 
 				return;
@@ -6146,7 +6104,6 @@ PHP_METHOD(php_wxGridCellAttr, HasAlignment)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -6230,7 +6187,6 @@ PHP_METHOD(php_wxGridCellAttr, HasBackgroundColour)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -6314,7 +6270,6 @@ PHP_METHOD(php_wxGridCellAttr, HasEditor)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -6398,7 +6353,6 @@ PHP_METHOD(php_wxGridCellAttr, HasFont)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -6482,7 +6436,6 @@ PHP_METHOD(php_wxGridCellAttr, HasRenderer)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -6566,7 +6519,6 @@ PHP_METHOD(php_wxGridCellAttr, HasTextColour)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -6650,7 +6602,6 @@ PHP_METHOD(php_wxGridCellAttr, IncRef)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -6734,7 +6685,6 @@ PHP_METHOD(php_wxGridCellAttr, IsReadOnly)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -6815,7 +6765,8 @@ PHP_METHOD(php_wxGridCellAttr, SetAlignment)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&hAlign0, &vAlign0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ll", &hAlign0, &vAlign0 ) == SUCCESS)
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &hAlign0, &vAlign0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -6823,7 +6774,6 @@ PHP_METHOD(php_wxGridCellAttr, SetAlignment)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -6904,7 +6854,8 @@ PHP_METHOD(php_wxGridCellAttr, SetBackgroundColour)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&colBack0, php_wxColour_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "O", &colBack0, php_wxColour_entry ) == SUCCESS)
+		char parse_parameters_string[] = "O";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &colBack0, php_wxColour_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(colBack0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(colBack0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -6915,10 +6866,6 @@ PHP_METHOD(php_wxGridCellAttr, SetBackgroundColour)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(colBack0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(colBack0);
 				}
 				else if(Z_TYPE_P(colBack0) != IS_NULL)
 				{
@@ -6932,7 +6879,6 @@ PHP_METHOD(php_wxGridCellAttr, SetBackgroundColour)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -7014,7 +6960,8 @@ PHP_METHOD(php_wxGridCellAttr, SetDefAttr)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&defAttr0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "z", &defAttr0 ) == SUCCESS)
+		char parse_parameters_string[] = "z";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &defAttr0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(defAttr0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(defAttr0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -7025,10 +6972,6 @@ PHP_METHOD(php_wxGridCellAttr, SetDefAttr)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(defAttr0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(defAttr0);
 				}
 				else if(Z_TYPE_P(defAttr0) != IS_NULL)
 				{
@@ -7042,7 +6985,6 @@ PHP_METHOD(php_wxGridCellAttr, SetDefAttr)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -7124,7 +7066,8 @@ PHP_METHOD(php_wxGridCellAttr, SetEditor)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&editor0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "z", &editor0 ) == SUCCESS)
+		char parse_parameters_string[] = "z";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &editor0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(editor0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(editor0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -7135,10 +7078,6 @@ PHP_METHOD(php_wxGridCellAttr, SetEditor)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(editor0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(editor0);
 				}
 				else if(Z_TYPE_P(editor0) != IS_NULL)
 				{
@@ -7152,7 +7091,6 @@ PHP_METHOD(php_wxGridCellAttr, SetEditor)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -7234,7 +7172,8 @@ PHP_METHOD(php_wxGridCellAttr, SetFont)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&font0, php_wxFont_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "O", &font0, php_wxFont_entry ) == SUCCESS)
+		char parse_parameters_string[] = "O";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &font0, php_wxFont_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(font0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(font0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -7245,10 +7184,6 @@ PHP_METHOD(php_wxGridCellAttr, SetFont)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(font0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(font0);
 				}
 				else if(Z_TYPE_P(font0) != IS_NULL)
 				{
@@ -7262,7 +7197,6 @@ PHP_METHOD(php_wxGridCellAttr, SetFont)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -7343,7 +7277,8 @@ PHP_METHOD(php_wxGridCellAttr, SetReadOnly)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|b' (&isReadOnly0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|b", &isReadOnly0 ) == SUCCESS)
+		char parse_parameters_string[] = "|b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &isReadOnly0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -7351,7 +7286,6 @@ PHP_METHOD(php_wxGridCellAttr, SetReadOnly)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -7443,7 +7377,8 @@ PHP_METHOD(php_wxGridCellAttr, SetRenderer)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&renderer0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "z", &renderer0 ) == SUCCESS)
+		char parse_parameters_string[] = "z";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &renderer0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(renderer0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(renderer0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -7454,10 +7389,6 @@ PHP_METHOD(php_wxGridCellAttr, SetRenderer)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(renderer0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(renderer0);
 				}
 				else if(Z_TYPE_P(renderer0) != IS_NULL)
 				{
@@ -7471,7 +7402,6 @@ PHP_METHOD(php_wxGridCellAttr, SetRenderer)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -7553,7 +7483,8 @@ PHP_METHOD(php_wxGridCellAttr, SetTextColour)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&colText0, php_wxColour_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "O", &colText0, php_wxColour_entry ) == SUCCESS)
+		char parse_parameters_string[] = "O";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &colText0, php_wxColour_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(colText0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(colText0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -7564,10 +7495,6 @@ PHP_METHOD(php_wxGridCellAttr, SetTextColour)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(colText0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(colText0);
 				}
 				else if(Z_TYPE_P(colText0) != IS_NULL)
 				{
@@ -7581,7 +7508,6 @@ PHP_METHOD(php_wxGridCellAttr, SetTextColour)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -7645,7 +7571,8 @@ PHP_METHOD(php_wxGridCellAttr, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|z' (&attrDefault0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|z", &attrDefault0 ) == SUCCESS)
+		char parse_parameters_string[] = "|z";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &attrDefault0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(attrDefault0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(attrDefault0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -7656,10 +7583,6 @@ PHP_METHOD(php_wxGridCellAttr, __construct)
 					{
 						goto overload1;
 					}
-				}
-				else if(Z_TYPE_P(attrDefault0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(attrDefault0);
 				}
 				else if(Z_TYPE_P(attrDefault0) != IS_NULL)
 				{
@@ -7680,7 +7603,8 @@ PHP_METHOD(php_wxGridCellAttr, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'OOOll' (&colText1, php_wxColour_entry, &colBack1, php_wxColour_entry, &font1, php_wxFont_entry, &hAlign1, &vAlign1)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "OOOll", &colText1, php_wxColour_entry, &colBack1, php_wxColour_entry, &font1, php_wxFont_entry, &hAlign1, &vAlign1 ) == SUCCESS)
+		char parse_parameters_string[] = "OOOll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &colText1, php_wxColour_entry, &colBack1, php_wxColour_entry, &font1, php_wxFont_entry, &hAlign1, &vAlign1 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(colText1) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(colText1), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -7691,10 +7615,6 @@ PHP_METHOD(php_wxGridCellAttr, __construct)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(colText1) == IS_LONG)
-				{
-					object_pointer1_0 = Z_LVAL_P(colText1);
 				}
 				else if(Z_TYPE_P(colText1) != IS_NULL)
 				{
@@ -7712,10 +7632,6 @@ PHP_METHOD(php_wxGridCellAttr, __construct)
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(colBack1) == IS_LONG)
-				{
-					object_pointer1_1 = Z_LVAL_P(colBack1);
-				}
 				else if(Z_TYPE_P(colBack1) != IS_NULL)
 				{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
@@ -7732,10 +7648,6 @@ PHP_METHOD(php_wxGridCellAttr, __construct)
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(font1) == IS_LONG)
-				{
-					object_pointer1_2 = Z_LVAL_P(font1);
-				}
 				else if(Z_TYPE_P(font1) != IS_NULL)
 				{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
@@ -7748,7 +7660,6 @@ PHP_METHOD(php_wxGridCellAttr, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -7777,7 +7688,6 @@ PHP_METHOD(php_wxGridCellAttr, __construct)
 		}
 	}
 
-	
 	if(overload1_called)
 	{
 		switch(arguments_received)
@@ -7826,6 +7736,7 @@ PHP_METHOD(php_wxGridCellAttr, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+
 void php_wxGridTableBase_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7834,13 +7745,13 @@ void php_wxGridTableBase_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_D
 	#endif
 	
 	
-	wxGridTableBase_php* object = (wxGridTableBase_php*)rsrc->ptr;
+	wxGridTableBase_php* object = static_cast<wxGridTableBase_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -7925,7 +7836,8 @@ PHP_METHOD(php_wxGridTableBase, AppendCols)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|l' (&numCols0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|l", &numCols0 ) == SUCCESS)
+		char parse_parameters_string[] = "|l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &numCols0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -7933,7 +7845,6 @@ PHP_METHOD(php_wxGridTableBase, AppendCols)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -8024,7 +7935,8 @@ PHP_METHOD(php_wxGridTableBase, AppendRows)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|l' (&numRows0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|l", &numRows0 ) == SUCCESS)
+		char parse_parameters_string[] = "|l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &numRows0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -8032,7 +7944,6 @@ PHP_METHOD(php_wxGridTableBase, AppendRows)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -8126,7 +8037,8 @@ PHP_METHOD(php_wxGridTableBase, CanGetValueAs)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lls' (&row0, &col0, &typeName0, &typeName_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "lls", &row0, &col0, &typeName0, &typeName_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "lls";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &col0, &typeName0, &typeName_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -8134,7 +8046,6 @@ PHP_METHOD(php_wxGridTableBase, CanGetValueAs)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -8218,7 +8129,6 @@ PHP_METHOD(php_wxGridTableBase, CanHaveAttributes)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -8301,7 +8211,8 @@ PHP_METHOD(php_wxGridTableBase, CanSetValueAs)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lls' (&row0, &col0, &typeName0, &typeName_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "lls", &row0, &col0, &typeName0, &typeName_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "lls";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &col0, &typeName0, &typeName_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -8309,7 +8220,6 @@ PHP_METHOD(php_wxGridTableBase, CanSetValueAs)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -8393,7 +8303,6 @@ PHP_METHOD(php_wxGridTableBase, Clear)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -8474,7 +8383,8 @@ PHP_METHOD(php_wxGridTableBase, DeleteCols)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|ll' (&pos0, &numCols0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|ll", &pos0, &numCols0 ) == SUCCESS)
+		char parse_parameters_string[] = "|ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0, &numCols0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -8482,7 +8392,6 @@ PHP_METHOD(php_wxGridTableBase, DeleteCols)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -8585,7 +8494,8 @@ PHP_METHOD(php_wxGridTableBase, DeleteRows)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|ll' (&pos0, &numRows0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|ll", &pos0, &numRows0 ) == SUCCESS)
+		char parse_parameters_string[] = "|ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0, &numRows0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -8593,7 +8503,6 @@ PHP_METHOD(php_wxGridTableBase, DeleteRows)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -8697,7 +8606,8 @@ PHP_METHOD(php_wxGridTableBase, GetAttr)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lll' (&row0, &col0, &kind0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "lll", &row0, &col0, &kind0 ) == SUCCESS)
+		char parse_parameters_string[] = "lll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &col0, &kind0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -8705,7 +8615,6 @@ PHP_METHOD(php_wxGridTableBase, GetAttr)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -8722,8 +8631,8 @@ PHP_METHOD(php_wxGridTableBase, GetAttr)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return3->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return3->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return3->phpObj != NULL){
+						return_value = value_to_return3->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -8811,7 +8720,6 @@ PHP_METHOD(php_wxGridTableBase, GetAttrProvider)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -8828,8 +8736,8 @@ PHP_METHOD(php_wxGridTableBase, GetAttrProvider)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return0->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return0->phpObj != NULL){
+						return_value = value_to_return0->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -8913,7 +8821,8 @@ PHP_METHOD(php_wxGridTableBase, GetColLabelValue)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&col0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &col0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &col0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -8921,7 +8830,6 @@ PHP_METHOD(php_wxGridTableBase, GetColLabelValue)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -9011,7 +8919,6 @@ PHP_METHOD(php_wxGridTableBase, GetColsCount)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -9039,7 +8946,8 @@ int wxGridTableBase_php::GetNumberCols()
 	php_printf("===========================================\n");
 	#endif
 	
-	int arguments = NULL;
+	zval* arguments[1];
+	arguments[0] = NULL;
 
 	zval* return_value;
 	MAKE_STD_ZVAL(return_value);
@@ -9072,7 +8980,7 @@ int wxGridTableBase_php::GetNumberCols()
 		php_printf("Returning userspace value.\n");
 		#endif
 		
-		return Z_LVAL_P(return_value);
+		return (int) Z_LVAL_P(return_value);
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -9091,7 +8999,8 @@ int wxGridTableBase_php::GetNumberRows()
 	php_printf("===========================================\n");
 	#endif
 	
-	int arguments = NULL;
+	zval* arguments[1];
+	arguments[0] = NULL;
 
 	zval* return_value;
 	MAKE_STD_ZVAL(return_value);
@@ -9124,7 +9033,7 @@ int wxGridTableBase_php::GetNumberRows()
 		php_printf("Returning userspace value.\n");
 		#endif
 		
-		return Z_LVAL_P(return_value);
+		return (int) Z_LVAL_P(return_value);
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -9195,7 +9104,8 @@ PHP_METHOD(php_wxGridTableBase, GetRowLabelValue)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&row0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &row0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -9203,7 +9113,6 @@ PHP_METHOD(php_wxGridTableBase, GetRowLabelValue)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -9293,7 +9202,6 @@ PHP_METHOD(php_wxGridTableBase, GetRowsCount)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -9374,7 +9282,8 @@ PHP_METHOD(php_wxGridTableBase, GetTypeName)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&row0, &col0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ll", &row0, &col0 ) == SUCCESS)
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &col0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -9382,7 +9291,6 @@ PHP_METHOD(php_wxGridTableBase, GetTypeName)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -9529,7 +9437,8 @@ PHP_METHOD(php_wxGridTableBase, GetValueAsBool)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&row0, &col0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ll", &row0, &col0 ) == SUCCESS)
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &col0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -9537,7 +9446,6 @@ PHP_METHOD(php_wxGridTableBase, GetValueAsBool)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -9620,7 +9528,8 @@ PHP_METHOD(php_wxGridTableBase, GetValueAsCustom)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lls' (&row0, &col0, &typeName0, &typeName_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "lls", &row0, &col0, &typeName0, &typeName_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "lls";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &col0, &typeName0, &typeName_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -9628,7 +9537,6 @@ PHP_METHOD(php_wxGridTableBase, GetValueAsCustom)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -9709,7 +9617,8 @@ PHP_METHOD(php_wxGridTableBase, GetValueAsDouble)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&row0, &col0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ll", &row0, &col0 ) == SUCCESS)
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &col0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -9717,7 +9626,6 @@ PHP_METHOD(php_wxGridTableBase, GetValueAsDouble)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -9798,7 +9706,8 @@ PHP_METHOD(php_wxGridTableBase, GetValueAsLong)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&row0, &col0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ll", &row0, &col0 ) == SUCCESS)
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &col0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -9806,7 +9715,6 @@ PHP_METHOD(php_wxGridTableBase, GetValueAsLong)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -9890,7 +9798,6 @@ PHP_METHOD(php_wxGridTableBase, GetView)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -9907,8 +9814,8 @@ PHP_METHOD(php_wxGridTableBase, GetView)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return0->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return0->phpObj != NULL){
+						return_value = value_to_return0->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -9993,7 +9900,8 @@ PHP_METHOD(php_wxGridTableBase, InsertCols)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|ll' (&pos0, &numCols0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|ll", &pos0, &numCols0 ) == SUCCESS)
+		char parse_parameters_string[] = "|ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0, &numCols0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -10001,7 +9909,6 @@ PHP_METHOD(php_wxGridTableBase, InsertCols)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -10104,7 +10011,8 @@ PHP_METHOD(php_wxGridTableBase, InsertRows)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|ll' (&pos0, &numRows0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|ll", &pos0, &numRows0 ) == SUCCESS)
+		char parse_parameters_string[] = "|ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0, &numRows0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -10112,7 +10020,6 @@ PHP_METHOD(php_wxGridTableBase, InsertRows)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -10146,116 +10053,6 @@ PHP_METHOD(php_wxGridTableBase, InsertRows)
 				#endif
 				ZVAL_BOOL(return_value, ((wxGridTableBase_php*)_this)->InsertRows((size_t) pos0, (size_t) numRows0));
 
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_METHOD(php_wxGridTableBase, IsEmpty)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxGridTableBase::IsEmpty\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	bool return_is_user_initialized = false;
-	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
-	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
-		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxGridTableBase::IsEmpty\n");
-			
-			return;
-		}
-		else
-		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
-			
-			if(parent_rsrc_type == le_wxGridTableBase)
-				references = &((wxGridTableBase_php*)_this)->references;
-		}
-	}
-	else
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Processing the method call as static\n");
-		#endif
-	}
-	
-	//Parameters for overload 0
-	zval* coords0 = 0;
-	void* object_pointer0_0 = 0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'O' (&coords0, php_wxGridCellCoords_entry)\n");
-		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "O", &coords0, php_wxGridCellCoords_entry ) == SUCCESS)
-		{
-			if(arguments_received >= 1){
-				if(Z_TYPE_P(coords0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(coords0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
-				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer0_0 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer0_0 )
-					{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(coords0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(coords0);
-				}
-				else if(Z_TYPE_P(coords0) != IS_NULL)
-				{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-				}
-			}
-
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxGridTableBase::IsEmpty(*(wxGridCellCoords*) object_pointer0_0))\n\n");
-				#endif
-				ZVAL_BOOL(return_value, ((wxGridTableBase_php*)_this)->IsEmpty(*(wxGridCellCoords*) object_pointer0_0));
-
-				references->AddReference(coords0);
 
 				return;
 				break;
@@ -10325,7 +10122,8 @@ PHP_METHOD(php_wxGridTableBase, IsEmptyCell)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&row0, &col0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ll", &row0, &col0 ) == SUCCESS)
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &col0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -10333,7 +10131,6 @@ PHP_METHOD(php_wxGridTableBase, IsEmptyCell)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -10416,7 +10213,8 @@ PHP_METHOD(php_wxGridTableBase, SetAttr)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zll' (&attr0, &row0, &col0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "zll", &attr0, &row0, &col0 ) == SUCCESS)
+		char parse_parameters_string[] = "zll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &attr0, &row0, &col0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(attr0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(attr0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -10427,10 +10225,6 @@ PHP_METHOD(php_wxGridTableBase, SetAttr)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(attr0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(attr0);
 				}
 				else if(Z_TYPE_P(attr0) != IS_NULL)
 				{
@@ -10444,7 +10238,6 @@ PHP_METHOD(php_wxGridTableBase, SetAttr)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -10526,7 +10319,8 @@ PHP_METHOD(php_wxGridTableBase, SetAttrProvider)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&attrProvider0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "z", &attrProvider0 ) == SUCCESS)
+		char parse_parameters_string[] = "z";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &attrProvider0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(attrProvider0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(attrProvider0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -10537,10 +10331,6 @@ PHP_METHOD(php_wxGridTableBase, SetAttrProvider)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(attrProvider0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(attrProvider0);
 				}
 				else if(Z_TYPE_P(attrProvider0) != IS_NULL)
 				{
@@ -10554,7 +10344,6 @@ PHP_METHOD(php_wxGridTableBase, SetAttrProvider)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -10637,7 +10426,8 @@ PHP_METHOD(php_wxGridTableBase, SetColAttr)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zl' (&attr0, &col0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "zl", &attr0, &col0 ) == SUCCESS)
+		char parse_parameters_string[] = "zl";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &attr0, &col0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(attr0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(attr0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -10648,10 +10438,6 @@ PHP_METHOD(php_wxGridTableBase, SetColAttr)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(attr0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(attr0);
 				}
 				else if(Z_TYPE_P(attr0) != IS_NULL)
 				{
@@ -10665,7 +10451,6 @@ PHP_METHOD(php_wxGridTableBase, SetColAttr)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -10748,7 +10533,8 @@ PHP_METHOD(php_wxGridTableBase, SetColLabelValue)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ls' (&col0, &label0, &label_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ls", &col0, &label0, &label_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "ls";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &col0, &label0, &label_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -10756,7 +10542,6 @@ PHP_METHOD(php_wxGridTableBase, SetColLabelValue)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -10838,7 +10623,8 @@ PHP_METHOD(php_wxGridTableBase, SetRowAttr)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zl' (&attr0, &row0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "zl", &attr0, &row0 ) == SUCCESS)
+		char parse_parameters_string[] = "zl";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &attr0, &row0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(attr0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(attr0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -10849,10 +10635,6 @@ PHP_METHOD(php_wxGridTableBase, SetRowAttr)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(attr0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(attr0);
 				}
 				else if(Z_TYPE_P(attr0) != IS_NULL)
 				{
@@ -10866,7 +10648,6 @@ PHP_METHOD(php_wxGridTableBase, SetRowAttr)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -10949,7 +10730,8 @@ PHP_METHOD(php_wxGridTableBase, SetRowLabelValue)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ls' (&row0, &label0, &label_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ls", &row0, &label0, &label_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "ls";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &label0, &label_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -10957,7 +10739,6 @@ PHP_METHOD(php_wxGridTableBase, SetRowLabelValue)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -11103,7 +10884,8 @@ PHP_METHOD(php_wxGridTableBase, SetValueAsBool)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'llb' (&row0, &col0, &value0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "llb", &row0, &col0, &value0 ) == SUCCESS)
+		char parse_parameters_string[] = "llb";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &col0, &value0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -11111,7 +10893,6 @@ PHP_METHOD(php_wxGridTableBase, SetValueAsBool)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -11197,17 +10978,18 @@ PHP_METHOD(php_wxGridTableBase, SetValueAsCustom)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'llss' (&row0, &col0, &typeName0, &typeName_len0, &value0, &value_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "llss", &row0, &col0, &typeName0, &typeName_len0, &value0, &value_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "llss";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &col0, &typeName0, &typeName_len0, &value0, &value_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
 
-			zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "zzzz", &dummy, &dummy, &dummy, &value0_ref );
+			char parse_references_string[] = "zzzz";
+			zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_references_string, &dummy, &dummy, &dummy, &value0_ref );
 		}
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -11290,7 +11072,8 @@ PHP_METHOD(php_wxGridTableBase, SetValueAsDouble)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lld' (&row0, &col0, &value0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "lld", &row0, &col0, &value0 ) == SUCCESS)
+		char parse_parameters_string[] = "lld";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &col0, &value0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -11298,7 +11081,6 @@ PHP_METHOD(php_wxGridTableBase, SetValueAsDouble)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -11380,7 +11162,8 @@ PHP_METHOD(php_wxGridTableBase, SetValueAsLong)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lll' (&row0, &col0, &value0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "lll", &row0, &col0, &value0 ) == SUCCESS)
+		char parse_parameters_string[] = "lll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &col0, &value0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -11388,7 +11171,6 @@ PHP_METHOD(php_wxGridTableBase, SetValueAsLong)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -11469,7 +11251,8 @@ PHP_METHOD(php_wxGridTableBase, SetView)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&grid0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "z", &grid0 ) == SUCCESS)
+		char parse_parameters_string[] = "z";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &grid0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(grid0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(grid0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -11480,10 +11263,6 @@ PHP_METHOD(php_wxGridTableBase, SetView)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(grid0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(grid0);
 				}
 				else if(Z_TYPE_P(grid0) != IS_NULL)
 				{
@@ -11497,7 +11276,6 @@ PHP_METHOD(php_wxGridTableBase, SetView)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -11554,7 +11332,6 @@ PHP_METHOD(php_wxGridTableBase, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -11600,6 +11377,7 @@ PHP_METHOD(php_wxGridTableBase, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+
 void php_wxGridSizesInfo_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11608,13 +11386,13 @@ void php_wxGridSizesInfo_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_D
 	#endif
 	
 	
-	wxGridSizesInfo_php* object = (wxGridSizesInfo_php*)rsrc->ptr;
+	wxGridSizesInfo_php* object = static_cast<wxGridSizesInfo_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -11675,7 +11453,6 @@ PHP_METHOD(php_wxGridSizesInfo, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -11760,7 +11537,9 @@ PHP_METHOD(php_wxGridSizesInfo, __get)
 		zend_error(E_ERROR, "Could not process __get call as static\n");
 	}
 	
-	if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "s", &name, &name_len ) == FAILURE)
+	char parse_parameters_string[] = "s";
+	
+	if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &name, &name_len ) == FAILURE)
 	{
 		RETVAL_NULL();
 	}
@@ -11843,7 +11622,8 @@ PHP_METHOD(php_wxGridSizesInfo, GetSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&pos0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &pos0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -11851,7 +11631,6 @@ PHP_METHOD(php_wxGridSizesInfo, GetSize)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -11872,6 +11651,7 @@ PHP_METHOD(php_wxGridSizesInfo, GetSize)
 
 		
 }
+
 void php_wxGrid_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11939,7 +11719,8 @@ PHP_METHOD(php_wxGrid, AppendCols)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|lb' (&numCols0, &updateLabels0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|lb", &numCols0, &updateLabels0 ) == SUCCESS)
+		char parse_parameters_string[] = "|lb";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &numCols0, &updateLabels0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -11947,7 +11728,6 @@ PHP_METHOD(php_wxGrid, AppendCols)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -12050,7 +11830,8 @@ PHP_METHOD(php_wxGrid, AppendRows)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|lb' (&numRows0, &updateLabels0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|lb", &numRows0, &updateLabels0 ) == SUCCESS)
+		char parse_parameters_string[] = "|lb";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &numRows0, &updateLabels0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -12058,7 +11839,6 @@ PHP_METHOD(php_wxGrid, AppendRows)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -12164,7 +11944,6 @@ PHP_METHOD(php_wxGrid, AreHorzGridLinesClipped)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -12248,7 +12027,6 @@ PHP_METHOD(php_wxGrid, AreVertGridLinesClipped)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -12332,7 +12110,6 @@ PHP_METHOD(php_wxGrid, AutoSize)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -12412,7 +12189,8 @@ PHP_METHOD(php_wxGrid, AutoSizeColLabelSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&col0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &col0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &col0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -12420,7 +12198,6 @@ PHP_METHOD(php_wxGrid, AutoSizeColLabelSize)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -12501,7 +12278,8 @@ PHP_METHOD(php_wxGrid, AutoSizeColumn)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l|b' (&col0, &setAsMin0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l|b", &col0, &setAsMin0 ) == SUCCESS)
+		char parse_parameters_string[] = "l|b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &col0, &setAsMin0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -12509,7 +12287,6 @@ PHP_METHOD(php_wxGrid, AutoSizeColumn)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -12600,7 +12377,8 @@ PHP_METHOD(php_wxGrid, AutoSizeColumns)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|b' (&setAsMin0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|b", &setAsMin0 ) == SUCCESS)
+		char parse_parameters_string[] = "|b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &setAsMin0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -12608,7 +12386,6 @@ PHP_METHOD(php_wxGrid, AutoSizeColumns)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -12700,7 +12477,8 @@ PHP_METHOD(php_wxGrid, AutoSizeRow)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l|b' (&row0, &setAsMin0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l|b", &row0, &setAsMin0 ) == SUCCESS)
+		char parse_parameters_string[] = "l|b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &setAsMin0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -12708,7 +12486,6 @@ PHP_METHOD(php_wxGrid, AutoSizeRow)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -12799,7 +12576,8 @@ PHP_METHOD(php_wxGrid, AutoSizeRowLabelSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&col0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &col0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &col0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -12807,7 +12585,6 @@ PHP_METHOD(php_wxGrid, AutoSizeRowLabelSize)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -12887,7 +12664,8 @@ PHP_METHOD(php_wxGrid, AutoSizeRows)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|b' (&setAsMin0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|b", &setAsMin0 ) == SUCCESS)
+		char parse_parameters_string[] = "|b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &setAsMin0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -12895,7 +12673,6 @@ PHP_METHOD(php_wxGrid, AutoSizeRows)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -12990,7 +12767,6 @@ PHP_METHOD(php_wxGrid, BeginBatch)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -13002,144 +12778,6 @@ PHP_METHOD(php_wxGrid, BeginBatch)
 				#endif
 				((wxGrid_php*)_this)->BeginBatch();
 
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_METHOD(php_wxGrid, BlockToDeviceRect)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxGrid::BlockToDeviceRect\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	bool return_is_user_initialized = false;
-	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
-	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
-		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxGrid::BlockToDeviceRect\n");
-			
-			return;
-		}
-		else
-		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
-			
-			if(parent_rsrc_type == le_wxGrid)
-				references = &((wxGrid_php*)_this)->references;
-		}
-	}
-	else
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Processing the method call as static\n");
-		#endif
-	}
-	
-	//Parameters for overload 0
-	zval* topLeft0 = 0;
-	void* object_pointer0_0 = 0;
-	zval* bottomRight0 = 0;
-	void* object_pointer0_1 = 0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 2)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'OO' (&topLeft0, php_wxGridCellCoords_entry, &bottomRight0, php_wxGridCellCoords_entry)\n");
-		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "OO", &topLeft0, php_wxGridCellCoords_entry, &bottomRight0, php_wxGridCellCoords_entry ) == SUCCESS)
-		{
-			if(arguments_received >= 1){
-				if(Z_TYPE_P(topLeft0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(topLeft0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
-				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer0_0 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer0_0 )
-					{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(topLeft0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(topLeft0);
-				}
-				else if(Z_TYPE_P(topLeft0) != IS_NULL)
-				{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-				}
-			}
-
-			if(arguments_received >= 2){
-				if(Z_TYPE_P(bottomRight0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(bottomRight0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
-				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer0_1 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer0_1 )
-					{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(bottomRight0) == IS_LONG)
-				{
-					object_pointer0_1 = Z_LVAL_P(bottomRight0);
-				}
-				else if(Z_TYPE_P(bottomRight0) != IS_NULL)
-				{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-				}
-			}
-
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxGrid::BlockToDeviceRect(*(wxGridCellCoords*) object_pointer0_0, *(wxGridCellCoords*) object_pointer0_1) to return new object\n\n");
-				#endif
-				wxRect value_to_return2;
-				value_to_return2 = ((wxGrid_php*)_this)->BlockToDeviceRect(*(wxGridCellCoords*) object_pointer0_0, *(wxGridCellCoords*) object_pointer0_1);
-				void* ptr = safe_emalloc(1, sizeof(wxRect_php), 0);
-				memcpy(ptr, &value_to_return2, sizeof(wxRect));
-				object_init_ex(return_value, php_wxRect_entry);
-				add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxRect));
-
-				references->AddReference(topLeft0);
-				references->AddReference(bottomRight0);
 
 				return;
 				break;
@@ -13212,7 +12850,6 @@ PHP_METHOD(php_wxGrid, CanDragCell)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -13296,7 +12933,6 @@ PHP_METHOD(php_wxGrid, CanDragColMove)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -13376,7 +13012,8 @@ PHP_METHOD(php_wxGrid, CanDragColSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&col0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &col0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &col0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -13384,7 +13021,6 @@ PHP_METHOD(php_wxGrid, CanDragColSize)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -13468,7 +13104,6 @@ PHP_METHOD(php_wxGrid, CanDragGridSize)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -13548,7 +13183,8 @@ PHP_METHOD(php_wxGrid, CanDragRowSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&row0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &row0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -13556,7 +13192,6 @@ PHP_METHOD(php_wxGrid, CanDragRowSize)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -13640,7 +13275,6 @@ PHP_METHOD(php_wxGrid, CanEnableCellControl)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -13712,10 +13346,6 @@ PHP_METHOD(php_wxGrid, CellToRect)
 	long row0;
 	long col0;
 	bool overload0_called = false;
-	//Parameters for overload 1
-	zval* coords1 = 0;
-	void* object_pointer1_0 = 0;
-	bool overload1_called = false;
 		
 	//Overload 0
 	overload0:
@@ -13725,50 +13355,15 @@ PHP_METHOD(php_wxGrid, CellToRect)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&row0, &col0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ll", &row0, &col0 ) == SUCCESS)
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &col0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
 		}
 	}
 
-	//Overload 1
-	overload1:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'O' (&coords1, php_wxGridCellCoords_entry)\n");
-		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "O", &coords1, php_wxGridCellCoords_entry ) == SUCCESS)
-		{
-			if(arguments_received >= 1){
-				if(Z_TYPE_P(coords1) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(coords1), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
-				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer1_0 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer1_0 )
-					{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(coords1) == IS_LONG)
-				{
-					object_pointer1_0 = Z_LVAL_P(coords1);
-				}
-				else if(Z_TYPE_P(coords1) != IS_NULL)
-				{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-				}
-			}
-
-			overload1_called = true;
-			already_called = true;
-		}
-	}
-
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -13785,31 +13380,6 @@ PHP_METHOD(php_wxGrid, CellToRect)
 				object_init_ex(return_value, php_wxRect_entry);
 				add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxRect));
 
-
-				return;
-				break;
-			}
-		}
-	}
-
-	
-	if(overload1_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxGrid::CellToRect(*(wxGridCellCoords*) object_pointer1_0) to return new object\n\n");
-				#endif
-				wxRect value_to_return1;
-				value_to_return1 = ((wxGrid_php*)_this)->CellToRect(*(wxGridCellCoords*) object_pointer1_0);
-				void* ptr = safe_emalloc(1, sizeof(wxRect_php), 0);
-				memcpy(ptr, &value_to_return1, sizeof(wxRect));
-				object_init_ex(return_value, php_wxRect_entry);
-				add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxRect));
-
-				references->AddReference(coords1);
 
 				return;
 				break;
@@ -13882,7 +13452,6 @@ PHP_METHOD(php_wxGrid, ClearGrid)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -13966,7 +13535,6 @@ PHP_METHOD(php_wxGrid, ClearSelection)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -14046,7 +13614,8 @@ PHP_METHOD(php_wxGrid, ClipHorzGridLines)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&clip0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "b", &clip0 ) == SUCCESS)
+		char parse_parameters_string[] = "b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &clip0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -14054,7 +13623,6 @@ PHP_METHOD(php_wxGrid, ClipHorzGridLines)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -14134,7 +13702,8 @@ PHP_METHOD(php_wxGrid, ClipVertGridLines)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&clip0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "b", &clip0 ) == SUCCESS)
+		char parse_parameters_string[] = "b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &clip0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -14142,7 +13711,6 @@ PHP_METHOD(php_wxGrid, ClipVertGridLines)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -14231,21 +13799,18 @@ PHP_METHOD(php_wxGrid, Create)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zl|OOls' (&parent0, &id0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &name0, &name_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "zl|OOls", &parent0, &id0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &name0, &name_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "zl|OOls";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &name0, &name_len0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(parent0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(parent0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
 				{
 					id_to_find = Z_RESVAL_P(*tmp);
 					object_pointer0_0 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer0_0 || (rsrc_type != le_wxNonOwnedWindow && rsrc_type != le_wxTopLevelWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxMDIChildFrame && rsrc_type != le_wxMDIParentFrame && rsrc_type != le_wxMiniFrame && rsrc_type != le_wxPreviewFrame && rsrc_type != le_wxHtmlHelpDialog && rsrc_type != le_wxHtmlHelpFrame && rsrc_type != le_wxDialog && rsrc_type != le_wxTextEntryDialog && rsrc_type != le_wxPasswordEntryDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxFindReplaceDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxSymbolPickerDialog && rsrc_type != le_wxPropertySheetDialog && rsrc_type != le_wxWizard && rsrc_type != le_wxProgressDialog && rsrc_type != le_wxColourDialog && rsrc_type != le_wxFileDialog && rsrc_type != le_wxFontDialog && rsrc_type != le_wxPageSetupDialog && rsrc_type != le_wxPrintDialog && rsrc_type != le_wxSingleChoiceDialog && rsrc_type != le_wxPopupWindow && rsrc_type != le_wxPopupTransientWindow && rsrc_type != le_wxControl && rsrc_type != le_wxStatusBar && rsrc_type != le_wxAnyButton && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxToggleButton && rsrc_type != le_wxBitmapToggleButton && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxControlWithItems && rsrc_type != le_wxListBox && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxRearrangeList && rsrc_type != le_wxChoice && rsrc_type != le_wxBookCtrlBase && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxListbook && rsrc_type != le_wxChoicebook && rsrc_type != le_wxNotebook && rsrc_type != le_wxTreebook && rsrc_type != le_wxToolbook && rsrc_type != le_wxAnimationCtrl && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxScrollBar && rsrc_type != le_wxStaticText && rsrc_type != le_wxStaticLine && rsrc_type != le_wxStaticBox && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxCheckBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxSearchCtrl && rsrc_type != le_wxComboBox && rsrc_type != le_wxBitmapComboBox && rsrc_type != le_wxAuiToolBar && rsrc_type != le_wxListCtrl && rsrc_type != le_wxListView && rsrc_type != le_wxRadioBox && rsrc_type != le_wxRadioButton && rsrc_type != le_wxSlider && rsrc_type != le_wxSpinCtrl && rsrc_type != le_wxSpinButton && rsrc_type != le_wxGauge && rsrc_type != le_wxHyperlinkCtrl && rsrc_type != le_wxSpinCtrlDouble && rsrc_type != le_wxGenericDirCtrl && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxPickerBase && rsrc_type != le_wxColourPickerCtrl && rsrc_type != le_wxFontPickerCtrl && rsrc_type != le_wxFilePickerCtrl && rsrc_type != le_wxDirPickerCtrl && rsrc_type != le_wxTimePickerCtrl && rsrc_type != le_wxToolBar && rsrc_type != le_wxDatePickerCtrl && rsrc_type != le_wxCollapsiblePane && rsrc_type != le_wxComboCtrl && rsrc_type != le_wxDataViewCtrl && rsrc_type != le_wxDataViewListCtrl && rsrc_type != le_wxDataViewTreeCtrl && rsrc_type != le_wxHeaderCtrl && rsrc_type != le_wxHeaderCtrlSimple && rsrc_type != le_wxFileCtrl && rsrc_type != le_wxInfoBar && rsrc_type != le_wxRibbonControl && rsrc_type != le_wxRibbonBar && rsrc_type != le_wxRibbonButtonBar && rsrc_type != le_wxRibbonGallery && rsrc_type != le_wxRibbonPage && rsrc_type != le_wxRibbonPanel && rsrc_type != le_wxRibbonToolBar && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxPanel && rsrc_type != le_wxWizardPage && rsrc_type != le_wxWizardPageSimple && rsrc_type != le_wxScrolledWindow && rsrc_type != le_wxHtmlWindow && rsrc_type != le_wxGrid && rsrc_type != le_wxPreviewCanvas && rsrc_type != le_wxEditableListBox && rsrc_type != le_wxHScrolledWindow && rsrc_type != le_wxPreviewControlBar && rsrc_type != le_wxMenuBar && rsrc_type != le_wxBannerWindow && rsrc_type != le_wxMDIClientWindow && rsrc_type != le_wxTreeListCtrl && rsrc_type != le_wxSashWindow && rsrc_type != le_wxSashLayoutWindow && rsrc_type != le_wxHtmlHelpWindow))
+					if (!object_pointer0_0 || (rsrc_type != le_wxNonOwnedWindow && rsrc_type != le_wxTopLevelWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxMDIChildFrame && rsrc_type != le_wxMDIParentFrame && rsrc_type != le_wxMiniFrame && rsrc_type != le_wxPreviewFrame && rsrc_type != le_wxHtmlHelpDialog && rsrc_type != le_wxHtmlHelpFrame && rsrc_type != le_wxDialog && rsrc_type != le_wxTextEntryDialog && rsrc_type != le_wxPasswordEntryDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxFindReplaceDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxSymbolPickerDialog && rsrc_type != le_wxPropertySheetDialog && rsrc_type != le_wxWizard && rsrc_type != le_wxProgressDialog && rsrc_type != le_wxColourDialog && rsrc_type != le_wxFileDialog && rsrc_type != le_wxFontDialog && rsrc_type != le_wxPageSetupDialog && rsrc_type != le_wxPrintDialog && rsrc_type != le_wxSingleChoiceDialog && rsrc_type != le_wxGenericProgressDialog && rsrc_type != le_wxPopupWindow && rsrc_type != le_wxPopupTransientWindow && rsrc_type != le_wxControl && rsrc_type != le_wxStatusBar && rsrc_type != le_wxAnyButton && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxToggleButton && rsrc_type != le_wxBitmapToggleButton && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxControlWithItems && rsrc_type != le_wxListBox && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxRearrangeList && rsrc_type != le_wxChoice && rsrc_type != le_wxBookCtrlBase && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxListbook && rsrc_type != le_wxChoicebook && rsrc_type != le_wxNotebook && rsrc_type != le_wxTreebook && rsrc_type != le_wxToolbook && rsrc_type != le_wxAnimationCtrl && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxScrollBar && rsrc_type != le_wxStaticText && rsrc_type != le_wxStaticLine && rsrc_type != le_wxStaticBox && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxCheckBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxSearchCtrl && rsrc_type != le_wxComboBox && rsrc_type != le_wxBitmapComboBox && rsrc_type != le_wxAuiToolBar && rsrc_type != le_wxListCtrl && rsrc_type != le_wxListView && rsrc_type != le_wxRadioBox && rsrc_type != le_wxRadioButton && rsrc_type != le_wxSlider && rsrc_type != le_wxSpinCtrl && rsrc_type != le_wxSpinButton && rsrc_type != le_wxGauge && rsrc_type != le_wxHyperlinkCtrl && rsrc_type != le_wxSpinCtrlDouble && rsrc_type != le_wxGenericDirCtrl && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxPickerBase && rsrc_type != le_wxColourPickerCtrl && rsrc_type != le_wxFontPickerCtrl && rsrc_type != le_wxFilePickerCtrl && rsrc_type != le_wxDirPickerCtrl && rsrc_type != le_wxTimePickerCtrl && rsrc_type != le_wxToolBar && rsrc_type != le_wxDatePickerCtrl && rsrc_type != le_wxCollapsiblePane && rsrc_type != le_wxComboCtrl && rsrc_type != le_wxDataViewCtrl && rsrc_type != le_wxDataViewListCtrl && rsrc_type != le_wxDataViewTreeCtrl && rsrc_type != le_wxHeaderCtrl && rsrc_type != le_wxHeaderCtrlSimple && rsrc_type != le_wxFileCtrl && rsrc_type != le_wxInfoBar && rsrc_type != le_wxRibbonControl && rsrc_type != le_wxRibbonBar && rsrc_type != le_wxRibbonButtonBar && rsrc_type != le_wxRibbonGallery && rsrc_type != le_wxRibbonPage && rsrc_type != le_wxRibbonPanel && rsrc_type != le_wxRibbonToolBar && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxPanel && rsrc_type != le_wxScrolledWindow && rsrc_type != le_wxHtmlWindow && rsrc_type != le_wxGrid && rsrc_type != le_wxPreviewCanvas && rsrc_type != le_wxWizardPage && rsrc_type != le_wxWizardPageSimple && rsrc_type != le_wxEditableListBox && rsrc_type != le_wxHScrolledWindow && rsrc_type != le_wxPreviewControlBar && rsrc_type != le_wxMenuBar && rsrc_type != le_wxBannerWindow && rsrc_type != le_wxMDIClientWindow && rsrc_type != le_wxTreeListCtrl && rsrc_type != le_wxSashWindow && rsrc_type != le_wxSashLayoutWindow && rsrc_type != le_wxHtmlHelpWindow))
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(parent0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(parent0);
 				}
 				else if(Z_TYPE_P(parent0) != IS_NULL)
 				{
@@ -14263,10 +13828,6 @@ PHP_METHOD(php_wxGrid, Create)
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(pos0) == IS_LONG)
-				{
-					object_pointer0_2 = Z_LVAL_P(pos0);
-				}
 				else if(Z_TYPE_P(pos0) != IS_NULL)
 				{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
@@ -14283,10 +13844,6 @@ PHP_METHOD(php_wxGrid, Create)
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(size0) == IS_LONG)
-				{
-					object_pointer0_3 = Z_LVAL_P(size0);
-				}
 				else if(Z_TYPE_P(size0) != IS_NULL)
 				{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
@@ -14299,7 +13856,6 @@ PHP_METHOD(php_wxGrid, Create)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -14437,7 +13993,8 @@ PHP_METHOD(php_wxGrid, CreateGrid)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll|l' (&numRows0, &numCols0, &selmode0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ll|l", &numRows0, &numCols0, &selmode0 ) == SUCCESS)
+		char parse_parameters_string[] = "ll|l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &numRows0, &numCols0, &selmode0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -14445,7 +14002,6 @@ PHP_METHOD(php_wxGrid, CreateGrid)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -14538,7 +14094,8 @@ PHP_METHOD(php_wxGrid, DeleteCols)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|llb' (&pos0, &numCols0, &updateLabels0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|llb", &pos0, &numCols0, &updateLabels0 ) == SUCCESS)
+		char parse_parameters_string[] = "|llb";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0, &numCols0, &updateLabels0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -14546,7 +14103,6 @@ PHP_METHOD(php_wxGrid, DeleteCols)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -14661,7 +14217,8 @@ PHP_METHOD(php_wxGrid, DeleteRows)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|llb' (&pos0, &numRows0, &updateLabels0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|llb", &pos0, &numRows0, &updateLabels0 ) == SUCCESS)
+		char parse_parameters_string[] = "|llb";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0, &numRows0, &updateLabels0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -14669,7 +14226,6 @@ PHP_METHOD(php_wxGrid, DeleteRows)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -14786,7 +14342,6 @@ PHP_METHOD(php_wxGrid, DisableCellEditControl)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -14866,7 +14421,8 @@ PHP_METHOD(php_wxGrid, DisableColResize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&col0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &col0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &col0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -14874,7 +14430,6 @@ PHP_METHOD(php_wxGrid, DisableColResize)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -14958,7 +14513,6 @@ PHP_METHOD(php_wxGrid, DisableDragColMove)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -15042,7 +14596,6 @@ PHP_METHOD(php_wxGrid, DisableDragColSize)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -15126,7 +14679,6 @@ PHP_METHOD(php_wxGrid, DisableDragGridSize)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -15210,7 +14762,6 @@ PHP_METHOD(php_wxGrid, DisableDragRowSize)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -15290,7 +14841,8 @@ PHP_METHOD(php_wxGrid, DisableRowResize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&row0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &row0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -15298,7 +14850,6 @@ PHP_METHOD(php_wxGrid, DisableRowResize)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -15378,7 +14929,8 @@ PHP_METHOD(php_wxGrid, EnableCellEditControl)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|b' (&enable0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|b", &enable0 ) == SUCCESS)
+		char parse_parameters_string[] = "|b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &enable0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -15386,7 +14938,6 @@ PHP_METHOD(php_wxGrid, EnableCellEditControl)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -15477,7 +15028,8 @@ PHP_METHOD(php_wxGrid, EnableDragCell)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|b' (&enable0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|b", &enable0 ) == SUCCESS)
+		char parse_parameters_string[] = "|b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &enable0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -15485,7 +15037,6 @@ PHP_METHOD(php_wxGrid, EnableDragCell)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -15576,7 +15127,8 @@ PHP_METHOD(php_wxGrid, EnableDragColMove)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|b' (&enable0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|b", &enable0 ) == SUCCESS)
+		char parse_parameters_string[] = "|b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &enable0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -15584,7 +15136,6 @@ PHP_METHOD(php_wxGrid, EnableDragColMove)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -15675,7 +15226,8 @@ PHP_METHOD(php_wxGrid, EnableDragColSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|b' (&enable0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|b", &enable0 ) == SUCCESS)
+		char parse_parameters_string[] = "|b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &enable0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -15683,7 +15235,6 @@ PHP_METHOD(php_wxGrid, EnableDragColSize)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -15774,7 +15325,8 @@ PHP_METHOD(php_wxGrid, EnableDragGridSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|b' (&enable0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|b", &enable0 ) == SUCCESS)
+		char parse_parameters_string[] = "|b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &enable0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -15782,7 +15334,6 @@ PHP_METHOD(php_wxGrid, EnableDragGridSize)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -15873,7 +15424,8 @@ PHP_METHOD(php_wxGrid, EnableDragRowSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|b' (&enable0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|b", &enable0 ) == SUCCESS)
+		char parse_parameters_string[] = "|b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &enable0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -15881,7 +15433,6 @@ PHP_METHOD(php_wxGrid, EnableDragRowSize)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -15972,7 +15523,8 @@ PHP_METHOD(php_wxGrid, EnableEditing)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&edit0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "b", &edit0 ) == SUCCESS)
+		char parse_parameters_string[] = "b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &edit0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -15980,7 +15532,6 @@ PHP_METHOD(php_wxGrid, EnableEditing)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -16060,7 +15611,8 @@ PHP_METHOD(php_wxGrid, EnableGridLines)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|b' (&enable0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|b", &enable0 ) == SUCCESS)
+		char parse_parameters_string[] = "|b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &enable0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -16068,7 +15620,6 @@ PHP_METHOD(php_wxGrid, EnableGridLines)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -16163,7 +15714,6 @@ PHP_METHOD(php_wxGrid, EndBatch)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -16247,7 +15797,6 @@ PHP_METHOD(php_wxGrid, Fit)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -16331,7 +15880,6 @@ PHP_METHOD(php_wxGrid, ForceRefresh)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -16415,7 +15963,6 @@ PHP_METHOD(php_wxGrid, GetBatchCount)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -16500,17 +16047,18 @@ PHP_METHOD(php_wxGrid, GetCellAlignment)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'llll' (&row0, &col0, horiz0, vert0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "llll", &row0, &col0, horiz0, vert0 ) == SUCCESS)
+		char parse_parameters_string[] = "llll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &col0, horiz0, vert0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
 
-			zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "zzzz", &dummy, &dummy, &horiz0_ref, &vert0_ref );
+			char parse_references_string[] = "zzzz";
+			zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_references_string, &dummy, &dummy, &horiz0_ref, &vert0_ref );
 		}
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -16603,7 +16151,8 @@ PHP_METHOD(php_wxGrid, GetCellBackgroundColour)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&row0, &col0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ll", &row0, &col0 ) == SUCCESS)
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &col0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -16611,7 +16160,6 @@ PHP_METHOD(php_wxGrid, GetCellBackgroundColour)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -16697,7 +16245,8 @@ PHP_METHOD(php_wxGrid, GetCellEditor)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&row0, &col0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ll", &row0, &col0 ) == SUCCESS)
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &col0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -16705,7 +16254,6 @@ PHP_METHOD(php_wxGrid, GetCellEditor)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -16722,8 +16270,8 @@ PHP_METHOD(php_wxGrid, GetCellEditor)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return2->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return2->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return2->phpObj != NULL){
+						return_value = value_to_return2->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -16808,7 +16356,8 @@ PHP_METHOD(php_wxGrid, GetCellFont)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&row0, &col0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ll", &row0, &col0 ) == SUCCESS)
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &col0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -16816,7 +16365,6 @@ PHP_METHOD(php_wxGrid, GetCellFont)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -16902,7 +16450,8 @@ PHP_METHOD(php_wxGrid, GetCellRenderer)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&row0, &col0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ll", &row0, &col0 ) == SUCCESS)
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &col0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -16910,7 +16459,6 @@ PHP_METHOD(php_wxGrid, GetCellRenderer)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -16927,8 +16475,8 @@ PHP_METHOD(php_wxGrid, GetCellRenderer)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return2->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return2->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return2->phpObj != NULL){
+						return_value = value_to_return2->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -17008,10 +16556,6 @@ PHP_METHOD(php_wxGrid, GetCellSize)
 	long* num_cols0;
 	zval* num_cols0_ref;
 	bool overload0_called = false;
-	//Parameters for overload 1
-	zval* coords1 = 0;
-	void* object_pointer1_0 = 0;
-	bool overload1_called = false;
 		
 	//Overload 0
 	overload0:
@@ -17021,52 +16565,18 @@ PHP_METHOD(php_wxGrid, GetCellSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'llll' (&row0, &col0, num_rows0, num_cols0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "llll", &row0, &col0, num_rows0, num_cols0 ) == SUCCESS)
+		char parse_parameters_string[] = "llll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &col0, num_rows0, num_cols0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
 
-			zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "zzzz", &dummy, &dummy, &num_rows0_ref, &num_cols0_ref );
-		}
-	}
-
-	//Overload 1
-	overload1:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'O' (&coords1, php_wxGridCellCoords_entry)\n");
-		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "O", &coords1, php_wxGridCellCoords_entry ) == SUCCESS)
-		{
-			if(arguments_received >= 1){
-				if(Z_TYPE_P(coords1) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(coords1), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
-				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer1_0 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer1_0 )
-					{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(coords1) == IS_LONG)
-				{
-					object_pointer1_0 = Z_LVAL_P(coords1);
-				}
-				else if(Z_TYPE_P(coords1) != IS_NULL)
-				{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-				}
-			}
-
-			overload1_called = true;
-			already_called = true;
+			char parse_references_string[] = "zzzz";
+			zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_references_string, &dummy, &dummy, &num_rows0_ref, &num_cols0_ref );
 		}
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -17090,31 +16600,6 @@ PHP_METHOD(php_wxGrid, GetCellSize)
 				{
 					add_next_index_long(num_cols0_ref, num_cols0[i]);
 				}
-
-				return;
-				break;
-			}
-		}
-	}
-
-	
-	if(overload1_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxGrid::GetCellSize(*(wxGridCellCoords*) object_pointer1_0) to return new object\n\n");
-				#endif
-				wxSize value_to_return1;
-				value_to_return1 = ((wxGrid_php*)_this)->GetCellSize(*(wxGridCellCoords*) object_pointer1_0);
-				void* ptr = safe_emalloc(1, sizeof(wxSize_php), 0);
-				memcpy(ptr, &value_to_return1, sizeof(wxSize));
-				object_init_ex(return_value, php_wxSize_entry);
-				add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxSize));
-
-				references->AddReference(coords1);
 
 				return;
 				break;
@@ -17184,7 +16669,8 @@ PHP_METHOD(php_wxGrid, GetCellTextColour)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&row0, &col0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ll", &row0, &col0 ) == SUCCESS)
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &col0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -17192,7 +16678,6 @@ PHP_METHOD(php_wxGrid, GetCellTextColour)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -17269,10 +16754,6 @@ PHP_METHOD(php_wxGrid, GetCellValue)
 	long row0;
 	long col0;
 	bool overload0_called = false;
-	//Parameters for overload 1
-	zval* coords1 = 0;
-	void* object_pointer1_0 = 0;
-	bool overload1_called = false;
 		
 	//Overload 0
 	overload0:
@@ -17282,50 +16763,15 @@ PHP_METHOD(php_wxGrid, GetCellValue)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&row0, &col0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ll", &row0, &col0 ) == SUCCESS)
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &col0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
 		}
 	}
 
-	//Overload 1
-	overload1:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'O' (&coords1, php_wxGridCellCoords_entry)\n");
-		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "O", &coords1, php_wxGridCellCoords_entry ) == SUCCESS)
-		{
-			if(arguments_received >= 1){
-				if(Z_TYPE_P(coords1) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(coords1), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
-				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer1_0 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer1_0 )
-					{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(coords1) == IS_LONG)
-				{
-					object_pointer1_0 = Z_LVAL_P(coords1);
-				}
-				else if(Z_TYPE_P(coords1) != IS_NULL)
-				{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-				}
-			}
-
-			overload1_called = true;
-			already_called = true;
-		}
-	}
-
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -17343,32 +16789,6 @@ PHP_METHOD(php_wxGrid, GetCellValue)
 				ZVAL_STRING(return_value, temp_string2, 1);
 				free(temp_string2);
 
-
-				return;
-				break;
-			}
-		}
-	}
-
-	
-	if(overload1_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(wxGrid::GetCellValue(*(wxGridCellCoords*) object_pointer1_0).fn_str(), 1)\n\n");
-				#endif
-				wxString value_to_return1;
-				value_to_return1 = ((wxGrid_php*)_this)->GetCellValue(*(wxGridCellCoords*) object_pointer1_0);
-				char* temp_string1;
-				temp_string1 = (char*)malloc(sizeof(wxChar)*(value_to_return1.size()+1));
-				strcpy (temp_string1, (const char *) value_to_return1.char_str() );
-				ZVAL_STRING(return_value, temp_string1, 1);
-				free(temp_string1);
-
-				references->AddReference(coords1);
 
 				return;
 				break;
@@ -17437,7 +16857,8 @@ PHP_METHOD(php_wxGrid, GetColAt)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&colPos0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &colPos0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &colPos0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -17445,7 +16866,6 @@ PHP_METHOD(php_wxGrid, GetColAt)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -17525,7 +16945,8 @@ PHP_METHOD(php_wxGrid, GetColGridLinePen)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&col0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &col0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &col0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -17533,7 +16954,6 @@ PHP_METHOD(php_wxGrid, GetColGridLinePen)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -17621,17 +17041,18 @@ PHP_METHOD(php_wxGrid, GetColLabelAlignment)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (horiz0, vert0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ll", horiz0, vert0 ) == SUCCESS)
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, horiz0, vert0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
 
-			zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "zz", &horiz0_ref, &vert0_ref );
+			char parse_references_string[] = "zz";
+			zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_references_string, &horiz0_ref, &vert0_ref );
 		}
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -17727,7 +17148,6 @@ PHP_METHOD(php_wxGrid, GetColLabelSize)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -17811,7 +17231,6 @@ PHP_METHOD(php_wxGrid, GetColLabelTextOrientation)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -17891,7 +17310,8 @@ PHP_METHOD(php_wxGrid, GetColLabelValue)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&col0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &col0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &col0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -17899,7 +17319,6 @@ PHP_METHOD(php_wxGrid, GetColLabelValue)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -17989,7 +17408,6 @@ PHP_METHOD(php_wxGrid, GetColMinimalAcceptableWidth)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -18069,7 +17487,8 @@ PHP_METHOD(php_wxGrid, GetColPos)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&colID0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &colID0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &colID0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -18077,7 +17496,6 @@ PHP_METHOD(php_wxGrid, GetColPos)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -18157,7 +17575,8 @@ PHP_METHOD(php_wxGrid, GetColSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&col0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &col0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &col0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -18165,7 +17584,6 @@ PHP_METHOD(php_wxGrid, GetColSize)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -18249,7 +17667,6 @@ PHP_METHOD(php_wxGrid, GetColSizes)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -18337,17 +17754,18 @@ PHP_METHOD(php_wxGrid, GetDefaultCellAlignment)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (horiz0, vert0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ll", horiz0, vert0 ) == SUCCESS)
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, horiz0, vert0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
 
-			zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "zz", &horiz0_ref, &vert0_ref );
+			char parse_references_string[] = "zz";
+			zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_references_string, &horiz0_ref, &vert0_ref );
 		}
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -18443,7 +17861,6 @@ PHP_METHOD(php_wxGrid, GetDefaultCellBackgroundColour)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -18532,7 +17949,6 @@ PHP_METHOD(php_wxGrid, GetDefaultCellFont)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -18621,7 +18037,6 @@ PHP_METHOD(php_wxGrid, GetDefaultCellTextColour)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -18710,7 +18125,6 @@ PHP_METHOD(php_wxGrid, GetDefaultColLabelSize)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -18794,7 +18208,6 @@ PHP_METHOD(php_wxGrid, GetDefaultColSize)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -18878,7 +18291,6 @@ PHP_METHOD(php_wxGrid, GetDefaultEditor)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -18895,8 +18307,8 @@ PHP_METHOD(php_wxGrid, GetDefaultEditor)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return0->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return0->phpObj != NULL){
+						return_value = value_to_return0->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -18912,138 +18324,6 @@ PHP_METHOD(php_wxGrid, GetDefaultEditor)
 					references->AddReference(return_value);
 				}
 
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_METHOD(php_wxGrid, GetDefaultEditorForCell)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxGrid::GetDefaultEditorForCell\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	bool return_is_user_initialized = false;
-	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
-	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
-		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxGrid::GetDefaultEditorForCell\n");
-			
-			return;
-		}
-		else
-		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
-			
-			if(parent_rsrc_type == le_wxGrid)
-				references = &((wxGrid_php*)_this)->references;
-		}
-	}
-	else
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Processing the method call as static\n");
-		#endif
-	}
-	
-	//Parameters for overload 0
-	zval* c0 = 0;
-	void* object_pointer0_0 = 0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'O' (&c0, php_wxGridCellCoords_entry)\n");
-		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "O", &c0, php_wxGridCellCoords_entry ) == SUCCESS)
-		{
-			if(arguments_received >= 1){
-				if(Z_TYPE_P(c0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(c0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
-				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer0_0 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer0_0 )
-					{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(c0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(c0);
-				}
-				else if(Z_TYPE_P(c0) != IS_NULL)
-				{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-				}
-			}
-
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxGrid::GetDefaultEditorForCell(*(wxGridCellCoords*) object_pointer0_0) to return object pointer\n\n");
-				#endif
-				wxGridCellEditor_php* value_to_return1;
-				value_to_return1 = (wxGridCellEditor_php*) ((wxGrid_php*)_this)->GetDefaultEditorForCell(*(wxGridCellCoords*) object_pointer0_0);
-
-				if(value_to_return1 == NULL){
-					ZVAL_NULL(return_value);
-				}
-				else if(value_to_return1->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return1->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
-						return_is_user_initialized = true;
-					}
-					else{
-						zend_error(E_ERROR, "Could not retreive original zval.");
-					}
-				}
-				else{
-					object_init_ex(return_value,php_wxGridCellEditor_entry);
-					add_property_resource(return_value, "wxResource", zend_list_insert(value_to_return1, le_wxGridCellEditor));
-				}
-
-				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return1 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
-				}
-
-				references->AddReference(c0);
 
 				return;
 				break;
@@ -19113,7 +18393,8 @@ PHP_METHOD(php_wxGrid, GetDefaultEditorForType)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&typeName0, &typeName_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "s", &typeName0, &typeName_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "s";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &typeName0, &typeName_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -19121,7 +18402,6 @@ PHP_METHOD(php_wxGrid, GetDefaultEditorForType)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -19138,8 +18418,8 @@ PHP_METHOD(php_wxGrid, GetDefaultEditorForType)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return1->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return1->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return1->phpObj != NULL){
+						return_value = value_to_return1->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -19227,7 +18507,6 @@ PHP_METHOD(php_wxGrid, GetDefaultGridLinePen)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -19316,7 +18595,6 @@ PHP_METHOD(php_wxGrid, GetDefaultRenderer)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -19333,8 +18611,8 @@ PHP_METHOD(php_wxGrid, GetDefaultRenderer)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return0->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return0->phpObj != NULL){
+						return_value = value_to_return0->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -19419,7 +18697,8 @@ PHP_METHOD(php_wxGrid, GetDefaultRendererForCell)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&row0, &col0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ll", &row0, &col0 ) == SUCCESS)
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &col0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -19427,7 +18706,6 @@ PHP_METHOD(php_wxGrid, GetDefaultRendererForCell)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -19444,8 +18722,8 @@ PHP_METHOD(php_wxGrid, GetDefaultRendererForCell)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return2->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return2->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return2->phpObj != NULL){
+						return_value = value_to_return2->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -19530,7 +18808,8 @@ PHP_METHOD(php_wxGrid, GetDefaultRendererForType)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&typeName0, &typeName_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "s", &typeName0, &typeName_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "s";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &typeName0, &typeName_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -19538,7 +18817,6 @@ PHP_METHOD(php_wxGrid, GetDefaultRendererForType)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -19555,8 +18833,8 @@ PHP_METHOD(php_wxGrid, GetDefaultRendererForType)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return1->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return1->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return1->phpObj != NULL){
+						return_value = value_to_return1->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -19644,7 +18922,6 @@ PHP_METHOD(php_wxGrid, GetDefaultRowLabelSize)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -19728,7 +19005,6 @@ PHP_METHOD(php_wxGrid, GetDefaultRowSize)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -19812,7 +19088,6 @@ PHP_METHOD(php_wxGrid, GetGridColHeader)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -19829,8 +19104,8 @@ PHP_METHOD(php_wxGrid, GetGridColHeader)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return0->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return0->phpObj != NULL){
+						return_value = value_to_return0->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -19918,7 +19193,6 @@ PHP_METHOD(php_wxGrid, GetGridColLabelWindow)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -19935,8 +19209,8 @@ PHP_METHOD(php_wxGrid, GetGridColLabelWindow)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return0->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return0->phpObj != NULL){
+						return_value = value_to_return0->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -20024,7 +19298,6 @@ PHP_METHOD(php_wxGrid, GetGridCornerLabelWindow)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -20041,8 +19314,8 @@ PHP_METHOD(php_wxGrid, GetGridCornerLabelWindow)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return0->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return0->phpObj != NULL){
+						return_value = value_to_return0->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -20130,7 +19403,6 @@ PHP_METHOD(php_wxGrid, GetGridCursorCol)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -20214,7 +19486,6 @@ PHP_METHOD(php_wxGrid, GetGridCursorRow)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -20298,7 +19569,6 @@ PHP_METHOD(php_wxGrid, GetGridLineColour)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -20387,7 +19657,6 @@ PHP_METHOD(php_wxGrid, GetGridRowLabelWindow)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -20404,8 +19673,8 @@ PHP_METHOD(php_wxGrid, GetGridRowLabelWindow)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return0->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return0->phpObj != NULL){
+						return_value = value_to_return0->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -20493,7 +19762,6 @@ PHP_METHOD(php_wxGrid, GetGridWindow)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -20510,8 +19778,8 @@ PHP_METHOD(php_wxGrid, GetGridWindow)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return0->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return0->phpObj != NULL){
+						return_value = value_to_return0->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -20599,7 +19867,6 @@ PHP_METHOD(php_wxGrid, GetLabelBackgroundColour)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -20688,7 +19955,6 @@ PHP_METHOD(php_wxGrid, GetLabelFont)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -20777,7 +20043,6 @@ PHP_METHOD(php_wxGrid, GetLabelTextColour)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -20866,7 +20131,6 @@ PHP_METHOD(php_wxGrid, GetNumberCols)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -20950,7 +20214,6 @@ PHP_METHOD(php_wxGrid, GetNumberRows)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -21031,7 +20294,8 @@ PHP_METHOD(php_wxGrid, GetOrCreateCellAttr)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&row0, &col0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ll", &row0, &col0 ) == SUCCESS)
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &col0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -21039,7 +20303,6 @@ PHP_METHOD(php_wxGrid, GetOrCreateCellAttr)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -21056,8 +20319,8 @@ PHP_METHOD(php_wxGrid, GetOrCreateCellAttr)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return2->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return2->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return2->phpObj != NULL){
+						return_value = value_to_return2->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -21141,7 +20404,8 @@ PHP_METHOD(php_wxGrid, GetRowGridLinePen)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&row0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &row0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -21149,7 +20413,6 @@ PHP_METHOD(php_wxGrid, GetRowGridLinePen)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -21237,17 +20500,18 @@ PHP_METHOD(php_wxGrid, GetRowLabelAlignment)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (horiz0, vert0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ll", horiz0, vert0 ) == SUCCESS)
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, horiz0, vert0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
 
-			zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "zz", &horiz0_ref, &vert0_ref );
+			char parse_references_string[] = "zz";
+			zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_references_string, &horiz0_ref, &vert0_ref );
 		}
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -21343,7 +20607,6 @@ PHP_METHOD(php_wxGrid, GetRowLabelSize)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -21423,7 +20686,8 @@ PHP_METHOD(php_wxGrid, GetRowLabelValue)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&row0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &row0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -21431,7 +20695,6 @@ PHP_METHOD(php_wxGrid, GetRowLabelValue)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -21521,7 +20784,6 @@ PHP_METHOD(php_wxGrid, GetRowMinimalAcceptableHeight)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -21601,7 +20863,8 @@ PHP_METHOD(php_wxGrid, GetRowSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&row0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &row0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -21609,7 +20872,6 @@ PHP_METHOD(php_wxGrid, GetRowSize)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -21693,7 +20955,6 @@ PHP_METHOD(php_wxGrid, GetRowSizes)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -21782,7 +21043,6 @@ PHP_METHOD(php_wxGrid, GetScrollLineX)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -21866,7 +21126,6 @@ PHP_METHOD(php_wxGrid, GetScrollLineY)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -21950,7 +21209,6 @@ PHP_METHOD(php_wxGrid, GetSelectionBackground)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -22039,7 +21297,6 @@ PHP_METHOD(php_wxGrid, GetSelectionForeground)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -22128,7 +21385,6 @@ PHP_METHOD(php_wxGrid, GetSelectionMode)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -22212,7 +21468,6 @@ PHP_METHOD(php_wxGrid, GetSortingColumn)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -22296,7 +21551,6 @@ PHP_METHOD(php_wxGrid, GetTable)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -22313,8 +21567,8 @@ PHP_METHOD(php_wxGrid, GetTable)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return0->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return0->phpObj != NULL){
+						return_value = value_to_return0->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -22390,10 +21644,6 @@ PHP_METHOD(php_wxGrid, GoToCell)
 	long row0;
 	long col0;
 	bool overload0_called = false;
-	//Parameters for overload 1
-	zval* coords1 = 0;
-	void* object_pointer1_0 = 0;
-	bool overload1_called = false;
 		
 	//Overload 0
 	overload0:
@@ -22403,50 +21653,15 @@ PHP_METHOD(php_wxGrid, GoToCell)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&row0, &col0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ll", &row0, &col0 ) == SUCCESS)
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &col0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
 		}
 	}
 
-	//Overload 1
-	overload1:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'O' (&coords1, php_wxGridCellCoords_entry)\n");
-		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "O", &coords1, php_wxGridCellCoords_entry ) == SUCCESS)
-		{
-			if(arguments_received >= 1){
-				if(Z_TYPE_P(coords1) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(coords1), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
-				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer1_0 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer1_0 )
-					{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(coords1) == IS_LONG)
-				{
-					object_pointer1_0 = Z_LVAL_P(coords1);
-				}
-				else if(Z_TYPE_P(coords1) != IS_NULL)
-				{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-				}
-			}
-
-			overload1_called = true;
-			already_called = true;
-		}
-	}
-
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -22458,26 +21673,6 @@ PHP_METHOD(php_wxGrid, GoToCell)
 				#endif
 				((wxGrid_php*)_this)->GoToCell((int) row0, (int) col0);
 
-
-				return;
-				break;
-			}
-		}
-	}
-
-	
-	if(overload1_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxGrid::GoToCell(*(wxGridCellCoords*) object_pointer1_0)\n\n");
-				#endif
-				((wxGrid_php*)_this)->GoToCell(*(wxGridCellCoords*) object_pointer1_0);
-
-				references->AddReference(coords1);
 
 				return;
 				break;
@@ -22550,7 +21745,6 @@ PHP_METHOD(php_wxGrid, GridLinesEnabled)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -22634,7 +21828,6 @@ PHP_METHOD(php_wxGrid, HideCellEditControl)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -22714,7 +21907,8 @@ PHP_METHOD(php_wxGrid, HideCol)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&col0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &col0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &col0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -22722,7 +21916,6 @@ PHP_METHOD(php_wxGrid, HideCol)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -22806,7 +21999,6 @@ PHP_METHOD(php_wxGrid, HideColLabels)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -22886,7 +22078,8 @@ PHP_METHOD(php_wxGrid, HideRow)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&col0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &col0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &col0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -22894,7 +22087,6 @@ PHP_METHOD(php_wxGrid, HideRow)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -22978,7 +22170,6 @@ PHP_METHOD(php_wxGrid, HideRowLabels)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -23060,7 +22251,8 @@ PHP_METHOD(php_wxGrid, InsertCols)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|llb' (&pos0, &numCols0, &updateLabels0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|llb", &pos0, &numCols0, &updateLabels0 ) == SUCCESS)
+		char parse_parameters_string[] = "|llb";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0, &numCols0, &updateLabels0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -23068,7 +22260,6 @@ PHP_METHOD(php_wxGrid, InsertCols)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -23183,7 +22374,8 @@ PHP_METHOD(php_wxGrid, InsertRows)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|llb' (&pos0, &numRows0, &updateLabels0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|llb", &pos0, &numRows0, &updateLabels0 ) == SUCCESS)
+		char parse_parameters_string[] = "|llb";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0, &numRows0, &updateLabels0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -23191,7 +22383,6 @@ PHP_METHOD(php_wxGrid, InsertRows)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -23308,7 +22499,6 @@ PHP_METHOD(php_wxGrid, IsCellEditControlEnabled)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -23392,7 +22582,6 @@ PHP_METHOD(php_wxGrid, IsCurrentCellReadOnly)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -23476,7 +22665,6 @@ PHP_METHOD(php_wxGrid, IsEditable)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -23556,7 +22744,8 @@ PHP_METHOD(php_wxGrid, IsColShown)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&col0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &col0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &col0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -23564,7 +22753,6 @@ PHP_METHOD(php_wxGrid, IsColShown)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -23636,10 +22824,6 @@ PHP_METHOD(php_wxGrid, IsInSelection)
 	long row0;
 	long col0;
 	bool overload0_called = false;
-	//Parameters for overload 1
-	zval* coords1 = 0;
-	void* object_pointer1_0 = 0;
-	bool overload1_called = false;
 		
 	//Overload 0
 	overload0:
@@ -23649,50 +22833,15 @@ PHP_METHOD(php_wxGrid, IsInSelection)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&row0, &col0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ll", &row0, &col0 ) == SUCCESS)
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &col0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
 		}
 	}
 
-	//Overload 1
-	overload1:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'O' (&coords1, php_wxGridCellCoords_entry)\n");
-		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "O", &coords1, php_wxGridCellCoords_entry ) == SUCCESS)
-		{
-			if(arguments_received >= 1){
-				if(Z_TYPE_P(coords1) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(coords1), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
-				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer1_0 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer1_0 )
-					{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(coords1) == IS_LONG)
-				{
-					object_pointer1_0 = Z_LVAL_P(coords1);
-				}
-				else if(Z_TYPE_P(coords1) != IS_NULL)
-				{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-				}
-			}
-
-			overload1_called = true;
-			already_called = true;
-		}
-	}
-
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -23704,26 +22853,6 @@ PHP_METHOD(php_wxGrid, IsInSelection)
 				#endif
 				ZVAL_BOOL(return_value, ((wxGrid_php*)_this)->IsInSelection((int) row0, (int) col0));
 
-
-				return;
-				break;
-			}
-		}
-	}
-
-	
-	if(overload1_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxGrid::IsInSelection(*(wxGridCellCoords*) object_pointer1_0))\n\n");
-				#endif
-				ZVAL_BOOL(return_value, ((wxGrid_php*)_this)->IsInSelection(*(wxGridCellCoords*) object_pointer1_0));
-
-				references->AddReference(coords1);
 
 				return;
 				break;
@@ -23793,7 +22922,8 @@ PHP_METHOD(php_wxGrid, IsReadOnly)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&row0, &col0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ll", &row0, &col0 ) == SUCCESS)
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &col0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -23801,7 +22931,6 @@ PHP_METHOD(php_wxGrid, IsReadOnly)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -23881,7 +23010,8 @@ PHP_METHOD(php_wxGrid, IsRowShown)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&row0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &row0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -23889,7 +23019,6 @@ PHP_METHOD(php_wxGrid, IsRowShown)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -23973,7 +23102,6 @@ PHP_METHOD(php_wxGrid, IsSelection)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -24057,7 +23185,6 @@ PHP_METHOD(php_wxGrid, IsSortOrderAscending)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -24137,7 +23264,8 @@ PHP_METHOD(php_wxGrid, IsSortingBy)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&col0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &col0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &col0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -24145,7 +23273,6 @@ PHP_METHOD(php_wxGrid, IsSortingBy)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -24218,11 +23345,6 @@ PHP_METHOD(php_wxGrid, IsVisible)
 	long col0;
 	bool wholeCellVisible0;
 	bool overload0_called = false;
-	//Parameters for overload 1
-	zval* coords1 = 0;
-	void* object_pointer1_0 = 0;
-	bool wholeCellVisible1;
-	bool overload1_called = false;
 		
 	//Overload 0
 	overload0:
@@ -24232,50 +23354,15 @@ PHP_METHOD(php_wxGrid, IsVisible)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll|b' (&row0, &col0, &wholeCellVisible0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ll|b", &row0, &col0, &wholeCellVisible0 ) == SUCCESS)
+		char parse_parameters_string[] = "ll|b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &col0, &wholeCellVisible0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
 		}
 	}
 
-	//Overload 1
-	overload1:
-	if(!already_called && arguments_received >= 1  && arguments_received <= 2)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'O|b' (&coords1, php_wxGridCellCoords_entry, &wholeCellVisible1)\n");
-		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "O|b", &coords1, php_wxGridCellCoords_entry, &wholeCellVisible1 ) == SUCCESS)
-		{
-			if(arguments_received >= 1){
-				if(Z_TYPE_P(coords1) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(coords1), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
-				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer1_0 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer1_0 )
-					{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(coords1) == IS_LONG)
-				{
-					object_pointer1_0 = Z_LVAL_P(coords1);
-				}
-				else if(Z_TYPE_P(coords1) != IS_NULL)
-				{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-				}
-			}
-
-			overload1_called = true;
-			already_called = true;
-		}
-	}
-
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -24298,38 +23385,6 @@ PHP_METHOD(php_wxGrid, IsVisible)
 				#endif
 				ZVAL_BOOL(return_value, ((wxGrid_php*)_this)->IsVisible((int) row0, (int) col0, wholeCellVisible0));
 
-
-				return;
-				break;
-			}
-		}
-	}
-
-	
-	if(overload1_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxGrid::IsVisible(*(wxGridCellCoords*) object_pointer1_0))\n\n");
-				#endif
-				ZVAL_BOOL(return_value, ((wxGrid_php*)_this)->IsVisible(*(wxGridCellCoords*) object_pointer1_0));
-
-				references->AddReference(coords1);
-
-				return;
-				break;
-			}
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxGrid::IsVisible(*(wxGridCellCoords*) object_pointer1_0, wholeCellVisible1))\n\n");
-				#endif
-				ZVAL_BOOL(return_value, ((wxGrid_php*)_this)->IsVisible(*(wxGridCellCoords*) object_pointer1_0, wholeCellVisible1));
-
-				references->AddReference(coords1);
 
 				return;
 				break;
@@ -24390,10 +23445,6 @@ PHP_METHOD(php_wxGrid, MakeCellVisible)
 	long row0;
 	long col0;
 	bool overload0_called = false;
-	//Parameters for overload 1
-	zval* coords1 = 0;
-	void* object_pointer1_0 = 0;
-	bool overload1_called = false;
 		
 	//Overload 0
 	overload0:
@@ -24403,50 +23454,15 @@ PHP_METHOD(php_wxGrid, MakeCellVisible)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&row0, &col0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ll", &row0, &col0 ) == SUCCESS)
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &col0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
 		}
 	}
 
-	//Overload 1
-	overload1:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'O' (&coords1, php_wxGridCellCoords_entry)\n");
-		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "O", &coords1, php_wxGridCellCoords_entry ) == SUCCESS)
-		{
-			if(arguments_received >= 1){
-				if(Z_TYPE_P(coords1) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(coords1), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
-				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer1_0 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer1_0 )
-					{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(coords1) == IS_LONG)
-				{
-					object_pointer1_0 = Z_LVAL_P(coords1);
-				}
-				else if(Z_TYPE_P(coords1) != IS_NULL)
-				{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-				}
-			}
-
-			overload1_called = true;
-			already_called = true;
-		}
-	}
-
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -24458,26 +23474,6 @@ PHP_METHOD(php_wxGrid, MakeCellVisible)
 				#endif
 				((wxGrid_php*)_this)->MakeCellVisible((int) row0, (int) col0);
 
-
-				return;
-				break;
-			}
-		}
-	}
-
-	
-	if(overload1_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxGrid::MakeCellVisible(*(wxGridCellCoords*) object_pointer1_0)\n\n");
-				#endif
-				((wxGrid_php*)_this)->MakeCellVisible(*(wxGridCellCoords*) object_pointer1_0);
-
-				references->AddReference(coords1);
 
 				return;
 				break;
@@ -24546,7 +23542,8 @@ PHP_METHOD(php_wxGrid, MoveCursorDown)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&expandSelection0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "b", &expandSelection0 ) == SUCCESS)
+		char parse_parameters_string[] = "b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &expandSelection0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -24554,7 +23551,6 @@ PHP_METHOD(php_wxGrid, MoveCursorDown)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -24634,7 +23630,8 @@ PHP_METHOD(php_wxGrid, MoveCursorDownBlock)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&expandSelection0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "b", &expandSelection0 ) == SUCCESS)
+		char parse_parameters_string[] = "b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &expandSelection0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -24642,7 +23639,6 @@ PHP_METHOD(php_wxGrid, MoveCursorDownBlock)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -24722,7 +23718,8 @@ PHP_METHOD(php_wxGrid, MoveCursorLeft)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&expandSelection0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "b", &expandSelection0 ) == SUCCESS)
+		char parse_parameters_string[] = "b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &expandSelection0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -24730,7 +23727,6 @@ PHP_METHOD(php_wxGrid, MoveCursorLeft)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -24810,7 +23806,8 @@ PHP_METHOD(php_wxGrid, MoveCursorLeftBlock)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&expandSelection0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "b", &expandSelection0 ) == SUCCESS)
+		char parse_parameters_string[] = "b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &expandSelection0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -24818,7 +23815,6 @@ PHP_METHOD(php_wxGrid, MoveCursorLeftBlock)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -24898,7 +23894,8 @@ PHP_METHOD(php_wxGrid, MoveCursorRight)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&expandSelection0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "b", &expandSelection0 ) == SUCCESS)
+		char parse_parameters_string[] = "b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &expandSelection0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -24906,7 +23903,6 @@ PHP_METHOD(php_wxGrid, MoveCursorRight)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -24986,7 +23982,8 @@ PHP_METHOD(php_wxGrid, MoveCursorRightBlock)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&expandSelection0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "b", &expandSelection0 ) == SUCCESS)
+		char parse_parameters_string[] = "b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &expandSelection0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -24994,7 +23991,6 @@ PHP_METHOD(php_wxGrid, MoveCursorRightBlock)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -25074,7 +24070,8 @@ PHP_METHOD(php_wxGrid, MoveCursorUp)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&expandSelection0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "b", &expandSelection0 ) == SUCCESS)
+		char parse_parameters_string[] = "b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &expandSelection0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -25082,7 +24079,6 @@ PHP_METHOD(php_wxGrid, MoveCursorUp)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -25162,7 +24158,8 @@ PHP_METHOD(php_wxGrid, MoveCursorUpBlock)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&expandSelection0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "b", &expandSelection0 ) == SUCCESS)
+		char parse_parameters_string[] = "b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &expandSelection0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -25170,7 +24167,6 @@ PHP_METHOD(php_wxGrid, MoveCursorUpBlock)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -25254,7 +24250,6 @@ PHP_METHOD(php_wxGrid, MovePageDown)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -25338,7 +24333,6 @@ PHP_METHOD(php_wxGrid, MovePageUp)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -25419,7 +24413,8 @@ PHP_METHOD(php_wxGrid, RefreshAttr)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&row0, &col0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ll", &row0, &col0 ) == SUCCESS)
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &col0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -25427,7 +24422,6 @@ PHP_METHOD(php_wxGrid, RefreshAttr)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -25512,7 +24506,8 @@ PHP_METHOD(php_wxGrid, RegisterDataType)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'szz' (&typeName0, &typeName_len0, &renderer0, &editor0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "szz", &typeName0, &typeName_len0, &renderer0, &editor0 ) == SUCCESS)
+		char parse_parameters_string[] = "szz";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &typeName0, &typeName_len0, &renderer0, &editor0 ) == SUCCESS)
 		{
 			if(arguments_received >= 2){
 				if(Z_TYPE_P(renderer0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(renderer0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -25523,10 +24518,6 @@ PHP_METHOD(php_wxGrid, RegisterDataType)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(renderer0) == IS_LONG)
-				{
-					object_pointer0_1 = Z_LVAL_P(renderer0);
 				}
 				else if(Z_TYPE_P(renderer0) != IS_NULL)
 				{
@@ -25544,10 +24535,6 @@ PHP_METHOD(php_wxGrid, RegisterDataType)
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(editor0) == IS_LONG)
-				{
-					object_pointer0_2 = Z_LVAL_P(editor0);
-				}
 				else if(Z_TYPE_P(editor0) != IS_NULL)
 				{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
@@ -25560,7 +24547,6 @@ PHP_METHOD(php_wxGrid, RegisterDataType)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -25646,7 +24632,6 @@ PHP_METHOD(php_wxGrid, ResetColPos)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -25730,7 +24715,6 @@ PHP_METHOD(php_wxGrid, SaveEditControlValue)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -25814,7 +24798,6 @@ PHP_METHOD(php_wxGrid, SelectAll)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -25889,13 +24872,6 @@ PHP_METHOD(php_wxGrid, SelectBlock)
 	long rightCol0;
 	bool addToSelected0;
 	bool overload0_called = false;
-	//Parameters for overload 1
-	zval* topLeft1 = 0;
-	void* object_pointer1_0 = 0;
-	zval* bottomRight1 = 0;
-	void* object_pointer1_1 = 0;
-	bool addToSelected1;
-	bool overload1_called = false;
 		
 	//Overload 0
 	overload0:
@@ -25905,70 +24881,15 @@ PHP_METHOD(php_wxGrid, SelectBlock)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'llll|b' (&topRow0, &leftCol0, &bottomRow0, &rightCol0, &addToSelected0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "llll|b", &topRow0, &leftCol0, &bottomRow0, &rightCol0, &addToSelected0 ) == SUCCESS)
+		char parse_parameters_string[] = "llll|b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &topRow0, &leftCol0, &bottomRow0, &rightCol0, &addToSelected0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
 		}
 	}
 
-	//Overload 1
-	overload1:
-	if(!already_called && arguments_received >= 2  && arguments_received <= 3)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'OO|b' (&topLeft1, php_wxGridCellCoords_entry, &bottomRight1, php_wxGridCellCoords_entry, &addToSelected1)\n");
-		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "OO|b", &topLeft1, php_wxGridCellCoords_entry, &bottomRight1, php_wxGridCellCoords_entry, &addToSelected1 ) == SUCCESS)
-		{
-			if(arguments_received >= 1){
-				if(Z_TYPE_P(topLeft1) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(topLeft1), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
-				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer1_0 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer1_0 )
-					{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(topLeft1) == IS_LONG)
-				{
-					object_pointer1_0 = Z_LVAL_P(topLeft1);
-				}
-				else if(Z_TYPE_P(topLeft1) != IS_NULL)
-				{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-				}
-			}
-
-			if(arguments_received >= 2){
-				if(Z_TYPE_P(bottomRight1) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(bottomRight1), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
-				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer1_1 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer1_1 )
-					{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(bottomRight1) == IS_LONG)
-				{
-					object_pointer1_1 = Z_LVAL_P(bottomRight1);
-				}
-				else if(Z_TYPE_P(bottomRight1) != IS_NULL)
-				{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-				}
-			}
-
-			overload1_called = true;
-			already_called = true;
-		}
-	}
-
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -25991,40 +24912,6 @@ PHP_METHOD(php_wxGrid, SelectBlock)
 				#endif
 				((wxGrid_php*)_this)->SelectBlock((int) topRow0, (int) leftCol0, (int) bottomRow0, (int) rightCol0, addToSelected0);
 
-
-				return;
-				break;
-			}
-		}
-	}
-
-	
-	if(overload1_called)
-	{
-		switch(arguments_received)
-		{
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxGrid::SelectBlock(*(wxGridCellCoords*) object_pointer1_0, *(wxGridCellCoords*) object_pointer1_1)\n\n");
-				#endif
-				((wxGrid_php*)_this)->SelectBlock(*(wxGridCellCoords*) object_pointer1_0, *(wxGridCellCoords*) object_pointer1_1);
-
-				references->AddReference(topLeft1);
-				references->AddReference(bottomRight1);
-
-				return;
-				break;
-			}
-			case 3:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxGrid::SelectBlock(*(wxGridCellCoords*) object_pointer1_0, *(wxGridCellCoords*) object_pointer1_1, addToSelected1)\n\n");
-				#endif
-				((wxGrid_php*)_this)->SelectBlock(*(wxGridCellCoords*) object_pointer1_0, *(wxGridCellCoords*) object_pointer1_1, addToSelected1);
-
-				references->AddReference(topLeft1);
-				references->AddReference(bottomRight1);
 
 				return;
 				break;
@@ -26094,7 +24981,8 @@ PHP_METHOD(php_wxGrid, SelectCol)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l|b' (&col0, &addToSelected0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l|b", &col0, &addToSelected0 ) == SUCCESS)
+		char parse_parameters_string[] = "l|b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &col0, &addToSelected0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -26102,7 +24990,6 @@ PHP_METHOD(php_wxGrid, SelectCol)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -26194,7 +25081,8 @@ PHP_METHOD(php_wxGrid, SelectRow)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l|b' (&row0, &addToSelected0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l|b", &row0, &addToSelected0 ) == SUCCESS)
+		char parse_parameters_string[] = "l|b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &addToSelected0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -26202,7 +25090,6 @@ PHP_METHOD(php_wxGrid, SelectRow)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -26301,7 +25188,8 @@ PHP_METHOD(php_wxGrid, SetCellAlignment)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'llll' (&row0, &col0, &horiz0, &vert0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "llll", &row0, &col0, &horiz0, &vert0 ) == SUCCESS)
+		char parse_parameters_string[] = "llll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &col0, &horiz0, &vert0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -26316,7 +25204,8 @@ PHP_METHOD(php_wxGrid, SetCellAlignment)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lll' (&align1, &row1, &col1)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "lll", &align1, &row1, &col1 ) == SUCCESS)
+		char parse_parameters_string[] = "lll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &align1, &row1, &col1 ) == SUCCESS)
 		{
 			overload1_called = true;
 			already_called = true;
@@ -26324,7 +25213,6 @@ PHP_METHOD(php_wxGrid, SetCellAlignment)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -26343,7 +25231,6 @@ PHP_METHOD(php_wxGrid, SetCellAlignment)
 		}
 	}
 
-	
 	if(overload1_called)
 	{
 		switch(arguments_received)
@@ -26426,7 +25313,8 @@ PHP_METHOD(php_wxGrid, SetCellBackgroundColour)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'llO' (&row0, &col0, &colour0, php_wxColour_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "llO", &row0, &col0, &colour0, php_wxColour_entry ) == SUCCESS)
+		char parse_parameters_string[] = "llO";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &col0, &colour0, php_wxColour_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 3){
 				if(Z_TYPE_P(colour0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(colour0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -26437,10 +25325,6 @@ PHP_METHOD(php_wxGrid, SetCellBackgroundColour)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(colour0) == IS_LONG)
-				{
-					object_pointer0_2 = Z_LVAL_P(colour0);
 				}
 				else if(Z_TYPE_P(colour0) != IS_NULL)
 				{
@@ -26454,7 +25338,6 @@ PHP_METHOD(php_wxGrid, SetCellBackgroundColour)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -26538,7 +25421,8 @@ PHP_METHOD(php_wxGrid, SetCellEditor)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'llz' (&row0, &col0, &editor0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "llz", &row0, &col0, &editor0 ) == SUCCESS)
+		char parse_parameters_string[] = "llz";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &col0, &editor0 ) == SUCCESS)
 		{
 			if(arguments_received >= 3){
 				if(Z_TYPE_P(editor0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(editor0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -26549,10 +25433,6 @@ PHP_METHOD(php_wxGrid, SetCellEditor)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(editor0) == IS_LONG)
-				{
-					object_pointer0_2 = Z_LVAL_P(editor0);
 				}
 				else if(Z_TYPE_P(editor0) != IS_NULL)
 				{
@@ -26566,7 +25446,6 @@ PHP_METHOD(php_wxGrid, SetCellEditor)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -26650,7 +25529,8 @@ PHP_METHOD(php_wxGrid, SetCellFont)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'llO' (&row0, &col0, &font0, php_wxFont_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "llO", &row0, &col0, &font0, php_wxFont_entry ) == SUCCESS)
+		char parse_parameters_string[] = "llO";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &col0, &font0, php_wxFont_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 3){
 				if(Z_TYPE_P(font0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(font0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -26661,10 +25541,6 @@ PHP_METHOD(php_wxGrid, SetCellFont)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(font0) == IS_LONG)
-				{
-					object_pointer0_2 = Z_LVAL_P(font0);
 				}
 				else if(Z_TYPE_P(font0) != IS_NULL)
 				{
@@ -26678,7 +25554,6 @@ PHP_METHOD(php_wxGrid, SetCellFont)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -26762,7 +25637,8 @@ PHP_METHOD(php_wxGrid, SetCellRenderer)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'llz' (&row0, &col0, &renderer0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "llz", &row0, &col0, &renderer0 ) == SUCCESS)
+		char parse_parameters_string[] = "llz";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &col0, &renderer0 ) == SUCCESS)
 		{
 			if(arguments_received >= 3){
 				if(Z_TYPE_P(renderer0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(renderer0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -26773,10 +25649,6 @@ PHP_METHOD(php_wxGrid, SetCellRenderer)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(renderer0) == IS_LONG)
-				{
-					object_pointer0_2 = Z_LVAL_P(renderer0);
 				}
 				else if(Z_TYPE_P(renderer0) != IS_NULL)
 				{
@@ -26790,7 +25662,6 @@ PHP_METHOD(php_wxGrid, SetCellRenderer)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -26874,7 +25745,8 @@ PHP_METHOD(php_wxGrid, SetCellSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'llll' (&row0, &col0, &num_rows0, &num_cols0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "llll", &row0, &col0, &num_rows0, &num_cols0 ) == SUCCESS)
+		char parse_parameters_string[] = "llll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &col0, &num_rows0, &num_cols0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -26882,7 +25754,6 @@ PHP_METHOD(php_wxGrid, SetCellSize)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -26975,7 +25846,8 @@ PHP_METHOD(php_wxGrid, SetCellTextColour)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'llO' (&row0, &col0, &colour0, php_wxColour_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "llO", &row0, &col0, &colour0, php_wxColour_entry ) == SUCCESS)
+		char parse_parameters_string[] = "llO";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &col0, &colour0, php_wxColour_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 3){
 				if(Z_TYPE_P(colour0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(colour0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -26986,10 +25858,6 @@ PHP_METHOD(php_wxGrid, SetCellTextColour)
 					{
 						goto overload1;
 					}
-				}
-				else if(Z_TYPE_P(colour0) == IS_LONG)
-				{
-					object_pointer0_2 = Z_LVAL_P(colour0);
 				}
 				else if(Z_TYPE_P(colour0) != IS_NULL)
 				{
@@ -27010,7 +25878,8 @@ PHP_METHOD(php_wxGrid, SetCellTextColour)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'Oll' (&val1, php_wxColour_entry, &row1, &col1)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "Oll", &val1, php_wxColour_entry, &row1, &col1 ) == SUCCESS)
+		char parse_parameters_string[] = "Oll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &val1, php_wxColour_entry, &row1, &col1 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(val1) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(val1), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -27021,10 +25890,6 @@ PHP_METHOD(php_wxGrid, SetCellTextColour)
 					{
 						goto overload2;
 					}
-				}
-				else if(Z_TYPE_P(val1) == IS_LONG)
-				{
-					object_pointer1_0 = Z_LVAL_P(val1);
 				}
 				else if(Z_TYPE_P(val1) != IS_NULL)
 				{
@@ -27045,7 +25910,8 @@ PHP_METHOD(php_wxGrid, SetCellTextColour)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&colour2, php_wxColour_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "O", &colour2, php_wxColour_entry ) == SUCCESS)
+		char parse_parameters_string[] = "O";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &colour2, php_wxColour_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(colour2) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(colour2), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -27056,10 +25922,6 @@ PHP_METHOD(php_wxGrid, SetCellTextColour)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(colour2) == IS_LONG)
-				{
-					object_pointer2_0 = Z_LVAL_P(colour2);
 				}
 				else if(Z_TYPE_P(colour2) != IS_NULL)
 				{
@@ -27073,7 +25935,6 @@ PHP_METHOD(php_wxGrid, SetCellTextColour)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -27093,7 +25954,6 @@ PHP_METHOD(php_wxGrid, SetCellTextColour)
 		}
 	}
 
-	
 	if(overload1_called)
 	{
 		switch(arguments_received)
@@ -27113,7 +25973,6 @@ PHP_METHOD(php_wxGrid, SetCellTextColour)
 		}
 	}
 
-	
 	if(overload2_called)
 	{
 		switch(arguments_received)
@@ -27189,17 +26048,11 @@ PHP_METHOD(php_wxGrid, SetCellValue)
 	long s_len0;
 	bool overload0_called = false;
 	//Parameters for overload 1
-	zval* coords1 = 0;
-	void* object_pointer1_0 = 0;
-	char* s1;
-	long s_len1;
+	char* val1;
+	long val_len1;
+	long row1;
+	long col1;
 	bool overload1_called = false;
-	//Parameters for overload 2
-	char* val2;
-	long val_len2;
-	long row2;
-	long col2;
-	bool overload2_called = false;
 		
 	//Overload 0
 	overload0:
@@ -27209,7 +26062,8 @@ PHP_METHOD(php_wxGrid, SetCellValue)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lls' (&row0, &col0, &s0, &s_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "lls", &row0, &col0, &s0, &s_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "lls";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &col0, &s0, &s_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -27218,56 +26072,21 @@ PHP_METHOD(php_wxGrid, SetCellValue)
 
 	//Overload 1
 	overload1:
-	if(!already_called && arguments_received == 2)
+	if(!already_called && arguments_received == 3)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'Os' (&coords1, php_wxGridCellCoords_entry, &s1, &s_len1)\n");
+		php_printf("Parsing parameters with 'sll' (&val1, &val_len1, &row1, &col1)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "Os", &coords1, php_wxGridCellCoords_entry, &s1, &s_len1 ) == SUCCESS)
+		char parse_parameters_string[] = "sll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &val1, &val_len1, &row1, &col1 ) == SUCCESS)
 		{
-			if(arguments_received >= 1){
-				if(Z_TYPE_P(coords1) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(coords1), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
-				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer1_0 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer1_0 )
-					{
-						goto overload2;
-					}
-				}
-				else if(Z_TYPE_P(coords1) == IS_LONG)
-				{
-					object_pointer1_0 = Z_LVAL_P(coords1);
-				}
-				else if(Z_TYPE_P(coords1) != IS_NULL)
-				{
-						goto overload2;
-				}
-			}
-
 			overload1_called = true;
 			already_called = true;
 		}
 	}
 
-	//Overload 2
-	overload2:
-	if(!already_called && arguments_received == 3)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'sll' (&val2, &val_len2, &row2, &col2)\n");
-		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "sll", &val2, &val_len2, &row2, &col2 ) == SUCCESS)
-		{
-			overload2_called = true;
-			already_called = true;
-		}
-	}
-
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -27286,37 +26105,16 @@ PHP_METHOD(php_wxGrid, SetCellValue)
 		}
 	}
 
-	
 	if(overload1_called)
-	{
-		switch(arguments_received)
-		{
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxGrid::SetCellValue(*(wxGridCellCoords*) object_pointer1_0, wxString(s1, wxConvUTF8))\n\n");
-				#endif
-				((wxGrid_php*)_this)->SetCellValue(*(wxGridCellCoords*) object_pointer1_0, wxString(s1, wxConvUTF8));
-
-				references->AddReference(coords1);
-
-				return;
-				break;
-			}
-		}
-	}
-
-	
-	if(overload2_called)
 	{
 		switch(arguments_received)
 		{
 			case 3:
 			{
 				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxGrid::SetCellValue(wxString(val2, wxConvUTF8), (int) row2, (int) col2)\n\n");
+				php_printf("Executing wxGrid::SetCellValue(wxString(val1, wxConvUTF8), (int) row1, (int) col1)\n\n");
 				#endif
-				((wxGrid_php*)_this)->SetCellValue(wxString(val2, wxConvUTF8), (int) row2, (int) col2);
+				((wxGrid_php*)_this)->SetCellValue(wxString(val1, wxConvUTF8), (int) row1, (int) col1);
 
 
 				return;
@@ -27388,7 +26186,8 @@ PHP_METHOD(php_wxGrid, SetColAttr)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lz' (&col0, &attr0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "lz", &col0, &attr0 ) == SUCCESS)
+		char parse_parameters_string[] = "lz";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &col0, &attr0 ) == SUCCESS)
 		{
 			if(arguments_received >= 2){
 				if(Z_TYPE_P(attr0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(attr0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -27399,10 +26198,6 @@ PHP_METHOD(php_wxGrid, SetColAttr)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(attr0) == IS_LONG)
-				{
-					object_pointer0_1 = Z_LVAL_P(attr0);
 				}
 				else if(Z_TYPE_P(attr0) != IS_NULL)
 				{
@@ -27416,7 +26211,6 @@ PHP_METHOD(php_wxGrid, SetColAttr)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -27497,7 +26291,8 @@ PHP_METHOD(php_wxGrid, SetColFormatBool)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&col0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &col0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &col0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -27505,7 +26300,6 @@ PHP_METHOD(php_wxGrid, SetColFormatBool)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -27587,7 +26381,8 @@ PHP_METHOD(php_wxGrid, SetColFormatCustom)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ls' (&col0, &typeName0, &typeName_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ls", &col0, &typeName0, &typeName_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "ls";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &col0, &typeName0, &typeName_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -27595,7 +26390,6 @@ PHP_METHOD(php_wxGrid, SetColFormatCustom)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -27677,7 +26471,8 @@ PHP_METHOD(php_wxGrid, SetColFormatFloat)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l|ll' (&col0, &width0, &precision0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l|ll", &col0, &width0, &precision0 ) == SUCCESS)
+		char parse_parameters_string[] = "l|ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &col0, &width0, &precision0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -27685,7 +26480,6 @@ PHP_METHOD(php_wxGrid, SetColFormatFloat)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -27787,7 +26581,8 @@ PHP_METHOD(php_wxGrid, SetColFormatNumber)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&col0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &col0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &col0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -27795,7 +26590,6 @@ PHP_METHOD(php_wxGrid, SetColFormatNumber)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -27876,7 +26670,8 @@ PHP_METHOD(php_wxGrid, SetColLabelAlignment)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&horiz0, &vert0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ll", &horiz0, &vert0 ) == SUCCESS)
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &horiz0, &vert0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -27884,7 +26679,6 @@ PHP_METHOD(php_wxGrid, SetColLabelAlignment)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -27964,7 +26758,8 @@ PHP_METHOD(php_wxGrid, SetColLabelSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&height0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &height0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &height0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -27972,7 +26767,6 @@ PHP_METHOD(php_wxGrid, SetColLabelSize)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -28052,7 +26846,8 @@ PHP_METHOD(php_wxGrid, SetColLabelTextOrientation)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&textOrientation0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &textOrientation0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &textOrientation0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -28060,7 +26855,6 @@ PHP_METHOD(php_wxGrid, SetColLabelTextOrientation)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -28142,7 +26936,8 @@ PHP_METHOD(php_wxGrid, SetColLabelValue)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ls' (&col0, &value0, &value_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ls", &col0, &value0, &value_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "ls";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &col0, &value0, &value_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -28150,7 +26945,6 @@ PHP_METHOD(php_wxGrid, SetColLabelValue)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -28230,7 +27024,8 @@ PHP_METHOD(php_wxGrid, SetColMinimalAcceptableWidth)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&width0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &width0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &width0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -28238,7 +27033,6 @@ PHP_METHOD(php_wxGrid, SetColMinimalAcceptableWidth)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -28319,7 +27113,8 @@ PHP_METHOD(php_wxGrid, SetColMinimalWidth)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&col0, &width0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ll", &col0, &width0 ) == SUCCESS)
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &col0, &width0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -28327,7 +27122,6 @@ PHP_METHOD(php_wxGrid, SetColMinimalWidth)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -28408,7 +27202,8 @@ PHP_METHOD(php_wxGrid, SetColPos)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&colID0, &newPos0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ll", &colID0, &newPos0 ) == SUCCESS)
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &colID0, &newPos0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -28416,7 +27211,6 @@ PHP_METHOD(php_wxGrid, SetColPos)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -28497,7 +27291,8 @@ PHP_METHOD(php_wxGrid, SetColSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&col0, &width0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ll", &col0, &width0 ) == SUCCESS)
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &col0, &width0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -28505,7 +27300,6 @@ PHP_METHOD(php_wxGrid, SetColSize)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -28586,7 +27380,8 @@ PHP_METHOD(php_wxGrid, SetColSizes)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&sizeInfo0, php_wxGridSizesInfo_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "O", &sizeInfo0, php_wxGridSizesInfo_entry ) == SUCCESS)
+		char parse_parameters_string[] = "O";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &sizeInfo0, php_wxGridSizesInfo_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(sizeInfo0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(sizeInfo0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -28597,10 +27392,6 @@ PHP_METHOD(php_wxGrid, SetColSizes)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(sizeInfo0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(sizeInfo0);
 				}
 				else if(Z_TYPE_P(sizeInfo0) != IS_NULL)
 				{
@@ -28614,7 +27405,6 @@ PHP_METHOD(php_wxGrid, SetColSizes)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -28696,7 +27486,8 @@ PHP_METHOD(php_wxGrid, SetDefaultCellAlignment)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&horiz0, &vert0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ll", &horiz0, &vert0 ) == SUCCESS)
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &horiz0, &vert0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -28704,7 +27495,6 @@ PHP_METHOD(php_wxGrid, SetDefaultCellAlignment)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -28785,7 +27575,8 @@ PHP_METHOD(php_wxGrid, SetDefaultCellBackgroundColour)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&colour0, php_wxColour_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "O", &colour0, php_wxColour_entry ) == SUCCESS)
+		char parse_parameters_string[] = "O";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &colour0, php_wxColour_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(colour0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(colour0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -28796,10 +27587,6 @@ PHP_METHOD(php_wxGrid, SetDefaultCellBackgroundColour)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(colour0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(colour0);
 				}
 				else if(Z_TYPE_P(colour0) != IS_NULL)
 				{
@@ -28813,7 +27600,6 @@ PHP_METHOD(php_wxGrid, SetDefaultCellBackgroundColour)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -28895,7 +27681,8 @@ PHP_METHOD(php_wxGrid, SetDefaultCellFont)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&font0, php_wxFont_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "O", &font0, php_wxFont_entry ) == SUCCESS)
+		char parse_parameters_string[] = "O";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &font0, php_wxFont_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(font0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(font0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -28906,10 +27693,6 @@ PHP_METHOD(php_wxGrid, SetDefaultCellFont)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(font0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(font0);
 				}
 				else if(Z_TYPE_P(font0) != IS_NULL)
 				{
@@ -28923,7 +27706,6 @@ PHP_METHOD(php_wxGrid, SetDefaultCellFont)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -29005,7 +27787,8 @@ PHP_METHOD(php_wxGrid, SetDefaultCellTextColour)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&colour0, php_wxColour_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "O", &colour0, php_wxColour_entry ) == SUCCESS)
+		char parse_parameters_string[] = "O";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &colour0, php_wxColour_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(colour0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(colour0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -29016,10 +27799,6 @@ PHP_METHOD(php_wxGrid, SetDefaultCellTextColour)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(colour0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(colour0);
 				}
 				else if(Z_TYPE_P(colour0) != IS_NULL)
 				{
@@ -29033,7 +27812,6 @@ PHP_METHOD(php_wxGrid, SetDefaultCellTextColour)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -29115,7 +27893,8 @@ PHP_METHOD(php_wxGrid, SetDefaultColSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l|b' (&width0, &resizeExistingCols0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l|b", &width0, &resizeExistingCols0 ) == SUCCESS)
+		char parse_parameters_string[] = "l|b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &width0, &resizeExistingCols0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -29123,7 +27902,6 @@ PHP_METHOD(php_wxGrid, SetDefaultColSize)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -29215,7 +27993,8 @@ PHP_METHOD(php_wxGrid, SetDefaultEditor)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&editor0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "z", &editor0 ) == SUCCESS)
+		char parse_parameters_string[] = "z";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &editor0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(editor0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(editor0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -29226,10 +28005,6 @@ PHP_METHOD(php_wxGrid, SetDefaultEditor)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(editor0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(editor0);
 				}
 				else if(Z_TYPE_P(editor0) != IS_NULL)
 				{
@@ -29243,7 +28018,6 @@ PHP_METHOD(php_wxGrid, SetDefaultEditor)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -29325,7 +28099,8 @@ PHP_METHOD(php_wxGrid, SetDefaultRenderer)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&renderer0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "z", &renderer0 ) == SUCCESS)
+		char parse_parameters_string[] = "z";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &renderer0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(renderer0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(renderer0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -29336,10 +28111,6 @@ PHP_METHOD(php_wxGrid, SetDefaultRenderer)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(renderer0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(renderer0);
 				}
 				else if(Z_TYPE_P(renderer0) != IS_NULL)
 				{
@@ -29353,7 +28124,6 @@ PHP_METHOD(php_wxGrid, SetDefaultRenderer)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -29435,7 +28205,8 @@ PHP_METHOD(php_wxGrid, SetDefaultRowSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l|b' (&height0, &resizeExistingRows0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l|b", &height0, &resizeExistingRows0 ) == SUCCESS)
+		char parse_parameters_string[] = "l|b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &height0, &resizeExistingRows0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -29443,7 +28214,6 @@ PHP_METHOD(php_wxGrid, SetDefaultRowSize)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -29526,10 +28296,6 @@ PHP_METHOD(php_wxGrid, SetGridCursor)
 	long row0;
 	long col0;
 	bool overload0_called = false;
-	//Parameters for overload 1
-	zval* coords1 = 0;
-	void* object_pointer1_0 = 0;
-	bool overload1_called = false;
 		
 	//Overload 0
 	overload0:
@@ -29539,50 +28305,15 @@ PHP_METHOD(php_wxGrid, SetGridCursor)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&row0, &col0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ll", &row0, &col0 ) == SUCCESS)
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &col0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
 		}
 	}
 
-	//Overload 1
-	overload1:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'O' (&coords1, php_wxGridCellCoords_entry)\n");
-		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "O", &coords1, php_wxGridCellCoords_entry ) == SUCCESS)
-		{
-			if(arguments_received >= 1){
-				if(Z_TYPE_P(coords1) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(coords1), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
-				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer1_0 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer1_0 )
-					{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(coords1) == IS_LONG)
-				{
-					object_pointer1_0 = Z_LVAL_P(coords1);
-				}
-				else if(Z_TYPE_P(coords1) != IS_NULL)
-				{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-				}
-			}
-
-			overload1_called = true;
-			already_called = true;
-		}
-	}
-
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -29594,26 +28325,6 @@ PHP_METHOD(php_wxGrid, SetGridCursor)
 				#endif
 				((wxGrid_php*)_this)->SetGridCursor((int) row0, (int) col0);
 
-
-				return;
-				break;
-			}
-		}
-	}
-
-	
-	if(overload1_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxGrid::SetGridCursor(*(wxGridCellCoords*) object_pointer1_0)\n\n");
-				#endif
-				((wxGrid_php*)_this)->SetGridCursor(*(wxGridCellCoords*) object_pointer1_0);
-
-				references->AddReference(coords1);
 
 				return;
 				break;
@@ -29683,7 +28394,8 @@ PHP_METHOD(php_wxGrid, SetGridLineColour)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&colour0, php_wxColour_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "O", &colour0, php_wxColour_entry ) == SUCCESS)
+		char parse_parameters_string[] = "O";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &colour0, php_wxColour_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(colour0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(colour0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -29694,10 +28406,6 @@ PHP_METHOD(php_wxGrid, SetGridLineColour)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(colour0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(colour0);
 				}
 				else if(Z_TYPE_P(colour0) != IS_NULL)
 				{
@@ -29711,7 +28419,6 @@ PHP_METHOD(php_wxGrid, SetGridLineColour)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -29793,7 +28500,8 @@ PHP_METHOD(php_wxGrid, SetLabelBackgroundColour)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&colour0, php_wxColour_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "O", &colour0, php_wxColour_entry ) == SUCCESS)
+		char parse_parameters_string[] = "O";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &colour0, php_wxColour_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(colour0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(colour0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -29804,10 +28512,6 @@ PHP_METHOD(php_wxGrid, SetLabelBackgroundColour)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(colour0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(colour0);
 				}
 				else if(Z_TYPE_P(colour0) != IS_NULL)
 				{
@@ -29821,7 +28525,6 @@ PHP_METHOD(php_wxGrid, SetLabelBackgroundColour)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -29903,7 +28606,8 @@ PHP_METHOD(php_wxGrid, SetLabelFont)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&font0, php_wxFont_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "O", &font0, php_wxFont_entry ) == SUCCESS)
+		char parse_parameters_string[] = "O";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &font0, php_wxFont_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(font0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(font0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -29914,10 +28618,6 @@ PHP_METHOD(php_wxGrid, SetLabelFont)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(font0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(font0);
 				}
 				else if(Z_TYPE_P(font0) != IS_NULL)
 				{
@@ -29931,7 +28631,6 @@ PHP_METHOD(php_wxGrid, SetLabelFont)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -30013,7 +28712,8 @@ PHP_METHOD(php_wxGrid, SetLabelTextColour)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&colour0, php_wxColour_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "O", &colour0, php_wxColour_entry ) == SUCCESS)
+		char parse_parameters_string[] = "O";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &colour0, php_wxColour_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(colour0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(colour0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -30024,10 +28724,6 @@ PHP_METHOD(php_wxGrid, SetLabelTextColour)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(colour0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(colour0);
 				}
 				else if(Z_TYPE_P(colour0) != IS_NULL)
 				{
@@ -30041,7 +28737,6 @@ PHP_METHOD(php_wxGrid, SetLabelTextColour)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -30123,7 +28818,8 @@ PHP_METHOD(php_wxGrid, SetMargins)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&extraWidth0, &extraHeight0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ll", &extraWidth0, &extraHeight0 ) == SUCCESS)
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &extraWidth0, &extraHeight0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -30131,7 +28827,6 @@ PHP_METHOD(php_wxGrid, SetMargins)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -30213,7 +28908,8 @@ PHP_METHOD(php_wxGrid, SetReadOnly)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll|b' (&row0, &col0, &isReadOnly0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ll|b", &row0, &col0, &isReadOnly0 ) == SUCCESS)
+		char parse_parameters_string[] = "ll|b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &col0, &isReadOnly0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -30221,7 +28917,6 @@ PHP_METHOD(php_wxGrid, SetReadOnly)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -30314,7 +29009,8 @@ PHP_METHOD(php_wxGrid, SetRowAttr)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lz' (&row0, &attr0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "lz", &row0, &attr0 ) == SUCCESS)
+		char parse_parameters_string[] = "lz";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &attr0 ) == SUCCESS)
 		{
 			if(arguments_received >= 2){
 				if(Z_TYPE_P(attr0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(attr0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -30325,10 +29021,6 @@ PHP_METHOD(php_wxGrid, SetRowAttr)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(attr0) == IS_LONG)
-				{
-					object_pointer0_1 = Z_LVAL_P(attr0);
 				}
 				else if(Z_TYPE_P(attr0) != IS_NULL)
 				{
@@ -30342,7 +29034,6 @@ PHP_METHOD(php_wxGrid, SetRowAttr)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -30424,7 +29115,8 @@ PHP_METHOD(php_wxGrid, SetRowLabelAlignment)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&horiz0, &vert0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ll", &horiz0, &vert0 ) == SUCCESS)
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &horiz0, &vert0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -30432,7 +29124,6 @@ PHP_METHOD(php_wxGrid, SetRowLabelAlignment)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -30512,7 +29203,8 @@ PHP_METHOD(php_wxGrid, SetRowLabelSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&width0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &width0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &width0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -30520,7 +29212,6 @@ PHP_METHOD(php_wxGrid, SetRowLabelSize)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -30602,7 +29293,8 @@ PHP_METHOD(php_wxGrid, SetRowLabelValue)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ls' (&row0, &value0, &value_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ls", &row0, &value0, &value_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "ls";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &value0, &value_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -30610,7 +29302,6 @@ PHP_METHOD(php_wxGrid, SetRowLabelValue)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -30690,7 +29381,8 @@ PHP_METHOD(php_wxGrid, SetRowMinimalAcceptableHeight)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&height0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &height0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &height0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -30698,7 +29390,6 @@ PHP_METHOD(php_wxGrid, SetRowMinimalAcceptableHeight)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -30779,7 +29470,8 @@ PHP_METHOD(php_wxGrid, SetRowMinimalHeight)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&row0, &height0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ll", &row0, &height0 ) == SUCCESS)
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &height0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -30787,7 +29479,6 @@ PHP_METHOD(php_wxGrid, SetRowMinimalHeight)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -30868,7 +29559,8 @@ PHP_METHOD(php_wxGrid, SetRowSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&row0, &height0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ll", &row0, &height0 ) == SUCCESS)
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0, &height0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -30876,7 +29568,6 @@ PHP_METHOD(php_wxGrid, SetRowSize)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -30957,7 +29648,8 @@ PHP_METHOD(php_wxGrid, SetRowSizes)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&sizeInfo0, php_wxGridSizesInfo_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "O", &sizeInfo0, php_wxGridSizesInfo_entry ) == SUCCESS)
+		char parse_parameters_string[] = "O";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &sizeInfo0, php_wxGridSizesInfo_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(sizeInfo0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(sizeInfo0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -30968,10 +29660,6 @@ PHP_METHOD(php_wxGrid, SetRowSizes)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(sizeInfo0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(sizeInfo0);
 				}
 				else if(Z_TYPE_P(sizeInfo0) != IS_NULL)
 				{
@@ -30985,7 +29673,6 @@ PHP_METHOD(php_wxGrid, SetRowSizes)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -31066,7 +29753,8 @@ PHP_METHOD(php_wxGrid, SetScrollLineX)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&x0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &x0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &x0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -31074,7 +29762,6 @@ PHP_METHOD(php_wxGrid, SetScrollLineX)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -31154,7 +29841,8 @@ PHP_METHOD(php_wxGrid, SetScrollLineY)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&y0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &y0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &y0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -31162,7 +29850,6 @@ PHP_METHOD(php_wxGrid, SetScrollLineY)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -31243,7 +29930,8 @@ PHP_METHOD(php_wxGrid, SetSelectionBackground)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&c0, php_wxColour_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "O", &c0, php_wxColour_entry ) == SUCCESS)
+		char parse_parameters_string[] = "O";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &c0, php_wxColour_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(c0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(c0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -31254,10 +29942,6 @@ PHP_METHOD(php_wxGrid, SetSelectionBackground)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(c0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(c0);
 				}
 				else if(Z_TYPE_P(c0) != IS_NULL)
 				{
@@ -31271,7 +29955,6 @@ PHP_METHOD(php_wxGrid, SetSelectionBackground)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -31353,7 +30036,8 @@ PHP_METHOD(php_wxGrid, SetSelectionForeground)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&c0, php_wxColour_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "O", &c0, php_wxColour_entry ) == SUCCESS)
+		char parse_parameters_string[] = "O";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &c0, php_wxColour_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(c0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(c0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -31364,10 +30048,6 @@ PHP_METHOD(php_wxGrid, SetSelectionForeground)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(c0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(c0);
 				}
 				else if(Z_TYPE_P(c0) != IS_NULL)
 				{
@@ -31381,7 +30061,6 @@ PHP_METHOD(php_wxGrid, SetSelectionForeground)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -31462,7 +30141,8 @@ PHP_METHOD(php_wxGrid, SetSelectionMode)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&selmode0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &selmode0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &selmode0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -31470,7 +30150,6 @@ PHP_METHOD(php_wxGrid, SetSelectionMode)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -31551,7 +30230,8 @@ PHP_METHOD(php_wxGrid, SetSortingColumn)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l|b' (&col0, &ascending0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l|b", &col0, &ascending0 ) == SUCCESS)
+		char parse_parameters_string[] = "l|b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &col0, &ascending0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -31559,7 +30239,6 @@ PHP_METHOD(php_wxGrid, SetSortingColumn)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -31653,7 +30332,8 @@ PHP_METHOD(php_wxGrid, SetTable)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z|bl' (&table0, &takeOwnership0, &selmode0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "z|bl", &table0, &takeOwnership0, &selmode0 ) == SUCCESS)
+		char parse_parameters_string[] = "z|bl";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &table0, &takeOwnership0, &selmode0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(table0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(table0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -31664,10 +30344,6 @@ PHP_METHOD(php_wxGrid, SetTable)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(table0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(table0);
 				}
 				else if(Z_TYPE_P(table0) != IS_NULL)
 				{
@@ -31681,7 +30357,6 @@ PHP_METHOD(php_wxGrid, SetTable)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -31786,7 +30461,8 @@ PHP_METHOD(php_wxGrid, SetUseNativeColLabels)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|b' (&native0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|b", &native0 ) == SUCCESS)
+		char parse_parameters_string[] = "|b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &native0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -31794,7 +30470,6 @@ PHP_METHOD(php_wxGrid, SetUseNativeColLabels)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -31889,7 +30564,6 @@ PHP_METHOD(php_wxGrid, ShowCellEditControl)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -31969,7 +30643,8 @@ PHP_METHOD(php_wxGrid, ShowCol)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&col0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &col0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &col0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -31977,7 +30652,6 @@ PHP_METHOD(php_wxGrid, ShowCol)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -32057,7 +30731,8 @@ PHP_METHOD(php_wxGrid, ShowRow)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&col0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &col0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &col0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -32065,7 +30740,6 @@ PHP_METHOD(php_wxGrid, ShowRow)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -32149,7 +30823,6 @@ PHP_METHOD(php_wxGrid, UnsetSortingColumn)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -32229,7 +30902,8 @@ PHP_METHOD(php_wxGrid, UseNativeColHeader)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|b' (&native0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|b", &native0 ) == SUCCESS)
+		char parse_parameters_string[] = "|b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &native0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -32237,7 +30911,6 @@ PHP_METHOD(php_wxGrid, UseNativeColHeader)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -32329,7 +31002,8 @@ PHP_METHOD(php_wxGrid, XToCol)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l|b' (&x0, &clipToMinMax0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l|b", &x0, &clipToMinMax0 ) == SUCCESS)
+		char parse_parameters_string[] = "l|b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &x0, &clipToMinMax0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -32337,7 +31011,6 @@ PHP_METHOD(php_wxGrid, XToCol)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -32428,7 +31101,8 @@ PHP_METHOD(php_wxGrid, XToEdgeOfCol)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&x0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &x0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &x0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -32436,7 +31110,6 @@ PHP_METHOD(php_wxGrid, XToEdgeOfCol)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -32448,164 +31121,6 @@ PHP_METHOD(php_wxGrid, XToEdgeOfCol)
 				#endif
 				ZVAL_LONG(return_value, ((wxGrid_php*)_this)->XToEdgeOfCol((int) x0));
 
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_METHOD(php_wxGrid, XYToCell)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxGrid::XYToCell\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	bool return_is_user_initialized = false;
-	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
-	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
-		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxGrid::XYToCell\n");
-			
-			return;
-		}
-		else
-		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
-			
-			if(parent_rsrc_type == le_wxGrid)
-				references = &((wxGrid_php*)_this)->references;
-		}
-	}
-	else
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Processing the method call as static\n");
-		#endif
-	}
-	
-	//Parameters for overload 0
-	long x0;
-	long y0;
-	bool overload0_called = false;
-	//Parameters for overload 1
-	zval* pos1 = 0;
-	void* object_pointer1_0 = 0;
-	bool overload1_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 2)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'll' (&x0, &y0)\n");
-		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ll", &x0, &y0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-	//Overload 1
-	overload1:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'O' (&pos1, php_wxPoint_entry)\n");
-		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "O", &pos1, php_wxPoint_entry ) == SUCCESS)
-		{
-			if(arguments_received >= 1){
-				if(Z_TYPE_P(pos1) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(pos1), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
-				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer1_0 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer1_0 )
-					{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(pos1) == IS_LONG)
-				{
-					object_pointer1_0 = Z_LVAL_P(pos1);
-				}
-				else if(Z_TYPE_P(pos1) != IS_NULL)
-				{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-				}
-			}
-
-			overload1_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxGrid::XYToCell((int) x0, (int) y0) to return new object\n\n");
-				#endif
-				wxGridCellCoords value_to_return2;
-				value_to_return2 = ((wxGrid_php*)_this)->XYToCell((int) x0, (int) y0);
-				void* ptr = safe_emalloc(1, sizeof(wxGridCellCoords_php), 0);
-				memcpy(ptr, &value_to_return2, sizeof(wxGridCellCoords));
-				object_init_ex(return_value, php_wxGridCellCoords_entry);
-				add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxGridCellCoords));
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-	
-	if(overload1_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxGrid::XYToCell(*(wxPoint*) object_pointer1_0) to return new object\n\n");
-				#endif
-				wxGridCellCoords value_to_return1;
-				value_to_return1 = ((wxGrid_php*)_this)->XYToCell(*(wxPoint*) object_pointer1_0);
-				void* ptr = safe_emalloc(1, sizeof(wxGridCellCoords_php), 0);
-				memcpy(ptr, &value_to_return1, sizeof(wxGridCellCoords));
-				object_init_ex(return_value, php_wxGridCellCoords_entry);
-				add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxGridCellCoords));
-
-				references->AddReference(pos1);
 
 				return;
 				break;
@@ -32674,7 +31189,8 @@ PHP_METHOD(php_wxGrid, YToEdgeOfRow)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&y0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &y0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &y0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -32682,7 +31198,6 @@ PHP_METHOD(php_wxGrid, YToEdgeOfRow)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -32763,7 +31278,8 @@ PHP_METHOD(php_wxGrid, YToRow)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l|b' (&y0, &clipToMinMax0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l|b", &y0, &clipToMinMax0 ) == SUCCESS)
+		char parse_parameters_string[] = "l|b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &y0, &clipToMinMax0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -32771,7 +31287,6 @@ PHP_METHOD(php_wxGrid, YToRow)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -32857,21 +31372,18 @@ PHP_METHOD(php_wxGrid, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zl|OOls' (&parent1, &id1, &pos1, php_wxPoint_entry, &size1, php_wxSize_entry, &style1, &name1, &name_len1)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "zl|OOls", &parent1, &id1, &pos1, php_wxPoint_entry, &size1, php_wxSize_entry, &style1, &name1, &name_len1 ) == SUCCESS)
+		char parse_parameters_string[] = "zl|OOls";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent1, &id1, &pos1, php_wxPoint_entry, &size1, php_wxSize_entry, &style1, &name1, &name_len1 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(parent1) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(parent1), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
 				{
 					id_to_find = Z_RESVAL_P(*tmp);
 					object_pointer1_0 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer1_0 || (rsrc_type != le_wxNonOwnedWindow && rsrc_type != le_wxTopLevelWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxMDIChildFrame && rsrc_type != le_wxMDIParentFrame && rsrc_type != le_wxMiniFrame && rsrc_type != le_wxPreviewFrame && rsrc_type != le_wxHtmlHelpDialog && rsrc_type != le_wxHtmlHelpFrame && rsrc_type != le_wxDialog && rsrc_type != le_wxTextEntryDialog && rsrc_type != le_wxPasswordEntryDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxFindReplaceDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxSymbolPickerDialog && rsrc_type != le_wxPropertySheetDialog && rsrc_type != le_wxWizard && rsrc_type != le_wxProgressDialog && rsrc_type != le_wxColourDialog && rsrc_type != le_wxFileDialog && rsrc_type != le_wxFontDialog && rsrc_type != le_wxPageSetupDialog && rsrc_type != le_wxPrintDialog && rsrc_type != le_wxSingleChoiceDialog && rsrc_type != le_wxPopupWindow && rsrc_type != le_wxPopupTransientWindow && rsrc_type != le_wxControl && rsrc_type != le_wxStatusBar && rsrc_type != le_wxAnyButton && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxToggleButton && rsrc_type != le_wxBitmapToggleButton && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxControlWithItems && rsrc_type != le_wxListBox && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxRearrangeList && rsrc_type != le_wxChoice && rsrc_type != le_wxBookCtrlBase && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxListbook && rsrc_type != le_wxChoicebook && rsrc_type != le_wxNotebook && rsrc_type != le_wxTreebook && rsrc_type != le_wxToolbook && rsrc_type != le_wxAnimationCtrl && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxScrollBar && rsrc_type != le_wxStaticText && rsrc_type != le_wxStaticLine && rsrc_type != le_wxStaticBox && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxCheckBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxSearchCtrl && rsrc_type != le_wxComboBox && rsrc_type != le_wxBitmapComboBox && rsrc_type != le_wxAuiToolBar && rsrc_type != le_wxListCtrl && rsrc_type != le_wxListView && rsrc_type != le_wxRadioBox && rsrc_type != le_wxRadioButton && rsrc_type != le_wxSlider && rsrc_type != le_wxSpinCtrl && rsrc_type != le_wxSpinButton && rsrc_type != le_wxGauge && rsrc_type != le_wxHyperlinkCtrl && rsrc_type != le_wxSpinCtrlDouble && rsrc_type != le_wxGenericDirCtrl && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxPickerBase && rsrc_type != le_wxColourPickerCtrl && rsrc_type != le_wxFontPickerCtrl && rsrc_type != le_wxFilePickerCtrl && rsrc_type != le_wxDirPickerCtrl && rsrc_type != le_wxTimePickerCtrl && rsrc_type != le_wxToolBar && rsrc_type != le_wxDatePickerCtrl && rsrc_type != le_wxCollapsiblePane && rsrc_type != le_wxComboCtrl && rsrc_type != le_wxDataViewCtrl && rsrc_type != le_wxDataViewListCtrl && rsrc_type != le_wxDataViewTreeCtrl && rsrc_type != le_wxHeaderCtrl && rsrc_type != le_wxHeaderCtrlSimple && rsrc_type != le_wxFileCtrl && rsrc_type != le_wxInfoBar && rsrc_type != le_wxRibbonControl && rsrc_type != le_wxRibbonBar && rsrc_type != le_wxRibbonButtonBar && rsrc_type != le_wxRibbonGallery && rsrc_type != le_wxRibbonPage && rsrc_type != le_wxRibbonPanel && rsrc_type != le_wxRibbonToolBar && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxPanel && rsrc_type != le_wxWizardPage && rsrc_type != le_wxWizardPageSimple && rsrc_type != le_wxScrolledWindow && rsrc_type != le_wxHtmlWindow && rsrc_type != le_wxGrid && rsrc_type != le_wxPreviewCanvas && rsrc_type != le_wxEditableListBox && rsrc_type != le_wxHScrolledWindow && rsrc_type != le_wxPreviewControlBar && rsrc_type != le_wxMenuBar && rsrc_type != le_wxBannerWindow && rsrc_type != le_wxMDIClientWindow && rsrc_type != le_wxTreeListCtrl && rsrc_type != le_wxSashWindow && rsrc_type != le_wxSashLayoutWindow && rsrc_type != le_wxHtmlHelpWindow))
+					if (!object_pointer1_0 || (rsrc_type != le_wxNonOwnedWindow && rsrc_type != le_wxTopLevelWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxMDIChildFrame && rsrc_type != le_wxMDIParentFrame && rsrc_type != le_wxMiniFrame && rsrc_type != le_wxPreviewFrame && rsrc_type != le_wxHtmlHelpDialog && rsrc_type != le_wxHtmlHelpFrame && rsrc_type != le_wxDialog && rsrc_type != le_wxTextEntryDialog && rsrc_type != le_wxPasswordEntryDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxFindReplaceDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxSymbolPickerDialog && rsrc_type != le_wxPropertySheetDialog && rsrc_type != le_wxWizard && rsrc_type != le_wxProgressDialog && rsrc_type != le_wxColourDialog && rsrc_type != le_wxFileDialog && rsrc_type != le_wxFontDialog && rsrc_type != le_wxPageSetupDialog && rsrc_type != le_wxPrintDialog && rsrc_type != le_wxSingleChoiceDialog && rsrc_type != le_wxGenericProgressDialog && rsrc_type != le_wxPopupWindow && rsrc_type != le_wxPopupTransientWindow && rsrc_type != le_wxControl && rsrc_type != le_wxStatusBar && rsrc_type != le_wxAnyButton && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxToggleButton && rsrc_type != le_wxBitmapToggleButton && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxControlWithItems && rsrc_type != le_wxListBox && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxRearrangeList && rsrc_type != le_wxChoice && rsrc_type != le_wxBookCtrlBase && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxListbook && rsrc_type != le_wxChoicebook && rsrc_type != le_wxNotebook && rsrc_type != le_wxTreebook && rsrc_type != le_wxToolbook && rsrc_type != le_wxAnimationCtrl && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxScrollBar && rsrc_type != le_wxStaticText && rsrc_type != le_wxStaticLine && rsrc_type != le_wxStaticBox && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxCheckBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxSearchCtrl && rsrc_type != le_wxComboBox && rsrc_type != le_wxBitmapComboBox && rsrc_type != le_wxAuiToolBar && rsrc_type != le_wxListCtrl && rsrc_type != le_wxListView && rsrc_type != le_wxRadioBox && rsrc_type != le_wxRadioButton && rsrc_type != le_wxSlider && rsrc_type != le_wxSpinCtrl && rsrc_type != le_wxSpinButton && rsrc_type != le_wxGauge && rsrc_type != le_wxHyperlinkCtrl && rsrc_type != le_wxSpinCtrlDouble && rsrc_type != le_wxGenericDirCtrl && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxPickerBase && rsrc_type != le_wxColourPickerCtrl && rsrc_type != le_wxFontPickerCtrl && rsrc_type != le_wxFilePickerCtrl && rsrc_type != le_wxDirPickerCtrl && rsrc_type != le_wxTimePickerCtrl && rsrc_type != le_wxToolBar && rsrc_type != le_wxDatePickerCtrl && rsrc_type != le_wxCollapsiblePane && rsrc_type != le_wxComboCtrl && rsrc_type != le_wxDataViewCtrl && rsrc_type != le_wxDataViewListCtrl && rsrc_type != le_wxDataViewTreeCtrl && rsrc_type != le_wxHeaderCtrl && rsrc_type != le_wxHeaderCtrlSimple && rsrc_type != le_wxFileCtrl && rsrc_type != le_wxInfoBar && rsrc_type != le_wxRibbonControl && rsrc_type != le_wxRibbonBar && rsrc_type != le_wxRibbonButtonBar && rsrc_type != le_wxRibbonGallery && rsrc_type != le_wxRibbonPage && rsrc_type != le_wxRibbonPanel && rsrc_type != le_wxRibbonToolBar && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxPanel && rsrc_type != le_wxScrolledWindow && rsrc_type != le_wxHtmlWindow && rsrc_type != le_wxGrid && rsrc_type != le_wxPreviewCanvas && rsrc_type != le_wxWizardPage && rsrc_type != le_wxWizardPageSimple && rsrc_type != le_wxEditableListBox && rsrc_type != le_wxHScrolledWindow && rsrc_type != le_wxPreviewControlBar && rsrc_type != le_wxMenuBar && rsrc_type != le_wxBannerWindow && rsrc_type != le_wxMDIClientWindow && rsrc_type != le_wxTreeListCtrl && rsrc_type != le_wxSashWindow && rsrc_type != le_wxSashLayoutWindow && rsrc_type != le_wxHtmlHelpWindow))
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(parent1) == IS_LONG)
-				{
-					object_pointer1_0 = Z_LVAL_P(parent1);
 				}
 				else if(Z_TYPE_P(parent1) != IS_NULL)
 				{
@@ -32889,10 +31401,6 @@ PHP_METHOD(php_wxGrid, __construct)
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(pos1) == IS_LONG)
-				{
-					object_pointer1_2 = Z_LVAL_P(pos1);
-				}
 				else if(Z_TYPE_P(pos1) != IS_NULL)
 				{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
@@ -32909,10 +31417,6 @@ PHP_METHOD(php_wxGrid, __construct)
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(size1) == IS_LONG)
-				{
-					object_pointer1_3 = Z_LVAL_P(size1);
-				}
 				else if(Z_TYPE_P(size1) != IS_NULL)
 				{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
@@ -32925,7 +31429,6 @@ PHP_METHOD(php_wxGrid, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -32943,7 +31446,6 @@ PHP_METHOD(php_wxGrid, __construct)
 		}
 	}
 
-	
 	if(overload1_called)
 	{
 		switch(arguments_received)
@@ -33041,6 +31543,7 @@ PHP_METHOD(php_wxGrid, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+
 void php_wxGridUpdateLocker_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -33049,13 +31552,13 @@ void php_wxGridUpdateLocker_destruction_handler(zend_rsrc_list_entry *rsrc TSRML
 	#endif
 	
 	
-	wxGridUpdateLocker_php* object = (wxGridUpdateLocker_php*)rsrc->ptr;
+	wxGridUpdateLocker_php* object = static_cast<wxGridUpdateLocker_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -33141,7 +31644,8 @@ PHP_METHOD(php_wxGridUpdateLocker, Create)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&grid0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "z", &grid0 ) == SUCCESS)
+		char parse_parameters_string[] = "z";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &grid0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(grid0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(grid0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -33152,10 +31656,6 @@ PHP_METHOD(php_wxGridUpdateLocker, Create)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(grid0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(grid0);
 				}
 				else if(Z_TYPE_P(grid0) != IS_NULL)
 				{
@@ -33169,7 +31669,6 @@ PHP_METHOD(php_wxGridUpdateLocker, Create)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -33223,7 +31722,8 @@ PHP_METHOD(php_wxGridUpdateLocker, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|z' (&grid0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|z", &grid0 ) == SUCCESS)
+		char parse_parameters_string[] = "|z";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &grid0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(grid0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(grid0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -33234,10 +31734,6 @@ PHP_METHOD(php_wxGridUpdateLocker, __construct)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(grid0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(grid0);
 				}
 				else if(Z_TYPE_P(grid0) != IS_NULL)
 				{
@@ -33251,7 +31747,6 @@ PHP_METHOD(php_wxGridUpdateLocker, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)

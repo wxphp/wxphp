@@ -20,7 +20,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="1624"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" line="1624"/>
       </memberdef>
       <memberdef kind="function" id="classwx_mutex_1aca15d3e1f04cf77b25b8a25a37c7281d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -33,7 +33,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="1629"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" line="1629"/>
       </memberdef>
       <memberdef kind="function" id="classwx_mutex_1a5291e0e421262f420051390421ba0d09" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="interface_2wx_2thread_8h_1ac8c1ee75d2a2da3be8eabc629f71c1a7" kindref="member">wxMutexError</ref></type>
@@ -47,7 +47,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="1640"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" line="1640"/>
       </memberdef>
       <memberdef kind="function" id="classwx_mutex_1a1e22609b14aefe8a248b2e48bca51415" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="interface_2wx_2thread_8h_1ac8c1ee75d2a2da3be8eabc629f71c1a7" kindref="member">wxMutexError</ref></type>
@@ -65,7 +65,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="1647"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" line="1647"/>
       </memberdef>
       <memberdef kind="function" id="classwx_mutex_1a4485a8234390d1adc69426337069602b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="interface_2wx_2thread_8h_1ac8c1ee75d2a2da3be8eabc629f71c1a7" kindref="member">wxMutexError</ref></type>
@@ -79,7 +79,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="1654"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" line="1654"/>
       </memberdef>
       <memberdef kind="function" id="classwx_mutex_1aad45c7189e66d6d49eeaf1135ab24af7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="interface_2wx_2thread_8h_1ac8c1ee75d2a2da3be8eabc629f71c1a7" kindref="member">wxMutexError</ref></type>
@@ -93,7 +93,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="1661"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" line="1661"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -136,7 +136,7 @@
 </programlisting></para><para>Notice how <ref refid="classwx_mutex_locker" kindref="compound">wxMutexLocker</ref> was used in the second function to ensure that the mutex is unlocked in any case: whether the function returns true or false (because the destructor of the local object <emphasis>lock</emphasis> is always called). Using this class instead of directly using <ref refid="classwx_mutex" kindref="compound">wxMutex</ref> is, in general, safer and is even more so if your program uses C++ exceptions.</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__threading" kindref="compound">Threading</ref></para><para><simplesect kind="see"><para><ref refid="classwx_thread" kindref="compound">wxThread</ref>, <ref refid="classwx_condition" kindref="compound">wxCondition</ref>, <ref refid="classwx_mutex_locker" kindref="compound">wxMutexLocker</ref>, <ref refid="classwx_critical_section" kindref="compound">wxCriticalSection</ref> </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="1619" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" bodystart="1618" bodyend="1662"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" line="1619" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" bodystart="1618" bodyend="1662"/>
     <listofallmembers>
       <member refid="classwx_mutex_1a5291e0e421262f420051390421ba0d09" prot="public" virt="non-virtual"><scope>wxMutex</scope><name>Lock</name></member>
       <member refid="classwx_mutex_1a1e22609b14aefe8a248b2e48bca51415" prot="public" virt="non-virtual"><scope>wxMutex</scope><name>LockTimeout</name></member>

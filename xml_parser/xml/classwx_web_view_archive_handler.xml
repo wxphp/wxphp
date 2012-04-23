@@ -20,7 +20,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webviewarchivehandler.h" line="30"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/webviewarchivehandler.h" line="30"/>
       </memberdef>
       <memberdef kind="function" id="classwx_web_view_archive_handler_1a80858acc71a35bbd1e48ee31c7d9a3d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_f_s_file" kindref="compound">wxFSFile</ref> *</type>
@@ -39,41 +39,41 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webviewarchivehandler.h" line="31"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/webviewarchivehandler.h" line="31"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para>A custom handler for the file scheme which also supports loading from archives. </para>    </briefdescription>
     <detaileddescription>
-<para>The syntax for <ref refid="classwx_web_view_archive_handler" kindref="compound">wxWebViewArchiveHandler</ref> differs from virtual file systems in the rest of wxWidgets by using a syntax such as <computeroutput> scheme:///C:/exmaple/docs.zip;protocol=zip/main.htm </computeroutput> Currently the only supported protocol is <computeroutput>zip</computeroutput>.</para><para><simplesect kind="since"><para>2.9.3 <heading level="2"></heading>
+<para>The syntax for <ref refid="classwx_web_view_archive_handler" kindref="compound">wxWebViewArchiveHandler</ref> differs from virtual file systems in the rest of wxWidgets by using a syntax such as <computeroutput> scheme:///C:/example/docs.zip;protocol=zip/main.htm </computeroutput> Currently the only supported protocol is <computeroutput>zip</computeroutput>.</para><para><simplesect kind="since"><para>2.9.3 <heading level="2"></heading>
 </para></simplesect>
 Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxwebview" kindref="member">wxWebView</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__webview" kindref="compound">WebView</ref></para><para><simplesect kind="see"><para><ref refid="classwx_web_view" kindref="compound">wxWebView</ref>, <ref refid="classwx_web_view_handler" kindref="compound">wxWebViewHandler</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="11443">
+      <node id="11632">
         <label>wxWebViewArchiveHandler</label>
         <link refid="classwx_web_view_archive_handler"/>
-        <childnode refid="11444" relation="public-inheritance">
+        <childnode refid="11633" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11444">
+      <node id="11633">
         <label>wxWebViewHandler</label>
         <link refid="classwx_web_view_handler"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="11445">
+      <node id="11634">
         <label>wxWebViewArchiveHandler</label>
         <link refid="classwx_web_view_archive_handler"/>
-        <childnode refid="11446" relation="public-inheritance">
+        <childnode refid="11635" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11446">
+      <node id="11635">
         <label>wxWebViewHandler</label>
         <link refid="classwx_web_view_handler"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webviewarchivehandler.h" line="25" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webviewarchivehandler.h" bodystart="24" bodyend="32"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/webviewarchivehandler.h" line="25" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/webviewarchivehandler.h" bodystart="24" bodyend="32"/>
     <listofallmembers>
       <member refid="classwx_web_view_archive_handler_1a80858acc71a35bbd1e48ee31c7d9a3d8" prot="public" virt="virtual"><scope>wxWebViewArchiveHandler</scope><name>GetFile</name></member>
       <member refid="classwx_web_view_handler_1a44da19cad5e5d2207e009bcee437e2a9" prot="public" virt="virtual"><scope>wxWebViewArchiveHandler</scope><name>GetName</name></member>

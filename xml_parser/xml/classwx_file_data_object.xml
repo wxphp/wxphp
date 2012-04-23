@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataobj.h" line="807"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataobj.h" line="764"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_data_object_1af2e24d5d093a189b1a410a7f862123ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -33,7 +33,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataobj.h" line="812"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataobj.h" line="769"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_data_object_1a5acc2636458b4f41b424fdbfbff4427c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_array_string" kindref="compound">wxArrayString</ref> &amp;</type>
@@ -46,7 +46,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataobj.h" line="817"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataobj.h" line="774"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -57,42 +57,42 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__dnd" kindref="compound">Clipboard and Drag &amp; Drop</ref></para><para><simplesect kind="see"><para><ref refid="classwx_data_object" kindref="compound">wxDataObject</ref>, <ref refid="classwx_data_object_simple" kindref="compound">wxDataObjectSimple</ref>, <ref refid="classwx_text_data_object" kindref="compound">wxTextDataObject</ref>, <ref refid="classwx_bitmap_data_object" kindref="compound">wxBitmapDataObject</ref>, <ref refid="classwx_data_object" kindref="compound">wxDataObject</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="6168">
+      <node id="6287">
         <label>wxDataObject</label>
         <link refid="classwx_data_object"/>
       </node>
-      <node id="6166">
+      <node id="6285">
         <label>wxFileDataObject</label>
         <link refid="classwx_file_data_object"/>
-        <childnode refid="6167" relation="public-inheritance">
+        <childnode refid="6286" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6167">
+      <node id="6286">
         <label>wxDataObjectSimple</label>
         <link refid="classwx_data_object_simple"/>
-        <childnode refid="6168" relation="public-inheritance">
+        <childnode refid="6287" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="6171">
+      <node id="6290">
         <label>wxDataObject</label>
         <link refid="classwx_data_object"/>
       </node>
-      <node id="6169">
+      <node id="6288">
         <label>wxFileDataObject</label>
         <link refid="classwx_file_data_object"/>
-        <childnode refid="6170" relation="public-inheritance">
+        <childnode refid="6289" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6170">
+      <node id="6289">
         <label>wxDataObjectSimple</label>
         <link refid="classwx_data_object_simple"/>
-        <childnode refid="6171" relation="public-inheritance">
+        <childnode refid="6290" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataobj.h" line="802" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataobj.h" bodystart="801" bodyend="818"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataobj.h" line="759" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dataobj.h" bodystart="758" bodyend="775"/>
     <listofallmembers>
       <member refid="classwx_file_data_object_1af2e24d5d093a189b1a410a7f862123ba" prot="public" virt="non-virtual"><scope>wxFileDataObject</scope><name>AddFile</name></member>
       <member refid="classwx_data_object_1a7623fd02a6bef5dba7c96ff0a1a692efa1f94b69e55238c5470f85e252b5fd8df" prot="public" virt="non-virtual"><scope>wxFileDataObject</scope><name>Both</name></member>

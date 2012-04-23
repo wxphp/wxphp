@@ -51,6 +51,7 @@
     <innerclass refid="classwx_move_event" prot="public">wxMoveEvent</innerclass>
     <innerclass refid="classwx_size_event" prot="public">wxSizeEvent</innerclass>
     <innerclass refid="classwx_set_cursor_event" prot="public">wxSetCursorEvent</innerclass>
+    <innerclass refid="classwx_find_dialog_event" prot="public">wxFindDialogEvent</innerclass>
     <innerclass refid="classwx_file_ctrl_event" prot="public">wxFileCtrlEvent</innerclass>
     <innerclass refid="classwx_file_dir_picker_event" prot="public">wxFileDirPickerEvent</innerclass>
     <innerclass refid="classwx_font_picker_event" prot="public">wxFontPickerEvent</innerclass>

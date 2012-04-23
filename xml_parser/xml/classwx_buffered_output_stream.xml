@@ -40,7 +40,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stream.h" line="1027"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stream.h" line="1034"/>
       </memberdef>
       <memberdef kind="function" id="classwx_buffered_output_stream_1a4ec5d6b5802ab2531e23496818ffaa20" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -77,7 +77,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stream.h" line="1043"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stream.h" line="1050"/>
       </memberdef>
       <memberdef kind="function" id="classwx_buffered_output_stream_1aee1ad4e94be06b2a76082806d645958d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -90,7 +90,7 @@
 <para>Calls <ref refid="classwx_buffered_output_stream_1ace40e297c6342271be974bdf95d2d139" kindref="member">Sync()</ref> and destroys the internal buffer. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stream.h" line="1048"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stream.h" line="1055"/>
       </memberdef>
       <memberdef kind="function" id="classwx_buffered_output_stream_1a309319db903fbd2476dd5d7a6b800051" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="group__group__funcmacro__file_1ga69d831b3febabc149c67b716c8e22de5" kindref="member">wxFileOffset</ref></type>
@@ -103,7 +103,7 @@
           <declname>pos</declname>
         </param>
         <param>
-          <type><ref refid="ffile_8h_1ae3981f8632f0391e5c852bf62eb982b0" kindref="member">wxSeekMode</ref></type>
+          <type><ref refid="group__group__funcmacro__file_1gae3981f8632f0391e5c852bf62eb982b0" kindref="member">wxSeekMode</ref></type>
           <declname>mode</declname>
           <defval>wxFromStart</defval>
         </param>
@@ -113,7 +113,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stream.h" line="1053"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stream.h" line="1060"/>
       </memberdef>
       <memberdef kind="function" id="classwx_buffered_output_stream_1ace40e297c6342271be974bdf95d2d139" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -126,7 +126,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stream.h" line="1058"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stream.h" line="1065"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -136,54 +136,54 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__streams" kindref="compound">Streams</ref></para><para><simplesect kind="see"><para><ref refid="classwx_stream_buffer" kindref="compound">wxStreamBuffer</ref>, <ref refid="classwx_output_stream" kindref="compound">wxOutputStream</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="4614">
+      <node id="4704">
         <label>wxBufferedOutputStream</label>
         <link refid="classwx_buffered_output_stream"/>
-        <childnode refid="4615" relation="public-inheritance">
+        <childnode refid="4705" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4617">
+      <node id="4707">
         <label>wxStreamBase</label>
         <link refid="classwx_stream_base"/>
       </node>
-      <node id="4615">
+      <node id="4705">
         <label>wxFilterOutputStream</label>
         <link refid="classwx_filter_output_stream"/>
-        <childnode refid="4616" relation="public-inheritance">
+        <childnode refid="4706" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4616">
+      <node id="4706">
         <label>wxOutputStream</label>
         <link refid="classwx_output_stream"/>
-        <childnode refid="4617" relation="public-inheritance">
+        <childnode refid="4707" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="4618">
+      <node id="4708">
         <label>wxBufferedOutputStream</label>
         <link refid="classwx_buffered_output_stream"/>
-        <childnode refid="4619" relation="public-inheritance">
+        <childnode refid="4709" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4621">
+      <node id="4711">
         <label>wxStreamBase</label>
         <link refid="classwx_stream_base"/>
       </node>
-      <node id="4619">
+      <node id="4709">
         <label>wxFilterOutputStream</label>
         <link refid="classwx_filter_output_stream"/>
-        <childnode refid="4620" relation="public-inheritance">
+        <childnode refid="4710" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4620">
+      <node id="4710">
         <label>wxOutputStream</label>
         <link refid="classwx_output_stream"/>
-        <childnode refid="4621" relation="public-inheritance">
+        <childnode refid="4711" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stream.h" line="1014" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stream.h" bodystart="1013" bodyend="1059"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stream.h" line="1021" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/stream.h" bodystart="1020" bodyend="1066"/>
     <listofallmembers>
       <member refid="classwx_output_stream_1a1c306ce99990d525921f8f6ae8432083" prot="public" virt="virtual"><scope>wxBufferedOutputStream</scope><name>Close</name></member>
       <member refid="classwx_stream_base_1aca7d52699887bc33bec4810bf6fe29ba" prot="public" virt="non-virtual"><scope>wxBufferedOutputStream</scope><name>GetLastError</name></member>

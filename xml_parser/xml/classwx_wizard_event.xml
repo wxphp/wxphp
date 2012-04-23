@@ -36,7 +36,7 @@
 <para>It is not normally used by the user code as the objects of this type are constructed by <ref refid="classwx_wizard" kindref="compound">wxWizard</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wizard.h" line="126"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/wizard.h" line="130"/>
       </memberdef>
       <memberdef kind="function" id="classwx_wizard_event_1a3233f5e5a7c5a4f91a4265efcaa58f2e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -49,7 +49,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wizard.h" line="134"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/wizard.h" line="138"/>
       </memberdef>
       <memberdef kind="function" id="classwx_wizard_event_1afa74fe943597cda74d380a47441f097a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_wizard_page" kindref="compound">wxWizardPage</ref> *</type>
@@ -62,7 +62,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wizard.h" line="139"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/wizard.h" line="143"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -72,6 +72,7 @@
 </para><para>The following event handler macros redirect the events to member function handlers &apos;<bold>func</bold>&apos; with prototypes like: void<nonbreakablespace/>handlerFuncName(<ref refid="classwx_wizard_event" kindref="compound">wxWizardEvent</ref>&amp;<nonbreakablespace/>event)Event macros: <itemizedlist>
 <listitem><para>EVT_WIZARD_PAGE_CHANGED(id,  func): The page has been just changed (this event cannot be vetoed). </para></listitem>
 <listitem><para>EVT_WIZARD_PAGE_CHANGING(id,  func): The page is being changed (this event can be vetoed). </para></listitem>
+<listitem><para>EVT_WIZARD_BEFORE_PAGE_CHANGED(id,  func): Called after Next is clicked but before GetNext is called. Unlike EVT_WIZARD_CHANGING, the handler for this function can change state that might affect the return value of GetNext. This event can be vetoed. </para></listitem>
 <listitem><para>EVT_WIZARD_PAGE_SHOWN(id,  func): The page was shown and laid out (this event cannot be vetoed). </para></listitem>
 <listitem><para>EVT_WIZARD_CANCEL(id,  func): The user attempted to cancel the wizard (this event may also be vetoed). </para></listitem>
 <listitem><para>EVT_WIZARD_HELP(id,  func): The wizard help button was pressed. </para></listitem>
@@ -81,73 +82,73 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="classwx_wizard" kindref="compound">wxWizard</ref>, <ref refid="page_samples_1page_samples_wizard" kindref="member">Wizard Sample</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="11680">
+      <node id="11869">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="11678">
+      <node id="11867">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="11679" relation="public-inheritance">
+        <childnode refid="11868" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11676">
+      <node id="11865">
         <label>wxWizardEvent</label>
         <link refid="classwx_wizard_event"/>
-        <childnode refid="11677" relation="public-inheritance">
+        <childnode refid="11866" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11677">
+      <node id="11866">
         <label>wxNotifyEvent</label>
         <link refid="classwx_notify_event"/>
-        <childnode refid="11678" relation="public-inheritance">
+        <childnode refid="11867" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11679">
+      <node id="11868">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="11680" relation="public-inheritance">
+        <childnode refid="11869" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="11685">
+      <node id="11874">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="11686" relation="usage">
+        <childnode refid="11875" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="11683">
+      <node id="11872">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="11684" relation="public-inheritance">
+        <childnode refid="11873" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11681">
+      <node id="11870">
         <label>wxWizardEvent</label>
         <link refid="classwx_wizard_event"/>
-        <childnode refid="11682" relation="public-inheritance">
+        <childnode refid="11871" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11682">
+      <node id="11871">
         <label>wxNotifyEvent</label>
         <link refid="classwx_notify_event"/>
-        <childnode refid="11683" relation="public-inheritance">
+        <childnode refid="11872" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11684">
+      <node id="11873">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="11685" relation="public-inheritance">
+        <childnode refid="11874" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11686">
+      <node id="11875">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wizard.h" line="117" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wizard.h" bodystart="116" bodyend="140"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/wizard.h" line="121" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/wizard.h" bodystart="120" bodyend="144"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxWizardEvent</scope><name>AllocExclusive</name></member>
       <member refid="classwx_notify_event_1a7b23515f827b2ce1da1e6990d9aafe80" prot="public" virt="non-virtual"><scope>wxWizardEvent</scope><name>Allow</name></member>

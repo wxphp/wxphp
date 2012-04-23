@@ -17,7 +17,7 @@
         <param>
           <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
           <declname>message</declname>
-          <defval>wxDirSelectorPromptStr</defval>
+          <defval><ref refid="dirdlg_8h_1a6f17a504b82b31c8d81672581bf26a8d" kindref="member">wxDirSelectorPromptStr</ref></defval>
         </param>
         <param>
           <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -42,7 +42,7 @@
         <param>
           <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
           <declname>name</declname>
-          <defval>wxDirDialogNameStr</defval>
+          <defval><ref refid="dirdlg_8h_1ab3ea030cc3321afccebdc45a0944cb9e" kindref="member">wxDirDialogNameStr</ref></defval>
         </param>
         <briefdescription>
 <para>Constructor. </para>        </briefdescription>
@@ -100,7 +100,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dirdlg.h" line="77"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dirdlg.h" line="92"/>
       </memberdef>
       <memberdef kind="function" id="classwx_dir_dialog_1ae063d8bd91314ff3c2b5210ab2dd38a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -113,7 +113,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dirdlg.h" line="82"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dirdlg.h" line="97"/>
       </memberdef>
       <memberdef kind="function" id="classwx_dir_dialog_1a7cd0ec476ad492a6de21aad5d18ac4d9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -126,7 +126,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dirdlg.h" line="87"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dirdlg.h" line="102"/>
       </memberdef>
       <memberdef kind="function" id="classwx_dir_dialog_1a740b638c7086d536a0e6176a0c13e27e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -139,7 +139,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dirdlg.h" line="92"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dirdlg.h" line="107"/>
       </memberdef>
       <memberdef kind="function" id="classwx_dir_dialog_1a24fce7078762cc20624568df366f6dcc" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -156,7 +156,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dirdlg.h" line="97"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dirdlg.h" line="112"/>
       </memberdef>
       <memberdef kind="function" id="classwx_dir_dialog_1af16d4eceadfcb89ae79f7235dfccc488" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -173,7 +173,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dirdlg.h" line="102"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dirdlg.h" line="117"/>
       </memberdef>
       <memberdef kind="function" id="classwx_dir_dialog_1a037ba48268fd2632d47369ad80c84da5" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>int</type>
@@ -187,7 +187,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dirdlg.h" line="108"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dirdlg.h" line="123"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -205,109 +205,109 @@ Notice that <computeroutput>wxRESIZE_BORDER</computeroutput> has special side ef
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__cmndlg" kindref="compound">Common Dialogs</ref></para><para><simplesect kind="see"><para><ref refid="overview_cmndlg_1overview_cmndlg_dir" kindref="member">wxDirDialog Overview</ref>, <ref refid="classwx_file_dialog" kindref="compound">wxFileDialog</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="5622">
+      <node id="5716">
         <label>wxNonOwnedWindow</label>
         <link refid="classwx_non_owned_window"/>
-        <childnode refid="5623" relation="public-inheritance">
+        <childnode refid="5717" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5625">
+      <node id="5719">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="5624">
+      <node id="5718">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="5625" relation="public-inheritance">
+        <childnode refid="5719" relation="public-inheritance">
         </childnode>
-        <childnode refid="5626" relation="public-inheritance">
+        <childnode refid="5720" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5626">
+      <node id="5720">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="5623">
+      <node id="5717">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="5624" relation="public-inheritance">
+        <childnode refid="5718" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5620">
+      <node id="5714">
         <label>wxDialog</label>
         <link refid="classwx_dialog"/>
-        <childnode refid="5621" relation="public-inheritance">
+        <childnode refid="5715" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5619">
+      <node id="5713">
         <label>wxDirDialog</label>
         <link refid="classwx_dir_dialog"/>
-        <childnode refid="5620" relation="public-inheritance">
+        <childnode refid="5714" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5621">
+      <node id="5715">
         <label>wxTopLevelWindow</label>
         <link refid="classwx_top_level_window"/>
-        <childnode refid="5622" relation="public-inheritance">
+        <childnode refid="5716" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="5630">
+      <node id="5724">
         <label>wxNonOwnedWindow</label>
         <link refid="classwx_non_owned_window"/>
-        <childnode refid="5631" relation="public-inheritance">
+        <childnode refid="5725" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5633">
+      <node id="5727">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="5634" relation="usage">
+        <childnode refid="5728" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="5632">
+      <node id="5726">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="5633" relation="public-inheritance">
+        <childnode refid="5727" relation="public-inheritance">
         </childnode>
-        <childnode refid="5635" relation="public-inheritance">
+        <childnode refid="5729" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5635">
+      <node id="5729">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="5631">
+      <node id="5725">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="5632" relation="public-inheritance">
+        <childnode refid="5726" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5628">
+      <node id="5722">
         <label>wxDialog</label>
         <link refid="classwx_dialog"/>
-        <childnode refid="5629" relation="public-inheritance">
+        <childnode refid="5723" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5627">
+      <node id="5721">
         <label>wxDirDialog</label>
         <link refid="classwx_dir_dialog"/>
-        <childnode refid="5628" relation="public-inheritance">
+        <childnode refid="5722" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5629">
+      <node id="5723">
         <label>wxTopLevelWindow</label>
         <link refid="classwx_top_level_window"/>
-        <childnode refid="5630" relation="public-inheritance">
+        <childnode refid="5724" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5634">
+      <node id="5728">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dirdlg.h" line="51" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dirdlg.h" bodystart="50" bodyend="109"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dirdlg.h" line="66" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dirdlg.h" bodystart="65" bodyend="124"/>
     <listofallmembers>
       <member refid="classwx_window_1a3afbd49b1ea2f8275e3600dcac102923" prot="public" virt="virtual"><scope>wxDirDialog</scope><name>AcceptsFocus</name></member>
       <member refid="classwx_window_1a2370bdd3ab08e7ef3c7555c6aa8301b8" prot="public" virt="virtual"><scope>wxDirDialog</scope><name>AcceptsFocusFromKeyboard</name></member>
@@ -351,6 +351,7 @@ Notice that <computeroutput>wxRESIZE_BORDER</computeroutput> has special side ef
       <member refid="classwx_dialog_1a0c6fb55be0b07b934b30550e0225df8f" prot="public" virt="non-virtual"><scope>wxDirDialog</scope><name>CreateSeparatedButtonSizer</name></member>
       <member refid="classwx_dialog_1ab7a5666b612d6cfdfb2660fd9bd3393e" prot="public" virt="non-virtual"><scope>wxDirDialog</scope><name>CreateSeparatedSizer</name></member>
       <member refid="classwx_dialog_1a8f2f565975f843035391ce62b0b9f8e8" prot="public" virt="non-virtual"><scope>wxDirDialog</scope><name>CreateStdDialogButtonSizer</name></member>
+      <member refid="classwx_dialog_1a5bead5e932f17b7c2345dfc41b6cc79c" prot="public" virt="non-virtual"><scope>wxDirDialog</scope><name>CreateTextSizer</name></member>
       <member refid="classwx_evt_handler_1a6e7f9cf4ebd0623c1d94979855d096f8" prot="public" virt="non-virtual"><scope>wxDirDialog</scope><name>DeletePendingEvents</name></member>
       <member refid="classwx_window_1a6bf0c5be864544d9ce0560087667b7fc" prot="public" virt="virtual"><scope>wxDirDialog</scope><name>Destroy</name></member>
       <member refid="classwx_window_1aff47b32c8d42d515ea0bb6a6c2fea917" prot="public" virt="non-virtual"><scope>wxDirDialog</scope><name>DestroyChildren</name></member>
@@ -501,6 +502,7 @@ Notice that <computeroutput>wxRESIZE_BORDER</computeroutput> has special side ef
       <member refid="classwx_top_level_window_1afa58f411cf488eb9279683b1d20a74b6" prot="public" virt="virtual"><scope>wxDirDialog</scope><name>IsActive</name></member>
       <member refid="classwx_top_level_window_1ac0c7a7cb6e6dfdf7e59300ee5d476ce3" prot="public" virt="virtual"><scope>wxDirDialog</scope><name>IsAlwaysMaximized</name></member>
       <member refid="classwx_window_1af918e6fe8565c2d5235973cc3de84a43" prot="public" virt="non-virtual"><scope>wxDirDialog</scope><name>IsBeingDeleted</name></member>
+      <member refid="classwx_window_1a469f0881da248d37691440c9d4cc7200" prot="public" virt="non-virtual"><scope>wxDirDialog</scope><name>IsDescendant</name></member>
       <member refid="classwx_window_1a9d1be1bbb625ebf87ad4ad47e49a0194" prot="public" virt="virtual"><scope>wxDirDialog</scope><name>IsDoubleBuffered</name></member>
       <member refid="classwx_window_1a59452a5bd42f5ea4b31d7fc4aa59644f" prot="public" virt="non-virtual"><scope>wxDirDialog</scope><name>IsEnabled</name></member>
       <member refid="classwx_window_1af27ef77c913e32050543f3b0ca435a0d" prot="public" virt="non-virtual"><scope>wxDirDialog</scope><name>IsExposed</name></member>
@@ -522,6 +524,7 @@ Notice that <computeroutput>wxRESIZE_BORDER</computeroutput> has special side ef
       <member refid="classwx_window_1a72d70fd14e3565bf782fbcd3271d8930" prot="public" virt="virtual"><scope>wxDirDialog</scope><name>IsShownOnScreen</name></member>
       <member refid="classwx_window_1a657ef8b6055eb06df894ac5e6ddfecf8" prot="public" virt="non-virtual"><scope>wxDirDialog</scope><name>IsThisEnabled</name></member>
       <member refid="classwx_window_1a0002826ad05f2a5661b4c8995713f37f" prot="public" virt="virtual"><scope>wxDirDialog</scope><name>IsTopLevel</name></member>
+      <member refid="classwx_window_1a7940d510c5bdc062a2b109a1022dd8c2" prot="public" virt="virtual"><scope>wxDirDialog</scope><name>IsTransparentBackgroundSupported</name></member>
       <member refid="classwx_evt_handler_1a360fdeefcf53b62fb49fb828406bb8a6" prot="public" virt="non-virtual"><scope>wxDirDialog</scope><name>IsUnlinked</name></member>
       <member refid="classwx_top_level_window_1a305c48ddb8e45f89add1694053185a7d" prot="public" virt="non-virtual"><scope>wxDirDialog</scope><name>IsUsingNativeDecorations</name></member>
       <member refid="classwx_top_level_window_1adfe7e3f4a32f3ed178968f64431bbfe0" prot="public" virt="virtual"><scope>wxDirDialog</scope><name>Layout</name></member>
@@ -529,7 +532,6 @@ Notice that <computeroutput>wxRESIZE_BORDER</computeroutput> has special side ef
       <member refid="classwx_window_1afc0816a174ceee6d36d1995c6824a273" prot="public" virt="non-virtual"><scope>wxDirDialog</scope><name>LineUp</name></member>
       <member refid="classwx_window_1a124944524f36b71385dad8fddaad8ded" prot="public" virt="virtual"><scope>wxDirDialog</scope><name>Lower</name></member>
       <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxDirDialog</scope><name>m_refData</name></member>
-      <member refid="classwx_window_1a192fc8b467845d093c16452db96c65c5" prot="public" virt="virtual"><scope>wxDirDialog</scope><name>MakeModal</name></member>
       <member refid="classwx_top_level_window_1addb1612e9f00ac82c2e19c2bac6ffc4f" prot="public" virt="virtual"><scope>wxDirDialog</scope><name>Maximize</name></member>
       <member refid="classwx_window_1ab1cb98c8d25b9e6ff7b706b1446c3df7" prot="public" virt="non-virtual"><scope>wxDirDialog</scope><name>Move</name></member>
       <member refid="classwx_window_1a22a22c1e23ca05776707e7999d8047fe" prot="public" virt="non-virtual"><scope>wxDirDialog</scope><name>Move</name></member>
@@ -540,7 +542,6 @@ Notice that <computeroutput>wxRESIZE_BORDER</computeroutput> has special side ef
       <member refid="classwx_window_1aa58039c8fc65e19160becf510ee1d1d5" prot="public" virt="non-virtual"><scope>wxDirDialog</scope><name>NavigateIn</name></member>
       <member refid="classwx_window_1a8175da594e6045635a1d1cfe775cdddb" prot="public" virt="non-virtual"><scope>wxDirDialog</scope><name>NewControlId</name></member>
       <member refid="classwx_window_1a6b5654c0c6c6245d592c279521f7099c" prot="public" virt="virtual"><scope>wxDirDialog</scope><name>OnInternalIdle</name></member>
-      <member refid="classwx_dialog_1a31dde643f83e859e53759b8ae5f07378" prot="public" virt="non-virtual"><scope>wxDirDialog</scope><name>OnSysColourChanged</name></member>
       <member refid="classwx_object_1a07b8f34f5afc5743195c5fed052f55d3" prot="public" virt="non-virtual"><scope>wxDirDialog</scope><name>operator delete</name></member>
       <member refid="classwx_object_1a96fa423a1dbc212c8227a5d83825971f" prot="public" virt="non-virtual"><scope>wxDirDialog</scope><name>operator new</name></member>
       <member refid="classwx_top_level_window_1a5890684b71321e27e8f3a223ad3c2445" prot="public" virt="virtual"><scope>wxDirDialog</scope><name>OSXIsModified</name></member>
@@ -677,7 +678,6 @@ Notice that <computeroutput>wxRESIZE_BORDER</computeroutput> has special side ef
       <member refid="classwx_window_1a88cc65e424a129d9b0057756cdb67ec9" prot="public" virt="virtual"><scope>wxDirDialog</scope><name>TransferDataToWindow</name></member>
       <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxDirDialog</scope><name>TryAfter</name></member>
       <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxDirDialog</scope><name>TryBefore</name></member>
-      <member refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" virt="non-virtual"><scope>wxDirDialog</scope><name>TryThis</name></member>
       <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxDirDialog</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxDirDialog</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a22e5db2ec1d19c8252c056fd116975d7" prot="public" virt="non-virtual"><scope>wxDirDialog</scope><name>Unlink</name></member>

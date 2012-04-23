@@ -16,12 +16,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filectrl.h" line="59"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filectrl.h" line="69"/>
       </memberdef>
-      <memberdef kind="function" id="classwx_file_ctrl_1ab9a30fe6156c678c36774d91373134ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classwx_file_ctrl_1a3a4611ef0c3e9087e3768869c53ab5cc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
         <definition>wxFileCtrl::wxFileCtrl</definition>
-        <argsstring>(wxWindow *parent, wxWindowID id, const wxString &amp;defaultDirectory=wxEmptyString, const wxString &amp;defaultFilename=wxEmptyString, const wxPoint &amp;wildCard=wxFileSelectorDefaultWildcardStr, long style=wxFC_DEFAULT_STYLE, const wxPoint &amp;pos=wxDefaultPosition, const wxSize &amp;size=wxDefaultSize, const wxString &amp;name=wxFileCtrlNameStr)</argsstring>
+        <argsstring>(wxWindow *parent, wxWindowID id, const wxString &amp;defaultDirectory=wxEmptyString, const wxString &amp;defaultFilename=wxEmptyString, const wxString &amp;wildCard=wxFileSelectorDefaultWildcardStr, long style=wxFC_DEFAULT_STYLE, const wxPoint &amp;pos=wxDefaultPosition, const wxSize &amp;size=wxDefaultSize, const wxString &amp;name=wxFileCtrlNameStr)</argsstring>
         <name>wxFileCtrl</name>
         <param>
           <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
@@ -42,9 +42,9 @@
           <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
         </param>
         <param>
-          <type>const <ref refid="classwx_point" kindref="compound">wxPoint</ref> &amp;</type>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
           <declname>wildCard</declname>
-          <defval>wxFileSelectorDefaultWildcardStr</defval>
+          <defval><ref refid="filedlg_8h_1a3a48d9b7ad35e6c332acb146f78c1b5d" kindref="member">wxFileSelectorDefaultWildcardStr</ref></defval>
         </param>
         <param>
           <type>long</type>
@@ -137,7 +137,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filectrl.h" line="97"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filectrl.h" line="107"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_ctrl_1adfd64c940ac90a72a5b5931404c12c79" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -165,7 +165,7 @@
         <param>
           <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
           <declname>wildCard</declname>
-          <defval>wxFileSelectorDefaultWildcardStr</defval>
+          <defval><ref refid="filedlg_8h_1a3a48d9b7ad35e6c332acb146f78c1b5d" kindref="member">wxFileSelectorDefaultWildcardStr</ref></defval>
         </param>
         <param>
           <type>long</type>
@@ -193,7 +193,7 @@
 <para>See <ref refid="classwx_file_ctrl_1ad0f3935004f16b380571ead2d1b4c04c" kindref="member">wxFileCtrl()</ref> for details. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filectrl.h" line="108"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filectrl.h" line="118"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_ctrl_1a6056e3e14e5158693f081694b29c9340" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -206,7 +206,7 @@
 <para>the directory shown by it). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filectrl.h" line="113"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filectrl.h" line="123"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_ctrl_1a69e28d6396345efc6dfb666cf1ae0ab3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -219,7 +219,7 @@
 <para>For the controls having the <computeroutput>wxFC_MULTIPLE</computeroutput> style, use <ref refid="classwx_file_ctrl_1ace696f287df8f89ac3394a1f06cb98af" kindref="member">GetFilenames()</ref> instead. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filectrl.h" line="120"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filectrl.h" line="130"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_ctrl_1ace696f287df8f89ac3394a1f06cb98af" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -237,7 +237,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filectrl.h" line="130"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filectrl.h" line="140"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_ctrl_1a64457b48cfe0aecb6feb4e7e1613d711" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>int</type>
@@ -250,7 +250,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filectrl.h" line="135"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filectrl.h" line="145"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_ctrl_1a3bf75ab5d854761aca42588136637911" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -263,7 +263,7 @@
 <para>For the controls having the <computeroutput>wxFC_MULTIPLE</computeroutput> style, use <ref refid="classwx_file_ctrl_1a8e3b3b3b90da55d179e7cdca36eeb8e5" kindref="member">GetPaths()</ref> instead. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filectrl.h" line="141"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filectrl.h" line="151"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_ctrl_1a8e3b3b3b90da55d179e7cdca36eeb8e5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -281,7 +281,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filectrl.h" line="151"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filectrl.h" line="161"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_ctrl_1a9f0582a45d878325dbd9b80ce6065f2b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -294,7 +294,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filectrl.h" line="156"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filectrl.h" line="166"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_ctrl_1afc5c972073949ff303acd9f9834b0543" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -312,7 +312,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filectrl.h" line="163"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filectrl.h" line="173"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_ctrl_1aa6672f8ae14c8d59eb8312d8935eebd6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -330,7 +330,25 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filectrl.h" line="170"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filectrl.h" line="180"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_ctrl_1a588d1276adfe6ab5b53f41c7cf67a30d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxFileCtrl::SetPath</definition>
+        <argsstring>(const wxString &amp;path)</argsstring>
+        <name>SetPath</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+<para>Changes to a certain directory and selects a certain file. </para>        </briefdescription>
+        <detaileddescription>
+<para>In case the filename specified isn&apos;t found/couldn&apos;t be shown with currently selected filter, false is returned.</para><para><simplesect kind="return"><para>Returns true on success, false otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filectrl.h" line="190"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_ctrl_1a3e69759abe6cf646c4aff13d4bb32145" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -347,7 +365,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filectrl.h" line="175"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filectrl.h" line="195"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_ctrl_1a7599cc5356e0d0f2b851374d591d9aeb" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -364,7 +382,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filectrl.h" line="181"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filectrl.h" line="201"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_ctrl_1a062c1bbdd9c31f647286db8cac2990b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -381,7 +399,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filectrl.h" line="186"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filectrl.h" line="206"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -407,85 +425,85 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref> <htmlonly> &lt;br&gt;&lt;div&gt;&lt;span class=&apos;appearance&apos;&gt;Appearance:&lt;/span&gt;&lt;br&gt;&lt;table class=&apos;appearance&apos;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&apos;wxmsw/filectrl.png&apos; alt=&apos;wxMSW appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxgtk/filectrl.png&apos; alt=&apos;wxGTK appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxmac/filectrl.png&apos; alt=&apos;wxMac appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;wxMSW appearance&lt;/td&gt;&lt;td&gt;wxGTK appearance&lt;/td&gt;&lt;td&gt;wxMac appearance&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt; </htmlonly></para><para>Implementations:<nonbreakablespace/><nonbreakablespace/>native under <ref refid="page_port_1page_port_wxgtk" kindref="member">wxGTK</ref> port; a generic implementation is used elsewhere.</para><para><simplesect kind="see"><para><ref refid="classwx_generic_dir_ctrl" kindref="compound">wxGenericDirCtrl</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="6148">
+      <node id="6267">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="6147">
+      <node id="6266">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="6148" relation="public-inheritance">
+        <childnode refid="6267" relation="public-inheritance">
         </childnode>
-        <childnode refid="6149" relation="public-inheritance">
+        <childnode refid="6268" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6149">
+      <node id="6268">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="6145">
+      <node id="6264">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="6146" relation="public-inheritance">
+        <childnode refid="6265" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6146">
+      <node id="6265">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="6147" relation="public-inheritance">
+        <childnode refid="6266" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6144">
+      <node id="6263">
         <label>wxFileCtrl</label>
         <link refid="classwx_file_ctrl"/>
-        <childnode refid="6145" relation="public-inheritance">
+        <childnode refid="6264" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="6154">
+      <node id="6273">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="6155" relation="usage">
+        <childnode refid="6274" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="6153">
+      <node id="6272">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="6154" relation="public-inheritance">
+        <childnode refid="6273" relation="public-inheritance">
         </childnode>
-        <childnode refid="6156" relation="public-inheritance">
+        <childnode refid="6275" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6156">
+      <node id="6275">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="6151">
+      <node id="6270">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="6152" relation="public-inheritance">
+        <childnode refid="6271" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6152">
+      <node id="6271">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="6153" relation="public-inheritance">
+        <childnode refid="6272" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6150">
+      <node id="6269">
         <label>wxFileCtrl</label>
         <link refid="classwx_file_ctrl"/>
-        <childnode refid="6151" relation="public-inheritance">
+        <childnode refid="6270" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6155">
+      <node id="6274">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filectrl.h" line="57" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filectrl.h" bodystart="56" bodyend="187"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filectrl.h" line="67" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/filectrl.h" bodystart="66" bodyend="207"/>
     <listofallmembers>
       <member refid="classwx_window_1a3afbd49b1ea2f8275e3600dcac102923" prot="public" virt="virtual"><scope>wxFileCtrl</scope><name>AcceptsFocus</name></member>
       <member refid="classwx_window_1a2370bdd3ab08e7ef3c7555c6aa8301b8" prot="public" virt="virtual"><scope>wxFileCtrl</scope><name>AcceptsFocusFromKeyboard</name></member>
@@ -657,6 +675,7 @@
       <member refid="classwx_window_1aa90a260c0a835a133043460b7d0024a8" prot="public" virt="virtual"><scope>wxFileCtrl</scope><name>InitDialog</name></member>
       <member refid="classwx_window_1ae1b56ca87d8590ee5e576012229a380a" prot="public" virt="non-virtual"><scope>wxFileCtrl</scope><name>InvalidateBestSize</name></member>
       <member refid="classwx_window_1af918e6fe8565c2d5235973cc3de84a43" prot="public" virt="non-virtual"><scope>wxFileCtrl</scope><name>IsBeingDeleted</name></member>
+      <member refid="classwx_window_1a469f0881da248d37691440c9d4cc7200" prot="public" virt="non-virtual"><scope>wxFileCtrl</scope><name>IsDescendant</name></member>
       <member refid="classwx_window_1a9d1be1bbb625ebf87ad4ad47e49a0194" prot="public" virt="virtual"><scope>wxFileCtrl</scope><name>IsDoubleBuffered</name></member>
       <member refid="classwx_window_1a59452a5bd42f5ea4b31d7fc4aa59644f" prot="public" virt="non-virtual"><scope>wxFileCtrl</scope><name>IsEnabled</name></member>
       <member refid="classwx_window_1af27ef77c913e32050543f3b0ca435a0d" prot="public" virt="non-virtual"><scope>wxFileCtrl</scope><name>IsExposed</name></member>
@@ -672,13 +691,13 @@
       <member refid="classwx_window_1a72d70fd14e3565bf782fbcd3271d8930" prot="public" virt="virtual"><scope>wxFileCtrl</scope><name>IsShownOnScreen</name></member>
       <member refid="classwx_window_1a657ef8b6055eb06df894ac5e6ddfecf8" prot="public" virt="non-virtual"><scope>wxFileCtrl</scope><name>IsThisEnabled</name></member>
       <member refid="classwx_window_1a0002826ad05f2a5661b4c8995713f37f" prot="public" virt="virtual"><scope>wxFileCtrl</scope><name>IsTopLevel</name></member>
+      <member refid="classwx_window_1a7940d510c5bdc062a2b109a1022dd8c2" prot="public" virt="virtual"><scope>wxFileCtrl</scope><name>IsTransparentBackgroundSupported</name></member>
       <member refid="classwx_evt_handler_1a360fdeefcf53b62fb49fb828406bb8a6" prot="public" virt="non-virtual"><scope>wxFileCtrl</scope><name>IsUnlinked</name></member>
       <member refid="classwx_window_1a1b143c3e72bd0af533b76db4830a6113" prot="public" virt="virtual"><scope>wxFileCtrl</scope><name>Layout</name></member>
       <member refid="classwx_window_1ade808784f0e64d9985e2f279b5ca8c02" prot="public" virt="non-virtual"><scope>wxFileCtrl</scope><name>LineDown</name></member>
       <member refid="classwx_window_1afc0816a174ceee6d36d1995c6824a273" prot="public" virt="non-virtual"><scope>wxFileCtrl</scope><name>LineUp</name></member>
       <member refid="classwx_window_1a124944524f36b71385dad8fddaad8ded" prot="public" virt="virtual"><scope>wxFileCtrl</scope><name>Lower</name></member>
       <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxFileCtrl</scope><name>m_refData</name></member>
-      <member refid="classwx_window_1a192fc8b467845d093c16452db96c65c5" prot="public" virt="virtual"><scope>wxFileCtrl</scope><name>MakeModal</name></member>
       <member refid="classwx_window_1ab1cb98c8d25b9e6ff7b706b1446c3df7" prot="public" virt="non-virtual"><scope>wxFileCtrl</scope><name>Move</name></member>
       <member refid="classwx_window_1a22a22c1e23ca05776707e7999d8047fe" prot="public" virt="non-virtual"><scope>wxFileCtrl</scope><name>Move</name></member>
       <member refid="classwx_window_1a79e66079125e8420de269811bdb6f2b6" prot="public" virt="non-virtual"><scope>wxFileCtrl</scope><name>MoveAfterInTabOrder</name></member>
@@ -770,6 +789,7 @@
       <member refid="classwx_window_1a89a4f62f23c1e7c845b8d07cecae4c43" prot="public" virt="non-virtual"><scope>wxFileCtrl</scope><name>SetOwnFont</name></member>
       <member refid="classwx_window_1a53f4a878e4e2d440bd00543f8014aaaa" prot="public" virt="non-virtual"><scope>wxFileCtrl</scope><name>SetOwnForegroundColour</name></member>
       <member refid="classwx_window_1aee57358435d6bd33f598c81354b47425" prot="public" virt="non-virtual"><scope>wxFileCtrl</scope><name>SetPalette</name></member>
+      <member refid="classwx_file_ctrl_1a588d1276adfe6ab5b53f41c7cf67a30d" prot="public" virt="virtual"><scope>wxFileCtrl</scope><name>SetPath</name></member>
       <member refid="classwx_window_1a81f23590239934fa10fded0566a65d8c" prot="public" virt="non-virtual"><scope>wxFileCtrl</scope><name>SetPosition</name></member>
       <member refid="classwx_window_1a07f5f7ed3f78e0ef7b3dee3f4da81001" prot="public" virt="virtual"><scope>wxFileCtrl</scope><name>SetPreviousHandler</name></member>
       <member refid="classwx_object_1afab780710f2adc1bb33310e27590140b" prot="public" virt="non-virtual"><scope>wxFileCtrl</scope><name>SetRefData</name></member>
@@ -804,7 +824,6 @@
       <member refid="classwx_window_1a88cc65e424a129d9b0057756cdb67ec9" prot="public" virt="virtual"><scope>wxFileCtrl</scope><name>TransferDataToWindow</name></member>
       <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxFileCtrl</scope><name>TryAfter</name></member>
       <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxFileCtrl</scope><name>TryBefore</name></member>
-      <member refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" virt="non-virtual"><scope>wxFileCtrl</scope><name>TryThis</name></member>
       <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxFileCtrl</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxFileCtrl</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a22e5db2ec1d19c8252c056fd116975d7" prot="public" virt="non-virtual"><scope>wxFileCtrl</scope><name>Unlink</name></member>
@@ -822,7 +841,7 @@
       <member refid="classwx_control_1a08428de2ba5cc988a86fe17071d49522" prot="public" virt="non-virtual"><scope>wxFileCtrl</scope><name>wxControl</name></member>
       <member refid="classwx_evt_handler_1a3f0166c4154227d05575b01eb2c8d4be" prot="public" virt="non-virtual"><scope>wxFileCtrl</scope><name>wxEvtHandler</name></member>
       <member refid="classwx_file_ctrl_1ad0f3935004f16b380571ead2d1b4c04c" prot="public" virt="non-virtual"><scope>wxFileCtrl</scope><name>wxFileCtrl</name></member>
-      <member refid="classwx_file_ctrl_1ab9a30fe6156c678c36774d91373134ce" prot="public" virt="non-virtual"><scope>wxFileCtrl</scope><name>wxFileCtrl</name></member>
+      <member refid="classwx_file_ctrl_1a3a4611ef0c3e9087e3768869c53ab5cc" prot="public" virt="non-virtual"><scope>wxFileCtrl</scope><name>wxFileCtrl</name></member>
       <member refid="classwx_object_1acaa378363a28af421ab56ad7b46eadf0" prot="public" virt="non-virtual"><scope>wxFileCtrl</scope><name>wxObject</name></member>
       <member refid="classwx_object_1a4721b4dc9b7aff0f30904ba2ea3954cf" prot="public" virt="non-virtual"><scope>wxFileCtrl</scope><name>wxObject</name></member>
       <member refid="classwx_window_1a695200a4915b934926dcf32afa44544c" prot="public" virt="non-virtual"><scope>wxFileCtrl</scope><name>wxWindow</name></member>

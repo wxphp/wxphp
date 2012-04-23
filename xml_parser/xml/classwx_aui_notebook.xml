@@ -20,7 +20,7 @@
 <para>The argument <emphasis>page</emphasis> indicates the page that will be split off. This page will also become the active page after the split.</para><para>The <emphasis>direction</emphasis> argument specifies where the pane should go, it should be one of the following: wxTOP, wxBOTTOM, wxLEFT, or wxRIGHT. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/auibook.h" line="325"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/auibook.h" line="360"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_notebook_1af87725d1dacec2e4091988d11c887db7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -41,7 +41,7 @@
 <para>The argument <emphasis>page</emphasis> indicates the page that will be split off. This page will also become the active page after the split.</para><para>The <emphasis>direction</emphasis> argument specifies where the pane should go, it should be one of the following: wxTOP, wxBOTTOM, wxLEFT, or wxRIGHT. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/auibook.h" line="326"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/auibook.h" line="361"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -56,7 +56,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/auibook.h" line="82"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/auibook.h" line="99"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_notebook_1a6644c4008d58ad2a5dd202c9ca4389be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -93,7 +93,7 @@
 <para>Creates a wxAuiNotebok control. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/auibook.h" line="90"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/auibook.h" line="107"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_notebook_1a1599f8298c1b42ec08bac518db00fa63" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -124,7 +124,7 @@
 <para>If the <emphasis>select</emphasis> parameter is true, calling this will generate a page change event. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/auibook.h" line="98"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/auibook.h" line="115"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_notebook_1a8cecc80f80446d49d76907fea3f91da9" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -187,7 +187,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/auibook.h" line="124"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/auibook.h" line="141"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_notebook_1a06e4efbb49d49b924eb9c41b2fa21551" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -206,7 +206,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/auibook.h" line="129"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/auibook.h" line="146"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_notebook_1aef0fbb68845b31bc3fce0535881e24ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>int</type>
@@ -225,7 +225,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/auibook.h" line="140"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/auibook.h" line="157"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_notebook_1a1f0c8010a2d29d7358b471fd96036ad4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -262,7 +262,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/auibook.h" line="148"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/auibook.h" line="165"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_notebook_1ac8534aaa80404abff11ee8741fcb8496" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -277,7 +277,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/auibook.h" line="154"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/auibook.h" line="171"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_notebook_1ae35a79605728b1defee7276db1304eab" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -295,7 +295,7 @@
 <para>Calling this method will generate a page change event. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/auibook.h" line="160"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/auibook.h" line="177"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_notebook_1a6be55e02610c358a61600360cdea86a8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_aui_tab_art" kindref="compound">wxAuiTabArt</ref> *</type>
@@ -308,7 +308,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/auibook.h" line="165"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/auibook.h" line="182"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_notebook_1a772189723b0a732f3e09d5e39a9f71a0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
@@ -323,7 +323,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/auibook.h" line="171"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/auibook.h" line="188"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_notebook_1a9fd7e66ebec0cdb0fedbd64a4d5a97e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -340,7 +340,7 @@
 <para>Use this to fit the notebook to a given page size. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/auibook.h" line="177"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/auibook.h" line="194"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_notebook_1a91dcee81f89fbdd5e7fcdff82c541632" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
@@ -358,7 +358,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/auibook.h" line="182"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/auibook.h" line="199"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_notebook_1acf5c2c017aa8e89ac5358cb0fd13929f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref></type>
@@ -375,7 +375,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/auibook.h" line="187"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/auibook.h" line="204"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_notebook_1ae001407c34a04fcb726b13efcd4985f3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>size_t</type>
@@ -389,7 +389,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/auibook.h" line="192"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/auibook.h" line="209"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_notebook_1acc9261cc049c8713b2ac5d29e3d27ab5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -406,7 +406,7 @@
 <para>If the window is not found in the notebook, wxNOT_FOUND is returned. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/auibook.h" line="198"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/auibook.h" line="215"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_notebook_1abf32e9510e7f7256c992d8102a20e759" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -424,7 +424,25 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/auibook.h" line="203"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/auibook.h" line="220"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_aui_notebook_1a3caacd690d1efb0a432799148d978dc4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxAuiNotebook::GetPageToolTip</definition>
+        <argsstring>(size_t pageIdx) const </argsstring>
+        <name>GetPageToolTip</name>
+        <param>
+          <type>size_t</type>
+          <declname>pageIdx</declname>
+        </param>
+        <briefdescription>
+<para>Returns the tooltip for the tab label of the page. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="since"><para>2.9.4 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/auibook.h" line="227"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_notebook_1a1c413283ed0003d8b8a0ba8a20d3b66e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>int</type>
@@ -438,7 +456,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/auibook.h" line="208"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/auibook.h" line="232"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_notebook_1a95926af6613f4771052ad5ad3a4a199f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -451,7 +469,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/auibook.h" line="213"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/auibook.h" line="237"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_notebook_1af77f82c0d3636bd60f281366ea584a15" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -486,7 +504,7 @@
 <para>If the <emphasis>select</emphasis> parameter is true, calling this will generate a page change event. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/auibook.h" line="224"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/auibook.h" line="248"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_notebook_1ad980264b8d066e9fd92c90e2b788da02" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -562,7 +580,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/auibook.h" line="248"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/auibook.h" line="272"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_notebook_1ad133fc6461af6afaaa8fbdeed19e4cf8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -580,7 +598,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/auibook.h" line="253"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/auibook.h" line="277"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_notebook_1ab1b3740da86630f7f1a7e3f5c7f308d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -597,7 +615,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/auibook.h" line="258"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/auibook.h" line="282"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_notebook_1ad97a013c2ad887cde7ebffc67b7a167f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -615,7 +633,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/auibook.h" line="264"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/auibook.h" line="288"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_notebook_1aafa5685354776ba6ea00c0b81afeee94" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -632,7 +650,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/auibook.h" line="269"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/auibook.h" line="293"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_notebook_1aafff2a705c043066451ddec27d003cb4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -649,7 +667,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/auibook.h" line="274"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/auibook.h" line="298"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_notebook_1ac4c14ba864265f1202d8134462048292" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -670,7 +688,7 @@
 <para>To remove a bitmap from the tab caption, pass wxNullBitmap. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/auibook.h" line="280"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/auibook.h" line="304"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_notebook_1ab1c4d17f73151f12750b6c8865fc51dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -693,7 +711,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/auibook.h" line="287"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/auibook.h" line="311"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_notebook_1a43f48e582eebf0c3991a49d15199e84e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -715,7 +733,30 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/auibook.h" line="292"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/auibook.h" line="316"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_aui_notebook_1aed55320cf754f5f6b8fffa1240dd749b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxAuiNotebook::SetPageToolTip</definition>
+        <argsstring>(size_t page, const wxString &amp;text)</argsstring>
+        <name>SetPageToolTip</name>
+        <param>
+          <type>size_t</type>
+          <declname>page</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>text</declname>
+        </param>
+        <briefdescription>
+<para>Sets the tooltip displayed when hovering over the tab label of the page. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true if tooltip was updated, false if it failed, e.g. because the page index is invalid.</para></simplesect>
+<simplesect kind="since"><para>2.9.4 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/auibook.h" line="327"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_notebook_1a46a80e69f7d52f5f10a44a1552117cf4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -732,7 +773,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/auibook.h" line="297"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/auibook.h" line="332"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_notebook_1a39e9e72d5feacebdd49b8746e34f7c8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>size_t</type>
@@ -750,7 +791,7 @@
 <para>Calling this method will generate a page change event. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/auibook.h" line="302"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/auibook.h" line="337"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_notebook_1aa784a41316fc5bde864d90ae0a3dac8a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -767,7 +808,7 @@
 <para>By default, the tab control height is calculated by measuring the text height and bitmap sizes on the tab captions. Calling this method will override that calculation and set the tab control to the specified height parameter. A call to this method will override any call to <ref refid="classwx_aui_notebook_1ae08a7c4367b3979d79962fc2ecb57f79" kindref="member">SetUniformBitmapSize()</ref>.</para><para>Specifying -1 as the height will return the control to its default auto-sizing behaviour. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/auibook.h" line="314"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/auibook.h" line="349"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_notebook_1aa91f05bfc34450fe7919264072927955" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -780,7 +821,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/auibook.h" line="333"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/auibook.h" line="368"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -788,7 +829,7 @@
     <detaileddescription>
 <para>See also <ref refid="overview_aui" kindref="compound">wxAUI Overview</ref>.</para><para><ref refid="classwx_aui_notebook" kindref="compound">wxAuiNotebook</ref> is a notebook control which implements many features common in applications with dockable panes. Specifically, <ref refid="classwx_aui_notebook" kindref="compound">wxAuiNotebook</ref> implements functionality which allows the user to rearrange tab order via drag-and-drop, split the tab window into many different splitter configurations, and toggle through different themes to customize the control&apos;s look and feel.</para><para>The default theme that is used is wxAuiDefaultTabArt, which provides a modern, glossy look and feel. The theme can be changed by calling <ref refid="classwx_aui_notebook_1ab1b3740da86630f7f1a7e3f5c7f308d2" kindref="member">wxAuiNotebook::SetArtProvider</ref>.</para><para><heading level="2">Styles</heading>
 </para><para>This class supports the following styles: <itemizedlist>
-<listitem><para>wxAUI_NB_DEFAULT_STYLE: Defined as wxAUI_NB_TOP | wxAUI_NB_TAB_SPLIT | wxAUI_NB_TAB_MOVE | wxAUI_NB_SCROLL_BUTTONS | wxAUI_NB_CLOSE_ON_ACTIVE_TAB. </para></listitem>
+<listitem><para>wxAUI_NB_DEFAULT_STYLE: Defined as wxAUI_NB_TOP | wxAUI_NB_TAB_SPLIT | wxAUI_NB_TAB_MOVE | wxAUI_NB_SCROLL_BUTTONS | wxAUI_NB_CLOSE_ON_ACTIVE_TAB | wxAUI_NB_MIDDLE_CLICK_CLOSE. </para></listitem>
 <listitem><para>wxAUI_NB_TAB_SPLIT: Allows the tab control to be split by dragging a tab. </para></listitem>
 <listitem><para>wxAUI_NB_TAB_MOVE: Allows a tab to be moved horizontally by dragging. </para></listitem>
 <listitem><para>wxAUI_NB_TAB_EXTERNAL_MOVE: Allows a tab to be moved to another tab control. </para></listitem>
@@ -798,12 +839,14 @@
 <listitem><para>wxAUI_NB_CLOSE_BUTTON: With this style, a close button is available on the tab bar. </para></listitem>
 <listitem><para>wxAUI_NB_CLOSE_ON_ACTIVE_TAB: With this style, the close button is visible on the active tab. </para></listitem>
 <listitem><para>wxAUI_NB_CLOSE_ON_ALL_TABS: With this style, the close button is visible on all tabs. </para></listitem>
+<listitem><para>wxAUI_NB_MIDDLE_CLICK_CLOSE: With this style, middle click on a tab closes the tab. </para></listitem>
 <listitem><para>wxAUI_NB_TOP: With this style, tabs are drawn along the top of the notebook. </para></listitem>
 <listitem><para>wxAUI_NB_BOTTOM: With this style, tabs are drawn along the bottom of the notebook. </para></listitem>
 </itemizedlist>
 <heading level="2">Events emitted by this class</heading>
 </para><para>The following event handler macros redirect the events to member function handlers &apos;<bold>func</bold>&apos; with prototypes like: void<nonbreakablespace/>handlerFuncName(<ref refid="classwx_aui_notebook_event" kindref="compound">wxAuiNotebookEvent</ref>&amp;<nonbreakablespace/>event)Event macros for events emitted by this class: <itemizedlist>
 <listitem><para>EVT_AUINOTEBOOK_PAGE_CLOSE(id,  func): A page is about to be closed. Processes a <computeroutput>wxEVT_COMMAND_AUINOTEBOOK_PAGE_CLOSE</computeroutput> event. </para></listitem>
+<listitem><para>EVT_AUINOTEBOOK_PAGE_CLOSED(winid,  fn): A page has been closed. Processes a <computeroutput>wxEVT_COMMAND_AUINOTEBOOK_PAGE_CLOSED</computeroutput> event. </para></listitem>
 <listitem><para>EVT_AUINOTEBOOK_PAGE_CHANGED(id,  func): The page selection was changed. Processes a <computeroutput>wxEVT_COMMAND_AUINOTEBOOK_PAGE_CHANGED</computeroutput> event. </para></listitem>
 <listitem><para>EVT_AUINOTEBOOK_PAGE_CHANGING(id,  func): The page selection is about to be changed. Processes a <computeroutput>wxEVT_COMMAND_AUINOTEBOOK_PAGE_CHANGING</computeroutput> event. This event can be vetoed. </para></listitem>
 <listitem><para>EVT_AUINOTEBOOK_BUTTON(id,  func): The window list button has been pressed. Processes a <computeroutput>wxEVT_COMMAND_AUINOTEBOOK_BUTTON</computeroutput> event. </para></listitem>
@@ -811,113 +854,119 @@
 <listitem><para>EVT_AUINOTEBOOK_END_DRAG(id,  func): Dragging has ended. Processes a <computeroutput>wxEVT_COMMAND_AUINOTEBOOK_END_DRAG</computeroutput> event. </para></listitem>
 <listitem><para>EVT_AUINOTEBOOK_DRAG_MOTION(id,  func): Emitted during a drag and drop operation. Processes a <computeroutput>wxEVT_COMMAND_AUINOTEBOOK_DRAG_MOTION</computeroutput> event. </para></listitem>
 <listitem><para>EVT_AUINOTEBOOK_ALLOW_DND(id,  func): Whether to allow a tab to be dropped. Processes a <computeroutput>wxEVT_COMMAND_AUINOTEBOOK_ALLOW_DND</computeroutput> event. This event must be specially allowed. </para></listitem>
+<listitem><para>EVT_AUINOTEBOOK_DRAG_DONE(winid,  fn): Notify that the tab has been dragged. Processes a <computeroutput>wxEVT_COMMAND_AUINOTEBOOK_DRAG_DONE</computeroutput> event. </para></listitem>
+<listitem><para>EVT_AUINOTEBOOK_TAB_MIDDLE_DOWN(winid,  fn): The middle mouse button is pressed on a tab. Processes a <computeroutput>wxEVT_COMMAND_AUINOTEBOOK_TAB_MIDDLE_DOWN</computeroutput> event. </para></listitem>
+<listitem><para>EVT_AUINOTEBOOK_TAB_MIDDLE_UP(winid,  fn): The middle mouse button is released on a tab. Processes a <computeroutput>wxEVT_COMMAND_AUINOTEBOOK_TAB_MIDDLE_UP</computeroutput> event. </para></listitem>
+<listitem><para>EVT_AUINOTEBOOK_TAB_RIGHT_DOWN(winid,  fn): The right mouse button is pressed on a tab. Processes a <computeroutput>wxEVT_COMMAND_AUINOTEBOOK_TAB_RIGHT_DOWN</computeroutput> event. </para></listitem>
+<listitem><para>EVT_AUINOTEBOOK_TAB_RIGHT_UP(winid,  fn): The right mouse button is released on a tab. Processes a <computeroutput>wxEVT_COMMAND_AUINOTEBOOK_TAB_RIGHT_UP</computeroutput> event. </para></listitem>
+<listitem><para>EVT_AUINOTEBOOK_BG_DCLICK(winid,  fn): Double clicked on the tabs background area. Processes a <computeroutput>wxEVT_COMMAND_AUINOTEBOOK_BG_DCLICK</computeroutput> event. </para></listitem>
 </itemizedlist>
 <heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxaui" kindref="member">wxAui</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__aui" kindref="compound">Window Docking (wxAUI)</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="4377">
+      <node id="4467">
         <label>wxAuiNotebook</label>
         <link refid="classwx_aui_notebook"/>
-        <childnode refid="4378" relation="public-inheritance">
+        <childnode refid="4468" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4378">
+      <node id="4468">
         <label>wxBookCtrlBase</label>
         <link refid="classwx_book_ctrl_base"/>
-        <childnode refid="4379" relation="public-inheritance">
+        <childnode refid="4469" relation="public-inheritance">
         </childnode>
-        <childnode refid="4384" relation="public-inheritance">
+        <childnode refid="4474" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4382">
+      <node id="4472">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="4381">
+      <node id="4471">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="4382" relation="public-inheritance">
+        <childnode refid="4472" relation="public-inheritance">
         </childnode>
-        <childnode refid="4383" relation="public-inheritance">
+        <childnode refid="4473" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4383">
+      <node id="4473">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="4379">
+      <node id="4469">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="4380" relation="public-inheritance">
+        <childnode refid="4470" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4380">
+      <node id="4470">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="4381" relation="public-inheritance">
+        <childnode refid="4471" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4384">
+      <node id="4474">
         <label>wxWithImages</label>
         <link refid="classwx_with_images"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="4385">
+      <node id="4475">
         <label>wxAuiNotebook</label>
         <link refid="classwx_aui_notebook"/>
-        <childnode refid="4386" relation="public-inheritance">
+        <childnode refid="4476" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4386">
+      <node id="4476">
         <label>wxBookCtrlBase</label>
         <link refid="classwx_book_ctrl_base"/>
-        <childnode refid="4387" relation="public-inheritance">
+        <childnode refid="4477" relation="public-inheritance">
         </childnode>
-        <childnode refid="4393" relation="public-inheritance">
+        <childnode refid="4483" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4390">
+      <node id="4480">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="4391" relation="usage">
+        <childnode refid="4481" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="4389">
+      <node id="4479">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="4390" relation="public-inheritance">
+        <childnode refid="4480" relation="public-inheritance">
         </childnode>
-        <childnode refid="4392" relation="public-inheritance">
+        <childnode refid="4482" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4392">
+      <node id="4482">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="4387">
+      <node id="4477">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="4388" relation="public-inheritance">
+        <childnode refid="4478" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4388">
+      <node id="4478">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="4389" relation="public-inheritance">
+        <childnode refid="4479" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4393">
+      <node id="4483">
         <label>wxWithImages</label>
         <link refid="classwx_with_images"/>
       </node>
-      <node id="4391">
+      <node id="4481">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/auibook.h" line="77" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/auibook.h" bodystart="76" bodyend="334"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/auibook.h" line="94" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/auibook.h" bodystart="93" bodyend="369"/>
     <listofallmembers>
       <member refid="classwx_window_1a3afbd49b1ea2f8275e3600dcac102923" prot="public" virt="virtual"><scope>wxAuiNotebook</scope><name>AcceptsFocus</name></member>
       <member refid="classwx_window_1a2370bdd3ab08e7ef3c7555c6aa8301b8" prot="public" virt="virtual"><scope>wxAuiNotebook</scope><name>AcceptsFocusFromKeyboard</name></member>
@@ -1050,6 +1099,7 @@
       <member refid="classwx_book_ctrl_base_1a87f9cf7b1a5abc5cca716511277b39f8" prot="public" virt="pure-virtual"><scope>wxAuiNotebook</scope><name>GetPageImage</name></member>
       <member refid="classwx_aui_notebook_1acc9261cc049c8713b2ac5d29e3d27ab5" prot="public" virt="non-virtual"><scope>wxAuiNotebook</scope><name>GetPageIndex</name></member>
       <member refid="classwx_aui_notebook_1abf32e9510e7f7256c992d8102a20e759" prot="public" virt="virtual"><scope>wxAuiNotebook</scope><name>GetPageText</name></member>
+      <member refid="classwx_aui_notebook_1a3caacd690d1efb0a432799148d978dc4" prot="public" virt="non-virtual"><scope>wxAuiNotebook</scope><name>GetPageToolTip</name></member>
       <member refid="classwx_window_1a63871f881941b99b4b94328d1c4cd163" prot="public" virt="non-virtual"><scope>wxAuiNotebook</scope><name>GetParent</name></member>
       <member refid="classwx_window_1a9b7de6ea85ca926b668ba0682a61a93e" prot="public" virt="non-virtual"><scope>wxAuiNotebook</scope><name>GetPopupMenuSelectionFromUser</name></member>
       <member refid="classwx_window_1a00f5cb3cac003205317a565a33d4bb27" prot="public" virt="non-virtual"><scope>wxAuiNotebook</scope><name>GetPopupMenuSelectionFromUser</name></member>
@@ -1106,6 +1156,7 @@
       <member refid="classwx_aui_notebook_1ad980264b8d066e9fd92c90e2b788da02" prot="public" virt="virtual"><scope>wxAuiNotebook</scope><name>InsertPage</name></member>
       <member refid="classwx_window_1ae1b56ca87d8590ee5e576012229a380a" prot="public" virt="non-virtual"><scope>wxAuiNotebook</scope><name>InvalidateBestSize</name></member>
       <member refid="classwx_window_1af918e6fe8565c2d5235973cc3de84a43" prot="public" virt="non-virtual"><scope>wxAuiNotebook</scope><name>IsBeingDeleted</name></member>
+      <member refid="classwx_window_1a469f0881da248d37691440c9d4cc7200" prot="public" virt="non-virtual"><scope>wxAuiNotebook</scope><name>IsDescendant</name></member>
       <member refid="classwx_window_1a9d1be1bbb625ebf87ad4ad47e49a0194" prot="public" virt="virtual"><scope>wxAuiNotebook</scope><name>IsDoubleBuffered</name></member>
       <member refid="classwx_window_1a59452a5bd42f5ea4b31d7fc4aa59644f" prot="public" virt="non-virtual"><scope>wxAuiNotebook</scope><name>IsEnabled</name></member>
       <member refid="classwx_window_1af27ef77c913e32050543f3b0ca435a0d" prot="public" virt="non-virtual"><scope>wxAuiNotebook</scope><name>IsExposed</name></member>
@@ -1121,13 +1172,13 @@
       <member refid="classwx_window_1a72d70fd14e3565bf782fbcd3271d8930" prot="public" virt="virtual"><scope>wxAuiNotebook</scope><name>IsShownOnScreen</name></member>
       <member refid="classwx_window_1a657ef8b6055eb06df894ac5e6ddfecf8" prot="public" virt="non-virtual"><scope>wxAuiNotebook</scope><name>IsThisEnabled</name></member>
       <member refid="classwx_window_1a0002826ad05f2a5661b4c8995713f37f" prot="public" virt="virtual"><scope>wxAuiNotebook</scope><name>IsTopLevel</name></member>
+      <member refid="classwx_window_1a7940d510c5bdc062a2b109a1022dd8c2" prot="public" virt="virtual"><scope>wxAuiNotebook</scope><name>IsTransparentBackgroundSupported</name></member>
       <member refid="classwx_evt_handler_1a360fdeefcf53b62fb49fb828406bb8a6" prot="public" virt="non-virtual"><scope>wxAuiNotebook</scope><name>IsUnlinked</name></member>
       <member refid="classwx_window_1a1b143c3e72bd0af533b76db4830a6113" prot="public" virt="virtual"><scope>wxAuiNotebook</scope><name>Layout</name></member>
       <member refid="classwx_window_1ade808784f0e64d9985e2f279b5ca8c02" prot="public" virt="non-virtual"><scope>wxAuiNotebook</scope><name>LineDown</name></member>
       <member refid="classwx_window_1afc0816a174ceee6d36d1995c6824a273" prot="public" virt="non-virtual"><scope>wxAuiNotebook</scope><name>LineUp</name></member>
       <member refid="classwx_window_1a124944524f36b71385dad8fddaad8ded" prot="public" virt="virtual"><scope>wxAuiNotebook</scope><name>Lower</name></member>
       <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxAuiNotebook</scope><name>m_refData</name></member>
-      <member refid="classwx_window_1a192fc8b467845d093c16452db96c65c5" prot="public" virt="virtual"><scope>wxAuiNotebook</scope><name>MakeModal</name></member>
       <member refid="classwx_window_1ab1cb98c8d25b9e6ff7b706b1446c3df7" prot="public" virt="non-virtual"><scope>wxAuiNotebook</scope><name>Move</name></member>
       <member refid="classwx_window_1a22a22c1e23ca05776707e7999d8047fe" prot="public" virt="non-virtual"><scope>wxAuiNotebook</scope><name>Move</name></member>
       <member refid="classwx_window_1a79e66079125e8420de269811bdb6f2b6" prot="public" virt="non-virtual"><scope>wxAuiNotebook</scope><name>MoveAfterInTabOrder</name></member>
@@ -1135,7 +1186,7 @@
       <member refid="classwx_window_1a86904f6785df4af6036b33383490a805" prot="public" virt="non-virtual"><scope>wxAuiNotebook</scope><name>Navigate</name></member>
       <member refid="classwx_window_1aa58039c8fc65e19160becf510ee1d1d5" prot="public" virt="non-virtual"><scope>wxAuiNotebook</scope><name>NavigateIn</name></member>
       <member refid="classwx_window_1a8175da594e6045635a1d1cfe775cdddb" prot="public" virt="non-virtual"><scope>wxAuiNotebook</scope><name>NewControlId</name></member>
-      <member refid="classwx_book_ctrl_base_1aed8700a5492ca104d2792d9bafea2167a76a5551525c61310e58ed494b5d4d730" prot="public" virt="non-virtual"><scope>wxAuiNotebook</scope><name>NO_IMAGE</name></member>
+      <member refid="classwx_book_ctrl_base_1a2329dd4eea633a8764dbc29ac353c1a6a76a5551525c61310e58ed494b5d4d730" prot="public" virt="non-virtual"><scope>wxAuiNotebook</scope><name>NO_IMAGE</name></member>
       <member refid="classwx_window_1a6b5654c0c6c6245d592c279521f7099c" prot="public" virt="virtual"><scope>wxAuiNotebook</scope><name>OnInternalIdle</name></member>
       <member refid="classwx_object_1a07b8f34f5afc5743195c5fed052f55d3" prot="public" virt="non-virtual"><scope>wxAuiNotebook</scope><name>operator delete</name></member>
       <member refid="classwx_object_1a96fa423a1dbc212c8227a5d83825971f" prot="public" virt="non-virtual"><scope>wxAuiNotebook</scope><name>operator new</name></member>
@@ -1225,6 +1276,7 @@
       <member refid="classwx_aui_notebook_1ab1c4d17f73151f12750b6c8865fc51dd" prot="public" virt="virtual"><scope>wxAuiNotebook</scope><name>SetPageImage</name></member>
       <member refid="classwx_book_ctrl_base_1a7ab6ba69644452e74bf914b3c30a9e58" prot="public" virt="virtual"><scope>wxAuiNotebook</scope><name>SetPageSize</name></member>
       <member refid="classwx_aui_notebook_1a43f48e582eebf0c3991a49d15199e84e" prot="public" virt="virtual"><scope>wxAuiNotebook</scope><name>SetPageText</name></member>
+      <member refid="classwx_aui_notebook_1aed55320cf754f5f6b8fffa1240dd749b" prot="public" virt="non-virtual"><scope>wxAuiNotebook</scope><name>SetPageToolTip</name></member>
       <member refid="classwx_window_1aee57358435d6bd33f598c81354b47425" prot="public" virt="non-virtual"><scope>wxAuiNotebook</scope><name>SetPalette</name></member>
       <member refid="classwx_window_1a81f23590239934fa10fded0566a65d8c" prot="public" virt="non-virtual"><scope>wxAuiNotebook</scope><name>SetPosition</name></member>
       <member refid="classwx_window_1a07f5f7ed3f78e0ef7b3dee3f4da81001" prot="public" virt="virtual"><scope>wxAuiNotebook</scope><name>SetPreviousHandler</name></member>
@@ -1264,7 +1316,6 @@
       <member refid="classwx_window_1a88cc65e424a129d9b0057756cdb67ec9" prot="public" virt="virtual"><scope>wxAuiNotebook</scope><name>TransferDataToWindow</name></member>
       <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxAuiNotebook</scope><name>TryAfter</name></member>
       <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxAuiNotebook</scope><name>TryBefore</name></member>
-      <member refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" virt="non-virtual"><scope>wxAuiNotebook</scope><name>TryThis</name></member>
       <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxAuiNotebook</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxAuiNotebook</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a22e5db2ec1d19c8252c056fd116975d7" prot="public" virt="non-virtual"><scope>wxAuiNotebook</scope><name>Unlink</name></member>

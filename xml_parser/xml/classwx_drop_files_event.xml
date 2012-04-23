@@ -31,7 +31,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2580"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="2575"/>
       </memberdef>
       <memberdef kind="function" id="classwx_drop_files_event_1ac0d7ad82ffbfa635f745818edff55306" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref> *</type>
@@ -44,7 +44,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2585"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="2580"/>
       </memberdef>
       <memberdef kind="function" id="classwx_drop_files_event_1a5495ee4dca291671f132dcc493aeb6c1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -57,7 +57,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2590"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="2585"/>
       </memberdef>
       <memberdef kind="function" id="classwx_drop_files_event_1ae958700b1bed1e7142ac2526fd89b0f9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_point" kindref="compound">wxPoint</ref></type>
@@ -70,7 +70,7 @@
 <para>Returns an array of filenames. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2596"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="2591"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -84,49 +84,49 @@ Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="overview_events" kindref="compound">Events and Event Handling</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="5787">
+      <node id="5902">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="5785">
+      <node id="5900">
         <label>wxDropFilesEvent</label>
         <link refid="classwx_drop_files_event"/>
-        <childnode refid="5786" relation="public-inheritance">
+        <childnode refid="5901" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5786">
+      <node id="5901">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="5787" relation="public-inheritance">
+        <childnode refid="5902" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="5790">
+      <node id="5905">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="5791" relation="usage">
+        <childnode refid="5906" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="5788">
+      <node id="5903">
         <label>wxDropFilesEvent</label>
         <link refid="classwx_drop_files_event"/>
-        <childnode refid="5789" relation="public-inheritance">
+        <childnode refid="5904" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5789">
+      <node id="5904">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="5790" relation="public-inheritance">
+        <childnode refid="5905" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5791">
+      <node id="5906">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2574" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="2573" bodyend="2597"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="2569" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="2568" bodyend="2592"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxDropFilesEvent</scope><name>AllocExclusive</name></member>
       <member refid="classwx_event_1a26878097a702e8d0368da150125d4158" prot="public" virt="pure-virtual"><scope>wxDropFilesEvent</scope><name>Clone</name></member>

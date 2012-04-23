@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bitmap.h" line="13" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bitmap.h" bodystart="13" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/bitmap.h" line="13" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/bitmap.h" bodystart="13" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="var">
@@ -30,13 +30,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bitmap.h" line="671" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bitmap.h" bodystart="671" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/bitmap.h" line="671" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/bitmap.h" bodystart="671" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bitmap.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/bitmap.h"/>
   </compounddef>
 </doxygen>

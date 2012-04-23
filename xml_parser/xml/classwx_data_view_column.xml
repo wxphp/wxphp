@@ -86,7 +86,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2010"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" line="2010"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_column_1a3a63c1a874e68ba998b271b4efd4d4e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -169,7 +169,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2034"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" line="2034"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_column_1a3885ad1e61cd529122233e5a468a7ba4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>unsigned int</type>
@@ -182,7 +182,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2040"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" line="2040"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_column_1a70a28c97efb54639253acf1c6b7254f7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_data_view_ctrl" kindref="compound">wxDataViewCtrl</ref> *</type>
@@ -195,7 +195,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2045"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" line="2045"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_column_1a47b8650061878b4ae07751f696d9b9cd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_data_view_renderer" kindref="compound">wxDataViewRenderer</ref> *</type>
@@ -209,7 +209,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2052"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" line="2052"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -218,42 +218,42 @@
 <para>One <ref refid="classwx_data_view_column" kindref="compound">wxDataViewColumn</ref> is bound to one column in the data model to which the <ref refid="classwx_data_view_ctrl" kindref="compound">wxDataViewCtrl</ref> has been associated.</para><para>An instance of <ref refid="classwx_data_view_renderer" kindref="compound">wxDataViewRenderer</ref> is used by this class to render its data.</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__dvc" kindref="compound">wxDataViewCtrl Related Classes</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="5282">
+      <node id="5377">
         <label>wxSettableHeaderColumn</label>
         <link refid="classwx_settable_header_column"/>
-        <childnode refid="5283" relation="public-inheritance">
+        <childnode refid="5378" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5283">
+      <node id="5378">
         <label>wxHeaderColumn</label>
         <link refid="classwx_header_column"/>
       </node>
-      <node id="5281">
+      <node id="5376">
         <label>wxDataViewColumn</label>
         <link refid="classwx_data_view_column"/>
-        <childnode refid="5282" relation="public-inheritance">
+        <childnode refid="5377" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="5285">
+      <node id="5380">
         <label>wxSettableHeaderColumn</label>
         <link refid="classwx_settable_header_column"/>
-        <childnode refid="5286" relation="public-inheritance">
+        <childnode refid="5381" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5286">
+      <node id="5381">
         <label>wxHeaderColumn</label>
         <link refid="classwx_header_column"/>
       </node>
-      <node id="5284">
+      <node id="5379">
         <label>wxDataViewColumn</label>
         <link refid="classwx_data_view_column"/>
-        <childnode refid="5285" relation="public-inheritance">
+        <childnode refid="5380" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="1986" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" bodystart="1985" bodyend="2053"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" line="1986" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" bodystart="1985" bodyend="2053"/>
     <listofallmembers>
       <member refid="classwx_settable_header_column_1ae4c0570355a3c4b712352457c925a7dd" prot="public" virt="non-virtual"><scope>wxDataViewColumn</scope><name>ChangeFlag</name></member>
       <member refid="classwx_settable_header_column_1afb2fa0ed8e8e729d16ff9fefe9e41a26" prot="public" virt="non-virtual"><scope>wxDataViewColumn</scope><name>ClearFlag</name></member>

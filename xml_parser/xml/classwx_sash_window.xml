@@ -17,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sashwin.h" line="74"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sashwin.h" line="74"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sash_window_1aed974ee33685e7a209f061e39cf13451" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -101,7 +101,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sashwin.h" line="100"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sashwin.h" line="100"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sash_window_1a64f2c2a520b39f27cf25f23026ab15e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -114,7 +114,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sashwin.h" line="105"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sashwin.h" line="105"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sash_window_1a36e0ec36504f8a47142b19d189a53ed3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>int</type>
@@ -127,7 +127,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sashwin.h" line="110"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sashwin.h" line="110"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sash_window_1a1733654b6053bcdc113a8d9db0045e13" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>int</type>
@@ -140,7 +140,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sashwin.h" line="115"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sashwin.h" line="115"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sash_window_1ab43ff8ab6cce73ee2c95ad01a3d9f3fd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>int</type>
@@ -153,7 +153,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sashwin.h" line="120"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sashwin.h" line="120"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sash_window_1aab48d586d85468819b6b588306dcfc25" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>int</type>
@@ -166,7 +166,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sashwin.h" line="125"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sashwin.h" line="125"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sash_window_1a2a68532a10d3f5c8c4b109564fcdb69c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -192,7 +192,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sashwin.h" line="135"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sashwin.h" line="135"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sash_window_1a6cbd57e36ac74497b6c250f88722ccfa" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -218,7 +218,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sashwin.h" line="146"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sashwin.h" line="146"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sash_window_1a31a5d16924b62648c44d966ff9a87414" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -235,7 +235,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sashwin.h" line="151"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sashwin.h" line="151"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sash_window_1a611a11221cd17757a44e944dd4ee90a5" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -252,7 +252,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sashwin.h" line="156"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sashwin.h" line="156"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sash_window_1a1de8e31899aacc41f9bffa7f25c2f9f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -269,7 +269,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sashwin.h" line="161"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sashwin.h" line="161"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sash_window_1a29bdb16095ffd1de0eb4d90ff3afa153" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -286,7 +286,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sashwin.h" line="166"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sashwin.h" line="166"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sash_window_1a4bd1cfe1fdad921435a1536f07cdfa1e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -322,7 +322,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sashwin.h" line="177"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sashwin.h" line="177"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sash_window_1a2d1c7d1912a7e0107501af0281d02cb3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -359,7 +359,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sashwin.h" line="189"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sashwin.h" line="189"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -381,79 +381,79 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__miscwnd" kindref="compound">Miscellaneous Windows</ref></para><para><simplesect kind="see"><para><ref refid="classwx_sash_event" kindref="compound">wxSashEvent</ref>, <ref refid="classwx_sash_layout_window" kindref="compound">wxSashLayoutWindow</ref>, <ref refid="overview_events" kindref="compound">Events and Event Handling</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10067">
+      <node id="10250">
         <label>wxSashLayoutWindow</label>
         <link refid="classwx_sash_layout_window"/>
-        <childnode refid="10062" relation="public-inheritance">
+        <childnode refid="10245" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10065">
+      <node id="10248">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="10064">
+      <node id="10247">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="10065" relation="public-inheritance">
+        <childnode refid="10248" relation="public-inheritance">
         </childnode>
-        <childnode refid="10066" relation="public-inheritance">
+        <childnode refid="10249" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10066">
+      <node id="10249">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="10063">
+      <node id="10246">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="10064" relation="public-inheritance">
+        <childnode refid="10247" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10062">
+      <node id="10245">
         <label>wxSashWindow</label>
         <link refid="classwx_sash_window"/>
-        <childnode refid="10063" relation="public-inheritance">
+        <childnode refid="10246" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10071">
+      <node id="10254">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="10072" relation="usage">
+        <childnode refid="10255" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="10070">
+      <node id="10253">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="10071" relation="public-inheritance">
+        <childnode refid="10254" relation="public-inheritance">
         </childnode>
-        <childnode refid="10073" relation="public-inheritance">
+        <childnode refid="10256" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10073">
+      <node id="10256">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="10069">
+      <node id="10252">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="10070" relation="public-inheritance">
+        <childnode refid="10253" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10072">
+      <node id="10255">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
-      <node id="10068">
+      <node id="10251">
         <label>wxSashWindow</label>
         <link refid="classwx_sash_window"/>
-        <childnode refid="10069" relation="public-inheritance">
+        <childnode refid="10252" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sashwin.h" line="69" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sashwin.h" bodystart="68" bodyend="190"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sashwin.h" line="69" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/sashwin.h" bodystart="68" bodyend="190"/>
     <listofallmembers>
       <member refid="classwx_window_1a3afbd49b1ea2f8275e3600dcac102923" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>AcceptsFocus</name></member>
       <member refid="classwx_window_1a2370bdd3ab08e7ef3c7555c6aa8301b8" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>AcceptsFocusFromKeyboard</name></member>
@@ -617,6 +617,7 @@
       <member refid="classwx_window_1aa90a260c0a835a133043460b7d0024a8" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>InitDialog</name></member>
       <member refid="classwx_window_1ae1b56ca87d8590ee5e576012229a380a" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>InvalidateBestSize</name></member>
       <member refid="classwx_window_1af918e6fe8565c2d5235973cc3de84a43" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>IsBeingDeleted</name></member>
+      <member refid="classwx_window_1a469f0881da248d37691440c9d4cc7200" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>IsDescendant</name></member>
       <member refid="classwx_window_1a9d1be1bbb625ebf87ad4ad47e49a0194" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>IsDoubleBuffered</name></member>
       <member refid="classwx_window_1a59452a5bd42f5ea4b31d7fc4aa59644f" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>IsEnabled</name></member>
       <member refid="classwx_window_1af27ef77c913e32050543f3b0ca435a0d" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>IsExposed</name></member>
@@ -632,13 +633,13 @@
       <member refid="classwx_window_1a72d70fd14e3565bf782fbcd3271d8930" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>IsShownOnScreen</name></member>
       <member refid="classwx_window_1a657ef8b6055eb06df894ac5e6ddfecf8" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>IsThisEnabled</name></member>
       <member refid="classwx_window_1a0002826ad05f2a5661b4c8995713f37f" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>IsTopLevel</name></member>
+      <member refid="classwx_window_1a7940d510c5bdc062a2b109a1022dd8c2" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>IsTransparentBackgroundSupported</name></member>
       <member refid="classwx_evt_handler_1a360fdeefcf53b62fb49fb828406bb8a6" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>IsUnlinked</name></member>
       <member refid="classwx_window_1a1b143c3e72bd0af533b76db4830a6113" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>Layout</name></member>
       <member refid="classwx_window_1ade808784f0e64d9985e2f279b5ca8c02" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>LineDown</name></member>
       <member refid="classwx_window_1afc0816a174ceee6d36d1995c6824a273" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>LineUp</name></member>
       <member refid="classwx_window_1a124944524f36b71385dad8fddaad8ded" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>Lower</name></member>
       <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxSashWindow</scope><name>m_refData</name></member>
-      <member refid="classwx_window_1a192fc8b467845d093c16452db96c65c5" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>MakeModal</name></member>
       <member refid="classwx_window_1ab1cb98c8d25b9e6ff7b706b1446c3df7" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>Move</name></member>
       <member refid="classwx_window_1a22a22c1e23ca05776707e7999d8047fe" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>Move</name></member>
       <member refid="classwx_window_1a79e66079125e8420de269811bdb6f2b6" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>MoveAfterInTabOrder</name></member>
@@ -762,7 +763,6 @@
       <member refid="classwx_window_1a88cc65e424a129d9b0057756cdb67ec9" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>TransferDataToWindow</name></member>
       <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxSashWindow</scope><name>TryAfter</name></member>
       <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxSashWindow</scope><name>TryBefore</name></member>
-      <member refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" virt="non-virtual"><scope>wxSashWindow</scope><name>TryThis</name></member>
       <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a22e5db2ec1d19c8252c056fd116975d7" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>Unlink</name></member>

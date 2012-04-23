@@ -22,7 +22,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h" line="140"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/colour.h" line="140"/>
       </memberdef>
       <memberdef kind="function" id="classwx_colour_1a940633aa9d78da10bf86cf6848364579" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -41,7 +41,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h" line="141"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/colour.h" line="141"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -57,7 +57,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h" line="158"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/colour.h" line="158"/>
       </memberdef>
       <memberdef kind="function" id="classwx_colour_1a1d2e4202099e997473e52adfd877d438" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="defs_8h_1afdb12e5345c3fae4b537e813df9f02a3" kindref="member">wxUint32</ref></type>
@@ -71,7 +71,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h" line="159"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/colour.h" line="159"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -104,7 +104,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h" line="203"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/colour.h" line="203"/>
       </memberdef>
       <memberdef kind="function" id="classwx_colour_1aeb9a24555fadb810c68d1c072a977fb3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -122,7 +122,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h" line="204"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/colour.h" line="204"/>
       </memberdef>
       <memberdef kind="function" id="classwx_colour_1a08e9f56265647b8b5e1349b76eb728e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -140,7 +140,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h" line="205"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/colour.h" line="205"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -155,7 +155,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h" line="63"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/colour.h" line="63"/>
       </memberdef>
       <memberdef kind="function" id="classwx_colour_1a1ae10cc5b32d6000c23eaf29b9947c48" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -214,7 +214,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h" line="77"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/colour.h" line="77"/>
       </memberdef>
       <memberdef kind="function" id="classwx_colour_1ae114ff88fe3a07477d111baa01c1b325" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -239,7 +239,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h" line="83"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/colour.h" line="83"/>
       </memberdef>
       <memberdef kind="function" id="classwx_colour_1a118c5ebc8a4f787887ccfa8f28c19ef8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -264,7 +264,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h" line="89"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/colour.h" line="89"/>
       </memberdef>
       <memberdef kind="function" id="classwx_colour_1a0fbc51432a57424a0538d0932af6bf78" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -281,7 +281,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h" line="94"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/colour.h" line="94"/>
       </memberdef>
       <memberdef kind="function" id="classwx_colour_1a167c65bd9d57dc17953b9a8458b33cbf" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>unsigned char</type>
@@ -294,7 +294,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h" line="100"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/colour.h" line="100"/>
       </memberdef>
       <memberdef kind="function" id="classwx_colour_1a01fc129bb30019a1ecbbfaa5d12afab5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>unsigned char</type>
@@ -307,7 +307,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h" line="105"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/colour.h" line="105"/>
       </memberdef>
       <memberdef kind="function" id="classwx_colour_1acd9eda2800e18506fbb74763ce4e7de6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -326,7 +326,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h" line="124"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/colour.h" line="124"/>
       </memberdef>
       <memberdef kind="function" id="classwx_colour_1a7764c30275bba44ea826a07b4519c3ac" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="defs_8h_1adc7fafddfefae454021d2e0660c96487" kindref="member">wxIntPtr</ref></type>
@@ -339,7 +339,7 @@
 <para>On Windows, a COLORREF is returned. On X, an allocated pixel value is returned. If the pixel is invalid (on X, unallocated), <computeroutput>-1</computeroutput> is returned. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h" line="168"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/colour.h" line="168"/>
       </memberdef>
       <memberdef kind="function" id="classwx_colour_1ac41983903a9e2de5e53a547c16cbe119" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>unsigned char</type>
@@ -352,7 +352,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h" line="173"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/colour.h" line="173"/>
       </memberdef>
       <memberdef kind="function" id="classwx_colour_1a5616c16dbc5f312421adb50a49720320" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -365,7 +365,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h" line="179"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/colour.h" line="179"/>
       </memberdef>
       <memberdef kind="function" id="classwx_colour_1ac1e9ac2d07f8634f0958a644ea2deb96" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>unsigned char</type>
@@ -378,7 +378,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h" line="184"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/colour.h" line="184"/>
       </memberdef>
       <memberdef kind="function" id="classwx_colour_1a0ff89e822ba5aab75b688bf68684e277" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -395,7 +395,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h" line="212"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/colour.h" line="212"/>
       </memberdef>
       <memberdef kind="function" id="classwx_colour_1a3626b79f7c04fb3877a7a69ba4b7086f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_colour" kindref="compound">wxColour</ref> &amp;</type>
@@ -413,7 +413,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h" line="219"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/colour.h" line="219"/>
       </memberdef>
       <memberdef kind="function" id="classwx_colour_1ad806f8d25728374205d6edadbbbe0c02" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -430,7 +430,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h" line="225"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/colour.h" line="225"/>
       </memberdef>
       <memberdef kind="function" id="classwx_colour_1a5245fe28b2756fc1a49a62c76d58ba02" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_colour" kindref="compound">wxColour</ref></type>
@@ -448,7 +448,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h" line="273"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/colour.h" line="273"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -480,7 +480,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h" line="231"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/colour.h" line="231"/>
       </memberdef>
       <memberdef kind="function" id="classwx_colour_1afc71a8208268eb8fa682e43524478c69" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -511,7 +511,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h" line="237"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/colour.h" line="237"/>
       </memberdef>
       <memberdef kind="function" id="classwx_colour_1a45e74c88fdab10e07164abe02c1b011a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -537,7 +537,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h" line="243"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/colour.h" line="243"/>
       </memberdef>
       <memberdef kind="function" id="classwx_colour_1a9020f882bba4f92bb68fcc7fd6d7cff4" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -575,7 +575,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h" line="252"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/colour.h" line="252"/>
       </memberdef>
       <memberdef kind="function" id="classwx_colour_1a9674d4508549c1fbc983e5582fd86bed" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>unsigned char</type>
@@ -601,7 +601,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h" line="258"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/colour.h" line="258"/>
       </memberdef>
       <memberdef kind="function" id="classwx_colour_1af225e6fafd00001ac3612aaf26fe5501" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -631,7 +631,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h" line="267"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/colour.h" line="267"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -643,37 +643,37 @@
 </para><para><simplesect kind="see"><para><ref refid="classwx_colour_database" kindref="compound">wxColourDatabase</ref>, <ref refid="classwx_pen" kindref="compound">wxPen</ref>, <ref refid="classwx_brush" kindref="compound">wxBrush</ref>, <ref refid="classwx_colour_dialog" kindref="compound">wxColourDialog</ref>, <ref refid="classwx_system_settings" kindref="compound">wxSystemSettings</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="4852">
+      <node id="4944">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="4851">
+      <node id="4943">
         <label>wxColour</label>
         <link refid="classwx_colour"/>
-        <childnode refid="4852" relation="public-inheritance">
+        <childnode refid="4944" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="4854">
+      <node id="4946">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="4855" relation="usage">
+        <childnode refid="4947" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="4853">
+      <node id="4945">
         <label>wxColour</label>
         <link refid="classwx_colour"/>
-        <childnode refid="4854" relation="public-inheritance">
+        <childnode refid="4946" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4855">
+      <node id="4947">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h" line="57" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h" bodystart="56" bodyend="274"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/colour.h" line="57" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/colour.h" bodystart="56" bodyend="274"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxColour</scope><name>AllocExclusive</name></member>
       <member refid="classwx_colour_1a167c65bd9d57dc17953b9a8458b33cbf" prot="public" virt="virtual"><scope>wxColour</scope><name>Alpha</name></member>

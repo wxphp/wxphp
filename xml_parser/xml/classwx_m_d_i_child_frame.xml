@@ -17,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mdi.h" line="377"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mdi.h" line="377"/>
       </memberdef>
       <memberdef kind="function" id="classwx_m_d_i_child_frame_1ad37698541afe79aeecb20919ecbab4fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -113,7 +113,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mdi.h" line="409"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mdi.h" line="409"/>
       </memberdef>
       <memberdef kind="function" id="classwx_m_d_i_child_frame_1ac5250d3a3edb3b001f68e3a6932bae18" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -126,7 +126,7 @@
 <para>Destroys all child windows and menu bar if present. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mdi.h" line="414"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mdi.h" line="414"/>
       </memberdef>
       <memberdef kind="function" id="classwx_m_d_i_child_frame_1a41a8b7c8c9a2dce1004c9ef094ade8db" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -140,7 +140,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mdi.h" line="421"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mdi.h" line="421"/>
       </memberdef>
       <memberdef kind="function" id="classwx_m_d_i_child_frame_1a0b95030a98744516707c4effdb670d21" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -185,7 +185,7 @@
 <para>See <ref refid="classwx_m_d_i_child_frame_1aa1adde0f4d658fb8aa704eb9cf992cd9" kindref="member">wxMDIChildFrame()</ref> for further details. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mdi.h" line="431"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mdi.h" line="431"/>
       </memberdef>
       <memberdef kind="function" id="classwx_m_d_i_child_frame_1a15ff6b3d006a52f12c31410db2970450" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_m_d_i_parent_frame" kindref="compound">wxMDIParentFrame</ref> *</type>
@@ -198,7 +198,7 @@
 <para>Notice that this may return a different object than <ref refid="classwx_window_1a63871f881941b99b4b94328d1c4cd163" kindref="member">GetParent()</ref> as the child frames may be created as children of the client window internally. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mdi.h" line="440"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mdi.h" line="440"/>
       </memberdef>
       <memberdef kind="function" id="classwx_m_d_i_child_frame_1a2fac04403b6e684ddfd692ed8d9d8cc5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -213,7 +213,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mdi.h" line="451"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mdi.h" line="451"/>
       </memberdef>
       <memberdef kind="function" id="classwx_m_d_i_child_frame_1a050f0818cb669338ad74b189b77e9b20" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -233,7 +233,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mdi.h" line="460"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mdi.h" line="460"/>
       </memberdef>
       <memberdef kind="function" id="classwx_m_d_i_child_frame_1ad04977c9edd7c4766b2c3358be6b0d2d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -247,7 +247,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mdi.h" line="469"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mdi.h" line="469"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -259,115 +259,115 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__managedwnd" kindref="compound">Managed Windows</ref></para><para><simplesect kind="see"><para><ref refid="classwx_m_d_i_client_window" kindref="compound">wxMDIClientWindow</ref>, <ref refid="classwx_m_d_i_parent_frame" kindref="compound">wxMDIParentFrame</ref>, <ref refid="classwx_frame" kindref="compound">wxFrame</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7603">
+      <node id="7796">
         <label>wxNonOwnedWindow</label>
         <link refid="classwx_non_owned_window"/>
-        <childnode refid="7604" relation="public-inheritance">
+        <childnode refid="7797" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7600">
+      <node id="7793">
         <label>wxMDIChildFrame</label>
         <link refid="classwx_m_d_i_child_frame"/>
-        <childnode refid="7601" relation="public-inheritance">
+        <childnode refid="7794" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7606">
+      <node id="7799">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="7605">
+      <node id="7798">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="7606" relation="public-inheritance">
+        <childnode refid="7799" relation="public-inheritance">
         </childnode>
-        <childnode refid="7607" relation="public-inheritance">
+        <childnode refid="7800" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7607">
+      <node id="7800">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="7604">
+      <node id="7797">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="7605" relation="public-inheritance">
+        <childnode refid="7798" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7601">
+      <node id="7794">
         <label>wxFrame</label>
         <link refid="classwx_frame"/>
-        <childnode refid="7602" relation="public-inheritance">
+        <childnode refid="7795" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7602">
+      <node id="7795">
         <label>wxTopLevelWindow</label>
         <link refid="classwx_top_level_window"/>
-        <childnode refid="7603" relation="public-inheritance">
+        <childnode refid="7796" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7608">
+      <node id="7801">
         <label>wxDocMDIChildFrame</label>
         <link refid="classwx_doc_m_d_i_child_frame"/>
-        <childnode refid="7600" relation="public-inheritance">
+        <childnode refid="7793" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7612">
+      <node id="7805">
         <label>wxNonOwnedWindow</label>
         <link refid="classwx_non_owned_window"/>
-        <childnode refid="7613" relation="public-inheritance">
+        <childnode refid="7806" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7609">
+      <node id="7802">
         <label>wxMDIChildFrame</label>
         <link refid="classwx_m_d_i_child_frame"/>
-        <childnode refid="7610" relation="public-inheritance">
+        <childnode refid="7803" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7615">
+      <node id="7808">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="7616" relation="usage">
+        <childnode refid="7809" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="7614">
+      <node id="7807">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="7615" relation="public-inheritance">
+        <childnode refid="7808" relation="public-inheritance">
         </childnode>
-        <childnode refid="7617" relation="public-inheritance">
+        <childnode refid="7810" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7617">
+      <node id="7810">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="7613">
+      <node id="7806">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="7614" relation="public-inheritance">
+        <childnode refid="7807" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7610">
+      <node id="7803">
         <label>wxFrame</label>
         <link refid="classwx_frame"/>
-        <childnode refid="7611" relation="public-inheritance">
+        <childnode refid="7804" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7611">
+      <node id="7804">
         <label>wxTopLevelWindow</label>
         <link refid="classwx_top_level_window"/>
-        <childnode refid="7612" relation="public-inheritance">
+        <childnode refid="7805" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7616">
+      <node id="7809">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mdi.h" line="372" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mdi.h" bodystart="371" bodyend="470"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mdi.h" line="372" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/mdi.h" bodystart="371" bodyend="470"/>
     <listofallmembers>
       <member refid="classwx_window_1a3afbd49b1ea2f8275e3600dcac102923" prot="public" virt="virtual"><scope>wxMDIChildFrame</scope><name>AcceptsFocus</name></member>
       <member refid="classwx_window_1a2370bdd3ab08e7ef3c7555c6aa8301b8" prot="public" virt="virtual"><scope>wxMDIChildFrame</scope><name>AcceptsFocusFromKeyboard</name></member>
@@ -407,7 +407,7 @@
       <member refid="classwx_frame_1a6541d1aab71fc90041bfdde6e8705add" prot="public" virt="non-virtual" ambiguityscope="wxFrame::"><scope>wxMDIChildFrame</scope><name>Create</name></member>
       <member refid="classwx_window_1a95b7ca8faa033f5ab35458887c07bf38" prot="public" virt="non-virtual" ambiguityscope="wxNonOwnedWindow::"><scope>wxMDIChildFrame</scope><name>Create</name></member>
       <member refid="classwx_object_1a95c6a5e4e1e03ff23c7b9efe4cff0c1a" prot="protected" virt="virtual"><scope>wxMDIChildFrame</scope><name>CreateRefData</name></member>
-      <member refid="classwx_frame_1ae8a54b5e9eed1ed7483be05e0706e346" prot="public" virt="virtual"><scope>wxMDIChildFrame</scope><name>CreateStatusBar</name></member>
+      <member refid="classwx_frame_1aaa5134dcecc1ec77386465a327dd0a21" prot="public" virt="virtual"><scope>wxMDIChildFrame</scope><name>CreateStatusBar</name></member>
       <member refid="classwx_frame_1a529698edc2fd2037ac8578dadafad0e2" prot="public" virt="virtual"><scope>wxMDIChildFrame</scope><name>CreateToolBar</name></member>
       <member refid="classwx_evt_handler_1a6e7f9cf4ebd0623c1d94979855d096f8" prot="public" virt="non-virtual"><scope>wxMDIChildFrame</scope><name>DeletePendingEvents</name></member>
       <member refid="classwx_window_1a6bf0c5be864544d9ce0560087667b7fc" prot="public" virt="virtual"><scope>wxMDIChildFrame</scope><name>Destroy</name></member>
@@ -548,6 +548,7 @@
       <member refid="classwx_top_level_window_1afa58f411cf488eb9279683b1d20a74b6" prot="public" virt="virtual"><scope>wxMDIChildFrame</scope><name>IsActive</name></member>
       <member refid="classwx_m_d_i_child_frame_1a2fac04403b6e684ddfd692ed8d9d8cc5" prot="public" virt="virtual"><scope>wxMDIChildFrame</scope><name>IsAlwaysMaximized</name></member>
       <member refid="classwx_window_1af918e6fe8565c2d5235973cc3de84a43" prot="public" virt="non-virtual"><scope>wxMDIChildFrame</scope><name>IsBeingDeleted</name></member>
+      <member refid="classwx_window_1a469f0881da248d37691440c9d4cc7200" prot="public" virt="non-virtual"><scope>wxMDIChildFrame</scope><name>IsDescendant</name></member>
       <member refid="classwx_window_1a9d1be1bbb625ebf87ad4ad47e49a0194" prot="public" virt="virtual"><scope>wxMDIChildFrame</scope><name>IsDoubleBuffered</name></member>
       <member refid="classwx_window_1a59452a5bd42f5ea4b31d7fc4aa59644f" prot="public" virt="non-virtual"><scope>wxMDIChildFrame</scope><name>IsEnabled</name></member>
       <member refid="classwx_window_1af27ef77c913e32050543f3b0ca435a0d" prot="public" virt="non-virtual"><scope>wxMDIChildFrame</scope><name>IsExposed</name></member>
@@ -566,6 +567,7 @@
       <member refid="classwx_window_1a72d70fd14e3565bf782fbcd3271d8930" prot="public" virt="virtual"><scope>wxMDIChildFrame</scope><name>IsShownOnScreen</name></member>
       <member refid="classwx_window_1a657ef8b6055eb06df894ac5e6ddfecf8" prot="public" virt="non-virtual"><scope>wxMDIChildFrame</scope><name>IsThisEnabled</name></member>
       <member refid="classwx_window_1a0002826ad05f2a5661b4c8995713f37f" prot="public" virt="virtual"><scope>wxMDIChildFrame</scope><name>IsTopLevel</name></member>
+      <member refid="classwx_window_1a7940d510c5bdc062a2b109a1022dd8c2" prot="public" virt="virtual"><scope>wxMDIChildFrame</scope><name>IsTransparentBackgroundSupported</name></member>
       <member refid="classwx_evt_handler_1a360fdeefcf53b62fb49fb828406bb8a6" prot="public" virt="non-virtual"><scope>wxMDIChildFrame</scope><name>IsUnlinked</name></member>
       <member refid="classwx_top_level_window_1a305c48ddb8e45f89add1694053185a7d" prot="public" virt="non-virtual"><scope>wxMDIChildFrame</scope><name>IsUsingNativeDecorations</name></member>
       <member refid="classwx_top_level_window_1adfe7e3f4a32f3ed178968f64431bbfe0" prot="public" virt="virtual"><scope>wxMDIChildFrame</scope><name>Layout</name></member>
@@ -573,7 +575,6 @@
       <member refid="classwx_window_1afc0816a174ceee6d36d1995c6824a273" prot="public" virt="non-virtual"><scope>wxMDIChildFrame</scope><name>LineUp</name></member>
       <member refid="classwx_window_1a124944524f36b71385dad8fddaad8ded" prot="public" virt="virtual"><scope>wxMDIChildFrame</scope><name>Lower</name></member>
       <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxMDIChildFrame</scope><name>m_refData</name></member>
-      <member refid="classwx_window_1a192fc8b467845d093c16452db96c65c5" prot="public" virt="virtual"><scope>wxMDIChildFrame</scope><name>MakeModal</name></member>
       <member refid="classwx_m_d_i_child_frame_1a050f0818cb669338ad74b189b77e9b20" prot="public" virt="virtual"><scope>wxMDIChildFrame</scope><name>Maximize</name></member>
       <member refid="classwx_window_1ab1cb98c8d25b9e6ff7b706b1446c3df7" prot="public" virt="non-virtual"><scope>wxMDIChildFrame</scope><name>Move</name></member>
       <member refid="classwx_window_1a22a22c1e23ca05776707e7999d8047fe" prot="public" virt="non-virtual"><scope>wxMDIChildFrame</scope><name>Move</name></member>
@@ -720,7 +721,6 @@
       <member refid="classwx_window_1a88cc65e424a129d9b0057756cdb67ec9" prot="public" virt="virtual"><scope>wxMDIChildFrame</scope><name>TransferDataToWindow</name></member>
       <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxMDIChildFrame</scope><name>TryAfter</name></member>
       <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxMDIChildFrame</scope><name>TryBefore</name></member>
-      <member refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" virt="non-virtual"><scope>wxMDIChildFrame</scope><name>TryThis</name></member>
       <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxMDIChildFrame</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxMDIChildFrame</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a22e5db2ec1d19c8252c056fd116975d7" prot="public" virt="non-virtual"><scope>wxMDIChildFrame</scope><name>Unlink</name></member>

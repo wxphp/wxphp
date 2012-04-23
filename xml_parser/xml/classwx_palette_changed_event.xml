@@ -21,7 +21,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3076"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="3071"/>
       </memberdef>
       <memberdef kind="function" id="classwx_palette_changed_event_1abe64d5ff5f8bc76d39fa77c957b9faa8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -38,7 +38,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3078"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="3073"/>
       </memberdef>
       <memberdef kind="function" id="classwx_palette_changed_event_1a04485f4e4a62524649c294eee1d75da6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
@@ -51,7 +51,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3079"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="3074"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -59,49 +59,49 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="8546">
+      <node id="8739">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="8544">
+      <node id="8737">
         <label>wxPaletteChangedEvent</label>
         <link refid="classwx_palette_changed_event"/>
-        <childnode refid="8545" relation="public-inheritance">
+        <childnode refid="8738" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8545">
+      <node id="8738">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="8546" relation="public-inheritance">
+        <childnode refid="8739" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="8549">
+      <node id="8742">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="8550" relation="usage">
+        <childnode refid="8743" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="8547">
+      <node id="8740">
         <label>wxPaletteChangedEvent</label>
         <link refid="classwx_palette_changed_event"/>
-        <childnode refid="8548" relation="public-inheritance">
+        <childnode refid="8741" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8548">
+      <node id="8741">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="8549" relation="public-inheritance">
+        <childnode refid="8742" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8550">
+      <node id="8743">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3074" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="3073" bodyend="3080"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="3069" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="3068" bodyend="3075"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxPaletteChangedEvent</scope><name>AllocExclusive</name></member>
       <member refid="classwx_event_1a26878097a702e8d0368da150125d4158" prot="public" virt="pure-virtual"><scope>wxPaletteChangedEvent</scope><name>Clone</name></member>

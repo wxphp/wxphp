@@ -20,7 +20,7 @@
 <para>Takes the name of the scheme that will be handled by this class for example <computeroutput>file</computeroutput> or <computeroutput>zip</computeroutput>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="139"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/webview.h" line="138"/>
       </memberdef>
       <memberdef kind="function" id="classwx_web_view_handler_1a29f448e3c8f685c45e43cc06bd4c9b38" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type><ref refid="classwx_f_s_file" kindref="compound">wxFSFile</ref> *</type>
@@ -39,7 +39,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="144"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/webview.h" line="143"/>
       </memberdef>
       <memberdef kind="function" id="classwx_web_view_handler_1a44da19cad5e5d2207e009bcee437e2a9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -53,7 +53,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="149"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/webview.h" line="148"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -64,18 +64,18 @@
 Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxwebview" kindref="member">wxWebView</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__webview" kindref="compound">WebView</ref></para><para><simplesect kind="see"><para><ref refid="classwx_web_view" kindref="compound">wxWebView</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="11459">
+      <node id="11648">
         <label>wxWebViewArchiveHandler</label>
         <link refid="classwx_web_view_archive_handler"/>
-        <childnode refid="11458" relation="public-inheritance">
+        <childnode refid="11647" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11458">
+      <node id="11647">
         <label>wxWebViewHandler</label>
         <link refid="classwx_web_view_handler"/>
       </node>
     </inheritancegraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="133" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" bodystart="132" bodyend="150"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/webview.h" line="132" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/webview.h" bodystart="131" bodyend="149"/>
     <listofallmembers>
       <member refid="classwx_web_view_handler_1a29f448e3c8f685c45e43cc06bd4c9b38" prot="public" virt="pure-virtual"><scope>wxWebViewHandler</scope><name>GetFile</name></member>
       <member refid="classwx_web_view_handler_1a44da19cad5e5d2207e009bcee437e2a9" prot="public" virt="virtual"><scope>wxWebViewHandler</scope><name>GetName</name></member>

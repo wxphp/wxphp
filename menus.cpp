@@ -50,6 +50,7 @@
 #include "others.h"
 
 
+
 void php_wxMenuBar_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -88,7 +89,8 @@ PHP_METHOD(php_wxMenuBar, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|l' (&style0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|l", &style0 ) == SUCCESS)
+		char parse_parameters_string[] = "|l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &style0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -96,7 +98,6 @@ PHP_METHOD(php_wxMenuBar, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -214,7 +215,8 @@ PHP_METHOD(php_wxMenuBar, Append)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zs' (&menu0, &title0, &title_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "zs", &menu0, &title0, &title_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "zs";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &menu0, &title0, &title_len0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(menu0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(menu0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -225,10 +227,6 @@ PHP_METHOD(php_wxMenuBar, Append)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(menu0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(menu0);
 				}
 				else if(Z_TYPE_P(menu0) != IS_NULL)
 				{
@@ -242,7 +240,6 @@ PHP_METHOD(php_wxMenuBar, Append)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -324,7 +321,8 @@ PHP_METHOD(php_wxMenuBar, Attach)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&frame0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "z", &frame0 ) == SUCCESS)
+		char parse_parameters_string[] = "z";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &frame0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(frame0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(frame0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -335,10 +333,6 @@ PHP_METHOD(php_wxMenuBar, Attach)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(frame0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(frame0);
 				}
 				else if(Z_TYPE_P(frame0) != IS_NULL)
 				{
@@ -352,7 +346,6 @@ PHP_METHOD(php_wxMenuBar, Attach)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -434,7 +427,8 @@ PHP_METHOD(php_wxMenuBar, Check)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lb' (&id0, &check0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "lb", &id0, &check0 ) == SUCCESS)
+		char parse_parameters_string[] = "lb";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id0, &check0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -442,7 +436,6 @@ PHP_METHOD(php_wxMenuBar, Check)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -526,7 +519,6 @@ PHP_METHOD(php_wxMenuBar, Detach)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -607,7 +599,8 @@ PHP_METHOD(php_wxMenuBar, Enable)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lb' (&id0, &enable0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "lb", &id0, &enable0 ) == SUCCESS)
+		char parse_parameters_string[] = "lb";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id0, &enable0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -615,7 +608,6 @@ PHP_METHOD(php_wxMenuBar, Enable)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -696,7 +688,8 @@ PHP_METHOD(php_wxMenuBar, EnableTop)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lb' (&pos0, &enable0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "lb", &pos0, &enable0 ) == SUCCESS)
+		char parse_parameters_string[] = "lb";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0, &enable0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -704,7 +697,6 @@ PHP_METHOD(php_wxMenuBar, EnableTop)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -785,7 +777,8 @@ PHP_METHOD(php_wxMenuBar, FindMenu)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&title0, &title_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "s", &title0, &title_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "s";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &title0, &title_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -793,7 +786,6 @@ PHP_METHOD(php_wxMenuBar, FindMenu)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -876,7 +868,8 @@ PHP_METHOD(php_wxMenuBar, FindMenuItem)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ss' (&menuString0, &menuString_len0, &itemString0, &itemString_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ss", &menuString0, &menuString_len0, &itemString0, &itemString_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "ss";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &menuString0, &menuString_len0, &itemString0, &itemString_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -884,7 +877,6 @@ PHP_METHOD(php_wxMenuBar, FindMenuItem)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -968,7 +960,6 @@ PHP_METHOD(php_wxMenuBar, GetFrame)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -985,8 +976,8 @@ PHP_METHOD(php_wxMenuBar, GetFrame)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return0->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return0->phpObj != NULL){
+						return_value = value_to_return0->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -1070,7 +1061,8 @@ PHP_METHOD(php_wxMenuBar, GetHelpString)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&id0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &id0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -1078,7 +1070,6 @@ PHP_METHOD(php_wxMenuBar, GetHelpString)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -1164,7 +1155,8 @@ PHP_METHOD(php_wxMenuBar, GetLabel)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&id0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &id0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -1172,7 +1164,6 @@ PHP_METHOD(php_wxMenuBar, GetLabel)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -1258,7 +1249,8 @@ PHP_METHOD(php_wxMenuBar, GetLabelTop)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&pos0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &pos0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -1266,7 +1258,6 @@ PHP_METHOD(php_wxMenuBar, GetLabelTop)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -1352,7 +1343,8 @@ PHP_METHOD(php_wxMenuBar, GetMenu)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&menuIndex0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &menuIndex0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &menuIndex0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -1360,7 +1352,6 @@ PHP_METHOD(php_wxMenuBar, GetMenu)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -1377,8 +1368,8 @@ PHP_METHOD(php_wxMenuBar, GetMenu)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return1->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return1->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return1->phpObj != NULL){
+						return_value = value_to_return1->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -1466,7 +1457,6 @@ PHP_METHOD(php_wxMenuBar, GetMenuCount)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -1546,7 +1536,8 @@ PHP_METHOD(php_wxMenuBar, GetMenuLabel)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&pos0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &pos0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -1554,7 +1545,6 @@ PHP_METHOD(php_wxMenuBar, GetMenuLabel)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -1640,7 +1630,8 @@ PHP_METHOD(php_wxMenuBar, GetMenuLabelText)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&pos0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &pos0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -1648,7 +1639,6 @@ PHP_METHOD(php_wxMenuBar, GetMenuLabelText)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -1738,7 +1728,8 @@ PHP_METHOD(php_wxMenuBar, Insert)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lzs' (&pos0, &menu0, &title0, &title_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "lzs", &pos0, &menu0, &title0, &title_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "lzs";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0, &menu0, &title0, &title_len0 ) == SUCCESS)
 		{
 			if(arguments_received >= 2){
 				if(Z_TYPE_P(menu0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(menu0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -1749,10 +1740,6 @@ PHP_METHOD(php_wxMenuBar, Insert)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(menu0) == IS_LONG)
-				{
-					object_pointer0_1 = Z_LVAL_P(menu0);
 				}
 				else if(Z_TYPE_P(menu0) != IS_NULL)
 				{
@@ -1766,7 +1753,6 @@ PHP_METHOD(php_wxMenuBar, Insert)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -1851,7 +1837,6 @@ PHP_METHOD(php_wxMenuBar, IsAttached)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -1931,7 +1916,8 @@ PHP_METHOD(php_wxMenuBar, IsChecked)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&id0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &id0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -1939,7 +1925,6 @@ PHP_METHOD(php_wxMenuBar, IsChecked)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -2019,7 +2004,8 @@ PHP_METHOD(php_wxMenuBar, IsEnabled)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&id0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &id0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -2027,7 +2013,6 @@ PHP_METHOD(php_wxMenuBar, IsEnabled)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -2109,7 +2094,8 @@ PHP_METHOD(php_wxMenuBar, Refresh)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|bz' (&eraseBackground0, &rect0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|bz", &eraseBackground0, &rect0 ) == SUCCESS)
+		char parse_parameters_string[] = "|bz";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &eraseBackground0, &rect0 ) == SUCCESS)
 		{
 			if(arguments_received >= 2){
 				if(Z_TYPE_P(rect0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(rect0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -2120,10 +2106,6 @@ PHP_METHOD(php_wxMenuBar, Refresh)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(rect0) == IS_LONG)
-				{
-					object_pointer0_1 = Z_LVAL_P(rect0);
 				}
 				else if(Z_TYPE_P(rect0) != IS_NULL)
 				{
@@ -2137,7 +2119,6 @@ PHP_METHOD(php_wxMenuBar, Refresh)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -2240,7 +2221,8 @@ PHP_METHOD(php_wxMenuBar, Remove)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&pos0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &pos0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -2248,7 +2230,6 @@ PHP_METHOD(php_wxMenuBar, Remove)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -2265,8 +2246,8 @@ PHP_METHOD(php_wxMenuBar, Remove)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return1->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return1->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return1->phpObj != NULL){
+						return_value = value_to_return1->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -2354,7 +2335,8 @@ PHP_METHOD(php_wxMenuBar, Replace)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lzs' (&pos0, &menu0, &title0, &title_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "lzs", &pos0, &menu0, &title0, &title_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "lzs";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0, &menu0, &title0, &title_len0 ) == SUCCESS)
 		{
 			if(arguments_received >= 2){
 				if(Z_TYPE_P(menu0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(menu0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -2365,10 +2347,6 @@ PHP_METHOD(php_wxMenuBar, Replace)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(menu0) == IS_LONG)
-				{
-					object_pointer0_1 = Z_LVAL_P(menu0);
 				}
 				else if(Z_TYPE_P(menu0) != IS_NULL)
 				{
@@ -2382,7 +2360,6 @@ PHP_METHOD(php_wxMenuBar, Replace)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -2399,8 +2376,8 @@ PHP_METHOD(php_wxMenuBar, Replace)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return3->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return3->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return3->phpObj != NULL){
+						return_value = value_to_return3->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -2487,7 +2464,8 @@ PHP_METHOD(php_wxMenuBar, SetHelpString)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ls' (&id0, &helpString0, &helpString_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ls", &id0, &helpString0, &helpString_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "ls";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id0, &helpString0, &helpString_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -2495,7 +2473,6 @@ PHP_METHOD(php_wxMenuBar, SetHelpString)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -2577,7 +2554,8 @@ PHP_METHOD(php_wxMenuBar, SetLabel)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ls' (&id0, &label0, &label_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ls", &id0, &label0, &label_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "ls";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id0, &label0, &label_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -2585,7 +2563,6 @@ PHP_METHOD(php_wxMenuBar, SetLabel)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -2667,7 +2644,8 @@ PHP_METHOD(php_wxMenuBar, SetLabelTop)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ls' (&pos0, &label0, &label_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ls", &pos0, &label0, &label_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "ls";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0, &label0, &label_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -2675,7 +2653,6 @@ PHP_METHOD(php_wxMenuBar, SetLabelTop)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -2757,7 +2734,8 @@ PHP_METHOD(php_wxMenuBar, SetMenuLabel)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ls' (&pos0, &label0, &label_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ls", &pos0, &label0, &label_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "ls";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0, &label0, &label_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -2765,7 +2743,6 @@ PHP_METHOD(php_wxMenuBar, SetMenuLabel)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -2786,6 +2763,7 @@ PHP_METHOD(php_wxMenuBar, SetMenuLabel)
 
 		
 }
+
 void php_wxMenu_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2831,7 +2809,8 @@ PHP_METHOD(php_wxMenu, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&style0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &style0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &style0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -2846,7 +2825,8 @@ PHP_METHOD(php_wxMenu, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's|l' (&title1, &title_len1, &style1)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "s|l", &title1, &title_len1, &style1 ) == SUCCESS)
+		char parse_parameters_string[] = "s|l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &title1, &title_len1, &style1 ) == SUCCESS)
 		{
 			overload1_called = true;
 			already_called = true;
@@ -2866,7 +2846,6 @@ PHP_METHOD(php_wxMenu, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -2884,7 +2863,6 @@ PHP_METHOD(php_wxMenu, __construct)
 		}
 	}
 
-	
 	if(overload1_called)
 	{
 		switch(arguments_received)
@@ -2912,7 +2890,6 @@ PHP_METHOD(php_wxMenu, __construct)
 		}
 	}
 
-	
 	if(overload2_called)
 	{
 		switch(arguments_received)
@@ -3018,7 +2995,8 @@ PHP_METHOD(php_wxMenu, SetTitle)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&title0, &title_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "s", &title0, &title_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "s";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &title0, &title_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -3026,7 +3004,6 @@ PHP_METHOD(php_wxMenu, SetTitle)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -3107,7 +3084,8 @@ PHP_METHOD(php_wxMenu, SetParent)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&parent0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "z", &parent0 ) == SUCCESS)
+		char parse_parameters_string[] = "z";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(parent0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(parent0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -3118,10 +3096,6 @@ PHP_METHOD(php_wxMenu, SetParent)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(parent0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(parent0);
 				}
 				else if(Z_TYPE_P(parent0) != IS_NULL)
 				{
@@ -3135,7 +3109,6 @@ PHP_METHOD(php_wxMenu, SetParent)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -3218,7 +3191,8 @@ PHP_METHOD(php_wxMenu, SetLabel)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ls' (&id0, &label0, &label_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ls", &id0, &label0, &label_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "ls";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id0, &label0, &label_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -3226,7 +3200,6 @@ PHP_METHOD(php_wxMenu, SetLabel)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -3307,21 +3280,18 @@ PHP_METHOD(php_wxMenu, SetInvokingWindow)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&win0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "z", &win0 ) == SUCCESS)
+		char parse_parameters_string[] = "z";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &win0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(win0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(win0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
 				{
 					id_to_find = Z_RESVAL_P(*tmp);
 					object_pointer0_0 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer0_0 || (rsrc_type != le_wxNonOwnedWindow && rsrc_type != le_wxTopLevelWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxMDIChildFrame && rsrc_type != le_wxMDIParentFrame && rsrc_type != le_wxMiniFrame && rsrc_type != le_wxPreviewFrame && rsrc_type != le_wxHtmlHelpDialog && rsrc_type != le_wxHtmlHelpFrame && rsrc_type != le_wxDialog && rsrc_type != le_wxTextEntryDialog && rsrc_type != le_wxPasswordEntryDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxFindReplaceDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxSymbolPickerDialog && rsrc_type != le_wxPropertySheetDialog && rsrc_type != le_wxWizard && rsrc_type != le_wxProgressDialog && rsrc_type != le_wxColourDialog && rsrc_type != le_wxFileDialog && rsrc_type != le_wxFontDialog && rsrc_type != le_wxPageSetupDialog && rsrc_type != le_wxPrintDialog && rsrc_type != le_wxSingleChoiceDialog && rsrc_type != le_wxPopupWindow && rsrc_type != le_wxPopupTransientWindow && rsrc_type != le_wxControl && rsrc_type != le_wxStatusBar && rsrc_type != le_wxAnyButton && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxToggleButton && rsrc_type != le_wxBitmapToggleButton && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxControlWithItems && rsrc_type != le_wxListBox && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxRearrangeList && rsrc_type != le_wxChoice && rsrc_type != le_wxBookCtrlBase && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxListbook && rsrc_type != le_wxChoicebook && rsrc_type != le_wxNotebook && rsrc_type != le_wxTreebook && rsrc_type != le_wxToolbook && rsrc_type != le_wxAnimationCtrl && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxScrollBar && rsrc_type != le_wxStaticText && rsrc_type != le_wxStaticLine && rsrc_type != le_wxStaticBox && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxCheckBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxSearchCtrl && rsrc_type != le_wxComboBox && rsrc_type != le_wxBitmapComboBox && rsrc_type != le_wxAuiToolBar && rsrc_type != le_wxListCtrl && rsrc_type != le_wxListView && rsrc_type != le_wxRadioBox && rsrc_type != le_wxRadioButton && rsrc_type != le_wxSlider && rsrc_type != le_wxSpinCtrl && rsrc_type != le_wxSpinButton && rsrc_type != le_wxGauge && rsrc_type != le_wxHyperlinkCtrl && rsrc_type != le_wxSpinCtrlDouble && rsrc_type != le_wxGenericDirCtrl && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxPickerBase && rsrc_type != le_wxColourPickerCtrl && rsrc_type != le_wxFontPickerCtrl && rsrc_type != le_wxFilePickerCtrl && rsrc_type != le_wxDirPickerCtrl && rsrc_type != le_wxTimePickerCtrl && rsrc_type != le_wxToolBar && rsrc_type != le_wxDatePickerCtrl && rsrc_type != le_wxCollapsiblePane && rsrc_type != le_wxComboCtrl && rsrc_type != le_wxDataViewCtrl && rsrc_type != le_wxDataViewListCtrl && rsrc_type != le_wxDataViewTreeCtrl && rsrc_type != le_wxHeaderCtrl && rsrc_type != le_wxHeaderCtrlSimple && rsrc_type != le_wxFileCtrl && rsrc_type != le_wxInfoBar && rsrc_type != le_wxRibbonControl && rsrc_type != le_wxRibbonBar && rsrc_type != le_wxRibbonButtonBar && rsrc_type != le_wxRibbonGallery && rsrc_type != le_wxRibbonPage && rsrc_type != le_wxRibbonPanel && rsrc_type != le_wxRibbonToolBar && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxPanel && rsrc_type != le_wxWizardPage && rsrc_type != le_wxWizardPageSimple && rsrc_type != le_wxScrolledWindow && rsrc_type != le_wxHtmlWindow && rsrc_type != le_wxGrid && rsrc_type != le_wxPreviewCanvas && rsrc_type != le_wxEditableListBox && rsrc_type != le_wxHScrolledWindow && rsrc_type != le_wxPreviewControlBar && rsrc_type != le_wxMenuBar && rsrc_type != le_wxBannerWindow && rsrc_type != le_wxMDIClientWindow && rsrc_type != le_wxTreeListCtrl && rsrc_type != le_wxSashWindow && rsrc_type != le_wxSashLayoutWindow && rsrc_type != le_wxHtmlHelpWindow))
+					if (!object_pointer0_0 || (rsrc_type != le_wxNonOwnedWindow && rsrc_type != le_wxTopLevelWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxMDIChildFrame && rsrc_type != le_wxMDIParentFrame && rsrc_type != le_wxMiniFrame && rsrc_type != le_wxPreviewFrame && rsrc_type != le_wxHtmlHelpDialog && rsrc_type != le_wxHtmlHelpFrame && rsrc_type != le_wxDialog && rsrc_type != le_wxTextEntryDialog && rsrc_type != le_wxPasswordEntryDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxFindReplaceDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxSymbolPickerDialog && rsrc_type != le_wxPropertySheetDialog && rsrc_type != le_wxWizard && rsrc_type != le_wxProgressDialog && rsrc_type != le_wxColourDialog && rsrc_type != le_wxFileDialog && rsrc_type != le_wxFontDialog && rsrc_type != le_wxPageSetupDialog && rsrc_type != le_wxPrintDialog && rsrc_type != le_wxSingleChoiceDialog && rsrc_type != le_wxGenericProgressDialog && rsrc_type != le_wxPopupWindow && rsrc_type != le_wxPopupTransientWindow && rsrc_type != le_wxControl && rsrc_type != le_wxStatusBar && rsrc_type != le_wxAnyButton && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxToggleButton && rsrc_type != le_wxBitmapToggleButton && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxControlWithItems && rsrc_type != le_wxListBox && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxRearrangeList && rsrc_type != le_wxChoice && rsrc_type != le_wxBookCtrlBase && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxListbook && rsrc_type != le_wxChoicebook && rsrc_type != le_wxNotebook && rsrc_type != le_wxTreebook && rsrc_type != le_wxToolbook && rsrc_type != le_wxAnimationCtrl && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxScrollBar && rsrc_type != le_wxStaticText && rsrc_type != le_wxStaticLine && rsrc_type != le_wxStaticBox && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxCheckBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxSearchCtrl && rsrc_type != le_wxComboBox && rsrc_type != le_wxBitmapComboBox && rsrc_type != le_wxAuiToolBar && rsrc_type != le_wxListCtrl && rsrc_type != le_wxListView && rsrc_type != le_wxRadioBox && rsrc_type != le_wxRadioButton && rsrc_type != le_wxSlider && rsrc_type != le_wxSpinCtrl && rsrc_type != le_wxSpinButton && rsrc_type != le_wxGauge && rsrc_type != le_wxHyperlinkCtrl && rsrc_type != le_wxSpinCtrlDouble && rsrc_type != le_wxGenericDirCtrl && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxPickerBase && rsrc_type != le_wxColourPickerCtrl && rsrc_type != le_wxFontPickerCtrl && rsrc_type != le_wxFilePickerCtrl && rsrc_type != le_wxDirPickerCtrl && rsrc_type != le_wxTimePickerCtrl && rsrc_type != le_wxToolBar && rsrc_type != le_wxDatePickerCtrl && rsrc_type != le_wxCollapsiblePane && rsrc_type != le_wxComboCtrl && rsrc_type != le_wxDataViewCtrl && rsrc_type != le_wxDataViewListCtrl && rsrc_type != le_wxDataViewTreeCtrl && rsrc_type != le_wxHeaderCtrl && rsrc_type != le_wxHeaderCtrlSimple && rsrc_type != le_wxFileCtrl && rsrc_type != le_wxInfoBar && rsrc_type != le_wxRibbonControl && rsrc_type != le_wxRibbonBar && rsrc_type != le_wxRibbonButtonBar && rsrc_type != le_wxRibbonGallery && rsrc_type != le_wxRibbonPage && rsrc_type != le_wxRibbonPanel && rsrc_type != le_wxRibbonToolBar && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxPanel && rsrc_type != le_wxScrolledWindow && rsrc_type != le_wxHtmlWindow && rsrc_type != le_wxGrid && rsrc_type != le_wxPreviewCanvas && rsrc_type != le_wxWizardPage && rsrc_type != le_wxWizardPageSimple && rsrc_type != le_wxEditableListBox && rsrc_type != le_wxHScrolledWindow && rsrc_type != le_wxPreviewControlBar && rsrc_type != le_wxMenuBar && rsrc_type != le_wxBannerWindow && rsrc_type != le_wxMDIClientWindow && rsrc_type != le_wxTreeListCtrl && rsrc_type != le_wxSashWindow && rsrc_type != le_wxSashLayoutWindow && rsrc_type != le_wxHtmlHelpWindow))
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(win0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(win0);
 				}
 				else if(Z_TYPE_P(win0) != IS_NULL)
 				{
@@ -3335,7 +3305,6 @@ PHP_METHOD(php_wxMenu, SetInvokingWindow)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -3418,7 +3387,8 @@ PHP_METHOD(php_wxMenu, SetHelpString)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ls' (&id0, &helpString0, &helpString_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ls", &id0, &helpString0, &helpString_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "ls";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id0, &helpString0, &helpString_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -3426,7 +3396,6 @@ PHP_METHOD(php_wxMenu, SetHelpString)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -3510,7 +3479,8 @@ PHP_METHOD(php_wxMenu, Remove)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&item0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "z", &item0 ) == SUCCESS)
+		char parse_parameters_string[] = "z";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &item0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(item0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(item0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -3521,10 +3491,6 @@ PHP_METHOD(php_wxMenu, Remove)
 					{
 						goto overload1;
 					}
-				}
-				else if(Z_TYPE_P(item0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(item0);
 				}
 				else if(Z_TYPE_P(item0) != IS_NULL)
 				{
@@ -3545,7 +3511,8 @@ PHP_METHOD(php_wxMenu, Remove)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&id1)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &id1 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id1 ) == SUCCESS)
 		{
 			overload1_called = true;
 			already_called = true;
@@ -3553,7 +3520,6 @@ PHP_METHOD(php_wxMenu, Remove)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -3570,8 +3536,8 @@ PHP_METHOD(php_wxMenu, Remove)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return1->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return1->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return1->phpObj != NULL){
+						return_value = value_to_return1->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -3595,7 +3561,6 @@ PHP_METHOD(php_wxMenu, Remove)
 		}
 	}
 
-	
 	if(overload1_called)
 	{
 		switch(arguments_received)
@@ -3612,8 +3577,8 @@ PHP_METHOD(php_wxMenu, Remove)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return1->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return1->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return1->phpObj != NULL){
+						return_value = value_to_return1->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -3701,7 +3666,6 @@ PHP_METHOD(php_wxMenu, PrependSeparator)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -3718,8 +3682,8 @@ PHP_METHOD(php_wxMenu, PrependSeparator)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return0->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return0->phpObj != NULL){
+						return_value = value_to_return0->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -3807,7 +3771,8 @@ PHP_METHOD(php_wxMenu, PrependRadioItem)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ls|s' (&id0, &item0, &item_len0, &helpString0, &helpString_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ls|s", &id0, &item0, &item_len0, &helpString0, &helpString_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "ls|s";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id0, &item0, &item_len0, &helpString0, &helpString_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -3815,7 +3780,6 @@ PHP_METHOD(php_wxMenu, PrependRadioItem)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -3832,8 +3796,8 @@ PHP_METHOD(php_wxMenu, PrependRadioItem)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return2->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return2->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return2->phpObj != NULL){
+						return_value = value_to_return2->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -3865,8 +3829,8 @@ PHP_METHOD(php_wxMenu, PrependRadioItem)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return3->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return3->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return3->phpObj != NULL){
+						return_value = value_to_return3->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -3954,7 +3918,8 @@ PHP_METHOD(php_wxMenu, PrependCheckItem)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ls|s' (&id0, &item0, &item_len0, &helpString0, &helpString_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ls|s", &id0, &item0, &item_len0, &helpString0, &helpString_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "ls|s";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id0, &item0, &item_len0, &helpString0, &helpString_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -3962,7 +3927,6 @@ PHP_METHOD(php_wxMenu, PrependCheckItem)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -3979,8 +3943,8 @@ PHP_METHOD(php_wxMenu, PrependCheckItem)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return2->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return2->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return2->phpObj != NULL){
+						return_value = value_to_return2->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -4012,8 +3976,8 @@ PHP_METHOD(php_wxMenu, PrependCheckItem)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return3->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return3->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return3->phpObj != NULL){
+						return_value = value_to_return3->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -4106,7 +4070,8 @@ PHP_METHOD(php_wxMenu, Prepend)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l|ssl' (&id0, &item0, &item_len0, &helpString0, &helpString_len0, &kind0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l|ssl", &id0, &item0, &item_len0, &helpString0, &helpString_len0, &kind0 ) == SUCCESS)
+		char parse_parameters_string[] = "l|ssl";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id0, &item0, &item_len0, &helpString0, &helpString_len0, &kind0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -4121,7 +4086,8 @@ PHP_METHOD(php_wxMenu, Prepend)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&item1)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "z", &item1 ) == SUCCESS)
+		char parse_parameters_string[] = "z";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &item1 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(item1) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(item1), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -4132,10 +4098,6 @@ PHP_METHOD(php_wxMenu, Prepend)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(item1) == IS_LONG)
-				{
-					object_pointer1_0 = Z_LVAL_P(item1);
 				}
 				else if(Z_TYPE_P(item1) != IS_NULL)
 				{
@@ -4149,7 +4111,6 @@ PHP_METHOD(php_wxMenu, Prepend)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -4166,8 +4127,8 @@ PHP_METHOD(php_wxMenu, Prepend)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return1->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return1->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return1->phpObj != NULL){
+						return_value = value_to_return1->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -4199,8 +4160,8 @@ PHP_METHOD(php_wxMenu, Prepend)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return2->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return2->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return2->phpObj != NULL){
+						return_value = value_to_return2->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -4232,8 +4193,8 @@ PHP_METHOD(php_wxMenu, Prepend)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return3->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return3->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return3->phpObj != NULL){
+						return_value = value_to_return3->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -4265,8 +4226,8 @@ PHP_METHOD(php_wxMenu, Prepend)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return4->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return4->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return4->phpObj != NULL){
+						return_value = value_to_return4->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -4289,7 +4250,6 @@ PHP_METHOD(php_wxMenu, Prepend)
 		}
 	}
 
-	
 	if(overload1_called)
 	{
 		switch(arguments_received)
@@ -4306,8 +4266,8 @@ PHP_METHOD(php_wxMenu, Prepend)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return1->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return1->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return1->phpObj != NULL){
+						return_value = value_to_return1->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -4410,7 +4370,8 @@ PHP_METHOD(php_wxMenu, Append)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l|ssl' (&id0, &item0, &item_len0, &helpString0, &helpString_len0, &kind0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l|ssl", &id0, &item0, &item_len0, &helpString0, &helpString_len0, &kind0 ) == SUCCESS)
+		char parse_parameters_string[] = "l|ssl";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id0, &item0, &item_len0, &helpString0, &helpString_len0, &kind0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -4425,7 +4386,8 @@ PHP_METHOD(php_wxMenu, Append)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lsz|s' (&id1, &item1, &item_len1, &subMenu1, &helpString1, &helpString_len1)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "lsz|s", &id1, &item1, &item_len1, &subMenu1, &helpString1, &helpString_len1 ) == SUCCESS)
+		char parse_parameters_string[] = "lsz|s";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id1, &item1, &item_len1, &subMenu1, &helpString1, &helpString_len1 ) == SUCCESS)
 		{
 			if(arguments_received >= 3){
 				if(Z_TYPE_P(subMenu1) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(subMenu1), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -4436,10 +4398,6 @@ PHP_METHOD(php_wxMenu, Append)
 					{
 						goto overload2;
 					}
-				}
-				else if(Z_TYPE_P(subMenu1) == IS_LONG)
-				{
-					object_pointer1_2 = Z_LVAL_P(subMenu1);
 				}
 				else if(Z_TYPE_P(subMenu1) != IS_NULL)
 				{
@@ -4460,7 +4418,8 @@ PHP_METHOD(php_wxMenu, Append)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&menuItem2)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "z", &menuItem2 ) == SUCCESS)
+		char parse_parameters_string[] = "z";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &menuItem2 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(menuItem2) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(menuItem2), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -4471,10 +4430,6 @@ PHP_METHOD(php_wxMenu, Append)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(menuItem2) == IS_LONG)
-				{
-					object_pointer2_0 = Z_LVAL_P(menuItem2);
 				}
 				else if(Z_TYPE_P(menuItem2) != IS_NULL)
 				{
@@ -4488,7 +4443,6 @@ PHP_METHOD(php_wxMenu, Append)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -4505,8 +4459,8 @@ PHP_METHOD(php_wxMenu, Append)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return1->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return1->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return1->phpObj != NULL){
+						return_value = value_to_return1->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -4538,8 +4492,8 @@ PHP_METHOD(php_wxMenu, Append)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return2->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return2->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return2->phpObj != NULL){
+						return_value = value_to_return2->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -4571,8 +4525,8 @@ PHP_METHOD(php_wxMenu, Append)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return3->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return3->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return3->phpObj != NULL){
+						return_value = value_to_return3->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -4604,8 +4558,8 @@ PHP_METHOD(php_wxMenu, Append)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return4->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return4->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return4->phpObj != NULL){
+						return_value = value_to_return4->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -4628,7 +4582,6 @@ PHP_METHOD(php_wxMenu, Append)
 		}
 	}
 
-	
 	if(overload1_called)
 	{
 		switch(arguments_received)
@@ -4645,8 +4598,8 @@ PHP_METHOD(php_wxMenu, Append)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return3->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return3->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return3->phpObj != NULL){
+						return_value = value_to_return3->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -4679,8 +4632,8 @@ PHP_METHOD(php_wxMenu, Append)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return4->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return4->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return4->phpObj != NULL){
+						return_value = value_to_return4->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -4704,7 +4657,6 @@ PHP_METHOD(php_wxMenu, Append)
 		}
 	}
 
-	
 	if(overload2_called)
 	{
 		switch(arguments_received)
@@ -4721,8 +4673,8 @@ PHP_METHOD(php_wxMenu, Append)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return1->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return1->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return1->phpObj != NULL){
+						return_value = value_to_return1->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -4811,7 +4763,8 @@ PHP_METHOD(php_wxMenu, AppendCheckItem)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ls|s' (&id0, &item0, &item_len0, &help0, &help_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ls|s", &id0, &item0, &item_len0, &help0, &help_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "ls|s";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id0, &item0, &item_len0, &help0, &help_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -4819,7 +4772,6 @@ PHP_METHOD(php_wxMenu, AppendCheckItem)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -4836,8 +4788,8 @@ PHP_METHOD(php_wxMenu, AppendCheckItem)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return2->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return2->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return2->phpObj != NULL){
+						return_value = value_to_return2->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -4869,8 +4821,8 @@ PHP_METHOD(php_wxMenu, AppendCheckItem)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return3->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return3->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return3->phpObj != NULL){
+						return_value = value_to_return3->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -4958,7 +4910,8 @@ PHP_METHOD(php_wxMenu, AppendRadioItem)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ls|s' (&id0, &item0, &item_len0, &help0, &help_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ls|s", &id0, &item0, &item_len0, &help0, &help_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "ls|s";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id0, &item0, &item_len0, &help0, &help_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -4966,7 +4919,6 @@ PHP_METHOD(php_wxMenu, AppendRadioItem)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -4983,8 +4935,8 @@ PHP_METHOD(php_wxMenu, AppendRadioItem)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return2->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return2->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return2->phpObj != NULL){
+						return_value = value_to_return2->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -5016,8 +4968,8 @@ PHP_METHOD(php_wxMenu, AppendRadioItem)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return3->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return3->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return3->phpObj != NULL){
+						return_value = value_to_return3->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -5105,7 +5057,6 @@ PHP_METHOD(php_wxMenu, AppendSeparator)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -5122,8 +5073,8 @@ PHP_METHOD(php_wxMenu, AppendSeparator)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return0->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return0->phpObj != NULL){
+						return_value = value_to_return0->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -5212,7 +5163,8 @@ PHP_METHOD(php_wxMenu, AppendSubMenu)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zs|s' (&submenu0, &text0, &text_len0, &help0, &help_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "zs|s", &submenu0, &text0, &text_len0, &help0, &help_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "zs|s";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &submenu0, &text0, &text_len0, &help0, &help_len0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(submenu0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(submenu0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -5223,10 +5175,6 @@ PHP_METHOD(php_wxMenu, AppendSubMenu)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(submenu0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(submenu0);
 				}
 				else if(Z_TYPE_P(submenu0) != IS_NULL)
 				{
@@ -5240,7 +5188,6 @@ PHP_METHOD(php_wxMenu, AppendSubMenu)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -5257,8 +5204,8 @@ PHP_METHOD(php_wxMenu, AppendSubMenu)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return2->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return2->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return2->phpObj != NULL){
+						return_value = value_to_return2->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -5291,8 +5238,8 @@ PHP_METHOD(php_wxMenu, AppendSubMenu)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return3->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return3->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return3->phpObj != NULL){
+						return_value = value_to_return3->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -5378,7 +5325,8 @@ PHP_METHOD(php_wxMenu, Attach)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&menubar0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "z", &menubar0 ) == SUCCESS)
+		char parse_parameters_string[] = "z";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &menubar0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(menubar0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(menubar0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -5389,10 +5337,6 @@ PHP_METHOD(php_wxMenu, Attach)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(menubar0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(menubar0);
 				}
 				else if(Z_TYPE_P(menubar0) != IS_NULL)
 				{
@@ -5406,7 +5350,6 @@ PHP_METHOD(php_wxMenu, Attach)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -5491,7 +5434,6 @@ PHP_METHOD(php_wxMenu, Break)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -5572,7 +5514,8 @@ PHP_METHOD(php_wxMenu, Check)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lb' (&id0, &check0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "lb", &id0, &check0 ) == SUCCESS)
+		char parse_parameters_string[] = "lb";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id0, &check0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -5580,7 +5523,6 @@ PHP_METHOD(php_wxMenu, Check)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -5664,7 +5606,8 @@ PHP_METHOD(php_wxMenu, Delete)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&id0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &id0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -5679,7 +5622,8 @@ PHP_METHOD(php_wxMenu, Delete)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&item1)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "z", &item1 ) == SUCCESS)
+		char parse_parameters_string[] = "z";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &item1 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(item1) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(item1), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -5690,10 +5634,6 @@ PHP_METHOD(php_wxMenu, Delete)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(item1) == IS_LONG)
-				{
-					object_pointer1_0 = Z_LVAL_P(item1);
 				}
 				else if(Z_TYPE_P(item1) != IS_NULL)
 				{
@@ -5707,7 +5647,6 @@ PHP_METHOD(php_wxMenu, Delete)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -5726,7 +5665,6 @@ PHP_METHOD(php_wxMenu, Delete)
 		}
 	}
 
-	
 	if(overload1_called)
 	{
 		switch(arguments_received)
@@ -5811,7 +5749,8 @@ PHP_METHOD(php_wxMenu, Destroy)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&id0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &id0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -5826,7 +5765,8 @@ PHP_METHOD(php_wxMenu, Destroy)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&item1)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "z", &item1 ) == SUCCESS)
+		char parse_parameters_string[] = "z";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &item1 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(item1) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(item1), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -5837,10 +5777,6 @@ PHP_METHOD(php_wxMenu, Destroy)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(item1) == IS_LONG)
-				{
-					object_pointer1_0 = Z_LVAL_P(item1);
 				}
 				else if(Z_TYPE_P(item1) != IS_NULL)
 				{
@@ -5854,7 +5790,6 @@ PHP_METHOD(php_wxMenu, Destroy)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -5873,7 +5808,6 @@ PHP_METHOD(php_wxMenu, Destroy)
 		}
 	}
 
-	
 	if(overload1_called)
 	{
 		switch(arguments_received)
@@ -5958,7 +5892,6 @@ PHP_METHOD(php_wxMenu, Detach)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -6039,7 +5972,8 @@ PHP_METHOD(php_wxMenu, Enable)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lb' (&id0, &enable0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "lb", &id0, &enable0 ) == SUCCESS)
+		char parse_parameters_string[] = "lb";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id0, &enable0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -6047,7 +5981,6 @@ PHP_METHOD(php_wxMenu, Enable)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -6128,7 +6061,8 @@ PHP_METHOD(php_wxMenu, FindItem)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&itemString0, &itemString_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "s", &itemString0, &itemString_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "s";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &itemString0, &itemString_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -6136,7 +6070,6 @@ PHP_METHOD(php_wxMenu, FindItem)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -6216,7 +6149,8 @@ PHP_METHOD(php_wxMenu, FindItemByPosition)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&position0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &position0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &position0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -6224,7 +6158,6 @@ PHP_METHOD(php_wxMenu, FindItemByPosition)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -6241,8 +6174,8 @@ PHP_METHOD(php_wxMenu, FindItemByPosition)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return1->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return1->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return1->phpObj != NULL){
+						return_value = value_to_return1->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -6326,7 +6259,8 @@ PHP_METHOD(php_wxMenu, GetHelpString)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&id0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &id0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -6334,7 +6268,6 @@ PHP_METHOD(php_wxMenu, GetHelpString)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -6424,7 +6357,6 @@ PHP_METHOD(php_wxMenu, GetInvokingWindow)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -6441,8 +6373,8 @@ PHP_METHOD(php_wxMenu, GetInvokingWindow)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return0->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return0->phpObj != NULL){
+						return_value = value_to_return0->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -6526,7 +6458,8 @@ PHP_METHOD(php_wxMenu, GetLabel)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&id0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &id0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -6534,7 +6467,6 @@ PHP_METHOD(php_wxMenu, GetLabel)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -6620,7 +6552,8 @@ PHP_METHOD(php_wxMenu, GetLabelText)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&id0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &id0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -6628,7 +6561,6 @@ PHP_METHOD(php_wxMenu, GetLabelText)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -6718,7 +6650,6 @@ PHP_METHOD(php_wxMenu, GetMenuItemCount)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -6802,7 +6733,6 @@ PHP_METHOD(php_wxMenu, GetParent)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -6819,8 +6749,8 @@ PHP_METHOD(php_wxMenu, GetParent)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return0->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return0->phpObj != NULL){
+						return_value = value_to_return0->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -6908,7 +6838,6 @@ PHP_METHOD(php_wxMenu, GetStyle)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -6992,7 +6921,6 @@ PHP_METHOD(php_wxMenu, GetTitle)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -7082,7 +7010,6 @@ PHP_METHOD(php_wxMenu, GetWindow)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -7099,8 +7026,8 @@ PHP_METHOD(php_wxMenu, GetWindow)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return0->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return0->phpObj != NULL){
+						return_value = value_to_return0->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -7195,7 +7122,8 @@ PHP_METHOD(php_wxMenu, Insert)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lz' (&pos0, &menuItem0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "lz", &pos0, &menuItem0 ) == SUCCESS)
+		char parse_parameters_string[] = "lz";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0, &menuItem0 ) == SUCCESS)
 		{
 			if(arguments_received >= 2){
 				if(Z_TYPE_P(menuItem0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(menuItem0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -7206,10 +7134,6 @@ PHP_METHOD(php_wxMenu, Insert)
 					{
 						goto overload1;
 					}
-				}
-				else if(Z_TYPE_P(menuItem0) == IS_LONG)
-				{
-					object_pointer0_1 = Z_LVAL_P(menuItem0);
 				}
 				else if(Z_TYPE_P(menuItem0) != IS_NULL)
 				{
@@ -7230,7 +7154,8 @@ PHP_METHOD(php_wxMenu, Insert)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll|ssl' (&pos1, &id1, &item1, &item_len1, &helpString1, &helpString_len1, &kind1)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ll|ssl", &pos1, &id1, &item1, &item_len1, &helpString1, &helpString_len1, &kind1 ) == SUCCESS)
+		char parse_parameters_string[] = "ll|ssl";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos1, &id1, &item1, &item_len1, &helpString1, &helpString_len1, &kind1 ) == SUCCESS)
 		{
 			overload1_called = true;
 			already_called = true;
@@ -7238,7 +7163,6 @@ PHP_METHOD(php_wxMenu, Insert)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -7255,8 +7179,8 @@ PHP_METHOD(php_wxMenu, Insert)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return2->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return2->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return2->phpObj != NULL){
+						return_value = value_to_return2->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -7280,7 +7204,6 @@ PHP_METHOD(php_wxMenu, Insert)
 		}
 	}
 
-	
 	if(overload1_called)
 	{
 		switch(arguments_received)
@@ -7297,8 +7220,8 @@ PHP_METHOD(php_wxMenu, Insert)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return2->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return2->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return2->phpObj != NULL){
+						return_value = value_to_return2->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -7330,8 +7253,8 @@ PHP_METHOD(php_wxMenu, Insert)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return3->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return3->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return3->phpObj != NULL){
+						return_value = value_to_return3->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -7363,8 +7286,8 @@ PHP_METHOD(php_wxMenu, Insert)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return4->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return4->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return4->phpObj != NULL){
+						return_value = value_to_return4->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -7396,8 +7319,8 @@ PHP_METHOD(php_wxMenu, Insert)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return5->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return5->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return5->phpObj != NULL){
+						return_value = value_to_return5->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -7486,7 +7409,8 @@ PHP_METHOD(php_wxMenu, InsertCheckItem)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lls|s' (&pos0, &id0, &item0, &item_len0, &helpString0, &helpString_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "lls|s", &pos0, &id0, &item0, &item_len0, &helpString0, &helpString_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "lls|s";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0, &id0, &item0, &item_len0, &helpString0, &helpString_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -7494,7 +7418,6 @@ PHP_METHOD(php_wxMenu, InsertCheckItem)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -7511,8 +7434,8 @@ PHP_METHOD(php_wxMenu, InsertCheckItem)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return3->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return3->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return3->phpObj != NULL){
+						return_value = value_to_return3->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -7544,8 +7467,8 @@ PHP_METHOD(php_wxMenu, InsertCheckItem)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return4->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return4->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return4->phpObj != NULL){
+						return_value = value_to_return4->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -7634,7 +7557,8 @@ PHP_METHOD(php_wxMenu, InsertRadioItem)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lls|s' (&pos0, &id0, &item0, &item_len0, &helpString0, &helpString_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "lls|s", &pos0, &id0, &item0, &item_len0, &helpString0, &helpString_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "lls|s";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0, &id0, &item0, &item_len0, &helpString0, &helpString_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -7642,7 +7566,6 @@ PHP_METHOD(php_wxMenu, InsertRadioItem)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -7659,8 +7582,8 @@ PHP_METHOD(php_wxMenu, InsertRadioItem)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return3->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return3->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return3->phpObj != NULL){
+						return_value = value_to_return3->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -7692,8 +7615,8 @@ PHP_METHOD(php_wxMenu, InsertRadioItem)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return4->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return4->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return4->phpObj != NULL){
+						return_value = value_to_return4->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -7777,7 +7700,8 @@ PHP_METHOD(php_wxMenu, InsertSeparator)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&pos0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &pos0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -7785,7 +7709,6 @@ PHP_METHOD(php_wxMenu, InsertSeparator)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -7802,8 +7725,8 @@ PHP_METHOD(php_wxMenu, InsertSeparator)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return1->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return1->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return1->phpObj != NULL){
+						return_value = value_to_return1->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -7891,7 +7814,6 @@ PHP_METHOD(php_wxMenu, IsAttached)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -7971,7 +7893,8 @@ PHP_METHOD(php_wxMenu, IsChecked)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&id0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &id0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -7979,7 +7902,6 @@ PHP_METHOD(php_wxMenu, IsChecked)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -8059,7 +7981,8 @@ PHP_METHOD(php_wxMenu, IsEnabled)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&id0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &id0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -8067,7 +7990,6 @@ PHP_METHOD(php_wxMenu, IsEnabled)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -8149,17 +8071,18 @@ PHP_METHOD(php_wxMenu, FindChildItem)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l|l' (&id0, pos0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l|l", &id0, pos0 ) == SUCCESS)
+		char parse_parameters_string[] = "l|l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id0, pos0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
 
-			zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "z|z", &dummy, &pos0_ref );
+			char parse_references_string[] = "z|z";
+			zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_references_string, &dummy, &pos0_ref );
 		}
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -8176,8 +8099,8 @@ PHP_METHOD(php_wxMenu, FindChildItem)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return1->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return1->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return1->phpObj != NULL){
+						return_value = value_to_return1->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -8209,8 +8132,8 @@ PHP_METHOD(php_wxMenu, FindChildItem)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return2->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return2->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return2->phpObj != NULL){
+						return_value = value_to_return2->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -8241,6 +8164,7 @@ PHP_METHOD(php_wxMenu, FindChildItem)
 
 		
 }
+
 void php_wxMenuItem_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8288,7 +8212,8 @@ PHP_METHOD(php_wxMenuItem, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|zlsslz' (&parentMenu0, &id0, &text0, &text_len0, &helpString0, &helpString_len0, &kind0, &subMenu0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|zlsslz", &parentMenu0, &id0, &text0, &text_len0, &helpString0, &helpString_len0, &kind0, &subMenu0 ) == SUCCESS)
+		char parse_parameters_string[] = "|zlsslz";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parentMenu0, &id0, &text0, &text_len0, &helpString0, &helpString_len0, &kind0, &subMenu0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(parentMenu0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(parentMenu0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -8299,10 +8224,6 @@ PHP_METHOD(php_wxMenuItem, __construct)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(parentMenu0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(parentMenu0);
 				}
 				else if(Z_TYPE_P(parentMenu0) != IS_NULL)
 				{
@@ -8320,10 +8241,6 @@ PHP_METHOD(php_wxMenuItem, __construct)
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(subMenu0) == IS_LONG)
-				{
-					object_pointer0_5 = Z_LVAL_P(subMenu0);
-				}
 				else if(Z_TYPE_P(subMenu0) != IS_NULL)
 				{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
@@ -8336,7 +8253,6 @@ PHP_METHOD(php_wxMenuItem, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -8509,7 +8425,8 @@ PHP_METHOD(php_wxMenuItem, SetText)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&text0, &text_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "s", &text0, &text_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "s";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &text0, &text_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -8517,7 +8434,6 @@ PHP_METHOD(php_wxMenuItem, SetText)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -8598,7 +8514,8 @@ PHP_METHOD(php_wxMenuItem, SetSubMenu)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&menu0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "z", &menu0 ) == SUCCESS)
+		char parse_parameters_string[] = "z";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &menu0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(menu0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(menu0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -8609,10 +8526,6 @@ PHP_METHOD(php_wxMenuItem, SetSubMenu)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(menu0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(menu0);
 				}
 				else if(Z_TYPE_P(menu0) != IS_NULL)
 				{
@@ -8626,7 +8539,6 @@ PHP_METHOD(php_wxMenuItem, SetSubMenu)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -8708,7 +8620,8 @@ PHP_METHOD(php_wxMenuItem, SetMenu)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&menu0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "z", &menu0 ) == SUCCESS)
+		char parse_parameters_string[] = "z";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &menu0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(menu0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(menu0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -8719,10 +8632,6 @@ PHP_METHOD(php_wxMenuItem, SetMenu)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(menu0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(menu0);
 				}
 				else if(Z_TYPE_P(menu0) != IS_NULL)
 				{
@@ -8736,7 +8645,6 @@ PHP_METHOD(php_wxMenuItem, SetMenu)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -8818,7 +8726,8 @@ PHP_METHOD(php_wxMenuItem, SetItemLabel)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&label0, &label_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "s", &label0, &label_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "s";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &label0, &label_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -8826,7 +8735,6 @@ PHP_METHOD(php_wxMenuItem, SetItemLabel)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -8907,7 +8815,8 @@ PHP_METHOD(php_wxMenuItem, SetHelp)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&helpString0, &helpString_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "s", &helpString0, &helpString_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "s";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &helpString0, &helpString_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -8915,7 +8824,6 @@ PHP_METHOD(php_wxMenuItem, SetHelp)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -8999,7 +8907,6 @@ PHP_METHOD(php_wxMenuItem, IsSubMenu)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -9083,7 +8990,6 @@ PHP_METHOD(php_wxMenuItem, IsSeparator)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -9163,7 +9069,8 @@ PHP_METHOD(php_wxMenuItem, Check)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|b' (&check0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|b", &check0 ) == SUCCESS)
+		char parse_parameters_string[] = "|b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &check0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -9171,7 +9078,6 @@ PHP_METHOD(php_wxMenuItem, Check)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -9262,7 +9168,8 @@ PHP_METHOD(php_wxMenuItem, Enable)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|b' (&enable0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|b", &enable0 ) == SUCCESS)
+		char parse_parameters_string[] = "|b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &enable0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -9270,7 +9177,6 @@ PHP_METHOD(php_wxMenuItem, Enable)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -9292,110 +9198,6 @@ PHP_METHOD(php_wxMenuItem, Enable)
 				php_printf("Executing wxMenuItem::Enable(enable0)\n\n");
 				#endif
 				((wxMenuItem_php*)_this)->Enable(enable0);
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_METHOD(php_wxMenuItem, GetBitmap)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxMenuItem::GetBitmap\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	bool return_is_user_initialized = false;
-	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
-	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
-		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMenuItem::GetBitmap\n");
-			
-			return;
-		}
-		else
-		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
-			
-			if(parent_rsrc_type == le_wxMenuItem)
-				references = &((wxMenuItem_php*)_this)->references;
-		}
-	}
-	else
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Processing the method call as static\n");
-		#endif
-	}
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
-		overload0_called = true;
-		already_called = true;
-	}
-
-		
-	
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxMenuItem::GetBitmap() to return object reference\n\n");
-				#endif
-				wxBitmap_php* value_to_return0;
-				value_to_return0 = (wxBitmap_php*) &((wxMenuItem_php*)_this)->GetBitmap();
-
-				if(value_to_return0->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return0->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
-						return_is_user_initialized = true;
-					}
-					else{
-						zend_error(E_ERROR, "Could not retreive original zval.");
-					}
-				}
-				else{
-					object_init_ex(return_value,php_wxBitmap_entry);
-					add_property_resource(return_value, "wxResource", zend_list_insert(value_to_return0, le_wxBitmap));
-				}
-
-				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
-					references->AddReference(return_value);
-				}
-				references->AddReference(return_value);
 
 
 				return;
@@ -9469,7 +9271,6 @@ PHP_METHOD(php_wxMenuItem, GetHelp)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -9559,7 +9360,6 @@ PHP_METHOD(php_wxMenuItem, GetId)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -9643,7 +9443,6 @@ PHP_METHOD(php_wxMenuItem, GetItemLabel)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -9733,7 +9532,6 @@ PHP_METHOD(php_wxMenuItem, GetItemLabelText)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -9823,7 +9621,6 @@ PHP_METHOD(php_wxMenuItem, GetKind)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -9907,7 +9704,6 @@ PHP_METHOD(php_wxMenuItem, GetLabel)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -9994,7 +9790,8 @@ PHP_METHOD(php_wxMenuItem, GetLabelFromText)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&text0, &text_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "s", &text0, &text_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "s";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &text0, &text_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -10002,7 +9799,6 @@ PHP_METHOD(php_wxMenuItem, GetLabelFromText)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -10090,7 +9886,8 @@ PHP_METHOD(php_wxMenuItem, GetLabelText)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&text0, &text_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "s", &text0, &text_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "s";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &text0, &text_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -10098,7 +9895,6 @@ PHP_METHOD(php_wxMenuItem, GetLabelText)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -10189,7 +9985,6 @@ PHP_METHOD(php_wxMenuItem, GetMenu)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -10206,8 +10001,8 @@ PHP_METHOD(php_wxMenuItem, GetMenu)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return0->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return0->phpObj != NULL){
+						return_value = value_to_return0->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -10295,7 +10090,6 @@ PHP_METHOD(php_wxMenuItem, GetName)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -10385,7 +10179,6 @@ PHP_METHOD(php_wxMenuItem, GetSubMenu)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -10402,8 +10195,8 @@ PHP_METHOD(php_wxMenuItem, GetSubMenu)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return0->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return0->phpObj != NULL){
+						return_value = value_to_return0->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -10491,7 +10284,6 @@ PHP_METHOD(php_wxMenuItem, GetText)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -10581,7 +10373,6 @@ PHP_METHOD(php_wxMenuItem, IsCheckable)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -10665,7 +10456,6 @@ PHP_METHOD(php_wxMenuItem, IsChecked)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -10749,7 +10539,6 @@ PHP_METHOD(php_wxMenuItem, IsEnabled)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -10830,7 +10619,8 @@ PHP_METHOD(php_wxMenuItem, SetBitmap)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&bmp0, php_wxBitmap_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "O", &bmp0, php_wxBitmap_entry ) == SUCCESS)
+		char parse_parameters_string[] = "O";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &bmp0, php_wxBitmap_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(bmp0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(bmp0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -10841,10 +10631,6 @@ PHP_METHOD(php_wxMenuItem, SetBitmap)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(bmp0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(bmp0);
 				}
 				else if(Z_TYPE_P(bmp0) != IS_NULL)
 				{
@@ -10858,7 +10644,6 @@ PHP_METHOD(php_wxMenuItem, SetBitmap)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)

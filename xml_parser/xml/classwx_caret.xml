@@ -27,7 +27,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/caret.h" line="40"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/caret.h" line="40"/>
       </memberdef>
       <memberdef kind="function" id="classwx_caret_1a74852f5d8cd0210f47b645da445aeb96" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -48,7 +48,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/caret.h" line="41"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/caret.h" line="41"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -75,7 +75,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/caret.h" line="49"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/caret.h" line="49"/>
       </memberdef>
       <memberdef kind="function" id="classwx_caret_1a81d78716eed0fc5b3fc984f4572da10e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -96,7 +96,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/caret.h" line="50"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/caret.h" line="50"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -121,7 +121,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/caret.h" line="71"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/caret.h" line="71"/>
       </memberdef>
       <memberdef kind="function" id="classwx_caret_1a3a1d4bffd5ba39f8edf8761d6fb3bc30" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_point" kindref="compound">wxPoint</ref></type>
@@ -136,7 +136,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/caret.h" line="72"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/caret.h" line="72"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -161,7 +161,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/caret.h" line="86"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/caret.h" line="86"/>
       </memberdef>
       <memberdef kind="function" id="classwx_caret_1a8f2c20a9a5eefd72fbcadb04a77d7a11" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
@@ -176,7 +176,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/caret.h" line="87"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/caret.h" line="87"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -199,7 +199,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/caret.h" line="116"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/caret.h" line="116"/>
       </memberdef>
       <memberdef kind="function" id="classwx_caret_1a4b1e2c18b950f771b44172b752d6eb1b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -216,7 +216,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/caret.h" line="117"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/caret.h" line="117"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -239,7 +239,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/caret.h" line="135"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/caret.h" line="135"/>
       </memberdef>
       <memberdef kind="function" id="classwx_caret_1afaed1930afff173d1a5ec005e6086509" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -256,7 +256,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/caret.h" line="136"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/caret.h" line="136"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -271,7 +271,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/caret.h" line="33"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/caret.h" line="33"/>
       </memberdef>
       <memberdef kind="function" id="classwx_caret_1a80f54ac9c706292a05e5ee0c97ae4c1e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
@@ -284,7 +284,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/caret.h" line="93"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/caret.h" line="93"/>
       </memberdef>
       <memberdef kind="function" id="classwx_caret_1a272c1c4887bf5b9d16213b2bd616033a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -297,7 +297,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/caret.h" line="98"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/caret.h" line="98"/>
       </memberdef>
       <memberdef kind="function" id="classwx_caret_1a5114e47c973bf022e59e9780f9e4fa3a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -310,7 +310,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/caret.h" line="103"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/caret.h" line="103"/>
       </memberdef>
       <memberdef kind="function" id="classwx_caret_1ad96e4e1ec5c0063ac625bebee394b1f0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -323,7 +323,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/caret.h" line="110"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/caret.h" line="110"/>
       </memberdef>
       <memberdef kind="function" id="classwx_caret_1a5112409bd3a83148f364c4b08086fe28" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -341,7 +341,7 @@
 <para>Notice that if the caret was hidden N times, it must be shown N times as well to reappear on the screen. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/caret.h" line="143"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/caret.h" line="143"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -356,7 +356,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/caret.h" line="58"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/caret.h" line="58"/>
       </memberdef>
       <memberdef kind="function" id="classwx_caret_1ae6018e5419476a7437940b92d10ec318" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -375,7 +375,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/caret.h" line="129"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/caret.h" line="129"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -383,7 +383,7 @@
     <detaileddescription>
 <para>Text controls usually have their own caret but <ref refid="classwx_caret" kindref="compound">wxCaret</ref> provides a way to use a caret in other windows.</para><para>Currently, the caret appears as a rectangle of the given size. In the future, it will be possible to specify a bitmap to be used for the caret shape.</para><para>A caret is always associated with a window and the current caret can be retrieved using <ref refid="classwx_window_1a83ed7c9d9252b912eebc753d6132245b" kindref="member">wxWindow::GetCaret()</ref>. The same caret can&apos;t be reused in two different windows.</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__misc" kindref="compound">Miscellaneous</ref> </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/caret.h" line="28" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/caret.h" bodystart="27" bodyend="144"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/caret.h" line="28" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/caret.h" bodystart="27" bodyend="144"/>
     <listofallmembers>
       <member refid="classwx_caret_1aa3364db05669724259f42a4df68cb303" prot="public" virt="non-virtual"><scope>wxCaret</scope><name>Create</name></member>
       <member refid="classwx_caret_1a81d78716eed0fc5b3fc984f4572da10e" prot="public" virt="non-virtual"><scope>wxCaret</scope><name>Create</name></member>

@@ -31,7 +31,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextxml.h" line="40"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextxml.h" line="40"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_x_m_l_handler_1a5a0ab77793165459f95b633bda711e51" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -45,7 +45,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextxml.h" line="45"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextxml.h" line="45"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_x_m_l_handler_1a89bc4731156200212f306ba1beb95f10" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -59,46 +59,16 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextxml.h" line="50"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextxml.h" line="50"/>
       </memberdef>
-      <memberdef kind="function" id="classwx_rich_text_x_m_l_handler_1a820a26d9796c669fe1676d32ea36b179" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
-        <definition>wxString wxRichTextXMLHandler::CreateStyle</definition>
-        <argsstring>(const wxTextAttr &amp;attr, bool isPara=false)</argsstring>
-        <name>CreateStyle</name>
-        <param>
-          <type>const <ref refid="classwx_text_attr" kindref="compound">wxTextAttr</ref> &amp;</type>
-          <declname>attr</declname>
-        </param>
-        <param>
-          <type>bool</type>
-          <declname>isPara</declname>
-          <defval>false</defval>
-        </param>
-        <briefdescription>
-<para>Creates XML code for a given character or paragraph style. </para>        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextxml.h" line="55"/>
-      </memberdef>
-      <memberdef kind="function" id="classwx_rich_text_x_m_l_handler_1a824d8a4bae0ff57b536b85d704db3228" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classwx_rich_text_x_m_l_handler_1a81d457a030ca1dff0390c794e7b620ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
         <definition>bool wxRichTextXMLHandler::ExportXML</definition>
-        <argsstring>(wxOutputStream &amp;stream, wxMBConv *convMem, wxMBConv *convFile, wxRichTextObject &amp;obj, int level)</argsstring>
+        <argsstring>(wxOutputStream &amp;stream, wxRichTextObject &amp;obj, int level)</argsstring>
         <name>ExportXML</name>
         <param>
           <type><ref refid="classwx_output_stream" kindref="compound">wxOutputStream</ref> &amp;</type>
           <declname>stream</declname>
-        </param>
-        <param>
-          <type><ref refid="classwx_m_b_conv" kindref="compound">wxMBConv</ref> *</type>
-          <declname>convMem</declname>
-        </param>
-        <param>
-          <type><ref refid="classwx_m_b_conv" kindref="compound">wxMBConv</ref> *</type>
-          <declname>convFile</declname>
         </param>
         <param>
           <type><ref refid="classwx_rich_text_object" kindref="compound">wxRichTextObject</ref> &amp;</type>
@@ -114,7 +84,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextxml.h" line="63"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextxml.h" line="55"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_x_m_l_handler_1a998ebcefd9cf4b4f64025bcf6c106536" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -131,7 +101,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextxml.h" line="68"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextxml.h" line="60"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_x_m_l_handler_1ac7bb590e423d7a084d968b6d1f425172" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_xml_node" kindref="compound">wxXmlNode</ref> *</type>
@@ -152,7 +122,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextxml.h" line="73"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextxml.h" line="65"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_x_m_l_handler_1ae269043813e2b777060665e94c4e3d2a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -173,33 +143,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextxml.h" line="78"/>
-      </memberdef>
-      <memberdef kind="function" id="classwx_rich_text_x_m_l_handler_1a400cc9c021896a0ebe531c976c239e6e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>bool</type>
-        <definition>bool wxRichTextXMLHandler::GetStyle</definition>
-        <argsstring>(wxTextAttr &amp;attr, wxXmlNode *node, bool isPara=false)</argsstring>
-        <name>GetStyle</name>
-        <param>
-          <type><ref refid="classwx_text_attr" kindref="compound">wxTextAttr</ref> &amp;</type>
-          <declname>attr</declname>
-        </param>
-        <param>
-          <type><ref refid="classwx_xml_node" kindref="compound">wxXmlNode</ref> *</type>
-          <declname>node</declname>
-        </param>
-        <param>
-          <type>bool</type>
-          <declname>isPara</declname>
-          <defval>false</defval>
-        </param>
-        <briefdescription>
-<para>Helper function: gets style parameters from the given XML node. </para>        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextxml.h" line="84"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextxml.h" line="70"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_x_m_l_handler_1ac6a7d74bf6c237d920ba6bc0f87951d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -226,7 +170,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextxml.h" line="91"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextxml.h" line="77"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_x_m_l_handler_1a66252ad79e2fe387eb1268cacc8654a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -247,16 +191,20 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextxml.h" line="96"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextxml.h" line="82"/>
       </memberdef>
-      <memberdef kind="function" id="classwx_rich_text_x_m_l_handler_1ae8204c2781d9ad5fcb947312decd2020" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classwx_rich_text_x_m_l_handler_1a9d9ce2046b69f2910e662e7f60952f86" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
         <definition>bool wxRichTextXMLHandler::ImportXML</definition>
-        <argsstring>(wxRichTextBuffer *buffer, wxXmlNode *node)</argsstring>
+        <argsstring>(wxRichTextBuffer *buffer, wxRichTextObject *obj, wxXmlNode *node)</argsstring>
         <name>ImportXML</name>
         <param>
           <type><ref refid="classwx_rich_text_buffer" kindref="compound">wxRichTextBuffer</ref> *</type>
           <declname>buffer</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_rich_text_object" kindref="compound">wxRichTextObject</ref> *</type>
+          <declname>obj</declname>
         </param>
         <param>
           <type><ref refid="classwx_xml_node" kindref="compound">wxXmlNode</ref> *</type>
@@ -268,7 +216,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextxml.h" line="101"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextxml.h" line="87"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-func">
@@ -291,7 +239,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextxml.h" line="108"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextxml.h" line="94"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_x_m_l_handler_1afbc34a2378e267afb05bf8e593695c0a" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -312,7 +260,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextxml.h" line="113"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextxml.h" line="99"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -326,58 +274,58 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxrichtext" kindref="member">wxRichText</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__richtext" kindref="compound">Rich Text</ref> </para></sect1>
     </detaileddescription>
     <inheritancegraph>
-      <node id="10030">
+      <node id="10213">
         <label>wxRichTextXMLHandler</label>
         <link refid="classwx_rich_text_x_m_l_handler"/>
-        <childnode refid="10031" relation="public-inheritance">
+        <childnode refid="10214" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10031">
+      <node id="10214">
         <label>wxRichTextFileHandler</label>
         <link refid="classwx_rich_text_file_handler"/>
-        <childnode refid="10032" relation="public-inheritance">
+        <childnode refid="10215" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10032">
+      <node id="10215">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10037">
+      <node id="10220">
         <label>wxString</label>
         <link refid="classwx_string"/>
       </node>
-      <node id="10033">
+      <node id="10216">
         <label>wxRichTextXMLHandler</label>
         <link refid="classwx_rich_text_x_m_l_handler"/>
-        <childnode refid="10034" relation="public-inheritance">
+        <childnode refid="10217" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10034">
+      <node id="10217">
         <label>wxRichTextFileHandler</label>
         <link refid="classwx_rich_text_file_handler"/>
-        <childnode refid="10035" relation="public-inheritance">
+        <childnode refid="10218" relation="public-inheritance">
         </childnode>
-        <childnode refid="10037" relation="usage">
+        <childnode refid="10220" relation="usage">
           <edgelabel>m_encoding</edgelabel>
           <edgelabel>m_extension</edgelabel>
           <edgelabel>m_name</edgelabel>
         </childnode>
       </node>
-      <node id="10035">
+      <node id="10218">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="10036" relation="usage">
+        <childnode refid="10219" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="10036">
+      <node id="10219">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextxml.h" line="33" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextxml.h" bodystart="32" bodyend="114"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextxml.h" line="33" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextxml.h" bodystart="32" bodyend="100"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxRichTextXMLHandler</scope><name>AllocExclusive</name></member>
       <member refid="classwx_rich_text_file_handler_1aa20fea9876f9f1b1c80991939d30473f" prot="public" virt="virtual"><scope>wxRichTextXMLHandler</scope><name>CanHandle</name></member>
@@ -385,10 +333,9 @@
       <member refid="classwx_rich_text_x_m_l_handler_1a89bc4731156200212f306ba1beb95f10" prot="public" virt="virtual"><scope>wxRichTextXMLHandler</scope><name>CanSave</name></member>
       <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxRichTextXMLHandler</scope><name>CloneRefData</name></member>
       <member refid="classwx_object_1a95c6a5e4e1e03ff23c7b9efe4cff0c1a" prot="protected" virt="virtual"><scope>wxRichTextXMLHandler</scope><name>CreateRefData</name></member>
-      <member refid="classwx_rich_text_x_m_l_handler_1a820a26d9796c669fe1676d32ea36b179" prot="public" virt="non-virtual"><scope>wxRichTextXMLHandler</scope><name>CreateStyle</name></member>
       <member refid="classwx_rich_text_x_m_l_handler_1a355cba06c7e8d0f5296020a8ce27af26" prot="protected" virt="virtual"><scope>wxRichTextXMLHandler</scope><name>DoLoadFile</name></member>
       <member refid="classwx_rich_text_x_m_l_handler_1afbc34a2378e267afb05bf8e593695c0a" prot="protected" virt="virtual"><scope>wxRichTextXMLHandler</scope><name>DoSaveFile</name></member>
-      <member refid="classwx_rich_text_x_m_l_handler_1a824d8a4bae0ff57b536b85d704db3228" prot="public" virt="non-virtual"><scope>wxRichTextXMLHandler</scope><name>ExportXML</name></member>
+      <member refid="classwx_rich_text_x_m_l_handler_1a81d457a030ca1dff0390c794e7b620ce" prot="public" virt="non-virtual"><scope>wxRichTextXMLHandler</scope><name>ExportXML</name></member>
       <member refid="classwx_object_1ab3a0c6f723cbaddb47be4e8dd98cc8e2" prot="public" virt="virtual"><scope>wxRichTextXMLHandler</scope><name>GetClassInfo</name></member>
       <member refid="classwx_rich_text_file_handler_1a4c3a2aa3d9e1275d6df0023c1ddfc20c" prot="public" virt="non-virtual"><scope>wxRichTextXMLHandler</scope><name>GetEncoding</name></member>
       <member refid="classwx_rich_text_file_handler_1a7011fa4ad4c527420bce7e7abd5206d7" prot="public" virt="non-virtual"><scope>wxRichTextXMLHandler</scope><name>GetExtension</name></member>
@@ -398,11 +345,10 @@
       <member refid="classwx_rich_text_x_m_l_handler_1ac7bb590e423d7a084d968b6d1f425172" prot="public" virt="non-virtual"><scope>wxRichTextXMLHandler</scope><name>GetParamNode</name></member>
       <member refid="classwx_rich_text_x_m_l_handler_1ae269043813e2b777060665e94c4e3d2a" prot="public" virt="non-virtual"><scope>wxRichTextXMLHandler</scope><name>GetParamValue</name></member>
       <member refid="classwx_object_1aabdb4fc957226544a8408167844e4f42" prot="public" virt="non-virtual"><scope>wxRichTextXMLHandler</scope><name>GetRefData</name></member>
-      <member refid="classwx_rich_text_x_m_l_handler_1a400cc9c021896a0ebe531c976c239e6e" prot="public" virt="non-virtual"><scope>wxRichTextXMLHandler</scope><name>GetStyle</name></member>
       <member refid="classwx_rich_text_x_m_l_handler_1ac6a7d74bf6c237d920ba6bc0f87951d4" prot="public" virt="non-virtual"><scope>wxRichTextXMLHandler</scope><name>GetText</name></member>
       <member refid="classwx_rich_text_file_handler_1a9fcaf6a8281d4b8c90e7749964b52e78" prot="public" virt="non-virtual"><scope>wxRichTextXMLHandler</scope><name>GetType</name></member>
       <member refid="classwx_rich_text_x_m_l_handler_1a66252ad79e2fe387eb1268cacc8654a7" prot="public" virt="non-virtual"><scope>wxRichTextXMLHandler</scope><name>HasParam</name></member>
-      <member refid="classwx_rich_text_x_m_l_handler_1ae8204c2781d9ad5fcb947312decd2020" prot="public" virt="non-virtual"><scope>wxRichTextXMLHandler</scope><name>ImportXML</name></member>
+      <member refid="classwx_rich_text_x_m_l_handler_1a9d9ce2046b69f2910e662e7f60952f86" prot="public" virt="non-virtual"><scope>wxRichTextXMLHandler</scope><name>ImportXML</name></member>
       <member refid="classwx_object_1af40d580385cf4f8112fae7713404b01e" prot="public" virt="non-virtual"><scope>wxRichTextXMLHandler</scope><name>IsKindOf</name></member>
       <member refid="classwx_object_1a80a1a3fda7b14396a9ddd3d7a46a88bd" prot="public" virt="non-virtual"><scope>wxRichTextXMLHandler</scope><name>IsSameAs</name></member>
       <member refid="classwx_rich_text_file_handler_1a57eb49ccee60cefd1395419b161eb87b" prot="public" virt="virtual"><scope>wxRichTextXMLHandler</scope><name>IsVisible</name></member>

@@ -54,7 +54,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/timectrl.h" line="51"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/timectrl.h" line="51"/>
       </memberdef>
       <memberdef kind="function" id="classwx_time_picker_ctrl_1a279ca45f94b68d7c6d80d148c6b97d9e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -163,7 +163,34 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/timectrl.h" line="89"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/timectrl.h" line="89"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_time_picker_ctrl_1a40859db9dc295256e2425b19d97adb9b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxTimePickerCtrl::GetTime</definition>
+        <argsstring>(int *hour, int *min, int *sec) const </argsstring>
+        <name>GetTime</name>
+        <param>
+          <type>int *</type>
+          <declname>hour</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>min</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>sec</declname>
+        </param>
+        <briefdescription>
+<para>Returns the currently entered time as hours, minutes and seconds. </para>        </briefdescription>
+        <detaileddescription>
+<para>All the arguments must be non-NULL, false is returned otherwise and none of them is modified.</para><para><simplesect kind="see"><para><ref refid="classwx_time_picker_ctrl_1a361ddb73bd005759c1f9acff7433d098" kindref="member">SetTime()</ref></para></simplesect>
+<simplesect kind="since"><para>2.9.4 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/timectrl.h" line="101"/>
       </memberdef>
       <memberdef kind="function" id="classwx_time_picker_ctrl_1a76b47d3da12c04332f865e3cf1fbb1af" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type><ref refid="classwx_date_time" kindref="compound">wxDateTime</ref></type>
@@ -176,7 +203,57 @@
 <para>The date part of the returned <ref refid="classwx_date_time" kindref="compound">wxDateTime</ref> object is always set to today and should be ignored, only the time part is relevant. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/timectrl.h" line="97"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/timectrl.h" line="109"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_time_picker_ctrl_1a361ddb73bd005759c1f9acff7433d098" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxTimePickerCtrl::SetTime</definition>
+        <argsstring>(int hour, int min, int sec)</argsstring>
+        <name>SetTime</name>
+        <param>
+          <type>int</type>
+          <declname>hour</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>min</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>sec</declname>
+        </param>
+        <briefdescription>
+<para>Changes the current time of the control. </para>        </briefdescription>
+        <detaileddescription>
+<para>Calling this method does not result in a time change event.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>hour</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new hour value in 0..23 interval. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>min</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new minute value in 0..59 interval. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new second value in 0..59 interval. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the time was changed or false on failure, e.g. if the time components were invalid.</para></simplesect>
+<simplesect kind="see"><para><ref refid="classwx_time_picker_ctrl_1a40859db9dc295256e2425b19d97adb9b" kindref="member">GetTime()</ref></para></simplesect>
+<simplesect kind="since"><para>2.9.4 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/timectrl.h" line="126"/>
       </memberdef>
       <memberdef kind="function" id="classwx_time_picker_ctrl_1a8c889fd6cb2fdc240c23863bc64801f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -190,10 +267,10 @@
         <briefdescription>
 <para>Changes the current value of the control. </para>        </briefdescription>
         <detaileddescription>
-<para>The date part of <emphasis>dt</emphasis> is ignored, only the time part is displayed in the control. The <emphasis>dt</emphasis> object must however be valid.</para><para>Calling this method does not result in a time change event. </para>        </detaileddescription>
+<para>The date part of <emphasis>dt</emphasis> is ignored, only the time part is displayed in the control. The <emphasis>dt</emphasis> object must however be valid.</para><para>In particular notice that it is a bad idea to use default <ref refid="classwx_date_time" kindref="compound">wxDateTime</ref> constructor from hour, minute and second values as it uses the today date for the date part which means that some times can be invalid if today happens to be the day of DST change. For example, when switching to summer time the time 2:00 typically doesn&apos;t exist as the clocks jump directly to 3:00. To avoid this problem, use a fixed date on which DST is known not to change (e.g. Jan 1, 2012) for the date part of the argument or use <ref refid="classwx_time_picker_ctrl_1a361ddb73bd005759c1f9acff7433d098" kindref="member">SetTime()</ref>.</para><para>Calling this method does not result in a time change event. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/timectrl.h" line="107"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/timectrl.h" line="145"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -208,85 +285,85 @@
 <simplesect kind="since"><para>2.9.3 </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10863">
+      <node id="11048">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="10862">
+      <node id="11047">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="10863" relation="public-inheritance">
+        <childnode refid="11048" relation="public-inheritance">
         </childnode>
-        <childnode refid="10864" relation="public-inheritance">
+        <childnode refid="11049" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10864">
+      <node id="11049">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="10860">
+      <node id="11045">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="10861" relation="public-inheritance">
+        <childnode refid="11046" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10861">
+      <node id="11046">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="10862" relation="public-inheritance">
+        <childnode refid="11047" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10859">
+      <node id="11044">
         <label>wxTimePickerCtrl</label>
         <link refid="classwx_time_picker_ctrl"/>
-        <childnode refid="10860" relation="public-inheritance">
+        <childnode refid="11045" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10869">
+      <node id="11054">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="10870" relation="usage">
+        <childnode refid="11055" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="10868">
+      <node id="11053">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="10869" relation="public-inheritance">
+        <childnode refid="11054" relation="public-inheritance">
         </childnode>
-        <childnode refid="10871" relation="public-inheritance">
+        <childnode refid="11056" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10871">
+      <node id="11056">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="10866">
+      <node id="11051">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="10867" relation="public-inheritance">
+        <childnode refid="11052" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10867">
+      <node id="11052">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="10868" relation="public-inheritance">
+        <childnode refid="11053" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10870">
+      <node id="11055">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
-      <node id="10865">
+      <node id="11050">
         <label>wxTimePickerCtrl</label>
         <link refid="classwx_time_picker_ctrl"/>
-        <childnode refid="10866" relation="public-inheritance">
+        <childnode refid="11051" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/timectrl.h" line="40" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/timectrl.h" bodystart="39" bodyend="108"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/timectrl.h" line="40" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/timectrl.h" bodystart="39" bodyend="146"/>
     <listofallmembers>
       <member refid="classwx_window_1a3afbd49b1ea2f8275e3600dcac102923" prot="public" virt="virtual"><scope>wxTimePickerCtrl</scope><name>AcceptsFocus</name></member>
       <member refid="classwx_window_1a2370bdd3ab08e7ef3c7555c6aa8301b8" prot="public" virt="virtual"><scope>wxTimePickerCtrl</scope><name>AcceptsFocusFromKeyboard</name></member>
@@ -422,6 +499,7 @@
       <member refid="classwx_window_1ac9cd7b4472d5419e518f69311914466f" prot="public" virt="non-virtual"><scope>wxTimePickerCtrl</scope><name>GetTextExtent</name></member>
       <member refid="classwx_window_1a79e5f88a2408871663d4ab0405cd35f6" prot="public" virt="non-virtual"><scope>wxTimePickerCtrl</scope><name>GetTextExtent</name></member>
       <member refid="classwx_window_1a0b31a21532407cf809d73aa09f34235c" prot="public" virt="virtual"><scope>wxTimePickerCtrl</scope><name>GetThemeEnabled</name></member>
+      <member refid="classwx_time_picker_ctrl_1a40859db9dc295256e2425b19d97adb9b" prot="public" virt="non-virtual"><scope>wxTimePickerCtrl</scope><name>GetTime</name></member>
       <member refid="classwx_window_1aae94155ccf8a6e4e72ad08527c89ba89" prot="public" virt="non-virtual"><scope>wxTimePickerCtrl</scope><name>GetToolTip</name></member>
       <member refid="classwx_window_1ad1a9c53c8e7e5010874f15b8ff4a6568" prot="public" virt="non-virtual"><scope>wxTimePickerCtrl</scope><name>GetToolTipText</name></member>
       <member refid="classwx_window_1a7e32d9a9ffd058c931db20416bc55baa" prot="public" virt="non-virtual"><scope>wxTimePickerCtrl</scope><name>GetUpdateClientRect</name></member>
@@ -452,6 +530,7 @@
       <member refid="classwx_window_1aa90a260c0a835a133043460b7d0024a8" prot="public" virt="virtual"><scope>wxTimePickerCtrl</scope><name>InitDialog</name></member>
       <member refid="classwx_window_1ae1b56ca87d8590ee5e576012229a380a" prot="public" virt="non-virtual"><scope>wxTimePickerCtrl</scope><name>InvalidateBestSize</name></member>
       <member refid="classwx_window_1af918e6fe8565c2d5235973cc3de84a43" prot="public" virt="non-virtual"><scope>wxTimePickerCtrl</scope><name>IsBeingDeleted</name></member>
+      <member refid="classwx_window_1a469f0881da248d37691440c9d4cc7200" prot="public" virt="non-virtual"><scope>wxTimePickerCtrl</scope><name>IsDescendant</name></member>
       <member refid="classwx_window_1a9d1be1bbb625ebf87ad4ad47e49a0194" prot="public" virt="virtual"><scope>wxTimePickerCtrl</scope><name>IsDoubleBuffered</name></member>
       <member refid="classwx_window_1a59452a5bd42f5ea4b31d7fc4aa59644f" prot="public" virt="non-virtual"><scope>wxTimePickerCtrl</scope><name>IsEnabled</name></member>
       <member refid="classwx_window_1af27ef77c913e32050543f3b0ca435a0d" prot="public" virt="non-virtual"><scope>wxTimePickerCtrl</scope><name>IsExposed</name></member>
@@ -467,13 +546,13 @@
       <member refid="classwx_window_1a72d70fd14e3565bf782fbcd3271d8930" prot="public" virt="virtual"><scope>wxTimePickerCtrl</scope><name>IsShownOnScreen</name></member>
       <member refid="classwx_window_1a657ef8b6055eb06df894ac5e6ddfecf8" prot="public" virt="non-virtual"><scope>wxTimePickerCtrl</scope><name>IsThisEnabled</name></member>
       <member refid="classwx_window_1a0002826ad05f2a5661b4c8995713f37f" prot="public" virt="virtual"><scope>wxTimePickerCtrl</scope><name>IsTopLevel</name></member>
+      <member refid="classwx_window_1a7940d510c5bdc062a2b109a1022dd8c2" prot="public" virt="virtual"><scope>wxTimePickerCtrl</scope><name>IsTransparentBackgroundSupported</name></member>
       <member refid="classwx_evt_handler_1a360fdeefcf53b62fb49fb828406bb8a6" prot="public" virt="non-virtual"><scope>wxTimePickerCtrl</scope><name>IsUnlinked</name></member>
       <member refid="classwx_window_1a1b143c3e72bd0af533b76db4830a6113" prot="public" virt="virtual"><scope>wxTimePickerCtrl</scope><name>Layout</name></member>
       <member refid="classwx_window_1ade808784f0e64d9985e2f279b5ca8c02" prot="public" virt="non-virtual"><scope>wxTimePickerCtrl</scope><name>LineDown</name></member>
       <member refid="classwx_window_1afc0816a174ceee6d36d1995c6824a273" prot="public" virt="non-virtual"><scope>wxTimePickerCtrl</scope><name>LineUp</name></member>
       <member refid="classwx_window_1a124944524f36b71385dad8fddaad8ded" prot="public" virt="virtual"><scope>wxTimePickerCtrl</scope><name>Lower</name></member>
       <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxTimePickerCtrl</scope><name>m_refData</name></member>
-      <member refid="classwx_window_1a192fc8b467845d093c16452db96c65c5" prot="public" virt="virtual"><scope>wxTimePickerCtrl</scope><name>MakeModal</name></member>
       <member refid="classwx_window_1ab1cb98c8d25b9e6ff7b706b1446c3df7" prot="public" virt="non-virtual"><scope>wxTimePickerCtrl</scope><name>Move</name></member>
       <member refid="classwx_window_1a22a22c1e23ca05776707e7999d8047fe" prot="public" virt="non-virtual"><scope>wxTimePickerCtrl</scope><name>Move</name></member>
       <member refid="classwx_window_1a79e66079125e8420de269811bdb6f2b6" prot="public" virt="non-virtual"><scope>wxTimePickerCtrl</scope><name>MoveAfterInTabOrder</name></member>
@@ -576,6 +655,7 @@
       <member refid="classwx_window_1abc95691b45e29a52c24aa9d33d46dec1" prot="public" virt="non-virtual"><scope>wxTimePickerCtrl</scope><name>SetSizer</name></member>
       <member refid="classwx_window_1a29938af9828fd35da666536cdfb6b73c" prot="public" virt="non-virtual"><scope>wxTimePickerCtrl</scope><name>SetSizerAndFit</name></member>
       <member refid="classwx_window_1a41dd19ed8809fd8ec662e2aa2a9579c3" prot="public" virt="virtual"><scope>wxTimePickerCtrl</scope><name>SetThemeEnabled</name></member>
+      <member refid="classwx_time_picker_ctrl_1a361ddb73bd005759c1f9acff7433d098" prot="public" virt="non-virtual"><scope>wxTimePickerCtrl</scope><name>SetTime</name></member>
       <member refid="classwx_window_1a81a9fb74e3c6c7f4416e882f5e589b8c" prot="public" virt="non-virtual"><scope>wxTimePickerCtrl</scope><name>SetToolTip</name></member>
       <member refid="classwx_window_1a494e0b7cfca9299caa40e847767e7357" prot="public" virt="non-virtual"><scope>wxTimePickerCtrl</scope><name>SetToolTip</name></member>
       <member refid="classwx_window_1ac8cf4398cec50ac36634760f45a0656f" prot="public" virt="virtual"><scope>wxTimePickerCtrl</scope><name>SetTransparent</name></member>
@@ -595,7 +675,6 @@
       <member refid="classwx_window_1a88cc65e424a129d9b0057756cdb67ec9" prot="public" virt="virtual"><scope>wxTimePickerCtrl</scope><name>TransferDataToWindow</name></member>
       <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxTimePickerCtrl</scope><name>TryAfter</name></member>
       <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxTimePickerCtrl</scope><name>TryBefore</name></member>
-      <member refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" virt="non-virtual"><scope>wxTimePickerCtrl</scope><name>TryThis</name></member>
       <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxTimePickerCtrl</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxTimePickerCtrl</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a22e5db2ec1d19c8252c056fd116975d7" prot="public" virt="non-virtual"><scope>wxTimePickerCtrl</scope><name>Unlink</name></member>

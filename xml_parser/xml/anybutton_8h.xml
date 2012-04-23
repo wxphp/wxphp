@@ -13,7 +13,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/anybutton.h" line="9" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/anybutton.h" bodystart="9" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/anybutton.h" line="9" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/anybutton.h" bodystart="9" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="anybutton_8h_1afe88776600ca26e7f5f4f51888b1ed12" prot="public" static="no">
         <name>wxBU_TOP</name>
@@ -24,7 +24,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/anybutton.h" line="10" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/anybutton.h" bodystart="10" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/anybutton.h" line="10" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/anybutton.h" bodystart="10" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="anybutton_8h_1afaed7ada979032a4fe3379af36abd2b4" prot="public" static="no">
         <name>wxBU_RIGHT</name>
@@ -35,7 +35,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/anybutton.h" line="11" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/anybutton.h" bodystart="11" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/anybutton.h" line="11" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/anybutton.h" bodystart="11" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="anybutton_8h_1a01f821da1d833be3a76972035130a324" prot="public" static="no">
         <name>wxBU_BOTTOM</name>
@@ -46,7 +46,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/anybutton.h" line="12" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/anybutton.h" bodystart="12" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/anybutton.h" line="12" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/anybutton.h" bodystart="12" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="anybutton_8h_1a63ec8d11ee74f8d3b22d06d2bdcfe191" prot="public" static="no">
         <name>wxBU_ALIGN_MASK</name>
@@ -57,7 +57,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/anybutton.h" line="13" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/anybutton.h" bodystart="13" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/anybutton.h" line="13" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/anybutton.h" bodystart="13" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="anybutton_8h_1a5073dbd4ce3a849b19d8dfc22ca91904" prot="public" static="no">
         <name>wxBU_EXACTFIT</name>
@@ -68,7 +68,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/anybutton.h" line="15" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/anybutton.h" bodystart="15" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/anybutton.h" line="15" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/anybutton.h" bodystart="15" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="anybutton_8h_1adeb61e2e16cee5d78b1899718e0ed95e" prot="public" static="no">
         <name>wxBU_NOTEXT</name>
@@ -79,7 +79,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/anybutton.h" line="16" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/anybutton.h" bodystart="16" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/anybutton.h" line="16" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/anybutton.h" bodystart="16" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="anybutton_8h_1ac428088f5c2c41db50c65ab244eff1a0" prot="public" static="no">
         <name>wxBU_AUTODRAW</name>
@@ -90,13 +90,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/anybutton.h" line="17" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/anybutton.h" bodystart="17" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/anybutton.h" line="17" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/anybutton.h" bodystart="17" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/anybutton.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/anybutton.h"/>
   </compounddef>
 </doxygen>

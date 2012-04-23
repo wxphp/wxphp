@@ -29,7 +29,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/url.h" line="53"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/url.h" line="53"/>
       </memberdef>
       <memberdef kind="function" id="classwx_u_r_l_1a6ea0d6a3020382c84c86aac4697768a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -42,7 +42,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/url.h" line="58"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/url.h" line="58"/>
       </memberdef>
       <memberdef kind="function" id="classwx_u_r_l_1ac9b906a4ea766ab695e4dce0eb14fb70" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="url_8h_1a96577e618caa0aa92dc39403bc3d5d81" kindref="member">wxURLError</ref></type>
@@ -55,7 +55,7 @@
 <para>This error refers to the URL parsing or to the protocol. It can be one of <ref refid="url_8h_1a96577e618caa0aa92dc39403bc3d5d81" kindref="member">wxURLError</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/url.h" line="64"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/url.h" line="64"/>
       </memberdef>
       <memberdef kind="function" id="classwx_u_r_l_1a6974f1d2c13a6ef721e2b93c84e5e376" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_input_stream" kindref="compound">wxInputStream</ref> *</type>
@@ -78,7 +78,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/url.h" line="92"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/url.h" line="92"/>
       </memberdef>
       <memberdef kind="function" id="classwx_u_r_l_1a7ddfecfb1e7d44c571c5db67b21e6330" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_protocol" kindref="compound">wxProtocol</ref> &amp;</type>
@@ -91,7 +91,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/url.h" line="97"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/url.h" line="97"/>
       </memberdef>
       <memberdef kind="function" id="classwx_u_r_l_1ab3c1e6cd3fa2fbb771dff48e7e93f439" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -104,7 +104,7 @@
 <para>if <ref refid="classwx_u_r_l_1ac9b906a4ea766ab695e4dce0eb14fb70" kindref="member">GetError()</ref> returns <ref refid="url_8h_1a96577e618caa0aa92dc39403bc3d5d81a4845be36309c1c3b66bdc23e678ff260" kindref="member">wxURL_NOERR</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/url.h" line="103"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/url.h" line="103"/>
       </memberdef>
       <memberdef kind="function" id="classwx_u_r_l_1a79723a45665f2bbd71d5e1bbfcb2849f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -122,7 +122,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/url.h" line="121"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/url.h" line="121"/>
       </memberdef>
       <memberdef kind="function" id="classwx_u_r_l_1afd25de2271b473acf331ab56412a3a99" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="url_8h_1a96577e618caa0aa92dc39403bc3d5d81" kindref="member">wxURLError</ref></type>
@@ -139,7 +139,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/url.h" line="127"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/url.h" line="127"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -167,7 +167,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/url.h" line="114"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/url.h" line="114"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -177,49 +177,49 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxnet" kindref="member">wxNet</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__net" kindref="compound">Networking</ref></para><para><simplesect kind="see"><para><ref refid="classwx_socket_base" kindref="compound">wxSocketBase</ref>, <ref refid="classwx_protocol" kindref="compound">wxProtocol</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="11269">
+      <node id="11458">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="11268">
+      <node id="11457">
         <label>wxURI</label>
         <link refid="classwx_u_r_i"/>
-        <childnode refid="11269" relation="public-inheritance">
+        <childnode refid="11458" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11267">
+      <node id="11456">
         <label>wxURL</label>
         <link refid="classwx_u_r_l"/>
-        <childnode refid="11268" relation="public-inheritance">
+        <childnode refid="11457" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="11272">
+      <node id="11461">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="11273" relation="usage">
+        <childnode refid="11462" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="11271">
+      <node id="11460">
         <label>wxURI</label>
         <link refid="classwx_u_r_i"/>
-        <childnode refid="11272" relation="public-inheritance">
+        <childnode refid="11461" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11270">
+      <node id="11459">
         <label>wxURL</label>
         <link refid="classwx_u_r_l"/>
-        <childnode refid="11271" relation="public-inheritance">
+        <childnode refid="11460" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11273">
+      <node id="11462">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/url.h" line="38" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/url.h" bodystart="37" bodyend="128"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/url.h" line="38" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/url.h" bodystart="37" bodyend="128"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxURL</scope><name>AllocExclusive</name></member>
       <member refid="classwx_u_r_i_1a3352a1dd8649194230a72efcd2d0ebf9" prot="public" virt="non-virtual"><scope>wxURL</scope><name>BuildUnescapedURI</name></member>
@@ -248,7 +248,7 @@
       <member refid="classwx_u_r_i_1a25ecd142749d1ca2be7939b1cf606593" prot="public" virt="non-virtual"><scope>wxURL</scope><name>HasQuery</name></member>
       <member refid="classwx_u_r_i_1aa424836846d5438b0cd75fe1631aaf9c" prot="public" virt="non-virtual"><scope>wxURL</scope><name>HasScheme</name></member>
       <member refid="classwx_u_r_i_1a741d16955b870aaddf0d5d6d26d78ae9" prot="public" virt="non-virtual"><scope>wxURL</scope><name>HasServer</name></member>
-      <member refid="classwx_u_r_i_1afb92420e39800d72e1adfb4048edd32d" prot="public" virt="non-virtual"><scope>wxURL</scope><name>HasUser</name></member>
+      <member refid="classwx_u_r_i_1af2b283ab9e5ab7b3ddaab50cf6fcd9de" prot="public" virt="non-virtual"><scope>wxURL</scope><name>HasUserInfo</name></member>
       <member refid="classwx_object_1af40d580385cf4f8112fae7713404b01e" prot="public" virt="non-virtual"><scope>wxURL</scope><name>IsKindOf</name></member>
       <member refid="classwx_u_r_l_1ab3c1e6cd3fa2fbb771dff48e7e93f439" prot="public" virt="non-virtual"><scope>wxURL</scope><name>IsOk</name></member>
       <member refid="classwx_u_r_i_1aaa5d7930c1e01d7261126c4fbf4b139d" prot="public" virt="non-virtual"><scope>wxURL</scope><name>IsReference</name></member>

@@ -15,7 +15,7 @@
 <para>Notice that this class is not copyable, comparators are not passed by value. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treelist.h" line="60"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treelist.h" line="60"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_list_item_comparator_1a9c5f8ed944e7e2b80f6c1bc41cd65f52" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>int</type>
@@ -74,7 +74,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treelist.h" line="88"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treelist.h" line="88"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_list_item_comparator_1a153be4341743a0fd741d565f81dbd51b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -87,7 +87,7 @@
 <para>Although this class is not used polymorphically by wxWidgets itself, provide virtual dtor in case it&apos;s used like this in the user code. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treelist.h" line="96"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treelist.h" line="96"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -97,7 +97,7 @@
 <heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref></para><para><simplesect kind="since"><para>2.9.3 </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treelist.h" line="52" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treelist.h" bodystart="51" bodyend="97"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treelist.h" line="52" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/treelist.h" bodystart="51" bodyend="97"/>
     <listofallmembers>
       <member refid="classwx_tree_list_item_comparator_1a9c5f8ed944e7e2b80f6c1bc41cd65f52" prot="public" virt="pure-virtual"><scope>wxTreeListItemComparator</scope><name>Compare</name></member>
       <member refid="classwx_tree_list_item_comparator_1ae5d3c8526057319acf76f098db2779e5" prot="public" virt="non-virtual"><scope>wxTreeListItemComparator</scope><name>wxTreeListItemComparator</name></member>

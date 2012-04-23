@@ -16,7 +16,7 @@
 <para>Default type is &quot;MOFILE&quot;. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/translation.h" line="347"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/translation.h" line="347"/>
       </memberdef>
       <memberdef kind="function" id="classwx_resource_translations_loader_1a023191351ea6f3ab3f5ad250f79ef794" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>WXHINSTANCE</type>
@@ -29,7 +29,7 @@
 <para>By default, the main executable is used. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/translation.h" line="354"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/translation.h" line="354"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -42,30 +42,30 @@
 </programlisting></para><para>This class is only available on Windows.</para><para><simplesect kind="since"><para>2.9.1 </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="9082">
+      <node id="9265">
         <label>wxResourceTranslationsLoader</label>
         <link refid="classwx_resource_translations_loader"/>
-        <childnode refid="9083" relation="public-inheritance">
+        <childnode refid="9266" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9083">
+      <node id="9266">
         <label>wxTranslationsLoader</label>
         <link refid="classwx_translations_loader"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="9084">
+      <node id="9267">
         <label>wxResourceTranslationsLoader</label>
         <link refid="classwx_resource_translations_loader"/>
-        <childnode refid="9085" relation="public-inheritance">
+        <childnode refid="9268" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9085">
+      <node id="9268">
         <label>wxTranslationsLoader</label>
         <link refid="classwx_translations_loader"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/translation.h" line="340" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/translation.h" bodystart="339" bodyend="355"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/translation.h" line="340" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/translation.h" bodystart="339" bodyend="355"/>
     <listofallmembers>
       <member refid="classwx_translations_loader_1aa02efbe41b86a4b3b8bc551a323b42fb" prot="public" virt="pure-virtual"><scope>wxResourceTranslationsLoader</scope><name>GetAvailableTranslations</name></member>
       <member refid="classwx_resource_translations_loader_1a023191351ea6f3ab3f5ad250f79ef794" prot="protected" virt="virtual"><scope>wxResourceTranslationsLoader</scope><name>GetModule</name></member>

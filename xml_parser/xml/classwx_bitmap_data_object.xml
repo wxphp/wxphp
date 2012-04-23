@@ -21,7 +21,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataobj.h" line="629"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataobj.h" line="592"/>
       </memberdef>
       <memberdef kind="function" id="classwx_bitmap_data_object_1af7af566b046324011cedcb56cfca60af" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref></type>
@@ -34,7 +34,7 @@
 <para>You may wish to override this method when offering data on-demand, but this is not required by wxWidgets&apos; internals. Use this method to get data in bitmap form from the <ref refid="classwx_clipboard" kindref="compound">wxClipboard</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataobj.h" line="637"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataobj.h" line="600"/>
       </memberdef>
       <memberdef kind="function" id="classwx_bitmap_data_object_1ab08fe86cb5428c632aff7854dcc99630" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -51,52 +51,52 @@
 <para>This method is called when the data object receives data. Usually there will be no reason to override this function. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataobj.h" line="644"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataobj.h" line="607"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para><ref refid="classwx_bitmap_data_object" kindref="compound">wxBitmapDataObject</ref> is a specialization of <ref refid="classwx_data_object" kindref="compound">wxDataObject</ref> for bitmap data. </para>    </briefdescription>
     <detaileddescription>
-<para>It can be used without change to paste data into the <ref refid="classwx_clipboard" kindref="compound">wxClipboard</ref> or a <ref refid="classwx_drop_source" kindref="compound">wxDropSource</ref>. A user may wish to derive a new class from this class for providing a bitmap on-demand in order to minimize memory consumption when offering data in several formats, such as a bitmap and GIF.</para><para>This class may be used as is, but <ref refid="classwx_bitmap_data_object_1af7af566b046324011cedcb56cfca60af" kindref="member">GetBitmap()</ref> may be overridden to increase efficiency.</para><para><bold>wxPython Note:</bold> If you wish to create a derived <ref refid="classwx_bitmap_data_object" kindref="compound">wxBitmapDataObject</ref> class in wxPython you should derive the class from wxPyBitmapDataObject in order to get Python-aware capabilities for the various virtual methods.</para><para><heading level="2"></heading>
+<para>It can be used without change to paste data into the <ref refid="classwx_clipboard" kindref="compound">wxClipboard</ref> or a <ref refid="classwx_drop_source" kindref="compound">wxDropSource</ref>. A user may wish to derive a new class from this class for providing a bitmap on-demand in order to minimize memory consumption when offering data in several formats, such as a bitmap and GIF.</para><para>This class may be used as is, but <ref refid="classwx_bitmap_data_object_1af7af566b046324011cedcb56cfca60af" kindref="member">GetBitmap()</ref> may be overridden to increase efficiency.</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__dnd" kindref="compound">Clipboard and Drag &amp; Drop</ref></para><para><simplesect kind="see"><para><ref refid="overview_dnd" kindref="compound">Drag and Drop Overview</ref>, <ref refid="classwx_data_object" kindref="compound">wxDataObject</ref>, <ref refid="classwx_data_object_simple" kindref="compound">wxDataObjectSimple</ref>, <ref refid="classwx_file_data_object" kindref="compound">wxFileDataObject</ref>, <ref refid="classwx_text_data_object" kindref="compound">wxTextDataObject</ref>, <ref refid="classwx_data_object" kindref="compound">wxDataObject</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="4517">
+      <node id="4607">
         <label>wxDataObject</label>
         <link refid="classwx_data_object"/>
       </node>
-      <node id="4515">
+      <node id="4605">
         <label>wxBitmapDataObject</label>
         <link refid="classwx_bitmap_data_object"/>
-        <childnode refid="4516" relation="public-inheritance">
+        <childnode refid="4606" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4516">
+      <node id="4606">
         <label>wxDataObjectSimple</label>
         <link refid="classwx_data_object_simple"/>
-        <childnode refid="4517" relation="public-inheritance">
+        <childnode refid="4607" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="4520">
+      <node id="4610">
         <label>wxDataObject</label>
         <link refid="classwx_data_object"/>
       </node>
-      <node id="4518">
+      <node id="4608">
         <label>wxBitmapDataObject</label>
         <link refid="classwx_bitmap_data_object"/>
-        <childnode refid="4519" relation="public-inheritance">
+        <childnode refid="4609" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4519">
+      <node id="4609">
         <label>wxDataObjectSimple</label>
         <link refid="classwx_data_object_simple"/>
-        <childnode refid="4520" relation="public-inheritance">
+        <childnode refid="4610" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataobj.h" line="623" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataobj.h" bodystart="622" bodyend="645"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataobj.h" line="586" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dataobj.h" bodystart="585" bodyend="608"/>
     <listofallmembers>
       <member refid="classwx_data_object_1a7623fd02a6bef5dba7c96ff0a1a692efa1f94b69e55238c5470f85e252b5fd8df" prot="public" virt="non-virtual"><scope>wxBitmapDataObject</scope><name>Both</name></member>
       <member refid="classwx_data_object_1a7623fd02a6bef5dba7c96ff0a1a692ef" prot="public" virt="non-virtual"><scope>wxBitmapDataObject</scope><name>Direction</name></member>

@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dirctrl.h" line="42"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dirctrl.h" line="57"/>
       </memberdef>
       <memberdef kind="function" id="classwx_generic_dir_ctrl_1a13e3b17515798125c1b00024fafbe511" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -35,7 +35,7 @@
         <param>
           <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
           <declname>dir</declname>
-          <defval>wxDirDialogDefaultFolderStr</defval>
+          <defval><ref refid="dirdlg_8h_1acadf4ee710a343f80d0aa3bc97111404" kindref="member">wxDirDialogDefaultFolderStr</ref></defval>
         </param>
         <param>
           <type>const <ref refid="classwx_point" kindref="compound">wxPoint</ref> &amp;</type>
@@ -137,7 +137,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dirctrl.h" line="76"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dirctrl.h" line="91"/>
       </memberdef>
       <memberdef kind="function" id="classwx_generic_dir_ctrl_1a8d2de85d37c1fe5e72d02b0dc0450d03" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -150,7 +150,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dirctrl.h" line="81"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dirctrl.h" line="96"/>
       </memberdef>
       <memberdef kind="function" id="classwx_generic_dir_ctrl_1a114c6e42f0a75738ced711bc6395ac93" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -167,7 +167,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dirctrl.h" line="86"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dirctrl.h" line="101"/>
       </memberdef>
       <memberdef kind="function" id="classwx_generic_dir_ctrl_1aee6c6d4da828a3c159fc626d2fe85fb0" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -180,7 +180,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dirctrl.h" line="91"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dirctrl.h" line="106"/>
       </memberdef>
       <memberdef kind="function" id="classwx_generic_dir_ctrl_1a73a48debbc285902da125d56dd3db896" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -199,7 +199,7 @@
         <param>
           <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
           <declname>dir</declname>
-          <defval>wxDirDialogDefaultFolderStr</defval>
+          <defval><ref refid="dirdlg_8h_1acadf4ee710a343f80d0aa3bc97111404" kindref="member">wxDirDialogDefaultFolderStr</ref></defval>
         </param>
         <param>
           <type>const <ref refid="classwx_point" kindref="compound">wxPoint</ref> &amp;</type>
@@ -237,7 +237,7 @@
 <para>See <ref refid="classwx_generic_dir_ctrl_1a1072f4e29922e08f7e8a288e573bec5a" kindref="member">wxGenericDirCtrl()</ref> for details. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dirctrl.h" line="103"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dirctrl.h" line="118"/>
       </memberdef>
       <memberdef kind="function" id="classwx_generic_dir_ctrl_1afbc4020de9d42bf1413320323b04e53e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -254,7 +254,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dirctrl.h" line="109"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dirctrl.h" line="124"/>
       </memberdef>
       <memberdef kind="function" id="classwx_generic_dir_ctrl_1a00845dc2ceb7284eb3aeb7b91a75ad2c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -267,7 +267,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dirctrl.h" line="114"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dirctrl.h" line="129"/>
       </memberdef>
       <memberdef kind="function" id="classwx_generic_dir_ctrl_1a3305896380664ceca2fafa693b7b54ef" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -280,7 +280,7 @@
 <para>This function doesn&apos;t count a directory as a selection. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dirctrl.h" line="121"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dirctrl.h" line="136"/>
       </memberdef>
       <memberdef kind="function" id="classwx_generic_dir_ctrl_1a34254856fea6283e9a0027f782258ac2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -297,7 +297,7 @@
 <para>This function doesn&apos;t count a directory as a selection. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dirctrl.h" line="128"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dirctrl.h" line="143"/>
       </memberdef>
       <memberdef kind="function" id="classwx_generic_dir_ctrl_1ab44c74350626790f176975f029536106" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -310,7 +310,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dirctrl.h" line="133"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dirctrl.h" line="148"/>
       </memberdef>
       <memberdef kind="function" id="classwx_generic_dir_ctrl_1a5dc600e9a8de6df00cf57b68e317d496" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>int</type>
@@ -323,10 +323,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dirctrl.h" line="138"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dirctrl.h" line="153"/>
       </memberdef>
       <memberdef kind="function" id="classwx_generic_dir_ctrl_1a9135601de4c43f5e708ce3be80f10b57" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
-        <type>wxDirFilterListCtrl *</type>
+        <type><ref refid="classwx_dir_filter_list_ctrl" kindref="compound">wxDirFilterListCtrl</ref> *</type>
         <definition>virtual wxDirFilterListCtrl* wxGenericDirCtrl::GetFilterListCtrl</definition>
         <argsstring>() const </argsstring>
         <name>GetFilterListCtrl</name>
@@ -336,7 +336,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dirctrl.h" line="143"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dirctrl.h" line="158"/>
       </memberdef>
       <memberdef kind="function" id="classwx_generic_dir_ctrl_1aef1b3459ac577106bbc4ef7eb91bad26" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -349,7 +349,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dirctrl.h" line="148"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dirctrl.h" line="163"/>
       </memberdef>
       <memberdef kind="function" id="classwx_generic_dir_ctrl_1ad761ac66b3988c213d3b9bccbca76d20" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -366,7 +366,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dirctrl.h" line="153"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dirctrl.h" line="168"/>
       </memberdef>
       <memberdef kind="function" id="classwx_generic_dir_ctrl_1a52a3a39e47910a8cab4ed207e4b6a99f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_tree_item_id" kindref="compound">wxTreeItemId</ref></type>
@@ -379,7 +379,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dirctrl.h" line="158"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dirctrl.h" line="173"/>
       </memberdef>
       <memberdef kind="function" id="classwx_generic_dir_ctrl_1a2bfb2f9e1850d3a8f0a960ad01d7a3cf" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_tree_ctrl" kindref="compound">wxTreeCtrl</ref> *</type>
@@ -392,7 +392,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dirctrl.h" line="163"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dirctrl.h" line="178"/>
       </memberdef>
       <memberdef kind="function" id="classwx_generic_dir_ctrl_1aba23511d2deada35503cfa92b8b98283" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -405,7 +405,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dirctrl.h" line="168"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dirctrl.h" line="183"/>
       </memberdef>
       <memberdef kind="function" id="classwx_generic_dir_ctrl_1a78a608e5aae6000be3f1b6225f67e613" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -418,7 +418,7 @@
 <para>May be used to update the displayed directory content. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dirctrl.h" line="174"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dirctrl.h" line="189"/>
       </memberdef>
       <memberdef kind="function" id="classwx_generic_dir_ctrl_1afaefbd20c8132ed2acbf0cee90e47723" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -435,7 +435,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dirctrl.h" line="179"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dirctrl.h" line="194"/>
       </memberdef>
       <memberdef kind="function" id="classwx_generic_dir_ctrl_1a7cd100f7754fc1c533f7f53d6449d666" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -452,7 +452,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dirctrl.h" line="184"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dirctrl.h" line="199"/>
       </memberdef>
       <memberdef kind="function" id="classwx_generic_dir_ctrl_1abb2e1e12579519b7a0d8f85cb6d0b097" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -469,7 +469,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dirctrl.h" line="189"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dirctrl.h" line="204"/>
       </memberdef>
       <memberdef kind="function" id="classwx_generic_dir_ctrl_1ac0e8bc480574ecf6fa0393bc38f20ecb" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -486,7 +486,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dirctrl.h" line="194"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dirctrl.h" line="209"/>
       </memberdef>
       <memberdef kind="function" id="classwx_generic_dir_ctrl_1a0a489055c42760e78e3a50e533a66484" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -511,7 +511,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dirctrl.h" line="201"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dirctrl.h" line="216"/>
       </memberdef>
       <memberdef kind="function" id="classwx_generic_dir_ctrl_1a5f175c4f1fef663c4ff6c322a6a175f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -533,7 +533,7 @@
 <para>In multiple selection controls, can be also used to deselect a currently selected item if the value of <emphasis>select</emphasis> is false. Existing selections are not changed. Only visible items can be (de)selected, otherwise use <ref refid="classwx_generic_dir_ctrl_1afbc4020de9d42bf1413320323b04e53e" kindref="member">ExpandPath()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dirctrl.h" line="211"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dirctrl.h" line="226"/>
       </memberdef>
       <memberdef kind="function" id="classwx_generic_dir_ctrl_1a0f898f8a134b4351c9352c0278bcd866" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -550,7 +550,7 @@
 <para>Only supported when wxDIRCTRL_MULTIPLE is set. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dirctrl.h" line="218"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dirctrl.h" line="233"/>
       </memberdef>
       <memberdef kind="function" id="classwx_generic_dir_ctrl_1a40f845ec747803acf66037a03499b9ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -563,7 +563,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dirctrl.h" line="223"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dirctrl.h" line="238"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -580,85 +580,85 @@
 <heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref> <htmlonly> &lt;br&gt;&lt;div&gt;&lt;span class=&apos;appearance&apos;&gt;Appearance:&lt;/span&gt;&lt;br&gt;&lt;table class=&apos;appearance&apos;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&apos;wxmsw/genericdirctrl.png&apos; alt=&apos;wxMSW appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxgtk/genericdirctrl.png&apos; alt=&apos;wxGTK appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxmac/genericdirctrl.png&apos; alt=&apos;wxMac appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;wxMSW appearance&lt;/td&gt;&lt;td&gt;wxGTK appearance&lt;/td&gt;&lt;td&gt;wxMac appearance&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt; </htmlonly> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="6515">
+      <node id="6665">
         <label>wxGenericDirCtrl</label>
         <link refid="classwx_generic_dir_ctrl"/>
-        <childnode refid="6516" relation="public-inheritance">
+        <childnode refid="6666" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6519">
+      <node id="6669">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="6518">
+      <node id="6668">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="6519" relation="public-inheritance">
+        <childnode refid="6669" relation="public-inheritance">
         </childnode>
-        <childnode refid="6520" relation="public-inheritance">
+        <childnode refid="6670" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6520">
+      <node id="6670">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="6516">
+      <node id="6666">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="6517" relation="public-inheritance">
+        <childnode refid="6667" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6517">
+      <node id="6667">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="6518" relation="public-inheritance">
+        <childnode refid="6668" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="6521">
+      <node id="6671">
         <label>wxGenericDirCtrl</label>
         <link refid="classwx_generic_dir_ctrl"/>
-        <childnode refid="6522" relation="public-inheritance">
+        <childnode refid="6672" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6525">
+      <node id="6675">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="6526" relation="usage">
+        <childnode refid="6676" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="6524">
+      <node id="6674">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="6525" relation="public-inheritance">
+        <childnode refid="6675" relation="public-inheritance">
         </childnode>
-        <childnode refid="6527" relation="public-inheritance">
+        <childnode refid="6677" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6527">
+      <node id="6677">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="6522">
+      <node id="6672">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="6523" relation="public-inheritance">
+        <childnode refid="6673" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6523">
+      <node id="6673">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="6524" relation="public-inheritance">
+        <childnode refid="6674" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6526">
+      <node id="6676">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dirctrl.h" line="37" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dirctrl.h" bodystart="36" bodyend="224"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dirctrl.h" line="52" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dirctrl.h" bodystart="51" bodyend="239"/>
     <listofallmembers>
       <member refid="classwx_window_1a3afbd49b1ea2f8275e3600dcac102923" prot="public" virt="virtual"><scope>wxGenericDirCtrl</scope><name>AcceptsFocus</name></member>
       <member refid="classwx_window_1a2370bdd3ab08e7ef3c7555c6aa8301b8" prot="public" virt="virtual"><scope>wxGenericDirCtrl</scope><name>AcceptsFocusFromKeyboard</name></member>
@@ -837,6 +837,7 @@
       <member refid="classwx_window_1aa90a260c0a835a133043460b7d0024a8" prot="public" virt="virtual"><scope>wxGenericDirCtrl</scope><name>InitDialog</name></member>
       <member refid="classwx_window_1ae1b56ca87d8590ee5e576012229a380a" prot="public" virt="non-virtual"><scope>wxGenericDirCtrl</scope><name>InvalidateBestSize</name></member>
       <member refid="classwx_window_1af918e6fe8565c2d5235973cc3de84a43" prot="public" virt="non-virtual"><scope>wxGenericDirCtrl</scope><name>IsBeingDeleted</name></member>
+      <member refid="classwx_window_1a469f0881da248d37691440c9d4cc7200" prot="public" virt="non-virtual"><scope>wxGenericDirCtrl</scope><name>IsDescendant</name></member>
       <member refid="classwx_window_1a9d1be1bbb625ebf87ad4ad47e49a0194" prot="public" virt="virtual"><scope>wxGenericDirCtrl</scope><name>IsDoubleBuffered</name></member>
       <member refid="classwx_window_1a59452a5bd42f5ea4b31d7fc4aa59644f" prot="public" virt="non-virtual"><scope>wxGenericDirCtrl</scope><name>IsEnabled</name></member>
       <member refid="classwx_window_1af27ef77c913e32050543f3b0ca435a0d" prot="public" virt="non-virtual"><scope>wxGenericDirCtrl</scope><name>IsExposed</name></member>
@@ -852,13 +853,13 @@
       <member refid="classwx_window_1a72d70fd14e3565bf782fbcd3271d8930" prot="public" virt="virtual"><scope>wxGenericDirCtrl</scope><name>IsShownOnScreen</name></member>
       <member refid="classwx_window_1a657ef8b6055eb06df894ac5e6ddfecf8" prot="public" virt="non-virtual"><scope>wxGenericDirCtrl</scope><name>IsThisEnabled</name></member>
       <member refid="classwx_window_1a0002826ad05f2a5661b4c8995713f37f" prot="public" virt="virtual"><scope>wxGenericDirCtrl</scope><name>IsTopLevel</name></member>
+      <member refid="classwx_window_1a7940d510c5bdc062a2b109a1022dd8c2" prot="public" virt="virtual"><scope>wxGenericDirCtrl</scope><name>IsTransparentBackgroundSupported</name></member>
       <member refid="classwx_evt_handler_1a360fdeefcf53b62fb49fb828406bb8a6" prot="public" virt="non-virtual"><scope>wxGenericDirCtrl</scope><name>IsUnlinked</name></member>
       <member refid="classwx_window_1a1b143c3e72bd0af533b76db4830a6113" prot="public" virt="virtual"><scope>wxGenericDirCtrl</scope><name>Layout</name></member>
       <member refid="classwx_window_1ade808784f0e64d9985e2f279b5ca8c02" prot="public" virt="non-virtual"><scope>wxGenericDirCtrl</scope><name>LineDown</name></member>
       <member refid="classwx_window_1afc0816a174ceee6d36d1995c6824a273" prot="public" virt="non-virtual"><scope>wxGenericDirCtrl</scope><name>LineUp</name></member>
       <member refid="classwx_window_1a124944524f36b71385dad8fddaad8ded" prot="public" virt="virtual"><scope>wxGenericDirCtrl</scope><name>Lower</name></member>
       <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxGenericDirCtrl</scope><name>m_refData</name></member>
-      <member refid="classwx_window_1a192fc8b467845d093c16452db96c65c5" prot="public" virt="virtual"><scope>wxGenericDirCtrl</scope><name>MakeModal</name></member>
       <member refid="classwx_window_1ab1cb98c8d25b9e6ff7b706b1446c3df7" prot="public" virt="non-virtual"><scope>wxGenericDirCtrl</scope><name>Move</name></member>
       <member refid="classwx_window_1a22a22c1e23ca05776707e7999d8047fe" prot="public" virt="non-virtual"><scope>wxGenericDirCtrl</scope><name>Move</name></member>
       <member refid="classwx_window_1a79e66079125e8420de269811bdb6f2b6" prot="public" virt="non-virtual"><scope>wxGenericDirCtrl</scope><name>MoveAfterInTabOrder</name></member>
@@ -987,7 +988,6 @@
       <member refid="classwx_window_1a88cc65e424a129d9b0057756cdb67ec9" prot="public" virt="virtual"><scope>wxGenericDirCtrl</scope><name>TransferDataToWindow</name></member>
       <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxGenericDirCtrl</scope><name>TryAfter</name></member>
       <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxGenericDirCtrl</scope><name>TryBefore</name></member>
-      <member refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" virt="non-virtual"><scope>wxGenericDirCtrl</scope><name>TryThis</name></member>
       <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxGenericDirCtrl</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxGenericDirCtrl</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a22e5db2ec1d19c8252c056fd116975d7" prot="public" virt="non-virtual"><scope>wxGenericDirCtrl</scope><name>Unlink</name></member>

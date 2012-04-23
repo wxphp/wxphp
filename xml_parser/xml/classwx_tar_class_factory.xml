@@ -11,49 +11,49 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__archive" kindref="compound">Archive support</ref>, <ref refid="group__group__class__streams" kindref="compound">Streams</ref></para><para><simplesect kind="see"><para><ref refid="overview_archive" kindref="compound">Archive Formats</ref>, <ref refid="overview_archive_1overview_archive_generic" kindref="member">Generic Archive Programming</ref>, <ref refid="classwx_tar_entry" kindref="compound">wxTarEntry</ref>, <ref refid="classwx_tar_input_stream" kindref="compound">wxTarInputStream</ref>, <ref refid="classwx_tar_output_stream" kindref="compound">wxTarOutputStream</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10668">
+      <node id="10853">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="10667">
+      <node id="10852">
         <label>wxArchiveClassFactory</label>
         <link refid="classwx_archive_class_factory"/>
-        <childnode refid="10668" relation="public-inheritance">
+        <childnode refid="10853" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10666">
+      <node id="10851">
         <label>wxTarClassFactory</label>
         <link refid="classwx_tar_class_factory"/>
-        <childnode refid="10667" relation="public-inheritance">
+        <childnode refid="10852" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10671">
+      <node id="10856">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="10672" relation="usage">
+        <childnode refid="10857" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="10670">
+      <node id="10855">
         <label>wxArchiveClassFactory</label>
         <link refid="classwx_archive_class_factory"/>
-        <childnode refid="10671" relation="public-inheritance">
+        <childnode refid="10856" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10669">
+      <node id="10854">
         <label>wxTarClassFactory</label>
         <link refid="classwx_tar_class_factory"/>
-        <childnode refid="10670" relation="public-inheritance">
+        <childnode refid="10855" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10672">
+      <node id="10857">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" line="112" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" bodystart="111" bodyend="115"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/tarstrm.h" line="112" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/tarstrm.h" bodystart="111" bodyend="115"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxTarClassFactory</scope><name>AllocExclusive</name></member>
       <member refid="classwx_archive_class_factory_1a91f564a745dc5d35498e638078a8cb81" prot="public" virt="non-virtual"><scope>wxTarClassFactory</scope><name>CanHandle</name></member>

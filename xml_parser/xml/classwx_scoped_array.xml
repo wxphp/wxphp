@@ -20,7 +20,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopedarray.h" line="121" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopedarray.h" bodystart="121" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/scopedarray.h" line="121" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/scopedarray.h" bodystart="121" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -40,7 +40,7 @@
 <para>On compilers that support it, this uses the explicit keyword. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopedarray.h" line="77"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/scopedarray.h" line="77"/>
       </memberdef>
       <memberdef kind="function" id="classwx_scoped_array_1aaba2436381ab2e5f8475012549d86db4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>const T *</type>
@@ -53,7 +53,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopedarray.h" line="83"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/scopedarray.h" line="83"/>
       </memberdef>
       <memberdef kind="function" id="classwx_scoped_array_1a8952ef9694da124e40130363038d4b3d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>const T &amp;</type>
@@ -70,7 +70,7 @@
 <para>The function does not do bounds checking. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopedarray.h" line="89"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/scopedarray.h" line="89"/>
       </memberdef>
       <memberdef kind="function" id="classwx_scoped_array_1a2fda76162f6d263438e9b274d2f7b81b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -88,7 +88,7 @@
 <para>This function does check to make sure that the pointer you are assigning is not the same pointer that is already stored. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopedarray.h" line="96"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/scopedarray.h" line="96"/>
       </memberdef>
       <memberdef kind="function" id="classwx_scoped_array_1a1c2383aef679994454f4cd5f4faf8ad3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -105,7 +105,7 @@
 <para>The pointer being swapped must be of the same type (hence the same class name). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopedarray.h" line="102"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/scopedarray.h" line="102"/>
       </memberdef>
       <memberdef kind="function" id="classwx_scoped_array_1a0ccb5c555051a3455903bc70d62e34e7" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
         <type></type>
@@ -131,7 +131,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopedarray.h" line="131"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/scopedarray.h" line="131"/>
       </memberdef>
       <memberdef kind="function" id="classwx_scoped_array_1ab1290af2f1e951056cdc33770584b11a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -144,7 +144,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopedarray.h" line="134"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/scopedarray.h" line="134"/>
       </memberdef>
       <memberdef kind="function" id="classwx_scoped_array_1af451c2674e5a8d2bcc97dbf0795f7b12" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -157,7 +157,7 @@
 <para>If this class contains a valid array it will return true, if it contains a NULL pointer it will return false. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopedarray.h" line="143"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/scopedarray.h" line="143"/>
       </memberdef>
       <memberdef kind="function" id="classwx_scoped_array_1a877c6b3f10236aa6ce0e273d93cdf910" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -183,7 +183,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopedarray.h" line="153"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/scopedarray.h" line="153"/>
       </memberdef>
       <memberdef kind="function" id="classwx_scoped_array_1a315ad6a56187a5a90c5d71c4dfd94d25" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>T &amp;</type>
@@ -200,7 +200,7 @@
 <para>Must not be called if the array has no valid pointer. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopedarray.h" line="160"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/scopedarray.h" line="160"/>
       </memberdef>
       <memberdef kind="function" id="classwx_scoped_array_1a4d2097f0ae3410f5eb5afcc2e08c1b9b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>T *</type>
@@ -213,7 +213,7 @@
 <para>The returned pointer may be NULL. It must not be deleted by the caller, call <computeroutput>reset(NULL)</computeroutput> instead. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopedarray.h" line="168"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/scopedarray.h" line="168"/>
       </memberdef>
       <memberdef kind="function" id="classwx_scoped_array_1ac7f6ea16c7b21dcd2d53f5c3048f1061" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -230,7 +230,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopedarray.h" line="171"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/scopedarray.h" line="171"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -269,7 +269,7 @@
 </programlisting></para><para>A smart pointer holds a pointer to an object (which must be complete when wxDEFINE_SCOPED_ARRAY() is called).</para><para>The memory used by the object is deleted when the smart pointer goes out of scope. The first argument of the macro is the pointer type, the second is the name of the new smart pointer class being created. Below we will use <ref refid="classwx_scoped_array" kindref="compound">wxScopedArray</ref> to represent the scoped pointer array class, but the user may create the class with any legal name.</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__smartpointers" kindref="compound">Smart Pointers</ref></para><para><simplesect kind="see"><para><ref refid="classwx_scoped_ptr" kindref="compound">wxScopedPtr</ref> </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopedarray.h" line="71" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopedarray.h" bodystart="70" bodyend="103"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/scopedarray.h" line="71" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/scopedarray.h" bodystart="70" bodyend="103"/>
     <listofallmembers>
       <member refid="classwx_scoped_array_1ac28509dec72c7d4c56bd1123ffafc80e" prot="public" virt="non-virtual"><scope>wxScopedArray</scope><name>element_type</name></member>
       <member refid="classwx_scoped_array_1aaba2436381ab2e5f8475012549d86db4" prot="public" virt="non-virtual"><scope>wxScopedArray</scope><name>get</name></member>

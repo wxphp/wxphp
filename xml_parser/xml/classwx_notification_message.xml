@@ -4,6 +4,34 @@
     <compoundname>wxNotificationMessage</compoundname>
     <basecompoundref refid="classwx_evt_handler" prot="public" virt="non-virtual">wxEvtHandler</basecompoundref>
     <includes local="no">wx/notifmsg.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="classwx_notification_message_1af0778573601811408d35f535ffa7a0d9" prot="public" static="no">
+        <name>@28</name>
+        <enumvalue id="classwx_notification_message_1af0778573601811408d35f535ffa7a0d9a5b4a8e2f2e6ed0a8fe76016be6ee7942" prot="public">
+          <name>Timeout_Auto</name>
+          <initializer> -1</initializer>
+          <briefdescription>
+<para>Notification will be hidden automatically. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classwx_notification_message_1af0778573601811408d35f535ffa7a0d9a56e3ea77b58c4b79887804eddfdabe78" prot="public">
+          <name>Timeout_Never</name>
+          <initializer> 0</initializer>
+          <briefdescription>
+<para>Notification will never time out. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Possible values for <ref refid="classwx_notification_message_1ac08556aaa081b3c39281dc261449a4bc" kindref="member">Show()</ref> timeout. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/notifmsg.h" line="29" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/notifmsg.h" bodystart="28" bodyend="32"/>
+      </memberdef>
+      </sectiondef>
       <sectiondef kind="public-func">
       <memberdef kind="function" id="classwx_notification_message_1a7799f9358f0d90f8d9ebc675c2da4782" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -16,7 +44,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/notifmsg.h" line="31"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/notifmsg.h" line="38"/>
       </memberdef>
       <memberdef kind="function" id="classwx_notification_message_1ad7702e56ced878ea5b0b0e3f9a6a727c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -48,7 +76,7 @@
 <para>See <ref refid="classwx_notification_message_1a7654f8e0764ac66c5dcf58b057453045" kindref="member">SetTitle()</ref>, <ref refid="classwx_notification_message_1acdc0e245b4391be704cced4c790e9e35" kindref="member">SetMessage()</ref>, <ref refid="classwx_notification_message_1a5b966d65b4c90b36c86fc80782cf8459" kindref="member">SetParent()</ref> and <ref refid="classwx_notification_message_1af55f3983bfd60ae746411dafed65257a" kindref="member">SetFlags()</ref> for the description of the corresponding parameters. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/notifmsg.h" line="40"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/notifmsg.h" line="47"/>
       </memberdef>
       <memberdef kind="function" id="classwx_notification_message_1a31b6df34e4c1c09531848cc0f30eccb1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -61,7 +89,7 @@
 <para>Returns true if it was hidden or false if it couldn&apos;t be done (e.g. on some systems automatically hidden notifications can&apos;t be hidden manually). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/notifmsg.h" line="49"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/notifmsg.h" line="56"/>
       </memberdef>
       <memberdef kind="function" id="classwx_notification_message_1af55f3983bfd60ae746411dafed65257a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -78,7 +106,7 @@
 <para>Valid values are <computeroutput>wxICON_INFORMATION</computeroutput>, <computeroutput>wxICON_WARNING</computeroutput> and <computeroutput>wxICON_ERROR</computeroutput> (notice that <computeroutput>wxICON_QUESTION</computeroutput> is not allowed here). Some implementations of this class may not support the icons. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/notifmsg.h" line="59"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/notifmsg.h" line="66"/>
       </memberdef>
       <memberdef kind="function" id="classwx_notification_message_1acdc0e245b4391be704cced4c790e9e35" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -95,7 +123,7 @@
 <para>This should be a more detailed description than the title but still limited to reasonable length (not more than 256 characters). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/notifmsg.h" line="67"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/notifmsg.h" line="74"/>
       </memberdef>
       <memberdef kind="function" id="classwx_notification_message_1a5b966d65b4c90b36c86fc80782cf8459" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -112,7 +140,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/notifmsg.h" line="74"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/notifmsg.h" line="81"/>
       </memberdef>
       <memberdef kind="function" id="classwx_notification_message_1a7654f8e0764ac66c5dcf58b057453045" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -129,7 +157,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/notifmsg.h" line="80"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/notifmsg.h" line="87"/>
       </memberdef>
       <memberdef kind="function" id="classwx_notification_message_1ac08556aaa081b3c39281dc261449a4bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -148,7 +176,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/notifmsg.h" line="93"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/notifmsg.h" line="100"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -157,61 +185,61 @@
 <para>Currently it is implemented natively only for the Maemo platform and uses (non-modal) dialogs for the display of the notifications under the other platforms but it will be extended to use the platform-specific notifications in the other ports in the future.</para><para>Notice that this class is not a window and so doesn&apos;t derive from <ref refid="classwx_window" kindref="compound">wxWindow</ref>.</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__misc" kindref="compound">Miscellaneous</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7971">
+      <node id="8163">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="7970">
+      <node id="8162">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="7971" relation="public-inheritance">
+        <childnode refid="8163" relation="public-inheritance">
         </childnode>
-        <childnode refid="7972" relation="public-inheritance">
+        <childnode refid="8164" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7972">
+      <node id="8164">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="7969">
+      <node id="8161">
         <label>wxNotificationMessage</label>
         <link refid="classwx_notification_message"/>
-        <childnode refid="7970" relation="public-inheritance">
+        <childnode refid="8162" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7975">
+      <node id="8167">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="7976" relation="usage">
+        <childnode refid="8168" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="7974">
+      <node id="8166">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="7975" relation="public-inheritance">
+        <childnode refid="8167" relation="public-inheritance">
         </childnode>
-        <childnode refid="7977" relation="public-inheritance">
+        <childnode refid="8169" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7977">
+      <node id="8169">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="7973">
+      <node id="8165">
         <label>wxNotificationMessage</label>
         <link refid="classwx_notification_message"/>
-        <childnode refid="7974" relation="public-inheritance">
+        <childnode refid="8166" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7976">
+      <node id="8168">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/notifmsg.h" line="25" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/notifmsg.h" bodystart="24" bodyend="94"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/notifmsg.h" line="25" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/notifmsg.h" bodystart="24" bodyend="101"/>
     <listofallmembers>
       <member refid="classwx_evt_handler_1a7dc3c701781f4044372049de5004137e" prot="public" virt="non-virtual"><scope>wxNotificationMessage</scope><name>AddFilter</name></member>
       <member refid="classwx_evt_handler_1a0737c6d2cbcd5ded4b1ecdd53ed0def3" prot="public" virt="virtual"><scope>wxNotificationMessage</scope><name>AddPendingEvent</name></member>
@@ -260,9 +288,10 @@
       <member refid="classwx_object_1afab780710f2adc1bb33310e27590140b" prot="public" virt="non-virtual"><scope>wxNotificationMessage</scope><name>SetRefData</name></member>
       <member refid="classwx_notification_message_1a7654f8e0764ac66c5dcf58b057453045" prot="public" virt="non-virtual"><scope>wxNotificationMessage</scope><name>SetTitle</name></member>
       <member refid="classwx_notification_message_1ac08556aaa081b3c39281dc261449a4bc" prot="public" virt="virtual"><scope>wxNotificationMessage</scope><name>Show</name></member>
+      <member refid="classwx_notification_message_1af0778573601811408d35f535ffa7a0d9a5b4a8e2f2e6ed0a8fe76016be6ee7942" prot="public" virt="non-virtual"><scope>wxNotificationMessage</scope><name>Timeout_Auto</name></member>
+      <member refid="classwx_notification_message_1af0778573601811408d35f535ffa7a0d9a56e3ea77b58c4b79887804eddfdabe78" prot="public" virt="non-virtual"><scope>wxNotificationMessage</scope><name>Timeout_Never</name></member>
       <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxNotificationMessage</scope><name>TryAfter</name></member>
       <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxNotificationMessage</scope><name>TryBefore</name></member>
-      <member refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" virt="non-virtual"><scope>wxNotificationMessage</scope><name>TryThis</name></member>
       <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxNotificationMessage</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxNotificationMessage</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a22e5db2ec1d19c8252c056fd116975d7" prot="public" virt="non-virtual"><scope>wxNotificationMessage</scope><name>Unlink</name></member>

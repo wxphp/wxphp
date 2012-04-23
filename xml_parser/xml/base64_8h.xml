@@ -32,7 +32,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/base64.h" line="22" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/base64.h" bodystart="21" bodyend="26"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/base64.h" line="22" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/base64.h" bodystart="21" bodyend="26"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -93,7 +93,7 @@
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/base64.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/base64.h" line="53"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/base64.h" line="53"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__misc_1gaafaeb4b7aef5c4f9795341938cb469ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -129,7 +129,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/base64.h&gt; 
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/base64.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/base64.h" line="72"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/base64.h" line="72"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__misc_1ga12895467dca7cafd2d3c776e580d4861" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -146,7 +146,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/base64.h&gt; 
 <para>There is no error return.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/base64.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/base64.h" line="82"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/base64.h" line="82"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__misc_1ga2b4f508809484666dfc7f81cf9073523" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -163,7 +163,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/base64.h&gt; 
 <para>This can be useful for allocating a buffer to be passed to <ref refid="group__group__funcmacro__misc_1ga97da529725f807059069449cdc0eb6e3" kindref="member">wxBase64Decode()</ref>.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/base64.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/base64.h" line="92"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/base64.h" line="92"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__misc_1ga84d7266622d43ce4793a8f0bce865117" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -180,7 +180,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/base64.h&gt; 
 <para>This can be useful for allocating the buffer passed to <ref refid="group__group__funcmacro__misc_1gae76ac8ba0136d28435a233108cc40bee" kindref="member">wxBase64Encode()</ref>.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/base64.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/base64.h" line="101"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/base64.h" line="101"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__misc_1ga97da529725f807059069449cdc0eb6e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -263,7 +263,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/base64.h&gt; 
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/base64.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/base64.h" line="145"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/base64.h" line="145"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__misc_1ga093152150d5e353cbd9d5499b5d83c9a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -299,7 +299,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/base64.h&gt; 
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/base64.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/base64.h" line="162"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/base64.h" line="162"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__misc_1ga254a00deb9b405de6f11736937b032b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_memory_buffer" kindref="compound">wxMemoryBuffer</ref></type>
@@ -331,7 +331,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/base64.h&gt; 
 <para>See the <ref refid="group__group__funcmacro__misc_1ga97da529725f807059069449cdc0eb6e3" kindref="member">wxBase64Decode(void*,size_t,const char*,size_t,wxBase64DecodeMode,size_t*)</ref> overload for more information about the parameters of this function. The difference of this overload is that it allocates a buffer of necessary size on its own and returns it, freeing you from the need to do it manually. Because of this, it is simpler to use and is recommended for normal use.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/base64.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/base64.h" line="178"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/base64.h" line="178"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__misc_1ga57c3f3ee5b6ba0e9e2fcf5008634a32b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_memory_buffer" kindref="compound">wxMemoryBuffer</ref></type>
@@ -358,13 +358,13 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/base64.h&gt; 
 <para>See the <ref refid="group__group__funcmacro__misc_1ga97da529725f807059069449cdc0eb6e3" kindref="member">wxBase64Decode(void*,size_t,const char*,size_t,wxBase64DecodeMode,size_t*)</ref> overload for more information about the parameters of this function.</para><para>This overload takes as input a <ref refid="classwx_string" kindref="compound">wxString</ref> and returns the internally-allocated memory as a <ref refid="classwx_memory_buffer" kindref="compound">wxMemoryBuffer</ref>, containing the Base64-decoded data.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/base64.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/base64.h" line="193"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/base64.h" line="193"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/base64.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/base64.h"/>
   </compounddef>
 </doxygen>

@@ -39,7 +39,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textcompleter.h" line="141"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/textcompleter.h" line="141"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -75,30 +75,30 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para><simplesect kind="since"><para>2.9.2 </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10771">
+      <node id="10956">
         <label>wxTextCompleterSimple</label>
         <link refid="classwx_text_completer_simple"/>
-        <childnode refid="10772" relation="public-inheritance">
+        <childnode refid="10957" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10772">
+      <node id="10957">
         <label>wxTextCompleter</label>
         <link refid="classwx_text_completer"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10773">
+      <node id="10958">
         <label>wxTextCompleterSimple</label>
         <link refid="classwx_text_completer_simple"/>
-        <childnode refid="10774" relation="public-inheritance">
+        <childnode refid="10959" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10774">
+      <node id="10959">
         <label>wxTextCompleter</label>
         <link refid="classwx_text_completer"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textcompleter.h" line="117" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textcompleter.h" bodystart="116" bodyend="142"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/textcompleter.h" line="117" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/textcompleter.h" bodystart="116" bodyend="142"/>
     <listofallmembers>
       <member refid="classwx_text_completer_simple_1abf3d103eda25bcb7a9d572523d0de736" prot="public" virt="pure-virtual"><scope>wxTextCompleterSimple</scope><name>GetCompletions</name></member>
       <member refid="classwx_text_completer_1afcfaf585fe34114a444411148c299619" prot="public" virt="pure-virtual"><scope>wxTextCompleterSimple</scope><name>GetNext</name></member>

@@ -32,7 +32,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/valnum.h" line="352"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/valnum.h" line="352"/>
       </memberdef>
       <memberdef kind="function" id="valnum_8h_1a4f86eb1c74de9461226a87d743c44e33" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -64,7 +64,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/valnum.h" line="357"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/valnum.h" line="357"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="enum">
@@ -108,7 +108,7 @@
 Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__validator" kindref="compound">Validators</ref> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/valnum.h" line="21" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/valnum.h" bodystart="20" bodyend="63"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/valnum.h" line="21" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/valnum.h" bodystart="20" bodyend="63"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -140,13 +140,13 @@ Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/valnum.h" line="239"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/valnum.h" line="239"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/valnum.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/valnum.h"/>
   </compounddef>
 </doxygen>

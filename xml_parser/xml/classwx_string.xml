@@ -17,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="82" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" bodystart="82" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="82" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" bodystart="82" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="classwx_string_1a6d7f9c6d210daec80bb59763e3016516" prot="public" static="no">
         <type><ref refid="classwx_uni_char" kindref="compound">wxUniChar</ref></type>
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="83" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" bodystart="83" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="83" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" bodystart="83" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="classwx_string_1a1d03e8507f5f2044d9776255cb5dfb04" prot="public" static="no">
         <type><ref refid="classwx_uni_char_ref" kindref="compound">wxUniCharRef</ref></type>
@@ -43,7 +43,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="84" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" bodystart="84" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="84" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" bodystart="84" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="classwx_string_1a6d1498f58142e40d885b1bda1ec25c83" prot="public" static="no">
         <type><ref refid="group__group__funcmacro__string_1gad42f64d8c82f1ce4ae58773a89b2d6a7" kindref="member">wxChar</ref> *</type>
@@ -56,7 +56,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="85" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" bodystart="85" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="85" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" bodystart="85" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="classwx_string_1a9c8b22db8c1446c53f1728c261d2d65b" prot="public" static="no">
         <type>const <ref refid="group__group__funcmacro__string_1gad42f64d8c82f1ce4ae58773a89b2d6a7" kindref="member">wxChar</ref> *</type>
@@ -69,7 +69,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="86" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" bodystart="86" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="86" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" bodystart="86" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="classwx_string_1afc144b1e31fffd1a9fc6ba8a551cc073" prot="public" static="no">
         <type>size_t</type>
@@ -82,7 +82,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="87" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" bodystart="87" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="87" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" bodystart="87" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="classwx_string_1afd79e86aee78b7aab5e82483ab8d7a57" prot="public" static="no">
         <type><ref refid="classwx_uni_char" kindref="compound">wxUniChar</ref></type>
@@ -95,7 +95,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="88" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" bodystart="88" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="88" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" bodystart="88" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -112,7 +112,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="107"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="107"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1aa4133e804efc7d6a7615f1720697d2f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -129,7 +129,7 @@
 <para>Just increases the ref count by 1. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="113"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="113"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a791f5885a0950a41ee76eddc2534a5f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -151,7 +151,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="118"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="118"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a1d31831eeb309c5d673a97aa9f1568d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -173,7 +173,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="123"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="123"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a1afc83d848d12750b539e579624df9fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -195,7 +195,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="129"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="129"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1ae92c9031a0143807f1d72fd2b75cfcb4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -217,7 +217,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="134"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="134"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a0ec94790ea7b08344537f5cf893476f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -234,7 +234,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="140"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="140"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a96d8fedae47a282c685c6af0dfa3728c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -255,7 +255,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="146"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="146"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a18eac98263a8ecc3d565b9e6627a14b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -276,7 +276,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="152"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="152"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a86a2ec232912c97ed44ba34651d98123" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -301,7 +301,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="158"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="158"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1ae1fcf718262b69078417a15bde646668" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -318,7 +318,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="163"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="163"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a8b1f7dc26eb881f228fd7be26885dbe7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -339,7 +339,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="168"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="168"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1afb25e4a2670786aa360792fe40eb6d31" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -356,7 +356,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="174"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="174"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a6fdc82f6b7412bc8617a9194580024ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -373,7 +373,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="179"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="179"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1adbc5f0b4efc63b775da5e9571841928a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -391,7 +391,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="187"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="187"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1adf6220517c6b2e2305c9af3c5e932afb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -409,7 +409,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="194"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="194"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1ad25109eb98a464712a6f28939e5adbdd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -422,7 +422,7 @@
 <para>Note that this is not virtual, so <ref refid="classwx_string" kindref="compound">wxString</ref> must not be inherited from. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="201"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="201"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a3ba262755ed0b1b1b4b547ff5092b285" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -439,7 +439,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="206"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="206"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1ae72a297b5ec14564a21569ff2cb540d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -456,7 +456,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="211"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="211"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -473,7 +473,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="231"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="231"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a8895cca03120099236c002c0577b4d1c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -486,7 +486,7 @@
 <para>This is a wxWidgets 1.xx compatibility function; you should not use it in new code. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="238"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="238"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1ace32756bab999f8aae9be0cf981fc449" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -499,7 +499,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="243"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="243"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1ae0a2020695a6ecd9ee49c14fe7429176" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -512,7 +512,7 @@
 <para>This is a wxWidgets 1.xx compatibility function; you should not use it in new code. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="250"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="250"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1ad04423868c5aba6cddc0b5c77dfb42ec" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -526,7 +526,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="258"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="258"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -547,7 +547,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="279"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="279"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a9a774cc2c2f9b1a6daf5e8d1d555943e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const wxCStrData</type>
@@ -560,7 +560,7 @@
 <para>Same as <ref refid="classwx_string_1a6418ec90c6d4ffe0b05702be1b35df4f" kindref="member">c_str()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="284"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="284"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a8b30e786e96beed161b30cf6d6e1c7d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_uni_char_ref" kindref="compound">wxUniCharRef</ref></type>
@@ -577,7 +577,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="289"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="289"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a0c87e85cee09e65d314457379e5aba19" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="group__group__funcmacro__string_1gaf558f1d34fbf3cf5e3258e42a40875fd" kindref="member">wxStringCharType</ref> *</type>
@@ -594,7 +594,7 @@
 <para>It returns a pointer to a new memory block, and the existing data will not be copied. Call <ref refid="classwx_string_1a3783b441b540bac783a8e5a2cceaae7d" kindref="member">UngetWriteBuf()</ref> as soon as possible to put the string back into a reasonable state.</para><para>This method is deprecated, please use <ref refid="classwx_string_buffer" kindref="compound">wxStringBuffer</ref> or <ref refid="classwx_string_buffer_length" kindref="compound">wxStringBufferLength</ref> instead. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="299"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="299"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a3783b441b540bac783a8e5a2cceaae7d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -607,7 +607,7 @@
 <para>The version of the function without the <emphasis>len</emphasis> parameter will calculate the new string length itself assuming that the string is terminated by the first <computeroutput>NUL</computeroutput> character in it while the second one will use the specified length and thus is the only version which should be used with the strings with embedded <computeroutput>NULs</computeroutput> (it is also slightly more efficient as <computeroutput>strlen()</computeroutput> doesn&apos;t have to be called).</para><para>This method is deprecated, please use <ref refid="classwx_string_buffer" kindref="compound">wxStringBuffer</ref> or <ref refid="classwx_string_buffer_length" kindref="compound">wxStringBufferLength</ref> instead. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="314"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="314"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1aa4ff7bfb39cdac3a8322cd4932216eb0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -624,7 +624,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="319"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="319"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1ad1a022058f58773d2feb072ae10a1408" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -645,7 +645,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="324"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="324"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a9cbac1fb780a7e227d38a85108829f8d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_uni_char" kindref="compound">wxUniChar</ref></type>
@@ -658,7 +658,7 @@
 <para>This is a wxWidgets 1.xx compatibility function; you should not use it in new code. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="332"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="332"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a93aaa3f92c1c13d7af2a590387340988" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_uni_char_ref" kindref="compound">wxUniCharRef</ref></type>
@@ -671,7 +671,7 @@
 <para>This is a wxWidgets 1.xx compatibility function; you should not use it in new code. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="340"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="340"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1abdf1bada2f023c6ae8023a1e4b523aa9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_uni_char" kindref="compound">wxUniChar</ref></type>
@@ -688,7 +688,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="345"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="345"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a015fbd8666790e967c9c581fa3601bac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_uni_char_ref" kindref="compound">wxUniCharRef</ref></type>
@@ -705,7 +705,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="350"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="350"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -723,7 +723,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="378"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="378"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1aedcaea87fc347a940263a533bd56846f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>wxWritableCharBuffer</type>
@@ -742,7 +742,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="389"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="389"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a12488a246923e6644d757cddd0f55efe" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -774,7 +774,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="414"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="414"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1abbd66d19de7187f2e04ad00b09f4614a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const wchar_t *</type>
@@ -787,7 +787,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="420"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="420"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a7f0bc3f755db9d009c04c88bfad4af9e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const char *</type>
@@ -800,7 +800,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="425"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="425"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a9b0c4e18fd523e43214279ab117162aa" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_char_buffer" kindref="compound">wxCharBuffer</ref></type>
@@ -813,7 +813,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="430"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="430"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1adcfd12e6d0765b1d74bccc3d63d02e98" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_char_buffer" kindref="compound">wxCharBuffer</ref></type>
@@ -832,7 +832,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="438"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="438"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1ad71e3ded85939db8af9eeadfa02719ac" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_scoped_char_type_buffer" kindref="compound">wxScopedCharBuffer</ref></type>
@@ -846,7 +846,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="447"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="447"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a6cd4782263a3ed4064eca915eb6e27e6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const wchar_t *</type>
@@ -860,7 +860,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="459"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="459"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a26a7fea7b3cda801c40b95f18e2d1d86" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_w_char_buffer" kindref="compound">wxWCharBuffer</ref></type>
@@ -873,7 +873,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="464"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="464"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a3d9337b865b8962e172c2589409c6876" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>wxWritableWCharBuffer</type>
@@ -887,7 +887,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="475"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="475"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a667b135c20008042653f82b739f6c3ab" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="group__group__funcmacro__string_1gaf558f1d34fbf3cf5e3258e42a40875fd" kindref="member">wxStringCharType</ref> *</type>
@@ -900,7 +900,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="481"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="481"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1afa91a632574bcbba1bf35b54f2c5562a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_scoped_char_type_buffer" kindref="compound">wxScopedCharBuffer</ref></type>
@@ -915,7 +915,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="495"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="495"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a2fec30dc8959d4fd3a56cd148bf1e57a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const char *</type>
@@ -928,7 +928,7 @@
 <para>Note that this conversion only works if the string contains only ASCII characters. The <ref refid="classwx_string_1adcfd12e6d0765b1d74bccc3d63d02e98" kindref="member">mb_str</ref> method provides more powerful means of converting <ref refid="classwx_string" kindref="compound">wxString</ref> to C string. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="504"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="504"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a9c39f3ca6c54a28347527c28e7c18f23" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_char_buffer" kindref="compound">wxCharBuffer</ref></type>
@@ -941,7 +941,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="509"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="509"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a3c764622c960389c4d8c9e21e13bddc7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>std::string</type>
@@ -959,7 +959,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="529"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="529"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1acd4ba44e34428aa83cd9922d2933d060" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>std::wstring</type>
@@ -973,7 +973,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="539"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="539"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1ac923e0bcfda57ec5064dcade9808db94" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_scoped_char_type_buffer" kindref="compound">wxScopedCharBuffer</ref></type>
@@ -986,7 +986,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="544"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="544"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -1007,7 +1007,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="565"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="565"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1afa989ea2b0472869c3ac5b2594cbcf81" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -1024,7 +1024,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="570"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="570"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a28d69617cbfac2f86f2255612a7d44af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -1045,7 +1045,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="575"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="575"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a506350bcfa0c862afc0bb5d291559930" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -1066,7 +1066,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="580"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="580"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a72bd9097575892317cd9521f149a16b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -1083,7 +1083,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="585"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="585"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a6b91de64493beb67937a759572757b8b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -1105,7 +1105,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="590"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="590"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a09e5dc4368a806f922c24651033f45de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -1122,7 +1122,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="595"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="595"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a742b91e784f7baaef808b4ffb073ec53" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -1143,7 +1143,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="600"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="600"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1ac6b0d07b904597a70fea888c33f165cc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -1164,7 +1164,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="605"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="605"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a8d96a72afdc434512dee502353730b6a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -1181,7 +1181,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="607"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="607"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a89dce4633434e7625479f82671dc75a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -1198,7 +1198,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="608"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="608"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a0066fea139757b878b2bfcaf1dbb69b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -1215,7 +1215,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="609"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="609"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1af3f55fe4bccf98077e3e5458f9ba2569" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -1232,7 +1232,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="610"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="610"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a784f4d061907ad8da8ecd64b7e041b67" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -1249,7 +1249,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="611"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="611"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1aa9aec5c227079380c6c6adf4f3f466d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -1266,7 +1266,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="612"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="612"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a539729c9846e45c1199f1385538b8d08" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -1283,7 +1283,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="613"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="613"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a15680835024b546e209f9d5d3c34c898" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -1300,7 +1300,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="614"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="614"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a5a321cb019b678b98f9843b2f8f67247" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -1317,7 +1317,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="615"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="615"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1ad30c6312505e3ad2f2da2d3154708c95" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -1334,7 +1334,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="616"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="616"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1ac9a674899a3bdec6a8f254228a87f7df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -1351,7 +1351,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="617"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="617"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a6e482dd5382ccc0f2170439127b565ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -1368,7 +1368,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="618"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="618"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a1502d0bb5a86a5fc2466ce7b0672a725" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -1385,7 +1385,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="619"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="619"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a7c3a6bcf82d2a5b1b93a62025a33d8da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -1402,7 +1402,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="620"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="620"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a1f24d0faf4a1c911384da20b31af3cde" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -1419,7 +1419,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="621"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="621"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a6dad8a252757bed8815e97dd1a6b8fef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -1436,7 +1436,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="622"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="622"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1ac3f6ebf36fbbc843ef0dc28d862f2c51" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -1453,7 +1453,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="623"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="623"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1ad4eb2747aea15e45454cc4092b676fb7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -1470,7 +1470,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="624"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="624"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1ab82d9888319f8639cb3310d18b7640a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1487,7 +1487,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="629"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="629"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a26c983e1489887af0ec14bbacef962ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1504,7 +1504,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="634"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="634"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -1526,7 +1526,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="668"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="668"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a9c0eb52308e347031f9e479a9abc0a8f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -1544,7 +1544,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="678"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="678"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a65f965b378fbfceed8f8688287f6e65e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1568,7 +1568,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="690"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="690"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a7e3a514459838e0c5c4b2b9b3703cc8a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1592,7 +1592,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="702"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="702"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a0fef65e3bf7f77fa6858521f29a84e20" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1609,7 +1609,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="707"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="707"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a627b084ee8088734e1b28ee23d67f7bb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1631,7 +1631,7 @@
 <para>If it does, the function will return true and put the rest of the string (i.e. after the prefix) into <emphasis>rest</emphasis> string if it is not NULL. Otherwise, the function returns false and doesn&apos;t modify the <emphasis>rest</emphasis>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="717"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="717"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a5799047918ccbed5d3166ab9c03be279" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1653,7 +1653,7 @@
 <para>If it does, the function will return true and put the beginning of the string before the suffix into <emphasis>rest</emphasis> string if it is not NULL. Otherwise, the function returns false and doesn&apos;t modify the <emphasis>rest</emphasis>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="726"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="726"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -1679,7 +1679,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="745"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="745"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a74da2de05c10aa806a4b0264be1f906f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -1700,7 +1700,7 @@
 <para>This is a wxWidgets 1.xx compatibility function, use <ref refid="classwx_string_1a023d5f6b708eff5123f47498fcf151bc" kindref="member">Mid()</ref> instead (but note that parameters have different meaning). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="754"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="754"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a0bcf647b96d18fa8c6962085f4db93c2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -1721,7 +1721,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="759"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="759"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1aaadd66ce3aa4bcfc66459c95cad81550" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -1738,7 +1738,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="764"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="764"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1ad1fc08b5bac017acda7c1583c013f6a3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -1755,7 +1755,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="769"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="769"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a1605126b7bbf5f60a6fca7f393a58f1d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -1772,7 +1772,7 @@
 <para>Returns the empty string if <emphasis>ch</emphasis> is not found. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="775"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="775"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a230d2887e27bd53592bea08bc053d912" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -1789,7 +1789,7 @@
 <para>Returns the whole string if <emphasis>ch</emphasis> is not found. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="781"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="781"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1ac37f690daad1637493dc8ffc7c0efe70" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -1827,7 +1827,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="796"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="796"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a9b6f088a6ef2faadf922a521df0fae3a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -1865,7 +1865,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="811"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="811"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -1884,7 +1884,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="833"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="833"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1aaacf7a99a2674bc3f462d54181c40f4f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -1898,7 +1898,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="840"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="840"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a2eddc0d38ba0090d5f3af1d66c4c702e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1911,7 +1911,7 @@
 <para>This is a wxWidgets 1.xx compatibility function; you should not use it in new code. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="847"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="847"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a7a8ec48b76dac441cd11db49f418d413" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -1926,7 +1926,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="857"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="857"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a3b211c6f784d687ee9bb6033a4684071" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -1940,7 +1940,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="865"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="865"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1af862e46d093e1e52fbc4f204e9aea34f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -1954,7 +1954,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="873"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="873"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1ab84d4b6e9f38ba939d61f3382d2a009b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -1968,7 +1968,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="880"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="880"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1ab708a3eb6b01704bc0019f1cf0de5b4f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1981,7 +1981,7 @@
 <para>This is a wxWidgets 1.xx compatibility function; you should not use it in new code. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="888"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="888"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -2007,7 +2007,7 @@
 <para>Returns the position or <computeroutput>wxNOT_FOUND</computeroutput> if not found. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="907"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="907"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a2e6c84a2a60fd1ca4f0465f11a6e5e41" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -2024,7 +2024,7 @@
 <para>Returns the starting position or <computeroutput>wxNOT_FOUND</computeroutput> if not found. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="913"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="913"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a93e1e0634d46ce94d6491abdedc71c21" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -2041,7 +2041,7 @@
 <para>This is a wxWidgets 1.xx compatibility function; you should not use it in new code. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="921"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="921"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a6de9a66add4360224a23bdb670181099" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -2058,7 +2058,7 @@
 <para>This is a wxWidgets 1.xx compatibility function; you should not use it in new code. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="929"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="929"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a5517e2b01e8da1a7a92400028f1a8344" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -2106,7 +2106,7 @@
 Returns the number of replacements made. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="945"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="945"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -2128,7 +2128,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="988"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="988"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a81ee01c0c1f9c2264506d674f1f2b733" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -2146,7 +2146,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1000"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1000"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1abb54083175bbc1e1164616b4aa64fcd8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -2169,7 +2169,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1032"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1032"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a2d7fb808fae67a4226ebeedf854a5a03" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -2192,7 +2192,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1043"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1043"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a978e566d90ff4ed900fb353c7160c4d2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -2215,7 +2215,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1054"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1054"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a36a50d60b6d2ff7a08f112c8db8fc109" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -2238,7 +2238,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1073"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1073"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a545b481942916202dacaaee5e558d035" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -2261,7 +2261,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1084"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1084"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1ab9a3972bffb4edf0b5568b23f519de01" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -2283,7 +2283,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
 <para>Please see <ref refid="classwx_string_1a978e566d90ff4ed900fb353c7160c4d2" kindref="member">ToLongLong()</ref> for additional remarks. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1092"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1092"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -2315,7 +2315,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1128"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1128"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a5670779cbafb35c454a6d7664b6a6064" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -2336,7 +2336,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
 <para>Returns the number of characters written, or an integer less than zero on error. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1135"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1135"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -2375,7 +2375,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1189"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1189"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1ae81a1f0b72aa33325f922aa50579de59" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -2388,7 +2388,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
 <para>This can be useful after a call to <ref refid="classwx_string_1a87e614d9924a1b5524334aac3fc96d38" kindref="member">Alloc()</ref> if too much memory were preallocated. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1195"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1195"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1afe63f53ecaa197333c405ca985f733fe" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -2402,7 +2402,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1209"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1209"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a39f5e308eb0192cac2e338bedb377ee0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2416,7 +2416,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1216"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1216"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -2437,7 +2437,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
 <para>This is a wxWidgets 1.xx compatibility function; you should not use it in new code. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1234"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1234"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a07b0dcc83872b23833a7335b2b931c42" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2451,7 +2451,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1241"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1241"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a90e66e8c77af2526a407eb82a1565df6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -2468,7 +2468,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
 <para>This is a wxWidgets 1.xx compatibility function; you should not use it in new code. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1248"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1248"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a932ddb6b4786213596c3e41b1fa1f7c5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -2481,7 +2481,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
 <para>See <ref refid="classwx_uni_char_1a584ce7cb729ceea70dde2bb25f8639cd" kindref="member">wxUniChar::IsAscii</ref> for more details.</para><para>This is a wxWidgets 1.xx compatibility function; you should not use it in new code. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1257"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1257"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a42fc468fb16b820b1b599fadfc6285cb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -2494,7 +2494,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
 <para>This is a wxWidgets 1.xx compatibility function; you should not use it in new code. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1264"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1264"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a1b27a667e2c97b561e8dbb917e491cf0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -2507,7 +2507,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
 <para>This is a wxWidgets 1.xx compatibility function; you should not use it in new code. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1271"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1271"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a4edc1cfe89c876f84997ac315a39cf4e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -2534,7 +2534,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
 <para>Removes spaces from the left or from the right (default). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1279"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1279"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a9a83357210198cefd2d7d1411db1838d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -2551,7 +2551,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
 <para>Use <ref refid="classwx_string_1a9b66809526638b11208bfe36cf895f36" kindref="member">Truncate()</ref> as a more readable alternative.</para><para>This is a wxWidgets 1.xx compatibility function; you should not use it in new code. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1287"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1287"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a497880b0bba35d3693883eef14fbdf36" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -2572,7 +2572,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
 <para>This is a wxWidgets 1.xx compatibility function; you should not use it in new code. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1294"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1294"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1aa375e1718cb40fd991e89428e620ba82" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -2590,7 +2590,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1299"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1299"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a35746c99cc72c2d424c91f2ba0cd8606" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -2608,7 +2608,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
 <para>This is the same as <ref refid="classwx_string_1aefd36feb8f3c36edcf3322f84de0bfc4" kindref="member">Trim()</ref> except that it doesn&apos;t change this string.</para><para>This is a wxWidgets 1.xx compatibility function; you should not use it in new code. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1308"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1308"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1aefd36feb8f3c36edcf3322f84de0bfc4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -2626,7 +2626,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1314"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1314"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a9b66809526638b11208bfe36cf895f36" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -2643,7 +2643,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1319"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1319"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -2660,7 +2660,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1336"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1336"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1ab2b671a75b59a8c6c1af4d6d647f9902" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>iterator</type>
@@ -2673,7 +2673,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1337"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1337"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a6a0f235fff88df5e6b16b5f0e1e719cc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const_iterator</type>
@@ -2686,7 +2686,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1338"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1338"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a14fb759ca1074e9fbab66f9579bd7b25" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>iterator</type>
@@ -2699,7 +2699,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1339"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1339"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a1136ebe0b44f7f66494c1061b450e0f8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const_reverse_iterator</type>
@@ -2712,7 +2712,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1341"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1341"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1ae63061f3a0c0f91224e91daf988af434" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>reverse_iterator</type>
@@ -2725,7 +2725,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1342"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1342"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a4e2a503f15ce18a01492fce44dd21737" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const_reverse_iterator</type>
@@ -2738,7 +2738,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1343"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1343"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a114b4b3a040be56dfda6b5983d822cd9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>reverse_iterator</type>
@@ -2751,7 +2751,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1344"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1344"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -2780,7 +2780,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1360"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1360"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1af06ef38f5158d1e04d4358416c323b3f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -2797,7 +2797,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1361"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1361"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a9594c001adc6a018ef2cb1e326fb7f98" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -2818,7 +2818,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1362"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1362"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a612ebe397444e8097c79292f76d67499" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -2839,7 +2839,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1363"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1363"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1ad1ac59548b8d480b644b01e6244a67c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -2860,7 +2860,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1364"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1364"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a5d4ce358f124e7e61e30763f7799633b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -2881,7 +2881,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1365"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1365"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1aa621f3bc053edf813635f448022d14df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -2906,7 +2906,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1367"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1367"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a4fb8d2be6be4727f07414184eabee32f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -2923,7 +2923,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1368"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1368"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a61f0dbe9615977014ad46f850c044796" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -2944,7 +2944,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1369"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1369"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a3759362fd178dd5c833f20b8a4ba326f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -2965,7 +2965,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1370"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1370"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a2002ee6b6e474a1466bfa495ae389662" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -2986,7 +2986,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1371"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1371"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a66914915ab17cc690d42009f478dcd93" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -3007,7 +3007,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1372"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1372"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a875afc9681eb1cfe60c8a578c97a8f14" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_uni_char" kindref="compound">wxUniChar</ref></type>
@@ -3024,7 +3024,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1374"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1374"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1af2706738677db54403e91bfd824595f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_uni_char_ref" kindref="compound">wxUniCharRef</ref></type>
@@ -3041,7 +3041,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1375"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1375"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a4dcd0f3f0fe03ccddb85df2f3b18d665" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -3054,7 +3054,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1377"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1377"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a307ff6af69fbce1a22ded1b34ee134e2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string_1afc144b1e31fffd1a9fc6ba8a551cc073" kindref="member">size_type</ref></type>
@@ -3067,7 +3067,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1379"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1379"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1addee33a9b9e21e4803bccdda8e362548" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -3084,7 +3084,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1381"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1381"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1af99ab8db21458830fd68a9202a196a88" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -3109,7 +3109,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1382"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1382"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a7a4c43b3d8ce95a86cb134091a382098" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -3142,7 +3142,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1384"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1384"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a70a0299d62d4a6207d1b89db82337cd0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -3172,7 +3172,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1386"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1386"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a8aa121108c7f05fce3d36477b55f3e7c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -3202,7 +3202,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1388"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1388"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a1ce523326d36035117eaf41019f3eefe" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>wxCStrData</type>
@@ -3215,7 +3215,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1390"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1390"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1ac6ae24a8ccc6e4e671f972948fca437c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -3228,7 +3228,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1392"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1392"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1acb2c7985fb9550bb057b62bd6e5b4305" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -3251,7 +3251,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1394"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1394"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a55b82ddfe4dae84a49ef9e175bdadd80" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>iterator</type>
@@ -3272,7 +3272,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1395"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1395"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1ada23f52354ca0625e520b84adfc41ce4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>iterator</type>
@@ -3289,7 +3289,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1396"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1396"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a55b90a900c24e9555760265170dc051c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -3311,7 +3311,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1398"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1398"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1abae93815cb89f51dc9e3d39f31f7e5f0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -3338,7 +3338,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1399"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1399"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a0647cf0e9f6a7e304c4d74c0c1c4ae3e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -3365,7 +3365,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1400"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1400"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1ad7ba8dd973c3801b5213c00283139c89" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -3387,7 +3387,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1401"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1401"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a778b7aa9baee20cc7d6c6a04798fdb3d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -3409,7 +3409,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1402"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1402"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1aa3ab85ecd15c38fe21ac931c7bc8a3dd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -3431,7 +3431,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1403"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1403"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1acde44adf742b40be75b61f936df44134" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -3456,7 +3456,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1404"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1404"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a3c72aabe6f5c3a27c1aa2ee55746c0da" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -3481,7 +3481,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1405"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1405"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1ad17ac2c5c165b4534033360a44c2172e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -3503,7 +3503,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1406"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1406"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a50410c23c851cf0b4ffaad265532cd65" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -3525,7 +3525,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1407"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1407"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a1e68c5b448d44ecda22b0eefb3ad8ad1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -3547,7 +3547,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1408"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1408"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1ab8056912b1be04a4a4f9519d5c4ae935" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -3569,7 +3569,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1409"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1409"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a47acab8e0ae8925191588017866fd527" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -3594,7 +3594,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1410"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1410"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a666e095db7daa384753df47f94f4c03b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -3619,7 +3619,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1411"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1411"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1ad54160d6b7fb0ec64af3f182b37642c4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -3641,7 +3641,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1412"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1412"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1aa5c1c55cac296299be911f6d8d4724f2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -3663,7 +3663,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1413"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1413"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a5d26643e87027a337820791d0fe6affb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -3685,7 +3685,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1414"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1414"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a26ceb1ff58d5e157c03e9497c0e45559" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -3707,7 +3707,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1415"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1415"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a09d206a66d81cc9b4b6abd88b284e9b6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -3732,7 +3732,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1416"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1416"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a9f54dcd53eec75c561969a3b6f587525" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -3757,7 +3757,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1417"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1417"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a814c6a48005f540df17259f299cb3eae" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -3779,7 +3779,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1418"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1418"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a012a6b2c01e64e5934782bad7880d3c4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -3801,7 +3801,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1419"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1419"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a29b2188b433f8752a7aec77e96def9ef" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -3823,7 +3823,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1420"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1420"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a37d66f9b00971bfe1d6ab8047ecdae1a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -3845,7 +3845,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1421"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1421"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1aef1ad6bd1d63fd2faaa648bd9e7ba421" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -3870,7 +3870,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1422"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1422"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a113341165cd0f9e0f2fd1c15c47e1a89" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -3895,7 +3895,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1423"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1423"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1af81fb656038da7c98f62317f55db15a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -3916,7 +3916,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1425"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1425"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a1788e00ec8fc04ff6607e3502ad34e55" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -3945,7 +3945,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1426"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1426"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a2886942e2160d8a9b64935fc5f98d9ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -3970,7 +3970,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1427"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1427"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a73d5d7c823791fa2e9238ac6865ecd73" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -3995,7 +3995,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1428"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1428"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a8e85148798adb31e0da832243552aa46" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -4020,7 +4020,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1429"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1429"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a3ed61e4671e7b2e44224edf20d574681" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>iterator</type>
@@ -4041,7 +4041,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1430"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1430"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a8be75ab1d86b3944ad335663d78f4a52" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -4066,7 +4066,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1431"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1431"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1afd91c9bc221c5311f3b6542bcacdbaa6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -4091,7 +4091,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1432"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1432"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1af63f200410b56436a830550905e20539" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -4104,7 +4104,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1434"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1434"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a13471470cbc1443525bedef99e179baa" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string_1afc144b1e31fffd1a9fc6ba8a551cc073" kindref="member">size_type</ref></type>
@@ -4117,7 +4117,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1436"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1436"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a3fa50b251ca98e1e5d2aa8d73c688b57" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -4134,7 +4134,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1438"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1438"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1ab79b33581860edeced7855c70af192d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -4156,7 +4156,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1439"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1439"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1ab8853ed8b4ff8cd1d5ade53b6b95b6e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -4181,7 +4181,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1441"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1441"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a1e01ffd892b6d787c7df223182b0f811" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -4210,7 +4210,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1442"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1442"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1aa490d9fb014750aab405175190b375f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -4243,7 +4243,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1444"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1444"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a608713cebdea7616d9a7b5be4f33b882" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -4272,7 +4272,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1446"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1446"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1adef6c38981e5778b51b92f5f2a2e9937" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -4301,7 +4301,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1448"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1448"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1aced4f0ef33e61ea7dd21268b1d277bac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -4330,7 +4330,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1450"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1450"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1acb8cd4c4aaae6166d7e09aa0c8c9d40d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -4355,7 +4355,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1451"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1451"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a7ac1fba1c84e465e458b36603d459263" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -4384,7 +4384,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1452"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1452"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1aa06b632d3d44a884e332207274b9f4e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -4413,7 +4413,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1453"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1453"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a4ecea34799d5d6c4c629dd924ae6c4bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -4442,7 +4442,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1454"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1454"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1ab5313ebe5346126c9cae69e50ebe8e13" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -4471,7 +4471,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1456"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1456"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1af33d49209742523ac7f76a89e4ff10f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -4500,7 +4500,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1458"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1458"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1af0c522bb34383c669ceafb7325033629" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -4529,7 +4529,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1460"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1460"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a501cfba6e92fca9ead383c2bb5689aba" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -4551,7 +4551,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1462"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1462"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a9bfca48de47194ec5478efd3305ff535" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -4578,7 +4578,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1463"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1463"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1aa597e9d949828d4d9107b96e0eb34a26" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -4605,7 +4605,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1464"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1464"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a97975ce42c92058fe3f492dd079ecf3c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -4627,7 +4627,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1465"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1465"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1aba423303c6e0580605269827e4744761" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string_1afc144b1e31fffd1a9fc6ba8a551cc073" kindref="member">size_type</ref></type>
@@ -4640,7 +4640,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1467"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1467"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1af7832aeeec723684a92e2beafbd45af1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -4663,7 +4663,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1468"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1468"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a11a06a7638bdfe254ff07f5e1fb073b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -4680,7 +4680,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1469"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1469"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -4705,7 +4705,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1516"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1516"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1aeb82fe2331039ceb32838c814ae36d89" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -4724,7 +4724,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1517"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1517"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -4743,7 +4743,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1525"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1525"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a70c1974b9bfa75ecf4eee50341b65625" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -4760,7 +4760,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1526"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1526"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a600c7b770a1fca1c4a48337d42854c99" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -4781,7 +4781,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1527"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1527"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1aad58ba080272e8540ff39a8b023ad841" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -4802,7 +4802,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1528"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1528"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1ae101c2c62370da0014d36c8987fc6586" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -4819,7 +4819,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1529"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1529"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -4839,7 +4839,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1582"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1582"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a1a91d42a0166f38752265afd68881990" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -4861,7 +4861,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1583"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1583"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -4881,7 +4881,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1602"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1602"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a23583b46c05d6c953aaaace6410599f5" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -4903,7 +4903,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1603"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1603"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-attrib">
@@ -4918,7 +4918,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1482" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" bodystart="1482" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1482" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" bodystart="1482" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -4941,7 +4941,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1490"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1490"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1aa7bc330dcb0248bb8e886d27c4983ef5" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -4963,7 +4963,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1498"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1498"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1a12be0249db64b0c53339cb79dcaa2add" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -4987,7 +4987,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1544"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1544"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_1abe1f539ff2e9d46a80849fc758f51dc3" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -5027,7 +5027,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1568"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1568"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -5041,7 +5041,7 @@ Returns the number of replacements made. </para>        </detaileddescription>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__data" kindref="compound">Data Structures</ref></para><para>Predefined objects/pointers: <ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></para><para><simplesect kind="see"><para><ref refid="overview_string" kindref="compound">wxString Overview</ref>, <ref refid="overview_unicode" kindref="compound">Unicode Support in wxWidgets</ref>, <ref refid="group__group__funcmacro__string" kindref="compound">String-related functions</ref>, <ref refid="classwx_u_string" kindref="compound">wxUString</ref>, <ref refid="classwx_char_buffer" kindref="compound">wxCharBuffer</ref>, <ref refid="classwx_uni_char" kindref="compound">wxUniChar</ref>, <ref refid="classwx_string_tokenizer" kindref="compound">wxStringTokenizer</ref>, <ref refid="classwx_string_buffer" kindref="compound">wxStringBuffer</ref>, <ref refid="classwx_string_buffer_length" kindref="compound">wxStringBufferLength</ref> </para></simplesect>
 </para></sect1>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="74" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" bodystart="73" bodyend="1605"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="74" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" bodystart="73" bodyend="1605"/>
     <listofallmembers>
       <member refid="classwx_string_1a1605126b7bbf5f60a6fca7f393a58f1d" prot="public" virt="non-virtual"><scope>wxString</scope><name>AfterFirst</name></member>
       <member refid="classwx_string_1a230d2887e27bd53592bea08bc053d912" prot="public" virt="non-virtual"><scope>wxString</scope><name>AfterLast</name></member>

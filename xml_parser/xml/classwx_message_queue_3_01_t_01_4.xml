@@ -20,7 +20,7 @@
 <para>Use wxMessageQueue::IsOk to check if the object was successfully initialized. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msgqueue.h" line="62"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msgqueue.h" line="62"/>
       </memberdef>
       <memberdef kind="function" id="classwx_message_queue_3_01_t_01_4_1a984a18cac0e89a873462a9fd22a03c9c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="group__group__class__threading_1ga7a72ccb77613365cdc8b1a82bdf3f5f9" kindref="member">wxMessageQueueError</ref></type>
@@ -34,7 +34,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msgqueue.h" line="73"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msgqueue.h" line="73"/>
       </memberdef>
       <memberdef kind="function" id="classwx_message_queue_3_01_t_01_4_1a46209933690bac8e0bf2e769411b516e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -47,7 +47,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msgqueue.h" line="79"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msgqueue.h" line="79"/>
       </memberdef>
       <memberdef kind="function" id="classwx_message_queue_3_01_t_01_4_1a7f841f82d7f032bb7876ab5411d94e6c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="group__group__class__threading_1ga7a72ccb77613365cdc8b1a82bdf3f5f9" kindref="member">wxMessageQueueError</ref></type>
@@ -64,7 +64,7 @@
 <para>the threads which called wxMessageQueue::Receive or wxMessageQueue::ReceiveTimeout).</para><para>This method is safe to call from multiple threads in parallel. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msgqueue.h" line="88"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msgqueue.h" line="88"/>
       </memberdef>
       <memberdef kind="function" id="classwx_message_queue_3_01_t_01_4_1a937360de8c4d207abf7884930947378d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="group__group__class__threading_1ga7a72ccb77613365cdc8b1a82bdf3f5f9" kindref="member">wxMessageQueueError</ref></type>
@@ -81,7 +81,7 @@
 <para>Waits indefinitely long or until an error occurs.</para><para>The message is returned in <emphasis>msg</emphasis>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msgqueue.h" line="96"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msgqueue.h" line="96"/>
       </memberdef>
       <memberdef kind="function" id="classwx_message_queue_3_01_t_01_4_1a9ab1fc69e81a9960fb63cc28a0cc21af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="group__group__class__threading_1ga7a72ccb77613365cdc8b1a82bdf3f5f9" kindref="member">wxMessageQueueError</ref></type>
@@ -102,7 +102,7 @@
 <para>If no message is available after <emphasis>timeout</emphasis> milliseconds then returns <bold>wxMSGQUEUE_TIMEOUT</bold>.</para><para>If <emphasis>timeout</emphasis> is 0 then checks for any messages present in the queue and returns immediately without waiting.</para><para>The message is returned in <emphasis>msg</emphasis>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msgqueue.h" line="110"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msgqueue.h" line="110"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -120,7 +120,7 @@ Notice that often there is a some special message indicating that the thread sho
 <heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/>None; this class implementation is entirely header-based.</para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__threading" kindref="compound">Threading</ref></para><para><simplesect kind="see"><para><ref refid="classwx_thread" kindref="compound">wxThread</ref> </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msgqueue.h" line="56" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msgqueue.h" bodystart="55" bodyend="111"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msgqueue.h" line="56" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/msgqueue.h" bodystart="55" bodyend="111"/>
     <listofallmembers>
       <member refid="classwx_message_queue_3_01_t_01_4_1a984a18cac0e89a873462a9fd22a03c9c" prot="public" virt="non-virtual"><scope>wxMessageQueue&lt; T &gt;</scope><name>Clear</name></member>
       <member refid="classwx_message_queue_3_01_t_01_4_1a46209933690bac8e0bf2e769411b516e" prot="public" virt="non-virtual"><scope>wxMessageQueue&lt; T &gt;</scope><name>IsOk</name></member>

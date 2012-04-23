@@ -5,6 +5,19 @@
     <basecompoundref refid="classwx_picker_base" prot="public" virt="non-virtual">wxPickerBase</basecompoundref>
     <includes local="no">wx/filepicker.h</includes>
       <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_dir_picker_ctrl_1a7afb789fa0326ec140f4645d49cc735b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxDirPickerCtrl::wxDirPickerCtrl</definition>
+        <argsstring>()</argsstring>
+        <name>wxDirPickerCtrl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filepicker.h" line="225"/>
+      </memberdef>
       <memberdef kind="function" id="classwx_dir_picker_ctrl_1a6a8c66f10082401f7445c5660c3b6d79" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
         <definition>wxDirPickerCtrl::wxDirPickerCtrl</definition>
@@ -26,7 +39,7 @@
         <param>
           <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
           <declname>message</declname>
-          <defval>wxDirSelectorPromptStr</defval>
+          <defval><ref refid="dirdlg_8h_1a6f17a504b82b31c8d81672581bf26a8d" kindref="member">wxDirSelectorPromptStr</ref></defval>
         </param>
         <param>
           <type>const <ref refid="classwx_point" kindref="compound">wxPoint</ref> &amp;</type>
@@ -59,7 +72,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filepicker.h" line="215"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filepicker.h" line="238"/>
       </memberdef>
       <memberdef kind="function" id="classwx_dir_picker_ctrl_1a64d40890f6f77bb0b11e1b73b463c580" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -82,7 +95,7 @@
         <param>
           <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
           <declname>message</declname>
-          <defval>wxDirSelectorPromptStr</defval>
+          <defval><ref refid="dirdlg_8h_1a6f17a504b82b31c8d81672581bf26a8d" kindref="member">wxDirSelectorPromptStr</ref></defval>
         </param>
         <param>
           <type>const <ref refid="classwx_point" kindref="compound">wxPoint</ref> &amp;</type>
@@ -180,7 +193,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filepicker.h" line="250"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filepicker.h" line="273"/>
       </memberdef>
       <memberdef kind="function" id="classwx_dir_picker_ctrl_1a5550c54bde8e6a1b2571afadecd27e96" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_file_name" kindref="compound">wxFileName</ref></type>
@@ -193,7 +206,7 @@
 <para>This function is equivalent to <ref refid="classwx_dir_picker_ctrl_1a8b02633af34aa499cf83ec54987436b2" kindref="member">GetPath()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filepicker.h" line="257"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filepicker.h" line="280"/>
       </memberdef>
       <memberdef kind="function" id="classwx_dir_picker_ctrl_1a8b02633af34aa499cf83ec54987436b2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -206,7 +219,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filepicker.h" line="262"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filepicker.h" line="285"/>
       </memberdef>
       <memberdef kind="function" id="classwx_dir_picker_ctrl_1ab9d54a573c9ab81a1967099543d5b267" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -223,7 +236,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filepicker.h" line="267"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filepicker.h" line="290"/>
       </memberdef>
       <memberdef kind="function" id="classwx_dir_picker_ctrl_1a628dc1acb50a1df99335f0ceff2da4c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -241,7 +254,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filepicker.h" line="281"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filepicker.h" line="304"/>
       </memberdef>
       <memberdef kind="function" id="classwx_dir_picker_ctrl_1a0a861d00a0877c830bc6e77d6077b9a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -258,7 +271,7 @@
 <para>This must be a valid directory if <computeroutput>wxDIRP_DIR_MUST_EXIST</computeroutput> style was given. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filepicker.h" line="288"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filepicker.h" line="311"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -280,97 +293,97 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__pickers" kindref="compound">Picker Controls</ref> <htmlonly> &lt;br&gt;&lt;div&gt;&lt;span class=&apos;appearance&apos;&gt;Appearance:&lt;/span&gt;&lt;br&gt;&lt;table class=&apos;appearance&apos;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&apos;wxmsw/dirpickerctrl.png&apos; alt=&apos;wxMSW appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxgtk/dirpickerctrl.png&apos; alt=&apos;wxGTK appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxmac/dirpickerctrl.png&apos; alt=&apos;wxMac appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;wxMSW appearance&lt;/td&gt;&lt;td&gt;wxGTK appearance&lt;/td&gt;&lt;td&gt;wxMac appearance&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt; </htmlonly></para><para><simplesect kind="see"><para><ref refid="classwx_dir_dialog" kindref="compound">wxDirDialog</ref>, <ref refid="classwx_file_dir_picker_event" kindref="compound">wxFileDirPickerEvent</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="5641">
+      <node id="5756">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="5640">
+      <node id="5755">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="5641" relation="public-inheritance">
+        <childnode refid="5756" relation="public-inheritance">
         </childnode>
-        <childnode refid="5642" relation="public-inheritance">
+        <childnode refid="5757" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5642">
+      <node id="5757">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="5638">
+      <node id="5753">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="5639" relation="public-inheritance">
+        <childnode refid="5754" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5639">
+      <node id="5754">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="5640" relation="public-inheritance">
+        <childnode refid="5755" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5636">
+      <node id="5751">
         <label>wxDirPickerCtrl</label>
         <link refid="classwx_dir_picker_ctrl"/>
-        <childnode refid="5637" relation="public-inheritance">
+        <childnode refid="5752" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5637">
+      <node id="5752">
         <label>wxPickerBase</label>
         <link refid="classwx_picker_base"/>
-        <childnode refid="5638" relation="public-inheritance">
+        <childnode refid="5753" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="5648">
+      <node id="5763">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="5649" relation="usage">
+        <childnode refid="5764" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="5647">
+      <node id="5762">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="5648" relation="public-inheritance">
+        <childnode refid="5763" relation="public-inheritance">
         </childnode>
-        <childnode refid="5650" relation="public-inheritance">
+        <childnode refid="5765" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5650">
+      <node id="5765">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="5645">
+      <node id="5760">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="5646" relation="public-inheritance">
+        <childnode refid="5761" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5646">
+      <node id="5761">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="5647" relation="public-inheritance">
+        <childnode refid="5762" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5643">
+      <node id="5758">
         <label>wxDirPickerCtrl</label>
         <link refid="classwx_dir_picker_ctrl"/>
-        <childnode refid="5644" relation="public-inheritance">
+        <childnode refid="5759" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5649">
+      <node id="5764">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
-      <node id="5644">
+      <node id="5759">
         <label>wxPickerBase</label>
         <link refid="classwx_picker_base"/>
-        <childnode refid="5645" relation="public-inheritance">
+        <childnode refid="5760" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filepicker.h" line="202" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filepicker.h" bodystart="201" bodyend="289"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filepicker.h" line="223" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/filepicker.h" bodystart="222" bodyend="312"/>
     <listofallmembers>
       <member refid="classwx_window_1a3afbd49b1ea2f8275e3600dcac102923" prot="public" virt="virtual"><scope>wxDirPickerCtrl</scope><name>AcceptsFocus</name></member>
       <member refid="classwx_window_1a2370bdd3ab08e7ef3c7555c6aa8301b8" prot="public" virt="virtual"><scope>wxDirPickerCtrl</scope><name>AcceptsFocusFromKeyboard</name></member>
@@ -407,6 +420,7 @@
       <member refid="classwx_dir_picker_ctrl_1a64d40890f6f77bb0b11e1b73b463c580" prot="public" virt="non-virtual"><scope>wxDirPickerCtrl</scope><name>Create</name></member>
       <member refid="classwx_control_1abe23789c94c86907463a0e8434be822a" prot="public" virt="non-virtual" ambiguityscope="wxPickerBase::"><scope>wxDirPickerCtrl</scope><name>Create</name></member>
       <member refid="classwx_window_1a95b7ca8faa033f5ab35458887c07bf38" prot="public" virt="non-virtual" ambiguityscope="wxWindow::"><scope>wxDirPickerCtrl</scope><name>Create</name></member>
+      <member refid="classwx_picker_base_1a768d847f06c01b3e757656020e153c45" prot="public" virt="non-virtual"><scope>wxDirPickerCtrl</scope><name>CreateBase</name></member>
       <member refid="classwx_object_1a95c6a5e4e1e03ff23c7b9efe4cff0c1a" prot="protected" virt="virtual"><scope>wxDirPickerCtrl</scope><name>CreateRefData</name></member>
       <member refid="classwx_evt_handler_1a6e7f9cf4ebd0623c1d94979855d096f8" prot="public" virt="non-virtual"><scope>wxDirPickerCtrl</scope><name>DeletePendingEvents</name></member>
       <member refid="classwx_window_1a6bf0c5be864544d9ce0560087667b7fc" prot="public" virt="virtual"><scope>wxDirPickerCtrl</scope><name>Destroy</name></member>
@@ -491,6 +505,7 @@
       <member refid="classwx_dir_picker_ctrl_1a8b02633af34aa499cf83ec54987436b2" prot="public" virt="non-virtual"><scope>wxDirPickerCtrl</scope><name>GetPath</name></member>
       <member refid="classwx_picker_base_1a68c3ea45617f46d2f5c170dd8b5b1844" prot="public" virt="non-virtual"><scope>wxDirPickerCtrl</scope><name>GetPickerCtrl</name></member>
       <member refid="classwx_picker_base_1a10a218d4fca757eedb60f2870b556358" prot="public" virt="non-virtual"><scope>wxDirPickerCtrl</scope><name>GetPickerCtrlProportion</name></member>
+      <member refid="classwx_picker_base_1a43c6d2566d6127844f5e2adb7c4734bd" prot="protected" virt="virtual"><scope>wxDirPickerCtrl</scope><name>GetPickerStyle</name></member>
       <member refid="classwx_window_1a9b7de6ea85ca926b668ba0682a61a93e" prot="public" virt="non-virtual"><scope>wxDirPickerCtrl</scope><name>GetPopupMenuSelectionFromUser</name></member>
       <member refid="classwx_window_1a00f5cb3cac003205317a565a33d4bb27" prot="public" virt="non-virtual"><scope>wxDirPickerCtrl</scope><name>GetPopupMenuSelectionFromUser</name></member>
       <member refid="classwx_window_1a9f36392b289a1e567e95bee073d6533e" prot="public" virt="non-virtual"><scope>wxDirPickerCtrl</scope><name>GetPosition</name></member>
@@ -510,6 +525,7 @@
       <member refid="classwx_window_1ad8284cce1a2afe57724b52a89d7fac2f" prot="public" virt="non-virtual"><scope>wxDirPickerCtrl</scope><name>GetSizer</name></member>
       <member refid="classwx_picker_base_1a7b53b34fac85e16b855fad65bd043efe" prot="public" virt="non-virtual"><scope>wxDirPickerCtrl</scope><name>GetTextCtrl</name></member>
       <member refid="classwx_picker_base_1a0283f827d44a30366dc1732be2238399" prot="public" virt="non-virtual"><scope>wxDirPickerCtrl</scope><name>GetTextCtrlProportion</name></member>
+      <member refid="classwx_picker_base_1a4d8689fd09a48fdb40916cae9cfd3ca8" prot="protected" virt="virtual"><scope>wxDirPickerCtrl</scope><name>GetTextCtrlStyle</name></member>
       <member refid="classwx_window_1ac9cd7b4472d5419e518f69311914466f" prot="public" virt="non-virtual"><scope>wxDirPickerCtrl</scope><name>GetTextExtent</name></member>
       <member refid="classwx_window_1a79e5f88a2408871663d4ab0405cd35f6" prot="public" virt="non-virtual"><scope>wxDirPickerCtrl</scope><name>GetTextExtent</name></member>
       <member refid="classwx_window_1a0b31a21532407cf809d73aa09f34235c" prot="public" virt="virtual"><scope>wxDirPickerCtrl</scope><name>GetThemeEnabled</name></member>
@@ -543,6 +559,7 @@
       <member refid="classwx_window_1aa90a260c0a835a133043460b7d0024a8" prot="public" virt="virtual"><scope>wxDirPickerCtrl</scope><name>InitDialog</name></member>
       <member refid="classwx_window_1ae1b56ca87d8590ee5e576012229a380a" prot="public" virt="non-virtual"><scope>wxDirPickerCtrl</scope><name>InvalidateBestSize</name></member>
       <member refid="classwx_window_1af918e6fe8565c2d5235973cc3de84a43" prot="public" virt="non-virtual"><scope>wxDirPickerCtrl</scope><name>IsBeingDeleted</name></member>
+      <member refid="classwx_window_1a469f0881da248d37691440c9d4cc7200" prot="public" virt="non-virtual"><scope>wxDirPickerCtrl</scope><name>IsDescendant</name></member>
       <member refid="classwx_window_1a9d1be1bbb625ebf87ad4ad47e49a0194" prot="public" virt="virtual"><scope>wxDirPickerCtrl</scope><name>IsDoubleBuffered</name></member>
       <member refid="classwx_window_1a59452a5bd42f5ea4b31d7fc4aa59644f" prot="public" virt="non-virtual"><scope>wxDirPickerCtrl</scope><name>IsEnabled</name></member>
       <member refid="classwx_window_1af27ef77c913e32050543f3b0ca435a0d" prot="public" virt="non-virtual"><scope>wxDirPickerCtrl</scope><name>IsExposed</name></member>
@@ -560,13 +577,13 @@
       <member refid="classwx_picker_base_1aa0fe47e53fe9fba60e7f1d9a1aecc540" prot="public" virt="non-virtual"><scope>wxDirPickerCtrl</scope><name>IsTextCtrlGrowable</name></member>
       <member refid="classwx_window_1a657ef8b6055eb06df894ac5e6ddfecf8" prot="public" virt="non-virtual"><scope>wxDirPickerCtrl</scope><name>IsThisEnabled</name></member>
       <member refid="classwx_window_1a0002826ad05f2a5661b4c8995713f37f" prot="public" virt="virtual"><scope>wxDirPickerCtrl</scope><name>IsTopLevel</name></member>
+      <member refid="classwx_window_1a7940d510c5bdc062a2b109a1022dd8c2" prot="public" virt="virtual"><scope>wxDirPickerCtrl</scope><name>IsTransparentBackgroundSupported</name></member>
       <member refid="classwx_evt_handler_1a360fdeefcf53b62fb49fb828406bb8a6" prot="public" virt="non-virtual"><scope>wxDirPickerCtrl</scope><name>IsUnlinked</name></member>
       <member refid="classwx_window_1a1b143c3e72bd0af533b76db4830a6113" prot="public" virt="virtual"><scope>wxDirPickerCtrl</scope><name>Layout</name></member>
       <member refid="classwx_window_1ade808784f0e64d9985e2f279b5ca8c02" prot="public" virt="non-virtual"><scope>wxDirPickerCtrl</scope><name>LineDown</name></member>
       <member refid="classwx_window_1afc0816a174ceee6d36d1995c6824a273" prot="public" virt="non-virtual"><scope>wxDirPickerCtrl</scope><name>LineUp</name></member>
       <member refid="classwx_window_1a124944524f36b71385dad8fddaad8ded" prot="public" virt="virtual"><scope>wxDirPickerCtrl</scope><name>Lower</name></member>
       <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxDirPickerCtrl</scope><name>m_refData</name></member>
-      <member refid="classwx_window_1a192fc8b467845d093c16452db96c65c5" prot="public" virt="virtual"><scope>wxDirPickerCtrl</scope><name>MakeModal</name></member>
       <member refid="classwx_window_1ab1cb98c8d25b9e6ff7b706b1446c3df7" prot="public" virt="non-virtual"><scope>wxDirPickerCtrl</scope><name>Move</name></member>
       <member refid="classwx_window_1a22a22c1e23ca05776707e7999d8047fe" prot="public" virt="non-virtual"><scope>wxDirPickerCtrl</scope><name>Move</name></member>
       <member refid="classwx_window_1a79e66079125e8420de269811bdb6f2b6" prot="public" virt="non-virtual"><scope>wxDirPickerCtrl</scope><name>MoveAfterInTabOrder</name></member>
@@ -582,6 +599,7 @@
       <member refid="classwx_window_1ac45c1f4cf96c70779764c14cf528790b" prot="public" virt="non-virtual"><scope>wxDirPickerCtrl</scope><name>PopEventHandler</name></member>
       <member refid="classwx_window_1a8f715d238cf74a845488b0e2645e98df" prot="public" virt="non-virtual"><scope>wxDirPickerCtrl</scope><name>PopupMenu</name></member>
       <member refid="classwx_window_1a834bcdfd41f5e5370ebd9ea401c92900" prot="public" virt="non-virtual"><scope>wxDirPickerCtrl</scope><name>PopupMenu</name></member>
+      <member refid="classwx_picker_base_1abfd1d92daf22ad3b9d15978f1f9de9e1" prot="protected" virt="non-virtual"><scope>wxDirPickerCtrl</scope><name>PostCreation</name></member>
       <member refid="classwx_window_1ab1943463e6661f97e072b43337c6cc09" prot="public" virt="non-virtual"><scope>wxDirPickerCtrl</scope><name>PostSizeEvent</name></member>
       <member refid="classwx_window_1aa080d8dcda58bcc6ea2abd8bea592e3e" prot="public" virt="non-virtual"><scope>wxDirPickerCtrl</scope><name>PostSizeEventToParent</name></member>
       <member refid="classwx_window_1a5ebdbd87c28644149a07f1742996df96" prot="protected" virt="virtual"><scope>wxDirPickerCtrl</scope><name>ProcessEvent</name></member>
@@ -659,6 +677,7 @@
       <member refid="classwx_window_1a53f4a878e4e2d440bd00543f8014aaaa" prot="public" virt="non-virtual"><scope>wxDirPickerCtrl</scope><name>SetOwnForegroundColour</name></member>
       <member refid="classwx_window_1aee57358435d6bd33f598c81354b47425" prot="public" virt="non-virtual"><scope>wxDirPickerCtrl</scope><name>SetPalette</name></member>
       <member refid="classwx_dir_picker_ctrl_1a0a861d00a0877c830bc6e77d6077b9a7" prot="public" virt="non-virtual"><scope>wxDirPickerCtrl</scope><name>SetPath</name></member>
+      <member refid="classwx_picker_base_1a87e04d99810b342d358d21d26b4c8915" prot="public" virt="non-virtual"><scope>wxDirPickerCtrl</scope><name>SetPickerCtrl</name></member>
       <member refid="classwx_picker_base_1ab031bd45e323b43b6a9943e25ec6e191" prot="public" virt="non-virtual"><scope>wxDirPickerCtrl</scope><name>SetPickerCtrlGrowable</name></member>
       <member refid="classwx_picker_base_1a5801852b32e1e8020bfa48b75bde67a5" prot="public" virt="non-virtual"><scope>wxDirPickerCtrl</scope><name>SetPickerCtrlProportion</name></member>
       <member refid="classwx_window_1a81f23590239934fa10fded0566a65d8c" prot="public" virt="non-virtual"><scope>wxDirPickerCtrl</scope><name>SetPosition</name></member>
@@ -674,6 +693,7 @@
       <member refid="classwx_window_1ae813c640e1e2bc6014423247050846cf" prot="public" virt="virtual"><scope>wxDirPickerCtrl</scope><name>SetSizeHints</name></member>
       <member refid="classwx_window_1abc95691b45e29a52c24aa9d33d46dec1" prot="public" virt="non-virtual"><scope>wxDirPickerCtrl</scope><name>SetSizer</name></member>
       <member refid="classwx_window_1a29938af9828fd35da666536cdfb6b73c" prot="public" virt="non-virtual"><scope>wxDirPickerCtrl</scope><name>SetSizerAndFit</name></member>
+      <member refid="classwx_picker_base_1a06f3f7837fa1ac0cc0a860e591e0b34a" prot="public" virt="non-virtual"><scope>wxDirPickerCtrl</scope><name>SetTextCtrl</name></member>
       <member refid="classwx_picker_base_1a094adc3942377519ecee6ce1afeb2954" prot="public" virt="non-virtual"><scope>wxDirPickerCtrl</scope><name>SetTextCtrlGrowable</name></member>
       <member refid="classwx_picker_base_1a34d76334dfea7b6f65bbbb3b41269a9e" prot="public" virt="non-virtual"><scope>wxDirPickerCtrl</scope><name>SetTextCtrlProportion</name></member>
       <member refid="classwx_window_1a41dd19ed8809fd8ec662e2aa2a9579c3" prot="public" virt="virtual"><scope>wxDirPickerCtrl</scope><name>SetThemeEnabled</name></member>
@@ -695,7 +715,6 @@
       <member refid="classwx_window_1a88cc65e424a129d9b0057756cdb67ec9" prot="public" virt="virtual"><scope>wxDirPickerCtrl</scope><name>TransferDataToWindow</name></member>
       <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxDirPickerCtrl</scope><name>TryAfter</name></member>
       <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxDirPickerCtrl</scope><name>TryBefore</name></member>
-      <member refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" virt="non-virtual"><scope>wxDirPickerCtrl</scope><name>TryThis</name></member>
       <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxDirPickerCtrl</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxDirPickerCtrl</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a22e5db2ec1d19c8252c056fd116975d7" prot="public" virt="non-virtual"><scope>wxDirPickerCtrl</scope><name>Unlink</name></member>
@@ -705,20 +724,25 @@
       <member refid="classwx_window_1ae75712451673658b0a533480bf5eeaa4" prot="public" virt="non-virtual"><scope>wxDirPickerCtrl</scope><name>UnsetToolTip</name></member>
       <member refid="classwx_object_1a74b40e42d19a4b9e9bec0b57d62a5725" prot="public" virt="non-virtual"><scope>wxDirPickerCtrl</scope><name>UnShare</name></member>
       <member refid="classwx_window_1abaf28f1a075fd1b10f761a8febe597ec" prot="public" virt="virtual"><scope>wxDirPickerCtrl</scope><name>Update</name></member>
+      <member refid="classwx_picker_base_1a6dd0785ceb13d2c71cadecf7caf402bf" prot="public" virt="pure-virtual"><scope>wxDirPickerCtrl</scope><name>UpdatePickerFromTextCtrl</name></member>
+      <member refid="classwx_picker_base_1a0be21e2897a509151242390054b86bb8" prot="public" virt="pure-virtual"><scope>wxDirPickerCtrl</scope><name>UpdateTextCtrlFromPicker</name></member>
       <member refid="classwx_window_1adf0a4987728bd0bf69f922641b3efbfc" prot="public" virt="virtual"><scope>wxDirPickerCtrl</scope><name>UpdateWindowUI</name></member>
       <member refid="classwx_window_1ac87f253253a0c5eb498871c83afa40fd" prot="public" virt="virtual"><scope>wxDirPickerCtrl</scope><name>Validate</name></member>
       <member refid="classwx_window_1ac500152d1eca3a2ee98a68e7ea7372b5" prot="public" virt="virtual"><scope>wxDirPickerCtrl</scope><name>WarpPointer</name></member>
       <member refid="classwx_window_1aa456f800c9dde3b2361cad0abf54bc27" prot="public" virt="virtual"><scope>wxDirPickerCtrl</scope><name>WindowToClientSize</name></member>
       <member refid="classwx_control_1adb8f3edf807efa9159de826bf92d6a44" prot="public" virt="non-virtual"><scope>wxDirPickerCtrl</scope><name>wxControl</name></member>
       <member refid="classwx_control_1a08428de2ba5cc988a86fe17071d49522" prot="public" virt="non-virtual"><scope>wxDirPickerCtrl</scope><name>wxControl</name></member>
+      <member refid="classwx_dir_picker_ctrl_1a7afb789fa0326ec140f4645d49cc735b" prot="public" virt="non-virtual"><scope>wxDirPickerCtrl</scope><name>wxDirPickerCtrl</name></member>
       <member refid="classwx_dir_picker_ctrl_1a6a8c66f10082401f7445c5660c3b6d79" prot="public" virt="non-virtual"><scope>wxDirPickerCtrl</scope><name>wxDirPickerCtrl</name></member>
       <member refid="classwx_evt_handler_1a3f0166c4154227d05575b01eb2c8d4be" prot="public" virt="non-virtual"><scope>wxDirPickerCtrl</scope><name>wxEvtHandler</name></member>
       <member refid="classwx_object_1acaa378363a28af421ab56ad7b46eadf0" prot="public" virt="non-virtual"><scope>wxDirPickerCtrl</scope><name>wxObject</name></member>
       <member refid="classwx_object_1a4721b4dc9b7aff0f30904ba2ea3954cf" prot="public" virt="non-virtual"><scope>wxDirPickerCtrl</scope><name>wxObject</name></member>
+      <member refid="classwx_picker_base_1a34a47fbbcc21d8f4b9251ce5f02e1afe" prot="public" virt="non-virtual"><scope>wxDirPickerCtrl</scope><name>wxPickerBase</name></member>
       <member refid="classwx_window_1a695200a4915b934926dcf32afa44544c" prot="public" virt="non-virtual"><scope>wxDirPickerCtrl</scope><name>wxWindow</name></member>
       <member refid="classwx_window_1a7799009b10d1765d1bbb6db4994f922e" prot="public" virt="non-virtual"><scope>wxDirPickerCtrl</scope><name>wxWindow</name></member>
       <member refid="classwx_evt_handler_1a372d2239d91521eddc8fd2715fcab584" prot="public" virt="virtual"><scope>wxDirPickerCtrl</scope><name>~wxEvtHandler</name></member>
       <member refid="classwx_object_1a2a51aa8bfbab47ca2f051bcf84b3f35b" prot="public" virt="virtual"><scope>wxDirPickerCtrl</scope><name>~wxObject</name></member>
+      <member refid="classwx_picker_base_1af5e29cad758a3b63029acab188f08b43" prot="public" virt="virtual"><scope>wxDirPickerCtrl</scope><name>~wxPickerBase</name></member>
       <member refid="classwx_window_1a0c2a46181a89c349327f0b276f5ef8d7" prot="public" virt="virtual"><scope>wxDirPickerCtrl</scope><name>~wxWindow</name></member>
     </listofallmembers>
   </compounddef>

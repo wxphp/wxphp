@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tglbtn.h" line="135"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/tglbtn.h" line="135"/>
       </memberdef>
       <memberdef kind="function" id="classwx_bitmap_toggle_button_1a69f6ff88492ac2c260dd7849d48b82ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -66,7 +66,7 @@
 <para>Internally calls <ref refid="classwx_bitmap_toggle_button_1a7306202d82de6587a719589c9bf8c35e" kindref="member">Create()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tglbtn.h" line="147"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/tglbtn.h" line="147"/>
       </memberdef>
       <memberdef kind="function" id="classwx_bitmap_toggle_button_1a7306202d82de6587a719589c9bf8c35e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -116,7 +116,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tglbtn.h" line="158"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/tglbtn.h" line="158"/>
       </memberdef>
       <memberdef kind="function" id="classwx_bitmap_toggle_button_1a1c78fb022ad78b744ed8170913efef24" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -131,7 +131,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tglbtn.h" line="165"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/tglbtn.h" line="165"/>
       </memberdef>
       <memberdef kind="function" id="classwx_bitmap_toggle_button_1a58beb938aa3bab2231169fad0db30547" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -157,7 +157,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tglbtn.h" line="174"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/tglbtn.h" line="174"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -170,109 +170,109 @@
 <heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref> <htmlonly> &lt;br&gt;&lt;div&gt;&lt;span class=&apos;appearance&apos;&gt;Appearance:&lt;/span&gt;&lt;br&gt;&lt;table class=&apos;appearance&apos;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&apos;wxmsw/bitmaptogglebutton.png&apos; alt=&apos;wxMSW appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxgtk/bitmaptogglebutton.png&apos; alt=&apos;wxGTK appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxmac/bitmaptogglebutton.png&apos; alt=&apos;wxMac appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;wxMSW appearance&lt;/td&gt;&lt;td&gt;wxGTK appearance&lt;/td&gt;&lt;td&gt;wxMac appearance&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt; </htmlonly> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="4532">
+      <node id="4622">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="4531">
+      <node id="4621">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="4532" relation="public-inheritance">
+        <childnode refid="4622" relation="public-inheritance">
         </childnode>
-        <childnode refid="4533" relation="public-inheritance">
+        <childnode refid="4623" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4527">
+      <node id="4617">
         <label>wxToggleButton</label>
         <link refid="classwx_toggle_button"/>
-        <childnode refid="4528" relation="public-inheritance">
+        <childnode refid="4618" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4533">
+      <node id="4623">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="4529">
+      <node id="4619">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="4530" relation="public-inheritance">
+        <childnode refid="4620" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4530">
+      <node id="4620">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="4531" relation="public-inheritance">
+        <childnode refid="4621" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4526">
+      <node id="4616">
         <label>wxBitmapToggleButton</label>
         <link refid="classwx_bitmap_toggle_button"/>
-        <childnode refid="4527" relation="public-inheritance">
+        <childnode refid="4617" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4528">
+      <node id="4618">
         <label>wxAnyButton</label>
         <link refid="classwx_any_button"/>
-        <childnode refid="4529" relation="public-inheritance">
+        <childnode refid="4619" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="4540">
+      <node id="4630">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="4541" relation="usage">
+        <childnode refid="4631" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="4539">
+      <node id="4629">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="4540" relation="public-inheritance">
+        <childnode refid="4630" relation="public-inheritance">
         </childnode>
-        <childnode refid="4542" relation="public-inheritance">
+        <childnode refid="4632" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4535">
+      <node id="4625">
         <label>wxToggleButton</label>
         <link refid="classwx_toggle_button"/>
-        <childnode refid="4536" relation="public-inheritance">
+        <childnode refid="4626" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4542">
+      <node id="4632">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="4537">
+      <node id="4627">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="4538" relation="public-inheritance">
+        <childnode refid="4628" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4538">
+      <node id="4628">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="4539" relation="public-inheritance">
+        <childnode refid="4629" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4534">
+      <node id="4624">
         <label>wxBitmapToggleButton</label>
         <link refid="classwx_bitmap_toggle_button"/>
-        <childnode refid="4535" relation="public-inheritance">
+        <childnode refid="4625" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4536">
+      <node id="4626">
         <label>wxAnyButton</label>
         <link refid="classwx_any_button"/>
-        <childnode refid="4537" relation="public-inheritance">
+        <childnode refid="4627" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4541">
+      <node id="4631">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tglbtn.h" line="130" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tglbtn.h" bodystart="129" bodyend="175"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/tglbtn.h" line="130" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/tglbtn.h" bodystart="129" bodyend="175"/>
     <listofallmembers>
       <member refid="classwx_window_1a3afbd49b1ea2f8275e3600dcac102923" prot="public" virt="virtual"><scope>wxBitmapToggleButton</scope><name>AcceptsFocus</name></member>
       <member refid="classwx_window_1a2370bdd3ab08e7ef3c7555c6aa8301b8" prot="public" virt="virtual"><scope>wxBitmapToggleButton</scope><name>AcceptsFocusFromKeyboard</name></member>
@@ -446,6 +446,7 @@
       <member refid="classwx_window_1aa90a260c0a835a133043460b7d0024a8" prot="public" virt="virtual"><scope>wxBitmapToggleButton</scope><name>InitDialog</name></member>
       <member refid="classwx_window_1ae1b56ca87d8590ee5e576012229a380a" prot="public" virt="non-virtual"><scope>wxBitmapToggleButton</scope><name>InvalidateBestSize</name></member>
       <member refid="classwx_window_1af918e6fe8565c2d5235973cc3de84a43" prot="public" virt="non-virtual"><scope>wxBitmapToggleButton</scope><name>IsBeingDeleted</name></member>
+      <member refid="classwx_window_1a469f0881da248d37691440c9d4cc7200" prot="public" virt="non-virtual"><scope>wxBitmapToggleButton</scope><name>IsDescendant</name></member>
       <member refid="classwx_window_1a9d1be1bbb625ebf87ad4ad47e49a0194" prot="public" virt="virtual"><scope>wxBitmapToggleButton</scope><name>IsDoubleBuffered</name></member>
       <member refid="classwx_window_1a59452a5bd42f5ea4b31d7fc4aa59644f" prot="public" virt="non-virtual"><scope>wxBitmapToggleButton</scope><name>IsEnabled</name></member>
       <member refid="classwx_window_1af27ef77c913e32050543f3b0ca435a0d" prot="public" virt="non-virtual"><scope>wxBitmapToggleButton</scope><name>IsExposed</name></member>
@@ -461,13 +462,13 @@
       <member refid="classwx_window_1a72d70fd14e3565bf782fbcd3271d8930" prot="public" virt="virtual"><scope>wxBitmapToggleButton</scope><name>IsShownOnScreen</name></member>
       <member refid="classwx_window_1a657ef8b6055eb06df894ac5e6ddfecf8" prot="public" virt="non-virtual"><scope>wxBitmapToggleButton</scope><name>IsThisEnabled</name></member>
       <member refid="classwx_window_1a0002826ad05f2a5661b4c8995713f37f" prot="public" virt="virtual"><scope>wxBitmapToggleButton</scope><name>IsTopLevel</name></member>
+      <member refid="classwx_window_1a7940d510c5bdc062a2b109a1022dd8c2" prot="public" virt="virtual"><scope>wxBitmapToggleButton</scope><name>IsTransparentBackgroundSupported</name></member>
       <member refid="classwx_evt_handler_1a360fdeefcf53b62fb49fb828406bb8a6" prot="public" virt="non-virtual"><scope>wxBitmapToggleButton</scope><name>IsUnlinked</name></member>
       <member refid="classwx_window_1a1b143c3e72bd0af533b76db4830a6113" prot="public" virt="virtual"><scope>wxBitmapToggleButton</scope><name>Layout</name></member>
       <member refid="classwx_window_1ade808784f0e64d9985e2f279b5ca8c02" prot="public" virt="non-virtual"><scope>wxBitmapToggleButton</scope><name>LineDown</name></member>
       <member refid="classwx_window_1afc0816a174ceee6d36d1995c6824a273" prot="public" virt="non-virtual"><scope>wxBitmapToggleButton</scope><name>LineUp</name></member>
       <member refid="classwx_window_1a124944524f36b71385dad8fddaad8ded" prot="public" virt="virtual"><scope>wxBitmapToggleButton</scope><name>Lower</name></member>
       <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxBitmapToggleButton</scope><name>m_refData</name></member>
-      <member refid="classwx_window_1a192fc8b467845d093c16452db96c65c5" prot="public" virt="virtual"><scope>wxBitmapToggleButton</scope><name>MakeModal</name></member>
       <member refid="classwx_window_1ab1cb98c8d25b9e6ff7b706b1446c3df7" prot="public" virt="non-virtual"><scope>wxBitmapToggleButton</scope><name>Move</name></member>
       <member refid="classwx_window_1a22a22c1e23ca05776707e7999d8047fe" prot="public" virt="non-virtual"><scope>wxBitmapToggleButton</scope><name>Move</name></member>
       <member refid="classwx_window_1a79e66079125e8420de269811bdb6f2b6" prot="public" virt="non-virtual"><scope>wxBitmapToggleButton</scope><name>MoveAfterInTabOrder</name></member>
@@ -598,7 +599,6 @@
       <member refid="classwx_window_1a88cc65e424a129d9b0057756cdb67ec9" prot="public" virt="virtual"><scope>wxBitmapToggleButton</scope><name>TransferDataToWindow</name></member>
       <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxBitmapToggleButton</scope><name>TryAfter</name></member>
       <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxBitmapToggleButton</scope><name>TryBefore</name></member>
-      <member refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" virt="non-virtual"><scope>wxBitmapToggleButton</scope><name>TryThis</name></member>
       <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxBitmapToggleButton</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxBitmapToggleButton</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a22e5db2ec1d19c8252c056fd116975d7" prot="public" virt="non-virtual"><scope>wxBitmapToggleButton</scope><name>Unlink</name></member>

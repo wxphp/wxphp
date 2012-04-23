@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="994" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" bodystart="994" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" line="994" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" bodystart="994" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -37,7 +37,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="1005"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" line="1005"/>
       </memberdef>
       <memberdef kind="function" id="classwx_thread_1a48c37f3555eb99cca9d9f3594fed5793" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -50,7 +50,7 @@
 <para>Notice that you should never delete a detached thread -- you may only call <ref refid="classwx_thread_1a66796042bf5f3eb33a0ad3db85f686d4" kindref="member">Delete()</ref> on it or wait until it terminates (and auto destructs) itself.</para><para>Because the detached threads delete themselves, they can only be allocated on the heap. Joinable threads should be deleted explicitly. The <ref refid="classwx_thread_1a66796042bf5f3eb33a0ad3db85f686d4" kindref="member">Delete()</ref> and <ref refid="classwx_thread_1a2cbff8b3b0a93ab82f212c02f38a1ef4" kindref="member">Kill()</ref> functions will not delete the C++ thread object. It is also safe to allocate them on stack. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="1016"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" line="1016"/>
       </memberdef>
       <memberdef kind="function" id="classwx_thread_1a88051a33aa3fa9ca9392ac7d47b43cf4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="interface_2wx_2thread_8h_1a9e4ba0577f752fee0ba2133035f75ac2" kindref="member">wxThreadError</ref></type>
@@ -72,7 +72,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="1046"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" line="1046"/>
       </memberdef>
       <memberdef kind="function" id="classwx_thread_1a66796042bf5f3eb33a0ad3db85f686d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="interface_2wx_2thread_8h_1a9e4ba0577f752fee0ba2133035f75ac2" kindref="member">wxThreadError</ref></type>
@@ -111,7 +111,7 @@
 See <ref refid="classwx_thread_1thread_deletion" kindref="member">wxThread Deletion</ref> for a broader explanation of this routine. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="1070"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" line="1070"/>
       </memberdef>
       <memberdef kind="function" id="classwx_thread_1a2c9db3ca1d37d8ed921e78c31acd9bb4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>wxThreadIdType</type>
@@ -124,7 +124,7 @@ See <ref refid="classwx_thread_1thread_deletion" kindref="member">wxThread Delet
 <para>the thread identifiers may be reused). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="1097"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" line="1097"/>
       </memberdef>
       <memberdef kind="function" id="classwx_thread_1a1fc5fa753cf2bc0ec63ff16825a144b2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="interface_2wx_2thread_8h_1a0dc9a167e8d084946512da99b37b5fd0" kindref="member">wxThreadKind</ref></type>
@@ -138,7 +138,7 @@ See <ref refid="classwx_thread_1thread_deletion" kindref="member">wxThread Delet
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="1104"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" line="1104"/>
       </memberdef>
       <memberdef kind="function" id="classwx_thread_1a785ac6add565d789481f8a9dfde5c229" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>unsigned int</type>
@@ -153,7 +153,7 @@ See <ref refid="classwx_thread_1thread_deletion" kindref="member">wxThread Delet
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="1123"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" line="1123"/>
       </memberdef>
       <memberdef kind="function" id="classwx_thread_1adc6cf71c426b1da03c6ca4b7f7da8aab" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -166,7 +166,7 @@ See <ref refid="classwx_thread_1thread_deletion" kindref="member">wxThread Delet
 <para>started and not terminating).</para><para>Note that this function can only safely be used with joinable threads, not detached ones as the latter delete themselves and so when the real thread is no longer alive, it is not possible to call this function because the <ref refid="classwx_thread" kindref="compound">wxThread</ref> object no longer exists. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="1133"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" line="1133"/>
       </memberdef>
       <memberdef kind="function" id="classwx_thread_1a315c2abb553ba7e17ab2d5b2a0728e73" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -179,7 +179,7 @@ See <ref refid="classwx_thread_1thread_deletion" kindref="member">wxThread Delet
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="1139"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" line="1139"/>
       </memberdef>
       <memberdef kind="function" id="classwx_thread_1a34328ecb720a1066971fb5e48cd84b6f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -192,7 +192,7 @@ See <ref refid="classwx_thread_1thread_deletion" kindref="member">wxThread Delet
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="1154"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" line="1154"/>
       </memberdef>
       <memberdef kind="function" id="classwx_thread_1a0230733ffdc8f7603082dd2ca86b8cdd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -205,7 +205,7 @@ See <ref refid="classwx_thread_1thread_deletion" kindref="member">wxThread Delet
 <para>This method may only be safely used for joinable threads, see the remark in <ref refid="classwx_thread_1adc6cf71c426b1da03c6ca4b7f7da8aab" kindref="member">IsAlive()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="1162"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" line="1162"/>
       </memberdef>
       <memberdef kind="function" id="classwx_thread_1a2cbff8b3b0a93ab82f212c02f38a1ef4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="interface_2wx_2thread_8h_1a9e4ba0577f752fee0ba2133035f75ac2" kindref="member">wxThreadError</ref></type>
@@ -218,7 +218,7 @@ See <ref refid="classwx_thread_1thread_deletion" kindref="member">wxThread Delet
 <para><bold>&quot;This function is dangerous and should be used with extreme care&quot;</bold> (and not used at all whenever possible)! The resources allocated to the thread will not be freed and the state of the C runtime library may become inconsistent. Use <ref refid="classwx_thread_1a66796042bf5f3eb33a0ad3db85f686d4" kindref="member">Delete()</ref> for detached threads or <ref refid="classwx_thread_1a62ee778033013d3a4754b71b8cf2902e" kindref="member">Wait()</ref> for joinable threads instead.</para><para>For detached threads <ref refid="classwx_thread_1a2cbff8b3b0a93ab82f212c02f38a1ef4" kindref="member">Kill()</ref> will also delete the associated C++ object. However this will not happen for joinable threads and this means that you will still have to delete the <ref refid="classwx_thread" kindref="compound">wxThread</ref> object yourself to avoid memory leaks.</para><para>In neither case OnExit() of the dying thread will be called, so no thread-specific cleanup will be performed. This function can only be called from another thread context, i.e. a thread cannot kill itself.</para><para>It is also an error to call this function for a thread which is not running or paused (in the latter case, the thread will be resumed first) -- if you do it, a <bold>wxTHREAD_NOT_RUNNING</bold> error will be returned. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="1186"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" line="1186"/>
       </memberdef>
       <memberdef kind="function" id="classwx_thread_1a8c6d835578dde71dd2c241c38336a4ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="interface_2wx_2thread_8h_1a9e4ba0577f752fee0ba2133035f75ac2" kindref="member">wxThreadError</ref></type>
@@ -231,7 +231,7 @@ See <ref refid="classwx_thread_1thread_deletion" kindref="member">wxThread Delet
 <para>Under some implementations (Win32), the thread is suspended immediately, under others it will only be suspended when it calls <ref refid="classwx_thread_1a9a3acec44b06b2a2430c5659991a3eac" kindref="member">TestDestroy()</ref> for the next time (hence, if the thread doesn&apos;t call it at all, it won&apos;t be suspended).</para><para>This function can only be called from another thread context. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="1198"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" line="1198"/>
       </memberdef>
       <memberdef kind="function" id="classwx_thread_1afe81d37cd6cb6d5eb142773fb2c94562" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="interface_2wx_2thread_8h_1a9e4ba0577f752fee0ba2133035f75ac2" kindref="member">wxThreadError</ref></type>
@@ -244,7 +244,7 @@ See <ref refid="classwx_thread_1thread_deletion" kindref="member">wxThread Delet
 <para>This function can only be called from another thread context. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="1205"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" line="1205"/>
       </memberdef>
       <memberdef kind="function" id="classwx_thread_1a5d894750ffaac8fc42ee85aeff8bb4c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="interface_2wx_2thread_8h_1a9e4ba0577f752fee0ba2133035f75ac2" kindref="member">wxThreadError</ref></type>
@@ -257,7 +257,7 @@ See <ref refid="classwx_thread_1thread_deletion" kindref="member">wxThread Delet
 <para>Should be called after <ref refid="classwx_thread_1a88051a33aa3fa9ca9392ac7d47b43cf4" kindref="member">Create()</ref>.</para><para>Note that once you <ref refid="classwx_thread_1a5d894750ffaac8fc42ee85aeff8bb4c0" kindref="member">Run()</ref> a <bold>detached</bold> thread, <emphasis>any</emphasis> function call you do on the thread pointer (you must allocate it on the heap) is <emphasis>&quot;unsafe&quot;</emphasis>; i.e. the thread may have terminated at any moment after <ref refid="classwx_thread_1a5d894750ffaac8fc42ee85aeff8bb4c0" kindref="member">Run()</ref> and your pointer may be dangling. See <ref refid="classwx_thread_1thread_types" kindref="member">Types of wxThreads</ref> for an example of safe manipulation of detached threads.</para><para>This function can only be called from another thread context.</para><para>Finally, note that once a thread has completed and its <ref refid="classwx_thread_1af50fa7d3ac55002e367e79989b9cbc5d" kindref="member">Entry()</ref> function returns, you cannot call <ref refid="classwx_thread_1a5d894750ffaac8fc42ee85aeff8bb4c0" kindref="member">Run()</ref> on it again (an assert will fail in debug builds or <computeroutput>wxTHREAD_RUNNING</computeroutput> will be returned in release builds). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="1222"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" line="1222"/>
       </memberdef>
       <memberdef kind="function" id="classwx_thread_1a6236828fe98e81103219a519fbd7091d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -276,7 +276,7 @@ See <ref refid="classwx_thread_1thread_deletion" kindref="member">wxThread Delet
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="1245"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" line="1245"/>
       </memberdef>
       <memberdef kind="function" id="classwx_thread_1a9a3acec44b06b2a2430c5659991a3eac" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -289,7 +289,7 @@ See <ref refid="classwx_thread_1thread_deletion" kindref="member">wxThread Delet
 <para>If it returns true, the thread should exit as soon as possible. Notice that under some platforms (POSIX), implementation of <ref refid="classwx_thread_1a8c6d835578dde71dd2c241c38336a4ba" kindref="member">Pause()</ref> also relies on this function being called, so not calling it would prevent both stopping and suspending thread from working. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="1263"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" line="1263"/>
       </memberdef>
       <memberdef kind="function" id="classwx_thread_1a62ee778033013d3a4754b71b8cf2902e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_thread_1ade9497fa072fe19481086e6486dcc028" kindref="member">ExitCode</ref></type>
@@ -315,7 +315,7 @@ See <ref refid="classwx_thread_1thread_deletion" kindref="member">wxThread Delet
 See <ref refid="classwx_thread_1thread_deletion" kindref="member">wxThread Deletion</ref> for a broader explanation of this routine. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="1293"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" line="1293"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -331,7 +331,7 @@ See <ref refid="classwx_thread_1thread_deletion" kindref="member">wxThread Delet
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="1081"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" line="1081"/>
       </memberdef>
       <memberdef kind="function" id="classwx_thread_1a414fecfb855a7e12088bb0fa54ebd330" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>wxThreadIdType</type>
@@ -345,7 +345,7 @@ See <ref refid="classwx_thread_1thread_deletion" kindref="member">wxThread Delet
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="1090"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" line="1090"/>
       </memberdef>
       <memberdef kind="function" id="classwx_thread_1a0023e6e671b016f06c452f34dd6ce8f4" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>wxThreadIdType</type>
@@ -360,7 +360,7 @@ See <ref refid="classwx_thread_1thread_deletion" kindref="member">wxThread Delet
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="1113"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" line="1113"/>
       </memberdef>
       <memberdef kind="function" id="classwx_thread_1a1ee917ef87f986ba3b2ee26e620378e4" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -374,7 +374,7 @@ See <ref refid="classwx_thread_1thread_deletion" kindref="member">wxThread Delet
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="1149"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" line="1149"/>
       </memberdef>
       <memberdef kind="function" id="classwx_thread_1a09dfe3800bbfad53be303a4608d52959" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -392,7 +392,7 @@ See <ref refid="classwx_thread_1thread_deletion" kindref="member">wxThread Delet
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="1234"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" line="1234"/>
       </memberdef>
       <memberdef kind="function" id="classwx_thread_1a9ae47b39270c54dba5534af31f885ec6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -409,7 +409,7 @@ See <ref refid="classwx_thread_1thread_deletion" kindref="member">wxThread Delet
 <para>This is the same as <ref refid="group__group__funcmacro__time_1ga66778879349f76fd833902d3767006fa" kindref="member">wxMilliSleep()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="1252"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" line="1252"/>
       </memberdef>
       <memberdef kind="function" id="classwx_thread_1a7077fa46ffef0fd1d023628776598335" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_thread" kindref="compound">wxThread</ref> *</type>
@@ -422,7 +422,7 @@ See <ref refid="classwx_thread_1thread_deletion" kindref="member">wxThread Delet
 <para>NULL is returned if the calling thread is the main (GUI) thread, but <ref refid="classwx_thread_1a1ee917ef87f986ba3b2ee26e620378e4" kindref="member">IsMain()</ref> should be used to test whether the thread is really the main one because NULL may also be returned for the thread not created with <ref refid="classwx_thread" kindref="compound">wxThread</ref> class. Generally speaking, the return value for such a thread is undefined. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="1273"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" line="1273"/>
       </memberdef>
       <memberdef kind="function" id="classwx_thread_1a7a36099bab2d4be9d72cfd4cf76e8aa6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -435,7 +435,7 @@ See <ref refid="classwx_thread_1thread_deletion" kindref="member">wxThread Delet
 <para>Note that using this function is <bold>strongly</bold> discouraged, since in many cases it indicates a design weakness of your threading model (as does using <ref refid="classwx_thread_1a9ae47b39270c54dba5534af31f885ec6" kindref="member">Sleep()</ref> functions).</para><para>Threads should use the CPU in an efficient manner, i.e. they should do their current work efficiently, then as soon as the work is done block on a wakeup event (<ref refid="classwx_condition" kindref="compound">wxCondition</ref>, <ref refid="classwx_mutex" kindref="compound">wxMutex</ref>, select(), poll(), ...) which will get signalled e.g. by other threads or a user device once further thread work is available. Using <ref refid="classwx_thread_1a7a36099bab2d4be9d72cfd4cf76e8aa6" kindref="member">Yield()</ref> or <ref refid="classwx_thread_1a9ae47b39270c54dba5534af31f885ec6" kindref="member">Sleep()</ref> indicates polling-type behaviour, since we&apos;re fuzzily giving up our timeslice and wait until sometime later we&apos;ll get reactivated, at which time we realize that there isn&apos;t really much to do and <ref refid="classwx_thread_1a7a36099bab2d4be9d72cfd4cf76e8aa6" kindref="member">Yield()</ref> again...</para><para>The most critical characteristic of <ref refid="classwx_thread_1a7a36099bab2d4be9d72cfd4cf76e8aa6" kindref="member">Yield()</ref> is that it&apos;s operating system specific: there may be scheduler changes which cause your thread to not wake up relatively soon again, but instead many seconds later, causing huge performance issues for your application.</para><para><bold> With a well-behaving, CPU-efficient thread the operating system is likely to properly care for its reactivation the moment it needs it, whereas with non-deterministic, Yield-using threads all bets are off and the system scheduler is free to penalize them drastically</bold>, and this effect gets worse with increasing system load due to less free CPU resources available. You may refer to various Linux kernel <computeroutput>sched_yield</computeroutput> discussions for more information.</para><para>See also <ref refid="classwx_thread_1a9ae47b39270c54dba5534af31f885ec6" kindref="member">Sleep()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="1329"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" line="1329"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-func">
@@ -450,7 +450,7 @@ See <ref refid="classwx_thread_1thread_deletion" kindref="member">wxThread Delet
 <para>This function is pure virtual and must be implemented by any derived class. The thread execution will start here.</para><para>The returned value is the thread exit code which is only useful for joinable threads and is the value returned by <ref refid="classwx_thread_1a62ee778033013d3a4754b71b8cf2902e" kindref="member">Wait()</ref>. This function is called by wxWidgets itself and should never be called directly. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="1344"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" line="1344"/>
       </memberdef>
       <memberdef kind="function" id="classwx_thread_1a888b9b94f64a2b61bd4740de1149e6e2" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -468,7 +468,7 @@ See <ref refid="classwx_thread_1thread_deletion" kindref="member">wxThread Delet
 <para>It also can only be called in the context of this thread, i.e. a thread can only exit from itself, not from another thread.</para><para>This function will terminate the OS thread (i.e. stop the associated path of execution) and also delete the associated C++ object for detached threads. OnExit() will be called just before exiting. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="1355"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" line="1355"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -483,7 +483,7 @@ See <ref refid="classwx_thread_1thread_deletion" kindref="member">wxThread Delet
 <para>This function is called in the context of the thread associated with the <ref refid="classwx_thread" kindref="compound">wxThread</ref> object, not in the context of the main thread. This function will not be called if the thread was <ref refid="classwx_thread_1a2cbff8b3b0a93ab82f212c02f38a1ef4" kindref="member">Kill()</ref> killed.</para><para>This function should never be called directly. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="1368"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" line="1368"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -674,7 +674,7 @@ See <ref refid="classwx_thread_1thread_deletion" kindref="member">wxThread Delet
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__threading" kindref="compound">Threading</ref></para><para><simplesect kind="see"><para><ref refid="classwx_thread_helper" kindref="compound">wxThreadHelper</ref>, <ref refid="classwx_mutex" kindref="compound">wxMutex</ref>, <ref refid="classwx_condition" kindref="compound">wxCondition</ref>, <ref refid="classwx_critical_section" kindref="compound">wxCriticalSection</ref>, <ref refid="overview_thread" kindref="compound">Multithreading Overview</ref> </para></simplesect>
 </para></sect1>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="989" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" bodystart="988" bodyend="1369"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" line="989" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" bodystart="988" bodyend="1369"/>
     <listofallmembers>
       <member refid="classwx_thread_1a88051a33aa3fa9ca9392ac7d47b43cf4" prot="public" virt="non-virtual"><scope>wxThread</scope><name>Create</name></member>
       <member refid="classwx_thread_1a66796042bf5f3eb33a0ad3db85f686d4" prot="public" virt="non-virtual"><scope>wxThread</scope><name>Delete</name></member>

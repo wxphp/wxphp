@@ -17,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/clntdata.h" line="97"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/clntdata.h" line="97"/>
       </memberdef>
       <memberdef kind="function" id="classwx_client_data_1a427b6e314d2e172badcdcf55068a2c00" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/clntdata.h" line="102"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/clntdata.h" line="102"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -40,24 +40,24 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__containers" kindref="compound">Containers</ref></para><para><simplesect kind="see"><para><ref refid="classwx_evt_handler" kindref="compound">wxEvtHandler</ref>, <ref refid="classwx_tree_item_data" kindref="compound">wxTreeItemData</ref>, <ref refid="classwx_string_client_data" kindref="compound">wxStringClientData</ref>, <ref refid="classwx_client_data_container" kindref="compound">wxClientDataContainer</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="4788">
+      <node id="4879">
         <label>wxClientData</label>
         <link refid="classwx_client_data"/>
       </node>
-      <node id="4790">
+      <node id="4881">
         <label>wxTreeItemData</label>
         <link refid="classwx_tree_item_data"/>
-        <childnode refid="4788" relation="public-inheritance">
+        <childnode refid="4879" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4789">
+      <node id="4880">
         <label>wxStringClientData</label>
         <link refid="classwx_string_client_data"/>
-        <childnode refid="4788" relation="public-inheritance">
+        <childnode refid="4879" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/clntdata.h" line="92" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/clntdata.h" bodystart="91" bodyend="103"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/clntdata.h" line="92" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/clntdata.h" bodystart="91" bodyend="103"/>
     <listofallmembers>
       <member refid="classwx_client_data_1acf0e79134d5fb8abd8a4a343c616e8d7" prot="public" virt="non-virtual"><scope>wxClientData</scope><name>wxClientData</name></member>
       <member refid="classwx_client_data_1a427b6e314d2e172badcdcf55068a2c00" prot="public" virt="virtual"><scope>wxClientData</scope><name>~wxClientData</name></member>

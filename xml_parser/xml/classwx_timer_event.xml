@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/timer.h" line="201"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/timer.h" line="201"/>
       </memberdef>
       <memberdef kind="function" id="classwx_timer_event_1aedca4f26719c256c2f8d9ef8486d2f86" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -33,7 +33,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/timer.h" line="202"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/timer.h" line="202"/>
       </memberdef>
       <memberdef kind="function" id="classwx_timer_event_1a010005917554d99fe8372913c8de53d2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -46,7 +46,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/timer.h" line="207"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/timer.h" line="207"/>
       </memberdef>
       <memberdef kind="function" id="classwx_timer_event_1ae305165ebfd0e536a654ee09c19fd10e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_timer" kindref="compound">wxTimer</ref> &amp;</type>
@@ -59,7 +59,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/timer.h" line="212"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/timer.h" line="212"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -94,49 +94,49 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="classwx_timer" kindref="compound">wxTimer</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10883">
+      <node id="11068">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="10881">
+      <node id="11066">
         <label>wxTimerEvent</label>
         <link refid="classwx_timer_event"/>
-        <childnode refid="10882" relation="public-inheritance">
+        <childnode refid="11067" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10882">
+      <node id="11067">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="10883" relation="public-inheritance">
+        <childnode refid="11068" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10886">
+      <node id="11071">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="10887" relation="usage">
+        <childnode refid="11072" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="10884">
+      <node id="11069">
         <label>wxTimerEvent</label>
         <link refid="classwx_timer_event"/>
-        <childnode refid="10885" relation="public-inheritance">
+        <childnode refid="11070" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10885">
+      <node id="11070">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="10886" relation="public-inheritance">
+        <childnode refid="11071" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10887">
+      <node id="11072">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/timer.h" line="199" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/timer.h" bodystart="198" bodyend="213"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/timer.h" line="199" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/timer.h" bodystart="198" bodyend="213"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxTimerEvent</scope><name>AllocExclusive</name></member>
       <member refid="classwx_event_1a26878097a702e8d0368da150125d4158" prot="public" virt="pure-virtual"><scope>wxTimerEvent</scope><name>Clone</name></member>

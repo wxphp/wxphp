@@ -102,7 +102,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/zipstrm.h" line="13" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/zipstrm.h" bodystart="12" bodyend="26"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/zipstrm.h" line="13" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/zipstrm.h" bodystart="12" bodyend="26"/>
       </memberdef>
       <memberdef kind="enum" id="zipstrm_8h_1a58254256a46231cb3924e25f98c6d0ef" prot="public" static="no">
         <name>wxZipSystem</name>
@@ -245,7 +245,7 @@
 <para>These are Pkware&apos;s values. Note that Info-zip disagree on some of them, most notably NTFS. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/zipstrm.h" line="33" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/zipstrm.h" bodystart="32" bodyend="53"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/zipstrm.h" line="33" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/zipstrm.h" bodystart="32" bodyend="53"/>
       </memberdef>
       <memberdef kind="enum" id="zipstrm_8h_1a77b66e32f758eee5da17db30b0350c4c" prot="public" static="no">
         <name>wxZipAttributes</name>
@@ -303,7 +303,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/zipstrm.h" line="57" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/zipstrm.h" bodystart="56" bodyend="65"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/zipstrm.h" line="57" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/zipstrm.h" bodystart="56" bodyend="65"/>
       </memberdef>
       <memberdef kind="enum" id="zipstrm_8h_1a1c3a3c25e263ddbe0916f10fd065fbdd" prot="public" static="no">
         <name>wxZipFlags</name>
@@ -409,13 +409,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/zipstrm.h" line="69" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/zipstrm.h" bodystart="68" bodyend="82"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/zipstrm.h" line="69" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/zipstrm.h" bodystart="68" bodyend="82"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/zipstrm.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/zipstrm.h"/>
   </compounddef>
 </doxygen>

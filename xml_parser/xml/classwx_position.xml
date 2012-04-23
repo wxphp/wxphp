@@ -20,7 +20,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/position.h" line="72"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/position.h" line="72"/>
       </memberdef>
       <memberdef kind="function" id="classwx_position_1ac006d8c2a03efd86f4d0ed5071bc0464" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -37,12 +37,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/position.h" line="73"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/position.h" line="73"/>
       </memberdef>
-      <memberdef kind="function" id="classwx_position_1a746adf5cd3f1e6d42177ee655f68dad4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classwx_position_1a328de65d02e4d7af583bc51fbaec85a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_position" kindref="compound">wxPosition</ref> &amp;</type>
         <definition>wxPosition&amp; wxPosition::operator+=</definition>
-        <argsstring>(const wxPosition &amp;pos) const </argsstring>
+        <argsstring>(const wxPosition &amp;pos)</argsstring>
         <name>operator+=</name>
         <param>
           <type>const <ref refid="classwx_position" kindref="compound">wxPosition</ref> &amp;</type>
@@ -54,12 +54,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/position.h" line="74"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/position.h" line="74"/>
       </memberdef>
-      <memberdef kind="function" id="classwx_position_1a96673ca1c93aea5ae5d0f4480b25fd13" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classwx_position_1aa57c84e8503c0f206eaad737740fb4b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_position" kindref="compound">wxPosition</ref> &amp;</type>
         <definition>wxPosition&amp; wxPosition::operator-=</definition>
-        <argsstring>(const wxPosition &amp;pos) const </argsstring>
+        <argsstring>(const wxPosition &amp;pos)</argsstring>
         <name>operator-=</name>
         <param>
           <type>const <ref refid="classwx_position" kindref="compound">wxPosition</ref> &amp;</type>
@@ -71,12 +71,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/position.h" line="75"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/position.h" line="75"/>
       </memberdef>
-      <memberdef kind="function" id="classwx_position_1a65a5de36342a482222c89b2af75a4405" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classwx_position_1a46f7e47c2880fd590bee7a9c77508bce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_position" kindref="compound">wxPosition</ref> &amp;</type>
         <definition>wxPosition&amp; wxPosition::operator+=</definition>
-        <argsstring>(const wxSize &amp;size) const </argsstring>
+        <argsstring>(const wxSize &amp;size)</argsstring>
         <name>operator+=</name>
         <param>
           <type>const <ref refid="classwx_size" kindref="compound">wxSize</ref> &amp;</type>
@@ -88,12 +88,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/position.h" line="76"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/position.h" line="76"/>
       </memberdef>
-      <memberdef kind="function" id="classwx_position_1afe7f1dadce564a1df0b9a53301698fb2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classwx_position_1aec72456168604dde0281ccafcbe6fbad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_position" kindref="compound">wxPosition</ref> &amp;</type>
         <definition>wxPosition&amp; wxPosition::operator-=</definition>
-        <argsstring>(const wxSize &amp;size) const </argsstring>
+        <argsstring>(const wxSize &amp;size)</argsstring>
         <name>operator-=</name>
         <param>
           <type>const <ref refid="classwx_size" kindref="compound">wxSize</ref> &amp;</type>
@@ -105,7 +105,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/position.h" line="77"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/position.h" line="77"/>
       </memberdef>
       <memberdef kind="function" id="classwx_position_1a22d6bf73f3056528830cb41d3e0dcd8b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_position" kindref="compound">wxPosition</ref></type>
@@ -122,7 +122,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/position.h" line="78"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/position.h" line="78"/>
       </memberdef>
       <memberdef kind="function" id="classwx_position_1a46c938913dc01e9c69b4f322454761fa" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_position" kindref="compound">wxPosition</ref></type>
@@ -139,7 +139,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/position.h" line="79"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/position.h" line="79"/>
       </memberdef>
       <memberdef kind="function" id="classwx_position_1a046addd5ef4655b4ab432a6ae0e5e7f3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_position" kindref="compound">wxPosition</ref></type>
@@ -156,7 +156,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/position.h" line="80"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/position.h" line="80"/>
       </memberdef>
       <memberdef kind="function" id="classwx_position_1a57bbed32e8b7d3199ef993dd51ae18a1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_position" kindref="compound">wxPosition</ref></type>
@@ -173,7 +173,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/position.h" line="81"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/position.h" line="81"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -188,7 +188,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/position.h" line="28"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/position.h" line="28"/>
       </memberdef>
       <memberdef kind="function" id="classwx_position_1ae8301b4ac1db055821f713ad4e3a1062" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -209,7 +209,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/position.h" line="34"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/position.h" line="34"/>
       </memberdef>
       <memberdef kind="function" id="classwx_position_1ab541c81540254ef30acce315741ee1f2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -222,7 +222,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/position.h" line="39"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/position.h" line="39"/>
       </memberdef>
       <memberdef kind="function" id="classwx_position_1aeb2d6a7f1119bcf5090d57b40f1f4d26" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -235,7 +235,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/position.h" line="44"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/position.h" line="44"/>
       </memberdef>
       <memberdef kind="function" id="classwx_position_1a510d68d82fb257e15d938acd58bc513c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -248,7 +248,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/position.h" line="49"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/position.h" line="49"/>
       </memberdef>
       <memberdef kind="function" id="classwx_position_1ae186188a3cf0f1065ac2d71c7dbcf289" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -265,7 +265,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/position.h" line="54"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/position.h" line="54"/>
       </memberdef>
       <memberdef kind="function" id="classwx_position_1ab6171fd77eeba5ffb9b9d42e6b683b72" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -282,7 +282,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/position.h" line="59"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/position.h" line="59"/>
       </memberdef>
       <memberdef kind="function" id="classwx_position_1a6c7e7e403e18e88bc89cfb4ad4310b49" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -299,7 +299,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/position.h" line="64"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/position.h" line="64"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -308,7 +308,7 @@
 <para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__data" kindref="compound">Data Structures</ref></para><para><simplesect kind="see"><para><ref refid="classwx_point" kindref="compound">wxPoint</ref>, <ref refid="classwx_size" kindref="compound">wxSize</ref> </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/position.h" line="21" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/position.h" bodystart="20" bodyend="83"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/position.h" line="21" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/position.h" bodystart="20" bodyend="83"/>
     <listofallmembers>
       <member refid="classwx_position_1ab541c81540254ef30acce315741ee1f2" prot="public" virt="non-virtual"><scope>wxPosition</scope><name>GetCol</name></member>
       <member refid="classwx_position_1aeb2d6a7f1119bcf5090d57b40f1f4d26" prot="public" virt="non-virtual"><scope>wxPosition</scope><name>GetColumn</name></member>
@@ -316,12 +316,12 @@
       <member refid="classwx_position_1ac006d8c2a03efd86f4d0ed5071bc0464" prot="public" virt="non-virtual"><scope>wxPosition</scope><name>operator!=</name></member>
       <member refid="classwx_position_1a22d6bf73f3056528830cb41d3e0dcd8b" prot="public" virt="non-virtual"><scope>wxPosition</scope><name>operator+</name></member>
       <member refid="classwx_position_1a046addd5ef4655b4ab432a6ae0e5e7f3" prot="public" virt="non-virtual"><scope>wxPosition</scope><name>operator+</name></member>
-      <member refid="classwx_position_1a746adf5cd3f1e6d42177ee655f68dad4" prot="public" virt="non-virtual"><scope>wxPosition</scope><name>operator+=</name></member>
-      <member refid="classwx_position_1a65a5de36342a482222c89b2af75a4405" prot="public" virt="non-virtual"><scope>wxPosition</scope><name>operator+=</name></member>
+      <member refid="classwx_position_1a328de65d02e4d7af583bc51fbaec85a2" prot="public" virt="non-virtual"><scope>wxPosition</scope><name>operator+=</name></member>
+      <member refid="classwx_position_1a46f7e47c2880fd590bee7a9c77508bce" prot="public" virt="non-virtual"><scope>wxPosition</scope><name>operator+=</name></member>
       <member refid="classwx_position_1a46c938913dc01e9c69b4f322454761fa" prot="public" virt="non-virtual"><scope>wxPosition</scope><name>operator-</name></member>
       <member refid="classwx_position_1a57bbed32e8b7d3199ef993dd51ae18a1" prot="public" virt="non-virtual"><scope>wxPosition</scope><name>operator-</name></member>
-      <member refid="classwx_position_1a96673ca1c93aea5ae5d0f4480b25fd13" prot="public" virt="non-virtual"><scope>wxPosition</scope><name>operator-=</name></member>
-      <member refid="classwx_position_1afe7f1dadce564a1df0b9a53301698fb2" prot="public" virt="non-virtual"><scope>wxPosition</scope><name>operator-=</name></member>
+      <member refid="classwx_position_1aa57c84e8503c0f206eaad737740fb4b8" prot="public" virt="non-virtual"><scope>wxPosition</scope><name>operator-=</name></member>
+      <member refid="classwx_position_1aec72456168604dde0281ccafcbe6fbad" prot="public" virt="non-virtual"><scope>wxPosition</scope><name>operator-=</name></member>
       <member refid="classwx_position_1ab63c9a560cbb577a8cc377fd99b04253" prot="public" virt="non-virtual"><scope>wxPosition</scope><name>operator==</name></member>
       <member refid="classwx_position_1ae186188a3cf0f1065ac2d71c7dbcf289" prot="public" virt="non-virtual"><scope>wxPosition</scope><name>SetCol</name></member>
       <member refid="classwx_position_1ab6171fd77eeba5ffb9b9d42e6b683b72" prot="public" virt="non-virtual"><scope>wxPosition</scope><name>SetColumn</name></member>

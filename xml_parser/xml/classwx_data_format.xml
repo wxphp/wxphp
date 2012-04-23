@@ -20,7 +20,7 @@
 <para><bold>wxPerl Note:</bold> In wxPerl use Wx::Bitmap-&gt;newNative(format). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataobj.h" line="75"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataobj.h" line="75"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_format_1a6c08911611be5e3a5dd35528b4d091db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -37,7 +37,7 @@
 <para><bold>wxPerl Note:</bold> In wxPerl use Wx::Bitmap-&gt;newUser(format). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataobj.h" line="85"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataobj.h" line="85"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_format_1aad852ba717c2db4d3d61b9e4ac2f09d9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -50,7 +50,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataobj.h" line="91"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataobj.h" line="91"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_format_1a0747b4235e1df0e2eead9cba3bbc53e9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="defs_8h_1a263109c79f708754bf656c7768b27047" kindref="member">wxDataFormatId</ref></type>
@@ -63,7 +63,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataobj.h" line="96"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataobj.h" line="96"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_format_1a3b3748f25fc57f360b3ea5f68c238ee7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -80,7 +80,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataobj.h" line="101"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataobj.h" line="101"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_format_1a9400041e82a194b015bdf9d90805f701" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -97,7 +97,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataobj.h" line="107"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataobj.h" line="107"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_format_1a21fdc4110ef2504bfae857dcb3c6c144" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -114,7 +114,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataobj.h" line="112"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataobj.h" line="112"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_format_1aaca5c8ae97f3e1efa5490edcc524af02" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -131,7 +131,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataobj.h" line="117"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataobj.h" line="117"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -153,7 +153,7 @@
 </para><para>As mentioned above, these standard formats may be passed to any function taking <ref refid="classwx_data_format" kindref="compound">wxDataFormat</ref> argument because <ref refid="classwx_data_format" kindref="compound">wxDataFormat</ref> has an implicit conversion from them (or, to be precise from the type <computeroutput>wxDataFormat::NativeFormat</computeroutput> which is the type used by the underlying platform for data formats).</para><para>Aside the standard formats, the application may also use custom formats which are identified by their names (strings) and not numeric identifiers. Although internally custom format must be created (or <emphasis>registered</emphasis>) first, you shouldn&apos;t care about it because it is done automatically the first time the <ref refid="classwx_data_format" kindref="compound">wxDataFormat</ref> object corresponding to a given format name is created. The only implication of this is that you should avoid having global <ref refid="classwx_data_format" kindref="compound">wxDataFormat</ref> objects with non-default constructor because their constructors are executed before the program has time to perform all necessary initialisations and so an attempt to do clipboard format registration at this time will usually lead to a crash!</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__dnd" kindref="compound">Clipboard and Drag &amp; Drop</ref></para><para><simplesect kind="see"><para><ref refid="overview_dnd" kindref="compound">Drag and Drop Overview</ref>, <ref refid="page_samples_1page_samples_dnd" kindref="member">Drag &amp; Drop Sample</ref>, <ref refid="classwx_data_object" kindref="compound">wxDataObject</ref> </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataobj.h" line="65" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataobj.h" bodystart="64" bodyend="118"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataobj.h" line="65" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dataobj.h" bodystart="64" bodyend="118"/>
     <listofallmembers>
       <member refid="classwx_data_format_1aad852ba717c2db4d3d61b9e4ac2f09d9" prot="public" virt="non-virtual"><scope>wxDataFormat</scope><name>GetId</name></member>
       <member refid="classwx_data_format_1a0747b4235e1df0e2eead9cba3bbc53e9" prot="public" virt="non-virtual"><scope>wxDataFormat</scope><name>GetType</name></member>

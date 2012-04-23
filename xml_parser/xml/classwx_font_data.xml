@@ -16,7 +16,7 @@
 <para>Initializes <emphasis>fontColour</emphasis> to black, <emphasis>showHelp</emphasis> to false, <emphasis>allowSymbols</emphasis> to true, <emphasis>enableEffects</emphasis> to true, <emphasis>minSize</emphasis> to 0 and <emphasis>maxSize</emphasis> to 0. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fontdata.h" line="27"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fontdata.h" line="27"/>
       </memberdef>
       <memberdef kind="function" id="classwx_font_data_1a5d2430c6959bea4a023a87c0e606c31a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -33,7 +33,7 @@
 <para>This refers to the controls for manipulating colour, strikeout and underline properties.</para><para>The default value is true. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fontdata.h" line="36"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fontdata.h" line="36"/>
       </memberdef>
       <memberdef kind="function" id="classwx_font_data_1a8fca3521d67ac8a5843ff8d372a60b8d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -46,7 +46,7 @@
 <para>Has no effect on other platforms.</para><para>The default value is true. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fontdata.h" line="44"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fontdata.h" line="44"/>
       </memberdef>
       <memberdef kind="function" id="classwx_font_data_1a5ecc1a48c1a783fef87c26f7ea825c0d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_font" kindref="compound">wxFont</ref></type>
@@ -59,7 +59,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fontdata.h" line="50"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fontdata.h" line="50"/>
       </memberdef>
       <memberdef kind="function" id="classwx_font_data_1abb0099f48190807679d721639e9ab6e9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_colour" kindref="compound">wxColour</ref> &amp;</type>
@@ -72,7 +72,7 @@
 <para>The default value is black. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fontdata.h" line="57"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fontdata.h" line="57"/>
       </memberdef>
       <memberdef kind="function" id="classwx_font_data_1a814d62588997cd69f69e45bbf4c472e5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -85,7 +85,7 @@
 <para>This refers to the controls for manipulating colour, strikeout and underline properties.</para><para>The default value is true. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fontdata.h" line="66"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fontdata.h" line="66"/>
       </memberdef>
       <memberdef kind="function" id="classwx_font_data_1acb38460d543044b92b99c749cef6b4af" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_font" kindref="compound">wxFont</ref></type>
@@ -98,7 +98,7 @@
 <para>This should have previously been set by the application. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fontdata.h" line="72"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fontdata.h" line="72"/>
       </memberdef>
       <memberdef kind="function" id="classwx_font_data_1ad2d994c34a5e221ff4b5485362a3f18e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -111,7 +111,7 @@
 <para>The default value is false. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fontdata.h" line="79"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fontdata.h" line="79"/>
       </memberdef>
       <memberdef kind="function" id="classwx_font_data_1a0bd2d264044fcf568c1d731e9d19c32c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -128,7 +128,7 @@
 <para>Has no effect on other platforms.</para><para>The default value is true. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fontdata.h" line="87"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fontdata.h" line="87"/>
       </memberdef>
       <memberdef kind="function" id="classwx_font_data_1a316d4574ef7100e4e5f3e12bff7d98dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -145,7 +145,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fontdata.h" line="93"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fontdata.h" line="93"/>
       </memberdef>
       <memberdef kind="function" id="classwx_font_data_1a52e4308bf17d933b5b2948f6eb469608" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -162,7 +162,7 @@
 <para>The default colour is black. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fontdata.h" line="100"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fontdata.h" line="100"/>
       </memberdef>
       <memberdef kind="function" id="classwx_font_data_1a24fd79c0a3eb6764cc7d525acba9aaeb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -179,7 +179,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fontdata.h" line="105"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fontdata.h" line="105"/>
       </memberdef>
       <memberdef kind="function" id="classwx_font_data_1ac3d2f78a59cd50d5e3a045775a83fff5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -200,7 +200,7 @@
 <para>The default is 0, 0 (unrestricted range). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fontdata.h" line="112"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fontdata.h" line="112"/>
       </memberdef>
       <memberdef kind="function" id="classwx_font_data_1ad203acb97b8278907994f254f96f63ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -217,7 +217,7 @@
 <para>The default value is false. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fontdata.h" line="120"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fontdata.h" line="120"/>
       </memberdef>
       <memberdef kind="function" id="classwx_font_data_1a3275ef185524b42964391b1b89ffc9b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_font_data" kindref="compound">wxFontData</ref> &amp;</type>
@@ -234,7 +234,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fontdata.h" line="125"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fontdata.h" line="125"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -244,37 +244,37 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__cmndlg" kindref="compound">Common Dialogs</ref>, <ref refid="group__group__class__data" kindref="compound">Data Structures</ref></para><para><simplesect kind="see"><para><ref refid="overview_cmndlg_1overview_cmndlg_font" kindref="member">wxFontDialog Overview</ref>, <ref refid="classwx_font" kindref="compound">wxFont</ref>, <ref refid="classwx_font_dialog" kindref="compound">wxFontDialog</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="6371">
+      <node id="6511">
         <label>wxFontData</label>
         <link refid="classwx_font_data"/>
-        <childnode refid="6372" relation="public-inheritance">
+        <childnode refid="6512" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6372">
+      <node id="6512">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="6373">
+      <node id="6513">
         <label>wxFontData</label>
         <link refid="classwx_font_data"/>
-        <childnode refid="6374" relation="public-inheritance">
+        <childnode refid="6514" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6374">
+      <node id="6514">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="6375" relation="usage">
+        <childnode refid="6515" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="6375">
+      <node id="6515">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fontdata.h" line="20" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fontdata.h" bodystart="19" bodyend="126"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fontdata.h" line="20" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/fontdata.h" bodystart="19" bodyend="126"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxFontData</scope><name>AllocExclusive</name></member>
       <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxFontData</scope><name>CloneRefData</name></member>

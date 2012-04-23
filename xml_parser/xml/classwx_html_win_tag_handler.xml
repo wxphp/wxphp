@@ -16,7 +16,7 @@
 <para>The only difference is that m_WParser points to <ref refid="classwx_html_win_parser" kindref="compound">wxHtmlWinParser</ref> object while m_Parser points to <ref refid="classwx_html_parser" kindref="compound">wxHtmlParser</ref> object. (The same object, but overcast.) </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/winpars.h" line="59" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/winpars.h" bodystart="59" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/winpars.h" line="59" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/html/winpars.h" bodystart="59" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -25,65 +25,65 @@
 <para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxhtml" kindref="member">wxHTML</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__html" kindref="compound">HTML</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7149">
+      <node id="7336">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="7147">
+      <node id="7334">
         <label>wxHtmlWinTagHandler</label>
         <link refid="classwx_html_win_tag_handler"/>
-        <childnode refid="7148" relation="public-inheritance">
+        <childnode refid="7335" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7148">
+      <node id="7335">
         <label>wxHtmlTagHandler</label>
         <link refid="classwx_html_tag_handler"/>
-        <childnode refid="7149" relation="public-inheritance">
+        <childnode refid="7336" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7152">
+      <node id="7339">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="7153" relation="usage">
+        <childnode refid="7340" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="7155">
+      <node id="7342">
         <label>wxHtmlWinParser</label>
         <link refid="classwx_html_win_parser"/>
-        <childnode refid="7154" relation="public-inheritance">
+        <childnode refid="7341" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7150">
+      <node id="7337">
         <label>wxHtmlWinTagHandler</label>
         <link refid="classwx_html_win_tag_handler"/>
-        <childnode refid="7151" relation="public-inheritance">
+        <childnode refid="7338" relation="public-inheritance">
         </childnode>
-        <childnode refid="7155" relation="usage">
+        <childnode refid="7342" relation="usage">
           <edgelabel>m_WParser</edgelabel>
         </childnode>
       </node>
-      <node id="7151">
+      <node id="7338">
         <label>wxHtmlTagHandler</label>
         <link refid="classwx_html_tag_handler"/>
-        <childnode refid="7152" relation="public-inheritance">
+        <childnode refid="7339" relation="public-inheritance">
         </childnode>
-        <childnode refid="7154" relation="usage">
+        <childnode refid="7341" relation="usage">
           <edgelabel>m_Parser</edgelabel>
         </childnode>
       </node>
-      <node id="7153">
+      <node id="7340">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
-      <node id="7154">
+      <node id="7341">
         <label>wxHtmlParser</label>
         <link refid="classwx_html_parser"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/winpars.h" line="52" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/winpars.h" bodystart="51" bodyend="60"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/winpars.h" line="52" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/html/winpars.h" bodystart="51" bodyend="60"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxHtmlWinTagHandler</scope><name>AllocExclusive</name></member>
       <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxHtmlWinTagHandler</scope><name>CloneRefData</name></member>

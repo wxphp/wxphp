@@ -38,7 +38,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataobj.h" line="228" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataobj.h" bodystart="227" bodyend="240"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataobj.h" line="223" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dataobj.h" bodystart="222" bodyend="235"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -53,7 +53,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataobj.h" line="245"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataobj.h" line="240"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_object_1a392665fe790cd29de240223b5bd2936c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -66,7 +66,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataobj.h" line="250"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataobj.h" line="245"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_object_1a71abcc4eb2229e936ea53ebdefa53bef" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -89,7 +89,7 @@
 <para>There must be enough space for GetFormatCount(dir) formats in it.</para><para><bold>wxPerl Note:</bold> In wxPerl this method only takes the <emphasis>dir</emphasis> parameter. In scalar context it returns the first format in the list, in list context it returns a list containing all the supported formats. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataobj.h" line="265"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataobj.h" line="260"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_object_1aa48761390b25d797d4cad393db752568" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type>bool</type>
@@ -110,7 +110,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataobj.h" line="271"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataobj.h" line="266"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_object_1a10674c65e59f08ba318f942e410b8627" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type>size_t</type>
@@ -127,13 +127,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataobj.h" line="276"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataobj.h" line="271"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_object_1a3f82815810bf4dcc34e1a5783c9b8a62" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type>size_t</type>
         <definition>virtual size_t wxDataObject::GetFormatCount</definition>
         <argsstring>(Direction dir=Get) const =0</argsstring>
         <name>GetFormatCount</name>
+        <reimplementedby refid="classwx_text_data_object_1aeb197612bcadc2f37aecdfc4acee9b55">GetFormatCount</reimplementedby>
         <param>
           <type><ref refid="classwx_data_object_1a7623fd02a6bef5dba7c96ff0a1a692ef" kindref="member">Direction</ref></type>
           <declname>dir</declname>
@@ -145,7 +146,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataobj.h" line="282"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataobj.h" line="277"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_object_1a47570ed6123bbebec195a2b7f843103c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type><ref refid="classwx_data_format" kindref="compound">wxDataFormat</ref></type>
@@ -163,7 +164,7 @@
 <para>Usually this will be the native format of the <ref refid="classwx_data_object" kindref="compound">wxDataObject</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataobj.h" line="289"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataobj.h" line="284"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_object_1ab73fa5f1cb933c67df20ddb1fad99071" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -211,7 +212,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataobj.h" line="304"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataobj.h" line="299"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_object_1aaedc05373d1e6822c9795f57d8200b72" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -233,7 +234,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataobj.h" line="309"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataobj.h" line="304"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -249,58 +250,58 @@
 </para></listitem><listitem><para>Use <ref refid="classwx_data_object" kindref="compound">wxDataObject</ref> directly<itemizedlist>
 <listitem><para>This is the solution for maximum flexibility and efficiency, but it is also the most difficult to implement.</para></listitem></itemizedlist>
 </para></listitem></orderedlist>
-</para><para>Please note that the easiest way to use drag and drop and the clipboard with multiple formats is by using <ref refid="classwx_data_object_composite" kindref="compound">wxDataObjectComposite</ref>, but it is not the most efficient one as each <ref refid="classwx_data_object_simple" kindref="compound">wxDataObjectSimple</ref> would contain the whole data in its respective formats. Now imagine that you want to paste 200 pages of text in your proprietary format, as well as Word, RTF, HTML, Unicode and plain text to the clipboard and even today&apos;s computers are in trouble. For this case, you will have to derive from <ref refid="classwx_data_object" kindref="compound">wxDataObject</ref> directly and make it enumerate its formats and provide the data in the requested format on demand.</para><para>Note that neither the GTK+ data transfer mechanisms for clipboard and drag and drop, nor OLE data transfer, <emphasis>copies</emphasis> any data until another application actually requests the data. This is in contrast to the &apos;feel&apos; offered to the user of a program who would normally think that the data resides in the clipboard after having pressed &apos;Copy&apos; - in reality it is only declared to be <emphasis>available</emphasis>.</para><para>You may also derive your own data object classes from <ref refid="classwx_custom_data_object" kindref="compound">wxCustomDataObject</ref> for user-defined types. The format of user-defined data is given as a mime-type string literal, such as &quot;application/word&quot; or &quot;image/png&quot;. These strings are used as they are under Unix (so far only GTK+) to identify a format and are translated into their Windows equivalent under Win32 (using the OLE IDataObject for data exchange to and from the clipboard and for drag and drop). Note that the format string translation under Windows is not yet finished.</para><para>Each class derived directly from <ref refid="classwx_data_object" kindref="compound">wxDataObject</ref> must override and implement all of its functions which are pure virtual in the base class. The data objects which only render their data or only set it (i.e. work in only one direction), should return 0 from <ref refid="classwx_data_object_1a3f82815810bf4dcc34e1a5783c9b8a62" kindref="member">GetFormatCount()</ref>.</para><para><bold>wxPython Note:</bold> At this time this class is not directly usable from wxPython. Derive a class from wxPyDataObjectSimple() instead.</para><para><bold>wxPerl Note:</bold> This class is not currently usable from wxPerl; you may use Wx::PlDataObjectSimple instead.</para><para><heading level="2"></heading>
+</para><para>Please note that the easiest way to use drag and drop and the clipboard with multiple formats is by using <ref refid="classwx_data_object_composite" kindref="compound">wxDataObjectComposite</ref>, but it is not the most efficient one as each <ref refid="classwx_data_object_simple" kindref="compound">wxDataObjectSimple</ref> would contain the whole data in its respective formats. Now imagine that you want to paste 200 pages of text in your proprietary format, as well as Word, RTF, HTML, Unicode and plain text to the clipboard and even today&apos;s computers are in trouble. For this case, you will have to derive from <ref refid="classwx_data_object" kindref="compound">wxDataObject</ref> directly and make it enumerate its formats and provide the data in the requested format on demand.</para><para>Note that neither the GTK+ data transfer mechanisms for clipboard and drag and drop, nor OLE data transfer, <emphasis>copies</emphasis> any data until another application actually requests the data. This is in contrast to the &apos;feel&apos; offered to the user of a program who would normally think that the data resides in the clipboard after having pressed &apos;Copy&apos; - in reality it is only declared to be <emphasis>available</emphasis>.</para><para>You may also derive your own data object classes from <ref refid="classwx_custom_data_object" kindref="compound">wxCustomDataObject</ref> for user-defined types. The format of user-defined data is given as a mime-type string literal, such as &quot;application/word&quot; or &quot;image/png&quot;. These strings are used as they are under Unix (so far only GTK+) to identify a format and are translated into their Windows equivalent under Win32 (using the OLE IDataObject for data exchange to and from the clipboard and for drag and drop). Note that the format string translation under Windows is not yet finished.</para><para>Each class derived directly from <ref refid="classwx_data_object" kindref="compound">wxDataObject</ref> must override and implement all of its functions which are pure virtual in the base class. The data objects which only render their data or only set it (i.e. work in only one direction), should return 0 from <ref refid="classwx_data_object_1a3f82815810bf4dcc34e1a5783c9b8a62" kindref="member">GetFormatCount()</ref>.</para><para><bold>wxPerl Note:</bold> This class is not currently usable from wxPerl; you may use Wx::PlDataObjectSimple instead.</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__dnd" kindref="compound">Clipboard and Drag &amp; Drop</ref></para><para><simplesect kind="see"><para><ref refid="overview_dnd" kindref="compound">Drag and Drop Overview</ref>, <ref refid="page_samples_1page_samples_dnd" kindref="member">Drag &amp; Drop Sample</ref>, <ref refid="classwx_file_data_object" kindref="compound">wxFileDataObject</ref>, <ref refid="classwx_text_data_object" kindref="compound">wxTextDataObject</ref>, <ref refid="classwx_bitmap_data_object" kindref="compound">wxBitmapDataObject</ref>, <ref refid="classwx_custom_data_object" kindref="compound">wxCustomDataObject</ref>, <ref refid="classwx_drop_target" kindref="compound">wxDropTarget</ref>, <ref refid="classwx_drop_source" kindref="compound">wxDropSource</ref>, <ref refid="classwx_text_drop_target" kindref="compound">wxTextDropTarget</ref>, <ref refid="classwx_file_drop_target" kindref="compound">wxFileDropTarget</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="5250">
+      <node id="5345">
         <label>wxURLDataObject</label>
         <link refid="classwx_u_r_l_data_object"/>
-        <childnode refid="5249" relation="public-inheritance">
+        <childnode refid="5344" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5244">
+      <node id="5339">
         <label>wxDataObjectComposite</label>
         <link refid="classwx_data_object_composite"/>
-        <childnode refid="5243" relation="public-inheritance">
+        <childnode refid="5338" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5243">
+      <node id="5338">
         <label>wxDataObject</label>
         <link refid="classwx_data_object"/>
       </node>
-      <node id="5249">
+      <node id="5344">
         <label>wxTextDataObject</label>
         <link refid="classwx_text_data_object"/>
-        <childnode refid="5245" relation="public-inheritance">
+        <childnode refid="5340" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5247">
+      <node id="5342">
         <label>wxCustomDataObject</label>
         <link refid="classwx_custom_data_object"/>
-        <childnode refid="5245" relation="public-inheritance">
+        <childnode refid="5340" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5246">
+      <node id="5341">
         <label>wxBitmapDataObject</label>
         <link refid="classwx_bitmap_data_object"/>
-        <childnode refid="5245" relation="public-inheritance">
+        <childnode refid="5340" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5248">
+      <node id="5343">
         <label>wxFileDataObject</label>
         <link refid="classwx_file_data_object"/>
-        <childnode refid="5245" relation="public-inheritance">
+        <childnode refid="5340" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5245">
+      <node id="5340">
         <label>wxDataObjectSimple</label>
         <link refid="classwx_data_object_simple"/>
-        <childnode refid="5243" relation="public-inheritance">
+        <childnode refid="5338" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataobj.h" line="225" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataobj.h" bodystart="224" bodyend="310"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataobj.h" line="220" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dataobj.h" bodystart="219" bodyend="305"/>
     <listofallmembers>
       <member refid="classwx_data_object_1a7623fd02a6bef5dba7c96ff0a1a692efa1f94b69e55238c5470f85e252b5fd8df" prot="public" virt="non-virtual"><scope>wxDataObject</scope><name>Both</name></member>
       <member refid="classwx_data_object_1a7623fd02a6bef5dba7c96ff0a1a692ef" prot="public" virt="non-virtual"><scope>wxDataObject</scope><name>Direction</name></member>

@@ -25,7 +25,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/valnum.h" line="83" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/valnum.h" bodystart="83" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/valnum.h" line="83" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/valnum.h" bodystart="83" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -44,7 +44,7 @@
 <para>This value is inclusive, i.e. the value equal to <emphasis>min</emphasis> is accepted. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/valnum.h" line="90"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/valnum.h" line="90"/>
       </memberdef>
       <memberdef kind="function" id="classwx_num_validator_1a6f10b5931be461cdc3f988262bbf11d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -61,7 +61,7 @@
 <para>This value is inclusive, i.e. the value equal to <emphasis>max</emphasis> is accepted. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/valnum.h" line="97"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/valnum.h" line="97"/>
       </memberdef>
       <memberdef kind="function" id="classwx_num_validator_1a20bd7a1545887952d883e3c870e6b6a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -82,7 +82,7 @@
 <para>Calling this is equivalent to calling both <ref refid="classwx_num_validator_1afb03f64e6ba6525dc152e2f8e8c0a2ab" kindref="member">SetMin()</ref> and <ref refid="classwx_num_validator_1a6f10b5931be461cdc3f988262bbf11d1" kindref="member">SetMax()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/valnum.h" line="104"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/valnum.h" line="104"/>
       </memberdef>
       <memberdef kind="function" id="classwx_num_validator_1a2b8f78838d7430fc1b4a81d35971d23f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -99,7 +99,7 @@
 <para>Can be used to change the style of the validator after its creation. The <emphasis>style</emphasis> parameter must be a combination of the values from wxNumValidatorStyle enum. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/valnum.h" line="114"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/valnum.h" line="114"/>
       </memberdef>
       <memberdef kind="function" id="classwx_num_validator_1a629f0860d54bf200fe8779e7daa9a863" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -113,7 +113,7 @@
 <para>This method is called when the associated window is shown and it fills it with the contents of the associated variable, if any, formatted according to the validator style.</para><para>It does nothing if there is no associated variable. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/valnum.h" line="126"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/valnum.h" line="126"/>
       </memberdef>
       <memberdef kind="function" id="classwx_num_validator_1a583b267471b029df2b8d0e49f45d9141" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -127,7 +127,7 @@
 <para>This method is called to check the correctness of user input and fill the associated variable with the controls numeric value. It returns false if it is not a number in the configured range or if the control contents is empty for a validator without wxNUM_VAL_ZERO_AS_BLANK style.</para><para>It does nothing if there is no associated variable. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/valnum.h" line="139"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/valnum.h" line="139"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -144,85 +144,85 @@
 Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__validator" kindref="compound">Validators</ref></para><para><simplesect kind="since"><para>2.9.2 </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="8009">
+      <node id="8201">
         <label>wxValidator</label>
         <link refid="classwx_validator"/>
-        <childnode refid="8010" relation="public-inheritance">
+        <childnode refid="8202" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8008">
+      <node id="8200">
         <label>wxNumValidator&lt; T &gt;</label>
         <link refid="classwx_num_validator"/>
-        <childnode refid="8009" relation="public-inheritance">
+        <childnode refid="8201" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8014">
+      <node id="8206">
         <label>wxIntegerValidator&lt; T &gt;</label>
         <link refid="classwx_integer_validator"/>
-        <childnode refid="8008" relation="public-inheritance">
+        <childnode refid="8200" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8011">
+      <node id="8203">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="8010">
+      <node id="8202">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="8011" relation="public-inheritance">
+        <childnode refid="8203" relation="public-inheritance">
         </childnode>
-        <childnode refid="8012" relation="public-inheritance">
+        <childnode refid="8204" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8012">
+      <node id="8204">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="8013">
+      <node id="8205">
         <label>wxFloatingPointValidator&lt; T &gt;</label>
         <link refid="classwx_floating_point_validator"/>
-        <childnode refid="8008" relation="public-inheritance">
+        <childnode refid="8200" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="8016">
+      <node id="8208">
         <label>wxValidator</label>
         <link refid="classwx_validator"/>
-        <childnode refid="8017" relation="public-inheritance">
+        <childnode refid="8209" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8015">
+      <node id="8207">
         <label>wxNumValidator&lt; T &gt;</label>
         <link refid="classwx_num_validator"/>
-        <childnode refid="8016" relation="public-inheritance">
+        <childnode refid="8208" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8018">
+      <node id="8210">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="8019" relation="usage">
+        <childnode refid="8211" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="8017">
+      <node id="8209">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="8018" relation="public-inheritance">
+        <childnode refid="8210" relation="public-inheritance">
         </childnode>
-        <childnode refid="8020" relation="public-inheritance">
+        <childnode refid="8212" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8020">
+      <node id="8212">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="8019">
+      <node id="8211">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/valnum.h" line="80" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/valnum.h" bodystart="79" bodyend="140"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/valnum.h" line="80" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/valnum.h" bodystart="79" bodyend="140"/>
     <listofallmembers>
       <member refid="classwx_evt_handler_1a7dc3c701781f4044372049de5004137e" prot="public" virt="non-virtual"><scope>wxNumValidator</scope><name>AddFilter</name></member>
       <member refid="classwx_evt_handler_1a0737c6d2cbcd5ded4b1ecdd53ed0def3" prot="public" virt="virtual"><scope>wxNumValidator</scope><name>AddPendingEvent</name></member>
@@ -277,7 +277,6 @@ Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class
       <member refid="classwx_num_validator_1a629f0860d54bf200fe8779e7daa9a863" prot="public" virt="virtual"><scope>wxNumValidator</scope><name>TransferToWindow</name></member>
       <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxNumValidator</scope><name>TryAfter</name></member>
       <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxNumValidator</scope><name>TryBefore</name></member>
-      <member refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" virt="non-virtual"><scope>wxNumValidator</scope><name>TryThis</name></member>
       <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxNumValidator</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxNumValidator</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a22e5db2ec1d19c8252c056fd116975d7" prot="public" virt="non-virtual"><scope>wxNumValidator</scope><name>Unlink</name></member>

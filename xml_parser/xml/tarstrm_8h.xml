@@ -79,7 +79,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" line="12" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" bodystart="11" bodyend="21"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/tarstrm.h" line="12" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/tarstrm.h" bodystart="11" bodyend="21"/>
       </memberdef>
       <memberdef kind="enum" id="tarstrm_8h_1afdc9a1d1de204d191ef3b8f6f786134d" prot="public" static="no">
         <name>wxTarFormat</name>
@@ -103,13 +103,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" line="25" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" bodystart="24" bodyend="28"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/tarstrm.h" line="25" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/tarstrm.h" bodystart="24" bodyend="28"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/tarstrm.h"/>
   </compounddef>
 </doxygen>

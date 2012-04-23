@@ -26,7 +26,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3168"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="3163"/>
       </memberdef>
       <memberdef kind="function" id="classwx_thread_event_1af8d1c4ec499415d84680c1a52a68513a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_event" kindref="compound">wxEvent</ref> *</type>
@@ -40,7 +40,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3175"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="3170"/>
       </memberdef>
       <memberdef kind="function" id="classwx_thread_event_1a21a87c9ffaa750f3daf05fb628fe9251" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="event_8h_1a685cc8dc6176be3ab0d40e3f72719e7d" kindref="member">wxEventCategory</ref></type>
@@ -54,7 +54,7 @@
 <para>This is important to avoid unwanted processing of thread events when calling <ref refid="classwx_event_loop_base_1afb5ed08160c7e6b1364170af6115af55" kindref="member">wxEventLoopBase::YieldFor()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3183"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="3178"/>
       </memberdef>
       <memberdef kind="function" id="classwx_thread_event_1ae337f284728dfe2493240d6df5c73440" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -79,7 +79,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3200"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="3195"/>
       </memberdef>
       <memberdef kind="function" id="classwx_thread_event_1aea4df23d8997a416f56a65c809e99181" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -100,7 +100,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3214"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="3209"/>
       </memberdef>
       <memberdef kind="function" id="classwx_thread_event_1ac41090bf73b758da00fbcbfc2d31bda4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>long</type>
@@ -113,7 +113,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3219"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="3214"/>
       </memberdef>
       <memberdef kind="function" id="classwx_thread_event_1afcaf153304f3538396581c72c9ae5a05" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -126,7 +126,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3224"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="3219"/>
       </memberdef>
       <memberdef kind="function" id="classwx_thread_event_1a61df14280f0761625285335a95cd3760" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -139,7 +139,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3229"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="3224"/>
       </memberdef>
       <memberdef kind="function" id="classwx_thread_event_1a177554d331bfd911de8d9abcc35660e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -156,7 +156,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3235"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="3230"/>
       </memberdef>
       <memberdef kind="function" id="classwx_thread_event_1a6f3846d1860ddbb5fe8f7cdaa5f3c1fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -173,7 +173,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3240"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="3235"/>
       </memberdef>
       <memberdef kind="function" id="classwx_thread_event_1a72092085fc4e0837d8e56666cb45f4d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -190,7 +190,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3245"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="3240"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -201,49 +201,49 @@
 <simplesect kind="since"><para>2.9.0 </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10852">
+      <node id="11037">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="10850">
+      <node id="11035">
         <label>wxThreadEvent</label>
         <link refid="classwx_thread_event"/>
-        <childnode refid="10851" relation="public-inheritance">
+        <childnode refid="11036" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10851">
+      <node id="11036">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="10852" relation="public-inheritance">
+        <childnode refid="11037" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10855">
+      <node id="11040">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="10856" relation="usage">
+        <childnode refid="11041" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="10853">
+      <node id="11038">
         <label>wxThreadEvent</label>
         <link refid="classwx_thread_event"/>
-        <childnode refid="10854" relation="public-inheritance">
+        <childnode refid="11039" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10854">
+      <node id="11039">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="10855" relation="public-inheritance">
+        <childnode refid="11040" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10856">
+      <node id="11041">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3163" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="3162" bodyend="3246"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="3158" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="3157" bodyend="3241"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxThreadEvent</scope><name>AllocExclusive</name></member>
       <member refid="classwx_thread_event_1af8d1c4ec499415d84680c1a52a68513a" prot="public" virt="virtual"><scope>wxThreadEvent</scope><name>Clone</name></member>

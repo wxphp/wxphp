@@ -30,7 +30,7 @@
 <para><emphasis>level</emphasis> is the compression level to use. It can be a value between 0 and 9 or -1 to use the default value which currently is equivalent to 6.</para><para>If the parent stream is passed as a pointer then the new filter stream takes ownership of it. If it is passed by reference then it does not. In a Unicode build the third parameter <emphasis>conv</emphasis> is used to translate the filename and comment fields to an 8-bit encoding. It has no effect on the stream&apos;s data. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/zipstrm.h" line="495"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/zipstrm.h" line="495"/>
       </memberdef>
       <memberdef kind="function" id="classwx_zip_output_stream_1afa04f2760607dfd8aeac5199d22991db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -57,7 +57,7 @@
 <para><emphasis>level</emphasis> is the compression level to use. It can be a value between 0 and 9 or -1 to use the default value which currently is equivalent to 6.</para><para>If the parent stream is passed as a pointer then the new filter stream takes ownership of it. If it is passed by reference then it does not. In a Unicode build the third parameter <emphasis>conv</emphasis> is used to translate the filename and comment fields to an 8-bit encoding. It has no effect on the stream&apos;s data. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/zipstrm.h" line="497"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/zipstrm.h" line="497"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -72,7 +72,7 @@
 <para>It can be a value between 0 and 9 or -1 to use the default value which currently is equivalent to 6. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/zipstrm.h" line="548"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/zipstrm.h" line="548"/>
       </memberdef>
       <memberdef kind="function" id="classwx_zip_output_stream_1acd503189dc57277be3ddce5ff6de743c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -89,7 +89,7 @@
 <para>It can be a value between 0 and 9 or -1 to use the default value which currently is equivalent to 6. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/zipstrm.h" line="549"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/zipstrm.h" line="549"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -108,7 +108,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/zipstrm.h" line="566"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/zipstrm.h" line="566"/>
       </memberdef>
       <memberdef kind="function" id="classwx_zip_output_stream_1a4190f1b14a18d059689406951de42442" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -136,7 +136,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/zipstrm.h" line="573"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/zipstrm.h" line="573"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -151,7 +151,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/zipstrm.h" line="504"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/zipstrm.h" line="504"/>
       </memberdef>
       <memberdef kind="function" id="classwx_zip_output_stream_1a8c1c85831fa28ddca211200fd315ad04" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -165,7 +165,7 @@
 <para>Called by the destructor if not called explicitly. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/zipstrm.h" line="510"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/zipstrm.h" line="510"/>
       </memberdef>
       <memberdef kind="function" id="classwx_zip_output_stream_1aa8c78bdb0eba298b9a3648756b3562bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -179,7 +179,7 @@
 <para>It is called implicitly whenever another new entry is created with <ref refid="classwx_zip_output_stream_1a8dbdbb89330f20bdc5ea9feeaaf13729" kindref="member">CopyEntry()</ref> or <ref refid="classwx_zip_output_stream_1a3ef78370a66ac4c0030164df04eec61d" kindref="member">PutNextEntry()</ref>, or when the zip is closed. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/zipstrm.h" line="517"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/zipstrm.h" line="517"/>
       </memberdef>
       <memberdef kind="function" id="classwx_zip_output_stream_1aadc5bec41140d1b24ad14e6c128f57a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -196,7 +196,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/zipstrm.h" line="523"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/zipstrm.h" line="523"/>
       </memberdef>
       <memberdef kind="function" id="classwx_zip_output_stream_1a8dbdbb89330f20bdc5ea9feeaaf13729" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -217,7 +217,7 @@
 <para><emphasis>entry</emphasis> is then opened in <emphasis>inputStream</emphasis> and its contents copied to this stream.</para><para><ref refid="classwx_zip_output_stream_1a8dbdbb89330f20bdc5ea9feeaaf13729" kindref="member">CopyEntry()</ref> is much more efficient than transferring the data using Read() and <ref refid="classwx_output_stream_1a22154f02408431ffe8b1590407c3b011" kindref="member">Write()</ref> since it will copy them without decompressing and recompressing them.</para><para>For zips on seekable streams, <emphasis>entry</emphasis> must be from the same zip file as <emphasis>inputStream</emphasis>. For non-seekable streams, <emphasis>entry</emphasis> must also be the last thing read from <emphasis>inputStream</emphasis>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/zipstrm.h" line="538"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/zipstrm.h" line="538"/>
       </memberdef>
       <memberdef kind="function" id="classwx_zip_output_stream_1a8b92bb0f3837e79f8a289c9cecde7d3d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -240,7 +240,7 @@
 <para><ref refid="classwx_zip_output_stream_1a3ef78370a66ac4c0030164df04eec61d" kindref="member">PutNextEntry()</ref> can also be used to create directory entries, by supplying a name with a trailing path separator. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/zipstrm.h" line="560"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/zipstrm.h" line="560"/>
       </memberdef>
       <memberdef kind="function" id="classwx_zip_output_stream_1a939d59ea1b953158036a99ab9ab42235" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -257,7 +257,7 @@
 <para>It is written at the end of the zip. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/zipstrm.h" line="580"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/zipstrm.h" line="580"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -267,66 +267,66 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__archive" kindref="compound">Archive support</ref>, <ref refid="group__group__class__streams" kindref="compound">Streams</ref></para><para><simplesect kind="see"><para><ref refid="overview_archive" kindref="compound">Archive Formats</ref>, <ref refid="classwx_zip_entry" kindref="compound">wxZipEntry</ref>, <ref refid="classwx_zip_input_stream" kindref="compound">wxZipInputStream</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="11773">
+      <node id="11971">
         <label>wxZipOutputStream</label>
         <link refid="classwx_zip_output_stream"/>
-        <childnode refid="11774" relation="public-inheritance">
+        <childnode refid="11972" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11777">
+      <node id="11975">
         <label>wxStreamBase</label>
         <link refid="classwx_stream_base"/>
       </node>
-      <node id="11775">
+      <node id="11973">
         <label>wxFilterOutputStream</label>
         <link refid="classwx_filter_output_stream"/>
-        <childnode refid="11776" relation="public-inheritance">
+        <childnode refid="11974" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11776">
+      <node id="11974">
         <label>wxOutputStream</label>
         <link refid="classwx_output_stream"/>
-        <childnode refid="11777" relation="public-inheritance">
+        <childnode refid="11975" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11774">
+      <node id="11972">
         <label>wxArchiveOutputStream</label>
         <link refid="classwx_archive_output_stream"/>
-        <childnode refid="11775" relation="public-inheritance">
+        <childnode refid="11973" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="11778">
+      <node id="11976">
         <label>wxZipOutputStream</label>
         <link refid="classwx_zip_output_stream"/>
-        <childnode refid="11779" relation="public-inheritance">
+        <childnode refid="11977" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11782">
+      <node id="11980">
         <label>wxStreamBase</label>
         <link refid="classwx_stream_base"/>
       </node>
-      <node id="11780">
+      <node id="11978">
         <label>wxFilterOutputStream</label>
         <link refid="classwx_filter_output_stream"/>
-        <childnode refid="11781" relation="public-inheritance">
+        <childnode refid="11979" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11781">
+      <node id="11979">
         <label>wxOutputStream</label>
         <link refid="classwx_output_stream"/>
-        <childnode refid="11782" relation="public-inheritance">
+        <childnode refid="11980" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11779">
+      <node id="11977">
         <label>wxArchiveOutputStream</label>
         <link refid="classwx_archive_output_stream"/>
-        <childnode refid="11780" relation="public-inheritance">
+        <childnode refid="11978" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/zipstrm.h" line="478" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/zipstrm.h" bodystart="477" bodyend="581"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/zipstrm.h" line="478" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/zipstrm.h" bodystart="477" bodyend="581"/>
     <listofallmembers>
       <member refid="classwx_zip_output_stream_1a8c1c85831fa28ddca211200fd315ad04" prot="public" virt="virtual"><scope>wxZipOutputStream</scope><name>Close</name></member>
       <member refid="classwx_zip_output_stream_1aa8c78bdb0eba298b9a3648756b3562bd" prot="public" virt="virtual"><scope>wxZipOutputStream</scope><name>CloseEntry</name></member>

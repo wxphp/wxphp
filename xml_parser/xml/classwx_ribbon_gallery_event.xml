@@ -36,7 +36,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/gallery.h" line="278"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/gallery.h" line="278"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_gallery_event_1a5ad052a4169d0176f4477fd318a15804" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_ribbon_gallery" kindref="compound">wxRibbonGallery</ref> *</type>
@@ -49,7 +49,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/gallery.h" line="283"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/gallery.h" line="283"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_gallery_event_1a2959b9ad64ef7b5a79ff044028702407" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>wxRibbonGalleryItem *</type>
@@ -62,7 +62,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/gallery.h" line="289"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/gallery.h" line="289"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_gallery_event_1aebd03f73e35319be0594954611a21f72" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -79,7 +79,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/gallery.h" line="294"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/gallery.h" line="294"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_gallery_event_1a57dd92c3b4e95d9fd40149aec3a1661b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -96,7 +96,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/gallery.h" line="299"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/gallery.h" line="299"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -106,61 +106,61 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxribbon" kindref="member">wxRibbon</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref>, <ref refid="group__group__class__ribbon" kindref="compound">Ribbon User Interface</ref></para><para><simplesect kind="see"><para><ref refid="classwx_ribbon_bar" kindref="compound">wxRibbonBar</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="9175">
+      <node id="9358">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="9173">
+      <node id="9356">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="9174" relation="public-inheritance">
+        <childnode refid="9357" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9172">
+      <node id="9355">
         <label>wxRibbonGalleryEvent</label>
         <link refid="classwx_ribbon_gallery_event"/>
-        <childnode refid="9173" relation="public-inheritance">
+        <childnode refid="9356" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9174">
+      <node id="9357">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="9175" relation="public-inheritance">
+        <childnode refid="9358" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="9179">
+      <node id="9362">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="9180" relation="usage">
+        <childnode refid="9363" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="9177">
+      <node id="9360">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="9178" relation="public-inheritance">
+        <childnode refid="9361" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9176">
+      <node id="9359">
         <label>wxRibbonGalleryEvent</label>
         <link refid="classwx_ribbon_gallery_event"/>
-        <childnode refid="9177" relation="public-inheritance">
+        <childnode refid="9360" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9178">
+      <node id="9361">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="9179" relation="public-inheritance">
+        <childnode refid="9362" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9180">
+      <node id="9363">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/gallery.h" line="270" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/gallery.h" bodystart="269" bodyend="300"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/gallery.h" line="270" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/gallery.h" bodystart="269" bodyend="300"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxRibbonGalleryEvent</scope><name>AllocExclusive</name></member>
       <member refid="classwx_event_1a26878097a702e8d0368da150125d4158" prot="public" virt="pure-virtual"><scope>wxRibbonGalleryEvent</scope><name>Clone</name></member>

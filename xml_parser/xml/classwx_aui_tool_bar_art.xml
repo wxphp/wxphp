@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/toolbar.h" line="174"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/toolbar.h" line="174"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_tool_bar_art_1a799ff359e575af92b6f83bc23d96ef27" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type><ref refid="classwx_aui_tool_bar_art" kindref="compound">wxAuiToolBarArt</ref> *</type>
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/toolbar.h" line="176"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/toolbar.h" line="176"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_tool_bar_art_1adaf8fc605060991bc22faddbb82564f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -48,7 +48,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/toolbar.h" line="177"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/toolbar.h" line="177"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_tool_bar_art_1a7ab1acf203538788cc2551e5546de199" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>unsigned int</type>
@@ -62,7 +62,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/toolbar.h" line="178"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/toolbar.h" line="178"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_tool_bar_art_1a2c4da0dc4f46d93e8a46073a74d94551" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -80,7 +80,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/toolbar.h" line="179"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/toolbar.h" line="179"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_tool_bar_art_1a1a0579b425c1b3ba0c54af0a92ea93b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type><ref refid="classwx_font" kindref="compound">wxFont</ref></type>
@@ -94,7 +94,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/toolbar.h" line="180"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/toolbar.h" line="180"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_tool_bar_art_1a23e41b790de5e9e8809a2bd59a0f76b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -112,7 +112,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/toolbar.h" line="181"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/toolbar.h" line="181"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_tool_bar_art_1a4030ffb3dceee13774ad96c333733a02" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>int</type>
@@ -126,7 +126,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/toolbar.h" line="182"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/toolbar.h" line="182"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_tool_bar_art_1a813a001e71983dcd2840151a7f55ced1" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -152,7 +152,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/toolbar.h" line="187"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/toolbar.h" line="187"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_tool_bar_art_1a7115aab352e8641668c955d25e2b2b40" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -182,7 +182,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/toolbar.h" line="193"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/toolbar.h" line="193"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_tool_bar_art_1aff3c8aecc5040e3236fc6c878ad115e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -212,7 +212,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/toolbar.h" line="199"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/toolbar.h" line="199"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_tool_bar_art_1ac4a25867ef46713fe83e5cfbef1b92a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -242,7 +242,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/toolbar.h" line="205"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/toolbar.h" line="205"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_tool_bar_art_1a921527e928cacf8d7bc5c6388c914a26" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -272,7 +272,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/toolbar.h" line="211"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/toolbar.h" line="211"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_tool_bar_art_1aedf8d519c3fae54c6f2734fa9185df53" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -298,7 +298,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/toolbar.h" line="216"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/toolbar.h" line="216"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_tool_bar_art_1ae8f89214c00ced5aca5b655f3cdde22d" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -324,7 +324,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/toolbar.h" line="221"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/toolbar.h" line="221"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_tool_bar_art_1a3965f9fee00ee4599ba7ed60c1b94dcc" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -354,7 +354,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/toolbar.h" line="227"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/toolbar.h" line="227"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_tool_bar_art_1ae57f693405ccf8ef2fcca334965b9ce9" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
@@ -380,7 +380,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/toolbar.h" line="232"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/toolbar.h" line="232"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_tool_bar_art_1a574ea477abd35d35977663bc95cc7bc1" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
@@ -406,7 +406,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/toolbar.h" line="237"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/toolbar.h" line="237"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_tool_bar_art_1a8832bc7900d7bc2bbef686a41dbdb3cc" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>int</type>
@@ -424,7 +424,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/toolbar.h" line="239"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/toolbar.h" line="239"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_tool_bar_art_1a3eed1a2c387529121c714b83ec69cc40" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -446,7 +446,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/toolbar.h" line="240"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/toolbar.h" line="240"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_tool_bar_art_1a41d2759cfb04004c750fc05f105f8770" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>int</type>
@@ -468,7 +468,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/toolbar.h" line="244"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/toolbar.h" line="244"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -477,18 +477,18 @@
 <para>See also <ref refid="classwx_aui_tool_bar" kindref="compound">wxAuiToolBar</ref> and <ref refid="overview_aui" kindref="compound">wxAUI Overview</ref>.</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxaui" kindref="member">wxAui</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__aui" kindref="compound">Window Docking (wxAUI)</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="4425">
+      <node id="4515">
         <label>wxAuiDefaultToolBarArt</label>
         <link refid="classwx_aui_default_tool_bar_art"/>
-        <childnode refid="4424" relation="public-inheritance">
+        <childnode refid="4514" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4424">
+      <node id="4514">
         <label>wxAuiToolBarArt</label>
         <link refid="classwx_aui_tool_bar_art"/>
       </node>
     </inheritancegraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/toolbar.h" line="172" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/toolbar.h" bodystart="171" bodyend="245"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/toolbar.h" line="172" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/toolbar.h" bodystart="171" bodyend="245"/>
     <listofallmembers>
       <member refid="classwx_aui_tool_bar_art_1a799ff359e575af92b6f83bc23d96ef27" prot="public" virt="pure-virtual"><scope>wxAuiToolBarArt</scope><name>Clone</name></member>
       <member refid="classwx_aui_tool_bar_art_1a813a001e71983dcd2840151a7f55ced1" prot="public" virt="pure-virtual"><scope>wxAuiToolBarArt</scope><name>DrawBackground</name></member>

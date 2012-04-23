@@ -3,6 +3,9 @@
   <compounddef id="classwx_file_system_handler" kind="class" prot="public">
     <compoundname>wxFileSystemHandler</compoundname>
     <basecompoundref refid="classwx_object" prot="public" virt="non-virtual">wxObject</basecompoundref>
+    <derivedcompoundref refid="classwx_archive_f_s_handler" prot="public" virt="non-virtual">wxArchiveFSHandler</derivedcompoundref>
+    <derivedcompoundref refid="classwx_filter_f_s_handler" prot="public" virt="non-virtual">wxFilterFSHandler</derivedcompoundref>
+    <derivedcompoundref refid="classwx_internet_f_s_handler" prot="public" virt="non-virtual">wxInternetFSHandler</derivedcompoundref>
     <derivedcompoundref refid="classwx_memory_f_s_handler" prot="public" virt="non-virtual">wxMemoryFSHandler</derivedcompoundref>
     <includes local="no">wx/filesys.h</includes>
       <sectiondef kind="public-func">
@@ -17,7 +20,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filesys.h" line="353"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filesys.h" line="358"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_system_handler_1a421720c382a63c7117076757567c762f" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>bool</type>
@@ -38,7 +41,7 @@
 </programlisting></para><para>Must be overridden in derived handlers. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filesys.h" line="369"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filesys.h" line="374"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_system_handler_1a90b7fe424e6c5cd53c9900806b3cacaa" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -60,7 +63,7 @@
 <para>Returns the name of the first filename (within filesystem&apos;s current path) that matches <emphasis>wildcard</emphasis>. <emphasis>flags</emphasis> may be one of wxFILE (only files), wxDIR (only directories) or 0 (both).</para><para>This method is only called if <ref refid="classwx_file_system_handler_1a421720c382a63c7117076757567c762f" kindref="member">CanOpen()</ref> returns true. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filesys.h" line="381"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filesys.h" line="386"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_system_handler_1a0c07370b4135460f39228d49c3d297a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -73,7 +76,7 @@
 <para>This method is only called if <ref refid="classwx_file_system_handler_1a421720c382a63c7117076757567c762f" kindref="member">CanOpen()</ref> returns true and <ref refid="classwx_file_system_handler_1a90b7fe424e6c5cd53c9900806b3cacaa" kindref="member">FindFirst()</ref> returned a non-empty string. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filesys.h" line="389"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filesys.h" line="394"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_system_handler_1a1295897a496f83c538d4dcf8897301e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type><ref refid="classwx_f_s_file" kindref="compound">wxFSFile</ref> *</type>
@@ -109,7 +112,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filesys.h" line="413"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filesys.h" line="418"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -129,7 +132,7 @@
 </programlisting> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filesys.h" line="401"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filesys.h" line="406"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-static-func">
@@ -150,7 +153,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filesys.h" line="428"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filesys.h" line="433"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_system_handler_1a3f56ed8be86e2ddaf3af0d20c17aa067" prot="protected" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -168,7 +171,7 @@
 </programlisting> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filesys.h" line="438"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filesys.h" line="443"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_system_handler_1adf6e84f1ba33f047c15fb33f343b523a" prot="protected" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -186,7 +189,7 @@
 </programlisting> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filesys.h" line="448"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filesys.h" line="453"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_system_handler_1a759935b4792339bf97d6c6529bffb966" prot="protected" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -204,7 +207,7 @@
 </programlisting> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filesys.h" line="458"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filesys.h" line="463"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -216,43 +219,61 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__vfs" kindref="compound">Virtual File System</ref></para><para><simplesect kind="see"><para><ref refid="classwx_file_system" kindref="compound">wxFileSystem</ref>, <ref refid="classwx_f_s_file" kindref="compound">wxFSFile</ref>, <ref refid="overview_fs" kindref="compound">wxFileSystem Overview</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="6256">
+      <node id="6375">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="6257">
-        <label>wxMemoryFSHandler</label>
-        <link refid="classwx_memory_f_s_handler"/>
-        <childnode refid="6255" relation="public-inheritance">
+      <node id="6378">
+        <label>wxInternetFSHandler</label>
+        <link refid="classwx_internet_f_s_handler"/>
+        <childnode refid="6374" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6255">
+      <node id="6376">
+        <label>wxArchiveFSHandler</label>
+        <link refid="classwx_archive_f_s_handler"/>
+        <childnode refid="6374" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6379">
+        <label>wxMemoryFSHandler</label>
+        <link refid="classwx_memory_f_s_handler"/>
+        <childnode refid="6374" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6377">
+        <label>wxFilterFSHandler</label>
+        <link refid="classwx_filter_f_s_handler"/>
+        <childnode refid="6374" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6374">
         <label>wxFileSystemHandler</label>
         <link refid="classwx_file_system_handler"/>
-        <childnode refid="6256" relation="public-inheritance">
+        <childnode refid="6375" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="6259">
+      <node id="6381">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="6260" relation="usage">
+        <childnode refid="6382" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="6258">
+      <node id="6380">
         <label>wxFileSystemHandler</label>
         <link refid="classwx_file_system_handler"/>
-        <childnode refid="6259" relation="public-inheritance">
+        <childnode refid="6381" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6260">
+      <node id="6382">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filesys.h" line="348" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filesys.h" bodystart="347" bodyend="459"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filesys.h" line="353" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/filesys.h" bodystart="352" bodyend="464"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxFileSystemHandler</scope><name>AllocExclusive</name></member>
       <member refid="classwx_file_system_handler_1a421720c382a63c7117076757567c762f" prot="public" virt="pure-virtual"><scope>wxFileSystemHandler</scope><name>CanOpen</name></member>

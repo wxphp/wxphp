@@ -13,7 +13,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/imaglist.h" line="22" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/imaglist.h" bodystart="22" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/imaglist.h" line="22" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/imaglist.h" bodystart="22" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="imaglist_8h_1afa0fe19305c63a8a91bc43dbaeb52a55" prot="public" static="no">
         <name>wxIMAGELIST_DRAW_TRANSPARENT</name>
@@ -24,7 +24,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/imaglist.h" line="23" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/imaglist.h" bodystart="23" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/imaglist.h" line="23" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/imaglist.h" bodystart="23" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="imaglist_8h_1afc4a13e2ce601e30a1c14927ba80a2ed" prot="public" static="no">
         <name>wxIMAGELIST_DRAW_SELECTED</name>
@@ -35,7 +35,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/imaglist.h" line="24" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/imaglist.h" bodystart="24" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/imaglist.h" line="24" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/imaglist.h" bodystart="24" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="imaglist_8h_1a48570ea9540c6097f7b46f0358bb163a" prot="public" static="no">
         <name>wxIMAGELIST_DRAW_FOCUSED</name>
@@ -46,27 +46,27 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/imaglist.h" line="25" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/imaglist.h" bodystart="25" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/imaglist.h" line="25" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/imaglist.h" bodystart="25" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="enum">
-      <memberdef kind="enum" id="imaglist_8h_1aba01db17f4a2bfbc3db60dc172972a25" prot="public" static="no">
-        <name>@15</name>
-        <enumvalue id="imaglist_8h_1aba01db17f4a2bfbc3db60dc172972a25aec1cfefd5c35fa6dc93c282472ed9122" prot="public">
+      <memberdef kind="enum" id="imaglist_8h_1aae05225933a42f81e7c4a9fb286596f9" prot="public" static="no">
+        <name>@21</name>
+        <enumvalue id="imaglist_8h_1aae05225933a42f81e7c4a9fb286596f9aec1cfefd5c35fa6dc93c282472ed9122" prot="public">
           <name>wxIMAGE_LIST_NORMAL</name>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="imaglist_8h_1aba01db17f4a2bfbc3db60dc172972a25aaff447fcf94ef577a1b477adad415da0" prot="public">
+        <enumvalue id="imaglist_8h_1aae05225933a42f81e7c4a9fb286596f9aaff447fcf94ef577a1b477adad415da0" prot="public">
           <name>wxIMAGE_LIST_SMALL</name>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="imaglist_8h_1aba01db17f4a2bfbc3db60dc172972a25adda05446800fbd3ad25dac2e69411001" prot="public">
+        <enumvalue id="imaglist_8h_1aae05225933a42f81e7c4a9fb286596f9adda05446800fbd3ad25dac2e69411001" prot="public">
           <name>wxIMAGE_LIST_STATE</name>
           <briefdescription>
           </briefdescription>
@@ -79,13 +79,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/imaglist.h" line="13" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/imaglist.h" bodystart="12" bodyend="17"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/imaglist.h" line="13" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/imaglist.h" bodystart="12" bodyend="17"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/imaglist.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/imaglist.h"/>
   </compounddef>
 </doxygen>

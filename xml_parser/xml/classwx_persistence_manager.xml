@@ -24,7 +24,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/persist.h" line="159"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/persist.h" line="159"/>
       </memberdef>
       <memberdef kind="function" id="classwx_persistence_manager_1ac0a4d5858a69cd6db22e5ab75e5e9298" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -45,7 +45,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/persist.h" line="161"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/persist.h" line="161"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -65,7 +65,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/persist.h" line="40"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/persist.h" line="40"/>
       </memberdef>
       <memberdef kind="function" id="classwx_persistence_manager_1a1d594b5905ef1c7a11ccadf348325f5b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_persistence_manager" kindref="compound">wxPersistenceManager</ref> &amp;</type>
@@ -78,37 +78,37 @@
 <para>If <ref refid="classwx_persistence_manager_1a4cbc79238e7d46f5e201c67e86fd5343" kindref="member">Set()</ref> hadn&apos;t been called before, a default persistence manager implementation is returned. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/persist.h" line="48"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/persist.h" line="48"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
-      <memberdef kind="function" id="classwx_persistence_manager_1aeeac6b0671a5db861a0e383bbd677e46" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>bool</type>
-        <definition>bool wxPersistenceManager::DisableSaving</definition>
+      <memberdef kind="function" id="classwx_persistence_manager_1a4183a42f9dfbd223c363c2879b85d137" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxPersistenceManager::DisableSaving</definition>
         <argsstring>()</argsstring>
         <name>DisableSaving</name>
         <briefdescription>
 <para>Globally disable saving the persistence object properties. </para>        </briefdescription>
         <detaileddescription>
-<para>By default, saving properties in <ref refid="classwx_persistence_manager_1ae0b01606ded5323e923b1c9848bdb3bb" kindref="member">Save()</ref> is enabled but the program may wish to disable if, for example, it detects that it is running on a system which shouldn&apos;t be modified in any way and so configuration file (or Windows registry) shouldn&apos;t be written to.</para><para><simplesect kind="see"><para><ref refid="classwx_persistence_manager_1a5e9404d609b1ac51b3cde7d5fff29e8f" kindref="member">DisableRestoring()</ref> </para></simplesect>
+<para>By default, saving properties in <ref refid="classwx_persistence_manager_1ae0b01606ded5323e923b1c9848bdb3bb" kindref="member">Save()</ref> is enabled but the program may wish to disable if, for example, it detects that it is running on a system which shouldn&apos;t be modified in any way and so configuration file (or Windows registry) shouldn&apos;t be written to.</para><para><simplesect kind="see"><para><ref refid="classwx_persistence_manager_1aea41f3b4c596f7bc90f43e888faac93b" kindref="member">DisableRestoring()</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/persist.h" line="60"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/persist.h" line="60"/>
       </memberdef>
-      <memberdef kind="function" id="classwx_persistence_manager_1a5e9404d609b1ac51b3cde7d5fff29e8f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>bool</type>
-        <definition>bool wxPersistenceManager::DisableRestoring</definition>
+      <memberdef kind="function" id="classwx_persistence_manager_1aea41f3b4c596f7bc90f43e888faac93b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxPersistenceManager::DisableRestoring</definition>
         <argsstring>()</argsstring>
         <name>DisableRestoring</name>
         <briefdescription>
 <para>Globally disable restoring the persistence object properties. </para>        </briefdescription>
         <detaileddescription>
-<para>By default, restoring properties in <ref refid="classwx_persistence_manager_1a932d8f5cf981aed723f79d1923f67aed" kindref="member">Restore()</ref> is enabled but this function allows to disable it. This is mostly useful for testing.</para><para><simplesect kind="see"><para><ref refid="classwx_persistence_manager_1aeeac6b0671a5db861a0e383bbd677e46" kindref="member">DisableSaving()</ref> </para></simplesect>
+<para>By default, restoring properties in <ref refid="classwx_persistence_manager_1a932d8f5cf981aed723f79d1923f67aed" kindref="member">Restore()</ref> is enabled but this function allows to disable it. This is mostly useful for testing.</para><para><simplesect kind="see"><para><ref refid="classwx_persistence_manager_1a4183a42f9dfbd223c363c2879b85d137" kindref="member">DisableSaving()</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/persist.h" line="70"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/persist.h" line="70"/>
       </memberdef>
       <memberdef kind="function" id="classwx_persistence_manager_1a94e205e486abe0001ebd15af9e81dc63" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -138,7 +138,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/persist.h" line="85"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/persist.h" line="85"/>
       </memberdef>
       <memberdef kind="function" id="classwx_persistence_manager_1a48a010ae8b64a84a58ba5ab8b8b9e836" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_persistent_object" kindref="compound">wxPersistentObject</ref> *</type>
@@ -174,7 +174,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/persist.h" line="103"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/persist.h" line="103"/>
       </memberdef>
       <memberdef kind="function" id="classwx_persistence_manager_1ae0b4a3076e576c6285353ae50a61e214" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_persistent_object" kindref="compound">wxPersistentObject</ref> *</type>
@@ -191,7 +191,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/persist.h" line="109"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/persist.h" line="109"/>
       </memberdef>
       <memberdef kind="function" id="classwx_persistence_manager_1a453383431eb8f8127f0ac0d8a2cee1c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -216,7 +216,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/persist.h" line="123"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/persist.h" line="123"/>
       </memberdef>
       <memberdef kind="function" id="classwx_persistence_manager_1ae0b01606ded5323e923b1c9848bdb3bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -230,7 +230,7 @@
         <briefdescription>
 <para>Save the object properties to persistent storage. </para>        </briefdescription>
         <detaileddescription>
-<para>This method does nothing if <ref refid="classwx_persistence_manager_1aeeac6b0671a5db861a0e383bbd677e46" kindref="member">DisableSaving()</ref> had been called.</para><para><parameterlist kind="param"><parameteritem>
+<para>This method does nothing if <ref refid="classwx_persistence_manager_1a4183a42f9dfbd223c363c2879b85d137" kindref="member">DisableSaving()</ref> had been called.</para><para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>obj</parametername>
 </parameternamelist>
@@ -242,7 +242,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/persist.h" line="136"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/persist.h" line="136"/>
       </memberdef>
       <memberdef kind="function" id="classwx_persistence_manager_1a932d8f5cf981aed723f79d1923f67aed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -256,7 +256,7 @@
         <briefdescription>
 <para>Restore the object properties previously saved by <ref refid="classwx_persistence_manager_1ae0b01606ded5323e923b1c9848bdb3bb" kindref="member">Save()</ref>. </para>        </briefdescription>
         <detaileddescription>
-<para>This method does nothing if <ref refid="classwx_persistence_manager_1a5e9404d609b1ac51b3cde7d5fff29e8f" kindref="member">DisableRestoring()</ref> had been called.</para><para><parameterlist kind="param"><parameteritem>
+<para>This method does nothing if <ref refid="classwx_persistence_manager_1aea41f3b4c596f7bc90f43e888faac93b" kindref="member">DisableRestoring()</ref> had been called.</para><para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>obj</parametername>
 </parameternamelist>
@@ -269,7 +269,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/persist.h" line="151"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/persist.h" line="151"/>
       </memberdef>
       <memberdef kind="function" id="classwx_persistence_manager_1ab8a9b090b5f84df7b6a765fed78d4820" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -286,7 +286,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/persist.h" line="154"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/persist.h" line="154"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-func">
@@ -301,7 +301,7 @@
 <para>This constructor is only provided for the derived classes, to use an object of this class static <ref refid="classwx_persistence_manager_1a1d594b5905ef1c7a11ccadf348325f5b" kindref="member">Get()</ref> method should be called. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/persist.h" line="171"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/persist.h" line="171"/>
       </memberdef>
       <memberdef kind="function" id="classwx_persistence_manager_1a65683c942534f521ce1a19ca704a206a" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_config_base" kindref="compound">wxConfigBase</ref> *</type>
@@ -315,7 +315,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/persist.h" line="182"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/persist.h" line="182"/>
       </memberdef>
       <memberdef kind="function" id="classwx_persistence_manager_1a03e9951d6bfd4b6b089a60a5045ae19e" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -337,7 +337,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/persist.h" line="202"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/persist.h" line="202"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -346,10 +346,10 @@
 <para>This class is the central element of wxWidgets persistence framework, see <ref refid="overview_persistence" kindref="compound">Persistent Objects Overview</ref> for its overview.</para><para>This is a singleton class and its unique instance can be retrieved using <ref refid="classwx_persistence_manager_1a1d594b5905ef1c7a11ccadf348325f5b" kindref="member">Get()</ref> method.</para><para><simplesect kind="since"><para>2.9.0</para></simplesect>
 <heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref> </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/persist.h" line="25" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/persist.h" bodystart="24" bodyend="203"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/persist.h" line="25" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/persist.h" bodystart="24" bodyend="203"/>
     <listofallmembers>
-      <member refid="classwx_persistence_manager_1a5e9404d609b1ac51b3cde7d5fff29e8f" prot="public" virt="non-virtual"><scope>wxPersistenceManager</scope><name>DisableRestoring</name></member>
-      <member refid="classwx_persistence_manager_1aeeac6b0671a5db861a0e383bbd677e46" prot="public" virt="non-virtual"><scope>wxPersistenceManager</scope><name>DisableSaving</name></member>
+      <member refid="classwx_persistence_manager_1aea41f3b4c596f7bc90f43e888faac93b" prot="public" virt="non-virtual"><scope>wxPersistenceManager</scope><name>DisableRestoring</name></member>
+      <member refid="classwx_persistence_manager_1a4183a42f9dfbd223c363c2879b85d137" prot="public" virt="non-virtual"><scope>wxPersistenceManager</scope><name>DisableSaving</name></member>
       <member refid="classwx_persistence_manager_1ae0b4a3076e576c6285353ae50a61e214" prot="public" virt="non-virtual"><scope>wxPersistenceManager</scope><name>Find</name></member>
       <member refid="classwx_persistence_manager_1a1d594b5905ef1c7a11ccadf348325f5b" prot="public" virt="non-virtual"><scope>wxPersistenceManager</scope><name>Get</name></member>
       <member refid="classwx_persistence_manager_1a65683c942534f521ce1a19ca704a206a" prot="protected" virt="virtual"><scope>wxPersistenceManager</scope><name>GetConfig</name></member>

@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/auibook.h" line="354"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/auibook.h" line="389"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_tab_art_1afc9b9d6e617e887772f36bee18edce36" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type><ref refid="classwx_aui_tab_art" kindref="compound">wxAuiTabArt</ref> *</type>
@@ -28,7 +28,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/auibook.h" line="359"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/auibook.h" line="394"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_tab_art_1a5811489f11c6068e2febf91501eaacae" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -53,7 +53,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/auibook.h" line="364"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/auibook.h" line="399"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_tab_art_1ae1b7edcb881f4e4b4fd56a5f660a4d13" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -94,7 +94,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/auibook.h" line="371"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/auibook.h" line="406"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_tab_art_1a475bf55d62fd3c0f15ef85823ebcf6ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -139,7 +139,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/auibook.h" line="378"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/auibook.h" line="413"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_tab_art_1a1ec38b831d76261146f8e2f28e57f7b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>int</type>
@@ -161,7 +161,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/auibook.h" line="383"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/auibook.h" line="418"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_tab_art_1a2c2c0ec5bcb132130ca636e0b2c6bee2" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>int</type>
@@ -174,7 +174,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/auibook.h" line="388"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/auibook.h" line="423"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_tab_art_1aadf0d05036640eb421754948d7ad88d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
@@ -215,7 +215,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/auibook.h" line="395"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/auibook.h" line="430"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_tab_art_1aa18ee890bb7ea08f5e778cd5f8a4b971" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -232,7 +232,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/auibook.h" line="400"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/auibook.h" line="435"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_tab_art_1afb052aca1baad7ab51caa3a9ad92d378" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -249,7 +249,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/auibook.h" line="405"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/auibook.h" line="440"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_tab_art_1a19ed51e602d40f894d120bde65ae7ae3" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -266,7 +266,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/auibook.h" line="410"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/auibook.h" line="445"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_tab_art_1a014a8a26a905e0ae56b5e04370c580e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -283,7 +283,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/auibook.h" line="415"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/auibook.h" line="450"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_tab_art_1a7200cbb845aec7d6a4e2f00e5044280c" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -301,7 +301,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/auibook.h" line="422"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/auibook.h" line="457"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_tab_art_1a09d37933bfe2bb46a4aceeb5056ff4e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -319,7 +319,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/auibook.h" line="429"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/auibook.h" line="464"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_tab_art_1a22282354bc053c2e0db393b0001a0189" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -340,7 +340,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/auibook.h" line="434"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/auibook.h" line="469"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -348,7 +348,7 @@
     <detaileddescription>
 <para><xrefsect id="todo_1_todo000010"><xreftitle>Todo</xreftitle><xrefdescription><para>BETTER DESCRIPTION NEEDED</para></xrefdescription></xrefsect></para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxaui" kindref="member">wxAui</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__aui" kindref="compound">Window Docking (wxAUI)</ref> </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/auibook.h" line="349" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/auibook.h" bodystart="348" bodyend="435"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/auibook.h" line="384" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/auibook.h" bodystart="383" bodyend="470"/>
     <listofallmembers>
       <member refid="classwx_aui_tab_art_1afc9b9d6e617e887772f36bee18edce36" prot="public" virt="pure-virtual"><scope>wxAuiTabArt</scope><name>Clone</name></member>
       <member refid="classwx_aui_tab_art_1a5811489f11c6068e2febf91501eaacae" prot="public" virt="pure-virtual"><scope>wxAuiTabArt</scope><name>DrawBackground</name></member>

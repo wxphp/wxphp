@@ -5,3 +5,4 @@
 * Implement compare_objects handler for wxWidget classes that implement
   operator== etc...
 * Fix segmentation bug that occurs on shutdown (almost fixed).
+* fix xml_parser not using <array>[]</array> on argument types;

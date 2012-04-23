@@ -34,7 +34,7 @@
 <para><emphasis>min</emphasis> and <emphasis>max</emphasis> indicate the minimum and maximum values for the <ref refid="classwx_spin_ctrl" kindref="compound">wxSpinCtrl</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="1667"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" line="1667"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -43,61 +43,61 @@
 <para>It supports modifying the values in-place by using a <ref refid="classwx_spin_ctrl" kindref="compound">wxSpinCtrl</ref>. The renderer only support variants of type <emphasis>long</emphasis>.</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__dvc" kindref="compound">wxDataViewCtrl Related Classes</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="5421">
+      <node id="5516">
         <label>wxDataViewRenderer</label>
         <link refid="classwx_data_view_renderer"/>
-        <childnode refid="5422" relation="public-inheritance">
+        <childnode refid="5517" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5422">
+      <node id="5517">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="5419">
+      <node id="5514">
         <label>wxDataViewSpinRenderer</label>
         <link refid="classwx_data_view_spin_renderer"/>
-        <childnode refid="5420" relation="public-inheritance">
+        <childnode refid="5515" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5420">
+      <node id="5515">
         <label>wxDataViewCustomRenderer</label>
         <link refid="classwx_data_view_custom_renderer"/>
-        <childnode refid="5421" relation="public-inheritance">
+        <childnode refid="5516" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="5425">
+      <node id="5520">
         <label>wxDataViewRenderer</label>
         <link refid="classwx_data_view_renderer"/>
-        <childnode refid="5426" relation="public-inheritance">
+        <childnode refid="5521" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5426">
+      <node id="5521">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="5427" relation="usage">
+        <childnode refid="5522" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="5423">
+      <node id="5518">
         <label>wxDataViewSpinRenderer</label>
         <link refid="classwx_data_view_spin_renderer"/>
-        <childnode refid="5424" relation="public-inheritance">
+        <childnode refid="5519" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5424">
+      <node id="5519">
         <label>wxDataViewCustomRenderer</label>
         <link refid="classwx_data_view_custom_renderer"/>
-        <childnode refid="5425" relation="public-inheritance">
+        <childnode refid="5520" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5427">
+      <node id="5522">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="1659" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" bodystart="1658" bodyend="1668"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" line="1659" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" bodystart="1658" bodyend="1668"/>
     <listofallmembers>
       <member refid="classwx_data_view_custom_renderer_1a76e85467c89adae6612236d803a552fc" prot="public" virt="virtual"><scope>wxDataViewSpinRenderer</scope><name>ActivateCell</name></member>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxDataViewSpinRenderer</scope><name>AllocExclusive</name></member>

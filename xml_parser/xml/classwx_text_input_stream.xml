@@ -51,7 +51,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/txtstrm.h" line="69"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/txtstrm.h" line="69"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_input_stream_1ae63cd14d6225b08a86ffcfa5660fb8fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -64,7 +64,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/txtstrm.h" line="74"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/txtstrm.h" line="74"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_input_stream_1a82f5d2ecf67c03f4aafcfbed5a942433" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_input_stream" kindref="compound">wxInputStream</ref> &amp;</type>
@@ -78,7 +78,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/txtstrm.h" line="81"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/txtstrm.h" line="81"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_input_stream_1a93688dd773005a80da7592744e438e8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="group__group__funcmacro__string_1gad42f64d8c82f1ce4ae58773a89b2d6a7" kindref="member">wxChar</ref></type>
@@ -91,7 +91,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/txtstrm.h" line="87"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/txtstrm.h" line="87"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_input_stream_1a9d1ea55f580445ee6e1d3bc29e50fd80" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="defs_8h_1a8e9363c460a79dd550df544fab96e16d" kindref="member">wxUint16</ref></type>
@@ -109,7 +109,7 @@
 <para>See <ref refid="classwx_text_input_stream_1aab532fc13db6a42bc9278a863c8d46e4" kindref="member">Read8()</ref> for the description of the <emphasis>base</emphasis> parameter. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/txtstrm.h" line="94"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/txtstrm.h" line="94"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_input_stream_1a4de84c0c0b3ed77f847de3f9b7bd01ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="defs_8h_1ab69f92e8af201f1d324252e771e8ab5d" kindref="member">wxInt16</ref></type>
@@ -127,7 +127,7 @@
 <para>See <ref refid="classwx_text_input_stream_1aab532fc13db6a42bc9278a863c8d46e4" kindref="member">Read8()</ref> for the description of the <emphasis>base</emphasis> parameter. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/txtstrm.h" line="101"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/txtstrm.h" line="101"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_input_stream_1a3ff86078fe2bb6a18b3c528125d3950a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="defs_8h_1afdb12e5345c3fae4b537e813df9f02a3" kindref="member">wxUint32</ref></type>
@@ -145,7 +145,7 @@
 <para>See <ref refid="classwx_text_input_stream_1aab532fc13db6a42bc9278a863c8d46e4" kindref="member">Read8()</ref> for the description of the <emphasis>base</emphasis> parameter. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/txtstrm.h" line="108"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/txtstrm.h" line="108"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_input_stream_1a7fb61d3fadaef935e4d29b431161a51f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="defs_8h_1a5c084575ef1ffaa7586dda7e4b22d78a" kindref="member">wxInt32</ref></type>
@@ -163,7 +163,7 @@
 <para>See <ref refid="classwx_text_input_stream_1aab532fc13db6a42bc9278a863c8d46e4" kindref="member">Read8()</ref> for the description of the <emphasis>base</emphasis> parameter. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/txtstrm.h" line="115"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/txtstrm.h" line="115"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_input_stream_1aab532fc13db6a42bc9278a863c8d46e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="defs_8h_1aad88e290b822df511ad8025ee2e45263" kindref="member">wxUint8</ref></type>
@@ -181,7 +181,7 @@
 <para>The value of <emphasis>base</emphasis> must be comprised between 2 and 36, inclusive, or be a special value 0 which means that the usual rules of C numbers are applied: if the number starts with <computeroutput>0x</computeroutput> it is considered to be in base 16, if it starts with 0 - in base 8 and in base 10 otherwise. Note that you may not want to specify the base 0 if you are parsing the numbers which may have leading zeroes as they can yield unexpected (to the user not familiar with C) results. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/txtstrm.h" line="128"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/txtstrm.h" line="128"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_input_stream_1a70ae90a262a5f5bde0158afef9ea65a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="defs_8h_1a7569603c57eac28d9f20098191f936d7" kindref="member">wxInt8</ref></type>
@@ -199,7 +199,7 @@
 <para>See <ref refid="classwx_text_input_stream_1aab532fc13db6a42bc9278a863c8d46e4" kindref="member">Read8()</ref> for the description of the <emphasis>base</emphasis> parameter. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/txtstrm.h" line="135"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/txtstrm.h" line="135"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_input_stream_1a852f289b53336a705101100ddf8430ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -212,7 +212,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/txtstrm.h" line="140"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/txtstrm.h" line="140"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_input_stream_1ab6a53dda37e49a69be09a7dbe881729d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -225,7 +225,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/txtstrm.h" line="146"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/txtstrm.h" line="146"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_input_stream_1a29eb32a28f132159ae8fc0e51a487678" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -235,10 +235,10 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000058"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="classwx_text_input_stream_1ab6a53dda37e49a69be09a7dbe881729d" kindref="member">ReadLine()</ref> or <ref refid="classwx_text_input_stream_1aa8ce6095e1f7710c3a066b9ff9ff7588" kindref="member">ReadWord()</ref> instead.</para></xrefdescription></xrefsect></para><para>Same as <ref refid="classwx_text_input_stream_1ab6a53dda37e49a69be09a7dbe881729d" kindref="member">ReadLine()</ref>. </para>        </detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000057"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="classwx_text_input_stream_1ab6a53dda37e49a69be09a7dbe881729d" kindref="member">ReadLine()</ref> or <ref refid="classwx_text_input_stream_1aa8ce6095e1f7710c3a066b9ff9ff7588" kindref="member">ReadWord()</ref> instead.</para></xrefdescription></xrefsect></para><para>Same as <ref refid="classwx_text_input_stream_1ab6a53dda37e49a69be09a7dbe881729d" kindref="member">ReadLine()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/txtstrm.h" line="153"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/txtstrm.h" line="153"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_input_stream_1aa8ce6095e1f7710c3a066b9ff9ff7588" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -252,7 +252,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/txtstrm.h" line="161"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/txtstrm.h" line="161"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_input_stream_1a1f5226fec5f405a9c2950568ece99373" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -269,7 +269,7 @@
 <para>The default separators are the <computeroutput>space</computeroutput> and <computeroutput>TAB</computeroutput> characters. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/txtstrm.h" line="169"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/txtstrm.h" line="169"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -287,7 +287,7 @@
 </programlisting></para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__streams" kindref="compound">Streams</ref></para><para><simplesect kind="see"><para><ref refid="classwx_text_output_stream" kindref="compound">wxTextOutputStream</ref> </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/txtstrm.h" line="55" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/txtstrm.h" bodystart="54" bodyend="170"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/txtstrm.h" line="55" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/txtstrm.h" bodystart="54" bodyend="170"/>
     <listofallmembers>
       <member refid="classwx_text_input_stream_1a93688dd773005a80da7592744e438e8c" prot="public" virt="non-virtual"><scope>wxTextInputStream</scope><name>GetChar</name></member>
       <member refid="classwx_text_input_stream_1a82f5d2ecf67c03f4aafcfbed5a942433" prot="public" virt="non-virtual"><scope>wxTextInputStream</scope><name>GetInputStream</name></member>

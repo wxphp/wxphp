@@ -28,7 +28,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/valgen.h" line="42"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/valgen.h" line="42"/>
       </memberdef>
       <memberdef kind="function" id="classwx_generic_validator_1af21eecfcd12693a2ba9087cf984a8779" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -53,7 +53,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/valgen.h" line="53"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/valgen.h" line="53"/>
       </memberdef>
       <memberdef kind="function" id="classwx_generic_validator_1ae408126b38460f71f34645fb6a7cba28" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -78,7 +78,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/valgen.h" line="64"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/valgen.h" line="64"/>
       </memberdef>
       <memberdef kind="function" id="classwx_generic_validator_1abce0743e3f83f4119566661e76652dcc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -103,7 +103,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/valgen.h" line="76"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/valgen.h" line="76"/>
       </memberdef>
       <memberdef kind="function" id="classwx_generic_validator_1a1b08bdcfa0a194d224579914da51d210" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -128,7 +128,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/valgen.h" line="87"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/valgen.h" line="87"/>
       </memberdef>
       <memberdef kind="function" id="classwx_generic_validator_1ae9716ab95a262e8c02bc6abc64558a13" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -153,7 +153,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/valgen.h" line="98"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/valgen.h" line="98"/>
       </memberdef>
       <memberdef kind="function" id="classwx_generic_validator_1a53edd5f4520573fbb9de25b281d32f2f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -179,7 +179,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/valgen.h" line="110"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/valgen.h" line="110"/>
       </memberdef>
       <memberdef kind="function" id="classwx_generic_validator_1a62ddb0362276e41bf84a547b015554b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -205,7 +205,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/valgen.h" line="122"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/valgen.h" line="122"/>
       </memberdef>
       <memberdef kind="function" id="classwx_generic_validator_1a66e90c6da5e71e7258a2581370b92795" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -231,7 +231,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/valgen.h" line="134"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/valgen.h" line="134"/>
       </memberdef>
       <memberdef kind="function" id="classwx_generic_validator_1aaf75d445049954e42e740fb14fdeabf1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -244,7 +244,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/valgen.h" line="139"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/valgen.h" line="139"/>
       </memberdef>
       <memberdef kind="function" id="classwx_generic_validator_1a4f00ebe861f2098be1b2592e087c2919" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_object" kindref="compound">wxObject</ref> *</type>
@@ -258,7 +258,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/valgen.h" line="144"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/valgen.h" line="144"/>
       </memberdef>
       <memberdef kind="function" id="classwx_generic_validator_1acf9a45aa5199fda6e95db482aa238c92" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -272,7 +272,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/valgen.h" line="149"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/valgen.h" line="149"/>
       </memberdef>
       <memberdef kind="function" id="classwx_generic_validator_1aae15ba89856f2e15fc05c8b073f27660" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -286,7 +286,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/valgen.h" line="154"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/valgen.h" line="154"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -298,73 +298,73 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__validator" kindref="compound">Validators</ref></para><para><simplesect kind="see"><para><ref refid="overview_validator" kindref="compound">wxValidator Overview</ref>, <ref refid="classwx_validator" kindref="compound">wxValidator</ref>, <ref refid="classwx_text_validator" kindref="compound">wxTextValidator</ref>, <ref refid="classwx_integer_validator" kindref="compound">wxIntegerValidator</ref>, <ref refid="classwx_floating_point_validator" kindref="compound">wxFloatingPointValidator</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="6529">
+      <node id="6697">
         <label>wxValidator</label>
         <link refid="classwx_validator"/>
-        <childnode refid="6530" relation="public-inheritance">
+        <childnode refid="6698" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6531">
+      <node id="6699">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="6530">
+      <node id="6698">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="6531" relation="public-inheritance">
+        <childnode refid="6699" relation="public-inheritance">
         </childnode>
-        <childnode refid="6532" relation="public-inheritance">
+        <childnode refid="6700" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6528">
+      <node id="6696">
         <label>wxGenericValidator</label>
         <link refid="classwx_generic_validator"/>
-        <childnode refid="6529" relation="public-inheritance">
+        <childnode refid="6697" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6532">
+      <node id="6700">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="6534">
+      <node id="6702">
         <label>wxValidator</label>
         <link refid="classwx_validator"/>
-        <childnode refid="6535" relation="public-inheritance">
+        <childnode refid="6703" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6536">
+      <node id="6704">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="6537" relation="usage">
+        <childnode refid="6705" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="6535">
+      <node id="6703">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="6536" relation="public-inheritance">
+        <childnode refid="6704" relation="public-inheritance">
         </childnode>
-        <childnode refid="6538" relation="public-inheritance">
+        <childnode refid="6706" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6533">
+      <node id="6701">
         <label>wxGenericValidator</label>
         <link refid="classwx_generic_validator"/>
-        <childnode refid="6534" relation="public-inheritance">
+        <childnode refid="6702" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6538">
+      <node id="6706">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="6537">
+      <node id="6705">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/valgen.h" line="34" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/valgen.h" bodystart="33" bodyend="155"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/valgen.h" line="34" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/valgen.h" bodystart="33" bodyend="155"/>
     <listofallmembers>
       <member refid="classwx_evt_handler_1a7dc3c701781f4044372049de5004137e" prot="public" virt="non-virtual"><scope>wxGenericValidator</scope><name>AddFilter</name></member>
       <member refid="classwx_evt_handler_1a0737c6d2cbcd5ded4b1ecdd53ed0def3" prot="public" virt="virtual"><scope>wxGenericValidator</scope><name>AddPendingEvent</name></member>
@@ -415,7 +415,6 @@
       <member refid="classwx_generic_validator_1aae15ba89856f2e15fc05c8b073f27660" prot="public" virt="virtual"><scope>wxGenericValidator</scope><name>TransferToWindow</name></member>
       <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxGenericValidator</scope><name>TryAfter</name></member>
       <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxGenericValidator</scope><name>TryBefore</name></member>
-      <member refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" virt="non-virtual"><scope>wxGenericValidator</scope><name>TryThis</name></member>
       <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxGenericValidator</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxGenericValidator</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a22e5db2ec1d19c8252c056fd116975d7" prot="public" virt="non-virtual"><scope>wxGenericValidator</scope><name>Unlink</name></member>

@@ -16,7 +16,7 @@
 </programlisting></para><para>You must use <ref refid="dynarray_8h_1a52cebddf0dbdeb2d7dbbfb88656f0f79" kindref="member">WX_DEFINE_OBJARRAY()</ref> macro to define the array class, otherwise you would get link errors. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynarray.h" line="686" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynarray.h" bodystart="686" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dynarray.h" line="686" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dynarray.h" bodystart="686" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="dynarray_8h_1a6c4cbd97b2b8c79aef39d55f35686f96" prot="public" static="no">
         <name>WX_DECLARE_EXPORTED_OBJARRAY</name>
@@ -30,7 +30,7 @@
 </programlisting></para><para>You must use <ref refid="dynarray_8h_1a52cebddf0dbdeb2d7dbbfb88656f0f79" kindref="member">WX_DEFINE_OBJARRAY()</ref> macro to define the array class, otherwise you would get link errors. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynarray.h" line="687" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynarray.h" bodystart="687" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dynarray.h" line="687" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dynarray.h" bodystart="687" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="dynarray_8h_1ab391af5040f754730afdf5b0fcfc211b" prot="public" static="no">
         <name>WX_DECLARE_USER_EXPORTED_OBJARRAY</name>
@@ -44,7 +44,7 @@
 </programlisting></para><para>You must use <ref refid="dynarray_8h_1a52cebddf0dbdeb2d7dbbfb88656f0f79" kindref="member">WX_DEFINE_OBJARRAY()</ref> macro to define the array class, otherwise you would get link errors. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynarray.h" line="688" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynarray.h" bodystart="688" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dynarray.h" line="688" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dynarray.h" bodystart="688" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -62,7 +62,7 @@
 </programlisting></para><para>Note that wxWidgets predefines the following standard array classes: <bold>wxArrayInt</bold>, <bold>wxArrayLong</bold>, <bold>wxArrayShort</bold>, <bold>wxArrayDouble</bold>, <bold>wxArrayPtrVoid</bold>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynarray.h" line="713" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynarray.h" bodystart="713" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dynarray.h" line="713" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dynarray.h" bodystart="713" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="dynarray_8h_1a32eb9d62c9479016d9662c510a7c8291" prot="public" static="no">
         <name>WX_DEFINE_EXPORTED_ARRAY</name>
@@ -78,7 +78,7 @@
 </programlisting></para><para>Note that wxWidgets predefines the following standard array classes: <bold>wxArrayInt</bold>, <bold>wxArrayLong</bold>, <bold>wxArrayShort</bold>, <bold>wxArrayDouble</bold>, <bold>wxArrayPtrVoid</bold>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynarray.h" line="714" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynarray.h" bodystart="714" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dynarray.h" line="714" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dynarray.h" bodystart="714" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="dynarray_8h_1a3b9d36de8f94e2946dd96ae715572e88" prot="public" static="no">
         <name>WX_DEFINE_USER_EXPORTED_ARRAY</name>
@@ -95,7 +95,7 @@
 </programlisting></para><para>Note that wxWidgets predefines the following standard array classes: <bold>wxArrayInt</bold>, <bold>wxArrayLong</bold>, <bold>wxArrayShort</bold>, <bold>wxArrayDouble</bold>, <bold>wxArrayPtrVoid</bold>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynarray.h" line="715" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynarray.h" bodystart="715" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dynarray.h" line="715" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dynarray.h" bodystart="715" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -121,7 +121,7 @@
 </programlisting> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynarray.h" line="751" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynarray.h" bodystart="751" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dynarray.h" line="751" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dynarray.h" bodystart="751" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="dynarray_8h_1ae05b2e13eddeb23ff7fdc5163f9d992e" prot="public" static="no">
         <name>WX_DEFINE_EXPORTED_OBJARRAY</name>
@@ -145,7 +145,7 @@
 </programlisting> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynarray.h" line="752" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynarray.h" bodystart="752" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dynarray.h" line="752" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dynarray.h" bodystart="752" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="dynarray_8h_1a2555ba53da045a79c54b1303f25d8a47" prot="public" static="no">
         <name>WX_DEFINE_USER_EXPORTED_OBJARRAY</name>
@@ -169,7 +169,7 @@
 </programlisting> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynarray.h" line="753" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynarray.h" bodystart="753" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dynarray.h" line="753" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dynarray.h" bodystart="753" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -201,7 +201,7 @@
 </programlisting> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynarray.h" line="794" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynarray.h" bodystart="794" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dynarray.h" line="794" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dynarray.h" bodystart="794" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="dynarray_8h_1ab304943d0f95d3b5d4494743dbb4b0f8" prot="public" static="no">
         <name>WX_DEFINE_SORTED_EXPORTED_ARRAY</name>
@@ -231,7 +231,7 @@
 </programlisting> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynarray.h" line="795" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynarray.h" bodystart="795" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dynarray.h" line="795" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dynarray.h" bodystart="795" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="dynarray_8h_1af01eea1165404d844c705ed6539b4bf3" prot="public" static="no">
         <name>WX_DEFINE_SORTED_USER_EXPORTED_ARRAY</name>
@@ -261,7 +261,7 @@
 </programlisting> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynarray.h" line="796" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynarray.h" bodystart="796" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dynarray.h" line="796" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dynarray.h" bodystart="796" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -276,7 +276,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynarray.h" line="809" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynarray.h" bodystart="809" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dynarray.h" line="809" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dynarray.h" bodystart="809" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="dynarray_8h_1aae5ab96217f8797a82373b4126a6b254" prot="public" static="no">
         <type>wxArray&lt; long &gt;</type>
@@ -289,7 +289,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynarray.h" line="810" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynarray.h" bodystart="810" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dynarray.h" line="810" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dynarray.h" bodystart="810" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="dynarray_8h_1a4d95651e563be2e44c507f5e1c1ebb13" prot="public" static="no">
         <type>wxArray&lt; short &gt;</type>
@@ -302,7 +302,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynarray.h" line="811" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynarray.h" bodystart="811" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dynarray.h" line="811" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dynarray.h" bodystart="811" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="dynarray_8h_1a84411c7d20ee889cd887dd10ef12b1a7" prot="public" static="no">
         <type>wxArray&lt; double &gt;</type>
@@ -315,7 +315,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynarray.h" line="812" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynarray.h" bodystart="812" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dynarray.h" line="812" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dynarray.h" bodystart="812" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="dynarray_8h_1a6b7224fd0223439eed62c2fae09981d1" prot="public" static="no">
         <type>wxArray&lt; void * &gt;</type>
@@ -328,7 +328,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynarray.h" line="813" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynarray.h" bodystart="813" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dynarray.h" line="813" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dynarray.h" bodystart="813" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="define">
@@ -342,7 +342,7 @@
 <para>The two arrays must be of the same type. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynarray.h" line="658" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynarray.h" bodystart="658" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dynarray.h" line="658" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dynarray.h" bodystart="658" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="dynarray_8h_1a2057e24dceef760fadfc5ce19229cbc2" prot="public" static="no">
         <name>WX_CLEAR_ARRAY</name>
@@ -353,7 +353,7 @@
 <para>It cannot be used with wxObjArrays - but they will delete their elements anyway when you call Empty(). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynarray.h" line="665" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynarray.h" bodystart="665" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dynarray.h" line="665" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dynarray.h" bodystart="665" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="dynarray_8h_1a2f08ddc75e6cc24d752343f4f76460df" prot="public" static="no">
         <name>WX_PREPEND_ARRAY</name>
@@ -365,13 +365,13 @@
 <para>The two arrays must be of the same type. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynarray.h" line="803" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynarray.h" bodystart="803" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dynarray.h" line="803" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dynarray.h" bodystart="803" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynarray.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dynarray.h"/>
   </compounddef>
 </doxygen>

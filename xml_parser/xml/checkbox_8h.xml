@@ -13,7 +13,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/checkbox.h" line="20" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/checkbox.h" bodystart="20" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/checkbox.h" line="20" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/checkbox.h" bodystart="20" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="checkbox_8h_1a7ddfe0e0776dbb41320a4a80091d38f1" prot="public" static="no">
         <name>wxCHK_3STATE</name>
@@ -24,7 +24,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/checkbox.h" line="21" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/checkbox.h" bodystart="21" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/checkbox.h" line="21" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/checkbox.h" bodystart="21" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="checkbox_8h_1aa4b232e925d811ae01b457647016621d" prot="public" static="no">
         <name>wxCHK_ALLOW_3RD_STATE_FOR_USER</name>
@@ -35,7 +35,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/checkbox.h" line="29" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/checkbox.h" bodystart="29" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/checkbox.h" line="29" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/checkbox.h" bodystart="29" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="enum">
@@ -68,13 +68,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/checkbox.h" line="36" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/checkbox.h" bodystart="35" bodyend="40"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/checkbox.h" line="36" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/checkbox.h" bodystart="35" bodyend="40"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/checkbox.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/checkbox.h"/>
   </compounddef>
 </doxygen>

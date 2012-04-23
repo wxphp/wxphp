@@ -22,7 +22,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="205"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" line="205"/>
       </memberdef>
       <memberdef kind="function" id="classwx_log_chain_1a20f79de4c4e1e0e995b600d9dbcf3310" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -35,7 +35,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="210"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" line="210"/>
       </memberdef>
       <memberdef kind="function" id="classwx_log_chain_1a29d346136ed27d0ed887a72057f96c15" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -48,7 +48,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="216"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" line="216"/>
       </memberdef>
       <memberdef kind="function" id="classwx_log_chain_1a158915f59a400e201f8d56cd34623f71" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_log" kindref="compound">wxLog</ref> *</type>
@@ -61,7 +61,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="221"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" line="221"/>
       </memberdef>
       <memberdef kind="function" id="classwx_log_chain_1a03ae2fb38e4e8ad315f301c1577f090a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -74,7 +74,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="227"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" line="227"/>
       </memberdef>
       <memberdef kind="function" id="classwx_log_chain_1a5595a43501953825b6a07516d791fa90" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -91,7 +91,7 @@
 <para>Calling this function with false parameter disables this behaviour (presumably temporarily, as you shouldn&apos;t use <ref refid="classwx_log_chain" kindref="compound">wxLogChain</ref> at all otherwise) and it can be reenabled by calling it again with <emphasis>passMessages</emphasis> set to true. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="235"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" line="235"/>
       </memberdef>
       <memberdef kind="function" id="classwx_log_chain_1aecfefb1a2435a5372d4a317353b8a7e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -108,7 +108,7 @@
 <para>The log target specified in the <ref refid="classwx_log_chain_1a0b13ad0a56791e4686cf13d759bcab23" kindref="member">wxLogChain(wxLog*)</ref> constructor or in a previous call to this function is deleted. This doesn&apos;t change the old log target value (the one the messages are forwarded to) which still remains the same as was active when <ref refid="classwx_log_chain" kindref="compound">wxLogChain</ref> object was created. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="246"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" line="246"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -125,48 +125,48 @@
 </programlisting></para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__logging" kindref="compound">Logging</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7507">
+      <node id="7705">
         <label>wxLogWindow</label>
         <link refid="classwx_log_window"/>
-        <childnode refid="7506" relation="public-inheritance">
+        <childnode refid="7704" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7506">
+      <node id="7704">
         <label>wxLogInterposer</label>
         <link refid="classwx_log_interposer"/>
-        <childnode refid="7504" relation="public-inheritance">
+        <childnode refid="7702" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7508">
+      <node id="7706">
         <label>wxLogInterposerTemp</label>
         <link refid="classwx_log_interposer_temp"/>
-        <childnode refid="7504" relation="public-inheritance">
+        <childnode refid="7702" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7504">
+      <node id="7702">
         <label>wxLogChain</label>
         <link refid="classwx_log_chain"/>
-        <childnode refid="7505" relation="public-inheritance">
+        <childnode refid="7703" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7505">
+      <node id="7703">
         <label>wxLog</label>
         <link refid="classwx_log"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7509">
+      <node id="7707">
         <label>wxLogChain</label>
         <link refid="classwx_log_chain"/>
-        <childnode refid="7510" relation="public-inheritance">
+        <childnode refid="7708" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7510">
+      <node id="7708">
         <label>wxLog</label>
         <link refid="classwx_log"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="199" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" bodystart="198" bodyend="247"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" line="199" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" bodystart="198" bodyend="247"/>
     <listofallmembers>
       <member refid="classwx_log_1a4c11ee23ce5264b6c5921a17610cda13" prot="public" virt="non-virtual"><scope>wxLogChain</scope><name>AddTraceMask</name></member>
       <member refid="classwx_log_1ac6b25e807e4948795aea21def6b5c1e4" prot="public" virt="non-virtual"><scope>wxLogChain</scope><name>ClearTraceMasks</name></member>

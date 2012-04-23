@@ -63,13 +63,13 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/convauto.h" line="19" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/convauto.h" bodystart="18" bodyend="75"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/convauto.h" line="19" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/convauto.h" bodystart="18" bodyend="75"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/convauto.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/convauto.h"/>
   </compounddef>
 </doxygen>

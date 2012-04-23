@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="608"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="608"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_data_1a1dff3469897917c2d583c54ec03a1795" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_variant_data" kindref="compound">wxVariantData</ref> *</type>
@@ -29,7 +29,7 @@
 <para>You must implement this function in order for <ref refid="classwx_variant_1af5021c0a8bfb8ce1b987764ab662b132" kindref="member">wxVariant::Unshare()</ref> to work for your data. This function is implemented for all built-in data types. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="615"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="615"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_data_1a5c90358b8b5d3bc99c0c3410cf565010" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -43,7 +43,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="624"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="624"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_data_1a528c7c86af3dd554e5b72d2e5fdead6f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type>bool</type>
@@ -60,7 +60,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="629"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="629"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_data_1aa8d683f29eb3c502ca6cb7a98a92fa0e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -77,7 +77,7 @@
 <para>Return true if successful. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="634"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="634"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_data_1a56789ab40ed58d058e655576ec1e81bc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -90,7 +90,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="639"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="639"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_data_1a00e53db157b5eef10b07b648f2f1e623" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_class_info" kindref="compound">wxClassInfo</ref> *</type>
@@ -103,7 +103,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="645"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="645"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_data_1ae25c62e3451463ed287367a7b709e51d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -116,7 +116,7 @@
 <para>Note that initially <ref refid="classwx_variant_data" kindref="compound">wxVariantData</ref> has reference count of 1. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="651"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="651"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_data_1a1007dbb33d60c210caab567d2d12feae" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -133,7 +133,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="656"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="656"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_data_1a478c208420802aade488e57de371d27b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -150,7 +150,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="661"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="661"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_data_1a6229f1f0f28174a5256778c9acde711f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -167,7 +167,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="666"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="666"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_data_1aee0322acdcf0957c9b5e17cb4b29f503" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -184,7 +184,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="670"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="670"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -194,30 +194,30 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__data" kindref="compound">Data Structures</ref></para><para><simplesect kind="see"><para><ref refid="classwx_variant" kindref="compound">wxVariant</ref>, <ref refid="group__group__funcmacro__rtti_1ga0c6d4b0411eda94d041198d6385980cb" kindref="member">wxGetVariantCast()</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="11319">
+      <node id="11508">
         <label>wxVariantData</label>
         <link refid="classwx_variant_data"/>
-        <childnode refid="11320" relation="public-inheritance">
+        <childnode refid="11509" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11320">
+      <node id="11509">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="11321">
+      <node id="11510">
         <label>wxVariantData</label>
         <link refid="classwx_variant_data"/>
-        <childnode refid="11322" relation="public-inheritance">
+        <childnode refid="11511" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11322">
+      <node id="11511">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="603" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" bodystart="602" bodyend="671"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="603" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" bodystart="602" bodyend="671"/>
     <listofallmembers>
       <member refid="classwx_variant_data_1a1dff3469897917c2d583c54ec03a1795" prot="public" virt="virtual"><scope>wxVariantData</scope><name>Clone</name></member>
       <member refid="classwx_variant_data_1a5c90358b8b5d3bc99c0c3410cf565010" prot="public" virt="non-virtual"><scope>wxVariantData</scope><name>DecRef</name></member>

@@ -2,7 +2,7 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="persist_2treebook_8h" kind="file">
     <compoundname>treebook.h</compoundname>
-    <innerclass refid="classwx_persistent_tree_book" prot="public">wxPersistentTreeBook</innerclass>
+    <innerclass refid="classwx_persistent_tree_book_ctrl" prot="public">wxPersistentTreeBookCtrl</innerclass>
       <sectiondef kind="func">
       <memberdef kind="function" id="persist_2treebook_8h_1a4da8133614b68cfd84d77067cb36875c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_persistent_object" kindref="compound">wxPersistentObject</ref> *</type>
@@ -19,13 +19,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/persist/treebook.h" line="43"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/persist/treebook.h" line="43"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/persist/treebook.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/persist/treebook.h"/>
   </compounddef>
 </doxygen>

@@ -27,24 +27,49 @@
         <briefdescription>
 <para>Constructor. </para>        </briefdescription>
         <detaileddescription>
-<para>Pass a printout object, an optional printout object to be used for actual printing, and the address of an optional block of printer data, which will be copied to the print preview object&apos;s print data.</para><para>If <emphasis>printoutForPrinting</emphasis> is non-NULL, a <bold>&quot;Print...&quot;</bold> button will be placed on the preview frame so that the user can print directly from the preview interface.</para><para><simplesect kind="remark"><para>Do not explicitly delete the printout objects once this destructor has been called, since they will be deleted in the <ref refid="classwx_print_preview" kindref="compound">wxPrintPreview</ref> constructor. The same does not apply to the <emphasis>data</emphasis> argument.</para></simplesect>
+<para>Pass a printout object, an optional printout object to be used for actual printing, and the address of an optional block of printer data, which will be copied to the print preview object&apos;s print data.</para><para>If <emphasis>printoutForPrinting</emphasis> is non-NULL, a <bold>&quot;Print...&quot;</bold> button will be placed on the preview frame so that the user can print directly from the preview interface.</para><para><simplesect kind="remark"><para>Do not explicitly delete the printout objects once this constructor has been called, since they will be deleted in the <ref refid="classwx_print_preview" kindref="compound">wxPrintPreview</ref> destructor. The same does not apply to the <emphasis>data</emphasis> argument.</para></simplesect>
 Use <ref refid="classwx_print_preview_1acafc9b063d112f777ef1f0cfc4b49463" kindref="member">IsOk()</ref> to check whether the <ref refid="classwx_print_preview" kindref="compound">wxPrintPreview</ref> object was created correctly. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/print.h" line="293"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/print.h" line="324"/>
       </memberdef>
-      <memberdef kind="function" id="classwx_print_preview_1ae71ae8be06d48dc76a4203d70cb24917" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classwx_print_preview_1a7575df858272c361e43942b48e18d1c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
-        <definition>wxPrintPreview::~wxPrinter</definition>
+        <definition>wxPrintPreview::wxPrintPreview</definition>
+        <argsstring>(wxPrintout *printout, wxPrintout *printoutForPrinting, wxPrintData *data)</argsstring>
+        <name>wxPrintPreview</name>
+        <param>
+          <type><ref refid="classwx_printout" kindref="compound">wxPrintout</ref> *</type>
+          <declname>printout</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_printout" kindref="compound">wxPrintout</ref> *</type>
+          <declname>printoutForPrinting</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_print_data" kindref="compound">wxPrintData</ref> *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/print.h" line="327"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_print_preview_1ac1d6b29249e89b9b33e4623d6ec12fbd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxPrintPreview::~wxPrintPreview</definition>
         <argsstring>()</argsstring>
-        <name>~wxPrinter</name>
+        <name>~wxPrintPreview</name>
         <briefdescription>
 <para>Destructor. </para>        </briefdescription>
         <detaileddescription>
 <para>Deletes both print preview objects, so do not destroy these objects in your application. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/print.h" line="301"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/print.h" line="335"/>
       </memberdef>
       <memberdef kind="function" id="classwx_print_preview_1a4fbaf0ccad2bf1f99dcad7397e2b17ab" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_preview_canvas" kindref="compound">wxPreviewCanvas</ref> *</type>
@@ -57,7 +82,7 @@ Use <ref refid="classwx_print_preview_1acafc9b063d112f777ef1f0cfc4b49463" kindre
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/print.h" line="306"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/print.h" line="340"/>
       </memberdef>
       <memberdef kind="function" id="classwx_print_preview_1ad11a10c1dd1d5c5633801fe5c30ea8a8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>int</type>
@@ -70,7 +95,7 @@ Use <ref refid="classwx_print_preview_1acafc9b063d112f777ef1f0cfc4b49463" kindre
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/print.h" line="311"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/print.h" line="345"/>
       </memberdef>
       <memberdef kind="function" id="classwx_print_preview_1aef966ae0a3bb97ac6289199d07bc7ac3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_frame" kindref="compound">wxFrame</ref> *</type>
@@ -83,7 +108,7 @@ Use <ref refid="classwx_print_preview_1acafc9b063d112f777ef1f0cfc4b49463" kindre
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/print.h" line="317"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/print.h" line="351"/>
       </memberdef>
       <memberdef kind="function" id="classwx_print_preview_1a9311416b983191dc01eee7709be60b74" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>int</type>
@@ -96,7 +121,7 @@ Use <ref refid="classwx_print_preview_1acafc9b063d112f777ef1f0cfc4b49463" kindre
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/print.h" line="322"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/print.h" line="356"/>
       </memberdef>
       <memberdef kind="function" id="classwx_print_preview_1ad665d6457205459d8f74b8d656a10027" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>int</type>
@@ -109,7 +134,7 @@ Use <ref refid="classwx_print_preview_1acafc9b063d112f777ef1f0cfc4b49463" kindre
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/print.h" line="327"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/print.h" line="361"/>
       </memberdef>
       <memberdef kind="function" id="classwx_print_preview_1aaaa05d741514c3192860bf9a5caf8c27" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_printout" kindref="compound">wxPrintout</ref> *</type>
@@ -122,7 +147,7 @@ Use <ref refid="classwx_print_preview_1acafc9b063d112f777ef1f0cfc4b49463" kindre
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/print.h" line="332"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/print.h" line="366"/>
       </memberdef>
       <memberdef kind="function" id="classwx_print_preview_1ab1268dd92d09f1dc40489b88e2d52fb9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_printout" kindref="compound">wxPrintout</ref> *</type>
@@ -135,7 +160,7 @@ Use <ref refid="classwx_print_preview_1acafc9b063d112f777ef1f0cfc4b49463" kindre
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/print.h" line="339"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/print.h" line="373"/>
       </memberdef>
       <memberdef kind="function" id="classwx_print_preview_1acafc9b063d112f777ef1f0cfc4b49463" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -148,7 +173,7 @@ Use <ref refid="classwx_print_preview_1acafc9b063d112f777ef1f0cfc4b49463" kindre
 <para>It could return false if there was a problem initializing the printer device context (current printer not set, for example). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/print.h" line="347"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/print.h" line="381"/>
       </memberdef>
       <memberdef kind="function" id="classwx_print_preview_1a4d889f1a13a1b4cd4a3c0f699ddcccf8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -169,7 +194,7 @@ Use <ref refid="classwx_print_preview_1acafc9b063d112f777ef1f0cfc4b49463" kindre
 <para>It must be called from the preview window&apos;s OnPaint member.</para><para>The implementation simply blits the preview bitmap onto the canvas, creating a new preview bitmap if none exists. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/print.h" line="356"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/print.h" line="390"/>
       </memberdef>
       <memberdef kind="function" id="classwx_print_preview_1a65fef323ded88669f88d4c77520f0797" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -186,7 +211,7 @@ Use <ref refid="classwx_print_preview_1acafc9b063d112f777ef1f0cfc4b49463" kindre
 <para>Will normally be called by the <bold>Print</bold>... panel item on the preview frame&apos;s control bar.</para><para>Returns false in case of error -- call <ref refid="classwx_printer_1ac050c7cdfa1d43dee1617c298980624c" kindref="member">wxPrinter::GetLastError()</ref> to get detailed information about the kind of the error. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/print.h" line="367"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/print.h" line="401"/>
       </memberdef>
       <memberdef kind="function" id="classwx_print_preview_1a573071816b0282622ca640438975202b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -203,7 +228,7 @@ Use <ref refid="classwx_print_preview_1acafc9b063d112f777ef1f0cfc4b49463" kindre
 <para>Used internally by <ref refid="classwx_print_preview" kindref="compound">wxPrintPreview</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/print.h" line="372"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/print.h" line="406"/>
       </memberdef>
       <memberdef kind="function" id="classwx_print_preview_1adfd8f42344fe1dc119d557fd52f79cb9" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -220,7 +245,7 @@ Use <ref refid="classwx_print_preview_1acafc9b063d112f777ef1f0cfc4b49463" kindre
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/print.h" line="377"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/print.h" line="411"/>
       </memberdef>
       <memberdef kind="function" id="classwx_print_preview_1a606089b8aa5c47d288023107f12c1bf7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -237,7 +262,7 @@ Use <ref refid="classwx_print_preview_1acafc9b063d112f777ef1f0cfc4b49463" kindre
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/print.h" line="382"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/print.h" line="416"/>
       </memberdef>
       <memberdef kind="function" id="classwx_print_preview_1a20d4883daeeb5510ca6b7d4c4cba67f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -254,7 +279,7 @@ Use <ref refid="classwx_print_preview_1acafc9b063d112f777ef1f0cfc4b49463" kindre
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/print.h" line="388"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/print.h" line="422"/>
       </memberdef>
       <memberdef kind="function" id="classwx_print_preview_1a628d3f24b44b034b9cb35457697a7d02" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -271,7 +296,7 @@ Use <ref refid="classwx_print_preview_1acafc9b063d112f777ef1f0cfc4b49463" kindre
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/print.h" line="393"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/print.h" line="427"/>
       </memberdef>
       <memberdef kind="function" id="classwx_print_preview_1aa0916c3ad7a39737e8c8b851db508c24" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -288,7 +313,7 @@ Use <ref refid="classwx_print_preview_1acafc9b063d112f777ef1f0cfc4b49463" kindre
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/print.h" line="398"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/print.h" line="432"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -299,37 +324,37 @@ Use <ref refid="classwx_print_preview_1acafc9b063d112f777ef1f0cfc4b49463" kindre
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__printing" kindref="compound">Printing Framework</ref></para><para><simplesect kind="see"><para><ref refid="overview_printing" kindref="compound">Printing Framework Overview</ref>, <ref refid="classwx_printer_d_c" kindref="compound">wxPrinterDC</ref>, <ref refid="classwx_print_dialog" kindref="compound">wxPrintDialog</ref>, <ref refid="classwx_printout" kindref="compound">wxPrintout</ref>, <ref refid="classwx_printer" kindref="compound">wxPrinter</ref>, <ref refid="classwx_preview_canvas" kindref="compound">wxPreviewCanvas</ref>, <ref refid="classwx_preview_control_bar" kindref="compound">wxPreviewControlBar</ref>, <ref refid="classwx_preview_frame" kindref="compound">wxPreviewFrame</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="8826">
+      <node id="9007">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="8825">
+      <node id="9006">
         <label>wxPrintPreview</label>
         <link refid="classwx_print_preview"/>
-        <childnode refid="8826" relation="public-inheritance">
+        <childnode refid="9007" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="8828">
+      <node id="9009">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="8829" relation="usage">
+        <childnode refid="9010" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="8829">
+      <node id="9010">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
-      <node id="8827">
+      <node id="9008">
         <label>wxPrintPreview</label>
         <link refid="classwx_print_preview"/>
-        <childnode refid="8828" relation="public-inheritance">
+        <childnode refid="9009" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/print.h" line="272" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/print.h" bodystart="271" bodyend="399"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/print.h" line="303" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/print.h" bodystart="302" bodyend="433"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxPrintPreview</scope><name>AllocExclusive</name></member>
       <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxPrintPreview</scope><name>CloneRefData</name></member>
@@ -364,8 +389,9 @@ Use <ref refid="classwx_print_preview_1acafc9b063d112f777ef1f0cfc4b49463" kindre
       <member refid="classwx_object_1acaa378363a28af421ab56ad7b46eadf0" prot="public" virt="non-virtual"><scope>wxPrintPreview</scope><name>wxObject</name></member>
       <member refid="classwx_object_1a4721b4dc9b7aff0f30904ba2ea3954cf" prot="public" virt="non-virtual"><scope>wxPrintPreview</scope><name>wxObject</name></member>
       <member refid="classwx_print_preview_1a993d95afc3f583eb4d36bc45b03e584d" prot="public" virt="non-virtual"><scope>wxPrintPreview</scope><name>wxPrintPreview</name></member>
+      <member refid="classwx_print_preview_1a7575df858272c361e43942b48e18d1c2" prot="public" virt="non-virtual"><scope>wxPrintPreview</scope><name>wxPrintPreview</name></member>
       <member refid="classwx_object_1a2a51aa8bfbab47ca2f051bcf84b3f35b" prot="public" virt="virtual"><scope>wxPrintPreview</scope><name>~wxObject</name></member>
-      <member refid="classwx_print_preview_1ae71ae8be06d48dc76a4203d70cb24917" prot="public" virt="non-virtual"><scope>wxPrintPreview</scope><name>~wxPrinter</name></member>
+      <member refid="classwx_print_preview_1ac1d6b29249e89b9b33e4623d6ec12fbd" prot="public" virt="non-virtual"><scope>wxPrintPreview</scope><name>~wxPrintPreview</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

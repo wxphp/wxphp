@@ -1,9 +1,10 @@
 {
+	"wxThreadIdType":"unsigned long",
 	"wxLogLevel":"unsigned long",
 	"wxPGVFBFlags":"wxByte",
 	"wxPGSortCallback":"int(*",
-	"wxArtClient":"class wxString",
-	"wxArtID":"class wxString",
+	"wxArtClient":"wxString",
+	"wxArtID":"wxString",
 	"wxScopedCharBuffer":"wxScopedCharTypeBuffer< char >",
 	"wxScopedWCharBuffer":"wxScopedCharTypeBuffer< wchar_t >",
 	"wxChar":"wxUSE_UNICODE_dependent",
@@ -26,6 +27,7 @@
 	"wxUint64":"wxULongLong_t",
 	"wxIntPtr":"ssize_t",
 	"wxUIntPtr":"size_t",
+	"wxPrintQuality":"int",
 	"wxCoord":"int",
 	"wxFloat32":"float",
 	"wxFloat64":"double",
@@ -37,6 +39,7 @@
 	"wxArrayPtrVoid":"wxArray< void * >",
 	"wxEventType":"int",
 	"wxFileOffset":"off_t",
+	"wxZipFSHandler":"wxArchiveFSHandler",
 	"wxObjectRefData":"wxRefCounter",
 	"wxTextAttrDimensionFlags":"unsigned short",
 	"wxScrolledWindow":"wxScrolled< wxPanel >",
@@ -46,7 +49,5 @@
 	"wxTreeListItems":"wxVector< wxTreeListItem >",
 	"wxEnvVariableHashMap":"wxStringToStringHashMap",
 	"wxSortCallback":"int(*",
-	"wxWindowID":"int",
-	"wxThreadIdType":"unsigned long",
-	"ExitCode":"void*"
+	"wxWindowID":"int"
 }

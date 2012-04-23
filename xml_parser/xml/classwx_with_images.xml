@@ -5,9 +5,9 @@
     <derivedcompoundref refid="classwx_book_ctrl_base" prot="public" virt="non-virtual">wxBookCtrlBase</derivedcompoundref>
     <includes local="no">wx/withimages.h</includes>
       <sectiondef kind="public-type">
-      <memberdef kind="enum" id="classwx_with_images_1ad1a815c59ab249d922bc3b072508d984" prot="public" static="no">
-        <name>@27</name>
-        <enumvalue id="classwx_with_images_1ad1a815c59ab249d922bc3b072508d984a9c691a3188f0e2d96e1aa83fa5182406" prot="public">
+      <memberdef kind="enum" id="classwx_with_images_1a20d6b1bbdcca343bf3604d70086ad959" prot="public" static="no">
+        <name>@40</name>
+        <enumvalue id="classwx_with_images_1a20d6b1bbdcca343bf3604d70086ad959a9c691a3188f0e2d96e1aa83fa5182406" prot="public">
           <name>NO_IMAGE</name>
           <initializer> -1</initializer>
           <briefdescription>
@@ -21,7 +21,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/withimages.h" line="15" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/withimages.h" bodystart="14" bodyend="17"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/withimages.h" line="15" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/withimages.h" bodystart="14" bodyend="17"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -36,7 +36,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/withimages.h" line="19"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/withimages.h" line="19"/>
       </memberdef>
       <memberdef kind="function" id="classwx_with_images_1a931475b0ae296c7d577e76b6d67f01ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -49,7 +49,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/withimages.h" line="20"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/withimages.h" line="20"/>
       </memberdef>
       <memberdef kind="function" id="classwx_with_images_1ab25ea07b6da88d532e224be8e037a816" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -67,7 +67,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/withimages.h" line="27"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/withimages.h" line="27"/>
       </memberdef>
       <memberdef kind="function" id="classwx_with_images_1a8436e7fdc49a5a23fdca2effebd319ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -85,7 +85,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/withimages.h" line="35"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/withimages.h" line="35"/>
       </memberdef>
       <memberdef kind="function" id="classwx_with_images_1a7dab9774f31c09a1fa0837bb384eb106" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_image_list" kindref="compound">wxImageList</ref> *</type>
@@ -99,7 +99,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/withimages.h" line="42"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/withimages.h" line="42"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-func">
@@ -114,7 +114,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/withimages.h" line="48"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/withimages.h" line="48"/>
       </memberdef>
       <memberdef kind="function" id="classwx_with_images_1a18df9cacf60a39bf0a7fb59d0eb18200" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_icon" kindref="compound">wxIcon</ref></type>
@@ -131,7 +131,7 @@
 <para>If there is no image list or if index == NO_IMAGE, silently returns wxNullIcon. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/withimages.h" line="56"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/withimages.h" line="56"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -139,60 +139,60 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="11652">
+      <node id="11841">
         <label>wxAuiNotebook</label>
         <link refid="classwx_aui_notebook"/>
-        <childnode refid="11651" relation="public-inheritance">
+        <childnode refid="11840" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11651">
+      <node id="11840">
         <label>wxBookCtrlBase</label>
         <link refid="classwx_book_ctrl_base"/>
-        <childnode refid="11650" relation="public-inheritance">
+        <childnode refid="11839" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11657">
+      <node id="11846">
         <label>wxTreebook</label>
         <link refid="classwx_treebook"/>
-        <childnode refid="11651" relation="public-inheritance">
+        <childnode refid="11840" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11654">
+      <node id="11843">
         <label>wxListbook</label>
         <link refid="classwx_listbook"/>
-        <childnode refid="11651" relation="public-inheritance">
+        <childnode refid="11840" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11656">
+      <node id="11845">
         <label>wxToolbook</label>
         <link refid="classwx_toolbook"/>
-        <childnode refid="11651" relation="public-inheritance">
+        <childnode refid="11840" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11653">
+      <node id="11842">
         <label>wxChoicebook</label>
         <link refid="classwx_choicebook"/>
-        <childnode refid="11651" relation="public-inheritance">
+        <childnode refid="11840" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11655">
+      <node id="11844">
         <label>wxNotebook</label>
         <link refid="classwx_notebook"/>
-        <childnode refid="11651" relation="public-inheritance">
+        <childnode refid="11840" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11650">
+      <node id="11839">
         <label>wxWithImages</label>
         <link refid="classwx_with_images"/>
       </node>
     </inheritancegraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/withimages.h" line="12" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/withimages.h" bodystart="11" bodyend="57"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/withimages.h" line="12" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/withimages.h" bodystart="11" bodyend="57"/>
     <listofallmembers>
       <member refid="classwx_with_images_1ab25ea07b6da88d532e224be8e037a816" prot="public" virt="non-virtual"><scope>wxWithImages</scope><name>AssignImageList</name></member>
       <member refid="classwx_with_images_1a18df9cacf60a39bf0a7fb59d0eb18200" prot="protected" virt="non-virtual"><scope>wxWithImages</scope><name>GetImage</name></member>
       <member refid="classwx_with_images_1a7dab9774f31c09a1fa0837bb384eb106" prot="public" virt="non-virtual"><scope>wxWithImages</scope><name>GetImageList</name></member>
       <member refid="classwx_with_images_1a828e23a0895ed6c664d077918eb7b5ee" prot="protected" virt="non-virtual"><scope>wxWithImages</scope><name>HasImageList</name></member>
-      <member refid="classwx_with_images_1ad1a815c59ab249d922bc3b072508d984a9c691a3188f0e2d96e1aa83fa5182406" prot="public" virt="non-virtual"><scope>wxWithImages</scope><name>NO_IMAGE</name></member>
+      <member refid="classwx_with_images_1a20d6b1bbdcca343bf3604d70086ad959a9c691a3188f0e2d96e1aa83fa5182406" prot="public" virt="non-virtual"><scope>wxWithImages</scope><name>NO_IMAGE</name></member>
       <member refid="classwx_with_images_1a8436e7fdc49a5a23fdca2effebd319ef" prot="public" virt="virtual"><scope>wxWithImages</scope><name>SetImageList</name></member>
       <member refid="classwx_with_images_1ace26c8e42e40f25cdbcd05fc9a870484" prot="public" virt="non-virtual"><scope>wxWithImages</scope><name>wxWithImages</name></member>
       <member refid="classwx_with_images_1a931475b0ae296c7d577e76b6d67f01ba" prot="public" virt="virtual"><scope>wxWithImages</scope><name>~wxWithImages</name></member>

@@ -26,7 +26,7 @@
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/persist.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/persist.h" line="326"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/persist.h" line="326"/>
       </memberdef>
       <memberdef kind="function" id="persist_8h_1aa88ad0cab20a78e9c930fbbbc6caa36d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -70,13 +70,13 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/persist.h&gt;
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/persist.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/persist.h" line="352"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/persist.h" line="352"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/persist.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/persist.h"/>
   </compounddef>
 </doxygen>

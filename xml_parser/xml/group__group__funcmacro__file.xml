@@ -180,38 +180,41 @@
 <para>We define these constants in wxWidgets because S_IREAD &amp;c are not standard. However, we do assume that the values correspond to the Unix umask bits. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="372" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" bodystart="371" bodyend="416"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filefn.h" line="372" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/filefn.h" bodystart="371" bodyend="416"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__group__funcmacro__file_1gae3981f8632f0391e5c852bf62eb982b0" prot="public" static="no">
+        <name>wxSeekMode</name>
+        <enumvalue id="group__group__funcmacro__file_1ggae3981f8632f0391e5c852bf62eb982b0afe95aa5f8bbda276d20a0860a2af841d" prot="public">
+          <name>wxFromStart</name>
+          <briefdescription>
+<para>Seek from the file beginning. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__group__funcmacro__file_1ggae3981f8632f0391e5c852bf62eb982b0a491b3d54f556fd0602fd4654003f8138" prot="public">
+          <name>wxFromCurrent</name>
+          <briefdescription>
+<para>Seek from the current position. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__group__funcmacro__file_1ggae3981f8632f0391e5c852bf62eb982b0a29f5709341b57c5c3474eb181c3ba33b" prot="public">
+          <name>wxFromEnd</name>
+          <briefdescription>
+<para>Seek from end of the file. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Parameter indicating how file offset should be interpreted. </para>        </briefdescription>
+        <detaileddescription>
+<para>This is used by <ref refid="classwx_f_file_1a5b629e330a80275fc8275b8b08a5b40e" kindref="member">wxFFile::Seek()</ref> and <ref refid="classwx_file_1a106441378d84369853a60b0c8846aa9a" kindref="member">wxFile::Seek()</ref>.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filefn.h" line="490" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/filefn.h" bodystart="489" bodyend="494"/>
       </memberdef>
       <memberdef kind="enum" id="group__group__funcmacro__file_1ga68af15575db590aaa874d40a1073809d" prot="public" static="no">
         <name>wxFileKind</name>
-        <enumvalue id="group__group__funcmacro__file_1gga68af15575db590aaa874d40a1073809dad3eb9262e8b40fafb4f4e6906f072268" prot="public">
-          <name>wxFILE_KIND_UNKNOWN</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="group__group__funcmacro__file_1gga68af15575db590aaa874d40a1073809da8ae84056179343e1c01d426aaa3f6ccd" prot="public">
-          <name>wxFILE_KIND_DISK</name>
-          <briefdescription>
-<para>A file supporting seeking to arbitrary offsets. </para>          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="group__group__funcmacro__file_1gga68af15575db590aaa874d40a1073809da356638265164942b77d7ba9a0ca850ce" prot="public">
-          <name>wxFILE_KIND_TERMINAL</name>
-          <briefdescription>
-<para>A terminal. </para>          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="group__group__funcmacro__file_1gga68af15575db590aaa874d40a1073809dae56644a4f434d367dcf033e76e1c77c5" prot="public">
-          <name>wxFILE_KIND_PIPE</name>
-          <briefdescription>
-<para>A pipe. </para>          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
         <enumvalue id="group__group__funcmacro__file_1gga68af15575db590aaa874d40a1073809dad3eb9262e8b40fafb4f4e6906f072268" prot="public">
           <name>wxFILE_KIND_UNKNOWN</name>
           <briefdescription>
@@ -243,10 +246,10 @@
         <briefdescription>
 <para>File kind enumerations returned from <ref refid="group__group__funcmacro__file_1ga4fd2489fadb203b1c4451f2642b3eb8f" kindref="member">wxGetFileKind()</ref>. </para>        </briefdescription>
         <detaileddescription>
-<para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
+<para>Also used by <ref refid="classwx_f_file_1a7d1b48920f6583f9a50f7f21cbaa6b2e" kindref="member">wxFFile::GetKind()</ref> and <ref refid="classwx_file_1a765609522af7fbf010a76902961673be" kindref="member">wxFile::GetKind()</ref>.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="488" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" bodystart="487" bodyend="493"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filefn.h" line="504" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/filefn.h" bodystart="503" bodyend="509"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="typedef">
@@ -261,7 +264,7 @@
 <para>It is type-defined as <computeroutput>off_t</computeroutput> on POSIX platforms (see <ulink url="http://www.gnu.org/software/libc/manual/html_node/File-Position-Primitive.html">http://www.gnu.org/software/libc/manual/html_node/File-Position-Primitive.html</ulink>) or to <computeroutput>wxLongLong_t</computeroutput> on Windows when <computeroutput>wxHAS_HUGE_FILES</computeroutput> is defined. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="120" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" bodystart="120" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filefn.h" line="120" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/filefn.h" bodystart="120" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="var">
@@ -277,7 +280,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="111" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" bodystart="111" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filefn.h" line="111" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/filefn.h" bodystart="111" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -300,7 +303,7 @@
 <para>Useful when converting an old application to use streams (within the document/view framework, for example).</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/docview.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/docview.h" line="1643"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/docview.h" line="1623"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__file_1gaa5f4996b72cfd90c82d42b9038566828" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -321,7 +324,7 @@
 <para>Useful when converting an old application to use streams (within the document/view framework, for example).</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/docview.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/docview.h" line="1653"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/docview.h" line="1633"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__file_1gab94c2e0044fd40d901ac250be547d0da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -351,7 +354,7 @@
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="151"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filefn.h" line="151"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__file_1ga26e222d4250fd4cab65f03fc89b7ec45" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -364,7 +367,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/filefn.h&gt; 
 <para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="159"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filefn.h" line="159"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__file_1ga499c49ff35d9a9b6cff8cbbdba46b322" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -390,7 +393,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/filefn.h&gt; 
 </programlisting></para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="177"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filefn.h" line="177"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__file_1ga42358e18253927c01bfc5f48e6778075" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -407,7 +410,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/filefn.h&gt; 
 <para><xrefsect id="deprecated_1_deprecated000013"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Construct a <ref refid="classwx_file_name" kindref="compound">wxFileName</ref> with wxPATH_DOS and then use wxFileName::GetFullPath(wxPATH_UNIX) instead.</para></xrefdescription></xrefsect></para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="189"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filefn.h" line="189"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__file_1gaae581d4a5d5a334a0e10ed53470312be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -424,7 +427,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/filefn.h&gt; 
 <para><xrefsect id="deprecated_1_deprecated000014"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Construct a <ref refid="classwx_file_name" kindref="compound">wxFileName</ref> with wxPATH_UNIX and then use wxFileName::GetFullPath(wxPATH_DOS) instead.</para></xrefdescription></xrefsect></para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="201"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filefn.h" line="201"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__file_1ga3e960a6805631320fede18bf1176f278" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -441,7 +444,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/filefn.h&gt; 
 <para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="208"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filefn.h" line="208"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__file_1ga3ab12077f51f54497b7ce829a4339326" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -470,7 +473,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/filefn.h&gt; 
 <para><xrefsect id="deprecated_1_deprecated000015"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This function is obsolete, please use <ref refid="classwx_file_name_1a4f06c2499ce10643e41175405b93e61c" kindref="member">wxFileName::SplitPath()</ref> instead.</para></xrefdescription></xrefsect></para><para>This function splits a full file name into components: the path (including possible disk/drive specification under Windows), the base name, and the extension. Any of the output parameters (<emphasis>path</emphasis>, <emphasis>name</emphasis> or <emphasis>ext</emphasis>) may be NULL if you are not interested in the value of a particular component.</para><para><ref refid="group__group__funcmacro__file_1ga3ab12077f51f54497b7ce829a4339326" kindref="member">wxSplitPath()</ref> will correctly handle filenames with both DOS and Unix path separators under Windows, however it will not consider backslashes as path separators under Unix (where backslash is a valid character in a filename).</para><para>On entry, <emphasis>fullname</emphasis> should be non-NULL (it may be empty though).</para><para>On return, <emphasis>path</emphasis> contains the file path (without the trailing separator), <emphasis>name</emphasis> contains the file name and <computeroutput>ext</computeroutput> contains the file extension without leading dot. All three of them may be empty if the corresponding component is. The old contents of the strings pointed to by these parameters will be overwritten in any case (if the pointers are not NULL).</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="236"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filefn.h" line="236"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__file_1ga45ff442ed00090a09401fc1c93a5747e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>time_t</type>
@@ -487,7 +490,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/filefn.h&gt; 
 <para>The function returns <computeroutput>(time_t)-1</computeroutput> if an error occurred (e.g. file not found).</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="246"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filefn.h" line="246"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__file_1ga599c484cd4deea8fed7275a9a7e0a11c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -513,7 +516,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/filefn.h&gt; 
 <para>If <emphasis>file2</emphasis> is a directory, <emphasis>file1</emphasis> is moved into it (<emphasis>overwrite</emphasis> is ignored in this case). Otherwise, if <emphasis>file2</emphasis> is an existing file, it is overwritten if <emphasis>overwrite</emphasis> is true (default) and the function fails if <emphasis>overwrite</emphasis> is false.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="260"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filefn.h" line="260"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__file_1ga65ec867ed441231ed2ba67b3bb5ee4e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -539,7 +542,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/filefn.h&gt; 
 <para>If <emphasis>overwrite</emphasis> parameter is true (default), the destination file is overwritten if it exists, but if <emphasis>overwrite</emphasis> is false, the functions fails in this case.</para><para>This function supports resources forks under Mac OS.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="273"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filefn.h" line="273"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__file_1ga72d2e4ef03d51c0d59c2cb788462d600" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -556,7 +559,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/filefn.h&gt; 
 <para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="280"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filefn.h" line="280"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__file_1ga0d499f5b09fb2b6e381bddff181dba17" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -582,7 +585,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/filefn.h&gt; 
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="293"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filefn.h" line="293"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__file_1ga139aabab52fdd09c37716662d6a47110" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -605,7 +608,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/filefn.h&gt; 
 <para><xrefsect id="deprecated_1_deprecated000016"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This function is deprecated, use <ref refid="group__group__funcmacro__file_1gab0cc6ceca11d23f61cba353c01eeac06" kindref="member">wxGetCwd()</ref> instead.</para></xrefdescription></xrefsect></para><para>Copies the current working directory into the buffer if supplied, or copies the working directory into new storage (which you must delete yourself) if the buffer is NULL.</para><para><emphasis>sz</emphasis> is the size of the buffer if supplied.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="306"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filefn.h" line="306"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__file_1ga5a4bc3ac5b1952c29416335daa9ba0dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -622,7 +625,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/filefn.h&gt; 
 <para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="313"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filefn.h" line="313"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__file_1gac3789ec7318ad36e403f32bb8269d001" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -640,7 +643,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/filefn.h&gt; 
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="322"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filefn.h" line="322"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__file_1gaa80bce04d491b7e27cc3e78cab979ed8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -657,7 +660,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/filefn.h&gt; 
 <para>with a slash or drive name at the beginning.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="330"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filefn.h" line="330"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__file_1gab0cc6ceca11d23f61cba353c01eeac06" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -670,7 +673,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/filefn.h&gt; 
 <para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="337"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filefn.h" line="337"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__file_1ga315b861f905ae6b3915faa79526a198e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -687,7 +690,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/filefn.h&gt; 
 <para>Under MS Windows, the current drive is also changed if <emphasis>dir</emphasis> contains a drive specification.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="346"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filefn.h" line="346"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__file_1ga1f2c59b71636d40bafa3757fcf36cd67" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -712,7 +715,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/filefn.h&gt; 
 <para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="356"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filefn.h" line="356"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__file_1ga147f3601590c8c29a97d1101e03b2b90" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -729,7 +732,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/filefn.h&gt; 
 <para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="363"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filefn.h" line="363"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__file_1ga3510d5cf8163eded5bae385ce758df57" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -751,7 +754,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/filefn.h&gt; 
 <para><emphasis>perm</emphasis> is the access mask for the directory for the systems on which it is supported (Unix) and doesn&apos;t have any effect on the other ones.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="426"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filefn.h" line="426"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__file_1ga9ae2276737ad4fe72ea96c5f2d9bbfd3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -774,7 +777,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/filefn.h&gt; 
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="441"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filefn.h" line="441"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__file_1gabc2b3ae7f5c1f49034cc8577f00bc235" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -787,7 +790,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/filefn.h&gt; 
 <para>See <ref refid="group__group__funcmacro__file_1gab136c4ed6c3d71262d12780b723479ce" kindref="member">wxFindFirstFile()</ref> for an example.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="450"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filefn.h" line="450"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__file_1gab136c4ed6c3d71262d12780b723479ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -816,10 +819,10 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/filefn.h&gt; 
 </programlisting></para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="480"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filefn.h" line="480"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__file_1ga4fd2489fadb203b1c4451f2642b3eb8f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="ffile_8h_1a68af15575db590aaa874d40a1073809d" kindref="member">wxFileKind</ref></type>
+        <type><ref refid="group__group__funcmacro__file_1ga68af15575db590aaa874d40a1073809d" kindref="member">wxFileKind</ref></type>
         <definition>wxFileKind wxGetFileKind</definition>
         <argsstring>(int fd)</argsstring>
         <name>wxGetFileKind</name>
@@ -833,10 +836,10 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/filefn.h&gt; 
 <para>Possible return values are enumerations of <ref refid="group__group__funcmacro__file_1ga68af15575db590aaa874d40a1073809d" kindref="member">wxFileKind</ref>.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="505"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filefn.h" line="521"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__file_1ga749d8c7166598b5a82a7b638b0cb4d35" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="ffile_8h_1a68af15575db590aaa874d40a1073809d" kindref="member">wxFileKind</ref></type>
+        <type><ref refid="group__group__funcmacro__file_1ga68af15575db590aaa874d40a1073809d" kindref="member">wxFileKind</ref></type>
         <definition>wxFileKind wxGetFileKind</definition>
         <argsstring>(FILE *fp)</argsstring>
         <name>wxGetFileKind</name>
@@ -850,7 +853,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/filefn.h&gt; 
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="506"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filefn.h" line="522"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__file_1ga2414d8f9b3d08370551b0609eef5f0db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -867,7 +870,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/filefn.h&gt; 
 <para><xrefsect id="deprecated_1_deprecated000017"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This function is obsolete, please use <ref refid="classwx_file_name_1a4f06c2499ce10643e41175405b93e61c" kindref="member">wxFileName::SplitPath()</ref> instead.</para></xrefdescription></xrefsect></para><para>Returns the filename for a full path. The second form returns a pointer to temporary storage that should not be deallocated.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="520"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filefn.h" line="536"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__file_1ga0d16799305c79b72c1b62fce18734075" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>char *</type>
@@ -884,7 +887,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/filefn.h&gt; 
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="521"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filefn.h" line="537"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__file_1ga550c9561a7a15c571cb8ddf79d233457" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>char *</type>
@@ -906,7 +909,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/filefn.h&gt; 
 <para><xrefsect id="deprecated_1_deprecated000018"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This function is obsolete, please use <ref refid="classwx_file_name_1a416af84fddd624a3b457dbffbe174317" kindref="member">wxFileName::CreateTempFileName()</ref> instead.</para></xrefdescription></xrefsect></para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="532"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filefn.h" line="548"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__file_1gad57f5b539f70d723cff8b8b6084f0332" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -927,7 +930,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/filefn.h&gt; 
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="533"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filefn.h" line="549"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="define">
@@ -940,7 +943,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/filefn.h&gt; 
 <para>It works by declaring a variable which sets umask to <emphasis>mask</emphasis> in its constructor and restores it in its destructor. Under other platforms this macro expands to nothing.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="131" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" bodystart="131" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filefn.h" line="131" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/filefn.h" bodystart="131" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

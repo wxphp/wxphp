@@ -1,0 +1,193 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="classwx_wrapper_input_stream" kind="class" prot="public">
+    <compoundname>wxWrapperInputStream</compoundname>
+    <basecompoundref refid="classwx_filter_input_stream" prot="public" virt="non-virtual">wxFilterInputStream</basecompoundref>
+    <derivedcompoundref refid="classwx_f_s_input_stream" prot="public" virt="non-virtual">wxFSInputStream</derivedcompoundref>
+    <includes local="no">wx/stream.h</includes>
+      <sectiondef kind="user-defined">
+      <memberdef kind="function" id="classwx_wrapper_input_stream_1a3c6358c88884006e0e15ec0e1c189fca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxWrapperInputStream::wxWrapperInputStream</definition>
+        <argsstring>(wxInputStream &amp;stream)</argsstring>
+        <name>wxWrapperInputStream</name>
+        <param>
+          <type><ref refid="classwx_input_stream" kindref="compound">wxInputStream</ref> &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <briefdescription>
+<para>Initializes a wrapper stream. </para>        </briefdescription>
+        <detaileddescription>
+<para>If the parent stream is passed as a pointer then the new wrapper stream takes ownership of it. If it is passed by reference then it does not. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stream.h" line="1096"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_wrapper_input_stream_1a13f5184e23c6a5c7a67893a401bfefad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxWrapperInputStream::wxWrapperInputStream</definition>
+        <argsstring>(wxInputStream *stream)</argsstring>
+        <name>wxWrapperInputStream</name>
+        <param>
+          <type><ref refid="classwx_input_stream" kindref="compound">wxInputStream</ref> *</type>
+          <declname>stream</declname>
+        </param>
+        <briefdescription>
+<para>Initializes a wrapper stream. </para>        </briefdescription>
+        <detaileddescription>
+<para>If the parent stream is passed as a pointer then the new wrapper stream takes ownership of it. If it is passed by reference then it does not. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stream.h" line="1097"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <memberdef kind="function" id="classwx_wrapper_input_stream_1af2b30e695a9309426c50d740f2574ef3" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxWrapperInputStream::InitParentStream</definition>
+        <argsstring>(wxInputStream &amp;stream)</argsstring>
+        <name>InitParentStream</name>
+        <param>
+          <type><ref refid="classwx_input_stream" kindref="compound">wxInputStream</ref> &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <briefdescription>
+<para>Set up the wrapped stream for an object initialized using the default constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para>The ownership logic is the same as for the non-default constructor, i.e. this object takes ownership of the stream if it&apos;s passed by pointer but not if it&apos;s passed by reference. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stream.h" line="1119"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_wrapper_input_stream_1a1befcdaf5494c9cd42ebff692a02e640" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxWrapperInputStream::InitParentStream</definition>
+        <argsstring>(wxInputStream *stream)</argsstring>
+        <name>InitParentStream</name>
+        <param>
+          <type><ref refid="classwx_input_stream" kindref="compound">wxInputStream</ref> *</type>
+          <declname>stream</declname>
+        </param>
+        <briefdescription>
+<para>Set up the wrapped stream for an object initialized using the default constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para>The ownership logic is the same as for the non-default constructor, i.e. this object takes ownership of the stream if it&apos;s passed by pointer but not if it&apos;s passed by reference. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stream.h" line="1120"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classwx_wrapper_input_stream_1a6182cc3ea1788f2821e597aff1b8ea69" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxWrapperInputStream::wxWrapperInputStream</definition>
+        <argsstring>()</argsstring>
+        <name>wxWrapperInputStream</name>
+        <briefdescription>
+<para>Default constructor, use <ref refid="classwx_wrapper_input_stream_1af2b30e695a9309426c50d740f2574ef3" kindref="member">InitParentStream()</ref> to finish initialization. </para>        </briefdescription>
+        <detaileddescription>
+<para>This constructor can be used by the derived classes from their own constructors when the parent stream can&apos;t be specified immediately. The derived class must call <ref refid="classwx_wrapper_input_stream_1af2b30e695a9309426c50d740f2574ef3" kindref="member">InitParentStream()</ref> later to do it. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stream.h" line="1108"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A wrapper input stream is a kind of filter stream which forwards all the operations to its base stream. </para>    </briefdescription>
+    <detaileddescription>
+<para>This is useful to build utility classes such as <ref refid="classwx_f_s_input_stream" kindref="compound">wxFSInputStream</ref>.</para><para><simplesect kind="note"><para>The interface of this class is the same as that of <ref refid="classwx_input_stream" kindref="compound">wxInputStream</ref>. Only a constructor differs and it is documented below.</para></simplesect>
+<heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__streams" kindref="compound">Streams</ref></para><para><simplesect kind="see"><para><ref refid="classwx_f_s_input_stream" kindref="compound">wxFSInputStream</ref>, <ref refid="classwx_filter_input_stream" kindref="compound">wxFilterInputStream</ref> </para></simplesect>
+<simplesect kind="since"><para>2.9.4 </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="11907">
+        <label>wxInputStream</label>
+        <link refid="classwx_input_stream"/>
+        <childnode refid="11908" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11905">
+        <label>wxWrapperInputStream</label>
+        <link refid="classwx_wrapper_input_stream"/>
+        <childnode refid="11906" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11909">
+        <label>wxFSInputStream</label>
+        <link refid="classwx_f_s_input_stream"/>
+        <childnode refid="11905" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11908">
+        <label>wxStreamBase</label>
+        <link refid="classwx_stream_base"/>
+      </node>
+      <node id="11906">
+        <label>wxFilterInputStream</label>
+        <link refid="classwx_filter_input_stream"/>
+        <childnode refid="11907" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="11912">
+        <label>wxInputStream</label>
+        <link refid="classwx_input_stream"/>
+        <childnode refid="11913" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11910">
+        <label>wxWrapperInputStream</label>
+        <link refid="classwx_wrapper_input_stream"/>
+        <childnode refid="11911" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11913">
+        <label>wxStreamBase</label>
+        <link refid="classwx_stream_base"/>
+      </node>
+      <node id="11911">
+        <label>wxFilterInputStream</label>
+        <link refid="classwx_filter_input_stream"/>
+        <childnode refid="11912" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stream.h" line="1087" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/stream.h" bodystart="1086" bodyend="1122"/>
+    <listofallmembers>
+      <member refid="classwx_input_stream_1a72111c617db403344a2dd6b8c13330c3" prot="public" virt="virtual"><scope>wxWrapperInputStream</scope><name>CanRead</name></member>
+      <member refid="classwx_input_stream_1a177bb52eb500be28c8d41f959b0fb6be" prot="public" virt="virtual"><scope>wxWrapperInputStream</scope><name>Eof</name></member>
+      <member refid="classwx_input_stream_1a98462fa7198b5c9dca1c71acf6148e0b" prot="public" virt="non-virtual"><scope>wxWrapperInputStream</scope><name>GetC</name></member>
+      <member refid="classwx_stream_base_1aca7d52699887bc33bec4810bf6fe29ba" prot="public" virt="non-virtual"><scope>wxWrapperInputStream</scope><name>GetLastError</name></member>
+      <member refid="classwx_stream_base_1a0d2d992fd98835aabf2b9b656a1e6ccd" prot="public" virt="virtual"><scope>wxWrapperInputStream</scope><name>GetLength</name></member>
+      <member refid="classwx_stream_base_1a6ca6e81329a81252c50ccba1ee9249d8" prot="public" virt="virtual"><scope>wxWrapperInputStream</scope><name>GetSize</name></member>
+      <member refid="classwx_wrapper_input_stream_1af2b30e695a9309426c50d740f2574ef3" prot="protected" virt="non-virtual"><scope>wxWrapperInputStream</scope><name>InitParentStream</name></member>
+      <member refid="classwx_wrapper_input_stream_1a1befcdaf5494c9cd42ebff692a02e640" prot="protected" virt="non-virtual"><scope>wxWrapperInputStream</scope><name>InitParentStream</name></member>
+      <member refid="classwx_stream_base_1a40b8d76951fdbc283a312ad8c12cfe9b" prot="public" virt="virtual"><scope>wxWrapperInputStream</scope><name>IsOk</name></member>
+      <member refid="classwx_stream_base_1a1b575329128f8ec7a369c9b2f7593d93" prot="public" virt="virtual"><scope>wxWrapperInputStream</scope><name>IsSeekable</name></member>
+      <member refid="classwx_input_stream_1a475a7fe822572eb15182fea22f5969d9" prot="public" virt="virtual"><scope>wxWrapperInputStream</scope><name>LastRead</name></member>
+      <member refid="classwx_input_stream_1a8ebacd18964a4b169a62ad9190cab4d5" prot="protected" virt="pure-virtual"><scope>wxWrapperInputStream</scope><name>OnSysRead</name></member>
+      <member refid="classwx_stream_base_1ae38e82c374f82d39993909f0a5d3017e" prot="protected" virt="virtual"><scope>wxWrapperInputStream</scope><name>OnSysSeek</name></member>
+      <member refid="classwx_stream_base_1a7bb3b0b470e960d1165a28e83d576c1b" prot="protected" virt="virtual"><scope>wxWrapperInputStream</scope><name>OnSysTell</name></member>
+      <member refid="classwx_stream_base_1aaee699fe59f603eaae1550ee55ac579f" prot="public" virt="non-virtual"><scope>wxWrapperInputStream</scope><name>operator!</name></member>
+      <member refid="classwx_input_stream_1a42dc4394276b726b9877faf2c71ae408" prot="public" virt="virtual"><scope>wxWrapperInputStream</scope><name>Peek</name></member>
+      <member refid="classwx_input_stream_1a72f24d0f50c7f07bb68dedf5e8690f4e" prot="public" virt="virtual"><scope>wxWrapperInputStream</scope><name>Read</name></member>
+      <member refid="classwx_input_stream_1a05cc7b25c9df86f00157a34ee9809bd5" prot="public" virt="non-virtual"><scope>wxWrapperInputStream</scope><name>Read</name></member>
+      <member refid="classwx_stream_base_1a52353ac42f72538b2022a84f416e5fe2" prot="public" virt="non-virtual"><scope>wxWrapperInputStream</scope><name>Reset</name></member>
+      <member refid="classwx_input_stream_1a989ed0f85fe7340cc0996bbcee03822d" prot="public" virt="virtual"><scope>wxWrapperInputStream</scope><name>SeekI</name></member>
+      <member refid="classwx_input_stream_1aece5e9ece88100f15fa91802b005ef4b" prot="public" virt="virtual"><scope>wxWrapperInputStream</scope><name>TellI</name></member>
+      <member refid="classwx_input_stream_1a503ff01720f51c4fb170aa78a296be9d" prot="public" virt="non-virtual"><scope>wxWrapperInputStream</scope><name>Ungetch</name></member>
+      <member refid="classwx_input_stream_1a7fe847c79f8d2e1b98bb129c23e549c7" prot="public" virt="non-virtual"><scope>wxWrapperInputStream</scope><name>Ungetch</name></member>
+      <member refid="classwx_filter_input_stream_1a21dda00003313a92200677f2d9c78d99" prot="public" virt="non-virtual"><scope>wxWrapperInputStream</scope><name>wxFilterInputStream</name></member>
+      <member refid="classwx_filter_input_stream_1a64c3433e69bcec829fec8e0381a24847" prot="public" virt="non-virtual"><scope>wxWrapperInputStream</scope><name>wxFilterInputStream</name></member>
+      <member refid="classwx_input_stream_1aeb3e1146260cabcfbe631ff3493ee851" prot="public" virt="non-virtual"><scope>wxWrapperInputStream</scope><name>wxInputStream</name></member>
+      <member refid="classwx_stream_base_1a2bdb01f1ccd34d551d3cfc848054bf1e" prot="public" virt="non-virtual"><scope>wxWrapperInputStream</scope><name>wxStreamBase</name></member>
+      <member refid="classwx_wrapper_input_stream_1a3c6358c88884006e0e15ec0e1c189fca" prot="public" virt="non-virtual"><scope>wxWrapperInputStream</scope><name>wxWrapperInputStream</name></member>
+      <member refid="classwx_wrapper_input_stream_1a13f5184e23c6a5c7a67893a401bfefad" prot="public" virt="non-virtual"><scope>wxWrapperInputStream</scope><name>wxWrapperInputStream</name></member>
+      <member refid="classwx_wrapper_input_stream_1a6182cc3ea1788f2821e597aff1b8ea69" prot="protected" virt="non-virtual"><scope>wxWrapperInputStream</scope><name>wxWrapperInputStream</name></member>
+      <member refid="classwx_input_stream_1a30fea51e11bbf042f29bdf82bc052ab2" prot="public" virt="virtual"><scope>wxWrapperInputStream</scope><name>~wxInputStream</name></member>
+      <member refid="classwx_stream_base_1aebba32b4da79c60933fa997735a8bfe5" prot="public" virt="virtual"><scope>wxWrapperInputStream</scope><name>~wxStreamBase</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -9,10 +9,13 @@
  * 
 */
 
+#ifndef wxphp_app_h_guard
+#define wxphp_app_h_guard
+
 extern zend_class_entry *php_wxApp_entry;
 
-#define PHP_wxApp_NAME "wxApp"
-#define le_wxApp_name  "native wxApp"
+extern char PHP_wxApp_NAME[];
+extern char le_wxApp_name[];
 
 extern int le_wxApp;
 
@@ -32,3 +35,5 @@ static function_entry php_wxApp_functions[] = {
 	PHP_ME(php_wxApp, __construct, NULL,ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	{ NULL, NULL, NULL }
 };
+
+#endif //wxphp_app_h_guard

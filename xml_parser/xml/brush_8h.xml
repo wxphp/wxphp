@@ -125,7 +125,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" line="13" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" bodystart="12" bodyend="53"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/brush.h" line="13" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/brush.h" bodystart="12" bodyend="53"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="var">
@@ -140,7 +140,7 @@
 <para><ref refid="classwx_brush_1aafe8cee326d90dc7145968370153ba0a" kindref="member">wxBrush::IsOk()</ref> always returns false for this object. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" line="267" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" bodystart="267" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/brush.h" line="267" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/brush.h" bodystart="267" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="brush_8h_1a59deb993532ba47750c074a6539c557d" prot="public" static="no" mutable="no">
         <type><ref refid="classwx_brush" kindref="compound">wxBrush</ref> *</type>
@@ -153,7 +153,7 @@
 <para>Except for the color it has all standard attributes (<computeroutput>wxBRUSHSTYLE_SOLID</computeroutput>, no stipple bitmap, etc...). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" line="274" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" bodystart="274" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/brush.h" line="274" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/brush.h" bodystart="274" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="brush_8h_1aff6f39b67542f4a88437e9694b0a5deb" prot="public" static="no" mutable="no">
         <type><ref refid="classwx_brush" kindref="compound">wxBrush</ref> *</type>
@@ -166,7 +166,7 @@
 <para>Except for the color it has all standard attributes (<computeroutput>wxBRUSHSTYLE_SOLID</computeroutput>, no stipple bitmap, etc...). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" line="281" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" bodystart="281" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/brush.h" line="281" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/brush.h" bodystart="281" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="brush_8h_1ac7945749352f1e4e03d841fd93f95b18" prot="public" static="no" mutable="no">
         <type><ref refid="classwx_brush" kindref="compound">wxBrush</ref> *</type>
@@ -179,7 +179,7 @@
 <para>Except for the color it has all standard attributes (<computeroutput>wxBRUSHSTYLE_SOLID</computeroutput>, no stipple bitmap, etc...). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" line="288" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" bodystart="288" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/brush.h" line="288" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/brush.h" bodystart="288" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="brush_8h_1aae5659773c29d950f587fd01ac0b5649" prot="public" static="no" mutable="no">
         <type><ref refid="classwx_brush" kindref="compound">wxBrush</ref> *</type>
@@ -192,7 +192,7 @@
 <para>Except for the color it has all standard attributes (<computeroutput>wxBRUSHSTYLE_SOLID</computeroutput>, no stipple bitmap, etc...). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" line="295" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" bodystart="295" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/brush.h" line="295" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/brush.h" bodystart="295" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="brush_8h_1a69faad3dd0814b86866bd36d0963d598" prot="public" static="no" mutable="no">
         <type><ref refid="classwx_brush" kindref="compound">wxBrush</ref> *</type>
@@ -205,7 +205,7 @@
 <para>Except for the color it has all standard attributes (<computeroutput>wxBRUSHSTYLE_SOLID</computeroutput>, no stipple bitmap, etc...). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" line="302" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" bodystart="302" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/brush.h" line="302" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/brush.h" bodystart="302" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="brush_8h_1a9fd61bfd0445d71e17e56d836098096f" prot="public" static="no" mutable="no">
         <type><ref refid="classwx_brush" kindref="compound">wxBrush</ref> *</type>
@@ -218,7 +218,7 @@
 <para>Except for the color it has all standard attributes (<computeroutput>wxBRUSHSTYLE_SOLID</computeroutput>, no stipple bitmap, etc...). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" line="309" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" bodystart="309" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/brush.h" line="309" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/brush.h" bodystart="309" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="brush_8h_1ad2ba01aad1dbd57e361a623b109a0dde" prot="public" static="no" mutable="no">
         <type><ref refid="classwx_brush" kindref="compound">wxBrush</ref> *</type>
@@ -231,7 +231,7 @@
 <para>Except for the color it has all standard attributes (<computeroutput>wxBRUSHSTYLE_SOLID</computeroutput>, no stipple bitmap, etc...). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" line="316" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" bodystart="316" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/brush.h" line="316" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/brush.h" bodystart="316" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="brush_8h_1a031a216a3113203ad79a534ebf2dafea" prot="public" static="no" mutable="no">
         <type><ref refid="classwx_brush" kindref="compound">wxBrush</ref> *</type>
@@ -244,7 +244,7 @@
 <para>Except for the color it has all standard attributes (<computeroutput>wxBRUSHSTYLE_SOLID</computeroutput>, no stipple bitmap, etc...). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" line="323" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" bodystart="323" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/brush.h" line="323" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/brush.h" bodystart="323" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="brush_8h_1aa6cac71d7ee6ae54c3e6d2c87244d5b4" prot="public" static="no" mutable="no">
         <type><ref refid="classwx_brush" kindref="compound">wxBrush</ref> *</type>
@@ -257,7 +257,7 @@
 <para>Except for the color it has all standard attributes (<computeroutput>wxBRUSHSTYLE_SOLID</computeroutput>, no stipple bitmap, etc...). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" line="330" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" bodystart="330" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/brush.h" line="330" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/brush.h" bodystart="330" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="brush_8h_1a84d6b55f9b1b70e1c5f36aad248c7968" prot="public" static="no" mutable="no">
         <type><ref refid="classwx_brush" kindref="compound">wxBrush</ref> *</type>
@@ -270,7 +270,7 @@
 <para>Except for the color it has all standard attributes (<computeroutput>wxBRUSHSTYLE_SOLID</computeroutput>, no stipple bitmap, etc...). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" line="337" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" bodystart="337" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/brush.h" line="337" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/brush.h" bodystart="337" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="brush_8h_1a1556203b5244291d8c0a07e8e58f9ad2" prot="public" static="no" mutable="no">
         <type><ref refid="classwx_brush" kindref="compound">wxBrush</ref> *</type>
@@ -283,7 +283,7 @@
 <para>Except for the color it has all standard attributes (<computeroutput>wxBRUSHSTYLE_SOLID</computeroutput>, no stipple bitmap, etc...). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" line="344" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" bodystart="344" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/brush.h" line="344" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/brush.h" bodystart="344" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="brush_8h_1acb7c7a277d9b428fc6cdfd97437d6ef8" prot="public" static="no" mutable="no">
         <type><ref refid="classwx_brush_list" kindref="compound">wxBrushList</ref> *</type>
@@ -296,13 +296,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" line="380" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" bodystart="380" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/brush.h" line="380" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/brush.h" bodystart="380" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/brush.h"/>
   </compounddef>
 </doxygen>

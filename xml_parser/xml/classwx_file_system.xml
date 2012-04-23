@@ -16,7 +16,7 @@
 <para>The initial current path of this object will be empty (i.e. <ref refid="classwx_file_system_1a7d259cc06bd84c5292c69acad237dc0a" kindref="member">GetPath()</ref> == wxEmptyString) which means that e.g. <ref refid="classwx_file_system_1a01c6b989e86e34da21e94c802e516b16" kindref="member">OpenFile()</ref> or <ref refid="classwx_file_system_1a93f5d9fc8fe388213f8ed7dddc55db71" kindref="member">FindFirst()</ref> functions will use current working directory as current path (see also wxGetCwd). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filesys.h" line="45"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filesys.h" line="45"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_system_1ad491d9cb899dcdd3b9960c1974e34da0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -60,7 +60,7 @@ All these commands change the path to &quot;dir/subdir/&quot;:</para><para><prog
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filesys.h" line="92"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filesys.h" line="97"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_system_1aa398cf786d93b2033782eb31efb6d63e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -107,7 +107,7 @@ All these commands change the path to &quot;dir/subdir/&quot;:</para><para><prog
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filesys.h" line="116"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filesys.h" line="121"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_system_1a93f5d9fc8fe388213f8ed7dddc55db71" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -144,7 +144,7 @@ All these commands change the path to &quot;dir/subdir/&quot;:</para><para><prog
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filesys.h" line="129"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filesys.h" line="134"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_system_1ae654ed12023c1a1776fdaf340f9012ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -157,7 +157,7 @@ All these commands change the path to &quot;dir/subdir/&quot;:</para><para><prog
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filesys.h" line="134"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filesys.h" line="139"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_system_1a7d259cc06bd84c5292c69acad237dc0a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -170,7 +170,7 @@ All these commands change the path to &quot;dir/subdir/&quot;:</para><para><prog
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filesys.h" line="139"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filesys.h" line="144"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_system_1a01c6b989e86e34da21e94c802e516b16" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_f_s_file" kindref="compound">wxFSFile</ref> *</type>
@@ -193,7 +193,7 @@ All these commands change the path to &quot;dir/subdir/&quot;:</para><para><prog
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filesys.h" line="170"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filesys.h" line="175"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -214,7 +214,24 @@ All these commands change the path to &quot;dir/subdir/&quot;:</para><para><prog
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filesys.h" line="62"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filesys.h" line="62"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_system_1a4dfed1274580f8fcbfd02e27bcb920d1" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_file_system_handler" kindref="compound">wxFileSystemHandler</ref> *</type>
+        <definition>static wxFileSystemHandler* wxFileSystem::RemoveHandler</definition>
+        <argsstring>(wxFileSystemHandler *handler)</argsstring>
+        <name>RemoveHandler</name>
+        <param>
+          <type><ref refid="classwx_file_system_handler" kindref="compound">wxFileSystemHandler</ref> *</type>
+          <declname>handler</declname>
+        </param>
+        <briefdescription>
+<para>Remove a filesystem handler from the list of handlers. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filesys.h" line="67"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_system_1a616610cafdb14b841940d5e6b08a9615" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -232,7 +249,7 @@ All these commands change the path to &quot;dir/subdir/&quot;:</para><para><prog
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filesys.h" line="99"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filesys.h" line="104"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_system_1ac6d225954ea267ae5a6808aa61c86175" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -249,7 +266,7 @@ All these commands change the path to &quot;dir/subdir/&quot;:</para><para><prog
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filesys.h" line="145"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filesys.h" line="150"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_system_1a4c8dfb97bf9fdc0c6c1f89050d3c1974" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_file_name" kindref="compound">wxFileName</ref></type>
@@ -266,7 +283,7 @@ All these commands change the path to &quot;dir/subdir/&quot;:</para><para><prog
 <para>The URL must use the <computeroutput>file</computeroutput> protocol. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filesys.h" line="176"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filesys.h" line="181"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -276,37 +293,37 @@ All these commands change the path to &quot;dir/subdir/&quot;:</para><para><prog
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__vfs" kindref="compound">Virtual File System</ref></para><para><simplesect kind="see"><para><ref refid="classwx_file_system_handler" kindref="compound">wxFileSystemHandler</ref>, <ref refid="classwx_f_s_file" kindref="compound">wxFSFile</ref>, <ref refid="overview_fs" kindref="compound">wxFileSystem Overview</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="6250">
+      <node id="6369">
         <label>wxFileSystem</label>
         <link refid="classwx_file_system"/>
-        <childnode refid="6251" relation="public-inheritance">
+        <childnode refid="6370" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6251">
+      <node id="6370">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="6252">
+      <node id="6371">
         <label>wxFileSystem</label>
         <link refid="classwx_file_system"/>
-        <childnode refid="6253" relation="public-inheritance">
+        <childnode refid="6372" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6253">
+      <node id="6372">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="6254" relation="usage">
+        <childnode refid="6373" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="6254">
+      <node id="6373">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filesys.h" line="35" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filesys.h" bodystart="34" bodyend="177"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filesys.h" line="35" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/filesys.h" bodystart="34" bodyend="182"/>
     <listofallmembers>
       <member refid="classwx_file_system_1a442d841b2baa5a0eb83c3a985b1e3119" prot="public" virt="non-virtual"><scope>wxFileSystem</scope><name>AddHandler</name></member>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxFileSystem</scope><name>AllocExclusive</name></member>
@@ -328,6 +345,7 @@ All these commands change the path to &quot;dir/subdir/&quot;:</para><para><prog
       <member refid="classwx_object_1a07b8f34f5afc5743195c5fed052f55d3" prot="public" virt="non-virtual"><scope>wxFileSystem</scope><name>operator delete</name></member>
       <member refid="classwx_object_1a96fa423a1dbc212c8227a5d83825971f" prot="public" virt="non-virtual"><scope>wxFileSystem</scope><name>operator new</name></member>
       <member refid="classwx_object_1a2f6f1aa51fe9fc2b1415ca4211a90e9e" prot="public" virt="non-virtual"><scope>wxFileSystem</scope><name>Ref</name></member>
+      <member refid="classwx_file_system_1a4dfed1274580f8fcbfd02e27bcb920d1" prot="public" virt="non-virtual"><scope>wxFileSystem</scope><name>RemoveHandler</name></member>
       <member refid="classwx_object_1afab780710f2adc1bb33310e27590140b" prot="public" virt="non-virtual"><scope>wxFileSystem</scope><name>SetRefData</name></member>
       <member refid="classwx_object_1af51efc6b1ae632fc7f0cd7ebbce9fa36" prot="public" virt="non-virtual"><scope>wxFileSystem</scope><name>UnRef</name></member>
       <member refid="classwx_object_1a74b40e42d19a4b9e9bec0b57d62a5725" prot="public" virt="non-virtual"><scope>wxFileSystem</scope><name>UnShare</name></member>

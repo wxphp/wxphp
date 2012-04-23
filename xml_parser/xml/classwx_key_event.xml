@@ -17,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="1467"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="1448"/>
       </memberdef>
       <memberdef kind="function" id="classwx_key_event_1a2b1270ad737d6ceaef527e4bcd4c14be" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -38,7 +38,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="1468"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="1449"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -58,7 +58,7 @@
 <para>Currently, the only valid event types are <computeroutput>wxEVT_CHAR</computeroutput> and <computeroutput>wxEVT_CHAR_HOOK</computeroutput>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="1404"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="1385"/>
       </memberdef>
       <memberdef kind="function" id="classwx_key_event_1a3dccc5a254770931e5d8066ef47e7fb0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -78,7 +78,7 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>It&apos;s<sp/>a<sp/>special<sp/>key,<sp/>deal<sp/>with<sp/>all<sp/>the<sp/>known<sp/>ones:</highlight><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(<sp/>keycode<sp/>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(<sp/><ref refid="classwx_key_event_1a3dccc5a254770931e5d8066ef47e7fb0" kindref="member" tooltip="Returns the key code of the key that generated this event.">GetKeyCode</ref>()<sp/>)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="defs_8h_1a41c4609211685cff198618963ec8f77da02c178f08c2061bd418482a305024bb0" kindref="member">WXK_LEFT</ref>:</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="defs_8h_1a41c4609211685cff198618963ec8f77dab409b1eec0b8c17cdbeacf6597324c55" kindref="member">WXK_RIGHT</ref>:</highlight></codeline>
@@ -94,7 +94,7 @@
 </programlisting> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="1451"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="1432"/>
       </memberdef>
       <memberdef kind="function" id="classwx_key_event_1adba49d426004d179fa3f6fa0faa0d1ca" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -120,7 +120,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="1461"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="1442"/>
       </memberdef>
       <memberdef kind="function" id="classwx_key_event_1a6fddcd170d05b0852a7eb2a0cb730795" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="defs_8h_1afdb12e5345c3fae4b537e813df9f02a3" kindref="member">wxUint32</ref></type>
@@ -134,7 +134,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="1489"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="1470"/>
       </memberdef>
       <memberdef kind="function" id="classwx_key_event_1aeca3d5a0a34cb49725d0daee73e64886" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="defs_8h_1afdb12e5345c3fae4b537e813df9f02a3" kindref="member">wxUint32</ref></type>
@@ -148,7 +148,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="1508"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="1489"/>
       </memberdef>
       <memberdef kind="function" id="classwx_key_event_1afc21af89018eaef208ad50ffadc6cf6f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="group__group__funcmacro__string_1gad42f64d8c82f1ce4ae58773a89b2d6a7" kindref="member">wxChar</ref></type>
@@ -161,7 +161,7 @@
 <para>If the key pressed doesn&apos;t have any character value (e.g. a cursor key) this method will return <computeroutput>WXK_NONE</computeroutput>. In this case you should use <ref refid="classwx_key_event_1a3dccc5a254770931e5d8066ef47e7fb0" kindref="member">GetKeyCode()</ref> to retrieve the value of the key.</para><para>This function is only available in Unicode build, i.e. when <computeroutput>wxUSE_UNICODE</computeroutput> is 1. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="1520"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="1501"/>
       </memberdef>
       <memberdef kind="function" id="classwx_key_event_1abbc502a6442468355d8e3e70c72c8aa4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="defs_8h_1a11f6efc0e8d8d680f3ec8e82aa4f1770" kindref="member">wxCoord</ref></type>
@@ -174,7 +174,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="1525"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="1506"/>
       </memberdef>
       <memberdef kind="function" id="classwx_key_event_1aad0a940f9940a01a158079d175728db8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="defs_8h_1a11f6efc0e8d8d680f3ec8e82aa4f1770" kindref="member">wxCoord</ref></type>
@@ -187,7 +187,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="1530"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="1511"/>
       </memberdef>
       <memberdef kind="function" id="classwx_key_event_1a4a7060ef0054d681cf8685e0467a663e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -201,7 +201,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="1548"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="1529"/>
       </memberdef>
       <memberdef kind="function" id="classwx_key_event_1a0aca7f257410f7313994c69a7321bf11" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -215,7 +215,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="1558"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="1539"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -236,61 +236,61 @@ Another difference between key and char events is that another kind of translati
 <heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7377">
+      <node id="7575">
         <label>wxKeyboardState</label>
         <link refid="classwx_keyboard_state"/>
       </node>
-      <node id="7374">
+      <node id="7572">
         <label>wxKeyEvent</label>
         <link refid="classwx_key_event"/>
-        <childnode refid="7375" relation="public-inheritance">
+        <childnode refid="7573" relation="public-inheritance">
         </childnode>
-        <childnode refid="7377" relation="public-inheritance">
+        <childnode refid="7575" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7376">
+      <node id="7574">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="7375">
+      <node id="7573">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="7376" relation="public-inheritance">
+        <childnode refid="7574" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7382">
+      <node id="7580">
         <label>wxKeyboardState</label>
         <link refid="classwx_keyboard_state"/>
       </node>
-      <node id="7378">
+      <node id="7576">
         <label>wxKeyEvent</label>
         <link refid="classwx_key_event"/>
-        <childnode refid="7379" relation="public-inheritance">
+        <childnode refid="7577" relation="public-inheritance">
         </childnode>
-        <childnode refid="7382" relation="public-inheritance">
+        <childnode refid="7580" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7380">
+      <node id="7578">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="7381" relation="usage">
+        <childnode refid="7579" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="7379">
+      <node id="7577">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="7380" relation="public-inheritance">
+        <childnode refid="7578" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7381">
+      <node id="7579">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="1398" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="1396" bodyend="1559"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="1379" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="1377" bodyend="1540"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxKeyEvent</scope><name>AllocExclusive</name></member>
       <member refid="classwx_keyboard_state_1af71012a9fdbd32bbdc391c984ec5a588" prot="public" virt="non-virtual"><scope>wxKeyEvent</scope><name>AltDown</name></member>

@@ -83,7 +83,7 @@
 <parametername>style</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>A dialog style (bitlist) containing flags chosen from standard dialog style and the ones listed below. The default value is equivalent to wxDEFAULT_DIALOG_STYLE | wxRESIZE_BORDER | wxOK | wxCANCEL | wxCENTRE. </para></parameterdescription>
+<para>A dialog style (bitlist) containing flags chosen from standard dialog styles and the ones listed in the class documentation. The default value is equivalent to wxDEFAULT_DIALOG_STYLE | wxRESIZE_BORDER | wxOK | wxCANCEL | wxCENTRE. </para></parameterdescription>
 </parameteritem>
 <parameteritem>
 <parameternamelist>
@@ -93,17 +93,11 @@
 <para>Dialog position. Not Windows.</para></parameterdescription>
 </parameteritem>
 </parameterlist>
-<heading level="2">Styles</heading>
-</para><para>This class supports the following styles: <itemizedlist>
-<listitem><para>wxOK: Show an OK button. </para></listitem>
-<listitem><para>wxCANCEL: Show a Cancel button. </para></listitem>
-<listitem><para>wxCENTRE: Centre the message. Not Windows. </para></listitem>
-</itemizedlist>
 <simplesect kind="remark"><para>Use <ref refid="classwx_multi_choice_dialog_1a563ed5633d90460d08fd3d7a76d73534" kindref="member">ShowModal()</ref> to show the dialog.</para></simplesect>
-<bold>wxPython Note:</bold></para><para>For Python the two parameters <emphasis>n</emphasis> and <emphasis>choices</emphasis> are collapsed into a multi parameter <emphasis>choices</emphasis> which is expected to be a Python list of strings.</para><para><bold>wxPerl Note:</bold> Not supported by wxPerl. </para>        </detaileddescription>
+<bold>wxPerl Note:</bold> Not supported by wxPerl. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/choicdlg.h" line="72"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/choicdlg.h" line="82"/>
       </memberdef>
       <memberdef kind="function" id="classwx_multi_choice_dialog_1a83fe9a251dfc801f6a2f08b41e9c3a02" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -172,7 +166,7 @@
 <parametername>style</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>A dialog style (bitlist) containing flags chosen from standard dialog style and the ones listed below. The default value is equivalent to wxDEFAULT_DIALOG_STYLE | wxRESIZE_BORDER | wxOK | wxCANCEL | wxCENTRE. </para></parameterdescription>
+<para>A dialog style (bitlist) containing flags chosen from standard dialog styles and the ones listed in the class documentation. The default value is equivalent to wxDEFAULT_DIALOG_STYLE | wxRESIZE_BORDER | wxOK | wxCANCEL | wxCENTRE. </para></parameterdescription>
 </parameteritem>
 <parameteritem>
 <parameternamelist>
@@ -182,32 +176,26 @@
 <para>Dialog position. Not Windows.</para></parameterdescription>
 </parameteritem>
 </parameterlist>
-<heading level="2">Styles</heading>
-</para><para>This class supports the following styles: <itemizedlist>
-<listitem><para>wxOK: Show an OK button. </para></listitem>
-<listitem><para>wxCANCEL: Show a Cancel button. </para></listitem>
-<listitem><para>wxCENTRE: Centre the message. Not Windows. </para></listitem>
-</itemizedlist>
 <simplesect kind="remark"><para>Use <ref refid="classwx_multi_choice_dialog_1a563ed5633d90460d08fd3d7a76d73534" kindref="member">ShowModal()</ref> to show the dialog.</para></simplesect>
-<bold>wxPython Note:</bold></para><para>For Python the two parameters <emphasis>n</emphasis> and <emphasis>choices</emphasis> are collapsed into a multi parameter <emphasis>choices</emphasis> which is expected to be a Python list of strings.</para><para><bold>wxPerl Note:</bold> Use an array reference for the <emphasis>choices</emphasis> parameter. </para>        </detaileddescription>
+<bold>wxPerl Note:</bold> Use an array reference for the <emphasis>choices</emphasis> parameter. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/choicdlg.h" line="120"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/choicdlg.h" line="113"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
-      <memberdef kind="function" id="classwx_multi_choice_dialog_1af91db9b7a340e33856f9dce2f68efe22" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classwx_multi_choice_dialog_1ad0e12ea0b585890654b10e1c61f7487e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="dynarray_8h_1add87f199292e36ee87efd6d7f0d4ee66" kindref="member">wxArrayInt</ref></type>
-        <definition>wxArrayInt wxMultiChoiceDialog::GetSelection</definition>
+        <definition>wxArrayInt wxMultiChoiceDialog::GetSelections</definition>
         <argsstring>() const </argsstring>
-        <name>GetSelection</name>
+        <name>GetSelections</name>
         <briefdescription>
 <para>Returns array with indexes of selected items. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/choicdlg.h" line="126"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/choicdlg.h" line="119"/>
       </memberdef>
       <memberdef kind="function" id="classwx_multi_choice_dialog_1a7089e81303540024f3d587c743a33759" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -224,7 +212,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/choicdlg.h" line="131"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/choicdlg.h" line="124"/>
       </memberdef>
       <memberdef kind="function" id="classwx_multi_choice_dialog_1a563ed5633d90460d08fd3d7a76d73534" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>int</type>
@@ -238,119 +226,125 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/choicdlg.h" line="136"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/choicdlg.h" line="129"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para>This class represents a dialog that shows a list of strings, and allows the user to select one or more. </para>    </briefdescription>
     <detaileddescription>
-<para><heading level="2"></heading>
+<para><heading level="2">Styles</heading>
+</para><para>This class supports the following styles: <itemizedlist>
+<listitem><para>wxOK: Show an OK button. </para></listitem>
+<listitem><para>wxCANCEL: Show a Cancel button. </para></listitem>
+<listitem><para>wxCENTRE: Centre the message. Not Windows. </para></listitem>
+</itemizedlist>
+<heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__cmndlg" kindref="compound">Common Dialogs</ref></para><para><simplesect kind="see"><para><ref refid="overview_cmndlg_1overview_cmndlg_multichoice" kindref="member">wxMultiChoiceDialog Overview</ref>, <ref refid="classwx_single_choice_dialog" kindref="compound">wxSingleChoiceDialog</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7876">
+      <node id="8069">
         <label>wxNonOwnedWindow</label>
         <link refid="classwx_non_owned_window"/>
-        <childnode refid="7877" relation="public-inheritance">
+        <childnode refid="8070" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7879">
+      <node id="8072">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="7878">
+      <node id="8071">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="7879" relation="public-inheritance">
+        <childnode refid="8072" relation="public-inheritance">
         </childnode>
-        <childnode refid="7880" relation="public-inheritance">
+        <childnode refid="8073" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7873">
+      <node id="8066">
         <label>wxMultiChoiceDialog</label>
         <link refid="classwx_multi_choice_dialog"/>
-        <childnode refid="7874" relation="public-inheritance">
+        <childnode refid="8067" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7880">
+      <node id="8073">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="7877">
+      <node id="8070">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="7878" relation="public-inheritance">
+        <childnode refid="8071" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7874">
+      <node id="8067">
         <label>wxDialog</label>
         <link refid="classwx_dialog"/>
-        <childnode refid="7875" relation="public-inheritance">
+        <childnode refid="8068" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7875">
+      <node id="8068">
         <label>wxTopLevelWindow</label>
         <link refid="classwx_top_level_window"/>
-        <childnode refid="7876" relation="public-inheritance">
+        <childnode refid="8069" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7884">
+      <node id="8077">
         <label>wxNonOwnedWindow</label>
         <link refid="classwx_non_owned_window"/>
-        <childnode refid="7885" relation="public-inheritance">
+        <childnode refid="8078" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7887">
+      <node id="8080">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="7888" relation="usage">
+        <childnode refid="8081" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="7886">
+      <node id="8079">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="7887" relation="public-inheritance">
+        <childnode refid="8080" relation="public-inheritance">
         </childnode>
-        <childnode refid="7889" relation="public-inheritance">
+        <childnode refid="8082" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7881">
+      <node id="8074">
         <label>wxMultiChoiceDialog</label>
         <link refid="classwx_multi_choice_dialog"/>
-        <childnode refid="7882" relation="public-inheritance">
+        <childnode refid="8075" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7889">
+      <node id="8082">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="7885">
+      <node id="8078">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="7886" relation="public-inheritance">
+        <childnode refid="8079" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7882">
+      <node id="8075">
         <label>wxDialog</label>
         <link refid="classwx_dialog"/>
-        <childnode refid="7883" relation="public-inheritance">
+        <childnode refid="8076" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7883">
+      <node id="8076">
         <label>wxTopLevelWindow</label>
         <link refid="classwx_top_level_window"/>
-        <childnode refid="7884" relation="public-inheritance">
+        <childnode refid="8077" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7888">
+      <node id="8081">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/choicdlg.h" line="21" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/choicdlg.h" bodystart="20" bodyend="137"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/choicdlg.h" line="48" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/choicdlg.h" bodystart="47" bodyend="130"/>
     <listofallmembers>
       <member refid="classwx_window_1a3afbd49b1ea2f8275e3600dcac102923" prot="public" virt="virtual"><scope>wxMultiChoiceDialog</scope><name>AcceptsFocus</name></member>
       <member refid="classwx_window_1a2370bdd3ab08e7ef3c7555c6aa8301b8" prot="public" virt="virtual"><scope>wxMultiChoiceDialog</scope><name>AcceptsFocusFromKeyboard</name></member>
@@ -394,6 +388,7 @@
       <member refid="classwx_dialog_1a0c6fb55be0b07b934b30550e0225df8f" prot="public" virt="non-virtual"><scope>wxMultiChoiceDialog</scope><name>CreateSeparatedButtonSizer</name></member>
       <member refid="classwx_dialog_1ab7a5666b612d6cfdfb2660fd9bd3393e" prot="public" virt="non-virtual"><scope>wxMultiChoiceDialog</scope><name>CreateSeparatedSizer</name></member>
       <member refid="classwx_dialog_1a8f2f565975f843035391ce62b0b9f8e8" prot="public" virt="non-virtual"><scope>wxMultiChoiceDialog</scope><name>CreateStdDialogButtonSizer</name></member>
+      <member refid="classwx_dialog_1a5bead5e932f17b7c2345dfc41b6cc79c" prot="public" virt="non-virtual"><scope>wxMultiChoiceDialog</scope><name>CreateTextSizer</name></member>
       <member refid="classwx_evt_handler_1a6e7f9cf4ebd0623c1d94979855d096f8" prot="public" virt="non-virtual"><scope>wxMultiChoiceDialog</scope><name>DeletePendingEvents</name></member>
       <member refid="classwx_window_1a6bf0c5be864544d9ce0560087667b7fc" prot="public" virt="virtual"><scope>wxMultiChoiceDialog</scope><name>Destroy</name></member>
       <member refid="classwx_window_1aff47b32c8d42d515ea0bb6a6c2fea917" prot="public" virt="non-virtual"><scope>wxMultiChoiceDialog</scope><name>DestroyChildren</name></member>
@@ -500,7 +495,7 @@
       <member refid="classwx_window_1a3e23d10c17943fd873d0acb472db0caa" prot="public" virt="virtual"><scope>wxMultiChoiceDialog</scope><name>GetScrollPos</name></member>
       <member refid="classwx_window_1a067d2a38efbf2f535f717f1027003281" prot="public" virt="virtual"><scope>wxMultiChoiceDialog</scope><name>GetScrollRange</name></member>
       <member refid="classwx_window_1a10d24c60525a1c612cd775fc44dd1953" prot="public" virt="virtual"><scope>wxMultiChoiceDialog</scope><name>GetScrollThumb</name></member>
-      <member refid="classwx_multi_choice_dialog_1af91db9b7a340e33856f9dce2f68efe22" prot="public" virt="non-virtual"><scope>wxMultiChoiceDialog</scope><name>GetSelection</name></member>
+      <member refid="classwx_multi_choice_dialog_1ad0e12ea0b585890654b10e1c61f7487e" prot="public" virt="non-virtual"><scope>wxMultiChoiceDialog</scope><name>GetSelections</name></member>
       <member refid="classwx_window_1a124c12cff1e7b6e96a5e1fd3e48dca34" prot="public" virt="non-virtual"><scope>wxMultiChoiceDialog</scope><name>GetSize</name></member>
       <member refid="classwx_window_1a66e144ed8ab9a20e080ae6c69fc7015c" prot="public" virt="non-virtual"><scope>wxMultiChoiceDialog</scope><name>GetSize</name></member>
       <member refid="classwx_window_1ad8284cce1a2afe57724b52a89d7fac2f" prot="public" virt="non-virtual"><scope>wxMultiChoiceDialog</scope><name>GetSizer</name></member>
@@ -543,6 +538,7 @@
       <member refid="classwx_top_level_window_1afa58f411cf488eb9279683b1d20a74b6" prot="public" virt="virtual"><scope>wxMultiChoiceDialog</scope><name>IsActive</name></member>
       <member refid="classwx_top_level_window_1ac0c7a7cb6e6dfdf7e59300ee5d476ce3" prot="public" virt="virtual"><scope>wxMultiChoiceDialog</scope><name>IsAlwaysMaximized</name></member>
       <member refid="classwx_window_1af918e6fe8565c2d5235973cc3de84a43" prot="public" virt="non-virtual"><scope>wxMultiChoiceDialog</scope><name>IsBeingDeleted</name></member>
+      <member refid="classwx_window_1a469f0881da248d37691440c9d4cc7200" prot="public" virt="non-virtual"><scope>wxMultiChoiceDialog</scope><name>IsDescendant</name></member>
       <member refid="classwx_window_1a9d1be1bbb625ebf87ad4ad47e49a0194" prot="public" virt="virtual"><scope>wxMultiChoiceDialog</scope><name>IsDoubleBuffered</name></member>
       <member refid="classwx_window_1a59452a5bd42f5ea4b31d7fc4aa59644f" prot="public" virt="non-virtual"><scope>wxMultiChoiceDialog</scope><name>IsEnabled</name></member>
       <member refid="classwx_window_1af27ef77c913e32050543f3b0ca435a0d" prot="public" virt="non-virtual"><scope>wxMultiChoiceDialog</scope><name>IsExposed</name></member>
@@ -564,6 +560,7 @@
       <member refid="classwx_window_1a72d70fd14e3565bf782fbcd3271d8930" prot="public" virt="virtual"><scope>wxMultiChoiceDialog</scope><name>IsShownOnScreen</name></member>
       <member refid="classwx_window_1a657ef8b6055eb06df894ac5e6ddfecf8" prot="public" virt="non-virtual"><scope>wxMultiChoiceDialog</scope><name>IsThisEnabled</name></member>
       <member refid="classwx_window_1a0002826ad05f2a5661b4c8995713f37f" prot="public" virt="virtual"><scope>wxMultiChoiceDialog</scope><name>IsTopLevel</name></member>
+      <member refid="classwx_window_1a7940d510c5bdc062a2b109a1022dd8c2" prot="public" virt="virtual"><scope>wxMultiChoiceDialog</scope><name>IsTransparentBackgroundSupported</name></member>
       <member refid="classwx_evt_handler_1a360fdeefcf53b62fb49fb828406bb8a6" prot="public" virt="non-virtual"><scope>wxMultiChoiceDialog</scope><name>IsUnlinked</name></member>
       <member refid="classwx_top_level_window_1a305c48ddb8e45f89add1694053185a7d" prot="public" virt="non-virtual"><scope>wxMultiChoiceDialog</scope><name>IsUsingNativeDecorations</name></member>
       <member refid="classwx_top_level_window_1adfe7e3f4a32f3ed178968f64431bbfe0" prot="public" virt="virtual"><scope>wxMultiChoiceDialog</scope><name>Layout</name></member>
@@ -571,7 +568,6 @@
       <member refid="classwx_window_1afc0816a174ceee6d36d1995c6824a273" prot="public" virt="non-virtual"><scope>wxMultiChoiceDialog</scope><name>LineUp</name></member>
       <member refid="classwx_window_1a124944524f36b71385dad8fddaad8ded" prot="public" virt="virtual"><scope>wxMultiChoiceDialog</scope><name>Lower</name></member>
       <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxMultiChoiceDialog</scope><name>m_refData</name></member>
-      <member refid="classwx_window_1a192fc8b467845d093c16452db96c65c5" prot="public" virt="virtual"><scope>wxMultiChoiceDialog</scope><name>MakeModal</name></member>
       <member refid="classwx_top_level_window_1addb1612e9f00ac82c2e19c2bac6ffc4f" prot="public" virt="virtual"><scope>wxMultiChoiceDialog</scope><name>Maximize</name></member>
       <member refid="classwx_window_1ab1cb98c8d25b9e6ff7b706b1446c3df7" prot="public" virt="non-virtual"><scope>wxMultiChoiceDialog</scope><name>Move</name></member>
       <member refid="classwx_window_1a22a22c1e23ca05776707e7999d8047fe" prot="public" virt="non-virtual"><scope>wxMultiChoiceDialog</scope><name>Move</name></member>
@@ -582,7 +578,6 @@
       <member refid="classwx_window_1aa58039c8fc65e19160becf510ee1d1d5" prot="public" virt="non-virtual"><scope>wxMultiChoiceDialog</scope><name>NavigateIn</name></member>
       <member refid="classwx_window_1a8175da594e6045635a1d1cfe775cdddb" prot="public" virt="non-virtual"><scope>wxMultiChoiceDialog</scope><name>NewControlId</name></member>
       <member refid="classwx_window_1a6b5654c0c6c6245d592c279521f7099c" prot="public" virt="virtual"><scope>wxMultiChoiceDialog</scope><name>OnInternalIdle</name></member>
-      <member refid="classwx_dialog_1a31dde643f83e859e53759b8ae5f07378" prot="public" virt="non-virtual"><scope>wxMultiChoiceDialog</scope><name>OnSysColourChanged</name></member>
       <member refid="classwx_object_1a07b8f34f5afc5743195c5fed052f55d3" prot="public" virt="non-virtual"><scope>wxMultiChoiceDialog</scope><name>operator delete</name></member>
       <member refid="classwx_object_1a96fa423a1dbc212c8227a5d83825971f" prot="public" virt="non-virtual"><scope>wxMultiChoiceDialog</scope><name>operator new</name></member>
       <member refid="classwx_top_level_window_1a5890684b71321e27e8f3a223ad3c2445" prot="public" virt="virtual"><scope>wxMultiChoiceDialog</scope><name>OSXIsModified</name></member>
@@ -718,7 +713,6 @@
       <member refid="classwx_window_1a88cc65e424a129d9b0057756cdb67ec9" prot="public" virt="virtual"><scope>wxMultiChoiceDialog</scope><name>TransferDataToWindow</name></member>
       <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxMultiChoiceDialog</scope><name>TryAfter</name></member>
       <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxMultiChoiceDialog</scope><name>TryBefore</name></member>
-      <member refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" virt="non-virtual"><scope>wxMultiChoiceDialog</scope><name>TryThis</name></member>
       <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxMultiChoiceDialog</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxMultiChoiceDialog</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a22e5db2ec1d19c8252c056fd116975d7" prot="public" virt="non-virtual"><scope>wxMultiChoiceDialog</scope><name>Unlink</name></member>

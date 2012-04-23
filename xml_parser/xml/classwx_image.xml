@@ -19,7 +19,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="673"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="673"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1a07194d90bd6320255610a0a88a030a3e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -46,7 +46,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="681"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="681"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1a37e70a8f9c684974c9c54f43f5e60a3f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -68,7 +68,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="686"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="686"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1a63801a380397cdcf465cab68f313c9a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -99,7 +99,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="694"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="694"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1a717414a9d74dc882359857050bb4bdc3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -125,7 +125,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="699"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="699"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1aa395d661de4f3b98c6e92a767d97bb66" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -160,7 +160,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="707"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="707"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1aae3a6d125108f6fb93188d8c3c4990b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -190,7 +190,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="712"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="712"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1a2aa815c34284d6a85971e1ff8a2cc74c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -209,7 +209,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="720"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="720"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1ac64c3524a054db164b811c380db65f97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -222,7 +222,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="725"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="725"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1ac941b6b80262b968b575ab1b215e687b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -235,7 +235,7 @@
 <para>It is an error to call it if the image already has alpha data. If it doesn&apos;t, alpha data will be by default initialized to all pixels being fully opaque. But if the image has a mask colour, all mask pixels will be completely transparent. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="735"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="735"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -256,7 +256,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="752"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="752"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1a534300b66c2469720b1be4bd2a001822" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_image" kindref="compound">wxImage</ref></type>
@@ -274,7 +274,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="760"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="760"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1a20d4d0dd605eb5757161be251e048847" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_image" kindref="compound">wxImage</ref></type>
@@ -292,7 +292,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="768"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="768"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1abe3a18acec23fc0afbae68c5ec3f446f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_image" kindref="compound">wxImage</ref></type>
@@ -310,7 +310,7 @@
 <para>The parameter <emphasis>horizontally</emphasis> indicates the orientation. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="774"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="774"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1adb034510c331ea2fd26843e4d47b8629" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -335,7 +335,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="779"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="779"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1aec8466530f4aea8e2cea8cb24bfb74fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -372,7 +372,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="786"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="786"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1a35227071eb0de3c0c035324838071001" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_image" kindref="compound">wxImage</ref> &amp;</type>
@@ -399,7 +399,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="798"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="798"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1ac4dd8e967436c3206dfe4460345af794" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_image" kindref="compound">wxImage</ref> &amp;</type>
@@ -437,7 +437,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="816"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="816"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1a17daea3936f98c3b25204ab2b938a55a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_image" kindref="compound">wxImage</ref></type>
@@ -468,7 +468,7 @@
 <para>Passing true to <emphasis>interpolating</emphasis> results in better image quality, but is slower.</para><para>If the image has a mask, then the mask colour is used for the uncovered pixels in the rotated image background. Else, black (rgb 0, 0, 0) will be used.</para><para>Returns the rotated image, leaving this image intact. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="830"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="830"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1a55e17b1b5e664904c7b4946d315df168" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_image" kindref="compound">wxImage</ref></type>
@@ -486,7 +486,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="836"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="836"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1a227870b034b06a9b1869ce636af8fea6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_image" kindref="compound">wxImage</ref></type>
@@ -500,7 +500,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="843"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="843"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1a96a43d7bbb26ed775fa10c979c6e511f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -517,7 +517,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="850"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="850"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1aaf10a9f0a8284a9ccfe988d0a470d4e9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_image" kindref="compound">wxImage</ref></type>
@@ -557,7 +557,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="893"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="893"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1a8c3ef171a27cdb93a315eb78cf7b0377" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_image" kindref="compound">wxImage</ref></type>
@@ -594,7 +594,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="911"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="911"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -616,7 +616,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="934"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="934"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1a73c3cd71be1f97da115689a0387d197c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -677,7 +677,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="961"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="961"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1af1642edf492e25cddf76edd80db5e4fc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_image" kindref="compound">wxImage</ref></type>
@@ -702,7 +702,7 @@
 <para>The returned image uses the luminance component of the original to calculate the greyscale. Defaults to using the standard ITU-T BT.601 when converting to YUV, where every pixel equals (R * <emphasis>weight_r</emphasis>) + (G * <emphasis>weight_g</emphasis>) + (B * <emphasis>weight_b</emphasis>). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="971"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="971"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1a7541045f59badbacceb6224d0602300e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_image" kindref="compound">wxImage</ref></type>
@@ -716,7 +716,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="977"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="977"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1af9cebf3961f432b6c750463c52c9a96b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_image" kindref="compound">wxImage</ref></type>
@@ -741,7 +741,7 @@
 <para>The returned image has white colour where the original has <emphasis></emphasis>(r,g,b) colour and black colour everywhere else. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="985"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="985"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1a5f5b9ac6ab0caa7b567a2fb3120f77db" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_image" kindref="compound">wxImage</ref></type>
@@ -760,7 +760,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="991"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="991"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -792,7 +792,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="1022"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="1022"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1adfd2a60833d72432a0a28b54ca83a2d0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -834,7 +834,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="1045"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="1045"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1a4be78fed2c5a82d53114d77aad916371" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_image" kindref="compound">wxImage</ref> &amp;</type>
@@ -860,7 +860,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="1055"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="1055"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -876,7 +876,7 @@
 <para>This pointer is NULL for the images without the alpha channel. If the image does have it, this pointer may be used to directly manipulate the alpha values which are stored as the RGB ones. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="1072"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="1072"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1a5cac38e8fd2536852406d9c8daa55023" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>unsigned char *</type>
@@ -889,7 +889,7 @@
 <para>This is most often used when doing direct image manipulation. The return value points to an array of characters in RGBRGBRGB... format in the top-to-bottom, left-to-right order, that is the first RGB triplet corresponds to the pixel first pixel of the first row, the second one --- to the second pixel of the first row and so on until the end of the first row, with second row following after it and so on.</para><para>You should not delete the returned pointer nor pass it to <ref refid="classwx_image_1a736a8fc26d32e5eab70682b115bacacf" kindref="member">SetData()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="1086"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="1086"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1a406fe67d895c815386bfd2c697a1a667" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>unsigned char</type>
@@ -910,7 +910,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="1091"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="1091"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1ade7e4b89f960bffbc09a88863145397a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>unsigned char</type>
@@ -931,7 +931,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="1096"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="1096"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1a43533994a507cd8f419759cddeef8df2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>unsigned char</type>
@@ -952,7 +952,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="1101"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="1101"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1a19bf61cbc4d66512f3244149886f2e9f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>unsigned char</type>
@@ -973,7 +973,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="1106"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="1106"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1aa9c4b367f98baac91c77f863351f7c26" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>unsigned char</type>
@@ -986,7 +986,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="1111"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="1111"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1acf6994b3c2706193ee910c3836e6b0ec" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>unsigned char</type>
@@ -999,7 +999,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="1116"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="1116"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1ad5f1fc61f1343633ba80f3402f19956c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>unsigned char</type>
@@ -1012,7 +1012,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="1121"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="1121"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1abd2c9f02c948813eb23ae45481977995" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -1026,7 +1026,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="1128"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="1128"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1a73d10c7d8ea36dc5421f2713ce1d9e48" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -1040,7 +1040,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="1135"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="1135"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1aae7bbee7b8b53302e3656b93bba217cd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
@@ -1055,7 +1055,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="1144"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="1144"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1af006480a04b88e20033bab1615e05de4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -1088,7 +1088,7 @@ Options specific to wxGIFHandler: <itemizedlist>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="1167"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="1167"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1af752636f2a2baecd5d33cd8e8501c044" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -1145,7 +1145,7 @@ Options specific to wxTIFFHandler: <itemizedlist>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="1280"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="1280"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1a8262377d07012664242529bca77f91ab" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1170,7 +1170,7 @@ Options specific to wxTIFFHandler: <itemizedlist>
 <para>Returns true if the image currently has a mask. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="1287"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="1287"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1a055f1cd8ae68ae83204ecc3b0fff0f57" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_palette" kindref="compound">wxPalette</ref> &amp;</type>
@@ -1183,7 +1183,7 @@ Options specific to wxTIFFHandler: <itemizedlist>
 <para>Currently the palette is only used when converting to <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> under Windows.</para><para>Some of the <ref refid="classwx_image" kindref="compound">wxImage</ref> handlers have been modified to set the palette if one exists in the image file (usually 256 or less colour images in GIF or PNG format). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="1297"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="1297"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1a54967a3c86a41b62712dfa16fffa8cda" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_image" kindref="compound">wxImage</ref></type>
@@ -1200,7 +1200,7 @@ Options specific to wxTIFFHandler: <itemizedlist>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="1303"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="1303"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1ac711680e14facac5476a4a2946b7dc42" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="gdicmn_8h_1a90a1eb6d85b5044a99b706fd979f27f5" kindref="member">wxBitmapType</ref></type>
@@ -1214,7 +1214,7 @@ Options specific to wxTIFFHandler: <itemizedlist>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="1310"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="1310"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1abd42fd2c579837850ab5909ab2bf200c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1228,7 +1228,7 @@ Options specific to wxTIFFHandler: <itemizedlist>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="1317"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="1317"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1a6b5285194b6416122381cf8b824a156d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1241,7 +1241,7 @@ Options specific to wxTIFFHandler: <itemizedlist>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="1322"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="1322"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1a868ae81f470e1bef6ca81dd985078782" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1259,7 +1259,7 @@ Options specific to wxTIFFHandler: <itemizedlist>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="1333"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="1333"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1ab426714385b517d9367f7595e95714e0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1272,7 +1272,7 @@ Options specific to wxTIFFHandler: <itemizedlist>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="1338"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="1338"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1adbe6a22287f6bbbfc5dae4514ca62385" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1298,7 +1298,7 @@ Options specific to wxTIFFHandler: <itemizedlist>
 <para>either has the mask colour if this image has a mask or if this image has alpha channel and alpha value of this pixel is strictly less than <emphasis>threshold</emphasis>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="1346"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="1346"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -1371,7 +1371,7 @@ Options specific to wxTIFFHandler: <itemizedlist>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="1402"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="1402"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1a2f514d576c0c086249cd39edac0c1bd6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -1420,7 +1420,7 @@ Options specific to wxTIFFHandler: <itemizedlist>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="1417"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="1417"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1a5261b155bbc93ed1719462d80ce699be" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -1468,7 +1468,7 @@ Options specific to wxTIFFHandler: <itemizedlist>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="1431"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="1431"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1a318ae843ecc2e10fdc460865dff49a99" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -1516,7 +1516,7 @@ Options specific to wxTIFFHandler: <itemizedlist>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="1445"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="1445"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1adbdd72be525d71ebb3fe01a5de02607c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -1558,7 +1558,7 @@ Options specific to wxTIFFHandler: <itemizedlist>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="1471"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="1471"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1a9416097f955a828243cba8431e7044d4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -1605,7 +1605,7 @@ Options specific to wxTIFFHandler: <itemizedlist>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="1493"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="1493"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1adef2e0344bfa416816cc4d63c76375e4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -1641,7 +1641,7 @@ Options specific to wxTIFFHandler: <itemizedlist>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="1503"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="1503"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1a4c5201cc30a99d5cc006d99100dcf55d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -1666,7 +1666,7 @@ Options specific to wxTIFFHandler: <itemizedlist>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="1516"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="1516"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1af8ac6fad3c44385296cdaa1d82358ad0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -1702,7 +1702,7 @@ Options specific to wxTIFFHandler: <itemizedlist>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="1526"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="1526"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -1728,7 +1728,7 @@ Options specific to wxTIFFHandler: <itemizedlist>
 <para>The pointer passed to it may however be NULL in which case the function will allocate the alpha array internally -- this is useful to add alpha channel data to an image which doesn&apos;t have any.</para><para>If the pointer is not NULL, it must have one byte for each image pixel and be allocated with malloc(). <ref refid="classwx_image" kindref="compound">wxImage</ref> takes ownership of the pointer and will free it unless <emphasis>static_data</emphasis> parameter is set to true -- in this case the caller should do it. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="1550"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="1550"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1a882406861db4666fb619af90a1cb4b45" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1753,7 +1753,7 @@ Options specific to wxTIFFHandler: <itemizedlist>
 <para>This function should only be called if the image has alpha channel data, use <ref refid="classwx_image_1abd42fd2c579837850ab5909ab2bf200c" kindref="member">HasAlpha()</ref> to check for this. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="1557"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="1557"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1a1b82ae0550626a74c3ee97d9065628b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1767,7 +1767,7 @@ Options specific to wxTIFFHandler: <itemizedlist>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="1567"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="1567"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1a736a8fc26d32e5eab70682b115bacacf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1789,7 +1789,7 @@ Options specific to wxTIFFHandler: <itemizedlist>
 <para>The data given must have the size (width*height*3) or results will be unexpected. Don&apos;t use this method if you aren&apos;t sure you know what you are doing.</para><para>The data must have been allocated with <computeroutput>malloc()</computeroutput>, <bold>NOT</bold> with <computeroutput>operator</computeroutput> new.</para><para>If <emphasis>static_data</emphasis> is false, after this call the pointer to the data is owned by the <ref refid="classwx_image" kindref="compound">wxImage</ref> object, that will be responsible for deleting it. Do not pass to this function a pointer obtained through <ref refid="classwx_image_1a5cac38e8fd2536852406d9c8daa55023" kindref="member">GetData()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="1583"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="1583"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1afda57bc7ba823e7c060dbd7698c6ad31" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1819,7 +1819,7 @@ Options specific to wxTIFFHandler: <itemizedlist>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="1589"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="1589"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1a62645fe559149a8ee6b27ddc07cfc220" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1837,7 +1837,7 @@ Options specific to wxTIFFHandler: <itemizedlist>
 <para>The area of the mask is determined by the current mask colour. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="1596"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="1596"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1a25fcd0777ea579c7a27d78a2a81627e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1862,7 +1862,7 @@ Options specific to wxTIFFHandler: <itemizedlist>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="1602"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="1602"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1aaa8be307e013440b9a3e4791eab91771" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1893,7 +1893,7 @@ Options specific to wxTIFFHandler: <itemizedlist>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="1628"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="1628"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1a952ee065b17ee07a8cbee568486e01a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1915,7 +1915,7 @@ Options specific to wxTIFFHandler: <itemizedlist>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="1641"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="1641"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1acc3d48af8a50bff5ceca51fd649ec981" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1936,7 +1936,7 @@ Options specific to wxTIFFHandler: <itemizedlist>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="1646"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="1646"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1acbf3a8b9f954b7da7d65adbb9cc9e026" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1953,7 +1953,7 @@ Options specific to wxTIFFHandler: <itemizedlist>
 <para>The palette may be used when converting <ref refid="classwx_image" kindref="compound">wxImage</ref> to <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> (MSW only at present) or in file save operations (none as yet). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="1654"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="1654"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1a17f90246727d089675e7f44a414280d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1982,7 +1982,7 @@ Options specific to wxTIFFHandler: <itemizedlist>
 <para>This routine performs bounds-checks for the coordinate so it can be considered a safe way to manipulate the data. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="1665"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="1665"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1ab4a6c25da79e4f2473246108951906e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2008,7 +2008,7 @@ Options specific to wxTIFFHandler: <itemizedlist>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="1684"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="1684"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -2037,7 +2037,7 @@ Options specific to wxTIFFHandler: <itemizedlist>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="1711"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="1711"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1aa50b222b999e7cd690f2a5be0e0e9cef" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2050,7 +2050,7 @@ Options specific to wxTIFFHandler: <itemizedlist>
 <para>This function is called by wxWidgets on exit. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="1717"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="1717"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1abb0458fbb84d41af925f3d2c59d1adde" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_image_handler" kindref="compound">wxImageHandler</ref> *</type>
@@ -2077,7 +2077,7 @@ Options specific to wxTIFFHandler: <itemizedlist>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="1729"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="1729"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1a2bd74e0e2e3ba7980e09cf14fca86a7c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_image_handler" kindref="compound">wxImageHandler</ref> *</type>
@@ -2115,7 +2115,7 @@ Options specific to wxTIFFHandler: <itemizedlist>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="1744"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="1744"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1ae7b426b2352950992181c0760425e5e4" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_image_handler" kindref="compound">wxImageHandler</ref> *</type>
@@ -2142,7 +2142,7 @@ Options specific to wxTIFFHandler: <itemizedlist>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="1756"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="1756"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1a5e3f7cb7089c70f91e977fa2fa896b52" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_image_handler" kindref="compound">wxImageHandler</ref> *</type>
@@ -2169,7 +2169,7 @@ Options specific to wxTIFFHandler: <itemizedlist>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="1768"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="1768"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1a4c3a141a4d1e953e7e64e4c9477a76fb" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>wxList &amp;</type>
@@ -2183,7 +2183,7 @@ Options specific to wxTIFFHandler: <itemizedlist>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="1775"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="1775"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1ab2f032e0b7766dc69d4f092f4a55fd60" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2197,7 +2197,7 @@ Options specific to wxTIFFHandler: <itemizedlist>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="1786"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="1786"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1adcecda55890d6e9e3c827751a9ec42b0" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2223,7 +2223,7 @@ Options specific to wxTIFFHandler: <itemizedlist>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="1797"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="1797"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1a70ef86ff481bc18c0a32f5467a071e42" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -2250,7 +2250,7 @@ Options specific to wxTIFFHandler: <itemizedlist>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="1811"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="1811"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -2290,7 +2290,7 @@ Options specific to wxTIFFHandler: <itemizedlist>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="1866"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="1866"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1a54665a3517668fab312e7205de0b88ca" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -2328,7 +2328,7 @@ Options specific to wxTIFFHandler: <itemizedlist>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="1868"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="1868"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -2343,7 +2343,7 @@ Options specific to wxTIFFHandler: <itemizedlist>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="493"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="493"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1a21652c36c8e51bc696756afeaefe2d01" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -2391,7 +2391,7 @@ Options specific to wxTIFFHandler: <itemizedlist>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="507"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="507"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1ae071c8cdd85a48655ba59a70aeced3d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -2413,7 +2413,7 @@ Options specific to wxTIFFHandler: <itemizedlist>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="512"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="512"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1a2c97634b43bdd143f34418fb1f98a690" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -2472,7 +2472,7 @@ Options specific to wxTIFFHandler: <itemizedlist>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="529"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="529"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1ae4dfc16eddb74fca38a10809f56df264" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -2498,7 +2498,7 @@ Options specific to wxTIFFHandler: <itemizedlist>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="534"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="534"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1abdb7e8a7ca45e63935cda55b45869a7a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -2568,7 +2568,7 @@ Options specific to wxTIFFHandler: <itemizedlist>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="554"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="554"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1ad4d64f98e90c54902bfd9d445d23db29" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -2598,7 +2598,7 @@ Options specific to wxTIFFHandler: <itemizedlist>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="560"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="560"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1a5ab9262fabb41525bc669c245654579b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -2623,7 +2623,7 @@ Options specific to wxTIFFHandler: <itemizedlist>
 <bold>wxPerl Note:</bold> Not supported by wxPerl. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="572"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="572"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1a02233007383d193ab8e0f89cc1c92864" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -2692,7 +2692,7 @@ Options specific to wxTIFFHandler: <itemizedlist>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="615"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="615"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1a6ef7dc2eb9aaa9bf34437f7c12aad5f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -2740,7 +2740,7 @@ Options specific to wxTIFFHandler: <itemizedlist>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="627"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="627"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1add88cc57fe901b715c637e820342d91a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -2789,7 +2789,7 @@ Options specific to wxTIFFHandler: <itemizedlist>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="640"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="640"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1af8df8e96a278f30954592c452b3c0806" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -2837,7 +2837,7 @@ Options specific to wxTIFFHandler: <itemizedlist>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="653"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="653"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1ac20a9a1f46a1047f5947352afa9f2b09" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -2850,7 +2850,7 @@ Options specific to wxTIFFHandler: <itemizedlist>
 <para>See <ref refid="overview_refcount_1overview_refcount_destruct" kindref="member">reference-counted object destruction</ref> for more info. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="661"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="661"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -2869,7 +2869,7 @@ Options specific to wxTIFFHandler: <itemizedlist>
 <para>See <ref refid="classwx_image_handler_1a7c886c9f2192699183e480066e386133" kindref="member">wxImageHandler::CanRead</ref> for more info. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="1822"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="1822"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1aac069cba7821715661e03d9b6eeee98f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -2886,7 +2886,7 @@ Options specific to wxTIFFHandler: <itemizedlist>
 <para>See <ref refid="classwx_image_handler_1a7c886c9f2192699183e480066e386133" kindref="member">wxImageHandler::CanRead</ref> for more info. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="1830"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="1830"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1a0ed7bd5c0eba03553b6533e2f79e0ff1" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -2897,14 +2897,14 @@ Options specific to wxTIFFHandler: <itemizedlist>
 <para>Iterates all registered <ref refid="classwx_image_handler" kindref="compound">wxImageHandler</ref> objects, and returns a string containing file extension masks suitable for passing to file open/save dialog boxes. </para>        </briefdescription>
         <detaileddescription>
 <para><simplesect kind="return"><para>The format of the returned string is <computeroutput>&quot;(*.ext1;*.ext2)|*.ext1;*.ext2&quot;</computeroutput>. It is usually a good idea to prepend a description before passing the result to the dialog. Example: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_file_dialog" kindref="compound" tooltip="This class represents the file chooser dialog.">wxFileDialog</ref><sp/>FileDlg(<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Choose<sp/>Image&quot;</highlight><highlight class="normal">,<sp/>::<ref refid="group__group__funcmacro__file_1gab0cc6ceca11d23f61cba353c01eeac06" kindref="member" tooltip="Returns a string containing the current (or working) directory.">wxGetCwd</ref>(),<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__string_1ga8a02b8875a521df57263a9e6f090f2d0" kindref="member" tooltip="This macro expands into a call to wxGetTranslation(), so it marks the message for the extraction by x...">_</ref>(</highlight><highlight class="stringliteral">&quot;Image<sp/>Files<sp/>&quot;</highlight><highlight class="normal">)<sp/>+<sp/><ref refid="classwx_image_1a0ed7bd5c0eba03553b6533e2f79e0ff1" kindref="member" tooltip="Iterates all registered wxImageHandler objects, and returns a string containing file extension masks ...">wxImage::GetImageExtWildcard</ref>(),</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="filedlg_8h_1abed82baf7f470b522273a3e37c24c600a66a0a1b2dc1cea202030df12462a1026" kindref="member">wxFD_OPEN</ref><sp/>);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__string_1ga8a02b8875a521df57263a9e6f090f2d0" kindref="member" tooltip="Macro to be used around all literal strings that should be translated.">_</ref>(</highlight><highlight class="stringliteral">&quot;Image<sp/>Files<sp/>&quot;</highlight><highlight class="normal">)<sp/>+<sp/><ref refid="classwx_image_1a0ed7bd5c0eba03553b6533e2f79e0ff1" kindref="member" tooltip="Iterates all registered wxImageHandler objects, and returns a string containing file extension masks ...">wxImage::GetImageExtWildcard</ref>(),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="filedlg_8h_1a16af7b253440dadd46a80a4b9fddba4da66a0a1b2dc1cea202030df12462a1026" kindref="member">wxFD_OPEN</ref><sp/>);</highlight></codeline>
 </programlisting></para></simplesect>
 <simplesect kind="see"><para><ref refid="classwx_image_handler" kindref="compound">wxImageHandler</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="1887"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="1887"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1a28041e34c4dccaf9cba3fff358121b83" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_image_1_1_h_s_v_value" kindref="compound">wxImage::HSVValue</ref></type>
@@ -2921,7 +2921,7 @@ Options specific to wxTIFFHandler: <itemizedlist>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="1892"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="1892"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_1aa72cf0a75c1e517f69787e1984717017" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_image_1_1_r_g_b_value" kindref="compound">wxImage::RGBValue</ref></type>
@@ -2938,7 +2938,7 @@ Options specific to wxTIFFHandler: <itemizedlist>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="1897"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="1897"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -2956,37 +2956,37 @@ Options specific to wxTIFFHandler: <itemizedlist>
 </para></sect1>
     </detaileddescription>
     <inheritancegraph>
-      <node id="7243">
+      <node id="7430">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="7242">
+      <node id="7429">
         <label>wxImage</label>
         <link refid="classwx_image"/>
-        <childnode refid="7243" relation="public-inheritance">
+        <childnode refid="7430" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7245">
+      <node id="7432">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="7246" relation="usage">
+        <childnode refid="7433" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="7246">
+      <node id="7433">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
-      <node id="7244">
+      <node id="7431">
         <label>wxImage</label>
         <link refid="classwx_image"/>
-        <childnode refid="7245" relation="public-inheritance">
+        <childnode refid="7432" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="447" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" bodystart="446" bodyend="1898"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="447" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" bodystart="446" bodyend="1898"/>
     <listofallmembers>
       <member refid="classwx_image_1ab39fb3747dfb8c2d444eff9fe41fa205" prot="public" virt="non-virtual"><scope>wxImage</scope><name>AddHandler</name></member>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxImage</scope><name>AllocExclusive</name></member>

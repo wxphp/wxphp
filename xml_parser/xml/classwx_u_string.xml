@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ustring.h" line="45"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ustring.h" line="45"/>
       </memberdef>
       <memberdef kind="function" id="classwx_u_string_1ada4eec3db99acf36671df952611a3321" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -32,7 +32,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ustring.h" line="49"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ustring.h" line="49"/>
       </memberdef>
       <memberdef kind="function" id="classwx_u_string_1aaa79e44866f3cdba56c960032ad5f72f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -49,7 +49,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ustring.h" line="53"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ustring.h" line="53"/>
       </memberdef>
       <memberdef kind="function" id="classwx_u_string_1ab748aabbdb489739a7d33a2b08765496" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -66,7 +66,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ustring.h" line="57"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ustring.h" line="57"/>
       </memberdef>
       <memberdef kind="function" id="classwx_u_string_1aaafd445672adc0e5d9c3f46db06dc9b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -83,7 +83,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ustring.h" line="61"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ustring.h" line="61"/>
       </memberdef>
       <memberdef kind="function" id="classwx_u_string_1a91d0166595963757921ab7a2c52724ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -100,7 +100,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ustring.h" line="65"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ustring.h" line="65"/>
       </memberdef>
       <memberdef kind="function" id="classwx_u_string_1a2f74572d6c114ce2b327c372d470b619" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -121,7 +121,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ustring.h" line="69"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ustring.h" line="69"/>
       </memberdef>
       <memberdef kind="function" id="classwx_u_string_1ac52996989de6fa1d2b126c307989a0c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -142,7 +142,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ustring.h" line="73"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ustring.h" line="73"/>
       </memberdef>
       <memberdef kind="function" id="classwx_u_string_1a10d0fa93a7151cd7194e53b61f30ae40" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -159,7 +159,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ustring.h" line="77"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ustring.h" line="77"/>
       </memberdef>
       <memberdef kind="function" id="classwx_u_string_1a268bc49d03d2ed4ae0d1c5ecad832701" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -176,7 +176,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ustring.h" line="81"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ustring.h" line="81"/>
       </memberdef>
       <memberdef kind="function" id="classwx_u_string_1abe1077c6160d08d601743efe90946d73" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -193,7 +193,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ustring.h" line="85"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ustring.h" line="85"/>
       </memberdef>
       <memberdef kind="function" id="classwx_u_string_1aa5d27a0498126066e5d15a7e4e63f569" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -210,7 +210,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ustring.h" line="89"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ustring.h" line="89"/>
       </memberdef>
       <memberdef kind="function" id="classwx_u_string_1a7cacf85009f3834f5149ec40f33dfe06" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -227,7 +227,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ustring.h" line="93"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ustring.h" line="93"/>
       </memberdef>
       <memberdef kind="function" id="classwx_u_string_1aee305717decf193554ddde33aa252342" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -244,7 +244,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ustring.h" line="97"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ustring.h" line="97"/>
       </memberdef>
       <memberdef kind="function" id="classwx_u_string_1ab3966174e5600056f072dde55bb9eae6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -261,7 +261,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ustring.h" line="101"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ustring.h" line="101"/>
       </memberdef>
       <memberdef kind="function" id="classwx_u_string_1a77f250a5d5ded7479d7a57a5ce3a33fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -278,7 +278,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ustring.h" line="105"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ustring.h" line="105"/>
       </memberdef>
       <memberdef kind="function" id="classwx_u_string_1a54d993d15a020b2b814e8ab5b979e3ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -299,7 +299,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ustring.h" line="109"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ustring.h" line="109"/>
       </memberdef>
       <memberdef kind="function" id="classwx_u_string_1acad05164dc5dbd9dabea4c6dfe0f7c94" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -320,7 +320,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ustring.h" line="113"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ustring.h" line="113"/>
       </memberdef>
       <memberdef kind="function" id="classwx_u_string_1a40110f6826aeed1a557290e229090eaf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -341,7 +341,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ustring.h" line="117"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ustring.h" line="117"/>
       </memberdef>
       <memberdef kind="function" id="classwx_u_string_1ae14691121c2910b4ba7bb50fc5b07078" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -362,7 +362,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ustring.h" line="121"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ustring.h" line="121"/>
       </memberdef>
       <memberdef kind="function" id="classwx_u_string_1a0a8a80db75ef73cd71162a67b99c3db8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -383,7 +383,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ustring.h" line="125"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ustring.h" line="125"/>
       </memberdef>
       <memberdef kind="function" id="classwx_u_string_1ac13340c445b8ea08b4022b92838f3d03" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_u_string" kindref="compound">wxUString</ref> &amp;</type>
@@ -400,7 +400,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ustring.h" line="156"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ustring.h" line="156"/>
       </memberdef>
       <memberdef kind="function" id="classwx_u_string_1aac34b8b4d5b6c4b82081eea670e09afe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_u_string" kindref="compound">wxUString</ref> &amp;</type>
@@ -421,7 +421,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ustring.h" line="160"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ustring.h" line="160"/>
       </memberdef>
       <memberdef kind="function" id="classwx_u_string_1aa46e844910cbeed580b3531b69ee3d4d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_u_string" kindref="compound">wxUString</ref> &amp;</type>
@@ -438,7 +438,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ustring.h" line="164"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ustring.h" line="164"/>
       </memberdef>
       <memberdef kind="function" id="classwx_u_string_1aaed7d216f38abddc3dd687809c261dc7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_u_string" kindref="compound">wxUString</ref> &amp;</type>
@@ -459,7 +459,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ustring.h" line="168"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ustring.h" line="168"/>
       </memberdef>
       <memberdef kind="function" id="classwx_u_string_1a50c189d786adb7fa0563b6fca0ff41d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_u_string" kindref="compound">wxUString</ref> &amp;</type>
@@ -476,7 +476,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ustring.h" line="172"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ustring.h" line="172"/>
       </memberdef>
       <memberdef kind="function" id="classwx_u_string_1af4657977a64b86081484a6a76925c5d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_u_string" kindref="compound">wxUString</ref> &amp;</type>
@@ -497,7 +497,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ustring.h" line="176"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ustring.h" line="176"/>
       </memberdef>
       <memberdef kind="function" id="classwx_u_string_1a1acb075bbf3a85ceb2858c344b321bd4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_u_string" kindref="compound">wxUString</ref> &amp;</type>
@@ -514,7 +514,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ustring.h" line="180"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ustring.h" line="180"/>
       </memberdef>
       <memberdef kind="function" id="classwx_u_string_1a6e184c2bd582c26444915df9e34c4e35" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_u_string" kindref="compound">wxUString</ref> &amp;</type>
@@ -535,7 +535,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ustring.h" line="184"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ustring.h" line="184"/>
       </memberdef>
       <memberdef kind="function" id="classwx_u_string_1a76b544ce9375a91072e15bfdd66d1056" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_char_buffer" kindref="compound">wxCharBuffer</ref></type>
@@ -548,7 +548,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ustring.h" line="189"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ustring.h" line="189"/>
       </memberdef>
       <memberdef kind="function" id="classwx_u_string_1a7422ae91d2387ffbb00d0823fe8547a3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>wxU16CharBuffer</type>
@@ -561,7 +561,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ustring.h" line="193"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ustring.h" line="193"/>
       </memberdef>
       <memberdef kind="function" id="classwx_u_string_1ade10912171d40f4e52811603c4fb1f50" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_w_char_buffer" kindref="compound">wxWCharBuffer</ref></type>
@@ -574,7 +574,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ustring.h" line="199"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ustring.h" line="199"/>
       </memberdef>
       <memberdef kind="function" id="classwx_u_string_1a5f197c3d5dabeeaa5e08e9d93b787031" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -587,7 +587,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ustring.h" line="204"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ustring.h" line="204"/>
       </memberdef>
       <memberdef kind="function" id="classwx_u_string_1a20f00b1534fc957b2c8ead144e04feee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_u_string" kindref="compound">wxUString</ref> &amp;</type>
@@ -604,7 +604,7 @@
 <para><ref refid="classwx_u_string" kindref="compound">wxUString</ref> additionally provides overloads for <ref refid="classwx_string" kindref="compound">wxString</ref>, C string, UTF-16 strings, 32-bit strings, char buffers, single and repeated characters etc. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ustring.h" line="211"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ustring.h" line="211"/>
       </memberdef>
       <memberdef kind="function" id="classwx_u_string_1a0222eceb6d5f53b9a6de296bb2e446fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_u_string" kindref="compound">wxUString</ref> &amp;</type>
@@ -621,7 +621,7 @@
 <para><ref refid="classwx_u_string" kindref="compound">wxUString</ref> additionally provides overloads for <ref refid="classwx_string" kindref="compound">wxString</ref>, C string, UTF-16 strings, 32-bit strings, char buffers, single and repeated characters etc. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ustring.h" line="218"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ustring.h" line="218"/>
       </memberdef>
       <memberdef kind="function" id="classwx_u_string_1a00842ae78bd772acf3cd85ebdfb6656f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_u_string" kindref="compound">wxUString</ref> &amp;</type>
@@ -642,7 +642,7 @@
 <para><ref refid="classwx_u_string" kindref="compound">wxUString</ref> additionally provides overloads for <ref refid="classwx_string" kindref="compound">wxString</ref>, C string, UTF-16 strings, 32-bit strings, char buffers, single characters etc. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ustring.h" line="225"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ustring.h" line="225"/>
       </memberdef>
       <memberdef kind="function" id="classwx_u_string_1a5d0c63e6a8164b5a01b5a3fb6e0df07e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classwx_u_string" kindref="compound">wxUString</ref> &amp;</type>
@@ -659,7 +659,7 @@
 <para><ref refid="classwx_u_string" kindref="compound">wxUString</ref> additionally provides overloads for <ref refid="classwx_string" kindref="compound">wxString</ref>, C string, UTF-16 strings, 32-bit strings, char buffers, single characters etc. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ustring.h" line="232"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ustring.h" line="232"/>
       </memberdef>
       <memberdef kind="function" id="classwx_u_string_1ada4dbc82dbcc52c58445b66a8022e8a2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classwx_u_string" kindref="compound">wxUString</ref> &amp;</type>
@@ -676,7 +676,7 @@
 <para><ref refid="classwx_u_string" kindref="compound">wxUString</ref> additionally provides overloads for <ref refid="classwx_string" kindref="compound">wxString</ref>, C string, UTF-16 strings, 32-bit strings, char buffers, single characters etc. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ustring.h" line="239"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ustring.h" line="239"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -699,7 +699,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ustring.h" line="130"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ustring.h" line="130"/>
       </memberdef>
       <memberdef kind="function" id="classwx_u_string_1aeea032d38c42af6dfffc24354e6c820f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_u_string" kindref="compound">wxUString</ref></type>
@@ -716,7 +716,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ustring.h" line="134"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ustring.h" line="134"/>
       </memberdef>
       <memberdef kind="function" id="classwx_u_string_1a89b822e8c80eda0cf5fd33de480dbb31" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_u_string" kindref="compound">wxUString</ref></type>
@@ -737,7 +737,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ustring.h" line="138"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ustring.h" line="138"/>
       </memberdef>
       <memberdef kind="function" id="classwx_u_string_1a800f8786f4b0fa1123806fc53ccf40a9" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_u_string" kindref="compound">wxUString</ref></type>
@@ -754,7 +754,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ustring.h" line="142"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ustring.h" line="142"/>
       </memberdef>
       <memberdef kind="function" id="classwx_u_string_1a0405d63cd3ef0c766640389a0146ec8a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_u_string" kindref="compound">wxUString</ref></type>
@@ -775,7 +775,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ustring.h" line="146"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ustring.h" line="146"/>
       </memberdef>
       <memberdef kind="function" id="classwx_u_string_1a9fbca72c3e4a55266079283e01720faf" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_u_string" kindref="compound">wxUString</ref></type>
@@ -792,7 +792,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ustring.h" line="150"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ustring.h" line="150"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -801,7 +801,7 @@
 <para>This is different from <ref refid="classwx_string" kindref="compound">wxString</ref> which may store a character either as a UTF-8 or as a UTF-16 sequence and different from <computeroutput>std::string</computeroutput> which stores a string as a sequence of simple 8-bit characters and also different from <computeroutput>std::wstring</computeroutput> which stores the string differently depending on the definition of wchar_t.</para><para>The main purpose of <ref refid="classwx_u_string" kindref="compound">wxUString</ref> is a to give users a Unicode string class that has O(1) access to its content, to be identical on all platforms and to be easily convertable to <ref refid="classwx_string" kindref="compound">wxString</ref> as well as other ways to store strings (C string literals, wide character string literals, character buffer, etc) by providing several overloads and built-in conversions to and from the various string formats.</para><para><ref refid="classwx_u_string" kindref="compound">wxUString</ref> derives from <computeroutput>std::basic_string&lt;wxChar32&gt;</computeroutput> and therefore offers the complete API of <computeroutput>std::string</computeroutput>.</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__data" kindref="compound">Data Structures</ref></para><para><simplesect kind="see"><para><ref refid="classwx_string" kindref="compound">wxString</ref>, <ref refid="overview_string" kindref="compound">wxString overview</ref>, <ref refid="overview_unicode" kindref="compound">Unicode overview</ref> </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ustring.h" line="40" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ustring.h" bodystart="39" bodyend="241"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ustring.h" line="40" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/ustring.h" bodystart="39" bodyend="241"/>
     <listofallmembers>
       <member refid="classwx_u_string_1a0222eceb6d5f53b9a6de296bb2e446fd" prot="public" virt="non-virtual"><scope>wxUString</scope><name>append</name></member>
       <member refid="classwx_u_string_1a20f00b1534fc957b2c8ead144e04feee" prot="public" virt="non-virtual"><scope>wxUString</scope><name>assign</name></member>

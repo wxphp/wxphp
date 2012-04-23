@@ -19,7 +19,7 @@
 <para>The parameter must be non-NULL and the window must exist for longer than <ref refid="classwx_window_update_locker" kindref="compound">wxWindowUpdateLocker</ref> object itself. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wupdlock.h" line="44"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/wupdlock.h" line="44"/>
       </memberdef>
       <memberdef kind="function" id="classwx_window_update_locker_1a08f911aacf4214fafc3953729f9763f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -32,7 +32,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wupdlock.h" line="49"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/wupdlock.h" line="49"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -49,7 +49,7 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 </programlisting></para><para>Using this class is easier and safer than calling <ref refid="classwx_window_1a15c678314cfc1d807196bc298b713ed3" kindref="member">wxWindow::Freeze()</ref> and <ref refid="classwx_window_1a279a532124073261b28131b6afb59a1e" kindref="member">wxWindow::Thaw()</ref> because you don&apos;t risk to forget calling the latter.</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__misc" kindref="compound">Miscellaneous</ref> </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wupdlock.h" line="37" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wupdlock.h" bodystart="36" bodyend="50"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/wupdlock.h" line="37" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/wupdlock.h" bodystart="36" bodyend="50"/>
     <listofallmembers>
       <member refid="classwx_window_update_locker_1aedd1a05d69846272cc4cc271ce8b91cc" prot="public" virt="non-virtual"><scope>wxWindowUpdateLocker</scope><name>wxWindowUpdateLocker</name></member>
       <member refid="classwx_window_update_locker_1a08f911aacf4214fafc3953729f9763f3" prot="public" virt="non-virtual"><scope>wxWindowUpdateLocker</scope><name>~wxWindowUpdateLocker</name></member>

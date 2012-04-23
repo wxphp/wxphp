@@ -55,7 +55,7 @@
 <para>These values map 1:1 the native values supported by the Windows&apos; <computeroutput>GetStockObject</computeroutput> function. Note that other ports (other than wxMSW) will try to provide meaningful fonts but they usually map the same font to various <computeroutput>wxSYS_*_FONT</computeroutput> values. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/settings.h" line="18" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/settings.h" bodystart="17" bodyend="41"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/settings.h" line="18" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/settings.h" bodystart="17" bodyend="41"/>
       </memberdef>
       <memberdef kind="enum" id="settings_8h_1a44ad26cbd8d579d1b7eff7015c8bd24b" prot="public" static="no">
         <name>wxSystemColour</name>
@@ -355,7 +355,7 @@
 <para>These values map 1:1 the native values supported by the Windows&apos; <computeroutput>GetSysColor</computeroutput> function. Note that other ports (other than wxMSW) will try to provide meaningful colours but they usually map the same colour to various <computeroutput>wxSYS_COLOUR_*</computeroutput> values. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/settings.h" line="52" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/settings.h" bodystart="51" bodyend="149"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/settings.h" line="52" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/settings.h" bodystart="51" bodyend="149"/>
       </memberdef>
       <memberdef kind="enum" id="settings_8h_1a0f2b19d7a3717cdbef5a04cb05ab8f26" prot="public" static="no">
         <name>wxSystemMetric</name>
@@ -405,13 +405,6 @@
           <name>wxSYS_DCLICK_Y</name>
           <briefdescription>
 <para>Height in pixels of rectangle within which two successive mouse clicks must fall to generate a double-click. </para>          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="settings_8h_1a0f2b19d7a3717cdbef5a04cb05ab8f26ab1c07936d0c1c7f3d249fb57edafc029" prot="public">
-          <name>wxSYS_DCLICK_MSEC</name>
-          <briefdescription>
-<para>Maximal time, in milliseconds, which may pass between subsequent clicks for a double click to be generated. </para>          </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
@@ -625,7 +618,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="settings_8h_1a0f2b19d7a3717cdbef5a04cb05ab8f26ab1c07936d0c1c7f3d249fb57edafc029" prot="public">
+        <enumvalue id="settings_8h_1a0f2b19d7a3717cdbef5a04cb05ab8f26aea63f67303e6d02b2f1247585b2d0bac" prot="public">
           <name>wxSYS_DCLICK_MSEC</name>
           <briefdescription>
 <para>Maximal time, in milliseconds, which may pass between subsequent clicks for a double click to be generated. </para>          </briefdescription>
@@ -638,7 +631,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/settings.h" line="155" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/settings.h" bodystart="154" bodyend="197"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/settings.h" line="155" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/settings.h" bodystart="154" bodyend="196"/>
       </memberdef>
       <memberdef kind="enum" id="settings_8h_1afc464d07a27e1c7ebf406a1321167bf5" prot="public" static="no">
         <name>wxSystemFeature</name>
@@ -670,7 +663,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/settings.h" line="203" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/settings.h" bodystart="202" bodyend="207"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/settings.h" line="202" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/settings.h" bodystart="201" bodyend="206"/>
       </memberdef>
       <memberdef kind="enum" id="settings_8h_1a805b469950075040f8fc4925d6507419" prot="public" static="no">
         <name>wxSystemScreenType</name>
@@ -716,13 +709,13 @@
 <para>See <ref refid="classwx_system_settings_1af8a2e5d2411eb520b8dad5fc5e9a1a7a" kindref="member">wxSystemSettings::GetScreenType()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/settings.h" line="213" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/settings.h" bodystart="212" bodyend="220"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/settings.h" line="212" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/settings.h" bodystart="211" bodyend="219"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/settings.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/settings.h"/>
   </compounddef>
 </doxygen>

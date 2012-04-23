@@ -21,7 +21,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmprint.h" line="366"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmprint.h" line="366"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_printout_1a651c760257e1518eb60e11bbe42235d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -47,7 +47,7 @@
 <para>See <ref refid="classwx_html_window_1a31b77979403242da3ccd40bea9b29b87" kindref="member">wxHtmlWindow::SetFonts</ref> for detailed description. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmprint.h" line="379"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmprint.h" line="379"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_printout_1a312c6639a9a81bb495b0ba2b497fa27d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -86,7 +86,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmprint.h" line="394"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmprint.h" line="394"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_printout_1af21e5145232578a5117310dc5eed3108" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -125,7 +125,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmprint.h" line="409"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmprint.h" line="409"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_printout_1adb4187f1d3ce0caa5a7c256952fe0189" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -142,7 +142,7 @@
 <para>The file may be located on any virtual file system or it may be normal file. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmprint.h" line="415"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmprint.h" line="415"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_printout_1ac868e1967e343fc1921d9553f53ec02f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -191,7 +191,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmprint.h" line="431"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmprint.h" line="431"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_printout_1a87e4ae45e436c3ba1791f01b4988f047" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -229,7 +229,7 @@
 <para>Defaults to 1 inch for margins and 0.5cm for space between text and header and/or footer. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmprint.h" line="441"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmprint.h" line="441"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -248,7 +248,7 @@
 <para>See <ref refid="classwx_html_filter" kindref="compound">wxHtmlFilter</ref> for further information. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmprint.h" line="372"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmprint.h" line="372"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -257,49 +257,49 @@
 <para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxhtml" kindref="member">wxHTML</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__html" kindref="compound">HTML</ref>, <ref refid="group__group__class__printing" kindref="compound">Printing Framework</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7107">
+      <node id="7294">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="7106">
+      <node id="7293">
         <label>wxPrintout</label>
         <link refid="classwx_printout"/>
-        <childnode refid="7107" relation="public-inheritance">
+        <childnode refid="7294" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7105">
+      <node id="7292">
         <label>wxHtmlPrintout</label>
         <link refid="classwx_html_printout"/>
-        <childnode refid="7106" relation="public-inheritance">
+        <childnode refid="7293" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7110">
+      <node id="7297">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="7111" relation="usage">
+        <childnode refid="7298" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="7109">
+      <node id="7296">
         <label>wxPrintout</label>
         <link refid="classwx_printout"/>
-        <childnode refid="7110" relation="public-inheritance">
+        <childnode refid="7297" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7108">
+      <node id="7295">
         <label>wxHtmlPrintout</label>
         <link refid="classwx_html_printout"/>
-        <childnode refid="7109" relation="public-inheritance">
+        <childnode refid="7296" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7111">
+      <node id="7298">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmprint.h" line="361" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmprint.h" bodystart="360" bodyend="442"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmprint.h" line="361" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmprint.h" bodystart="360" bodyend="442"/>
     <listofallmembers>
       <member refid="classwx_html_printout_1a87bed268a20afa774dfd98e4d6d44167" prot="public" virt="non-virtual"><scope>wxHtmlPrintout</scope><name>AddFilter</name></member>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxHtmlPrintout</scope><name>AllocExclusive</name></member>

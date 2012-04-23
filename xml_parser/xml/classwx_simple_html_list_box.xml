@@ -61,7 +61,7 @@
 <para>See <ref refid="classwx_simple_html_list_box_1af1ca6cea6a59786dcdae00eb7f862f3e" kindref="member">wxSimpleHtmlListBox()</ref> for further details. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/htmllbox.h" line="290"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/htmllbox.h" line="290"/>
       </memberdef>
       <memberdef kind="function" id="classwx_simple_html_list_box_1a6449a13aeb08dd901655d1f052f83072" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -109,7 +109,7 @@
 <para>See <ref refid="classwx_simple_html_list_box_1af1ca6cea6a59786dcdae00eb7f862f3e" kindref="member">wxSimpleHtmlListBox()</ref> for further details. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/htmllbox.h" line="297"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/htmllbox.h" line="297"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -232,7 +232,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/htmllbox.h" line="239"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/htmllbox.h" line="239"/>
       </memberdef>
       <memberdef kind="function" id="classwx_simple_html_list_box_1a80dafda1b8a8d8bca60a21070f56e25e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -337,7 +337,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/htmllbox.h" line="267"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/htmllbox.h" line="267"/>
       </memberdef>
       <memberdef kind="function" id="classwx_simple_html_list_box_1af1ca6cea6a59786dcdae00eb7f862f3e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -350,7 +350,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/htmllbox.h" line="272"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/htmllbox.h" line="272"/>
       </memberdef>
       <memberdef kind="function" id="classwx_simple_html_list_box_1a308d8e32c3fa846ca79b40dd6b4e7601" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -363,7 +363,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/htmllbox.h" line="277"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/htmllbox.h" line="277"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -386,169 +386,169 @@ A <ref refid="classwx_simple_html_list_box" kindref="compound">wxSimpleHtmlListB
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxhtml" kindref="member">wxHTML</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref> <htmlonly> &lt;br&gt;&lt;div&gt;&lt;span class=&apos;appearance&apos;&gt;Appearance:&lt;/span&gt;&lt;br&gt;&lt;table class=&apos;appearance&apos;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&apos;wxmsw/simplehtmllistbox.png&apos; alt=&apos;wxMSW appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxgtk/simplehtmllistbox.png&apos; alt=&apos;wxGTK appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxmac/simplehtmllistbox.png&apos; alt=&apos;wxMac appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;wxMSW appearance&lt;/td&gt;&lt;td&gt;wxGTK appearance&lt;/td&gt;&lt;td&gt;wxMac appearance&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt; </htmlonly></para><para><simplesect kind="see"><para><ref refid="classwx_simple_html_list_box_1ad9ca89293dd85e02c349aace4a9c8552" kindref="member">wxSimpleHtmlListBox::Create</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10190">
+      <node id="10373">
         <label>wxItemContainer</label>
         <link refid="classwx_item_container"/>
-        <childnode refid="10191" relation="public-inheritance">
+        <childnode refid="10374" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10189">
+      <node id="10372">
         <label>wxVarScrollHelperBase</label>
         <link refid="classwx_var_scroll_helper_base"/>
       </node>
-      <node id="10181">
+      <node id="10364">
         <label>wxVListBox</label>
         <link refid="classwx_v_list_box"/>
-        <childnode refid="10182" relation="public-inheritance">
+        <childnode refid="10365" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10186">
+      <node id="10369">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="10179">
+      <node id="10362">
         <label>wxSimpleHtmlListBox</label>
         <link refid="classwx_simple_html_list_box"/>
-        <childnode refid="10180" relation="public-inheritance">
+        <childnode refid="10363" relation="public-inheritance">
         </childnode>
-        <childnode refid="10190" relation="public-inheritance">
+        <childnode refid="10373" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10182">
+      <node id="10365">
         <label>wxVScrolledWindow</label>
         <link refid="classwx_v_scrolled_window"/>
-        <childnode refid="10183" relation="public-inheritance">
+        <childnode refid="10366" relation="public-inheritance">
         </childnode>
-        <childnode refid="10188" relation="public-inheritance">
+        <childnode refid="10371" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10185">
+      <node id="10368">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="10186" relation="public-inheritance">
+        <childnode refid="10369" relation="public-inheritance">
         </childnode>
-        <childnode refid="10187" relation="public-inheritance">
+        <childnode refid="10370" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10183">
+      <node id="10366">
         <label>wxPanel</label>
         <link refid="classwx_panel"/>
-        <childnode refid="10184" relation="public-inheritance">
+        <childnode refid="10367" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10187">
+      <node id="10370">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="10184">
+      <node id="10367">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="10185" relation="public-inheritance">
+        <childnode refid="10368" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10180">
+      <node id="10363">
         <label>wxHtmlListBox</label>
         <link refid="classwx_html_list_box"/>
-        <childnode refid="10181" relation="public-inheritance">
+        <childnode refid="10364" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10188">
+      <node id="10371">
         <label>wxVarVScrollHelper</label>
         <link refid="classwx_var_v_scroll_helper"/>
-        <childnode refid="10189" relation="public-inheritance">
+        <childnode refid="10372" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10191">
+      <node id="10374">
         <label>wxItemContainerImmutable</label>
         <link refid="classwx_item_container_immutable"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10204">
+      <node id="10387">
         <label>wxItemContainer</label>
         <link refid="classwx_item_container"/>
-        <childnode refid="10205" relation="public-inheritance">
+        <childnode refid="10388" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10203">
+      <node id="10386">
         <label>wxVarScrollHelperBase</label>
         <link refid="classwx_var_scroll_helper_base"/>
       </node>
-      <node id="10194">
+      <node id="10377">
         <label>wxVListBox</label>
         <link refid="classwx_v_list_box"/>
-        <childnode refid="10195" relation="public-inheritance">
+        <childnode refid="10378" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10199">
+      <node id="10382">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="10200" relation="usage">
+        <childnode refid="10383" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="10192">
+      <node id="10375">
         <label>wxSimpleHtmlListBox</label>
         <link refid="classwx_simple_html_list_box"/>
-        <childnode refid="10193" relation="public-inheritance">
+        <childnode refid="10376" relation="public-inheritance">
         </childnode>
-        <childnode refid="10204" relation="public-inheritance">
+        <childnode refid="10387" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10195">
+      <node id="10378">
         <label>wxVScrolledWindow</label>
         <link refid="classwx_v_scrolled_window"/>
-        <childnode refid="10196" relation="public-inheritance">
+        <childnode refid="10379" relation="public-inheritance">
         </childnode>
-        <childnode refid="10202" relation="public-inheritance">
+        <childnode refid="10385" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10198">
+      <node id="10381">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="10199" relation="public-inheritance">
+        <childnode refid="10382" relation="public-inheritance">
         </childnode>
-        <childnode refid="10201" relation="public-inheritance">
+        <childnode refid="10384" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10196">
+      <node id="10379">
         <label>wxPanel</label>
         <link refid="classwx_panel"/>
-        <childnode refid="10197" relation="public-inheritance">
+        <childnode refid="10380" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10201">
+      <node id="10384">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="10197">
+      <node id="10380">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="10198" relation="public-inheritance">
+        <childnode refid="10381" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10193">
+      <node id="10376">
         <label>wxHtmlListBox</label>
         <link refid="classwx_html_list_box"/>
-        <childnode refid="10194" relation="public-inheritance">
+        <childnode refid="10377" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10202">
+      <node id="10385">
         <label>wxVarVScrollHelper</label>
         <link refid="classwx_var_v_scroll_helper"/>
-        <childnode refid="10203" relation="public-inheritance">
+        <childnode refid="10386" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10205">
+      <node id="10388">
         <label>wxItemContainerImmutable</label>
         <link refid="classwx_item_container_immutable"/>
       </node>
-      <node id="10200">
+      <node id="10383">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/htmllbox.h" line="206" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/htmllbox.h" bodystart="204" bodyend="299"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/htmllbox.h" line="206" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/htmllbox.h" bodystart="204" bodyend="299"/>
     <listofallmembers>
       <member refid="classwx_panel_1ad43482bf961c0a8185624085facd0853" prot="public" virt="virtual"><scope>wxSimpleHtmlListBox</scope><name>AcceptsFocus</name></member>
       <member refid="classwx_window_1a2370bdd3ab08e7ef3c7555c6aa8301b8" prot="public" virt="virtual"><scope>wxSimpleHtmlListBox</scope><name>AcceptsFocusFromKeyboard</name></member>
@@ -770,6 +770,7 @@ A <ref refid="classwx_simple_html_list_box" kindref="compound">wxSimpleHtmlListB
       <member refid="classwx_window_1ae1b56ca87d8590ee5e576012229a380a" prot="public" virt="non-virtual"><scope>wxSimpleHtmlListBox</scope><name>InvalidateBestSize</name></member>
       <member refid="classwx_window_1af918e6fe8565c2d5235973cc3de84a43" prot="public" virt="non-virtual"><scope>wxSimpleHtmlListBox</scope><name>IsBeingDeleted</name></member>
       <member refid="classwx_v_list_box_1adbef7038b847654aba0823d81496b60b" prot="public" virt="non-virtual"><scope>wxSimpleHtmlListBox</scope><name>IsCurrent</name></member>
+      <member refid="classwx_window_1a469f0881da248d37691440c9d4cc7200" prot="public" virt="non-virtual"><scope>wxSimpleHtmlListBox</scope><name>IsDescendant</name></member>
       <member refid="classwx_window_1a9d1be1bbb625ebf87ad4ad47e49a0194" prot="public" virt="virtual"><scope>wxSimpleHtmlListBox</scope><name>IsDoubleBuffered</name></member>
       <member refid="classwx_item_container_immutable_1a32c254e4cd1a6090377e0504e230bb88" prot="public" virt="non-virtual"><scope>wxSimpleHtmlListBox</scope><name>IsEmpty</name></member>
       <member refid="classwx_window_1a59452a5bd42f5ea4b31d7fc4aa59644f" prot="public" virt="non-virtual"><scope>wxSimpleHtmlListBox</scope><name>IsEnabled</name></member>
@@ -788,6 +789,7 @@ A <ref refid="classwx_simple_html_list_box" kindref="compound">wxSimpleHtmlListB
       <member refid="classwx_window_1a72d70fd14e3565bf782fbcd3271d8930" prot="public" virt="virtual"><scope>wxSimpleHtmlListBox</scope><name>IsShownOnScreen</name></member>
       <member refid="classwx_window_1a657ef8b6055eb06df894ac5e6ddfecf8" prot="public" virt="non-virtual"><scope>wxSimpleHtmlListBox</scope><name>IsThisEnabled</name></member>
       <member refid="classwx_window_1a0002826ad05f2a5661b4c8995713f37f" prot="public" virt="virtual"><scope>wxSimpleHtmlListBox</scope><name>IsTopLevel</name></member>
+      <member refid="classwx_window_1a7940d510c5bdc062a2b109a1022dd8c2" prot="public" virt="virtual"><scope>wxSimpleHtmlListBox</scope><name>IsTransparentBackgroundSupported</name></member>
       <member refid="classwx_evt_handler_1a360fdeefcf53b62fb49fb828406bb8a6" prot="public" virt="non-virtual"><scope>wxSimpleHtmlListBox</scope><name>IsUnlinked</name></member>
       <member refid="classwx_var_scroll_helper_base_1aeb032c41e1436c630b9fadf3c198c91d" prot="public" virt="non-virtual"><scope>wxSimpleHtmlListBox</scope><name>IsVisible</name></member>
       <member refid="classwx_panel_1a6ded9b75baf21e2c9f5496f746b68bf0" prot="public" virt="virtual"><scope>wxSimpleHtmlListBox</scope><name>Layout</name></member>
@@ -795,7 +797,6 @@ A <ref refid="classwx_simple_html_list_box" kindref="compound">wxSimpleHtmlListB
       <member refid="classwx_window_1afc0816a174ceee6d36d1995c6824a273" prot="public" virt="non-virtual"><scope>wxSimpleHtmlListBox</scope><name>LineUp</name></member>
       <member refid="classwx_window_1a124944524f36b71385dad8fddaad8ded" prot="public" virt="virtual"><scope>wxSimpleHtmlListBox</scope><name>Lower</name></member>
       <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxSimpleHtmlListBox</scope><name>m_refData</name></member>
-      <member refid="classwx_window_1a192fc8b467845d093c16452db96c65c5" prot="public" virt="virtual"><scope>wxSimpleHtmlListBox</scope><name>MakeModal</name></member>
       <member refid="classwx_window_1ab1cb98c8d25b9e6ff7b706b1446c3df7" prot="public" virt="non-virtual"><scope>wxSimpleHtmlListBox</scope><name>Move</name></member>
       <member refid="classwx_window_1a22a22c1e23ca05776707e7999d8047fe" prot="public" virt="non-virtual"><scope>wxSimpleHtmlListBox</scope><name>Move</name></member>
       <member refid="classwx_window_1a79e66079125e8420de269811bdb6f2b6" prot="public" virt="non-virtual"><scope>wxSimpleHtmlListBox</scope><name>MoveAfterInTabOrder</name></member>
@@ -955,7 +956,6 @@ A <ref refid="classwx_simple_html_list_box" kindref="compound">wxSimpleHtmlListB
       <member refid="classwx_window_1a88cc65e424a129d9b0057756cdb67ec9" prot="public" virt="virtual"><scope>wxSimpleHtmlListBox</scope><name>TransferDataToWindow</name></member>
       <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxSimpleHtmlListBox</scope><name>TryAfter</name></member>
       <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxSimpleHtmlListBox</scope><name>TryBefore</name></member>
-      <member refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" virt="non-virtual"><scope>wxSimpleHtmlListBox</scope><name>TryThis</name></member>
       <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxSimpleHtmlListBox</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxSimpleHtmlListBox</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a22e5db2ec1d19c8252c056fd116975d7" prot="public" virt="non-virtual"><scope>wxSimpleHtmlListBox</scope><name>Unlink</name></member>

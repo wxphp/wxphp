@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlpars.h" line="115"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlpars.h" line="115"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_parser_1a67e06c2e5023fb50c893a1a283205e45" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -33,7 +33,7 @@
 <para>This method should not be called directly by user but rather by derived class&apos; constructor.</para><para>This adds the handler to this <bold>instance</bold> of <ref refid="classwx_html_parser" kindref="compound">wxHtmlParser</ref>, not to all objects of this class! (Static front-end to AddTagHandler is provided by <ref refid="classwx_html_win_parser" kindref="compound">wxHtmlWinParser</ref>).</para><para>All handlers are deleted on object deletion. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlpars.h" line="128"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlpars.h" line="128"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_parser_1ae4856660f14cbcb812b48678b4984665" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -50,7 +50,7 @@
 <para>This method is called by <ref refid="classwx_html_parser_1a743a08491352f57043d2069df5cc7a7e" kindref="member">DoParsing()</ref> each time a part of text is parsed. <emphasis>txt</emphasis> is NOT only one word, it is substring of input. It is not formatted or preprocessed (so white spaces are unmodified). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlpars.h" line="137"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlpars.h" line="137"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_parser_1ac04230b82e6de6dde10757cbe6149980" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -71,7 +71,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlpars.h" line="142"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlpars.h" line="142"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_parser_1a743a08491352f57043d2069df5cc7a7e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -84,7 +84,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlpars.h" line="147"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlpars.h" line="147"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_parser_1a354d30d5071266b868a225b13333cd0e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -97,7 +97,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlpars.h" line="152"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlpars.h" line="152"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_parser_1aaea2ccc752d947e65dfe49d4ff1a1e2d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_file_system" kindref="compound">wxFileSystem</ref> *</type>
@@ -111,7 +111,7 @@
 </programlisting> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlpars.h" line="162"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlpars.h" line="162"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_parser_1a9b715eb585661ec4a9a1e9bf48fe660f" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type><ref refid="classwx_object" kindref="compound">wxObject</ref> *</type>
@@ -124,7 +124,7 @@
 <para>Returned value is result of parsing of the document.</para><para>The type of this result depends on internal representation in derived parser (but it must be derived from wxObject!). See <ref refid="classwx_html_win_parser" kindref="compound">wxHtmlWinParser</ref> for details. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlpars.h" line="172"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlpars.h" line="172"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_parser_1a7e1be4b2e16a3cee02ffc2906b14992b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> *</type>
@@ -137,7 +137,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlpars.h" line="177"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlpars.h" line="177"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_parser_1ad047fa0b03c8241080e0561fd9a5d8b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -154,7 +154,7 @@
 <para>(Should be overridden in derived class) </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlpars.h" line="183"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlpars.h" line="183"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_parser_1aaecb050ca8be6e6d980f28774aa35bef" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_f_s_file" kindref="compound">wxFSFile</ref> *</type>
@@ -193,7 +193,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlpars.h" line="210"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlpars.h" line="210"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_parser_1ad2a0f4c4a60f7745f31a0b0bac9ceac5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_object" kindref="compound">wxObject</ref> *</type>
@@ -212,7 +212,7 @@
 </para><para>You shouldn&apos;t use <ref refid="classwx_html_parser_1ad047fa0b03c8241080e0561fd9a5d8b6" kindref="member">InitParser()</ref>, <ref refid="classwx_html_parser_1a743a08491352f57043d2069df5cc7a7e" kindref="member">DoParsing()</ref>, <ref refid="classwx_html_parser_1a9b715eb585661ec4a9a1e9bf48fe660f" kindref="member">GetProduct()</ref> or <ref refid="classwx_html_parser_1a354d30d5071266b868a225b13333cd0e" kindref="member">DoneParser()</ref> directly. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlpars.h" line="225"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlpars.h" line="225"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_parser_1a8cc9ec3e59aa0d12116988831d4708dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -225,7 +225,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlpars.h" line="230"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlpars.h" line="230"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_parser_1a80498b0ad245e26f6041915e9bae934a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -281,7 +281,7 @@ Example:</para><para>Imagine you want to parse following pseudo-html structure: 
 </programlisting> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlpars.h" line="278"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlpars.h" line="278"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_parser_1ae49af4d0bc1de1476e9d6d0f235e2766" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -298,7 +298,7 @@ Example:</para><para>Imagine you want to parse following pseudo-html structure: 
 <para>(For example <computeroutput>IMG</computeroutput> tag handler requests <ref refid="classwx_f_s_file" kindref="compound">wxFSFile</ref> with the image data.) </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlpars.h" line="284"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlpars.h" line="284"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_parser_1af32c63cbcc6c42ac522b2aba269a422b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -311,7 +311,7 @@ Example:</para><para>Imagine you want to parse following pseudo-html structure: 
 <para>No more tags will be parsed afterward. This function may only be called from <ref refid="classwx_html_parser_1ad2a0f4c4a60f7745f31a0b0bac9ceac5" kindref="member">Parse()</ref> or any function called by it (i.e. from tag handlers). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlpars.h" line="291"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlpars.h" line="291"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-func">
@@ -330,7 +330,7 @@ Example:</para><para>Imagine you want to parse following pseudo-html structure: 
 <para>This method is called each time new tag is about to be added. <emphasis>tag</emphasis> contains information about the tag. (See <ref refid="classwx_html_tag" kindref="compound">wxHtmlTag</ref> for details.)</para><para>Default (<ref refid="classwx_html_parser" kindref="compound">wxHtmlParser</ref>) behaviour is this: first it finds a handler capable of handling this tag and then it calls handler&apos;s HandleTag() method. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlpars.h" line="304"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlpars.h" line="304"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -340,18 +340,18 @@ Example:</para><para>Imagine you want to parse following pseudo-html structure: 
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxhtml" kindref="member">wxHTML</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__html" kindref="compound">HTML</ref></para><para><simplesect kind="see"><para><ref refid="overview_html_1overview_html_cells" kindref="member">Cells and Containers</ref>, <ref refid="overview_html_1overview_html_handlers" kindref="member">Tag Handlers</ref>, <ref refid="classwx_html_tag" kindref="compound">wxHtmlTag</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7103">
+      <node id="7290">
         <label>wxHtmlWinParser</label>
         <link refid="classwx_html_win_parser"/>
-        <childnode refid="7102" relation="public-inheritance">
+        <childnode refid="7289" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7102">
+      <node id="7289">
         <label>wxHtmlParser</label>
         <link refid="classwx_html_parser"/>
       </node>
     </inheritancegraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlpars.h" line="110" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlpars.h" bodystart="109" bodyend="305"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlpars.h" line="110" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlpars.h" bodystart="109" bodyend="305"/>
     <listofallmembers>
       <member refid="classwx_html_parser_1a78f5d8c42846d23b6b33093f585f1352" prot="protected" virt="virtual"><scope>wxHtmlParser</scope><name>AddTag</name></member>
       <member refid="classwx_html_parser_1a67e06c2e5023fb50c893a1a283205e45" prot="public" virt="virtual"><scope>wxHtmlParser</scope><name>AddTagHandler</name></member>

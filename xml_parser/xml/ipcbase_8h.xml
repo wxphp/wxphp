@@ -347,13 +347,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ipcbase.h" line="13" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ipcbase.h" bodystart="12" bodyend="35"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ipcbase.h" line="13" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/ipcbase.h" bodystart="12" bodyend="35"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ipcbase.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ipcbase.h"/>
   </compounddef>
 </doxygen>

@@ -15,7 +15,7 @@
 <para>Use <ref refid="classwx_f_s_volume_1adfb2a7c227e86b1705bb6550ee6a991e" kindref="member">Create()</ref> later. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/volume.h" line="73"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/volume.h" line="73"/>
       </memberdef>
       <memberdef kind="function" id="classwx_f_s_volume_1a02f2eb7976b97fd1612dc83bd1289237" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -32,7 +32,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/volume.h" line="79"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/volume.h" line="79"/>
       </memberdef>
       <memberdef kind="function" id="classwx_f_s_volume_1adfb2a7c227e86b1705bb6550ee6a991e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -49,7 +49,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/volume.h" line="85"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/volume.h" line="85"/>
       </memberdef>
       <memberdef kind="function" id="classwx_f_s_volume_1adefde5139dad28a0edd0c9c4380fc51e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -62,7 +62,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/volume.h" line="110"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/volume.h" line="110"/>
       </memberdef>
       <memberdef kind="function" id="classwx_f_s_volume_1ab690b3bb601eee384c8c12d8f89db366" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="volume_8h_1aa4e140e1cf09e65894158d6df45cb129" kindref="member">wxFSVolumeKind</ref></type>
@@ -75,7 +75,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/volume.h" line="115"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/volume.h" line="115"/>
       </memberdef>
       <memberdef kind="function" id="classwx_f_s_volume_1a8d55b857b58d29150cd9330d9e68e65d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -88,7 +88,7 @@
 <para>See <ref refid="volume_8h_1a5c80e004648868994c5a2406a9f950fe" kindref="member">wxFSVolumeFlags</ref> enumeration values. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/volume.h" line="120"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/volume.h" line="120"/>
       </memberdef>
       <memberdef kind="function" id="classwx_f_s_volume_1aad3c199f3bdd89246f091fde409b4014" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -101,7 +101,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/volume.h" line="125"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/volume.h" line="125"/>
       </memberdef>
       <memberdef kind="function" id="classwx_f_s_volume_1ae6c3cd14cf91fd2d87ac0f2a8d5efe02" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -114,7 +114,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/volume.h" line="131"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/volume.h" line="131"/>
       </memberdef>
       <memberdef kind="function" id="classwx_f_s_volume_1a534f926534e673eab98fd3848fcad64a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -127,7 +127,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/volume.h" line="136"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/volume.h" line="136"/>
       </memberdef>
       <memberdef kind="function" id="classwx_f_s_volume_1af04cadcda4e2c52d5f2a61c1927678b2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_icon" kindref="compound">wxIcon</ref></type>
@@ -144,7 +144,7 @@
 <para>Returns the icon used by the native toolkit for the given file system type. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/volume.h" line="143"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/volume.h" line="143"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -170,7 +170,7 @@
 </programlisting> is true, are returned. By default, all mounted ones are returned. See <ref refid="volume_8h_1a5c80e004648868994c5a2406a9f950fe" kindref="member">wxFSVolumeFlags</ref> enumeration values for a list of valid flags.</para><para>This operation may take a while and, even if this function is synchronous, it can be stopped using <ref refid="classwx_f_s_volume_1a0a43342c22263988ce38996ee5ee37af" kindref="member">CancelSearch()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/volume.h" line="99"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/volume.h" line="99"/>
       </memberdef>
       <memberdef kind="function" id="classwx_f_s_volume_1a0a43342c22263988ce38996ee5ee37af" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -183,7 +183,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/volume.h" line="105"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/volume.h" line="105"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -191,7 +191,7 @@
     <detaileddescription>
 <para>Unix ports of wxWidgets do not have the concept of volumes and thus do not implement <ref refid="classwx_f_s_volume" kindref="compound">wxFSVolume</ref>.</para><para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page_port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor> </para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__misc" kindref="compound">Miscellaneous</ref> </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/volume.h" line="68" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/volume.h" bodystart="67" bodyend="144"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/volume.h" line="68" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/volume.h" bodystart="67" bodyend="144"/>
     <listofallmembers>
       <member refid="classwx_f_s_volume_1a0a43342c22263988ce38996ee5ee37af" prot="public" virt="non-virtual"><scope>wxFSVolume</scope><name>CancelSearch</name></member>
       <member refid="classwx_f_s_volume_1adfb2a7c227e86b1705bb6550ee6a991e" prot="public" virt="non-virtual"><scope>wxFSVolume</scope><name>Create</name></member>

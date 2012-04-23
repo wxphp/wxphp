@@ -28,7 +28,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/anybutton.h" line="191"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/anybutton.h" line="191"/>
       </memberdef>
       <memberdef kind="function" id="classwx_any_button_1ab12a46889cfb85eaa96f1a1dc3a21b8f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -47,7 +47,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/anybutton.h" line="192"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/anybutton.h" line="192"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -62,7 +62,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/anybutton.h" line="29"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/anybutton.h" line="29"/>
       </memberdef>
       <memberdef kind="function" id="classwx_any_button_1a0379ff40f5b44352a82d32608127de06" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -75,7 +75,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/anybutton.h" line="30"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/anybutton.h" line="30"/>
       </memberdef>
       <memberdef kind="function" id="classwx_any_button_1a57285ac9bd0df9670da2cd0a34999624" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref></type>
@@ -90,7 +90,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/anybutton.h" line="42"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/anybutton.h" line="42"/>
       </memberdef>
       <memberdef kind="function" id="classwx_any_button_1a8fb497d3c40b311ea3a8c6a4e6a6c738" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref></type>
@@ -105,7 +105,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/anybutton.h" line="53"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/anybutton.h" line="53"/>
       </memberdef>
       <memberdef kind="function" id="classwx_any_button_1ae3c3c296a42ff006c687c6c75ca77205" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref></type>
@@ -120,7 +120,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/anybutton.h" line="62"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/anybutton.h" line="62"/>
       </memberdef>
       <memberdef kind="function" id="classwx_any_button_1a9ae1b4ddc7c051fcbf16b582169a282b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref></type>
@@ -135,7 +135,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/anybutton.h" line="71"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/anybutton.h" line="71"/>
       </memberdef>
       <memberdef kind="function" id="classwx_any_button_1af616d452d69722d724b6d316eb69aad6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref></type>
@@ -150,7 +150,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/anybutton.h" line="83"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/anybutton.h" line="83"/>
       </memberdef>
       <memberdef kind="function" id="classwx_any_button_1a242ec37b894e361c3f96632665c48a4e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref></type>
@@ -165,7 +165,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/anybutton.h" line="93"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/anybutton.h" line="93"/>
       </memberdef>
       <memberdef kind="function" id="classwx_any_button_1a9d4e6eb774aa5d19b6f75c48439d3685" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -204,7 +204,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/anybutton.h" line="117"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/anybutton.h" line="117"/>
       </memberdef>
       <memberdef kind="function" id="classwx_any_button_1a7ef165f2a4d309e6ed6ff943a8d21563" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -223,7 +223,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/anybutton.h" line="127"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/anybutton.h" line="127"/>
       </memberdef>
       <memberdef kind="function" id="classwx_any_button_1a735a45850008e87e1198db36fcbee0db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -242,7 +242,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/anybutton.h" line="137"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/anybutton.h" line="137"/>
       </memberdef>
       <memberdef kind="function" id="classwx_any_button_1adcf9477763500b6fde991d8907a18cca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -261,7 +261,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/anybutton.h" line="148"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/anybutton.h" line="148"/>
       </memberdef>
       <memberdef kind="function" id="classwx_any_button_1a1efdfd1f222acca40aacad1fe5f8eb17" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -281,7 +281,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/anybutton.h" line="160"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/anybutton.h" line="160"/>
       </memberdef>
       <memberdef kind="function" id="classwx_any_button_1a414ed38ee5fce39feaf686b7616c0cb6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -299,7 +299,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/anybutton.h" line="168"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/anybutton.h" line="168"/>
       </memberdef>
       <memberdef kind="function" id="classwx_any_button_1ad45ae096a0a0ab0ba89442a34e76b30b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
@@ -314,7 +314,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/anybutton.h" line="178"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/anybutton.h" line="178"/>
       </memberdef>
       <memberdef kind="function" id="classwx_any_button_1a841c7747f78ea37110338b0ce1aa97dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -340,7 +340,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/anybutton.h" line="207"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/anybutton.h" line="207"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -348,121 +348,121 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="4265">
+      <node id="4348">
         <label>wxCommandLinkButton</label>
         <link refid="classwx_command_link_button"/>
-        <childnode refid="4262" relation="public-inheritance">
+        <childnode refid="4345" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4260">
+      <node id="4343">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="4259">
+      <node id="4342">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="4260" relation="public-inheritance">
+        <childnode refid="4343" relation="public-inheritance">
         </childnode>
-        <childnode refid="4261" relation="public-inheritance">
+        <childnode refid="4344" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4266">
+      <node id="4349">
         <label>wxToggleButton</label>
         <link refid="classwx_toggle_button"/>
-        <childnode refid="4256" relation="public-inheritance">
+        <childnode refid="4339" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4261">
+      <node id="4344">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="4257">
+      <node id="4340">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="4258" relation="public-inheritance">
+        <childnode refid="4341" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4258">
+      <node id="4341">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="4259" relation="public-inheritance">
+        <childnode refid="4342" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4267">
+      <node id="4350">
         <label>wxBitmapToggleButton</label>
         <link refid="classwx_bitmap_toggle_button"/>
-        <childnode refid="4266" relation="public-inheritance">
+        <childnode refid="4349" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4256">
+      <node id="4339">
         <label>wxAnyButton</label>
         <link refid="classwx_any_button"/>
-        <childnode refid="4257" relation="public-inheritance">
+        <childnode refid="4340" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4262">
+      <node id="4345">
         <label>wxButton</label>
         <link refid="classwx_button"/>
-        <childnode refid="4256" relation="public-inheritance">
+        <childnode refid="4339" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4263">
+      <node id="4346">
         <label>wxBitmapButton</label>
         <link refid="classwx_bitmap_button"/>
-        <childnode refid="4262" relation="public-inheritance">
+        <childnode refid="4345" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4264">
+      <node id="4347">
         <label>wxContextHelpButton</label>
         <link refid="classwx_context_help_button"/>
-        <childnode refid="4263" relation="public-inheritance">
+        <childnode refid="4346" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="4272">
+      <node id="4355">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="4273" relation="usage">
+        <childnode refid="4356" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="4271">
+      <node id="4354">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="4272" relation="public-inheritance">
+        <childnode refid="4355" relation="public-inheritance">
         </childnode>
-        <childnode refid="4274" relation="public-inheritance">
+        <childnode refid="4357" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4274">
+      <node id="4357">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="4269">
+      <node id="4352">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="4270" relation="public-inheritance">
+        <childnode refid="4353" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4270">
+      <node id="4353">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="4271" relation="public-inheritance">
+        <childnode refid="4354" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4268">
+      <node id="4351">
         <label>wxAnyButton</label>
         <link refid="classwx_any_button"/>
-        <childnode refid="4269" relation="public-inheritance">
+        <childnode refid="4352" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4273">
+      <node id="4356">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/anybutton.h" line="27" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/anybutton.h" bodystart="26" bodyend="208"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/anybutton.h" line="27" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/anybutton.h" bodystart="26" bodyend="208"/>
     <listofallmembers>
       <member refid="classwx_window_1a3afbd49b1ea2f8275e3600dcac102923" prot="public" virt="virtual"><scope>wxAnyButton</scope><name>AcceptsFocus</name></member>
       <member refid="classwx_window_1a2370bdd3ab08e7ef3c7555c6aa8301b8" prot="public" virt="virtual"><scope>wxAnyButton</scope><name>AcceptsFocusFromKeyboard</name></member>
@@ -633,6 +633,7 @@
       <member refid="classwx_window_1aa90a260c0a835a133043460b7d0024a8" prot="public" virt="virtual"><scope>wxAnyButton</scope><name>InitDialog</name></member>
       <member refid="classwx_window_1ae1b56ca87d8590ee5e576012229a380a" prot="public" virt="non-virtual"><scope>wxAnyButton</scope><name>InvalidateBestSize</name></member>
       <member refid="classwx_window_1af918e6fe8565c2d5235973cc3de84a43" prot="public" virt="non-virtual"><scope>wxAnyButton</scope><name>IsBeingDeleted</name></member>
+      <member refid="classwx_window_1a469f0881da248d37691440c9d4cc7200" prot="public" virt="non-virtual"><scope>wxAnyButton</scope><name>IsDescendant</name></member>
       <member refid="classwx_window_1a9d1be1bbb625ebf87ad4ad47e49a0194" prot="public" virt="virtual"><scope>wxAnyButton</scope><name>IsDoubleBuffered</name></member>
       <member refid="classwx_window_1a59452a5bd42f5ea4b31d7fc4aa59644f" prot="public" virt="non-virtual"><scope>wxAnyButton</scope><name>IsEnabled</name></member>
       <member refid="classwx_window_1af27ef77c913e32050543f3b0ca435a0d" prot="public" virt="non-virtual"><scope>wxAnyButton</scope><name>IsExposed</name></member>
@@ -648,13 +649,13 @@
       <member refid="classwx_window_1a72d70fd14e3565bf782fbcd3271d8930" prot="public" virt="virtual"><scope>wxAnyButton</scope><name>IsShownOnScreen</name></member>
       <member refid="classwx_window_1a657ef8b6055eb06df894ac5e6ddfecf8" prot="public" virt="non-virtual"><scope>wxAnyButton</scope><name>IsThisEnabled</name></member>
       <member refid="classwx_window_1a0002826ad05f2a5661b4c8995713f37f" prot="public" virt="virtual"><scope>wxAnyButton</scope><name>IsTopLevel</name></member>
+      <member refid="classwx_window_1a7940d510c5bdc062a2b109a1022dd8c2" prot="public" virt="virtual"><scope>wxAnyButton</scope><name>IsTransparentBackgroundSupported</name></member>
       <member refid="classwx_evt_handler_1a360fdeefcf53b62fb49fb828406bb8a6" prot="public" virt="non-virtual"><scope>wxAnyButton</scope><name>IsUnlinked</name></member>
       <member refid="classwx_window_1a1b143c3e72bd0af533b76db4830a6113" prot="public" virt="virtual"><scope>wxAnyButton</scope><name>Layout</name></member>
       <member refid="classwx_window_1ade808784f0e64d9985e2f279b5ca8c02" prot="public" virt="non-virtual"><scope>wxAnyButton</scope><name>LineDown</name></member>
       <member refid="classwx_window_1afc0816a174ceee6d36d1995c6824a273" prot="public" virt="non-virtual"><scope>wxAnyButton</scope><name>LineUp</name></member>
       <member refid="classwx_window_1a124944524f36b71385dad8fddaad8ded" prot="public" virt="virtual"><scope>wxAnyButton</scope><name>Lower</name></member>
       <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxAnyButton</scope><name>m_refData</name></member>
-      <member refid="classwx_window_1a192fc8b467845d093c16452db96c65c5" prot="public" virt="virtual"><scope>wxAnyButton</scope><name>MakeModal</name></member>
       <member refid="classwx_window_1ab1cb98c8d25b9e6ff7b706b1446c3df7" prot="public" virt="non-virtual"><scope>wxAnyButton</scope><name>Move</name></member>
       <member refid="classwx_window_1a22a22c1e23ca05776707e7999d8047fe" prot="public" virt="non-virtual"><scope>wxAnyButton</scope><name>Move</name></member>
       <member refid="classwx_window_1a79e66079125e8420de269811bdb6f2b6" prot="public" virt="non-virtual"><scope>wxAnyButton</scope><name>MoveAfterInTabOrder</name></member>
@@ -784,7 +785,6 @@
       <member refid="classwx_window_1a88cc65e424a129d9b0057756cdb67ec9" prot="public" virt="virtual"><scope>wxAnyButton</scope><name>TransferDataToWindow</name></member>
       <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxAnyButton</scope><name>TryAfter</name></member>
       <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxAnyButton</scope><name>TryBefore</name></member>
-      <member refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" virt="non-virtual"><scope>wxAnyButton</scope><name>TryThis</name></member>
       <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxAnyButton</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxAnyButton</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a22e5db2ec1d19c8252c056fd116975d7" prot="public" virt="non-virtual"><scope>wxAnyButton</scope><name>Unlink</name></member>

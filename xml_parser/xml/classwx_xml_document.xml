@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xml/xml.h" line="530"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xml/xml.h" line="530"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_document_1acac7d814bbdfaf4b36de2acb5f1d3b8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -33,7 +33,7 @@
 <para>Deep copies all the XML tree of the given document. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xml/xml.h" line="535"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xml/xml.h" line="535"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_document_1abdcc9918ef0bf28dc753b0130f819e39" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -55,7 +55,7 @@
 <para>See <ref refid="classwx_xml_document_1af0dfc897ac9fd69d67a0d8b5f00d23c2" kindref="member">Load()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xml/xml.h" line="541"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xml/xml.h" line="541"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_document_1a8a89e05266c37c99a1849aeb9eb1832a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -77,7 +77,7 @@
 <para>See <ref refid="classwx_xml_document_1af0dfc897ac9fd69d67a0d8b5f00d23c2" kindref="member">Load()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xml/xml.h" line="547"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xml/xml.h" line="547"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_document_1a7dcd1d859ef9d8da939685d4fa1edbdb" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -90,7 +90,7 @@
 <para>Frees the document root node. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xml/xml.h" line="552"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xml/xml.h" line="552"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_document_1a03971c5dcde4411827c408ed273fbfe4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -108,7 +108,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xml/xml.h" line="562"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xml/xml.h" line="562"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_document_1a27183047f9f416fc67ad27d84ac2e74c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_xml_node" kindref="compound">wxXmlNode</ref> *</type>
@@ -122,7 +122,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xml/xml.h" line="575"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xml/xml.h" line="575"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_document_1ae55d2a4fab3f8010f53aaf6a34b5a8b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_xml_node" kindref="compound">wxXmlNode</ref> *</type>
@@ -132,10 +132,10 @@
         <briefdescription>
 <para>Detaches the root entity node and returns it. </para>        </briefdescription>
         <detaileddescription>
-<para>After calling this function, the document node will remain together with any prologue nodes, but <ref refid="classwx_xml_document_1aa610055c17d575cd3dd0058ab9216818" kindref="member">IsOk()</ref> will return false since the root entity will be missing.</para><para>Note that the caller is reponsible for deleting the returned node in order to avoid memory leaks. </para>        </detaileddescription>
+<para>After calling this function, the document node will remain together with any prologue nodes, but <ref refid="classwx_xml_document_1aa610055c17d575cd3dd0058ab9216818" kindref="member">IsOk()</ref> will return false since the root entity will be missing.</para><para>Note that the caller is responsible for deleting the returned node in order to avoid memory leaks. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xml/xml.h" line="587"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xml/xml.h" line="587"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_document_1a8bfe22961e0bd50124bcbd2fa3cd4dfd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -149,7 +149,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xml/xml.h" line="595"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xml/xml.h" line="595"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_document_1aa4fa38c9a0053060f1fd63e3fcc96d23" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -163,7 +163,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xml/xml.h" line="603"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xml/xml.h" line="603"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_document_1a7efd58acc5dc3617685cd38454644ed4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_xml_node" kindref="compound">wxXmlNode</ref> *</type>
@@ -177,7 +177,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xml/xml.h" line="610"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xml/xml.h" line="610"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_document_1a47e0477f9b42518d1143cf5468d3520f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_xml_node" kindref="compound">wxXmlNode</ref> *</type>
@@ -190,7 +190,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xml/xml.h" line="615"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xml/xml.h" line="615"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_document_1a9c3657cbf31c65f2d08f5ec865c01388" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -203,7 +203,7 @@
 <para>This is the value in the <computeroutput>&lt;</computeroutput>?xml version=&quot;1.0&quot;?&gt; header of the XML document. If the version attribute was not explicitly given in the header, this function returns an empty string. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xml/xml.h" line="624"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xml/xml.h" line="624"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_document_1aa610055c17d575cd3dd0058ab9216818" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -216,7 +216,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xml/xml.h" line="629"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xml/xml.h" line="629"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_document_1af0dfc897ac9fd69d67a0d8b5f00d23c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -243,7 +243,7 @@
 <para>If <emphasis>flags</emphasis> does not contain wxXMLDOC_KEEP_WHITESPACE_NODES, then, while loading, all nodes of type <computeroutput>wxXML_TEXT_NODE</computeroutput> (see <ref refid="classwx_xml_node" kindref="compound">wxXmlNode</ref>) are automatically skipped if they contain whitespaces only.</para><para>The removal of these nodes makes the load process slightly faster and requires less memory however makes impossible to recreate exactly the loaded text with a <ref refid="classwx_xml_document_1aa2bf11ff613c60cc543b536a51e8bd95" kindref="member">Save()</ref> call later. Read the initial description of this class for more info.</para><para>Returns true on success, false otherwise. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xml/xml.h" line="646"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xml/xml.h" line="646"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_document_1a7eaa35dc0416b24624e167dfd6319ed5" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -270,7 +270,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xml/xml.h" line="653"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xml/xml.h" line="653"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_document_1aa2bf11ff613c60cc543b536a51e8bd95" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -292,7 +292,7 @@
 <para>If <emphasis>indentstep</emphasis> is greater than or equal to zero, then, while saving, an automatic indentation is added with steps composed by indentstep spaces.</para><para>If <emphasis>indentstep</emphasis> is <computeroutput>wxXML_NO_INDENTATION</computeroutput>, then, automatic indentation is turned off. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xml/xml.h" line="664"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xml/xml.h" line="664"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_document_1a1c70d7dd152146d14fa50ee90e52908d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -314,7 +314,7 @@
 <para>See Save(const wxString&amp;, int) for a description of <emphasis>indentstep</emphasis>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xml/xml.h" line="670"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xml/xml.h" line="670"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_document_1a679fea32f0b9750cb871db840c61658c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -332,7 +332,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xml/xml.h" line="681"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xml/xml.h" line="681"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_document_1a45859e3c657c0a10bbf758069551ca00" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -349,7 +349,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xml/xml.h" line="686"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xml/xml.h" line="686"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_document_1aacce1b11ea4136ceee88e35a9475ab61" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -366,7 +366,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xml/xml.h" line="691"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xml/xml.h" line="691"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_document_1ac5b5e19c90e268ffe10d420797c29aec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -383,7 +383,7 @@
 <para>Will create the document node if necessary. Any previous root element node is deleted. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xml/xml.h" line="699"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xml/xml.h" line="699"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_document_1a84705a38b23e60aa5bb4faa509ada74b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -400,7 +400,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xml/xml.h" line="704"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xml/xml.h" line="704"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_document_1a1952959f0e8cbff332a5a22efd54bd61" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_xml_document" kindref="compound">wxXmlDocument</ref> &amp;</type>
@@ -417,7 +417,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xml/xml.h" line="709"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xml/xml.h" line="709"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -434,7 +434,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xml/xml.h" line="717"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xml/xml.h" line="717"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -499,37 +499,37 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxxml" kindref="member">wxXML</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__xml" kindref="compound">XML</ref></para><para><simplesect kind="see"><para><ref refid="classwx_xml_node" kindref="compound">wxXmlNode</ref>, <ref refid="classwx_xml_attribute" kindref="compound">wxXmlAttribute</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="11730">
+      <node id="11928">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="11729">
+      <node id="11927">
         <label>wxXmlDocument</label>
         <link refid="classwx_xml_document"/>
-        <childnode refid="11730" relation="public-inheritance">
+        <childnode refid="11928" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="11732">
+      <node id="11930">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="11733" relation="usage">
+        <childnode refid="11931" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="11731">
+      <node id="11929">
         <label>wxXmlDocument</label>
         <link refid="classwx_xml_document"/>
-        <childnode refid="11732" relation="public-inheritance">
+        <childnode refid="11930" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11733">
+      <node id="11931">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xml/xml.h" line="525" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xml/xml.h" bodystart="524" bodyend="718"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xml/xml.h" line="525" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/xml/xml.h" bodystart="524" bodyend="718"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxXmlDocument</scope><name>AllocExclusive</name></member>
       <member refid="classwx_xml_document_1a03971c5dcde4411827c408ed273fbfe4" prot="public" virt="non-virtual"><scope>wxXmlDocument</scope><name>AppendToProlog</name></member>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE package SYSTEM "../pear/package.dtd">
+<package>
+ <name>wxWidgets</name>
+ <summary>PHP bindings to the GUI toolkit library wxWidgets</summary>
+ <maintainers>
+  <maintainer>
+   <user>seariver</user>
+   <name>Mário Soares</name>
+   <email>seariver@gmail.com</email>
+   <role>lead</role>
+  </maintainer>
+  <maintainer>
+   <user>jgmylm</user>
+   <name>Jefferson González</name>
+   <email>jgmdev@gmail.com</email>
+   <role>developer</role>
+  </maintainer>
+ </maintainers>
+ <description>
+Provides the neccesary bindings to build cross-platform software 
+with rich native GUIs using the combined power of the PHP language and 
+the wxWidgets library. 
+ </description>
+ <license>PHP</license>
+ <release>
+  <state>beta</state>
+  <version>2.9.3.1</version>
+  <date>2012-04-21</date>
+  <notes>
+Updated the binding to support newer versions of wxWidgets 2.9 - 3.0
+  </notes>
+  <filelist>
+   <file role="doc" name="CREDITS"/>
+   <file role="src" name="config.m4"/>
+   <file role="src" name="config.w32"/>
+   <file role="src" name="wxwidgets.c"/>
+   <file role="src" name="php_wxwidgets.h"/>
+  </filelist>
+  <deps>
+   <dep type="php" rel="ge" version="5" />
+  </deps>
+ </release>
+</package>

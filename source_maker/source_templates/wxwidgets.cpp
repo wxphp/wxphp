@@ -44,6 +44,8 @@ END_EXTERN_C()
 /**
  * Predefined handcoded class entry for wxApp
  */
+char PHP_wxApp_NAME[] = "wxApp";
+char le_wxApp_name[] = "native wxApp";
 zend_class_entry *php_wxApp_entry;
 int le_wxApp;
 
@@ -66,8 +68,10 @@ PHP_FUNCTION(php_wxExecute)
 {
 	char* _argStr0;
 	int _argStr0_len;
+	
+	char parse_parameters[] = "s";
     
-	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "s", &_argStr0 , &_argStr0_len ) == SUCCESS)
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, parse_parameters, &_argStr0 , &_argStr0_len ) == SUCCESS)
 	{
 		long ret0;
 		ret0 = wxExecute(wxString(_argStr0, wxConvUTF8));
@@ -79,7 +83,8 @@ PHP_FUNCTION(php_wxExecute)
 PHP_FUNCTION(php_wxEntry)
 {
 	int argc = 1;
-	char *argv[2] = { "wxPHP", NULL };
+	char application_name[] = "wxPHP";
+	char *argv[2] = { application_name, NULL };
 	
 	RETVAL_LONG(wxEntry(argc,argv));
 }
@@ -90,13 +95,16 @@ PHP_FUNCTION(php_wxAboutBox)
 	int id_to_find;
 	wxAboutDialogInfo *property;
 	zval *objvar;
+	char _wxResource[] = "wxResource";
 	
-	if(zend_parse_parameters(ZEND_NUM_ARGS() TSRMLS_CC, (char *)"O", &objvar, php_wxAboutDialogInfo_entry) == FAILURE)
+	char parse_parameters[] = "O";
+	
+	if(zend_parse_parameters(ZEND_NUM_ARGS() TSRMLS_CC, parse_parameters, &objvar, php_wxAboutDialogInfo_entry) == FAILURE)
 	{
 		RETURN_NULL();
 	}
 	
-	if(zend_hash_find(Z_OBJPROP_P(objvar), (char *)"wxResource", sizeof("wxResource"),  (void **)&tmp) == FAILURE) 
+	if(zend_hash_find(Z_OBJPROP_P(objvar), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
 	{
 		return;
 	}
@@ -114,7 +122,7 @@ PHP_FUNCTION(php_wxAboutBox)
 <?php print $functions ?>
 
 
-static function_entry php_wxWidgets_functions[] = {
+static zend_function_entry php_wxWidgets_functions[] = {
 	PHP_FALIAS(wxInitAllImageHandlers, php_wxInitAllImageHandlers, NULL)
 	PHP_FALIAS(wxExecute, php_wxExecute, NULL)
 	PHP_FALIAS(wxInitialize, php_wxInitialize, NULL)
@@ -127,14 +135,13 @@ static function_entry php_wxWidgets_functions[] = {
 	 */
 <?php print $functions_table ?>
 
-	{ NULL, NULL, NULL }
+	PHP_FE_END //Equivalent to { NULL, NULL, NULL, 0, 0 } at time of writing on PHP 5.4
 };
 
 
 PHP_MINIT_FUNCTION(php_wxWidgets)
 {
-    zend_class_entry ce; /* Temporary Variable */
-    zend_class_entry cf; /* Temporary Variable */
+    zend_class_entry ce; /* Temporary variable used to initialize class entries */
 
 	/**
 	 * Predefined Initialization of wxApp class
@@ -164,10 +171,16 @@ PHP_MINIT_FUNCTION(php_wxWidgets)
 }
 
 /**
- * TODO: Show something useful to phpinfo() using this function
+ * TODO: Automate the process of updating versions number
+ * Show version information to phpinfo()
  */
 PHP_MINFO_FUNCTION(php_wxWidgets)
 {
+	php_info_print_table_start();
+	php_info_print_table_header(2, "wxWidgets", "enabled");
+	php_info_print_table_row(2, "Extension Version", PHP_WXWIDGETS_EXTVER);
+	php_info_print_table_row(2, "wxWidgets Version", PHP_WXWIDGETS_VERSION);
+	php_info_print_table_end();
 }
 
 
@@ -186,7 +199,7 @@ zend_module_entry wxWidgets_module_entry = {
     NULL, 						/* RSHUTDOWN (request shutdown function) */
     NULL, 						/* MINFO (module information function) */
 #if ZEND_MODULE_API_NO >= 20010901
-    PHP_WXWIDGETS_VERSION,
+    PHP_WXWIDGETS_EXTVER,
 #endif
     STANDARD_MODULE_PROPERTIES
 };

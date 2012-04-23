@@ -37,13 +37,13 @@
 <parametername>firstProp</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Property to start iteration from. If NULL, then first child of root is used.</para></parameterdescription>
+<para>Property to start iteration from. If NULL, then first child of root is used. </para></parameterdescription>
 </parameteritem>
 </parameterlist>
-<bold>wxPython Note:</bold> Instead of ++ operator, use Next() method, and instead of * operator, use <ref refid="classwx_property_grid_interface_1a41c6a2d0535f4fce0cb8c351ae324667" kindref="member">GetProperty()</ref> method. There is also GetPyIterator() method (which takes the same arguments but instead returns a pythonic iterator), <computeroutput>Properties</computeroutput> attribute which is an iterator over all non-category, non-private properties, and finally <computeroutput>Items</computeroutput> attribute which is an iterator over all items except private child properties. </para>        </detaileddescription>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="243"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="235"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1acc9bc495b14420b8c87506b8914fc4f9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>wxPropertyGridConstIterator</type>
@@ -75,13 +75,13 @@
 <parametername>firstProp</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Property to start iteration from. If NULL, then first child of root is used.</para></parameterdescription>
+<para>Property to start iteration from. If NULL, then first child of root is used. </para></parameterdescription>
 </parameteritem>
 </parameterlist>
-<bold>wxPython Note:</bold> Instead of ++ operator, use Next() method, and instead of * operator, use <ref refid="classwx_property_grid_interface_1a41c6a2d0535f4fce0cb8c351ae324667" kindref="member">GetProperty()</ref> method. There is also GetPyIterator() method (which takes the same arguments but instead returns a pythonic iterator), <computeroutput>Properties</computeroutput> attribute which is an iterator over all non-category, non-private properties, and finally <computeroutput>Items</computeroutput> attribute which is an iterator over all items except private child properties. </para>        </detaileddescription>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="245"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="237"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -113,13 +113,13 @@
 <parametername>startPos</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Either wxTOP or wxBOTTOM. wxTOP will indicate that iterations start from the first property from the top, and wxBOTTOM means that the iteration will instead begin from bottommost valid item.</para></parameterdescription>
+<para>Either wxTOP or wxBOTTOM. wxTOP will indicate that iterations start from the first property from the top, and wxBOTTOM means that the iteration will instead begin from bottommost valid item. </para></parameterdescription>
 </parameteritem>
 </parameterlist>
-<bold>wxPython Note:</bold> Instead of ++ operator, use Next() method, and instead of * operator, use <ref refid="classwx_property_grid_interface_1a41c6a2d0535f4fce0cb8c351ae324667" kindref="member">GetProperty()</ref> method. There is also GetPyIterator() method (which takes the same arguments but instead returns a pythonic iterator), <computeroutput>Properties</computeroutput> attribute which is an iterator over all non-category, non-private properties, and finally <computeroutput>Items</computeroutput> attribute which is an iterator over all items except private child properties. </para>        </detaileddescription>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="269"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="253"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1a081cfe3d6c48372981f38a134594dff2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>wxPropertyGridConstIterator</type>
@@ -149,13 +149,13 @@
 <parametername>startPos</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Either wxTOP or wxBOTTOM. wxTOP will indicate that iterations start from the first property from the top, and wxBOTTOM means that the iteration will instead begin from bottommost valid item.</para></parameterdescription>
+<para>Either wxTOP or wxBOTTOM. wxTOP will indicate that iterations start from the first property from the top, and wxBOTTOM means that the iteration will instead begin from bottommost valid item. </para></parameterdescription>
 </parameteritem>
 </parameterlist>
-<bold>wxPython Note:</bold> Instead of ++ operator, use Next() method, and instead of * operator, use <ref refid="classwx_property_grid_interface_1a41c6a2d0535f4fce0cb8c351ae324667" kindref="member">GetProperty()</ref> method. There is also GetPyIterator() method (which takes the same arguments but instead returns a pythonic iterator), <computeroutput>Properties</computeroutput> attribute which is an iterator over all non-category, non-private properties, and finally <computeroutput>Items</computeroutput> attribute which is an iterator over all items except private child properties. </para>        </detaileddescription>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="270"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="254"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-type">
@@ -228,7 +228,7 @@
 <para><anchor id="classwx_property_grid_interface_1propgridinterface_editablestate_flags"/></para><para>Flags for <ref refid="classwx_property_grid_interface_1a09dcfdf53629918183615627957afe39" kindref="member">wxPropertyGridInterface::SaveEditableState()</ref> and <ref refid="classwx_property_grid_interface_1aceb7f1ca6c7079c075d9876b94a2cb0f" kindref="member">wxPropertyGridInterface::RestoreEditableState()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="654" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" bodystart="653" bodyend="679"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="629" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" bodystart="628" bodyend="654"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -243,7 +243,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="33" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" bodystart="33" bodyend="33"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="33" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" bodystart="33" bodyend="33"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1a8496963f469db86941157f8ce67896c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_p_g_property" kindref="compound">wxPGProperty</ref> *</type>
@@ -263,7 +263,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="53"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="53"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1a7ae5812ea47c050f981aec0b8ccbe83e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_p_g_property" kindref="compound">wxPGProperty</ref> *</type>
@@ -299,7 +299,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="64"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="64"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1a4917f17cd9f415db313942157788e8bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -317,7 +317,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="73"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="73"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1a787e4282dbb85994af0e29a948efa98c" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -334,7 +334,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="82"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="82"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1ad9630e6b319fafefcfac15c1060278dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -363,7 +363,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="101"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="101"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1a52aca4e7bbec0d9ac775ad4b5492544e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -376,7 +376,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="106"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="106"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1adc64e1889b8be3f775f34e9c91087596" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -395,7 +395,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="117"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="117"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1a3acfb29c90820199472ee16d8be40cf2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -409,7 +409,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="126"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="126"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1a03e60ec606ffc2a9e1ea944f832ba4d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -432,7 +432,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="135"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="135"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1ad7f72b604efa4854a673ebb722b26c94" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -458,7 +458,7 @@
 This functions deselects selected property, if any. Validation failure option wxPG_VFB_STAY_IN_PROPERTY is not respected, ie. selection is cleared even if editor had invalid value. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="152"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="152"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1ac2b62fc91927b5b4f9e9a95eebbb26d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -476,7 +476,7 @@ This functions deselects selected property, if any. Validation failure option wx
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="159"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="159"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1a7718a5497b7e5211d847b5a8134bc2ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -489,7 +489,7 @@ This functions deselects selected property, if any. Validation failure option wx
 <para>Usually only returns false if value in active editor has been invalidated by a <ref refid="classwx_validator" kindref="compound">wxValidator</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="166"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="166"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1ab46cadeb40c717d902daef74005431bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -527,7 +527,7 @@ This functions deselects selected property, if any. Validation failure option wx
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="179"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="179"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1a1715d4804457f8b44e9382b3127b0140" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -545,7 +545,7 @@ This functions deselects selected property, if any. Validation failure option wx
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="186"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="186"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1a9e37a22d7a60feb41f724119678b663e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -564,7 +564,7 @@ This functions deselects selected property, if any. Validation failure option wx
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="197"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="197"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1a678020610f0af4140eda4726cd89d728" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -583,7 +583,7 @@ This functions deselects selected property, if any. Validation failure option wx
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="206"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="206"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1ac39b51cf43d0dd8cc9b6cf4d54119da8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -601,7 +601,7 @@ This functions deselects selected property, if any. Validation failure option wx
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="213"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="213"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1abf1d15cc10bf6c37aeaf84dfc390d743" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_p_g_property" kindref="compound">wxPGProperty</ref> *</type>
@@ -619,7 +619,7 @@ This functions deselects selected property, if any. Validation failure option wx
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="220"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="220"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1a408afe75901ecc8092fba0abd3ec1750" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_p_g_property" kindref="compound">wxPGProperty</ref> *</type>
@@ -645,7 +645,7 @@ This functions deselects selected property, if any. Validation failure option wx
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="279"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="263"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1a41c6a2d0535f4fce0cb8c351ae324667" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_p_g_property" kindref="compound">wxPGProperty</ref> *</type>
@@ -663,7 +663,7 @@ This functions deselects selected property, if any. Validation failure option wx
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="289"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="273"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1a16e7c98c641c293be0f5bfd569b7c097" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -699,7 +699,7 @@ This functions deselects selected property, if any. Validation failure option wx
 <para></para></parameterdescription>
 </parameteritem>
 </parameterlist>
-<xrefsect id="todo_1_todo000047"><xreftitle>Todo</xreftitle><xrefdescription><para>docme </para></xrefdescription></xrefsect><parameterlist kind="param"><parameteritem>
+<xrefsect id="todo_1_todo000046"><xreftitle>Todo</xreftitle><xrefdescription><para>docme </para></xrefdescription></xrefsect><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>flags</parametername>
 </parameternamelist>
@@ -714,7 +714,7 @@ This functions deselects selected property, if any. Validation failure option wx
 <para></para></parameterdescription>
 </parameteritem>
 </parameterlist>
-<xrefsect id="todo_1_todo000048"><xreftitle>Todo</xreftitle><xrefdescription><para>docme </para></xrefdescription></xrefsect><parameterlist kind="param"><parameteritem>
+<xrefsect id="todo_1_todo000047"><xreftitle>Todo</xreftitle><xrefdescription><para>docme </para></xrefdescription></xrefsect><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>iterFlags</parametername>
 </parameternamelist>
@@ -725,7 +725,7 @@ This functions deselects selected property, if any. Validation failure option wx
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="309"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="293"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1ab982d81a75a957158473a468e265b314" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_variant" kindref="compound">wxVariant</ref></type>
@@ -746,7 +746,7 @@ This functions deselects selected property, if any. Validation failure option wx
 <para>If none found, returns wxNullVariant. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="314"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="298"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1a9470a7b6978212358409e47c5b862832" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_colour" kindref="compound">wxColour</ref></type>
@@ -763,7 +763,7 @@ This functions deselects selected property, if any. Validation failure option wx
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="319"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="303"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1a761a3de09cb1483d83b6a8f603144f87" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>wxPropertyCategory *</type>
@@ -780,7 +780,7 @@ This functions deselects selected property, if any. Validation failure option wx
 <para>If no category found, returns NULL. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="325"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="309"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1a69d52777f04e6f2aea99e1d969b8f708" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void *</type>
@@ -797,7 +797,7 @@ This functions deselects selected property, if any. Validation failure option wx
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="328"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="312"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1ab65c6edc3921c9feb18868398261634f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_p_g_property" kindref="compound">wxPGProperty</ref> *</type>
@@ -814,7 +814,7 @@ This functions deselects selected property, if any. Validation failure option wx
 <para>NULL if none found. Note that this operation is very slow when compared to <ref refid="classwx_property_grid_interface_1ac5723b61ae48d373671343e774632ed3" kindref="member">GetPropertyByName()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="335"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="319"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1ac5723b61ae48d373671343e774632ed3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_p_g_property" kindref="compound">wxPGProperty</ref> *</type>
@@ -832,7 +832,7 @@ This functions deselects selected property, if any. Validation failure option wx
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="345"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="329"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1a96e5b736b9598a307282a6c9e35ee2bc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_p_g_property" kindref="compound">wxPGProperty</ref> *</type>
@@ -853,7 +853,7 @@ This functions deselects selected property, if any. Validation failure option wx
 <para>Same as calling GetPropertyByName(&quot;name.subname&quot;), albeit slightly faster. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="352"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="336"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1aade92682f7b251d97d3ec2b53bba1e18" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_p_g_editor" kindref="compound">wxPGEditor</ref> *</type>
@@ -870,7 +870,7 @@ This functions deselects selected property, if any. Validation failure option wx
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="357"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="341"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1ac1bb46f25b7e2c4f66e386d5961aeba3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -887,7 +887,7 @@ This functions deselects selected property, if any. Validation failure option wx
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="362"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="346"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1a5938a486c4704ff1e5554c92afc582b8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> *</type>
@@ -904,7 +904,7 @@ This functions deselects selected property, if any. Validation failure option wx
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="367"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="351"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1a74f0ff31b45b8ea24d37d7e219de28f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -921,7 +921,7 @@ This functions deselects selected property, if any. Validation failure option wx
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="370"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="354"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1ab107b3f96a158e498f648888149b3bf4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -938,7 +938,7 @@ This functions deselects selected property, if any. Validation failure option wx
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="373"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="357"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1a8faf37918f55abf39788b48c75505635" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_colour" kindref="compound">wxColour</ref></type>
@@ -955,7 +955,7 @@ This functions deselects selected property, if any. Validation failure option wx
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="378"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="362"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1a5fa00509e8d8afde8462a64509ba5682" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_validator" kindref="compound">wxValidator</ref> *</type>
@@ -972,7 +972,7 @@ This functions deselects selected property, if any. Validation failure option wx
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="384"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="368"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1aa1164652240e4b157ce5250769af537e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_variant" kindref="compound">wxVariant</ref></type>
@@ -989,7 +989,7 @@ This functions deselects selected property, if any. Validation failure option wx
 <para>If property value is unspecified, Null variant is returned. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="391"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="375"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1aa464c5932add72e06c8022ac2277709c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="dynarray_8h_1add87f199292e36ee87efd6d7f0d4ee66" kindref="member">wxArrayInt</ref></type>
@@ -1006,7 +1006,7 @@ This functions deselects selected property, if any. Validation failure option wx
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="394"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="378"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1afbb1de85a87a1d20fbf70054a144ec19" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_array_string" kindref="compound">wxArrayString</ref></type>
@@ -1023,7 +1023,7 @@ This functions deselects selected property, if any. Validation failure option wx
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="397"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="381"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1a0ac35a786a34eddc9d006a23110fcb61" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1040,7 +1040,7 @@ This functions deselects selected property, if any. Validation failure option wx
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="400"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="384"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1a254a437531a9edc4509b485054e9a97b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_date_time" kindref="compound">wxDateTime</ref></type>
@@ -1057,7 +1057,7 @@ This functions deselects selected property, if any. Validation failure option wx
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="403"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="387"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1a7a75d55eb01cc869cae75fa1cffeac44" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -1074,7 +1074,7 @@ This functions deselects selected property, if any. Validation failure option wx
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="406"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="390"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1a3c72f929f0f28f6477faaf6e05bfc210" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -1091,7 +1091,7 @@ This functions deselects selected property, if any. Validation failure option wx
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="409"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="393"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1a2bf4b075b0b25c504a9c78a5b13fe033" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>long</type>
@@ -1108,7 +1108,7 @@ This functions deselects selected property, if any. Validation failure option wx
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="412"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="396"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1a0dc9044f30292c40659e09c28b9b0ee8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>wxLongLong_t</type>
@@ -1125,7 +1125,7 @@ This functions deselects selected property, if any. Validation failure option wx
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="415"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="399"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1a42537d846f644d3e8cfdb89bd37d9650" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -1142,7 +1142,7 @@ This functions deselects selected property, if any. Validation failure option wx
 <para>If property does not use string value type, then its value is converted using <ref refid="classwx_p_g_property_1a29f70a60e4844efbebc140270e1a4358" kindref="member">wxPGProperty::GetValueAsString()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="422"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="406"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1aa4eb719d3b547bf64b2a5e297ec7bc2d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>unsigned long</type>
@@ -1159,7 +1159,7 @@ This functions deselects selected property, if any. Validation failure option wx
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="425"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="409"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1a573c609faf91311707b7227f1ec63acb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>wxULongLong_t</type>
@@ -1176,7 +1176,7 @@ This functions deselects selected property, if any. Validation failure option wx
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="428"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="412"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1a1abce6843caee96faaeeee952f970105" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_variant" kindref="compound">wxVariant</ref></type>
@@ -1209,7 +1209,7 @@ This functions deselects selected property, if any. Validation failure option wx
 <para></para></parameterdescription>
 </parameteritem>
 </parameterlist>
-<xrefsect id="todo_1_todo000049"><xreftitle>Todo</xreftitle><xrefdescription><para>docme </para></xrefdescription></xrefsect><parameterlist kind="param"><parameteritem>
+<xrefsect id="todo_1_todo000048"><xreftitle>Todo</xreftitle><xrefdescription><para>docme </para></xrefdescription></xrefsect><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>baseparent</parametername>
 </parameternamelist>
@@ -1217,7 +1217,7 @@ This functions deselects selected property, if any. Validation failure option wx
 <para></para></parameterdescription>
 </parameteritem>
 </parameterlist>
-<xrefsect id="todo_1_todo000050"><xreftitle>Todo</xreftitle><xrefdescription><para>docme </para></xrefdescription></xrefsect><parameterlist kind="param"><parameteritem>
+<xrefsect id="todo_1_todo000049"><xreftitle>Todo</xreftitle><xrefdescription><para>docme </para></xrefdescription></xrefsect><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>flags</parametername>
 </parameternamelist>
@@ -1228,7 +1228,7 @@ This functions deselects selected property, if any. Validation failure option wx
 Use wxPG_INC_ATTRIBUTES to include property attributes as well. Each attribute will be stored as list variant named &quot;@@&lt;propname&gt;@@attr.&quot; </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="447"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="431"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1a49ccd0da1d0f4a68004e1a174bf5f998" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const wxArrayPGProperty &amp;</type>
@@ -1242,7 +1242,7 @@ Use wxPG_INC_ATTRIBUTES to include property attributes as well. Each attribute w
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="454"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="438"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1a302ae0ff624d48131544f6010373e599" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_p_g_property" kindref="compound">wxPGProperty</ref> *</type>
@@ -1250,7 +1250,7 @@ Use wxPG_INC_ATTRIBUTES to include property attributes as well. Each attribute w
         <argsstring>() const </argsstring>
         <name>GetSelection</name>
         <reimplementedby refid="classwx_property_grid_1ac2be24e5df0f27b041dc895007ad64f4">GetSelection</reimplementedby>
-        <reimplementedby refid="classwx_property_grid_manager_1a11d495eb9b5aa80560beaae0cb421af4">GetSelection</reimplementedby>
+        <reimplementedby refid="classwx_property_grid_manager_1a1e409fede5d20f32967c0a19d490d663">GetSelection</reimplementedby>
         <briefdescription>
 <para>Returns currently selected property. </para>        </briefdescription>
         <detaileddescription>
@@ -1258,7 +1258,7 @@ Use wxPG_INC_ATTRIBUTES to include property attributes as well. Each attribute w
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="463"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="447"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1a96a1c13733c0a83d7b509fd7a9e9a61a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_p_g_v_iterator" kindref="compound">wxPGVIterator</ref></type>
@@ -1278,13 +1278,13 @@ Use wxPG_INC_ATTRIBUTES to include property attributes as well. Each attribute w
 <parametername>flags</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>See <ref refid="propgridpagestate_8h_1propgrid_iterator_flags" kindref="member">wxPropertyGridIterator Flags</ref>.</para></parameterdescription>
+<para>See <ref refid="propgridpagestate_8h_1propgrid_iterator_flags" kindref="member">wxPropertyGridIterator Flags</ref>. </para></parameterdescription>
 </parameteritem>
 </parameterlist>
-<bold>wxPython Note:</bold> Instead of ++ operator, use Next() method, and instead of * operator, use <ref refid="classwx_property_grid_interface_1a41c6a2d0535f4fce0cb8c351ae324667" kindref="member">GetProperty()</ref> method. There is also GetPyVIterator() method (which takes the same arguments but instead returns a pythonic iterator), <computeroutput>Properties</computeroutput> attribute which is an iterator over all non-category, non-private properties, and finally <computeroutput>Items</computeroutput> attribute which is an iterator over all items except private child properties. </para>        </detaileddescription>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="482"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="457"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1aac3d5502e764989ed8b031a3d75b8814" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1316,7 +1316,7 @@ Use wxPG_INC_ATTRIBUTES to include property attributes as well. Each attribute w
 <para></para></parameterdescription>
 </parameteritem>
 </parameterlist>
-<xrefsect id="todo_1_todo000051"><xreftitle>Todo</xreftitle><xrefdescription><para>docme </para></xrefdescription></xrefsect><parameterlist kind="param"><parameteritem>
+<xrefsect id="todo_1_todo000050"><xreftitle>Todo</xreftitle><xrefdescription><para>docme </para></xrefdescription></xrefsect><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>hide</parametername>
 </parameternamelist>
@@ -1334,7 +1334,7 @@ Use wxPG_INC_ATTRIBUTES to include property attributes as well. Each attribute w
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="495"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="470"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1aed2f5e12acc0bc460c2295ac1564b735" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_p_g_property" kindref="compound">wxPGProperty</ref> *</type>
@@ -1388,7 +1388,7 @@ Use wxPG_INC_ATTRIBUTES to include property attributes as well. Each attribute w
 </programlisting> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="548"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="523"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1af6ced8d055116ef38522b868ac62f229" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_p_g_property" kindref="compound">wxPGProperty</ref> *</type>
@@ -1436,7 +1436,7 @@ Use wxPG_INC_ATTRIBUTES to include property attributes as well. Each attribute w
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="568"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="543"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1a7dc38b7ce9ba010c49d63935328097b8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1453,7 +1453,7 @@ Use wxPG_INC_ATTRIBUTES to include property attributes as well. Each attribute w
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="571"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="546"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1ab9ca28beec8a1da397ca984926d1186d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1470,7 +1470,7 @@ Use wxPG_INC_ATTRIBUTES to include property attributes as well. Each attribute w
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="574"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="549"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1aa3677cf3904d78407f5d60af032760d8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1487,7 +1487,7 @@ Use wxPG_INC_ATTRIBUTES to include property attributes as well. Each attribute w
 <para>Naturally, always returns false for properties that cannot be expanded. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="580"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="555"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1ae2640335c9e3e0071bac8a473ba3bf2a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1504,7 +1504,7 @@ Use wxPG_INC_ATTRIBUTES to include property attributes as well. Each attribute w
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="586"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="561"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1a60c2e3e8cbf8788f30189ce3b754b465" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -1522,7 +1522,7 @@ Use wxPG_INC_ATTRIBUTES to include property attributes as well. Each attribute w
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="591"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="566"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1a2005aa0ab6855cc4c4ecee816f97f791" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1539,7 +1539,7 @@ Use wxPG_INC_ATTRIBUTES to include property attributes as well. Each attribute w
 <para><ref refid="classwx_property_grid_interface_1aac3d5502e764989ed8b031a3d75b8814" kindref="member">HideProperty()</ref> with true not called for it). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="597"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="572"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1a71187c9c857cd578e167ff78d544e229" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1556,7 +1556,7 @@ Use wxPG_INC_ATTRIBUTES to include property attributes as well. Each attribute w
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="602"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="577"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1aac3d13601fb3a97f531b86923b20d5ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1578,7 +1578,7 @@ Use wxPG_INC_ATTRIBUTES to include property attributes as well. Each attribute w
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="608"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="583"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1a48485b2134b49f0bfb9adeb744d5c1a5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_p_g_property" kindref="compound">wxPGProperty</ref> *</type>
@@ -1604,7 +1604,7 @@ Use wxPG_INC_ATTRIBUTES to include property attributes as well. Each attribute w
 Also, if you remove property in a <ref refid="classwx_property_grid" kindref="compound">wxPropertyGrid</ref> event handler, the actual removal is postponed until the next idle event. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="631"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="606"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1ac0b507d04a4420f3aa8fec0c38e99cd1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_p_g_property" kindref="compound">wxPGProperty</ref> *</type>
@@ -1628,7 +1628,7 @@ Also, if you remove property in a <ref refid="classwx_property_grid" kindref="co
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="645"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="620"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1aceb7f1ca6c7079c075d9876b94a2cb0f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1667,7 +1667,7 @@ Also, if you remove property in a <ref refid="classwx_property_grid" kindref="co
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="699"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="674"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1a09dcfdf53629918183615627957afe39" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -1693,7 +1693,7 @@ Also, if you remove property in a <ref refid="classwx_property_grid" kindref="co
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="709"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="684"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1a5df440361d9e85f3a48d79d7b45667e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1717,7 +1717,7 @@ Also, if you remove property in a <ref refid="classwx_property_grid" kindref="co
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="732"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="707"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1a129a37f9d87a2a08516772de9860432d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1752,7 +1752,7 @@ Also, if you remove property in a <ref refid="classwx_property_grid" kindref="co
 <para></para></parameterdescription>
 </parameteritem>
 </parameterlist>
-<xrefsect id="todo_1_todo000052"><xreftitle>Todo</xreftitle><xrefdescription><para>docme </para></xrefdescription></xrefsect><parameterlist kind="param"><parameteritem>
+<xrefsect id="todo_1_todo000051"><xreftitle>Todo</xreftitle><xrefdescription><para>docme </para></xrefdescription></xrefsect><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>attrName</parametername>
 </parameternamelist>
@@ -1778,7 +1778,7 @@ Also, if you remove property in a <ref refid="classwx_property_grid" kindref="co
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="751"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="726"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1a9ae755985b70254e3e8a27a629c3fead" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1799,7 +1799,7 @@ Also, if you remove property in a <ref refid="classwx_property_grid" kindref="co
 <para>Be sure to use this method only after all properties have been added to the grid. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="758"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="733"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1a5727a38c6fa10713bac1b4fe6e90991c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1847,7 +1847,7 @@ Also, if you remove property in a <ref refid="classwx_property_grid" kindref="co
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="776"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="751"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1afd6721e817062d6c9dbb522334c029a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1891,7 +1891,7 @@ Also, if you remove property in a <ref refid="classwx_property_grid" kindref="co
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="790"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="765"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1ab65193f9761bc7b63141ff115db00efd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1913,7 +1913,7 @@ Also, if you remove property in a <ref refid="classwx_property_grid" kindref="co
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="798"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="773"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1a1a8b70c4e648dee652525c1bcb1d63e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1930,7 +1930,7 @@ Also, if you remove property in a <ref refid="classwx_property_grid" kindref="co
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="803"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="778"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1aff961af9dd2787fb97f510ea5ce46407" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1956,7 +1956,7 @@ Also, if you remove property in a <ref refid="classwx_property_grid" kindref="co
 <para></para></parameterdescription>
 </parameteritem>
 </parameterlist>
-<xrefsect id="todo_1_todo000053"><xreftitle>Todo</xreftitle><xrefdescription><para>docme </para></xrefdescription></xrefsect><parameterlist kind="param"><parameteritem>
+<xrefsect id="todo_1_todo000052"><xreftitle>Todo</xreftitle><xrefdescription><para>docme </para></xrefdescription></xrefsect><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>editor</parametername>
 </parameternamelist>
@@ -1964,10 +1964,10 @@ Also, if you remove property in a <ref refid="classwx_property_grid" kindref="co
 <para>For builtin editors, use wxPGEditor_X, where X is builtin editor&apos;s name (TextCtrl, Choice, etc. see <ref refid="classwx_p_g_editor" kindref="compound">wxPGEditor</ref> documentation for full list).</para></parameterdescription>
 </parameteritem>
 </parameterlist>
-For custom editors, use pointer you received from <ref refid="classwx_property_grid_1a89ee01017530df27ff2c469bfbe0605e" kindref="member">wxPropertyGrid::RegisterEditorClass()</ref>. </para>        </detaileddescription>
+For custom editors, use pointer you received from <ref refid="classwx_property_grid_1adb8c3d0d29d1c051a8a9ece93d40f6b7" kindref="member">wxPropertyGrid::RegisterEditorClass()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="817"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="792"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1a7155520a900a212c6ba48924a0398817" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1988,7 +1988,7 @@ For custom editors, use pointer you received from <ref refid="classwx_property_g
 <para>As editor argument, use editor name string, such as &quot;TextCtrl&quot; or &quot;Choice&quot;. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="823"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="798"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1ad7cc77546762cc92e69078d6ac161c63" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2012,7 +2012,7 @@ For custom editors, use pointer you received from <ref refid="classwx_property_g
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="832"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="807"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1af7b3c2349b7293076a223720274921e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2048,7 +2048,7 @@ For custom editors, use pointer you received from <ref refid="classwx_property_g
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="843"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="818"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1af5442c56a869f8f03c530a0d34555cd2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2098,7 +2098,7 @@ For custom editors, use pointer you received from <ref refid="classwx_property_g
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="864"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="839"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1ad0354321e04ed670c1d4904ef68f9ea0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2115,7 +2115,7 @@ For custom editors, use pointer you received from <ref refid="classwx_property_g
 <para>If it has children (it may be category), then the same thing is done to them. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="870"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="845"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1a85caa9196b0278e844df1af5f12c800b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2137,7 +2137,7 @@ For custom editors, use pointer you received from <ref refid="classwx_property_g
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="876"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="851"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1a59408c331ac19855ce3b55ff26f82a38" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2159,7 +2159,7 @@ For custom editors, use pointer you received from <ref refid="classwx_property_g
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="882"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="857"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1a5793ea3ef9afa47fe2c1c5bf437dd583" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2181,7 +2181,7 @@ For custom editors, use pointer you received from <ref refid="classwx_property_g
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="892"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="867"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1a88befed8aa91d5c6e62844da2166bb3c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2203,7 +2203,7 @@ For custom editors, use pointer you received from <ref refid="classwx_property_g
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="900"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="875"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1a51ae4dc2d3732d6e681c5a474abc0da9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -2224,7 +2224,7 @@ For custom editors, use pointer you received from <ref refid="classwx_property_g
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="905"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="880"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1ab2249b7bb57055b3620cb180956353db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2272,7 +2272,7 @@ For custom editors, use pointer you received from <ref refid="classwx_property_g
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="924"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="899"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1ad83fe8ad87751101316345a14133c45f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2293,7 +2293,7 @@ For custom editors, use pointer you received from <ref refid="classwx_property_g
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="929"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="904"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1aa652e127ce0c9d4e80821cbdcfe4983c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2314,7 +2314,7 @@ For custom editors, use pointer you received from <ref refid="classwx_property_g
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="932"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="907"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1a7f13128f8275004348ec252bdad097b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2335,7 +2335,7 @@ For custom editors, use pointer you received from <ref refid="classwx_property_g
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="935"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="910"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1afc31048af8214a81b9fc24daaa13b56e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2356,7 +2356,7 @@ For custom editors, use pointer you received from <ref refid="classwx_property_g
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="938"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="913"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1ab3c7f74d260993c2bb679c37dc7ae69b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2377,7 +2377,7 @@ For custom editors, use pointer you received from <ref refid="classwx_property_g
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="941"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="916"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1a4d2cbc3ea3d92c59e87372f4a05cba99" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2398,7 +2398,7 @@ For custom editors, use pointer you received from <ref refid="classwx_property_g
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="944"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="919"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1a63730146d50d376c6e8cce75a88180c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2419,7 +2419,7 @@ For custom editors, use pointer you received from <ref refid="classwx_property_g
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="947"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="922"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1a5be36e8a366457d8d8000ec73554eb10" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2440,7 +2440,7 @@ For custom editors, use pointer you received from <ref refid="classwx_property_g
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="950"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="925"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1ac14f033b18667d9965776c2d19dd7bb9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2461,7 +2461,7 @@ For custom editors, use pointer you received from <ref refid="classwx_property_g
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="953"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="928"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1a44f390c4041e9c84cc74f078e2c65fec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2482,7 +2482,7 @@ For custom editors, use pointer you received from <ref refid="classwx_property_g
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="956"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="931"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1aad1fe3813ff98b201bd77071156994f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2503,7 +2503,7 @@ For custom editors, use pointer you received from <ref refid="classwx_property_g
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="959"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="934"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1a2682d90e94b61601f6402bf930a98f1c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2524,7 +2524,7 @@ For custom editors, use pointer you received from <ref refid="classwx_property_g
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="962"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="937"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1a51719a02370c475b2c61f32cd7b32ea0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2545,7 +2545,7 @@ For custom editors, use pointer you received from <ref refid="classwx_property_g
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="965"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="940"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1a26e16b29e987c5f3b6782e80b23dc956" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2567,7 +2567,7 @@ For custom editors, use pointer you received from <ref refid="classwx_property_g
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="975"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="950"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1a07d4eb7ae9fc0014cc72bb320e36fa4f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2589,7 +2589,7 @@ For custom editors, use pointer you received from <ref refid="classwx_property_g
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="983"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="958"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1ade72c97a047aa409dc7429010f640bb6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2614,7 +2614,7 @@ For custom editors, use pointer you received from <ref refid="classwx_property_g
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="992"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="967"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1a68c73043fc89e18169207c0cee737852" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2641,7 +2641,7 @@ For custom editors, use pointer you received from <ref refid="classwx_property_g
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="1005"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="980"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1a5e99b4ebcbdc6ee1c59d8284df0bfa8f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2679,7 +2679,7 @@ For custom editors, use pointer you received from <ref refid="classwx_property_g
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="1019"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="994"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -2694,7 +2694,7 @@ For custom editors, use pointer you received from <ref refid="classwx_property_g
 <para>Causes references to most object files in the library, so calling this may cause significant increase in executable size when linking with static library. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="502"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="477"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1a330dc911b08378e967955f8a6a938612" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2707,7 +2707,7 @@ For custom editors, use pointer you received from <ref refid="classwx_property_g
 <para>Causes references to most object files in the library, so calling this may cause significant increase in executable size when linking with static library. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="616"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="591"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1ac02e6f40e5c5138a40c99a4f7b98100b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2728,7 +2728,7 @@ For custom editors, use pointer you received from <ref refid="classwx_property_g
 <para>Defaults are &quot;True&quot; and &quot;False&quot;, so changing them to, say, &quot;Yes&quot; and &quot;No&quot; may be useful in some less technical applications. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="718"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="693"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_interface_1ac79128278621fc7878c4cbe5340bbc1f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_p_g_editor" kindref="compound">wxPGEditor</ref> *</type>
@@ -2745,7 +2745,7 @@ For custom editors, use pointer you received from <ref refid="classwx_property_g
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="1024"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="999"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -2759,30 +2759,30 @@ For custom editors, use pointer you received from <ref refid="classwx_property_g
 </para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxpropgrid" kindref="member">wxPropertyGrid</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__propgrid" kindref="compound">wxPropertyGrid</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="8898">
+      <node id="9081">
         <label>wxPropertyGridManager</label>
         <link refid="classwx_property_grid_manager"/>
-        <childnode refid="8896" relation="public-inheritance">
+        <childnode refid="9079" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8897">
+      <node id="9080">
         <label>wxPropertyGrid</label>
         <link refid="classwx_property_grid"/>
-        <childnode refid="8896" relation="public-inheritance">
+        <childnode refid="9079" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8899">
+      <node id="9082">
         <label>wxPropertyGridPage</label>
         <link refid="classwx_property_grid_page"/>
-        <childnode refid="8896" relation="public-inheritance">
+        <childnode refid="9079" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8896">
+      <node id="9079">
         <label>wxPropertyGridInterface</label>
         <link refid="classwx_property_grid_interface"/>
       </node>
     </inheritancegraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" line="29" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridiface.h" bodystart="28" bodyend="1025"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" line="29" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridiface.h" bodystart="28" bodyend="1000"/>
     <listofallmembers>
       <member refid="classwx_property_grid_interface_1acd38be5728243d99365e0f371b6c19aea19c3af2d76e93bca4d687865b1ea27f4" prot="public" virt="non-virtual"><scope>wxPropertyGridInterface</scope><name>AllStates</name></member>
       <member refid="classwx_property_grid_interface_1a8496963f469db86941157f8ce67896c4" prot="public" virt="non-virtual"><scope>wxPropertyGridInterface</scope><name>Append</name></member>

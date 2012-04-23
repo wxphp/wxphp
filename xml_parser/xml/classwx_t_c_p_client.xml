@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sckipc.h" line="113"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sckipc.h" line="113"/>
       </memberdef>
       <memberdef kind="function" id="classwx_t_c_p_client_1a5575e6732a4710c238cd96034f723421" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_connection_base" kindref="compound">wxConnectionBase</ref> *</type>
@@ -41,7 +41,7 @@
 <para>If the server allows a connection, a <ref refid="classwx_t_c_p_connection" kindref="compound">wxTCPConnection</ref> object will be returned.</para><para>The type of <ref refid="classwx_t_c_p_connection" kindref="compound">wxTCPConnection</ref> returned can be altered by overriding the <ref refid="classwx_t_c_p_client_1a23359471eace5dca485aad4a3e24680f" kindref="member">OnMakeConnection()</ref> member to return your own derived connection object. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sckipc.h" line="127"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sckipc.h" line="127"/>
       </memberdef>
       <memberdef kind="function" id="classwx_t_c_p_client_1a23359471eace5dca485aad4a3e24680f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_connection_base" kindref="compound">wxConnectionBase</ref> *</type>
@@ -54,7 +54,7 @@
 <para>By default, a <ref refid="classwx_t_c_p_connection" kindref="compound">wxTCPConnection</ref> object is returned.</para><para>The advantage of deriving your own connection class is that it will enable you to intercept messages initiated by the server, such as <ref refid="classwx_t_c_p_connection_1afc89b194cbd4d4fc30b189235fa8a1bf" kindref="member">wxTCPConnection::OnAdvise()</ref>. You may also want to store application-specific data in instances of the new class. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sckipc.h" line="140"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sckipc.h" line="140"/>
       </memberdef>
       <memberdef kind="function" id="classwx_t_c_p_client_1a28baa6e6538ca2d9bb521b0ac1ece870" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -71,7 +71,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sckipc.h" line="145"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sckipc.h" line="145"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -81,37 +81,37 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxnet" kindref="member">wxNet</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__net" kindref="compound">Networking</ref></para><para><simplesect kind="see"><para><ref refid="classwx_t_c_p_server" kindref="compound">wxTCPServer</ref>, <ref refid="classwx_t_c_p_connection" kindref="compound">wxTCPConnection</ref>, <ref refid="overview_ipc" kindref="compound">Interprocess Communication</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10717">
+      <node id="10902">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="10716">
+      <node id="10901">
         <label>wxTCPClient</label>
         <link refid="classwx_t_c_p_client"/>
-        <childnode refid="10717" relation="public-inheritance">
+        <childnode refid="10902" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10719">
+      <node id="10904">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="10720" relation="usage">
+        <childnode refid="10905" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="10718">
+      <node id="10903">
         <label>wxTCPClient</label>
         <link refid="classwx_t_c_p_client"/>
-        <childnode refid="10719" relation="public-inheritance">
+        <childnode refid="10904" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10720">
+      <node id="10905">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sckipc.h" line="108" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sckipc.h" bodystart="107" bodyend="146"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sckipc.h" line="108" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/sckipc.h" bodystart="107" bodyend="146"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxTCPClient</scope><name>AllocExclusive</name></member>
       <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxTCPClient</scope><name>CloneRefData</name></member>

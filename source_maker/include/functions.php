@@ -609,7 +609,7 @@ function remove_methods_implementing_unknown_types(&$classes)
 				//Check return type if not constructor
 				if($method_name != $class_name)
 				{
-					if(parameter_type($method_definition["return_type"], $method_name, $class_name, $type_modifier, true) == "unknown")
+					if(parameter_type($method_definition["return_type"], false, $method_name, $class_name, $type_modifier, true) == "unknown")
 					{
 						file_put_contents("discarded.log", $method_definition["return_type"] . "\t" . $method_definition["return_type"]." $class_name::$method_name(".function_arguments_string($method_definition).")\n", FILE_APPEND);
 						unset($classes[$class_name][$method_name][$index_to_remove]);
@@ -620,9 +620,11 @@ function remove_methods_implementing_unknown_types(&$classes)
 				//Check all argument types
 				if(!$removed)
 				{
-					foreach($method_definition["parameters_type"] as $parameter_type)
+					foreach($method_definition["parameters_type"] as $parameter_index=>$parameter_type)
 					{
-						if(parameter_type($parameter_type, $method_name, $class_name, $type_modifier, true) == "unknown")
+						$parameter_is_array = $method_definition["parameters_is_array"][$parameter_index];
+						
+						if(parameter_type($parameter_type, $parameter_is_array, $method_name, $class_name, $type_modifier, true) == "unknown")
 						{
 							file_put_contents("discarded.log", $parameter_type . "\t" . $method_definition["return_type"]." $class_name::$method_name(".function_arguments_string($method_definition).")\n", FILE_APPEND);
 							unset($classes[$class_name][$method_name][$index_to_remove]);
@@ -682,7 +684,7 @@ function remove_functions_implementing_unknown_types(&$functions)
 			$type_modifier = "";
 			
 			//Check return type
-			if(parameter_type($function_definition["return_type"], $function_name, null, $type_modifier, true) == "unknown")
+			if(parameter_type($function_definition["return_type"], false, $function_name, null, $type_modifier, true) == "unknown")
 			{
 				file_put_contents("discarded.log", $function_definition["return_type"] . "\t" . $function_definition["return_type"]." $function_name(".function_arguments_string($function_definition).")\n", FILE_APPEND);
 				unset($functions[$function_name][$index_to_remove]);
@@ -692,9 +694,11 @@ function remove_functions_implementing_unknown_types(&$functions)
 			//Check all argument types
 			if(!$removed)
 			{
-				foreach($function_definition["parameters_type"] as $parameter_type)
+				foreach($function_definition["parameters_type"] as $parameter_index=>$parameter_type)
 				{
-					if(parameter_type($parameter_type, $function_name, null, $type_modifier, true) == "unknown")
+					$parameter_is_array = $function_definition["parameters_is_array"][$parameter_index];
+					
+					if(parameter_type($parameter_type, $parameter_is_array, $function_name, null, $type_modifier, true) == "unknown")
 					{
 						file_put_contents("discarded.log", $parameter_type . "\t" . $function_definition["return_type"]." $function_name(".function_arguments_string($function_definition).")\n", FILE_APPEND);
 						unset($functions[$function_name][$index_to_remove]);
@@ -725,6 +729,141 @@ function remove_functions_implementing_unknown_types(&$functions)
 						$functions[$function_name][] = $temp_definition;
 					}
 				}
+			}
+		}
+	}
+	
+	file_put_contents("discarded.log", "\n\n\n", FILE_APPEND);
+}
+
+/**
+ * Removes methods and classes that arent implemented on all
+ * target platforms (windows, linux, mac)
+ * 
+ * @param array $classes
+ */
+function remove_classes_and_methods_not_crossplatform(&$classes)
+{
+	file_put_contents("discarded.log", "Not Crossplatform Classes\n\n", FILE_APPEND);
+	foreach($classes as $class_name=>$class_methods)
+	{
+		if(isset($class_methods["_platforms"]))
+		{
+			$platforms = $class_methods["_platforms"];
+			
+			if(!in_array("wxmsw", $platforms) || !in_array("wxgtk", $platforms) || !in_array("wxosx", $platforms))
+			{
+				unset($classes[$class_name]);
+				file_put_contents("discarded.log", "$class_name\n", FILE_APPEND);
+			}
+		}
+	}
+	
+	file_put_contents("discarded.log", "\n\n\n", FILE_APPEND);
+	
+	file_put_contents("discarded.log", "Not Crossplatform Methods\n\n", FILE_APPEND);
+	foreach($classes as $class_name=>$class_methods)
+	{
+		
+		foreach($class_methods as $method_name=>$method_definitions)
+		{
+			//Skip _implements, _platforms (inheritance) list
+			if($method_name{0} == "_")
+				continue;
+				
+			//Remove not crossplatform methods from method_definitions
+			$temp_definitions = array();
+			foreach($method_definitions as $method_index=>$method_definition)
+			{
+				//Just save method overloads that are trully crossplatform
+				if(isset($method_definition["platforms"]))
+				{
+					$platforms = $method_definition["platforms"];
+					
+					if(!in_array("wxmsw", $platforms) || !in_array("wxgtk", $platforms) || !in_array("wxosx", $platforms))
+					{
+						file_put_contents("discarded.log", "$class_name::$method_name\n", FILE_APPEND);
+					
+						//Skip this method
+						continue;
+					}
+				}
+				
+				$temp_definitions[] = $method_definition;
+			}
+			
+			$method_definitions = $temp_definitions;
+			unset($temp_definitions);
+			
+			//If there are method overloads trully crossplatform
+			if(count($method_definitions))
+			{
+				$classes[$class_name][$method_name] = $method_definitions;
+			}
+			//If no trully crossplatform overload was found, completely remove the method
+			else
+			{
+				unset($classes[$class_name][$method_name]);
+			}
+		}
+	}
+	
+	file_put_contents("discarded.log", "\n\n\n", FILE_APPEND);
+}
+
+function remove_methods_implementing_unhandled_arguments(&$classes)
+{
+	file_put_contents("discarded.log", "Methods implemented unhandled argument declarations\n\n", FILE_APPEND);
+	
+	foreach($classes as $class_name=>$class_methods)
+	{
+		
+		foreach($class_methods as $method_name=>$method_definitions)
+		{
+			//Skip _implements, _platforms (inheritance) list
+			if($method_name{0} == "_")
+				continue;
+				
+			//Remove methods implementing unhandled argument declarations from method_definitions
+			$temp_definitions = array();
+			foreach($method_definitions as $method_index=>$method_definition)
+			{
+				if(isset($method_definition["parameters_extra"]))
+				{
+					$unhandled_argument_found = false;
+					foreach($method_definition["parameters_extra"] as $value)
+					{
+						if($value)
+						{
+							$unhandled_argument_found = true;
+							break;
+						}
+					}
+					
+					if($unhandled_argument_found)
+					{
+						file_put_contents("discarded.log", "$class_name::$method_name\n", FILE_APPEND);
+					
+						//Skip this method
+						continue;
+					}
+				}
+				
+				$temp_definitions[] = $method_definition;
+			}
+			
+			$method_definitions = $temp_definitions;
+			unset($temp_definitions);
+			
+			//If there are method overloads left add them
+			if(count($method_definitions))
+			{
+				$classes[$class_name][$method_name] = $method_definitions;
+			}
+			//If no method overload was left, completely remove the method
+			else
+			{
+				unset($classes[$class_name][$method_name]);
 			}
 		}
 	}
@@ -938,6 +1077,7 @@ function php_eval($string)
  * Get a standard type value that represents various parameter types
  * 
  * @param string $parameter_type Type of the parameter (declared as a reference in case the value needs to be substitued).
+ * @param bool $is_array To indicate if parameter is an array.
  * @param string $function_name Name of the function the parameter belongs to.
  * @param string $class_name Name of function/method's parent class.
  * @param string $parameter_modifier Reference to the modifier type of the parameter
@@ -945,13 +1085,13 @@ function php_eval($string)
  * 
  * @return string Standard value that represents the parameter type.
  */
-function parameter_type($parameter_type, $function_name, $class_name=null, &$parameter_modifier=null, $return_unknown=false)
+function parameter_type($parameter_type, $is_array, $function_name, $class_name=null, &$parameter_modifier=null, $return_unknown=false)
 {
 	global $defIni, $defTypedef;
 	
 	$cleaned_type = str_replace(array("const ", "&", "*"), "", $parameter_type);
 	
-	$parameter_modifier = type_modifier($parameter_type);
+	$parameter_modifier = type_modifier($parameter_type, $is_array);
 	
 	$type = "";
 	switch($cleaned_type)
@@ -1010,7 +1150,7 @@ function parameter_type($parameter_type, $function_name, $class_name=null, &$par
 			//Check if typedef and evaluate its type
 			elseif(isset($defTypedef[$cleaned_type]))
 			{
-				$type = parameter_type($defTypedef[$cleaned_type], $function_name, $class_name, $parameter_modifier, $return_unknown);
+				$type = parameter_type($defTypedef[$cleaned_type], $is_array, $function_name, $class_name, $parameter_modifier, $return_unknown);
 			}
 			//Check if enumartion of class
 			elseif(is_class_enum($cleaned_type))
@@ -1050,7 +1190,7 @@ function parameter_type($parameter_type, $function_name, $class_name=null, &$par
  * @return string const_pointer, const_reference, const_none, pointer,
  * reference, none
  */
-function type_modifier($type)
+function type_modifier($type, $is_array=false)
 {
 	$modifier = "";
 	
@@ -1074,6 +1214,11 @@ function type_modifier($type)
 	else
 	{
 		$modifier .= "none";
+	}
+	
+	if($is_array)
+	{
+		$modifier .= "_array";
 	}
 	
 	return $modifier;
@@ -1107,14 +1252,19 @@ function classes_author_header()
  * 
  * @return string
  */
-function function_arguments_string($function_definition)
+function function_arguments_string($function_definition, $default_argument=true)
 {
 	$arguments = "";
 	foreach($function_definition["parameters_type"] as $parameter_index=>$parameter_type)
 	{
 		$arguments .= $parameter_type . " " . $function_definition["parameters_name"][$parameter_index];
 		
-		if(strlen($function_definition["parameters_default_value"][$parameter_index]) > 0)
+		if($function_definition["parameters_is_array"][$parameter_index])
+		{
+			$arguments .= "[]";
+		}
+		
+		if(strlen($function_definition["parameters_default_value"][$parameter_index]) > 0 && $default_argument)
 		{
 			$arguments .= "=" . $function_definition["parameters_default_value"][$parameter_index];
 		}

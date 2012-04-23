@@ -39,7 +39,7 @@
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/tipdlg.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tipdlg.h" line="89"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/tipdlg.h" line="91"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__dialog_1ga71723a35f5e98349f5a79d7a025dac07" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -88,13 +88,13 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/tipdlg.h&gt; 
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/tipdlg.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tipdlg.h" line="111"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/tipdlg.h" line="113"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tipdlg.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/tipdlg.h"/>
   </compounddef>
 </doxygen>

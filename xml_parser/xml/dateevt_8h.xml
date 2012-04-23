@@ -3,10 +3,38 @@
   <compounddef id="dateevt_8h" kind="file">
     <compoundname>dateevt.h</compoundname>
     <innerclass refid="classwx_date_event" prot="public">wxDateEvent</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="dateevt_8h_1aa379353e608140c3c8354a71998d5b0f" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_DATE_CHANGED</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_DATE_CHANGED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dateevt.h" line="37" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dateevt.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dateevt_8h_1a180075c61013121f0954d315bbb51584" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_TIME_CHANGED</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_TIME_CHANGED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dateevt.h" line="38" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dateevt.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dateevt.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dateevt.h"/>
   </compounddef>
 </doxygen>

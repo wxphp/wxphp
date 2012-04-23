@@ -16,12 +16,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toolbook.h" line="56"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toolbook.h" line="56"/>
       </memberdef>
-      <memberdef kind="function" id="classwx_toolbook_1a91c9d969ff29153d0d6c09da912098c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classwx_toolbook_1a9587b9f1a9234c9ae366003a6551ac0e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
         <definition>wxToolbook::wxToolbook</definition>
-        <argsstring>(wxWindow *parent, wxWindowID id, const wxPoint &amp;pos=wxDefaultPosition, const wxSize &amp;size=wxDefaultSize, long style=0, const wxString &amp;name=wxEmptyStr)</argsstring>
+        <argsstring>(wxWindow *parent, wxWindowID id, const wxPoint &amp;pos=wxDefaultPosition, const wxSize &amp;size=wxDefaultSize, long style=0, const wxString &amp;name=wxEmptyString)</argsstring>
         <name>wxToolbook</name>
         <param>
           <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
@@ -49,7 +49,7 @@
         <param>
           <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
           <declname>name</declname>
-          <defval>wxEmptyStr</defval>
+          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
         </param>
         <briefdescription>
 <para>Constructs a choicebook control. </para>        </briefdescription>
@@ -57,7 +57,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toolbook.h" line="61"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toolbook.h" line="61"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -72,7 +72,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toolbook.h" line="67"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toolbook.h" line="67"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -92,109 +92,109 @@ The common wxBookCtrl styles described in the <ref refid="overview_bookctrl" kin
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__bookctrl" kindref="compound">Book Controls</ref></para><para><simplesect kind="see"><para><ref refid="overview_bookctrl" kindref="compound">wxBookCtrl Overview</ref>, <ref refid="classwx_book_ctrl_base" kindref="compound">wxBookCtrlBase</ref>, <ref refid="classwx_notebook" kindref="compound">wxNotebook</ref>, <ref refid="page_samples_1page_samples_notebook" kindref="member">Notebook Sample</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10935">
+      <node id="11125">
         <label>wxBookCtrlBase</label>
         <link refid="classwx_book_ctrl_base"/>
-        <childnode refid="10936" relation="public-inheritance">
+        <childnode refid="11126" relation="public-inheritance">
         </childnode>
-        <childnode refid="10941" relation="public-inheritance">
+        <childnode refid="11131" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10939">
+      <node id="11129">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="10938">
+      <node id="11128">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="10939" relation="public-inheritance">
+        <childnode refid="11129" relation="public-inheritance">
         </childnode>
-        <childnode refid="10940" relation="public-inheritance">
+        <childnode refid="11130" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10940">
+      <node id="11130">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="10936">
+      <node id="11126">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="10937" relation="public-inheritance">
+        <childnode refid="11127" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10937">
+      <node id="11127">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="10938" relation="public-inheritance">
+        <childnode refid="11128" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10934">
+      <node id="11124">
         <label>wxToolbook</label>
         <link refid="classwx_toolbook"/>
-        <childnode refid="10935" relation="public-inheritance">
+        <childnode refid="11125" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10941">
+      <node id="11131">
         <label>wxWithImages</label>
         <link refid="classwx_with_images"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10943">
+      <node id="11133">
         <label>wxBookCtrlBase</label>
         <link refid="classwx_book_ctrl_base"/>
-        <childnode refid="10944" relation="public-inheritance">
+        <childnode refid="11134" relation="public-inheritance">
         </childnode>
-        <childnode refid="10950" relation="public-inheritance">
+        <childnode refid="11140" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10947">
+      <node id="11137">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="10948" relation="usage">
+        <childnode refid="11138" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="10946">
+      <node id="11136">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="10947" relation="public-inheritance">
+        <childnode refid="11137" relation="public-inheritance">
         </childnode>
-        <childnode refid="10949" relation="public-inheritance">
+        <childnode refid="11139" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10949">
+      <node id="11139">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="10944">
+      <node id="11134">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="10945" relation="public-inheritance">
+        <childnode refid="11135" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10945">
+      <node id="11135">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="10946" relation="public-inheritance">
+        <childnode refid="11136" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10942">
+      <node id="11132">
         <label>wxToolbook</label>
         <link refid="classwx_toolbook"/>
-        <childnode refid="10943" relation="public-inheritance">
+        <childnode refid="11133" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10950">
+      <node id="11140">
         <label>wxWithImages</label>
         <link refid="classwx_with_images"/>
       </node>
-      <node id="10948">
+      <node id="11138">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toolbook.h" line="50" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toolbook.h" bodystart="49" bodyend="68"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toolbook.h" line="50" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/toolbook.h" bodystart="49" bodyend="68"/>
     <listofallmembers>
       <member refid="classwx_window_1a3afbd49b1ea2f8275e3600dcac102923" prot="public" virt="virtual"><scope>wxToolbook</scope><name>AcceptsFocus</name></member>
       <member refid="classwx_window_1a2370bdd3ab08e7ef3c7555c6aa8301b8" prot="public" virt="virtual"><scope>wxToolbook</scope><name>AcceptsFocusFromKeyboard</name></member>
@@ -376,6 +376,7 @@ The common wxBookCtrl styles described in the <ref refid="overview_bookctrl" kin
       <member refid="classwx_book_ctrl_base_1a2dcfe645ba865a3f44ebaf660a9ab0ed" prot="public" virt="pure-virtual"><scope>wxToolbook</scope><name>InsertPage</name></member>
       <member refid="classwx_window_1ae1b56ca87d8590ee5e576012229a380a" prot="public" virt="non-virtual"><scope>wxToolbook</scope><name>InvalidateBestSize</name></member>
       <member refid="classwx_window_1af918e6fe8565c2d5235973cc3de84a43" prot="public" virt="non-virtual"><scope>wxToolbook</scope><name>IsBeingDeleted</name></member>
+      <member refid="classwx_window_1a469f0881da248d37691440c9d4cc7200" prot="public" virt="non-virtual"><scope>wxToolbook</scope><name>IsDescendant</name></member>
       <member refid="classwx_window_1a9d1be1bbb625ebf87ad4ad47e49a0194" prot="public" virt="virtual"><scope>wxToolbook</scope><name>IsDoubleBuffered</name></member>
       <member refid="classwx_window_1a59452a5bd42f5ea4b31d7fc4aa59644f" prot="public" virt="non-virtual"><scope>wxToolbook</scope><name>IsEnabled</name></member>
       <member refid="classwx_window_1af27ef77c913e32050543f3b0ca435a0d" prot="public" virt="non-virtual"><scope>wxToolbook</scope><name>IsExposed</name></member>
@@ -391,13 +392,13 @@ The common wxBookCtrl styles described in the <ref refid="overview_bookctrl" kin
       <member refid="classwx_window_1a72d70fd14e3565bf782fbcd3271d8930" prot="public" virt="virtual"><scope>wxToolbook</scope><name>IsShownOnScreen</name></member>
       <member refid="classwx_window_1a657ef8b6055eb06df894ac5e6ddfecf8" prot="public" virt="non-virtual"><scope>wxToolbook</scope><name>IsThisEnabled</name></member>
       <member refid="classwx_window_1a0002826ad05f2a5661b4c8995713f37f" prot="public" virt="virtual"><scope>wxToolbook</scope><name>IsTopLevel</name></member>
+      <member refid="classwx_window_1a7940d510c5bdc062a2b109a1022dd8c2" prot="public" virt="virtual"><scope>wxToolbook</scope><name>IsTransparentBackgroundSupported</name></member>
       <member refid="classwx_evt_handler_1a360fdeefcf53b62fb49fb828406bb8a6" prot="public" virt="non-virtual"><scope>wxToolbook</scope><name>IsUnlinked</name></member>
       <member refid="classwx_window_1a1b143c3e72bd0af533b76db4830a6113" prot="public" virt="virtual"><scope>wxToolbook</scope><name>Layout</name></member>
       <member refid="classwx_window_1ade808784f0e64d9985e2f279b5ca8c02" prot="public" virt="non-virtual"><scope>wxToolbook</scope><name>LineDown</name></member>
       <member refid="classwx_window_1afc0816a174ceee6d36d1995c6824a273" prot="public" virt="non-virtual"><scope>wxToolbook</scope><name>LineUp</name></member>
       <member refid="classwx_window_1a124944524f36b71385dad8fddaad8ded" prot="public" virt="virtual"><scope>wxToolbook</scope><name>Lower</name></member>
       <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxToolbook</scope><name>m_refData</name></member>
-      <member refid="classwx_window_1a192fc8b467845d093c16452db96c65c5" prot="public" virt="virtual"><scope>wxToolbook</scope><name>MakeModal</name></member>
       <member refid="classwx_window_1ab1cb98c8d25b9e6ff7b706b1446c3df7" prot="public" virt="non-virtual"><scope>wxToolbook</scope><name>Move</name></member>
       <member refid="classwx_window_1a22a22c1e23ca05776707e7999d8047fe" prot="public" virt="non-virtual"><scope>wxToolbook</scope><name>Move</name></member>
       <member refid="classwx_window_1a79e66079125e8420de269811bdb6f2b6" prot="public" virt="non-virtual"><scope>wxToolbook</scope><name>MoveAfterInTabOrder</name></member>
@@ -405,7 +406,7 @@ The common wxBookCtrl styles described in the <ref refid="overview_bookctrl" kin
       <member refid="classwx_window_1a86904f6785df4af6036b33383490a805" prot="public" virt="non-virtual"><scope>wxToolbook</scope><name>Navigate</name></member>
       <member refid="classwx_window_1aa58039c8fc65e19160becf510ee1d1d5" prot="public" virt="non-virtual"><scope>wxToolbook</scope><name>NavigateIn</name></member>
       <member refid="classwx_window_1a8175da594e6045635a1d1cfe775cdddb" prot="public" virt="non-virtual"><scope>wxToolbook</scope><name>NewControlId</name></member>
-      <member refid="classwx_book_ctrl_base_1aed8700a5492ca104d2792d9bafea2167a76a5551525c61310e58ed494b5d4d730" prot="public" virt="non-virtual"><scope>wxToolbook</scope><name>NO_IMAGE</name></member>
+      <member refid="classwx_book_ctrl_base_1a2329dd4eea633a8764dbc29ac353c1a6a76a5551525c61310e58ed494b5d4d730" prot="public" virt="non-virtual"><scope>wxToolbook</scope><name>NO_IMAGE</name></member>
       <member refid="classwx_window_1a6b5654c0c6c6245d592c279521f7099c" prot="public" virt="virtual"><scope>wxToolbook</scope><name>OnInternalIdle</name></member>
       <member refid="classwx_object_1a07b8f34f5afc5743195c5fed052f55d3" prot="public" virt="non-virtual"><scope>wxToolbook</scope><name>operator delete</name></member>
       <member refid="classwx_object_1a96fa423a1dbc212c8227a5d83825971f" prot="public" virt="non-virtual"><scope>wxToolbook</scope><name>operator new</name></member>
@@ -525,7 +526,6 @@ The common wxBookCtrl styles described in the <ref refid="overview_bookctrl" kin
       <member refid="classwx_window_1a88cc65e424a129d9b0057756cdb67ec9" prot="public" virt="virtual"><scope>wxToolbook</scope><name>TransferDataToWindow</name></member>
       <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxToolbook</scope><name>TryAfter</name></member>
       <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxToolbook</scope><name>TryBefore</name></member>
-      <member refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" virt="non-virtual"><scope>wxToolbook</scope><name>TryThis</name></member>
       <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxToolbook</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxToolbook</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a22e5db2ec1d19c8252c056fd116975d7" prot="public" virt="non-virtual"><scope>wxToolbook</scope><name>Unlink</name></member>
@@ -547,7 +547,7 @@ The common wxBookCtrl styles described in the <ref refid="overview_bookctrl" kin
       <member refid="classwx_object_1acaa378363a28af421ab56ad7b46eadf0" prot="public" virt="non-virtual"><scope>wxToolbook</scope><name>wxObject</name></member>
       <member refid="classwx_object_1a4721b4dc9b7aff0f30904ba2ea3954cf" prot="public" virt="non-virtual"><scope>wxToolbook</scope><name>wxObject</name></member>
       <member refid="classwx_toolbook_1a8d988e8cdd0a495d737603418af5da34" prot="public" virt="non-virtual"><scope>wxToolbook</scope><name>wxToolbook</name></member>
-      <member refid="classwx_toolbook_1a91c9d969ff29153d0d6c09da912098c0" prot="public" virt="non-virtual"><scope>wxToolbook</scope><name>wxToolbook</name></member>
+      <member refid="classwx_toolbook_1a9587b9f1a9234c9ae366003a6551ac0e" prot="public" virt="non-virtual"><scope>wxToolbook</scope><name>wxToolbook</name></member>
       <member refid="classwx_window_1a695200a4915b934926dcf32afa44544c" prot="public" virt="non-virtual"><scope>wxToolbook</scope><name>wxWindow</name></member>
       <member refid="classwx_window_1a7799009b10d1765d1bbb6db4994f922e" prot="public" virt="non-virtual"><scope>wxToolbook</scope><name>wxWindow</name></member>
       <member refid="classwx_with_images_1ace26c8e42e40f25cdbcd05fc9a870484" prot="public" virt="non-virtual"><scope>wxToolbook</scope><name>wxWithImages</name></member>

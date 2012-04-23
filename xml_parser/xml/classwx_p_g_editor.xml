@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/editors.h" line="42"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/editors.h" line="42"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_editor_1a29dc3fd2736e4e4929753e10df3fa01c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/editors.h" line="45"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/editors.h" line="45"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_editor_1ac3c037223d4a2d9bcf6b7b79d4e22495" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -42,7 +42,7 @@
 <para>For example, wxPGEditor_TextCtrl has name &quot;TextCtrl&quot;. If you dont&apos; need to access your custom editor by string name, then you do not need to implement this function. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/editors.h" line="53"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/editors.h" line="53"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_editor_1a9d33fbd55fe4fe390bdaa826a7ff87e2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type>wxPGWindowList</type>
@@ -103,7 +103,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/editors.h" line="81"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/editors.h" line="81"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_editor_1a229b635a46763efa40814584eb480c51" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -124,7 +124,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/editors.h" line="84"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/editors.h" line="84"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_editor_1ac44a1db95b88f0f33f723eff7bc3d983" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -153,7 +153,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/editors.h" line="90"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/editors.h" line="90"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_editor_1a035fa3bee4ac87e4300df0c637a56261" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type>bool</type>
@@ -183,7 +183,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/editors.h" line="103"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/editors.h" line="103"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_editor_1a2a4995739922590161ffbdf7127063f2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -208,7 +208,7 @@
 <para>Usually ends up calling property&apos;s StringToValue() or IntToValue(). Returns true if value was different. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/editors.h" line="111"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/editors.h" line="111"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_editor_1a8b4f403f1311f9b3a57807147f0e8473" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -229,7 +229,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/editors.h" line="115"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/editors.h" line="115"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_editor_1a9bb01134af7a481206486035c54f5c20" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -266,7 +266,7 @@
 <para>Default implementation sets foreground colour, background colour, font, plus text for <ref refid="classwx_text_ctrl" kindref="compound">wxTextCtrl</ref> and <ref refid="classwx_combo_ctrl" kindref="compound">wxComboCtrl</ref>.</para><para>The parameter <emphasis>appearance</emphasis> represents the new appearance to be applied.</para><para>The parameter <emphasis>oldAppearance</emphasis> is the previously applied appearance. Used to detect which control attributes need to be changed (e.g. so we only change background colour if really needed).</para><para>Finally, the parameter <emphasis>unspecified</emphasis> if true tells this function that the new appearance represents an unspecified property value. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/editors.h" line="136"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/editors.h" line="136"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_editor_1a5fefad75f7890ac414f365d0b949a7a6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -291,7 +291,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/editors.h" line="140"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/editors.h" line="140"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_editor_1ad9667eb541f25f1d667de8cb937d24af" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -316,7 +316,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/editors.h" line="144"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/editors.h" line="144"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_editor_1a97de228636ce4e4b3f8d00593c65fe26" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>int</type>
@@ -341,7 +341,7 @@
 <para>Index -1 means end of list. Default implementation does nothing. Returns index of item added. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/editors.h" line="150"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/editors.h" line="150"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_editor_1afc7056e3e42a7deba94e13b519fdbc7c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -362,7 +362,7 @@
 <para>Default implementation does nothing. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/editors.h" line="156"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/editors.h" line="156"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_editor_1a479f4ec8deeb41a41c5427f4e506c499" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -383,7 +383,7 @@
 <para>For example, <ref refid="classwx_text_ctrl" kindref="compound">wxTextCtrl</ref> based controls should select all text. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/editors.h" line="162"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/editors.h" line="162"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_editor_1abd6bbee08a30f42d55b386cd5d400946" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -396,7 +396,7 @@
 <para>Default implementation returns false. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/editors.h" line="168"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/editors.h" line="168"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -408,42 +408,42 @@
 <itemizedlist>
 <listitem><para>Pointer to built-in editor is available as wxPGEditor_EditorName (eg. wxPGEditor_TextCtrl).</para></listitem></itemizedlist>
 </para><para><itemizedlist>
-<listitem><para>Before you start using new editor you just created, you need to register it using static function <ref refid="classwx_property_grid_1a89ee01017530df27ff2c469bfbe0605e" kindref="member">wxPropertyGrid::RegisterEditorClass()</ref>, with code like this: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_p_g_editor" kindref="compound" tooltip="Base class for custom wxPropertyGrid editors.">wxPGEditor</ref>*<sp/>editorPointer<sp/>=<sp/><ref refid="classwx_property_grid_1a89ee01017530df27ff2c469bfbe0605e" kindref="member" tooltip="Registers a new editor class.">wxPropertyGrid::RegisterEditorClass</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>MyEditorClass(),<sp/></highlight><highlight class="stringliteral">&quot;MyEditor&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<listitem><para>Before you start using new editor you just created, you need to register it using static function <ref refid="classwx_property_grid_1adb8c3d0d29d1c051a8a9ece93d40f6b7" kindref="member">wxPropertyGrid::RegisterEditorClass()</ref>, with code like this: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_p_g_editor" kindref="compound" tooltip="Base class for custom wxPropertyGrid editors.">wxPGEditor</ref>*<sp/>editorPointer<sp/>=<sp/><ref refid="classwx_property_grid_1adb8c3d0d29d1c051a8a9ece93d40f6b7" kindref="member" tooltip="Forwards to DoRegisterEditorClass with empty name.">wxPropertyGrid::RegisterEditorClass</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>MyEditorClass(),<sp/></highlight><highlight class="stringliteral">&quot;MyEditor&quot;</highlight><highlight class="normal">);</highlight></codeline>
 </programlisting> After that, <ref refid="classwx_property_grid" kindref="compound">wxPropertyGrid</ref> will take ownership of the given object, but you should still store editorPointer somewhere, so you can pass it to <ref refid="classwx_p_g_property_1a2cd2e6f0b30a1ab789f9ea8b58226260" kindref="member">wxPGProperty::SetEditor()</ref>, or return it from wxPGEditor::DoGetEditorClass().</para></listitem></itemizedlist>
 </para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxpropgrid" kindref="member">wxPropertyGrid</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__propgrid" kindref="compound">wxPropertyGrid</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="8649">
+      <node id="8842">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="8648">
+      <node id="8841">
         <label>wxPGEditor</label>
         <link refid="classwx_p_g_editor"/>
-        <childnode refid="8649" relation="public-inheritance">
+        <childnode refid="8842" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="8651">
+      <node id="8844">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="8652" relation="usage">
+        <childnode refid="8845" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="8650">
+      <node id="8843">
         <label>wxPGEditor</label>
         <link refid="classwx_p_g_editor"/>
-        <childnode refid="8651" relation="public-inheritance">
+        <childnode refid="8844" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8652">
+      <node id="8845">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/editors.h" line="38" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/editors.h" bodystart="37" bodyend="169"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/editors.h" line="38" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/editors.h" bodystart="37" bodyend="169"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxPGEditor</scope><name>AllocExclusive</name></member>
       <member refid="classwx_p_g_editor_1abd6bbee08a30f42d55b386cd5d400946" prot="public" virt="virtual"><scope>wxPGEditor</scope><name>CanContainCustomImage</name></member>

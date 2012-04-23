@@ -26,7 +26,7 @@
 <para>If <emphasis>window</emphasis> is NULL, the top window is used. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cshelp.h" line="203"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cshelp.h" line="203"/>
       </memberdef>
       <memberdef kind="function" id="classwx_context_help_1a31ea25f45e9b608257410bc249ec07c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -39,7 +39,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cshelp.h" line="208"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cshelp.h" line="208"/>
       </memberdef>
       <memberdef kind="function" id="classwx_context_help_1ab144c2a6389e24bdf11c3db382468b9e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -56,7 +56,7 @@
 <para><emphasis>window</emphasis> is the window which will be used to catch events; if NULL, the top window will be used.</para><para>Returns true if the application was successfully put into context-sensitive help mode. This function only returns when the event loop has finished. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cshelp.h" line="219"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cshelp.h" line="219"/>
       </memberdef>
       <memberdef kind="function" id="classwx_context_help_1a318135bcec88d5a25e31bb9353ea4f71" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -69,7 +69,7 @@
 <para>Not normally called by the application. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cshelp.h" line="225"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cshelp.h" line="225"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -84,37 +84,37 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__help" kindref="compound">Help</ref></para><para><simplesect kind="see"><para><ref refid="classwx_help_event" kindref="compound">wxHelpEvent</ref>, <ref refid="classwx_help_controller" kindref="compound">wxHelpController</ref>, <ref refid="classwx_context_help_button" kindref="compound">wxContextHelpButton</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="5057">
+      <node id="5150">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="5056">
+      <node id="5149">
         <label>wxContextHelp</label>
         <link refid="classwx_context_help"/>
-        <childnode refid="5057" relation="public-inheritance">
+        <childnode refid="5150" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="5059">
+      <node id="5152">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="5060" relation="usage">
+        <childnode refid="5153" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="5058">
+      <node id="5151">
         <label>wxContextHelp</label>
         <link refid="classwx_context_help"/>
-        <childnode refid="5059" relation="public-inheritance">
+        <childnode refid="5152" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5060">
+      <node id="5153">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cshelp.h" line="195" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cshelp.h" bodystart="194" bodyend="226"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cshelp.h" line="195" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/cshelp.h" bodystart="194" bodyend="226"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxContextHelp</scope><name>AllocExclusive</name></member>
       <member refid="classwx_context_help_1ab144c2a6389e24bdf11c3db382468b9e" prot="public" virt="non-virtual"><scope>wxContextHelp</scope><name>BeginContextHelp</name></member>

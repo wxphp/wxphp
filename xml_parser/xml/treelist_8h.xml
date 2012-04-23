@@ -17,7 +17,7 @@
 <para>This macro should be used with <ref refid="classwx_evt_handler_1a78719e8b82c9f9c6e4056b3449df1943" kindref="member">wxEvtHandler::Connect()</ref> when connecting to <ref refid="classwx_tree_list_ctrl" kindref="compound">wxTreeListCtrl</ref> events. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treelist.h" line="890" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treelist.h" bodystart="889" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treelist.h" line="890" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/treelist.h" bodystart="889" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="typedef">
@@ -32,7 +32,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treelist.h" line="102" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treelist.h" bodystart="102" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treelist.h" line="102" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/treelist.h" bodystart="102" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="var">
@@ -47,7 +47,7 @@
 <para>This value can be passed to <ref refid="classwx_tree_list_ctrl_1afbb4d0ca4e914ecaa96ce26bfa083018" kindref="member">wxTreeListCtrl::InsertItem()</ref> to achieve the same effect as calling <ref refid="classwx_tree_list_ctrl_1ac8e5e8796c0c7cf2233919578b49add5" kindref="member">wxTreeListCtrl::PrependItem()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treelist.h" line="110"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treelist.h" line="110"/>
       </memberdef>
       <memberdef kind="variable" id="treelist_8h_1a1f8c673140e9ab5e4325275846993d9d" prot="public" static="no" mutable="no">
         <type>const <ref refid="classwx_tree_list_item" kindref="compound">wxTreeListItem</ref></type>
@@ -60,13 +60,13 @@
 <para>This value can be passed to <ref refid="classwx_tree_list_ctrl_1afbb4d0ca4e914ecaa96ce26bfa083018" kindref="member">wxTreeListCtrl::InsertItem()</ref> to achieve the same effect as calling <ref refid="classwx_tree_list_ctrl_1a35b2d82789812c71ac0a724396ef21ee" kindref="member">wxTreeListCtrl::AppendItem()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treelist.h" line="118"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treelist.h" line="118"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treelist.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treelist.h"/>
   </compounddef>
 </doxygen>

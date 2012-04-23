@@ -23,7 +23,7 @@
 </programlisting></para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/version.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/version.h" line="33" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/version.h" bodystart="33" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/version.h" line="33" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/version.h" bodystart="33" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__version_1ga666af9e0a9939d0aff83078ebf682ab3" prot="public" static="no">
         <name>wxCHECK_VERSION_FULL</name>
@@ -37,13 +37,13 @@
 <para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/version.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/version.h" line="41" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/version.h" bodystart="41" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/version.h" line="41" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/version.h" bodystart="41" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/version.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/version.h"/>
   </compounddef>
 </doxygen>

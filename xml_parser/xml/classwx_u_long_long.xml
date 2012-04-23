@@ -8,7 +8,7 @@
     <detaileddescription>
 <para>Since <ref refid="classwx_u_long_long" kindref="compound">wxULongLong</ref> has exactly the same API as <ref refid="classwx_long_long" kindref="compound">wxLongLong</ref>, please refer to <ref refid="classwx_long_long" kindref="compound">wxLongLong</ref> documentation (this page exists only as redirection).</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__data" kindref="compound">Data Structures</ref> </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/longlong.h" line="199" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/longlong.h" bodystart="198" bodyend="200"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/longlong.h" line="199" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/longlong.h" bodystart="198" bodyend="200"/>
     <listofallmembers>
     </listofallmembers>
   </compounddef>

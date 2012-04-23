@@ -16,7 +16,7 @@
 <para>You must use <ref refid="classwx_header_ctrl_1a1f8ff3be92e0fb2bd59e25642447c2d5" kindref="member">Create()</ref> after creating the object using this constructor. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/headerctrl.h" line="536"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/headerctrl.h" line="536"/>
       </memberdef>
       <memberdef kind="function" id="classwx_header_ctrl_simple_1aab2ae72cdb8374216da503d7747c65fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -58,7 +58,7 @@
 <para>Please see the base class <ref refid="classwx_header_ctrl_1a1f8ff3be92e0fb2bd59e25642447c2d5" kindref="member">wxHeaderCtrl::Create()</ref> method for the parameters description. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/headerctrl.h" line="549"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/headerctrl.h" line="549"/>
       </memberdef>
       <memberdef kind="function" id="classwx_header_ctrl_simple_1a2da87a48d6020d62649d660a53778098" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -95,7 +95,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/headerctrl.h" line="564"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/headerctrl.h" line="564"/>
       </memberdef>
       <memberdef kind="function" id="classwx_header_ctrl_simple_1a953d8f6fcc305cea02182a10eb47cc08" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -113,7 +113,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/headerctrl.h" line="571"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/headerctrl.h" line="571"/>
       </memberdef>
       <memberdef kind="function" id="classwx_header_ctrl_simple_1a6b3ca586ed2da4ac964bd57ef0753509" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -131,7 +131,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/headerctrl.h" line="578"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/headerctrl.h" line="578"/>
       </memberdef>
       <memberdef kind="function" id="classwx_header_ctrl_simple_1aca35f2f868e3b5116f132ea5a7ef3bd7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -168,7 +168,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/headerctrl.h" line="596"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/headerctrl.h" line="596"/>
       </memberdef>
       <memberdef kind="function" id="classwx_header_ctrl_simple_1a39735d2c9a2ab8ba709a142757c47287" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -194,7 +194,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/headerctrl.h" line="606"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/headerctrl.h" line="606"/>
       </memberdef>
       <memberdef kind="function" id="classwx_header_ctrl_simple_1a18c357a62620cf6171ab4a8fa281eee2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -231,7 +231,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/headerctrl.h" line="623"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/headerctrl.h" line="623"/>
       </memberdef>
       <memberdef kind="function" id="classwx_header_ctrl_simple_1a3ad67fca36b463042d91a7d4b0e265ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -245,7 +245,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/headerctrl.h" line="630"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/headerctrl.h" line="630"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-func">
@@ -264,7 +264,7 @@
 <para>To implement automatic column resizing to fit its contents width when the column divider is double clicked, you need to simply return the fitting width for the given column <emphasis>idx</emphasis> from this method, the control will automatically use the biggest value between the one returned from here and the one needed for the display of the column title itself.</para><para>The base class version returns -1 indicating that this function is not implemented. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/headerctrl.h" line="646"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/headerctrl.h" line="646"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -274,97 +274,97 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref></para><para><simplesect kind="see"><para><ref refid="classwx_header_ctrl" kindref="compound">wxHeaderCtrl</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="6911">
+      <node id="7081">
         <label>wxHeaderCtrlSimple</label>
         <link refid="classwx_header_ctrl_simple"/>
-        <childnode refid="6912" relation="public-inheritance">
+        <childnode refid="7082" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6916">
+      <node id="7086">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="6915">
+      <node id="7085">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="6916" relation="public-inheritance">
+        <childnode refid="7086" relation="public-inheritance">
         </childnode>
-        <childnode refid="6917" relation="public-inheritance">
+        <childnode refid="7087" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6917">
+      <node id="7087">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="6913">
+      <node id="7083">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="6914" relation="public-inheritance">
+        <childnode refid="7084" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6914">
+      <node id="7084">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="6915" relation="public-inheritance">
+        <childnode refid="7085" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6912">
+      <node id="7082">
         <label>wxHeaderCtrl</label>
         <link refid="classwx_header_ctrl"/>
-        <childnode refid="6913" relation="public-inheritance">
+        <childnode refid="7083" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="6918">
+      <node id="7088">
         <label>wxHeaderCtrlSimple</label>
         <link refid="classwx_header_ctrl_simple"/>
-        <childnode refid="6919" relation="public-inheritance">
+        <childnode refid="7089" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6923">
+      <node id="7093">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="6924" relation="usage">
+        <childnode refid="7094" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="6922">
+      <node id="7092">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="6923" relation="public-inheritance">
+        <childnode refid="7093" relation="public-inheritance">
         </childnode>
-        <childnode refid="6925" relation="public-inheritance">
+        <childnode refid="7095" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6925">
+      <node id="7095">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="6920">
+      <node id="7090">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="6921" relation="public-inheritance">
+        <childnode refid="7091" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6921">
+      <node id="7091">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="6922" relation="public-inheritance">
+        <childnode refid="7092" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6919">
+      <node id="7089">
         <label>wxHeaderCtrl</label>
         <link refid="classwx_header_ctrl"/>
-        <childnode refid="6920" relation="public-inheritance">
+        <childnode refid="7090" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6924">
+      <node id="7094">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/headerctrl.h" line="529" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/headerctrl.h" bodystart="528" bodyend="647"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/headerctrl.h" line="529" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/headerctrl.h" bodystart="528" bodyend="647"/>
     <listofallmembers>
       <member refid="classwx_window_1a3afbd49b1ea2f8275e3600dcac102923" prot="public" virt="virtual"><scope>wxHeaderCtrlSimple</scope><name>AcceptsFocus</name></member>
       <member refid="classwx_window_1a2370bdd3ab08e7ef3c7555c6aa8301b8" prot="public" virt="virtual"><scope>wxHeaderCtrlSimple</scope><name>AcceptsFocusFromKeyboard</name></member>
@@ -540,6 +540,7 @@
       <member refid="classwx_header_ctrl_simple_1a2da87a48d6020d62649d660a53778098" prot="public" virt="non-virtual"><scope>wxHeaderCtrlSimple</scope><name>InsertColumn</name></member>
       <member refid="classwx_window_1ae1b56ca87d8590ee5e576012229a380a" prot="public" virt="non-virtual"><scope>wxHeaderCtrlSimple</scope><name>InvalidateBestSize</name></member>
       <member refid="classwx_window_1af918e6fe8565c2d5235973cc3de84a43" prot="public" virt="non-virtual"><scope>wxHeaderCtrlSimple</scope><name>IsBeingDeleted</name></member>
+      <member refid="classwx_window_1a469f0881da248d37691440c9d4cc7200" prot="public" virt="non-virtual"><scope>wxHeaderCtrlSimple</scope><name>IsDescendant</name></member>
       <member refid="classwx_window_1a9d1be1bbb625ebf87ad4ad47e49a0194" prot="public" virt="virtual"><scope>wxHeaderCtrlSimple</scope><name>IsDoubleBuffered</name></member>
       <member refid="classwx_header_ctrl_1a34816a207b4dfc0b152dc1cd1f55a0ee" prot="public" virt="non-virtual"><scope>wxHeaderCtrlSimple</scope><name>IsEmpty</name></member>
       <member refid="classwx_window_1a59452a5bd42f5ea4b31d7fc4aa59644f" prot="public" virt="non-virtual"><scope>wxHeaderCtrlSimple</scope><name>IsEnabled</name></member>
@@ -556,13 +557,13 @@
       <member refid="classwx_window_1a72d70fd14e3565bf782fbcd3271d8930" prot="public" virt="virtual"><scope>wxHeaderCtrlSimple</scope><name>IsShownOnScreen</name></member>
       <member refid="classwx_window_1a657ef8b6055eb06df894ac5e6ddfecf8" prot="public" virt="non-virtual"><scope>wxHeaderCtrlSimple</scope><name>IsThisEnabled</name></member>
       <member refid="classwx_window_1a0002826ad05f2a5661b4c8995713f37f" prot="public" virt="virtual"><scope>wxHeaderCtrlSimple</scope><name>IsTopLevel</name></member>
+      <member refid="classwx_window_1a7940d510c5bdc062a2b109a1022dd8c2" prot="public" virt="virtual"><scope>wxHeaderCtrlSimple</scope><name>IsTransparentBackgroundSupported</name></member>
       <member refid="classwx_evt_handler_1a360fdeefcf53b62fb49fb828406bb8a6" prot="public" virt="non-virtual"><scope>wxHeaderCtrlSimple</scope><name>IsUnlinked</name></member>
       <member refid="classwx_window_1a1b143c3e72bd0af533b76db4830a6113" prot="public" virt="virtual"><scope>wxHeaderCtrlSimple</scope><name>Layout</name></member>
       <member refid="classwx_window_1ade808784f0e64d9985e2f279b5ca8c02" prot="public" virt="non-virtual"><scope>wxHeaderCtrlSimple</scope><name>LineDown</name></member>
       <member refid="classwx_window_1afc0816a174ceee6d36d1995c6824a273" prot="public" virt="non-virtual"><scope>wxHeaderCtrlSimple</scope><name>LineUp</name></member>
       <member refid="classwx_window_1a124944524f36b71385dad8fddaad8ded" prot="public" virt="virtual"><scope>wxHeaderCtrlSimple</scope><name>Lower</name></member>
       <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxHeaderCtrlSimple</scope><name>m_refData</name></member>
-      <member refid="classwx_window_1a192fc8b467845d093c16452db96c65c5" prot="public" virt="virtual"><scope>wxHeaderCtrlSimple</scope><name>MakeModal</name></member>
       <member refid="classwx_window_1ab1cb98c8d25b9e6ff7b706b1446c3df7" prot="public" virt="non-virtual"><scope>wxHeaderCtrlSimple</scope><name>Move</name></member>
       <member refid="classwx_window_1a22a22c1e23ca05776707e7999d8047fe" prot="public" virt="non-virtual"><scope>wxHeaderCtrlSimple</scope><name>Move</name></member>
       <member refid="classwx_window_1a79e66079125e8420de269811bdb6f2b6" prot="public" virt="non-virtual"><scope>wxHeaderCtrlSimple</scope><name>MoveAfterInTabOrder</name></member>
@@ -693,7 +694,6 @@
       <member refid="classwx_window_1a88cc65e424a129d9b0057756cdb67ec9" prot="public" virt="virtual"><scope>wxHeaderCtrlSimple</scope><name>TransferDataToWindow</name></member>
       <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxHeaderCtrlSimple</scope><name>TryAfter</name></member>
       <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxHeaderCtrlSimple</scope><name>TryBefore</name></member>
-      <member refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" virt="non-virtual"><scope>wxHeaderCtrlSimple</scope><name>TryThis</name></member>
       <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxHeaderCtrlSimple</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxHeaderCtrlSimple</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a22e5db2ec1d19c8252c056fd116975d7" prot="public" virt="non-virtual"><scope>wxHeaderCtrlSimple</scope><name>Unlink</name></member>

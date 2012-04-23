@@ -49,7 +49,7 @@
 <para>Pass a print preview object plus other normal frame arguments. The print preview object will be destroyed by the frame when it closes. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/print.h" line="174"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/print.h" line="205"/>
       </memberdef>
       <memberdef kind="function" id="classwx_preview_frame_1ad67e8821ae6b095e2150f18e7d3d1e3d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -62,7 +62,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/print.h" line="179"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/print.h" line="210"/>
       </memberdef>
       <memberdef kind="function" id="classwx_preview_frame_1ada1ebeaf9eafc144ca4423818be93b92" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -75,7 +75,7 @@
 <para>Override this function to allow a user-defined preview canvas object to be created. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/print.h" line="187"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/print.h" line="218"/>
       </memberdef>
       <memberdef kind="function" id="classwx_preview_frame_1af8688661d377a79655ed097bbcf7fd04" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -88,7 +88,7 @@
 <para>Override this function to allow a user-defined preview control bar object to be created. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/print.h" line="195"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/print.h" line="226"/>
       </memberdef>
       <memberdef kind="function" id="classwx_preview_frame_1a3906d261e406fb21c4bdff861063fb31" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -101,7 +101,7 @@
 <para>Calling this method is equivalent to calling <ref refid="classwx_preview_frame_1aa04aa8433b7a43a70b29cb5b6b5d1996" kindref="member">InitializeWithModality()</ref> with wxPreviewFrame_AppModal argument, please see its documentation for more details.</para><para>Please notice that this function is virtual mostly for backwards compatibility only, there is no real need to override it as it&apos;s never called by wxWidgets itself. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/print.h" line="208"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/print.h" line="239"/>
       </memberdef>
       <memberdef kind="function" id="classwx_preview_frame_1aa04aa8433b7a43a70b29cb5b6b5d1996" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -129,7 +129,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/print.h" line="235"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/print.h" line="266"/>
       </memberdef>
       <memberdef kind="function" id="classwx_preview_frame_1a7fed034da39e98829491cdc84e6a5d2c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -146,7 +146,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/print.h" line="242"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/print.h" line="273"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -156,109 +156,109 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__printing" kindref="compound">Printing Framework</ref></para><para><simplesect kind="see"><para><ref refid="classwx_preview_canvas" kindref="compound">wxPreviewCanvas</ref>, <ref refid="classwx_preview_control_bar" kindref="compound">wxPreviewControlBar</ref>, <ref refid="classwx_print_preview" kindref="compound">wxPrintPreview</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="8765">
+      <node id="8958">
         <label>wxNonOwnedWindow</label>
         <link refid="classwx_non_owned_window"/>
-        <childnode refid="8766" relation="public-inheritance">
+        <childnode refid="8959" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8768">
+      <node id="8961">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="8767">
+      <node id="8960">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="8768" relation="public-inheritance">
+        <childnode refid="8961" relation="public-inheritance">
         </childnode>
-        <childnode refid="8769" relation="public-inheritance">
+        <childnode refid="8962" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8769">
+      <node id="8962">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="8766">
+      <node id="8959">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="8767" relation="public-inheritance">
+        <childnode refid="8960" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8763">
+      <node id="8956">
         <label>wxFrame</label>
         <link refid="classwx_frame"/>
-        <childnode refid="8764" relation="public-inheritance">
+        <childnode refid="8957" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8762">
+      <node id="8955">
         <label>wxPreviewFrame</label>
         <link refid="classwx_preview_frame"/>
-        <childnode refid="8763" relation="public-inheritance">
+        <childnode refid="8956" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8764">
+      <node id="8957">
         <label>wxTopLevelWindow</label>
         <link refid="classwx_top_level_window"/>
-        <childnode refid="8765" relation="public-inheritance">
+        <childnode refid="8958" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="8773">
+      <node id="8966">
         <label>wxNonOwnedWindow</label>
         <link refid="classwx_non_owned_window"/>
-        <childnode refid="8774" relation="public-inheritance">
+        <childnode refid="8967" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8776">
+      <node id="8969">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="8777" relation="usage">
+        <childnode refid="8970" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="8775">
+      <node id="8968">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="8776" relation="public-inheritance">
+        <childnode refid="8969" relation="public-inheritance">
         </childnode>
-        <childnode refid="8778" relation="public-inheritance">
+        <childnode refid="8971" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8778">
+      <node id="8971">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="8774">
+      <node id="8967">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="8775" relation="public-inheritance">
+        <childnode refid="8968" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8771">
+      <node id="8964">
         <label>wxFrame</label>
         <link refid="classwx_frame"/>
-        <childnode refid="8772" relation="public-inheritance">
+        <childnode refid="8965" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8770">
+      <node id="8963">
         <label>wxPreviewFrame</label>
         <link refid="classwx_preview_frame"/>
-        <childnode refid="8771" relation="public-inheritance">
+        <childnode refid="8964" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8772">
+      <node id="8965">
         <label>wxTopLevelWindow</label>
         <link refid="classwx_top_level_window"/>
-        <childnode refid="8773" relation="public-inheritance">
+        <childnode refid="8966" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8777">
+      <node id="8970">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/print.h" line="161" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/print.h" bodystart="160" bodyend="243"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/print.h" line="192" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/print.h" bodystart="191" bodyend="274"/>
     <listofallmembers>
       <member refid="classwx_window_1a3afbd49b1ea2f8275e3600dcac102923" prot="public" virt="virtual"><scope>wxPreviewFrame</scope><name>AcceptsFocus</name></member>
       <member refid="classwx_window_1a2370bdd3ab08e7ef3c7555c6aa8301b8" prot="public" virt="virtual"><scope>wxPreviewFrame</scope><name>AcceptsFocusFromKeyboard</name></member>
@@ -298,7 +298,7 @@
       <member refid="classwx_preview_frame_1ada1ebeaf9eafc144ca4423818be93b92" prot="public" virt="virtual"><scope>wxPreviewFrame</scope><name>CreateCanvas</name></member>
       <member refid="classwx_preview_frame_1af8688661d377a79655ed097bbcf7fd04" prot="public" virt="virtual"><scope>wxPreviewFrame</scope><name>CreateControlBar</name></member>
       <member refid="classwx_object_1a95c6a5e4e1e03ff23c7b9efe4cff0c1a" prot="protected" virt="virtual"><scope>wxPreviewFrame</scope><name>CreateRefData</name></member>
-      <member refid="classwx_frame_1ae8a54b5e9eed1ed7483be05e0706e346" prot="public" virt="virtual"><scope>wxPreviewFrame</scope><name>CreateStatusBar</name></member>
+      <member refid="classwx_frame_1aaa5134dcecc1ec77386465a327dd0a21" prot="public" virt="virtual"><scope>wxPreviewFrame</scope><name>CreateStatusBar</name></member>
       <member refid="classwx_frame_1a529698edc2fd2037ac8578dadafad0e2" prot="public" virt="virtual"><scope>wxPreviewFrame</scope><name>CreateToolBar</name></member>
       <member refid="classwx_evt_handler_1a6e7f9cf4ebd0623c1d94979855d096f8" prot="public" virt="non-virtual"><scope>wxPreviewFrame</scope><name>DeletePendingEvents</name></member>
       <member refid="classwx_window_1a6bf0c5be864544d9ce0560087667b7fc" prot="public" virt="virtual"><scope>wxPreviewFrame</scope><name>Destroy</name></member>
@@ -440,6 +440,7 @@
       <member refid="classwx_top_level_window_1afa58f411cf488eb9279683b1d20a74b6" prot="public" virt="virtual"><scope>wxPreviewFrame</scope><name>IsActive</name></member>
       <member refid="classwx_top_level_window_1ac0c7a7cb6e6dfdf7e59300ee5d476ce3" prot="public" virt="virtual"><scope>wxPreviewFrame</scope><name>IsAlwaysMaximized</name></member>
       <member refid="classwx_window_1af918e6fe8565c2d5235973cc3de84a43" prot="public" virt="non-virtual"><scope>wxPreviewFrame</scope><name>IsBeingDeleted</name></member>
+      <member refid="classwx_window_1a469f0881da248d37691440c9d4cc7200" prot="public" virt="non-virtual"><scope>wxPreviewFrame</scope><name>IsDescendant</name></member>
       <member refid="classwx_window_1a9d1be1bbb625ebf87ad4ad47e49a0194" prot="public" virt="virtual"><scope>wxPreviewFrame</scope><name>IsDoubleBuffered</name></member>
       <member refid="classwx_window_1a59452a5bd42f5ea4b31d7fc4aa59644f" prot="public" virt="non-virtual"><scope>wxPreviewFrame</scope><name>IsEnabled</name></member>
       <member refid="classwx_window_1af27ef77c913e32050543f3b0ca435a0d" prot="public" virt="non-virtual"><scope>wxPreviewFrame</scope><name>IsExposed</name></member>
@@ -458,6 +459,7 @@
       <member refid="classwx_window_1a72d70fd14e3565bf782fbcd3271d8930" prot="public" virt="virtual"><scope>wxPreviewFrame</scope><name>IsShownOnScreen</name></member>
       <member refid="classwx_window_1a657ef8b6055eb06df894ac5e6ddfecf8" prot="public" virt="non-virtual"><scope>wxPreviewFrame</scope><name>IsThisEnabled</name></member>
       <member refid="classwx_window_1a0002826ad05f2a5661b4c8995713f37f" prot="public" virt="virtual"><scope>wxPreviewFrame</scope><name>IsTopLevel</name></member>
+      <member refid="classwx_window_1a7940d510c5bdc062a2b109a1022dd8c2" prot="public" virt="virtual"><scope>wxPreviewFrame</scope><name>IsTransparentBackgroundSupported</name></member>
       <member refid="classwx_evt_handler_1a360fdeefcf53b62fb49fb828406bb8a6" prot="public" virt="non-virtual"><scope>wxPreviewFrame</scope><name>IsUnlinked</name></member>
       <member refid="classwx_top_level_window_1a305c48ddb8e45f89add1694053185a7d" prot="public" virt="non-virtual"><scope>wxPreviewFrame</scope><name>IsUsingNativeDecorations</name></member>
       <member refid="classwx_top_level_window_1adfe7e3f4a32f3ed178968f64431bbfe0" prot="public" virt="virtual"><scope>wxPreviewFrame</scope><name>Layout</name></member>
@@ -465,7 +467,6 @@
       <member refid="classwx_window_1afc0816a174ceee6d36d1995c6824a273" prot="public" virt="non-virtual"><scope>wxPreviewFrame</scope><name>LineUp</name></member>
       <member refid="classwx_window_1a124944524f36b71385dad8fddaad8ded" prot="public" virt="virtual"><scope>wxPreviewFrame</scope><name>Lower</name></member>
       <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxPreviewFrame</scope><name>m_refData</name></member>
-      <member refid="classwx_window_1a192fc8b467845d093c16452db96c65c5" prot="public" virt="virtual"><scope>wxPreviewFrame</scope><name>MakeModal</name></member>
       <member refid="classwx_top_level_window_1addb1612e9f00ac82c2e19c2bac6ffc4f" prot="public" virt="virtual"><scope>wxPreviewFrame</scope><name>Maximize</name></member>
       <member refid="classwx_window_1ab1cb98c8d25b9e6ff7b706b1446c3df7" prot="public" virt="non-virtual"><scope>wxPreviewFrame</scope><name>Move</name></member>
       <member refid="classwx_window_1a22a22c1e23ca05776707e7999d8047fe" prot="public" virt="non-virtual"><scope>wxPreviewFrame</scope><name>Move</name></member>
@@ -612,7 +613,6 @@
       <member refid="classwx_window_1a88cc65e424a129d9b0057756cdb67ec9" prot="public" virt="virtual"><scope>wxPreviewFrame</scope><name>TransferDataToWindow</name></member>
       <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxPreviewFrame</scope><name>TryAfter</name></member>
       <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxPreviewFrame</scope><name>TryBefore</name></member>
-      <member refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" virt="non-virtual"><scope>wxPreviewFrame</scope><name>TryThis</name></member>
       <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxPreviewFrame</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxPreviewFrame</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a22e5db2ec1d19c8252c056fd116975d7" prot="public" virt="non-virtual"><scope>wxPreviewFrame</scope><name>Unlink</name></member>

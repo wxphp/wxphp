@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/uiaction.h" line="32"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/uiaction.h" line="32"/>
       </memberdef>
       <memberdef kind="function" id="classwx_u_i_action_simulator_1a810d21924e14cb66205e4a921f711e5a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -51,7 +51,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/uiaction.h" line="43"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/uiaction.h" line="43"/>
       </memberdef>
       <memberdef kind="function" id="classwx_u_i_action_simulator_1aca7da1cd2fe227f2b1a85cfe8aef828b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -76,7 +76,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/uiaction.h" line="51"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/uiaction.h" line="51"/>
       </memberdef>
       <memberdef kind="function" id="classwx_u_i_action_simulator_1a9ddaf261490d1a71f723e713184424a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -102,7 +102,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/uiaction.h" line="60"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/uiaction.h" line="60"/>
       </memberdef>
       <memberdef kind="function" id="classwx_u_i_action_simulator_1a84bb2f01cfc044d682cbadd9efb9846f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -128,7 +128,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/uiaction.h" line="69"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/uiaction.h" line="69"/>
       </memberdef>
       <memberdef kind="function" id="classwx_u_i_action_simulator_1a9b1c032466a935687c5e68d6eb77bcc5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -154,7 +154,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/uiaction.h" line="77"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/uiaction.h" line="77"/>
       </memberdef>
       <memberdef kind="function" id="classwx_u_i_action_simulator_1aee0c2122c457fbd25bebb37e1f87e436" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -180,7 +180,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/uiaction.h" line="85"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/uiaction.h" line="85"/>
       </memberdef>
       <memberdef kind="function" id="classwx_u_i_action_simulator_1a9365e46a8500daac15eadbbdc7c6fb9d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -250,7 +250,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/uiaction.h" line="107"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/uiaction.h" line="107"/>
       </memberdef>
       <memberdef kind="function" id="classwx_u_i_action_simulator_1aabcdc7be926c32bd5b68b75f16c0fcb8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -287,7 +287,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/uiaction.h" line="122"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/uiaction.h" line="122"/>
       </memberdef>
       <memberdef kind="function" id="classwx_u_i_action_simulator_1a7f08822c577ff59c7a04064285b12db1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -324,7 +324,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/uiaction.h" line="134"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/uiaction.h" line="134"/>
       </memberdef>
       <memberdef kind="function" id="classwx_u_i_action_simulator_1a573e464dc75d6168564a6372f6b9aa21" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -361,7 +361,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/uiaction.h" line="146"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/uiaction.h" line="146"/>
       </memberdef>
       <memberdef kind="function" id="classwx_u_i_action_simulator_1af8daaf3d87f184e2dec185b820eab9b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -386,7 +386,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/uiaction.h" line="158"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/uiaction.h" line="158"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -395,7 +395,7 @@
 <para>Common usage for this class would be to provide playback and record (aka macro recording) functionality for users, or to drive unit tests by simulating user sessions.</para><para>See the <ref refid="page_samples_1page_samples_uiaction" kindref="member">wxUIActionSimulator Sample</ref> for an example of using this class.</para><para><simplesect kind="since"><para>2.9.2</para></simplesect>
 <heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref> </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/uiaction.h" line="27" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/uiaction.h" bodystart="26" bodyend="159"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/uiaction.h" line="27" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/uiaction.h" bodystart="26" bodyend="159"/>
     <listofallmembers>
       <member refid="classwx_u_i_action_simulator_1a573e464dc75d6168564a6372f6b9aa21" prot="public" virt="non-virtual"><scope>wxUIActionSimulator</scope><name>Char</name></member>
       <member refid="classwx_u_i_action_simulator_1aabcdc7be926c32bd5b68b75f16c0fcb8" prot="public" virt="non-virtual"><scope>wxUIActionSimulator</scope><name>KeyDown</name></member>

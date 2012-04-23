@@ -40,13 +40,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/uri.h" line="13" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/uri.h" bodystart="12" bodyend="18"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/uri.h" line="13" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/uri.h" bodystart="12" bodyend="18"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/uri.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/uri.h"/>
   </compounddef>
 </doxygen>

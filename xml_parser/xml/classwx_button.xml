@@ -18,7 +18,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/button.h" line="107"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/button.h" line="108"/>
       </memberdef>
       <memberdef kind="function" id="classwx_button_1ab30ef360a5f2f48dd3ff537f70808962" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -127,7 +127,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/button.h" line="152"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/button.h" line="153"/>
       </memberdef>
       <memberdef kind="function" id="classwx_button_1af7f5f8316423b6ae17fbd06b3371610b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -178,7 +178,7 @@
 <para>For more details, see <ref refid="classwx_button_1a61d2be397a8a673ebaf006003eb17b9e" kindref="member">wxButton()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/button.h" line="164"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/button.h" line="165"/>
       </memberdef>
       <memberdef kind="function" id="classwx_button_1ae10eaade3f0f336509af3adad6feafd9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -194,7 +194,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/button.h" line="177"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/button.h" line="178"/>
       </memberdef>
       <memberdef kind="function" id="classwx_button_1ab2e600e498ab8b2119a9cdc6ae93612d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -210,7 +210,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/button.h" line="192"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/button.h" line="193"/>
       </memberdef>
       <memberdef kind="function" id="classwx_button_1a2e9c19ca18bda893653deb023e08c037" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -231,7 +231,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/button.h" line="205"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/button.h" line="206"/>
       </memberdef>
       <memberdef kind="function" id="classwx_button_1a55d6205af843a987491cb270487c7924" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
@@ -246,7 +246,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/button.h" line="222"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/button.h" line="223"/>
       </memberdef>
       <memberdef kind="function" id="classwx_button_1ae16ea5741a8a6ef4c1d2708fef315a9a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -273,7 +273,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/button.h" line="230"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/button.h" line="231"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -288,7 +288,7 @@
 <para>It is advised to make all the dialog buttons of the same size and this function allows to retrieve the (platform and current font dependent size) which should be the best suited for this. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/button.h" line="185"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/button.h" line="186"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -309,7 +309,7 @@ All of the bitmaps must be of the same size and the normal bitmap must be set fi
 <listitem><para>wxBU_BOTTOM: Aligns the label to the bottom of the button. Windows and GTK+ only. </para></listitem>
 <listitem><para>wxBU_EXACTFIT: Creates the button as small as possible instead of making it of the standard size (which is the default behaviour ). </para></listitem>
 <listitem><para>wxBU_NOTEXT: Disables the display of the text label in the button even if it has one or its id is one of the standard stock ids with an associated label: without using this style a button which is only supposed to show a bitmap but uses a standard id would display a label too. </para></listitem>
-<listitem><para>wxBORDER_NONE: Creates a button without border. This is currently implemented in MSW, GTK2 and OSX/Carbon ports but in the latter only applies to buttons with bitmaps and using bitmap of one of the standard sizes only, namely 128*128, 48*48, 24*24 or 16*16. In all the other cases wxBORDER_NONE is ignored under OSX. </para></listitem>
+<listitem><para>wxBORDER_NONE: Creates a button without border. This is currently implemented in MSW, GTK2 and OSX/Cocoa and OSX/Carbon ports but in the latter only applies to buttons with bitmaps and using bitmap of one of the standard sizes only, namely 128*128, 48*48, 24*24 or 16*16. In all the other cases wxBORDER_NONE is ignored under OSX/Carbon (these restrictions don&apos;t exist in OSX/Cocoa however). </para></listitem>
 </itemizedlist>
 <heading level="2">Events emitted by this class</heading>
 </para><para>The following event handler macros redirect the events to member function handlers &apos;<bold>func</bold>&apos; with prototypes like: void<nonbreakablespace/>handlerFuncName(<ref refid="classwx_command_event" kindref="compound">wxCommandEvent</ref>&amp;<nonbreakablespace/>event)Event macros for events emitted by this class: <itemizedlist>
@@ -319,115 +319,115 @@ All of the bitmaps must be of the same size and the normal bitmap must be set fi
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref> <htmlonly> &lt;br&gt;&lt;div&gt;&lt;span class=&apos;appearance&apos;&gt;Appearance:&lt;/span&gt;&lt;br&gt;&lt;table class=&apos;appearance&apos;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&apos;wxmsw/button.png&apos; alt=&apos;wxMSW appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxgtk/button.png&apos; alt=&apos;wxGTK appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxmac/button.png&apos; alt=&apos;wxMac appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;wxMSW appearance&lt;/td&gt;&lt;td&gt;wxGTK appearance&lt;/td&gt;&lt;td&gt;wxMac appearance&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt; </htmlonly></para><para><simplesect kind="see"><para><ref refid="classwx_bitmap_button" kindref="compound">wxBitmapButton</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="4647">
+      <node id="4737">
         <label>wxCommandLinkButton</label>
         <link refid="classwx_command_link_button"/>
-        <childnode refid="4638" relation="public-inheritance">
+        <childnode refid="4728" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4643">
+      <node id="4733">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="4642">
+      <node id="4732">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="4643" relation="public-inheritance">
+        <childnode refid="4733" relation="public-inheritance">
         </childnode>
-        <childnode refid="4644" relation="public-inheritance">
+        <childnode refid="4734" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4644">
+      <node id="4734">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="4640">
+      <node id="4730">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="4641" relation="public-inheritance">
+        <childnode refid="4731" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4641">
+      <node id="4731">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="4642" relation="public-inheritance">
+        <childnode refid="4732" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4639">
+      <node id="4729">
         <label>wxAnyButton</label>
         <link refid="classwx_any_button"/>
-        <childnode refid="4640" relation="public-inheritance">
+        <childnode refid="4730" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4638">
+      <node id="4728">
         <label>wxButton</label>
         <link refid="classwx_button"/>
-        <childnode refid="4639" relation="public-inheritance">
+        <childnode refid="4729" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4645">
+      <node id="4735">
         <label>wxBitmapButton</label>
         <link refid="classwx_bitmap_button"/>
-        <childnode refid="4638" relation="public-inheritance">
+        <childnode refid="4728" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4646">
+      <node id="4736">
         <label>wxContextHelpButton</label>
         <link refid="classwx_context_help_button"/>
-        <childnode refid="4645" relation="public-inheritance">
+        <childnode refid="4735" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="4653">
+      <node id="4743">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="4654" relation="usage">
+        <childnode refid="4744" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="4652">
+      <node id="4742">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="4653" relation="public-inheritance">
+        <childnode refid="4743" relation="public-inheritance">
         </childnode>
-        <childnode refid="4655" relation="public-inheritance">
+        <childnode refid="4745" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4655">
+      <node id="4745">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="4650">
+      <node id="4740">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="4651" relation="public-inheritance">
+        <childnode refid="4741" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4651">
+      <node id="4741">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="4652" relation="public-inheritance">
+        <childnode refid="4742" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4649">
+      <node id="4739">
         <label>wxAnyButton</label>
         <link refid="classwx_any_button"/>
-        <childnode refid="4650" relation="public-inheritance">
+        <childnode refid="4740" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4648">
+      <node id="4738">
         <label>wxButton</label>
         <link refid="classwx_button"/>
-        <childnode refid="4649" relation="public-inheritance">
+        <childnode refid="4739" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4654">
+      <node id="4744">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/button.h" line="102" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/button.h" bodystart="101" bodyend="231"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/button.h" line="103" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/button.h" bodystart="102" bodyend="232"/>
     <listofallmembers>
       <member refid="classwx_window_1a3afbd49b1ea2f8275e3600dcac102923" prot="public" virt="virtual"><scope>wxButton</scope><name>AcceptsFocus</name></member>
       <member refid="classwx_window_1a2370bdd3ab08e7ef3c7555c6aa8301b8" prot="public" virt="virtual"><scope>wxButton</scope><name>AcceptsFocusFromKeyboard</name></member>
@@ -601,6 +601,7 @@ All of the bitmaps must be of the same size and the normal bitmap must be set fi
       <member refid="classwx_window_1aa90a260c0a835a133043460b7d0024a8" prot="public" virt="virtual"><scope>wxButton</scope><name>InitDialog</name></member>
       <member refid="classwx_window_1ae1b56ca87d8590ee5e576012229a380a" prot="public" virt="non-virtual"><scope>wxButton</scope><name>InvalidateBestSize</name></member>
       <member refid="classwx_window_1af918e6fe8565c2d5235973cc3de84a43" prot="public" virt="non-virtual"><scope>wxButton</scope><name>IsBeingDeleted</name></member>
+      <member refid="classwx_window_1a469f0881da248d37691440c9d4cc7200" prot="public" virt="non-virtual"><scope>wxButton</scope><name>IsDescendant</name></member>
       <member refid="classwx_window_1a9d1be1bbb625ebf87ad4ad47e49a0194" prot="public" virt="virtual"><scope>wxButton</scope><name>IsDoubleBuffered</name></member>
       <member refid="classwx_window_1a59452a5bd42f5ea4b31d7fc4aa59644f" prot="public" virt="non-virtual"><scope>wxButton</scope><name>IsEnabled</name></member>
       <member refid="classwx_window_1af27ef77c913e32050543f3b0ca435a0d" prot="public" virt="non-virtual"><scope>wxButton</scope><name>IsExposed</name></member>
@@ -616,13 +617,13 @@ All of the bitmaps must be of the same size and the normal bitmap must be set fi
       <member refid="classwx_window_1a72d70fd14e3565bf782fbcd3271d8930" prot="public" virt="virtual"><scope>wxButton</scope><name>IsShownOnScreen</name></member>
       <member refid="classwx_window_1a657ef8b6055eb06df894ac5e6ddfecf8" prot="public" virt="non-virtual"><scope>wxButton</scope><name>IsThisEnabled</name></member>
       <member refid="classwx_window_1a0002826ad05f2a5661b4c8995713f37f" prot="public" virt="virtual"><scope>wxButton</scope><name>IsTopLevel</name></member>
+      <member refid="classwx_window_1a7940d510c5bdc062a2b109a1022dd8c2" prot="public" virt="virtual"><scope>wxButton</scope><name>IsTransparentBackgroundSupported</name></member>
       <member refid="classwx_evt_handler_1a360fdeefcf53b62fb49fb828406bb8a6" prot="public" virt="non-virtual"><scope>wxButton</scope><name>IsUnlinked</name></member>
       <member refid="classwx_window_1a1b143c3e72bd0af533b76db4830a6113" prot="public" virt="virtual"><scope>wxButton</scope><name>Layout</name></member>
       <member refid="classwx_window_1ade808784f0e64d9985e2f279b5ca8c02" prot="public" virt="non-virtual"><scope>wxButton</scope><name>LineDown</name></member>
       <member refid="classwx_window_1afc0816a174ceee6d36d1995c6824a273" prot="public" virt="non-virtual"><scope>wxButton</scope><name>LineUp</name></member>
       <member refid="classwx_window_1a124944524f36b71385dad8fddaad8ded" prot="public" virt="virtual"><scope>wxButton</scope><name>Lower</name></member>
       <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxButton</scope><name>m_refData</name></member>
-      <member refid="classwx_window_1a192fc8b467845d093c16452db96c65c5" prot="public" virt="virtual"><scope>wxButton</scope><name>MakeModal</name></member>
       <member refid="classwx_window_1ab1cb98c8d25b9e6ff7b706b1446c3df7" prot="public" virt="non-virtual"><scope>wxButton</scope><name>Move</name></member>
       <member refid="classwx_window_1a22a22c1e23ca05776707e7999d8047fe" prot="public" virt="non-virtual"><scope>wxButton</scope><name>Move</name></member>
       <member refid="classwx_window_1a79e66079125e8420de269811bdb6f2b6" prot="public" virt="non-virtual"><scope>wxButton</scope><name>MoveAfterInTabOrder</name></member>
@@ -754,7 +755,6 @@ All of the bitmaps must be of the same size and the normal bitmap must be set fi
       <member refid="classwx_window_1a88cc65e424a129d9b0057756cdb67ec9" prot="public" virt="virtual"><scope>wxButton</scope><name>TransferDataToWindow</name></member>
       <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxButton</scope><name>TryAfter</name></member>
       <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxButton</scope><name>TryBefore</name></member>
-      <member refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" virt="non-virtual"><scope>wxButton</scope><name>TryThis</name></member>
       <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxButton</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxButton</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a22e5db2ec1d19c8252c056fd116975d7" prot="public" virt="non-virtual"><scope>wxButton</scope><name>Unlink</name></member>

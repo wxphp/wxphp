@@ -28,7 +28,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fontpicker.h" line="150"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fontpicker.h" line="162"/>
       </memberdef>
       <memberdef kind="function" id="classwx_font_picker_event_1a04c576117394399d2e909184f6166cd1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_font" kindref="compound">wxFont</ref></type>
@@ -41,7 +41,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fontpicker.h" line="155"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fontpicker.h" line="167"/>
       </memberdef>
       <memberdef kind="function" id="classwx_font_picker_event_1a4731df639d37c8056b96f9dec9db52d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -58,7 +58,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fontpicker.h" line="160"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fontpicker.h" line="172"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -72,61 +72,61 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="classwx_font_picker_ctrl" kindref="compound">wxFontPickerCtrl</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="6419">
+      <node id="6559">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="6417">
+      <node id="6557">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="6418" relation="public-inheritance">
+        <childnode refid="6558" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6416">
+      <node id="6556">
         <label>wxFontPickerEvent</label>
         <link refid="classwx_font_picker_event"/>
-        <childnode refid="6417" relation="public-inheritance">
+        <childnode refid="6557" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6418">
+      <node id="6558">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="6419" relation="public-inheritance">
+        <childnode refid="6559" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="6423">
+      <node id="6563">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="6424" relation="usage">
+        <childnode refid="6564" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="6421">
+      <node id="6561">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="6422" relation="public-inheritance">
+        <childnode refid="6562" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6420">
+      <node id="6560">
         <label>wxFontPickerEvent</label>
         <link refid="classwx_font_picker_event"/>
-        <childnode refid="6421" relation="public-inheritance">
+        <childnode refid="6561" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6422">
+      <node id="6562">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="6423" relation="public-inheritance">
+        <childnode refid="6563" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6424">
+      <node id="6564">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fontpicker.h" line="144" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fontpicker.h" bodystart="143" bodyend="161"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fontpicker.h" line="156" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/fontpicker.h" bodystart="155" bodyend="173"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxFontPickerEvent</scope><name>AllocExclusive</name></member>
       <member refid="classwx_event_1a26878097a702e8d0368da150125d4158" prot="public" virt="pure-virtual"><scope>wxFontPickerEvent</scope><name>Clone</name></member>

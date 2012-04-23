@@ -41,7 +41,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="129"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="129"/>
       </memberdef>
       <memberdef kind="function" id="classwx_grid_cell_date_time_renderer_1a15d677122c58b8aeb54184c79d4c75e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -66,7 +66,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="139"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="139"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -76,42 +76,42 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__grid" kindref="compound">Grid Related Classes</ref></para><para><simplesect kind="see"><para><ref refid="classwx_grid_cell_renderer" kindref="compound">wxGridCellRenderer</ref>, <ref refid="classwx_grid_cell_auto_wrap_string_renderer" kindref="compound">wxGridCellAutoWrapStringRenderer</ref>, <ref refid="classwx_grid_cell_bool_renderer" kindref="compound">wxGridCellBoolRenderer</ref>, <ref refid="classwx_grid_cell_enum_renderer" kindref="compound">wxGridCellEnumRenderer</ref>, <ref refid="classwx_grid_cell_float_renderer" kindref="compound">wxGridCellFloatRenderer</ref>, <ref refid="classwx_grid_cell_number_renderer" kindref="compound">wxGridCellNumberRenderer</ref>, <ref refid="classwx_grid_cell_string_renderer" kindref="compound">wxGridCellStringRenderer</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="6671">
+      <node id="6841">
         <label>wxGridCellDateTimeRenderer</label>
         <link refid="classwx_grid_cell_date_time_renderer"/>
-        <childnode refid="6672" relation="public-inheritance">
+        <childnode refid="6842" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6673">
+      <node id="6843">
         <label>wxGridCellRenderer</label>
         <link refid="classwx_grid_cell_renderer"/>
       </node>
-      <node id="6672">
+      <node id="6842">
         <label>wxGridCellStringRenderer</label>
         <link refid="classwx_grid_cell_string_renderer"/>
-        <childnode refid="6673" relation="public-inheritance">
+        <childnode refid="6843" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="6674">
+      <node id="6844">
         <label>wxGridCellDateTimeRenderer</label>
         <link refid="classwx_grid_cell_date_time_renderer"/>
-        <childnode refid="6675" relation="public-inheritance">
+        <childnode refid="6845" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6676">
+      <node id="6846">
         <label>wxGridCellRenderer</label>
         <link refid="classwx_grid_cell_renderer"/>
       </node>
-      <node id="6675">
+      <node id="6845">
         <label>wxGridCellStringRenderer</label>
         <link refid="classwx_grid_cell_string_renderer"/>
-        <childnode refid="6676" relation="public-inheritance">
+        <childnode refid="6846" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="118" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" bodystart="117" bodyend="140"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="118" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" bodystart="117" bodyend="140"/>
     <listofallmembers>
       <member refid="classwx_grid_cell_renderer_1a55c1db8c06f8cb994beb90615d5264f7" prot="public" virt="pure-virtual"><scope>wxGridCellDateTimeRenderer</scope><name>Clone</name></member>
       <member refid="classwx_grid_cell_renderer_1a1848512422742bbbf9dec1b173bfc752" prot="public" virt="pure-virtual"><scope>wxGridCellDateTimeRenderer</scope><name>Draw</name></member>

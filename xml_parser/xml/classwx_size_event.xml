@@ -25,7 +25,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4090"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4096"/>
       </memberdef>
       <memberdef kind="function" id="classwx_size_event_1ab4630e0469e7eaf1952e7afacadb7031" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
@@ -38,7 +38,7 @@
 <para>This is the new total size of the window, i.e. the same size as would be returned by <ref refid="classwx_window_1a124c12cff1e7b6e96a5e1fd3e48dca34" kindref="member">wxWindow::GetSize()</ref> if it were called now. Use <ref refid="classwx_window_1ae56fc53268b815b58570f66bfc33838f" kindref="member">wxWindow::GetClientSize()</ref> if you catch this event in a top level window such as <ref refid="classwx_frame" kindref="compound">wxFrame</ref> to find the size available for the window contents. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4100"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4106"/>
       </memberdef>
       <memberdef kind="function" id="classwx_size_event_1a10feb0885d50853a00bf302e1a1c6a22" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -55,7 +55,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4101"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4107"/>
       </memberdef>
       <memberdef kind="function" id="classwx_size_event_1af43d08bdee3bf87b2cfd12e6c684ec87" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_rect" kindref="compound">wxRect</ref></type>
@@ -68,7 +68,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4103"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4109"/>
       </memberdef>
       <memberdef kind="function" id="classwx_size_event_1aec71605403d6b11aa858d194fd486850" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -85,7 +85,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4104"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4110"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -99,49 +99,49 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="classwx_size" kindref="compound">wxSize</ref>, <ref refid="overview_events" kindref="compound">Events and Event Handling</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10229">
+      <node id="10412">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="10227">
+      <node id="10410">
         <label>wxSizeEvent</label>
         <link refid="classwx_size_event"/>
-        <childnode refid="10228" relation="public-inheritance">
+        <childnode refid="10411" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10228">
+      <node id="10411">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="10229" relation="public-inheritance">
+        <childnode refid="10412" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10232">
+      <node id="10415">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="10233" relation="usage">
+        <childnode refid="10416" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="10230">
+      <node id="10413">
         <label>wxSizeEvent</label>
         <link refid="classwx_size_event"/>
-        <childnode refid="10231" relation="public-inheritance">
+        <childnode refid="10414" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10231">
+      <node id="10414">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="10232" relation="public-inheritance">
+        <childnode refid="10415" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10233">
+      <node id="10416">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4085" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4084" bodyend="4105"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4091" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4090" bodyend="4111"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxSizeEvent</scope><name>AllocExclusive</name></member>
       <member refid="classwx_event_1a26878097a702e8d0368da150125d4158" prot="public" virt="pure-virtual"><scope>wxSizeEvent</scope><name>Clone</name></member>

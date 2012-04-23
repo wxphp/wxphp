@@ -23,7 +23,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/persist/window.h" line="27" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/persist/window.h" bodystart="27" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/persist/window.h" line="27" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/persist/window.h" bodystart="27" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -42,7 +42,7 @@
 <para>The constructor uses <ref refid="classwx_evt_handler_1a78719e8b82c9f9c6e4056b3449df1943" kindref="member">wxEvtHandler::Connect()</ref> to catch <ref refid="classwx_window_destroy_event" kindref="compound">wxWindowDestroyEvent</ref> generated when the window is destroyed and call <ref refid="classwx_persistence_manager_1ab8a9b090b5f84df7b6a765fed78d4820" kindref="member">wxPersistenceManager::SaveAndUnregister()</ref> when this happens. This ensures that the window properties are saved and that this object itself is deleted when the window is. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/persist/window.h" line="38"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/persist/window.h" line="38"/>
       </memberdef>
       <memberdef kind="function" id="classwx_persistent_window_1a10aa6724f3431349ac44fc1d583f6981" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classwx_persistent_window_1aae880a18a0619852354e0c416474d066" kindref="member">WindowType</ref> *</type>
@@ -55,7 +55,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/persist/window.h" line="40" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/persist/window.h" bodystart="40" bodyend="40"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/persist/window.h" line="40" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/persist/window.h" bodystart="40" bodyend="40"/>
       </memberdef>
       <memberdef kind="function" id="classwx_persistent_window_1adf5645fe614a4f617492afdc4fcf6522" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -69,7 +69,7 @@
 <para>Notice that window names are usually not unique while this function must return a unique (at least among the objects of this type) string. Because of this you need to specify a non-default window name in its constructor when creating it or explicitly call <ref refid="classwx_window_1af80875cda5e1af98dcd7c8e712e3c800" kindref="member">wxWindow::SetName()</ref> before saving or restoring persistent properties. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/persist/window.h" line="50"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/persist/window.h" line="50"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -79,30 +79,30 @@
 <listitem><para>Most importantly, <ref refid="classwx_persistent_window" kindref="compound">wxPersistentWindow</ref> catches <ref refid="classwx_window_destroy_event" kindref="compound">wxWindowDestroyEvent</ref> generated when the window is destroyed and saves its properties automatically when it happens.</para></listitem><listitem><para>It implements <ref refid="classwx_persistent_window_1adf5645fe614a4f617492afdc4fcf6522" kindref="member">GetName()</ref> using <ref refid="classwx_window_1aab1b302c4bdabd134ce8d401dbaaf990" kindref="member">wxWindow::GetName()</ref> so that the derived classes don&apos;t need to do it.</para></listitem><listitem><para>It adds a convenient <ref refid="classwx_persistent_window_1a10aa6724f3431349ac44fc1d583f6981" kindref="member">wxPersistentWindow::Get()</ref> accessor returning the window object of the correct type. </para></listitem></itemizedlist>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="8637">
+      <node id="8830">
         <label>wxPersistentWindow&lt; T &gt;</label>
         <link refid="classwx_persistent_window"/>
-        <childnode refid="8638" relation="public-inheritance">
+        <childnode refid="8831" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8638">
+      <node id="8831">
         <label>wxPersistentObject</label>
         <link refid="classwx_persistent_object"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="8639">
+      <node id="8832">
         <label>wxPersistentWindow&lt; T &gt;</label>
         <link refid="classwx_persistent_window"/>
-        <childnode refid="8640" relation="public-inheritance">
+        <childnode refid="8833" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8640">
+      <node id="8833">
         <label>wxPersistentObject</label>
         <link refid="classwx_persistent_object"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/persist/window.h" line="24" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/persist/window.h" bodystart="23" bodyend="51"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/persist/window.h" line="24" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/persist/window.h" bodystart="23" bodyend="51"/>
     <listofallmembers>
       <member refid="classwx_persistent_window_1a10aa6724f3431349ac44fc1d583f6981" prot="public" virt="non-virtual"><scope>wxPersistentWindow</scope><name>Get</name></member>
       <member refid="classwx_persistent_object_1a53d730bbfe3fdf57c9c553987f1096f8" prot="public" virt="pure-virtual"><scope>wxPersistentWindow</scope><name>GetKind</name></member>

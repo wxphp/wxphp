@@ -42,7 +42,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmdproc.h" line="38"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmdproc.h" line="38"/>
       </memberdef>
       <memberdef kind="function" id="classwx_command_1ae1a3e8b1984fe22e23c6fc38d08b63f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -55,7 +55,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmdproc.h" line="43"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmdproc.h" line="43"/>
       </memberdef>
       <memberdef kind="function" id="classwx_command_1a084b615e5adfd6d052ba2a87972b5da0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -68,7 +68,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmdproc.h" line="48"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmdproc.h" line="48"/>
       </memberdef>
       <memberdef kind="function" id="classwx_command_1a858fb8c1b0ab1d3400b9bc2605a5e5f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>bool</type>
@@ -83,7 +83,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmdproc.h" line="59"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmdproc.h" line="59"/>
       </memberdef>
       <memberdef kind="function" id="classwx_command_1ad27fd1943748787529255d0542441a46" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -96,7 +96,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmdproc.h" line="64"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmdproc.h" line="64"/>
       </memberdef>
       <memberdef kind="function" id="classwx_command_1afed9df8cfda3579429ba8353098859dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>bool</type>
@@ -114,7 +114,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmdproc.h" line="88"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmdproc.h" line="88"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -124,43 +124,43 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__docview" kindref="compound">Document/View Framework</ref></para><para><simplesect kind="see"><para><ref refid="overview_docview_1overview_docview_wxcommand" kindref="member">wxCommand overview</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="4955">
+      <node id="5047">
         <label>wxRichTextCommand</label>
         <link refid="classwx_rich_text_command"/>
-        <childnode refid="4953" relation="public-inheritance">
+        <childnode refid="5045" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4954">
+      <node id="5046">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="4953">
+      <node id="5045">
         <label>wxCommand</label>
         <link refid="classwx_command"/>
-        <childnode refid="4954" relation="public-inheritance">
+        <childnode refid="5046" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="4957">
+      <node id="5049">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="4958" relation="usage">
+        <childnode refid="5050" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="4956">
+      <node id="5048">
         <label>wxCommand</label>
         <link refid="classwx_command"/>
-        <childnode refid="4957" relation="public-inheritance">
+        <childnode refid="5049" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4958">
+      <node id="5050">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmdproc.h" line="23" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmdproc.h" bodystart="22" bodyend="89"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmdproc.h" line="23" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/cmdproc.h" bodystart="22" bodyend="89"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxCommand</scope><name>AllocExclusive</name></member>
       <member refid="classwx_command_1a084b615e5adfd6d052ba2a87972b5da0" prot="public" virt="virtual"><scope>wxCommand</scope><name>CanUndo</name></member>

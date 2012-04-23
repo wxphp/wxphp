@@ -8,7 +8,7 @@
     <detaileddescription>
 <para><xrefsect id="todo_1_todo000022"><xreftitle>Todo</xreftitle><xrefdescription><para>Write <ref refid="classwx_date_time_work_days" kindref="compound">wxDateTimeWorkDays</ref> documentation.</para></xrefdescription></xrefsect></para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__data" kindref="compound">Data Structures</ref> </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1517" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" bodystart="1516" bodyend="1520"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1599" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" bodystart="1598" bodyend="1602"/>
     <listofallmembers>
     </listofallmembers>
   </compounddef>

@@ -20,7 +20,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sckstrm.h" line="52"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sckstrm.h" line="52"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -30,42 +30,42 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxnet" kindref="member">wxNet</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__net" kindref="compound">Networking</ref>, <ref refid="group__group__class__streams" kindref="compound">Streams</ref></para><para><simplesect kind="see"><para><ref refid="classwx_socket_base" kindref="compound">wxSocketBase</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10310">
+      <node id="10493">
         <label>wxInputStream</label>
         <link refid="classwx_input_stream"/>
-        <childnode refid="10311" relation="public-inheritance">
+        <childnode refid="10494" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10309">
+      <node id="10492">
         <label>wxSocketInputStream</label>
         <link refid="classwx_socket_input_stream"/>
-        <childnode refid="10310" relation="public-inheritance">
+        <childnode refid="10493" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10311">
+      <node id="10494">
         <label>wxStreamBase</label>
         <link refid="classwx_stream_base"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10313">
+      <node id="10496">
         <label>wxInputStream</label>
         <link refid="classwx_input_stream"/>
-        <childnode refid="10314" relation="public-inheritance">
+        <childnode refid="10497" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10312">
+      <node id="10495">
         <label>wxSocketInputStream</label>
         <link refid="classwx_socket_input_stream"/>
-        <childnode refid="10313" relation="public-inheritance">
+        <childnode refid="10496" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10314">
+      <node id="10497">
         <label>wxStreamBase</label>
         <link refid="classwx_stream_base"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sckstrm.h" line="46" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sckstrm.h" bodystart="45" bodyend="53"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sckstrm.h" line="46" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/sckstrm.h" bodystart="45" bodyend="53"/>
     <listofallmembers>
       <member refid="classwx_input_stream_1a72111c617db403344a2dd6b8c13330c3" prot="public" virt="virtual"><scope>wxSocketInputStream</scope><name>CanRead</name></member>
       <member refid="classwx_input_stream_1a177bb52eb500be28c8d41f959b0fb6be" prot="public" virt="virtual"><scope>wxSocketInputStream</scope><name>Eof</name></member>

@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gbsizer.h" line="318"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gbsizer.h" line="318"/>
       </memberdef>
       <memberdef kind="function" id="classwx_g_b_span_1a51a3cdf14f004d4f5b8e33d20b7ea636" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -36,7 +36,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gbsizer.h" line="322"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gbsizer.h" line="322"/>
       </memberdef>
       <memberdef kind="function" id="classwx_g_b_span_1a0aee225bbbd2e1bb389f8125aa924a65" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -49,7 +49,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gbsizer.h" line="327"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gbsizer.h" line="327"/>
       </memberdef>
       <memberdef kind="function" id="classwx_g_b_span_1a143de385efda85b15a244f39f058eb8d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -62,7 +62,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gbsizer.h" line="332"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gbsizer.h" line="332"/>
       </memberdef>
       <memberdef kind="function" id="classwx_g_b_span_1a58a5d23ca81c8053d0ddcec0e9ad79e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -79,7 +79,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gbsizer.h" line="337"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gbsizer.h" line="337"/>
       </memberdef>
       <memberdef kind="function" id="classwx_g_b_span_1a3d5755e3cb64405ebbbfc984b38aa287" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -96,24 +96,24 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gbsizer.h" line="342"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gbsizer.h" line="342"/>
       </memberdef>
-      <memberdef kind="function" id="classwx_g_b_span_1aafcf8f96f211b7598cdf425111edc94a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classwx_g_b_span_1a5b2378cb7b541740d14b8bbcbfab8d39" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
-        <definition>bool wxGBSpan::operator!</definition>
+        <definition>bool wxGBSpan::operator!=</definition>
         <argsstring>(const wxGBSpan &amp;o) const </argsstring>
-        <name>operator!</name>
+        <name>operator!=</name>
         <param>
           <type>const <ref refid="classwx_g_b_span" kindref="compound">wxGBSpan</ref> &amp;</type>
           <declname>o</declname>
         </param>
         <briefdescription>
-<para>Checks if the span is valid. </para>        </briefdescription>
+<para>Compare inequality of two wxGBSpans. </para>        </briefdescription>
         <detaileddescription>
-<para>An invalid span is (-1,-1). </para>        </detaileddescription>
+        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gbsizer.h" line="347"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gbsizer.h" line="347"/>
       </memberdef>
       <memberdef kind="function" id="classwx_g_b_span_1a6556bc4f57b66fb7cc3301c43890eee0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -130,7 +130,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gbsizer.h" line="352"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gbsizer.h" line="352"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -138,11 +138,11 @@
     <detaileddescription>
 <para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__winlayout" kindref="compound">Window Layout</ref> </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gbsizer.h" line="312" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gbsizer.h" bodystart="311" bodyend="353"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gbsizer.h" line="312" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/gbsizer.h" bodystart="311" bodyend="353"/>
     <listofallmembers>
       <member refid="classwx_g_b_span_1a0aee225bbbd2e1bb389f8125aa924a65" prot="public" virt="non-virtual"><scope>wxGBSpan</scope><name>GetColspan</name></member>
       <member refid="classwx_g_b_span_1a143de385efda85b15a244f39f058eb8d" prot="public" virt="non-virtual"><scope>wxGBSpan</scope><name>GetRowspan</name></member>
-      <member refid="classwx_g_b_span_1aafcf8f96f211b7598cdf425111edc94a" prot="public" virt="non-virtual"><scope>wxGBSpan</scope><name>operator!</name></member>
+      <member refid="classwx_g_b_span_1a5b2378cb7b541740d14b8bbcbfab8d39" prot="public" virt="non-virtual"><scope>wxGBSpan</scope><name>operator!=</name></member>
       <member refid="classwx_g_b_span_1a6556bc4f57b66fb7cc3301c43890eee0" prot="public" virt="non-virtual"><scope>wxGBSpan</scope><name>operator==</name></member>
       <member refid="classwx_g_b_span_1a58a5d23ca81c8053d0ddcec0e9ad79e9" prot="public" virt="non-virtual"><scope>wxGBSpan</scope><name>SetColspan</name></member>
       <member refid="classwx_g_b_span_1a3d5755e3cb64405ebbbfc984b38aa287" prot="public" virt="non-virtual"><scope>wxGBSpan</scope><name>SetRowspan</name></member>

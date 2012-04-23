@@ -19,7 +19,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/unichar.h" line="38"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/unichar.h" line="38"/>
       </memberdef>
       <memberdef kind="function" id="classwx_uni_char_1a3ab8194435662cb83a1f4b973b3f8074" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -36,7 +36,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/unichar.h" line="39"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/unichar.h" line="39"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -51,7 +51,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/unichar.h" line="91"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/unichar.h" line="91"/>
       </memberdef>
       <memberdef kind="function" id="classwx_uni_char_1ac94ec868908df39c2e0d7fd9e6ce865e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -64,7 +64,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/unichar.h" line="92"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/unichar.h" line="92"/>
       </memberdef>
       <memberdef kind="function" id="classwx_uni_char_1a72eaa228a28100c69281a1b1306b30db" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -77,7 +77,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/unichar.h" line="93"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/unichar.h" line="93"/>
       </memberdef>
       <memberdef kind="function" id="classwx_uni_char_1ad316e691e9ca967ea4cb91ee8f174823" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -90,7 +90,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/unichar.h" line="94"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/unichar.h" line="94"/>
       </memberdef>
       <memberdef kind="function" id="classwx_uni_char_1a0538b7dd738ebb861ad1f79607fe2406" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -103,7 +103,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/unichar.h" line="95"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/unichar.h" line="95"/>
       </memberdef>
       <memberdef kind="function" id="classwx_uni_char_1abd23dfd8f4bd1ff32fe1ed93c5762259" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -116,7 +116,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/unichar.h" line="96"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/unichar.h" line="96"/>
       </memberdef>
       <memberdef kind="function" id="classwx_uni_char_1a103207b53446c738889a20ec5a4d6f6c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -129,7 +129,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/unichar.h" line="97"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/unichar.h" line="97"/>
       </memberdef>
       <memberdef kind="function" id="classwx_uni_char_1a17191c56143329ca69505308a8338d40" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -142,7 +142,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/unichar.h" line="98"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/unichar.h" line="98"/>
       </memberdef>
       <memberdef kind="function" id="classwx_uni_char_1a42048feb60cd36003752f20961c9807e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -155,7 +155,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/unichar.h" line="99"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/unichar.h" line="99"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -174,7 +174,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/unichar.h" line="106"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/unichar.h" line="106"/>
       </memberdef>
       <memberdef kind="function" id="classwx_uni_char_1ad1be5e81dce1ed604fe080306998abb4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_uni_char" kindref="compound">wxUniChar</ref> &amp;</type>
@@ -191,7 +191,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/unichar.h" line="107"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/unichar.h" line="107"/>
       </memberdef>
       <memberdef kind="function" id="classwx_uni_char_1a023eabbbdc1eccfa9828bda1288cf9f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_uni_char" kindref="compound">wxUniChar</ref> &amp;</type>
@@ -208,7 +208,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/unichar.h" line="108"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/unichar.h" line="108"/>
       </memberdef>
       <memberdef kind="function" id="classwx_uni_char_1a0534c167e8d58c805d2dff72eb7bd6bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_uni_char" kindref="compound">wxUniChar</ref> &amp;</type>
@@ -225,7 +225,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/unichar.h" line="109"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/unichar.h" line="109"/>
       </memberdef>
       <memberdef kind="function" id="classwx_uni_char_1aa11f788f1e31f9e8ff81369a8d304a44" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_uni_char" kindref="compound">wxUniChar</ref> &amp;</type>
@@ -242,7 +242,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/unichar.h" line="110"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/unichar.h" line="110"/>
       </memberdef>
       <memberdef kind="function" id="classwx_uni_char_1a3c42992c29fd46b417c0a2257eca3905" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_uni_char" kindref="compound">wxUniChar</ref> &amp;</type>
@@ -259,7 +259,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/unichar.h" line="111"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/unichar.h" line="111"/>
       </memberdef>
       <memberdef kind="function" id="classwx_uni_char_1a5451c92ce066657646e1a329fb7e7104" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_uni_char" kindref="compound">wxUniChar</ref> &amp;</type>
@@ -276,7 +276,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/unichar.h" line="112"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/unichar.h" line="112"/>
       </memberdef>
       <memberdef kind="function" id="classwx_uni_char_1af650cd1a4d4e1696198ca5c773765ba8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_uni_char" kindref="compound">wxUniChar</ref> &amp;</type>
@@ -293,7 +293,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/unichar.h" line="113"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/unichar.h" line="113"/>
       </memberdef>
       <memberdef kind="function" id="classwx_uni_char_1a7095cad93f925f250905929503898b29" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_uni_char" kindref="compound">wxUniChar</ref> &amp;</type>
@@ -310,7 +310,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/unichar.h" line="114"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/unichar.h" line="114"/>
       </memberdef>
       <memberdef kind="function" id="classwx_uni_char_1ae15beca0666b99b46cccd662d2000815" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_uni_char" kindref="compound">wxUniChar</ref> &amp;</type>
@@ -327,7 +327,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/unichar.h" line="115"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/unichar.h" line="115"/>
       </memberdef>
       <memberdef kind="function" id="classwx_uni_char_1a5a55026b3c0bda47acf1dd2c9d04bae8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_uni_char" kindref="compound">wxUniChar</ref> &amp;</type>
@@ -344,7 +344,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/unichar.h" line="116"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/unichar.h" line="116"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-type">
@@ -359,7 +359,7 @@
 <para>We do not use wchar_t as it cannot do the job on Win32, where wchar_t is a 16-bit type (wchar_t* is encoded using UTF-16 on Win32). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/unichar.h" line="26" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/unichar.h" bodystart="26" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/unichar.h" line="26" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/unichar.h" bodystart="26" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -374,7 +374,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/unichar.h" line="31"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/unichar.h" line="31"/>
       </memberdef>
       <memberdef kind="function" id="classwx_uni_char_1a49e8c14f75fbb36ba3233079b9f763b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -391,7 +391,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/unichar.h" line="42"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/unichar.h" line="42"/>
       </memberdef>
       <memberdef kind="function" id="classwx_uni_char_1a8838f0ebdf714f804cbeaf70aabb4f77" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -408,7 +408,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/unichar.h" line="43"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/unichar.h" line="43"/>
       </memberdef>
       <memberdef kind="function" id="classwx_uni_char_1a0bb50a4f4caaaa38c916a658c3926cd7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -425,7 +425,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/unichar.h" line="44"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/unichar.h" line="44"/>
       </memberdef>
       <memberdef kind="function" id="classwx_uni_char_1a5cd11bf7578be856477e330d61bcd272" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -442,7 +442,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/unichar.h" line="45"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/unichar.h" line="45"/>
       </memberdef>
       <memberdef kind="function" id="classwx_uni_char_1a26f88f8370a03ab12da7119e2e3de79f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -459,7 +459,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/unichar.h" line="46"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/unichar.h" line="46"/>
       </memberdef>
       <memberdef kind="function" id="classwx_uni_char_1ad97f25676ce70a6465301cfcd077834f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -476,7 +476,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/unichar.h" line="47"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/unichar.h" line="47"/>
       </memberdef>
       <memberdef kind="function" id="classwx_uni_char_1aa24344dfd264b05f0366b60e973af64c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -493,7 +493,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/unichar.h" line="49"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/unichar.h" line="49"/>
       </memberdef>
       <memberdef kind="function" id="classwx_uni_char_1a870a92d4a197ba01a5f5fbf811623713" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_uni_char_1ac115911ed58b8a8d781307523c4c759c" kindref="member">value_type</ref></type>
@@ -506,7 +506,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/unichar.h" line="54"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/unichar.h" line="54"/>
       </memberdef>
       <memberdef kind="function" id="classwx_uni_char_1a584ce7cb729ceea70dde2bb25f8639cd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -519,7 +519,7 @@
 <para>if its value is less than 128). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/unichar.h" line="59"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/unichar.h" line="59"/>
       </memberdef>
       <memberdef kind="function" id="classwx_uni_char_1a47afeef71d421805e40aaee1869ba6aa" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -547,7 +547,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/unichar.h" line="83"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/unichar.h" line="83"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -555,7 +555,7 @@
     <detaileddescription>
 <para>It can be converted to and from <computeroutput>char</computeroutput> or <computeroutput>wchar_t</computeroutput> and implements commonly used character operations.</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__data" kindref="compound">Data Structures</ref> </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/unichar.h" line="19" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/unichar.h" bodystart="18" bodyend="118"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/unichar.h" line="19" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/unichar.h" bodystart="18" bodyend="118"/>
     <listofallmembers>
       <member refid="classwx_uni_char_1a47afeef71d421805e40aaee1869ba6aa" prot="public" virt="non-virtual"><scope>wxUniChar</scope><name>GetAsChar</name></member>
       <member refid="classwx_uni_char_1a870a92d4a197ba01a5f5fbf811623713" prot="public" virt="non-virtual"><scope>wxUniChar</scope><name>GetValue</name></member>

@@ -1,0 +1,132 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="classwx_persistent_tree_book_ctrl" kind="class" prot="public">
+    <compoundname>wxPersistentTreeBookCtrl</compoundname>
+    <basecompoundref refid="classwx_persistent_book_ctrl" prot="public" virt="non-virtual">wxPersistentBookCtrl</basecompoundref>
+    <includes local="no">wx/persist/treebook.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_persistent_tree_book_ctrl_1a673158e98da4bfe8f005b940bf0d6f80" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxPersistentTreeBookCtrl::wxPersistentTreeBookCtrl</definition>
+        <argsstring>(wxTreebook *book)</argsstring>
+        <name>wxPersistentTreeBookCtrl</name>
+        <param>
+          <type><ref refid="classwx_treebook" kindref="compound">wxTreebook</ref> *</type>
+          <declname>book</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>book</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The associated tree book control. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/persist/treebook.h" line="26"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_persistent_tree_book_ctrl_1ad8af4b7ed5c2aa2bbb1c51b2268794af" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxPersistentTreeBookCtrl::Save</definition>
+        <argsstring>() const </argsstring>
+        <name>Save</name>
+        <reimplements refid="classwx_persistent_book_ctrl_1a3ccf1fec20301165cac5713d1d8f8dd5">Save</reimplements>
+        <briefdescription>
+<para>Save the currently opened branches. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/persist/treebook.h" line="31"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_persistent_tree_book_ctrl_1ac74fd4229fe85d962ec33ffe0137d9d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxPersistentTreeBookCtrl::Restore</definition>
+        <argsstring>()</argsstring>
+        <name>Restore</name>
+        <reimplements refid="classwx_persistent_book_ctrl_1a5c7d8a31c3018ed3773e7f97133e4299">Restore</reimplements>
+        <briefdescription>
+<para>Restore the opened branches. </para>        </briefdescription>
+        <detaileddescription>
+<para>The book control must be initialized before calling this function, i.e. all of its pages should be already added to it. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/persist/treebook.h" line="39"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Persistence adapter for <ref refid="classwx_treebook" kindref="compound">wxTreebook</ref>. </para>    </briefdescription>
+    <detaileddescription>
+<para>This adapter saves and restores the expanded branches of the <ref refid="classwx_tree_ctrl" kindref="compound">wxTreeCtrl</ref> used by <ref refid="classwx_treebook" kindref="compound">wxTreebook</ref>, in addition to saving and restoring the selection as implemented by the base <ref refid="classwx_persistent_book_ctrl" kindref="compound">wxPersistentBookCtrl</ref> class. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="8823">
+        <label>wxPersistentBookCtrl</label>
+        <link refid="classwx_persistent_book_ctrl"/>
+        <childnode refid="8824" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8824">
+        <label>wxPersistentWindow&lt; wxBookCtrlBase &gt;</label>
+        <link refid="classwx_persistent_window"/>
+        <childnode refid="8825" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8825">
+        <label>wxPersistentObject</label>
+        <link refid="classwx_persistent_object"/>
+      </node>
+      <node id="8822">
+        <label>wxPersistentTreeBookCtrl</label>
+        <link refid="classwx_persistent_tree_book_ctrl"/>
+        <childnode refid="8823" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="8827">
+        <label>wxPersistentBookCtrl</label>
+        <link refid="classwx_persistent_book_ctrl"/>
+        <childnode refid="8828" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8828">
+        <label>wxPersistentWindow&lt; wxBookCtrlBase &gt;</label>
+        <link refid="classwx_persistent_window"/>
+        <childnode refid="8829" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8829">
+        <label>wxPersistentObject</label>
+        <link refid="classwx_persistent_object"/>
+      </node>
+      <node id="8826">
+        <label>wxPersistentTreeBookCtrl</label>
+        <link refid="classwx_persistent_tree_book_ctrl"/>
+        <childnode refid="8827" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/persist/treebook.h" line="18" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/persist/treebook.h" bodystart="17" bodyend="40"/>
+    <listofallmembers>
+      <member refid="classwx_persistent_window_1a10aa6724f3431349ac44fc1d583f6981" prot="public" virt="non-virtual"><scope>wxPersistentTreeBookCtrl</scope><name>Get</name></member>
+      <member refid="classwx_persistent_object_1a53d730bbfe3fdf57c9c553987f1096f8" prot="public" virt="pure-virtual"><scope>wxPersistentTreeBookCtrl</scope><name>GetKind</name></member>
+      <member refid="classwx_persistent_window_1adf5645fe614a4f617492afdc4fcf6522" prot="public" virt="virtual"><scope>wxPersistentTreeBookCtrl</scope><name>GetName</name></member>
+      <member refid="classwx_persistent_object_1ae2a7456b936bcc5b3271e4dd2de0ef02" prot="public" virt="non-virtual"><scope>wxPersistentTreeBookCtrl</scope><name>GetObject</name></member>
+      <member refid="classwx_persistent_tree_book_ctrl_1ac74fd4229fe85d962ec33ffe0137d9d0" prot="public" virt="virtual"><scope>wxPersistentTreeBookCtrl</scope><name>Restore</name></member>
+      <member refid="classwx_persistent_object_1a0f55e4f45d2569287cbd527c54445ebf" prot="protected" virt="non-virtual"><scope>wxPersistentTreeBookCtrl</scope><name>RestoreValue</name></member>
+      <member refid="classwx_persistent_tree_book_ctrl_1ad8af4b7ed5c2aa2bbb1c51b2268794af" prot="public" virt="virtual"><scope>wxPersistentTreeBookCtrl</scope><name>Save</name></member>
+      <member refid="classwx_persistent_object_1aa29d1261d86f638dcbc3813e10f05b30" prot="protected" virt="non-virtual"><scope>wxPersistentTreeBookCtrl</scope><name>SaveValue</name></member>
+      <member refid="classwx_persistent_window_1aae880a18a0619852354e0c416474d066" prot="public" virt="non-virtual"><scope>wxPersistentTreeBookCtrl</scope><name>WindowType</name></member>
+      <member refid="classwx_persistent_book_ctrl_1a8dfbe14e63fa57296a271f4c144457d6" prot="public" virt="non-virtual"><scope>wxPersistentTreeBookCtrl</scope><name>wxPersistentBookCtrl</name></member>
+      <member refid="classwx_persistent_object_1aa400f4ce8ec1eed2498dd5dd1a385942" prot="public" virt="non-virtual"><scope>wxPersistentTreeBookCtrl</scope><name>wxPersistentObject</name></member>
+      <member refid="classwx_persistent_tree_book_ctrl_1a673158e98da4bfe8f005b940bf0d6f80" prot="public" virt="non-virtual"><scope>wxPersistentTreeBookCtrl</scope><name>wxPersistentTreeBookCtrl</name></member>
+      <member refid="classwx_persistent_window_1a92e849fad0fdefa08880d87a7a8d7e48" prot="public" virt="non-virtual"><scope>wxPersistentTreeBookCtrl</scope><name>wxPersistentWindow</name></member>
+      <member refid="classwx_persistent_object_1accfdecb17fa0e67708e0c9057cc91041" prot="public" virt="virtual"><scope>wxPersistentTreeBookCtrl</scope><name>~wxPersistentObject</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

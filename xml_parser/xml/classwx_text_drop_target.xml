@@ -16,14 +16,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dnd.h" line="25"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dnd.h" line="25"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_drop_target_1ad53cf7bbc99a63480e9575423b48db6c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
         <definition>virtual bool wxTextDropTarget::OnDrop</definition>
         <argsstring>(wxCoord x, wxCoord y)</argsstring>
         <name>OnDrop</name>
-        <reimplements refid="classwx_drop_target_1a3448cb9505b9dd3f064e9c5208d82ae1">OnDrop</reimplements>
+        <reimplements refid="classwx_drop_target_1ad523da0e8dfc4e402609fa290a5e60a8">OnDrop</reimplements>
         <param>
           <type><ref refid="defs_8h_1a11f6efc0e8d8d680f3ec8e82aa4f1770" kindref="member">wxCoord</ref></type>
           <declname>x</declname>
@@ -33,12 +33,12 @@
           <declname>y</declname>
         </param>
         <briefdescription>
-<para>See <ref refid="classwx_drop_target_1a3448cb9505b9dd3f064e9c5208d82ae1" kindref="member">wxDropTarget::OnDrop()</ref>. </para>        </briefdescription>
+<para>See <ref refid="classwx_drop_target_1ad523da0e8dfc4e402609fa290a5e60a8" kindref="member">wxDropTarget::OnDrop()</ref>. </para>        </briefdescription>
         <detaileddescription>
 <para>This function is implemented appropriately for text, and calls <ref refid="classwx_text_drop_target_1a91ba08b0cf219b402e97fb608bc9e852" kindref="member">OnDropText()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dnd.h" line="31"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dnd.h" line="31"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_drop_target_1a91ba08b0cf219b402e97fb608bc9e852" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>bool</type>
@@ -85,7 +85,7 @@
 Return true to accept the data, or false to veto the operation. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dnd.h" line="45"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dnd.h" line="45"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -95,33 +95,33 @@ Return true to accept the data, or false to veto the operation. </para>        <
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__dnd" kindref="compound">Clipboard and Drag &amp; Drop</ref></para><para><simplesect kind="see"><para><ref refid="overview_dnd" kindref="compound">Drag and Drop Overview</ref>, <ref refid="classwx_drop_source" kindref="compound">wxDropSource</ref>, <ref refid="classwx_drop_target" kindref="compound">wxDropTarget</ref>, <ref refid="classwx_file_drop_target" kindref="compound">wxFileDropTarget</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10799">
+      <node id="10984">
         <label>wxDropTarget</label>
         <link refid="classwx_drop_target"/>
       </node>
-      <node id="10798">
+      <node id="10983">
         <label>wxTextDropTarget</label>
         <link refid="classwx_text_drop_target"/>
-        <childnode refid="10799" relation="public-inheritance">
+        <childnode refid="10984" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10801">
+      <node id="10986">
         <label>wxDropTarget</label>
         <link refid="classwx_drop_target"/>
       </node>
-      <node id="10800">
+      <node id="10985">
         <label>wxTextDropTarget</label>
         <link refid="classwx_text_drop_target"/>
-        <childnode refid="10801" relation="public-inheritance">
+        <childnode refid="10986" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dnd.h" line="20" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dnd.h" bodystart="19" bodyend="46"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dnd.h" line="20" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dnd.h" bodystart="19" bodyend="46"/>
     <listofallmembers>
-      <member refid="classwx_drop_target_1a179adb5f161e0a8abc17e65f4470c51d" prot="public" virt="virtual"><scope>wxTextDropTarget</scope><name>GetData</name></member>
-      <member refid="classwx_drop_target_1a5c27f66d59eb89ab7e014fd153ace093" prot="public" virt="virtual"><scope>wxTextDropTarget</scope><name>OnData</name></member>
+      <member refid="classwx_drop_target_1af78b5e8d34ca09b24062386fd9585703" prot="public" virt="pure-virtual"><scope>wxTextDropTarget</scope><name>GetData</name></member>
+      <member refid="classwx_drop_target_1a375af32f4f5b00251212a75ee056d08d" prot="public" virt="pure-virtual"><scope>wxTextDropTarget</scope><name>OnData</name></member>
       <member refid="classwx_drop_target_1a2b1ae4317f7079e811060e3745eb0601" prot="public" virt="virtual"><scope>wxTextDropTarget</scope><name>OnDragOver</name></member>
       <member refid="classwx_text_drop_target_1ad53cf7bbc99a63480e9575423b48db6c" prot="public" virt="virtual"><scope>wxTextDropTarget</scope><name>OnDrop</name></member>
       <member refid="classwx_text_drop_target_1a91ba08b0cf219b402e97fb608bc9e852" prot="public" virt="pure-virtual"><scope>wxTextDropTarget</scope><name>OnDropText</name></member>

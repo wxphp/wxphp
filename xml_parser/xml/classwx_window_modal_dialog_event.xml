@@ -26,7 +26,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dialog.h" line="682"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dialog.h" line="671"/>
       </memberdef>
       <memberdef kind="function" id="classwx_window_modal_dialog_event_1a85c478d33088cd0ddf6eff9d506204b7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_dialog" kindref="compound">wxDialog</ref> *</type>
@@ -39,7 +39,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dialog.h" line="684"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dialog.h" line="673"/>
       </memberdef>
       <memberdef kind="function" id="classwx_window_modal_dialog_event_1a0a22ba65c38d423046162b7d4a879871" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -52,7 +52,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dialog.h" line="685"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dialog.h" line="674"/>
       </memberdef>
       <memberdef kind="function" id="classwx_window_modal_dialog_event_1a091a8dafde1e11074460401426a9a7ce" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_event" kindref="compound">wxEvent</ref> *</type>
@@ -67,7 +67,7 @@
 </programlisting> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dialog.h" line="686"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dialog.h" line="675"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -75,61 +75,61 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="11642">
+      <node id="11831">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="11640">
+      <node id="11829">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="11641" relation="public-inheritance">
+        <childnode refid="11830" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11639">
+      <node id="11828">
         <label>wxWindowModalDialogEvent</label>
         <link refid="classwx_window_modal_dialog_event"/>
-        <childnode refid="11640" relation="public-inheritance">
+        <childnode refid="11829" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11641">
+      <node id="11830">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="11642" relation="public-inheritance">
+        <childnode refid="11831" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="11646">
+      <node id="11835">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="11647" relation="usage">
+        <childnode refid="11836" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="11644">
+      <node id="11833">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="11645" relation="public-inheritance">
+        <childnode refid="11834" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11643">
+      <node id="11832">
         <label>wxWindowModalDialogEvent</label>
         <link refid="classwx_window_modal_dialog_event"/>
-        <childnode refid="11644" relation="public-inheritance">
+        <childnode refid="11833" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11645">
+      <node id="11834">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="11646" relation="public-inheritance">
+        <childnode refid="11835" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11647">
+      <node id="11836">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dialog.h" line="680" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dialog.h" bodystart="679" bodyend="687"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dialog.h" line="669" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dialog.h" bodystart="668" bodyend="676"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxWindowModalDialogEvent</scope><name>AllocExclusive</name></member>
       <member refid="classwx_window_modal_dialog_event_1a091a8dafde1e11074460401426a9a7ce" prot="public" virt="virtual"><scope>wxWindowModalDialogEvent</scope><name>Clone</name></member>

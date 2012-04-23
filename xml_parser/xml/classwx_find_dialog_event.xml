@@ -1,0 +1,210 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="classwx_find_dialog_event" kind="class" prot="public">
+    <compoundname>wxFindDialogEvent</compoundname>
+    <basecompoundref refid="classwx_command_event" prot="public" virt="non-virtual">wxCommandEvent</basecompoundref>
+    <includes local="no">wx/fdrepdlg.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_find_dialog_event_1a0c495e7783c240d206bb78b31ed16187" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxFindDialogEvent::wxFindDialogEvent</definition>
+        <argsstring>(wxEventType commandType=wxEVT_NULL, int id=0)</argsstring>
+        <name>wxFindDialogEvent</name>
+        <param>
+          <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+          <declname>commandType</declname>
+          <defval><ref refid="group__group__funcmacro__events_1ga310bc3f7977ae79ac1198c7a287dbffe" kindref="member">wxEVT_NULL</ref></defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Constructor used by wxWidgets only. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fdrepdlg.h" line="73"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_find_dialog_event_1ac68c70cb94b57c0484194188ba03a0cc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_find_replace_dialog" kindref="compound">wxFindReplaceDialog</ref> *</type>
+        <definition>wxFindReplaceDialog* wxFindDialogEvent::GetDialog</definition>
+        <argsstring>() const </argsstring>
+        <name>GetDialog</name>
+        <briefdescription>
+<para>Return the pointer to the dialog which generated this event. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fdrepdlg.h" line="78"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_find_dialog_event_1afde13542705de04215df13684cc7b2d0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxFindDialogEvent::GetFindString</definition>
+        <argsstring>() const </argsstring>
+        <name>GetFindString</name>
+        <briefdescription>
+<para>Return the string to find (never empty). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fdrepdlg.h" line="83"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_find_dialog_event_1a032d2ac8fa987c9d8a75c07c28f9e3fb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxFindDialogEvent::GetFlags</definition>
+        <argsstring>() const </argsstring>
+        <name>GetFlags</name>
+        <briefdescription>
+<para>Get the currently selected flags: this is the combination of the <ref refid="fdrepdlg_8h_1ad68c78e0d022740326233196fbf2d6a5" kindref="member">wxFindReplaceFlags</ref> enumeration values. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fdrepdlg.h" line="89"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_find_dialog_event_1ab864e5b620f76f54d787708fb4a9182f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+        <definition>const wxString&amp; wxFindDialogEvent::GetReplaceString</definition>
+        <argsstring>() const </argsstring>
+        <name>GetReplaceString</name>
+        <briefdescription>
+<para>Return the string to replace the search string with (only for replace and replace all events). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fdrepdlg.h" line="95"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="classwx_find_replace_dialog" kindref="compound">wxFindReplaceDialog</ref> events. </para>    </briefdescription>
+    <detaileddescription>
+<para><heading level="2">Events using this class</heading>
+</para><para>The following event handler macros redirect the events to member function handlers &apos;<bold>func</bold>&apos; with prototypes like: void<nonbreakablespace/>handlerFuncName(<ref refid="classwx_find_dialog_event" kindref="compound">wxFindDialogEvent</ref>&amp;<nonbreakablespace/>event)Event macros: <itemizedlist>
+<listitem><para>EVT_FIND(id,  func): Find button was pressed in the dialog. </para></listitem>
+<listitem><para>EVT_FIND_NEXT(id,  func): Find next button was pressed in the dialog. </para></listitem>
+<listitem><para>EVT_FIND_REPLACE(id,  func): Replace button was pressed in the dialog. </para></listitem>
+<listitem><para>EVT_FIND_REPLACE_ALL(id,  func): Replace all button was pressed in the dialog. </para></listitem>
+<listitem><para>EVT_FIND_CLOSE(id,  func): The dialog is being destroyed, any pointers to it cannot be used any longer. </para></listitem>
+</itemizedlist>
+<heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref> </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="6446">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+      </node>
+      <node id="6444">
+        <label>wxCommandEvent</label>
+        <link refid="classwx_command_event"/>
+        <childnode refid="6445" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6443">
+        <label>wxFindDialogEvent</label>
+        <link refid="classwx_find_dialog_event"/>
+        <childnode refid="6444" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6445">
+        <label>wxEvent</label>
+        <link refid="classwx_event"/>
+        <childnode refid="6446" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="6450">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="6451" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="6448">
+        <label>wxCommandEvent</label>
+        <link refid="classwx_command_event"/>
+        <childnode refid="6449" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6447">
+        <label>wxFindDialogEvent</label>
+        <link refid="classwx_find_dialog_event"/>
+        <childnode refid="6448" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6449">
+        <label>wxEvent</label>
+        <link refid="classwx_event"/>
+        <childnode refid="6450" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6451">
+        <label>wxObjectRefData</label>
+        <link refid="classwx_object_ref_data"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fdrepdlg.h" line="67" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/fdrepdlg.h" bodystart="66" bodyend="96"/>
+    <listofallmembers>
+      <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxFindDialogEvent</scope><name>AllocExclusive</name></member>
+      <member refid="classwx_event_1a26878097a702e8d0368da150125d4158" prot="public" virt="pure-virtual"><scope>wxFindDialogEvent</scope><name>Clone</name></member>
+      <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxFindDialogEvent</scope><name>CloneRefData</name></member>
+      <member refid="classwx_object_1a95c6a5e4e1e03ff23c7b9efe4cff0c1a" prot="protected" virt="virtual"><scope>wxFindDialogEvent</scope><name>CreateRefData</name></member>
+      <member refid="classwx_object_1ab3a0c6f723cbaddb47be4e8dd98cc8e2" prot="public" virt="virtual"><scope>wxFindDialogEvent</scope><name>GetClassInfo</name></member>
+      <member refid="classwx_command_event_1ae23c23fb440b31f32498dbe1b54faf32" prot="public" virt="non-virtual"><scope>wxFindDialogEvent</scope><name>GetClientData</name></member>
+      <member refid="classwx_command_event_1a6aba95aef4930c03fbba5808b395c93f" prot="public" virt="non-virtual"><scope>wxFindDialogEvent</scope><name>GetClientObject</name></member>
+      <member refid="classwx_find_dialog_event_1ac68c70cb94b57c0484194188ba03a0cc" prot="public" virt="non-virtual"><scope>wxFindDialogEvent</scope><name>GetDialog</name></member>
+      <member refid="classwx_event_1a525e5c576e64090af493cb81db2da59b" prot="public" virt="virtual"><scope>wxFindDialogEvent</scope><name>GetEventCategory</name></member>
+      <member refid="classwx_event_1abdc74e95c8c2f32f2cc2bd84b88985ee" prot="public" virt="non-virtual"><scope>wxFindDialogEvent</scope><name>GetEventObject</name></member>
+      <member refid="classwx_event_1ac1e62dc3000d4bff0ebbd90a3d290695" prot="public" virt="non-virtual"><scope>wxFindDialogEvent</scope><name>GetEventType</name></member>
+      <member refid="classwx_command_event_1aadd8fc10e9e32755f7bca503fe10f5fc" prot="public" virt="non-virtual"><scope>wxFindDialogEvent</scope><name>GetExtraLong</name></member>
+      <member refid="classwx_find_dialog_event_1afde13542705de04215df13684cc7b2d0" prot="public" virt="non-virtual"><scope>wxFindDialogEvent</scope><name>GetFindString</name></member>
+      <member refid="classwx_find_dialog_event_1a032d2ac8fa987c9d8a75c07c28f9e3fb" prot="public" virt="non-virtual"><scope>wxFindDialogEvent</scope><name>GetFlags</name></member>
+      <member refid="classwx_event_1ac732828ac14cfc289d798a4fea437246" prot="public" virt="non-virtual"><scope>wxFindDialogEvent</scope><name>GetId</name></member>
+      <member refid="classwx_command_event_1abaf0dde08fd04018feba4b458b757a7f" prot="public" virt="non-virtual"><scope>wxFindDialogEvent</scope><name>GetInt</name></member>
+      <member refid="classwx_object_1aabdb4fc957226544a8408167844e4f42" prot="public" virt="non-virtual"><scope>wxFindDialogEvent</scope><name>GetRefData</name></member>
+      <member refid="classwx_find_dialog_event_1ab864e5b620f76f54d787708fb4a9182f" prot="public" virt="non-virtual"><scope>wxFindDialogEvent</scope><name>GetReplaceString</name></member>
+      <member refid="classwx_command_event_1a3e16380f20769b1ed4053c69fe614b13" prot="public" virt="non-virtual"><scope>wxFindDialogEvent</scope><name>GetSelection</name></member>
+      <member refid="classwx_event_1a448d5ef08f617a3ae316235fcf804377" prot="public" virt="non-virtual"><scope>wxFindDialogEvent</scope><name>GetSkipped</name></member>
+      <member refid="classwx_command_event_1a24323d78936e5f6cd7f4780371f373e0" prot="public" virt="non-virtual"><scope>wxFindDialogEvent</scope><name>GetString</name></member>
+      <member refid="classwx_event_1a8a42d5b35d442052b58c53077ff4ae60" prot="public" virt="non-virtual"><scope>wxFindDialogEvent</scope><name>GetTimestamp</name></member>
+      <member refid="classwx_command_event_1a787f616f732b35c6ed30ab10b74147e4" prot="public" virt="non-virtual"><scope>wxFindDialogEvent</scope><name>IsChecked</name></member>
+      <member refid="classwx_event_1ad70c9cfaf0d626c1115b2d42ea047c2d" prot="public" virt="non-virtual"><scope>wxFindDialogEvent</scope><name>IsCommandEvent</name></member>
+      <member refid="classwx_object_1af40d580385cf4f8112fae7713404b01e" prot="public" virt="non-virtual"><scope>wxFindDialogEvent</scope><name>IsKindOf</name></member>
+      <member refid="classwx_object_1a80a1a3fda7b14396a9ddd3d7a46a88bd" prot="public" virt="non-virtual"><scope>wxFindDialogEvent</scope><name>IsSameAs</name></member>
+      <member refid="classwx_command_event_1a4bb9cda53263b6c666ce2ab7159203f1" prot="public" virt="non-virtual"><scope>wxFindDialogEvent</scope><name>IsSelection</name></member>
+      <member refid="classwx_event_1ac81911194f1f59e1454c0397b87975d4" prot="protected" virt="non-virtual"><scope>wxFindDialogEvent</scope><name>m_propagationLevel</name></member>
+      <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxFindDialogEvent</scope><name>m_refData</name></member>
+      <member refid="classwx_object_1a07b8f34f5afc5743195c5fed052f55d3" prot="public" virt="non-virtual"><scope>wxFindDialogEvent</scope><name>operator delete</name></member>
+      <member refid="classwx_object_1a96fa423a1dbc212c8227a5d83825971f" prot="public" virt="non-virtual"><scope>wxFindDialogEvent</scope><name>operator new</name></member>
+      <member refid="classwx_object_1a2f6f1aa51fe9fc2b1415ca4211a90e9e" prot="public" virt="non-virtual"><scope>wxFindDialogEvent</scope><name>Ref</name></member>
+      <member refid="classwx_event_1a0acb5c75f6e67b8822ad8ba3c5bdc4fe" prot="public" virt="non-virtual"><scope>wxFindDialogEvent</scope><name>ResumePropagation</name></member>
+      <member refid="classwx_command_event_1a1778d16766134e08cafcdb49b06855ce" prot="public" virt="non-virtual"><scope>wxFindDialogEvent</scope><name>SetClientData</name></member>
+      <member refid="classwx_command_event_1a752e5a0fb8992b062c4dec6866171586" prot="public" virt="non-virtual"><scope>wxFindDialogEvent</scope><name>SetClientObject</name></member>
+      <member refid="classwx_event_1a3460217d04c36393ab868ba453fde13d" prot="public" virt="non-virtual"><scope>wxFindDialogEvent</scope><name>SetEventObject</name></member>
+      <member refid="classwx_event_1aa29fb7459d64602e09837fea1e516d27" prot="public" virt="non-virtual"><scope>wxFindDialogEvent</scope><name>SetEventType</name></member>
+      <member refid="classwx_command_event_1a13ac3c581b99d110bac2c6b74803d2df" prot="public" virt="non-virtual"><scope>wxFindDialogEvent</scope><name>SetExtraLong</name></member>
+      <member refid="classwx_event_1ab9973f687bfa8a60318d8d9bd629d0d4" prot="public" virt="non-virtual"><scope>wxFindDialogEvent</scope><name>SetId</name></member>
+      <member refid="classwx_command_event_1aeaed91ffb1d02f07d7ea40f029f95a7c" prot="public" virt="non-virtual"><scope>wxFindDialogEvent</scope><name>SetInt</name></member>
+      <member refid="classwx_object_1afab780710f2adc1bb33310e27590140b" prot="public" virt="non-virtual"><scope>wxFindDialogEvent</scope><name>SetRefData</name></member>
+      <member refid="classwx_command_event_1a06ca56ac6680fe3b3178d8abd913d450" prot="public" virt="non-virtual"><scope>wxFindDialogEvent</scope><name>SetString</name></member>
+      <member refid="classwx_event_1ad4380dff3144a986cb960473051a1d8d" prot="public" virt="non-virtual"><scope>wxFindDialogEvent</scope><name>SetTimestamp</name></member>
+      <member refid="classwx_event_1ad265ef226445cb6b72a2697dd9d3b406" prot="public" virt="non-virtual"><scope>wxFindDialogEvent</scope><name>ShouldPropagate</name></member>
+      <member refid="classwx_event_1a98eb20b76106f9a933c2eb3ee119f66c" prot="public" virt="non-virtual"><scope>wxFindDialogEvent</scope><name>Skip</name></member>
+      <member refid="classwx_event_1a060a7d222404daff4d3cef30cddeaae3" prot="public" virt="non-virtual"><scope>wxFindDialogEvent</scope><name>StopPropagation</name></member>
+      <member refid="classwx_object_1af51efc6b1ae632fc7f0cd7ebbce9fa36" prot="public" virt="non-virtual"><scope>wxFindDialogEvent</scope><name>UnRef</name></member>
+      <member refid="classwx_object_1a74b40e42d19a4b9e9bec0b57d62a5725" prot="public" virt="non-virtual"><scope>wxFindDialogEvent</scope><name>UnShare</name></member>
+      <member refid="classwx_command_event_1aad941347872cd71fedcfc765fae7b2f7" prot="public" virt="non-virtual"><scope>wxFindDialogEvent</scope><name>wxCommandEvent</name></member>
+      <member refid="classwx_event_1aaf2a5cf056d006859cea36689ba13d36" prot="public" virt="non-virtual"><scope>wxFindDialogEvent</scope><name>wxEvent</name></member>
+      <member refid="classwx_find_dialog_event_1a0c495e7783c240d206bb78b31ed16187" prot="public" virt="non-virtual"><scope>wxFindDialogEvent</scope><name>wxFindDialogEvent</name></member>
+      <member refid="classwx_object_1acaa378363a28af421ab56ad7b46eadf0" prot="public" virt="non-virtual"><scope>wxFindDialogEvent</scope><name>wxObject</name></member>
+      <member refid="classwx_object_1a4721b4dc9b7aff0f30904ba2ea3954cf" prot="public" virt="non-virtual"><scope>wxFindDialogEvent</scope><name>wxObject</name></member>
+      <member refid="classwx_object_1a2a51aa8bfbab47ca2f051bcf84b3f35b" prot="public" virt="virtual"><scope>wxFindDialogEvent</scope><name>~wxObject</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -16,7 +16,7 @@
 <para>With this constructor, <ref refid="classwx_ribbon_tool_bar_1a9e4101063fdc71e83312ac7faa9bf333" kindref="member">Create()</ref> should be called in order to create the tool bar. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/toolbar.h" line="38"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/toolbar.h" line="38"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_tool_bar_1aaa413c491355b5c6ee82709ad4664ab3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -89,7 +89,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/toolbar.h" line="58"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/toolbar.h" line="58"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_tool_bar_1a88b148610cb17d61ffbb78373fee5fe6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -102,7 +102,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/toolbar.h" line="63"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/toolbar.h" line="63"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_tool_bar_1a9e4101063fdc71e83312ac7faa9bf333" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -139,7 +139,7 @@
 <para>Should only be called when the default constructor is used, and arguments have the same meaning as in the full constructor. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/toolbar.h" line="74"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/toolbar.h" line="74"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_tool_bar_1a1675720633457a243509a3a10ed53bba" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>wxRibbonToolBarToolBase *</type>
@@ -169,7 +169,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/toolbar.h" line="83"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/toolbar.h" line="83"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_tool_bar_1afc88a9c97fb4c517a3634929fa4f64ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>wxRibbonToolBarToolBase *</type>
@@ -196,7 +196,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/toolbar.h" line="93"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/toolbar.h" line="93"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_tool_bar_1aa0920c4b386293403fcd97a0dcae3a4c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>wxRibbonToolBarToolBase *</type>
@@ -223,7 +223,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/toolbar.h" line="103"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/toolbar.h" line="103"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_tool_bar_1aa3e2792ad5759a40f38bd2b3f5387654" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>wxRibbonToolBarToolBase *</type>
@@ -250,7 +250,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/toolbar.h" line="115"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/toolbar.h" line="115"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_tool_bar_1ab2868211962b01d0ccd53f7aab9a5f4f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>wxRibbonToolBarToolBase *</type>
@@ -336,7 +336,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/toolbar.h" line="147"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/toolbar.h" line="147"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_tool_bar_1a8ffb9fae53d1e78106465836c7c087af" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>wxRibbonToolBarToolBase *</type>
@@ -349,7 +349,7 @@
 <para>Separators are used to separate tools into groups. As such, a separator is not explicitly drawn, but is visually seen as the gap between tool groups. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/toolbar.h" line="156"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/toolbar.h" line="156"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_tool_bar_1a312d34cb3534ba02fe6b621d5dbb3483" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>wxRibbonToolBarToolBase *</type>
@@ -385,7 +385,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/toolbar.h" line="171"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/toolbar.h" line="171"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_tool_bar_1aca11e4e102ac0048feec46e253ee93a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>wxRibbonToolBarToolBase *</type>
@@ -417,7 +417,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/toolbar.h" line="186"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/toolbar.h" line="186"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_tool_bar_1af639809c018d957407d72dfcc68c5796" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>wxRibbonToolBarToolBase *</type>
@@ -449,7 +449,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/toolbar.h" line="200"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/toolbar.h" line="200"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_tool_bar_1a9ba08f72cdc184be59eda474651622e8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>wxRibbonToolBarToolBase *</type>
@@ -481,7 +481,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/toolbar.h" line="214"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/toolbar.h" line="214"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_tool_bar_1afe6765c55d5e84a5bac39693332a0ac7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>wxRibbonToolBarToolBase *</type>
@@ -528,7 +528,7 @@
 <parametername>pos</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Position of the new tool (number of tools and separators from the begining of the toolbar). </para></parameterdescription>
+<para>Position of the new tool (number of tools and separators from the beginning of the toolbar). </para></parameterdescription>
 </parameteritem>
 <parameteritem>
 <parameternamelist>
@@ -579,7 +579,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/toolbar.h" line="252"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/toolbar.h" line="252"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_tool_bar_1aaad936b4a748f72bff61edf4ed1db1fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>wxRibbonToolBarToolBase *</type>
@@ -598,7 +598,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/toolbar.h" line="261"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/toolbar.h" line="261"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_tool_bar_1ae0cc3ea212638290159d31415d8895ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -612,7 +612,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/toolbar.h" line="268"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/toolbar.h" line="268"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_tool_bar_1ad35f18c7feba2c9512b111bef57e6ef7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -640,7 +640,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/toolbar.h" line="282"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/toolbar.h" line="282"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_tool_bar_1adc6c3450b240e4911074feb175f93158" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -654,11 +654,11 @@
         <briefdescription>
 <para>This function behaves like <ref refid="classwx_ribbon_tool_bar_1ad35f18c7feba2c9512b111bef57e6ef7" kindref="member">DeleteTool()</ref> but it deletes the tool at the specified position and not the one with the given id. </para>        </briefdescription>
         <detaileddescription>
-<para>Usefull to delete separators.</para><para><simplesect kind="since"><para>2.9.4 </para></simplesect>
+<para>Useful to delete separators.</para><para><simplesect kind="since"><para>2.9.4 </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/toolbar.h" line="291"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/toolbar.h" line="291"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_tool_bar_1ab904359913bbac54b98bf1939a48953c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>wxRibbonToolBarToolBase *</type>
@@ -676,7 +676,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/toolbar.h" line="299"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/toolbar.h" line="299"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_tool_bar_1a6f4d560907de9728b5475ea699a85281" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>wxRibbonToolBarToolBase *</type>
@@ -695,7 +695,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/toolbar.h" line="315"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/toolbar.h" line="315"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_tool_bar_1a0da73f9df429c665420bb3c762ebd403" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>int</type>
@@ -713,7 +713,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/toolbar.h" line="324"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/toolbar.h" line="324"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_tool_bar_1a11cbf29d5bcd68eeb5f85bd05aaa7af1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_object" kindref="compound">wxObject</ref> *</type>
@@ -740,7 +740,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/toolbar.h" line="336"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/toolbar.h" line="336"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_tool_bar_1aeeef026e7a2ae3f4dbcc3e52557a5dce" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -768,7 +768,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/toolbar.h" line="350"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/toolbar.h" line="350"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_tool_bar_1a4d46fb3e8dbe28bb6981d7b4db2803e7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -794,7 +794,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/toolbar.h" line="360"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/toolbar.h" line="360"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_tool_bar_1ad768bead1e79aa85e88e55a2a9e0621d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="art_8h_1a49672bfa76086982645f3797b0162e19" kindref="member">wxRibbonButtonKind</ref></type>
@@ -820,7 +820,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/toolbar.h" line="370"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/toolbar.h" line="370"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_tool_bar_1a00c38c9257c7492c5aab18bf12306360" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>int</type>
@@ -846,7 +846,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/toolbar.h" line="381"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/toolbar.h" line="381"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_tool_bar_1a7b12c2a54deeaedf612bc04705d28720" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -874,7 +874,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/toolbar.h" line="395"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/toolbar.h" line="395"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_tool_bar_1a3dd872fbf4a614db656130c141c924a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -888,7 +888,7 @@
 <para>Must be called after tools are added to the tool bar, as otherwise the newly added tools will not be displayed. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/toolbar.h" line="403"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/toolbar.h" line="403"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_tool_bar_1a5abee7a0e02bcd3705479746b8672736" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -925,7 +925,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/toolbar.h" line="418"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/toolbar.h" line="418"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_tool_bar_1ad5363115a1418b54a162afebc4ce48d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -955,7 +955,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/toolbar.h" line="428"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/toolbar.h" line="428"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_tool_bar_1a04078695e62582b815a08044d27665f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -985,7 +985,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/toolbar.h" line="439"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/toolbar.h" line="439"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_tool_bar_1ad5a2925155b3d28f3d675567e6fc36cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -1023,7 +1023,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/toolbar.h" line="453"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/toolbar.h" line="453"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_tool_bar_1a6529d00831bdbebba8a073d968d33804" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -1053,7 +1053,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/toolbar.h" line="463"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/toolbar.h" line="463"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_tool_bar_1a97dcf4e8c1c2b70acc88ca75e03f19fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -1091,7 +1091,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/toolbar.h" line="475"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/toolbar.h" line="475"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_tool_bar_1aaaf93abfe569a7c42a240d804e750131" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -1128,7 +1128,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/toolbar.h" line="488"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/toolbar.h" line="488"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -1142,97 +1142,97 @@
 <heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxribbon" kindref="member">wxRibbon</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ribbon" kindref="compound">Ribbon User Interface</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="9212">
+      <node id="9395">
         <label>wxRibbonControl</label>
         <link refid="classwx_ribbon_control"/>
-        <childnode refid="9213" relation="public-inheritance">
+        <childnode refid="9396" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9216">
+      <node id="9399">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="9215">
+      <node id="9398">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="9216" relation="public-inheritance">
+        <childnode refid="9399" relation="public-inheritance">
         </childnode>
-        <childnode refid="9217" relation="public-inheritance">
+        <childnode refid="9400" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9217">
+      <node id="9400">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="9213">
+      <node id="9396">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="9214" relation="public-inheritance">
+        <childnode refid="9397" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9214">
+      <node id="9397">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="9215" relation="public-inheritance">
+        <childnode refid="9398" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9211">
+      <node id="9394">
         <label>wxRibbonToolBar</label>
         <link refid="classwx_ribbon_tool_bar"/>
-        <childnode refid="9212" relation="public-inheritance">
+        <childnode refid="9395" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="9219">
+      <node id="9402">
         <label>wxRibbonControl</label>
         <link refid="classwx_ribbon_control"/>
-        <childnode refid="9220" relation="public-inheritance">
+        <childnode refid="9403" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9223">
+      <node id="9406">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="9224" relation="usage">
+        <childnode refid="9407" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="9222">
+      <node id="9405">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="9223" relation="public-inheritance">
+        <childnode refid="9406" relation="public-inheritance">
         </childnode>
-        <childnode refid="9225" relation="public-inheritance">
+        <childnode refid="9408" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9225">
+      <node id="9408">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="9220">
+      <node id="9403">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="9221" relation="public-inheritance">
+        <childnode refid="9404" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9221">
+      <node id="9404">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="9222" relation="public-inheritance">
+        <childnode refid="9405" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9218">
+      <node id="9401">
         <label>wxRibbonToolBar</label>
         <link refid="classwx_ribbon_tool_bar"/>
-        <childnode refid="9219" relation="public-inheritance">
+        <childnode refid="9402" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9224">
+      <node id="9407">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/toolbar.h" line="31" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/toolbar.h" bodystart="30" bodyend="489"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/toolbar.h" line="31" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/toolbar.h" bodystart="30" bodyend="489"/>
     <listofallmembers>
       <member refid="classwx_window_1a3afbd49b1ea2f8275e3600dcac102923" prot="public" virt="virtual"><scope>wxRibbonToolBar</scope><name>AcceptsFocus</name></member>
       <member refid="classwx_window_1a2370bdd3ab08e7ef3c7555c6aa8301b8" prot="public" virt="virtual"><scope>wxRibbonToolBar</scope><name>AcceptsFocusFromKeyboard</name></member>
@@ -1313,6 +1313,7 @@
       <member refid="classwx_window_1a3006d98a4145b7064c1f08e39487d257" prot="public" virt="non-virtual"><scope>wxRibbonToolBar</scope><name>GetBackgroundColour</name></member>
       <member refid="classwx_window_1a59047d52b88f2422bbcf01bbecdc4b7b" prot="public" virt="virtual"><scope>wxRibbonToolBar</scope><name>GetBackgroundStyle</name></member>
       <member refid="classwx_window_1a7e64b9380374e5681f146e9e319e35e3" prot="public" virt="non-virtual"><scope>wxRibbonToolBar</scope><name>GetBestSize</name></member>
+      <member refid="classwx_ribbon_control_1a555837437ef7e19ebfb9cf7a019e9b8d" prot="public" virt="virtual"><scope>wxRibbonToolBar</scope><name>GetBestSizeForParentSize</name></member>
       <member refid="classwx_window_1a0180343fa395e0c8e6de4022684ca5d6" prot="public" virt="virtual"><scope>wxRibbonToolBar</scope><name>GetBestVirtualSize</name></member>
       <member refid="classwx_window_1ad95a95e683e57ac6365745b737571582" prot="public" virt="non-virtual"><scope>wxRibbonToolBar</scope><name>GetBorder</name></member>
       <member refid="classwx_window_1aa53c8d1b5af17a8fbbe8845210e2032b" prot="public" virt="non-virtual"><scope>wxRibbonToolBar</scope><name>GetBorder</name></member>
@@ -1429,6 +1430,7 @@
       <member refid="classwx_ribbon_tool_bar_1afe6765c55d5e84a5bac39693332a0ac7" prot="public" virt="virtual"><scope>wxRibbonToolBar</scope><name>InsertTool</name></member>
       <member refid="classwx_window_1ae1b56ca87d8590ee5e576012229a380a" prot="public" virt="non-virtual"><scope>wxRibbonToolBar</scope><name>InvalidateBestSize</name></member>
       <member refid="classwx_window_1af918e6fe8565c2d5235973cc3de84a43" prot="public" virt="non-virtual"><scope>wxRibbonToolBar</scope><name>IsBeingDeleted</name></member>
+      <member refid="classwx_window_1a469f0881da248d37691440c9d4cc7200" prot="public" virt="non-virtual"><scope>wxRibbonToolBar</scope><name>IsDescendant</name></member>
       <member refid="classwx_window_1a9d1be1bbb625ebf87ad4ad47e49a0194" prot="public" virt="virtual"><scope>wxRibbonToolBar</scope><name>IsDoubleBuffered</name></member>
       <member refid="classwx_window_1a59452a5bd42f5ea4b31d7fc4aa59644f" prot="public" virt="non-virtual"><scope>wxRibbonToolBar</scope><name>IsEnabled</name></member>
       <member refid="classwx_window_1af27ef77c913e32050543f3b0ca435a0d" prot="public" virt="non-virtual"><scope>wxRibbonToolBar</scope><name>IsExposed</name></member>
@@ -1445,13 +1447,13 @@
       <member refid="classwx_ribbon_control_1a501bee400eee7b57128c1ad77edf0b1d" prot="public" virt="virtual"><scope>wxRibbonToolBar</scope><name>IsSizingContinuous</name></member>
       <member refid="classwx_window_1a657ef8b6055eb06df894ac5e6ddfecf8" prot="public" virt="non-virtual"><scope>wxRibbonToolBar</scope><name>IsThisEnabled</name></member>
       <member refid="classwx_window_1a0002826ad05f2a5661b4c8995713f37f" prot="public" virt="virtual"><scope>wxRibbonToolBar</scope><name>IsTopLevel</name></member>
+      <member refid="classwx_window_1a7940d510c5bdc062a2b109a1022dd8c2" prot="public" virt="virtual"><scope>wxRibbonToolBar</scope><name>IsTransparentBackgroundSupported</name></member>
       <member refid="classwx_evt_handler_1a360fdeefcf53b62fb49fb828406bb8a6" prot="public" virt="non-virtual"><scope>wxRibbonToolBar</scope><name>IsUnlinked</name></member>
       <member refid="classwx_window_1a1b143c3e72bd0af533b76db4830a6113" prot="public" virt="virtual"><scope>wxRibbonToolBar</scope><name>Layout</name></member>
       <member refid="classwx_window_1ade808784f0e64d9985e2f279b5ca8c02" prot="public" virt="non-virtual"><scope>wxRibbonToolBar</scope><name>LineDown</name></member>
       <member refid="classwx_window_1afc0816a174ceee6d36d1995c6824a273" prot="public" virt="non-virtual"><scope>wxRibbonToolBar</scope><name>LineUp</name></member>
       <member refid="classwx_window_1a124944524f36b71385dad8fddaad8ded" prot="public" virt="virtual"><scope>wxRibbonToolBar</scope><name>Lower</name></member>
       <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxRibbonToolBar</scope><name>m_refData</name></member>
-      <member refid="classwx_window_1a192fc8b467845d093c16452db96c65c5" prot="public" virt="virtual"><scope>wxRibbonToolBar</scope><name>MakeModal</name></member>
       <member refid="classwx_window_1ab1cb98c8d25b9e6ff7b706b1446c3df7" prot="public" virt="non-virtual"><scope>wxRibbonToolBar</scope><name>Move</name></member>
       <member refid="classwx_window_1a22a22c1e23ca05776707e7999d8047fe" prot="public" virt="non-virtual"><scope>wxRibbonToolBar</scope><name>Move</name></member>
       <member refid="classwx_window_1a79e66079125e8420de269811bdb6f2b6" prot="public" virt="non-virtual"><scope>wxRibbonToolBar</scope><name>MoveAfterInTabOrder</name></member>
@@ -1581,7 +1583,6 @@
       <member refid="classwx_window_1a88cc65e424a129d9b0057756cdb67ec9" prot="public" virt="virtual"><scope>wxRibbonToolBar</scope><name>TransferDataToWindow</name></member>
       <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxRibbonToolBar</scope><name>TryAfter</name></member>
       <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxRibbonToolBar</scope><name>TryBefore</name></member>
-      <member refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" virt="non-virtual"><scope>wxRibbonToolBar</scope><name>TryThis</name></member>
       <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxRibbonToolBar</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxRibbonToolBar</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a22e5db2ec1d19c8252c056fd116975d7" prot="public" virt="non-virtual"><scope>wxRibbonToolBar</scope><name>Unlink</name></member>

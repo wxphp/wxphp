@@ -9,6 +9,83 @@
     <derivedcompoundref refid="classwx_font_picker_ctrl" prot="public" virt="non-virtual">wxFontPickerCtrl</derivedcompoundref>
     <includes local="no">wx/pickerbase.h</includes>
       <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_picker_base_1a34a47fbbcc21d8f4b9251ce5f02e1afe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxPickerBase::wxPickerBase</definition>
+        <argsstring>()</argsstring>
+        <name>wxPickerBase</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/pickerbase.h" line="41"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_picker_base_1af5e29cad758a3b63029acab188f08b43" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual wxPickerBase::~wxPickerBase</definition>
+        <argsstring>()</argsstring>
+        <name>~wxPickerBase</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/pickerbase.h" line="42"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_picker_base_1a768d847f06c01b3e757656020e153c45" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxPickerBase::CreateBase</definition>
+        <argsstring>(wxWindow *parent, wxWindowID id, const wxString &amp;text=wxEmptyString, const wxPoint &amp;pos=wxDefaultPosition, const wxSize &amp;size=wxDefaultSize, long style=0, const wxValidator &amp;validator=wxDefaultValidator, const wxString &amp;name=wxButtonNameStr)</argsstring>
+        <name>CreateBase</name>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>parent</declname>
+        </param>
+        <param>
+          <type><ref refid="windowid_8h_1ae8091432cc2cb2485d45f2302fb51133" kindref="member">wxWindowID</ref></type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>text</declname>
+          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_point" kindref="compound">wxPoint</ref> &amp;</type>
+          <declname>pos</declname>
+          <defval><ref refid="gdicmn_8h_1af5a90c753eaf3d3e3e5068a19ec3c1d0" kindref="member">wxDefaultPosition</ref></defval>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_size" kindref="compound">wxSize</ref> &amp;</type>
+          <declname>size</declname>
+          <defval><ref refid="gdicmn_8h_1a33a012cdb075e9f78c93f63bec2dc27b" kindref="member">wxDefaultSize</ref></defval>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>style</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_validator" kindref="compound">wxValidator</ref> &amp;</type>
+          <declname>validator</declname>
+          <defval><ref refid="validate_8h_1af1e90d8aa1824fd2ce4024ef7e40703c" kindref="member">wxDefaultValidator</ref></defval>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>name</declname>
+          <defval>wxButtonNameStr</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/pickerbase.h" line="53"/>
+      </memberdef>
       <memberdef kind="function" id="classwx_picker_base_1a33e5f9fd06515da476bfca72662da784" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
         <definition>int wxPickerBase::GetInternalMargin</definition>
@@ -20,7 +97,7 @@
 <para>This function can be used only when <ref refid="classwx_picker_base_1a5720150986171ba458c73bec9baf33d3" kindref="member">HasTextCtrl()</ref> returns true. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pickerbase.h" line="41"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/pickerbase.h" line="60"/>
       </memberdef>
       <memberdef kind="function" id="classwx_picker_base_1a10a218d4fca757eedb60f2870b556358" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -33,7 +110,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pickerbase.h" line="46"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/pickerbase.h" line="65"/>
       </memberdef>
       <memberdef kind="function" id="classwx_picker_base_1a7b53b34fac85e16b855fad65bd043efe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_text_ctrl" kindref="compound">wxTextCtrl</ref> *</type>
@@ -47,7 +124,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pickerbase.h" line="60"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/pickerbase.h" line="79"/>
       </memberdef>
       <memberdef kind="function" id="classwx_picker_base_1a68c3ea45617f46d2f5c170dd8b5b1844" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_control" kindref="compound">wxControl</ref> *</type>
@@ -69,7 +146,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pickerbase.h" line="80"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/pickerbase.h" line="99"/>
       </memberdef>
       <memberdef kind="function" id="classwx_picker_base_1a0283f827d44a30366dc1732be2238399" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -82,7 +159,7 @@
 <para>This function can be used only when <ref refid="classwx_picker_base_1a5720150986171ba458c73bec9baf33d3" kindref="member">HasTextCtrl()</ref> returns true. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pickerbase.h" line="87"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/pickerbase.h" line="106"/>
       </memberdef>
       <memberdef kind="function" id="classwx_picker_base_1a5720150986171ba458c73bec9baf33d3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -95,7 +172,7 @@
 <para>if the <computeroutput>wxPB_USE_TEXTCTRL</computeroutput> style was given when creating this control). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pickerbase.h" line="93"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/pickerbase.h" line="112"/>
       </memberdef>
       <memberdef kind="function" id="classwx_picker_base_1a8c32909480c34ebdd325759da4cff78f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -108,7 +185,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pickerbase.h" line="98"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/pickerbase.h" line="117"/>
       </memberdef>
       <memberdef kind="function" id="classwx_picker_base_1aa0fe47e53fe9fba60e7f1d9a1aecc540" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -121,7 +198,7 @@
 <para>This function can be used only when <ref refid="classwx_picker_base_1a5720150986171ba458c73bec9baf33d3" kindref="member">HasTextCtrl()</ref> returns true. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pickerbase.h" line="105"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/pickerbase.h" line="124"/>
       </memberdef>
       <memberdef kind="function" id="classwx_picker_base_1a902b0b8db0a78820d8d985500f5f66c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -138,7 +215,7 @@
 <para>This function can be used only when <ref refid="classwx_picker_base_1a5720150986171ba458c73bec9baf33d3" kindref="member">HasTextCtrl()</ref> returns true. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pickerbase.h" line="112"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/pickerbase.h" line="131"/>
       </memberdef>
       <memberdef kind="function" id="classwx_picker_base_1ab031bd45e323b43b6a9943e25ec6e191" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -156,7 +233,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pickerbase.h" line="117"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/pickerbase.h" line="136"/>
       </memberdef>
       <memberdef kind="function" id="classwx_picker_base_1a5801852b32e1e8020bfa48b75bde67a5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -173,7 +250,7 @@
 <para>Look at the detailed description of <ref refid="classwx_picker_base" kindref="compound">wxPickerBase</ref> for more info. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pickerbase.h" line="124"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/pickerbase.h" line="143"/>
       </memberdef>
       <memberdef kind="function" id="classwx_picker_base_1a094adc3942377519ecee6ce1afeb2954" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -191,7 +268,7 @@
 <para>This function can be used only when <ref refid="classwx_picker_base_1a5720150986171ba458c73bec9baf33d3" kindref="member">HasTextCtrl()</ref> returns true. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pickerbase.h" line="131"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/pickerbase.h" line="150"/>
       </memberdef>
       <memberdef kind="function" id="classwx_picker_base_1a34d76334dfea7b6f65bbbb3b41269a9e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -208,7 +285,116 @@
 <para>Look at the detailed description of <ref refid="classwx_picker_base" kindref="compound">wxPickerBase</ref> for more info.</para><para>This function can be used only when <ref refid="classwx_picker_base_1a5720150986171ba458c73bec9baf33d3" kindref="member">HasTextCtrl()</ref> returns true. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pickerbase.h" line="140"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/pickerbase.h" line="159"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_picker_base_1a06f3f7837fa1ac0cc0a860e591e0b34a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxPickerBase::SetTextCtrl</definition>
+        <argsstring>(wxTextCtrl *text)</argsstring>
+        <name>SetTextCtrl</name>
+        <param>
+          <type><ref refid="classwx_text_ctrl" kindref="compound">wxTextCtrl</ref> *</type>
+          <declname>text</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/pickerbase.h" line="162"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_picker_base_1a87e04d99810b342d358d21d26b4c8915" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxPickerBase::SetPickerCtrl</definition>
+        <argsstring>(wxControl *picker)</argsstring>
+        <name>SetPickerCtrl</name>
+        <param>
+          <type><ref refid="classwx_control" kindref="compound">wxControl</ref> *</type>
+          <declname>picker</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/pickerbase.h" line="163"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_picker_base_1a6dd0785ceb13d2c71cadecf7caf402bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void wxPickerBase::UpdatePickerFromTextCtrl</definition>
+        <argsstring>()=0</argsstring>
+        <name>UpdatePickerFromTextCtrl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/pickerbase.h" line="165"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_picker_base_1a0be21e2897a509151242390054b86bb8" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void wxPickerBase::UpdateTextCtrlFromPicker</definition>
+        <argsstring>()=0</argsstring>
+        <name>UpdateTextCtrlFromPicker</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/pickerbase.h" line="166"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classwx_picker_base_1a4d8689fd09a48fdb40916cae9cfd3ca8" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>long</type>
+        <definition>virtual long wxPickerBase::GetTextCtrlStyle</definition>
+        <argsstring>(long style) const </argsstring>
+        <name>GetTextCtrlStyle</name>
+        <param>
+          <type>long</type>
+          <declname>style</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/pickerbase.h" line="169"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_picker_base_1a43c6d2566d6127844f5e2adb7c4734bd" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>long</type>
+        <definition>virtual long wxPickerBase::GetPickerStyle</definition>
+        <argsstring>(long style) const </argsstring>
+        <name>GetPickerStyle</name>
+        <param>
+          <type>long</type>
+          <declname>style</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/pickerbase.h" line="170"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_picker_base_1abfd1d92daf22ad3b9d15978f1f9de9e1" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxPickerBase::PostCreation</definition>
+        <argsstring>()</argsstring>
+        <name>PostCreation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/pickerbase.h" line="171"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -222,109 +408,109 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__pickers" kindref="compound">Picker Controls</ref></para><para><simplesect kind="see"><para><ref refid="classwx_colour_picker_ctrl" kindref="compound">wxColourPickerCtrl</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="8677">
+      <node id="8870">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="8676">
+      <node id="8869">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="8677" relation="public-inheritance">
+        <childnode refid="8870" relation="public-inheritance">
         </childnode>
-        <childnode refid="8678" relation="public-inheritance">
+        <childnode refid="8871" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8678">
+      <node id="8871">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="8679">
+      <node id="8872">
         <label>wxColourPickerCtrl</label>
         <link refid="classwx_colour_picker_ctrl"/>
-        <childnode refid="8673" relation="public-inheritance">
+        <childnode refid="8866" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8674">
+      <node id="8867">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="8675" relation="public-inheritance">
+        <childnode refid="8868" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8675">
+      <node id="8868">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="8676" relation="public-inheritance">
+        <childnode refid="8869" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8681">
+      <node id="8874">
         <label>wxFilePickerCtrl</label>
         <link refid="classwx_file_picker_ctrl"/>
-        <childnode refid="8673" relation="public-inheritance">
+        <childnode refid="8866" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8680">
+      <node id="8873">
         <label>wxDirPickerCtrl</label>
         <link refid="classwx_dir_picker_ctrl"/>
-        <childnode refid="8673" relation="public-inheritance">
+        <childnode refid="8866" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8682">
+      <node id="8875">
         <label>wxFontPickerCtrl</label>
         <link refid="classwx_font_picker_ctrl"/>
-        <childnode refid="8673" relation="public-inheritance">
+        <childnode refid="8866" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8673">
+      <node id="8866">
         <label>wxPickerBase</label>
         <link refid="classwx_picker_base"/>
-        <childnode refid="8674" relation="public-inheritance">
+        <childnode refid="8867" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="8687">
+      <node id="8880">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="8688" relation="usage">
+        <childnode refid="8881" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="8686">
+      <node id="8879">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="8687" relation="public-inheritance">
+        <childnode refid="8880" relation="public-inheritance">
         </childnode>
-        <childnode refid="8689" relation="public-inheritance">
+        <childnode refid="8882" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8689">
+      <node id="8882">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="8684">
+      <node id="8877">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="8685" relation="public-inheritance">
+        <childnode refid="8878" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8685">
+      <node id="8878">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="8686" relation="public-inheritance">
+        <childnode refid="8879" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8688">
+      <node id="8881">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
-      <node id="8683">
+      <node id="8876">
         <label>wxPickerBase</label>
         <link refid="classwx_picker_base"/>
-        <childnode refid="8684" relation="public-inheritance">
+        <childnode refid="8877" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pickerbase.h" line="34" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pickerbase.h" bodystart="33" bodyend="141"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/pickerbase.h" line="39" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/pickerbase.h" bodystart="38" bodyend="172"/>
     <listofallmembers>
       <member refid="classwx_window_1a3afbd49b1ea2f8275e3600dcac102923" prot="public" virt="virtual"><scope>wxPickerBase</scope><name>AcceptsFocus</name></member>
       <member refid="classwx_window_1a2370bdd3ab08e7ef3c7555c6aa8301b8" prot="public" virt="virtual"><scope>wxPickerBase</scope><name>AcceptsFocusFromKeyboard</name></member>
@@ -360,6 +546,7 @@
       <member refid="classwx_window_1afd955ce9d25ec26a115bfb794b1c7d8b" prot="public" virt="non-virtual"><scope>wxPickerBase</scope><name>ConvertPixelsToDialog</name></member>
       <member refid="classwx_control_1abe23789c94c86907463a0e8434be822a" prot="public" virt="non-virtual"><scope>wxPickerBase</scope><name>Create</name></member>
       <member refid="classwx_window_1a95b7ca8faa033f5ab35458887c07bf38" prot="public" virt="non-virtual" ambiguityscope="wxWindow::"><scope>wxPickerBase</scope><name>Create</name></member>
+      <member refid="classwx_picker_base_1a768d847f06c01b3e757656020e153c45" prot="public" virt="non-virtual"><scope>wxPickerBase</scope><name>CreateBase</name></member>
       <member refid="classwx_object_1a95c6a5e4e1e03ff23c7b9efe4cff0c1a" prot="protected" virt="virtual"><scope>wxPickerBase</scope><name>CreateRefData</name></member>
       <member refid="classwx_evt_handler_1a6e7f9cf4ebd0623c1d94979855d096f8" prot="public" virt="non-virtual"><scope>wxPickerBase</scope><name>DeletePendingEvents</name></member>
       <member refid="classwx_window_1a6bf0c5be864544d9ce0560087667b7fc" prot="public" virt="virtual"><scope>wxPickerBase</scope><name>Destroy</name></member>
@@ -442,6 +629,7 @@
       <member refid="classwx_window_1a63871f881941b99b4b94328d1c4cd163" prot="public" virt="non-virtual"><scope>wxPickerBase</scope><name>GetParent</name></member>
       <member refid="classwx_picker_base_1a68c3ea45617f46d2f5c170dd8b5b1844" prot="public" virt="non-virtual"><scope>wxPickerBase</scope><name>GetPickerCtrl</name></member>
       <member refid="classwx_picker_base_1a10a218d4fca757eedb60f2870b556358" prot="public" virt="non-virtual"><scope>wxPickerBase</scope><name>GetPickerCtrlProportion</name></member>
+      <member refid="classwx_picker_base_1a43c6d2566d6127844f5e2adb7c4734bd" prot="protected" virt="virtual"><scope>wxPickerBase</scope><name>GetPickerStyle</name></member>
       <member refid="classwx_window_1a9b7de6ea85ca926b668ba0682a61a93e" prot="public" virt="non-virtual"><scope>wxPickerBase</scope><name>GetPopupMenuSelectionFromUser</name></member>
       <member refid="classwx_window_1a00f5cb3cac003205317a565a33d4bb27" prot="public" virt="non-virtual"><scope>wxPickerBase</scope><name>GetPopupMenuSelectionFromUser</name></member>
       <member refid="classwx_window_1a9f36392b289a1e567e95bee073d6533e" prot="public" virt="non-virtual"><scope>wxPickerBase</scope><name>GetPosition</name></member>
@@ -461,6 +649,7 @@
       <member refid="classwx_window_1ad8284cce1a2afe57724b52a89d7fac2f" prot="public" virt="non-virtual"><scope>wxPickerBase</scope><name>GetSizer</name></member>
       <member refid="classwx_picker_base_1a7b53b34fac85e16b855fad65bd043efe" prot="public" virt="non-virtual"><scope>wxPickerBase</scope><name>GetTextCtrl</name></member>
       <member refid="classwx_picker_base_1a0283f827d44a30366dc1732be2238399" prot="public" virt="non-virtual"><scope>wxPickerBase</scope><name>GetTextCtrlProportion</name></member>
+      <member refid="classwx_picker_base_1a4d8689fd09a48fdb40916cae9cfd3ca8" prot="protected" virt="virtual"><scope>wxPickerBase</scope><name>GetTextCtrlStyle</name></member>
       <member refid="classwx_window_1ac9cd7b4472d5419e518f69311914466f" prot="public" virt="non-virtual"><scope>wxPickerBase</scope><name>GetTextExtent</name></member>
       <member refid="classwx_window_1a79e5f88a2408871663d4ab0405cd35f6" prot="public" virt="non-virtual"><scope>wxPickerBase</scope><name>GetTextExtent</name></member>
       <member refid="classwx_window_1a0b31a21532407cf809d73aa09f34235c" prot="public" virt="virtual"><scope>wxPickerBase</scope><name>GetThemeEnabled</name></member>
@@ -494,6 +683,7 @@
       <member refid="classwx_window_1aa90a260c0a835a133043460b7d0024a8" prot="public" virt="virtual"><scope>wxPickerBase</scope><name>InitDialog</name></member>
       <member refid="classwx_window_1ae1b56ca87d8590ee5e576012229a380a" prot="public" virt="non-virtual"><scope>wxPickerBase</scope><name>InvalidateBestSize</name></member>
       <member refid="classwx_window_1af918e6fe8565c2d5235973cc3de84a43" prot="public" virt="non-virtual"><scope>wxPickerBase</scope><name>IsBeingDeleted</name></member>
+      <member refid="classwx_window_1a469f0881da248d37691440c9d4cc7200" prot="public" virt="non-virtual"><scope>wxPickerBase</scope><name>IsDescendant</name></member>
       <member refid="classwx_window_1a9d1be1bbb625ebf87ad4ad47e49a0194" prot="public" virt="virtual"><scope>wxPickerBase</scope><name>IsDoubleBuffered</name></member>
       <member refid="classwx_window_1a59452a5bd42f5ea4b31d7fc4aa59644f" prot="public" virt="non-virtual"><scope>wxPickerBase</scope><name>IsEnabled</name></member>
       <member refid="classwx_window_1af27ef77c913e32050543f3b0ca435a0d" prot="public" virt="non-virtual"><scope>wxPickerBase</scope><name>IsExposed</name></member>
@@ -511,13 +701,13 @@
       <member refid="classwx_picker_base_1aa0fe47e53fe9fba60e7f1d9a1aecc540" prot="public" virt="non-virtual"><scope>wxPickerBase</scope><name>IsTextCtrlGrowable</name></member>
       <member refid="classwx_window_1a657ef8b6055eb06df894ac5e6ddfecf8" prot="public" virt="non-virtual"><scope>wxPickerBase</scope><name>IsThisEnabled</name></member>
       <member refid="classwx_window_1a0002826ad05f2a5661b4c8995713f37f" prot="public" virt="virtual"><scope>wxPickerBase</scope><name>IsTopLevel</name></member>
+      <member refid="classwx_window_1a7940d510c5bdc062a2b109a1022dd8c2" prot="public" virt="virtual"><scope>wxPickerBase</scope><name>IsTransparentBackgroundSupported</name></member>
       <member refid="classwx_evt_handler_1a360fdeefcf53b62fb49fb828406bb8a6" prot="public" virt="non-virtual"><scope>wxPickerBase</scope><name>IsUnlinked</name></member>
       <member refid="classwx_window_1a1b143c3e72bd0af533b76db4830a6113" prot="public" virt="virtual"><scope>wxPickerBase</scope><name>Layout</name></member>
       <member refid="classwx_window_1ade808784f0e64d9985e2f279b5ca8c02" prot="public" virt="non-virtual"><scope>wxPickerBase</scope><name>LineDown</name></member>
       <member refid="classwx_window_1afc0816a174ceee6d36d1995c6824a273" prot="public" virt="non-virtual"><scope>wxPickerBase</scope><name>LineUp</name></member>
       <member refid="classwx_window_1a124944524f36b71385dad8fddaad8ded" prot="public" virt="virtual"><scope>wxPickerBase</scope><name>Lower</name></member>
       <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxPickerBase</scope><name>m_refData</name></member>
-      <member refid="classwx_window_1a192fc8b467845d093c16452db96c65c5" prot="public" virt="virtual"><scope>wxPickerBase</scope><name>MakeModal</name></member>
       <member refid="classwx_window_1ab1cb98c8d25b9e6ff7b706b1446c3df7" prot="public" virt="non-virtual"><scope>wxPickerBase</scope><name>Move</name></member>
       <member refid="classwx_window_1a22a22c1e23ca05776707e7999d8047fe" prot="public" virt="non-virtual"><scope>wxPickerBase</scope><name>Move</name></member>
       <member refid="classwx_window_1a79e66079125e8420de269811bdb6f2b6" prot="public" virt="non-virtual"><scope>wxPickerBase</scope><name>MoveAfterInTabOrder</name></member>
@@ -533,6 +723,7 @@
       <member refid="classwx_window_1ac45c1f4cf96c70779764c14cf528790b" prot="public" virt="non-virtual"><scope>wxPickerBase</scope><name>PopEventHandler</name></member>
       <member refid="classwx_window_1a8f715d238cf74a845488b0e2645e98df" prot="public" virt="non-virtual"><scope>wxPickerBase</scope><name>PopupMenu</name></member>
       <member refid="classwx_window_1a834bcdfd41f5e5370ebd9ea401c92900" prot="public" virt="non-virtual"><scope>wxPickerBase</scope><name>PopupMenu</name></member>
+      <member refid="classwx_picker_base_1abfd1d92daf22ad3b9d15978f1f9de9e1" prot="protected" virt="non-virtual"><scope>wxPickerBase</scope><name>PostCreation</name></member>
       <member refid="classwx_window_1ab1943463e6661f97e072b43337c6cc09" prot="public" virt="non-virtual"><scope>wxPickerBase</scope><name>PostSizeEvent</name></member>
       <member refid="classwx_window_1aa080d8dcda58bcc6ea2abd8bea592e3e" prot="public" virt="non-virtual"><scope>wxPickerBase</scope><name>PostSizeEventToParent</name></member>
       <member refid="classwx_window_1a5ebdbd87c28644149a07f1742996df96" prot="protected" virt="virtual"><scope>wxPickerBase</scope><name>ProcessEvent</name></member>
@@ -607,6 +798,7 @@
       <member refid="classwx_window_1a89a4f62f23c1e7c845b8d07cecae4c43" prot="public" virt="non-virtual"><scope>wxPickerBase</scope><name>SetOwnFont</name></member>
       <member refid="classwx_window_1a53f4a878e4e2d440bd00543f8014aaaa" prot="public" virt="non-virtual"><scope>wxPickerBase</scope><name>SetOwnForegroundColour</name></member>
       <member refid="classwx_window_1aee57358435d6bd33f598c81354b47425" prot="public" virt="non-virtual"><scope>wxPickerBase</scope><name>SetPalette</name></member>
+      <member refid="classwx_picker_base_1a87e04d99810b342d358d21d26b4c8915" prot="public" virt="non-virtual"><scope>wxPickerBase</scope><name>SetPickerCtrl</name></member>
       <member refid="classwx_picker_base_1ab031bd45e323b43b6a9943e25ec6e191" prot="public" virt="non-virtual"><scope>wxPickerBase</scope><name>SetPickerCtrlGrowable</name></member>
       <member refid="classwx_picker_base_1a5801852b32e1e8020bfa48b75bde67a5" prot="public" virt="non-virtual"><scope>wxPickerBase</scope><name>SetPickerCtrlProportion</name></member>
       <member refid="classwx_window_1a81f23590239934fa10fded0566a65d8c" prot="public" virt="non-virtual"><scope>wxPickerBase</scope><name>SetPosition</name></member>
@@ -622,6 +814,7 @@
       <member refid="classwx_window_1ae813c640e1e2bc6014423247050846cf" prot="public" virt="virtual"><scope>wxPickerBase</scope><name>SetSizeHints</name></member>
       <member refid="classwx_window_1abc95691b45e29a52c24aa9d33d46dec1" prot="public" virt="non-virtual"><scope>wxPickerBase</scope><name>SetSizer</name></member>
       <member refid="classwx_window_1a29938af9828fd35da666536cdfb6b73c" prot="public" virt="non-virtual"><scope>wxPickerBase</scope><name>SetSizerAndFit</name></member>
+      <member refid="classwx_picker_base_1a06f3f7837fa1ac0cc0a860e591e0b34a" prot="public" virt="non-virtual"><scope>wxPickerBase</scope><name>SetTextCtrl</name></member>
       <member refid="classwx_picker_base_1a094adc3942377519ecee6ce1afeb2954" prot="public" virt="non-virtual"><scope>wxPickerBase</scope><name>SetTextCtrlGrowable</name></member>
       <member refid="classwx_picker_base_1a34d76334dfea7b6f65bbbb3b41269a9e" prot="public" virt="non-virtual"><scope>wxPickerBase</scope><name>SetTextCtrlProportion</name></member>
       <member refid="classwx_window_1a41dd19ed8809fd8ec662e2aa2a9579c3" prot="public" virt="virtual"><scope>wxPickerBase</scope><name>SetThemeEnabled</name></member>
@@ -643,7 +836,6 @@
       <member refid="classwx_window_1a88cc65e424a129d9b0057756cdb67ec9" prot="public" virt="virtual"><scope>wxPickerBase</scope><name>TransferDataToWindow</name></member>
       <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxPickerBase</scope><name>TryAfter</name></member>
       <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxPickerBase</scope><name>TryBefore</name></member>
-      <member refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" virt="non-virtual"><scope>wxPickerBase</scope><name>TryThis</name></member>
       <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxPickerBase</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxPickerBase</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a22e5db2ec1d19c8252c056fd116975d7" prot="public" virt="non-virtual"><scope>wxPickerBase</scope><name>Unlink</name></member>
@@ -653,6 +845,8 @@
       <member refid="classwx_window_1ae75712451673658b0a533480bf5eeaa4" prot="public" virt="non-virtual"><scope>wxPickerBase</scope><name>UnsetToolTip</name></member>
       <member refid="classwx_object_1a74b40e42d19a4b9e9bec0b57d62a5725" prot="public" virt="non-virtual"><scope>wxPickerBase</scope><name>UnShare</name></member>
       <member refid="classwx_window_1abaf28f1a075fd1b10f761a8febe597ec" prot="public" virt="virtual"><scope>wxPickerBase</scope><name>Update</name></member>
+      <member refid="classwx_picker_base_1a6dd0785ceb13d2c71cadecf7caf402bf" prot="public" virt="pure-virtual"><scope>wxPickerBase</scope><name>UpdatePickerFromTextCtrl</name></member>
+      <member refid="classwx_picker_base_1a0be21e2897a509151242390054b86bb8" prot="public" virt="pure-virtual"><scope>wxPickerBase</scope><name>UpdateTextCtrlFromPicker</name></member>
       <member refid="classwx_window_1adf0a4987728bd0bf69f922641b3efbfc" prot="public" virt="virtual"><scope>wxPickerBase</scope><name>UpdateWindowUI</name></member>
       <member refid="classwx_window_1ac87f253253a0c5eb498871c83afa40fd" prot="public" virt="virtual"><scope>wxPickerBase</scope><name>Validate</name></member>
       <member refid="classwx_window_1ac500152d1eca3a2ee98a68e7ea7372b5" prot="public" virt="virtual"><scope>wxPickerBase</scope><name>WarpPointer</name></member>
@@ -662,10 +856,12 @@
       <member refid="classwx_evt_handler_1a3f0166c4154227d05575b01eb2c8d4be" prot="public" virt="non-virtual"><scope>wxPickerBase</scope><name>wxEvtHandler</name></member>
       <member refid="classwx_object_1acaa378363a28af421ab56ad7b46eadf0" prot="public" virt="non-virtual"><scope>wxPickerBase</scope><name>wxObject</name></member>
       <member refid="classwx_object_1a4721b4dc9b7aff0f30904ba2ea3954cf" prot="public" virt="non-virtual"><scope>wxPickerBase</scope><name>wxObject</name></member>
+      <member refid="classwx_picker_base_1a34a47fbbcc21d8f4b9251ce5f02e1afe" prot="public" virt="non-virtual"><scope>wxPickerBase</scope><name>wxPickerBase</name></member>
       <member refid="classwx_window_1a695200a4915b934926dcf32afa44544c" prot="public" virt="non-virtual"><scope>wxPickerBase</scope><name>wxWindow</name></member>
       <member refid="classwx_window_1a7799009b10d1765d1bbb6db4994f922e" prot="public" virt="non-virtual"><scope>wxPickerBase</scope><name>wxWindow</name></member>
       <member refid="classwx_evt_handler_1a372d2239d91521eddc8fd2715fcab584" prot="public" virt="virtual"><scope>wxPickerBase</scope><name>~wxEvtHandler</name></member>
       <member refid="classwx_object_1a2a51aa8bfbab47ca2f051bcf84b3f35b" prot="public" virt="virtual"><scope>wxPickerBase</scope><name>~wxObject</name></member>
+      <member refid="classwx_picker_base_1af5e29cad758a3b63029acab188f08b43" prot="public" virt="virtual"><scope>wxPickerBase</scope><name>~wxPickerBase</name></member>
       <member refid="classwx_window_1a0c2a46181a89c349327f0b276f5ef8d7" prot="public" virt="virtual"><scope>wxPickerBase</scope><name>~wxWindow</name></member>
     </listofallmembers>
   </compounddef>

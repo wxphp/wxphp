@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="30"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filefn.h" line="30"/>
       </memberdef>
       <memberdef kind="function" id="classwx_path_list_1a4450101a66ed3b517921e46968b79378" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -33,7 +33,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="35"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filefn.h" line="35"/>
       </memberdef>
       <memberdef kind="function" id="classwx_path_list_1adc4332dbbb73130484e147bb654e825e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -51,7 +51,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="48"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filefn.h" line="48"/>
       </memberdef>
       <memberdef kind="function" id="classwx_path_list_1a14e1b6527fe820394556d50fcb1faee1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -68,7 +68,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="53"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filefn.h" line="53"/>
       </memberdef>
       <memberdef kind="function" id="classwx_path_list_1a1f1c05d3555bf51bd09e657121b40773" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -85,7 +85,7 @@
 <para>Useful for finding files in the <computeroutput>PATH</computeroutput> variable, for example. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="61"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filefn.h" line="61"/>
       </memberdef>
       <memberdef kind="function" id="classwx_path_list_1a0410287f73b6c2700a4ee2377ddc83dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -102,7 +102,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="66"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filefn.h" line="66"/>
       </memberdef>
       <memberdef kind="function" id="classwx_path_list_1a6c89ece04438d73118131208b2a015b4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -119,7 +119,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="73"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filefn.h" line="73"/>
       </memberdef>
       <memberdef kind="function" id="classwx_path_list_1ad48a1536f1e0ea787913c1619326c0a9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -136,7 +136,7 @@
 <para>The first path which concatenated to the given string points to an existing file (see <ref refid="group__group__funcmacro__file_1ga72d2e4ef03d51c0d59c2cb788462d600" kindref="member">wxFileExists()</ref>) is returned.</para><para>If the file wasn&apos;t found in any of the stored paths, an empty string is returned.</para><para>The given string must be a file name, eventually with a path prefix (if the path prefix is absolute, only its name will be searched); i.e. it must not end with a directory separator (see <ref refid="classwx_file_name_1ad6f9ae274e12729fc5689128ea94d16e" kindref="member">wxFileName::GetPathSeparator</ref>) otherwise an assertion will fail.</para><para>The returned path may be relative to the current working directory.</para><para>Note in fact that <ref refid="classwx_path_list" kindref="compound">wxPathList</ref> can be used to store both relative and absolute paths so that if you added relative paths, then the current working directory (see <ref refid="group__group__funcmacro__file_1gab0cc6ceca11d23f61cba353c01eeac06" kindref="member">wxGetCwd()</ref> and <ref refid="group__group__funcmacro__file_1ga315b861f905ae6b3915faa79526a198e" kindref="member">wxSetWorkingDirectory()</ref>) may affect the value returned by this function! </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="95"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filefn.h" line="95"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -146,30 +146,30 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__file" kindref="compound">File Handling</ref></para><para><simplesect kind="see"><para><ref refid="classwx_array_string" kindref="compound">wxArrayString</ref>, <ref refid="classwx_standard_paths" kindref="compound">wxStandardPaths</ref>, <ref refid="classwx_file_name" kindref="compound">wxFileName</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="8593">
+      <node id="8786">
         <label>wxPathList</label>
         <link refid="classwx_path_list"/>
-        <childnode refid="8594" relation="public-inheritance">
+        <childnode refid="8787" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8594">
+      <node id="8787">
         <label>wxArrayString</label>
         <link refid="classwx_array_string"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="8595">
+      <node id="8788">
         <label>wxPathList</label>
         <link refid="classwx_path_list"/>
-        <childnode refid="8596" relation="public-inheritance">
+        <childnode refid="8789" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8596">
+      <node id="8789">
         <label>wxArrayString</label>
         <link refid="classwx_array_string"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="25" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" bodystart="24" bodyend="96"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filefn.h" line="25" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/filefn.h" bodystart="24" bodyend="96"/>
     <listofallmembers>
       <member refid="classwx_path_list_1adc4332dbbb73130484e147bb654e825e" prot="public" virt="non-virtual"><scope>wxPathList</scope><name>Add</name></member>
       <member refid="classwx_path_list_1a14e1b6527fe820394556d50fcb1faee1" prot="public" virt="non-virtual"><scope>wxPathList</scope><name>Add</name></member>
@@ -186,8 +186,10 @@
       <member refid="classwx_array_string_1a87d29ec37fca50c5b289c242fbaad2f5" prot="public" virt="non-virtual"><scope>wxPathList</scope><name>Index</name></member>
       <member refid="classwx_array_string_1a9913831038ad76b0c4386cbd095b8e0d" prot="public" virt="non-virtual"><scope>wxPathList</scope><name>Insert</name></member>
       <member refid="classwx_array_string_1a1eb4f967685188b1c14407026e9ec53c" prot="public" virt="non-virtual"><scope>wxPathList</scope><name>IsEmpty</name></member>
-      <member refid="classwx_array_string_1a461830aff857f321e7b0def8e84cb87f" prot="public" virt="non-virtual"><scope>wxPathList</scope><name>Item</name></member>
-      <member refid="classwx_array_string_1adbae6537d9624510d4e9c1d7b2e2b163" prot="public" virt="non-virtual"><scope>wxPathList</scope><name>Last</name></member>
+      <member refid="classwx_array_string_1a9d02526d49d8b9da9ea184969ca721d2" prot="public" virt="non-virtual"><scope>wxPathList</scope><name>Item</name></member>
+      <member refid="classwx_array_string_1a2eaf5fd9e978099af9a06da914aa30db" prot="public" virt="non-virtual"><scope>wxPathList</scope><name>Item</name></member>
+      <member refid="classwx_array_string_1ae6c05b8d0a6dd18ec1f72a94827dbd03" prot="public" virt="non-virtual"><scope>wxPathList</scope><name>Last</name></member>
+      <member refid="classwx_array_string_1ab02b482011ff086cf024b11dce2eb105" prot="public" virt="non-virtual"><scope>wxPathList</scope><name>Last</name></member>
       <member refid="classwx_array_string_1a3796e3297a21ff4f1dce9f1eecc7f8f7" prot="public" virt="non-virtual"><scope>wxPathList</scope><name>operator!=</name></member>
       <member refid="classwx_array_string_1a87f49b6cea7e371f45a4fc40b0f01548" prot="public" virt="non-virtual"><scope>wxPathList</scope><name>operator=</name></member>
       <member refid="classwx_array_string_1a4ccc608a22d5a805ee1374b3446b09ff" prot="public" virt="non-virtual"><scope>wxPathList</scope><name>operator==</name></member>

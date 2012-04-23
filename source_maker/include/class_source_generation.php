@@ -23,7 +23,7 @@ function classes_get_property_code($class_name)
 		foreach($defClassProperties[$class_name] as $property_name=>$property_attributes)
 		{
 			$type_modifier = "";
-			$standard_type = parameter_type($property_attributes["type"], "MINIT", $class_name, $type_modifier, true);
+			$standard_type = parameter_type($property_attributes["type"], false, "MINIT", $class_name, $type_modifier, true);
 			$property_type = str_replace(array("const ", "&", "*"), "", $property_attributes["type"]);
 			
 			switch($type_modifier)

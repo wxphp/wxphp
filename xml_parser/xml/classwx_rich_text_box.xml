@@ -23,7 +23,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="3270"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextbuffer.h" line="3270"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_box_1a619b60f9d68b780c9500e3fb10f36568" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -40,7 +40,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="3276" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="3276" bodyend="3276"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextbuffer.h" line="3276" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextbuffer.h" bodystart="3276" bodyend="3276"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_box_1a4f5c83ec0d835a9da96ddd10ee39e6a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -84,7 +84,7 @@
 <para>Some objects may ignore the range (for example paragraphs) while others must obey it (lines, to implement wrapping) </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="3280"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextbuffer.h" line="3280"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_box_1a5bee4d1f3363485adff54bd4b28b3c2e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -100,7 +100,7 @@
 <para>This must be overridden for wxXmlNode-base XML export to work. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="3282" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="3282" bodyend="3282"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextbuffer.h" line="3282" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextbuffer.h" bodystart="3282" bodyend="3282"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_box_1addb821314543e9590c9bae3395b2fa9d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
         <type>bool</type>
@@ -116,7 +116,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="3284" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="3284" bodyend="3284"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextbuffer.h" line="3284" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextbuffer.h" bodystart="3284" bodyend="3284"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_box_1a91ac256775325790d9382207a5b45ae3" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -139,7 +139,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="3286"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextbuffer.h" line="3286"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_box_1a8b41bb049977f659b26a4c523dee97c7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -155,7 +155,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="3288" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="3288" bodyend="3288"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextbuffer.h" line="3288" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextbuffer.h" bodystart="3288" bodyend="3288"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_box_1a0e72553c7dbe13741b09c921706a06b8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
         <type><ref refid="classwx_rich_text_object" kindref="compound">wxRichTextObject</ref> *</type>
@@ -171,7 +171,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="3294" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="3294" bodyend="3294"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextbuffer.h" line="3294" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextbuffer.h" bodystart="3294" bodyend="3294"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_box_1aa6d07e836081ae86613ccd7820a25ccd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -188,7 +188,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="3296"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextbuffer.h" line="3296"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -198,368 +198,368 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxrichtext" kindref="member">wxRichText</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__richtext" kindref="compound">Rich Text</ref></para><para><simplesect kind="see"><para><ref refid="classwx_rich_text_paragraph_layout_box" kindref="compound">wxRichTextParagraphLayoutBox</ref>, <ref refid="classwx_rich_text_object" kindref="compound">wxRichTextObject</ref>, <ref refid="classwx_rich_text_buffer" kindref="compound">wxRichTextBuffer</ref>, <ref refid="classwx_rich_text_ctrl" kindref="compound">wxRichTextCtrl</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="9283">
+      <node id="9466">
         <label>wxRichTextObject</label>
         <link refid="classwx_rich_text_object"/>
-        <childnode refid="9284" relation="public-inheritance">
+        <childnode refid="9467" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9284">
+      <node id="9467">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="9282">
+      <node id="9465">
         <label>wxRichTextCompositeObject</label>
         <link refid="classwx_rich_text_composite_object"/>
-        <childnode refid="9283" relation="public-inheritance">
+        <childnode refid="9466" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9280">
+      <node id="9463">
         <label>wxRichTextBox</label>
         <link refid="classwx_rich_text_box"/>
-        <childnode refid="9281" relation="public-inheritance">
+        <childnode refid="9464" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9286">
+      <node id="9469">
         <label>wxRichTextTable</label>
         <link refid="classwx_rich_text_table"/>
-        <childnode refid="9280" relation="public-inheritance">
+        <childnode refid="9463" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9285">
+      <node id="9468">
         <label>wxRichTextCell</label>
         <link refid="classwx_rich_text_cell"/>
-        <childnode refid="9280" relation="public-inheritance">
+        <childnode refid="9463" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9281">
+      <node id="9464">
         <label>wxRichTextParagraphLayoutBox</label>
         <link refid="classwx_rich_text_paragraph_layout_box"/>
-        <childnode refid="9282" relation="public-inheritance">
+        <childnode refid="9465" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="9301">
+      <node id="9484">
         <label>wxString</label>
         <link refid="classwx_string"/>
       </node>
-      <node id="9314">
+      <node id="9497">
         <label>wxRichTextRenderer</label>
         <link refid="classwx_rich_text_renderer"/>
-        <childnode refid="9291" relation="public-inheritance">
+        <childnode refid="9474" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9319">
+      <node id="9502">
         <label>wxCommandProcessor</label>
         <link refid="classwx_command_processor"/>
-        <childnode refid="9291" relation="public-inheritance">
+        <childnode refid="9474" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9290">
+      <node id="9473">
         <label>wxRichTextObject</label>
         <link refid="classwx_rich_text_object"/>
-        <childnode refid="9291" relation="public-inheritance">
+        <childnode refid="9474" relation="public-inheritance">
         </childnode>
-        <childnode refid="9293" relation="usage">
+        <childnode refid="9476" relation="usage">
           <edgelabel>m_size</edgelabel>
           <edgelabel>m_minSize</edgelabel>
           <edgelabel>m_maxSize</edgelabel>
         </childnode>
-        <childnode refid="9294" relation="usage">
+        <childnode refid="9477" relation="usage">
           <edgelabel>m_pos</edgelabel>
         </childnode>
-        <childnode refid="9295" relation="usage">
+        <childnode refid="9478" relation="usage">
           <edgelabel>m_attributes</edgelabel>
         </childnode>
-        <childnode refid="9304" relation="usage">
+        <childnode refid="9487" relation="usage">
           <edgelabel>m_properties</edgelabel>
         </childnode>
-        <childnode refid="9290" relation="usage">
+        <childnode refid="9473" relation="usage">
           <edgelabel>m_parent</edgelabel>
         </childnode>
-        <childnode refid="9305" relation="usage">
+        <childnode refid="9488" relation="usage">
           <edgelabel>m_ownRange</edgelabel>
           <edgelabel>m_range</edgelabel>
         </childnode>
       </node>
-      <node id="9303">
+      <node id="9486">
         <label>wxTextAttrBorder</label>
         <link refid="classwx_text_attr_border"/>
-        <childnode refid="9299" relation="usage">
+        <childnode refid="9482" relation="usage">
           <edgelabel>m_borderWidth</edgelabel>
         </childnode>
       </node>
-      <node id="9317">
+      <node id="9500">
         <label>wxRichTextCommand</label>
         <link refid="classwx_rich_text_command"/>
-        <childnode refid="9318" relation="public-inheritance">
+        <childnode refid="9501" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9291">
+      <node id="9474">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="9292" relation="usage">
+        <childnode refid="9475" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="9315">
+      <node id="9498">
         <label>wxRichTextStyleSheet</label>
         <link refid="classwx_rich_text_style_sheet"/>
-        <childnode refid="9291" relation="public-inheritance">
+        <childnode refid="9474" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9304">
+      <node id="9487">
         <label>wxRichTextProperties</label>
         <link refid="classwx_rich_text_properties"/>
-        <childnode refid="9291" relation="public-inheritance">
+        <childnode refid="9474" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9309">
+      <node id="9492">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="9291" relation="public-inheritance">
+        <childnode refid="9474" relation="public-inheritance">
         </childnode>
-        <childnode refid="9310" relation="public-inheritance">
+        <childnode refid="9493" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9289">
+      <node id="9472">
         <label>wxRichTextCompositeObject</label>
         <link refid="classwx_rich_text_composite_object"/>
-        <childnode refid="9290" relation="public-inheritance">
+        <childnode refid="9473" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9287">
+      <node id="9470">
         <label>wxRichTextBox</label>
         <link refid="classwx_rich_text_box"/>
-        <childnode refid="9288" relation="public-inheritance">
+        <childnode refid="9471" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9305">
+      <node id="9488">
         <label>wxRichTextRange</label>
         <link refid="classwx_rich_text_range"/>
       </node>
-      <node id="9293">
+      <node id="9476">
         <label>wxSize</label>
         <link refid="classwx_size"/>
       </node>
-      <node id="9296">
+      <node id="9479">
         <label>wxTextAttr</label>
         <link refid="classwx_text_attr"/>
       </node>
-      <node id="9295">
+      <node id="9478">
         <label>wxRichTextAttr</label>
         <link refid="classwx_rich_text_attr"/>
-        <childnode refid="9296" relation="public-inheritance">
+        <childnode refid="9479" relation="public-inheritance">
         </childnode>
-        <childnode refid="9297" relation="usage">
+        <childnode refid="9480" relation="usage">
           <edgelabel>m_textBoxAttr</edgelabel>
         </childnode>
       </node>
-      <node id="9310">
+      <node id="9493">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="9307">
+      <node id="9490">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="9308" relation="public-inheritance">
+        <childnode refid="9491" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9306">
+      <node id="9489">
         <label>wxRichTextCtrl</label>
         <link refid="classwx_rich_text_ctrl"/>
-        <childnode refid="9307" relation="public-inheritance">
+        <childnode refid="9490" relation="public-inheritance">
         </childnode>
-        <childnode refid="9311" relation="usage">
+        <childnode refid="9494" relation="usage">
           <edgelabel>sm_availableFontNames</edgelabel>
         </childnode>
-        <childnode refid="9312" relation="usage">
+        <childnode refid="9495" relation="usage">
           <edgelabel>m_selection</edgelabel>
         </childnode>
-        <childnode refid="9313" relation="usage">
+        <childnode refid="9496" relation="usage">
           <edgelabel>m_buffer</edgelabel>
         </childnode>
-        <childnode refid="9320" relation="usage">
+        <childnode refid="9503" relation="usage">
           <edgelabel>m_fullLayoutTime</edgelabel>
         </childnode>
-        <childnode refid="9290" relation="usage">
+        <childnode refid="9473" relation="usage">
           <edgelabel>m_selectionAnchorObject</edgelabel>
         </childnode>
-        <childnode refid="9288" relation="usage">
+        <childnode refid="9471" relation="usage">
           <edgelabel>m_focusObject</edgelabel>
         </childnode>
-        <childnode refid="9321" relation="usage">
+        <childnode refid="9504" relation="usage">
           <edgelabel>m_textCursor</edgelabel>
           <edgelabel>m_urlCursor</edgelabel>
         </childnode>
-        <childnode refid="9323" relation="usage">
+        <childnode refid="9506" relation="usage">
           <edgelabel>m_contextMenu</edgelabel>
         </childnode>
-        <childnode refid="9324" relation="usage">
+        <childnode refid="9507" relation="usage">
           <edgelabel>m_contextMenuPropertiesInfo</edgelabel>
         </childnode>
       </node>
-      <node id="9308">
+      <node id="9491">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="9309" relation="public-inheritance">
+        <childnode refid="9492" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9297">
+      <node id="9480">
         <label>wxTextBoxAttr</label>
         <link refid="classwx_text_box_attr"/>
-        <childnode refid="9298" relation="usage">
+        <childnode refid="9481" relation="usage">
           <edgelabel>m_size</edgelabel>
           <edgelabel>m_minSize</edgelabel>
           <edgelabel>m_maxSize</edgelabel>
         </childnode>
-        <childnode refid="9300" relation="usage">
+        <childnode refid="9483" relation="usage">
           <edgelabel>m_margins</edgelabel>
           <edgelabel>m_padding</edgelabel>
           <edgelabel>m_position</edgelabel>
         </childnode>
-        <childnode refid="9301" relation="usage">
+        <childnode refid="9484" relation="usage">
           <edgelabel>m_boxStyleName</edgelabel>
         </childnode>
-        <childnode refid="9302" relation="usage">
+        <childnode refid="9485" relation="usage">
           <edgelabel>m_border</edgelabel>
           <edgelabel>m_outline</edgelabel>
         </childnode>
       </node>
-      <node id="9311">
+      <node id="9494">
         <label>wxArrayString</label>
         <link refid="classwx_array_string"/>
       </node>
-      <node id="9300">
+      <node id="9483">
         <label>wxTextAttrDimensions</label>
         <link refid="classwx_text_attr_dimensions"/>
-        <childnode refid="9299" relation="usage">
+        <childnode refid="9482" relation="usage">
           <edgelabel>m_left</edgelabel>
           <edgelabel>m_bottom</edgelabel>
           <edgelabel>m_top</edgelabel>
           <edgelabel>m_right</edgelabel>
         </childnode>
       </node>
-      <node id="9298">
+      <node id="9481">
         <label>wxTextAttrSize</label>
         <link refid="classwx_text_attr_size"/>
-        <childnode refid="9299" relation="usage">
+        <childnode refid="9482" relation="usage">
           <edgelabel>m_width</edgelabel>
           <edgelabel>m_height</edgelabel>
         </childnode>
       </node>
-      <node id="9318">
+      <node id="9501">
         <label>wxCommand</label>
         <link refid="classwx_command"/>
-        <childnode refid="9291" relation="public-inheritance">
+        <childnode refid="9474" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9323">
+      <node id="9506">
         <label>wxMenu</label>
         <link refid="classwx_menu"/>
-        <childnode refid="9309" relation="public-inheritance">
+        <childnode refid="9492" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9324">
+      <node id="9507">
         <label>wxRichTextContextMenuPropertiesInfo</label>
         <link refid="classwx_rich_text_context_menu_properties_info"/>
-        <childnode refid="9311" relation="usage">
+        <childnode refid="9494" relation="usage">
           <edgelabel>m_labels</edgelabel>
         </childnode>
       </node>
-      <node id="9322">
+      <node id="9505">
         <label>wxGDIObject</label>
         <link refid="classwx_g_d_i_object"/>
-        <childnode refid="9291" relation="public-inheritance">
+        <childnode refid="9474" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9299">
+      <node id="9482">
         <label>wxTextAttrDimension</label>
         <link refid="classwx_text_attr_dimension"/>
       </node>
-      <node id="9316">
+      <node id="9499">
         <label>wxRichTextFontTable</label>
         <link refid="classwx_rich_text_font_table"/>
-        <childnode refid="9291" relation="public-inheritance">
+        <childnode refid="9474" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9320">
+      <node id="9503">
         <label>wxLongLong</label>
         <link refid="classwx_long_long"/>
       </node>
-      <node id="9313">
+      <node id="9496">
         <label>wxRichTextBuffer</label>
         <link refid="classwx_rich_text_buffer"/>
-        <childnode refid="9288" relation="public-inheritance">
+        <childnode refid="9471" relation="public-inheritance">
         </childnode>
-        <childnode refid="9314" relation="usage">
+        <childnode refid="9497" relation="usage">
           <edgelabel>sm_renderer</edgelabel>
         </childnode>
-        <childnode refid="9315" relation="usage">
+        <childnode refid="9498" relation="usage">
           <edgelabel>m_styleSheet</edgelabel>
         </childnode>
-        <childnode refid="9316" relation="usage">
+        <childnode refid="9499" relation="usage">
           <edgelabel>m_fontTable</edgelabel>
         </childnode>
-        <childnode refid="9317" relation="usage">
+        <childnode refid="9500" relation="usage">
           <edgelabel>m_batchedCommand</edgelabel>
         </childnode>
-        <childnode refid="9319" relation="usage">
+        <childnode refid="9502" relation="usage">
           <edgelabel>m_commandProcessor</edgelabel>
         </childnode>
-        <childnode refid="9301" relation="usage">
+        <childnode refid="9484" relation="usage">
           <edgelabel>m_batchedCommandsName</edgelabel>
         </childnode>
       </node>
-      <node id="9294">
+      <node id="9477">
         <label>wxPoint</label>
         <link refid="classwx_point"/>
       </node>
-      <node id="9312">
+      <node id="9495">
         <label>wxRichTextSelection</label>
         <link refid="classwx_rich_text_selection"/>
-        <childnode refid="9288" relation="usage">
+        <childnode refid="9471" relation="usage">
           <edgelabel>m_container</edgelabel>
         </childnode>
       </node>
-      <node id="9288">
+      <node id="9471">
         <label>wxRichTextParagraphLayoutBox</label>
         <link refid="classwx_rich_text_paragraph_layout_box"/>
-        <childnode refid="9289" relation="public-inheritance">
+        <childnode refid="9472" relation="public-inheritance">
         </childnode>
-        <childnode refid="9295" relation="usage">
+        <childnode refid="9478" relation="usage">
           <edgelabel>m_defaultAttributes</edgelabel>
         </childnode>
-        <childnode refid="9305" relation="usage">
+        <childnode refid="9488" relation="usage">
           <edgelabel>m_invalidRange</edgelabel>
         </childnode>
-        <childnode refid="9306" relation="usage">
+        <childnode refid="9489" relation="usage">
           <edgelabel>m_ctrl</edgelabel>
         </childnode>
       </node>
-      <node id="9321">
+      <node id="9504">
         <label>wxCursor</label>
         <link refid="classwx_cursor"/>
-        <childnode refid="9322" relation="public-inheritance">
+        <childnode refid="9505" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9302">
+      <node id="9485">
         <label>wxTextAttrBorders</label>
         <link refid="classwx_text_attr_borders"/>
-        <childnode refid="9303" relation="usage">
+        <childnode refid="9486" relation="usage">
           <edgelabel>m_left</edgelabel>
           <edgelabel>m_bottom</edgelabel>
           <edgelabel>m_top</edgelabel>
           <edgelabel>m_right</edgelabel>
         </childnode>
       </node>
-      <node id="9292">
+      <node id="9475">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="3261" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="3260" bodyend="3299"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextbuffer.h" line="3261" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextbuffer.h" bodystart="3260" bodyend="3299"/>
     <listofallmembers>
       <member refid="classwx_rich_text_paragraph_layout_box_1ad22e7586b1fe2993e7a6fc622470b3ad" prot="public" virt="virtual"><scope>wxRichTextBox</scope><name>AcceptsFocus</name></member>
       <member refid="classwx_rich_text_paragraph_layout_box_1aca17a22d4bd06a6c84e36c3c95705f4a" prot="public" virt="virtual"><scope>wxRichTextBox</scope><name>AddImage</name></member>

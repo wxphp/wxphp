@@ -25,7 +25,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataobj.h" line="552"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataobj.h" line="531"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_object_simple_1a20585d2b354e24e5f7b0f4f559f50594" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -39,10 +39,10 @@
         <briefdescription>
 <para>Copy the data to the buffer, return true on success. </para>        </briefdescription>
         <detaileddescription>
-<para>Must be implemented in the derived class if the object supports rendering its data.</para><para><bold>wxPython Note:</bold> When implementing this method in wxPython, no additional parameters are required and the data should be returned from the method as a string. </para>        </detaileddescription>
+<para>Must be implemented in the derived class if the object supports rendering its data. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataobj.h" line="564"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataobj.h" line="538"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_object_simple_1aac4311ab34deb1028d471c6a435574ff" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>size_t</type>
@@ -55,7 +55,7 @@
 <para>Must be implemented in the derived class if the object supports rendering its data. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataobj.h" line="570"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataobj.h" line="544"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_object_simple_1abd9099ed166b9fc902106f06db8a8338" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_data_format" kindref="compound">wxDataFormat</ref> &amp;</type>
@@ -69,7 +69,7 @@
 <para>It is assumed that the format is supported in both directions. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataobj.h" line="576"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataobj.h" line="550"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_object_simple_1a064b6e42ceb86247318e7ab62bb47442" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -88,10 +88,10 @@
         <briefdescription>
 <para>Copy the data from the buffer, return true on success. </para>        </briefdescription>
         <detaileddescription>
-<para>Must be implemented in the derived class if the object supports setting its data.</para><para><bold>wxPython Note:</bold> When implementing this method in wxPython, the data comes as a single string parameter rather than the two shown here. </para>        </detaileddescription>
+<para>Must be implemented in the derived class if the object supports setting its data. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataobj.h" line="588"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataobj.h" line="557"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_object_simple_1adf9d889c7fcc7e05cb6253b3b1e3cb0f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -108,70 +108,70 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataobj.h" line="593"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataobj.h" line="562"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para>This is the simplest possible implementation of the <ref refid="classwx_data_object" kindref="compound">wxDataObject</ref> class. </para>    </briefdescription>
     <detaileddescription>
-<para>The data object of (a class derived from) this class only supports <bold>one format</bold>, so the number of virtual functions to be implemented is reduced.</para><para>Notice that this is still an abstract base class and cannot be used directly, it must be derived. The objects supporting rendering the data must override <ref refid="classwx_data_object_simple_1aac4311ab34deb1028d471c6a435574ff" kindref="member">GetDataSize()</ref> and <ref refid="classwx_data_object_simple_1a20585d2b354e24e5f7b0f4f559f50594" kindref="member">GetDataHere()</ref> while the objects which may be set must override <ref refid="classwx_data_object_simple_1a064b6e42ceb86247318e7ab62bb47442" kindref="member">SetData()</ref>. Of course, the objects supporting both operations must override all three methods.</para><para><bold>wxPython Note:</bold> If you wish to create a derived <ref refid="classwx_data_object_simple" kindref="compound">wxDataObjectSimple</ref> class in wxPython you should derive the class from wxPyDataObjectSimple in order to get Python-aware capabilities for the various virtual methods.</para><para><bold>wxPerl Note:</bold> In wxPerl, you need to derive your data object class from Wx::PlDataObjectSimple.</para><para><heading level="2"></heading>
+<para>The data object of (a class derived from) this class only supports <bold>one format</bold>, so the number of virtual functions to be implemented is reduced.</para><para>Notice that this is still an abstract base class and cannot be used directly, it must be derived. The objects supporting rendering the data must override <ref refid="classwx_data_object_simple_1aac4311ab34deb1028d471c6a435574ff" kindref="member">GetDataSize()</ref> and <ref refid="classwx_data_object_simple_1a20585d2b354e24e5f7b0f4f559f50594" kindref="member">GetDataHere()</ref> while the objects which may be set must override <ref refid="classwx_data_object_simple_1a064b6e42ceb86247318e7ab62bb47442" kindref="member">SetData()</ref>. Of course, the objects supporting both operations must override all three methods.</para><para><bold>wxPerl Note:</bold> In wxPerl, you need to derive your data object class from Wx::PlDataObjectSimple.</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__dnd" kindref="compound">Clipboard and Drag &amp; Drop</ref></para><para><simplesect kind="see"><para><ref refid="overview_dnd" kindref="compound">Drag and Drop Overview</ref>, <ref refid="page_samples_1page_samples_dnd" kindref="member">Drag &amp; Drop Sample</ref>, <ref refid="classwx_file_data_object" kindref="compound">wxFileDataObject</ref>, <ref refid="classwx_text_data_object" kindref="compound">wxTextDataObject</ref>, <ref refid="classwx_bitmap_data_object" kindref="compound">wxBitmapDataObject</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="5262">
+      <node id="5357">
         <label>wxURLDataObject</label>
         <link refid="classwx_u_r_l_data_object"/>
-        <childnode refid="5261" relation="public-inheritance">
+        <childnode refid="5356" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5257">
+      <node id="5352">
         <label>wxDataObject</label>
         <link refid="classwx_data_object"/>
       </node>
-      <node id="5261">
+      <node id="5356">
         <label>wxTextDataObject</label>
         <link refid="classwx_text_data_object"/>
-        <childnode refid="5256" relation="public-inheritance">
+        <childnode refid="5351" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5259">
+      <node id="5354">
         <label>wxCustomDataObject</label>
         <link refid="classwx_custom_data_object"/>
-        <childnode refid="5256" relation="public-inheritance">
+        <childnode refid="5351" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5258">
+      <node id="5353">
         <label>wxBitmapDataObject</label>
         <link refid="classwx_bitmap_data_object"/>
-        <childnode refid="5256" relation="public-inheritance">
+        <childnode refid="5351" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5260">
+      <node id="5355">
         <label>wxFileDataObject</label>
         <link refid="classwx_file_data_object"/>
-        <childnode refid="5256" relation="public-inheritance">
+        <childnode refid="5351" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5256">
+      <node id="5351">
         <label>wxDataObjectSimple</label>
         <link refid="classwx_data_object_simple"/>
-        <childnode refid="5257" relation="public-inheritance">
+        <childnode refid="5352" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="5264">
+      <node id="5359">
         <label>wxDataObject</label>
         <link refid="classwx_data_object"/>
       </node>
-      <node id="5263">
+      <node id="5358">
         <label>wxDataObjectSimple</label>
         <link refid="classwx_data_object_simple"/>
-        <childnode refid="5264" relation="public-inheritance">
+        <childnode refid="5359" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataobj.h" line="546" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataobj.h" bodystart="545" bodyend="594"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataobj.h" line="525" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dataobj.h" bodystart="524" bodyend="563"/>
     <listofallmembers>
       <member refid="classwx_data_object_1a7623fd02a6bef5dba7c96ff0a1a692efa1f94b69e55238c5470f85e252b5fd8df" prot="public" virt="non-virtual"><scope>wxDataObjectSimple</scope><name>Both</name></member>
       <member refid="classwx_data_object_1a7623fd02a6bef5dba7c96ff0a1a692ef" prot="public" virt="non-virtual"><scope>wxDataObjectSimple</scope><name>Direction</name></member>

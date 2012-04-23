@@ -16,7 +16,7 @@
 <para>Use <ref refid="classwx_command_link_button_1a7e31d9eaa8da537f9509ea5bd9df2600" kindref="member">Create()</ref> to really create the control. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/commandlinkbutton.h" line="55"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/commandlinkbutton.h" line="55"/>
       </memberdef>
       <memberdef kind="function" id="classwx_command_link_button_1a193413ad8afa7895bdb0ef133a454234" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -137,7 +137,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/commandlinkbutton.h" line="93"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/commandlinkbutton.h" line="93"/>
       </memberdef>
       <memberdef kind="function" id="classwx_command_link_button_1a7e31d9eaa8da537f9509ea5bd9df2600" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -193,7 +193,7 @@
 <para>For more details, see <ref refid="classwx_command_link_button_1a05be41a7e1fd702cee7662e1a6ae9293" kindref="member">wxCommandLinkButton()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/commandlinkbutton.h" line="106"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/commandlinkbutton.h" line="106"/>
       </memberdef>
       <memberdef kind="function" id="classwx_command_link_button_1a0e496ccc683c5060796415d108381597" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -229,7 +229,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/commandlinkbutton.h" line="120"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/commandlinkbutton.h" line="120"/>
       </memberdef>
       <memberdef kind="function" id="classwx_command_link_button_1abc8a21805f1a8c07734a3b781e8dd18b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -255,7 +255,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/commandlinkbutton.h" line="129"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/commandlinkbutton.h" line="129"/>
       </memberdef>
       <memberdef kind="function" id="classwx_command_link_button_1a62f9b9ae4a163d4e202498edcccedea3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -271,7 +271,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/commandlinkbutton.h" line="140"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/commandlinkbutton.h" line="140"/>
       </memberdef>
       <memberdef kind="function" id="classwx_command_link_button_1a6cecd5ecdb7eff45519d02a6766c5b07" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -296,7 +296,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/commandlinkbutton.h" line="148"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/commandlinkbutton.h" line="148"/>
       </memberdef>
       <memberdef kind="function" id="classwx_command_link_button_1a67c8e23fe483fed7ea7e9e337d880c90" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -321,7 +321,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/commandlinkbutton.h" line="156"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/commandlinkbutton.h" line="156"/>
       </memberdef>
       <memberdef kind="function" id="classwx_command_link_button_1a7ecb32a9ea1c6dd9837ce4b3fe170787" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -335,7 +335,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/commandlinkbutton.h" line="164"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/commandlinkbutton.h" line="164"/>
       </memberdef>
       <memberdef kind="function" id="classwx_command_link_button_1a6b6fb7dcf99ac3282577ddf22be452c0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -349,120 +349,120 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/commandlinkbutton.h" line="172"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/commandlinkbutton.h" line="172"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
-<para>Objects of this class are similar in appearance to the normal wxButtons but to the links in a web page in functionality. </para>    </briefdescription>
+<para>Objects of this class are similar in appearance to the normal wxButtons but are similar to the links in a web page in functionality. </para>    </briefdescription>
     <detaileddescription>
 <para>Pressing such button usually results in switching to another window of the program and so they can be used as a replacement for the &quot;Next&quot; button in a multi-page dialog (such as <ref refid="classwx_wizard" kindref="compound">wxWizard</ref>), for example.</para><para>Their advantage compared to the ordinary wxButtons is that they emphasize the action of switching the window and also that they allow to give more detailed explanation to the user because, in addition to the short button label, they also show a longer description string.</para><para>The short, title-like, part of the label is called the <emphasis>main label</emphasis> and the longer description is the <emphasis>note</emphasis>. Both of them can be set and queried independently using wxCommandLinkButton-specific methods such as <ref refid="classwx_command_link_button_1a6cecd5ecdb7eff45519d02a6766c5b07" kindref="member">SetMainLabel()</ref> or <ref refid="classwx_command_link_button_1a6b6fb7dcf99ac3282577ddf22be452c0" kindref="member">GetNote()</ref> or also via <ref refid="classwx_command_link_button_1abc8a21805f1a8c07734a3b781e8dd18b" kindref="member">SetLabel()</ref> and <ref refid="classwx_command_link_button_1a62f9b9ae4a163d4e202498edcccedea3" kindref="member">GetLabel()</ref> methods inherited from <ref refid="classwx_button" kindref="compound">wxButton</ref>. When using the latter, the main label and the note are concatenated into a single string using a new line character between them (notice that the note part can have more new lines in it).</para><para><ref refid="classwx_command_link_button" kindref="compound">wxCommandLinkButton</ref> generates the same event as <ref refid="classwx_button" kindref="compound">wxButton</ref> but doesn&apos;t support any of wxButton-specific styles nor adds any new styles of its own.</para><para>Currently this class uses native implementation under Windows Vista and later versions and a generic implementation for the other platforms and earlier Windows versions.</para><para><simplesect kind="since"><para>2.9.2</para></simplesect>
 <heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref> <htmlonly> &lt;br&gt;&lt;div&gt;&lt;span class=&apos;appearance&apos;&gt;Appearance:&lt;/span&gt;&lt;br&gt;&lt;table class=&apos;appearance&apos;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&apos;wxmsw/commandlinkbutton.png&apos; alt=&apos;wxMSW appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxgtk/commandlinkbutton.png&apos; alt=&apos;wxGTK appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxmac/commandlinkbutton.png&apos; alt=&apos;wxMac appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;wxMSW appearance&lt;/td&gt;&lt;td&gt;wxGTK appearance&lt;/td&gt;&lt;td&gt;wxMac appearance&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt; </htmlonly></para><para><simplesect kind="see"><para><ref refid="classwx_button" kindref="compound">wxButton</ref>, <ref refid="classwx_bitmap_button" kindref="compound">wxBitmapButton</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="5012">
+      <node id="5105">
         <label>wxCommandLinkButton</label>
         <link refid="classwx_command_link_button"/>
-        <childnode refid="5013" relation="public-inheritance">
+        <childnode refid="5106" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5018">
+      <node id="5111">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="5017">
+      <node id="5110">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="5018" relation="public-inheritance">
+        <childnode refid="5111" relation="public-inheritance">
         </childnode>
-        <childnode refid="5019" relation="public-inheritance">
+        <childnode refid="5112" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5019">
+      <node id="5112">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="5015">
+      <node id="5108">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="5016" relation="public-inheritance">
+        <childnode refid="5109" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5016">
+      <node id="5109">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="5017" relation="public-inheritance">
+        <childnode refid="5110" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5014">
+      <node id="5107">
         <label>wxAnyButton</label>
         <link refid="classwx_any_button"/>
-        <childnode refid="5015" relation="public-inheritance">
+        <childnode refid="5108" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5013">
+      <node id="5106">
         <label>wxButton</label>
         <link refid="classwx_button"/>
-        <childnode refid="5014" relation="public-inheritance">
+        <childnode refid="5107" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="5020">
+      <node id="5113">
         <label>wxCommandLinkButton</label>
         <link refid="classwx_command_link_button"/>
-        <childnode refid="5021" relation="public-inheritance">
+        <childnode refid="5114" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5026">
+      <node id="5119">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="5027" relation="usage">
+        <childnode refid="5120" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="5025">
+      <node id="5118">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="5026" relation="public-inheritance">
+        <childnode refid="5119" relation="public-inheritance">
         </childnode>
-        <childnode refid="5028" relation="public-inheritance">
+        <childnode refid="5121" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5028">
+      <node id="5121">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="5023">
+      <node id="5116">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="5024" relation="public-inheritance">
+        <childnode refid="5117" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5024">
+      <node id="5117">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="5025" relation="public-inheritance">
+        <childnode refid="5118" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5022">
+      <node id="5115">
         <label>wxAnyButton</label>
         <link refid="classwx_any_button"/>
-        <childnode refid="5023" relation="public-inheritance">
+        <childnode refid="5116" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5021">
+      <node id="5114">
         <label>wxButton</label>
         <link refid="classwx_button"/>
-        <childnode refid="5022" relation="public-inheritance">
+        <childnode refid="5115" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5027">
+      <node id="5120">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/commandlinkbutton.h" line="48" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/commandlinkbutton.h" bodystart="47" bodyend="173"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/commandlinkbutton.h" line="48" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/commandlinkbutton.h" bodystart="47" bodyend="173"/>
     <listofallmembers>
       <member refid="classwx_window_1a3afbd49b1ea2f8275e3600dcac102923" prot="public" virt="virtual"><scope>wxCommandLinkButton</scope><name>AcceptsFocus</name></member>
       <member refid="classwx_window_1a2370bdd3ab08e7ef3c7555c6aa8301b8" prot="public" virt="virtual"><scope>wxCommandLinkButton</scope><name>AcceptsFocusFromKeyboard</name></member>
@@ -639,6 +639,7 @@
       <member refid="classwx_window_1aa90a260c0a835a133043460b7d0024a8" prot="public" virt="virtual"><scope>wxCommandLinkButton</scope><name>InitDialog</name></member>
       <member refid="classwx_window_1ae1b56ca87d8590ee5e576012229a380a" prot="public" virt="non-virtual"><scope>wxCommandLinkButton</scope><name>InvalidateBestSize</name></member>
       <member refid="classwx_window_1af918e6fe8565c2d5235973cc3de84a43" prot="public" virt="non-virtual"><scope>wxCommandLinkButton</scope><name>IsBeingDeleted</name></member>
+      <member refid="classwx_window_1a469f0881da248d37691440c9d4cc7200" prot="public" virt="non-virtual"><scope>wxCommandLinkButton</scope><name>IsDescendant</name></member>
       <member refid="classwx_window_1a9d1be1bbb625ebf87ad4ad47e49a0194" prot="public" virt="virtual"><scope>wxCommandLinkButton</scope><name>IsDoubleBuffered</name></member>
       <member refid="classwx_window_1a59452a5bd42f5ea4b31d7fc4aa59644f" prot="public" virt="non-virtual"><scope>wxCommandLinkButton</scope><name>IsEnabled</name></member>
       <member refid="classwx_window_1af27ef77c913e32050543f3b0ca435a0d" prot="public" virt="non-virtual"><scope>wxCommandLinkButton</scope><name>IsExposed</name></member>
@@ -654,13 +655,13 @@
       <member refid="classwx_window_1a72d70fd14e3565bf782fbcd3271d8930" prot="public" virt="virtual"><scope>wxCommandLinkButton</scope><name>IsShownOnScreen</name></member>
       <member refid="classwx_window_1a657ef8b6055eb06df894ac5e6ddfecf8" prot="public" virt="non-virtual"><scope>wxCommandLinkButton</scope><name>IsThisEnabled</name></member>
       <member refid="classwx_window_1a0002826ad05f2a5661b4c8995713f37f" prot="public" virt="virtual"><scope>wxCommandLinkButton</scope><name>IsTopLevel</name></member>
+      <member refid="classwx_window_1a7940d510c5bdc062a2b109a1022dd8c2" prot="public" virt="virtual"><scope>wxCommandLinkButton</scope><name>IsTransparentBackgroundSupported</name></member>
       <member refid="classwx_evt_handler_1a360fdeefcf53b62fb49fb828406bb8a6" prot="public" virt="non-virtual"><scope>wxCommandLinkButton</scope><name>IsUnlinked</name></member>
       <member refid="classwx_window_1a1b143c3e72bd0af533b76db4830a6113" prot="public" virt="virtual"><scope>wxCommandLinkButton</scope><name>Layout</name></member>
       <member refid="classwx_window_1ade808784f0e64d9985e2f279b5ca8c02" prot="public" virt="non-virtual"><scope>wxCommandLinkButton</scope><name>LineDown</name></member>
       <member refid="classwx_window_1afc0816a174ceee6d36d1995c6824a273" prot="public" virt="non-virtual"><scope>wxCommandLinkButton</scope><name>LineUp</name></member>
       <member refid="classwx_window_1a124944524f36b71385dad8fddaad8ded" prot="public" virt="virtual"><scope>wxCommandLinkButton</scope><name>Lower</name></member>
       <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxCommandLinkButton</scope><name>m_refData</name></member>
-      <member refid="classwx_window_1a192fc8b467845d093c16452db96c65c5" prot="public" virt="virtual"><scope>wxCommandLinkButton</scope><name>MakeModal</name></member>
       <member refid="classwx_window_1ab1cb98c8d25b9e6ff7b706b1446c3df7" prot="public" virt="non-virtual"><scope>wxCommandLinkButton</scope><name>Move</name></member>
       <member refid="classwx_window_1a22a22c1e23ca05776707e7999d8047fe" prot="public" virt="non-virtual"><scope>wxCommandLinkButton</scope><name>Move</name></member>
       <member refid="classwx_window_1a79e66079125e8420de269811bdb6f2b6" prot="public" virt="non-virtual"><scope>wxCommandLinkButton</scope><name>MoveAfterInTabOrder</name></member>
@@ -795,7 +796,6 @@
       <member refid="classwx_window_1a88cc65e424a129d9b0057756cdb67ec9" prot="public" virt="virtual"><scope>wxCommandLinkButton</scope><name>TransferDataToWindow</name></member>
       <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxCommandLinkButton</scope><name>TryAfter</name></member>
       <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxCommandLinkButton</scope><name>TryBefore</name></member>
-      <member refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" virt="non-virtual"><scope>wxCommandLinkButton</scope><name>TryThis</name></member>
       <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxCommandLinkButton</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxCommandLinkButton</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a22e5db2ec1d19c8252c056fd116975d7" prot="public" virt="non-virtual"><scope>wxCommandLinkButton</scope><name>Unlink</name></member>

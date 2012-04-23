@@ -24,7 +24,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/taskbar.h" line="26"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/taskbar.h" line="38"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -33,49 +33,49 @@
 <para>For a list of the event macros meant to be used with <ref refid="classwx_task_bar_icon_event" kindref="compound">wxTaskBarIconEvent</ref>, please look at <ref refid="classwx_task_bar_icon" kindref="compound">wxTaskBarIcon</ref> description.</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10711">
+      <node id="10896">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="10709">
+      <node id="10894">
         <label>wxTaskBarIconEvent</label>
         <link refid="classwx_task_bar_icon_event"/>
-        <childnode refid="10710" relation="public-inheritance">
+        <childnode refid="10895" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10710">
+      <node id="10895">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="10711" relation="public-inheritance">
+        <childnode refid="10896" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10714">
+      <node id="10899">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="10715" relation="usage">
+        <childnode refid="10900" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="10712">
+      <node id="10897">
         <label>wxTaskBarIconEvent</label>
         <link refid="classwx_task_bar_icon_event"/>
-        <childnode refid="10713" relation="public-inheritance">
+        <childnode refid="10898" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10713">
+      <node id="10898">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="10714" relation="public-inheritance">
+        <childnode refid="10899" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10715">
+      <node id="10900">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/taskbar.h" line="21" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/taskbar.h" bodystart="20" bodyend="27"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/taskbar.h" line="33" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/taskbar.h" bodystart="32" bodyend="39"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxTaskBarIconEvent</scope><name>AllocExclusive</name></member>
       <member refid="classwx_event_1a26878097a702e8d0368da150125d4158" prot="public" virt="pure-virtual"><scope>wxTaskBarIconEvent</scope><name>Clone</name></member>

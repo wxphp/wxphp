@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="515"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" line="515"/>
       </memberdef>
       <memberdef kind="function" id="classwx_log_buffer_1af1e67e3ce1ef590448506419c046932c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="522"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" line="522"/>
       </memberdef>
       <memberdef kind="function" id="classwx_log_buffer_1a51d7b829b081cba1ce99301f38294b6f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -43,7 +43,7 @@
 <para>Messages from different log function calls are separated with the new lines in the buffer. The buffer can be cleared by <ref refid="classwx_log_buffer_1af1e67e3ce1ef590448506419c046932c" kindref="member">Flush()</ref> which will also show the current contents to the user. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="530"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" line="530"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -52,30 +52,30 @@
 <para>The messages from different log function calls are separated by the new lines.</para><para>All the messages collected so far can be shown to the user (and the current buffer cleared) by calling the overloaded <ref refid="classwx_log_buffer_1af1e67e3ce1ef590448506419c046932c" kindref="member">wxLogBuffer::Flush</ref> method.</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__logging" kindref="compound">Logging</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7500">
+      <node id="7698">
         <label>wxLogBuffer</label>
         <link refid="classwx_log_buffer"/>
-        <childnode refid="7501" relation="public-inheritance">
+        <childnode refid="7699" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7501">
+      <node id="7699">
         <label>wxLog</label>
         <link refid="classwx_log"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7502">
+      <node id="7700">
         <label>wxLogBuffer</label>
         <link refid="classwx_log_buffer"/>
-        <childnode refid="7503" relation="public-inheritance">
+        <childnode refid="7701" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7503">
+      <node id="7701">
         <label>wxLog</label>
         <link refid="classwx_log"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="510" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" bodystart="509" bodyend="531"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" line="510" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" bodystart="509" bodyend="531"/>
     <listofallmembers>
       <member refid="classwx_log_1a4c11ee23ce5264b6c5921a17610cda13" prot="public" virt="non-virtual"><scope>wxLogBuffer</scope><name>AddTraceMask</name></member>
       <member refid="classwx_log_1ac6b25e807e4948795aea21def6b5c1e4" prot="public" virt="non-virtual"><scope>wxLogBuffer</scope><name>ClearTraceMasks</name></member>

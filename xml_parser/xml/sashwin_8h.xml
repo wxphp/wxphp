@@ -50,7 +50,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sashwin.h" line="14" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sashwin.h" bodystart="13" bodyend="20"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sashwin.h" line="14" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/sashwin.h" bodystart="13" bodyend="20"/>
       </memberdef>
       <memberdef kind="enum" id="sashwin_8h_1a2085e8b6992690a1660956bebad50ee1" prot="public" static="no">
         <name>wxSashDragStatus</name>
@@ -74,13 +74,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sashwin.h" line="26" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sashwin.h" bodystart="25" bodyend="29"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sashwin.h" line="26" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/sashwin.h" bodystart="25" bodyend="29"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sashwin.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sashwin.h"/>
   </compounddef>
 </doxygen>

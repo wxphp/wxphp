@@ -61,7 +61,7 @@ digraph Dependancies
 <listitem><para><ref refid="classwx_socket_output_stream" kindref="compound">wxSocketOutputStream</ref> and <ref refid="classwx_socket_input_stream" kindref="compound">wxSocketInputStream</ref> </para></listitem>
 <listitem><para>sockets-based IPC classes (<ref refid="classwx_t_c_p_server" kindref="compound">wxTCPServer</ref>, <ref refid="classwx_t_c_p_client" kindref="compound">wxTCPClient</ref> and <ref refid="classwx_t_c_p_connection" kindref="compound">wxTCPConnection</ref>) </para></listitem>
 <listitem><para><ref refid="classwx_u_r_l" kindref="compound">wxURL</ref> </para></listitem>
-<listitem><para>wxInternetFSHandler (a <ref refid="classwx_file_system" kindref="compound">wxFileSystem</ref> handler)</para></listitem>
+<listitem><para><ref refid="classwx_internet_f_s_handler" kindref="compound">wxInternetFSHandler</ref> (a <ref refid="classwx_file_system" kindref="compound">wxFileSystem</ref> handler)</para></listitem>
 </itemizedlist>
 Requires <ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref>.</para></sect1>
 <sect1 id="page_libs_1page_libs_wxpropgrid">

@@ -19,7 +19,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="327"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="327"/>
       </memberdef>
       <memberdef kind="function" id="classwx_propagation_disabler_1af0c3b73e526fbe6efd6bf8f5754ed64e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -32,14 +32,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="328"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="328"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para>Helper class to temporarily change an event to not propagate. </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="325" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="324" bodyend="329"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="325" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="324" bodyend="329"/>
     <listofallmembers>
       <member refid="classwx_propagation_disabler_1a4d74068643d2673cfd4c44850856f6e4" prot="public" virt="non-virtual"><scope>wxPropagationDisabler</scope><name>wxPropagationDisabler</name></member>
       <member refid="classwx_propagation_disabler_1af0c3b73e526fbe6efd6bf8f5754ed64e" prot="public" virt="non-virtual"><scope>wxPropagationDisabler</scope><name>~wxPropagationDisabler</name></member>

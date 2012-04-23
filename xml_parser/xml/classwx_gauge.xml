@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gauge.h" line="61"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gauge.h" line="61"/>
       </memberdef>
       <memberdef kind="function" id="classwx_gauge_1a6a258fc160c4b1899b3e8e8f92c6b508" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -124,7 +124,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gauge.h" line="92"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gauge.h" line="92"/>
       </memberdef>
       <memberdef kind="function" id="classwx_gauge_1aab209d1f66bf050fff0751c2a0170170" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -137,7 +137,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gauge.h" line="97"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gauge.h" line="97"/>
       </memberdef>
       <memberdef kind="function" id="classwx_gauge_1a5379a52a184c13c88a78a6e23d10982f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -187,7 +187,7 @@
 <para>See <ref refid="classwx_gauge_1a8bf73ec5e07533060f2579c72b8fc262" kindref="member">wxGauge()</ref> for further details. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gauge.h" line="107"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gauge.h" line="107"/>
       </memberdef>
       <memberdef kind="function" id="classwx_gauge_1aeb6c53ea3c8986eee4c2697a5ecbc96f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -202,7 +202,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gauge.h" line="116"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gauge.h" line="116"/>
       </memberdef>
       <memberdef kind="function" id="classwx_gauge_1a9271d3e8eaa1dccbb6d816595c82f0f0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -216,7 +216,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gauge.h" line="123"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gauge.h" line="123"/>
       </memberdef>
       <memberdef kind="function" id="classwx_gauge_1aaadb89191113b2afc1d17f69b2d249da" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -231,7 +231,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gauge.h" line="132"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gauge.h" line="132"/>
       </memberdef>
       <memberdef kind="function" id="classwx_gauge_1a1d42261b2f730e282833e16550a3c545" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -245,7 +245,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gauge.h" line="139"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gauge.h" line="139"/>
       </memberdef>
       <memberdef kind="function" id="classwx_gauge_1af06288a308b1367f5ba7e1111b02a203" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -258,7 +258,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gauge.h" line="145"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gauge.h" line="145"/>
       </memberdef>
       <memberdef kind="function" id="classwx_gauge_1a45c379e7a36861aa4cf4a381f8dc1e31" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -272,7 +272,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gauge.h" line="155"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gauge.h" line="155"/>
       </memberdef>
       <memberdef kind="function" id="classwx_gauge_1aadfa19f27fa820ef70007225ff0a0f19" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -291,7 +291,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gauge.h" line="165"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gauge.h" line="165"/>
       </memberdef>
       <memberdef kind="function" id="classwx_gauge_1ad371fb5ea9d29d482baea51f97976123" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -309,7 +309,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gauge.h" line="177"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gauge.h" line="177"/>
       </memberdef>
       <memberdef kind="function" id="classwx_gauge_1a13bd279b2ca9827d280ec27b30f6de70" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -327,7 +327,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gauge.h" line="185"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gauge.h" line="185"/>
       </memberdef>
       <memberdef kind="function" id="classwx_gauge_1a10d32bc2c4c4bb6c45041a0728f601dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -353,7 +353,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gauge.h" line="199"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gauge.h" line="199"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -369,85 +369,85 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref> <htmlonly> &lt;br&gt;&lt;div&gt;&lt;span class=&apos;appearance&apos;&gt;Appearance:&lt;/span&gt;&lt;br&gt;&lt;table class=&apos;appearance&apos;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&apos;wxmsw/gauge.png&apos; alt=&apos;wxMSW appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxgtk/gauge.png&apos; alt=&apos;wxGTK appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxmac/gauge.png&apos; alt=&apos;wxMac appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;wxMSW appearance&lt;/td&gt;&lt;td&gt;wxGTK appearance&lt;/td&gt;&lt;td&gt;wxMac appearance&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt; </htmlonly></para><para><simplesect kind="see"><para><ref refid="classwx_slider" kindref="compound">wxSlider</ref>, <ref refid="classwx_scroll_bar" kindref="compound">wxScrollBar</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="6473">
+      <node id="6623">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="6472">
+      <node id="6622">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="6473" relation="public-inheritance">
+        <childnode refid="6623" relation="public-inheritance">
         </childnode>
-        <childnode refid="6474" relation="public-inheritance">
+        <childnode refid="6624" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6474">
+      <node id="6624">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="6470">
+      <node id="6620">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="6471" relation="public-inheritance">
+        <childnode refid="6621" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6469">
+      <node id="6619">
         <label>wxGauge</label>
         <link refid="classwx_gauge"/>
-        <childnode refid="6470" relation="public-inheritance">
+        <childnode refid="6620" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6471">
+      <node id="6621">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="6472" relation="public-inheritance">
+        <childnode refid="6622" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="6479">
+      <node id="6629">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="6480" relation="usage">
+        <childnode refid="6630" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="6478">
+      <node id="6628">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="6479" relation="public-inheritance">
+        <childnode refid="6629" relation="public-inheritance">
         </childnode>
-        <childnode refid="6481" relation="public-inheritance">
+        <childnode refid="6631" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6481">
+      <node id="6631">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="6476">
+      <node id="6626">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="6477" relation="public-inheritance">
+        <childnode refid="6627" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6475">
+      <node id="6625">
         <label>wxGauge</label>
         <link refid="classwx_gauge"/>
-        <childnode refid="6476" relation="public-inheritance">
+        <childnode refid="6626" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6477">
+      <node id="6627">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="6478" relation="public-inheritance">
+        <childnode refid="6628" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6480">
+      <node id="6630">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gauge.h" line="56" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gauge.h" bodystart="55" bodyend="200"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gauge.h" line="56" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/gauge.h" bodystart="55" bodyend="200"/>
     <listofallmembers>
       <member refid="classwx_window_1a3afbd49b1ea2f8275e3600dcac102923" prot="public" virt="virtual"><scope>wxGauge</scope><name>AcceptsFocus</name></member>
       <member refid="classwx_window_1a2370bdd3ab08e7ef3c7555c6aa8301b8" prot="public" virt="virtual"><scope>wxGauge</scope><name>AcceptsFocusFromKeyboard</name></member>
@@ -616,6 +616,7 @@
       <member refid="classwx_window_1aa90a260c0a835a133043460b7d0024a8" prot="public" virt="virtual"><scope>wxGauge</scope><name>InitDialog</name></member>
       <member refid="classwx_window_1ae1b56ca87d8590ee5e576012229a380a" prot="public" virt="non-virtual"><scope>wxGauge</scope><name>InvalidateBestSize</name></member>
       <member refid="classwx_window_1af918e6fe8565c2d5235973cc3de84a43" prot="public" virt="non-virtual"><scope>wxGauge</scope><name>IsBeingDeleted</name></member>
+      <member refid="classwx_window_1a469f0881da248d37691440c9d4cc7200" prot="public" virt="non-virtual"><scope>wxGauge</scope><name>IsDescendant</name></member>
       <member refid="classwx_window_1a9d1be1bbb625ebf87ad4ad47e49a0194" prot="public" virt="virtual"><scope>wxGauge</scope><name>IsDoubleBuffered</name></member>
       <member refid="classwx_window_1a59452a5bd42f5ea4b31d7fc4aa59644f" prot="public" virt="non-virtual"><scope>wxGauge</scope><name>IsEnabled</name></member>
       <member refid="classwx_window_1af27ef77c913e32050543f3b0ca435a0d" prot="public" virt="non-virtual"><scope>wxGauge</scope><name>IsExposed</name></member>
@@ -631,6 +632,7 @@
       <member refid="classwx_window_1a72d70fd14e3565bf782fbcd3271d8930" prot="public" virt="virtual"><scope>wxGauge</scope><name>IsShownOnScreen</name></member>
       <member refid="classwx_window_1a657ef8b6055eb06df894ac5e6ddfecf8" prot="public" virt="non-virtual"><scope>wxGauge</scope><name>IsThisEnabled</name></member>
       <member refid="classwx_window_1a0002826ad05f2a5661b4c8995713f37f" prot="public" virt="virtual"><scope>wxGauge</scope><name>IsTopLevel</name></member>
+      <member refid="classwx_window_1a7940d510c5bdc062a2b109a1022dd8c2" prot="public" virt="virtual"><scope>wxGauge</scope><name>IsTransparentBackgroundSupported</name></member>
       <member refid="classwx_evt_handler_1a360fdeefcf53b62fb49fb828406bb8a6" prot="public" virt="non-virtual"><scope>wxGauge</scope><name>IsUnlinked</name></member>
       <member refid="classwx_gauge_1af06288a308b1367f5ba7e1111b02a203" prot="public" virt="non-virtual"><scope>wxGauge</scope><name>IsVertical</name></member>
       <member refid="classwx_window_1a1b143c3e72bd0af533b76db4830a6113" prot="public" virt="virtual"><scope>wxGauge</scope><name>Layout</name></member>
@@ -638,7 +640,6 @@
       <member refid="classwx_window_1afc0816a174ceee6d36d1995c6824a273" prot="public" virt="non-virtual"><scope>wxGauge</scope><name>LineUp</name></member>
       <member refid="classwx_window_1a124944524f36b71385dad8fddaad8ded" prot="public" virt="virtual"><scope>wxGauge</scope><name>Lower</name></member>
       <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxGauge</scope><name>m_refData</name></member>
-      <member refid="classwx_window_1a192fc8b467845d093c16452db96c65c5" prot="public" virt="virtual"><scope>wxGauge</scope><name>MakeModal</name></member>
       <member refid="classwx_window_1ab1cb98c8d25b9e6ff7b706b1446c3df7" prot="public" virt="non-virtual"><scope>wxGauge</scope><name>Move</name></member>
       <member refid="classwx_window_1a22a22c1e23ca05776707e7999d8047fe" prot="public" virt="non-virtual"><scope>wxGauge</scope><name>Move</name></member>
       <member refid="classwx_window_1a79e66079125e8420de269811bdb6f2b6" prot="public" virt="non-virtual"><scope>wxGauge</scope><name>MoveAfterInTabOrder</name></member>
@@ -764,7 +765,6 @@
       <member refid="classwx_window_1a88cc65e424a129d9b0057756cdb67ec9" prot="public" virt="virtual"><scope>wxGauge</scope><name>TransferDataToWindow</name></member>
       <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxGauge</scope><name>TryAfter</name></member>
       <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxGauge</scope><name>TryBefore</name></member>
-      <member refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" virt="non-virtual"><scope>wxGauge</scope><name>TryThis</name></member>
       <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxGauge</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxGauge</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a22e5db2ec1d19c8252c056fd116975d7" prot="public" virt="non-virtual"><scope>wxGauge</scope><name>Unlink</name></member>

@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/renderer.h" line="93" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/renderer.h" bodystart="93" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/renderer.h" line="93" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/renderer.h" bodystart="93" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structwx_splitter_render_params_1a908fbc631c9c14219b6e813e1dca8e50" prot="public" static="no" mutable="no">
         <type>const bool</type>
@@ -28,7 +28,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/renderer.h" line="99" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/renderer.h" bodystart="99" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/renderer.h" line="99" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/renderer.h" bodystart="99" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structwx_splitter_render_params_1af114db29601f512be4b537476be0d68a" prot="public" static="no" mutable="no">
         <type>const <ref refid="defs_8h_1a11f6efc0e8d8d680f3ec8e82aa4f1770" kindref="member">wxCoord</ref></type>
@@ -41,7 +41,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/renderer.h" line="104" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/renderer.h" bodystart="104" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/renderer.h" line="104" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/renderer.h" bodystart="104" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -68,7 +68,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/renderer.h" line="88"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/renderer.h" line="88"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -76,7 +76,7 @@
     <detaileddescription>
 <para>It doesn&apos;t have any methods and all of its fields are constant, so they can only be examined but not modified.</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__gdi" kindref="compound">Graphics Device Interface (GDI)</ref> </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/renderer.h" line="84" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/renderer.h" bodystart="83" bodyend="105"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/renderer.h" line="84" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/renderer.h" bodystart="83" bodyend="105"/>
     <listofallmembers>
       <member refid="structwx_splitter_render_params_1aa2944fb5e98af468198dfe5046c825b2" prot="public" virt="non-virtual"><scope>wxSplitterRenderParams</scope><name>border</name></member>
       <member refid="structwx_splitter_render_params_1a908fbc631c9c14219b6e813e1dca8e50" prot="public" virt="non-virtual"><scope>wxSplitterRenderParams</scope><name>isHotSensitive</name></member>

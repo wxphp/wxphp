@@ -16,13 +16,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/process.h" line="290" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/process.h" bodystart="290" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/process.h" line="290" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/process.h" bodystart="290" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/process.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/process.h"/>
   </compounddef>
 </doxygen>

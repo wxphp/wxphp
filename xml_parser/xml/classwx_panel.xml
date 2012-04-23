@@ -23,7 +23,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/panel.h" line="46"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/panel.h" line="46"/>
       </memberdef>
       <memberdef kind="function" id="classwx_panel_1a5860a221ee88bd4ea6f0843112523890" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -109,7 +109,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/panel.h" line="72"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/panel.h" line="72"/>
       </memberdef>
       <memberdef kind="function" id="classwx_panel_1a8feabacc22645e4c331516a652a2002d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -122,7 +122,7 @@
 <para>Deletes any child windows before deleting the physical window. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/panel.h" line="77"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/panel.h" line="77"/>
       </memberdef>
       <memberdef kind="function" id="classwx_panel_1ad43482bf961c0a8185624085facd0853" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -136,7 +136,7 @@
 <para>This is reevaluated each time a child window is added or removed from the panel. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/panel.h" line="85"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/panel.h" line="85"/>
       </memberdef>
       <memberdef kind="function" id="classwx_panel_1a3ff58c601a52262e03abf84d3896ff2f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -148,6 +148,7 @@
         <reimplementedby refid="classwx_h_scrolled_window_1a5982d08464fabd3b47543d298b710224">Create</reimplementedby>
         <reimplementedby refid="classwx_v_scrolled_window_1ac6e7a6ace37133efb091b1bf69d09a90">Create</reimplementedby>
         <reimplementedby refid="classwx_v_list_box_1ab04914d5db45af7c3c032e19fa2b2615">Create</reimplementedby>
+        <reimplementedby refid="classwx_property_grid_manager_1ac5197b6834f4dfe5d5864c4af4a06be1">Create</reimplementedby>
         <reimplementedby refid="classwx_html_list_box_1a27e85801bbec57a6d130b214fa5004f7">Create</reimplementedby>
         <param>
           <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
@@ -184,7 +185,7 @@
 <para>See <ref refid="classwx_panel_1abacb5b24465e240cfdc04e069249cbbb" kindref="member">wxPanel()</ref> for details. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/panel.h" line="94"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/panel.h" line="94"/>
       </memberdef>
       <memberdef kind="function" id="classwx_panel_1ab632da62e9cc8969bb25c628a2b8bdee" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -199,7 +200,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/panel.h" line="102"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/panel.h" line="102"/>
       </memberdef>
       <memberdef kind="function" id="classwx_panel_1a6ded9b75baf21e2c9f5496f746b68bf0" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -213,7 +214,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/panel.h" line="108"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/panel.h" line="108"/>
       </memberdef>
       <memberdef kind="function" id="classwx_panel_1a3953dd8ab6e04b15206b24a96c2636a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -240,7 +241,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/panel.h" line="125"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/panel.h" line="125"/>
       </memberdef>
       <memberdef kind="function" id="classwx_panel_1a3764294f9ec0393033efc02860daba5b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -255,7 +256,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/panel.h" line="138"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/panel.h" line="138"/>
       </memberdef>
       <memberdef kind="function" id="classwx_panel_1ae1f608902d585383401423a8e4eefe13" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -268,7 +269,7 @@
 <para>This is only rarely needed. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/panel.h" line="144"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/panel.h" line="144"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -284,145 +285,145 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__miscwnd" kindref="compound">Miscellaneous Windows</ref></para><para><simplesect kind="see"><para><ref refid="classwx_dialog" kindref="compound">wxDialog</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="8557">
+      <node id="8750">
         <label>wxHScrolledWindow</label>
         <link refid="classwx_h_scrolled_window"/>
-        <childnode refid="8551" relation="public-inheritance">
+        <childnode refid="8744" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8559">
+      <node id="8752">
         <label>wxPreviewControlBar</label>
         <link refid="classwx_preview_control_bar"/>
-        <childnode refid="8551" relation="public-inheritance">
+        <childnode refid="8744" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8562">
+      <node id="8755">
         <label>wxVListBox</label>
         <link refid="classwx_v_list_box"/>
-        <childnode refid="8561" relation="public-inheritance">
+        <childnode refid="8754" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8554">
+      <node id="8747">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="8565">
+      <node id="8758">
         <label>wxSimpleHtmlListBox</label>
         <link refid="classwx_simple_html_list_box"/>
-        <childnode refid="8563" relation="public-inheritance">
+        <childnode refid="8756" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8561">
+      <node id="8754">
         <label>wxVScrolledWindow</label>
         <link refid="classwx_v_scrolled_window"/>
-        <childnode refid="8551" relation="public-inheritance">
+        <childnode refid="8744" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8553">
+      <node id="8746">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="8554" relation="public-inheritance">
+        <childnode refid="8747" relation="public-inheritance">
         </childnode>
-        <childnode refid="8555" relation="public-inheritance">
+        <childnode refid="8748" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8551">
+      <node id="8744">
         <label>wxPanel</label>
         <link refid="classwx_panel"/>
-        <childnode refid="8552" relation="public-inheritance">
+        <childnode refid="8745" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8555">
+      <node id="8748">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="8564">
+      <node id="8757">
         <label>wxRichTextStyleListBox</label>
         <link refid="classwx_rich_text_style_list_box"/>
-        <childnode refid="8563" relation="public-inheritance">
+        <childnode refid="8756" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8552">
+      <node id="8745">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="8553" relation="public-inheritance">
+        <childnode refid="8746" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8563">
+      <node id="8756">
         <label>wxHtmlListBox</label>
         <link refid="classwx_html_list_box"/>
-        <childnode refid="8562" relation="public-inheritance">
+        <childnode refid="8755" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8558">
+      <node id="8751">
         <label>wxHVScrolledWindow</label>
         <link refid="classwx_h_v_scrolled_window"/>
-        <childnode refid="8551" relation="public-inheritance">
+        <childnode refid="8744" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8560">
+      <node id="8753">
         <label>wxPropertyGridManager</label>
         <link refid="classwx_property_grid_manager"/>
-        <childnode refid="8551" relation="public-inheritance">
+        <childnode refid="8744" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8567">
+      <node id="8760">
         <label>wxWizardPageSimple</label>
         <link refid="classwx_wizard_page_simple"/>
-        <childnode refid="8566" relation="public-inheritance">
+        <childnode refid="8759" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8556">
+      <node id="8749">
         <label>wxEditableListBox</label>
         <link refid="classwx_editable_list_box"/>
-        <childnode refid="8551" relation="public-inheritance">
+        <childnode refid="8744" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8566">
+      <node id="8759">
         <label>wxWizardPage</label>
         <link refid="classwx_wizard_page"/>
-        <childnode refid="8551" relation="public-inheritance">
+        <childnode refid="8744" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="8571">
+      <node id="8764">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="8572" relation="usage">
+        <childnode refid="8765" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="8570">
+      <node id="8763">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="8571" relation="public-inheritance">
+        <childnode refid="8764" relation="public-inheritance">
         </childnode>
-        <childnode refid="8573" relation="public-inheritance">
+        <childnode refid="8766" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8568">
+      <node id="8761">
         <label>wxPanel</label>
         <link refid="classwx_panel"/>
-        <childnode refid="8569" relation="public-inheritance">
+        <childnode refid="8762" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8573">
+      <node id="8766">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="8569">
+      <node id="8762">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="8570" relation="public-inheritance">
+        <childnode refid="8763" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8572">
+      <node id="8765">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/panel.h" line="40" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/panel.h" bodystart="39" bodyend="145"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/panel.h" line="40" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/panel.h" bodystart="39" bodyend="145"/>
     <listofallmembers>
       <member refid="classwx_panel_1ad43482bf961c0a8185624085facd0853" prot="public" virt="virtual"><scope>wxPanel</scope><name>AcceptsFocus</name></member>
       <member refid="classwx_window_1a2370bdd3ab08e7ef3c7555c6aa8301b8" prot="public" virt="virtual"><scope>wxPanel</scope><name>AcceptsFocusFromKeyboard</name></member>
@@ -580,6 +581,7 @@
       <member refid="classwx_panel_1ab632da62e9cc8969bb25c628a2b8bdee" prot="public" virt="virtual"><scope>wxPanel</scope><name>InitDialog</name></member>
       <member refid="classwx_window_1ae1b56ca87d8590ee5e576012229a380a" prot="public" virt="non-virtual"><scope>wxPanel</scope><name>InvalidateBestSize</name></member>
       <member refid="classwx_window_1af918e6fe8565c2d5235973cc3de84a43" prot="public" virt="non-virtual"><scope>wxPanel</scope><name>IsBeingDeleted</name></member>
+      <member refid="classwx_window_1a469f0881da248d37691440c9d4cc7200" prot="public" virt="non-virtual"><scope>wxPanel</scope><name>IsDescendant</name></member>
       <member refid="classwx_window_1a9d1be1bbb625ebf87ad4ad47e49a0194" prot="public" virt="virtual"><scope>wxPanel</scope><name>IsDoubleBuffered</name></member>
       <member refid="classwx_window_1a59452a5bd42f5ea4b31d7fc4aa59644f" prot="public" virt="non-virtual"><scope>wxPanel</scope><name>IsEnabled</name></member>
       <member refid="classwx_window_1af27ef77c913e32050543f3b0ca435a0d" prot="public" virt="non-virtual"><scope>wxPanel</scope><name>IsExposed</name></member>
@@ -595,13 +597,13 @@
       <member refid="classwx_window_1a72d70fd14e3565bf782fbcd3271d8930" prot="public" virt="virtual"><scope>wxPanel</scope><name>IsShownOnScreen</name></member>
       <member refid="classwx_window_1a657ef8b6055eb06df894ac5e6ddfecf8" prot="public" virt="non-virtual"><scope>wxPanel</scope><name>IsThisEnabled</name></member>
       <member refid="classwx_window_1a0002826ad05f2a5661b4c8995713f37f" prot="public" virt="virtual"><scope>wxPanel</scope><name>IsTopLevel</name></member>
+      <member refid="classwx_window_1a7940d510c5bdc062a2b109a1022dd8c2" prot="public" virt="virtual"><scope>wxPanel</scope><name>IsTransparentBackgroundSupported</name></member>
       <member refid="classwx_evt_handler_1a360fdeefcf53b62fb49fb828406bb8a6" prot="public" virt="non-virtual"><scope>wxPanel</scope><name>IsUnlinked</name></member>
       <member refid="classwx_panel_1a6ded9b75baf21e2c9f5496f746b68bf0" prot="public" virt="virtual"><scope>wxPanel</scope><name>Layout</name></member>
       <member refid="classwx_window_1ade808784f0e64d9985e2f279b5ca8c02" prot="public" virt="non-virtual"><scope>wxPanel</scope><name>LineDown</name></member>
       <member refid="classwx_window_1afc0816a174ceee6d36d1995c6824a273" prot="public" virt="non-virtual"><scope>wxPanel</scope><name>LineUp</name></member>
       <member refid="classwx_window_1a124944524f36b71385dad8fddaad8ded" prot="public" virt="virtual"><scope>wxPanel</scope><name>Lower</name></member>
       <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxPanel</scope><name>m_refData</name></member>
-      <member refid="classwx_window_1a192fc8b467845d093c16452db96c65c5" prot="public" virt="virtual"><scope>wxPanel</scope><name>MakeModal</name></member>
       <member refid="classwx_window_1ab1cb98c8d25b9e6ff7b706b1446c3df7" prot="public" virt="non-virtual"><scope>wxPanel</scope><name>Move</name></member>
       <member refid="classwx_window_1a22a22c1e23ca05776707e7999d8047fe" prot="public" virt="non-virtual"><scope>wxPanel</scope><name>Move</name></member>
       <member refid="classwx_window_1a79e66079125e8420de269811bdb6f2b6" prot="public" virt="non-virtual"><scope>wxPanel</scope><name>MoveAfterInTabOrder</name></member>
@@ -721,7 +723,6 @@
       <member refid="classwx_window_1a88cc65e424a129d9b0057756cdb67ec9" prot="public" virt="virtual"><scope>wxPanel</scope><name>TransferDataToWindow</name></member>
       <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxPanel</scope><name>TryAfter</name></member>
       <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxPanel</scope><name>TryBefore</name></member>
-      <member refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" virt="non-virtual"><scope>wxPanel</scope><name>TryThis</name></member>
       <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxPanel</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxPanel</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a22e5db2ec1d19c8252c056fd116975d7" prot="public" virt="non-virtual"><scope>wxPanel</scope><name>Unlink</name></member>

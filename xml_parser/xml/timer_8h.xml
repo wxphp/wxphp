@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/timer.h" line="10" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/timer.h" bodystart="10" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/timer.h" line="10" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/timer.h" bodystart="10" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="timer_8h_1aa76166f2f2d3551d72a79b706679b726" prot="public" static="no">
         <name>wxTIMER_ONE_SHOT</name>
@@ -26,7 +26,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/timer.h" line="13" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/timer.h" bodystart="13" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/timer.h" line="13" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/timer.h" bodystart="13" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="var">
@@ -41,13 +41,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/timer.h" line="15" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/timer.h" bodystart="15" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/timer.h" line="15" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/timer.h" bodystart="15" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/timer.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/timer.h"/>
   </compounddef>
 </doxygen>

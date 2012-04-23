@@ -2,11 +2,51 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="help_8h" kind="file">
     <compoundname>help.h</compoundname>
+    <innerclass refid="classwx_help_controller_base" prot="public">wxHelpControllerBase</innerclass>
     <innerclass refid="classwx_help_controller" prot="public">wxHelpController</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="help_8h_1acd0d0af47426ef60ed7f286ff8b7a8e8" prot="public" static="no">
+        <name>wxHELP_NETSCAPE</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/help.h" line="10" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/help.h" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="help_8h_1a6545e1763e46507e94ca603a9b75ead9" prot="public" static="no">
+        <name>wxHelpSearchMode</name>
+        <enumvalue id="help_8h_1a6545e1763e46507e94ca603a9b75ead9a1f3f7de276d5faa687322f7e8c276163" prot="public">
+          <name>wxHELP_SEARCH_INDEX</name>
+          <briefdescription>
+<para>Search the index only. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="help_8h_1a6545e1763e46507e94ca603a9b75ead9aa0d270468c352bcf71beda6a6fd543b9" prot="public">
+          <name>wxHELP_SEARCH_ALL</name>
+          <briefdescription>
+<para>Search all entries. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Help search modes for <ref refid="classwx_help_controller_base_1a725195abad79988412d6f9708cee9641" kindref="member">wxHelpController::KeywordSearch()</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/help.h" line="17" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/help.h" bodystart="16" bodyend="20"/>
+      </memberdef>
+      </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/help.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/help.h"/>
   </compounddef>
 </doxygen>

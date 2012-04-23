@@ -3,7 +3,7 @@
   <compounddef id="classwx_persistent_book_ctrl" kind="class" prot="public">
     <compoundname>wxPersistentBookCtrl</compoundname>
     <basecompoundref refid="classwx_persistent_window" prot="public" virt="non-virtual">wxPersistentWindow&lt; wxBookCtrlBase &gt;</basecompoundref>
-    <derivedcompoundref refid="classwx_persistent_tree_book" prot="public" virt="non-virtual">wxPersistentTreeBook</derivedcompoundref>
+    <derivedcompoundref refid="classwx_persistent_tree_book_ctrl" prot="public" virt="non-virtual">wxPersistentTreeBookCtrl</derivedcompoundref>
     <includes local="no">wx/persist/bookctrl.h</includes>
       <sectiondef kind="public-func">
       <memberdef kind="function" id="classwx_persistent_book_ctrl_1a8dfbe14e63fa57296a271f4c144457d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -29,7 +29,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/persist/bookctrl.h" line="28"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/persist/bookctrl.h" line="28"/>
       </memberdef>
       <memberdef kind="function" id="classwx_persistent_book_ctrl_1a3ccf1fec20301165cac5713d1d8f8dd5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -37,14 +37,14 @@
         <argsstring>() const </argsstring>
         <name>Save</name>
         <reimplements refid="classwx_persistent_object_1a93e351e08f224fbe7a2ab110458ba9cc">Save</reimplements>
-        <reimplementedby refid="classwx_persistent_tree_book_1adb7107cbe9cfb9376767140234a546e2">Save</reimplementedby>
+        <reimplementedby refid="classwx_persistent_tree_book_ctrl_1ad8af4b7ed5c2aa2bbb1c51b2268794af">Save</reimplementedby>
         <briefdescription>
 <para>Save the currently selected page index. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/persist/bookctrl.h" line="33"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/persist/bookctrl.h" line="33"/>
       </memberdef>
       <memberdef kind="function" id="classwx_persistent_book_ctrl_1a5c7d8a31c3018ed3773e7f97133e4299" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -52,64 +52,64 @@
         <argsstring>()</argsstring>
         <name>Restore</name>
         <reimplements refid="classwx_persistent_object_1a04f9a557b8dd17c60c83cb29102e093e">Restore</reimplements>
-        <reimplementedby refid="classwx_persistent_tree_book_1a62599a3fca3e820190fe31ddff3a8aab">Restore</reimplementedby>
+        <reimplementedby refid="classwx_persistent_tree_book_ctrl_1ac74fd4229fe85d962ec33ffe0137d9d0">Restore</reimplementedby>
         <briefdescription>
 <para>Restore the selected page index. </para>        </briefdescription>
         <detaileddescription>
 <para>The book control must be initialized before calling this function, i.e. all of its pages should be already added to it -- otherwise restoring the selection has no effect. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/persist/bookctrl.h" line="42"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/persist/bookctrl.h" line="42"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para>Persistence adapter for <ref refid="classwx_book_ctrl_base" kindref="compound">wxBookCtrlBase</ref>. </para>    </briefdescription>
     <detaileddescription>
-<para>This adapter handles the selected page of <ref refid="classwx_book_ctrl_base" kindref="compound">wxBookCtrlBase</ref>, i.e. it saves its value when the associated book control is destroyed and restores it when it is recreated.</para><para><simplesect kind="see"><para>wxPersistentTreeBookCtrl </para></simplesect>
+<para>This adapter handles the selected page of <ref refid="classwx_book_ctrl_base" kindref="compound">wxBookCtrlBase</ref>, i.e. it saves its value when the associated book control is destroyed and restores it when it is recreated.</para><para><simplesect kind="see"><para><ref refid="classwx_persistent_tree_book_ctrl" kindref="compound">wxPersistentTreeBookCtrl</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="8608">
+      <node id="8801">
         <label>wxPersistentBookCtrl</label>
         <link refid="classwx_persistent_book_ctrl"/>
-        <childnode refid="8609" relation="public-inheritance">
+        <childnode refid="8802" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8611">
-        <label>wxPersistentTreeBook</label>
-        <link refid="classwx_persistent_tree_book"/>
-        <childnode refid="8608" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="8609">
+      <node id="8802">
         <label>wxPersistentWindow&lt; wxBookCtrlBase &gt;</label>
         <link refid="classwx_persistent_window"/>
-        <childnode refid="8610" relation="public-inheritance">
+        <childnode refid="8803" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8610">
+      <node id="8803">
         <label>wxPersistentObject</label>
         <link refid="classwx_persistent_object"/>
       </node>
+      <node id="8804">
+        <label>wxPersistentTreeBookCtrl</label>
+        <link refid="classwx_persistent_tree_book_ctrl"/>
+        <childnode refid="8801" relation="public-inheritance">
+        </childnode>
+      </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="8612">
+      <node id="8805">
         <label>wxPersistentBookCtrl</label>
         <link refid="classwx_persistent_book_ctrl"/>
-        <childnode refid="8613" relation="public-inheritance">
+        <childnode refid="8806" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8613">
+      <node id="8806">
         <label>wxPersistentWindow&lt; wxBookCtrlBase &gt;</label>
         <link refid="classwx_persistent_window"/>
-        <childnode refid="8614" relation="public-inheritance">
+        <childnode refid="8807" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8614">
+      <node id="8807">
         <label>wxPersistentObject</label>
         <link refid="classwx_persistent_object"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/persist/bookctrl.h" line="20" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/persist/bookctrl.h" bodystart="19" bodyend="43"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/persist/bookctrl.h" line="20" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/persist/bookctrl.h" bodystart="19" bodyend="43"/>
     <listofallmembers>
       <member refid="classwx_persistent_window_1a10aa6724f3431349ac44fc1d583f6981" prot="public" virt="non-virtual"><scope>wxPersistentBookCtrl</scope><name>Get</name></member>
       <member refid="classwx_persistent_object_1a53d730bbfe3fdf57c9c553987f1096f8" prot="public" virt="pure-virtual"><scope>wxPersistentBookCtrl</scope><name>GetKind</name></member>

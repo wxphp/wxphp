@@ -25,7 +25,7 @@
 </programlisting></para><para><ref refid="classwx_archive_class_factory_1a4550c0581291ca6255b7eb0cb917a8ce" kindref="member">GetFirst()</ref> and <ref refid="classwx_archive_class_factory_1adafe1f5baee50e34416a382a77825ab8" kindref="member">GetNext()</ref> return a pointer to a factory or NULL if no more are available. They do not give away ownership of the factory. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/archive.h" line="386"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/archive.h" line="386"/>
       </memberdef>
       <memberdef kind="function" id="classwx_archive_class_factory_1a4550c0581291ca6255b7eb0cb917a8ce" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_archive_class_factory" kindref="compound">wxArchiveClassFactory</ref> *</type>
@@ -45,7 +45,7 @@
 </programlisting></para><para><ref refid="classwx_archive_class_factory_1a4550c0581291ca6255b7eb0cb917a8ce" kindref="member">GetFirst()</ref> and <ref refid="classwx_archive_class_factory_1adafe1f5baee50e34416a382a77825ab8" kindref="member">GetNext()</ref> return a pointer to a factory or NULL if no more are available. They do not give away ownership of the factory. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/archive.h" line="385"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/archive.h" line="385"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -64,7 +64,7 @@
 <para>If the parent stream is passed as a pointer then the new archive stream takes ownership of it. If it is passed by reference then it does not. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/archive.h" line="431"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/archive.h" line="431"/>
       </memberdef>
       <memberdef kind="function" id="classwx_archive_class_factory_1a28647d750a417fcb4637142956a65bd1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_archive_output_stream" kindref="compound">wxArchiveOutputStream</ref> *</type>
@@ -81,7 +81,7 @@
 <para>If the parent stream is passed as a pointer then the new archive stream takes ownership of it. If it is passed by reference then it does not. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/archive.h" line="432"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/archive.h" line="432"/>
       </memberdef>
       <memberdef kind="function" id="classwx_archive_class_factory_1a774289011ac9b4eaf27a3819c0c306c0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_archive_input_stream" kindref="compound">wxArchiveInputStream</ref> *</type>
@@ -98,7 +98,7 @@
 <para>If the parent stream is passed as a pointer then the new archive stream takes ownership of it. If it is passed by reference then it does not. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/archive.h" line="433"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/archive.h" line="433"/>
       </memberdef>
       <memberdef kind="function" id="classwx_archive_class_factory_1a30eda233d56ba79bb41c119b6582f369" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_archive_output_stream" kindref="compound">wxArchiveOutputStream</ref> *</type>
@@ -115,7 +115,7 @@
 <para>If the parent stream is passed as a pointer then the new archive stream takes ownership of it. If it is passed by reference then it does not. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/archive.h" line="434"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/archive.h" line="434"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -139,7 +139,7 @@
 <para>When using wxSTREAM_FILEEXT for the second parameter, the first parameter can be a complete filename rather than just an extension. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/archive.h" line="341"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/archive.h" line="341"/>
       </memberdef>
       <memberdef kind="function" id="classwx_archive_class_factory_1a295e16b696b0b0773e41f9f000bcf89f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_m_b_conv" kindref="compound">wxMBConv</ref> &amp;</type>
@@ -152,7 +152,7 @@
 <para>The initial default, set by the constructor, is wxConvLocal. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/archive.h" line="359"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/archive.h" line="359"/>
       </memberdef>
       <memberdef kind="function" id="classwx_archive_class_factory_1ae541f085aabc3531062e541c4bf42983" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -169,7 +169,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/archive.h" line="365"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/archive.h" line="365"/>
       </memberdef>
       <memberdef kind="function" id="classwx_archive_class_factory_1ac83622385ff9b2525266d0c5c147f90c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -191,7 +191,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/archive.h" line="394"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/archive.h" line="394"/>
       </memberdef>
       <memberdef kind="function" id="classwx_archive_class_factory_1a771c29d666830289a903efee2ceb559e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -205,7 +205,7 @@
 </programlisting>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/archive.h" line="400"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/archive.h" line="400"/>
       </memberdef>
       <memberdef kind="function" id="classwx_archive_class_factory_1acab270a64690103ec5179aa17386fce4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type>const <ref refid="group__group__funcmacro__string_1gad42f64d8c82f1ce4ae58773a89b2d6a7" kindref="member">wxChar</ref> **</type>
@@ -228,7 +228,7 @@
 </programlisting> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/archive.h" line="417"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/archive.h" line="417"/>
       </memberdef>
       <memberdef kind="function" id="classwx_archive_class_factory_1af7ee043f7fa38774d0aaca65d48c3c5e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_archive_entry" kindref="compound">wxArchiveEntry</ref> *</type>
@@ -241,7 +241,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/archive.h" line="422"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/archive.h" line="422"/>
       </memberdef>
       <memberdef kind="function" id="classwx_archive_class_factory_1a2ce9c0d68e825a8f2b61617f8b213ee2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -254,7 +254,7 @@
 <para>It is not necessary to do this to use the archive streams. It is usually used when implementing streams, typically the implementation will add a static instance of its factory class.</para><para>It can also be used to change the order of a factory already in the list, bringing it to the front. This isn&apos;t a thread safe operation so can&apos;t be done when other threads are running that will be using the list. The list does not take ownership of the factory. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/archive.h" line="449"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/archive.h" line="449"/>
       </memberdef>
       <memberdef kind="function" id="classwx_archive_class_factory_1a541af2ac6ad3a33a103d0c557165751f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -267,7 +267,7 @@
 <para>Removing from the list isn&apos;t a thread safe operation so can&apos;t be done when other threads are running that will be using the list. The list does not own the factories, so removing a factory does not delete it. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/archive.h" line="458"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/archive.h" line="458"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -291,7 +291,7 @@
 <para>Returns a pointer to the class factory if found, or NULL otherwise. It does not give away ownership of the factory.</para><para>When using wxSTREAM_FILEEXT for the second parameter, the first parameter can be a complete filename rather than just an extension. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/archive.h" line="352"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/archive.h" line="352"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -304,49 +304,49 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__archive" kindref="compound">Archive support</ref>, <ref refid="group__group__class__streams" kindref="compound">Streams</ref></para><para><simplesect kind="see"><para><ref refid="overview_archive" kindref="compound">Archive Formats</ref>, <ref refid="overview_archive_1overview_archive_generic" kindref="member">Generic Archive Programming</ref>, <ref refid="classwx_archive_entry" kindref="compound">wxArchiveEntry</ref>, <ref refid="classwx_archive_input_stream" kindref="compound">wxArchiveInputStream</ref>, <ref refid="classwx_archive_output_stream" kindref="compound">wxArchiveOutputStream</ref>, <ref refid="classwx_filter_class_factory" kindref="compound">wxFilterClassFactory</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="4307">
+      <node id="4390">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="4309">
+      <node id="4392">
         <label>wxZipClassFactory</label>
         <link refid="classwx_zip_class_factory"/>
-        <childnode refid="4306" relation="public-inheritance">
+        <childnode refid="4389" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4306">
+      <node id="4389">
         <label>wxArchiveClassFactory</label>
         <link refid="classwx_archive_class_factory"/>
-        <childnode refid="4307" relation="public-inheritance">
+        <childnode refid="4390" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4308">
+      <node id="4391">
         <label>wxTarClassFactory</label>
         <link refid="classwx_tar_class_factory"/>
-        <childnode refid="4306" relation="public-inheritance">
+        <childnode refid="4389" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="4311">
+      <node id="4394">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="4312" relation="usage">
+        <childnode refid="4395" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="4310">
+      <node id="4393">
         <label>wxArchiveClassFactory</label>
         <link refid="classwx_archive_class_factory"/>
-        <childnode refid="4311" relation="public-inheritance">
+        <childnode refid="4394" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4312">
+      <node id="4395">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/archive.h" line="331" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/archive.h" bodystart="330" bodyend="459"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/archive.h" line="331" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/archive.h" bodystart="330" bodyend="459"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxArchiveClassFactory</scope><name>AllocExclusive</name></member>
       <member refid="classwx_archive_class_factory_1a91f564a745dc5d35498e638078a8cb81" prot="public" virt="non-virtual"><scope>wxArchiveClassFactory</scope><name>CanHandle</name></member>

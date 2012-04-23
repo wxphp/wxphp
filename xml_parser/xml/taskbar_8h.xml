@@ -4,6 +4,39 @@
     <compoundname>taskbar.h</compoundname>
     <innerclass refid="classwx_task_bar_icon_event" prot="public">wxTaskBarIconEvent</innerclass>
     <innerclass refid="classwx_task_bar_icon" prot="public">wxTaskBarIcon</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="taskbar_8h_1a51fd8660b8ae3cd5773bc21a02883db2" prot="public" static="no">
+        <name>wxTaskBarIconType</name>
+        <enumvalue id="taskbar_8h_1a51fd8660b8ae3cd5773bc21a02883db2a19980c772ade5738c7c250ff17d1b023" prot="public">
+          <name>wxTBI_DOCK</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="taskbar_8h_1a51fd8660b8ae3cd5773bc21a02883db2ad5f2025854dcd64ad3c671346c0a9896" prot="public">
+          <name>wxTBI_CUSTOM_STATUSITEM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="taskbar_8h_1a51fd8660b8ae3cd5773bc21a02883db2aa67c2d7fe999dd6dd1bd578c5b1e9e1c" prot="public">
+          <name>wxTBI_DEFAULT_TYPE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>On OSX Cocoa the taskbar icon can be in the doc or in the status area. </para>        </briefdescription>
+        <detaileddescription>
+<para>This enumeration can be used to select which will be instantiated. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/taskbar.h" line="14" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/taskbar.h" bodystart="13" bodyend="18"/>
+      </memberdef>
+      </sectiondef>
       <sectiondef kind="var">
       <memberdef kind="variable" id="taskbar_8h_1a0b116093261d9af5ca0691bbd9b5af44" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -16,7 +49,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/taskbar.h" line="171" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/taskbar.h" bodystart="171" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/taskbar.h" line="184" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/taskbar.h" bodystart="184" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="taskbar_8h_1a598bba56fafdb6fe058ea7fe14c96d26" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -29,7 +62,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/taskbar.h" line="172" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/taskbar.h" bodystart="172" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/taskbar.h" line="185" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/taskbar.h" bodystart="185" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="taskbar_8h_1a2cde2d72a98b937aaaadff639681c129" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -42,7 +75,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/taskbar.h" line="173" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/taskbar.h" bodystart="173" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/taskbar.h" line="186" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/taskbar.h" bodystart="186" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="taskbar_8h_1ac8b10cb48a6e83cf1c962da064175229" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -55,7 +88,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/taskbar.h" line="174" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/taskbar.h" bodystart="174" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/taskbar.h" line="187" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/taskbar.h" bodystart="187" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="taskbar_8h_1ab5f1f355bad9f9aeef91b1592b899169" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -68,7 +101,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/taskbar.h" line="175" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/taskbar.h" bodystart="175" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/taskbar.h" line="188" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/taskbar.h" bodystart="188" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="taskbar_8h_1a5b2839bddfb81abd2bc697ed2c262e2f" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -81,7 +114,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/taskbar.h" line="176" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/taskbar.h" bodystart="176" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/taskbar.h" line="189" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/taskbar.h" bodystart="189" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="taskbar_8h_1a4d8c42b3406875374ed8b7c157422ff6" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -94,7 +127,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/taskbar.h" line="177" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/taskbar.h" bodystart="177" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/taskbar.h" line="190" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/taskbar.h" bodystart="190" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="taskbar_8h_1a8b47ea4483359433172b651217ed7258" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -107,7 +140,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/taskbar.h" line="178" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/taskbar.h" bodystart="178" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/taskbar.h" line="191" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/taskbar.h" bodystart="191" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="taskbar_8h_1ac7936fe03baf9fc9b32d52033b854b58" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -120,7 +153,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/taskbar.h" line="179" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/taskbar.h" bodystart="179" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/taskbar.h" line="192" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/taskbar.h" bodystart="192" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="taskbar_8h_1a7e24b0be1effd64d04884bdbd53b6be0" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -133,13 +166,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/taskbar.h" line="180" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/taskbar.h" bodystart="180" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/taskbar.h" line="193" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/taskbar.h" bodystart="193" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/taskbar.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/taskbar.h"/>
   </compounddef>
 </doxygen>

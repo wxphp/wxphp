@@ -41,7 +41,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/infobar.h" line="215"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/infobar.h" line="215"/>
       </memberdef>
       <memberdef kind="function" id="classwx_info_bar_1a855b23b9e7c0203df84c04416b477da7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="window_8h_1a49efebddb5cf706e0eb819b434bdf918" kindref="member">wxShowEffect</ref></type>
@@ -54,7 +54,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/infobar.h" line="218"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/infobar.h" line="218"/>
       </memberdef>
       <memberdef kind="function" id="classwx_info_bar_1a296c71afcdad8af00beba505b73bd0fb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="window_8h_1a49efebddb5cf706e0eb819b434bdf918" kindref="member">wxShowEffect</ref></type>
@@ -67,7 +67,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/infobar.h" line="221"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/infobar.h" line="221"/>
       </memberdef>
       <memberdef kind="function" id="classwx_info_bar_1a466a967c34d3aadc85f23de17712f605" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -92,7 +92,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/infobar.h" line="231"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/infobar.h" line="231"/>
       </memberdef>
       <memberdef kind="function" id="classwx_info_bar_1aab81fca817b7911b101d810f58256464" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -105,7 +105,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/infobar.h" line="234"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/infobar.h" line="234"/>
       </memberdef>
       <memberdef kind="function" id="classwx_info_bar_1aa6daa44e1c08910abf14ad075b1d9f86" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -123,7 +123,7 @@
 <para><ref refid="classwx_info_bar" kindref="compound">wxInfoBar</ref> overrides this method to use the font passed to it for its text message part. By default a larger and bold version of the standard font is used.</para><para>This method is generic-only. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/infobar.h" line="245"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/infobar.h" line="245"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -138,7 +138,7 @@
 <para>Use <ref refid="classwx_info_bar_1a67c612de758bfafba1f00c22efe36dd2" kindref="member">Create()</ref> for the objects created using this constructor. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/infobar.h" line="82"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/infobar.h" line="82"/>
       </memberdef>
       <memberdef kind="function" id="classwx_info_bar_1a4055bcabf87e581864ee9c957989cd5c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -161,7 +161,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/infobar.h" line="89"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/infobar.h" line="89"/>
       </memberdef>
       <memberdef kind="function" id="classwx_info_bar_1a67c612de758bfafba1f00c22efe36dd2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -198,7 +198,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/infobar.h" line="110"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/infobar.h" line="110"/>
       </memberdef>
       <memberdef kind="function" id="classwx_info_bar_1a6c2e88fe0c76e851948445e20f092ff1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -217,7 +217,7 @@
         <briefdescription>
 <para>Add a button to be shown in the info bar. </para>        </briefdescription>
         <detaileddescription>
-<para>The button added by this method will be shown to the right of the text (in LTR layout), with each successive button being added to the right of the previous one. If any buttons are added to the info bar using this method, the default &quot;Close&quot; button is not shown as it is assumed that the extra buttons already allow the user to close it.</para><para>Clicking the button will generate a normal EVT_COMMAND_BUTTON_CLICKED event which can be handled as usual. The default handler in <ref refid="classwx_info_bar" kindref="compound">wxInfoBar</ref> itself closes the window whenever a button in it is clicked so if you wish the info bar to be hidden when the button is clicked, simply call <computeroutput>event.Skip()</computeroutput> in the button handler to let the base class handler do it (calling <ref refid="classwx_info_bar_1ab2ce2964b330eb742af11b9226616e56" kindref="member">Dismiss()</ref> explicitly works too, of course). On the other hand, if you don&apos;t skip the event, the info bar will remain opened so make sure to do it for at least some buttons to allow the user to close it.</para><para>Notice that the generic <ref refid="classwx_info_bar" kindref="compound">wxInfoBar</ref> implementation handles the button events itself and so they are not propagated to the info bar parent and you need to either inherit from <ref refid="classwx_info_bar" kindref="compound">wxInfoBar</ref> and handle them in your derived class or use <ref refid="classwx_evt_handler_1a78719e8b82c9f9c6e4056b3449df1943" kindref="member">wxEvtHandler::Connect()</ref>, as is done in the dialogs sample, to handle the button events in the parent frame.</para><para><parameterlist kind="param"><parameteritem>
+<para>The button added by this method will be shown to the right of the text (in LTR layout), with each successive button being added to the right of the previous one. If any buttons are added to the info bar using this method, the default &quot;Close&quot; button is not shown as it is assumed that the extra buttons already allow the user to close it.</para><para>Clicking the button will generate a normal EVT_COMMAND_BUTTON_CLICKED event which can be handled as usual. The default handler in <ref refid="classwx_info_bar" kindref="compound">wxInfoBar</ref> itself closes the window whenever a button in it is clicked so if you wish the info bar to be hidden when the button is clicked, simply call <computeroutput>event.Skip()</computeroutput> in the button handler to let the base class handler do it (calling <ref refid="classwx_info_bar_1a3fd73896ffa7263985ad7b99aca3d5c9" kindref="member">Dismiss()</ref> explicitly works too, of course). On the other hand, if you don&apos;t skip the event, the info bar will remain opened so make sure to do it for at least some buttons to allow the user to close it.</para><para>Notice that the generic <ref refid="classwx_info_bar" kindref="compound">wxInfoBar</ref> implementation handles the button events itself and so they are not propagated to the info bar parent and you need to either inherit from <ref refid="classwx_info_bar" kindref="compound">wxInfoBar</ref> and handle them in your derived class or use <ref refid="classwx_evt_handler_1a78719e8b82c9f9c6e4056b3449df1943" kindref="member">wxEvtHandler::Connect()</ref>, as is done in the dialogs sample, to handle the button events in the parent frame.</para><para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>btnid</parametername>
 </parameternamelist>
@@ -235,11 +235,11 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/infobar.h" line="145"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/infobar.h" line="145"/>
       </memberdef>
-      <memberdef kind="function" id="classwx_info_bar_1ab2ce2964b330eb742af11b9226616e56" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classwx_info_bar_1a3fd73896ffa7263985ad7b99aca3d5c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
-        <definition>void wxInfoBar::Dismiss</definition>
+        <definition>virtual void wxInfoBar::Dismiss</definition>
         <argsstring>()</argsstring>
         <name>Dismiss</name>
         <briefdescription>
@@ -248,7 +248,7 @@
 <para>This method hides the window and lays out the parent window to account for its disappearance (unlike a simple <ref refid="classwx_window_1a7ed103df04014cb3c59c6a3fb4d95328" kindref="member">Hide()</ref>). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/infobar.h" line="153"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/infobar.h" line="153"/>
       </memberdef>
       <memberdef kind="function" id="classwx_info_bar_1aef66e90d5b841221c2a2f376d76b47e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -273,7 +273,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/infobar.h" line="163"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/infobar.h" line="163"/>
       </memberdef>
       <memberdef kind="function" id="classwx_info_bar_1a7a283acd1eaf61c183cb91cef1a27ebf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -310,7 +310,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/infobar.h" line="183"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/infobar.h" line="183"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -336,92 +336,92 @@
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>MyFrame::SomeMethod()</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_infoBar-&gt;ShowMessage(</highlight><highlight class="stringliteral">&quot;Something<sp/>happend&quot;</highlight><highlight class="normal">,<sp/><ref refid="defs_8h_1a6ad4380c48ee0854f49c171b1a2514eb" kindref="member">wxICON_INFORMATION</ref>);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_infoBar-&gt;ShowMessage(</highlight><highlight class="stringliteral">&quot;Something<sp/>happened&quot;</highlight><highlight class="normal">,<sp/><ref refid="defs_8h_1a6ad4380c48ee0854f49c171b1a2514eb" kindref="member">wxICON_INFORMATION</ref>);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 </programlisting></para><para>See the dialogs sample for more sophisticated examples.</para><para>Currently this class is implemented generically (i.e. in the same platform-independent way for all ports) and also natively in wxGTK but the native implementation requires a recent -- as of this writing -- GTK+ 2.18 version.</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__miscwnd" kindref="compound">Miscellaneous Windows</ref></para><para><simplesect kind="see"><para><ref refid="classwx_status_bar" kindref="compound">wxStatusBar</ref>, <ref refid="classwx_message_dialog" kindref="compound">wxMessageDialog</ref></para></simplesect>
 <simplesect kind="since"><para>2.9.1 </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7264">
+      <node id="7451">
         <label>wxInfoBar</label>
         <link refid="classwx_info_bar"/>
-        <childnode refid="7265" relation="public-inheritance">
+        <childnode refid="7452" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7268">
+      <node id="7455">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="7267">
+      <node id="7454">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="7268" relation="public-inheritance">
+        <childnode refid="7455" relation="public-inheritance">
         </childnode>
-        <childnode refid="7269" relation="public-inheritance">
+        <childnode refid="7456" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7269">
+      <node id="7456">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="7265">
+      <node id="7452">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="7266" relation="public-inheritance">
+        <childnode refid="7453" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7266">
+      <node id="7453">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="7267" relation="public-inheritance">
+        <childnode refid="7454" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7270">
+      <node id="7457">
         <label>wxInfoBar</label>
         <link refid="classwx_info_bar"/>
-        <childnode refid="7271" relation="public-inheritance">
+        <childnode refid="7458" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7274">
+      <node id="7461">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="7275" relation="usage">
+        <childnode refid="7462" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="7273">
+      <node id="7460">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="7274" relation="public-inheritance">
+        <childnode refid="7461" relation="public-inheritance">
         </childnode>
-        <childnode refid="7276" relation="public-inheritance">
+        <childnode refid="7463" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7276">
+      <node id="7463">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="7271">
+      <node id="7458">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="7272" relation="public-inheritance">
+        <childnode refid="7459" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7272">
+      <node id="7459">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="7273" relation="public-inheritance">
+        <childnode refid="7460" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7275">
+      <node id="7462">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/infobar.h" line="75" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/infobar.h" bodystart="74" bodyend="248"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/infobar.h" line="75" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/infobar.h" bodystart="74" bodyend="248"/>
     <listofallmembers>
       <member refid="classwx_window_1a3afbd49b1ea2f8275e3600dcac102923" prot="public" virt="virtual"><scope>wxInfoBar</scope><name>AcceptsFocus</name></member>
       <member refid="classwx_window_1a2370bdd3ab08e7ef3c7555c6aa8301b8" prot="public" virt="virtual"><scope>wxInfoBar</scope><name>AcceptsFocusFromKeyboard</name></member>
@@ -467,7 +467,7 @@
       <member refid="classwx_evt_handler_1a13061cf0ed01ac10a804ac057ef4bdbc" prot="public" virt="non-virtual"><scope>wxInfoBar</scope><name>Disconnect</name></member>
       <member refid="classwx_evt_handler_1a2f171e19444b9c4034c5e11f24fa9c91" prot="public" virt="non-virtual"><scope>wxInfoBar</scope><name>Disconnect</name></member>
       <member refid="classwx_evt_handler_1a16a6f823853e4b74b43dd9a2cf3abee6" prot="public" virt="non-virtual"><scope>wxInfoBar</scope><name>Disconnect</name></member>
-      <member refid="classwx_info_bar_1ab2ce2964b330eb742af11b9226616e56" prot="public" virt="non-virtual"><scope>wxInfoBar</scope><name>Dismiss</name></member>
+      <member refid="classwx_info_bar_1a3fd73896ffa7263985ad7b99aca3d5c9" prot="public" virt="virtual"><scope>wxInfoBar</scope><name>Dismiss</name></member>
       <member refid="classwx_window_1a2d10b472a4962d1c852c83d55252c44b" prot="protected" virt="virtual"><scope>wxInfoBar</scope><name>DoCentre</name></member>
       <member refid="classwx_window_1a01e7604ab0f0b2b1a8e322a630a4669e" prot="protected" virt="virtual"><scope>wxInfoBar</scope><name>DoGetBestSize</name></member>
       <member refid="classwx_window_1ae8a84a80645e99f4d24a22e5c386f626" prot="public" virt="virtual"><scope>wxInfoBar</scope><name>DoUpdateWindowUI</name></member>
@@ -591,6 +591,7 @@
       <member refid="classwx_window_1aa90a260c0a835a133043460b7d0024a8" prot="public" virt="virtual"><scope>wxInfoBar</scope><name>InitDialog</name></member>
       <member refid="classwx_window_1ae1b56ca87d8590ee5e576012229a380a" prot="public" virt="non-virtual"><scope>wxInfoBar</scope><name>InvalidateBestSize</name></member>
       <member refid="classwx_window_1af918e6fe8565c2d5235973cc3de84a43" prot="public" virt="non-virtual"><scope>wxInfoBar</scope><name>IsBeingDeleted</name></member>
+      <member refid="classwx_window_1a469f0881da248d37691440c9d4cc7200" prot="public" virt="non-virtual"><scope>wxInfoBar</scope><name>IsDescendant</name></member>
       <member refid="classwx_window_1a9d1be1bbb625ebf87ad4ad47e49a0194" prot="public" virt="virtual"><scope>wxInfoBar</scope><name>IsDoubleBuffered</name></member>
       <member refid="classwx_window_1a59452a5bd42f5ea4b31d7fc4aa59644f" prot="public" virt="non-virtual"><scope>wxInfoBar</scope><name>IsEnabled</name></member>
       <member refid="classwx_window_1af27ef77c913e32050543f3b0ca435a0d" prot="public" virt="non-virtual"><scope>wxInfoBar</scope><name>IsExposed</name></member>
@@ -606,13 +607,13 @@
       <member refid="classwx_window_1a72d70fd14e3565bf782fbcd3271d8930" prot="public" virt="virtual"><scope>wxInfoBar</scope><name>IsShownOnScreen</name></member>
       <member refid="classwx_window_1a657ef8b6055eb06df894ac5e6ddfecf8" prot="public" virt="non-virtual"><scope>wxInfoBar</scope><name>IsThisEnabled</name></member>
       <member refid="classwx_window_1a0002826ad05f2a5661b4c8995713f37f" prot="public" virt="virtual"><scope>wxInfoBar</scope><name>IsTopLevel</name></member>
+      <member refid="classwx_window_1a7940d510c5bdc062a2b109a1022dd8c2" prot="public" virt="virtual"><scope>wxInfoBar</scope><name>IsTransparentBackgroundSupported</name></member>
       <member refid="classwx_evt_handler_1a360fdeefcf53b62fb49fb828406bb8a6" prot="public" virt="non-virtual"><scope>wxInfoBar</scope><name>IsUnlinked</name></member>
       <member refid="classwx_window_1a1b143c3e72bd0af533b76db4830a6113" prot="public" virt="virtual"><scope>wxInfoBar</scope><name>Layout</name></member>
       <member refid="classwx_window_1ade808784f0e64d9985e2f279b5ca8c02" prot="public" virt="non-virtual"><scope>wxInfoBar</scope><name>LineDown</name></member>
       <member refid="classwx_window_1afc0816a174ceee6d36d1995c6824a273" prot="public" virt="non-virtual"><scope>wxInfoBar</scope><name>LineUp</name></member>
       <member refid="classwx_window_1a124944524f36b71385dad8fddaad8ded" prot="public" virt="virtual"><scope>wxInfoBar</scope><name>Lower</name></member>
       <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxInfoBar</scope><name>m_refData</name></member>
-      <member refid="classwx_window_1a192fc8b467845d093c16452db96c65c5" prot="public" virt="virtual"><scope>wxInfoBar</scope><name>MakeModal</name></member>
       <member refid="classwx_window_1ab1cb98c8d25b9e6ff7b706b1446c3df7" prot="public" virt="non-virtual"><scope>wxInfoBar</scope><name>Move</name></member>
       <member refid="classwx_window_1a22a22c1e23ca05776707e7999d8047fe" prot="public" virt="non-virtual"><scope>wxInfoBar</scope><name>Move</name></member>
       <member refid="classwx_window_1a79e66079125e8420de269811bdb6f2b6" prot="public" virt="non-virtual"><scope>wxInfoBar</scope><name>MoveAfterInTabOrder</name></member>
@@ -737,7 +738,6 @@
       <member refid="classwx_window_1a88cc65e424a129d9b0057756cdb67ec9" prot="public" virt="virtual"><scope>wxInfoBar</scope><name>TransferDataToWindow</name></member>
       <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxInfoBar</scope><name>TryAfter</name></member>
       <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxInfoBar</scope><name>TryBefore</name></member>
-      <member refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" virt="non-virtual"><scope>wxInfoBar</scope><name>TryThis</name></member>
       <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxInfoBar</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxInfoBar</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a22e5db2ec1d19c8252c056fd116975d7" prot="public" virt="non-virtual"><scope>wxInfoBar</scope><name>Unlink</name></member>

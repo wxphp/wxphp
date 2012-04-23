@@ -17,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="557"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" line="557"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -26,48 +26,48 @@
 <para>It forwards log messages to the previously installed one in addition to processing them itself.</para><para>Unlike <ref refid="classwx_log_chain" kindref="compound">wxLogChain</ref> which is usually used directly as is, this class must be derived from to implement wxLog::DoLog and/or wxLog::DoLogString methods.</para><para><ref refid="classwx_log_interposer" kindref="compound">wxLogInterposer</ref> destroys the previous log target in its destructor. If you don&apos;t want this to happen, use <ref refid="classwx_log_interposer_temp" kindref="compound">wxLogInterposerTemp</ref> instead.</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__logging" kindref="compound">Logging</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7521">
+      <node id="7719">
         <label>wxLogWindow</label>
         <link refid="classwx_log_window"/>
-        <childnode refid="7518" relation="public-inheritance">
+        <childnode refid="7716" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7518">
+      <node id="7716">
         <label>wxLogInterposer</label>
         <link refid="classwx_log_interposer"/>
-        <childnode refid="7519" relation="public-inheritance">
+        <childnode refid="7717" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7519">
+      <node id="7717">
         <label>wxLogChain</label>
         <link refid="classwx_log_chain"/>
-        <childnode refid="7520" relation="public-inheritance">
+        <childnode refid="7718" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7520">
+      <node id="7718">
         <label>wxLog</label>
         <link refid="classwx_log"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7522">
+      <node id="7720">
         <label>wxLogInterposer</label>
         <link refid="classwx_log_interposer"/>
-        <childnode refid="7523" relation="public-inheritance">
+        <childnode refid="7721" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7523">
+      <node id="7721">
         <label>wxLogChain</label>
         <link refid="classwx_log_chain"/>
-        <childnode refid="7524" relation="public-inheritance">
+        <childnode refid="7722" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7524">
+      <node id="7722">
         <label>wxLog</label>
         <link refid="classwx_log"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="552" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" bodystart="551" bodyend="558"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" line="552" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" bodystart="551" bodyend="558"/>
     <listofallmembers>
       <member refid="classwx_log_1a4c11ee23ce5264b6c5921a17610cda13" prot="public" virt="non-virtual"><scope>wxLogInterposer</scope><name>AddTraceMask</name></member>
       <member refid="classwx_log_1ac6b25e807e4948795aea21def6b5c1e4" prot="public" virt="non-virtual"><scope>wxLogInterposer</scope><name>ClearTraceMasks</name></member>

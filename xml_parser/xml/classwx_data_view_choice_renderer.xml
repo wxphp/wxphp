@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="1711"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" line="1711"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_choice_renderer_1a6b689f0dd051bce40fbf1547690208ef" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -47,7 +47,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="1716"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" line="1716"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_choice_renderer_1a3572fac32f191dcb38720cfb88a50123" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_array_string" kindref="compound">wxArrayString</ref> &amp;</type>
@@ -60,7 +60,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="1721"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" line="1721"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -69,49 +69,49 @@
 <para>It stores a string so that <ref refid="classwx_data_view_renderer_1ac4494f39d056c1b0976481647b24117f" kindref="member">SetValue()</ref> and <ref refid="classwx_data_view_renderer_1ad7c52082d76074cae4ceaf94e55cf604" kindref="member">GetValue()</ref> operate on a variant holding a string.</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__dvc" kindref="compound">wxDataViewCtrl Related Classes</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="5275">
+      <node id="5370">
         <label>wxDataViewRenderer</label>
         <link refid="classwx_data_view_renderer"/>
-        <childnode refid="5276" relation="public-inheritance">
+        <childnode refid="5371" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5276">
+      <node id="5371">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="5274">
+      <node id="5369">
         <label>wxDataViewChoiceRenderer</label>
         <link refid="classwx_data_view_choice_renderer"/>
-        <childnode refid="5275" relation="public-inheritance">
+        <childnode refid="5370" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="5278">
+      <node id="5373">
         <label>wxDataViewRenderer</label>
         <link refid="classwx_data_view_renderer"/>
-        <childnode refid="5279" relation="public-inheritance">
+        <childnode refid="5374" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5279">
+      <node id="5374">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="5280" relation="usage">
+        <childnode refid="5375" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="5277">
+      <node id="5372">
         <label>wxDataViewChoiceRenderer</label>
         <link refid="classwx_data_view_choice_renderer"/>
-        <childnode refid="5278" relation="public-inheritance">
+        <childnode refid="5373" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5280">
+      <node id="5375">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="1704" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" bodystart="1703" bodyend="1722"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" line="1704" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" bodystart="1703" bodyend="1722"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxDataViewChoiceRenderer</scope><name>AllocExclusive</name></member>
       <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxDataViewChoiceRenderer</scope><name>CloneRefData</name></member>

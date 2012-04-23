@@ -23,7 +23,7 @@
 <para>Pass an optional title argument - the current filename would be a good idea. This will appear in the printing list (at least in MSW) </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/print.h" line="546"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/print.h" line="580"/>
       </memberdef>
       <memberdef kind="function" id="classwx_printout_1a2caf681beebfcfb9df6f3f62bdce626b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -36,7 +36,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/print.h" line="551"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/print.h" line="585"/>
       </memberdef>
       <memberdef kind="function" id="classwx_printout_1a19fa2e3cb6e4e9563a8d3da9551dad84" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -53,7 +53,7 @@
 <para>On MSW and Mac, the page rectangle is the printable area of the page. On other platforms and PostScript printing, the page rectangle is the entire paper.</para><para>Use this if you want your printed image as large as possible, but with the caveat that on some platforms, portions of the image might be cut off at the edges. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/print.h" line="564"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/print.h" line="598"/>
       </memberdef>
       <memberdef kind="function" id="classwx_printout_1a440ddf4f34d82578b8307296e44ec456" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -75,7 +75,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/print.h" line="580"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/print.h" line="614"/>
       </memberdef>
       <memberdef kind="function" id="classwx_printout_1a94b4ce43d8a18bfe89a9c1abecb3fd64" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -93,7 +93,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/print.h" line="594"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/print.h" line="628"/>
       </memberdef>
       <memberdef kind="function" id="classwx_printout_1a0d7807fc425779ab74953d51d6df8652" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_d_c" kindref="compound">wxDC</ref> *</type>
@@ -106,7 +106,7 @@
 <para>The application can use <ref refid="classwx_printout_1a0d7807fc425779ab74953d51d6df8652" kindref="member">GetDC()</ref> to obtain a device context to draw on.</para><para>This will be a <ref refid="classwx_printer_d_c" kindref="compound">wxPrinterDC</ref> if printing under Windows or Mac, a <ref refid="classwx_post_script_d_c" kindref="compound">wxPostScriptDC</ref> if printing on other platforms, and a <ref refid="classwx_memory_d_c" kindref="compound">wxMemoryDC</ref> if previewing. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/print.h" line="605"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/print.h" line="639"/>
       </memberdef>
       <memberdef kind="function" id="classwx_printout_1a4a6c585035339f54eb442b67e81af6fb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_rect" kindref="compound">wxRect</ref></type>
@@ -123,7 +123,7 @@
 <para>The page margins are specified with respect to the edges of the paper on all platforms. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/print.h" line="615"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/print.h" line="649"/>
       </memberdef>
       <memberdef kind="function" id="classwx_printout_1affa9d2b903b2b97471967cba1acd9017" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_rect" kindref="compound">wxRect</ref></type>
@@ -136,7 +136,7 @@
 <para>On MSW and Mac, this will be the printable area of the paper. On other platforms and PostScript printing, this will be the full paper rectangle. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/print.h" line="625"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/print.h" line="659"/>
       </memberdef>
       <memberdef kind="function" id="classwx_printout_1aaa3752179bf80207f5cc117b4ab3b258" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_rect" kindref="compound">wxRect</ref></type>
@@ -149,7 +149,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/print.h" line="631"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/print.h" line="665"/>
       </memberdef>
       <memberdef kind="function" id="classwx_printout_1aab85573418897ab2f0b5933f0cbf7905" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -167,10 +167,10 @@
         <briefdescription>
 <para>Returns the number of pixels per logical inch of the printer device context. </para>        </briefdescription>
         <detaileddescription>
-<para>Dividing the printer PPI by the screen PPI can give a suitable scaling factor for drawing text onto the printer.</para><para>Remember to multiply this by a scaling factor to take the preview DC size into account. Or you can just use the FitThisSizeToXXX() and MapScreenSizeToXXX routines below, which do most of the scaling calculations for you.</para><para><bold>wxPython Note:</bold> This method returns the output-only parameters as a tuple.</para><para><bold>wxPerl Note:</bold> In wxPerl this method takes no arguments and returns a 2-element list (w, h). </para>        </detaileddescription>
+<para>Dividing the printer PPI by the screen PPI can give a suitable scaling factor for drawing text onto the printer.</para><para>Remember to multiply this by a scaling factor to take the preview DC size into account. Or you can just use the FitThisSizeToXXX() and MapScreenSizeToXXX routines below, which do most of the scaling calculations for you.</para><para><bold>wxPerl Note:</bold> In wxPerl this method takes no arguments and returns a 2-element list (w, h). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/print.h" line="653"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/print.h" line="683"/>
       </memberdef>
       <memberdef kind="function" id="classwx_printout_1ac743cd3e671020ee1d60296ad3425afc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -188,10 +188,10 @@
         <briefdescription>
 <para>Returns the number of pixels per logical inch of the screen device context. </para>        </briefdescription>
         <detaileddescription>
-<para>Dividing the printer PPI by the screen PPI can give a suitable scaling factor for drawing text onto the printer.</para><para>If you are doing your own scaling, remember to multiply this by a scaling factor to take the preview DC size into account.</para><para><bold>wxPython Note:</bold> This method returns the output-only parameters as a tuple.</para><para><bold>wxPerl Note:</bold> In wxPerl this method takes no arguments and returns a 2-element list (w, h). </para>        </detaileddescription>
+<para>Dividing the printer PPI by the screen PPI can give a suitable scaling factor for drawing text onto the printer.</para><para>If you are doing your own scaling, remember to multiply this by a scaling factor to take the preview DC size into account.</para><para><bold>wxPerl Note:</bold> In wxPerl this method takes no arguments and returns a 2-element list (w, h). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/print.h" line="673"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/print.h" line="699"/>
       </memberdef>
       <memberdef kind="function" id="classwx_printout_1a3fead3e929153c58b07f3c3521b9fdac" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -218,10 +218,10 @@
         <briefdescription>
 <para>Called by the framework to obtain information from the application about minimum and maximum page values that the user can select, and the required page range to be printed. </para>        </briefdescription>
         <detaileddescription>
-<para>By default this returns (1, 32000) for the page minimum and maximum values, and (1, 1) for the required page range.</para><para><emphasis>minPage</emphasis> must be greater than zero and <emphasis>maxPage</emphasis> must be greater than <emphasis>minPage</emphasis>.</para><para><bold>wxPython Note:</bold> When this method is implemented in a derived Python class, it should be designed to take no parameters (other than the self reference) and to return a tuple of four integers. </para>        </detaileddescription>
+<para>By default this returns (1, 32000) for the page minimum and maximum values, and (1, 1) for the required page range.</para><para><emphasis>minPage</emphasis> must be greater than zero and <emphasis>maxPage</emphasis> must be greater than <emphasis>minPage</emphasis>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/print.h" line="693"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/print.h" line="713"/>
       </memberdef>
       <memberdef kind="function" id="classwx_printout_1a4e3fac8f10527e6a964d8d0b7c7b748d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -239,10 +239,10 @@
         <briefdescription>
 <para>Returns the size of the printer page in millimetres. </para>        </briefdescription>
         <detaileddescription>
-<para><bold>wxPython Note:</bold> This method returns the output-only parameters as a tuple.</para><para><bold>wxPerl Note:</bold> In wxPerl this method takes no arguments and returns a 2-element list (w, h). </para>        </detaileddescription>
+<para><bold>wxPerl Note:</bold> In wxPerl this method takes no arguments and returns a 2-element list (w, h). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/print.h" line="707"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/print.h" line="723"/>
       </memberdef>
       <memberdef kind="function" id="classwx_printout_1a6c8c759e3b617d842675fdd6e5bdc33c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -260,10 +260,10 @@
         <briefdescription>
 <para>Returns the size of the printer page in pixels, called the page rectangle. </para>        </briefdescription>
         <detaileddescription>
-<para>The page rectangle has a top left corner at (0,0) and a bottom right corner at (w,h). These values may not be the same as the values returned from <ref refid="classwx_d_c_1ab4c22c7c7490a4aabc13dfd9e7a285a3" kindref="member">wxDC::GetSize()</ref>; if the printout is being used for previewing, a memory device context is used, which uses a bitmap size reflecting the current preview zoom. The application must take this discrepancy into account if previewing is to be supported.</para><para><bold>wxPython Note:</bold> This method returns the output-only parameters as a tuple.</para><para><bold>wxPerl Note:</bold> In wxPerl this method takes no arguments and returns a 2-element list (w, h). </para>        </detaileddescription>
+<para>The page rectangle has a top left corner at (0,0) and a bottom right corner at (w,h). These values may not be the same as the values returned from <ref refid="classwx_d_c_1ab4c22c7c7490a4aabc13dfd9e7a285a3" kindref="member">wxDC::GetSize()</ref>; if the printout is being used for previewing, a memory device context is used, which uses a bitmap size reflecting the current preview zoom. The application must take this discrepancy into account if previewing is to be supported. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/print.h" line="728"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/print.h" line="735"/>
       </memberdef>
       <memberdef kind="function" id="classwx_printout_1a8da1832a8fd8570c88a65d3f2ccb7928" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_rect" kindref="compound">wxRect</ref></type>
@@ -276,7 +276,7 @@
 <para>This distinction between paper rectangle and page rectangle reflects the fact that most printers cannot print all the way to the edge of the paper. The page rectangle is a rectangle whose top left corner is at (0,0) and whose width and height are given by wxDC::GetPageSizePixels().</para><para>On MSW and Mac, the page rectangle gives the printable area of the paper, while the paper rectangle represents the entire paper, including non-printable borders. Thus, the rectangle returned by wxDC::GetPaperRectPixels() will have a top left corner whose coordinates are small negative numbers and the bottom right corner will have values somewhat larger than the width and height given by wxDC::GetPageSizePixels().</para><para>On other platforms and for PostScript printing, the paper is treated as if its entire area were printable, so this function will return the same rectangle as the page rectangle. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/print.h" line="749"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/print.h" line="756"/>
       </memberdef>
       <memberdef kind="function" id="classwx_printout_1a91b233541df8475aa69704bd3dbf7744" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -286,10 +286,10 @@
         <briefdescription>
 <para>Returns the title of the printout. </para>        </briefdescription>
         <detaileddescription>
-<para><xrefsect id="todo_1_todo000045"><xreftitle>Todo</xreftitle><xrefdescription><para>the python note here was wrong </para></xrefdescription></xrefsect></para>        </detaileddescription>
+<para><xrefsect id="todo_1_todo000044"><xreftitle>Todo</xreftitle><xrefdescription><para>the python note here was wrong </para></xrefdescription></xrefsect></para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/print.h" line="756"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/print.h" line="763"/>
       </memberdef>
       <memberdef kind="function" id="classwx_printout_1a7829a7066a496a14d677d4958e28079f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -307,7 +307,7 @@
 <para>Returning false signifies the end of the document. By default, HasPage behaves as if the document has only one page. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/print.h" line="765"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/print.h" line="772"/>
       </memberdef>
       <memberdef kind="function" id="classwx_printout_1abcc8c9b2bb3dd63b1eff6a7b8327d291" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -321,7 +321,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/print.h" line="772"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/print.h" line="779"/>
       </memberdef>
       <memberdef kind="function" id="classwx_printout_1a270ebf6776a2d7c93e66fdae6116065d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_print_preview" kindref="compound">wxPrintPreview</ref> *</type>
@@ -336,7 +336,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/print.h" line="787"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/print.h" line="794"/>
       </memberdef>
       <memberdef kind="function" id="classwx_printout_1a3fa364935e551748a70a7126d22df728" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -350,7 +350,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/print.h" line="805"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/print.h" line="812"/>
       </memberdef>
       <memberdef kind="function" id="classwx_printout_1acb6a81daabfcfcf601a877bdc69fa46b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -363,7 +363,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/print.h" line="812"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/print.h" line="819"/>
       </memberdef>
       <memberdef kind="function" id="classwx_printout_1aa38f61997d6764e51468fd76078b241e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -380,7 +380,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/print.h" line="819"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/print.h" line="826"/>
       </memberdef>
       <memberdef kind="function" id="classwx_printout_1a434261996b9cec78ee5cbc61bac9caf7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -393,7 +393,7 @@
 <para>That is, a 100-pixel object on screen should appear at the same size on the printed page. (It will, of course, be larger or smaller in the preview image, depending on the zoom factor.)</para><para>Use this if you want WYSIWYG behaviour, e.g., in a text editor. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/print.h" line="833"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/print.h" line="840"/>
       </memberdef>
       <memberdef kind="function" id="classwx_printout_1a3d62cbdec3ac1675f46f9723327736b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -414,7 +414,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/print.h" line="838"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/print.h" line="845"/>
       </memberdef>
       <memberdef kind="function" id="classwx_printout_1ad278a98bfc9aa0a9a86a6e496c0f2432" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -432,11 +432,11 @@
         <briefdescription>
 <para>Called by the framework at the start of document printing. </para>        </briefdescription>
         <detaileddescription>
-<para>Return false from this function cancels the print job.</para><para><ref refid="classwx_printout_1ad278a98bfc9aa0a9a86a6e496c0f2432" kindref="member">OnBeginDocument()</ref> is called once for every copy printed.</para><para><simplesect kind="remark"><para>The base <ref refid="classwx_printout_1ad278a98bfc9aa0a9a86a6e496c0f2432" kindref="member">OnBeginDocument()</ref> must be called (and the return value checked) from within the overridden function, since it calls <ref refid="classwx_d_c_1ad6572581c9d31dc349b6a7462426856c" kindref="member">wxDC::StartDoc()</ref>.</para></simplesect>
-<bold>wxPython Note:</bold> If this method is overridden in a Python class then the base class version can be called by using the method <computeroutput>base_OnBeginDocument(startPage, endPage)</computeroutput>. </para>        </detaileddescription>
+<para>Return false from this function cancels the print job.</para><para><ref refid="classwx_printout_1ad278a98bfc9aa0a9a86a6e496c0f2432" kindref="member">OnBeginDocument()</ref> is called once for every copy printed.</para><para><simplesect kind="remark"><para>The base <ref refid="classwx_printout_1ad278a98bfc9aa0a9a86a6e496c0f2432" kindref="member">OnBeginDocument()</ref> must be called (and the return value checked) from within the overridden function, since it calls <ref refid="classwx_d_c_1ad6572581c9d31dc349b6a7462426856c" kindref="member">wxDC::StartDoc()</ref>. </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/print.h" line="855"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/print.h" line="857"/>
       </memberdef>
       <memberdef kind="function" id="classwx_printout_1a1540fb73d528065729d438aa12c34851" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -449,7 +449,7 @@
 <para><ref refid="classwx_printout_1a1540fb73d528065729d438aa12c34851" kindref="member">OnBeginPrinting()</ref> is called once for every print job (regardless of how many copies are being printed). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/print.h" line="863"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/print.h" line="865"/>
       </memberdef>
       <memberdef kind="function" id="classwx_printout_1a68a80cfbdc82c5239549c8eb6a6ce570" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -463,7 +463,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/print.h" line="874"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/print.h" line="876"/>
       </memberdef>
       <memberdef kind="function" id="classwx_printout_1ab8a9b5306101a4fbfb25c6252756f6b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -476,7 +476,7 @@
 <para>OnEndPrinting is called once for every print job (regardless of how many copies are being printed). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/print.h" line="882"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/print.h" line="884"/>
       </memberdef>
       <memberdef kind="function" id="classwx_printout_1a68c588cbf1b17a85a88db4738260e01b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -490,7 +490,7 @@
 <para>This gives the object an opportunity to calculate the number of pages in the document, for example. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/print.h" line="891"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/print.h" line="893"/>
       </memberdef>
       <memberdef kind="function" id="classwx_printout_1abac930e68b063cd609059fa9d96e7831" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>bool</type>
@@ -508,7 +508,7 @@
 <para>Returning false cancels the print job. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/print.h" line="897"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/print.h" line="899"/>
       </memberdef>
       <memberdef kind="function" id="classwx_printout_1a35af267f145372f666f930680ebd4fcf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -529,7 +529,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/print.h" line="903"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/print.h" line="905"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -539,49 +539,49 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__printing" kindref="compound">Printing Framework</ref></para><para><simplesect kind="see"><para><ref refid="overview_printing" kindref="compound">Printing Framework Overview</ref>, <ref refid="classwx_printer_d_c" kindref="compound">wxPrinterDC</ref>, <ref refid="classwx_print_dialog" kindref="compound">wxPrintDialog</ref>, <ref refid="classwx_page_setup_dialog" kindref="compound">wxPageSetupDialog</ref>, <ref refid="classwx_printer" kindref="compound">wxPrinter</ref>, <ref refid="classwx_print_preview" kindref="compound">wxPrintPreview</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="8819">
+      <node id="9000">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="8818">
+      <node id="8999">
         <label>wxPrintout</label>
         <link refid="classwx_printout"/>
-        <childnode refid="8819" relation="public-inheritance">
+        <childnode refid="9000" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8821">
+      <node id="9002">
         <label>wxRichTextPrintout</label>
         <link refid="classwx_rich_text_printout"/>
-        <childnode refid="8818" relation="public-inheritance">
+        <childnode refid="8999" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8820">
+      <node id="9001">
         <label>wxHtmlPrintout</label>
         <link refid="classwx_html_printout"/>
-        <childnode refid="8818" relation="public-inheritance">
+        <childnode refid="8999" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="8823">
+      <node id="9004">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="8824" relation="usage">
+        <childnode refid="9005" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="8822">
+      <node id="9003">
         <label>wxPrintout</label>
         <link refid="classwx_printout"/>
-        <childnode refid="8823" relation="public-inheritance">
+        <childnode refid="9004" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8824">
+      <node id="9005">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/print.h" line="538" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/print.h" bodystart="537" bodyend="904"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/print.h" line="572" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/print.h" bodystart="571" bodyend="906"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxPrintout</scope><name>AllocExclusive</name></member>
       <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxPrintout</scope><name>CloneRefData</name></member>

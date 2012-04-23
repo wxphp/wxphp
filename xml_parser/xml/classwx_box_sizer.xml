@@ -23,7 +23,7 @@
 <para><emphasis>orient</emphasis> may be either of wxVERTICAL or wxHORIZONTAL for creating either a column sizer or a row sizer. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="1820"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="1814"/>
       </memberdef>
       <memberdef kind="function" id="classwx_box_sizer_1a58007d1fd88698b9f733ba651977ad55" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_sizer_item" kindref="compound">wxSizerItem</ref> *</type>
@@ -49,7 +49,7 @@
 </programlisting> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="1836"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="1830"/>
       </memberdef>
       <memberdef kind="function" id="classwx_box_sizer_1abbb06ed94dca0aef849fd0b95d76346e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
@@ -66,7 +66,7 @@
 <para>It is used internally only and must not be called by the user. Documented for information. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="1844"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="1838"/>
       </memberdef>
       <memberdef kind="function" id="classwx_box_sizer_1add464d77a9506696e1b8cbd5418834ba" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -79,7 +79,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="1850"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="1844"/>
       </memberdef>
       <memberdef kind="function" id="classwx_box_sizer_1ad5c32286716e5dfcc9fbaf9cd87a3080" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -96,7 +96,7 @@
 <para>It is used internally only and must not be called by the user (call <ref refid="classwx_sizer_1a1ea8589882944f8ac78b6ff8abde1554" kindref="member">Layout()</ref> if you want to resize). Documented for information. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="1859"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="1853"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -106,67 +106,67 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__winlayout" kindref="compound">Window Layout</ref></para><para><simplesect kind="see"><para><ref refid="classwx_sizer" kindref="compound">wxSizer</ref>, <ref refid="overview_sizer" kindref="compound">Sizers Overview</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="4581">
+      <node id="4671">
         <label>wxWrapSizer</label>
         <link refid="classwx_wrap_sizer"/>
-        <childnode refid="4576" relation="public-inheritance">
+        <childnode refid="4666" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4578">
+      <node id="4668">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="4580">
+      <node id="4670">
         <label>wxStdDialogButtonSizer</label>
         <link refid="classwx_std_dialog_button_sizer"/>
-        <childnode refid="4576" relation="public-inheritance">
+        <childnode refid="4666" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4579">
+      <node id="4669">
         <label>wxStaticBoxSizer</label>
         <link refid="classwx_static_box_sizer"/>
-        <childnode refid="4576" relation="public-inheritance">
+        <childnode refid="4666" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4576">
+      <node id="4666">
         <label>wxBoxSizer</label>
         <link refid="classwx_box_sizer"/>
-        <childnode refid="4577" relation="public-inheritance">
+        <childnode refid="4667" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4577">
+      <node id="4667">
         <label>wxSizer</label>
         <link refid="classwx_sizer"/>
-        <childnode refid="4578" relation="public-inheritance">
+        <childnode refid="4668" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="4584">
+      <node id="4674">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="4585" relation="usage">
+        <childnode refid="4675" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="4582">
+      <node id="4672">
         <label>wxBoxSizer</label>
         <link refid="classwx_box_sizer"/>
-        <childnode refid="4583" relation="public-inheritance">
+        <childnode refid="4673" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4583">
+      <node id="4673">
         <label>wxSizer</label>
         <link refid="classwx_sizer"/>
-        <childnode refid="4584" relation="public-inheritance">
+        <childnode refid="4674" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4585">
+      <node id="4675">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="1814" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" bodystart="1813" bodyend="1860"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="1808" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" bodystart="1807" bodyend="1854"/>
     <listofallmembers>
       <member refid="classwx_sizer_1a4e2122f2749261473c21cb192d00709f" prot="public" virt="non-virtual"><scope>wxBoxSizer</scope><name>Add</name></member>
       <member refid="classwx_sizer_1a81d21f287c416da96739a73faa54840d" prot="public" virt="non-virtual"><scope>wxBoxSizer</scope><name>Add</name></member>

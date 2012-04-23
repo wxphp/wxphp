@@ -26,7 +26,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combo.h" line="723"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/combo.h" line="723"/>
       </memberdef>
       <memberdef kind="function" id="classwx_combo_ctrl_1a61fb396d486c81bcb733ff0b35301904" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -51,7 +51,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combo.h" line="724"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/combo.h" line="724"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -66,7 +66,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combo.h" line="361"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/combo.h" line="361"/>
       </memberdef>
       <memberdef kind="function" id="classwx_combo_ctrl_1a0f9d6b21d3728f135dbe0d01ee4bf865" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -176,7 +176,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combo.h" line="393"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/combo.h" line="393"/>
       </memberdef>
       <memberdef kind="function" id="classwx_combo_ctrl_1a542d88ad981a8dd2a53ca9cc03c2daaa" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -189,7 +189,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combo.h" line="398"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/combo.h" line="398"/>
       </memberdef>
       <memberdef kind="function" id="classwx_combo_ctrl_1a6feecca8942afd49ac29ff62936299c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -203,7 +203,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combo.h" line="403"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/combo.h" line="403"/>
       </memberdef>
       <memberdef kind="function" id="classwx_combo_ctrl_1aab2390bd7650a56e3d2c243140d28f98" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -256,7 +256,7 @@
 <para>Derived classes should call or replace this function. See <ref refid="classwx_combo_ctrl_1af31b505e73047689dc4d2948eaa13a3d" kindref="member">wxComboCtrl()</ref> for further details. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combo.h" line="416"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/combo.h" line="416"/>
       </memberdef>
       <memberdef kind="function" id="classwx_combo_ctrl_1a201dce519059e37ad35901f7603afa56" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -269,7 +269,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combo.h" line="421"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/combo.h" line="421"/>
       </memberdef>
       <memberdef kind="function" id="classwx_combo_ctrl_1a56867b1c18641c21fcd518ce43efbf99" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -283,7 +283,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combo.h" line="431"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/combo.h" line="431"/>
       </memberdef>
       <memberdef kind="function" id="classwx_combo_ctrl_1ae90d978c054d1ce215758c6073c43d31" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -301,7 +301,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combo.h" line="438"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/combo.h" line="438"/>
       </memberdef>
       <memberdef kind="function" id="classwx_combo_ctrl_1a43a36047283978383d87c395445ceede" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> &amp;</type>
@@ -315,7 +315,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combo.h" line="446"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/combo.h" line="446"/>
       </memberdef>
       <memberdef kind="function" id="classwx_combo_ctrl_1a844f2666c1e65f3fc74d2f2b1ebc4a28" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> &amp;</type>
@@ -329,7 +329,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combo.h" line="454"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/combo.h" line="454"/>
       </memberdef>
       <memberdef kind="function" id="classwx_combo_ctrl_1ad1598651e604d3d602c1c6918f897e39" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> &amp;</type>
@@ -343,7 +343,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combo.h" line="462"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/combo.h" line="462"/>
       </memberdef>
       <memberdef kind="function" id="classwx_combo_ctrl_1aafd2664dc7e52b2cc19bb895d8f885a2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> &amp;</type>
@@ -357,7 +357,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combo.h" line="470"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/combo.h" line="470"/>
       </memberdef>
       <memberdef kind="function" id="classwx_combo_ctrl_1ab6e1596a4b709465e0b07362a3c7dad2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
@@ -370,7 +370,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combo.h" line="475"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/combo.h" line="475"/>
       </memberdef>
       <memberdef kind="function" id="classwx_combo_ctrl_1acca0f05d49a19186f5bfe3e406ed5721" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -384,7 +384,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combo.h" line="482"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/combo.h" line="482"/>
       </memberdef>
       <memberdef kind="function" id="classwx_combo_ctrl_1ac43e88ba57753e939fc60af6ce60aae9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -395,11 +395,11 @@
         <briefdescription>
 <para>Returns the current hint string. </para>        </briefdescription>
         <detaileddescription>
-<para>See <ref refid="classwx_combo_ctrl_1afd6de67563df02c3e57d48a0a55842fa" kindref="member">SetHint()</ref> for more information about hints.</para><para><simplesect kind="since"><para>2.9.1 </para></simplesect>
+<para>See <ref refid="classwx_combo_ctrl_1a68221bdd4af63abfd9840e5de13f4ba6" kindref="member">SetHint()</ref> for more information about hints.</para><para><simplesect kind="since"><para>2.9.1 </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combo.h" line="501"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/combo.h" line="501"/>
       </memberdef>
       <memberdef kind="function" id="classwx_combo_ctrl_1a71260046ce8c1450d021ce183136d7a6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>long</type>
@@ -414,7 +414,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combo.h" line="509"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/combo.h" line="509"/>
       </memberdef>
       <memberdef kind="function" id="classwx_combo_ctrl_1a0f89b94190f5eee5e497dc0fd8679f99" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>long</type>
@@ -428,7 +428,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combo.h" line="514"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/combo.h" line="514"/>
       </memberdef>
       <memberdef kind="function" id="classwx_combo_ctrl_1aee42bf65d60931df1e9f7a26fcfdf377" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_point" kindref="compound">wxPoint</ref></type>
@@ -445,7 +445,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combo.h" line="527"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/combo.h" line="527"/>
       </memberdef>
       <memberdef kind="function" id="classwx_combo_ctrl_1aedb72a461632fa31ca5ea84e47fb5433" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_combo_popup" kindref="compound">wxComboPopup</ref> *</type>
@@ -458,7 +458,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combo.h" line="533"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/combo.h" line="533"/>
       </memberdef>
       <memberdef kind="function" id="classwx_combo_ctrl_1ae5b1c9a0c5e6e57f4919456bc1effc7a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
@@ -471,7 +471,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combo.h" line="538"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/combo.h" line="538"/>
       </memberdef>
       <memberdef kind="function" id="classwx_combo_ctrl_1aefeb3d34a2cfa480b60b07de53863a6e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_text_ctrl" kindref="compound">wxTextCtrl</ref> *</type>
@@ -484,7 +484,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combo.h" line="543"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/combo.h" line="543"/>
       </memberdef>
       <memberdef kind="function" id="classwx_combo_ctrl_1aed73e4d4c77b8e6ee98b77790dcce62c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="defs_8h_1a11f6efc0e8d8d680f3ec8e82aa4f1770" kindref="member">wxCoord</ref></type>
@@ -497,7 +497,7 @@
 <para><xrefsect id="deprecated_1_deprecated000006"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="classwx_combo_ctrl_1aee42bf65d60931df1e9f7a26fcfdf377" kindref="member">GetMargins()</ref> instead. </para></xrefdescription></xrefsect></para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combo.h" line="550"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/combo.h" line="550"/>
       </memberdef>
       <memberdef kind="function" id="classwx_combo_ctrl_1af6bddfb11881c819d9ee56f8325d4487" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_rect" kindref="compound">wxRect</ref> &amp;</type>
@@ -510,7 +510,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combo.h" line="556"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/combo.h" line="556"/>
       </memberdef>
       <memberdef kind="function" id="classwx_combo_ctrl_1af2c8a92d3a2b1f387432633bed397ef8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -524,7 +524,7 @@
 <para>For writable combo control it always returns the value in the text field. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combo.h" line="562"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/combo.h" line="562"/>
       </memberdef>
       <memberdef kind="function" id="classwx_combo_ctrl_1a73d2d6ede7bdc0db63c08f81cd09a5e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -550,7 +550,7 @@
 <xrefsect id="deprecated_1_deprecated000007"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="classwx_combo_ctrl_1a56867b1c18641c21fcd518ce43efbf99" kindref="member">Dismiss()</ref> instead. </para></xrefdescription></xrefsect></para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combo.h" line="573"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/combo.h" line="573"/>
       </memberdef>
       <memberdef kind="function" id="classwx_combo_ctrl_1a6f902c2f40b25a668b5439bb4fad4aed" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -563,7 +563,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combo.h" line="578"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/combo.h" line="578"/>
       </memberdef>
       <memberdef kind="function" id="classwx_combo_ctrl_1ad3189613aa316f856c8f9f5b2182928b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -587,7 +587,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combo.h" line="591"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/combo.h" line="591"/>
       </memberdef>
       <memberdef kind="function" id="classwx_combo_ctrl_1a3ce1fce108f3a84216fa9983d6b89a37" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -601,7 +601,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combo.h" line="601"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/combo.h" line="601"/>
       </memberdef>
       <memberdef kind="function" id="classwx_combo_ctrl_1a361e1a0db2dceb5aa7749ad5a158e49c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -615,7 +615,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combo.h" line="606"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/combo.h" line="606"/>
       </memberdef>
       <memberdef kind="function" id="classwx_combo_ctrl_1afda0208f5c2a31d504e230c36546fe8d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -629,7 +629,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combo.h" line="616"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/combo.h" line="616"/>
       </memberdef>
       <memberdef kind="function" id="classwx_combo_ctrl_1a20b2fecf36f2c5559fe1333f706681ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -666,7 +666,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combo.h" line="627"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/combo.h" line="627"/>
       </memberdef>
       <memberdef kind="function" id="classwx_combo_ctrl_1ab3c5214e81069bb594fa230a77b02da8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -714,7 +714,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combo.h" line="640"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/combo.h" line="640"/>
       </memberdef>
       <memberdef kind="function" id="classwx_combo_ctrl_1adc5fdec92913ba1ffdec20548106376b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -787,7 +787,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combo.h" line="662"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/combo.h" line="662"/>
       </memberdef>
       <memberdef kind="function" id="classwx_combo_ctrl_1aa0ffd3528d66f15bfd3c0da78117ebad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -849,7 +849,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combo.h" line="678"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/combo.h" line="678"/>
       </memberdef>
       <memberdef kind="function" id="classwx_combo_ctrl_1af0b54e5e4f71efc63464ceb44f1497d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -866,11 +866,11 @@
 <para>In read-only <ref refid="classwx_owner_drawn_combo_box" kindref="compound">wxOwnerDrawnComboBox</ref>, this is used to indicate area that is not covered by the focus rectangle. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combo.h" line="685"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/combo.h" line="685"/>
       </memberdef>
-      <memberdef kind="function" id="classwx_combo_ctrl_1afd6de67563df02c3e57d48a0a55842fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
-        <type>void</type>
-        <definition>virtual void wxComboCtrl::SetHint</definition>
+      <memberdef kind="function" id="classwx_combo_ctrl_1a68221bdd4af63abfd9840e5de13f4ba6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxComboCtrl::SetHint</definition>
         <argsstring>(const wxString &amp;hint)</argsstring>
         <name>SetHint</name>
         <reimplements refid="classwx_text_entry_1a4e9dfe958dbd1918c54b45be83f1bed4">SetHint</reimplements>
@@ -886,7 +886,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combo.h" line="697"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/combo.h" line="697"/>
       </memberdef>
       <memberdef kind="function" id="classwx_combo_ctrl_1a9ac49217e13edeb905cf640aac627bba" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -912,7 +912,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combo.h" line="705"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/combo.h" line="705"/>
       </memberdef>
       <memberdef kind="function" id="classwx_combo_ctrl_1a3b4d25c9166d51a95973176df1b05be4" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -926,7 +926,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combo.h" line="710"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/combo.h" line="710"/>
       </memberdef>
       <memberdef kind="function" id="classwx_combo_ctrl_1aac64729c09efde24fbc14d43aa688202" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -943,7 +943,7 @@
 <para>Valid values are <computeroutput>wxLEFT</computeroutput>, <computeroutput>wxRIGHT</computeroutput> and 0. The default value 0 means that the most appropriate side is used (which, currently, is always <computeroutput>wxLEFT</computeroutput>). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combo.h" line="733"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/combo.h" line="733"/>
       </memberdef>
       <memberdef kind="function" id="classwx_combo_ctrl_1afb0b22cb38395040699eebcb679fd86a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -960,7 +960,7 @@
 <para>This method should be called as soon as possible after the control has been created, unless <ref refid="classwx_combo_ctrl_1a3ce1fce108f3a84216fa9983d6b89a37" kindref="member">OnButtonClick()</ref> has been overridden. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combo.h" line="740"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/combo.h" line="740"/>
       </memberdef>
       <memberdef kind="function" id="classwx_combo_ctrl_1add059c3997d6697bc98365f039da17f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -997,7 +997,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combo.h" line="756"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/combo.h" line="756"/>
       </memberdef>
       <memberdef kind="function" id="classwx_combo_ctrl_1a24f043ce5c1287904a899c22f2dc7ce9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1015,7 +1015,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combo.h" line="763"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/combo.h" line="763"/>
       </memberdef>
       <memberdef kind="function" id="classwx_combo_ctrl_1aef690d395a8ef2500d2c4ddd2d345d6d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1033,7 +1033,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combo.h" line="772"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/combo.h" line="772"/>
       </memberdef>
       <memberdef kind="function" id="classwx_combo_ctrl_1a62f78126cae07f006685349851340b29" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -1070,7 +1070,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combo.h" line="783"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/combo.h" line="783"/>
       </memberdef>
       <memberdef kind="function" id="classwx_combo_ctrl_1a738267959dcf2b73430bd310173ebedb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1087,7 +1087,7 @@
 <para>Thus, unlike <ref refid="classwx_combo_ctrl_1a4202edbc9fc83623c658a83fe4c6d7be" kindref="member">SetValue()</ref>, it works equally well with combo control using <computeroutput>wxCB_READONLY</computeroutput> style. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combo.h" line="790"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/combo.h" line="790"/>
       </memberdef>
       <memberdef kind="function" id="classwx_combo_ctrl_1a00188332f7b6200c98f5f65966d5b151" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1110,7 +1110,7 @@
 </programlisting> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combo.h" line="806"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/combo.h" line="806"/>
       </memberdef>
       <memberdef kind="function" id="classwx_combo_ctrl_1ae38353a81954d02af302ba103e984cb7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1127,7 +1127,7 @@
 <para>Value -1 can be given to indicate platform default.</para><para><xrefsect id="deprecated_1_deprecated000008"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="classwx_combo_ctrl_1ae2b983f401d92ccc38f2bed47fb4d76b" kindref="member">SetMargins()</ref> instead. </para></xrefdescription></xrefsect></para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combo.h" line="815"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/combo.h" line="815"/>
       </memberdef>
       <memberdef kind="function" id="classwx_combo_ctrl_1a4202edbc9fc83623c658a83fe4c6d7be" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -1146,29 +1146,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combo.h" line="824"/>
-      </memberdef>
-      <memberdef kind="function" id="classwx_combo_ctrl_1af70ad872f5f8ca4c5598739556a73554" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void wxComboCtrl::SetValueWithEvent</definition>
-        <argsstring>(const wxString &amp;value, bool withEvent=true)</argsstring>
-        <name>SetValueWithEvent</name>
-        <param>
-          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
-          <declname>value</declname>
-        </param>
-        <param>
-          <type>bool</type>
-          <declname>withEvent</declname>
-          <defval>true</defval>
-        </param>
-        <briefdescription>
-<para>Same as <ref refid="classwx_combo_ctrl_1a4202edbc9fc83623c658a83fe4c6d7be" kindref="member">SetValue()</ref>, but also sends <ref refid="classwx_command_event" kindref="compound">wxCommandEvent</ref> of type <computeroutput>wxEVT_COMMAND_TEXT_UPDATED</computeroutput> if <emphasis>withEvent</emphasis> is true. </para>        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combo.h" line="830"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/combo.h" line="824"/>
       </memberdef>
       <memberdef kind="function" id="classwx_combo_ctrl_1ae87a04c471bfcac5ab0d370ac9edddbc" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -1181,7 +1159,7 @@
 <para><xrefsect id="deprecated_1_deprecated000009"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="classwx_combo_ctrl_1afda0208f5c2a31d504e230c36546fe8d" kindref="member">Popup()</ref> instead. </para></xrefdescription></xrefsect></para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combo.h" line="837"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/combo.h" line="831"/>
       </memberdef>
       <memberdef kind="function" id="classwx_combo_ctrl_1a9da1ff37488b9c33ed02ba2064ad6d85" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -1195,7 +1173,7 @@
 <para>Windows only. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combo.h" line="842"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/combo.h" line="836"/>
       </memberdef>
       <memberdef kind="function" id="classwx_combo_ctrl_1a5b8f90d12149fe7e3f1e38e0dd0b839a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1213,7 +1191,7 @@
 <para>This alternative popup window is usually a <ref refid="classwx_dialog" kindref="compound">wxDialog</ref>, and as such, when it is shown, its parent top-level window will appear as if the focus has been lost from it. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combo.h" line="851"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/combo.h" line="845"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -1229,7 +1207,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combo.h" line="492"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/combo.h" line="492"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-func">
@@ -1253,7 +1231,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combo.h" line="866"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/combo.h" line="860"/>
       </memberdef>
       <memberdef kind="function" id="classwx_combo_ctrl_1a0df7ddd8eb5454a2d3f72eb805848fa9" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -1271,7 +1249,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combo.h" line="877"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/combo.h" line="871"/>
       </memberdef>
       <memberdef kind="function" id="classwx_combo_ctrl_1a1c7a534296a4668e49737f599d54aa14" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -1312,7 +1290,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combo.h" line="898"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/combo.h" line="892"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -1416,109 +1394,109 @@
 </para></sect1>
     </detaileddescription>
     <inheritancegraph>
-      <node id="4928">
+      <node id="5020">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="4927">
+      <node id="5019">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="4928" relation="public-inheritance">
+        <childnode refid="5020" relation="public-inheritance">
         </childnode>
-        <childnode refid="4929" relation="public-inheritance">
+        <childnode refid="5021" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4929">
+      <node id="5021">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="4930">
+      <node id="5022">
         <label>wxTextEntry</label>
         <link refid="classwx_text_entry"/>
       </node>
-      <node id="4925">
+      <node id="5017">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="4926" relation="public-inheritance">
+        <childnode refid="5018" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4926">
+      <node id="5018">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="4927" relation="public-inheritance">
+        <childnode refid="5019" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4924">
+      <node id="5016">
         <label>wxComboCtrl</label>
         <link refid="classwx_combo_ctrl"/>
-        <childnode refid="4925" relation="public-inheritance">
+        <childnode refid="5017" relation="public-inheritance">
         </childnode>
-        <childnode refid="4930" relation="public-inheritance">
+        <childnode refid="5022" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4931">
+      <node id="5023">
         <label>wxOwnerDrawnComboBox</label>
         <link refid="classwx_owner_drawn_combo_box"/>
-        <childnode refid="4924" relation="public-inheritance">
+        <childnode refid="5016" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4932">
+      <node id="5024">
         <label>wxRichTextStyleComboCtrl</label>
         <link refid="classwx_rich_text_style_combo_ctrl"/>
-        <childnode refid="4924" relation="public-inheritance">
+        <childnode refid="5016" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="4937">
+      <node id="5029">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="4938" relation="usage">
+        <childnode refid="5030" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="4936">
+      <node id="5028">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="4937" relation="public-inheritance">
+        <childnode refid="5029" relation="public-inheritance">
         </childnode>
-        <childnode refid="4939" relation="public-inheritance">
+        <childnode refid="5031" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4939">
+      <node id="5031">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="4940">
+      <node id="5032">
         <label>wxTextEntry</label>
         <link refid="classwx_text_entry"/>
       </node>
-      <node id="4934">
+      <node id="5026">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="4935" relation="public-inheritance">
+        <childnode refid="5027" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4935">
+      <node id="5027">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="4936" relation="public-inheritance">
+        <childnode refid="5028" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4933">
+      <node id="5025">
         <label>wxComboCtrl</label>
         <link refid="classwx_combo_ctrl"/>
-        <childnode refid="4934" relation="public-inheritance">
+        <childnode refid="5026" relation="public-inheritance">
         </childnode>
-        <childnode refid="4940" relation="public-inheritance">
+        <childnode refid="5032" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4938">
+      <node id="5030">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combo.h" line="356" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combo.h" bodystart="354" bodyend="899"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/combo.h" line="356" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/combo.h" bodystart="354" bodyend="893"/>
     <listofallmembers>
       <member refid="classwx_window_1a3afbd49b1ea2f8275e3600dcac102923" prot="public" virt="virtual"><scope>wxComboCtrl</scope><name>AcceptsFocus</name></member>
       <member refid="classwx_window_1a2370bdd3ab08e7ef3c7555c6aa8301b8" prot="public" virt="virtual"><scope>wxComboCtrl</scope><name>AcceptsFocusFromKeyboard</name></member>
@@ -1723,6 +1701,7 @@
       <member refid="classwx_window_1aa90a260c0a835a133043460b7d0024a8" prot="public" virt="virtual"><scope>wxComboCtrl</scope><name>InitDialog</name></member>
       <member refid="classwx_window_1ae1b56ca87d8590ee5e576012229a380a" prot="public" virt="non-virtual"><scope>wxComboCtrl</scope><name>InvalidateBestSize</name></member>
       <member refid="classwx_window_1af918e6fe8565c2d5235973cc3de84a43" prot="public" virt="non-virtual"><scope>wxComboCtrl</scope><name>IsBeingDeleted</name></member>
+      <member refid="classwx_window_1a469f0881da248d37691440c9d4cc7200" prot="public" virt="non-virtual"><scope>wxComboCtrl</scope><name>IsDescendant</name></member>
       <member refid="classwx_window_1a9d1be1bbb625ebf87ad4ad47e49a0194" prot="public" virt="virtual"><scope>wxComboCtrl</scope><name>IsDoubleBuffered</name></member>
       <member refid="classwx_text_entry_1a2bb43512241850ba7cef54dee029fb86" prot="public" virt="virtual"><scope>wxComboCtrl</scope><name>IsEditable</name></member>
       <member refid="classwx_text_entry_1a84d0559b6e7720cc230ba35e74e1e158" prot="public" virt="virtual"><scope>wxComboCtrl</scope><name>IsEmpty</name></member>
@@ -1742,13 +1721,13 @@
       <member refid="classwx_window_1a72d70fd14e3565bf782fbcd3271d8930" prot="public" virt="virtual"><scope>wxComboCtrl</scope><name>IsShownOnScreen</name></member>
       <member refid="classwx_window_1a657ef8b6055eb06df894ac5e6ddfecf8" prot="public" virt="non-virtual"><scope>wxComboCtrl</scope><name>IsThisEnabled</name></member>
       <member refid="classwx_window_1a0002826ad05f2a5661b4c8995713f37f" prot="public" virt="virtual"><scope>wxComboCtrl</scope><name>IsTopLevel</name></member>
+      <member refid="classwx_window_1a7940d510c5bdc062a2b109a1022dd8c2" prot="public" virt="virtual"><scope>wxComboCtrl</scope><name>IsTransparentBackgroundSupported</name></member>
       <member refid="classwx_evt_handler_1a360fdeefcf53b62fb49fb828406bb8a6" prot="public" virt="non-virtual"><scope>wxComboCtrl</scope><name>IsUnlinked</name></member>
       <member refid="classwx_window_1a1b143c3e72bd0af533b76db4830a6113" prot="public" virt="virtual"><scope>wxComboCtrl</scope><name>Layout</name></member>
       <member refid="classwx_window_1ade808784f0e64d9985e2f279b5ca8c02" prot="public" virt="non-virtual"><scope>wxComboCtrl</scope><name>LineDown</name></member>
       <member refid="classwx_window_1afc0816a174ceee6d36d1995c6824a273" prot="public" virt="non-virtual"><scope>wxComboCtrl</scope><name>LineUp</name></member>
       <member refid="classwx_window_1a124944524f36b71385dad8fddaad8ded" prot="public" virt="virtual"><scope>wxComboCtrl</scope><name>Lower</name></member>
       <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxComboCtrl</scope><name>m_refData</name></member>
-      <member refid="classwx_window_1a192fc8b467845d093c16452db96c65c5" prot="public" virt="virtual"><scope>wxComboCtrl</scope><name>MakeModal</name></member>
       <member refid="classwx_window_1ab1cb98c8d25b9e6ff7b706b1446c3df7" prot="public" virt="non-virtual"><scope>wxComboCtrl</scope><name>Move</name></member>
       <member refid="classwx_window_1a22a22c1e23ca05776707e7999d8047fe" prot="public" virt="non-virtual"><scope>wxComboCtrl</scope><name>Move</name></member>
       <member refid="classwx_window_1a79e66079125e8420de269811bdb6f2b6" prot="public" virt="non-virtual"><scope>wxComboCtrl</scope><name>MoveAfterInTabOrder</name></member>
@@ -1831,7 +1810,7 @@
       <member refid="classwx_window_1a9ab11e7da57a1d08918aa75fc33f6ad3" prot="public" virt="virtual"><scope>wxComboCtrl</scope><name>SetFont</name></member>
       <member refid="classwx_window_1a69f1e1c7ddd370d72e68c70f13ac8de9" prot="public" virt="virtual"><scope>wxComboCtrl</scope><name>SetForegroundColour</name></member>
       <member refid="classwx_window_1a4c1a2cbc7363237b3a7c70af4e702c72" prot="public" virt="non-virtual"><scope>wxComboCtrl</scope><name>SetHelpText</name></member>
-      <member refid="classwx_combo_ctrl_1afd6de67563df02c3e57d48a0a55842fa" prot="public" virt="virtual"><scope>wxComboCtrl</scope><name>SetHint</name></member>
+      <member refid="classwx_combo_ctrl_1a68221bdd4af63abfd9840e5de13f4ba6" prot="public" virt="virtual"><scope>wxComboCtrl</scope><name>SetHint</name></member>
       <member refid="classwx_window_1a7f27d0faed14effa013381bdc40e1bcd" prot="public" virt="non-virtual"><scope>wxComboCtrl</scope><name>SetId</name></member>
       <member refid="classwx_window_1ae6dfe0b0d4a8c666b21ce8df8d96727b" prot="protected" virt="virtual"><scope>wxComboCtrl</scope><name>SetInitialBestSize</name></member>
       <member refid="classwx_window_1a1b309ca50ba87e34f968c83b79af1397" prot="public" virt="non-virtual"><scope>wxComboCtrl</scope><name>SetInitialSize</name></member>
@@ -1882,7 +1861,6 @@
       <member refid="classwx_window_1ac8cf4398cec50ac36634760f45a0656f" prot="public" virt="virtual"><scope>wxComboCtrl</scope><name>SetTransparent</name></member>
       <member refid="classwx_window_1a00066c70049a7be3ce6b648d206e6432" prot="public" virt="virtual"><scope>wxComboCtrl</scope><name>SetValidator</name></member>
       <member refid="classwx_combo_ctrl_1a4202edbc9fc83623c658a83fe4c6d7be" prot="public" virt="virtual"><scope>wxComboCtrl</scope><name>SetValue</name></member>
-      <member refid="classwx_combo_ctrl_1af70ad872f5f8ca4c5598739556a73554" prot="public" virt="non-virtual"><scope>wxComboCtrl</scope><name>SetValueWithEvent</name></member>
       <member refid="classwx_window_1a37f293b7904bc6668b86cccb0aea5669" prot="public" virt="non-virtual"><scope>wxComboCtrl</scope><name>SetVirtualSize</name></member>
       <member refid="classwx_window_1a8e95201edebe43b9623bd3bdc555af4d" prot="public" virt="non-virtual"><scope>wxComboCtrl</scope><name>SetVirtualSize</name></member>
       <member refid="classwx_window_1a306af30adec68689f74ed537b4f9d5fd" prot="public" virt="non-virtual"><scope>wxComboCtrl</scope><name>SetWindowStyle</name></member>
@@ -1898,7 +1876,6 @@
       <member refid="classwx_window_1a88cc65e424a129d9b0057756cdb67ec9" prot="public" virt="virtual"><scope>wxComboCtrl</scope><name>TransferDataToWindow</name></member>
       <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxComboCtrl</scope><name>TryAfter</name></member>
       <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxComboCtrl</scope><name>TryBefore</name></member>
-      <member refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" virt="non-virtual"><scope>wxComboCtrl</scope><name>TryThis</name></member>
       <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxComboCtrl</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxComboCtrl</scope><name>Unbind</name></member>
       <member refid="classwx_combo_ctrl_1a9da1ff37488b9c33ed02ba2064ad6d85" prot="public" virt="virtual"><scope>wxComboCtrl</scope><name>Undo</name></member>

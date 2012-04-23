@@ -23,7 +23,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmdline.h" line="517"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmdline.h" line="517"/>
       </memberdef>
       <memberdef kind="function" id="classwx_cmd_line_parser_1a5f9179bbfa468e833d507e9cccd14f88" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -44,7 +44,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmdline.h" line="518"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmdline.h" line="518"/>
       </memberdef>
       <memberdef kind="function" id="classwx_cmd_line_parser_1aefe037c833460769d82e27d63be87623" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -61,7 +61,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmdline.h" line="519"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmdline.h" line="519"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -76,7 +76,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmdline.h" line="281"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmdline.h" line="281"/>
       </memberdef>
       <memberdef kind="function" id="classwx_cmd_line_parser_1a6eb6f75eecbf45f608c6fbd16a0b21d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -97,7 +97,7 @@
 <para>This is the traditional (Unix) command line format. The parameters <emphasis>argc</emphasis> and <emphasis>argv</emphasis> have the same meaning as the typical <computeroutput>main()</computeroutput> function.</para><para>This constructor is available in both ANSI and Unicode modes because under some platforms the command line arguments are passed as ASCII strings even to Unicode programs. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmdline.h" line="292"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmdline.h" line="292"/>
       </memberdef>
       <memberdef kind="function" id="classwx_cmd_line_parser_1adcd642a8b6ccb4c7c683725d2535e3a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -118,7 +118,7 @@
 <para>This is the traditional (Unix) command line format.</para><para>The parameters <emphasis>argc</emphasis> and <emphasis>argv</emphasis> have the same meaning as the typical <computeroutput>main()</computeroutput> function.</para><para>This constructor is only available in Unicode build. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmdline.h" line="303"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmdline.h" line="303"/>
       </memberdef>
       <memberdef kind="function" id="classwx_cmd_line_parser_1a95102f8f3ba8246c90e400ed91a6a9e8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -135,7 +135,7 @@
 <para>The parameter cmdline has the same meaning as the corresponding parameter of <computeroutput>WinMain()</computeroutput>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmdline.h" line="310"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmdline.h" line="310"/>
       </memberdef>
       <memberdef kind="function" id="classwx_cmd_line_parser_1a748e26a8155fa216483837a7144532ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -152,7 +152,7 @@
 <para>You must use <ref refid="classwx_cmd_line_parser_1ab38495b944060a2434b97068dea04824" kindref="member">SetCmdLine()</ref> later. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmdline.h" line="316"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmdline.h" line="316"/>
       </memberdef>
       <memberdef kind="function" id="classwx_cmd_line_parser_1acdc4d2ce68032f412b1251f879f204c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -177,7 +177,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmdline.h" line="322"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmdline.h" line="322"/>
       </memberdef>
       <memberdef kind="function" id="classwx_cmd_line_parser_1a6be47a28300ac3d1a0085f51f5aac8b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -198,7 +198,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmdline.h" line="329"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmdline.h" line="329"/>
       </memberdef>
       <memberdef kind="function" id="classwx_cmd_line_parser_1aa100e0bcaa58595e99ba5907434dc1fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -212,7 +212,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmdline.h" line="337"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmdline.h" line="337"/>
       </memberdef>
       <memberdef kind="function" id="classwx_cmd_line_parser_1aa2a6c2690987a27868204c81fb4d9f10" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -245,7 +245,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmdline.h" line="350"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmdline.h" line="350"/>
       </memberdef>
       <memberdef kind="function" id="classwx_cmd_line_parser_1a8536e782a5cf4e14b664df216f6623e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -273,7 +273,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmdline.h" line="363"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmdline.h" line="363"/>
       </memberdef>
       <memberdef kind="function" id="classwx_cmd_line_parser_1ab23a85663e5234be569469220d00a7d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -310,7 +310,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmdline.h" line="374"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmdline.h" line="374"/>
       </memberdef>
       <memberdef kind="function" id="classwx_cmd_line_parser_1a61a92fe66e0c11af3405ba1b63bbe28d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -338,7 +338,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmdline.h" line="381"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmdline.h" line="381"/>
       </memberdef>
       <memberdef kind="function" id="classwx_cmd_line_parser_1a0574f1a3ae51a374da9a570a3237ad3b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -370,7 +370,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmdline.h" line="391"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmdline.h" line="391"/>
       </memberdef>
       <memberdef kind="function" id="classwx_cmd_line_parser_1a25201f90d6d3175847f366dd81fede75" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -388,7 +388,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmdline.h" line="398"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmdline.h" line="398"/>
       </memberdef>
       <memberdef kind="function" id="classwx_cmd_line_parser_1aab671600cb5899189ddd0783626ee940" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -402,7 +402,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmdline.h" line="405"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmdline.h" line="405"/>
       </memberdef>
       <memberdef kind="function" id="classwx_cmd_line_parser_1a4a885843cba2f51115c7d1238daef425" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -415,7 +415,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmdline.h" line="426"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmdline.h" line="426"/>
       </memberdef>
       <memberdef kind="function" id="classwx_cmd_line_parser_1a3817650ce71cb38be279f0a2029def3b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -434,7 +434,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmdline.h" line="436"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmdline.h" line="436"/>
       </memberdef>
       <memberdef kind="function" id="classwx_cmd_line_parser_1a89daa530a505f085a02e9ac6b4a521a6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -451,7 +451,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmdline.h" line="441"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmdline.h" line="441"/>
       </memberdef>
       <memberdef kind="function" id="classwx_cmd_line_parser_1ac490fe80a90259b976cdc68d50d27d21" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="cmdline_8h_1a221be5db9115bb24981adcb2837d0889" kindref="member">wxCmdLineSwitchState</ref></type>
@@ -469,7 +469,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmdline.h" line="461"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmdline.h" line="461"/>
       </memberdef>
       <memberdef kind="function" id="classwx_cmd_line_parser_1a440879f7550398ccdce262d62873e9a6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -490,7 +490,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmdline.h" line="467"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmdline.h" line="467"/>
       </memberdef>
       <memberdef kind="function" id="classwx_cmd_line_parser_1a851c30e2c7f91042a51471cf6bf1ffec" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -511,7 +511,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmdline.h" line="473"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmdline.h" line="473"/>
       </memberdef>
       <memberdef kind="function" id="classwx_cmd_line_parser_1acdf4e6607469da70f26fc9b1dbb0c172" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -532,7 +532,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmdline.h" line="479"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmdline.h" line="479"/>
       </memberdef>
       <memberdef kind="function" id="classwx_cmd_line_parser_1a29d042d27912720350bdc70dc54fbf07" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -553,7 +553,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmdline.h" line="485"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmdline.h" line="485"/>
       </memberdef>
       <memberdef kind="function" id="classwx_cmd_line_parser_1a7a6347d2fb9580c920a7cf2445949131" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -571,7 +571,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmdline.h" line="490"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmdline.h" line="490"/>
       </memberdef>
       <memberdef kind="function" id="classwx_cmd_line_parser_1af717f413add42a53578200f904881732" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -584,7 +584,7 @@
 <para>This function makes sense mostly if you had used <computeroutput>wxCMD_LINE_PARAM_MULTIPLE</computeroutput> flag. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmdline.h" line="496"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmdline.h" line="496"/>
       </memberdef>
       <memberdef kind="function" id="classwx_cmd_line_parser_1a80547a4638d7a16cbf6191e47fe7f82c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -610,7 +610,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmdline.h" line="510"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmdline.h" line="510"/>
       </memberdef>
       <memberdef kind="function" id="classwx_cmd_line_parser_1ac7281e9d5dfb7e41c1bf5f9fb959bbee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -645,7 +645,7 @@
 </programlisting> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmdline.h" line="551"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmdline.h" line="551"/>
       </memberdef>
       <memberdef kind="function" id="classwx_cmd_line_parser_1acb89b52769bfe4e897098b17cd1855bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -662,7 +662,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmdline.h" line="556"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmdline.h" line="556"/>
       </memberdef>
       <memberdef kind="function" id="classwx_cmd_line_parser_1a060ffe4abbbe7f40127b62a8e9c96f2f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -679,7 +679,7 @@
 <para>Default is <computeroutput>&quot;-&quot;</computeroutput> for Unix, <computeroutput>&quot;-/&quot;</computeroutput> for Windows. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmdline.h" line="562"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmdline.h" line="562"/>
       </memberdef>
       <memberdef kind="function" id="classwx_cmd_line_parser_1ae37c3b034155ae5f4b6ae330f7ecf38a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -693,7 +693,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmdline.h" line="572"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmdline.h" line="572"/>
       </memberdef>
       <memberdef kind="function" id="classwx_cmd_line_parser_1ae5fc6b7f15aac54a69899ea7360d7dd7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -706,7 +706,7 @@
 <para>Call <ref refid="classwx_cmd_line_parser_1ae37c3b034155ae5f4b6ae330f7ecf38a" kindref="member">Usage()</ref> to directly show this string to the user. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmdline.h" line="579"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmdline.h" line="579"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -730,7 +730,7 @@
 <para>Words are separated by whitespace and double quotes can be used to preserve the spaces inside the words.</para><para>By default, this function uses Windows-like word splitting algorithm, i.e. single quotes have no special meaning and backslash can&apos;t be used to escape spaces neither. With <computeroutput>wxCMD_LINE_SPLIT_UNIX</computeroutput> flag Unix semantics is used, i.e. both single and double quotes can be used and backslash can be used to escape all the other special characters. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmdline.h" line="421"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmdline.h" line="421"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -757,7 +757,7 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__appmanagement" kindref="compound">Application and Process Management</ref></para><para><simplesect kind="see"><para><ref refid="classwx_app_console_1a18d2288273cee260ff047831a5e8bfc5" kindref="member">wxApp::argc</ref>, <ref refid="classwx_app_console_1aec036ffd2b28e72ca36cb0f7ef6a3b37" kindref="member">wxApp::argv</ref>, <ref refid="page_samples_1page_samples_console" kindref="member">Console Program Sample</ref> </para></simplesect>
 </para></sect1>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmdline.h" line="276" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmdline.h" bodystart="275" bodyend="580"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmdline.h" line="276" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/cmdline.h" bodystart="275" bodyend="580"/>
     <listofallmembers>
       <member refid="classwx_cmd_line_parser_1aa2a6c2690987a27868204c81fb4d9f10" prot="public" virt="non-virtual"><scope>wxCmdLineParser</scope><name>AddLongOption</name></member>
       <member refid="classwx_cmd_line_parser_1a8536e782a5cf4e14b664df216f6623e4" prot="public" virt="non-virtual"><scope>wxCmdLineParser</scope><name>AddLongSwitch</name></member>

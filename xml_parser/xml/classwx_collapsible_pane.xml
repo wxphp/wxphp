@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/collpane.h" line="116"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/collpane.h" line="116"/>
       </memberdef>
       <memberdef kind="function" id="classwx_collapsible_pane_1a920561522d4b28c08b8d693047c3aa38" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -66,7 +66,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/collpane.h" line="127"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/collpane.h" line="127"/>
       </memberdef>
       <memberdef kind="function" id="classwx_collapsible_pane_1ae609270807e8655796abedfa7397b502" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -174,7 +174,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/collpane.h" line="157"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/collpane.h" line="157"/>
       </memberdef>
       <memberdef kind="function" id="classwx_collapsible_pane_1aaeebf5484692f4e262ea3760c372ecdc" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -192,7 +192,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/collpane.h" line="162"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/collpane.h" line="162"/>
       </memberdef>
       <memberdef kind="function" id="classwx_collapsible_pane_1a23700d2702ddb248e97cd80672c7becf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -205,7 +205,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/collpane.h" line="167"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/collpane.h" line="167"/>
       </memberdef>
       <memberdef kind="function" id="classwx_collapsible_pane_1a4fab8a810f7eb766dd0c672a74187e06" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
@@ -218,7 +218,7 @@
 <para>Add controls to the returned <ref refid="classwx_window" kindref="compound">wxWindow</ref> to make them collapsible. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/collpane.h" line="173"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/collpane.h" line="173"/>
       </memberdef>
       <memberdef kind="function" id="classwx_collapsible_pane_1a6a777627a7383a1f5cc0c62d66a97205" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -231,7 +231,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/collpane.h" line="178"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/collpane.h" line="178"/>
       </memberdef>
       <memberdef kind="function" id="classwx_collapsible_pane_1a39057b92b5d8d3112b9d2080d7dd4c69" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -244,7 +244,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/collpane.h" line="183"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/collpane.h" line="183"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -275,85 +275,85 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref> <htmlonly> &lt;br&gt;&lt;div&gt;&lt;span class=&apos;appearance&apos;&gt;Appearance:&lt;/span&gt;&lt;br&gt;&lt;table class=&apos;appearance&apos;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&apos;wxmsw/collapsiblepane.png&apos; alt=&apos;wxMSW appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxgtk/collapsiblepane.png&apos; alt=&apos;wxGTK appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxmac/collapsiblepane.png&apos; alt=&apos;wxMac appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;wxMSW appearance&lt;/td&gt;&lt;td&gt;wxGTK appearance&lt;/td&gt;&lt;td&gt;wxMac appearance&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt; </htmlonly></para><para><simplesect kind="see"><para><ref refid="classwx_panel" kindref="compound">wxPanel</ref>, <ref refid="classwx_collapsible_pane_event" kindref="compound">wxCollapsiblePaneEvent</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="4829">
+      <node id="4921">
         <label>wxCollapsiblePane</label>
         <link refid="classwx_collapsible_pane"/>
-        <childnode refid="4830" relation="public-inheritance">
+        <childnode refid="4922" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4833">
+      <node id="4925">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="4832">
+      <node id="4924">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="4833" relation="public-inheritance">
+        <childnode refid="4925" relation="public-inheritance">
         </childnode>
-        <childnode refid="4834" relation="public-inheritance">
+        <childnode refid="4926" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4834">
+      <node id="4926">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="4830">
+      <node id="4922">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="4831" relation="public-inheritance">
+        <childnode refid="4923" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4831">
+      <node id="4923">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="4832" relation="public-inheritance">
+        <childnode refid="4924" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="4835">
+      <node id="4927">
         <label>wxCollapsiblePane</label>
         <link refid="classwx_collapsible_pane"/>
-        <childnode refid="4836" relation="public-inheritance">
+        <childnode refid="4928" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4839">
+      <node id="4931">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="4840" relation="usage">
+        <childnode refid="4932" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="4838">
+      <node id="4930">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="4839" relation="public-inheritance">
+        <childnode refid="4931" relation="public-inheritance">
         </childnode>
-        <childnode refid="4841" relation="public-inheritance">
+        <childnode refid="4933" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4841">
+      <node id="4933">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="4836">
+      <node id="4928">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="4837" relation="public-inheritance">
+        <childnode refid="4929" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4837">
+      <node id="4929">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="4838" relation="public-inheritance">
+        <childnode refid="4930" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4840">
+      <node id="4932">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/collpane.h" line="111" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/collpane.h" bodystart="110" bodyend="184"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/collpane.h" line="111" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/collpane.h" bodystart="110" bodyend="184"/>
     <listofallmembers>
       <member refid="classwx_window_1a3afbd49b1ea2f8275e3600dcac102923" prot="public" virt="virtual"><scope>wxCollapsiblePane</scope><name>AcceptsFocus</name></member>
       <member refid="classwx_window_1a2370bdd3ab08e7ef3c7555c6aa8301b8" prot="public" virt="virtual"><scope>wxCollapsiblePane</scope><name>AcceptsFocusFromKeyboard</name></member>
@@ -522,6 +522,7 @@
       <member refid="classwx_window_1ae1b56ca87d8590ee5e576012229a380a" prot="public" virt="non-virtual"><scope>wxCollapsiblePane</scope><name>InvalidateBestSize</name></member>
       <member refid="classwx_window_1af918e6fe8565c2d5235973cc3de84a43" prot="public" virt="non-virtual"><scope>wxCollapsiblePane</scope><name>IsBeingDeleted</name></member>
       <member refid="classwx_collapsible_pane_1a6a777627a7383a1f5cc0c62d66a97205" prot="public" virt="virtual"><scope>wxCollapsiblePane</scope><name>IsCollapsed</name></member>
+      <member refid="classwx_window_1a469f0881da248d37691440c9d4cc7200" prot="public" virt="non-virtual"><scope>wxCollapsiblePane</scope><name>IsDescendant</name></member>
       <member refid="classwx_window_1a9d1be1bbb625ebf87ad4ad47e49a0194" prot="public" virt="virtual"><scope>wxCollapsiblePane</scope><name>IsDoubleBuffered</name></member>
       <member refid="classwx_window_1a59452a5bd42f5ea4b31d7fc4aa59644f" prot="public" virt="non-virtual"><scope>wxCollapsiblePane</scope><name>IsEnabled</name></member>
       <member refid="classwx_collapsible_pane_1a39057b92b5d8d3112b9d2080d7dd4c69" prot="public" virt="non-virtual"><scope>wxCollapsiblePane</scope><name>IsExpanded</name></member>
@@ -538,13 +539,13 @@
       <member refid="classwx_window_1a72d70fd14e3565bf782fbcd3271d8930" prot="public" virt="virtual"><scope>wxCollapsiblePane</scope><name>IsShownOnScreen</name></member>
       <member refid="classwx_window_1a657ef8b6055eb06df894ac5e6ddfecf8" prot="public" virt="non-virtual"><scope>wxCollapsiblePane</scope><name>IsThisEnabled</name></member>
       <member refid="classwx_window_1a0002826ad05f2a5661b4c8995713f37f" prot="public" virt="virtual"><scope>wxCollapsiblePane</scope><name>IsTopLevel</name></member>
+      <member refid="classwx_window_1a7940d510c5bdc062a2b109a1022dd8c2" prot="public" virt="virtual"><scope>wxCollapsiblePane</scope><name>IsTransparentBackgroundSupported</name></member>
       <member refid="classwx_evt_handler_1a360fdeefcf53b62fb49fb828406bb8a6" prot="public" virt="non-virtual"><scope>wxCollapsiblePane</scope><name>IsUnlinked</name></member>
       <member refid="classwx_window_1a1b143c3e72bd0af533b76db4830a6113" prot="public" virt="virtual"><scope>wxCollapsiblePane</scope><name>Layout</name></member>
       <member refid="classwx_window_1ade808784f0e64d9985e2f279b5ca8c02" prot="public" virt="non-virtual"><scope>wxCollapsiblePane</scope><name>LineDown</name></member>
       <member refid="classwx_window_1afc0816a174ceee6d36d1995c6824a273" prot="public" virt="non-virtual"><scope>wxCollapsiblePane</scope><name>LineUp</name></member>
       <member refid="classwx_window_1a124944524f36b71385dad8fddaad8ded" prot="public" virt="virtual"><scope>wxCollapsiblePane</scope><name>Lower</name></member>
       <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxCollapsiblePane</scope><name>m_refData</name></member>
-      <member refid="classwx_window_1a192fc8b467845d093c16452db96c65c5" prot="public" virt="virtual"><scope>wxCollapsiblePane</scope><name>MakeModal</name></member>
       <member refid="classwx_window_1ab1cb98c8d25b9e6ff7b706b1446c3df7" prot="public" virt="non-virtual"><scope>wxCollapsiblePane</scope><name>Move</name></member>
       <member refid="classwx_window_1a22a22c1e23ca05776707e7999d8047fe" prot="public" virt="non-virtual"><scope>wxCollapsiblePane</scope><name>Move</name></member>
       <member refid="classwx_window_1a79e66079125e8420de269811bdb6f2b6" prot="public" virt="non-virtual"><scope>wxCollapsiblePane</scope><name>MoveAfterInTabOrder</name></member>
@@ -665,7 +666,6 @@
       <member refid="classwx_window_1a88cc65e424a129d9b0057756cdb67ec9" prot="public" virt="virtual"><scope>wxCollapsiblePane</scope><name>TransferDataToWindow</name></member>
       <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxCollapsiblePane</scope><name>TryAfter</name></member>
       <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxCollapsiblePane</scope><name>TryBefore</name></member>
-      <member refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" virt="non-virtual"><scope>wxCollapsiblePane</scope><name>TryThis</name></member>
       <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxCollapsiblePane</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxCollapsiblePane</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a22e5db2ec1d19c8252c056fd116975d7" prot="public" virt="non-virtual"><scope>wxCollapsiblePane</scope><name>Unlink</name></member>

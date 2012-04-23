@@ -7,7 +7,609 @@
     <innerclass refid="classwx_list_item_attr" prot="public">wxListItemAttr</innerclass>
     <innerclass refid="classwx_list_view" prot="public">wxListView</innerclass>
     <innerclass refid="classwx_list_item" prot="public">wxListItem</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="interface_2wx_2listctrl_8h_1a9f4768b8832171196520bd61d0f24892" prot="public" static="no">
+        <name>wxLC_VRULES</name>
+        <initializer>0x0001</initializer>
+        <briefdescription>
+<para>style flags </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="10" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="interface_2wx_2listctrl_8h_1ad901addeb648b16488ef0a5d9d8ae3f2" prot="public" static="no">
+        <name>wxLC_HRULES</name>
+        <initializer>0x0002</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="11" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="interface_2wx_2listctrl_8h_1ad47b04a448f7d8d6835abe40632837cd" prot="public" static="no">
+        <name>wxLC_ICON</name>
+        <initializer>0x0004</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="13" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="interface_2wx_2listctrl_8h_1a49e009724952292f98f2fc258ea96057" prot="public" static="no">
+        <name>wxLC_SMALL_ICON</name>
+        <initializer>0x0008</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="14" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="interface_2wx_2listctrl_8h_1a10549d9148205b43204c5ef56446a2cd" prot="public" static="no">
+        <name>wxLC_LIST</name>
+        <initializer>0x0010</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="15" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="interface_2wx_2listctrl_8h_1ababe906ea6ac44adac57b655eda07d25" prot="public" static="no">
+        <name>wxLC_REPORT</name>
+        <initializer>0x0020</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="16" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="interface_2wx_2listctrl_8h_1a830e89519c8f4edf031e0699b8d7225f" prot="public" static="no">
+        <name>wxLC_ALIGN_TOP</name>
+        <initializer>0x0040</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="18" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="interface_2wx_2listctrl_8h_1ad6e4ab1dc9917816f9255f2fc74b5b04" prot="public" static="no">
+        <name>wxLC_ALIGN_LEFT</name>
+        <initializer>0x0080</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="19" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="interface_2wx_2listctrl_8h_1a229fa800b896ee6be197f44dad92c4da" prot="public" static="no">
+        <name>wxLC_AUTOARRANGE</name>
+        <initializer>0x0100</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="20" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="interface_2wx_2listctrl_8h_1a65384b7671f9f7998d572a0a5298f9c1" prot="public" static="no">
+        <name>wxLC_VIRTUAL</name>
+        <initializer>0x0200</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="21" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="interface_2wx_2listctrl_8h_1a4c62207a8241ba2a1e4e944d99de85fd" prot="public" static="no">
+        <name>wxLC_EDIT_LABELS</name>
+        <initializer>0x0400</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="22" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="interface_2wx_2listctrl_8h_1aee4ac2d397b881ff90378f88a270ddc4" prot="public" static="no">
+        <name>wxLC_NO_HEADER</name>
+        <initializer>0x0800</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="23" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="interface_2wx_2listctrl_8h_1a486b955a09e79f91d027198d4278e3a2" prot="public" static="no">
+        <name>wxLC_NO_SORT_HEADER</name>
+        <initializer>0x1000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="24" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="interface_2wx_2listctrl_8h_1a3263b761bee6be7d39d43e82dc98f686" prot="public" static="no">
+        <name>wxLC_SINGLE_SEL</name>
+        <initializer>0x2000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="25" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="interface_2wx_2listctrl_8h_1ad5b57aabcd934c62fff0557798ce0dea" prot="public" static="no">
+        <name>wxLC_SORT_ASCENDING</name>
+        <initializer>0x4000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="26" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="interface_2wx_2listctrl_8h_1a98ee65d7a325cbed83645be248fc67ec" prot="public" static="no">
+        <name>wxLC_SORT_DESCENDING</name>
+        <initializer>0x8000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="27" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="interface_2wx_2listctrl_8h_1af3682f7c65726fdd03938b9d1000d9ca" prot="public" static="no">
+        <name>wxLC_MASK_TYPE</name>
+        <initializer>(wxLC_ICON | wxLC_SMALL_ICON | wxLC_LIST | wxLC_REPORT)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="29" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="interface_2wx_2listctrl_8h_1aeab5b7503b94f08c7f024eb947cb9362" prot="public" static="no">
+        <name>wxLC_MASK_ALIGN</name>
+        <initializer>(wxLC_ALIGN_TOP | wxLC_ALIGN_LEFT)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="30" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="interface_2wx_2listctrl_8h_1a4f59b8cc2810923faca1e063ff5db284" prot="public" static="no">
+        <name>wxLC_MASK_SORT</name>
+        <initializer>(wxLC_SORT_ASCENDING | wxLC_SORT_DESCENDING)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="31" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="interface_2wx_2listctrl_8h_1a0c11fe2ace8837a3d8bafdbb5b8cfdd5" prot="public" static="no">
+        <name>wxLIST_MASK_STATE</name>
+        <initializer>0x0001</initializer>
+        <briefdescription>
+<para>Mask flags to tell app/GUI what fields of <ref refid="classwx_list_item" kindref="compound">wxListItem</ref> are valid. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="35" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="interface_2wx_2listctrl_8h_1a4025fa774e9def88090ca38d80c7c4a6" prot="public" static="no">
+        <name>wxLIST_MASK_TEXT</name>
+        <initializer>0x0002</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="36" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="interface_2wx_2listctrl_8h_1a45f7eff49d8fcd41b0fa657201aa9505" prot="public" static="no">
+        <name>wxLIST_MASK_IMAGE</name>
+        <initializer>0x0004</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="37" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="interface_2wx_2listctrl_8h_1ac0f339d5535eda021a44120ebb2b3e28" prot="public" static="no">
+        <name>wxLIST_MASK_DATA</name>
+        <initializer>0x0008</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="38" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="interface_2wx_2listctrl_8h_1a51e1cef52bda550d7dce0711d0f484da" prot="public" static="no">
+        <name>wxLIST_SET_ITEM</name>
+        <initializer>0x0010</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="39" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="interface_2wx_2listctrl_8h_1aadd5536673b2ec4f861c6cd46970766e" prot="public" static="no">
+        <name>wxLIST_MASK_WIDTH</name>
+        <initializer>0x0020</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="40" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="interface_2wx_2listctrl_8h_1a29b7e809f4b995ff479076685319e2d1" prot="public" static="no">
+        <name>wxLIST_MASK_FORMAT</name>
+        <initializer>0x0040</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="41" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="interface_2wx_2listctrl_8h_1a824dd5fb04d1cde986763478f865cd7c" prot="public" static="no">
+        <name>wxLIST_STATE_DONTCARE</name>
+        <initializer>0x0000</initializer>
+        <briefdescription>
+<para>State flags for indicating the state of an item. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="44" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="interface_2wx_2listctrl_8h_1ab61d0f9fa745734087e31294b271c05b" prot="public" static="no">
+        <name>wxLIST_STATE_DROPHILITED</name>
+        <initializer>0x0001</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="45" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="interface_2wx_2listctrl_8h_1a40379f078a7a205756b6c15ba9c06640" prot="public" static="no">
+        <name>wxLIST_STATE_FOCUSED</name>
+        <initializer>0x0002</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="46" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="interface_2wx_2listctrl_8h_1ae63567e152b485c92faec6487a310438" prot="public" static="no">
+        <name>wxLIST_STATE_SELECTED</name>
+        <initializer>0x0004</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="47" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="interface_2wx_2listctrl_8h_1a71a56ff64e2544c6499afaf56ed220bc" prot="public" static="no">
+        <name>wxLIST_STATE_CUT</name>
+        <initializer>0x0008</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="48" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="interface_2wx_2listctrl_8h_1a9fe0c0105820048ae32a24ef2cd5f538" prot="public" static="no">
+        <name>wxLIST_STATE_DISABLED</name>
+        <initializer>0x0010</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="49" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="interface_2wx_2listctrl_8h_1a29c245048cc9eac26fc387c8f722a354" prot="public" static="no">
+        <name>wxLIST_STATE_FILTERED</name>
+        <initializer>0x0020</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="50" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="interface_2wx_2listctrl_8h_1af86dca8f3e349cb9d960bd20dbb4ceb3" prot="public" static="no">
+        <name>wxLIST_STATE_INUSE</name>
+        <initializer>0x0040</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="51" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="interface_2wx_2listctrl_8h_1a1e53d54fbb9f789c6b7e10fca61e9dc0" prot="public" static="no">
+        <name>wxLIST_STATE_PICKED</name>
+        <initializer>0x0080</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="52" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="interface_2wx_2listctrl_8h_1aa7006896e284c739aa795a5530e1264c" prot="public" static="no">
+        <name>wxLIST_STATE_SOURCE</name>
+        <initializer>0x0100</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="53" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="interface_2wx_2listctrl_8h_1a4c2d66c3e90e0e619aa3cf7c0578492b" prot="public" static="no">
+        <name>wxLIST_HITTEST_ABOVE</name>
+        <initializer>0x0001</initializer>
+        <briefdescription>
+<para>Hit test flags, used in HitTest. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="56" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="interface_2wx_2listctrl_8h_1a22aaa23039d10fb4c0c335229a31bc8f" prot="public" static="no">
+        <name>wxLIST_HITTEST_BELOW</name>
+        <initializer>0x0002</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="57" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="interface_2wx_2listctrl_8h_1a0a5da95af7e05a6c32c08229d88d85b4" prot="public" static="no">
+        <name>wxLIST_HITTEST_NOWHERE</name>
+        <initializer>0x0004</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="58" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="interface_2wx_2listctrl_8h_1a7f35229733fe9cba8f525aa6371fcf42" prot="public" static="no">
+        <name>wxLIST_HITTEST_ONITEMICON</name>
+        <initializer>0x0020</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="59" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="interface_2wx_2listctrl_8h_1ae88af25d6998f04f4c7eb3201e37251b" prot="public" static="no">
+        <name>wxLIST_HITTEST_ONITEMLABEL</name>
+        <initializer>0x0080</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="60" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="interface_2wx_2listctrl_8h_1a15c627c3eb599fb3fcbdc881e6bd84c1" prot="public" static="no">
+        <name>wxLIST_HITTEST_ONITEMRIGHT</name>
+        <initializer>0x0100</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="61" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="interface_2wx_2listctrl_8h_1a6f632b1b380a6227720b38d4b4992860" prot="public" static="no">
+        <name>wxLIST_HITTEST_ONITEMSTATEICON</name>
+        <initializer>0x0200</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="62" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="interface_2wx_2listctrl_8h_1a4140f5520c9fb8422f64834468339c20" prot="public" static="no">
+        <name>wxLIST_HITTEST_TOLEFT</name>
+        <initializer>0x0400</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="63" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="interface_2wx_2listctrl_8h_1af6779e5299366fa043625b046302dfd8" prot="public" static="no">
+        <name>wxLIST_HITTEST_TORIGHT</name>
+        <initializer>0x0800</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="64" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="interface_2wx_2listctrl_8h_1a102a3d361f409760f147d2034600de65" prot="public" static="no">
+        <name>wxLIST_HITTEST_ONITEM</name>
+        <initializer>(wxLIST_HITTEST_ONITEMICON | wxLIST_HITTEST_ONITEMLABEL | wxLIST_HITTEST_ONITEMSTATEICON)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="66" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="interface_2wx_2listctrl_8h_1abab148b94ab9d59a255f68a359332433" prot="public" static="no">
+        <name>wxLIST_GETSUBITEMRECT_WHOLEITEM</name>
+        <initializer>-1l</initializer>
+        <briefdescription>
+<para>GetSubItemRect constants. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="69" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
       <sectiondef kind="enum">
+      <memberdef kind="enum" id="interface_2wx_2listctrl_8h_1a39fca1837c5ce7715cbf571669660c13" prot="public" static="no">
+        <name>@22</name>
+        <enumvalue id="interface_2wx_2listctrl_8h_1a39fca1837c5ce7715cbf571669660c13a0f45891db762bdec26f7b5233950d808" prot="public">
+          <name>wxLIST_NEXT_ABOVE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="interface_2wx_2listctrl_8h_1a39fca1837c5ce7715cbf571669660c13ade6f41ef8b2af3e3486906ed7a391c1e" prot="public">
+          <name>wxLIST_NEXT_ALL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="interface_2wx_2listctrl_8h_1a39fca1837c5ce7715cbf571669660c13a110c7c77e02193ffef8799ae758af64e" prot="public">
+          <name>wxLIST_NEXT_BELOW</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="interface_2wx_2listctrl_8h_1a39fca1837c5ce7715cbf571669660c13a48bba3d854d569b7828c86b2315911fa" prot="public">
+          <name>wxLIST_NEXT_LEFT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="interface_2wx_2listctrl_8h_1a39fca1837c5ce7715cbf571669660c13aab4f052d94ad6d470100b8a3921b252b" prot="public">
+          <name>wxLIST_NEXT_RIGHT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Flags for GetNextItem (MSW only except wxLIST_NEXT_ALL) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="73" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" bodystart="72" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="enum" id="interface_2wx_2listctrl_8h_1aaf8fd5f0e57d456151c951e0f3715fc4" prot="public" static="no">
+        <name>@23</name>
+        <enumvalue id="interface_2wx_2listctrl_8h_1aaf8fd5f0e57d456151c951e0f3715fc4ab50a3c50716f6c9da66f0e3081a2b986" prot="public">
+          <name>wxLIST_ALIGN_DEFAULT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="interface_2wx_2listctrl_8h_1aaf8fd5f0e57d456151c951e0f3715fc4adef5c8693f3648104649a3b96f7fb098" prot="public">
+          <name>wxLIST_ALIGN_LEFT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="interface_2wx_2listctrl_8h_1aaf8fd5f0e57d456151c951e0f3715fc4adedae6a518578c52b06cdb3c66b07d3e" prot="public">
+          <name>wxLIST_ALIGN_TOP</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="interface_2wx_2listctrl_8h_1aaf8fd5f0e57d456151c951e0f3715fc4a4cf4b03136160d2172fc92c5515d8e36" prot="public">
+          <name>wxLIST_ALIGN_SNAP_TO_GRID</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Alignment flags for Arrange (MSW only except wxLIST_ALIGN_LEFT) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="83" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" bodystart="82" bodyend="88"/>
+      </memberdef>
       <memberdef kind="enum" id="interface_2wx_2listctrl_8h_1afddccbb0d7cf18f9b205f00efc5738d0" prot="public" static="no">
         <name>wxListColumnFormat</name>
         <enumvalue id="interface_2wx_2listctrl_8h_1afddccbb0d7cf18f9b205f00efc5738d0a53ef6990b28b4ef0b18f06da3f8c630d" prot="public">
@@ -40,18 +642,375 @@
           </detaileddescription>
         </enumvalue>
         <briefdescription>
-<para>Column format (MSW only except wxLIST_FORMAT_LEFT). </para>        </briefdescription>
+<para>Column format (MSW only except wxLIST_FORMAT_LEFT) </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1426" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" bodystart="1425" bodyend="1431"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="92" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" bodystart="91" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="enum" id="interface_2wx_2listctrl_8h_1a94798fdadfbf49a7c658ace669a1d310" prot="public" static="no">
+        <name>@24</name>
+        <enumvalue id="interface_2wx_2listctrl_8h_1a94798fdadfbf49a7c658ace669a1d310ad8e121a8cc4230175e4687b8d05ef612" prot="public">
+          <name>wxLIST_AUTOSIZE</name>
+          <initializer> -1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="interface_2wx_2listctrl_8h_1a94798fdadfbf49a7c658ace669a1d310a063e5140e6a882b2c0ebb22480463558" prot="public">
+          <name>wxLIST_AUTOSIZE_USEHEADER</name>
+          <initializer> -2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Autosize values for SetColumnWidth. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="101" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" bodystart="100" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="enum" id="interface_2wx_2listctrl_8h_1ae4d5251432e1a9e6803c0240cc492e18" prot="public" static="no">
+        <name>@25</name>
+        <enumvalue id="interface_2wx_2listctrl_8h_1ae4d5251432e1a9e6803c0240cc492e18aff45f4057710f0c4f5cca0a7abf3f29d" prot="public">
+          <name>wxLIST_RECT_BOUNDS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="interface_2wx_2listctrl_8h_1ae4d5251432e1a9e6803c0240cc492e18abb97cbdcd60f1d8566b83af526ccdb27" prot="public">
+          <name>wxLIST_RECT_ICON</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="interface_2wx_2listctrl_8h_1ae4d5251432e1a9e6803c0240cc492e18ac6d7c01ed1a2aae00a34212bdda38ba8" prot="public">
+          <name>wxLIST_RECT_LABEL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Flag values for GetItemRect. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="108" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" bodystart="107" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="enum" id="interface_2wx_2listctrl_8h_1a7ff5f2dff38e7639981794c43dc9167b" prot="public" static="no">
+        <name>@26</name>
+        <enumvalue id="interface_2wx_2listctrl_8h_1a7ff5f2dff38e7639981794c43dc9167ba9395473793888df3ecfba8e4f1ee83d2" prot="public">
+          <name>wxLIST_FIND_UP</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="interface_2wx_2listctrl_8h_1a7ff5f2dff38e7639981794c43dc9167baff0974d4cb09f9466db3787f659f969e" prot="public">
+          <name>wxLIST_FIND_DOWN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="interface_2wx_2listctrl_8h_1a7ff5f2dff38e7639981794c43dc9167ba253ef09fcd3174a96a486ed212d6bfca" prot="public">
+          <name>wxLIST_FIND_LEFT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="interface_2wx_2listctrl_8h_1a7ff5f2dff38e7639981794c43dc9167ba2fef6f3285b5162ebdbbf1d3f745d230" prot="public">
+          <name>wxLIST_FIND_RIGHT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Flag values for FindItem (MSW only) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="116" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" bodystart="115" bodyend="121"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="interface_2wx_2listctrl_8h_1aaef054a50191e5ba5bed560c5a2d6283" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_LIST_BEGIN_DRAG</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_LIST_BEGIN_DRAG</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="1376" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" bodystart="1376" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="interface_2wx_2listctrl_8h_1abebb3eaf9fda91a0f5d1cda00a558e3e" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_LIST_BEGIN_RDRAG</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_LIST_BEGIN_RDRAG</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="1377" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" bodystart="1377" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="interface_2wx_2listctrl_8h_1abb93591cf58f10900a677875870a0e64" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_LIST_BEGIN_LABEL_EDIT</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_LIST_BEGIN_LABEL_EDIT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="1378" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" bodystart="1378" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="interface_2wx_2listctrl_8h_1ad19cd064f9678f32b1e0f35c6be48337" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_LIST_END_LABEL_EDIT</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_LIST_END_LABEL_EDIT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="1379" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" bodystart="1379" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="interface_2wx_2listctrl_8h_1a7cf10580557b5bf7e3c8f8666fb32156" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_LIST_DELETE_ITEM</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_LIST_DELETE_ITEM</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="1380" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" bodystart="1380" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="interface_2wx_2listctrl_8h_1aeefd7d710299b561e817b144b4dd6c88" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_LIST_DELETE_ALL_ITEMS</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_LIST_DELETE_ALL_ITEMS</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="1381" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" bodystart="1381" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="interface_2wx_2listctrl_8h_1af80cbdf38c4fd69e20639e1eb71bbdec" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_LIST_ITEM_SELECTED</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_LIST_ITEM_SELECTED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="1382" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" bodystart="1382" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="interface_2wx_2listctrl_8h_1a8223503c58ae26fab86725c8d5475584" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_LIST_ITEM_DESELECTED</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_LIST_ITEM_DESELECTED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="1383" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" bodystart="1383" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="interface_2wx_2listctrl_8h_1ac196d3e0c89092cec90064c65d466e39" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_LIST_KEY_DOWN</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_LIST_KEY_DOWN</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="1384" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" bodystart="1384" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="interface_2wx_2listctrl_8h_1a52722c57bec38f998b80f0e095c097be" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_LIST_INSERT_ITEM</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_LIST_INSERT_ITEM</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="1385" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" bodystart="1385" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="interface_2wx_2listctrl_8h_1a94c8f172ec8d9a9eac1a4c974bc550fd" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_LIST_COL_CLICK</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_LIST_COL_CLICK</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="1386" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" bodystart="1386" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="interface_2wx_2listctrl_8h_1a315a021afb1e050a7dc58fd659338162" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_LIST_ITEM_RIGHT_CLICK</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_LIST_ITEM_RIGHT_CLICK</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="1387" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" bodystart="1387" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="interface_2wx_2listctrl_8h_1ab3a239f9e053c15b76a103452e5b5dd2" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_LIST_ITEM_MIDDLE_CLICK</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_LIST_ITEM_MIDDLE_CLICK</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="1388" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" bodystart="1388" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="interface_2wx_2listctrl_8h_1a9686e46e7f307050c2bf2a15e1099a6f" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_LIST_ITEM_ACTIVATED</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_LIST_ITEM_ACTIVATED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="1389" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" bodystart="1389" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="interface_2wx_2listctrl_8h_1abd2e3fd09cb3b3f142b049049bb9ad19" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_LIST_CACHE_HINT</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_LIST_CACHE_HINT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="1390" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" bodystart="1390" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="interface_2wx_2listctrl_8h_1a1da3d4af8ac3c70317a27ed53185192c" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_LIST_COL_RIGHT_CLICK</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_LIST_COL_RIGHT_CLICK</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="1391" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" bodystart="1391" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="interface_2wx_2listctrl_8h_1aee6ea4966f84a08ce9562af8d55d786f" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_LIST_COL_BEGIN_DRAG</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_LIST_COL_BEGIN_DRAG</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="1392" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" bodystart="1392" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="interface_2wx_2listctrl_8h_1a29bd5e4ff9a0022d9ea5f7387dcd5356" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_LIST_COL_DRAGGING</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_LIST_COL_DRAGGING</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="1393" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" bodystart="1393" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="interface_2wx_2listctrl_8h_1a12c37d94fb8633c42f07a9b1dc7a6ca3" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_LIST_COL_END_DRAG</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_LIST_COL_END_DRAG</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="1394" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" bodystart="1394" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="interface_2wx_2listctrl_8h_1a7119ba26a6f538d72e0523a41cf2d642" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_LIST_ITEM_FOCUSED</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_LIST_ITEM_FOCUSED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="1395" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" bodystart="1395" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h"/>
   </compounddef>
 </doxygen>

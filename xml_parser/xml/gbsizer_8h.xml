@@ -18,13 +18,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gbsizer.h" line="356" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gbsizer.h" bodystart="356" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gbsizer.h" line="356" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/gbsizer.h" bodystart="356" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gbsizer.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gbsizer.h"/>
   </compounddef>
 </doxygen>

@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="485" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" bodystart="485" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="485" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" bodystart="485" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classwx_image_1_1_h_s_v_value_1adcb62694247ef515406061e90f0fddb0" prot="public" static="no" mutable="no">
         <type>double</type>
@@ -28,7 +28,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="486" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" bodystart="486" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="486" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" bodystart="486" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classwx_image_1_1_h_s_v_value_1a403d5a5cf298a0084c870ca07953e56e" prot="public" static="no" mutable="no">
         <type>double</type>
@@ -41,7 +41,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="487" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" bodystart="487" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="487" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" bodystart="487" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -71,14 +71,14 @@
 <para>It is used by <ref refid="classwx_image_1aa72cf0a75c1e517f69787e1984717017" kindref="member">wxImage::HSVtoRGB()</ref> and <ref refid="classwx_image_1a28041e34c4dccaf9cba3fff358121b83" kindref="member">wxImage::RGBtoHSV()</ref>, which convert between HSV color space and RGB color space. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="483"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="483"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para>A simple class which stores hue, saturation and value as doubles in the range 0.0-1.0. </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="474" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" bodystart="473" bodyend="488"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="474" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" bodystart="473" bodyend="488"/>
     <listofallmembers>
       <member refid="classwx_image_1_1_h_s_v_value_1a74cb9634c89371d04f14000490a2a017" prot="public" virt="non-virtual"><scope>wxImage::HSVValue</scope><name>HSVValue</name></member>
       <member refid="classwx_image_1_1_h_s_v_value_1a3c50682e1ed071b2ab500f78a13a05ff" prot="public" virt="non-virtual"><scope>wxImage::HSVValue</scope><name>hue</name></member>

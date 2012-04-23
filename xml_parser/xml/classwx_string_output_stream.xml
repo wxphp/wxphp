@@ -26,7 +26,7 @@
 <para>If the provided pointer is non-NULL, data will be written to it. Otherwise, an internal string is used for the data written to this stream, use <ref refid="classwx_string_output_stream_1ab3d0fb583a06e00acbd0f09528c44488" kindref="member">GetString()</ref> to get access to it.</para><para>If <emphasis>str</emphasis> is used, data written to the stream is appended to the current contents of it, i.e. the string is not cleared here. However if it is not empty, the positions returned by <ref refid="classwx_output_stream_1acb127540592e6b5a3e8787329eb696a4" kindref="member">wxOutputStream::TellO</ref> will be offset by the initial string length, i.e. initial stream position will be the initial length of the string and not 0.</para><para>Notice that the life time of <emphasis>conv</emphasis> must be greater than the life time of this object itself as it stores a reference to it. Also notice that with default value of this argument the data written to the stream must be valid UTF-8, pass <computeroutput>wxConvISO8859_1</computeroutput> to deal with arbitrary 8 bit data. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sstream.h" line="66"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sstream.h" line="66"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_output_stream_1ab3d0fb583a06e00acbd0f09528c44488" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -39,7 +39,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sstream.h" line="71"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sstream.h" line="71"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -48,42 +48,42 @@
 <para>Note that currently this stream does not support seeking but can tell its current position.</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__streams" kindref="compound">Streams</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10594">
+      <node id="10779">
         <label>wxStreamBase</label>
         <link refid="classwx_stream_base"/>
       </node>
-      <node id="10592">
+      <node id="10777">
         <label>wxStringOutputStream</label>
         <link refid="classwx_string_output_stream"/>
-        <childnode refid="10593" relation="public-inheritance">
+        <childnode refid="10778" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10593">
+      <node id="10778">
         <label>wxOutputStream</label>
         <link refid="classwx_output_stream"/>
-        <childnode refid="10594" relation="public-inheritance">
+        <childnode refid="10779" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10597">
+      <node id="10782">
         <label>wxStreamBase</label>
         <link refid="classwx_stream_base"/>
       </node>
-      <node id="10595">
+      <node id="10780">
         <label>wxStringOutputStream</label>
         <link refid="classwx_string_output_stream"/>
-        <childnode refid="10596" relation="public-inheritance">
+        <childnode refid="10781" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10596">
+      <node id="10781">
         <label>wxOutputStream</label>
         <link refid="classwx_output_stream"/>
-        <childnode refid="10597" relation="public-inheritance">
+        <childnode refid="10782" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sstream.h" line="46" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sstream.h" bodystart="45" bodyend="72"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sstream.h" line="46" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/sstream.h" bodystart="45" bodyend="72"/>
     <listofallmembers>
       <member refid="classwx_output_stream_1a1c306ce99990d525921f8f6ae8432083" prot="public" virt="virtual"><scope>wxStringOutputStream</scope><name>Close</name></member>
       <member refid="classwx_stream_base_1aca7d52699887bc33bec4810bf6fe29ba" prot="public" virt="non-virtual"><scope>wxStringOutputStream</scope><name>GetLastError</name></member>

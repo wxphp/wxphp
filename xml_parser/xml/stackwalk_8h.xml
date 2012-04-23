@@ -14,13 +14,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stackwalk.h" line="12" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stackwalk.h" bodystart="12" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stackwalk.h" line="12" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/stackwalk.h" bodystart="12" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stackwalk.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stackwalk.h"/>
   </compounddef>
 </doxygen>

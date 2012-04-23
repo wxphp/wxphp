@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" line="284" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" bodystart="284" bodyend="284"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/graphics.h" line="284" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/graphics.h" bodystart="284" bodyend="284"/>
       </memberdef>
       <memberdef kind="function" id="classwx_graphics_bitmap_1ae72a6bee1af1907f4180edde1dc85c84" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_image" kindref="compound">wxImage</ref></type>
@@ -30,7 +30,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" line="298"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/graphics.h" line="298"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -38,49 +38,49 @@
     <detaileddescription>
 <para>The objects of this class are not created directly but only via <ref refid="classwx_graphics_context" kindref="compound">wxGraphicsContext</ref> or <ref refid="classwx_graphics_renderer" kindref="compound">wxGraphicsRenderer</ref> CreateBitmap(), CreateBitmapFromImage() or CreateSubBitmap() methods. They can subsequently be used with <ref refid="classwx_graphics_context_1aee61e2fbc580d7f6a344daa1d1e13296" kindref="member">wxGraphicsContext::DrawBitmap()</ref>. The only other operation is testing for the bitmap validity which can be performed using <ref refid="classwx_graphics_object_1ada13da4f78271792792050132965777d" kindref="member">IsNull()</ref> method inherited from the base class. </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="6557">
+      <node id="6725">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="6555">
+      <node id="6723">
         <label>wxGraphicsBitmap</label>
         <link refid="classwx_graphics_bitmap"/>
-        <childnode refid="6556" relation="public-inheritance">
+        <childnode refid="6724" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6556">
+      <node id="6724">
         <label>wxGraphicsObject</label>
         <link refid="classwx_graphics_object"/>
-        <childnode refid="6557" relation="public-inheritance">
+        <childnode refid="6725" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="6560">
+      <node id="6728">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="6561" relation="usage">
+        <childnode refid="6729" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="6558">
+      <node id="6726">
         <label>wxGraphicsBitmap</label>
         <link refid="classwx_graphics_bitmap"/>
-        <childnode refid="6559" relation="public-inheritance">
+        <childnode refid="6727" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6559">
+      <node id="6727">
         <label>wxGraphicsObject</label>
         <link refid="classwx_graphics_object"/>
-        <childnode refid="6560" relation="public-inheritance">
+        <childnode refid="6728" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6561">
+      <node id="6729">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" line="279" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" bodystart="278" bodyend="299"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/graphics.h" line="279" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/graphics.h" bodystart="278" bodyend="299"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxGraphicsBitmap</scope><name>AllocExclusive</name></member>
       <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxGraphicsBitmap</scope><name>CloneRefData</name></member>

@@ -40,7 +40,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/calctrl.h" line="70"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/calctrl.h" line="109"/>
       </memberdef>
       <memberdef kind="function" id="classwx_calendar_date_attr_1a26f85c18293c0e5185d275a8fe6fc8ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -62,7 +62,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/calctrl.h" line="76"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/calctrl.h" line="115"/>
       </memberdef>
       <memberdef kind="function" id="classwx_calendar_date_attr_1ac1d4f3a277dd3ee005b95fc6a363c375" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_colour" kindref="compound">wxColour</ref> &amp;</type>
@@ -75,7 +75,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/calctrl.h" line="81"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/calctrl.h" line="120"/>
       </memberdef>
       <memberdef kind="function" id="classwx_calendar_date_attr_1af853b10f9a4f985468118a5a4d793bce" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="calctrl_8h_1a6dbe7946c87601eee0d7fd2b4f73fdd6" kindref="member">wxCalendarDateBorder</ref></type>
@@ -88,7 +88,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/calctrl.h" line="86"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/calctrl.h" line="125"/>
       </memberdef>
       <memberdef kind="function" id="classwx_calendar_date_attr_1a7a4e8c62a22eff34213255bdaefc3911" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_colour" kindref="compound">wxColour</ref> &amp;</type>
@@ -101,7 +101,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/calctrl.h" line="91"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/calctrl.h" line="130"/>
       </memberdef>
       <memberdef kind="function" id="classwx_calendar_date_attr_1ab7983d46441a3588f78d4f2230e62b87" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_font" kindref="compound">wxFont</ref> &amp;</type>
@@ -114,7 +114,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/calctrl.h" line="96"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/calctrl.h" line="135"/>
       </memberdef>
       <memberdef kind="function" id="classwx_calendar_date_attr_1a8ab84131a07baa07b1a7152a49376a1c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_colour" kindref="compound">wxColour</ref> &amp;</type>
@@ -127,7 +127,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/calctrl.h" line="101"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/calctrl.h" line="140"/>
       </memberdef>
       <memberdef kind="function" id="classwx_calendar_date_attr_1a901d2442240307a6f677dcd854a6d71c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -140,7 +140,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/calctrl.h" line="106"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/calctrl.h" line="145"/>
       </memberdef>
       <memberdef kind="function" id="classwx_calendar_date_attr_1a173cd76ce308fe49f589f717f2ece330" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -153,7 +153,7 @@
 <para>any) border is set. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/calctrl.h" line="111"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/calctrl.h" line="150"/>
       </memberdef>
       <memberdef kind="function" id="classwx_calendar_date_attr_1a4495c5b034c09e3dc238dc7a6c898622" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -166,7 +166,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/calctrl.h" line="116"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/calctrl.h" line="155"/>
       </memberdef>
       <memberdef kind="function" id="classwx_calendar_date_attr_1ab7c0b565e3c049751fc5e584a069d4fa" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -179,7 +179,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/calctrl.h" line="121"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/calctrl.h" line="160"/>
       </memberdef>
       <memberdef kind="function" id="classwx_calendar_date_attr_1a6b11db96fe3ed6fff224bc0a88303abe" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -192,7 +192,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/calctrl.h" line="126"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/calctrl.h" line="165"/>
       </memberdef>
       <memberdef kind="function" id="classwx_calendar_date_attr_1a8ff7989d5190d97f0c81bf87919100eb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -205,7 +205,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/calctrl.h" line="131"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/calctrl.h" line="170"/>
       </memberdef>
       <memberdef kind="function" id="classwx_calendar_date_attr_1a2069e44cf2779b3751e9f2aac51016f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -222,7 +222,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/calctrl.h" line="136"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/calctrl.h" line="175"/>
       </memberdef>
       <memberdef kind="function" id="classwx_calendar_date_attr_1a1aab6eca60d892a300e9a13e4083be3a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -239,7 +239,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/calctrl.h" line="141"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/calctrl.h" line="180"/>
       </memberdef>
       <memberdef kind="function" id="classwx_calendar_date_attr_1a4122d3da6381cad1064c782fa8f85734" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -256,7 +256,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/calctrl.h" line="146"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/calctrl.h" line="185"/>
       </memberdef>
       <memberdef kind="function" id="classwx_calendar_date_attr_1a4109c931605578813c8ef2bdeb978c8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -273,7 +273,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/calctrl.h" line="151"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/calctrl.h" line="190"/>
       </memberdef>
       <memberdef kind="function" id="classwx_calendar_date_attr_1a96a3d5518f288fb91456c31c4ef53147" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -290,7 +290,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/calctrl.h" line="157"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/calctrl.h" line="196"/>
       </memberdef>
       <memberdef kind="function" id="classwx_calendar_date_attr_1a89f88fc34b15f0d466d1cdfc4e30440d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -307,7 +307,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/calctrl.h" line="162"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/calctrl.h" line="201"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -322,15 +322,15 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/calctrl.h" line="167"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/calctrl.h" line="206"/>
       </memberdef>
-      <memberdef kind="function" id="classwx_calendar_date_attr_1a63c41bd3870ab71b1d023aa0b818bef1" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classwx_calendar_date_attr_1aa7aeed4f898b583e702a9fe4a56f7629" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>static void wxCalendarDateAttr::SetMark</definition>
-        <argsstring>(wxCalendarDateAttr const &amp;m)</argsstring>
+        <argsstring>(const wxCalendarDateAttr &amp;m)</argsstring>
         <name>SetMark</name>
         <param>
-          <type><ref refid="classwx_calendar_date_attr" kindref="compound">wxCalendarDateAttr</ref> const &amp;</type>
+          <type>const <ref refid="classwx_calendar_date_attr" kindref="compound">wxCalendarDateAttr</ref> &amp;</type>
           <declname>m</declname>
         </param>
         <briefdescription>
@@ -339,7 +339,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/calctrl.h" line="173"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/calctrl.h" line="212"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -348,7 +348,7 @@
 <para>The objects of this class are used with <ref refid="classwx_calendar_ctrl" kindref="compound">wxCalendarCtrl</ref>.</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__data" kindref="compound">Data Structures</ref></para><para><simplesect kind="see"><para><ref refid="classwx_calendar_ctrl" kindref="compound">wxCalendarCtrl</ref> </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/calctrl.h" line="61" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/calctrl.h" bodystart="60" bodyend="174"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/calctrl.h" line="100" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/calctrl.h" bodystart="99" bodyend="213"/>
     <listofallmembers>
       <member refid="classwx_calendar_date_attr_1ac1d4f3a277dd3ee005b95fc6a363c375" prot="public" virt="non-virtual"><scope>wxCalendarDateAttr</scope><name>GetBackgroundColour</name></member>
       <member refid="classwx_calendar_date_attr_1af853b10f9a4f985468118a5a4d793bce" prot="public" virt="non-virtual"><scope>wxCalendarDateAttr</scope><name>GetBorder</name></member>
@@ -367,7 +367,7 @@
       <member refid="classwx_calendar_date_attr_1a4122d3da6381cad1064c782fa8f85734" prot="public" virt="non-virtual"><scope>wxCalendarDateAttr</scope><name>SetBorderColour</name></member>
       <member refid="classwx_calendar_date_attr_1a4109c931605578813c8ef2bdeb978c8c" prot="public" virt="non-virtual"><scope>wxCalendarDateAttr</scope><name>SetFont</name></member>
       <member refid="classwx_calendar_date_attr_1a96a3d5518f288fb91456c31c4ef53147" prot="public" virt="non-virtual"><scope>wxCalendarDateAttr</scope><name>SetHoliday</name></member>
-      <member refid="classwx_calendar_date_attr_1a63c41bd3870ab71b1d023aa0b818bef1" prot="public" virt="non-virtual"><scope>wxCalendarDateAttr</scope><name>SetMark</name></member>
+      <member refid="classwx_calendar_date_attr_1aa7aeed4f898b583e702a9fe4a56f7629" prot="public" virt="non-virtual"><scope>wxCalendarDateAttr</scope><name>SetMark</name></member>
       <member refid="classwx_calendar_date_attr_1a89f88fc34b15f0d466d1cdfc4e30440d" prot="public" virt="non-virtual"><scope>wxCalendarDateAttr</scope><name>SetTextColour</name></member>
       <member refid="classwx_calendar_date_attr_1a1e39356347615a006b3f45b8e2bd8011" prot="public" virt="non-virtual"><scope>wxCalendarDateAttr</scope><name>wxCalendarDateAttr</name></member>
       <member refid="classwx_calendar_date_attr_1a26f85c18293c0e5185d275a8fe6fc8ae" prot="public" virt="non-virtual"><scope>wxCalendarDateAttr</scope><name>wxCalendarDateAttr</name></member>

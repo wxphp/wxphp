@@ -38,7 +38,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="1577"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/textctrl.h" line="1577"/>
       </memberdef>
       <memberdef kind="function" id="classwx_stream_to_text_redirector_1a7e2cac14100ba43aea4acee1a747854c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -51,7 +51,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="1584"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/textctrl.h" line="1584"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -71,7 +71,7 @@ Example of usage:</para><para><programlisting><codeline><highlight class="normal
 </programlisting></para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__logging" kindref="compound">Logging</ref></para><para><simplesect kind="see"><para><ref refid="classwx_text_ctrl" kindref="compound">wxTextCtrl</ref> </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="1566" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" bodystart="1565" bodyend="1585"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/textctrl.h" line="1566" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/textctrl.h" bodystart="1565" bodyend="1585"/>
     <listofallmembers>
       <member refid="classwx_stream_to_text_redirector_1aaf6717267c8638d0ade7fe5ae143cae0" prot="public" virt="non-virtual"><scope>wxStreamToTextRedirector</scope><name>wxStreamToTextRedirector</name></member>
       <member refid="classwx_stream_to_text_redirector_1a7e2cac14100ba43aea4acee1a747854c" prot="public" virt="non-virtual"><scope>wxStreamToTextRedirector</scope><name>~wxStreamToTextRedirector</name></member>

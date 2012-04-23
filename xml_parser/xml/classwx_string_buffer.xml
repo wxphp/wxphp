@@ -23,7 +23,7 @@
 <para>Basically, this is equivalent to calling <ref refid="classwx_string_1a0c87e85cee09e65d314457379e5aba19" kindref="member">wxString::GetWriteBuf()</ref> and saving the result. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1770"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1770"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_buffer_1ae7801d52c22c50d100b2a2a5fdb6dccc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -36,7 +36,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1776"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1776"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_buffer_1a0483dde557c8c40f519ec52536d7fad8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="group__group__funcmacro__string_1gaf558f1d34fbf3cf5e3258e42a40875fd" kindref="member">wxStringCharType</ref> *</type>
@@ -49,7 +49,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1782"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1782"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -61,7 +61,7 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__log_1ga0dd3c633f990f794e76065c9a7af4c87" kindref="member" tooltip="The functions to use for error messages, i.e.">wxLogError</ref>(</highlight><highlight class="stringliteral">&quot;Something<sp/>is<sp/>very<sp/>wrong!&quot;</highlight><highlight class="normal">);</highlight></codeline>
 </programlisting></para><para>Note that the exact usage of this depends on whether or not <computeroutput>wxUSE_STL</computeroutput> is enabled. If <computeroutput>wxUSE_STL</computeroutput> is enabled, <ref refid="classwx_string_buffer" kindref="compound">wxStringBuffer</ref> creates a separate empty character buffer, and if <computeroutput>wxUSE_STL</computeroutput> is disabled, it uses GetWriteBuf() from <ref refid="classwx_string" kindref="compound">wxString</ref>, keeping the same buffer <ref refid="classwx_string" kindref="compound">wxString</ref> uses intact. In other words, relying on <ref refid="classwx_string_buffer" kindref="compound">wxStringBuffer</ref> containing the old <ref refid="classwx_string" kindref="compound">wxString</ref> data is not a good idea if you want to build your program both with and without <computeroutput>wxUSE_STL</computeroutput>.</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__data" kindref="compound">Data Structures</ref> </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1762" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" bodystart="1761" bodyend="1783"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" line="1762" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/string.h" bodystart="1761" bodyend="1783"/>
     <listofallmembers>
       <member refid="classwx_string_buffer_1a0483dde557c8c40f519ec52536d7fad8" prot="public" virt="non-virtual"><scope>wxStringBuffer</scope><name>operator wxStringCharType *</name></member>
       <member refid="classwx_string_buffer_1abcb53ccbb849af669bb51402ea57d7c8" prot="public" virt="non-virtual"><scope>wxStringBuffer</scope><name>wxStringBuffer</name></member>

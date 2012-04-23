@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="200" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" bodystart="200" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="200" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" bodystart="200" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="interface_2wx_2propgrid_2propgrid_8h_1a422babdd5ce8058435ed638fd1c486b0" prot="public" static="no">
         <name>wxPGMAN_DEFAULT_STYLE</name>
@@ -26,7 +26,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="204" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" bodystart="204" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="204" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" bodystart="204" bodyend="-1"/>
       </memberdef>
       <memberdef kind="enum" id="interface_2wx_2propgrid_2propgrid_8h_1a967b646b15085e115051d83a65ffdfe8" prot="public" static="no">
         <name>wxPG_WINDOW_STYLES</name>
@@ -143,7 +143,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="17" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" bodystart="16" bodyend="99"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="17" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" bodystart="16" bodyend="99"/>
       </memberdef>
       <memberdef kind="enum" id="interface_2wx_2propgrid_2propgrid_8h_1aeebee6f1621b080999ea22a5b76b00a6" prot="public" static="no">
         <name>wxPG_EX_WINDOW_STYLES</name>
@@ -250,7 +250,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="102" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" bodystart="101" bodyend="196"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="102" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" bodystart="101" bodyend="196"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -322,7 +322,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="217" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" bodystart="216" bodyend="265"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="217" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" bodystart="216" bodyend="265"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -401,7 +401,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="321" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" bodystart="320" bodyend="350"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="321" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" bodystart="320" bodyend="350"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="typedef">
@@ -416,7 +416,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="270" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" bodystart="270" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="270" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" bodystart="270" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="interface_2wx_2propgrid_2propgrid_8h_1add392b8d6550141475e3efb953b0a20f" prot="public" static="no">
         <type>int(*</type>
@@ -435,13 +435,13 @@
 </programlisting> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="374" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" bodystart="372" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="374" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" bodystart="372" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h"/>
   </compounddef>
 </doxygen>

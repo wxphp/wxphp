@@ -30,7 +30,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="286"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/socket.h" line="286"/>
       </memberdef>
       <memberdef kind="function" id="classwx_socket_client_1a6e55d27056f3bf22b16b25d2fadb01ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -43,7 +43,7 @@
 <para>Please see <ref refid="classwx_socket_base_1ab0b0926cfdfdd00b8b5c5f7f57cea861" kindref="member">wxSocketBase::Destroy()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="291"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/socket.h" line="291"/>
       </memberdef>
       <memberdef kind="function" id="classwx_socket_client_1a581cdb757cce6020c8caac1ddd74a599" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -84,7 +84,7 @@ If <emphasis>wait</emphasis> is false, <ref refid="classwx_socket_client_1a581cd
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="323"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/socket.h" line="323"/>
       </memberdef>
       <memberdef kind="function" id="classwx_socket_client_1a2167813338c94621a9ee0180524974a5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -134,7 +134,7 @@ If <emphasis>wait</emphasis> is false, <ref refid="classwx_socket_client_1a581cd
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="358"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/socket.h" line="358"/>
       </memberdef>
       <memberdef kind="function" id="classwx_socket_client_1a83c92e8c27a72c3610c9eb0b60e92d74" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -188,76 +188,76 @@ If <emphasis>wait</emphasis> is false, <ref refid="classwx_socket_client_1a581cd
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="393"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/socket.h" line="393"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-<para><xrefsect id="todo_1_todo000058"><xreftitle>Todo</xreftitle><xrefdescription><para>describe me.</para></xrefdescription></xrefsect></para><para><heading level="2"></heading>
+<para><xrefsect id="todo_1_todo000057"><xreftitle>Todo</xreftitle><xrefdescription><para>describe me.</para></xrefdescription></xrefsect></para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxnet" kindref="member">wxNet</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__net" kindref="compound">Networking</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10293">
+      <node id="10476">
         <label>wxSocketBase</label>
         <link refid="classwx_socket_base"/>
-        <childnode refid="10294" relation="public-inheritance">
+        <childnode refid="10477" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10294">
+      <node id="10477">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="10292">
+      <node id="10475">
         <label>wxSocketClient</label>
         <link refid="classwx_socket_client"/>
-        <childnode refid="10293" relation="public-inheritance">
+        <childnode refid="10476" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10296">
+      <node id="10479">
         <label>wxFTP</label>
         <link refid="classwx_f_t_p"/>
-        <childnode refid="10295" relation="public-inheritance">
+        <childnode refid="10478" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10297">
+      <node id="10480">
         <label>wxHTTP</label>
         <link refid="classwx_h_t_t_p"/>
-        <childnode refid="10295" relation="public-inheritance">
+        <childnode refid="10478" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10295">
+      <node id="10478">
         <label>wxProtocol</label>
         <link refid="classwx_protocol"/>
-        <childnode refid="10292" relation="public-inheritance">
+        <childnode refid="10475" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10299">
+      <node id="10482">
         <label>wxSocketBase</label>
         <link refid="classwx_socket_base"/>
-        <childnode refid="10300" relation="public-inheritance">
+        <childnode refid="10483" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10300">
+      <node id="10483">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="10301" relation="usage">
+        <childnode refid="10484" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="10298">
+      <node id="10481">
         <label>wxSocketClient</label>
         <link refid="classwx_socket_client"/>
-        <childnode refid="10299" relation="public-inheritance">
+        <childnode refid="10482" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10301">
+      <node id="10484">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="278" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" bodystart="277" bodyend="394"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/socket.h" line="278" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/socket.h" bodystart="277" bodyend="394"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxSocketClient</scope><name>AllocExclusive</name></member>
       <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxSocketClient</scope><name>CloneRefData</name></member>

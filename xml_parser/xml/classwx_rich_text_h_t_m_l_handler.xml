@@ -31,7 +31,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtexthtml.h" line="66"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtexthtml.h" line="66"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_h_t_m_l_handler_1ad21e46e72a063539b2f239b7724ece4f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -44,7 +44,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtexthtml.h" line="71"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtexthtml.h" line="71"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_h_t_m_l_handler_1a5237b4e140575359e9166b7045735862" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -57,7 +57,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtexthtml.h" line="76"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtexthtml.h" line="76"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_h_t_m_l_handler_1a4d46c95b2499408f4ddf454cf44c552f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="dynarray_8h_1add87f199292e36ee87efd6d7f0d4ee66" kindref="member">wxArrayInt</ref></type>
@@ -70,7 +70,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtexthtml.h" line="89"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtexthtml.h" line="89"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_h_t_m_l_handler_1a8bb444b087f74f7f6ecd9138adad95b1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -83,7 +83,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtexthtml.h" line="94"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtexthtml.h" line="94"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_h_t_m_l_handler_1ab7192921136514409c97ce36958ed140" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_array_string" kindref="compound">wxArrayString</ref> &amp;</type>
@@ -96,7 +96,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtexthtml.h" line="99"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtexthtml.h" line="99"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_h_t_m_l_handler_1a3781c32cc7212d3cdc62b520185a4582" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -123,7 +123,7 @@
 </programlisting> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtexthtml.h" line="126"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtexthtml.h" line="126"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_h_t_m_l_handler_1a4f1331be53b57fa7542a84a0a01b2b3d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -140,7 +140,7 @@
 <para>If empty, the system temporary directory will be used. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtexthtml.h" line="132"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtexthtml.h" line="132"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_h_t_m_l_handler_1a9f6f547aca9c78f1bfa5503965ab67d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -157,7 +157,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtexthtml.h" line="137"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtexthtml.h" line="137"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -180,7 +180,7 @@
 <para>This is a static function that can be used to delete the saved locations from an earlier operation, for example after the user has viewed the HTML file. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtexthtml.h" line="84"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtexthtml.h" line="84"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_h_t_m_l_handler_1a3bbadd19d5fd6bcf0f0984273da4399d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -197,7 +197,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtexthtml.h" line="105"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtexthtml.h" line="105"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-func">
@@ -220,7 +220,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtexthtml.h" line="143"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtexthtml.h" line="143"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -234,58 +234,58 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxrichtext" kindref="member">wxRichText</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__richtext" kindref="compound">Rich Text</ref> </para></sect1>
     </detaileddescription>
     <inheritancegraph>
-      <node id="9634">
+      <node id="9817">
         <label>wxRichTextFileHandler</label>
         <link refid="classwx_rich_text_file_handler"/>
-        <childnode refid="9635" relation="public-inheritance">
+        <childnode refid="9818" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9633">
+      <node id="9816">
         <label>wxRichTextHTMLHandler</label>
         <link refid="classwx_rich_text_h_t_m_l_handler"/>
-        <childnode refid="9634" relation="public-inheritance">
+        <childnode refid="9817" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9635">
+      <node id="9818">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="9640">
+      <node id="9823">
         <label>wxString</label>
         <link refid="classwx_string"/>
       </node>
-      <node id="9637">
+      <node id="9820">
         <label>wxRichTextFileHandler</label>
         <link refid="classwx_rich_text_file_handler"/>
-        <childnode refid="9638" relation="public-inheritance">
+        <childnode refid="9821" relation="public-inheritance">
         </childnode>
-        <childnode refid="9640" relation="usage">
+        <childnode refid="9823" relation="usage">
           <edgelabel>m_encoding</edgelabel>
           <edgelabel>m_extension</edgelabel>
           <edgelabel>m_name</edgelabel>
         </childnode>
       </node>
-      <node id="9636">
+      <node id="9819">
         <label>wxRichTextHTMLHandler</label>
         <link refid="classwx_rich_text_h_t_m_l_handler"/>
-        <childnode refid="9637" relation="public-inheritance">
+        <childnode refid="9820" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9638">
+      <node id="9821">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="9639" relation="usage">
+        <childnode refid="9822" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="9639">
+      <node id="9822">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtexthtml.h" line="59" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtexthtml.h" bodystart="58" bodyend="144"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtexthtml.h" line="59" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtexthtml.h" bodystart="58" bodyend="144"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxRichTextHTMLHandler</scope><name>AllocExclusive</name></member>
       <member refid="classwx_rich_text_file_handler_1aa20fea9876f9f1b1c80991939d30473f" prot="public" virt="virtual"><scope>wxRichTextHTMLHandler</scope><name>CanHandle</name></member>

@@ -45,7 +45,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/zstream.h" line="11" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/zstream.h" bodystart="11" bodyend="16"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/zstream.h" line="11" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/zstream.h" bodystart="11" bodyend="16"/>
       </memberdef>
       <memberdef kind="enum" id="zstream_8h_1a64bea75633419f58a90931e19349c384" prot="public" static="no">
         <name>wxZLibFlags</name>
@@ -87,13 +87,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/zstream.h" line="19" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/zstream.h" bodystart="19" bodyend="24"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/zstream.h" line="19" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/zstream.h" bodystart="19" bodyend="24"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/zstream.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/zstream.h"/>
   </compounddef>
 </doxygen>

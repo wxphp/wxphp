@@ -32,7 +32,7 @@
 <para>This method returns 0-sized bounding box for invalid regions. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" line="275"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/region.h" line="271"/>
       </memberdef>
       <memberdef kind="function" id="classwx_region_1ae971dbafb3b1d78049cd4eee00696614" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_rect" kindref="compound">wxRect</ref></type>
@@ -45,7 +45,7 @@
 <para>This method returns 0-sized bounding box for invalid regions. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" line="276"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/region.h" line="272"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -69,7 +69,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" line="349"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/region.h" line="345"/>
       </memberdef>
       <memberdef kind="function" id="classwx_region_1afad58d401a561baeff26b2413cef9532" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -87,7 +87,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" line="350"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/region.h" line="346"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -102,7 +102,7 @@
 <para>This constructor creates an invalid, or null, object, i.e. calling IsOk() on it returns false and <ref refid="classwx_region_1a59c5c5a41def2f2b67b9e1adb0f385c8" kindref="member">IsEmpty()</ref> returns true. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" line="164"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/region.h" line="160"/>
       </memberdef>
       <memberdef kind="function" id="classwx_region_1af2b51dd977107b0dd162db6e4e9e9c5c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -131,7 +131,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" line="168"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/region.h" line="164"/>
       </memberdef>
       <memberdef kind="function" id="classwx_region_1a2cebf12d74122ce220f3ad48fa686e97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -152,7 +152,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" line="173"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/region.h" line="169"/>
       </memberdef>
       <memberdef kind="function" id="classwx_region_1a66708b42c8bce4a76ada65cb312b60f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -169,7 +169,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" line="177"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/region.h" line="173"/>
       </memberdef>
       <memberdef kind="function" id="classwx_region_1ad88c11689e65f02bb99acea6d59a6d9f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -186,7 +186,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" line="181"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/region.h" line="177"/>
       </memberdef>
       <memberdef kind="function" id="classwx_region_1a4edcabc3e3beeeea45542c56873d50ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -212,7 +212,7 @@
 <para><emphasis>fillStyle</emphasis> parameter may have values <computeroutput>wxWINDING_RULE</computeroutput> or <computeroutput>wxODDEVEN_RULE</computeroutput>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" line="187"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/region.h" line="183"/>
       </memberdef>
       <memberdef kind="function" id="classwx_region_1ad7bfbeb79fe8dc281b91cfba43e8bd0a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -229,7 +229,7 @@
 <para>See <ref refid="classwx_region_1ae8ea15425722b296b6cb6974d7306e60" kindref="member">Union()</ref> for more details. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" line="191"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/region.h" line="187"/>
       </memberdef>
       <memberdef kind="function" id="classwx_region_1aab62039edc53c55b833042b7c83e9068" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -255,7 +255,7 @@
 <para>See <ref refid="classwx_region_1ae8ea15425722b296b6cb6974d7306e60" kindref="member">Union()</ref> for more details. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" line="197"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/region.h" line="193"/>
       </memberdef>
       <memberdef kind="function" id="classwx_region_1adb60f41b909b261b3292f34bfa700a30" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -268,7 +268,7 @@
 <para>See <ref refid="overview_refcount_1overview_refcount_destruct" kindref="member">reference-counted object destruction</ref> for more info. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" line="204"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/region.h" line="200"/>
       </memberdef>
       <memberdef kind="function" id="classwx_region_1a3e2c4b0910da7fadc36bd6ced199a673" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -281,7 +281,7 @@
 <para>The object becomes invalid, or null, after being cleared. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" line="211"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/region.h" line="207"/>
       </memberdef>
       <memberdef kind="function" id="classwx_region_1a0e3c821e69f6f69b1b48d811783a5dad" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="region_8h_1aa3ced1100e2b9a034e102e5938664cca" kindref="member">wxRegionContain</ref></type>
@@ -303,7 +303,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" line="221"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/region.h" line="217"/>
       </memberdef>
       <memberdef kind="function" id="classwx_region_1a23474efe70beaee07aa6d4d6a9d59478" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="region_8h_1aa3ced1100e2b9a034e102e5938664cca" kindref="member">wxRegionContain</ref></type>
@@ -321,7 +321,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" line="230"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/region.h" line="226"/>
       </memberdef>
       <memberdef kind="function" id="classwx_region_1aa7d0a5dc77828fa87be4d24fce4590fb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="region_8h_1aa3ced1100e2b9a034e102e5938664cca" kindref="member">wxRegionContain</ref></type>
@@ -352,7 +352,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" line="244"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/region.h" line="240"/>
       </memberdef>
       <memberdef kind="function" id="classwx_region_1a63aa89c1eaad488abfa1d02b811f5fbb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="region_8h_1aa3ced1100e2b9a034e102e5938664cca" kindref="member">wxRegionContain</ref></type>
@@ -371,7 +371,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" line="258"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/region.h" line="254"/>
       </memberdef>
       <memberdef kind="function" id="classwx_region_1af44f6a05c09550092ae79e83c67d8184" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref></type>
@@ -384,7 +384,7 @@
 <para>This method can&apos;t be used for invalid region. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" line="266"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/region.h" line="262"/>
       </memberdef>
       <memberdef kind="function" id="classwx_region_1a241f47ba24eab7f10fe6acf2b6c0b7f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -415,7 +415,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" line="293"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/region.h" line="289"/>
       </memberdef>
       <memberdef kind="function" id="classwx_region_1a2aaa03bd30c4dad1f3aca89149933a22" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -434,7 +434,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" line="306"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/region.h" line="302"/>
       </memberdef>
       <memberdef kind="function" id="classwx_region_1ad94d3469777fc5d8e9246acaa3ca7afd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -453,7 +453,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" line="319"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/region.h" line="315"/>
       </memberdef>
       <memberdef kind="function" id="classwx_region_1a59c5c5a41def2f2b67b9e1adb0f385c8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -466,7 +466,7 @@
 <para>Always returns true if the region is invalid. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" line="326"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/region.h" line="322"/>
       </memberdef>
       <memberdef kind="function" id="classwx_region_1a0a2e8377a438d0075b9ff2e497dbd686" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -483,7 +483,7 @@
 <para>covers the same area as, another one.</para><para>If both this region and <emphasis>region</emphasis> are both invalid, they are considered to be equal. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" line="335"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/region.h" line="331"/>
       </memberdef>
       <memberdef kind="function" id="classwx_region_1a569a77247771375b06dc159a739b79b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -502,7 +502,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" line="365"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/region.h" line="361"/>
       </memberdef>
       <memberdef kind="function" id="classwx_region_1ac1ed0ca194bc1e9a46d32581a16203e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -521,7 +521,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" line="378"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/region.h" line="374"/>
       </memberdef>
       <memberdef kind="function" id="classwx_region_1ae8ea15425722b296b6cb6974d7306e60" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -552,7 +552,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" line="394"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/region.h" line="390"/>
       </memberdef>
       <memberdef kind="function" id="classwx_region_1a4a78ad08c47361b8cfa95dabc54487e8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -571,7 +571,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" line="408"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/region.h" line="404"/>
       </memberdef>
       <memberdef kind="function" id="classwx_region_1ac4edc555b9bef0263675b8afefdf0578" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -590,7 +590,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" line="422"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/region.h" line="418"/>
       </memberdef>
       <memberdef kind="function" id="classwx_region_1a9b8729b4d3acf9e77188f92ebdfaf168" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -609,7 +609,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" line="434"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/region.h" line="430"/>
       </memberdef>
       <memberdef kind="function" id="classwx_region_1ad33ab31d06beebe15b9b7fbd3f2978e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -637,7 +637,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" line="447"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/region.h" line="443"/>
       </memberdef>
       <memberdef kind="function" id="classwx_region_1aafeebc72cda33bc9b1285d1554be9ec3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -668,7 +668,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" line="463"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/region.h" line="459"/>
       </memberdef>
       <memberdef kind="function" id="classwx_region_1ad9afb74d82763343326a4a60c397ea6e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -687,7 +687,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" line="477"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/region.h" line="473"/>
       </memberdef>
       <memberdef kind="function" id="classwx_region_1a908a56969729732832b3c274ffae8071" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -706,7 +706,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" line="491"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/region.h" line="487"/>
       </memberdef>
       <memberdef kind="function" id="classwx_region_1a4c0370cf9a88c41d0f8909cf38753ee6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_region" kindref="compound">wxRegion</ref> &amp;</type>
@@ -723,7 +723,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" line="496"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/region.h" line="492"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -735,49 +735,49 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__data" kindref="compound">Data Structures</ref>, <ref refid="group__group__class__gdi" kindref="compound">Graphics Device Interface (GDI)</ref></para><para><simplesect kind="see"><para><ref refid="classwx_region_iterator" kindref="compound">wxRegionIterator</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="9065">
+      <node id="9248">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="9064">
+      <node id="9247">
         <label>wxGDIObject</label>
         <link refid="classwx_g_d_i_object"/>
-        <childnode refid="9065" relation="public-inheritance">
+        <childnode refid="9248" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9063">
+      <node id="9246">
         <label>wxRegion</label>
         <link refid="classwx_region"/>
-        <childnode refid="9064" relation="public-inheritance">
+        <childnode refid="9247" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="9068">
+      <node id="9251">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="9069" relation="usage">
+        <childnode refid="9252" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="9067">
+      <node id="9250">
         <label>wxGDIObject</label>
         <link refid="classwx_g_d_i_object"/>
-        <childnode refid="9068" relation="public-inheritance">
+        <childnode refid="9251" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9066">
+      <node id="9249">
         <label>wxRegion</label>
         <link refid="classwx_region"/>
-        <childnode refid="9067" relation="public-inheritance">
+        <childnode refid="9250" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9069">
+      <node id="9252">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" line="156" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" bodystart="155" bodyend="497"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/region.h" line="152" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/region.h" bodystart="151" bodyend="493"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxRegion</scope><name>AllocExclusive</name></member>
       <member refid="classwx_region_1a3e2c4b0910da7fadc36bd6ced199a673" prot="public" virt="virtual"><scope>wxRegion</scope><name>Clear</name></member>

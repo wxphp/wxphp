@@ -21,7 +21,7 @@
 <para>The object can be associated with a window later. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="266"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/access.h" line="266"/>
       </memberdef>
       <memberdef kind="function" id="classwx_accessible_1a24f79813aa6e15ed6acfb63bc52c6d5f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -34,7 +34,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="271"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/access.h" line="271"/>
       </memberdef>
       <memberdef kind="function" id="classwx_accessible_1aab415520f210449a88ac60f6ff5afdf2" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="access_8h_1adbb7f2b71088722b071ab881a9d123e3" kindref="member">wxAccStatus</ref></type>
@@ -52,7 +52,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="281"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/access.h" line="281"/>
       </memberdef>
       <memberdef kind="function" id="classwx_accessible_1a6b6a1414972ae0859f4866574e3e971d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="access_8h_1adbb7f2b71088722b071ab881a9d123e3" kindref="member">wxAccStatus</ref></type>
@@ -73,7 +73,7 @@
 <para>If <emphasis>child</emphasis> is NULL and the return value is wxACC_OK, this means that the child is a simple element and not an accessible object. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="288"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/access.h" line="288"/>
       </memberdef>
       <memberdef kind="function" id="classwx_accessible_1a8a98bf10df9c148cb6f2634aae5cac87" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="access_8h_1adbb7f2b71088722b071ab881a9d123e3" kindref="member">wxAccStatus</ref></type>
@@ -90,7 +90,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="293"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/access.h" line="293"/>
       </memberdef>
       <memberdef kind="function" id="classwx_accessible_1a5c96b070b77b0da3abadb97a736d5cca" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="access_8h_1adbb7f2b71088722b071ab881a9d123e3" kindref="member">wxAccStatus</ref></type>
@@ -112,7 +112,7 @@
         the current document.&quot; </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="305"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/access.h" line="305"/>
       </memberdef>
       <memberdef kind="function" id="classwx_accessible_1ab0617a414ae7bcb92d3062e9cdb9a7ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="access_8h_1adbb7f2b71088722b071ab881a9d123e3" kindref="member">wxAccStatus</ref></type>
@@ -133,7 +133,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="311"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/access.h" line="311"/>
       </memberdef>
       <memberdef kind="function" id="classwx_accessible_1a4d790354c7d061492ee1829b623c5e85" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="access_8h_1adbb7f2b71088722b071ab881a9d123e3" kindref="member">wxAccStatus</ref></type>
@@ -154,7 +154,7 @@
 <para>If childId is 0 and child is NULL, no object in this subhierarchy has the focus. If this object has the focus, child should be &apos;this&apos;. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="318"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/access.h" line="318"/>
       </memberdef>
       <memberdef kind="function" id="classwx_accessible_1a3541dd66ff1c6e7f2b0c08a11be4fda8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="access_8h_1adbb7f2b71088722b071ab881a9d123e3" kindref="member">wxAccStatus</ref></type>
@@ -175,7 +175,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="323"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/access.h" line="323"/>
       </memberdef>
       <memberdef kind="function" id="classwx_accessible_1affb894463473ec5d1075b75b8136643b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="access_8h_1adbb7f2b71088722b071ab881a9d123e3" kindref="member">wxAccStatus</ref></type>
@@ -196,7 +196,7 @@
 <para>Returns e.g. ALT+K. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="330"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/access.h" line="330"/>
       </memberdef>
       <memberdef kind="function" id="classwx_accessible_1aed3f585ffc3db4a38e6afd91f9f3dd9d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="access_8h_1adbb7f2b71088722b071ab881a9d123e3" kindref="member">wxAccStatus</ref></type>
@@ -217,7 +217,7 @@
 <para><emphasis>rect</emphasis> is in screen coordinates. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="337"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/access.h" line="337"/>
       </memberdef>
       <memberdef kind="function" id="classwx_accessible_1a1951753111882fe2dfbfdad6c196e195" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="access_8h_1adbb7f2b71088722b071ab881a9d123e3" kindref="member">wxAccStatus</ref></type>
@@ -238,7 +238,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="342"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/access.h" line="342"/>
       </memberdef>
       <memberdef kind="function" id="classwx_accessible_1a68b549c63ab07b9dd9ac66cbc1333584" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="access_8h_1adbb7f2b71088722b071ab881a9d123e3" kindref="member">wxAccStatus</ref></type>
@@ -255,7 +255,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="347"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/access.h" line="347"/>
       </memberdef>
       <memberdef kind="function" id="classwx_accessible_1a34f133abf6292942ee0726d4cd865a96" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="access_8h_1adbb7f2b71088722b071ab881a9d123e3" kindref="member">wxAccStatus</ref></type>
@@ -276,7 +276,7 @@
 <para>See wxAccRole for a list of these roles. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="353"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/access.h" line="353"/>
       </memberdef>
       <memberdef kind="function" id="classwx_accessible_1a89f9e60a1f645c8fcaf16d7e24f7ea4d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="access_8h_1adbb7f2b71088722b071ab881a9d123e3" kindref="member">wxAccStatus</ref></type>
@@ -299,7 +299,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="365"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/access.h" line="365"/>
       </memberdef>
       <memberdef kind="function" id="classwx_accessible_1a08543032aa0ba74e6dd1b0b01a9f8dc1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="access_8h_1adbb7f2b71088722b071ab881a9d123e3" kindref="member">wxAccStatus</ref></type>
@@ -320,7 +320,7 @@
 <para>See wxAccStatus for a list of these states. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="370"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/access.h" line="370"/>
       </memberdef>
       <memberdef kind="function" id="classwx_accessible_1a3c98a52d933617309dfb45f2f42e2ef6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="access_8h_1adbb7f2b71088722b071ab881a9d123e3" kindref="member">wxAccStatus</ref></type>
@@ -341,7 +341,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="376"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/access.h" line="376"/>
       </memberdef>
       <memberdef kind="function" id="classwx_accessible_1a1e9546c36aeba01de9d1165f20583f05" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
@@ -354,7 +354,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="381"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/access.h" line="381"/>
       </memberdef>
       <memberdef kind="function" id="classwx_accessible_1ad966ddb079367967894306a12a197fb9" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="access_8h_1adbb7f2b71088722b071ab881a9d123e3" kindref="member">wxAccStatus</ref></type>
@@ -379,7 +379,7 @@
 <para>Can return either a child object, or an integer representing the child element, starting from 1.</para><para><emphasis>pt</emphasis> is in screen coordinates. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="391"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/access.h" line="391"/>
       </memberdef>
       <memberdef kind="function" id="classwx_accessible_1affdf33339c1df212e3b0278787fc95d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="access_8h_1adbb7f2b71088722b071ab881a9d123e3" kindref="member">wxAccStatus</ref></type>
@@ -408,7 +408,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="398"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/access.h" line="398"/>
       </memberdef>
       <memberdef kind="function" id="classwx_accessible_1af26349015e5abaa987e70b7a034eb9e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="access_8h_1adbb7f2b71088722b071ab881a9d123e3" kindref="member">wxAccStatus</ref></type>
@@ -429,7 +429,7 @@
 <para>See wxAccSelectionFlags for a list of the selection actions. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="413"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/access.h" line="413"/>
       </memberdef>
       <memberdef kind="function" id="classwx_accessible_1a84ba079b14a4f39a4535271efa67796c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -446,7 +446,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="418"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/access.h" line="418"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -477,7 +477,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="406"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/access.h" line="406"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -487,37 +487,37 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__misc" kindref="compound">Miscellaneous</ref></para><para><simplesect kind="see"><para><ref refid="page_samples_1page_samples_access" kindref="member">Accessibility Sample</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="4198">
+      <node id="4276">
         <label>wxAccessible</label>
         <link refid="classwx_accessible"/>
-        <childnode refid="4199" relation="public-inheritance">
+        <childnode refid="4277" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4199">
+      <node id="4277">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="4200">
+      <node id="4278">
         <label>wxAccessible</label>
         <link refid="classwx_accessible"/>
-        <childnode refid="4201" relation="public-inheritance">
+        <childnode refid="4279" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4201">
+      <node id="4279">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="4202" relation="usage">
+        <childnode refid="4280" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="4202">
+      <node id="4280">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="260" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" bodystart="259" bodyend="419"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/access.h" line="260" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/access.h" bodystart="259" bodyend="419"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxAccessible</scope><name>AllocExclusive</name></member>
       <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxAccessible</scope><name>CloneRefData</name></member>

@@ -50,6 +50,7 @@
 #include "others.h"
 
 
+
 void php_wxCondition_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -58,13 +59,13 @@ void php_wxCondition_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 	#endif
 	
 	
-	wxCondition_php* object = (wxCondition_php*)rsrc->ptr;
+	wxCondition_php* object = static_cast<wxCondition_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -153,7 +154,6 @@ PHP_METHOD(php_wxCondition, Broadcast)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -237,7 +237,6 @@ PHP_METHOD(php_wxCondition, IsOk)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -321,7 +320,6 @@ PHP_METHOD(php_wxCondition, Signal)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -405,7 +403,6 @@ PHP_METHOD(php_wxCondition, Wait)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -485,7 +482,8 @@ PHP_METHOD(php_wxCondition, WaitTimeout)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&milliseconds0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &milliseconds0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &milliseconds0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -493,7 +491,6 @@ PHP_METHOD(php_wxCondition, WaitTimeout)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -546,7 +543,8 @@ PHP_METHOD(php_wxCondition, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&mutex0, php_wxMutex_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "O", &mutex0, php_wxMutex_entry ) == SUCCESS)
+		char parse_parameters_string[] = "O";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &mutex0, php_wxMutex_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(mutex0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(mutex0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -557,10 +555,6 @@ PHP_METHOD(php_wxCondition, __construct)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(mutex0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(mutex0);
 				}
 				else if(Z_TYPE_P(mutex0) != IS_NULL)
 				{
@@ -574,7 +568,6 @@ PHP_METHOD(php_wxCondition, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -621,6 +614,7 @@ PHP_METHOD(php_wxCondition, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+
 void php_wxCriticalSectionLocker_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -629,13 +623,13 @@ void php_wxCriticalSectionLocker_destruction_handler(zend_rsrc_list_entry *rsrc 
 	#endif
 	
 	
-	wxCriticalSectionLocker_php* object = (wxCriticalSectionLocker_php*)rsrc->ptr;
+	wxCriticalSectionLocker_php* object = static_cast<wxCriticalSectionLocker_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -693,7 +687,8 @@ PHP_METHOD(php_wxCriticalSectionLocker, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&criticalsection0, php_wxCriticalSection_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "O", &criticalsection0, php_wxCriticalSection_entry ) == SUCCESS)
+		char parse_parameters_string[] = "O";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &criticalsection0, php_wxCriticalSection_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(criticalsection0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(criticalsection0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -704,10 +699,6 @@ PHP_METHOD(php_wxCriticalSectionLocker, __construct)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(criticalsection0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(criticalsection0);
 				}
 				else if(Z_TYPE_P(criticalsection0) != IS_NULL)
 				{
@@ -721,7 +712,6 @@ PHP_METHOD(php_wxCriticalSectionLocker, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -768,6 +758,7 @@ PHP_METHOD(php_wxCriticalSectionLocker, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+
 void php_wxThreadHelper_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -776,13 +767,13 @@ void php_wxThreadHelper_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC
 	#endif
 	
 	
-	wxThreadHelper_php* object = (wxThreadHelper_php*)rsrc->ptr;
+	wxThreadHelper_php* object = static_cast<wxThreadHelper_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -807,101 +798,6 @@ void php_wxThreadHelper_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC
 		php_printf("Not user space initialized\n");
 		#endif
 	}
-}
-PHP_METHOD(php_wxThreadHelper, __construct)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxThreadHelper::__construct\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
-	bool already_called = false;
-	
-	//Parameters for overload 0
-	long kind0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received >= 0  && arguments_received <= 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '|l' (&kind0)\n");
-		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|l", &kind0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct()\n");
-				#endif
-				_this = new wxThreadHelper_php();
-
-				((wxThreadHelper_php*) _this)->references.Initialize();
-				break;
-			}
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct((wxThreadKind) kind0)\n");
-				#endif
-				_this = new wxThreadHelper_php((wxThreadKind) kind0);
-
-				((wxThreadHelper_php*) _this)->references.Initialize();
-				break;
-			}
-		}
-	}
-
-		
-	if(already_called)
-	{
-		long id_to_find = zend_list_insert(_this, le_wxThreadHelper);
-		
-		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxThreadHelper_php*) _this)->evnArray);
-		
-		array_init(((wxThreadHelper_php*) _this)->evnArray);
-		
-		((wxThreadHelper_php*) _this)->phpObj = getThis();
-		
-		((wxThreadHelper_php*) _this)->InitProperties();
-		
-		#ifdef ZTS 
-		((wxThreadHelper_php*) _this)->TSRMLS_C = TSRMLS_C;
-		#endif
-	}
-	else
-	{
-		zend_error(E_ERROR, "Abstract type: failed to call a proper constructor");
-	}
-	
-	#ifdef USE_WXPHP_DEBUG
-		php_printf("===========================================\n\n");
-	#endif
 }
 PHP_METHOD(php_wxThreadHelper, GetThread)
 {
@@ -966,7 +862,6 @@ PHP_METHOD(php_wxThreadHelper, GetThread)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -977,14 +872,17 @@ PHP_METHOD(php_wxThreadHelper, GetThread)
 				php_printf("Executing wxThreadHelper::GetThread() to return object pointer\n\n");
 				#endif
 				wxThread_php* value_to_return0;
-				value_to_return0 = (wxThread_php*) ((wxThreadHelper_php*)_this)->GetThread();
+				if(parent_rsrc_type == le_wxThreadHelper)
+				{
+					value_to_return0 = (wxThread_php*) ((wxThreadHelper_php*)_this)->GetThread();
 
+				}
 				if(value_to_return0 == NULL){
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return0->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return0->phpObj != NULL){
+						return_value = value_to_return0->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -1008,58 +906,6 @@ PHP_METHOD(php_wxThreadHelper, GetThread)
 	}
 
 		
-}
-void* wxThreadHelper_php::Entry()
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking virtual wxThreadHelper::Entry\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	int arguments = NULL;
-
-	zval* return_value;
-	MAKE_STD_ZVAL(return_value);
-	zval function_name;
-	ZVAL_STRING(&function_name, "Entry", 0);
-	char* temp_string;
-	char _wxResource[] = "wxResource";
-	zval **tmp;
-	int id_to_find;
-	void* return_object;
-	int rsrc_type;
-	
-	//Parameters for conversion
-		
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Trying to call user defined method\n");
-	#endif
-	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC) == FAILURE)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Invocation of user defined method failed\n");
-		#endif
-		
-		wxMessageBox("Failed to call virtual method 'Entry'!", "Error");
-	}
-	else
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
-		
-		return;
-	}
-	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxThreadHelper::Entry();
-
 }
 PHP_METHOD(php_wxThreadHelper, CreateThread)
 {
@@ -1121,7 +967,8 @@ PHP_METHOD(php_wxThreadHelper, CreateThread)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|ll' (&kind0, &stackSize0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|ll", &kind0, &stackSize0 ) == SUCCESS)
+		char parse_parameters_string[] = "|ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &kind0, &stackSize0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -1129,7 +976,6 @@ PHP_METHOD(php_wxThreadHelper, CreateThread)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -1139,7 +985,10 @@ PHP_METHOD(php_wxThreadHelper, CreateThread)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxThreadHelper::CreateThread())\n\n");
 				#endif
-				ZVAL_LONG(return_value, ((wxThreadHelper_php*)_this)->CreateThread());
+				if(parent_rsrc_type == le_wxThreadHelper)
+				{
+					ZVAL_LONG(return_value, ((wxThreadHelper_php*)_this)->CreateThread());
+				}
 
 
 				return;
@@ -1150,7 +999,10 @@ PHP_METHOD(php_wxThreadHelper, CreateThread)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxThreadHelper::CreateThread((wxThreadKind) kind0))\n\n");
 				#endif
-				ZVAL_LONG(return_value, ((wxThreadHelper_php*)_this)->CreateThread((wxThreadKind) kind0));
+				if(parent_rsrc_type == le_wxThreadHelper)
+				{
+					ZVAL_LONG(return_value, ((wxThreadHelper_php*)_this)->CreateThread((wxThreadKind) kind0));
+				}
 
 
 				return;
@@ -1161,7 +1013,10 @@ PHP_METHOD(php_wxThreadHelper, CreateThread)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxThreadHelper::CreateThread((wxThreadKind) kind0, (unsigned int) stackSize0))\n\n");
 				#endif
-				ZVAL_LONG(return_value, ((wxThreadHelper_php*)_this)->CreateThread((wxThreadKind) kind0, (unsigned int) stackSize0));
+				if(parent_rsrc_type == le_wxThreadHelper)
+				{
+					ZVAL_LONG(return_value, ((wxThreadHelper_php*)_this)->CreateThread((wxThreadKind) kind0, (unsigned int) stackSize0));
+				}
 
 
 				return;
@@ -1231,7 +1086,8 @@ PHP_METHOD(php_wxThreadHelper, Create)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|l' (&stackSize0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|l", &stackSize0 ) == SUCCESS)
+		char parse_parameters_string[] = "|l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &stackSize0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -1239,7 +1095,6 @@ PHP_METHOD(php_wxThreadHelper, Create)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -1249,7 +1104,10 @@ PHP_METHOD(php_wxThreadHelper, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxThreadHelper::Create())\n\n");
 				#endif
-				ZVAL_LONG(return_value, ((wxThreadHelper_php*)_this)->Create());
+				if(parent_rsrc_type == le_wxThreadHelper)
+				{
+					ZVAL_LONG(return_value, ((wxThreadHelper_php*)_this)->Create());
+				}
 
 
 				return;
@@ -1260,7 +1118,10 @@ PHP_METHOD(php_wxThreadHelper, Create)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing RETURN_LONG(wxThreadHelper::Create((unsigned int) stackSize0))\n\n");
 				#endif
-				ZVAL_LONG(return_value, ((wxThreadHelper_php*)_this)->Create((unsigned int) stackSize0));
+				if(parent_rsrc_type == le_wxThreadHelper)
+				{
+					ZVAL_LONG(return_value, ((wxThreadHelper_php*)_this)->Create((unsigned int) stackSize0));
+				}
 
 
 				return;
@@ -1271,6 +1132,7 @@ PHP_METHOD(php_wxThreadHelper, Create)
 
 		
 }
+
 void php_wxCriticalSection_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1279,13 +1141,13 @@ void php_wxCriticalSection_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS
 	#endif
 	
 	
-	wxCriticalSection_php* object = (wxCriticalSection_php*)rsrc->ptr;
+	wxCriticalSection_php* object = static_cast<wxCriticalSection_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -1374,7 +1236,6 @@ PHP_METHOD(php_wxCriticalSection, Enter)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -1458,7 +1319,6 @@ PHP_METHOD(php_wxCriticalSection, Leave)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -1542,7 +1402,6 @@ PHP_METHOD(php_wxCriticalSection, TryEnter)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -1594,7 +1453,8 @@ PHP_METHOD(php_wxCriticalSection, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|l' (&critSecType0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|l", &critSecType0 ) == SUCCESS)
+		char parse_parameters_string[] = "|l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &critSecType0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -1602,7 +1462,6 @@ PHP_METHOD(php_wxCriticalSection, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -1658,6 +1517,7 @@ PHP_METHOD(php_wxCriticalSection, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+
 void php_wxThread_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1666,13 +1526,13 @@ void php_wxThread_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 	#endif
 	
 	
-	wxThread_php* object = (wxThread_php*)rsrc->ptr;
+	wxThread_php* object = static_cast<wxThread_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -1729,7 +1589,8 @@ PHP_METHOD(php_wxThread, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|l' (&kind0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|l", &kind0 ) == SUCCESS)
+		char parse_parameters_string[] = "|l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &kind0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -1737,7 +1598,6 @@ PHP_METHOD(php_wxThread, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -1856,7 +1716,6 @@ PHP_METHOD(php_wxThread, Yield)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -1868,105 +1727,6 @@ PHP_METHOD(php_wxThread, Yield)
 				php_printf("Executing wxThread::Yield()\n\n");
 				#endif
 				wxThread::Yield();
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_METHOD(php_wxThread, Wait)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxThread::Wait\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	bool return_is_user_initialized = false;
-	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
-	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
-		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxThread::Wait\n");
-			
-			return;
-		}
-		else
-		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
-			
-			if(parent_rsrc_type == le_wxThread)
-				references = &((wxThread_php*)_this)->references;
-		}
-	}
-	else
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Processing the method call as static\n");
-		#endif
-	}
-	
-	//Parameters for overload 0
-	long flags0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received >= 0  && arguments_received <= 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '|l' (&flags0)\n");
-		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|l", &flags0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxThread::Wait()\n\n");
-				#endif
-				ZVAL_STRING(return_value, (char*) ((wxThread_php*)_this)->Wait(), 1);
-
-
-				return;
-				break;
-			}
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxThread::Wait((wxThreadWait) flags0)\n\n");
-				#endif
-				ZVAL_STRING(return_value, (char*) ((wxThread_php*)_this)->Wait((wxThreadWait) flags0), 1);
 
 
 				return;
@@ -2040,7 +1800,6 @@ PHP_METHOD(php_wxThread, This)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -2057,8 +1816,8 @@ PHP_METHOD(php_wxThread, This)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return0->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return0->phpObj != NULL){
+						return_value = value_to_return0->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -2143,7 +1902,6 @@ PHP_METHOD(php_wxThread, TestDestroy)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -2223,7 +1981,8 @@ PHP_METHOD(php_wxThread, SetPriority)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&priority0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &priority0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &priority0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -2231,7 +1990,6 @@ PHP_METHOD(php_wxThread, SetPriority)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -2311,7 +2069,8 @@ PHP_METHOD(php_wxThread, Sleep)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&milliseconds0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &milliseconds0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &milliseconds0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -2319,7 +2078,6 @@ PHP_METHOD(php_wxThread, Sleep)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -2400,7 +2158,8 @@ PHP_METHOD(php_wxThread, SetConcurrency)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&level0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &level0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &level0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -2408,7 +2167,6 @@ PHP_METHOD(php_wxThread, SetConcurrency)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -2429,58 +2187,6 @@ PHP_METHOD(php_wxThread, SetConcurrency)
 	}
 
 		
-}
-void* wxThread_php::Entry()
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking virtual wxThread::Entry\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	int arguments = NULL;
-
-	zval* return_value;
-	MAKE_STD_ZVAL(return_value);
-	zval function_name;
-	ZVAL_STRING(&function_name, "Entry", 0);
-	char* temp_string;
-	char _wxResource[] = "wxResource";
-	zval **tmp;
-	int id_to_find;
-	void* return_object;
-	int rsrc_type;
-	
-	//Parameters for conversion
-		
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Trying to call user defined method\n");
-	#endif
-	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC) == FAILURE)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Invocation of user defined method failed\n");
-		#endif
-		
-		wxMessageBox("Failed to call virtual method 'Entry'!", "Error");
-	}
-	else
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
-		
-		return;
-	}
-	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxThread::Entry();
-
 }
 PHP_METHOD(php_wxThread, GetCPUCount)
 {
@@ -2545,7 +2251,6 @@ PHP_METHOD(php_wxThread, GetCPUCount)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -2630,7 +2335,6 @@ PHP_METHOD(php_wxThread, GetCurrentId)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -2715,7 +2419,6 @@ PHP_METHOD(php_wxThread, GetId)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -2799,7 +2502,6 @@ PHP_METHOD(php_wxThread, GetKind)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -2883,7 +2585,6 @@ PHP_METHOD(php_wxThread, GetMainId)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -2968,7 +2669,6 @@ PHP_METHOD(php_wxThread, GetPriority)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -3052,7 +2752,6 @@ PHP_METHOD(php_wxThread, IsAlive)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -3136,7 +2835,6 @@ PHP_METHOD(php_wxThread, IsDetached)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -3220,7 +2918,6 @@ PHP_METHOD(php_wxThread, IsMain)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -3305,7 +3002,6 @@ PHP_METHOD(php_wxThread, IsPaused)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -3389,7 +3085,6 @@ PHP_METHOD(php_wxThread, IsRunning)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -3473,7 +3168,6 @@ PHP_METHOD(php_wxThread, Kill)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -3557,7 +3251,6 @@ PHP_METHOD(php_wxThread, Pause)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -3641,7 +3334,6 @@ PHP_METHOD(php_wxThread, Resume)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -3725,7 +3417,6 @@ PHP_METHOD(php_wxThread, Run)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -3805,7 +3496,8 @@ PHP_METHOD(php_wxThread, Create)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|l' (&stackSize0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|l", &stackSize0 ) == SUCCESS)
+		char parse_parameters_string[] = "|l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &stackSize0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -3813,7 +3505,6 @@ PHP_METHOD(php_wxThread, Create)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -3907,17 +3598,18 @@ PHP_METHOD(php_wxThread, Delete)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|sl' (&rc0, &rc_len0, &waitMode0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|sl", &rc0, &rc_len0, &waitMode0 ) == SUCCESS)
+		char parse_parameters_string[] = "|sl";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &rc0, &rc_len0, &waitMode0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
 
-			zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|zz", &rc0_ref, &dummy );
+			char parse_references_string[] = "|zz";
+			zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_references_string, &rc0_ref, &dummy );
 		}
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -3960,6 +3652,159 @@ PHP_METHOD(php_wxThread, Delete)
 
 		
 }
+void* wxThread_php::Entry()
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking virtual wxThread::Entry\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zval* arguments[1];
+	arguments[0] = NULL;
+
+	zval* return_value;
+	MAKE_STD_ZVAL(return_value);
+	zval function_name;
+	ZVAL_STRING(&function_name, "Entry", 0);
+	char* temp_string;
+	char _wxResource[] = "wxResource";
+	zval **tmp;
+	int id_to_find;
+	void* return_object;
+	int rsrc_type;
+	
+	//Parameters for conversion
+		
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Trying to call user defined method\n");
+	#endif
+	
+	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC) == FAILURE)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Invocation of user defined method failed\n");
+		#endif
+		
+		wxMessageBox("Failed to call virtual method 'Entry'!", "Error");
+	}
+	else
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Returning userspace value.\n");
+		#endif
+		
+		return (void*) Z_STRVAL_P(return_value);
+	}
+	
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Calling original method\n");
+	php_printf("===========================================\n\n");
+	#endif
+	
+	//Call original method
+	return wxThread::Entry();
+
+}
+PHP_METHOD(php_wxThread, Wait)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxThread::Wait\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	//In case the constructor uses objects
+	zval **tmp;
+	int rsrc_type;
+	int parent_rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	
+	//Other variables used thru the code
+	int arguments_received = ZEND_NUM_ARGS();
+	void *_this;
+	zval* dummy;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	bool return_is_user_initialized = false;
+	
+	//Get pointer of object that called this method if not a static method
+	if (getThis() != NULL) 
+	{
+		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		{
+			zend_error(E_ERROR, "Failed to get the parent object that called wxThread::Wait\n");
+			
+			return;
+		}
+		else
+		{
+			id_to_find = Z_RESVAL_P(*tmp);
+			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			
+			if(parent_rsrc_type == le_wxThread)
+				references = &((wxThread_php*)_this)->references;
+		}
+	}
+	else
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Processing the method call as static\n");
+		#endif
+	}
+	
+	//Parameters for overload 0
+	long flags0;
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received >= 0  && arguments_received <= 1)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '|l' (&flags0)\n");
+		#endif
+		char parse_parameters_string[] = "|l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &flags0 ) == SUCCESS)
+		{
+			overload0_called = true;
+			already_called = true;
+		}
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing wxThread::Wait()\n\n");
+				#endif
+				ZVAL_STRING(return_value, (char*) ((wxThread_php*)_this)->Wait(), 1);
+
+
+				return;
+				break;
+			}
+			case 1:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing wxThread::Wait((wxThreadWait) flags0)\n\n");
+				#endif
+				ZVAL_STRING(return_value, (char*) ((wxThread_php*)_this)->Wait((wxThreadWait) flags0), 1);
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+}
+
 void php_wxSemaphore_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3968,13 +3813,13 @@ void php_wxSemaphore_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 	#endif
 	
 	
-	wxSemaphore_php* object = (wxSemaphore_php*)rsrc->ptr;
+	wxSemaphore_php* object = static_cast<wxSemaphore_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -4063,7 +3908,6 @@ PHP_METHOD(php_wxSemaphore, Post)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -4147,7 +3991,6 @@ PHP_METHOD(php_wxSemaphore, TryWait)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -4231,7 +4074,6 @@ PHP_METHOD(php_wxSemaphore, Wait)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -4311,7 +4153,8 @@ PHP_METHOD(php_wxSemaphore, WaitTimeout)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&timeout_millis0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &timeout_millis0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &timeout_millis0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -4319,7 +4162,6 @@ PHP_METHOD(php_wxSemaphore, WaitTimeout)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -4372,7 +4214,8 @@ PHP_METHOD(php_wxSemaphore, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|ll' (&initialcount0, &maxcount0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|ll", &initialcount0, &maxcount0 ) == SUCCESS)
+		char parse_parameters_string[] = "|ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &initialcount0, &maxcount0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -4380,7 +4223,6 @@ PHP_METHOD(php_wxSemaphore, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -4446,6 +4288,7 @@ PHP_METHOD(php_wxSemaphore, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+
 void php_wxMutexLocker_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4454,13 +4297,13 @@ void php_wxMutexLocker_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 	#endif
 	
 	
-	wxMutexLocker_php* object = (wxMutexLocker_php*)rsrc->ptr;
+	wxMutexLocker_php* object = static_cast<wxMutexLocker_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -4549,7 +4392,6 @@ PHP_METHOD(php_wxMutexLocker, IsOk)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -4602,7 +4444,8 @@ PHP_METHOD(php_wxMutexLocker, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&mutex0, php_wxMutex_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "O", &mutex0, php_wxMutex_entry ) == SUCCESS)
+		char parse_parameters_string[] = "O";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &mutex0, php_wxMutex_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(mutex0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(mutex0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -4613,10 +4456,6 @@ PHP_METHOD(php_wxMutexLocker, __construct)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(mutex0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(mutex0);
 				}
 				else if(Z_TYPE_P(mutex0) != IS_NULL)
 				{
@@ -4630,7 +4469,6 @@ PHP_METHOD(php_wxMutexLocker, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -4677,6 +4515,7 @@ PHP_METHOD(php_wxMutexLocker, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+
 void php_wxMutex_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4685,13 +4524,13 @@ void php_wxMutex_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 	#endif
 	
 	
-	wxMutex_php* object = (wxMutex_php*)rsrc->ptr;
+	wxMutex_php* object = static_cast<wxMutex_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -4780,7 +4619,6 @@ PHP_METHOD(php_wxMutex, Lock)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -4860,7 +4698,8 @@ PHP_METHOD(php_wxMutex, LockTimeout)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&msec0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &msec0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &msec0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -4868,7 +4707,6 @@ PHP_METHOD(php_wxMutex, LockTimeout)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -4952,7 +4790,6 @@ PHP_METHOD(php_wxMutex, TryLock)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -5036,7 +4873,6 @@ PHP_METHOD(php_wxMutex, Unlock)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -5088,7 +4924,8 @@ PHP_METHOD(php_wxMutex, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|l' (&type0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|l", &type0 ) == SUCCESS)
+		char parse_parameters_string[] = "|l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &type0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -5096,7 +4933,6 @@ PHP_METHOD(php_wxMutex, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)

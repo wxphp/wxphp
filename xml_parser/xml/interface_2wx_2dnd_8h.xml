@@ -17,7 +17,7 @@
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/dnd.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dnd.h" line="400" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dnd.h" bodystart="400" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dnd.h" line="400" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dnd.h" bodystart="400" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="enum">
@@ -71,13 +71,13 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/dnd.h&gt; </v
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dnd.h" line="54" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dnd.h" bodystart="53" bodyend="61"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dnd.h" line="54" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dnd.h" bodystart="53" bodyend="61"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dnd.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dnd.h"/>
   </compounddef>
 </doxygen>

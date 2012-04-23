@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treebook.h" line="52"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treebook.h" line="52"/>
       </memberdef>
       <memberdef kind="function" id="classwx_treebook_1a9206f1a4a98bc1defb9244284bb01ab8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -100,7 +100,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treebook.h" line="74"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treebook.h" line="74"/>
       </memberdef>
       <memberdef kind="function" id="classwx_treebook_1ac5aff81342da1459d1c1b26f8edf110d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -113,7 +113,7 @@
 <para>Also deletes all the pages owned by the control (inserted previously into it). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treebook.h" line="80"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treebook.h" line="80"/>
       </memberdef>
       <memberdef kind="function" id="classwx_treebook_1a005654249564b0f3e3c1127bc33cfb8b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -145,7 +145,7 @@
 <para>The page is placed at the topmost level after all other pages. NULL could be specified for page to create an empty page. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treebook.h" line="87"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treebook.h" line="87"/>
       </memberdef>
       <memberdef kind="function" id="classwx_treebook_1a409e957bacff40d46c3ba9a6606fc0d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -176,7 +176,7 @@
 <para>NULL could be specified for page to create an empty page. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treebook.h" line="94"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treebook.h" line="94"/>
       </memberdef>
       <memberdef kind="function" id="classwx_treebook_1ae71d6c62bb452d6a808cf289b98ef30b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -193,7 +193,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treebook.h" line="101"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treebook.h" line="101"/>
       </memberdef>
       <memberdef kind="function" id="classwx_treebook_1ac6ff8c68c20d71c2c7d4b96bbe7714ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -235,7 +235,7 @@
 <para>See <ref refid="classwx_treebook_1acf521d7cb242cd792756ff6959fec797" kindref="member">wxTreebook::wxTreebook()</ref> for the description of the parameters. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treebook.h" line="111"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treebook.h" line="111"/>
       </memberdef>
       <memberdef kind="function" id="classwx_treebook_1a7b46ac8ed525f1f0627671d3fb0bc5b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -253,7 +253,7 @@
 <para>Could trigger page selection change in a case when selected page is removed. In that case its parent is selected (or the next page if no parent). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treebook.h" line="118"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treebook.h" line="118"/>
       </memberdef>
       <memberdef kind="function" id="classwx_treebook_1add0b76a06599dc37b6275dc4b35ead79" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -275,7 +275,7 @@
 <para>Returns the previous state. May generate page changing events (if selected page is under the collapsed branch, then its parent is autoselected). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treebook.h" line="125"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treebook.h" line="125"/>
       </memberdef>
       <memberdef kind="function" id="classwx_treebook_1aaa20a6511cd3f7ff9aab45a5d50bc6ce" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -292,7 +292,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treebook.h" line="131"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treebook.h" line="131"/>
       </memberdef>
       <memberdef kind="function" id="classwx_treebook_1afb6e45bb33306cb80b9a9a611a8478a1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>int</type>
@@ -307,7 +307,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treebook.h" line="141"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treebook.h" line="141"/>
       </memberdef>
       <memberdef kind="function" id="classwx_treebook_1a9491fe745b68b9a51063f8f3aac59376" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -343,7 +343,7 @@
 <para>The new page is placed before <emphasis>pagePos</emphasis> page and on the same level. NULL could be specified for page to create an empty page. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treebook.h" line="150"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treebook.h" line="150"/>
       </memberdef>
       <memberdef kind="function" id="classwx_treebook_1ae3c46fd64891e13d511b4840b275143c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -378,7 +378,7 @@
 <para>NULL could be specified for page to create an empty page. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treebook.h" line="159"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treebook.h" line="159"/>
       </memberdef>
       <memberdef kind="function" id="classwx_treebook_1afc4850f3cede0207a67187edc33cc91d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -395,7 +395,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treebook.h" line="164"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treebook.h" line="164"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -412,109 +412,109 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__bookctrl" kindref="compound">Book Controls</ref></para><para><simplesect kind="see"><para><ref refid="interface_2wx_2bookctrl_8h_1ab367c06ea9df73f0d3bf3c464afdb7d6" kindref="member">wxBookCtrl</ref>, <ref refid="classwx_book_ctrl_event" kindref="compound">wxBookCtrlEvent</ref>, <ref refid="classwx_notebook" kindref="compound">wxNotebook</ref>, <ref refid="classwx_tree_ctrl" kindref="compound">wxTreeCtrl</ref>, <ref refid="classwx_image_list" kindref="compound">wxImageList</ref>, <ref refid="overview_bookctrl" kindref="compound">wxBookCtrl Overview</ref>, <ref refid="page_samples_1page_samples_notebook" kindref="member">Notebook Sample</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="11172">
+      <node id="11361">
         <label>wxBookCtrlBase</label>
         <link refid="classwx_book_ctrl_base"/>
-        <childnode refid="11173" relation="public-inheritance">
+        <childnode refid="11362" relation="public-inheritance">
         </childnode>
-        <childnode refid="11178" relation="public-inheritance">
+        <childnode refid="11367" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11176">
+      <node id="11365">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="11175">
+      <node id="11364">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="11176" relation="public-inheritance">
+        <childnode refid="11365" relation="public-inheritance">
         </childnode>
-        <childnode refid="11177" relation="public-inheritance">
+        <childnode refid="11366" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11171">
+      <node id="11360">
         <label>wxTreebook</label>
         <link refid="classwx_treebook"/>
-        <childnode refid="11172" relation="public-inheritance">
+        <childnode refid="11361" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11177">
+      <node id="11366">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="11173">
+      <node id="11362">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="11174" relation="public-inheritance">
+        <childnode refid="11363" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11174">
+      <node id="11363">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="11175" relation="public-inheritance">
+        <childnode refid="11364" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11178">
+      <node id="11367">
         <label>wxWithImages</label>
         <link refid="classwx_with_images"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="11180">
+      <node id="11369">
         <label>wxBookCtrlBase</label>
         <link refid="classwx_book_ctrl_base"/>
-        <childnode refid="11181" relation="public-inheritance">
+        <childnode refid="11370" relation="public-inheritance">
         </childnode>
-        <childnode refid="11187" relation="public-inheritance">
+        <childnode refid="11376" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11184">
+      <node id="11373">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="11185" relation="usage">
+        <childnode refid="11374" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="11183">
+      <node id="11372">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="11184" relation="public-inheritance">
+        <childnode refid="11373" relation="public-inheritance">
         </childnode>
-        <childnode refid="11186" relation="public-inheritance">
+        <childnode refid="11375" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11179">
+      <node id="11368">
         <label>wxTreebook</label>
         <link refid="classwx_treebook"/>
-        <childnode refid="11180" relation="public-inheritance">
+        <childnode refid="11369" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11186">
+      <node id="11375">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="11181">
+      <node id="11370">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="11182" relation="public-inheritance">
+        <childnode refid="11371" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11182">
+      <node id="11371">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="11183" relation="public-inheritance">
+        <childnode refid="11372" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11187">
+      <node id="11376">
         <label>wxWithImages</label>
         <link refid="classwx_with_images"/>
       </node>
-      <node id="11185">
+      <node id="11374">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treebook.h" line="47" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treebook.h" bodystart="46" bodyend="165"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treebook.h" line="47" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/treebook.h" bodystart="46" bodyend="165"/>
     <listofallmembers>
       <member refid="classwx_window_1a3afbd49b1ea2f8275e3600dcac102923" prot="public" virt="virtual"><scope>wxTreebook</scope><name>AcceptsFocus</name></member>
       <member refid="classwx_window_1a2370bdd3ab08e7ef3c7555c6aa8301b8" prot="public" virt="virtual"><scope>wxTreebook</scope><name>AcceptsFocusFromKeyboard</name></member>
@@ -700,6 +700,7 @@
       <member refid="classwx_treebook_1ae3c46fd64891e13d511b4840b275143c" prot="public" virt="virtual"><scope>wxTreebook</scope><name>InsertSubPage</name></member>
       <member refid="classwx_window_1ae1b56ca87d8590ee5e576012229a380a" prot="public" virt="non-virtual"><scope>wxTreebook</scope><name>InvalidateBestSize</name></member>
       <member refid="classwx_window_1af918e6fe8565c2d5235973cc3de84a43" prot="public" virt="non-virtual"><scope>wxTreebook</scope><name>IsBeingDeleted</name></member>
+      <member refid="classwx_window_1a469f0881da248d37691440c9d4cc7200" prot="public" virt="non-virtual"><scope>wxTreebook</scope><name>IsDescendant</name></member>
       <member refid="classwx_window_1a9d1be1bbb625ebf87ad4ad47e49a0194" prot="public" virt="virtual"><scope>wxTreebook</scope><name>IsDoubleBuffered</name></member>
       <member refid="classwx_window_1a59452a5bd42f5ea4b31d7fc4aa59644f" prot="public" virt="non-virtual"><scope>wxTreebook</scope><name>IsEnabled</name></member>
       <member refid="classwx_window_1af27ef77c913e32050543f3b0ca435a0d" prot="public" virt="non-virtual"><scope>wxTreebook</scope><name>IsExposed</name></member>
@@ -716,13 +717,13 @@
       <member refid="classwx_window_1a72d70fd14e3565bf782fbcd3271d8930" prot="public" virt="virtual"><scope>wxTreebook</scope><name>IsShownOnScreen</name></member>
       <member refid="classwx_window_1a657ef8b6055eb06df894ac5e6ddfecf8" prot="public" virt="non-virtual"><scope>wxTreebook</scope><name>IsThisEnabled</name></member>
       <member refid="classwx_window_1a0002826ad05f2a5661b4c8995713f37f" prot="public" virt="virtual"><scope>wxTreebook</scope><name>IsTopLevel</name></member>
+      <member refid="classwx_window_1a7940d510c5bdc062a2b109a1022dd8c2" prot="public" virt="virtual"><scope>wxTreebook</scope><name>IsTransparentBackgroundSupported</name></member>
       <member refid="classwx_evt_handler_1a360fdeefcf53b62fb49fb828406bb8a6" prot="public" virt="non-virtual"><scope>wxTreebook</scope><name>IsUnlinked</name></member>
       <member refid="classwx_window_1a1b143c3e72bd0af533b76db4830a6113" prot="public" virt="virtual"><scope>wxTreebook</scope><name>Layout</name></member>
       <member refid="classwx_window_1ade808784f0e64d9985e2f279b5ca8c02" prot="public" virt="non-virtual"><scope>wxTreebook</scope><name>LineDown</name></member>
       <member refid="classwx_window_1afc0816a174ceee6d36d1995c6824a273" prot="public" virt="non-virtual"><scope>wxTreebook</scope><name>LineUp</name></member>
       <member refid="classwx_window_1a124944524f36b71385dad8fddaad8ded" prot="public" virt="virtual"><scope>wxTreebook</scope><name>Lower</name></member>
       <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxTreebook</scope><name>m_refData</name></member>
-      <member refid="classwx_window_1a192fc8b467845d093c16452db96c65c5" prot="public" virt="virtual"><scope>wxTreebook</scope><name>MakeModal</name></member>
       <member refid="classwx_window_1ab1cb98c8d25b9e6ff7b706b1446c3df7" prot="public" virt="non-virtual"><scope>wxTreebook</scope><name>Move</name></member>
       <member refid="classwx_window_1a22a22c1e23ca05776707e7999d8047fe" prot="public" virt="non-virtual"><scope>wxTreebook</scope><name>Move</name></member>
       <member refid="classwx_window_1a79e66079125e8420de269811bdb6f2b6" prot="public" virt="non-virtual"><scope>wxTreebook</scope><name>MoveAfterInTabOrder</name></member>
@@ -730,7 +731,7 @@
       <member refid="classwx_window_1a86904f6785df4af6036b33383490a805" prot="public" virt="non-virtual"><scope>wxTreebook</scope><name>Navigate</name></member>
       <member refid="classwx_window_1aa58039c8fc65e19160becf510ee1d1d5" prot="public" virt="non-virtual"><scope>wxTreebook</scope><name>NavigateIn</name></member>
       <member refid="classwx_window_1a8175da594e6045635a1d1cfe775cdddb" prot="public" virt="non-virtual"><scope>wxTreebook</scope><name>NewControlId</name></member>
-      <member refid="classwx_book_ctrl_base_1aed8700a5492ca104d2792d9bafea2167a76a5551525c61310e58ed494b5d4d730" prot="public" virt="non-virtual"><scope>wxTreebook</scope><name>NO_IMAGE</name></member>
+      <member refid="classwx_book_ctrl_base_1a2329dd4eea633a8764dbc29ac353c1a6a76a5551525c61310e58ed494b5d4d730" prot="public" virt="non-virtual"><scope>wxTreebook</scope><name>NO_IMAGE</name></member>
       <member refid="classwx_window_1a6b5654c0c6c6245d592c279521f7099c" prot="public" virt="virtual"><scope>wxTreebook</scope><name>OnInternalIdle</name></member>
       <member refid="classwx_object_1a07b8f34f5afc5743195c5fed052f55d3" prot="public" virt="non-virtual"><scope>wxTreebook</scope><name>operator delete</name></member>
       <member refid="classwx_object_1a96fa423a1dbc212c8227a5d83825971f" prot="public" virt="non-virtual"><scope>wxTreebook</scope><name>operator new</name></member>
@@ -850,7 +851,6 @@
       <member refid="classwx_window_1a88cc65e424a129d9b0057756cdb67ec9" prot="public" virt="virtual"><scope>wxTreebook</scope><name>TransferDataToWindow</name></member>
       <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxTreebook</scope><name>TryAfter</name></member>
       <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxTreebook</scope><name>TryBefore</name></member>
-      <member refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" virt="non-virtual"><scope>wxTreebook</scope><name>TryThis</name></member>
       <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxTreebook</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxTreebook</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a22e5db2ec1d19c8252c056fd116975d7" prot="public" virt="non-virtual"><scope>wxTreebook</scope><name>Unlink</name></member>

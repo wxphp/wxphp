@@ -16,7 +16,7 @@
 <para>You do not need to construct a <ref refid="classwx_quantize" kindref="compound">wxQuantize</ref> object since its functions are static. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/quantize.h" line="27"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/quantize.h" line="27"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -55,7 +55,7 @@
 <para><emphasis>in_rows</emphasis> and <emphasis>out_rows</emphasis> are arrays [0..h-1] of pointer to rows (<emphasis>in_rows</emphasis> contains <emphasis>w</emphasis> * 3 bytes per row, <emphasis>out_rows</emphasis> <emphasis>w</emphasis> bytes per row). Fills <emphasis>out_rows</emphasis> with indexes into palette (which is also stored into <emphasis>palette</emphasis> variable). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/quantize.h" line="38"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/quantize.h" line="38"/>
       </memberdef>
       <memberdef kind="function" id="classwx_quantize_1a1c1c9e1fef4fff61f0aafc8dd3e6c65c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -95,7 +95,7 @@
 <para>Both images may be the same, to overwrite the source image.</para><para>Specify an optional palette pointer to receive the resulting palette. This palette may be passed to ConvertImageToBitmap, for example. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/quantize.h" line="52"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/quantize.h" line="52"/>
       </memberdef>
       <memberdef kind="function" id="classwx_quantize_1aa99e73bbc0f939bb4d7f40ca761ce31f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -131,7 +131,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/quantize.h" line="63"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/quantize.h" line="63"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -140,37 +140,37 @@
 <para>Functions in this class are static and so a <ref refid="classwx_quantize" kindref="compound">wxQuantize</ref> object need not be created.</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__misc" kindref="compound">Miscellaneous</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="8961">
+      <node id="9144">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="8960">
+      <node id="9143">
         <label>wxQuantize</label>
         <link refid="classwx_quantize"/>
-        <childnode refid="8961" relation="public-inheritance">
+        <childnode refid="9144" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="8963">
+      <node id="9146">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="8964" relation="usage">
+        <childnode refid="9147" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="8962">
+      <node id="9145">
         <label>wxQuantize</label>
         <link refid="classwx_quantize"/>
-        <childnode refid="8963" relation="public-inheritance">
+        <childnode refid="9146" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8964">
+      <node id="9147">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/quantize.h" line="21" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/quantize.h" bodystart="20" bodyend="64"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/quantize.h" line="21" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/quantize.h" bodystart="20" bodyend="64"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxQuantize</scope><name>AllocExclusive</name></member>
       <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxQuantize</scope><name>CloneRefData</name></member>

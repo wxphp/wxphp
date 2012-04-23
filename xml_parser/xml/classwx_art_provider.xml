@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/artprov.h" line="184"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" line="257"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -35,7 +35,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/artprov.h" line="189"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" line="262"/>
       </memberdef>
       <memberdef kind="function" id="classwx_art_provider_1a405ecf7cdead6dbfb092376a51a856c4" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref></type>
@@ -43,13 +43,13 @@
         <argsstring>(const wxArtID &amp;id, const wxArtClient &amp;client=wxART_OTHER, const wxSize &amp;size=wxDefaultSize)</argsstring>
         <name>GetBitmap</name>
         <param>
-          <type>const <ref refid="artprov_8h_1a372ff88c4a78144bc9fb36a413facdb4" kindref="member">wxArtID</ref> &amp;</type>
+          <type>const <ref refid="classwx_string" kindref="compound">wxArtID</ref> &amp;</type>
           <declname>id</declname>
         </param>
         <param>
-          <type>const <ref refid="artprov_8h_1ad9c24b799a686f312c2bb64f47b6ef95" kindref="member">wxArtClient</ref> &amp;</type>
+          <type>const <ref refid="classwx_string" kindref="compound">wxArtClient</ref> &amp;</type>
           <declname>client</declname>
-          <defval>wxART_OTHER</defval>
+          <defval><ref refid="artprov_8h_1abe6f6066b36e0456cb2f8a0e6decb831" kindref="member">wxART_OTHER</ref></defval>
         </param>
         <param>
           <type>const <ref refid="classwx_size" kindref="compound">wxSize</ref> &amp;</type>
@@ -85,7 +85,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/artprov.h" line="206"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" line="279"/>
       </memberdef>
       <memberdef kind="function" id="classwx_art_provider_1ac9bd0ba166e5ef9515c68542bb96da09" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_icon" kindref="compound">wxIcon</ref></type>
@@ -93,13 +93,13 @@
         <argsstring>(const wxArtID &amp;id, const wxArtClient &amp;client=wxART_OTHER, const wxSize &amp;size=wxDefaultSize)</argsstring>
         <name>GetIcon</name>
         <param>
-          <type>const <ref refid="artprov_8h_1a372ff88c4a78144bc9fb36a413facdb4" kindref="member">wxArtID</ref> &amp;</type>
+          <type>const <ref refid="classwx_string" kindref="compound">wxArtID</ref> &amp;</type>
           <declname>id</declname>
         </param>
         <param>
-          <type>const <ref refid="artprov_8h_1ad9c24b799a686f312c2bb64f47b6ef95" kindref="member">wxArtClient</ref> &amp;</type>
+          <type>const <ref refid="classwx_string" kindref="compound">wxArtClient</ref> &amp;</type>
           <declname>client</declname>
-          <defval>wxART_OTHER</defval>
+          <defval><ref refid="artprov_8h_1abe6f6066b36e0456cb2f8a0e6decb831" kindref="member">wxART_OTHER</ref></defval>
         </param>
         <param>
           <type>const <ref refid="classwx_size" kindref="compound">wxSize</ref> &amp;</type>
@@ -112,7 +112,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/artprov.h" line="214"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" line="287"/>
       </memberdef>
       <memberdef kind="function" id="classwx_art_provider_1aba8987da6f829278235407245ee22f57" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
@@ -120,7 +120,7 @@
         <argsstring>(const wxArtClient &amp;client)</argsstring>
         <name>GetNativeSizeHint</name>
         <param>
-          <type>const <ref refid="artprov_8h_1ad9c24b799a686f312c2bb64f47b6ef95" kindref="member">wxArtClient</ref> &amp;</type>
+          <type>const <ref refid="classwx_string" kindref="compound">wxArtClient</ref> &amp;</type>
           <declname>client</declname>
         </param>
         <briefdescription>
@@ -131,7 +131,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/artprov.h" line="229"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" line="302"/>
       </memberdef>
       <memberdef kind="function" id="classwx_art_provider_1adfcca5fc919f1be4a95cc5ccb63f1cae" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
@@ -139,7 +139,7 @@
         <argsstring>(const wxArtClient &amp;client, bool platform_default=false)</argsstring>
         <name>GetSizeHint</name>
         <param>
-          <type>const <ref refid="artprov_8h_1ad9c24b799a686f312c2bb64f47b6ef95" kindref="member">wxArtClient</ref> &amp;</type>
+          <type>const <ref refid="classwx_string" kindref="compound">wxArtClient</ref> &amp;</type>
           <declname>client</declname>
         </param>
         <param>
@@ -154,7 +154,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/artprov.h" line="242"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" line="315"/>
       </memberdef>
       <memberdef kind="function" id="classwx_art_provider_1a0849828481ed689d716e600672fbaec0" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_icon_bundle" kindref="compound">wxIconBundle</ref></type>
@@ -162,13 +162,13 @@
         <argsstring>(const wxArtID &amp;id, const wxArtClient &amp;client=wxART_OTHER)</argsstring>
         <name>GetIconBundle</name>
         <param>
-          <type>const <ref refid="artprov_8h_1a372ff88c4a78144bc9fb36a413facdb4" kindref="member">wxArtID</ref> &amp;</type>
+          <type>const <ref refid="classwx_string" kindref="compound">wxArtID</ref> &amp;</type>
           <declname>id</declname>
         </param>
         <param>
-          <type>const <ref refid="artprov_8h_1ad9c24b799a686f312c2bb64f47b6ef95" kindref="member">wxArtClient</ref> &amp;</type>
+          <type>const <ref refid="classwx_string" kindref="compound">wxArtClient</ref> &amp;</type>
           <declname>client</declname>
-          <defval>wxART_OTHER</defval>
+          <defval><ref refid="artprov_8h_1abe6f6066b36e0456cb2f8a0e6decb831" kindref="member">wxART_OTHER</ref></defval>
         </param>
         <briefdescription>
 <para>Query registered providers for icon bundle with given ID. </para>        </briefdescription>
@@ -192,7 +192,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/artprov.h" line="257"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" line="330"/>
       </memberdef>
       <memberdef kind="function" id="classwx_art_provider_1ae64f10b3bc37c12ca7b18c2f43c42611" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -206,7 +206,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/artprov.h" line="271"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" line="344"/>
       </memberdef>
       <memberdef kind="function" id="classwx_art_provider_1ae6090f32579d782205dd247006e4c7de" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -223,7 +223,7 @@
 <para><xrefsect id="deprecated_1_deprecated000003"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="classwx_art_provider_1a55fe50769f0aeae2cf49860ef0b168d2" kindref="member">PushBack()</ref> instead.</para></xrefdescription></xrefsect></para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/artprov.h" line="276"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" line="349"/>
       </memberdef>
       <memberdef kind="function" id="classwx_art_provider_1a0be076c2270930e8a698dff5bee94b59" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -236,7 +236,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/artprov.h" line="281"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" line="354"/>
       </memberdef>
       <memberdef kind="function" id="classwx_art_provider_1a6af5625b194423247ff3845e1f0f61d6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -254,7 +254,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/artprov.h" line="289"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" line="362"/>
       </memberdef>
       <memberdef kind="function" id="classwx_art_provider_1a55fe50769f0aeae2cf49860ef0b168d2" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -273,7 +273,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/artprov.h" line="300"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" line="373"/>
       </memberdef>
       <memberdef kind="function" id="classwx_art_provider_1a990035bf586ca89c93c509b704687cbc" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -290,7 +290,7 @@
 <para>The provider is not deleted, unlike when using <ref refid="classwx_art_provider_1a2ea46956a7acce89f91be6ce422283eb" kindref="member">Delete()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/artprov.h" line="306"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" line="379"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-func">
@@ -300,11 +300,11 @@
         <argsstring>(const wxArtID &amp;id, const wxArtClient &amp;client, const wxSize &amp;size)</argsstring>
         <name>CreateBitmap</name>
         <param>
-          <type>const <ref refid="artprov_8h_1a372ff88c4a78144bc9fb36a413facdb4" kindref="member">wxArtID</ref> &amp;</type>
+          <type>const <ref refid="classwx_string" kindref="compound">wxArtID</ref> &amp;</type>
           <declname>id</declname>
         </param>
         <param>
-          <type>const <ref refid="artprov_8h_1ad9c24b799a686f312c2bb64f47b6ef95" kindref="member">wxArtClient</ref> &amp;</type>
+          <type>const <ref refid="classwx_string" kindref="compound">wxArtClient</ref> &amp;</type>
           <declname>client</declname>
         </param>
         <param>
@@ -341,7 +341,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/artprov.h" line="334"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" line="407"/>
       </memberdef>
       <memberdef kind="function" id="classwx_art_provider_1a0bb64950e85d0cc36977c01f864fdef8" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_icon_bundle" kindref="compound">wxIconBundle</ref></type>
@@ -349,11 +349,11 @@
         <argsstring>(const wxArtID &amp;id, const wxArtClient &amp;client)</argsstring>
         <name>CreateIconBundle</name>
         <param>
-          <type>const <ref refid="artprov_8h_1a372ff88c4a78144bc9fb36a413facdb4" kindref="member">wxArtID</ref> &amp;</type>
+          <type>const <ref refid="classwx_string" kindref="compound">wxArtID</ref> &amp;</type>
           <declname>id</declname>
         </param>
         <param>
-          <type>const <ref refid="artprov_8h_1ad9c24b799a686f312c2bb64f47b6ef95" kindref="member">wxArtClient</ref> &amp;</type>
+          <type>const <ref refid="classwx_string" kindref="compound">wxArtClient</ref> &amp;</type>
           <declname>client</declname>
         </param>
         <briefdescription>
@@ -362,7 +362,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/artprov.h" line="341"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" line="414"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -371,20 +371,20 @@
 <para>When wxWidgets needs to display an icon or a bitmap (e.g. in the standard file dialog), it does not use a hard-coded resource but asks <ref refid="classwx_art_provider" kindref="compound">wxArtProvider</ref> for it instead. This way users can plug in their own <ref refid="classwx_art_provider" kindref="compound">wxArtProvider</ref> class and easily replace standard art with their own version.</para><para>All that is needed is to derive a class from <ref refid="classwx_art_provider" kindref="compound">wxArtProvider</ref>, override either its <ref refid="classwx_art_provider_1a7605cdbfeac3b04094ab05cfa9aba0bc" kindref="member">wxArtProvider::CreateBitmap()</ref> and/or its <ref refid="classwx_art_provider_1a0bb64950e85d0cc36977c01f864fdef8" kindref="member">wxArtProvider::CreateIconBundle()</ref> methods and register the provider with <ref refid="classwx_art_provider_1a6af5625b194423247ff3845e1f0f61d6" kindref="member">wxArtProvider::Push()</ref>:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">MyProvider<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classwx_art_provider" kindref="compound" tooltip="wxArtProvider class is used to customize the look of wxWidgets application.">wxArtProvider</ref></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_bitmap" kindref="compound" tooltip="This class encapsulates the concept of a platform-dependent bitmap, either monochrome or colour or co...">wxBitmap</ref><sp/><ref refid="classwx_art_provider_1a7605cdbfeac3b04094ab05cfa9aba0bc" kindref="member" tooltip="Derived art provider classes must override this method to create requested art resource.">CreateBitmap</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="artprov_8h_1a372ff88c4a78144bc9fb36a413facdb4" kindref="member" tooltip="This type identifies a specific art object which can be requested to wxArtProvider.">wxArtID</ref>&amp;<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="artprov_8h_1ad9c24b799a686f312c2bb64f47b6ef95" kindref="member" tooltip="This type identifies the client of the art objects requested to wxArtProvider.">wxArtClient</ref>&amp;<sp/>client,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_bitmap" kindref="compound" tooltip="This class encapsulates the concept of a platform-dependent bitmap, either monochrome or colour or co...">wxBitmap</ref><sp/><ref refid="classwx_art_provider_1a7605cdbfeac3b04094ab05cfa9aba0bc" kindref="member" tooltip="Derived art provider classes must override this method to create requested art resource.">CreateBitmap</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change was actually the m...">wxArtID</ref>&amp;<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change was actually the m...">wxArtClient</ref>&amp;<sp/>client,</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classwx_size" kindref="compound" tooltip="A wxSize is a useful data structure for graphics operations.">wxSize</ref><sp/>size)</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>optionally<sp/>override<sp/>this<sp/>one<sp/>as<sp/>well</highlight><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_icon_bundle" kindref="compound" tooltip="This class contains multiple copies of an icon in different sizes.">wxIconBundle</ref><sp/><ref refid="classwx_art_provider_1a0bb64950e85d0cc36977c01f864fdef8" kindref="member" tooltip="This method is similar to CreateBitmap() but can be used when a bitmap (or an icon) exists in several...">CreateIconBundle</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="artprov_8h_1a372ff88c4a78144bc9fb36a413facdb4" kindref="member" tooltip="This type identifies a specific art object which can be requested to wxArtProvider.">wxArtID</ref>&amp;<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="artprov_8h_1ad9c24b799a686f312c2bb64f47b6ef95" kindref="member" tooltip="This type identifies the client of the art objects requested to wxArtProvider.">wxArtClient</ref>&amp;<sp/>client)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_icon_bundle" kindref="compound" tooltip="This class contains multiple copies of an icon in different sizes.">wxIconBundle</ref><sp/><ref refid="classwx_art_provider_1a0bb64950e85d0cc36977c01f864fdef8" kindref="member" tooltip="This method is similar to CreateBitmap() but can be used when a bitmap (or an icon) exists in several...">CreateIconBundle</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change was actually the m...">wxArtID</ref>&amp;<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change was actually the m...">wxArtClient</ref>&amp;<sp/>client)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>...<sp/>}</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>...</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_art_provider_1a6af5625b194423247ff3845e1f0f61d6" kindref="member" tooltip="Register new art provider and add it to the top of providers stack (i.e.">wxArtProvider::Push</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>MyProvider);</highlight></codeline>
 </programlisting></para><para>If you need bitmap images (of the same artwork) that should be displayed at different sizes you should probably consider overriding <ref refid="classwx_art_provider_1a0bb64950e85d0cc36977c01f864fdef8" kindref="member">wxArtProvider::CreateIconBundle</ref> and supplying icon bundles that contain different bitmap sizes.</para><para>There&apos;s another way of taking advantage of this class: you can use it in your code and use platform native icons as provided by <ref refid="classwx_art_provider_1a405ecf7cdead6dbfb092376a51a856c4" kindref="member">wxArtProvider::GetBitmap</ref> or <ref refid="classwx_art_provider_1ac9bd0ba166e5ef9515c68542bb96da09" kindref="member">wxArtProvider::GetIcon</ref>.</para><sect1 id="classwx_art_provider_1artprovider_identify">
 <title>Identifying art resources</title>
-<para>Every bitmap and icon bundle are known to <ref refid="classwx_art_provider" kindref="compound">wxArtProvider</ref> under an unique ID that is used when requesting a resource from it. The ID is represented by the <ref refid="artprov_8h_1a372ff88c4a78144bc9fb36a413facdb4" kindref="member">wxArtID</ref> type and can have one of these predefined values (you can see bitmaps represented by these constants in the <ref refid="page_samples_1page_samples_artprov" kindref="member">Art Provider Sample</ref>):</para><para><table rows="1" cols="3"><row>
+<para>Every bitmap and icon bundle are known to <ref refid="classwx_art_provider" kindref="compound">wxArtProvider</ref> under an unique ID that is used when requesting a resource from it. The ID is represented by the <ref refid="artprov_8h_1af7d82bed13ba95dd8ba357f0cb4bdfbd" kindref="member">wxArtID</ref> type and can have one of these predefined values (you can see bitmaps represented by these constants in the <ref refid="page_samples_1page_samples_artprov" kindref="member">Art Provider Sample</ref>):</para><para><table rows="1" cols="3"><row>
 <entry thead="no"><para><itemizedlist>
 <listitem><para><computeroutput>wxART_ERROR</computeroutput> </para></listitem>
 <listitem><para><computeroutput>wxART_QUESTION</computeroutput> </para></listitem>
@@ -447,7 +447,7 @@
 </para></entry></row>
 </table>
 </para><para>Additionally, any string recognized by custom art providers registered using <ref refid="classwx_art_provider_1a6af5625b194423247ff3845e1f0f61d6" kindref="member">wxArtProvider::Push</ref> may be used.</para><para><simplesect kind="note"><para>When running under GTK+ 2, GTK+ stock item IDs (e.g. <computeroutput>&quot;gtk-cdrom&quot;</computeroutput>) may be used as well: <programlisting><codeline><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#ifdef<sp/>__WXGTK__</highlight></codeline>
-<codeline><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_bitmap" kindref="compound" tooltip="This class encapsulates the concept of a platform-dependent bitmap, either monochrome or colour or co...">wxBitmap</ref><sp/>bmp<sp/>=<sp/><ref refid="classwx_art_provider_1a405ecf7cdead6dbfb092376a51a856c4" kindref="member" tooltip="Query registered providers for bitmap with given ID.">wxArtProvider::GetBitmap</ref>(</highlight><highlight class="stringliteral">&quot;gtk-cdrom&quot;</highlight><highlight class="normal">,<sp/>wxART_MENU);</highlight></codeline>
+<codeline><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_bitmap" kindref="compound" tooltip="This class encapsulates the concept of a platform-dependent bitmap, either monochrome or colour or co...">wxBitmap</ref><sp/>bmp<sp/>=<sp/><ref refid="classwx_art_provider_1a405ecf7cdead6dbfb092376a51a856c4" kindref="member" tooltip="Query registered providers for bitmap with given ID.">wxArtProvider::GetBitmap</ref>(</highlight><highlight class="stringliteral">&quot;gtk-cdrom&quot;</highlight><highlight class="normal">,<sp/><ref refid="artprov_8h_1a71acc864981812e272f64633af6f63a6" kindref="member">wxART_MENU</ref>);</highlight></codeline>
 <codeline><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif</highlight></codeline>
 </programlisting> For a list of the GTK+ stock items please refer to the <ulink url="http://library.gnome.org/devel/gtk/stable/gtk-Stock-Items.html">GTK+ documentation page</ulink>. It is also possible to load icons from the current icon theme by specifying their name (without extension and directory components). Icon themes recognized by GTK+ follow the freedesktop.org <ulink url="http://freedesktop.org/Standards/icon-theme-spec">Icon Themes specification</ulink>. Note that themes are not guaranteed to contain all icons, so <ref refid="classwx_art_provider" kindref="compound">wxArtProvider</ref> may return <ref refid="interface_2wx_2bitmap_8h_1a2947690e84b8fdb2e37b79a4af8f8a21" kindref="member">wxNullBitmap</ref> or <ref refid="icon_8h_1a953854798a8dfd400777318358dad5b6" kindref="member">wxNullIcon</ref>. The default theme is typically installed in <computeroutput>/usr/share/icons/hicolor</computeroutput>.</para></simplesect>
 </para></sect1>
@@ -468,37 +468,37 @@ Client ID serve as a hint to <ref refid="classwx_art_provider" kindref="compound
 </para></sect1>
     </detaileddescription>
     <inheritancegraph>
-      <node id="4351">
+      <node id="4441">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="4350">
+      <node id="4440">
         <label>wxArtProvider</label>
         <link refid="classwx_art_provider"/>
-        <childnode refid="4351" relation="public-inheritance">
+        <childnode refid="4441" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="4353">
+      <node id="4443">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="4354" relation="usage">
+        <childnode refid="4444" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="4352">
+      <node id="4442">
         <label>wxArtProvider</label>
         <link refid="classwx_art_provider"/>
-        <childnode refid="4353" relation="public-inheritance">
+        <childnode refid="4443" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4354">
+      <node id="4444">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/artprov.h" line="178" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/artprov.h" bodystart="177" bodyend="342"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" line="251" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" bodystart="250" bodyend="415"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxArtProvider</scope><name>AllocExclusive</name></member>
       <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxArtProvider</scope><name>CloneRefData</name></member>

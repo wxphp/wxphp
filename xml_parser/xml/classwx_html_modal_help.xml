@@ -62,7 +62,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/helpctrl.h" line="282"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/helpctrl.h" line="284"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -73,7 +73,7 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_html_modal_help" kindref="compound" tooltip="This class uses wxHtmlHelpController to display help in a modal dialog.">wxHtmlModalHelp</ref><sp/>help(parent,<sp/></highlight><highlight class="stringliteral">&quot;help&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;My<sp/>topic&quot;</highlight><highlight class="normal">);</highlight></codeline>
 </programlisting></para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxhtml" kindref="member">wxHTML</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__help" kindref="compound">Help</ref>, <ref refid="group__group__class__html" kindref="compound">HTML</ref> </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/helpctrl.h" line="265" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/helpctrl.h" bodystart="264" bodyend="283"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/helpctrl.h" line="267" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/html/helpctrl.h" bodystart="266" bodyend="285"/>
     <listofallmembers>
       <member refid="classwx_html_modal_help_1a4d16248f91685234b066edca4993a665" prot="public" virt="non-virtual"><scope>wxHtmlModalHelp</scope><name>wxHtmlModalHelp</name></member>
     </listofallmembers>

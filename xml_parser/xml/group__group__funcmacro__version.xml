@@ -18,7 +18,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="229"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="229"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="define">
@@ -32,7 +32,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 <para>Returns false otherwise.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/platform.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platform.h" line="18" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platform.h" bodystart="18" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/platform.h" line="18" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/platform.h" bodystart="18" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__version_1ga1837086b42f6bb0f186a0197458273d4" prot="public" static="no">
         <name>wxCHECK_SUNCC_VERSION</name>
@@ -44,7 +44,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 <para>Returns false otherwise.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/platform.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platform.h" line="26" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platform.h" bodystart="26" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/platform.h" line="26" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/platform.h" bodystart="26" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__version_1ga5a01a6b9009ee0ef3b90d520b1a0f5c1" prot="public" static="no">
         <name>wxCHECK_VISUALC_VERSION</name>
@@ -55,7 +55,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 <para>Returns false otherwise.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/platform.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platform.h" line="34" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platform.h" bodystart="34" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/platform.h" line="34" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/platform.h" bodystart="34" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__version_1ga22ed1759d538e8dff27b4f118eab6e14" prot="public" static="no">
         <name>wxCHECK_W32API_VERSION</name>
@@ -67,7 +67,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 <para>Otherwise, and also if we are not compiling with MinGW32/Cygwin under Win32 at all, returns false.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/platform.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platform.h" line="43" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platform.h" bodystart="43" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/platform.h" line="43" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/platform.h" bodystart="43" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__version_1gae7a4bbd65402259b17a664fe87f2ec17" prot="public" static="no">
         <name>wxCHECK_VERSION</name>
@@ -89,7 +89,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 </programlisting></para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/version.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/version.h" line="33" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/version.h" bodystart="33" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/version.h" line="33" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/version.h" bodystart="33" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__version_1ga666af9e0a9939d0aff83078ebf682ab3" prot="public" static="no">
         <name>wxCHECK_VERSION_FULL</name>
@@ -103,7 +103,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 <para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/version.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/version.h" line="41" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/version.h" bodystart="41" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/version.h" line="41" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/version.h" bodystart="41" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

@@ -16,7 +16,7 @@
 <para>You don&apos;t need to create an instance of <ref refid="classwx_system_settings" kindref="compound">wxSystemSettings</ref> since all of its functions are static. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/settings.h" line="245"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/settings.h" line="244"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -44,7 +44,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/settings.h" line="256"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/settings.h" line="255"/>
       </memberdef>
       <memberdef kind="function" id="classwx_system_settings_1a8ca19381cf14a21063ccadfed5ad4ad8" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_font" kindref="compound">wxFont</ref></type>
@@ -70,7 +70,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/settings.h" line="267"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/settings.h" line="266"/>
       </memberdef>
       <memberdef kind="function" id="classwx_system_settings_1aa18e3b5794dc4193c4b0668d28d4933a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -92,7 +92,7 @@
 <para>The value of <emphasis>win</emphasis> determines if the metric returned is a global value or a <ref refid="classwx_window" kindref="compound">wxWindow</ref> based value, in which case it might determine the widget, the display the window is on, or something similar. The window given should be as close to the metric as possible (e.g. a <ref refid="classwx_top_level_window" kindref="compound">wxTopLevelWindow</ref> in case of the wxSYS_CAPTION_Y metric).</para><para><emphasis>index</emphasis> can be one of the <ref refid="settings_8h_1a0f2b19d7a3717cdbef5a04cb05ab8f26" kindref="member">wxSystemMetric</ref> enum values.</para><para><emphasis>win</emphasis> is a pointer to the window for which the metric is requested. Specifying the <emphasis>win</emphasis> parameter is encouraged, because some metrics on some ports are not supported without one,or they might be capable of reporting better values if given one. If a window does not make sense for a metric, one should still be given, as for example it might determine which displays cursor width is requested with wxSYS_CURSOR_X. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/settings.h" line="288"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/settings.h" line="287"/>
       </memberdef>
       <memberdef kind="function" id="classwx_system_settings_1af8a2e5d2411eb520b8dad5fc5e9a1a7a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="settings_8h_1a805b469950075040f8fc4925d6507419" kindref="member">wxSystemScreenType</ref></type>
@@ -105,7 +105,7 @@
 <para>The return value is one of the <ref refid="settings_8h_1a805b469950075040f8fc4925d6507419" kindref="member">wxSystemScreenType</ref> enum values. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/settings.h" line="294"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/settings.h" line="293"/>
       </memberdef>
       <memberdef kind="function" id="classwx_system_settings_1a9e695a03bc8e3127b8a45f24ebf7c297" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -122,7 +122,7 @@
 <para>See the <ref refid="settings_8h_1afc464d07a27e1c7ebf406a1321167bf5" kindref="member">wxSystemFeature</ref> enum values. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/settings.h" line="300"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/settings.h" line="299"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -132,37 +132,37 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__cfg" kindref="compound">Application and System configuration</ref></para><para><simplesect kind="see"><para><ref refid="classwx_font" kindref="compound">wxFont</ref>, <ref refid="classwx_colour" kindref="compound">wxColour</ref>, <ref refid="classwx_system_options" kindref="compound">wxSystemOptions</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10662">
+      <node id="10847">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="10661">
+      <node id="10846">
         <label>wxSystemSettings</label>
         <link refid="classwx_system_settings"/>
-        <childnode refid="10662" relation="public-inheritance">
+        <childnode refid="10847" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10664">
+      <node id="10849">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="10665" relation="usage">
+        <childnode refid="10850" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="10663">
+      <node id="10848">
         <label>wxSystemSettings</label>
         <link refid="classwx_system_settings"/>
-        <childnode refid="10664" relation="public-inheritance">
+        <childnode refid="10849" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10665">
+      <node id="10850">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/settings.h" line="237" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/settings.h" bodystart="236" bodyend="301"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/settings.h" line="236" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/settings.h" bodystart="235" bodyend="300"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxSystemSettings</scope><name>AllocExclusive</name></member>
       <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxSystemSettings</scope><name>CloneRefData</name></member>

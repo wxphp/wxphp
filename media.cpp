@@ -50,6 +50,7 @@
 #include "others.h"
 
 
+
 void php_wxSound_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -58,13 +59,13 @@ void php_wxSound_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 	#endif
 	
 	
-	wxSound_php* object = (wxSound_php*)rsrc->ptr;
+	wxSound_php* object = static_cast<wxSound_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -151,7 +152,8 @@ PHP_METHOD(php_wxSound, Create)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's|b' (&fileName0, &fileName_len0, &isResource0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "s|b", &fileName0, &fileName_len0, &isResource0 ) == SUCCESS)
+		char parse_parameters_string[] = "s|b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &fileName0, &fileName_len0, &isResource0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -159,7 +161,6 @@ PHP_METHOD(php_wxSound, Create)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -254,7 +255,6 @@ PHP_METHOD(php_wxSound, IsOk)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -265,91 +265,6 @@ PHP_METHOD(php_wxSound, IsOk)
 				php_printf("Executing RETURN_BOOL(wxSound::IsOk())\n\n");
 				#endif
 				ZVAL_BOOL(return_value, ((wxSound_php*)_this)->IsOk());
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_METHOD(php_wxSound, IsPlaying)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxSound::IsPlaying\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	bool return_is_user_initialized = false;
-	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
-	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
-		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxSound::IsPlaying\n");
-			
-			return;
-		}
-		else
-		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
-			
-			if(parent_rsrc_type == le_wxSound)
-				references = &((wxSound_php*)_this)->references;
-		}
-	}
-	else
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Processing the method call as static\n");
-		#endif
-	}
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
-		overload0_called = true;
-		already_called = true;
-	}
-
-		
-	
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Static ");
-				php_printf("Executing RETURN_BOOL(wxSound::IsPlaying())\n\n");
-				#endif
-				ZVAL_BOOL(return_value, wxSound::IsPlaying());
 
 
 				return;
@@ -424,7 +339,8 @@ PHP_METHOD(php_wxSound, Play)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|l' (&flags0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|l", &flags0 ) == SUCCESS)
+		char parse_parameters_string[] = "|l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &flags0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -439,7 +355,8 @@ PHP_METHOD(php_wxSound, Play)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's|l' (&filename1, &filename_len1, &flags1)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "s|l", &filename1, &filename_len1, &flags1 ) == SUCCESS)
+		char parse_parameters_string[] = "s|l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &filename1, &filename_len1, &flags1 ) == SUCCESS)
 		{
 			overload1_called = true;
 			already_called = true;
@@ -447,7 +364,6 @@ PHP_METHOD(php_wxSound, Play)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -477,7 +393,6 @@ PHP_METHOD(php_wxSound, Play)
 		}
 	}
 
-	
 	if(overload1_called)
 	{
 		switch(arguments_received)
@@ -574,7 +489,6 @@ PHP_METHOD(php_wxSound, Stop)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -648,7 +562,8 @@ PHP_METHOD(php_wxSound, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's|b' (&fileName1, &fileName_len1, &isResource1)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "s|b", &fileName1, &fileName_len1, &isResource1 ) == SUCCESS)
+		char parse_parameters_string[] = "s|b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &fileName1, &fileName_len1, &isResource1 ) == SUCCESS)
 		{
 			overload1_called = true;
 			already_called = true;
@@ -663,7 +578,8 @@ PHP_METHOD(php_wxSound, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ls' (&size2, &data2, &data_len2)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ls", &size2, &data2, &data_len2 ) == SUCCESS)
+		char parse_parameters_string[] = "ls";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &size2, &data2, &data_len2 ) == SUCCESS)
 		{
 			overload2_called = true;
 			already_called = true;
@@ -671,7 +587,6 @@ PHP_METHOD(php_wxSound, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -689,7 +604,6 @@ PHP_METHOD(php_wxSound, __construct)
 		}
 	}
 
-	
 	if(overload1_called)
 	{
 		switch(arguments_received)
@@ -717,7 +631,6 @@ PHP_METHOD(php_wxSound, __construct)
 		}
 	}
 
-	
 	if(overload2_called)
 	{
 		switch(arguments_received)

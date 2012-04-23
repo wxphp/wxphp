@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/splitter.h" line="96"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/splitter.h" line="96"/>
       </memberdef>
       <memberdef kind="function" id="classwx_splitter_window_1aeefa297444ad5b968f3105af012c987e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -103,7 +103,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/splitter.h" line="128"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/splitter.h" line="128"/>
       </memberdef>
       <memberdef kind="function" id="classwx_splitter_window_1ae46ccf0bdc743c346c947f5ffdfecf35" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -116,7 +116,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/splitter.h" line="133"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/splitter.h" line="133"/>
       </memberdef>
       <memberdef kind="function" id="classwx_splitter_window_1a40bd4e468a9c71a837e8de40b4c983db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -159,7 +159,7 @@
 <para>See <ref refid="classwx_splitter_window_1a311c33909f1164ccdf9a11f5be45ecdc" kindref="member">wxSplitterWindow()</ref> for details. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/splitter.h" line="142"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/splitter.h" line="142"/>
       </memberdef>
       <memberdef kind="function" id="classwx_splitter_window_1ad492c8a5baa7db0d867259452750151a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -173,7 +173,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/splitter.h" line="149"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/splitter.h" line="149"/>
       </memberdef>
       <memberdef kind="function" id="classwx_splitter_window_1a9f1e1234ff311fd123bfd9fd5a95af50" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -187,7 +187,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/splitter.h" line="156"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/splitter.h" line="156"/>
       </memberdef>
       <memberdef kind="function" id="classwx_splitter_window_1a20316c3f66d3d596d63630a1529ababc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -201,7 +201,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/splitter.h" line="163"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/splitter.h" line="163"/>
       </memberdef>
       <memberdef kind="function" id="classwx_splitter_window_1adec02cfab03fbe9d22b2ccb92dfeaa03" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -209,12 +209,27 @@
         <argsstring>() const </argsstring>
         <name>GetSashSize</name>
         <briefdescription>
-<para>Returns the sash size in pixels. </para>        </briefdescription>
+<para>Returns the default sash size in pixels or 0 if it is invisible. </para>        </briefdescription>
         <detaileddescription>
-<para>The size of the sash is its width for a vertically split window and its height for a horizontally split one. Its other direction is the same as the client size of the window in the corresponding direction.</para><para>The sash size is platform-dependent because it conforms to the current platform look-and-feel and cannot be changed. </para>        </detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classwx_splitter_window_1a4acbd590a5881aabfa66efc98d365a94" kindref="member">GetDefaultSashSize()</ref>, <ref refid="classwx_splitter_window_1a78f8295074649e7d3b6fa06dd09f4b45" kindref="member">IsSashInvisible()</ref> </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/splitter.h" line="175"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/splitter.h" line="170"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_splitter_window_1a4acbd590a5881aabfa66efc98d365a94" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxSplitterWindow::GetDefaultSashSize</definition>
+        <argsstring>() const </argsstring>
+        <name>GetDefaultSashSize</name>
+        <briefdescription>
+<para>Returns the default sash size in pixels. </para>        </briefdescription>
+        <detaileddescription>
+<para>The size of the sash is its width for a vertically split window and its height for a horizontally split one. Its other direction is the same as the client size of the window in the corresponding direction.</para><para>The default sash size is platform-dependent because it conforms to the current platform look-and-feel and cannot be changed.</para><para><simplesect kind="since"><para>2.9.4 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/splitter.h" line="184"/>
       </memberdef>
       <memberdef kind="function" id="classwx_splitter_window_1a5a75a5c90aea1448a639dc2e7318dec9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="splitter_8h_1affac8fb7a12145212dbcba85d347083d" kindref="member">wxSplitMode</ref></type>
@@ -228,7 +243,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/splitter.h" line="182"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/splitter.h" line="191"/>
       </memberdef>
       <memberdef kind="function" id="classwx_splitter_window_1a45c07fa29398044e4fdc87ab51c90b36" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
@@ -241,7 +256,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/splitter.h" line="187"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/splitter.h" line="196"/>
       </memberdef>
       <memberdef kind="function" id="classwx_splitter_window_1aca850dfd705254fb29a94a5560e87762" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
@@ -254,7 +269,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/splitter.h" line="192"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/splitter.h" line="201"/>
       </memberdef>
       <memberdef kind="function" id="classwx_splitter_window_1a7b54aa365c98375c562a7fbc3f4e715f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -281,7 +296,23 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/splitter.h" line="206"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/splitter.h" line="215"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_splitter_window_1a78f8295074649e7d3b6fa06dd09f4b45" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxSplitterWindow::IsSashInvisible</definition>
+        <argsstring>() const </argsstring>
+        <name>IsSashInvisible</name>
+        <briefdescription>
+<para>Returns true if the sash is invisible even when the window is split, false otherwise. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="remark"><para>This is a shortcut for HasFlag(wxSP_NOSASH)</para></simplesect>
+<simplesect kind="see"><para><ref refid="classwx_splitter_window_1a3e140b4e8e73ff55aaf3b055f007c269" kindref="member">SetSashInvisible()</ref></para></simplesect>
+<simplesect kind="since"><para>2.9.4 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/splitter.h" line="226"/>
       </memberdef>
       <memberdef kind="function" id="classwx_splitter_window_1ab57f1dc1b8a48f8a19fd3d615de04084" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -294,7 +325,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/splitter.h" line="211"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/splitter.h" line="231"/>
       </memberdef>
       <memberdef kind="function" id="classwx_splitter_window_1acd8600550847fd6424c6ba79a7ac833e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -332,7 +363,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/splitter.h" line="227"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/splitter.h" line="247"/>
       </memberdef>
       <memberdef kind="function" id="classwx_splitter_window_1ad0c6a75e2f9635f9e3651cb01f6fc530" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -358,7 +389,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/splitter.h" line="240"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/splitter.h" line="260"/>
       </memberdef>
       <memberdef kind="function" id="classwx_splitter_window_1a6ff1d9cf73ded27ff0de8fd608106659" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -384,7 +415,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/splitter.h" line="252"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/splitter.h" line="272"/>
       </memberdef>
       <memberdef kind="function" id="classwx_splitter_window_1af85847a7899f8f4bf9a28b7e2ebee357" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -406,7 +437,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/splitter.h" line="269"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/splitter.h" line="289"/>
       </memberdef>
       <memberdef kind="function" id="classwx_splitter_window_1a84820036d00f751f5a2284ab4bc9ef22" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -433,7 +464,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/splitter.h" line="287"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/splitter.h" line="307"/>
       </memberdef>
       <memberdef kind="function" id="classwx_splitter_window_1a3c52925dffd02509d110086d4bb29373" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -462,7 +493,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/splitter.h" line="310"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/splitter.h" line="330"/>
       </memberdef>
       <memberdef kind="function" id="classwx_splitter_window_1ac109c071995913871c8669cb05186f7a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -501,7 +532,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/splitter.h" line="324"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/splitter.h" line="344"/>
       </memberdef>
       <memberdef kind="function" id="classwx_splitter_window_1a92c912e2e7b656c8f906aaff89e1a0ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -528,7 +559,36 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/splitter.h" line="336"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/splitter.h" line="356"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_splitter_window_1a3e140b4e8e73ff55aaf3b055f007c269" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxSplitterWindow::SetSashInvisible</definition>
+        <argsstring>(bool invisible=true)</argsstring>
+        <name>SetSashInvisible</name>
+        <param>
+          <type>bool</type>
+          <declname>invisible</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>Sets whether the sash should be invisible, even when the window is split. </para>        </briefdescription>
+        <detaileddescription>
+<para>When the sash is invisible, it doesn&apos;t appear on the screen at all and, in particular, doesn&apos;t allow the user to resize the windows.</para><para><simplesect kind="remark"><para>Only sets the internal variable; does not update the display.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>invisible</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If true, the sash is always invisible, else it is shown when the window is split.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="classwx_splitter_window_1a78f8295074649e7d3b6fa06dd09f4b45" kindref="member">IsSashInvisible()</ref></para></simplesect>
+<simplesect kind="since"><para>2.9.4 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/splitter.h" line="375"/>
       </memberdef>
       <memberdef kind="function" id="classwx_splitter_window_1a27f942a5849311e4800cabfdc1e781db" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -579,7 +639,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/splitter.h" line="362"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/splitter.h" line="401"/>
       </memberdef>
       <memberdef kind="function" id="classwx_splitter_window_1a3003054271e61737e914b365e3a233b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -630,7 +690,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/splitter.h" line="389"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/splitter.h" line="428"/>
       </memberdef>
       <memberdef kind="function" id="classwx_splitter_window_1a8802da28267a6bb4eb6610f6abca2fc3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -659,7 +719,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/splitter.h" line="405"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/splitter.h" line="444"/>
       </memberdef>
       <memberdef kind="function" id="classwx_splitter_window_1af7f3511718dfbfc2b4f36a202a436ff5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -672,7 +732,7 @@
 <para>Such resizing normally takes place in idle time, in order to wait for layout to be completed. However, this can cause unacceptable flicker as the panes are resized after the window has been shown. To work around this, you can perform window layout (for example by sending a size event to the parent window), and then call this function, before showing the top-level window. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/splitter.h" line="418"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/splitter.h" line="457"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -701,73 +761,73 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__miscwnd" kindref="compound">Miscellaneous Windows</ref></para><para><simplesect kind="see"><para><ref refid="classwx_splitter_event" kindref="compound">wxSplitterEvent</ref>, <ref refid="overview_splitterwindow" kindref="compound">wxSplitterWindow Overview</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10431">
+      <node id="10614">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="10430">
+      <node id="10613">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="10431" relation="public-inheritance">
+        <childnode refid="10614" relation="public-inheritance">
         </childnode>
-        <childnode refid="10432" relation="public-inheritance">
+        <childnode refid="10615" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10428">
+      <node id="10611">
         <label>wxSplitterWindow</label>
         <link refid="classwx_splitter_window"/>
-        <childnode refid="10429" relation="public-inheritance">
+        <childnode refid="10612" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10432">
+      <node id="10615">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="10429">
+      <node id="10612">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="10430" relation="public-inheritance">
+        <childnode refid="10613" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10436">
+      <node id="10619">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="10437" relation="usage">
+        <childnode refid="10620" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="10435">
+      <node id="10618">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="10436" relation="public-inheritance">
+        <childnode refid="10619" relation="public-inheritance">
         </childnode>
-        <childnode refid="10438" relation="public-inheritance">
+        <childnode refid="10621" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10433">
+      <node id="10616">
         <label>wxSplitterWindow</label>
         <link refid="classwx_splitter_window"/>
-        <childnode refid="10434" relation="public-inheritance">
+        <childnode refid="10617" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10438">
+      <node id="10621">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="10434">
+      <node id="10617">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="10435" relation="public-inheritance">
+        <childnode refid="10618" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10437">
+      <node id="10620">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/splitter.h" line="91" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/splitter.h" bodystart="90" bodyend="419"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/splitter.h" line="91" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/splitter.h" bodystart="90" bodyend="458"/>
     <listofallmembers>
       <member refid="classwx_window_1a3afbd49b1ea2f8275e3600dcac102923" prot="public" virt="virtual"><scope>wxSplitterWindow</scope><name>AcceptsFocus</name></member>
       <member refid="classwx_window_1a2370bdd3ab08e7ef3c7555c6aa8301b8" prot="public" virt="virtual"><scope>wxSplitterWindow</scope><name>AcceptsFocusFromKeyboard</name></member>
@@ -850,6 +910,7 @@
       <member refid="classwx_window_1ade8de9a91bb5bf49c3a52e5262a5ffea" prot="public" virt="non-virtual"><scope>wxSplitterWindow</scope><name>GetContainingSizer</name></member>
       <member refid="classwx_window_1ad7ce1e9af33e6be0b608813eff2d349c" prot="public" virt="non-virtual"><scope>wxSplitterWindow</scope><name>GetCursor</name></member>
       <member refid="classwx_window_1a24e7b8f717e91f4590d148140e853dc5" prot="public" virt="virtual"><scope>wxSplitterWindow</scope><name>GetDefaultAttributes</name></member>
+      <member refid="classwx_splitter_window_1a4acbd590a5881aabfa66efc98d365a94" prot="public" virt="non-virtual"><scope>wxSplitterWindow</scope><name>GetDefaultSashSize</name></member>
       <member refid="classwx_window_1a4511e71affd926a47c5c320563ca2df5" prot="public" virt="virtual"><scope>wxSplitterWindow</scope><name>GetDropTarget</name></member>
       <member refid="classwx_window_1a1a54fcda8d52986482e030bd54739e9f" prot="public" virt="virtual"><scope>wxSplitterWindow</scope><name>GetEffectiveMinSize</name></member>
       <member refid="classwx_window_1a72c2454cf309f30109da3cbfe237c760" prot="public" virt="non-virtual"><scope>wxSplitterWindow</scope><name>GetEventHandler</name></member>
@@ -933,6 +994,7 @@
       <member refid="classwx_splitter_window_1a7b54aa365c98375c562a7fbc3f4e715f" prot="public" virt="non-virtual"><scope>wxSplitterWindow</scope><name>Initialize</name></member>
       <member refid="classwx_window_1ae1b56ca87d8590ee5e576012229a380a" prot="public" virt="non-virtual"><scope>wxSplitterWindow</scope><name>InvalidateBestSize</name></member>
       <member refid="classwx_window_1af918e6fe8565c2d5235973cc3de84a43" prot="public" virt="non-virtual"><scope>wxSplitterWindow</scope><name>IsBeingDeleted</name></member>
+      <member refid="classwx_window_1a469f0881da248d37691440c9d4cc7200" prot="public" virt="non-virtual"><scope>wxSplitterWindow</scope><name>IsDescendant</name></member>
       <member refid="classwx_window_1a9d1be1bbb625ebf87ad4ad47e49a0194" prot="public" virt="virtual"><scope>wxSplitterWindow</scope><name>IsDoubleBuffered</name></member>
       <member refid="classwx_window_1a59452a5bd42f5ea4b31d7fc4aa59644f" prot="public" virt="non-virtual"><scope>wxSplitterWindow</scope><name>IsEnabled</name></member>
       <member refid="classwx_window_1af27ef77c913e32050543f3b0ca435a0d" prot="public" virt="non-virtual"><scope>wxSplitterWindow</scope><name>IsExposed</name></member>
@@ -943,19 +1005,20 @@
       <member refid="classwx_object_1af40d580385cf4f8112fae7713404b01e" prot="public" virt="non-virtual"><scope>wxSplitterWindow</scope><name>IsKindOf</name></member>
       <member refid="classwx_window_1ae9b31dec54256b68574a4bba8cca94ab" prot="public" virt="virtual"><scope>wxSplitterWindow</scope><name>IsRetained</name></member>
       <member refid="classwx_object_1a80a1a3fda7b14396a9ddd3d7a46a88bd" prot="public" virt="non-virtual"><scope>wxSplitterWindow</scope><name>IsSameAs</name></member>
+      <member refid="classwx_splitter_window_1a78f8295074649e7d3b6fa06dd09f4b45" prot="public" virt="non-virtual"><scope>wxSplitterWindow</scope><name>IsSashInvisible</name></member>
       <member refid="classwx_window_1aeeef7eaf8c8f1ec1a54e7a68d63923d0" prot="public" virt="virtual"><scope>wxSplitterWindow</scope><name>IsScrollbarAlwaysShown</name></member>
       <member refid="classwx_window_1a95af3a39aa422580dae156ed281a7e88" prot="public" virt="virtual"><scope>wxSplitterWindow</scope><name>IsShown</name></member>
       <member refid="classwx_window_1a72d70fd14e3565bf782fbcd3271d8930" prot="public" virt="virtual"><scope>wxSplitterWindow</scope><name>IsShownOnScreen</name></member>
       <member refid="classwx_splitter_window_1ab57f1dc1b8a48f8a19fd3d615de04084" prot="public" virt="non-virtual"><scope>wxSplitterWindow</scope><name>IsSplit</name></member>
       <member refid="classwx_window_1a657ef8b6055eb06df894ac5e6ddfecf8" prot="public" virt="non-virtual"><scope>wxSplitterWindow</scope><name>IsThisEnabled</name></member>
       <member refid="classwx_window_1a0002826ad05f2a5661b4c8995713f37f" prot="public" virt="virtual"><scope>wxSplitterWindow</scope><name>IsTopLevel</name></member>
+      <member refid="classwx_window_1a7940d510c5bdc062a2b109a1022dd8c2" prot="public" virt="virtual"><scope>wxSplitterWindow</scope><name>IsTransparentBackgroundSupported</name></member>
       <member refid="classwx_evt_handler_1a360fdeefcf53b62fb49fb828406bb8a6" prot="public" virt="non-virtual"><scope>wxSplitterWindow</scope><name>IsUnlinked</name></member>
       <member refid="classwx_window_1a1b143c3e72bd0af533b76db4830a6113" prot="public" virt="virtual"><scope>wxSplitterWindow</scope><name>Layout</name></member>
       <member refid="classwx_window_1ade808784f0e64d9985e2f279b5ca8c02" prot="public" virt="non-virtual"><scope>wxSplitterWindow</scope><name>LineDown</name></member>
       <member refid="classwx_window_1afc0816a174ceee6d36d1995c6824a273" prot="public" virt="non-virtual"><scope>wxSplitterWindow</scope><name>LineUp</name></member>
       <member refid="classwx_window_1a124944524f36b71385dad8fddaad8ded" prot="public" virt="virtual"><scope>wxSplitterWindow</scope><name>Lower</name></member>
       <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxSplitterWindow</scope><name>m_refData</name></member>
-      <member refid="classwx_window_1a192fc8b467845d093c16452db96c65c5" prot="public" virt="virtual"><scope>wxSplitterWindow</scope><name>MakeModal</name></member>
       <member refid="classwx_window_1ab1cb98c8d25b9e6ff7b706b1446c3df7" prot="public" virt="non-virtual"><scope>wxSplitterWindow</scope><name>Move</name></member>
       <member refid="classwx_window_1a22a22c1e23ca05776707e7999d8047fe" prot="public" virt="non-virtual"><scope>wxSplitterWindow</scope><name>Move</name></member>
       <member refid="classwx_window_1a79e66079125e8420de269811bdb6f2b6" prot="public" virt="non-virtual"><scope>wxSplitterWindow</scope><name>MoveAfterInTabOrder</name></member>
@@ -1050,6 +1113,7 @@
       <member refid="classwx_window_1a07f5f7ed3f78e0ef7b3dee3f4da81001" prot="public" virt="virtual"><scope>wxSplitterWindow</scope><name>SetPreviousHandler</name></member>
       <member refid="classwx_object_1afab780710f2adc1bb33310e27590140b" prot="public" virt="non-virtual"><scope>wxSplitterWindow</scope><name>SetRefData</name></member>
       <member refid="classwx_splitter_window_1a3c52925dffd02509d110086d4bb29373" prot="public" virt="non-virtual"><scope>wxSplitterWindow</scope><name>SetSashGravity</name></member>
+      <member refid="classwx_splitter_window_1a3e140b4e8e73ff55aaf3b055f007c269" prot="public" virt="non-virtual"><scope>wxSplitterWindow</scope><name>SetSashInvisible</name></member>
       <member refid="classwx_splitter_window_1ac109c071995913871c8669cb05186f7a" prot="public" virt="non-virtual"><scope>wxSplitterWindow</scope><name>SetSashPosition</name></member>
       <member refid="classwx_window_1aa842d59529f873683e55cd8392ec46e9" prot="public" virt="virtual"><scope>wxSplitterWindow</scope><name>SetScrollbar</name></member>
       <member refid="classwx_window_1afbf4dc9064cf70cfe6884554b97a27bf" prot="public" virt="virtual"><scope>wxSplitterWindow</scope><name>SetScrollPos</name></member>
@@ -1083,7 +1147,6 @@
       <member refid="classwx_window_1a88cc65e424a129d9b0057756cdb67ec9" prot="public" virt="virtual"><scope>wxSplitterWindow</scope><name>TransferDataToWindow</name></member>
       <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxSplitterWindow</scope><name>TryAfter</name></member>
       <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxSplitterWindow</scope><name>TryBefore</name></member>
-      <member refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" virt="non-virtual"><scope>wxSplitterWindow</scope><name>TryThis</name></member>
       <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxSplitterWindow</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxSplitterWindow</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a22e5db2ec1d19c8252c056fd116975d7" prot="public" virt="non-virtual"><scope>wxSplitterWindow</scope><name>Unlink</name></member>

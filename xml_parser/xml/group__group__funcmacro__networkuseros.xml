@@ -16,7 +16,7 @@
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="628"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="631"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__networkuseros_1ga9df97118e6514b933b0aa755ff62964d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -34,7 +34,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000063"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="group__group__funcmacro__networkuseros_1ga58315189fa6c3c70c8c3e040fd592d97" kindref="member">wxGetEmailAddress()</ref> instead.</para></xrefdescription></xrefsect></para><para><parameterlist kind="param"><parameteritem>
+<para><xrefsect id="deprecated_1_deprecated000062"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="group__group__funcmacro__networkuseros_1ga58315189fa6c3c70c8c3e040fd592d97" kindref="member">wxGetEmailAddress()</ref> instead.</para></xrefdescription></xrefsect></para><para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>buf</parametername>
 </parameternamelist>
@@ -53,7 +53,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="640"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="643"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__networkuseros_1ga295ff6a2681c806195447a920f681499" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>wxMemorySize</type>
@@ -66,7 +66,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 <para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="648"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="651"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__networkuseros_1gae426408d7b659be4db51cc8296af5e7a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -80,7 +80,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="657"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="660"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__networkuseros_1ga25dd53a4a5aab23305b8e4e9c5ff730b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -95,7 +95,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="674"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="677"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__networkuseros_1ga6f8c550ed86ea82ac363e925db7026f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -113,7 +113,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000064"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="group__group__funcmacro__networkuseros_1ga25dd53a4a5aab23305b8e4e9c5ff730b" kindref="member">wxGetHostName()</ref> instead.</para></xrefdescription></xrefsect></para><para><parameterlist kind="param"><parameteritem>
+<para><xrefsect id="deprecated_1_deprecated000063"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="group__group__funcmacro__networkuseros_1ga25dd53a4a5aab23305b8e4e9c5ff730b" kindref="member">wxGetHostName()</ref> instead.</para></xrefdescription></xrefsect></para><para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>buf</parametername>
 </parameternamelist>
@@ -132,7 +132,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="686"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="689"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__networkuseros_1ga8e3277f772d143953b4e7eca3312dea0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -146,7 +146,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="696"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="699"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__networkuseros_1ga18db911e93361ebd5bbfb0d5136ddf5b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -164,7 +164,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 <para>If the <emphasis>user</emphasis> is empty (default value), this function behaves like <ref refid="group__group__funcmacro__networkuseros_1gae426408d7b659be4db51cc8296af5e7a" kindref="member">wxGetHomeDir()</ref> (i.e. returns the current user home directory).</para><para>If the home directory couldn&apos;t be determined, an empty string is returned.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="707"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="710"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__networkuseros_1gab1ebfcd4741550d6f7aa6f8a8952f4f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -179,7 +179,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="722"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="725"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__networkuseros_1gac27162ecb34dab557506f6a612df6211" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -197,7 +197,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000065"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="group__group__funcmacro__networkuseros_1gab1ebfcd4741550d6f7aa6f8a8952f4f3" kindref="member">wxGetUserId()</ref> instead.</para></xrefdescription></xrefsect></para><para><parameterlist kind="param"><parameteritem>
+<para><xrefsect id="deprecated_1_deprecated000064"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="group__group__funcmacro__networkuseros_1gab1ebfcd4741550d6f7aa6f8a8952f4f3" kindref="member">wxGetUserId()</ref> instead.</para></xrefdescription></xrefsect></para><para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>buf</parametername>
 </parameternamelist>
@@ -216,7 +216,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="734"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="737"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__networkuseros_1ga37cb8272601e8c81e2ee53ee50e64a8e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -231,7 +231,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="749"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="752"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__networkuseros_1gaae7f8332d69c28360110242de6f3d3e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -249,7 +249,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000066"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="group__group__funcmacro__networkuseros_1ga37cb8272601e8c81e2ee53ee50e64a8e" kindref="member">wxGetUserName()</ref> instead.</para></xrefdescription></xrefsect></para><para><parameterlist kind="param"><parameteritem>
+<para><xrefsect id="deprecated_1_deprecated000065"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="group__group__funcmacro__networkuseros_1ga37cb8272601e8c81e2ee53ee50e64a8e" kindref="member">wxGetUserName()</ref> instead.</para></xrefdescription></xrefsect></para><para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>buf</parametername>
 </parameternamelist>
@@ -268,7 +268,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="761"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="764"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__networkuseros_1ga2404d9ca32701ddb2a34af00e81446b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -282,7 +282,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="772"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="775"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__networkuseros_1ga2ca585c288b956d80511478dc7b01533" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="platinfo_8h_1ae1234f6be0bdb09c90c9ba78251056fd" kindref="member">wxOperatingSystemId</ref></type>
@@ -325,7 +325,7 @@ See the <ulink url="http://msdn.microsoft.com/en-us/library/ms724832(VS.85).aspx
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="808"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="811"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__networkuseros_1ga56083f0f3875e40b13aa6094e283584e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -339,7 +339,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="824"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="827"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__networkuseros_1gaccf71bf91abcb6469e6b812acf40bd38" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -353,7 +353,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="834"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="837"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__networkuseros_1ga06f6fb212c396bd20865ee4e2f69aa1f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structwx_linux_distribution_info" kindref="compound">wxLinuxDistributionInfo</ref></type>
@@ -366,7 +366,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 <para>This function uses the <computeroutput>lsb_release</computeroutput> utility which is part of the <computeroutput>Linux Standard Base Core</computeroutput> specification (see <ulink url="http://refspecs.linux-foundation.org/lsb.shtml">http://refspecs.linux-foundation.org/lsb.shtml</ulink>) since the very first LSB release 1.0 (released in 2001). The <computeroutput>lsb_release</computeroutput> utility is very common on modern Linux distributions but in case it&apos;s not available, then this function will return a <ref refid="structwx_linux_distribution_info" kindref="compound">wxLinuxDistributionInfo</ref> structure containing empty strings.</para><para>This function is Linux-specific and is only available when the <computeroutput>__LINUX__</computeroutput> symbol is defined. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="851"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="854"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

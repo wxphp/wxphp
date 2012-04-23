@@ -16,7 +16,7 @@
 <para>If you use it to construct the object and don&apos;t call <ref refid="classwx_timer_1aa3966b37329a4fad69ad384733eab27e" kindref="member">SetOwner()</ref> later, you must override <ref refid="classwx_timer_1abeaa78e9916e88fd5f544c3eab4e57b4" kindref="member">Notify()</ref> method to process the notifications. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/timer.h" line="57"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/timer.h" line="57"/>
       </memberdef>
       <memberdef kind="function" id="classwx_timer_1aeba595e67731d9f8ce07e4ac69a0ca65" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -38,7 +38,7 @@
 <para>Please see <ref refid="classwx_timer_1aa3966b37329a4fad69ad384733eab27e" kindref="member">SetOwner()</ref> for the description of parameters. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/timer.h" line="63"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/timer.h" line="63"/>
       </memberdef>
       <memberdef kind="function" id="classwx_timer_1a89747005621bd84959b3bed0fdedb9f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -51,7 +51,7 @@
 <para>Stops the timer if it is running. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/timer.h" line="68"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/timer.h" line="68"/>
       </memberdef>
       <memberdef kind="function" id="classwx_timer_1ad8ad8395c1432e69dac3484ec26c6df1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -64,7 +64,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/timer.h" line="73"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/timer.h" line="73"/>
       </memberdef>
       <memberdef kind="function" id="classwx_timer_1a7a89e850ea197643c1fecb171aabc8ac" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -77,7 +77,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/timer.h" line="78"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/timer.h" line="78"/>
       </memberdef>
       <memberdef kind="function" id="classwx_timer_1a49c403b4c5f74168eb35777c4ccb909e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_evt_handler" kindref="compound">wxEvtHandler</ref> *</type>
@@ -90,7 +90,7 @@
 <para>If non-NULL this is the event handler which will receive the timer events (see <ref refid="classwx_timer_event" kindref="compound">wxTimerEvent</ref>) when the timer is running. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/timer.h" line="86"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/timer.h" line="86"/>
       </memberdef>
       <memberdef kind="function" id="classwx_timer_1afd218cc14dce41c02d1af87fbf30331f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -103,7 +103,7 @@
 <para>if it will stop after firing the first notification automatically. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/timer.h" line="92"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/timer.h" line="92"/>
       </memberdef>
       <memberdef kind="function" id="classwx_timer_1a66d459fa6e61e9e16a95f870c07aa4c9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -116,7 +116,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/timer.h" line="97"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/timer.h" line="97"/>
       </memberdef>
       <memberdef kind="function" id="classwx_timer_1abeaa78e9916e88fd5f544c3eab4e57b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -129,7 +129,7 @@
 <para>Perform whatever action which is to be taken periodically here.</para><para>Notice that throwing exceptions from this method is currently not supported, use event-based timer handling approach if an exception can be thrown while handling timer notifications. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/timer.h" line="109"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/timer.h" line="109"/>
       </memberdef>
       <memberdef kind="function" id="classwx_timer_1aa3966b37329a4fad69ad384733eab27e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -151,7 +151,7 @@
 <para>When the timer is running, the owner will receive timer events (see <ref refid="classwx_timer_event" kindref="compound">wxTimerEvent</ref>) with <emphasis>id</emphasis> equal to <emphasis>id</emphasis> specified here. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/timer.h" line="117"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/timer.h" line="117"/>
       </memberdef>
       <memberdef kind="function" id="classwx_timer_1a2d0f584f28cd836deea602a8f2fc32d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -176,7 +176,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/timer.h" line="134"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/timer.h" line="134"/>
       </memberdef>
       <memberdef kind="function" id="classwx_timer_1a74c499ddd20b00376ff99f08fb96a3d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -189,7 +189,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/timer.h" line="139"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/timer.h" line="139"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -202,61 +202,61 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__misc" kindref="compound">Miscellaneous</ref></para><para><simplesect kind="see"><para><ref refid="classwx_stop_watch" kindref="compound">wxStopWatch</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10874">
+      <node id="11059">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="10873">
+      <node id="11058">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="10874" relation="public-inheritance">
+        <childnode refid="11059" relation="public-inheritance">
         </childnode>
-        <childnode refid="10875" relation="public-inheritance">
+        <childnode refid="11060" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10872">
+      <node id="11057">
         <label>wxTimer</label>
         <link refid="classwx_timer"/>
-        <childnode refid="10873" relation="public-inheritance">
+        <childnode refid="11058" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10875">
+      <node id="11060">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10878">
+      <node id="11063">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="10879" relation="usage">
+        <childnode refid="11064" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="10877">
+      <node id="11062">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="10878" relation="public-inheritance">
+        <childnode refid="11063" relation="public-inheritance">
         </childnode>
-        <childnode refid="10880" relation="public-inheritance">
+        <childnode refid="11065" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10876">
+      <node id="11061">
         <label>wxTimer</label>
         <link refid="classwx_timer"/>
-        <childnode refid="10877" relation="public-inheritance">
+        <childnode refid="11062" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10880">
+      <node id="11065">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="10879">
+      <node id="11064">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/timer.h" line="50" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/timer.h" bodystart="49" bodyend="140"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/timer.h" line="50" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/timer.h" bodystart="49" bodyend="140"/>
     <listofallmembers>
       <member refid="classwx_evt_handler_1a7dc3c701781f4044372049de5004137e" prot="public" virt="non-virtual"><scope>wxTimer</scope><name>AddFilter</name></member>
       <member refid="classwx_evt_handler_1a0737c6d2cbcd5ded4b1ecdd53ed0def3" prot="public" virt="virtual"><scope>wxTimer</scope><name>AddPendingEvent</name></member>
@@ -310,7 +310,6 @@
       <member refid="classwx_timer_1a74c499ddd20b00376ff99f08fb96a3d0" prot="public" virt="virtual"><scope>wxTimer</scope><name>Stop</name></member>
       <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxTimer</scope><name>TryAfter</name></member>
       <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxTimer</scope><name>TryBefore</name></member>
-      <member refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" virt="non-virtual"><scope>wxTimer</scope><name>TryThis</name></member>
       <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxTimer</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxTimer</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a22e5db2ec1d19c8252c056fd116975d7" prot="public" virt="non-virtual"><scope>wxTimer</scope><name>Unlink</name></member>

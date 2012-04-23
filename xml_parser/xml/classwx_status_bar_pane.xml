@@ -25,7 +25,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/statusbr.h" line="41"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/statusbr.h" line="41"/>
       </memberdef>
       <memberdef kind="function" id="classwx_status_bar_pane_1a1ec718cfd2487553b7dfe18419482282" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -38,7 +38,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/statusbr.h" line="46"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/statusbr.h" line="46"/>
       </memberdef>
       <memberdef kind="function" id="classwx_status_bar_pane_1a0d00ac53d9e3c32a02072a6c5e3978c4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -51,7 +51,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/statusbr.h" line="51"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/statusbr.h" line="51"/>
       </memberdef>
       <memberdef kind="function" id="classwx_status_bar_pane_1ae5c45183b68522993d834b3eb7f0f65d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -64,7 +64,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/statusbr.h" line="56"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/statusbr.h" line="56"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -73,7 +73,7 @@
 <para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__data" kindref="compound">Data Structures</ref></para><para><simplesect kind="see"><para><ref refid="classwx_status_bar" kindref="compound">wxStatusBar</ref> </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/statusbr.h" line="36" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/statusbr.h" bodystart="35" bodyend="57"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/statusbr.h" line="36" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/statusbr.h" bodystart="35" bodyend="57"/>
     <listofallmembers>
       <member refid="classwx_status_bar_pane_1a0d00ac53d9e3c32a02072a6c5e3978c4" prot="public" virt="non-virtual"><scope>wxStatusBarPane</scope><name>GetStyle</name></member>
       <member refid="classwx_status_bar_pane_1ae5c45183b68522993d834b3eb7f0f65d" prot="public" virt="non-virtual"><scope>wxStatusBarPane</scope><name>GetText</name></member>

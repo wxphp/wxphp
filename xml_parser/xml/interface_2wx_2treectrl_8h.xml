@@ -4,10 +4,285 @@
     <compoundname>treectrl.h</compoundname>
     <innerclass refid="classwx_tree_ctrl" prot="public">wxTreeCtrl</innerclass>
     <innerclass refid="classwx_tree_event" prot="public">wxTreeEvent</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="interface_2wx_2treectrl_8h_1a2af9740e6e235207bb2eb2546d3bb2dc" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_TREE_BEGIN_DRAG</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_TREE_BEGIN_DRAG</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="1111" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" bodystart="1111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="interface_2wx_2treectrl_8h_1a55881600bd1a6230b4c2b094b06740f7" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_TREE_BEGIN_RDRAG</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_TREE_BEGIN_RDRAG</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="1112" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" bodystart="1112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="interface_2wx_2treectrl_8h_1aae2aa9aa13e7f363b0d6b96e7529dedd" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_TREE_BEGIN_LABEL_EDIT</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_TREE_BEGIN_LABEL_EDIT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="1113" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" bodystart="1113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="interface_2wx_2treectrl_8h_1a849e5167cbdb3612cd9f9409a2c04ac8" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_TREE_END_LABEL_EDIT</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_TREE_END_LABEL_EDIT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="1114" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" bodystart="1114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="interface_2wx_2treectrl_8h_1adc22efeb74d59d5adc08c4d65979fe7b" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_TREE_DELETE_ITEM</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_TREE_DELETE_ITEM</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="1115" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" bodystart="1115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="interface_2wx_2treectrl_8h_1a5d18f0392c3e26dd753c37af1fb1e44d" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_TREE_GET_INFO</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_TREE_GET_INFO</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="1116" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" bodystart="1116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="interface_2wx_2treectrl_8h_1a4ebd27d7b21ac41bff3628b9b8d0c37e" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_TREE_SET_INFO</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_TREE_SET_INFO</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="1117" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" bodystart="1117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="interface_2wx_2treectrl_8h_1a7ed501e1057ad754457247779e52da24" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_TREE_ITEM_EXPANDED</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_TREE_ITEM_EXPANDED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="1118" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" bodystart="1118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="interface_2wx_2treectrl_8h_1a62efbfd5d8995e2cd71cf9052d4029ed" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_TREE_ITEM_EXPANDING</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_TREE_ITEM_EXPANDING</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="1119" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" bodystart="1119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="interface_2wx_2treectrl_8h_1a1dc6c0abb0153c12cb7789671ad6b9be" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_TREE_ITEM_COLLAPSED</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_TREE_ITEM_COLLAPSED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="1120" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" bodystart="1120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="interface_2wx_2treectrl_8h_1a59937ccbf5bda2a936ca21f3ebc563df" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_TREE_ITEM_COLLAPSING</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_TREE_ITEM_COLLAPSING</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="1121" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" bodystart="1121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="interface_2wx_2treectrl_8h_1a561509e33f3f37a270eaace6c9d6a348" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_TREE_SEL_CHANGED</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_TREE_SEL_CHANGED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="1122" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" bodystart="1122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="interface_2wx_2treectrl_8h_1a4e1e1609fe3bc53e6305c8ceca16abfc" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_TREE_SEL_CHANGING</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_TREE_SEL_CHANGING</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="1123" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" bodystart="1123" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="interface_2wx_2treectrl_8h_1a3eeb0eb56802c5d485cb0ae309253e32" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_TREE_KEY_DOWN</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_TREE_KEY_DOWN</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="1124" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" bodystart="1124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="interface_2wx_2treectrl_8h_1a0214939a0aa5592d4afdf7dd2c3f1528" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_TREE_ITEM_ACTIVATED</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_TREE_ITEM_ACTIVATED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="1125" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" bodystart="1125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="interface_2wx_2treectrl_8h_1afce44e30f6b767ad277791bf7bfe3a8f" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_TREE_ITEM_RIGHT_CLICK</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_TREE_ITEM_RIGHT_CLICK</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="1126" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" bodystart="1126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="interface_2wx_2treectrl_8h_1a6cd876e8ec6d4a59ecc04c3aceaefea1" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_TREE_ITEM_MIDDLE_CLICK</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_TREE_ITEM_MIDDLE_CLICK</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="1127" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" bodystart="1127" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="interface_2wx_2treectrl_8h_1ac9e7d4421d1ae7a176b389cdd627f3da" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_TREE_END_DRAG</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_TREE_END_DRAG</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="1128" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" bodystart="1128" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="interface_2wx_2treectrl_8h_1a8aa672f7fbf63c6801a9916d5683469d" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_TREE_STATE_IMAGE_CLICK</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_TREE_STATE_IMAGE_CLICK</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="1129" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" bodystart="1129" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="interface_2wx_2treectrl_8h_1a3ffe5f3bd4908f6215fedd726ef620e3" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_TREE_ITEM_GETTOOLTIP</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_TREE_ITEM_GETTOOLTIP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="1130" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" bodystart="1130" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="interface_2wx_2treectrl_8h_1a8a4bb359318375c2cd81cd288421741a" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_TREE_ITEM_MENU</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_TREE_ITEM_MENU</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="1131" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" bodystart="1131" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h"/>
   </compounddef>
 </doxygen>

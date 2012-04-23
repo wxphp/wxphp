@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gbsizer.h" line="258"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gbsizer.h" line="258"/>
       </memberdef>
       <memberdef kind="function" id="classwx_g_b_sizer_item_1a0bae32b23b9b3d03aafc140ef91c7dfc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -37,7 +37,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gbsizer.h" line="259"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gbsizer.h" line="259"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -52,7 +52,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gbsizer.h" line="266"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gbsizer.h" line="266"/>
       </memberdef>
       <memberdef kind="function" id="classwx_g_b_sizer_item_1accb20138e1aa2ae7e16b4342e73bff07" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -73,7 +73,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gbsizer.h" line="267"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gbsizer.h" line="267"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -120,7 +120,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gbsizer.h" line="235"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gbsizer.h" line="235"/>
       </memberdef>
       <memberdef kind="function" id="classwx_g_b_sizer_item_1aca1e967cfb791dc102ab1766acb27e4f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -161,7 +161,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gbsizer.h" line="241"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gbsizer.h" line="241"/>
       </memberdef>
       <memberdef kind="function" id="classwx_g_b_sizer_item_1a6e02caab6163a761ced57e5b370c72c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -202,7 +202,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gbsizer.h" line="247"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gbsizer.h" line="247"/>
       </memberdef>
       <memberdef kind="function" id="classwx_g_b_sizer_item_1a6dfe180960c6d1eb5674de93bacefb66" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -223,7 +223,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gbsizer.h" line="252"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gbsizer.h" line="252"/>
       </memberdef>
       <memberdef kind="function" id="classwx_g_b_sizer_item_1a53bb94f29fef93966cd960c644408cac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -240,7 +240,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gbsizer.h" line="273"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gbsizer.h" line="273"/>
       </memberdef>
       <memberdef kind="function" id="classwx_g_b_sizer_item_1ada5e2355bc74010eed74e24fa21a9836" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -261,7 +261,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gbsizer.h" line="277"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gbsizer.h" line="277"/>
       </memberdef>
       <memberdef kind="function" id="classwx_g_b_sizer_item_1a16f4cfb3084129107896cdcb6ab6e0df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -278,7 +278,7 @@
 <para>Returns true if the change is successful and after the next Layout the item will be moved. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gbsizer.h" line="285"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gbsizer.h" line="285"/>
       </memberdef>
       <memberdef kind="function" id="classwx_g_b_sizer_item_1a62fe2aad8ca333ba7d99b688970ab23d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -295,7 +295,7 @@
 <para>Returns true if the change is successful and after the next Layout the item will be resized. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gbsizer.h" line="293"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gbsizer.h" line="293"/>
       </memberdef>
       <memberdef kind="function" id="classwx_g_b_sizer_item_1a8f1f9d7aedb04352a19dd8bdf713c687" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_grid_bag_sizer" kindref="compound">wxGridBagSizer</ref> *</type>
@@ -308,7 +308,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gbsizer.h" line="296"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gbsizer.h" line="296"/>
       </memberdef>
       <memberdef kind="function" id="classwx_g_b_sizer_item_1a38666e7ccd3eac99b170be25575c497f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -325,7 +325,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gbsizer.h" line="297"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gbsizer.h" line="297"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -334,49 +334,49 @@
 <para>It adds grid position and spanning information to the normal <ref refid="classwx_sizer_item" kindref="compound">wxSizerItem</ref> by adding <ref refid="classwx_g_b_position" kindref="compound">wxGBPosition</ref> and <ref refid="classwx_g_b_span" kindref="compound">wxGBSpan</ref> attributes. Most of the time you will not need to use a <ref refid="classwx_g_b_sizer_item" kindref="compound">wxGBSizerItem</ref> directly in your code, but there are a couple of cases where it is handy.</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__winlayout" kindref="compound">Window Layout</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="6486">
+      <node id="6636">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="6484">
+      <node id="6634">
         <label>wxGBSizerItem</label>
         <link refid="classwx_g_b_sizer_item"/>
-        <childnode refid="6485" relation="public-inheritance">
+        <childnode refid="6635" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6485">
+      <node id="6635">
         <label>wxSizerItem</label>
         <link refid="classwx_sizer_item"/>
-        <childnode refid="6486" relation="public-inheritance">
+        <childnode refid="6636" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="6489">
+      <node id="6639">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="6490" relation="usage">
+        <childnode refid="6640" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="6487">
+      <node id="6637">
         <label>wxGBSizerItem</label>
         <link refid="classwx_g_b_sizer_item"/>
-        <childnode refid="6488" relation="public-inheritance">
+        <childnode refid="6638" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6488">
+      <node id="6638">
         <label>wxSizerItem</label>
         <link refid="classwx_sizer_item"/>
-        <childnode refid="6489" relation="public-inheritance">
+        <childnode refid="6639" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6490">
+      <node id="6640">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gbsizer.h" line="228" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gbsizer.h" bodystart="227" bodyend="298"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gbsizer.h" line="228" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/gbsizer.h" bodystart="227" bodyend="298"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxGBSizerItem</scope><name>AllocExclusive</name></member>
       <member refid="classwx_sizer_item_1adfbb98b4173df43be52d9c25d4f842b4" prot="public" virt="non-virtual"><scope>wxGBSizerItem</scope><name>AssignSizer</name></member>

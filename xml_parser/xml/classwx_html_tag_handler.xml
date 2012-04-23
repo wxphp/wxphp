@@ -17,7 +17,7 @@
 <para>It is protected so that it can&apos;t be accessed by user but can be accessed from derived classes. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlpars.h" line="82" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlpars.h" bodystart="82" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlpars.h" line="82" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlpars.h" bodystart="82" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -32,7 +32,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlpars.h" line="25"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlpars.h" line="25"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_tag_handler_1a4659531bcbb3cbcafea31d31a227f747" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -45,7 +45,7 @@
 <para>The list is in uppercase and tags are delimited by &apos;,&apos;. Example: <computeroutput>&quot;I,B,FONT,P&quot;</computeroutput> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlpars.h" line="32"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlpars.h" line="32"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_tag_handler_1a9b619fe66c49e8756f8ff5db04c5e69e" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>bool</type>
@@ -71,7 +71,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlpars.h" line="56"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlpars.h" line="56"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_tag_handler_1ae48361d91332da5c86b2e5490f00cf2c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -88,7 +88,7 @@
 <para>Each <bold>instance</bold> of handler is guaranteed to be called only from the parser. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlpars.h" line="62"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlpars.h" line="62"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-func">
@@ -108,60 +108,60 @@
 </programlisting></para><para>In this example, a call to <ref refid="classwx_html_tag_handler_1a77d60c69e8dabcf9810d201b79404cd3" kindref="member">ParseInner()</ref> (with <emphasis>tag</emphasis> pointing to A tag) will parse &apos;Hello, world!&apos;. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlpars.h" line="76"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlpars.h" line="76"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-<para><xrefsect id="todo_1_todo000033"><xreftitle>Todo</xreftitle><xrefdescription><para>describe me</para></xrefdescription></xrefsect></para><para><heading level="2"></heading>
+<para><xrefsect id="todo_1_todo000032"><xreftitle>Todo</xreftitle><xrefdescription><para>describe me</para></xrefdescription></xrefsect></para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxhtml" kindref="member">wxHTML</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__html" kindref="compound">HTML</ref></para><para><simplesect kind="see"><para><ref refid="overview_html_1overview_html_handlers" kindref="member">Tag Handlers</ref>, <ref refid="classwx_html_tag" kindref="compound">wxHtmlTag</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7119">
+      <node id="7306">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="7120">
+      <node id="7307">
         <label>wxHtmlWinTagHandler</label>
         <link refid="classwx_html_win_tag_handler"/>
-        <childnode refid="7118" relation="public-inheritance">
+        <childnode refid="7305" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7118">
+      <node id="7305">
         <label>wxHtmlTagHandler</label>
         <link refid="classwx_html_tag_handler"/>
-        <childnode refid="7119" relation="public-inheritance">
+        <childnode refid="7306" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7122">
+      <node id="7309">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="7123" relation="usage">
+        <childnode refid="7310" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="7121">
+      <node id="7308">
         <label>wxHtmlTagHandler</label>
         <link refid="classwx_html_tag_handler"/>
-        <childnode refid="7122" relation="public-inheritance">
+        <childnode refid="7309" relation="public-inheritance">
         </childnode>
-        <childnode refid="7124" relation="usage">
+        <childnode refid="7311" relation="usage">
           <edgelabel>m_Parser</edgelabel>
         </childnode>
       </node>
-      <node id="7123">
+      <node id="7310">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
-      <node id="7124">
+      <node id="7311">
         <label>wxHtmlParser</label>
         <link refid="classwx_html_parser"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlpars.h" line="20" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlpars.h" bodystart="19" bodyend="83"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlpars.h" line="20" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlpars.h" bodystart="19" bodyend="83"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxHtmlTagHandler</scope><name>AllocExclusive</name></member>
       <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxHtmlTagHandler</scope><name>CloneRefData</name></member>

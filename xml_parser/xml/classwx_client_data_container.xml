@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/clntdata.h" line="33"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/clntdata.h" line="33"/>
       </memberdef>
       <memberdef kind="function" id="classwx_client_data_container_1a20946ab7128a84681ccb7d5da52ba695" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/clntdata.h" line="38"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/clntdata.h" line="38"/>
       </memberdef>
       <memberdef kind="function" id="classwx_client_data_container_1ae20037f89a0300067a3bddc302aed862" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void *</type>
@@ -42,7 +42,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/clntdata.h" line="43"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/clntdata.h" line="43"/>
       </memberdef>
       <memberdef kind="function" id="classwx_client_data_container_1af9c93cd0b2bf558e1373ec3af9a25b72" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_client_data" kindref="compound">wxClientData</ref> *</type>
@@ -55,7 +55,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/clntdata.h" line="48"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/clntdata.h" line="48"/>
       </memberdef>
       <memberdef kind="function" id="classwx_client_data_container_1a3b291dde8d851583b00e6917af539d13" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -72,7 +72,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/clntdata.h" line="53"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/clntdata.h" line="53"/>
       </memberdef>
       <memberdef kind="function" id="classwx_client_data_container_1afc03e080cc61dd9acaac86b76965cbb5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -89,7 +89,7 @@
 <para>Any previous object will be deleted. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/clntdata.h" line="58"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/clntdata.h" line="58"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -100,18 +100,18 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__containers" kindref="compound">Containers</ref></para><para><simplesect kind="see"><para><ref refid="classwx_evt_handler" kindref="compound">wxEvtHandler</ref>, <ref refid="classwx_client_data" kindref="compound">wxClientData</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="4792">
+      <node id="4883">
         <label>wxClientDataContainer</label>
         <link refid="classwx_client_data_container"/>
       </node>
-      <node id="4793">
+      <node id="4884">
         <label>wxGridCellAttrProvider</label>
         <link refid="classwx_grid_cell_attr_provider"/>
-        <childnode refid="4792" relation="public-inheritance">
+        <childnode refid="4883" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/clntdata.h" line="28" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/clntdata.h" bodystart="27" bodyend="59"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/clntdata.h" line="28" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/clntdata.h" bodystart="27" bodyend="59"/>
     <listofallmembers>
       <member refid="classwx_client_data_container_1ae20037f89a0300067a3bddc302aed862" prot="public" virt="non-virtual"><scope>wxClientDataContainer</scope><name>GetClientData</name></member>
       <member refid="classwx_client_data_container_1af9c93cd0b2bf558e1373ec3af9a25b72" prot="public" virt="non-virtual"><scope>wxClientDataContainer</scope><name>GetClientObject</name></member>

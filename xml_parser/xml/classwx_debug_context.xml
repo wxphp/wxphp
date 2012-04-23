@@ -21,7 +21,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/memory.h" line="36"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/memory.h" line="36"/>
       </memberdef>
       <memberdef kind="function" id="classwx_debug_context_1af9cb40d2b9fda1812c4d073facde67bb" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -35,7 +35,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/memory.h" line="45"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/memory.h" line="45"/>
       </memberdef>
       <memberdef kind="function" id="classwx_debug_context_1a12a377277a0ceb7493054388089828ad" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -49,7 +49,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/memory.h" line="55"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/memory.h" line="55"/>
       </memberdef>
       <memberdef kind="function" id="classwx_debug_context_1a0faa5523072259c7862ccc3d1ecfa439" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -63,7 +63,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/memory.h" line="66"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/memory.h" line="66"/>
       </memberdef>
       <memberdef kind="function" id="classwx_debug_context_1aa2175db985d125950314331d790428c2" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -73,11 +73,11 @@
         <briefdescription>
 <para>Gets the debug level (default 1). </para>        </briefdescription>
         <detaileddescription>
-<para>The debug level is used by the wxTraceLevel function and the WXTRACELEVEL macro to specify how detailed the trace information is; setting a different level will only have an effect if trace statements in the application specify a value other than one.</para><para><xrefsect id="deprecated_1_deprecated000035"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This is obsolete, replaced by <ref refid="classwx_log" kindref="compound">wxLog</ref> functionality.</para></xrefdescription></xrefsect></para><para><simplesect kind="see"><para><ref refid="classwx_debug_context_1ad96f255b65d4b0a3a6429ba9ce991ffb" kindref="member">SetLevel()</ref> </para></simplesect>
+<para>The debug level is used by the wxTraceLevel function and the WXTRACELEVEL macro to specify how detailed the trace information is; setting a different level will only have an effect if trace statements in the application specify a value other than one.</para><para><xrefsect id="deprecated_1_deprecated000034"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This is obsolete, replaced by <ref refid="classwx_log" kindref="compound">wxLog</ref> functionality.</para></xrefdescription></xrefsect></para><para><simplesect kind="see"><para><ref refid="classwx_debug_context_1ad96f255b65d4b0a3a6429ba9ce991ffb" kindref="member">SetLevel()</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/memory.h" line="81"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/memory.h" line="81"/>
       </memberdef>
       <memberdef kind="function" id="classwx_debug_context_1ab9503fbcc389ded437c3ac311596b550" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -91,7 +91,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/memory.h" line="89"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/memory.h" line="89"/>
       </memberdef>
       <memberdef kind="function" id="classwx_debug_context_1a675ad7ff0b4643cd75a30632dc64c0c9" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -118,7 +118,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/memory.h" line="102"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/memory.h" line="102"/>
       </memberdef>
       <memberdef kind="function" id="classwx_debug_context_1a6c37be6176f9c9c4cab6a2359d2fb783" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -136,7 +136,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/memory.h" line="110"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/memory.h" line="110"/>
       </memberdef>
       <memberdef kind="function" id="classwx_debug_context_1ad8b15852c0d7d2c41a9d8e49ceeb3fa1" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -162,7 +162,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/memory.h" line="121"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/memory.h" line="121"/>
       </memberdef>
       <memberdef kind="function" id="classwx_debug_context_1a907d87da4f595f299cf3faf9bc703d56" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -180,7 +180,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/memory.h" line="137"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/memory.h" line="137"/>
       </memberdef>
       <memberdef kind="function" id="classwx_debug_context_1ad96f255b65d4b0a3a6429ba9ce991ffb" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -194,11 +194,11 @@
         <briefdescription>
 <para>Sets the debug level (default 1). </para>        </briefdescription>
         <detaileddescription>
-<para>The debug level is used by the wxTraceLevel function and the WXTRACELEVEL macro to specify how detailed the trace information is; setting a different level will only have an effect if trace statements in the application specify a value other than one.</para><para><xrefsect id="deprecated_1_deprecated000036"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This is obsolete, replaced by <ref refid="classwx_log" kindref="compound">wxLog</ref> functionality.</para></xrefdescription></xrefsect></para><para><simplesect kind="see"><para><ref refid="classwx_debug_context_1aa2175db985d125950314331d790428c2" kindref="member">GetLevel()</ref> </para></simplesect>
+<para>The debug level is used by the wxTraceLevel function and the WXTRACELEVEL macro to specify how detailed the trace information is; setting a different level will only have an effect if trace statements in the application specify a value other than one.</para><para><xrefsect id="deprecated_1_deprecated000035"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This is obsolete, replaced by <ref refid="classwx_log" kindref="compound">wxLog</ref> functionality.</para></xrefdescription></xrefsect></para><para><simplesect kind="see"><para><ref refid="classwx_debug_context_1aa2175db985d125950314331d790428c2" kindref="member">GetLevel()</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/memory.h" line="152"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/memory.h" line="152"/>
       </memberdef>
       <memberdef kind="function" id="classwx_debug_context_1acdef51a2ad9ec55b6bfa81d89d91dbd2" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -215,7 +215,7 @@
 <para>It will be called after all files with global instances of wxDebugContextDumpDelayCounter have run their destructors.</para><para>The shutdown function must be take no parameters and return nothing. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/memory.h" line="161"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/memory.h" line="161"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -224,7 +224,7 @@
 <para>Full functionality (such as printing out objects currently allocated) is only present in a debugging build of wxWidgets, i.e. if the __WXDEBUG__ symbol is defined. <ref refid="classwx_debug_context" kindref="compound">wxDebugContext</ref> and related functions and macros can be compiled out by setting wxUSE_DEBUG_CONTEXT to 0 is setup.h</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__debugging" kindref="compound">Debugging</ref></para><para><simplesect kind="see"><para><ref refid="overview_debugging" kindref="compound">Debugging</ref> </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/memory.h" line="26" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/memory.h" bodystart="25" bodyend="162"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/memory.h" line="26" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/memory.h" bodystart="25" bodyend="162"/>
     <listofallmembers>
       <member refid="classwx_debug_context_1a6c28a88c1268ed2b6aa005b63da43eef" prot="public" virt="non-virtual"><scope>wxDebugContext</scope><name>Check</name></member>
       <member refid="classwx_debug_context_1af9cb40d2b9fda1812c4d073facde67bb" prot="public" virt="non-virtual"><scope>wxDebugContext</scope><name>Dump</name></member>

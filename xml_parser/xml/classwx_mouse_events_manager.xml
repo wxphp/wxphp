@@ -16,7 +16,7 @@
 <para>You must call <ref refid="classwx_mouse_events_manager_1a8627443b743f13fb4a486ee9831f6f89" kindref="member">Create()</ref> to finish initializing the mouse events manager. If possible, avoid the use of this constructor in favour of the other one which fully initializes the mouse events manager immediately. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mousemanager.h" line="47"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mousemanager.h" line="47"/>
       </memberdef>
       <memberdef kind="function" id="classwx_mouse_events_manager_1a069e9abad1cb2d178b4899bdc7081f43" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -33,7 +33,7 @@
 <para>A mouse event manager is always associated with a window and must be destroyed by the window when it is destroyed (it doesn&apos;t need to be allocated on the heap however). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mousemanager.h" line="56"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mousemanager.h" line="56"/>
       </memberdef>
       <memberdef kind="function" id="classwx_mouse_events_manager_1a8627443b743f13fb4a486ee9831f6f89" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -50,7 +50,7 @@
 <para>Currently always returns true. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mousemanager.h" line="64"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mousemanager.h" line="64"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-func">
@@ -78,7 +78,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mousemanager.h" line="76"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mousemanager.h" line="76"/>
       </memberdef>
       <memberdef kind="function" id="classwx_mouse_events_manager_1aef800a0d0d71c2ccdc1b797e52a0f282" prot="protected" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>bool</type>
@@ -104,7 +104,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mousemanager.h" line="92"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mousemanager.h" line="92"/>
       </memberdef>
       <memberdef kind="function" id="classwx_mouse_events_manager_1a6efa90616c6fa3b01bcd9a2e7b7c3d12" prot="protected" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>bool</type>
@@ -141,7 +141,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mousemanager.h" line="109"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mousemanager.h" line="109"/>
       </memberdef>
       <memberdef kind="function" id="classwx_mouse_events_manager_1a06919af9b1d82f0ba33046620e82d3f0" prot="protected" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -178,7 +178,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mousemanager.h" line="129"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mousemanager.h" line="129"/>
       </memberdef>
       <memberdef kind="function" id="classwx_mouse_events_manager_1a202263161d841caeb9d5c47a8c87db16" prot="protected" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -215,7 +215,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mousemanager.h" line="144"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mousemanager.h" line="144"/>
       </memberdef>
       <memberdef kind="function" id="classwx_mouse_events_manager_1aab7d86df3e6b9a61facb5199f9f6b631" prot="protected" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -233,7 +233,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mousemanager.h" line="156"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mousemanager.h" line="156"/>
       </memberdef>
       <memberdef kind="function" id="classwx_mouse_events_manager_1a543da21dccf90eb88a67d9b2175dbd9b" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -258,7 +258,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mousemanager.h" line="170"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mousemanager.h" line="170"/>
       </memberdef>
       <memberdef kind="function" id="classwx_mouse_events_manager_1a9fd1d3883b222936d0704dd18ca8f599" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -276,7 +276,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mousemanager.h" line="182"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mousemanager.h" line="182"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -285,61 +285,61 @@
 <para>This class handles mouse events and synthesizes high-level notifications such as clicks and drag events from low level mouse button presses and mouse movement events. It is useful because handling the mouse events is less obvious than might seem at a first glance: for example, clicks on an object should only be generated if the mouse was both pressed and released over it and not just released (so it requires storing the previous state) and dragging shouldn&apos;t start before the mouse moves away far enough.</para><para>This class encapsulates all these dull details for controls containing multiple items which can be identified by a positive integer index and you just need to implement its pure virtual functions to use it.</para><para>Notice that this class supposes that all items can be identified by an integer &quot;index&quot; but it doesn&apos;t need to be an ordinal index of the item (although this is the most common case) -- it can be any value which can be used to uniquely identify an item.</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7852">
+      <node id="8045">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="7851">
+      <node id="8044">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="7852" relation="public-inheritance">
+        <childnode refid="8045" relation="public-inheritance">
         </childnode>
-        <childnode refid="7853" relation="public-inheritance">
+        <childnode refid="8046" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7850">
+      <node id="8043">
         <label>wxMouseEventsManager</label>
         <link refid="classwx_mouse_events_manager"/>
-        <childnode refid="7851" relation="public-inheritance">
+        <childnode refid="8044" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7853">
+      <node id="8046">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7856">
+      <node id="8049">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="7857" relation="usage">
+        <childnode refid="8050" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="7855">
+      <node id="8048">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="7856" relation="public-inheritance">
+        <childnode refid="8049" relation="public-inheritance">
         </childnode>
-        <childnode refid="7858" relation="public-inheritance">
+        <childnode refid="8051" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7854">
+      <node id="8047">
         <label>wxMouseEventsManager</label>
         <link refid="classwx_mouse_events_manager"/>
-        <childnode refid="7855" relation="public-inheritance">
+        <childnode refid="8048" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7858">
+      <node id="8051">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="7857">
+      <node id="8050">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mousemanager.h" line="38" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mousemanager.h" bodystart="37" bodyend="183"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mousemanager.h" line="38" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/mousemanager.h" bodystart="37" bodyend="183"/>
     <listofallmembers>
       <member refid="classwx_evt_handler_1a7dc3c701781f4044372049de5004137e" prot="public" virt="non-virtual"><scope>wxMouseEventsManager</scope><name>AddFilter</name></member>
       <member refid="classwx_evt_handler_1a0737c6d2cbcd5ded4b1ecdd53ed0def3" prot="public" virt="virtual"><scope>wxMouseEventsManager</scope><name>AddPendingEvent</name></member>
@@ -393,7 +393,6 @@
       <member refid="classwx_object_1afab780710f2adc1bb33310e27590140b" prot="public" virt="non-virtual"><scope>wxMouseEventsManager</scope><name>SetRefData</name></member>
       <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxMouseEventsManager</scope><name>TryAfter</name></member>
       <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxMouseEventsManager</scope><name>TryBefore</name></member>
-      <member refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" virt="non-virtual"><scope>wxMouseEventsManager</scope><name>TryThis</name></member>
       <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxMouseEventsManager</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxMouseEventsManager</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a22e5db2ec1d19c8252c056fd116975d7" prot="public" virt="non-virtual"><scope>wxMouseEventsManager</scope><name>Unlink</name></member>

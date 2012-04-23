@@ -21,7 +21,7 @@
 <para><emphasis>joystick</emphasis> may be one of wxJOYSTICK1, wxJOYSTICK2, indicating the joystick controller of interest. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/joystick.h" line="28"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/joystick.h" line="28"/>
       </memberdef>
       <memberdef kind="function" id="classwx_joystick_1a7c6f5add6cf806697aed6232211e447e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -34,7 +34,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/joystick.h" line="33"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/joystick.h" line="33"/>
       </memberdef>
       <memberdef kind="function" id="classwx_joystick_1ae6ffce5bd4732045e20c513de24ef5a9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -47,7 +47,7 @@
 <para>Every button is mapped to a single bit in the returned integer, with the first button being mapped to the least significant bit, and so on.</para><para>A bitlist of wxJOY_BUTTONn identifiers, where n is 1, 2, 3 or 4 is available for historical reasons. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/joystick.h" line="43"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/joystick.h" line="43"/>
       </memberdef>
       <memberdef kind="function" id="classwx_joystick_1af1480997430bafe7a7d27e9de64759bc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -72,7 +72,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/joystick.h" line="51"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/joystick.h" line="51"/>
       </memberdef>
       <memberdef kind="function" id="classwx_joystick_1a142c7e6150a5a3737733e521dadb5dc3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -85,7 +85,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/joystick.h" line="56"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/joystick.h" line="56"/>
       </memberdef>
       <memberdef kind="function" id="classwx_joystick_1a2c3d43da4e03b509ba0e29c3f115b070" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -98,7 +98,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/joystick.h" line="63"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/joystick.h" line="63"/>
       </memberdef>
       <memberdef kind="function" id="classwx_joystick_1ae262fd5ecbddf0a1c4f132a8dd8e3a61" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -111,7 +111,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/joystick.h" line="68"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/joystick.h" line="68"/>
       </memberdef>
       <memberdef kind="function" id="classwx_joystick_1ad58b96203e4f9ecae50f9c5f0dbba524" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -124,7 +124,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/joystick.h" line="73"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/joystick.h" line="73"/>
       </memberdef>
       <memberdef kind="function" id="classwx_joystick_1a994d0b66d242135a73c62f76bcdbfba8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -137,7 +137,7 @@
 <para>Returns -1 on error. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/joystick.h" line="86"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/joystick.h" line="86"/>
       </memberdef>
       <memberdef kind="function" id="classwx_joystick_1a10712042f8cbca788ef04e96eab375a4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -150,7 +150,7 @@
 <para>Returns -1 on error. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/joystick.h" line="94"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/joystick.h" line="94"/>
       </memberdef>
       <memberdef kind="function" id="classwx_joystick_1afdec5142be584fea125d525310949178" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -163,7 +163,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/joystick.h" line="99"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/joystick.h" line="99"/>
       </memberdef>
       <memberdef kind="function" id="classwx_joystick_1adcea69285bac38018e2cf5cbcd54fe97" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -176,7 +176,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/joystick.h" line="104"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/joystick.h" line="104"/>
       </memberdef>
       <memberdef kind="function" id="classwx_joystick_1a0f8511487e8ea1f7aae3b3c1c84267e8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_point" kindref="compound">wxPoint</ref></type>
@@ -189,7 +189,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/joystick.h" line="109"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/joystick.h" line="109"/>
       </memberdef>
       <memberdef kind="function" id="classwx_joystick_1a43fcbc313f66bb88a5ce1d5d4076a921" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -214,7 +214,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/joystick.h" line="117"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/joystick.h" line="117"/>
       </memberdef>
       <memberdef kind="function" id="classwx_joystick_1a340d8bdd614cb8e6e9aa5c760e9ceca9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -227,7 +227,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/joystick.h" line="122"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/joystick.h" line="122"/>
       </memberdef>
       <memberdef kind="function" id="classwx_joystick_1a0dabd6fe1a556553e3bf6324bfe2da11" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -240,7 +240,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/joystick.h" line="127"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/joystick.h" line="127"/>
       </memberdef>
       <memberdef kind="function" id="classwx_joystick_1a76f97055c46f9bd686879d3b785a15f1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -253,7 +253,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/joystick.h" line="132"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/joystick.h" line="132"/>
       </memberdef>
       <memberdef kind="function" id="classwx_joystick_1a784bebd68b361630b4394c7eec9daf73" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -266,7 +266,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/joystick.h" line="137"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/joystick.h" line="137"/>
       </memberdef>
       <memberdef kind="function" id="classwx_joystick_1ac56dd4711220f0c4be9be420407dde08" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -279,7 +279,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/joystick.h" line="142"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/joystick.h" line="142"/>
       </memberdef>
       <memberdef kind="function" id="classwx_joystick_1a17f4053e265bc17f3e5e6a0077c50a8b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -292,7 +292,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/joystick.h" line="147"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/joystick.h" line="147"/>
       </memberdef>
       <memberdef kind="function" id="classwx_joystick_1af3f2b794bb85a060606384bcf3fe004a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -305,7 +305,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/joystick.h" line="152"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/joystick.h" line="152"/>
       </memberdef>
       <memberdef kind="function" id="classwx_joystick_1af87857ceb5effd8971ea5f2b164de06b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -318,7 +318,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/joystick.h" line="157"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/joystick.h" line="157"/>
       </memberdef>
       <memberdef kind="function" id="classwx_joystick_1a33bef5dbf97b64f3b7e2d2df324e7526" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -331,7 +331,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/joystick.h" line="162"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/joystick.h" line="162"/>
       </memberdef>
       <memberdef kind="function" id="classwx_joystick_1ac5a78396a74770fff032832ad4aaff6d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -344,7 +344,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/joystick.h" line="167"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/joystick.h" line="167"/>
       </memberdef>
       <memberdef kind="function" id="classwx_joystick_1a12965c9a883d842c8e68da7c8d6bff41" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -357,7 +357,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/joystick.h" line="172"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/joystick.h" line="172"/>
       </memberdef>
       <memberdef kind="function" id="classwx_joystick_1a2c2f6585dda25497756ccdb59ba6fcba" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -370,7 +370,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/joystick.h" line="177"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/joystick.h" line="177"/>
       </memberdef>
       <memberdef kind="function" id="classwx_joystick_1aac82ba008bb80a0d24a83df537245550" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -383,7 +383,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/joystick.h" line="182"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/joystick.h" line="182"/>
       </memberdef>
       <memberdef kind="function" id="classwx_joystick_1a2e3b046cb909f87fbef0112d81157c36" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -396,7 +396,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/joystick.h" line="187"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/joystick.h" line="187"/>
       </memberdef>
       <memberdef kind="function" id="classwx_joystick_1abade27e156acbf457b0c90aa6305de13" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -409,7 +409,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/joystick.h" line="192"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/joystick.h" line="192"/>
       </memberdef>
       <memberdef kind="function" id="classwx_joystick_1ade76193b9295ac6d2493320da026166a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -422,7 +422,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/joystick.h" line="197"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/joystick.h" line="197"/>
       </memberdef>
       <memberdef kind="function" id="classwx_joystick_1a5f1448546563bf8c8791f1e2523341f1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -435,7 +435,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/joystick.h" line="202"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/joystick.h" line="202"/>
       </memberdef>
       <memberdef kind="function" id="classwx_joystick_1addf77ac0775a561696e736ec2d26fc4c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -448,7 +448,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/joystick.h" line="207"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/joystick.h" line="207"/>
       </memberdef>
       <memberdef kind="function" id="classwx_joystick_1aa4284f321efab231e1ec7dd891100368" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -461,7 +461,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/joystick.h" line="212"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/joystick.h" line="212"/>
       </memberdef>
       <memberdef kind="function" id="classwx_joystick_1a72370ce987c31ab0aadee639e9c8006a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -474,7 +474,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/joystick.h" line="218"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/joystick.h" line="218"/>
       </memberdef>
       <memberdef kind="function" id="classwx_joystick_1a4a0fa4fd0d76361a4ddc1c2077d537c7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -487,7 +487,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/joystick.h" line="223"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/joystick.h" line="223"/>
       </memberdef>
       <memberdef kind="function" id="classwx_joystick_1a59c9b5280251542ff020189c625612e2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -500,7 +500,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/joystick.h" line="228"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/joystick.h" line="228"/>
       </memberdef>
       <memberdef kind="function" id="classwx_joystick_1a8be9e5648fb67a79eb3a922e0843c95e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -513,7 +513,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/joystick.h" line="233"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/joystick.h" line="233"/>
       </memberdef>
       <memberdef kind="function" id="classwx_joystick_1a1b769d35f0974f42446b83f1895a8339" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -526,7 +526,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/joystick.h" line="238"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/joystick.h" line="238"/>
       </memberdef>
       <memberdef kind="function" id="classwx_joystick_1a3785b1cd1ab06118be3ba594ee481010" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -539,7 +539,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/joystick.h" line="243"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/joystick.h" line="243"/>
       </memberdef>
       <memberdef kind="function" id="classwx_joystick_1a3d300100071f143565d0ded261a2755a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -552,7 +552,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/joystick.h" line="248"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/joystick.h" line="248"/>
       </memberdef>
       <memberdef kind="function" id="classwx_joystick_1a8932a9f532d7c785a47ff7a37b3b6767" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -567,7 +567,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/joystick.h" line="257"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/joystick.h" line="257"/>
       </memberdef>
       <memberdef kind="function" id="classwx_joystick_1a274ee12cdcaac2a37ca63206e85d920c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -606,7 +606,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/joystick.h" line="272"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/joystick.h" line="272"/>
       </memberdef>
       <memberdef kind="function" id="classwx_joystick_1add489d32cd2b1ff1c752297cc790c3db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -623,7 +623,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/joystick.h" line="278"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/joystick.h" line="278"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -638,7 +638,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/joystick.h" line="78"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/joystick.h" line="78"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -648,37 +648,37 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__misc" kindref="compound">Miscellaneous</ref></para><para><simplesect kind="see"><para><ref refid="classwx_joystick_event" kindref="compound">wxJoystickEvent</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7358">
+      <node id="7556">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="7357">
+      <node id="7555">
         <label>wxJoystick</label>
         <link refid="classwx_joystick"/>
-        <childnode refid="7358" relation="public-inheritance">
+        <childnode refid="7556" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7360">
+      <node id="7558">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="7361" relation="usage">
+        <childnode refid="7559" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="7359">
+      <node id="7557">
         <label>wxJoystick</label>
         <link refid="classwx_joystick"/>
-        <childnode refid="7360" relation="public-inheritance">
+        <childnode refid="7558" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7361">
+      <node id="7559">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/joystick.h" line="20" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/joystick.h" bodystart="19" bodyend="279"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/joystick.h" line="20" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/joystick.h" bodystart="19" bodyend="279"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxJoystick</scope><name>AllocExclusive</name></member>
       <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxJoystick</scope><name>CloneRefData</name></member>

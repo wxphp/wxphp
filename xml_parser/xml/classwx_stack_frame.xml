@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stackwalk.h" line="110"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stackwalk.h" line="110"/>
       </memberdef>
       <memberdef kind="function" id="classwx_stack_frame_1a0415a6351b5a91fee2fddbc089ca3f16" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -28,7 +28,7 @@
 <para>Use <ref refid="classwx_stack_frame_1a3c68b9945815d205799c8feca0f43779" kindref="member">HasSourceLocation()</ref> to check whether the file name is available. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stackwalk.h" line="118"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stackwalk.h" line="118"/>
       </memberdef>
       <memberdef kind="function" id="classwx_stack_frame_1afb1db1601ddaec2849c84e6e47cd0af7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -41,7 +41,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stackwalk.h" line="123"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stackwalk.h" line="123"/>
       </memberdef>
       <memberdef kind="function" id="classwx_stack_frame_1a29a21d5a16f321f10ecee235ed7c28ac" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -55,7 +55,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stackwalk.h" line="130"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stackwalk.h" line="130"/>
       </memberdef>
       <memberdef kind="function" id="classwx_stack_frame_1a3943de877c998b52800ea6ff3e02524c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -68,7 +68,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stackwalk.h" line="135"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stackwalk.h" line="135"/>
       </memberdef>
       <memberdef kind="function" id="classwx_stack_frame_1a27381bcbce38ceaad864cd006c560fc9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -81,7 +81,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stackwalk.h" line="140"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stackwalk.h" line="140"/>
       </memberdef>
       <memberdef kind="function" id="classwx_stack_frame_1ae0050546a1b334b7f1ef6fac6f871fca" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -94,7 +94,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stackwalk.h" line="145"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stackwalk.h" line="145"/>
       </memberdef>
       <memberdef kind="function" id="classwx_stack_frame_1a3b2e16ea2455a3111c8bc08ab0b85936" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -123,7 +123,7 @@
 <para>Any pointer may be NULL if you&apos;re not interested in the corresponding value.</para><para>Return true if at least some values could be retrieved. This function currently is only implemented under Win32 and requires a PDB file. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stackwalk.h" line="155"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stackwalk.h" line="155"/>
       </memberdef>
       <memberdef kind="function" id="classwx_stack_frame_1a13fc094a421253f02af235adda95a830" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>size_t</type>
@@ -136,7 +136,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stackwalk.h" line="162"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stackwalk.h" line="162"/>
       </memberdef>
       <memberdef kind="function" id="classwx_stack_frame_1a3c68b9945815d205799c8feca0f43779" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -149,7 +149,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stackwalk.h" line="167"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stackwalk.h" line="167"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -158,7 +158,7 @@
 <para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__debugging" kindref="compound">Debugging</ref></para><para><simplesect kind="see"><para><ref refid="classwx_stack_walker" kindref="compound">wxStackWalker</ref> </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stackwalk.h" line="105" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stackwalk.h" bodystart="104" bodyend="168"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stackwalk.h" line="105" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/stackwalk.h" bodystart="104" bodyend="168"/>
     <listofallmembers>
       <member refid="classwx_stack_frame_1aa299d381c7ae8030dfd97797251ffc07" prot="public" virt="non-virtual"><scope>wxStackFrame</scope><name>GetAddress</name></member>
       <member refid="classwx_stack_frame_1a0415a6351b5a91fee2fddbc089ca3f16" prot="public" virt="non-virtual"><scope>wxStackFrame</scope><name>GetFileName</name></member>

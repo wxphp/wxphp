@@ -16,7 +16,7 @@
 <para>With this constructor, <ref refid="classwx_ribbon_page_1a4c36c0c227e37200832b85b156db93d5" kindref="member">Create()</ref> should be called in order to create the ribbon page. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/page.h" line="28"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/page.h" line="28"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_page_1aac820c69ce5e848aebf465fc006159a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -89,7 +89,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/page.h" line="51"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/page.h" line="51"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_page_1aca4ece65d0276bdd563ebf2ab60f5b6c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -102,7 +102,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/page.h" line="56"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/page.h" line="56"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_page_1a4c36c0c227e37200832b85b156db93d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -139,7 +139,7 @@
 <para>Should only be called when the default constructor is used, and arguments have the same meaning as in the full constructor. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/page.h" line="67"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/page.h" line="67"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_page_1a126d65a6deb6959a973cc26371973e2e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -157,7 +157,7 @@
 <para>Normally called automatically by <ref refid="classwx_ribbon_bar" kindref="compound">wxRibbonBar</ref> when the page is created, or the art provider changed on the bar.</para><para>The new art provider will be propagated to the children of the page. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/page.h" line="76"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/page.h" line="76"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_page_1a97e230d47605a4498a6002bc4711fc0f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> &amp;</type>
@@ -170,7 +170,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/page.h" line="82"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/page.h" line="82"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_page_1afa9dccf3781297876c760360f1c3f842" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -199,7 +199,7 @@
 <para>When a page is too small to display all of its children, scroll buttons will appear (and if the page is sized up enough, they will disappear again). Slightly counter-intuitively, these buttons are created as siblings of the page rather than children of the page (to achieve correct cropping and paint ordering of the children and the buttons). When there are no scroll buttons, this function behaves the same as <ref refid="classwx_window_1a180312d5ad4a4a5ad805b8d52d67a74e" kindref="member">SetSize()</ref>, however when there are scroll buttons, it positions them at the edges of the given area, and then calls <ref refid="classwx_window_1a180312d5ad4a4a5ad805b8d52d67a74e" kindref="member">SetSize()</ref> with the remaining area.</para><para>This is provided as a separate function to <ref refid="classwx_window_1a180312d5ad4a4a5ad805b8d52d67a74e" kindref="member">SetSize()</ref> rather than within the implementation of <ref refid="classwx_window_1a180312d5ad4a4a5ad805b8d52d67a74e" kindref="member">SetSize()</ref>, as interacting algorithms may not expect <ref refid="classwx_window_1a180312d5ad4a4a5ad805b8d52d67a74e" kindref="member">SetSize()</ref> to also set the size of siblings. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/page.h" line="100"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/page.h" line="100"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_page_1a974fbcdf536fb542df1b0d3e2d7d6f18" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -224,7 +224,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/page.h" line="110"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/page.h" line="110"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_page_1ada2e8fec9000faf536d86db7f38710f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -238,7 +238,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/page.h" line="123"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/page.h" line="123"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_page_1a136ccc66820a89fb8cb18e94210efec2" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -252,7 +252,7 @@
 <para>Should be called after panels are added to the page, or the sizing behaviour of a panel on the page changes (i.e. due to children being added to it). Usually called automatically when <ref refid="classwx_ribbon_bar_1ac70abc120cc43044d197f19795e9cf44" kindref="member">wxRibbonBar::Realize()</ref> is called.</para><para>Will invoke <ref refid="classwx_ribbon_panel_1a71d9966c3a95947c048feac9f5fa637d" kindref="member">wxRibbonPanel::Realize()</ref> for all child panels. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/page.h" line="135"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/page.h" line="135"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_page_1a6c716e621f9452cbcaedce810974a751" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -272,7 +272,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/page.h" line="152"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/page.h" line="152"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_page_1a29158202a809b2710c70cc4117a9b630" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -291,7 +291,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/page.h" line="169"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/page.h" line="169"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_page_1a4645f4ca1160ff1cdd19bdf9d6909bc0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="defs_8h_1a1e6994f40bd9cb140e292afb165af971" kindref="member">wxOrientation</ref></type>
@@ -305,7 +305,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/page.h" line="181"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/page.h" line="181"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -315,97 +315,97 @@
 <heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxribbon" kindref="member">wxRibbon</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ribbon" kindref="compound">Ribbon User Interface</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="9182">
+      <node id="9365">
         <label>wxRibbonControl</label>
         <link refid="classwx_ribbon_control"/>
-        <childnode refid="9183" relation="public-inheritance">
+        <childnode refid="9366" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9186">
+      <node id="9369">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="9185">
+      <node id="9368">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="9186" relation="public-inheritance">
+        <childnode refid="9369" relation="public-inheritance">
         </childnode>
-        <childnode refid="9187" relation="public-inheritance">
+        <childnode refid="9370" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9187">
+      <node id="9370">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="9183">
+      <node id="9366">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="9184" relation="public-inheritance">
+        <childnode refid="9367" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9184">
+      <node id="9367">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="9185" relation="public-inheritance">
+        <childnode refid="9368" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9181">
+      <node id="9364">
         <label>wxRibbonPage</label>
         <link refid="classwx_ribbon_page"/>
-        <childnode refid="9182" relation="public-inheritance">
+        <childnode refid="9365" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="9189">
+      <node id="9372">
         <label>wxRibbonControl</label>
         <link refid="classwx_ribbon_control"/>
-        <childnode refid="9190" relation="public-inheritance">
+        <childnode refid="9373" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9193">
+      <node id="9376">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="9194" relation="usage">
+        <childnode refid="9377" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="9192">
+      <node id="9375">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="9193" relation="public-inheritance">
+        <childnode refid="9376" relation="public-inheritance">
         </childnode>
-        <childnode refid="9195" relation="public-inheritance">
+        <childnode refid="9378" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9195">
+      <node id="9378">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="9190">
+      <node id="9373">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="9191" relation="public-inheritance">
+        <childnode refid="9374" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9191">
+      <node id="9374">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="9192" relation="public-inheritance">
+        <childnode refid="9375" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9188">
+      <node id="9371">
         <label>wxRibbonPage</label>
         <link refid="classwx_ribbon_page"/>
-        <childnode refid="9189" relation="public-inheritance">
+        <childnode refid="9372" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9194">
+      <node id="9377">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/page.h" line="21" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/page.h" bodystart="20" bodyend="182"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/page.h" line="21" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/page.h" bodystart="20" bodyend="182"/>
     <listofallmembers>
       <member refid="classwx_window_1a3afbd49b1ea2f8275e3600dcac102923" prot="public" virt="virtual"><scope>wxRibbonPage</scope><name>AcceptsFocus</name></member>
       <member refid="classwx_window_1a2370bdd3ab08e7ef3c7555c6aa8301b8" prot="public" virt="virtual"><scope>wxRibbonPage</scope><name>AcceptsFocusFromKeyboard</name></member>
@@ -477,6 +477,7 @@
       <member refid="classwx_window_1a3006d98a4145b7064c1f08e39487d257" prot="public" virt="non-virtual"><scope>wxRibbonPage</scope><name>GetBackgroundColour</name></member>
       <member refid="classwx_window_1a59047d52b88f2422bbcf01bbecdc4b7b" prot="public" virt="virtual"><scope>wxRibbonPage</scope><name>GetBackgroundStyle</name></member>
       <member refid="classwx_window_1a7e64b9380374e5681f146e9e319e35e3" prot="public" virt="non-virtual"><scope>wxRibbonPage</scope><name>GetBestSize</name></member>
+      <member refid="classwx_ribbon_control_1a555837437ef7e19ebfb9cf7a019e9b8d" prot="public" virt="virtual"><scope>wxRibbonPage</scope><name>GetBestSizeForParentSize</name></member>
       <member refid="classwx_window_1a0180343fa395e0c8e6de4022684ca5d6" prot="public" virt="virtual"><scope>wxRibbonPage</scope><name>GetBestVirtualSize</name></member>
       <member refid="classwx_window_1ad95a95e683e57ac6365745b737571582" prot="public" virt="non-virtual"><scope>wxRibbonPage</scope><name>GetBorder</name></member>
       <member refid="classwx_window_1aa53c8d1b5af17a8fbbe8845210e2032b" prot="public" virt="non-virtual"><scope>wxRibbonPage</scope><name>GetBorder</name></member>
@@ -581,6 +582,7 @@
       <member refid="classwx_window_1aa90a260c0a835a133043460b7d0024a8" prot="public" virt="virtual"><scope>wxRibbonPage</scope><name>InitDialog</name></member>
       <member refid="classwx_window_1ae1b56ca87d8590ee5e576012229a380a" prot="public" virt="non-virtual"><scope>wxRibbonPage</scope><name>InvalidateBestSize</name></member>
       <member refid="classwx_window_1af918e6fe8565c2d5235973cc3de84a43" prot="public" virt="non-virtual"><scope>wxRibbonPage</scope><name>IsBeingDeleted</name></member>
+      <member refid="classwx_window_1a469f0881da248d37691440c9d4cc7200" prot="public" virt="non-virtual"><scope>wxRibbonPage</scope><name>IsDescendant</name></member>
       <member refid="classwx_window_1a9d1be1bbb625ebf87ad4ad47e49a0194" prot="public" virt="virtual"><scope>wxRibbonPage</scope><name>IsDoubleBuffered</name></member>
       <member refid="classwx_window_1a59452a5bd42f5ea4b31d7fc4aa59644f" prot="public" virt="non-virtual"><scope>wxRibbonPage</scope><name>IsEnabled</name></member>
       <member refid="classwx_window_1af27ef77c913e32050543f3b0ca435a0d" prot="public" virt="non-virtual"><scope>wxRibbonPage</scope><name>IsExposed</name></member>
@@ -597,13 +599,13 @@
       <member refid="classwx_ribbon_control_1a501bee400eee7b57128c1ad77edf0b1d" prot="public" virt="virtual"><scope>wxRibbonPage</scope><name>IsSizingContinuous</name></member>
       <member refid="classwx_window_1a657ef8b6055eb06df894ac5e6ddfecf8" prot="public" virt="non-virtual"><scope>wxRibbonPage</scope><name>IsThisEnabled</name></member>
       <member refid="classwx_window_1a0002826ad05f2a5661b4c8995713f37f" prot="public" virt="virtual"><scope>wxRibbonPage</scope><name>IsTopLevel</name></member>
+      <member refid="classwx_window_1a7940d510c5bdc062a2b109a1022dd8c2" prot="public" virt="virtual"><scope>wxRibbonPage</scope><name>IsTransparentBackgroundSupported</name></member>
       <member refid="classwx_evt_handler_1a360fdeefcf53b62fb49fb828406bb8a6" prot="public" virt="non-virtual"><scope>wxRibbonPage</scope><name>IsUnlinked</name></member>
       <member refid="classwx_window_1a1b143c3e72bd0af533b76db4830a6113" prot="public" virt="virtual"><scope>wxRibbonPage</scope><name>Layout</name></member>
       <member refid="classwx_window_1ade808784f0e64d9985e2f279b5ca8c02" prot="public" virt="non-virtual"><scope>wxRibbonPage</scope><name>LineDown</name></member>
       <member refid="classwx_window_1afc0816a174ceee6d36d1995c6824a273" prot="public" virt="non-virtual"><scope>wxRibbonPage</scope><name>LineUp</name></member>
       <member refid="classwx_window_1a124944524f36b71385dad8fddaad8ded" prot="public" virt="virtual"><scope>wxRibbonPage</scope><name>Lower</name></member>
       <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxRibbonPage</scope><name>m_refData</name></member>
-      <member refid="classwx_window_1a192fc8b467845d093c16452db96c65c5" prot="public" virt="virtual"><scope>wxRibbonPage</scope><name>MakeModal</name></member>
       <member refid="classwx_window_1ab1cb98c8d25b9e6ff7b706b1446c3df7" prot="public" virt="non-virtual"><scope>wxRibbonPage</scope><name>Move</name></member>
       <member refid="classwx_window_1a22a22c1e23ca05776707e7999d8047fe" prot="public" virt="non-virtual"><scope>wxRibbonPage</scope><name>Move</name></member>
       <member refid="classwx_window_1a79e66079125e8420de269811bdb6f2b6" prot="public" virt="non-virtual"><scope>wxRibbonPage</scope><name>MoveAfterInTabOrder</name></member>
@@ -729,7 +731,6 @@
       <member refid="classwx_window_1a88cc65e424a129d9b0057756cdb67ec9" prot="public" virt="virtual"><scope>wxRibbonPage</scope><name>TransferDataToWindow</name></member>
       <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxRibbonPage</scope><name>TryAfter</name></member>
       <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxRibbonPage</scope><name>TryBefore</name></member>
-      <member refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" virt="non-virtual"><scope>wxRibbonPage</scope><name>TryThis</name></member>
       <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxRibbonPage</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxRibbonPage</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a22e5db2ec1d19c8252c056fd116975d7" prot="public" virt="non-virtual"><scope>wxRibbonPage</scope><name>Unlink</name></member>

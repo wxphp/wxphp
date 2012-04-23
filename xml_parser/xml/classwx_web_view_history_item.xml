@@ -23,7 +23,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="107"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/webview.h" line="106"/>
       </memberdef>
       <memberdef kind="function" id="classwx_web_view_history_item_1aa57af8861cbf30dcaa106b7d1a029dec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -37,7 +37,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="112"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/webview.h" line="111"/>
       </memberdef>
       <memberdef kind="function" id="classwx_web_view_history_item_1a72c6b80c3b356d9ddca876a08a9bc86e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -51,7 +51,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="117"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/webview.h" line="116"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -61,7 +61,7 @@
 </para></simplesect>
 Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxwebview" kindref="member">wxWebView</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__webview" kindref="compound">WebView</ref></para><para><simplesect kind="see"><para><ref refid="classwx_web_view" kindref="compound">wxWebView</ref> </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="102" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" bodystart="101" bodyend="118"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/webview.h" line="101" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/webview.h" bodystart="100" bodyend="117"/>
     <listofallmembers>
       <member refid="classwx_web_view_history_item_1a72c6b80c3b356d9ddca876a08a9bc86e" prot="public" virt="non-virtual"><scope>wxWebViewHistoryItem</scope><name>GetTitle</name></member>
       <member refid="classwx_web_view_history_item_1aa57af8861cbf30dcaa106b7d1a029dec" prot="public" virt="non-virtual"><scope>wxWebViewHistoryItem</scope><name>GetUrl</name></member>

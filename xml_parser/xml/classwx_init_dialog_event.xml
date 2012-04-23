@@ -21,7 +21,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3568"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="3571"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -35,49 +35,49 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="overview_events" kindref="compound">Events and Event Handling</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7279">
+      <node id="7466">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="7277">
+      <node id="7464">
         <label>wxInitDialogEvent</label>
         <link refid="classwx_init_dialog_event"/>
-        <childnode refid="7278" relation="public-inheritance">
+        <childnode refid="7465" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7278">
+      <node id="7465">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="7279" relation="public-inheritance">
+        <childnode refid="7466" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7282">
+      <node id="7469">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="7283" relation="usage">
+        <childnode refid="7470" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="7280">
+      <node id="7467">
         <label>wxInitDialogEvent</label>
         <link refid="classwx_init_dialog_event"/>
-        <childnode refid="7281" relation="public-inheritance">
+        <childnode refid="7468" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7281">
+      <node id="7468">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="7282" relation="public-inheritance">
+        <childnode refid="7469" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7283">
+      <node id="7470">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3563" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="3562" bodyend="3569"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="3566" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="3565" bodyend="3572"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxInitDialogEvent</scope><name>AllocExclusive</name></member>
       <member refid="classwx_event_1a26878097a702e8d0368da150125d4158" prot="public" virt="pure-virtual"><scope>wxInitDialogEvent</scope><name>Clone</name></member>

@@ -16,7 +16,7 @@
 <para>See also <ref refid="classwx_archive_entry_1acb1e2dd308429c6afba02ec6d24c43f3" kindref="member">wxArchiveEntry::GetDateTime()</ref> and <ref refid="classwx_archive_entry_1a2de48b81c6513c2884b35d606d9b1ffa" kindref="member">wxArchiveEntry::SetDateTime()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" line="280"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/tarstrm.h" line="280"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tar_entry_1a2f6fca990f94df6a66a764dee5109580" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -33,7 +33,7 @@
 <para>See also <ref refid="classwx_archive_entry_1acb1e2dd308429c6afba02ec6d24c43f3" kindref="member">wxArchiveEntry::GetDateTime()</ref> and <ref refid="classwx_archive_entry_1a2de48b81c6513c2884b35d606d9b1ffa" kindref="member">wxArchiveEntry::SetDateTime()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" line="281"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/tarstrm.h" line="281"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -48,7 +48,7 @@
 <para>See also <ref refid="classwx_archive_entry_1acb1e2dd308429c6afba02ec6d24c43f3" kindref="member">wxArchiveEntry::GetDateTime()</ref> and <ref refid="classwx_archive_entry_1a2de48b81c6513c2884b35d606d9b1ffa" kindref="member">wxArchiveEntry::SetDateTime()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" line="289"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/tarstrm.h" line="289"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tar_entry_1a2a5b595d3398bb2ea041ad991a47ea04" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -65,7 +65,7 @@
 <para>See also <ref refid="classwx_archive_entry_1acb1e2dd308429c6afba02ec6d24c43f3" kindref="member">wxArchiveEntry::GetDateTime()</ref> and <ref refid="classwx_archive_entry_1a2de48b81c6513c2884b35d606d9b1ffa" kindref="member">wxArchiveEntry::SetDateTime()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" line="290"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/tarstrm.h" line="290"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -80,7 +80,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" line="298"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/tarstrm.h" line="298"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tar_entry_1a14c30e2df98480c6f7cc3aa006238c0a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -93,7 +93,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" line="299"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/tarstrm.h" line="299"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tar_entry_1afc7892bf78a72978ea85459a9e879c35" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -110,7 +110,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" line="300"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/tarstrm.h" line="300"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tar_entry_1a8506708e9dbe4b66ca895866dac777e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -127,7 +127,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" line="301"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/tarstrm.h" line="301"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -142,7 +142,7 @@
 <para>These values aren&apos;t usually useful unless the file will only be restored to the same system it originated from. <ref refid="classwx_tar_entry_1ad452783e42c096e021d9534a9247099d" kindref="member">wxTarEntry::GetGroupName()</ref> and <ref refid="classwx_tar_entry_1ae59ba869ec661fb3150838a7312603db" kindref="member">wxTarEntry::GetUserName()</ref> can be used instead. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" line="313"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/tarstrm.h" line="313"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tar_entry_1a77026169ccff722e4bce6165aa02a821" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -155,7 +155,7 @@
 <para>These values aren&apos;t usually useful unless the file will only be restored to the same system it originated from. <ref refid="classwx_tar_entry_1ad452783e42c096e021d9534a9247099d" kindref="member">wxTarEntry::GetGroupName()</ref> and <ref refid="classwx_tar_entry_1ae59ba869ec661fb3150838a7312603db" kindref="member">wxTarEntry::GetUserName()</ref> can be used instead. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" line="314"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/tarstrm.h" line="314"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tar_entry_1a72eccb73add48ba41942c736894c311f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -172,7 +172,7 @@
 <para>These values aren&apos;t usually useful unless the file will only be restored to the same system it originated from. <ref refid="classwx_tar_entry_1ad452783e42c096e021d9534a9247099d" kindref="member">wxTarEntry::GetGroupName()</ref> and <ref refid="classwx_tar_entry_1ae59ba869ec661fb3150838a7312603db" kindref="member">wxTarEntry::GetUserName()</ref> can be used instead. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" line="315"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/tarstrm.h" line="315"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tar_entry_1a2dd46136dd6eb9dc972e168b46ea204d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -189,7 +189,7 @@
 <para>These values aren&apos;t usually useful unless the file will only be restored to the same system it originated from. <ref refid="classwx_tar_entry_1ad452783e42c096e021d9534a9247099d" kindref="member">wxTarEntry::GetGroupName()</ref> and <ref refid="classwx_tar_entry_1ae59ba869ec661fb3150838a7312603db" kindref="member">wxTarEntry::GetUserName()</ref> can be used instead. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" line="316"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/tarstrm.h" line="316"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -204,7 +204,7 @@
 <para>These are not present in very old tars. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" line="324"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/tarstrm.h" line="324"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tar_entry_1ae59ba869ec661fb3150838a7312603db" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -217,7 +217,7 @@
 <para>These are not present in very old tars. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" line="325"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/tarstrm.h" line="325"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tar_entry_1a79c3b5e094695ec9183afa351bf2d6e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -234,7 +234,7 @@
 <para>These are not present in very old tars. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" line="326"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/tarstrm.h" line="326"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tar_entry_1a51184ce2ce070239c76de6fb1c65cfec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -251,7 +251,7 @@
 <para>These are not present in very old tars. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" line="327"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/tarstrm.h" line="327"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -266,7 +266,7 @@
 <para>Only meaningful when <ref refid="classwx_tar_entry_1a4655d55a9f6c27e2c36b0d1589efd09c" kindref="member">wxTarEntry::GetTypeFlag()</ref> is set to <emphasis>wxTAR_LNKTYPE</emphasis> or <emphasis>wxTAR_SYMTYPE</emphasis>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" line="336"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/tarstrm.h" line="336"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tar_entry_1ae7e815e898d65cd60709dcf80eb8126d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -283,7 +283,7 @@
 <para>Only meaningful when <ref refid="classwx_tar_entry_1a4655d55a9f6c27e2c36b0d1589efd09c" kindref="member">wxTarEntry::GetTypeFlag()</ref> is set to <emphasis>wxTAR_LNKTYPE</emphasis> or <emphasis>wxTAR_SYMTYPE</emphasis>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" line="337"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/tarstrm.h" line="337"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -298,7 +298,7 @@
 <para>Giving read, write and execute permissions to the file&apos;s user and group (see <ref refid="classwx_tar_entry_1ad452783e42c096e021d9534a9247099d" kindref="member">GetGroupName()</ref> and <ref refid="classwx_tar_entry_1ae59ba869ec661fb3150838a7312603db" kindref="member">GetUserName()</ref>) and to others.</para><para>The integer is one or more <ref refid="group__group__funcmacro__file_1ga64460401fb35c137c9df28f3c019694d" kindref="member">wxPosixPermissions</ref> flags OR-combined. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" line="348"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/tarstrm.h" line="348"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tar_entry_1ac02ce7134837e4071adb3f7a7c3918fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -315,7 +315,7 @@
 <para>Giving read, write and execute permissions to the file&apos;s user and group (see <ref refid="classwx_tar_entry_1ad452783e42c096e021d9534a9247099d" kindref="member">GetGroupName()</ref> and <ref refid="classwx_tar_entry_1ae59ba869ec661fb3150838a7312603db" kindref="member">GetUserName()</ref>) and to others.</para><para>The integer is one or more <ref refid="group__group__funcmacro__file_1ga64460401fb35c137c9df28f3c019694d" kindref="member">wxPosixPermissions</ref> flags OR-combined. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" line="349"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/tarstrm.h" line="349"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -335,7 +335,7 @@
 <para>The tar archive format stores the entry&apos;s size ahead of the entry&apos;s data. Therefore when creating an archive on a non-seekable stream it is necessary to supply the correct size when each entry is created.</para><para>For seekable streams this is not necessary as <ref refid="classwx_tar_output_stream" kindref="compound">wxTarOutputStream</ref> will attempt to seek back and fix the entry&apos;s header when the entry is closed, though it is still more efficient if the size is given beforehand. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" line="364"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/tarstrm.h" line="364"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tar_entry_1a066b3d9023480d9fde9ed266d5d9ae8b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="group__group__funcmacro__file_1ga69d831b3febabc149c67b716c8e22de5" kindref="member">wxFileOffset</ref></type>
@@ -349,7 +349,7 @@
 <para>The tar archive format stores the entry&apos;s size ahead of the entry&apos;s data. Therefore when creating an archive on a non-seekable stream it is necessary to supply the correct size when each entry is created.</para><para>For seekable streams this is not necessary as <ref refid="classwx_tar_output_stream" kindref="compound">wxTarOutputStream</ref> will attempt to seek back and fix the entry&apos;s header when the entry is closed, though it is still more efficient if the size is given beforehand. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" line="365"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/tarstrm.h" line="365"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -364,7 +364,7 @@
 <para>When creating archives use only one of <ref refid="tarstrm_8h_1a182207a2794a58c1c0c21ea6c8ed865f" kindref="member">wxTarType</ref> values. When reading archives, <ref refid="classwx_tar_entry_1a4655d55a9f6c27e2c36b0d1589efd09c" kindref="member">GetTypeFlag()</ref> may return a value which does not match any value of <ref refid="tarstrm_8h_1a182207a2794a58c1c0c21ea6c8ed865f" kindref="member">wxTarType</ref>; in this case the returned value should be treated as <emphasis>wxTAR_REGTYPE</emphasis>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" line="377"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/tarstrm.h" line="377"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tar_entry_1a439d96d58b3e3db4ff02679b46eb057c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -381,7 +381,7 @@
 <para>When creating archives use only one of <ref refid="tarstrm_8h_1a182207a2794a58c1c0c21ea6c8ed865f" kindref="member">wxTarType</ref> values. When reading archives, <ref refid="classwx_tar_entry_1a4655d55a9f6c27e2c36b0d1589efd09c" kindref="member">GetTypeFlag()</ref> may return a value which does not match any value of <ref refid="tarstrm_8h_1a182207a2794a58c1c0c21ea6c8ed865f" kindref="member">wxTarType</ref>; in this case the returned value should be treated as <emphasis>wxTAR_REGTYPE</emphasis>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" line="378"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/tarstrm.h" line="378"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -411,7 +411,7 @@
 <para>The tar archive format stores the entry&apos;s size ahead of the entry&apos;s data. Therefore when creating an archive on a non-seekable stream it is necessary to supply the correct size when each entry is created. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" line="268"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/tarstrm.h" line="268"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tar_entry_1afc69f3281c918412e034f6f88b74260f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -428,7 +428,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" line="273"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/tarstrm.h" line="273"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tar_entry_1ac9f34a7005df589f5428fca61e4e747a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -442,7 +442,7 @@
 <para>The name can include directory components, i.e. it can be a full path. The names of directory entries are returned without any trailing path separator. This gives a canonical name that can be used in comparisons. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" line="388"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/tarstrm.h" line="388"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tar_entry_1a5e185aac56eba9244f216eb2f43e68cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_tar_entry" kindref="compound">wxTarEntry</ref> &amp;</type>
@@ -459,7 +459,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" line="404"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/tarstrm.h" line="404"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -488,7 +488,7 @@
 <para>If the third parameter is provided, the bool pointed to is set to indicate whether the name looks like a directory name (i.e. has a trailing path separator). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" line="399"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/tarstrm.h" line="399"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -501,49 +501,49 @@
 </para></sect1>
     </detaileddescription>
     <inheritancegraph>
-      <node id="10674">
+      <node id="10859">
         <label>wxArchiveEntry</label>
         <link refid="classwx_archive_entry"/>
-        <childnode refid="10675" relation="public-inheritance">
+        <childnode refid="10860" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10675">
+      <node id="10860">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="10673">
+      <node id="10858">
         <label>wxTarEntry</label>
         <link refid="classwx_tar_entry"/>
-        <childnode refid="10674" relation="public-inheritance">
+        <childnode refid="10859" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10677">
+      <node id="10862">
         <label>wxArchiveEntry</label>
         <link refid="classwx_archive_entry"/>
-        <childnode refid="10678" relation="public-inheritance">
+        <childnode refid="10863" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10678">
+      <node id="10863">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="10679" relation="usage">
+        <childnode refid="10864" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="10676">
+      <node id="10861">
         <label>wxTarEntry</label>
         <link refid="classwx_tar_entry"/>
-        <childnode refid="10677" relation="public-inheritance">
+        <childnode refid="10862" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10679">
+      <node id="10864">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" line="257" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" bodystart="256" bodyend="405"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/tarstrm.h" line="257" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/tarstrm.h" bodystart="256" bodyend="405"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxTarEntry</scope><name>AllocExclusive</name></member>
       <member refid="classwx_archive_entry_1a18cf9ea4a92bd5a9e845ee1d2ee04553" prot="public" virt="non-virtual"><scope>wxTarEntry</scope><name>Clone</name></member>

@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fswatcher.h" line="149"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fswatcher.h" line="149"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_system_watcher_event_1ac3d3fb37e8af7d9198ffba3650f2f02d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_file_name" kindref="compound">wxFileName</ref> &amp;</type>
@@ -29,7 +29,7 @@
 <para>Otherwise it returns the same path as <ref refid="classwx_file_system_watcher_event_1a1dfef691f1bc4f0a5bdcea0e1d6a1b54" kindref="member">GetPath()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fswatcher.h" line="157"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fswatcher.h" line="157"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_system_watcher_event_1a0e2e85e17b4fe13742e062c52caa45b8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -42,7 +42,7 @@
 <para>See wxFSWFlags for the list of possible file system change types. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fswatcher.h" line="163"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fswatcher.h" line="163"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_system_watcher_event_1a116b6707b9debc640721f2d4ff692fe7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -55,7 +55,7 @@
 <para>Error event is an event generated when a warning or error condition arises. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fswatcher.h" line="171"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fswatcher.h" line="171"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_system_watcher_event_1a04dc1aa8650526da2c005004c4d10587" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -68,7 +68,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fswatcher.h" line="176"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fswatcher.h" line="176"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_system_watcher_event_1aa45e2d5f40f2c19a4c758f0dcaf44631" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -81,7 +81,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fswatcher.h" line="182"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fswatcher.h" line="182"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -92,49 +92,49 @@
 <simplesect kind="since"><para>2.9.1 </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="6272">
+      <node id="6394">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="6270">
+      <node id="6392">
         <label>wxFileSystemWatcherEvent</label>
         <link refid="classwx_file_system_watcher_event"/>
-        <childnode refid="6271" relation="public-inheritance">
+        <childnode refid="6393" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6271">
+      <node id="6393">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="6272" relation="public-inheritance">
+        <childnode refid="6394" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="6275">
+      <node id="6397">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="6276" relation="usage">
+        <childnode refid="6398" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="6273">
+      <node id="6395">
         <label>wxFileSystemWatcherEvent</label>
         <link refid="classwx_file_system_watcher_event"/>
-        <childnode refid="6274" relation="public-inheritance">
+        <childnode refid="6396" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6274">
+      <node id="6396">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="6275" relation="public-inheritance">
+        <childnode refid="6397" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6276">
+      <node id="6398">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fswatcher.h" line="144" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fswatcher.h" bodystart="143" bodyend="183"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fswatcher.h" line="144" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/fswatcher.h" bodystart="143" bodyend="183"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxFileSystemWatcherEvent</scope><name>AllocExclusive</name></member>
       <member refid="classwx_event_1a26878097a702e8d0368da150125d4158" prot="public" virt="pure-virtual"><scope>wxFileSystemWatcherEvent</scope><name>Clone</name></member>

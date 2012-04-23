@@ -16,7 +16,7 @@
 <para>This method can be called for all header control events. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/headerctrl.h" line="667"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/headerctrl.h" line="667"/>
       </memberdef>
       <memberdef kind="function" id="classwx_header_ctrl_event_1a93c26f60c6c8ea1fed60ad7493ca5087" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -29,7 +29,7 @@
 <para>This method can only be called for the dragging events. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/headerctrl.h" line="674"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/headerctrl.h" line="674"/>
       </memberdef>
       <memberdef kind="function" id="classwx_header_ctrl_event_1aed8f8bef4a60e4dd4bdc60c337c35d18" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>unsigned int</type>
@@ -42,7 +42,7 @@
 <para>This method can only be called for end reorder event for which it indicates the tentative new position for the column <ref refid="classwx_header_ctrl_event_1ac037dc127c94b4ba5fb0fc31c3216c6d" kindref="member">GetColumn()</ref> selected by the user. If the event is not vetoed, this will become the new column position in <ref refid="classwx_header_ctrl_1acdb9b8a7013e39408bb3eb2c71247d5a" kindref="member">wxHeaderCtrl::GetColumnsOrder()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/headerctrl.h" line="684"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/headerctrl.h" line="684"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -52,73 +52,73 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="classwx_header_ctrl" kindref="compound">wxHeaderCtrl</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="6904">
+      <node id="7074">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="6902">
+      <node id="7072">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="6903" relation="public-inheritance">
+        <childnode refid="7073" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6901">
+      <node id="7071">
         <label>wxNotifyEvent</label>
         <link refid="classwx_notify_event"/>
-        <childnode refid="6902" relation="public-inheritance">
+        <childnode refid="7072" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6900">
+      <node id="7070">
         <label>wxHeaderCtrlEvent</label>
         <link refid="classwx_header_ctrl_event"/>
-        <childnode refid="6901" relation="public-inheritance">
+        <childnode refid="7071" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6903">
+      <node id="7073">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="6904" relation="public-inheritance">
+        <childnode refid="7074" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="6909">
+      <node id="7079">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="6910" relation="usage">
+        <childnode refid="7080" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="6907">
+      <node id="7077">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="6908" relation="public-inheritance">
+        <childnode refid="7078" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6906">
+      <node id="7076">
         <label>wxNotifyEvent</label>
         <link refid="classwx_notify_event"/>
-        <childnode refid="6907" relation="public-inheritance">
+        <childnode refid="7077" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6905">
+      <node id="7075">
         <label>wxHeaderCtrlEvent</label>
         <link refid="classwx_header_ctrl_event"/>
-        <childnode refid="6906" relation="public-inheritance">
+        <childnode refid="7076" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6908">
+      <node id="7078">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="6909" relation="public-inheritance">
+        <childnode refid="7079" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6910">
+      <node id="7080">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/headerctrl.h" line="660" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/headerctrl.h" bodystart="659" bodyend="685"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/headerctrl.h" line="660" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/headerctrl.h" bodystart="659" bodyend="685"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxHeaderCtrlEvent</scope><name>AllocExclusive</name></member>
       <member refid="classwx_notify_event_1a7b23515f827b2ce1da1e6990d9aafe80" prot="public" virt="non-virtual"><scope>wxHeaderCtrlEvent</scope><name>Allow</name></member>

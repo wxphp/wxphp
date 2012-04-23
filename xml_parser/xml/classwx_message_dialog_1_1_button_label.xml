@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="classwx_message_dialog_1_1_button_label" kind="class" prot="public">
+    <compoundname>wxMessageDialog::ButtonLabel</compoundname>
+    <includes local="no">wx/msgdlg.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_message_dialog_1_1_button_label_1ad3bd2169b472ea615c81bdbf0785fab9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxMessageDialog::ButtonLabel::ButtonLabel</definition>
+        <argsstring>(int stockId)</argsstring>
+        <name>ButtonLabel</name>
+        <param>
+          <type>int</type>
+          <declname>stockId</declname>
+        </param>
+        <briefdescription>
+<para>Construct the label from a stock id. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msgdlg.h" line="103"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_message_dialog_1_1_button_label_1a439d236808554e232dc9e5a30985206b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxMessageDialog::ButtonLabel::ButtonLabel</definition>
+        <argsstring>(const wxString &amp;label)</argsstring>
+        <name>ButtonLabel</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>label</declname>
+        </param>
+        <briefdescription>
+<para>Construct the label from the specified string. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msgdlg.h" line="106"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_message_dialog_1_1_button_label_1aac4d24832519e18facd553b65a094fc5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxMessageDialog::ButtonLabel::GetAsString</definition>
+        <argsstring>() const </argsstring>
+        <name>GetAsString</name>
+        <briefdescription>
+<para>Return the associated label as string. </para>        </briefdescription>
+        <detaileddescription>
+<para>Get the string label, whether it was originally specified directly or as a stock id -- this is only useful for platforms without native stock items id support </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msgdlg.h" line="115"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_message_dialog_1_1_button_label_1a08218541e5a2cb0c0d20809eb76bbc92" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxMessageDialog::ButtonLabel::GetStockId</definition>
+        <argsstring>() const </argsstring>
+        <name>GetStockId</name>
+        <briefdescription>
+<para>Return the stock id or wxID_NONE if this is not a stock label. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msgdlg.h" line="120"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Helper class allowing to use either stock id or string labels. </para>    </briefdescription>
+    <detaileddescription>
+<para>This class should never be used explicitly and is not really part of wxWidgets API but rather is just an implementation helper allowing the methods such as <ref refid="classwx_message_dialog_1aa23b25ebf18bf0915d438cc13b55cb23" kindref="member">SetYesNoLabels()</ref> and <ref refid="classwx_message_dialog_1ad8fdf1426f7363bd1e1e07af5f1e7adc" kindref="member">SetOKCancelLabels()</ref> below to be callable with either stock ids (e.g. <ref refid="defs_8h_1ac66d0a09761e7d86b2ac0b2e0c6a8cbba2a9e536914614593db4a7f1c070842a6" kindref="member">wxID_CLOSE</ref>) or strings (&quot;&amp;Close&quot;). </para>    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msgdlg.h" line="100" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/msgdlg.h" bodystart="99" bodyend="121"/>
+    <listofallmembers>
+      <member refid="classwx_message_dialog_1_1_button_label_1ad3bd2169b472ea615c81bdbf0785fab9" prot="public" virt="non-virtual"><scope>wxMessageDialog::ButtonLabel</scope><name>ButtonLabel</name></member>
+      <member refid="classwx_message_dialog_1_1_button_label_1a439d236808554e232dc9e5a30985206b" prot="public" virt="non-virtual"><scope>wxMessageDialog::ButtonLabel</scope><name>ButtonLabel</name></member>
+      <member refid="classwx_message_dialog_1_1_button_label_1aac4d24832519e18facd553b65a094fc5" prot="public" virt="non-virtual"><scope>wxMessageDialog::ButtonLabel</scope><name>GetAsString</name></member>
+      <member refid="classwx_message_dialog_1_1_button_label_1a08218541e5a2cb0c0d20809eb76bbc92" prot="public" virt="non-virtual"><scope>wxMessageDialog::ButtonLabel</scope><name>GetStockId</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

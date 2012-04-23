@@ -35,7 +35,7 @@
 <para>The first constructor creates a header showing the given text <emphasis>title</emphasis> while the second one creates one showing the specified <emphasis>bitmap</emphasis> image. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/headercol.h" line="411"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/headercol.h" line="411"/>
       </memberdef>
       <memberdef kind="function" id="classwx_header_column_simple_1a53e76673786f47e27e8f9bce2e9d3d1e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -67,7 +67,7 @@
 <para>The first constructor creates a header showing the given text <emphasis>title</emphasis> while the second one creates one showing the specified <emphasis>bitmap</emphasis> image. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/headercol.h" line="416"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/headercol.h" line="416"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -87,7 +87,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/headercol.h" line="423"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/headercol.h" line="423"/>
       </memberdef>
       <memberdef kind="function" id="classwx_header_column_simple_1a3af661667b5e3c8a4d168d4b58d58f80" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -101,7 +101,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/headercol.h" line="424"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/headercol.h" line="424"/>
       </memberdef>
       <memberdef kind="function" id="classwx_header_column_simple_1a249250483e2b2855c66451fb6b60aea4" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -119,7 +119,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/headercol.h" line="425"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/headercol.h" line="425"/>
       </memberdef>
       <memberdef kind="function" id="classwx_header_column_simple_1a83db1ef677bd59f4d6dc9ac2f937e6c2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref></type>
@@ -133,7 +133,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/headercol.h" line="426"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/headercol.h" line="426"/>
       </memberdef>
       <memberdef kind="function" id="classwx_header_column_simple_1ab7fe07a7131383d838693d189c4219c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -151,7 +151,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/headercol.h" line="427"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/headercol.h" line="427"/>
       </memberdef>
       <memberdef kind="function" id="classwx_header_column_simple_1acbba11243f59e52fda8ddf4885f74d66" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>int</type>
@@ -165,7 +165,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/headercol.h" line="428"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/headercol.h" line="428"/>
       </memberdef>
       <memberdef kind="function" id="classwx_header_column_simple_1a2170a87a0e410c9f4ba6568ebc138c4c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -183,7 +183,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/headercol.h" line="429"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/headercol.h" line="429"/>
       </memberdef>
       <memberdef kind="function" id="classwx_header_column_simple_1acce06e660aae64da6ad363bbf82c4b7c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>int</type>
@@ -197,7 +197,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/headercol.h" line="430"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/headercol.h" line="430"/>
       </memberdef>
       <memberdef kind="function" id="classwx_header_column_simple_1a14670c0e4a9a7f53f4800cabaf119934" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -215,7 +215,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/headercol.h" line="431"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/headercol.h" line="431"/>
       </memberdef>
       <memberdef kind="function" id="classwx_header_column_simple_1ad64e80431e201938172e394ec5d954a1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="defs_8h_1a543dd017a172dc316253a8a1f351dde9" kindref="member">wxAlignment</ref></type>
@@ -229,7 +229,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/headercol.h" line="432"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/headercol.h" line="432"/>
       </memberdef>
       <memberdef kind="function" id="classwx_header_column_simple_1aaa4db67648cde4557ea2c222c659e3c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -247,7 +247,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/headercol.h" line="433"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/headercol.h" line="433"/>
       </memberdef>
       <memberdef kind="function" id="classwx_header_column_simple_1a08c42c5ab86dfb5e87628a3c63cb460c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>int</type>
@@ -261,7 +261,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/headercol.h" line="434"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/headercol.h" line="434"/>
       </memberdef>
       <memberdef kind="function" id="classwx_header_column_simple_1aa3419085887391dd60f80b4a492c8872" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -275,7 +275,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/headercol.h" line="435"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/headercol.h" line="435"/>
       </memberdef>
       <memberdef kind="function" id="classwx_header_column_simple_1a0435ddb5c9945974193997e1ffd05954" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -293,7 +293,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/headercol.h" line="436"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/headercol.h" line="436"/>
       </memberdef>
       <memberdef kind="function" id="classwx_header_column_simple_1a45b1f31105e6850110543e3a84b62356" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -307,7 +307,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/headercol.h" line="437"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/headercol.h" line="437"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -321,42 +321,42 @@
 </programlisting></para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="6881">
+      <node id="7051">
         <label>wxSettableHeaderColumn</label>
         <link refid="classwx_settable_header_column"/>
-        <childnode refid="6882" relation="public-inheritance">
+        <childnode refid="7052" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6882">
+      <node id="7052">
         <label>wxHeaderColumn</label>
         <link refid="classwx_header_column"/>
       </node>
-      <node id="6880">
+      <node id="7050">
         <label>wxHeaderColumnSimple</label>
         <link refid="classwx_header_column_simple"/>
-        <childnode refid="6881" relation="public-inheritance">
+        <childnode refid="7051" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="6884">
+      <node id="7054">
         <label>wxSettableHeaderColumn</label>
         <link refid="classwx_settable_header_column"/>
-        <childnode refid="6885" relation="public-inheritance">
+        <childnode refid="7055" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6885">
+      <node id="7055">
         <label>wxHeaderColumn</label>
         <link refid="classwx_header_column"/>
       </node>
-      <node id="6883">
+      <node id="7053">
         <label>wxHeaderColumnSimple</label>
         <link refid="classwx_header_column_simple"/>
-        <childnode refid="6884" relation="public-inheritance">
+        <childnode refid="7054" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/headercol.h" line="399" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/headercol.h" bodystart="398" bodyend="440"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/headercol.h" line="399" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/headercol.h" bodystart="398" bodyend="440"/>
     <listofallmembers>
       <member refid="classwx_settable_header_column_1ae4c0570355a3c4b712352457c925a7dd" prot="public" virt="non-virtual"><scope>wxHeaderColumnSimple</scope><name>ChangeFlag</name></member>
       <member refid="classwx_settable_header_column_1afb2fa0ed8e8e729d16ff9fefe9e41a26" prot="public" virt="non-virtual"><scope>wxHeaderColumnSimple</scope><name>ClearFlag</name></member>

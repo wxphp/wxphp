@@ -349,13 +349,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sckipc.h" line="14" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sckipc.h" bodystart="13" bodyend="36"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sckipc.h" line="14" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/sckipc.h" bodystart="13" bodyend="36"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sckipc.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sckipc.h"/>
   </compounddef>
 </doxygen>

@@ -126,18 +126,18 @@
 </para></sect1>
     </detaileddescription>
     <inheritancegraph>
-      <node id="8461">
+      <node id="8664">
         <label>wxVariantData</label>
         <link refid="classwx_variant_data"/>
-        <childnode refid="8460" relation="public-inheritance">
+        <childnode refid="8663" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8460">
+      <node id="8663">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </inheritancegraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/object.h" line="9"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/object.h" line="9"/>
     <listofallmembers>
     </listofallmembers>
   </compounddef>

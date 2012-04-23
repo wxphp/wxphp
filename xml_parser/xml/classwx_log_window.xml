@@ -63,7 +63,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="106"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" line="106"/>
       </memberdef>
       <memberdef kind="function" id="classwx_log_window_1a0bace242012e6882c31c3077009110cc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_frame" kindref="compound">wxFrame</ref> *</type>
@@ -76,7 +76,7 @@
 <para>This may be used to position or resize it but use <ref refid="classwx_log_window_1abf62cbce32f19a763439c4fcf0500aae" kindref="member">Show()</ref> to show or hide it. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="112"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" line="112"/>
       </memberdef>
       <memberdef kind="function" id="classwx_log_window_1a8bfff42748e0bb2b859b3c8cf57397e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -94,7 +94,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="124"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" line="124"/>
       </memberdef>
       <memberdef kind="function" id="classwx_log_window_1af1f57777eaa2d54879fe54da3e52c5a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -111,7 +111,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="130"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" line="130"/>
       </memberdef>
       <memberdef kind="function" id="classwx_log_window_1ad52956e65f11961028faae5ce309724b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -128,7 +128,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="136"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" line="136"/>
       </memberdef>
       <memberdef kind="function" id="classwx_log_window_1abf62cbce32f19a763439c4fcf0500aae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -146,7 +146,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="141"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" line="141"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -156,54 +156,54 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__logging" kindref="compound">Logging</ref></para><para><simplesect kind="see"><para><ref refid="classwx_log_text_ctrl" kindref="compound">wxLogTextCtrl</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7547">
+      <node id="7745">
         <label>wxLogWindow</label>
         <link refid="classwx_log_window"/>
-        <childnode refid="7548" relation="public-inheritance">
+        <childnode refid="7746" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7548">
+      <node id="7746">
         <label>wxLogInterposer</label>
         <link refid="classwx_log_interposer"/>
-        <childnode refid="7549" relation="public-inheritance">
+        <childnode refid="7747" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7549">
+      <node id="7747">
         <label>wxLogChain</label>
         <link refid="classwx_log_chain"/>
-        <childnode refid="7550" relation="public-inheritance">
+        <childnode refid="7748" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7550">
+      <node id="7748">
         <label>wxLog</label>
         <link refid="classwx_log"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7551">
+      <node id="7749">
         <label>wxLogWindow</label>
         <link refid="classwx_log_window"/>
-        <childnode refid="7552" relation="public-inheritance">
+        <childnode refid="7750" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7552">
+      <node id="7750">
         <label>wxLogInterposer</label>
         <link refid="classwx_log_interposer"/>
-        <childnode refid="7553" relation="public-inheritance">
+        <childnode refid="7751" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7553">
+      <node id="7751">
         <label>wxLogChain</label>
         <link refid="classwx_log_chain"/>
-        <childnode refid="7554" relation="public-inheritance">
+        <childnode refid="7752" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7554">
+      <node id="7752">
         <label>wxLog</label>
         <link refid="classwx_log"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="86" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" bodystart="85" bodyend="142"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" line="86" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" bodystart="85" bodyend="142"/>
     <listofallmembers>
       <member refid="classwx_log_1a4c11ee23ce5264b6c5921a17610cda13" prot="public" virt="non-virtual"><scope>wxLogWindow</scope><name>AddTraceMask</name></member>
       <member refid="classwx_log_1ac6b25e807e4948795aea21def6b5c1e4" prot="public" virt="non-virtual"><scope>wxLogWindow</scope><name>ClearTraceMasks</name></member>

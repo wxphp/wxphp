@@ -22,7 +22,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/print.h" line="429"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/print.h" line="463"/>
       </memberdef>
       <memberdef kind="function" id="classwx_printer_1ab7d03e29d2dd2cd8c07b832767493777" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
@@ -43,7 +43,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/print.h" line="434"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/print.h" line="468"/>
       </memberdef>
       <memberdef kind="function" id="classwx_printer_1a68dea693d02388c0397688b4e663184c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -56,7 +56,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/print.h" line="439"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/print.h" line="473"/>
       </memberdef>
       <memberdef kind="function" id="classwx_printer_1a851ae6c47b7dc1822a31c1128fdec47c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_print_dialog_data" kindref="compound">wxPrintDialogData</ref> &amp;</type>
@@ -69,7 +69,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/print.h" line="461"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/print.h" line="495"/>
       </memberdef>
       <memberdef kind="function" id="classwx_printer_1a59e6d69be017dfa033e116bdf749bab3" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -95,7 +95,7 @@
 <para>Provide a parent window, a user-defined <ref refid="classwx_printout" kindref="compound">wxPrintout</ref> object which controls the printing of a document, and whether the print dialog should be invoked first.</para><para><ref refid="classwx_printer_1a59e6d69be017dfa033e116bdf749bab3" kindref="member">Print()</ref> could return false if there was a problem initializing the printer device context (current printer not set, for example) or the user cancelled printing. Call <ref refid="classwx_printer_1ac050c7cdfa1d43dee1617c298980624c" kindref="member">GetLastError()</ref> to get detailed information about the kind of the error. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/print.h" line="473"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/print.h" line="507"/>
       </memberdef>
       <memberdef kind="function" id="classwx_printer_1a1a893200eb6e52b642b372e5dd41f5e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_d_c" kindref="compound">wxDC</ref> *</type>
@@ -113,7 +113,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/print.h" line="485"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/print.h" line="519"/>
       </memberdef>
       <memberdef kind="function" id="classwx_printer_1a11fd8880287b8ed11b153294d4d9afee" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -138,7 +138,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/print.h" line="491"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/print.h" line="525"/>
       </memberdef>
       <memberdef kind="function" id="classwx_printer_1a9e6eeeaa72bef57ea7f8e7f5e1f148bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -156,12 +156,12 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/print.h" line="500"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/print.h" line="534"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
       <memberdef kind="function" id="classwx_printer_1ac050c7cdfa1d43dee1617c298980624c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>wxPrinterError</type>
+        <type><ref refid="print_8h_1a64fea46a34fc036e63a5aa2b572e5ee6" kindref="member">wxPrinterError</ref></type>
         <definition>static wxPrinterError wxPrinter::GetLastError</definition>
         <argsstring>()</argsstring>
         <name>GetLastError</name>
@@ -178,7 +178,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/print.h" line="455"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/print.h" line="489"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -188,37 +188,37 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__printing" kindref="compound">Printing Framework</ref></para><para><simplesect kind="see"><para><ref refid="overview_printing" kindref="compound">Printing Framework Overview</ref>, <ref refid="classwx_printer_d_c" kindref="compound">wxPrinterDC</ref>, <ref refid="classwx_print_dialog" kindref="compound">wxPrintDialog</ref>, <ref refid="classwx_printout" kindref="compound">wxPrintout</ref>, <ref refid="classwx_print_preview" kindref="compound">wxPrintPreview</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="8806">
+      <node id="8987">
         <label>wxPrinter</label>
         <link refid="classwx_printer"/>
-        <childnode refid="8807" relation="public-inheritance">
+        <childnode refid="8988" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8807">
+      <node id="8988">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="8808">
+      <node id="8989">
         <label>wxPrinter</label>
         <link refid="classwx_printer"/>
-        <childnode refid="8809" relation="public-inheritance">
+        <childnode refid="8990" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8809">
+      <node id="8990">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="8810" relation="usage">
+        <childnode refid="8991" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="8810">
+      <node id="8991">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/print.h" line="419" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/print.h" bodystart="418" bodyend="501"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/print.h" line="453" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/print.h" bodystart="452" bodyend="535"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxPrinter</scope><name>AllocExclusive</name></member>
       <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxPrinter</scope><name>CloneRefData</name></member>

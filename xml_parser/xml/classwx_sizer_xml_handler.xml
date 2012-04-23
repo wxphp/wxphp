@@ -16,7 +16,7 @@
 <para>Initializes the attributes and adds the supported styles. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xh_sizer.h" line="30"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xrc/xh_sizer.h" line="30"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sizer_xml_handler_1a96014255241b509cfc0cb9861d0c2457" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_object" kindref="compound">wxObject</ref> *</type>
@@ -31,7 +31,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xh_sizer.h" line="37"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xrc/xh_sizer.h" line="37"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sizer_xml_handler_1a084c61f000ada8809952c75d2b2602f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -50,7 +50,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xh_sizer.h" line="47"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xrc/xh_sizer.h" line="47"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-func">
@@ -96,7 +96,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xh_sizer.h" line="91"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xrc/xh_sizer.h" line="91"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sizer_xml_handler_1adc7dd4d2b943f31f581196d8493c17d7" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -114,7 +114,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xh_sizer.h" line="104"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xrc/xh_sizer.h" line="104"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -122,49 +122,49 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="10256">
+      <node id="10439">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="10254">
+      <node id="10437">
         <label>wxSizerXmlHandler</label>
         <link refid="classwx_sizer_xml_handler"/>
-        <childnode refid="10255" relation="public-inheritance">
+        <childnode refid="10438" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10255">
+      <node id="10438">
         <label>wxXmlResourceHandler</label>
         <link refid="classwx_xml_resource_handler"/>
-        <childnode refid="10256" relation="public-inheritance">
+        <childnode refid="10439" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10259">
+      <node id="10442">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="10260" relation="usage">
+        <childnode refid="10443" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="10257">
+      <node id="10440">
         <label>wxSizerXmlHandler</label>
         <link refid="classwx_sizer_xml_handler"/>
-        <childnode refid="10258" relation="public-inheritance">
+        <childnode refid="10441" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10258">
+      <node id="10441">
         <label>wxXmlResourceHandler</label>
         <link refid="classwx_xml_resource_handler"/>
-        <childnode refid="10259" relation="public-inheritance">
+        <childnode refid="10442" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10260">
+      <node id="10443">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xh_sizer.h" line="24" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xh_sizer.h" bodystart="23" bodyend="106"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xrc/xh_sizer.h" line="24" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/xrc/xh_sizer.h" bodystart="23" bodyend="106"/>
     <listofallmembers>
       <member refid="classwx_xml_resource_handler_1a610176f73f543c1de32b65c4d370c34e" prot="protected" virt="non-virtual"><scope>wxSizerXmlHandler</scope><name>AddStyle</name></member>
       <member refid="classwx_xml_resource_handler_1af495ff91d59a9839e1646ca4c1887cb7" prot="protected" virt="non-virtual"><scope>wxSizerXmlHandler</scope><name>AddWindowStyles</name></member>

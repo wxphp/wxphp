@@ -68,13 +68,13 @@
 <para>This enum describes the kind of the tip shown which combines both the tip position and appearance because the two are related (when the tip is positioned asymmetrically, a right handed triangle is used but an equilateral one when it&apos;s in the middle of a side).</para><para>Automatic selects the tip appearance best suited for the current platform and the position best suited for the window the tooltip is shown for, i.e. chosen in such a way that the tooltip is always fully on screen.</para><para>Other values describe the position of the tooltip itself, not the window it relates to. E.g. wxTipKind_Top places the tip on the top of the tooltip and so the tooltip itself is located beneath its associated window. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtooltip.h" line="28" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtooltip.h" bodystart="27" bodyend="53"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtooltip.h" line="28" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/richtooltip.h" bodystart="27" bodyend="53"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtooltip.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtooltip.h"/>
   </compounddef>
 </doxygen>

@@ -24,7 +24,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/object.h" line="639"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/object.h" line="639"/>
       </memberdef>
       <memberdef kind="function" id="classwx_object_data_ptr_3_01_t_01_4_1a07572e1b1af70bb7ddf8413f37ed46cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>wxObjectDataPtr&lt; T &gt; &amp;</type>
@@ -41,7 +41,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/object.h" line="640"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/object.h" line="640"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -61,7 +61,7 @@
 <para><emphasis>ptr</emphasis> is a pointer to the reference counted object to which this class points. If <emphasis>ptr</emphasis> is not NULL <bold>T::IncRef()</bold> will be called on the object. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/object.h" line="587"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/object.h" line="587"/>
       </memberdef>
       <memberdef kind="function" id="classwx_object_data_ptr_3_01_t_01_4_1a9963015e1a99b951df8d4550c7e375db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -78,7 +78,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/object.h" line="593"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/object.h" line="593"/>
       </memberdef>
       <memberdef kind="function" id="classwx_object_data_ptr_3_01_t_01_4_1afc347d29ffbdb48ccd73d2d07134e2de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -91,7 +91,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/object.h" line="599"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/object.h" line="599"/>
       </memberdef>
       <memberdef kind="function" id="classwx_object_data_ptr_3_01_t_01_4_1a03d48ac006376dd4d2e2e8d7c8363ca7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>T *</type>
@@ -104,7 +104,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/object.h" line="604"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/object.h" line="604"/>
       </memberdef>
       <memberdef kind="function" id="classwx_object_data_ptr_3_01_t_01_4_1a7a116724a09b11170af1cb4a125290f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -121,7 +121,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/object.h" line="610"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/object.h" line="610"/>
       </memberdef>
       <memberdef kind="function" id="classwx_object_data_ptr_3_01_t_01_4_1ad3932c3198765cb2b697e2694e72f8a0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -134,7 +134,7 @@
 <para>If this class contains a valid pointer it will return true, if it contains a NULL pointer it will return false. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/object.h" line="619"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/object.h" line="619"/>
       </memberdef>
       <memberdef kind="function" id="classwx_object_data_ptr_3_01_t_01_4_1ab1a30a619c31e22da03849c77375e487" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>T &amp;</type>
@@ -147,7 +147,7 @@
 <para>If the internal pointer is NULL this method will cause an assert in debug mode. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/object.h" line="626"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/object.h" line="626"/>
       </memberdef>
       <memberdef kind="function" id="classwx_object_data_ptr_3_01_t_01_4_1a87fa62d355ac5afa9973572da68a8104" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>T *</type>
@@ -160,7 +160,7 @@
 <para>If this the internal pointer is NULL, this method will assert in debug mode. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/object.h" line="633"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/object.h" line="633"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -237,7 +237,7 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__rtti" kindref="compound">Runtime Type Information (RTTI)</ref>, <ref refid="group__group__class__smartpointers" kindref="compound">Smart Pointers</ref></para><para><simplesect kind="see"><para><ref refid="classwx_object" kindref="compound">wxObject</ref>, <ref refid="classwx_object_ref_data" kindref="compound">wxObjectRefData</ref>, <ref refid="overview_refcount" kindref="compound">Reference Counting</ref>, <ref refid="classwx_shared_ptr_3_01_t_01_4" kindref="compound">wxSharedPtr&lt;T&gt;</ref>, <ref refid="classwx_scoped_ptr_3_01_t_01_4" kindref="compound">wxScopedPtr&lt;T&gt;</ref>, <ref refid="classwx_weak_ref_3_01_t_01_4" kindref="compound">wxWeakRef&lt;T&gt;</ref> </para></simplesect>
 </para></sect1>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/object.h" line="579" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/object.h" bodystart="578" bodyend="642"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/object.h" line="579" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/object.h" bodystart="578" bodyend="642"/>
     <listofallmembers>
       <member refid="classwx_object_data_ptr_3_01_t_01_4_1a03d48ac006376dd4d2e2e8d7c8363ca7" prot="public" virt="non-virtual"><scope>wxObjectDataPtr&lt; T &gt;</scope><name>get</name></member>
       <member refid="classwx_object_data_ptr_3_01_t_01_4_1ad3932c3198765cb2b697e2694e72f8a0" prot="public" virt="non-virtual"><scope>wxObjectDataPtr&lt; T &gt;</scope><name>operator unspecified_bool_type</name></member>

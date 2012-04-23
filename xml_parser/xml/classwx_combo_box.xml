@@ -69,7 +69,7 @@
 <para>Derived classes should call or replace this function. See <ref refid="classwx_combo_box_1aac1f4d94c40a0a675dd5b2c72376057a" kindref="member">wxComboBox()</ref> for further details. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combobox.h" line="199"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/combobox.h" line="189"/>
       </memberdef>
       <memberdef kind="function" id="classwx_combo_box_1ac14230b50e82a84f0d3b53ef08fe1c77" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -122,7 +122,7 @@
 <para>Derived classes should call or replace this function. See <ref refid="classwx_combo_box_1aac1f4d94c40a0a675dd5b2c72376057a" kindref="member">wxComboBox()</ref> for further details. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combobox.h" line="207"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/combobox.h" line="197"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -137,7 +137,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combobox.h" line="89"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/combobox.h" line="89"/>
       </memberdef>
       <memberdef kind="function" id="classwx_combo_box_1a0d4fcc94af359eb1bf5420280991ad51" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -267,11 +267,11 @@
 <para>Window name.</para></parameterdescription>
 </parameteritem>
 </parameterlist>
-<bold>wxPython Note:</bold> The <ref refid="classwx_combo_box" kindref="compound">wxComboBox</ref> constructor in wxPython reduces the <emphasis>n</emphasis> and <emphasis>choices</emphasis> arguments are to a single argument, which is a list of strings.</para><para><bold>wxPerl Note:</bold> Not supported by wxPerl.</para><para><simplesect kind="see"><para><ref refid="classwx_combo_box_1aeed16aad621a88818dc7dc50af9e6f3f" kindref="member">Create()</ref>, <ref refid="classwx_validator" kindref="compound">wxValidator</ref> </para></simplesect>
+<bold>wxPerl Note:</bold> Not supported by wxPerl.</para><para><simplesect kind="see"><para><ref refid="classwx_combo_box_1aeed16aad621a88818dc7dc50af9e6f3f" kindref="member">Create()</ref>, <ref refid="classwx_validator" kindref="compound">wxValidator</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combobox.h" line="138"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/combobox.h" line="133"/>
       </memberdef>
       <memberdef kind="function" id="classwx_combo_box_1ade11ed7d2b64bd1f50cdb34f162e120f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -384,11 +384,11 @@
 <para>Window name.</para></parameterdescription>
 </parameteritem>
 </parameterlist>
-<bold>wxPython Note:</bold> The <ref refid="classwx_combo_box" kindref="compound">wxComboBox</ref> constructor in wxPython reduces the <emphasis>n</emphasis> and <emphasis>choices</emphasis> arguments are to a single argument, which is a list of strings.</para><para><bold>wxPerl Note:</bold> Use an array reference for the <emphasis>choices</emphasis> parameter.</para><para><simplesect kind="see"><para><ref refid="classwx_combo_box_1aeed16aad621a88818dc7dc50af9e6f3f" kindref="member">Create()</ref>, <ref refid="classwx_validator" kindref="compound">wxValidator</ref> </para></simplesect>
+<bold>wxPerl Note:</bold> Use an array reference for the <emphasis>choices</emphasis> parameter.</para><para><simplesect kind="see"><para><ref refid="classwx_combo_box_1aeed16aad621a88818dc7dc50af9e6f3f" kindref="member">Create()</ref>, <ref refid="classwx_validator" kindref="compound">wxValidator</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combobox.h" line="180"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/combobox.h" line="170"/>
       </memberdef>
       <memberdef kind="function" id="classwx_combo_box_1aee0b09601d790d5d6a6b36ed2524d135" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -401,7 +401,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combobox.h" line="185"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/combobox.h" line="175"/>
       </memberdef>
       <memberdef kind="function" id="classwx_combo_box_1a04bdd7a496190c0329dacac0c140b3a5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>int</type>
@@ -414,7 +414,7 @@
 <para>This function does the same things as <ref refid="classwx_choice_1abe793ea784ce361d07dda742e957ca89" kindref="member">wxChoice::GetCurrentSelection()</ref> and returns the item currently selected in the dropdown list if it&apos;s open or the same thing as <ref refid="classwx_item_container_immutable_1a18a7cb1a652772d5cb8adc52be1efea0" kindref="member">wxControlWithItems::GetSelection()</ref> otherwise. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combobox.h" line="217"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/combobox.h" line="207"/>
       </memberdef>
       <memberdef kind="function" id="classwx_combo_box_1a33052efce3da8a48cdda17c524997955" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>long</type>
@@ -429,7 +429,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combobox.h" line="225"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/combobox.h" line="215"/>
       </memberdef>
       <memberdef kind="function" id="classwx_combo_box_1a41789d188664ce4d05500b8452798c8f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -443,7 +443,7 @@
 <para>This method is documented here only to notice that it can&apos;t be used with this class because of the ambiguity between the methods with the same name inherited from <ref refid="classwx_item_container" kindref="compound">wxItemContainer</ref> and <ref refid="classwx_text_entry" kindref="compound">wxTextEntry</ref> base classes.</para><para>Because of this, any attempt to call it results in a compilation error and you should use either <ref refid="classwx_combo_box_1a8c5e9ee5cf37d5e2f43eb1f6311b4536" kindref="member">IsListEmpty()</ref> or <ref refid="classwx_combo_box_1a7ea3095ed99ef8b1b70e29e1a5f3eab1" kindref="member">IsTextEmpty()</ref> depending on what exactly do you want to test. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combobox.h" line="238"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/combobox.h" line="228"/>
       </memberdef>
       <memberdef kind="function" id="classwx_combo_box_1a8c5e9ee5cf37d5e2f43eb1f6311b4536" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -457,7 +457,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combobox.h" line="248"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/combobox.h" line="238"/>
       </memberdef>
       <memberdef kind="function" id="classwx_combo_box_1a7ea3095ed99ef8b1b70e29e1a5f3eab1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -471,7 +471,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combobox.h" line="258"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/combobox.h" line="248"/>
       </memberdef>
       <memberdef kind="function" id="classwx_combo_box_1a110d8b94ae2655ab28488b22843b47b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -490,10 +490,10 @@
         <briefdescription>
 <para>Same as <ref refid="classwx_text_entry_1af7e298bc2a34bd646328f53efab766aa" kindref="member">wxTextEntry::SetSelection()</ref>. </para>        </briefdescription>
         <detaileddescription>
-<para><bold>wxPython Note:</bold> This method is called SetMark() in wxPython, &quot;SetSelection&quot; is kept for <ref refid="classwx_item_container_immutable_1aea97d8ee51e7af5e06befd5f8c9d793b" kindref="member">wxControlWithItems::SetSelection()</ref>. </para>        </detaileddescription>
+        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combobox.h" line="268"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/combobox.h" line="253"/>
       </memberdef>
       <memberdef kind="function" id="classwx_combo_box_1aa784b34330fee87b27cbe64bf0ce41b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -520,7 +520,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combobox.h" line="283"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/combobox.h" line="268"/>
       </memberdef>
       <memberdef kind="function" id="classwx_combo_box_1a325d7d2afc9e1e17f7b5fb13f4186d0c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -534,7 +534,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combobox.h" line="296"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/combobox.h" line="281"/>
       </memberdef>
       <memberdef kind="function" id="classwx_combo_box_1acb37b8dfdeb57a514d87ae21a5e73853" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -548,7 +548,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combobox.h" line="309"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/combobox.h" line="294"/>
       </memberdef>
       <memberdef kind="function" id="classwx_combo_box_1ab669c3175df737ed1d6fb8d95c621f70" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>int</type>
@@ -565,7 +565,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combobox.h" line="311"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/combobox.h" line="296"/>
       </memberdef>
       <memberdef kind="function" id="classwx_combo_box_1a201248c40379b5ab8d8cca80cc98b764" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -602,7 +602,7 @@
 <bold>wxPerl Note:</bold> In wxPerl this method takes no parameters and returns a 2-element list (from, to). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combobox.h" line="312"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/combobox.h" line="297"/>
       </memberdef>
       <memberdef kind="function" id="classwx_combo_box_1a28ec184571590745a26a1be7fa2dfc72" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -625,11 +625,11 @@
 <para>The string position to select, starting from zero.</para></parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="see"><para><ref refid="classwx_combo_box_1a281df5e404fb6745657ca7faac96ff41" kindref="member">SetString()</ref>, <ref refid="classwx_item_container_immutable_1afa3800ff87f00a47211c3ce206e7bc39" kindref="member">SetStringSelection()</ref> </para></simplesect>
+<simplesect kind="see"><para><ref refid="classwx_combo_box_1a4c8d4b39403b6c0ee14f30b0c1dd96b7" kindref="member">SetString()</ref>, <ref refid="classwx_item_container_immutable_1afa3800ff87f00a47211c3ce206e7bc39" kindref="member">SetStringSelection()</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combobox.h" line="313"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/combobox.h" line="298"/>
       </memberdef>
       <memberdef kind="function" id="classwx_combo_box_1a089acdaa86fa91c0899259ecbed9dd46" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>int</type>
@@ -668,7 +668,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combobox.h" line="314"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/combobox.h" line="299"/>
       </memberdef>
       <memberdef kind="function" id="classwx_combo_box_1ae6bfbfa36e53edc58df54525db1b6e44" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -695,7 +695,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combobox.h" line="315"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/combobox.h" line="300"/>
       </memberdef>
       <memberdef kind="function" id="classwx_combo_box_1aae0a8a3adfb51a5dd44cf03c0fd20d1c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -709,12 +709,12 @@
 <para>If there is no selection, the returned string is empty. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combobox.h" line="316"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/combobox.h" line="301"/>
       </memberdef>
-      <memberdef kind="function" id="classwx_combo_box_1a281df5e404fb6745657ca7faac96ff41" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+      <memberdef kind="function" id="classwx_combo_box_1a4c8d4b39403b6c0ee14f30b0c1dd96b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
         <definition>virtual void wxComboBox::SetString</definition>
-        <argsstring>(unsigned int n, const wxString &amp;s)</argsstring>
+        <argsstring>(unsigned int n, const wxString &amp;text)</argsstring>
         <name>SetString</name>
         <reimplements refid="classwx_item_container_immutable_1a1daf356c330bac2d7a93c5b3de8fbabf">SetString</reimplements>
         <param>
@@ -723,30 +723,15 @@
         </param>
         <param>
           <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
-          <declname>string</declname>
+          <declname>text</declname>
         </param>
         <briefdescription>
-<para>Sets the label for the given item. </para>        </briefdescription>
+<para>Changes the text of the specified combobox item. </para>        </briefdescription>
         <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>n</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>The zero-based item index. </para></parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>string</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>The label to set. </para></parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>        </detaileddescription>
+<para>Notice that if the item is the currently selected one, i.e. if its text is displayed in the text part of the combobox, then the text is also replaced with the new <emphasis>text</emphasis>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combobox.h" line="317"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/combobox.h" line="310"/>
       </memberdef>
       <memberdef kind="function" id="classwx_combo_box_1ad43c531eb94f1283a781dcb478de50dd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>unsigned int</type>
@@ -761,7 +746,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combobox.h" line="319"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/combobox.h" line="312"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -787,127 +772,127 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref> <htmlonly> &lt;br&gt;&lt;div&gt;&lt;span class=&apos;appearance&apos;&gt;Appearance:&lt;/span&gt;&lt;br&gt;&lt;table class=&apos;appearance&apos;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&apos;wxmsw/combobox.png&apos; alt=&apos;wxMSW appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxgtk/combobox.png&apos; alt=&apos;wxGTK appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxmac/combobox.png&apos; alt=&apos;wxMac appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;wxMSW appearance&lt;/td&gt;&lt;td&gt;wxGTK appearance&lt;/td&gt;&lt;td&gt;wxMac appearance&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt; </htmlonly></para><para><simplesect kind="see"><para><ref refid="classwx_list_box" kindref="compound">wxListBox</ref>, <ref refid="classwx_text_ctrl" kindref="compound">wxTextCtrl</ref>, <ref refid="classwx_choice" kindref="compound">wxChoice</ref>, <ref refid="classwx_command_event" kindref="compound">wxCommandEvent</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="4910">
+      <node id="5002">
         <label>wxItemContainer</label>
         <link refid="classwx_item_container"/>
-        <childnode refid="4911" relation="public-inheritance">
+        <childnode refid="5003" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4908">
+      <node id="5000">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="4913">
+      <node id="5005">
         <label>wxBitmapComboBox</label>
         <link refid="classwx_bitmap_combo_box"/>
-        <childnode refid="4904" relation="public-inheritance">
+        <childnode refid="4996" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4907">
+      <node id="4999">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="4908" relation="public-inheritance">
+        <childnode refid="5000" relation="public-inheritance">
         </childnode>
-        <childnode refid="4909" relation="public-inheritance">
+        <childnode refid="5001" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4909">
+      <node id="5001">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="4912">
+      <node id="5004">
         <label>wxTextEntry</label>
         <link refid="classwx_text_entry"/>
       </node>
-      <node id="4905">
+      <node id="4997">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="4906" relation="public-inheritance">
+        <childnode refid="4998" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4906">
+      <node id="4998">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="4907" relation="public-inheritance">
+        <childnode refid="4999" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4904">
+      <node id="4996">
         <label>wxComboBox</label>
         <link refid="classwx_combo_box"/>
-        <childnode refid="4905" relation="public-inheritance">
+        <childnode refid="4997" relation="public-inheritance">
         </childnode>
-        <childnode refid="4910" relation="public-inheritance">
+        <childnode refid="5002" relation="public-inheritance">
         </childnode>
-        <childnode refid="4912" relation="public-inheritance">
+        <childnode refid="5004" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4911">
+      <node id="5003">
         <label>wxItemContainerImmutable</label>
         <link refid="classwx_item_container_immutable"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="4921">
+      <node id="5013">
         <label>wxItemContainer</label>
         <link refid="classwx_item_container"/>
-        <childnode refid="4922" relation="public-inheritance">
+        <childnode refid="5014" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4918">
+      <node id="5010">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="4919" relation="usage">
+        <childnode refid="5011" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="4917">
+      <node id="5009">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="4918" relation="public-inheritance">
+        <childnode refid="5010" relation="public-inheritance">
         </childnode>
-        <childnode refid="4920" relation="public-inheritance">
+        <childnode refid="5012" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4920">
+      <node id="5012">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="4923">
+      <node id="5015">
         <label>wxTextEntry</label>
         <link refid="classwx_text_entry"/>
       </node>
-      <node id="4915">
+      <node id="5007">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="4916" relation="public-inheritance">
+        <childnode refid="5008" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4916">
+      <node id="5008">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="4917" relation="public-inheritance">
+        <childnode refid="5009" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4914">
+      <node id="5006">
         <label>wxComboBox</label>
         <link refid="classwx_combo_box"/>
-        <childnode refid="4915" relation="public-inheritance">
+        <childnode refid="5007" relation="public-inheritance">
         </childnode>
-        <childnode refid="4921" relation="public-inheritance">
+        <childnode refid="5013" relation="public-inheritance">
         </childnode>
-        <childnode refid="4923" relation="public-inheritance">
+        <childnode refid="5015" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4922">
+      <node id="5014">
         <label>wxItemContainerImmutable</label>
         <link refid="classwx_item_container_immutable"/>
       </node>
-      <node id="4919">
+      <node id="5011">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combobox.h" line="84" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combobox.h" bodystart="81" bodyend="320"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/combobox.h" line="84" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/combobox.h" bodystart="81" bodyend="313"/>
     <listofallmembers>
       <member refid="classwx_window_1a3afbd49b1ea2f8275e3600dcac102923" prot="public" virt="virtual"><scope>wxComboBox</scope><name>AcceptsFocus</name></member>
       <member refid="classwx_window_1a2370bdd3ab08e7ef3c7555c6aa8301b8" prot="public" virt="virtual"><scope>wxComboBox</scope><name>AcceptsFocusFromKeyboard</name></member>
@@ -1127,6 +1112,7 @@
       <member refid="classwx_item_container_1ad2bc86a398c44f6ab6d3d6f64d946c70" prot="public" virt="non-virtual"><scope>wxComboBox</scope><name>Insert</name></member>
       <member refid="classwx_window_1ae1b56ca87d8590ee5e576012229a380a" prot="public" virt="non-virtual"><scope>wxComboBox</scope><name>InvalidateBestSize</name></member>
       <member refid="classwx_window_1af918e6fe8565c2d5235973cc3de84a43" prot="public" virt="non-virtual"><scope>wxComboBox</scope><name>IsBeingDeleted</name></member>
+      <member refid="classwx_window_1a469f0881da248d37691440c9d4cc7200" prot="public" virt="non-virtual"><scope>wxComboBox</scope><name>IsDescendant</name></member>
       <member refid="classwx_window_1a9d1be1bbb625ebf87ad4ad47e49a0194" prot="public" virt="virtual"><scope>wxComboBox</scope><name>IsDoubleBuffered</name></member>
       <member refid="classwx_text_entry_1a2bb43512241850ba7cef54dee029fb86" prot="public" virt="virtual"><scope>wxComboBox</scope><name>IsEditable</name></member>
       <member refid="classwx_combo_box_1a41789d188664ce4d05500b8452798c8f" prot="public" virt="virtual"><scope>wxComboBox</scope><name>IsEmpty</name></member>
@@ -1146,13 +1132,13 @@
       <member refid="classwx_combo_box_1a7ea3095ed99ef8b1b70e29e1a5f3eab1" prot="public" virt="non-virtual"><scope>wxComboBox</scope><name>IsTextEmpty</name></member>
       <member refid="classwx_window_1a657ef8b6055eb06df894ac5e6ddfecf8" prot="public" virt="non-virtual"><scope>wxComboBox</scope><name>IsThisEnabled</name></member>
       <member refid="classwx_window_1a0002826ad05f2a5661b4c8995713f37f" prot="public" virt="virtual"><scope>wxComboBox</scope><name>IsTopLevel</name></member>
+      <member refid="classwx_window_1a7940d510c5bdc062a2b109a1022dd8c2" prot="public" virt="virtual"><scope>wxComboBox</scope><name>IsTransparentBackgroundSupported</name></member>
       <member refid="classwx_evt_handler_1a360fdeefcf53b62fb49fb828406bb8a6" prot="public" virt="non-virtual"><scope>wxComboBox</scope><name>IsUnlinked</name></member>
       <member refid="classwx_window_1a1b143c3e72bd0af533b76db4830a6113" prot="public" virt="virtual"><scope>wxComboBox</scope><name>Layout</name></member>
       <member refid="classwx_window_1ade808784f0e64d9985e2f279b5ca8c02" prot="public" virt="non-virtual"><scope>wxComboBox</scope><name>LineDown</name></member>
       <member refid="classwx_window_1afc0816a174ceee6d36d1995c6824a273" prot="public" virt="non-virtual"><scope>wxComboBox</scope><name>LineUp</name></member>
       <member refid="classwx_window_1a124944524f36b71385dad8fddaad8ded" prot="public" virt="virtual"><scope>wxComboBox</scope><name>Lower</name></member>
       <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxComboBox</scope><name>m_refData</name></member>
-      <member refid="classwx_window_1a192fc8b467845d093c16452db96c65c5" prot="public" virt="virtual"><scope>wxComboBox</scope><name>MakeModal</name></member>
       <member refid="classwx_window_1ab1cb98c8d25b9e6ff7b706b1446c3df7" prot="public" virt="non-virtual"><scope>wxComboBox</scope><name>Move</name></member>
       <member refid="classwx_window_1a22a22c1e23ca05776707e7999d8047fe" prot="public" virt="non-virtual"><scope>wxComboBox</scope><name>Move</name></member>
       <member refid="classwx_window_1a79e66079125e8420de269811bdb6f2b6" prot="public" virt="non-virtual"><scope>wxComboBox</scope><name>MoveAfterInTabOrder</name></member>
@@ -1278,7 +1264,7 @@
       <member refid="classwx_window_1ae813c640e1e2bc6014423247050846cf" prot="public" virt="virtual"><scope>wxComboBox</scope><name>SetSizeHints</name></member>
       <member refid="classwx_window_1abc95691b45e29a52c24aa9d33d46dec1" prot="public" virt="non-virtual"><scope>wxComboBox</scope><name>SetSizer</name></member>
       <member refid="classwx_window_1a29938af9828fd35da666536cdfb6b73c" prot="public" virt="non-virtual"><scope>wxComboBox</scope><name>SetSizerAndFit</name></member>
-      <member refid="classwx_combo_box_1a281df5e404fb6745657ca7faac96ff41" prot="public" virt="virtual"><scope>wxComboBox</scope><name>SetString</name></member>
+      <member refid="classwx_combo_box_1a4c8d4b39403b6c0ee14f30b0c1dd96b7" prot="public" virt="virtual"><scope>wxComboBox</scope><name>SetString</name></member>
       <member refid="classwx_item_container_immutable_1afa3800ff87f00a47211c3ce206e7bc39" prot="public" virt="non-virtual"><scope>wxComboBox</scope><name>SetStringSelection</name></member>
       <member refid="classwx_window_1a41dd19ed8809fd8ec662e2aa2a9579c3" prot="public" virt="virtual"><scope>wxComboBox</scope><name>SetThemeEnabled</name></member>
       <member refid="classwx_window_1a81a9fb74e3c6c7f4416e882f5e589b8c" prot="public" virt="non-virtual"><scope>wxComboBox</scope><name>SetToolTip</name></member>
@@ -1300,7 +1286,6 @@
       <member refid="classwx_window_1a88cc65e424a129d9b0057756cdb67ec9" prot="public" virt="virtual"><scope>wxComboBox</scope><name>TransferDataToWindow</name></member>
       <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxComboBox</scope><name>TryAfter</name></member>
       <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxComboBox</scope><name>TryBefore</name></member>
-      <member refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" virt="non-virtual"><scope>wxComboBox</scope><name>TryThis</name></member>
       <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxComboBox</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxComboBox</scope><name>Unbind</name></member>
       <member refid="classwx_text_entry_1ad3784d539a2554c6eec76c80aa6d97de" prot="public" virt="virtual"><scope>wxComboBox</scope><name>Undo</name></member>

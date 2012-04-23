@@ -23,7 +23,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scrolwin.h" line="156"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/scrolwin.h" line="156"/>
       </memberdef>
       <memberdef kind="function" id="classwx_scrolled_1ae68b98d2386b81f413e08cd5410401fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -109,7 +109,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scrolwin.h" line="184"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/scrolwin.h" line="184"/>
       </memberdef>
       <memberdef kind="function" id="classwx_scrolled_1ad57ab2754edf096046d87ecd67ad2a68" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -139,7 +139,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scrolwin.h" line="201"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/scrolwin.h" line="201"/>
       </memberdef>
       <memberdef kind="function" id="classwx_scrolled_1ac296b6676926ba2fe356c9a12d50579e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -169,7 +169,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scrolwin.h" line="217"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/scrolwin.h" line="217"/>
       </memberdef>
       <memberdef kind="function" id="classwx_scrolled_1a9f03bd3bcbb96c84f90c2482f58f075a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -212,7 +212,7 @@
 <para>Derived classes should call or replace this function. See <ref refid="classwx_scrolled_1a01d0ecb5daa59ebb7a0806f16b7ac267" kindref="member">wxScrolled::wxScrolled()</ref> for details. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scrolwin.h" line="228"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/scrolwin.h" line="228"/>
       </memberdef>
       <memberdef kind="function" id="classwx_scrolled_1a294b1585caef1c22f5ea1ac6a6787164" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -226,7 +226,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scrolwin.h" line="244"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/scrolwin.h" line="244"/>
       </memberdef>
       <memberdef kind="function" id="classwx_scrolled_1a96a2b41d3bcd07e28491de5f39f9c5cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -258,7 +258,7 @@
 </programlisting></para><para>Notice that the function sets the origin by moving it relatively to the current origin position, so you shouldn&apos;t change the origin before calling <ref refid="classwx_scrolled_1a96a2b41d3bcd07e28491de5f39f9c5cb" kindref="member">DoPrepareDC()</ref> or, if you do, reset it to (0, 0) later. If you call <ref refid="classwx_scrolled_1a96a2b41d3bcd07e28491de5f39f9c5cb" kindref="member">DoPrepareDC()</ref> immediately after device context creation, as in the example above, this problem doesn&apos;t arise, of course, so it is customary to do it like this. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scrolwin.h" line="283"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/scrolwin.h" line="283"/>
       </memberdef>
       <memberdef kind="function" id="classwx_scrolled_1ac5a023517721a5ad5b891527b437dd61" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -295,7 +295,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scrolwin.h" line="302"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/scrolwin.h" line="302"/>
       </memberdef>
       <memberdef kind="function" id="classwx_scrolled_1a8590337dc643a64437c56031cf5f2e71" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -334,7 +334,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scrolwin.h" line="328"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/scrolwin.h" line="328"/>
       </memberdef>
       <memberdef kind="function" id="classwx_scrolled_1a573b3bb11a2a90eae9c6b12bcca51dbf" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -371,7 +371,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scrolwin.h" line="347"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/scrolwin.h" line="347"/>
       </memberdef>
       <memberdef kind="function" id="classwx_scrolled_1ae693691d39e53291067f559ac7600604" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -409,7 +409,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scrolwin.h" line="373"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/scrolwin.h" line="373"/>
       </memberdef>
       <memberdef kind="function" id="classwx_scrolled_1a99e97c6179262456462765127c55d775" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_point" kindref="compound">wxPoint</ref></type>
@@ -422,7 +422,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scrolwin.h" line="379"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/scrolwin.h" line="379"/>
       </memberdef>
       <memberdef kind="function" id="classwx_scrolled_1aec388dc5ab515d1312b58963ef5647b1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -460,7 +460,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scrolwin.h" line="401"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/scrolwin.h" line="401"/>
       </memberdef>
       <memberdef kind="function" id="classwx_scrolled_1a0758df4420ce6992f07287242c66fc4c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -473,7 +473,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scrolwin.h" line="406"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/scrolwin.h" line="406"/>
       </memberdef>
       <memberdef kind="function" id="classwx_scrolled_1a52284d06a6160fb42b0899aedce2c880" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -490,7 +490,7 @@
 <para>Instead of overriding this function you may also just process the paint event in the derived class as usual, but then you will have to call <ref refid="classwx_scrolled_1a96a2b41d3bcd07e28491de5f39f9c5cb" kindref="member">DoPrepareDC()</ref> yourself. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scrolwin.h" line="417"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/scrolwin.h" line="417"/>
       </memberdef>
       <memberdef kind="function" id="classwx_scrolled_1ab33dbfe88be5ede4b04de4dcec4830f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -507,7 +507,7 @@
 <para>Notice that it is not called by the default paint event handle (<ref refid="classwx_scrolled_1a96a2b41d3bcd07e28491de5f39f9c5cb" kindref="member">DoPrepareDC()</ref> is), so overriding this method in your derived class is useless. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scrolwin.h" line="425"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/scrolwin.h" line="425"/>
       </memberdef>
       <memberdef kind="function" id="classwx_scrolled_1a601bcac37185a2d4a24164d065907f69" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -545,7 +545,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scrolwin.h" line="443"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/scrolwin.h" line="443"/>
       </memberdef>
       <memberdef kind="function" id="classwx_scrolled_1affb3c1be4945c27b589439a1d47fbbb8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -562,7 +562,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scrolwin.h" line="448"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/scrolwin.h" line="448"/>
       </memberdef>
       <memberdef kind="function" id="classwx_scrolled_1a76286e2efa55d0ba85d37106a44a9401" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -583,7 +583,7 @@
 <para>See the pixelsPerUnit parameter in <ref refid="classwx_scrolled_1af5d940f364bb5097f20fee4a8e1210bb" kindref="member">SetScrollbars()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scrolwin.h" line="454"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/scrolwin.h" line="454"/>
       </memberdef>
       <memberdef kind="function" id="classwx_scrolled_1af5d940f364bb5097f20fee4a8e1210bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -679,7 +679,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scrolwin.h" line="506"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/scrolwin.h" line="506"/>
       </memberdef>
       <memberdef kind="function" id="classwx_scrolled_1a117dc8edabb3e1250199eab089e4fa5b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -696,7 +696,7 @@
 <para>This method is useful when only a part of the window should be scrolled. A typical example is a control consisting of a fixed header and the scrollable contents window: the scrollbars are attached to the main window itself, hence it, and not the contents window must be derived from <ref refid="classwx_scrolled" kindref="compound">wxScrolled</ref>, but only the contents window scrolls when the scrollbars are used. To implement such setup, you need to call this method with the contents window as argument.</para><para>Notice that if this method is used, <ref refid="classwx_scrolled_1a81800886d1d5f094caeee683e707de12" kindref="member">GetSizeAvailableForScrollTarget()</ref> method must be overridden. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scrolwin.h" line="523"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/scrolwin.h" line="523"/>
       </memberdef>
       <memberdef kind="function" id="classwx_scrolled_1ae9a4680f58855a58235134c32ed742ad" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
@@ -709,7 +709,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scrolwin.h" line="524"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/scrolwin.h" line="524"/>
       </memberdef>
       <memberdef kind="function" id="classwx_scrolled_1aee90a87e1b3f7f0f70a89e085c0d9928" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -726,7 +726,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scrolwin.h" line="527"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/scrolwin.h" line="527"/>
       </memberdef>
       <memberdef kind="function" id="classwx_scrolled_1a753b645a99d21a25ba7db29e78015741" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_rect" kindref="compound">wxRect</ref></type>
@@ -739,7 +739,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scrolwin.h" line="528"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/scrolwin.h" line="528"/>
       </memberdef>
       <memberdef kind="function" id="classwx_scrolled_1a194f815525111860f7345a5d6af687d7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -756,7 +756,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scrolwin.h" line="530"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/scrolwin.h" line="530"/>
       </memberdef>
       <memberdef kind="function" id="classwx_scrolled_1aa160351f31a0080784a00023947a06f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -777,7 +777,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scrolwin.h" line="531"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/scrolwin.h" line="531"/>
       </memberdef>
       <memberdef kind="function" id="classwx_scrolled_1a9619063556af240c66202e0526d49cb3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -794,7 +794,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scrolwin.h" line="532"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/scrolwin.h" line="532"/>
       </memberdef>
       <memberdef kind="function" id="classwx_scrolled_1a5c8829d39d00ce53901a8b1a67d5d780" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -815,7 +815,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scrolwin.h" line="533"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/scrolwin.h" line="533"/>
       </memberdef>
       <memberdef kind="function" id="classwx_scrolled_1a787b355ef546a900ba9eff9aab7d4036" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -828,7 +828,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scrolwin.h" line="534"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/scrolwin.h" line="534"/>
       </memberdef>
       <memberdef kind="function" id="classwx_scrolled_1aa25601fb1795a6a38fe425b049366ae3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -841,7 +841,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scrolwin.h" line="535"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/scrolwin.h" line="535"/>
       </memberdef>
       <memberdef kind="function" id="classwx_scrolled_1a5b5e335677055e4107903f7d5dad042f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -854,7 +854,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scrolwin.h" line="537"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/scrolwin.h" line="537"/>
       </memberdef>
       <memberdef kind="function" id="classwx_scrolled_1a813ba4e0e51842fd08f0758b2690ef00" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -867,7 +867,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scrolwin.h" line="538"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/scrolwin.h" line="538"/>
       </memberdef>
       <memberdef kind="function" id="classwx_scrolled_1a33c3daf5feb84c357357012e1b0e7a0a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -880,7 +880,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scrolwin.h" line="539"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/scrolwin.h" line="539"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-func">
@@ -899,7 +899,7 @@
 <para>This method must be overridden if <ref refid="classwx_scrolled_1a117dc8edabb3e1250199eab089e4fa5b" kindref="member">SetTargetWindow()</ref> is used (it is never called otherwise). The implementation should decrease the <emphasis>size</emphasis> to account for the size of the non-scrollable parts of the main window and return only the size available for the scrollable window itself. E.g. in the example given in <ref refid="classwx_scrolled_1a117dc8edabb3e1250199eab089e4fa5b" kindref="member">SetTargetWindow()</ref> documentation the function would subtract the height of the header window from the vertical component of <emphasis>size</emphasis>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scrolwin.h" line="554"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/scrolwin.h" line="554"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -909,7 +909,7 @@
 <listitem><para><ref refid="group__group__class__miscwnd_1ga695bec5996cd4d5512d1a01cfdcf96a5" kindref="member">wxScrolledWindow</ref>, aka wxScrolled&lt;wxPanel&gt;, is equivalent to <ref refid="group__group__class__miscwnd_1ga695bec5996cd4d5512d1a01cfdcf96a5" kindref="member">wxScrolledWindow</ref> from earlier versions. Derived from <ref refid="classwx_panel" kindref="compound">wxPanel</ref>, it shares wxPanel&apos;s behaviour with regard to TAB traversal and focus handling. Use this if the scrolled window will have child controls.</para></listitem></itemizedlist>
 </para><para><itemizedlist>
 <listitem><para><ref refid="group__group__class__miscwnd_1ga6b205af0f8759231eab11f15f7d4a098" kindref="member">wxScrolledCanvas</ref>, aka wxScrolled&lt;wxWindow&gt;, derives from <ref refid="classwx_window" kindref="compound">wxWindow</ref> and so doesn&apos;t handle children specially. This is suitable e.g. for implementing scrollable controls such as tree or list controls.</para></listitem></itemizedlist>
-</para><para>Starting from version 2.4 of wxWidgets, there are several ways to use a <ref refid="group__group__class__miscwnd_1ga695bec5996cd4d5512d1a01cfdcf96a5" kindref="member">wxScrolledWindow</ref> (and now <ref refid="classwx_scrolled" kindref="compound">wxScrolled</ref>). In particular, there are three ways to set the size of the scrolling area:</para><para>One way is to set the scrollbars directly using a call to <ref refid="classwx_scrolled_1af5d940f364bb5097f20fee4a8e1210bb" kindref="member">SetScrollbars()</ref>. This is the way it used to be in any previous version of wxWidgets and it will be kept for backwards compatibility.</para><para>An additional method of manual control, which requires a little less computation of your own, is to set the total size of the scrolling area by calling either <ref refid="classwx_window_1a37f293b7904bc6668b86cccb0aea5669" kindref="member">wxWindow::SetVirtualSize()</ref>, or <ref refid="classwx_window_1a55aca401aab29d59f7cc53f89ba2e38d" kindref="member">wxWindow::FitInside()</ref>, and setting the scrolling increments for it by calling <ref refid="classwx_scrolled_1a76286e2efa55d0ba85d37106a44a9401" kindref="member">SetScrollRate()</ref>. Scrolling in some orientation is enabled by setting a non-zero increment for it.</para><para>The most automatic and newest way is to simply let sizers determine the scrolling area. This is now the default when you set an interior sizer into a <ref refid="classwx_scrolled" kindref="compound">wxScrolled</ref> with <ref refid="classwx_window_1abc95691b45e29a52c24aa9d33d46dec1" kindref="member">wxWindow::SetSizer()</ref>. The scrolling area will be set to the size requested by the sizer and the scrollbars will be assigned for each orientation according to the need for them and the scrolling increment set by <ref refid="classwx_scrolled_1a76286e2efa55d0ba85d37106a44a9401" kindref="member">SetScrollRate()</ref>. As above, scrolling is only enabled in orientations with a non-zero increment. You can influence the minimum size of the scrolled area controlled by a sizer by calling wxWindow::SetVirtualSizeHints(). (Calling <ref refid="classwx_scrolled_1af5d940f364bb5097f20fee4a8e1210bb" kindref="member">SetScrollbars()</ref> has analogous effects in wxWidgets 2.4 -- in later versions it may not continue to override the sizer.)</para><para>Note that if maximum size hints are still supported by wxWindow::SetVirtualSizeHints(), use them at your own dire risk. They may or may not have been removed for 2.4, but it really only makes sense to set minimum size hints here. We should probably replace wxWindow::SetVirtualSizeHints() with wxWindow::SetMinVirtualSize() or similar and remove it entirely in future.</para><para><xrefsect id="todo_1_todo000054"><xreftitle>Todo</xreftitle><xrefdescription><para>review docs for this class replacing SetVirtualSizeHints() with SetMinClientSize().</para></xrefdescription></xrefsect></para><para>As with all windows, an application can draw onto a <ref refid="classwx_scrolled" kindref="compound">wxScrolled</ref> using a <ref refid="overview_dc" kindref="compound">device context</ref>.</para><para>You have the option of handling the OnPaint handler or overriding the <ref refid="classwx_scrolled_1a52284d06a6160fb42b0899aedce2c880" kindref="member">wxScrolled::OnDraw()</ref> function, which is passed a pre-scrolled device context (prepared by <ref refid="classwx_scrolled_1a96a2b41d3bcd07e28491de5f39f9c5cb" kindref="member">wxScrolled::DoPrepareDC()</ref>).</para><para>If you don&apos;t wish to calculate your own scrolling, you must call <ref refid="classwx_scrolled_1a96a2b41d3bcd07e28491de5f39f9c5cb" kindref="member">DoPrepareDC()</ref> when not drawing from within <ref refid="classwx_scrolled_1a52284d06a6160fb42b0899aedce2c880" kindref="member">OnDraw()</ref>, to set the device origin for the device context according to the current scroll position.</para><para>A <ref refid="classwx_scrolled" kindref="compound">wxScrolled</ref> will normally scroll itself and therefore its child windows as well. It might however be desired to scroll a different window than itself: e.g. when designing a spreadsheet, you will normally only have to scroll the (usually white) cell area, whereas the (usually grey) label area will scroll very differently. For this special purpose, you can call <ref refid="classwx_scrolled_1a117dc8edabb3e1250199eab089e4fa5b" kindref="member">SetTargetWindow()</ref> which means that pressing the scrollbars will scroll a different window.</para><para>Note that the underlying system knows nothing about scrolling coordinates, so that all system functions (mouse events, expose events, refresh calls etc) as well as the position of subwindows are relative to the &quot;physical&quot; origin of the scrolled window. If the user insert a child window at position (10,10) and scrolls the window down 100 pixels (moving the child window out of the visible area), the child window will report a position of (10,-90).</para><para><heading level="2">Styles</heading>
+</para><para>Starting from version 2.4 of wxWidgets, there are several ways to use a <ref refid="group__group__class__miscwnd_1ga695bec5996cd4d5512d1a01cfdcf96a5" kindref="member">wxScrolledWindow</ref> (and now <ref refid="classwx_scrolled" kindref="compound">wxScrolled</ref>). In particular, there are three ways to set the size of the scrolling area:</para><para>One way is to set the scrollbars directly using a call to <ref refid="classwx_scrolled_1af5d940f364bb5097f20fee4a8e1210bb" kindref="member">SetScrollbars()</ref>. This is the way it used to be in any previous version of wxWidgets and it will be kept for backwards compatibility.</para><para>An additional method of manual control, which requires a little less computation of your own, is to set the total size of the scrolling area by calling either <ref refid="classwx_window_1a37f293b7904bc6668b86cccb0aea5669" kindref="member">wxWindow::SetVirtualSize()</ref>, or <ref refid="classwx_window_1a55aca401aab29d59f7cc53f89ba2e38d" kindref="member">wxWindow::FitInside()</ref>, and setting the scrolling increments for it by calling <ref refid="classwx_scrolled_1a76286e2efa55d0ba85d37106a44a9401" kindref="member">SetScrollRate()</ref>. Scrolling in some orientation is enabled by setting a non-zero increment for it.</para><para>The most automatic and newest way is to simply let sizers determine the scrolling area. This is now the default when you set an interior sizer into a <ref refid="classwx_scrolled" kindref="compound">wxScrolled</ref> with <ref refid="classwx_window_1abc95691b45e29a52c24aa9d33d46dec1" kindref="member">wxWindow::SetSizer()</ref>. The scrolling area will be set to the size requested by the sizer and the scrollbars will be assigned for each orientation according to the need for them and the scrolling increment set by <ref refid="classwx_scrolled_1a76286e2efa55d0ba85d37106a44a9401" kindref="member">SetScrollRate()</ref>. As above, scrolling is only enabled in orientations with a non-zero increment. You can influence the minimum size of the scrolled area controlled by a sizer by calling wxWindow::SetVirtualSizeHints(). (Calling <ref refid="classwx_scrolled_1af5d940f364bb5097f20fee4a8e1210bb" kindref="member">SetScrollbars()</ref> has analogous effects in wxWidgets 2.4 -- in later versions it may not continue to override the sizer.)</para><para>Note that if maximum size hints are still supported by wxWindow::SetVirtualSizeHints(), use them at your own dire risk. They may or may not have been removed for 2.4, but it really only makes sense to set minimum size hints here. We should probably replace wxWindow::SetVirtualSizeHints() with wxWindow::SetMinVirtualSize() or similar and remove it entirely in future.</para><para><xrefsect id="todo_1_todo000053"><xreftitle>Todo</xreftitle><xrefdescription><para>review docs for this class replacing SetVirtualSizeHints() with SetMinClientSize().</para></xrefdescription></xrefsect></para><para>As with all windows, an application can draw onto a <ref refid="classwx_scrolled" kindref="compound">wxScrolled</ref> using a <ref refid="overview_dc" kindref="compound">device context</ref>.</para><para>You have the option of handling the OnPaint handler or overriding the <ref refid="classwx_scrolled_1a52284d06a6160fb42b0899aedce2c880" kindref="member">wxScrolled::OnDraw()</ref> function, which is passed a pre-scrolled device context (prepared by <ref refid="classwx_scrolled_1a96a2b41d3bcd07e28491de5f39f9c5cb" kindref="member">wxScrolled::DoPrepareDC()</ref>).</para><para>If you don&apos;t wish to calculate your own scrolling, you must call <ref refid="classwx_scrolled_1a96a2b41d3bcd07e28491de5f39f9c5cb" kindref="member">DoPrepareDC()</ref> when not drawing from within <ref refid="classwx_scrolled_1a52284d06a6160fb42b0899aedce2c880" kindref="member">OnDraw()</ref>, to set the device origin for the device context according to the current scroll position.</para><para>A <ref refid="classwx_scrolled" kindref="compound">wxScrolled</ref> will normally scroll itself and therefore its child windows as well. It might however be desired to scroll a different window than itself: e.g. when designing a spreadsheet, you will normally only have to scroll the (usually white) cell area, whereas the (usually grey) label area will scroll very differently. For this special purpose, you can call <ref refid="classwx_scrolled_1a117dc8edabb3e1250199eab089e4fa5b" kindref="member">SetTargetWindow()</ref> which means that pressing the scrollbars will scroll a different window.</para><para>Note that the underlying system knows nothing about scrolling coordinates, so that all system functions (mouse events, expose events, refresh calls etc) as well as the position of subwindows are relative to the &quot;physical&quot; origin of the scrolled window. If the user insert a child window at position (10,10) and scrolls the window down 100 pixels (moving the child window out of the visible area), the child window will report a position of (10,-90).</para><para><heading level="2">Styles</heading>
 </para><para>This class supports the following styles: <itemizedlist>
 <listitem><para>wxRETAINED: Uses a backing pixmap to speed refreshes. Motif only. </para></listitem>
 </itemizedlist>
@@ -932,30 +932,30 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__miscwnd" kindref="compound">Miscellaneous Windows</ref></para><para><simplesect kind="see"><para><ref refid="classwx_scroll_bar" kindref="compound">wxScrollBar</ref>, <ref refid="classwx_client_d_c" kindref="compound">wxClientDC</ref>, <ref refid="classwx_paint_d_c" kindref="compound">wxPaintDC</ref>, <ref refid="classwx_v_scrolled_window" kindref="compound">wxVScrolledWindow</ref>, <ref refid="classwx_h_scrolled_window" kindref="compound">wxHScrolledWindow</ref>, <ref refid="classwx_h_v_scrolled_window" kindref="compound">wxHVScrolledWindow</ref>, </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10110">
+      <node id="10293">
         <label>wxScrolled&lt; T &gt;</label>
         <link refid="classwx_scrolled"/>
       </node>
-      <node id="10111">
+      <node id="10294">
         <label>wxGrid&lt; wxPanel &gt;</label>
         <link refid="classwx_grid"/>
-        <childnode refid="10110" relation="public-inheritance">
+        <childnode refid="10293" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10113">
+      <node id="10296">
         <label>wxPreviewCanvas&lt; wxPanel &gt;</label>
         <link refid="classwx_preview_canvas"/>
-        <childnode refid="10110" relation="public-inheritance">
+        <childnode refid="10293" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10112">
+      <node id="10295">
         <label>wxHtmlWindow&lt; wxPanel &gt;</label>
         <link refid="classwx_html_window"/>
-        <childnode refid="10110" relation="public-inheritance">
+        <childnode refid="10293" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scrolwin.h" line="153" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scrolwin.h" bodystart="152" bodyend="555"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/scrolwin.h" line="153" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/scrolwin.h" bodystart="152" bodyend="555"/>
     <listofallmembers>
       <member refid="classwx_scrolled_1a5b5e335677055e4107903f7d5dad042f" prot="public" virt="virtual"><scope>wxScrolled</scope><name>AdjustScrollbars</name></member>
       <member refid="classwx_scrolled_1ad57ab2754edf096046d87ecd67ad2a68" prot="public" virt="non-virtual"><scope>wxScrolled</scope><name>CalcScrolledPosition</name></member>

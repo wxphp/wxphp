@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dde.h" line="295"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dde.h" line="295"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_d_e_server_1a4923f00672f291e66bf82c63469622a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -32,7 +32,7 @@
 <para>Under UNIX, the string must contain an integer id which is used as an Internet port number. false is returned if the call failed (for example, if the port number is already in use). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dde.h" line="303"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dde.h" line="303"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_d_e_server_1ae2ba3d248d3fa46a25b9fded5fbe095d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_connection_base" kindref="compound">wxConnectionBase</ref> *</type>
@@ -49,7 +49,7 @@
 <para>The application should derive a member to intercept this message and return a connection object of either the standard <ref refid="classwx_d_d_e_connection" kindref="compound">wxDDEConnection</ref> type, or of a user-derived type.</para><para>If the <emphasis>topic</emphasis> is &quot;STDIO&quot;, the application may wish to refuse the connection. Under UNIX, when a server is created the <ref refid="classwx_d_d_e_server_1ae2ba3d248d3fa46a25b9fded5fbe095d" kindref="member">OnAcceptConnection()</ref> message is always sent for standard input and output, but in the context of DDE messages it doesn&apos;t make a lot of sense. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dde.h" line="317"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dde.h" line="317"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -58,7 +58,7 @@
 <para>This DDE-based implementation is available on Windows only, but a platform-independent, socket-based version of this API is available using <ref refid="classwx_t_c_p_server" kindref="compound">wxTCPServer</ref>.</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ipc" kindref="compound">Interprocess Communication</ref> Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page_port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor> </para><para><simplesect kind="see"><para><ref refid="classwx_d_d_e_client" kindref="compound">wxDDEClient</ref>, <ref refid="classwx_d_d_e_connection" kindref="compound">wxDDEConnection</ref>, <ref refid="overview_ipc" kindref="compound">Interprocess Communication</ref> </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dde.h" line="290" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dde.h" bodystart="289" bodyend="318"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dde.h" line="290" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dde.h" bodystart="289" bodyend="318"/>
     <listofallmembers>
       <member refid="classwx_d_d_e_server_1a4923f00672f291e66bf82c63469622a4" prot="public" virt="non-virtual"><scope>wxDDEServer</scope><name>Create</name></member>
       <member refid="classwx_d_d_e_server_1ae2ba3d248d3fa46a25b9fded5fbe095d" prot="public" virt="virtual"><scope>wxDDEServer</scope><name>OnAcceptConnection</name></member>

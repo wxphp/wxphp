@@ -6,6 +6,44 @@
     <derivedcompoundref refid="classwx_calendar_event" prot="public" virt="non-virtual">wxCalendarEvent</derivedcompoundref>
     <includes local="no">wx/dateevt.h</includes>
       <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_date_event_1a54de582d97abba75950d2aa9b3ba84a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxDateEvent::wxDateEvent</definition>
+        <argsstring>()</argsstring>
+        <name>wxDateEvent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dateevt.h" line="22"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_date_event_1ae559b6b9413feaf4d12e9402ca43e4ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxDateEvent::wxDateEvent</definition>
+        <argsstring>(wxWindow *win, const wxDateTime &amp;dt, wxEventType type)</argsstring>
+        <name>wxDateEvent</name>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>win</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_date_time" kindref="compound">wxDateTime</ref> &amp;</type>
+          <declname>dt</declname>
+        </param>
+        <param>
+          <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dateevt.h" line="23"/>
+      </memberdef>
       <memberdef kind="function" id="classwx_date_event_1a2d6195169d930629a876b63db3a27249" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_date_time" kindref="compound">wxDateTime</ref> &amp;</type>
         <definition>const wxDateTime&amp; wxDateEvent::GetDate</definition>
@@ -17,7 +55,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dateevt.h" line="25"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dateevt.h" line="28"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_event_1a1ef1b62865b967e7b4c50f6e04658d92" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -34,7 +72,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dateevt.h" line="31"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dateevt.h" line="34"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -43,67 +81,67 @@
 <para>It also serves as a base class for <ref refid="classwx_calendar_event" kindref="compound">wxCalendarEvent</ref>.</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="5474">
+      <node id="5569">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="5472">
+      <node id="5567">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="5473" relation="public-inheritance">
+        <childnode refid="5568" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5471">
+      <node id="5566">
         <label>wxDateEvent</label>
         <link refid="classwx_date_event"/>
-        <childnode refid="5472" relation="public-inheritance">
+        <childnode refid="5567" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5475">
+      <node id="5570">
         <label>wxCalendarEvent</label>
         <link refid="classwx_calendar_event"/>
-        <childnode refid="5471" relation="public-inheritance">
+        <childnode refid="5566" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5473">
+      <node id="5568">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="5474" relation="public-inheritance">
+        <childnode refid="5569" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="5479">
+      <node id="5574">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="5480" relation="usage">
+        <childnode refid="5575" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="5477">
+      <node id="5572">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="5478" relation="public-inheritance">
+        <childnode refid="5573" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5476">
+      <node id="5571">
         <label>wxDateEvent</label>
         <link refid="classwx_date_event"/>
-        <childnode refid="5477" relation="public-inheritance">
+        <childnode refid="5572" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5478">
+      <node id="5573">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="5479" relation="public-inheritance">
+        <childnode refid="5574" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5480">
+      <node id="5575">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dateevt.h" line="20" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dateevt.h" bodystart="19" bodyend="32"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dateevt.h" line="20" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dateevt.h" bodystart="19" bodyend="35"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxDateEvent</scope><name>AllocExclusive</name></member>
       <member refid="classwx_event_1a26878097a702e8d0368da150125d4158" prot="public" virt="pure-virtual"><scope>wxDateEvent</scope><name>Clone</name></member>
@@ -152,6 +190,8 @@
       <member refid="classwx_object_1af51efc6b1ae632fc7f0cd7ebbce9fa36" prot="public" virt="non-virtual"><scope>wxDateEvent</scope><name>UnRef</name></member>
       <member refid="classwx_object_1a74b40e42d19a4b9e9bec0b57d62a5725" prot="public" virt="non-virtual"><scope>wxDateEvent</scope><name>UnShare</name></member>
       <member refid="classwx_command_event_1aad941347872cd71fedcfc765fae7b2f7" prot="public" virt="non-virtual"><scope>wxDateEvent</scope><name>wxCommandEvent</name></member>
+      <member refid="classwx_date_event_1a54de582d97abba75950d2aa9b3ba84a2" prot="public" virt="non-virtual"><scope>wxDateEvent</scope><name>wxDateEvent</name></member>
+      <member refid="classwx_date_event_1ae559b6b9413feaf4d12e9402ca43e4ca" prot="public" virt="non-virtual"><scope>wxDateEvent</scope><name>wxDateEvent</name></member>
       <member refid="classwx_event_1aaf2a5cf056d006859cea36689ba13d36" prot="public" virt="non-virtual"><scope>wxDateEvent</scope><name>wxEvent</name></member>
       <member refid="classwx_object_1acaa378363a28af421ab56ad7b46eadf0" prot="public" virt="non-virtual"><scope>wxDateEvent</scope><name>wxObject</name></member>
       <member refid="classwx_object_1a4721b4dc9b7aff0f30904ba2ea3954cf" prot="public" virt="non-virtual"><scope>wxDateEvent</scope><name>wxObject</name></member>

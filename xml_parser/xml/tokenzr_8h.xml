@@ -3,6 +3,19 @@
   <compounddef id="tokenzr_8h" kind="file">
     <compoundname>tokenzr.h</compoundname>
     <innerclass refid="classwx_string_tokenizer" prot="public">wxStringTokenizer</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="tokenzr_8h_1a58f42335052e241a3ee01fd735263922" prot="public" static="no">
+        <name>wxDEFAULT_DELIMITERS</name>
+        <initializer>&quot; \t\r\n&quot;</initializer>
+        <briefdescription>
+<para>Default <ref refid="classwx_string_tokenizer" kindref="compound">wxStringTokenizer</ref> delimiters are the usual white space characters. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/tokenzr.h" line="63" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/tokenzr.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
       <sectiondef kind="enum">
       <memberdef kind="enum" id="tokenzr_8h_1a8203239377764e04822e52b33ee02f9f" prot="public" static="no">
         <name>wxStringTokenizerMode</name>
@@ -50,12 +63,12 @@
           </detaileddescription>
         </enumvalue>
         <briefdescription>
-<para>The behaviour of <ref refid="classwx_string_tokenizer" kindref="compound">wxStringTokenizer</ref> is governed by the <ref refid="classwx_string_tokenizer_1a59aa6a8673730d97a235c9a77ee93866" kindref="member">wxStringTokenizer::wxStringTokenizer()</ref> or <ref refid="classwx_string_tokenizer_1a689e26b3056baa9e88359d08deb513d8" kindref="member">wxStringTokenizer::SetString()</ref> with the parameter <emphasis>mode</emphasis>, which may be one of the following: </para>        </briefdescription>
+<para>The behaviour of <ref refid="classwx_string_tokenizer" kindref="compound">wxStringTokenizer</ref> is governed by the <ref refid="classwx_string_tokenizer_1a59aa6a8673730d97a235c9a77ee93866" kindref="member">wxStringTokenizer::wxStringTokenizer()</ref> or <ref refid="classwx_string_tokenizer_1acac18438a15dbe799d659f13a10187e9" kindref="member">wxStringTokenizer::SetString()</ref> with the parameter <emphasis>mode</emphasis>, which may be one of the following: </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tokenzr.h" line="15" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tokenzr.h" bodystart="14" bodyend="60"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/tokenzr.h" line="15" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/tokenzr.h" bodystart="14" bodyend="60"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -85,13 +98,13 @@
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/string.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tokenzr.h" line="180"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/tokenzr.h" line="183"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tokenzr.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/tokenzr.h"/>
   </compounddef>
 </doxygen>

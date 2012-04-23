@@ -24,7 +24,7 @@
 </programlisting> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopeguard.h" line="38"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/scopeguard.h" line="38"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -32,7 +32,7 @@
     <detaileddescription>
 <para>The objects of this class must be constructed using <ref refid="group__group__funcmacro__misc_1ga24290da88c13d315efe19c0ed480477f" kindref="member">wxMakeGuard()</ref> function.</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/>None; this class implementation is entirely header-based.</para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__misc" kindref="compound">Miscellaneous</ref> </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopeguard.h" line="20" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopeguard.h" bodystart="19" bodyend="39"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/scopeguard.h" line="20" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/scopeguard.h" bodystart="19" bodyend="39"/>
     <listofallmembers>
       <member refid="classwx_scope_guard_1a6fe50c80f2e4216db32703b420554ae9" prot="public" virt="non-virtual"><scope>wxScopeGuard</scope><name>Dismiss</name></member>
     </listofallmembers>

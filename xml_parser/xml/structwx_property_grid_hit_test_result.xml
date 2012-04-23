@@ -15,7 +15,7 @@
 <para>-1 for margin. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridpagestate.h" line="23" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridpagestate.h" bodystart="23" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridpagestate.h" line="23" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridpagestate.h" bodystart="23" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structwx_property_grid_hit_test_result_1ab6cb71dfb4b0ef32912f16396839805c" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -28,7 +28,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridpagestate.h" line="26" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridpagestate.h" bodystart="26" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridpagestate.h" line="26" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridpagestate.h" bodystart="26" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structwx_property_grid_hit_test_result_1a0af9a90447b44de781a62d949e779db8" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -41,7 +41,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridpagestate.h" line="29" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridpagestate.h" bodystart="29" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridpagestate.h" line="29" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridpagestate.h" bodystart="29" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-attrib">
@@ -56,7 +56,7 @@
 <para>NULL if empty space below properties was hit </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridpagestate.h" line="33" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridpagestate.h" bodystart="33" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridpagestate.h" line="33" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridpagestate.h" bodystart="33" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -71,7 +71,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridpagestate.h" line="20" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridpagestate.h" bodystart="20" bodyend="20"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridpagestate.h" line="20" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridpagestate.h" bodystart="20" bodyend="20"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -82,32 +82,32 @@
 <para>A return value from <ref refid="classwx_property_grid_1af20ff1e30938a1e0424ade4bf3905989" kindref="member">wxPropertyGrid::HitTest()</ref>, contains all you need to know about an arbitrary location on the grid. </para></sect1>
     </detaileddescription>
     <collaborationgraph>
-      <node id="8893">
+      <node id="9076">
         <label>wxPGProperty</label>
         <link refid="classwx_p_g_property"/>
-        <childnode refid="8894" relation="public-inheritance">
+        <childnode refid="9077" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8892">
+      <node id="9075">
         <label>wxPropertyGridHitTestResult</label>
         <link refid="structwx_property_grid_hit_test_result"/>
-        <childnode refid="8893" relation="usage">
+        <childnode refid="9076" relation="usage">
           <edgelabel>property</edgelabel>
         </childnode>
       </node>
-      <node id="8894">
+      <node id="9077">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="8895" relation="usage">
+        <childnode refid="9078" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="8895">
+      <node id="9078">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridpagestate.h" line="17" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridpagestate.h" bodystart="16" bodyend="34"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridpagestate.h" line="17" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridpagestate.h" bodystart="16" bodyend="34"/>
     <listofallmembers>
       <member refid="structwx_property_grid_hit_test_result_1af23e29d4671648cf7f9a0c4b0c1e1934" prot="public" virt="non-virtual"><scope>wxPropertyGridHitTestResult</scope><name>column</name></member>
       <member refid="structwx_property_grid_hit_test_result_1ac6ec9537349608f8aa7f6b9b346dd5af" prot="public" virt="non-virtual"><scope>wxPropertyGridHitTestResult</scope><name>GetProperty</name></member>

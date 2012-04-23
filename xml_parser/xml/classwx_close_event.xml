@@ -26,7 +26,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3820"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="3823"/>
       </memberdef>
       <memberdef kind="function" id="classwx_close_event_1adaa0548df45e05e8487cc5664ac352cf" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -39,7 +39,7 @@
 <para>Vetoing a window close event is not possible if the calling code wishes to force the application to exit, and so this function must be called to check this. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3827"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="3830"/>
       </memberdef>
       <memberdef kind="function" id="classwx_close_event_1a59874843bd46af10ea3e8abcecf71e26" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -52,7 +52,7 @@
 <para>This method can only be called for end session and query end session events, it doesn&apos;t make sense for close window event. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3834"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="3837"/>
       </memberdef>
       <memberdef kind="function" id="classwx_close_event_1a25150c209983febf02b80a6f93dfc6ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -69,7 +69,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3839"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="3842"/>
       </memberdef>
       <memberdef kind="function" id="classwx_close_event_1af8059e703d942f5962a0b2f6dedc3bd6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -86,7 +86,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3844"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="3847"/>
       </memberdef>
       <memberdef kind="function" id="classwx_close_event_1a0ec337c77613d5d8407831cd64e16417" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -104,7 +104,7 @@
 <para>You can only veto a shutdown if <ref refid="classwx_close_event_1adaa0548df45e05e8487cc5664ac352cf" kindref="member">CanVeto()</ref> returns true. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3852"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="3855"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -114,7 +114,7 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>event.<ref refid="classwx_close_event_1adaa0548df45e05e8487cc5664ac352cf" kindref="member" tooltip="Returns true if you can veto a system shutdown or a window close event.">CanVeto</ref>()<sp/>&amp;&amp;<sp/>m_bFileNotSaved<sp/>)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="group__group__funcmacro__dialog_1gaf8a6b7e1e34eae82d3d75e3721298b26" kindref="member" tooltip="Show a general purpose message dialog.">wxMessageBox</ref>(</highlight><highlight class="stringliteral">&quot;The<sp/>file<sp/>has<sp/>not<sp/>been<sp/>saved...<sp/>continue<sp/>closing?&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="group__group__funcmacro__dialog_1ga193c64ed4802e379799cdb42de252647" kindref="member" tooltip="Show a general purpose message dialog.">wxMessageBox</ref>(</highlight><highlight class="stringliteral">&quot;The<sp/>file<sp/>has<sp/>not<sp/>been<sp/>saved...<sp/>continue<sp/>closing?&quot;</highlight><highlight class="normal">,</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Please<sp/>confirm&quot;</highlight><highlight class="normal">,</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="defs_8h_1a01d0612a961327f6038a91e5f94fa44a" kindref="member">wxICON_QUESTION</ref><sp/>|<sp/><ref refid="defs_8h_1a5ba00a09cea0417a2ef7c4a4c2b0012c" kindref="member">wxYES_NO</ref>)<sp/>!=<sp/><ref refid="defs_8h_1ab38ccd9aa8aa47f9df32a75c96bb3000" kindref="member">wxYES</ref><sp/>)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
@@ -136,49 +136,49 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="classwx_window_1a3e44f4a494fc9ef4346c4fba70c8de0c" kindref="member">wxWindow::Close</ref>, <ref refid="overview_windowdeletion" kindref="compound">Window Deletion</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="4820">
+      <node id="4912">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="4818">
+      <node id="4910">
         <label>wxCloseEvent</label>
         <link refid="classwx_close_event"/>
-        <childnode refid="4819" relation="public-inheritance">
+        <childnode refid="4911" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4819">
+      <node id="4911">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="4820" relation="public-inheritance">
+        <childnode refid="4912" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="4823">
+      <node id="4915">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="4824" relation="usage">
+        <childnode refid="4916" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="4821">
+      <node id="4913">
         <label>wxCloseEvent</label>
         <link refid="classwx_close_event"/>
-        <childnode refid="4822" relation="public-inheritance">
+        <childnode refid="4914" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4822">
+      <node id="4914">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="4823" relation="public-inheritance">
+        <childnode refid="4915" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4824">
+      <node id="4916">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3815" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="3814" bodyend="3853"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="3818" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="3817" bodyend="3856"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxCloseEvent</scope><name>AllocExclusive</name></member>
       <member refid="classwx_close_event_1adaa0548df45e05e8487cc5664ac352cf" prot="public" virt="non-virtual"><scope>wxCloseEvent</scope><name>CanVeto</name></member>

@@ -97,7 +97,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xml/xml.h" line="86"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xml/xml.h" line="86"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_node_1a23e8c27c4636fafbb329721e2fc11674" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -157,7 +157,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xml/xml.h" line="103"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xml/xml.h" line="103"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_node_1a7848928197b7644ff4cbb0ba96b44642" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -174,7 +174,7 @@
 <para>Note that this does NOT copy siblings and parent pointer, i.e. <ref refid="classwx_xml_node_1aeaed87c25b408ba2dfb8b211bc4bf037" kindref="member">GetParent()</ref> and <ref refid="classwx_xml_node_1a957d5728f448a8f48a5158a2abd04b10" kindref="member">GetNext()</ref> will return NULL after using copy ctor and are never unmodified by <ref refid="classwx_xml_node_1a92abc6482d00265c86a74c93eefba78d" kindref="member">operator=()</ref>. On the other hand, it DOES copy children and attributes. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xml/xml.h" line="112"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xml/xml.h" line="112"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_node_1aa2a7fd7f10de9340308e06b19f011538" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -187,7 +187,7 @@
 <para>Deletes attached children and attributes. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xml/xml.h" line="117"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xml/xml.h" line="117"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_node_1a9a2012a18ff44037a6de74cb241e34e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -208,7 +208,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xml/xml.h" line="123"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xml/xml.h" line="123"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_node_1ac99f7e9aa7f2aafb416564fa4911c799" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -225,7 +225,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xml/xml.h" line="128"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xml/xml.h" line="128"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_node_1a06a09a31e1f7531f3b37f29b89fe5a10" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -244,7 +244,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xml/xml.h" line="142"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xml/xml.h" line="142"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_node_1aa8ef6092958403ecf760bd7285c19df7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -261,7 +261,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xml/xml.h" line="148"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xml/xml.h" line="148"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_node_1a17a0abf151a15be11a9bae1d7528d65c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -282,7 +282,7 @@
 <para>The value of that attribute is saved in value (which must not be NULL). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xml/xml.h" line="154"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xml/xml.h" line="154"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_node_1a163f3428f7f66a5265f222dfdb7abf04" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -304,7 +304,7 @@
 <para>If it does not exist, the <emphasis>defaultVal</emphasis> is returned. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xml/xml.h" line="161"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xml/xml.h" line="161"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_node_1acd58ae99c4fdefb73a6a7f1a16b39079" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_xml_attribute" kindref="compound">wxXmlAttribute</ref> *</type>
@@ -317,7 +317,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xml/xml.h" line="166"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xml/xml.h" line="166"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_node_1ad9bb1ba74e8f01cba6107a59ccc7273b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_xml_node" kindref="compound">wxXmlNode</ref> *</type>
@@ -330,7 +330,7 @@
 <para>To get a pointer to the second child of this node (if it does exist), use the <ref refid="classwx_xml_node_1a957d5728f448a8f48a5158a2abd04b10" kindref="member">GetNext()</ref> function on the returned value. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xml/xml.h" line="173"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xml/xml.h" line="173"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_node_1a630878872d56f8b9db55565bee57a891" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -343,7 +343,7 @@
 <para>Can be an empty string. Be aware that for nodes of type <computeroutput>wxXML_ELEMENT_NODE</computeroutput> (the most used node type) the content is an empty string. See <ref refid="classwx_xml_node_1a44831c2e36382a642aa88558d8a2d276" kindref="member">GetNodeContent()</ref> for more details. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xml/xml.h" line="180"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xml/xml.h" line="180"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_node_1a78f230fdf938dd57b26a2a1a94f8eb0f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -361,7 +361,7 @@
 <para>This function searches only the parents of this node until it finds <emphasis>grandparent</emphasis> or the NULL node (which is the parent of non-linked nodes or the parent of a wxXmlDocument&apos;s root element node). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xml/xml.h" line="189"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xml/xml.h" line="189"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_node_1a37ffcb95324f60fc562b6bc541ccc5fd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -374,7 +374,7 @@
 <para>The default is false.</para><para>You can improve saving efficiency considerably by setting this value. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xml/xml.h" line="196"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xml/xml.h" line="196"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_node_1a8ba522b400732fbfb41a60bce4ea34ae" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -387,7 +387,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xml/xml.h" line="201"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xml/xml.h" line="201"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_node_1a0698933e2fdd3156d4c0c041327ba730" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -400,7 +400,7 @@
 <para>Can be an empty string (e.g. for nodes of type <computeroutput>wxXML_TEXT_NODE</computeroutput> or <computeroutput>wxXML_CDATA_SECTION_NODE</computeroutput>). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xml/xml.h" line="208"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xml/xml.h" line="208"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_node_1a957d5728f448a8f48a5158a2abd04b10" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_xml_node" kindref="compound">wxXmlNode</ref> *</type>
@@ -413,7 +413,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xml/xml.h" line="214"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xml/xml.h" line="214"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_node_1a44831c2e36382a642aa88558d8a2d276" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -430,7 +430,7 @@
 </programlisting></para><para>An empty string is returned if the node has no children of type <computeroutput>wxXML_TEXT_NODE</computeroutput> or <computeroutput>wxXML_CDATA_SECTION_NODE</computeroutput>, or if the content of the first child of such types is empty. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xml/xml.h" line="238"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xml/xml.h" line="238"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_node_1aeaed87c25b408ba2dfb8b211bc4bf037" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_xml_node" kindref="compound">wxXmlNode</ref> *</type>
@@ -443,7 +443,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xml/xml.h" line="244"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xml/xml.h" line="244"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_node_1a46a55bf74bc68bb0f6cebcc50aeecb07" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xml_8h_1a8439c6a82632b0ef566fcadbcd9e7510" kindref="member">wxXmlNodeType</ref></type>
@@ -456,7 +456,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xml/xml.h" line="249"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xml/xml.h" line="249"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_node_1ae6db3f067e98c8eb98478a130c74b018" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -473,7 +473,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xml/xml.h" line="254"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xml/xml.h" line="254"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_node_1a0278086b6241fd16490c0090d983dd53" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -497,7 +497,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xml/xml.h" line="271"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xml/xml.h" line="271"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_node_1a7387dfd55a683f1c52362c08dafd1106" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -536,7 +536,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xml/xml.h" line="291"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xml/xml.h" line="291"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_node_1a56b92af7fd16a656010d16f41663b5d7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -549,7 +549,7 @@
 <para>Note that this function is locale-independent since the parsing of XML documents must always produce the exact same tree regardless of the locale it runs under. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xml/xml.h" line="301"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xml/xml.h" line="301"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_node_1a04af1a58610feb763603b67360645674" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -566,7 +566,7 @@
 <para>Returns true if the node was found and removed or false if the node could not be found. Note that the caller is responsible for deleting the removed node in order to avoid memory leaks. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xml/xml.h" line="311"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xml/xml.h" line="311"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_node_1a6f06d89fd5ee89a199131ae3f64c0e03" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -583,7 +583,7 @@
 <para>The caller is responsible for deleting any previously present attributes attached to this node. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xml/xml.h" line="319"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xml/xml.h" line="319"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_node_1ae34716fde958598ad4a96801098add50" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -600,7 +600,7 @@
 <para>The caller is responsible for deleting any previously present children node. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xml/xml.h" line="326"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xml/xml.h" line="326"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_node_1a498a7ab0a0909f2e1ec8ae4b5b8a17c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -617,7 +617,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xml/xml.h" line="331"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xml/xml.h" line="331"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_node_1a91e113b0061430f7ea87b4197f130759" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -634,7 +634,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xml/xml.h" line="336"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xml/xml.h" line="336"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_node_1aadb626778d184a459c3dd1992cb59785" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -651,7 +651,7 @@
 <para>The caller is responsible for deleting any previously present sibling node. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xml/xml.h" line="343"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xml/xml.h" line="343"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_node_1a673e755ce0b66802430bb087849ee467" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -668,7 +668,7 @@
 <para>The default is false.</para><para>You can improve saving efficiency considerably by setting this value. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xml/xml.h" line="350"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xml/xml.h" line="350"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_node_1aae5220ccbc45caa31296ba165dde3fbd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -685,7 +685,7 @@
 <para>The caller is responsible for deleting any previously present parent node. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xml/xml.h" line="357"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xml/xml.h" line="357"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_node_1a691b60bdae2c594d403f4374ac672221" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -702,7 +702,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xml/xml.h" line="362"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xml/xml.h" line="362"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_node_1a92abc6482d00265c86a74c93eefba78d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_xml_node" kindref="compound">wxXmlNode</ref> &amp;</type>
@@ -719,7 +719,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xml/xml.h" line="367"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xml/xml.h" line="367"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -728,7 +728,7 @@
 <para>See <ref refid="classwx_xml_document" kindref="compound">wxXmlDocument</ref>.</para><para>Node has a name and may have content and attributes.</para><para>Most common node types are <computeroutput>wxXML_TEXT_NODE</computeroutput> (name and attributes are irrelevant) and <computeroutput>wxXML_ELEMENT_NODE</computeroutput>.</para><para>Example: in <computeroutput>&lt;title&gt;hi&lt;/title&gt;</computeroutput> there is an element with the name <computeroutput>title</computeroutput> and irrelevant content and one child of type <computeroutput>wxXML_TEXT_NODE</computeroutput> with <computeroutput>hi</computeroutput> as content.</para><para>The <computeroutput>wxXML_PI_NODE</computeroutput> type sets the name to the PI target and the contents to the instructions. Note that whilst the PI instructions are often in the form of pseudo-attributes these do not use the nodes attribute system. It is the users responsibility to code and decode the instruction text.</para><para>If <computeroutput>wxUSE_UNICODE</computeroutput> is 0, all strings are encoded in the encoding given to <ref refid="classwx_xml_document_1af0dfc897ac9fd69d67a0d8b5f00d23c2" kindref="member">wxXmlDocument::Load</ref> (default is UTF-8).</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxxml" kindref="member">wxXML</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__xml" kindref="compound">XML</ref></para><para><simplesect kind="see"><para><ref refid="classwx_xml_document" kindref="compound">wxXmlDocument</ref>, <ref refid="classwx_xml_attribute" kindref="compound">wxXmlAttribute</ref> </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xml/xml.h" line="57" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xml/xml.h" bodystart="56" bodyend="368"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xml/xml.h" line="57" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/xml/xml.h" bodystart="56" bodyend="368"/>
     <listofallmembers>
       <member refid="classwx_xml_node_1a9a2012a18ff44037a6de74cb241e34e2" prot="public" virt="virtual"><scope>wxXmlNode</scope><name>AddAttribute</name></member>
       <member refid="classwx_xml_node_1ac99f7e9aa7f2aafb416564fa4911c799" prot="public" virt="virtual"><scope>wxXmlNode</scope><name>AddAttribute</name></member>

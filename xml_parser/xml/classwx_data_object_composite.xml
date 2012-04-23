@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataobj.h" line="482"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataobj.h" line="467"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_object_composite_1a7406b1fbd05e00de815e03eab39d1ce3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -38,7 +38,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataobj.h" line="488"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataobj.h" line="473"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_object_composite_1a0b2565e0e231a32ce01493eecb55ccea" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_data_format" kindref="compound">wxDataFormat</ref></type>
@@ -51,7 +51,7 @@
 <para>This should be the format of the data object within the composite that received data from the clipboard or the DnD operation. You can use this method to find out what kind of data object was received. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataobj.h" line="496"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataobj.h" line="481"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_object_composite_1a79c0d3dd9703c3cf8971985cabded947" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_data_object_simple" kindref="compound">wxDataObjectSimple</ref> *</type>
@@ -74,7 +74,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataobj.h" line="509"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataobj.h" line="494"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -91,7 +91,7 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="interface_2wx_2dnd_8h_1adbd4b292582eebbc9a6ce3dee31c2afb" kindref="member" tooltip="Result returned from a wxDropSource::DoDragDrop() call.">wxDragResult</ref><sp/>MyDropTarget::OnData(<ref refid="defs_8h_1a11f6efc0e8d8d680f3ec8e82aa4f1770" kindref="member" tooltip="The type for screen and DC coordinates.">wxCoord</ref><sp/>x,<sp/><ref refid="defs_8h_1a11f6efc0e8d8d680f3ec8e82aa4f1770" kindref="member" tooltip="The type for screen and DC coordinates.">wxCoord</ref><sp/>y,</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="interface_2wx_2dnd_8h_1adbd4b292582eebbc9a6ce3dee31c2afb" kindref="member" tooltip="Result returned from a wxDropSource::DoDragDrop() call.">wxDragResult</ref><sp/>defaultDragResult)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="interface_2wx_2dnd_8h_1adbd4b292582eebbc9a6ce3dee31c2afb" kindref="member" tooltip="Result returned from a wxDropSource::DoDragDrop() call.">wxDragResult</ref><sp/>dragResult<sp/>=<sp/><ref refid="classwx_drop_target_1a5c27f66d59eb89ab7e014fd153ace093" kindref="member" tooltip="Called after OnDrop() returns true.">wxDropTarget::OnData</ref>(x,<sp/>y,<sp/>defaultDragResult);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="interface_2wx_2dnd_8h_1adbd4b292582eebbc9a6ce3dee31c2afb" kindref="member" tooltip="Result returned from a wxDropSource::DoDragDrop() call.">wxDragResult</ref><sp/>dragResult<sp/>=<sp/><ref refid="classwx_drop_target_1a375af32f4f5b00251212a75ee056d08d" kindref="member" tooltip="Called after OnDrop() returns true.">wxDropTarget::OnData</ref>(x,<sp/>y,<sp/>defaultDragResult);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>dragResult<sp/>==<sp/>defaultDragResult<sp/>)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_data_object_composite" kindref="compound" tooltip="wxDataObjectComposite is the simplest wxDataObject derivation which may be used to support multiple f...">wxDataObjectComposite</ref><sp/>*</highlight></codeline>
@@ -130,30 +130,30 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__dnd" kindref="compound">Clipboard and Drag &amp; Drop</ref></para><para><simplesect kind="see"><para><ref refid="overview_dnd" kindref="compound">Drag and Drop Overview</ref>, <ref refid="classwx_data_object" kindref="compound">wxDataObject</ref>, <ref refid="classwx_data_object_simple" kindref="compound">wxDataObjectSimple</ref>, <ref refid="classwx_file_data_object" kindref="compound">wxFileDataObject</ref>, <ref refid="classwx_text_data_object" kindref="compound">wxTextDataObject</ref>, <ref refid="classwx_bitmap_data_object" kindref="compound">wxBitmapDataObject</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="5252">
+      <node id="5347">
         <label>wxDataObjectComposite</label>
         <link refid="classwx_data_object_composite"/>
-        <childnode refid="5253" relation="public-inheritance">
+        <childnode refid="5348" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5253">
+      <node id="5348">
         <label>wxDataObject</label>
         <link refid="classwx_data_object"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="5254">
+      <node id="5349">
         <label>wxDataObjectComposite</label>
         <link refid="classwx_data_object_composite"/>
-        <childnode refid="5255" relation="public-inheritance">
+        <childnode refid="5350" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5255">
+      <node id="5350">
         <label>wxDataObject</label>
         <link refid="classwx_data_object"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataobj.h" line="477" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataobj.h" bodystart="476" bodyend="510"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataobj.h" line="462" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dataobj.h" bodystart="461" bodyend="495"/>
     <listofallmembers>
       <member refid="classwx_data_object_composite_1a7406b1fbd05e00de815e03eab39d1ce3" prot="public" virt="non-virtual"><scope>wxDataObjectComposite</scope><name>Add</name></member>
       <member refid="classwx_data_object_1a7623fd02a6bef5dba7c96ff0a1a692efa1f94b69e55238c5470f85e252b5fd8df" prot="public" virt="non-virtual"><scope>wxDataObjectComposite</scope><name>Both</name></member>

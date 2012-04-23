@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/buffer.h" line="235" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/buffer.h" bodystart="235" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/buffer.h" line="235" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/buffer.h" bodystart="235" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="classwx_char_buffer_1acfef8e0aef2bbc068eb7eefe7b72f988" prot="public" static="no">
         <type><ref refid="classwx_scoped_char_type_buffer" kindref="compound">wxScopedCharTypeBuffer</ref>&lt; char &gt;</type>
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/buffer.h" line="236" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/buffer.h" bodystart="236" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/buffer.h" line="236" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/buffer.h" bodystart="236" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -48,7 +48,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/buffer.h" line="238"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/buffer.h" line="238"/>
       </memberdef>
       <memberdef kind="function" id="classwx_char_buffer_1aeafbc7579ec6bd30caf820db94be9799" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -65,7 +65,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/buffer.h" line="239"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/buffer.h" line="239"/>
       </memberdef>
       <memberdef kind="function" id="classwx_char_buffer_1ae3da85b4fdd1894b4fd30ffd11a2b63e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -83,7 +83,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/buffer.h" line="240"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/buffer.h" line="240"/>
       </memberdef>
       <memberdef kind="function" id="classwx_char_buffer_1a252fb214cb71ae18c93cba7b63f9d9d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -100,7 +100,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/buffer.h" line="241"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/buffer.h" line="241"/>
       </memberdef>
       <memberdef kind="function" id="classwx_char_buffer_1a9fb72965acabe95c29c44d3500d2e154" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -117,7 +117,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/buffer.h" line="242"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/buffer.h" line="242"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -126,42 +126,42 @@
 <para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/>None; this class implementation is entirely header-based.</para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__data" kindref="compound">Data Structures</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="4693">
+      <node id="4783">
         <label>wxScopedCharTypeBuffer&lt; char &gt;</label>
         <link refid="classwx_scoped_char_type_buffer"/>
       </node>
-      <node id="4691">
+      <node id="4781">
         <label>wxCharBuffer</label>
         <link refid="classwx_char_buffer"/>
-        <childnode refid="4692" relation="public-inheritance">
+        <childnode refid="4782" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4692">
+      <node id="4782">
         <label>wxCharTypeBuffer&lt; char &gt;</label>
         <link refid="classwx_char_type_buffer"/>
-        <childnode refid="4693" relation="public-inheritance">
+        <childnode refid="4783" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="4696">
+      <node id="4786">
         <label>wxScopedCharTypeBuffer&lt; char &gt;</label>
         <link refid="classwx_scoped_char_type_buffer"/>
       </node>
-      <node id="4694">
+      <node id="4784">
         <label>wxCharBuffer</label>
         <link refid="classwx_char_buffer"/>
-        <childnode refid="4695" relation="public-inheritance">
+        <childnode refid="4785" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4695">
+      <node id="4785">
         <label>wxCharTypeBuffer&lt; char &gt;</label>
         <link refid="classwx_char_type_buffer"/>
-        <childnode refid="4696" relation="public-inheritance">
+        <childnode refid="4786" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/buffer.h" line="233" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/buffer.h" bodystart="232" bodyend="243"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/buffer.h" line="233" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/buffer.h" bodystart="232" bodyend="243"/>
     <listofallmembers>
       <member refid="classwx_scoped_char_type_buffer_1af80c4ff48b92f8e01b6167ff0468e213" prot="public" virt="non-virtual"><scope>wxCharBuffer</scope><name>CharType</name></member>
       <member refid="classwx_scoped_char_type_buffer_1a7ee8d22a9db07acc53630b74fda08581" prot="public" virt="non-virtual"><scope>wxCharBuffer</scope><name>CreateNonOwned</name></member>

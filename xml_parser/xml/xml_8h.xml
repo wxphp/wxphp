@@ -118,13 +118,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xml/xml.h" line="12" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xml/xml.h" bodystart="11" bodyend="27"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xml/xml.h" line="12" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/xml/xml.h" bodystart="11" bodyend="27"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xml/xml.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xml/xml.h"/>
   </compounddef>
 </doxygen>

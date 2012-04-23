@@ -71,4 +71,11 @@
 extern "C" {
 #include "php.h"
 #include "zend_API.h" //Declaration for zend_declare_class_constant_long
+#include "ext/standard/info.h" //Declaration of ini functions like php_info_print_table_start()
+
+//For backward compatibility with older versions of php that didnt
+//implemented this macro
+#ifndef PHP_FE_END
+	#define PHP_FE_END {NULL, NULL, NULL}
+#endif
 }

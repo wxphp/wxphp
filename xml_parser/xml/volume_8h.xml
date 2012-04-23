@@ -44,7 +44,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/volume.h" line="13" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/volume.h" bodystart="12" bodyend="25"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/volume.h" line="13" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/volume.h" bodystart="12" bodyend="25"/>
       </memberdef>
       <memberdef kind="enum" id="volume_8h_1aa4e140e1cf09e65894158d6df45cb129" prot="public" static="no">
         <name>wxFSVolumeKind</name>
@@ -103,7 +103,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/volume.h" line="31" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/volume.h" bodystart="30" bodyend="39"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/volume.h" line="31" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/volume.h" bodystart="30" bodyend="39"/>
       </memberdef>
       <memberdef kind="enum" id="volume_8h_1a25716a00b483e0fd09f520c53cca04c3" prot="public" static="no">
         <name>wxFSIconType</name>
@@ -149,13 +149,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/volume.h" line="45" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/volume.h" bodystart="44" bodyend="51"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/volume.h" line="45" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/volume.h" bodystart="44" bodyend="51"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/volume.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/volume.h"/>
   </compounddef>
 </doxygen>

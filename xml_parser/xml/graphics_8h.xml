@@ -36,7 +36,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" line="207" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" bodystart="206" bodyend="213"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/graphics.h" line="207" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/graphics.h" bodystart="206" bodyend="213"/>
       </memberdef>
       <memberdef kind="enum" id="graphics_8h_1aec2ef7cc43f841ab74155becb8185e18" prot="public" static="no">
         <name>wxInterpolationQuality</name>
@@ -81,7 +81,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" line="219" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" bodystart="218" bodyend="230"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/graphics.h" line="219" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/graphics.h" bodystart="218" bodyend="230"/>
       </memberdef>
       <memberdef kind="enum" id="graphics_8h_1af26ae47387aa983f2a975b3f85cb9668" prot="public" static="no">
         <name>wxCompositionMode</name>
@@ -191,7 +191,7 @@
 <para>The description give a short equation on how the values of a resulting pixel are calculated. <emphasis>R</emphasis> = Result, <emphasis>S</emphasis> = Source, <emphasis>D</emphasis> = Destination, colors premultiplied with alpha <emphasis>Ra</emphasis>, <emphasis>Sa</emphasis>, <emphasis>Da</emphasis> their alpha components </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" line="243" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" bodystart="242" bodyend="266"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/graphics.h" line="243" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/graphics.h" bodystart="242" bodyend="266"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="var">
@@ -206,7 +206,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" line="1301" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" bodystart="1301" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/graphics.h" line="1328" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/graphics.h" bodystart="1328" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="graphics_8h_1a746222fe384446b63e61e613a03e31a3" prot="public" static="no" mutable="no">
         <type>const <ref refid="classwx_graphics_brush" kindref="compound">wxGraphicsBrush</ref></type>
@@ -219,7 +219,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" line="1302" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" bodystart="1302" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/graphics.h" line="1329" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/graphics.h" bodystart="1329" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="graphics_8h_1ac5ae5f0d89ce2102d6ab4a06f2a09a28" prot="public" static="no" mutable="no">
         <type>const <ref refid="classwx_graphics_font" kindref="compound">wxGraphicsFont</ref></type>
@@ -232,7 +232,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" line="1303" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" bodystart="1303" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/graphics.h" line="1330" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/graphics.h" bodystart="1330" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="graphics_8h_1a11e4bf3e4817ff334ea5ad33a0ea7143" prot="public" static="no" mutable="no">
         <type>const <ref refid="classwx_graphics_bitmap" kindref="compound">wxGraphicsBitmap</ref></type>
@@ -245,7 +245,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" line="1304" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" bodystart="1304" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/graphics.h" line="1331" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/graphics.h" bodystart="1331" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="graphics_8h_1a07954c042dc231f9f0edbfa558a7d2cb" prot="public" static="no" mutable="no">
         <type>const <ref refid="classwx_graphics_matrix" kindref="compound">wxGraphicsMatrix</ref></type>
@@ -258,7 +258,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" line="1305" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" bodystart="1305" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/graphics.h" line="1332" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/graphics.h" bodystart="1332" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="graphics_8h_1a5e61a130fe29633d1a7c1a7f60043d17" prot="public" static="no" mutable="no">
         <type>const <ref refid="classwx_graphics_path" kindref="compound">wxGraphicsPath</ref></type>
@@ -271,13 +271,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" line="1306" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" bodystart="1306" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/graphics.h" line="1333" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/graphics.h" bodystart="1333" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/graphics.h"/>
   </compounddef>
 </doxygen>

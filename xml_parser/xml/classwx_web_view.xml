@@ -18,7 +18,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="401"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/webview.h" line="400"/>
       </memberdef>
       <memberdef kind="function" id="classwx_web_view_1ab6941bf1f9ff799ad60e123b7eb495db" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type>bool</type>
@@ -32,7 +32,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="408"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/webview.h" line="407"/>
       </memberdef>
       <memberdef kind="function" id="classwx_web_view_1a5d563c6d0fbbcde82f9804029da59d71" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type>bool</type>
@@ -46,7 +46,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="415"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/webview.h" line="414"/>
       </memberdef>
       <memberdef kind="function" id="classwx_web_view_1a3924aebd33600323bec8f648e5e2e7aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -59,7 +59,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="420"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/webview.h" line="419"/>
       </memberdef>
       <memberdef kind="function" id="classwx_web_view_1a83fb6507003499b156c8093f037c9bea" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -72,7 +72,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="425"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/webview.h" line="424"/>
       </memberdef>
       <memberdef kind="function" id="classwx_web_view_1a01ab952b877b90dda60aa3866348f14b" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -85,7 +85,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="430"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/webview.h" line="429"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -101,7 +101,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="440"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/webview.h" line="439"/>
       </memberdef>
       <memberdef kind="function" id="classwx_web_view_1ad87a02f0945a52907b32f75163bd842a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type>bool</type>
@@ -114,7 +114,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="446"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/webview.h" line="445"/>
       </memberdef>
       <memberdef kind="function" id="classwx_web_view_1aed31910ada73c6fa569e257592649703" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -127,7 +127,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="451"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/webview.h" line="450"/>
       </memberdef>
       <memberdef kind="function" id="classwx_web_view_1ae8c31ef747e292b6ba9f685e72d320fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -145,7 +145,7 @@
 <para>This will also clear the history. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="456"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/webview.h" line="455"/>
       </memberdef>
       <memberdef kind="function" id="classwx_web_view_1a0987d9975db2ef609be2e4eea6a77856" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>wxVector&lt; wxSharedPtr&lt; <ref refid="classwx_web_view_history_item" kindref="compound">wxWebViewHistoryItem</ref> &gt; &gt;</type>
@@ -158,7 +158,7 @@
 <para>The first item in the vector is the first page that was loaded by the control. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="462"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/webview.h" line="461"/>
       </memberdef>
       <memberdef kind="function" id="classwx_web_view_1a5083250ca6ee427c53d0cd8f3be9bb72" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>wxVector&lt; wxSharedPtr&lt; <ref refid="classwx_web_view_history_item" kindref="compound">wxWebViewHistoryItem</ref> &gt; &gt;</type>
@@ -171,7 +171,7 @@
 <para>The first item in the vector is the next item in the history with respect to the curently loaded page. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="469"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/webview.h" line="468"/>
       </memberdef>
       <memberdef kind="function" id="classwx_web_view_1ad50ae9ee51db5cce11a0e4ac47f636f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -184,7 +184,7 @@
 <para>Only valid if <ref refid="classwx_web_view_1aa8854bf3427e3d3d302b69f2c7277f0b" kindref="member">CanGoBack()</ref> returns true. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="475"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/webview.h" line="474"/>
       </memberdef>
       <memberdef kind="function" id="classwx_web_view_1ad2b57279558b0556104b9f32a1833015" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -197,7 +197,7 @@
 <para>Only valid if <ref refid="classwx_web_view_1ad87a02f0945a52907b32f75163bd842a" kindref="member">CanGoForward()</ref> returns true. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="481"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/webview.h" line="480"/>
       </memberdef>
       <memberdef kind="function" id="classwx_web_view_1a35abeaa940f2c4dc9bffa87d66ab85d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -214,7 +214,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="486"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/webview.h" line="485"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -230,7 +230,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="495"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/webview.h" line="494"/>
       </memberdef>
       <memberdef kind="function" id="classwx_web_view_1a215beec5ac3716980adcc275d999df5c" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -243,7 +243,7 @@
 <para>Note that for <computeroutput>wxWEB_VIEW_BACKEND_WEBKIT</computeroutput> the selection must be editable, either through SetEditable or the correct HTML attribute. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="502"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/webview.h" line="501"/>
       </memberdef>
       <memberdef kind="function" id="classwx_web_view_1a4fcce1e680a0ca069363f84beb0dd5af" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -256,7 +256,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="507"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/webview.h" line="506"/>
       </memberdef>
       <memberdef kind="function" id="classwx_web_view_1a7251381e31eebb424fdab515446930e1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -269,7 +269,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="512"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/webview.h" line="511"/>
       </memberdef>
       <memberdef kind="function" id="classwx_web_view_1a788178ec4c5de32941ca72cd6bfe62e3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type>bool</type>
@@ -282,7 +282,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="517"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/webview.h" line="516"/>
       </memberdef>
       <memberdef kind="function" id="classwx_web_view_1a3778cc991cfd7df6e76ad30c79cb270b" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -295,7 +295,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="522"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/webview.h" line="521"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -311,7 +311,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="531"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/webview.h" line="530"/>
       </memberdef>
       <memberdef kind="function" id="classwx_web_view_1ab953cdb9030d048fb563459a5f95ade8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type>bool</type>
@@ -324,7 +324,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="536"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/webview.h" line="535"/>
       </memberdef>
       <memberdef kind="function" id="classwx_web_view_1a6c0ae6a5a527dd2e12115a47493f3c7f" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -337,7 +337,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="541"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/webview.h" line="540"/>
       </memberdef>
       <memberdef kind="function" id="classwx_web_view_1af164050b23d2fd54529d147308a36b13" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -350,7 +350,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="546"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/webview.h" line="545"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -379,7 +379,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="558"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/webview.h" line="557"/>
       </memberdef>
       <memberdef kind="function" id="classwx_web_view_1ae73f76488f34f4d1bdabe6c2cf04a391" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type><ref refid="webview_8h_1aacf38eb86740b7b28525fab4f8637a6c" kindref="member">wxWebViewZoom</ref></type>
@@ -393,7 +393,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="564"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/webview.h" line="563"/>
       </memberdef>
       <memberdef kind="function" id="classwx_web_view_1a40b3522389e4ce19cc995f6bc69e2fb6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type><ref refid="webview_8h_1a4de3543743ab8fb2b462644182845b69" kindref="member">wxWebViewZoomType</ref></type>
@@ -407,7 +407,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="570"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/webview.h" line="569"/>
       </memberdef>
       <memberdef kind="function" id="classwx_web_view_1ac52c3534e64a822ab48551f41d052397" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -432,7 +432,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="576"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/webview.h" line="575"/>
       </memberdef>
       <memberdef kind="function" id="classwx_web_view_1a3c4ac3d82a94c2a521472a058c4ec572" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -458,7 +458,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="585"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/webview.h" line="584"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -506,7 +506,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="264"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/webview.h" line="263"/>
       </memberdef>
       <memberdef kind="function" id="classwx_web_view_1a5c10294f286dc0b685ccfcaee1fa8cd9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -519,7 +519,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="301"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/webview.h" line="300"/>
       </memberdef>
       <memberdef kind="function" id="classwx_web_view_1a2ba0212f788831a48be295b3b1575e93" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -532,7 +532,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="306"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/webview.h" line="305"/>
       </memberdef>
       <memberdef kind="function" id="classwx_web_view_1acec066750bd878c690be07f26764f6d9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -546,7 +546,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="313"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/webview.h" line="312"/>
       </memberdef>
       <memberdef kind="function" id="classwx_web_view_1ac26d558d07716a52920ff5a39002b47d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -559,7 +559,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="318"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/webview.h" line="317"/>
       </memberdef>
       <memberdef kind="function" id="classwx_web_view_1aadda38fa9b2c05257d25aab93c30140a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type>bool</type>
@@ -572,7 +572,7 @@
 <para>loading a page). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="323"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/webview.h" line="322"/>
       </memberdef>
       <memberdef kind="function" id="classwx_web_view_1af8ef65acca55638267c7d3a340fd0825" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type>bool</type>
@@ -585,7 +585,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="328"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/webview.h" line="327"/>
       </memberdef>
       <memberdef kind="function" id="classwx_web_view_1a284e43ed5f52e384e033874debb01254" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -611,7 +611,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="337"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/webview.h" line="336"/>
       </memberdef>
       <memberdef kind="function" id="classwx_web_view_1a09c921bd9909fc97d9d87fc9a75248a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -624,7 +624,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="343"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/webview.h" line="342"/>
       </memberdef>
       <memberdef kind="function" id="classwx_web_view_1a7f97f428ac96426dd84bfd1b7406dbc2" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -649,7 +649,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="349"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/webview.h" line="348"/>
       </memberdef>
       <memberdef kind="function" id="classwx_web_view_1ac978367671b6bbb06b35d8cbf2ed56ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -675,7 +675,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="355"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/webview.h" line="354"/>
       </memberdef>
       <memberdef kind="function" id="classwx_web_view_1afdfb3b58de7556da67a9dfd29b6b1395" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -692,7 +692,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="360"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/webview.h" line="359"/>
       </memberdef>
       <memberdef kind="function" id="classwx_web_view_1a27819424e783db54ab269e0827fef85e" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -710,7 +710,7 @@
 <para>Enabling allows the user to edit the page even if the <computeroutput>contenteditable</computeroutput> attribute is not set. The exact capabilities vary with the backend being used. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="367"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/webview.h" line="366"/>
       </memberdef>
       <memberdef kind="function" id="classwx_web_view_1acaf31bd55bb607012ce054fc1b0aeab6" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -746,7 +746,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="375"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/webview.h" line="374"/>
       </memberdef>
       <memberdef kind="function" id="classwx_web_view_1ada9d443aea1d61ce18339c7328c54a67" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -782,7 +782,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="383"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/webview.h" line="382"/>
       </memberdef>
       <memberdef kind="function" id="classwx_web_view_1a9ca553e7dfd399222d4f89364c5f3a2f" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -795,7 +795,7 @@
 <para>May trigger an error event of type <computeroutput>wxWEB_NAV_ERR_USER_CANCELLED</computeroutput>. TODO: make <computeroutput>wxWEB_NAV_ERR_USER_CANCELLED</computeroutput> errors uniform across ports. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="390"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/webview.h" line="389"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -824,7 +824,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="273"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/webview.h" line="272"/>
       </memberdef>
       <memberdef kind="function" id="classwx_web_view_1ac75b81ad795de2bd309796ea113af533" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_web_view" kindref="compound">wxWebView</ref> *</type>
@@ -919,7 +919,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="295"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/webview.h" line="294"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -951,85 +951,85 @@ Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs
 </para></sect1>
     </detaileddescription>
     <inheritancegraph>
-      <node id="11434">
+      <node id="11623">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="11433">
+      <node id="11622">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="11434" relation="public-inheritance">
+        <childnode refid="11623" relation="public-inheritance">
         </childnode>
-        <childnode refid="11435" relation="public-inheritance">
+        <childnode refid="11624" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11435">
+      <node id="11624">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="11431">
+      <node id="11620">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="11432" relation="public-inheritance">
+        <childnode refid="11621" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11430">
+      <node id="11619">
         <label>wxWebView</label>
         <link refid="classwx_web_view"/>
-        <childnode refid="11431" relation="public-inheritance">
+        <childnode refid="11620" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11432">
+      <node id="11621">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="11433" relation="public-inheritance">
+        <childnode refid="11622" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="11440">
+      <node id="11629">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="11441" relation="usage">
+        <childnode refid="11630" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="11439">
+      <node id="11628">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="11440" relation="public-inheritance">
+        <childnode refid="11629" relation="public-inheritance">
         </childnode>
-        <childnode refid="11442" relation="public-inheritance">
+        <childnode refid="11631" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11442">
+      <node id="11631">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="11437">
+      <node id="11626">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="11438" relation="public-inheritance">
+        <childnode refid="11627" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11436">
+      <node id="11625">
         <label>wxWebView</label>
         <link refid="classwx_web_view"/>
-        <childnode refid="11437" relation="public-inheritance">
+        <childnode refid="11626" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11438">
+      <node id="11627">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="11439" relation="public-inheritance">
+        <childnode refid="11628" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11441">
+      <node id="11630">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="252" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" bodystart="251" bodyend="586"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/webview.h" line="251" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/webview.h" bodystart="250" bodyend="585"/>
     <listofallmembers>
       <member refid="classwx_window_1a3afbd49b1ea2f8275e3600dcac102923" prot="public" virt="virtual"><scope>wxWebView</scope><name>AcceptsFocus</name></member>
       <member refid="classwx_window_1a2370bdd3ab08e7ef3c7555c6aa8301b8" prot="public" virt="virtual"><scope>wxWebView</scope><name>AcceptsFocusFromKeyboard</name></member>
@@ -1222,6 +1222,7 @@ Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs
       <member refid="classwx_window_1ae1b56ca87d8590ee5e576012229a380a" prot="public" virt="non-virtual"><scope>wxWebView</scope><name>InvalidateBestSize</name></member>
       <member refid="classwx_window_1af918e6fe8565c2d5235973cc3de84a43" prot="public" virt="non-virtual"><scope>wxWebView</scope><name>IsBeingDeleted</name></member>
       <member refid="classwx_web_view_1aadda38fa9b2c05257d25aab93c30140a" prot="public" virt="pure-virtual"><scope>wxWebView</scope><name>IsBusy</name></member>
+      <member refid="classwx_window_1a469f0881da248d37691440c9d4cc7200" prot="public" virt="non-virtual"><scope>wxWebView</scope><name>IsDescendant</name></member>
       <member refid="classwx_window_1a9d1be1bbb625ebf87ad4ad47e49a0194" prot="public" virt="virtual"><scope>wxWebView</scope><name>IsDoubleBuffered</name></member>
       <member refid="classwx_web_view_1af8ef65acca55638267c7d3a340fd0825" prot="public" virt="pure-virtual"><scope>wxWebView</scope><name>IsEditable</name></member>
       <member refid="classwx_window_1a59452a5bd42f5ea4b31d7fc4aa59644f" prot="public" virt="non-virtual"><scope>wxWebView</scope><name>IsEnabled</name></member>
@@ -1238,6 +1239,7 @@ Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs
       <member refid="classwx_window_1a72d70fd14e3565bf782fbcd3271d8930" prot="public" virt="virtual"><scope>wxWebView</scope><name>IsShownOnScreen</name></member>
       <member refid="classwx_window_1a657ef8b6055eb06df894ac5e6ddfecf8" prot="public" virt="non-virtual"><scope>wxWebView</scope><name>IsThisEnabled</name></member>
       <member refid="classwx_window_1a0002826ad05f2a5661b4c8995713f37f" prot="public" virt="virtual"><scope>wxWebView</scope><name>IsTopLevel</name></member>
+      <member refid="classwx_window_1a7940d510c5bdc062a2b109a1022dd8c2" prot="public" virt="virtual"><scope>wxWebView</scope><name>IsTransparentBackgroundSupported</name></member>
       <member refid="classwx_evt_handler_1a360fdeefcf53b62fb49fb828406bb8a6" prot="public" virt="non-virtual"><scope>wxWebView</scope><name>IsUnlinked</name></member>
       <member refid="classwx_window_1a1b143c3e72bd0af533b76db4830a6113" prot="public" virt="virtual"><scope>wxWebView</scope><name>Layout</name></member>
       <member refid="classwx_window_1ade808784f0e64d9985e2f279b5ca8c02" prot="public" virt="non-virtual"><scope>wxWebView</scope><name>LineDown</name></member>
@@ -1246,7 +1248,6 @@ Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs
       <member refid="classwx_web_view_1a284e43ed5f52e384e033874debb01254" prot="public" virt="pure-virtual"><scope>wxWebView</scope><name>LoadURL</name></member>
       <member refid="classwx_window_1a124944524f36b71385dad8fddaad8ded" prot="public" virt="virtual"><scope>wxWebView</scope><name>Lower</name></member>
       <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxWebView</scope><name>m_refData</name></member>
-      <member refid="classwx_window_1a192fc8b467845d093c16452db96c65c5" prot="public" virt="virtual"><scope>wxWebView</scope><name>MakeModal</name></member>
       <member refid="classwx_window_1ab1cb98c8d25b9e6ff7b706b1446c3df7" prot="public" virt="non-virtual"><scope>wxWebView</scope><name>Move</name></member>
       <member refid="classwx_window_1a22a22c1e23ca05776707e7999d8047fe" prot="public" virt="non-virtual"><scope>wxWebView</scope><name>Move</name></member>
       <member refid="classwx_window_1a79e66079125e8420de269811bdb6f2b6" prot="public" virt="non-virtual"><scope>wxWebView</scope><name>MoveAfterInTabOrder</name></member>
@@ -1382,7 +1383,6 @@ Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs
       <member refid="classwx_window_1a88cc65e424a129d9b0057756cdb67ec9" prot="public" virt="virtual"><scope>wxWebView</scope><name>TransferDataToWindow</name></member>
       <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxWebView</scope><name>TryAfter</name></member>
       <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxWebView</scope><name>TryBefore</name></member>
-      <member refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" virt="non-virtual"><scope>wxWebView</scope><name>TryThis</name></member>
       <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxWebView</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxWebView</scope><name>Unbind</name></member>
       <member refid="classwx_web_view_1af164050b23d2fd54529d147308a36b13" prot="public" virt="pure-virtual"><scope>wxWebView</scope><name>Undo</name></member>

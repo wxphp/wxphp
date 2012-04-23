@@ -17,7 +17,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/checkbox.h" line="84"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/checkbox.h" line="84"/>
       </memberdef>
       <memberdef kind="function" id="classwx_check_box_1a5ab183aef8c69afd5ca12de0ce41dbc4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -125,7 +125,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/checkbox.h" line="116"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/checkbox.h" line="116"/>
       </memberdef>
       <memberdef kind="function" id="classwx_check_box_1a78132a6fa78e20adbf0d818235d66b55" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -138,7 +138,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/checkbox.h" line="121"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/checkbox.h" line="121"/>
       </memberdef>
       <memberdef kind="function" id="classwx_check_box_1a4d9f2efaf4be717ca142fcbe854447a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -188,7 +188,7 @@
 <para>See <ref refid="classwx_check_box_1a2b239bc0db88dcae8b1dfe2ac3e7f96f" kindref="member">wxCheckBox()</ref> for details. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/checkbox.h" line="131"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/checkbox.h" line="131"/>
       </memberdef>
       <memberdef kind="function" id="classwx_check_box_1aecc89e43b836891dafb81632f803b0cd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -202,7 +202,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/checkbox.h" line="138"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/checkbox.h" line="138"/>
       </memberdef>
       <memberdef kind="function" id="classwx_check_box_1ae48bb7d9cc7bd4e8d30a904d5b1ebb34" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="checkbox_8h_1ab7ff30e019a8312536b5bb723606febf" kindref="member">wxCheckBoxState</ref></type>
@@ -215,7 +215,7 @@
 <para>Asserts when the function is used with a 2-state checkbox. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/checkbox.h" line="144"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/checkbox.h" line="144"/>
       </memberdef>
       <memberdef kind="function" id="classwx_check_box_1af3dca419e650cd39604b2035741f191f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -229,7 +229,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/checkbox.h" line="152"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/checkbox.h" line="152"/>
       </memberdef>
       <memberdef kind="function" id="classwx_check_box_1a46d7f67383773dceff48a857e2a3afef" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -243,7 +243,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/checkbox.h" line="162"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/checkbox.h" line="162"/>
       </memberdef>
       <memberdef kind="function" id="classwx_check_box_1acc27305dfa04827e60716f0f0890cc85" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -256,7 +256,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/checkbox.h" line="169"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/checkbox.h" line="169"/>
       </memberdef>
       <memberdef kind="function" id="classwx_check_box_1a6b19d59054f3f038ffaa279bf99552fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -281,7 +281,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/checkbox.h" line="178"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/checkbox.h" line="178"/>
       </memberdef>
       <memberdef kind="function" id="classwx_check_box_1aa5c882ce796f17f5742c8f81613e8a90" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -298,7 +298,7 @@
 <para>This does not cause a <computeroutput>wxEVT_COMMAND_CHECKBOX_CLICKED</computeroutput> event to get emitted.</para><para>Asserts when the checkbox is a 2-state checkbox and setting the state to wxCHK_UNDETERMINED. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/checkbox.h" line="187"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/checkbox.h" line="187"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -319,85 +319,85 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref> <htmlonly> &lt;br&gt;&lt;div&gt;&lt;span class=&apos;appearance&apos;&gt;Appearance:&lt;/span&gt;&lt;br&gt;&lt;table class=&apos;appearance&apos;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&apos;wxmsw/checkbox.png&apos; alt=&apos;wxMSW appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxgtk/checkbox.png&apos; alt=&apos;wxGTK appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxmac/checkbox.png&apos; alt=&apos;wxMac appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;wxMSW appearance&lt;/td&gt;&lt;td&gt;wxGTK appearance&lt;/td&gt;&lt;td&gt;wxMac appearance&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt; </htmlonly></para><para><simplesect kind="see"><para><ref refid="classwx_radio_button" kindref="compound">wxRadioButton</ref>, <ref refid="classwx_command_event" kindref="compound">wxCommandEvent</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="4705">
+      <node id="4795">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="4704">
+      <node id="4794">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="4705" relation="public-inheritance">
+        <childnode refid="4795" relation="public-inheritance">
         </childnode>
-        <childnode refid="4706" relation="public-inheritance">
+        <childnode refid="4796" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4701">
+      <node id="4791">
         <label>wxCheckBox</label>
         <link refid="classwx_check_box"/>
-        <childnode refid="4702" relation="public-inheritance">
+        <childnode refid="4792" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4706">
+      <node id="4796">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="4702">
+      <node id="4792">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="4703" relation="public-inheritance">
+        <childnode refid="4793" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4703">
+      <node id="4793">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="4704" relation="public-inheritance">
+        <childnode refid="4794" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="4711">
+      <node id="4801">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="4712" relation="usage">
+        <childnode refid="4802" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="4710">
+      <node id="4800">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="4711" relation="public-inheritance">
+        <childnode refid="4801" relation="public-inheritance">
         </childnode>
-        <childnode refid="4713" relation="public-inheritance">
+        <childnode refid="4803" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4707">
+      <node id="4797">
         <label>wxCheckBox</label>
         <link refid="classwx_check_box"/>
-        <childnode refid="4708" relation="public-inheritance">
+        <childnode refid="4798" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4713">
+      <node id="4803">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="4708">
+      <node id="4798">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="4709" relation="public-inheritance">
+        <childnode refid="4799" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4709">
+      <node id="4799">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="4710" relation="public-inheritance">
+        <childnode refid="4800" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4712">
+      <node id="4802">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/checkbox.h" line="77" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/checkbox.h" bodystart="76" bodyend="188"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/checkbox.h" line="77" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/checkbox.h" bodystart="76" bodyend="188"/>
     <listofallmembers>
       <member refid="classwx_window_1a3afbd49b1ea2f8275e3600dcac102923" prot="public" virt="virtual"><scope>wxCheckBox</scope><name>AcceptsFocus</name></member>
       <member refid="classwx_window_1a2370bdd3ab08e7ef3c7555c6aa8301b8" prot="public" virt="virtual"><scope>wxCheckBox</scope><name>AcceptsFocusFromKeyboard</name></member>
@@ -567,6 +567,7 @@
       <member refid="classwx_check_box_1af3dca419e650cd39604b2035741f191f" prot="public" virt="non-virtual"><scope>wxCheckBox</scope><name>Is3State</name></member>
       <member refid="classwx_window_1af918e6fe8565c2d5235973cc3de84a43" prot="public" virt="non-virtual"><scope>wxCheckBox</scope><name>IsBeingDeleted</name></member>
       <member refid="classwx_check_box_1acc27305dfa04827e60716f0f0890cc85" prot="public" virt="non-virtual"><scope>wxCheckBox</scope><name>IsChecked</name></member>
+      <member refid="classwx_window_1a469f0881da248d37691440c9d4cc7200" prot="public" virt="non-virtual"><scope>wxCheckBox</scope><name>IsDescendant</name></member>
       <member refid="classwx_window_1a9d1be1bbb625ebf87ad4ad47e49a0194" prot="public" virt="virtual"><scope>wxCheckBox</scope><name>IsDoubleBuffered</name></member>
       <member refid="classwx_window_1a59452a5bd42f5ea4b31d7fc4aa59644f" prot="public" virt="non-virtual"><scope>wxCheckBox</scope><name>IsEnabled</name></member>
       <member refid="classwx_window_1af27ef77c913e32050543f3b0ca435a0d" prot="public" virt="non-virtual"><scope>wxCheckBox</scope><name>IsExposed</name></member>
@@ -582,13 +583,13 @@
       <member refid="classwx_window_1a72d70fd14e3565bf782fbcd3271d8930" prot="public" virt="virtual"><scope>wxCheckBox</scope><name>IsShownOnScreen</name></member>
       <member refid="classwx_window_1a657ef8b6055eb06df894ac5e6ddfecf8" prot="public" virt="non-virtual"><scope>wxCheckBox</scope><name>IsThisEnabled</name></member>
       <member refid="classwx_window_1a0002826ad05f2a5661b4c8995713f37f" prot="public" virt="virtual"><scope>wxCheckBox</scope><name>IsTopLevel</name></member>
+      <member refid="classwx_window_1a7940d510c5bdc062a2b109a1022dd8c2" prot="public" virt="virtual"><scope>wxCheckBox</scope><name>IsTransparentBackgroundSupported</name></member>
       <member refid="classwx_evt_handler_1a360fdeefcf53b62fb49fb828406bb8a6" prot="public" virt="non-virtual"><scope>wxCheckBox</scope><name>IsUnlinked</name></member>
       <member refid="classwx_window_1a1b143c3e72bd0af533b76db4830a6113" prot="public" virt="virtual"><scope>wxCheckBox</scope><name>Layout</name></member>
       <member refid="classwx_window_1ade808784f0e64d9985e2f279b5ca8c02" prot="public" virt="non-virtual"><scope>wxCheckBox</scope><name>LineDown</name></member>
       <member refid="classwx_window_1afc0816a174ceee6d36d1995c6824a273" prot="public" virt="non-virtual"><scope>wxCheckBox</scope><name>LineUp</name></member>
       <member refid="classwx_window_1a124944524f36b71385dad8fddaad8ded" prot="public" virt="virtual"><scope>wxCheckBox</scope><name>Lower</name></member>
       <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxCheckBox</scope><name>m_refData</name></member>
-      <member refid="classwx_window_1a192fc8b467845d093c16452db96c65c5" prot="public" virt="virtual"><scope>wxCheckBox</scope><name>MakeModal</name></member>
       <member refid="classwx_window_1ab1cb98c8d25b9e6ff7b706b1446c3df7" prot="public" virt="non-virtual"><scope>wxCheckBox</scope><name>Move</name></member>
       <member refid="classwx_window_1a22a22c1e23ca05776707e7999d8047fe" prot="public" virt="non-virtual"><scope>wxCheckBox</scope><name>Move</name></member>
       <member refid="classwx_window_1a79e66079125e8420de269811bdb6f2b6" prot="public" virt="non-virtual"><scope>wxCheckBox</scope><name>MoveAfterInTabOrder</name></member>
@@ -711,7 +712,6 @@
       <member refid="classwx_window_1a88cc65e424a129d9b0057756cdb67ec9" prot="public" virt="virtual"><scope>wxCheckBox</scope><name>TransferDataToWindow</name></member>
       <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxCheckBox</scope><name>TryAfter</name></member>
       <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxCheckBox</scope><name>TryBefore</name></member>
-      <member refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" virt="non-virtual"><scope>wxCheckBox</scope><name>TryThis</name></member>
       <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxCheckBox</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxCheckBox</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a22e5db2ec1d19c8252c056fd116975d7" prot="public" virt="non-virtual"><scope>wxCheckBox</scope><name>Unlink</name></member>

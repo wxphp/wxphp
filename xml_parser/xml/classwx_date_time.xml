@@ -3,6 +3,7 @@
   <compounddef id="classwx_date_time" kind="class" prot="public">
     <compoundname>wxDateTime</compoundname>
     <includes local="no">wx/datetime.h</includes>
+    <innerclass refid="classwx_date_time_1_1_time_zone" prot="public">wxDateTime::TimeZone</innerclass>
     <innerclass refid="structwx_date_time_1_1_tm" prot="public">wxDateTime::Tm</innerclass>
       <sectiondef kind="user-defined">
       <header>Constructors, Assignment Operators and Setters</header>
@@ -18,7 +19,24 @@
 <para>Use one of the <ref refid="classwx_date_time_1a221052d954c072ce56b796eaa4c075d3" kindref="member">Set()</ref> functions to initialize the object later. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="297"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="434"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_date_time_1aca2bc3b942d920e01e496841bd759001" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxDateTime::wxDateTime</definition>
+        <argsstring>(const wxDateTime &amp;date)</argsstring>
+        <name>wxDateTime</name>
+        <param>
+          <type>const <ref refid="classwx_date_time" kindref="compound">wxDateTime</ref> &amp;</type>
+          <declname>date</declname>
+        </param>
+        <briefdescription>
+<para>Copy constructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="439"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1af389cfd683905c7bd26d78ed2830f8d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -32,10 +50,10 @@
         <briefdescription>
 <para>Same as <ref refid="classwx_date_time_1a221052d954c072ce56b796eaa4c075d3" kindref="member">Set()</ref>. </para>        </briefdescription>
         <detaileddescription>
-<para><bold>wxPython Note:</bold> This constructor is named &quot;wxDateTimeFromTimeT&quot; in wxPython. </para>        </detaileddescription>
+        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="305"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="444"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1af060ddc94177492d3cedf60f9e17224a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -49,10 +67,10 @@
         <briefdescription>
 <para>Same as <ref refid="classwx_date_time_1a221052d954c072ce56b796eaa4c075d3" kindref="member">Set()</ref>. </para>        </briefdescription>
         <detaileddescription>
-<para><bold>wxPython Note:</bold> Unsupported. </para>        </detaileddescription>
+        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="311"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="448"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1aa2c38922eafec2a94fb5ee9221c0f6b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -66,10 +84,10 @@
         <briefdescription>
 <para>Same as <ref refid="classwx_date_time_1a221052d954c072ce56b796eaa4c075d3" kindref="member">Set()</ref>. </para>        </briefdescription>
         <detaileddescription>
-<para><bold>wxPython Note:</bold> This constructor is named &quot;wxDateTimeFromJDN&quot; in wxPython. </para>        </detaileddescription>
+        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="319"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="452"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1a929b59bfd0b445d2bd2e5e2b58767c18" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -98,15 +116,15 @@
         <briefdescription>
 <para>Same as <ref refid="classwx_date_time_1a221052d954c072ce56b796eaa4c075d3" kindref="member">Set()</ref>. </para>        </briefdescription>
         <detaileddescription>
-<para><bold>wxPython Note:</bold> This constructor is named &quot;wxDateTimeFromHMS&quot; in wxPython. </para>        </detaileddescription>
+        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="328"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="457"/>
       </memberdef>
-      <memberdef kind="function" id="classwx_date_time_1a11bc08a6d3a49d9c04f66c23bad5edf8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classwx_date_time_1a8e4a6d1104d1882514679514e3dbc642" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
         <definition>wxDateTime::wxDateTime</definition>
-        <argsstring>(wxDateTime_t day, Month month=Inv_Month, int year=Inv_Year, wxDateTime_t hour=0, wxDateTime_t minute=0, wxDateTime_t second=0, wxDateTime_t millisec=0)</argsstring>
+        <argsstring>(wxDateTime_t day, Month month, int year=Inv_Year, wxDateTime_t hour=0, wxDateTime_t minute=0, wxDateTime_t second=0, wxDateTime_t millisec=0)</argsstring>
         <name>wxDateTime</name>
         <param>
           <type><ref refid="classwx_date_time_1a27df9e32a320a1ca266288d1a436de98" kindref="member">wxDateTime_t</ref></type>
@@ -115,7 +133,6 @@
         <param>
           <type><ref refid="classwx_date_time_1a156e17eb15e3c16a7da36cd810ff9117" kindref="member">Month</ref></type>
           <declname>month</declname>
-          <defval>Inv_Month</defval>
         </param>
         <param>
           <type>int</type>
@@ -145,10 +162,10 @@
         <briefdescription>
 <para>Same as <ref refid="classwx_date_time_1a221052d954c072ce56b796eaa4c075d3" kindref="member">Set()</ref>. </para>        </briefdescription>
         <detaileddescription>
-<para><bold>wxPython Note:</bold> This constructor is named &quot;wxDateTimeFromDMY&quot; in wxPython. </para>        </detaileddescription>
+        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="339"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="464"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1a7d16ccd02f0c98f0667f57376da89da7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -171,11 +188,11 @@
 </parameteritem>
 </parameterlist>
 <simplesect kind="since"><para>2.9.0 </para></simplesect>
-<simplesect kind="remark"><para>MSW only </para></simplesect>
+<simplesect kind="remark"><para>MSW only Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page_port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor>  </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="349"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="475"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1a1975ca9c72d4fb89050566849776d3b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_date_time" kindref="compound">wxDateTime</ref> &amp;</type>
@@ -188,7 +205,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="355"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="481"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1a221052d954c072ce56b796eaa4c075d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_date_time" kindref="compound">wxDateTime</ref> &amp;</type>
@@ -202,10 +219,10 @@
         <briefdescription>
 <para>Constructs the object from <emphasis>timet</emphasis> value holding the number of seconds since Jan 1, 1970. </para>        </briefdescription>
         <detaileddescription>
-<para><bold>wxPython Note:</bold> This method is named &quot;SetTimeT&quot; in wxPython. </para>        </detaileddescription>
+        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="365"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="487"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1ae38d80eca7dcbfcd0984708e957c343f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_date_time" kindref="compound">wxDateTime</ref> &amp;</type>
@@ -219,10 +236,27 @@
         <briefdescription>
 <para>Sets the date and time from the broken down representation in the standard <emphasis>tm</emphasis> structure. </para>        </briefdescription>
         <detaileddescription>
-<para><bold>wxPython Note:</bold> Unsupported. </para>        </detaileddescription>
+        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="372"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="492"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_date_time_1afe75b8090e51a7b4e1aacccc55fd10bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_date_time" kindref="compound">wxDateTime</ref> &amp;</type>
+        <definition>wxDateTime&amp; wxDateTime::Set</definition>
+        <argsstring>(const Tm &amp;tm)</argsstring>
+        <name>Set</name>
+        <param>
+          <type>const <ref refid="structwx_date_time_1_1_tm" kindref="compound">Tm</ref> &amp;</type>
+          <declname>tm</declname>
+        </param>
+        <briefdescription>
+<para>Sets the date and time from the broken down representation in the <emphasis><ref refid="structwx_date_time_1_1_tm" kindref="compound">wxDateTime::Tm</ref></emphasis> structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="498"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1acfaba2a9f0241f74aff4641304f0a8fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_date_time" kindref="compound">wxDateTime</ref> &amp;</type>
@@ -236,10 +270,10 @@
         <briefdescription>
 <para>Sets the date from the so-called Julian Day Number. </para>        </briefdescription>
         <detaileddescription>
-<para>By definition, the Julian Day Number, usually abbreviated as JDN, of a particular instant is the fractional number of days since 12 hours Universal Coordinated Time (Greenwich mean noon) on January 1 of the year -4712 in the Julian proleptic calendar.</para><para><bold>wxPython Note:</bold> This method is named &quot;SetJDN&quot; in wxPython. </para>        </detaileddescription>
+<para>By definition, the Julian Day Number, usually abbreviated as JDN, of a particular instant is the fractional number of days since 12 hours Universal Coordinated Time (Greenwich mean noon) on January 1 of the year -4712 in the Julian proleptic calendar. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="385"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="508"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1a0b73caf2a363e429725244483ebc0d08" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_date_time" kindref="compound">wxDateTime</ref> &amp;</type>
@@ -268,15 +302,15 @@
         <briefdescription>
 <para>Sets the date to be equal to <ref refid="classwx_date_time_1af730202238b9acd5a5df2977fa40c569" kindref="member">Today()</ref> and the time from supplied parameters. </para>        </briefdescription>
         <detaileddescription>
-<para><bold>wxPython Note:</bold> This method is named &quot;SetHMS&quot; in wxPython. </para>        </detaileddescription>
+        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="395"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="514"/>
       </memberdef>
-      <memberdef kind="function" id="classwx_date_time_1a8edf536d1491a72bd9e280e86f582bf2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classwx_date_time_1a6f7ee89e55144c61ac19a6543e67db6a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_date_time" kindref="compound">wxDateTime</ref> &amp;</type>
         <definition>wxDateTime&amp; wxDateTime::Set</definition>
-        <argsstring>(wxDateTime_t day, Month month=Inv_Month, int year=Inv_Year, wxDateTime_t hour=0, wxDateTime_t minute=0, wxDateTime_t second=0, wxDateTime_t millisec=0)</argsstring>
+        <argsstring>(wxDateTime_t day, Month month, int year=Inv_Year, wxDateTime_t hour=0, wxDateTime_t minute=0, wxDateTime_t second=0, wxDateTime_t millisec=0)</argsstring>
         <name>Set</name>
         <param>
           <type><ref refid="classwx_date_time_1a27df9e32a320a1ca266288d1a436de98" kindref="member">wxDateTime_t</ref></type>
@@ -285,7 +319,6 @@
         <param>
           <type><ref refid="classwx_date_time_1a156e17eb15e3c16a7da36cd810ff9117" kindref="member">Month</ref></type>
           <declname>month</declname>
-          <defval>Inv_Month</defval>
         </param>
         <param>
           <type>int</type>
@@ -318,7 +351,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="402"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="521"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1a153d3687333e318574299ad191f340bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_date_time" kindref="compound">wxDateTime</ref> &amp;</type>
@@ -335,7 +368,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="407"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="526"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1acdba3b71eec0870b14417d3010311a1a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_date_time" kindref="compound">wxDateTime</ref> &amp;</type>
@@ -352,7 +385,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="412"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="531"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1a00a6e0dd915c7239dc0ea6192a1908c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_date_time" kindref="compound">wxDateTime</ref> &amp;</type>
@@ -369,7 +402,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="417"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="536"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1ab227fbf523dca7ea1aefdc0a806d4622" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_date_time" kindref="compound">wxDateTime</ref> &amp;</type>
@@ -386,7 +419,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="422"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="541"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1ae028d28c81960d95b9d433ea02775cde" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_date_time" kindref="compound">wxDateTime</ref> &amp;</type>
@@ -403,7 +436,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="427"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="546"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1a480fc77f9dc8491eb71b75be65befc57" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_date_time" kindref="compound">wxDateTime</ref> &amp;</type>
@@ -420,7 +453,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="432"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="551"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1aff2fd9f698a48bd18946b3d950adda65" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_date_time" kindref="compound">wxDateTime</ref> &amp;</type>
@@ -437,7 +470,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="437"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="556"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1ab033c8036318532cb55943847a9abb66" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_date_time" kindref="compound">wxDateTime</ref> &amp;</type>
@@ -450,7 +483,7 @@
 <para>Same as assigning the result of <ref refid="classwx_date_time_1a6e6c37a0414bb4831e2cc03b37f498a2" kindref="member">Now()</ref> to this object. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="443"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="562"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1ac68d4faee34360eac3ba52c5def5ac09" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_date_time" kindref="compound">wxDateTime</ref> &amp;</type>
@@ -467,7 +500,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="448"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="567"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1a437af2acfdf63d47f09e43269e4c3f76" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_date_time" kindref="compound">wxDateTime</ref> &amp;</type>
@@ -484,7 +517,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="453"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="572"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1a4040ef007d8fc9273b0e6bf489d4d975" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_date_time" kindref="compound">wxDateTime</ref> &amp;</type>
@@ -501,15 +534,15 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="457"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="576"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
       <header>Accessors</header>
       <description><para>Here are the trivial accessors.</para><para>Other functions, which might have to perform some more complicated calculations to find the answer are under the &quot;Date Arithmetics&quot; section. </para></description>
-      <memberdef kind="function" id="classwx_date_time_1aae2426d8e550a3e8fd0db66a87a9d135" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type>long unsigned int</type>
-        <definition>long unsigned int wxDateTime::GetAsDOS</definition>
+      <memberdef kind="function" id="classwx_date_time_1a66aebd04f50f468049f17e8159e69a6a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned long</type>
+        <definition>unsigned long wxDateTime::GetAsDOS</definition>
         <argsstring>() const </argsstring>
         <name>GetAsDOS</name>
         <briefdescription>
@@ -518,7 +551,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="475"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="594"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1a48d529a2bb8434ce9419dbaa87a7e06d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_date_time" kindref="compound">wxDateTime</ref> &amp;</type>
@@ -541,11 +574,11 @@
 </parameteritem>
 </parameterlist>
 <simplesect kind="since"><para>2.9.0 </para></simplesect>
-<simplesect kind="remark"><para>MSW only </para></simplesect>
+<simplesect kind="remark"><para>MSW only Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page_port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor>  </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="484"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="604"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1ae40a8c0a37d06ac476d856827e5176d8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -568,11 +601,11 @@
 </parameteritem>
 </parameterlist>
 <simplesect kind="since"><para>2.9.0 </para></simplesect>
-<simplesect kind="remark"><para>MSW only </para></simplesect>
+<simplesect kind="remark"><para>MSW only Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page_port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor>  </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="493"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="614"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1acc8f531061b26803b921e20e19faaea1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -580,7 +613,7 @@
         <argsstring>(const TimeZone &amp;tz=Local) const </argsstring>
         <name>GetCentury</name>
         <param>
-          <type>const TimeZone &amp;</type>
+          <type>const <ref refid="classwx_date_time_1_1_time_zone" kindref="compound">TimeZone</ref> &amp;</type>
           <declname>tz</declname>
           <defval>Local</defval>
         </param>
@@ -590,7 +623,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="498"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="619"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1a3b341c8cb0e343d3b7f9db929c7b4830" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_date_time" kindref="compound">wxDateTime</ref></type>
@@ -605,15 +638,15 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="508"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="629"/>
       </memberdef>
-      <memberdef kind="function" id="classwx_date_time_1a1b7e51b1f11430df08182b34e1f6f551" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type>short unsigned int</type>
-        <definition>short unsigned int wxDateTime::GetDay</definition>
+      <memberdef kind="function" id="classwx_date_time_1a6ce5fca7b6e7cc7a230e4595d52fb8ed" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned short</type>
+        <definition>unsigned short wxDateTime::GetDay</definition>
         <argsstring>(const TimeZone &amp;tz=Local) const </argsstring>
         <name>GetDay</name>
         <param>
-          <type>const TimeZone &amp;</type>
+          <type>const <ref refid="classwx_date_time_1_1_time_zone" kindref="compound">TimeZone</ref> &amp;</type>
           <declname>tz</declname>
           <defval>Local</defval>
         </param>
@@ -623,15 +656,15 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="513"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="634"/>
       </memberdef>
-      <memberdef kind="function" id="classwx_date_time_1a98091e7adceeea387bca0486959f9cde" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type>short unsigned int</type>
-        <definition>short unsigned int wxDateTime::GetDayOfYear</definition>
+      <memberdef kind="function" id="classwx_date_time_1a0242e2ec46f3345576bce53354cf5e6a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned short</type>
+        <definition>unsigned short wxDateTime::GetDayOfYear</definition>
         <argsstring>(const TimeZone &amp;tz=Local) const </argsstring>
         <name>GetDayOfYear</name>
         <param>
-          <type>const TimeZone &amp;</type>
+          <type>const <ref refid="classwx_date_time_1_1_time_zone" kindref="compound">TimeZone</ref> &amp;</type>
           <declname>tz</declname>
           <defval>Local</defval>
         </param>
@@ -641,15 +674,15 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="519"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="640"/>
       </memberdef>
-      <memberdef kind="function" id="classwx_date_time_1abad26a81819464f1ee6df37f89621b63" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type>short unsigned int</type>
-        <definition>short unsigned int wxDateTime::GetHour</definition>
+      <memberdef kind="function" id="classwx_date_time_1a0c07232d5f21ba2ede2a4751f3531c1a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned short</type>
+        <definition>unsigned short wxDateTime::GetHour</definition>
         <argsstring>(const TimeZone &amp;tz=Local) const </argsstring>
         <name>GetHour</name>
         <param>
-          <type>const TimeZone &amp;</type>
+          <type>const <ref refid="classwx_date_time_1_1_time_zone" kindref="compound">TimeZone</ref> &amp;</type>
           <declname>tz</declname>
           <defval>Local</defval>
         </param>
@@ -659,15 +692,15 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="524"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="645"/>
       </memberdef>
-      <memberdef kind="function" id="classwx_date_time_1a1d20ba245aee8e4ea0cb46bf7b81e838" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type>short unsigned int</type>
-        <definition>short unsigned int wxDateTime::GetMillisecond</definition>
+      <memberdef kind="function" id="classwx_date_time_1a9ae6607047e0e0971e1f6e02fbaf12d4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned short</type>
+        <definition>unsigned short wxDateTime::GetMillisecond</definition>
         <argsstring>(const TimeZone &amp;tz=Local) const </argsstring>
         <name>GetMillisecond</name>
         <param>
-          <type>const TimeZone &amp;</type>
+          <type>const <ref refid="classwx_date_time_1_1_time_zone" kindref="compound">TimeZone</ref> &amp;</type>
           <declname>tz</declname>
           <defval>Local</defval>
         </param>
@@ -677,15 +710,15 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="529"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="650"/>
       </memberdef>
-      <memberdef kind="function" id="classwx_date_time_1a081d1faa16d00b5cc6be7306827e4eb2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type>short unsigned int</type>
-        <definition>short unsigned int wxDateTime::GetMinute</definition>
+      <memberdef kind="function" id="classwx_date_time_1ad78c55f442700463a58e3f57054c61e8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned short</type>
+        <definition>unsigned short wxDateTime::GetMinute</definition>
         <argsstring>(const TimeZone &amp;tz=Local) const </argsstring>
         <name>GetMinute</name>
         <param>
-          <type>const TimeZone &amp;</type>
+          <type>const <ref refid="classwx_date_time_1_1_time_zone" kindref="compound">TimeZone</ref> &amp;</type>
           <declname>tz</declname>
           <defval>Local</defval>
         </param>
@@ -695,7 +728,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="534"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="655"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1a7e1316e87a89b31a2b72958201105061" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_date_time_1a156e17eb15e3c16a7da36cd810ff9117" kindref="member">Month</ref></type>
@@ -703,7 +736,7 @@
         <argsstring>(const TimeZone &amp;tz=Local) const </argsstring>
         <name>GetMonth</name>
         <param>
-          <type>const TimeZone &amp;</type>
+          <type>const <ref refid="classwx_date_time_1_1_time_zone" kindref="compound">TimeZone</ref> &amp;</type>
           <declname>tz</declname>
           <defval>Local</defval>
         </param>
@@ -713,15 +746,15 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="539"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="660"/>
       </memberdef>
-      <memberdef kind="function" id="classwx_date_time_1a87bf2d95a45084e2d0cff6ac427cd307" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type>short unsigned int</type>
-        <definition>short unsigned int wxDateTime::GetSecond</definition>
+      <memberdef kind="function" id="classwx_date_time_1adf71fea598bd0baeb6b0e1f56eba093b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned short</type>
+        <definition>unsigned short wxDateTime::GetSecond</definition>
         <argsstring>(const TimeZone &amp;tz=Local) const </argsstring>
         <name>GetSecond</name>
         <param>
-          <type>const TimeZone &amp;</type>
+          <type>const <ref refid="classwx_date_time_1_1_time_zone" kindref="compound">TimeZone</ref> &amp;</type>
           <declname>tz</declname>
           <defval>Local</defval>
         </param>
@@ -731,7 +764,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="544"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="665"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1a6be02e8f615380ff701c5f9cedc9fb84" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>time_t</type>
@@ -744,7 +777,7 @@
 <para>An assert failure will occur if the date is not in the range covered by <computeroutput>time_t</computeroutput> type. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="550"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="671"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1a5eb3d08cd32226a5aefa87a65dffe759" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structwx_date_time_1_1_tm" kindref="compound">Tm</ref></type>
@@ -752,7 +785,7 @@
         <argsstring>(const TimeZone &amp;tz=Local) const </argsstring>
         <name>GetTm</name>
         <param>
-          <type>const TimeZone &amp;</type>
+          <type>const <ref refid="classwx_date_time_1_1_time_zone" kindref="compound">TimeZone</ref> &amp;</type>
           <declname>tz</declname>
           <defval>Local</defval>
         </param>
@@ -762,7 +795,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="555"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="676"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1ada293c954c5b0345846bb69de3938da2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_date_time_1a9ce844e5c79b28711f52ae2d9a571457" kindref="member">WeekDay</ref></type>
@@ -770,7 +803,7 @@
         <argsstring>(const TimeZone &amp;tz=Local) const </argsstring>
         <name>GetWeekDay</name>
         <param>
-          <type>const TimeZone &amp;</type>
+          <type>const <ref refid="classwx_date_time_1_1_time_zone" kindref="compound">TimeZone</ref> &amp;</type>
           <declname>tz</declname>
           <defval>Local</defval>
         </param>
@@ -780,7 +813,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="560"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="681"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1ac2e541595f16d6f48db34b489a5d1ce9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_date_time_1a27df9e32a320a1ca266288d1a436de98" kindref="member">wxDateTime_t</ref></type>
@@ -793,7 +826,7 @@
           <defval>Monday_First</defval>
         </param>
         <param>
-          <type>const TimeZone &amp;</type>
+          <type>const <ref refid="classwx_date_time_1_1_time_zone" kindref="compound">TimeZone</ref> &amp;</type>
           <declname>tz</declname>
           <defval>Local</defval>
         </param>
@@ -803,7 +836,7 @@
 <para>As <ref refid="classwx_date_time_1aeb92e6f6fdd172850a759fda324c87fb" kindref="member">GetWeekOfYear()</ref>, this function supports both conventions for the week start. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="569"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="690"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1aeb92e6f6fdd172850a759fda324c87fb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_date_time_1a27df9e32a320a1ca266288d1a436de98" kindref="member">wxDateTime_t</ref></type>
@@ -816,7 +849,7 @@
           <defval>Monday_First</defval>
         </param>
         <param>
-          <type>const TimeZone &amp;</type>
+          <type>const <ref refid="classwx_date_time_1_1_time_zone" kindref="compound">TimeZone</ref> &amp;</type>
           <declname>tz</declname>
           <defval>Local</defval>
         </param>
@@ -826,7 +859,7 @@
 <para>The first week of the year is, according to international standards, the one containing Jan 4 or, equivalently, the first week which has Thursday in this year. Both of these definitions are the same as saying that the first week of the year must contain more than half of its days in this year. Accordingly, the week number will always be in 1-53 range (52 for non-leap years).</para><para>The function depends on the week start convention specified by the <emphasis>flags</emphasis> argument but its results for <computeroutput>Sunday_First</computeroutput> are not well-defined as the ISO definition quoted above applies to the weeks starting on Monday only. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="585"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="706"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1a27fe507f5ba549091f1f7d523e424be9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -834,7 +867,7 @@
         <argsstring>(const TimeZone &amp;tz=Local) const </argsstring>
         <name>GetYear</name>
         <param>
-          <type>const TimeZone &amp;</type>
+          <type>const <ref refid="classwx_date_time_1_1_time_zone" kindref="compound">TimeZone</ref> &amp;</type>
           <declname>tz</declname>
           <defval>Local</defval>
         </param>
@@ -844,7 +877,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="590"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="711"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1aa87b3990a0d925f9d0221411aa8c9375" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -852,7 +885,7 @@
         <argsstring>(GregorianAdoption country=Gr_Standard) const </argsstring>
         <name>IsGregorianDate</name>
         <param>
-          <type>GregorianAdoption</type>
+          <type><ref refid="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317" kindref="member">GregorianAdoption</ref></type>
           <declname>country</declname>
           <defval>Gr_Standard</defval>
         </param>
@@ -862,7 +895,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="597"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="718"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1aaff0bd60809b4d03839ddd4c6eb9e84d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -875,7 +908,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="602"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="723"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1a24f030fd10755b6a0e30fb7cdc9933bc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -893,7 +926,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="607"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="728"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -914,7 +947,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="624"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="745"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1a0a00396a0e837d2577547363a50467ac" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -931,7 +964,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="629"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="750"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1a984b284c05ac8f37c5ad335cd6ad1c52" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -952,7 +985,7 @@
 <para>if the absolute difference between the two dates is less than this interval. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="636"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="757"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1a9e0c48caeb682ef668b4d7940d663937" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -969,7 +1002,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="641"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="762"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1a237d373eb71aff639e44e5ff46ddf2f3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -986,7 +1019,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="646"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="767"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1a5627246bfbd060f01f027ae1d53a7f24" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1003,7 +1036,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="651"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="772"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1ad1edfb9a46c2dcd963200beff1648dc2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1025,7 +1058,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="659"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="780"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1a8985ab251703e34d0b288a22581ba9d8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1047,7 +1080,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="667"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="788"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -1065,10 +1098,10 @@
         <briefdescription>
 <para>Adds the given date span to this object. </para>        </briefdescription>
         <detaileddescription>
-<para><bold>wxPython Note:</bold> This method is named &quot;AddDS&quot; in wxPython. </para>        </detaileddescription>
+        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="697"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="814"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1a9ed88ad5bc505a961d4a86083e3b2cb2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_date_time" kindref="compound">wxDateTime</ref></type>
@@ -1082,10 +1115,10 @@
         <briefdescription>
 <para>Adds the given date span to this object. </para>        </briefdescription>
         <detaileddescription>
-<para><bold>wxPython Note:</bold> This method is named &quot;AddDS&quot; in wxPython. </para>        </detaileddescription>
+        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="705"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="818"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1a8cb13e8a953a8061fba8c718929beaa3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_date_time" kindref="compound">wxDateTime</ref></type>
@@ -1099,10 +1132,10 @@
         <briefdescription>
 <para>Adds the given time span to this object. </para>        </briefdescription>
         <detaileddescription>
-<para><bold>wxPython Note:</bold> This method is named &quot;AddTS&quot; in wxPython. </para>        </detaileddescription>
+        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="713"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="822"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1a36c3dfb82a3fdf9c0e4c8cc944508d0d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_date_time" kindref="compound">wxDateTime</ref> &amp;</type>
@@ -1116,10 +1149,10 @@
         <briefdescription>
 <para>Adds the given time span to this object. </para>        </briefdescription>
         <detaileddescription>
-<para><bold>wxPython Note:</bold> This method is named &quot;AddTS&quot; in wxPython. </para>        </detaileddescription>
+        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="721"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="826"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1a99bfe3957c206d71cd4d980b10b400a1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_date_time" kindref="compound">wxDateTime</ref></type>
@@ -1133,10 +1166,10 @@
         <briefdescription>
 <para>Subtracts the given time span from this object. </para>        </briefdescription>
         <detaileddescription>
-<para><bold>wxPython Note:</bold> This method is named &quot;SubtractTS&quot; in wxPython. </para>        </detaileddescription>
+        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="730"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="831"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1a9bb9c12d2fa47e67b6f9975f5cb8d750" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_date_time" kindref="compound">wxDateTime</ref> &amp;</type>
@@ -1150,10 +1183,10 @@
         <briefdescription>
 <para>Subtracts the given time span from this object. </para>        </briefdescription>
         <detaileddescription>
-<para><bold>wxPython Note:</bold> This method is named &quot;SubtractTS&quot; in wxPython. </para>        </detaileddescription>
+        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="738"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="835"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1afb1be3e9505496ec939897ec892fe694" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_date_time" kindref="compound">wxDateTime</ref></type>
@@ -1167,10 +1200,10 @@
         <briefdescription>
 <para>Subtracts the given date span from this object. </para>        </briefdescription>
         <detaileddescription>
-<para><bold>wxPython Note:</bold> This method is named &quot;SubtractDS&quot; in wxPython. </para>        </detaileddescription>
+        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="746"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="839"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1ad2975130454759c7b198e14de10d2655" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_date_time" kindref="compound">wxDateTime</ref> &amp;</type>
@@ -1184,10 +1217,10 @@
         <briefdescription>
 <para>Subtracts the given date span from this object. </para>        </briefdescription>
         <detaileddescription>
-<para><bold>wxPython Note:</bold> This method is named &quot;SubtractDS&quot; in wxPython. </para>        </detaileddescription>
+        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="754"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="843"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1a0c983954508addf59aa40c75eac4beea" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_time_span" kindref="compound">wxTimeSpan</ref></type>
@@ -1204,11 +1237,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="759"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="848"/>
       </memberdef>
-      <memberdef kind="function" id="classwx_date_time_1aa7d96c558490c187e5ce5fe0cf06ae8d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="classwx_date_time" kindref="compound">wxDateTime</ref></type>
-        <definition>wxDateTime wxDateTime::operator+=</definition>
+      <memberdef kind="function" id="classwx_date_time_1ac1a77fc607ee36a16fba7078d25fe44d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_date_time" kindref="compound">wxDateTime</ref> &amp;</type>
+        <definition>wxDateTime&amp; wxDateTime::operator+=</definition>
         <argsstring>(const wxDateSpan &amp;diff)</argsstring>
         <name>operator+=</name>
         <param>
@@ -1221,7 +1254,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="764"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="853"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1a146dd110466fb8ba714e98a853b83019" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_date_time" kindref="compound">wxDateTime</ref> &amp;</type>
@@ -1238,7 +1271,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="768"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="857"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1ae3f78fde5174f576fca00eb21654544f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_date_time" kindref="compound">wxDateTime</ref> &amp;</type>
@@ -1255,7 +1288,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="772"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="861"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1a45d8ef84a5fcda547a9a15226ee68347" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_date_time" kindref="compound">wxDateTime</ref> &amp;</type>
@@ -1272,7 +1305,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="776"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="865"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -1289,7 +1322,7 @@
           <defval>wxDefaultDateTimeFormat</defval>
         </param>
         <param>
-          <type>const TimeZone &amp;</type>
+          <type>const <ref refid="classwx_date_time_1_1_time_zone" kindref="compound">TimeZone</ref> &amp;</type>
           <declname>tz</declname>
           <defval>Local</defval>
         </param>
@@ -1300,7 +1333,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="802"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="891"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1ab9886b69761a87ccf77f0ffee7c7f12e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -1313,7 +1346,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="808"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="897"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1a8d99cfc519de33d2fcf16360a13212f0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -1332,7 +1365,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="819"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="908"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1a7dc79585261a999dbd43152186e52299" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -1345,7 +1378,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="825"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="914"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1a0f677ffcbc651c733249af36af6bbb3b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -1358,7 +1391,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="831"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="920"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1a4d3145af33faf443ac9d9fdfc4256c1e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -1371,7 +1404,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="837"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="926"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1acdcb88e25b38099994af45b11391c962" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1393,7 +1426,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="851"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="940"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1a332a41f998bc3be6c0a9a81449112485" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1414,7 +1447,7 @@
 <para>This function tries as hard as it can to interpret the given string as date and time. Unlike <ref refid="classwx_date_time_1ab0f2485c52d0d3cf0196aaf0062d2f83" kindref="member">ParseRfc822Date()</ref>, it will accept anything that may be accepted and will only reject strings which cannot be parsed in any way at all. Notice that the function will fail if either date or time part is present but not both, use <ref refid="classwx_date_time_1acdcb88e25b38099994af45b11391c962" kindref="member">ParseDate()</ref> or <ref refid="classwx_date_time_1ac903b3227620e1b88019e76b807327e8" kindref="member">ParseTime()</ref> to parse strings containing just the date or time component.</para><para>See <ref refid="classwx_date_time_1a5d01d56c310d505a093f1a7f25086a1b" kindref="member">ParseFormat()</ref> for the description of function parameters and return value. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="867"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="956"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1a5d01d56c310d505a093f1a7f25086a1b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1440,7 +1473,7 @@
         <briefdescription>
 <para>This function parses the string <emphasis>date</emphasis> according to the given <emphasis>format</emphasis>. </para>        </briefdescription>
         <detaileddescription>
-<para>The system <computeroutput>strptime(3)</computeroutput> function is used whenever available, but even if it is not, this function is still implemented, although support for locale-dependent format specifiers such as <computeroutput>&quot;%c&quot;</computeroutput>, <computeroutput>&quot;%x&quot;</computeroutput> or <computeroutput>&quot;%X&quot;</computeroutput> may not be perfect and GNU extensions such as <computeroutput>&quot;%z&quot;</computeroutput> and <computeroutput>&quot;%Z&quot;</computeroutput> are not implemented. This function does handle the month and weekday names in the current locale on all platforms, however.</para><para>Please see the description of the ANSI C function <computeroutput>strftime(3)</computeroutput> for the syntax of the format string.</para><para>The <emphasis>dateDef</emphasis> parameter is used to fill in the fields which could not be determined from the format string. For example, if the format is <computeroutput>&quot;%d&quot;</computeroutput> (the day of the month), the month and the year are taken from <emphasis>dateDef</emphasis>. If it is not specified, <ref refid="classwx_date_time_1af730202238b9acd5a5df2977fa40c569" kindref="member">Today()</ref> is used as the default date.</para><para>Example of using this function: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_date_time" kindref="compound" tooltip="wxDateTime class represents an absolute moment in the time.">wxDateTime</ref><sp/>dt;</highlight></codeline>
+<para>The system <computeroutput>strptime(3)</computeroutput> function is used whenever available, but even if it is not, this function is still implemented, although support for locale-dependent format specifiers such as <computeroutput>&quot;%c&quot;</computeroutput>, <computeroutput>&quot;%x&quot;</computeroutput> or <computeroutput>&quot;%X&quot;</computeroutput> may not be perfect and GNU extensions such as <computeroutput>&quot;%z&quot;</computeroutput> and <computeroutput>&quot;%Z&quot;</computeroutput> are not implemented. This function does handle the month and weekday names in the current locale on all platforms, however.</para><para>Please see the description of the ANSI C function <computeroutput>strftime(3)</computeroutput> for the syntax of the format string.</para><para>The <emphasis>dateDef</emphasis> parameter is used to fill in the fields which could not be determined from the format string. For example, if the format is <computeroutput>&quot;%d&quot;</computeroutput> (the day of the month), the month and the year are taken from <emphasis>dateDef</emphasis>. If it is not specified, <ref refid="classwx_date_time_1af730202238b9acd5a5df2977fa40c569" kindref="member">Today()</ref> is used as the default date.</para><para>Example of using this function: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_date_time" kindref="compound" tooltip="wxDateTime class represents an absolute moment in time.">wxDateTime</ref><sp/>dt;</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change was actually the m...">wxString</ref><sp/>str<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;...&quot;</highlight><highlight class="normal">;</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wxString::const_iterator<sp/>end;</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>!dt.<ref refid="classwx_date_time_1a5d01d56c310d505a093f1a7f25086a1b" kindref="member" tooltip="This function parses the string date according to the given format.">ParseFormat</ref>(str,<sp/></highlight><highlight class="stringliteral">&quot;%Y-%m-%d&quot;</highlight><highlight class="normal">,<sp/>&amp;end)<sp/>)</highlight></codeline>
@@ -1483,7 +1516,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="922"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1011"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1aa2137ab606576e3f5baf50d98ff47d17" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1508,7 +1541,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="929"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1018"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1a9430da2d38573e4043cf1217c0da1916" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1529,7 +1562,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="934"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1023"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1a35240c6a928bc9c763a5d26bd8f3072b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1552,7 +1585,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="945"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1034"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1a416e9e5e7395dd11a059cd116da7e6a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1570,7 +1603,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="953"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1042"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1adc4c1fb178f73958b151eabd36625f59" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1588,7 +1621,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="961"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1050"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1ab0f2485c52d0d3cf0196aaf0062d2f83" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1609,7 +1642,7 @@
 <para>The exact description of this format may, of course, be found in the RFC (section 5), but, briefly, this is the format used in the headers of Internet email messages and one of the most common strings expressing date in this format may be something like <computeroutput>&quot;Sat, 18 Dec 1999 00:48:30 +0100&quot;</computeroutput>.</para><para>Returns NULL if the conversion failed, otherwise return the pointer to the character immediately following the part of the string which could be parsed. If the entire string contains only the date in RFC 822 format, the returned pointer will be pointing to a <computeroutput>NUL</computeroutput> character.</para><para>This function is intentionally strict, it will return an error for any string which is not RFC 822 compliant. If you need to parse date formatted in more free ways, you should use <ref refid="classwx_date_time_1a332a41f998bc3be6c0a9a81449112485" kindref="member">ParseDateTime()</ref> or <ref refid="classwx_date_time_1acdcb88e25b38099994af45b11391c962" kindref="member">ParseDate()</ref> instead.</para><para>See <ref refid="classwx_date_time_1a5d01d56c310d505a093f1a7f25086a1b" kindref="member">ParseFormat()</ref> for the description of function parameters and return value. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="984"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1073"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1ac903b3227620e1b88019e76b807327e8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1630,7 +1663,7 @@
 <para>See <ref refid="classwx_date_time_1a5d01d56c310d505a093f1a7f25086a1b" kindref="member">ParseFormat()</ref> for the description of function parameters and return value. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="993"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1082"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -1657,7 +1690,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1017"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1106"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1a931022efed3491d720ebc9767acb9051" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_date_time" kindref="compound">wxDateTime</ref></type>
@@ -1684,7 +1717,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1024"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1113"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1a948507060e1ca798a5c2ee10ddadd7f0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_date_time" kindref="compound">wxDateTime</ref></type>
@@ -1701,7 +1734,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1030"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1119"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1a5a982f1f5674f694e4ae1df980fb1af6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_date_time" kindref="compound">wxDateTime</ref></type>
@@ -1718,7 +1751,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1036"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1125"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1a313aab54e44a9de99b6f0d0eef528aa7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_date_time" kindref="compound">wxDateTime</ref></type>
@@ -1750,7 +1783,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1042"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1131"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1a2b3deaf8d044cb517c2fabc7a0a4e561" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_date_time" kindref="compound">wxDateTime</ref></type>
@@ -1772,7 +1805,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1049"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1138"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1ad96b754422ee7db5adcace39b4f2395e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_date_time" kindref="compound">wxDateTime</ref></type>
@@ -1789,7 +1822,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1054"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1143"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1a6d6bc203c75e55188c03d60d88600494" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_date_time" kindref="compound">wxDateTime</ref> &amp;</type>
@@ -1813,7 +1846,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1062"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1151"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1a55182141a6235de19c0bae356994e6f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1840,7 +1873,7 @@
 <para>The date will be set to the last <emphasis>weekday</emphasis> in the given month and year (the current ones by default). Always returns true. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1071"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1160"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1ab239f44b4d46001c5887f8a3680fa5c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_date_time" kindref="compound">wxDateTime</ref> &amp;</type>
@@ -1858,7 +1891,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1079"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1168"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1a798feefecc3c77cc64ba3e585b5ac704" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_date_time" kindref="compound">wxDateTime</ref> &amp;</type>
@@ -1876,7 +1909,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1087"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1176"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1a4687372ebe55a6aded83de6a639cde95" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1909,7 +1942,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1104"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1193"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1a927cf1043514729227f07d244b208142" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_date_time" kindref="compound">wxDateTime</ref> &amp;</type>
@@ -1932,7 +1965,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1113"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1202"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1a857b73aa9271782744cd524bea373f3c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_date_time" kindref="compound">wxDateTime</ref> &amp;</type>
@@ -1950,7 +1983,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1123"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1212"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -1967,7 +2000,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1143"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1232"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1af99c22cc0d4d7deaffbc3b998403b7d1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -1981,7 +2014,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1150"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1239"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1a28e2d20d224aedadad683a93d88c5c4e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -1994,7 +2027,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1155"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1244"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1aec513fdaa56ec1f13ca9d1e3e48a485d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -2007,7 +2040,7 @@
 <para>The MJDs are simpler to work with as the integral MJDs correspond to midnights of the dates in the Gregorian calendar and not the noons like JDN. The MJD 0 represents Nov 17, 1858. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1164"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1253"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1ab81c9b7069ad4eb91bafdc144a2baea6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -2020,7 +2053,7 @@
 <para>By definition, the Rata Die number is a date specified as the number of days relative to a base date of December 31 of the year 0. Thus January 1 of the year 1 is Rata Die day 1. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1173"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1262"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -2032,7 +2065,7 @@
         <argsstring>(const TimeZone &amp;tz, bool noDST=false) const </argsstring>
         <name>FromTimezone</name>
         <param>
-          <type>const TimeZone &amp;</type>
+          <type>const <ref refid="classwx_date_time_1_1_time_zone" kindref="compound">TimeZone</ref> &amp;</type>
           <declname>tz</declname>
         </param>
         <param>
@@ -2047,7 +2080,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1196"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1285"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1a5478f06e2449d299c60ad98be6ca34a8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -2066,7 +2099,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1203"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1292"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1a83cff1eb8079f9eef5c386a5701d8803" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_date_time" kindref="compound">wxDateTime</ref> &amp;</type>
@@ -2074,7 +2107,7 @@
         <argsstring>(const TimeZone &amp;tz, bool noDST=false)</argsstring>
         <name>MakeFromTimezone</name>
         <param>
-          <type>const TimeZone &amp;</type>
+          <type>const <ref refid="classwx_date_time_1_1_time_zone" kindref="compound">TimeZone</ref> &amp;</type>
           <declname>tz</declname>
         </param>
         <param>
@@ -2088,7 +2121,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1208"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1297"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1ad6ce9eb1fb237eda8013695ebd531af1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_date_time" kindref="compound">wxDateTime</ref> &amp;</type>
@@ -2096,7 +2129,7 @@
         <argsstring>(const TimeZone &amp;tz, bool noDST=false)</argsstring>
         <name>MakeTimezone</name>
         <param>
-          <type>const TimeZone &amp;</type>
+          <type>const <ref refid="classwx_date_time_1_1_time_zone" kindref="compound">TimeZone</ref> &amp;</type>
           <declname>tz</declname>
         </param>
         <param>
@@ -2110,7 +2143,7 @@
 <para>If <emphasis>noDST</emphasis> is true, no DST adjustments will be made. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1214"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1303"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1aa7e62cebf49c1c6b765e70ec19caedc0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_date_time" kindref="compound">wxDateTime</ref> &amp;</type>
@@ -2128,7 +2161,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1219"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1308"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1a254dff0f6fb8861216941dcc3d4fdc15" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_date_time" kindref="compound">wxDateTime</ref></type>
@@ -2136,7 +2169,7 @@
         <argsstring>(const TimeZone &amp;tz, bool noDST=false) const </argsstring>
         <name>ToTimezone</name>
         <param>
-          <type>const TimeZone &amp;</type>
+          <type>const <ref refid="classwx_date_time_1_1_time_zone" kindref="compound">TimeZone</ref> &amp;</type>
           <declname>tz</declname>
         </param>
         <param>
@@ -2151,7 +2184,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1227"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1316"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1a4bddd303b09cc47c7251b01ca49dc04c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_date_time" kindref="compound">wxDateTime</ref></type>
@@ -2169,7 +2202,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1232"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1321"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -2596,7 +2629,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="100" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" bodystart="99" bodyend="160"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="94" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" bodystart="93" bodyend="154"/>
       </memberdef>
       <memberdef kind="enum" id="classwx_date_time_1ab2c1717e9dff5256cc01f917a5b7f70c" prot="public" static="no">
         <name>Calendar</name>
@@ -2620,7 +2653,487 @@
 <para>This parameters is one of the following values. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="168" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" bodystart="167" bodyend="171"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="162" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" bodystart="161" bodyend="165"/>
+      </memberdef>
+      <memberdef kind="enum" id="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317" prot="public" static="no">
+        <name>GregorianAdoption</name>
+        <enumvalue id="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317a05b4d00b4f3b2cf9f94653731d077df7" prot="public">
+          <name>Gr_Unknown</name>
+          <briefdescription>
+<para>no data for this country or it&apos;s too uncertain to use </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317adb5a0d088fe066053e4ee22aa18ec6e7" prot="public">
+          <name>Gr_Standard</name>
+          <briefdescription>
+<para>on the day 0 of Gregorian calendar: 15 Oct 1582 </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317af01a3afc4efc21f6ffb06248c7f61aff" prot="public">
+          <name>Gr_Alaska</name>
+          <briefdescription>
+<para>Oct 1867 when Alaska became part of the USA. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317a0de48e9efd9a07f1811664b5a409a326" prot="public">
+          <name>Gr_Albania</name>
+          <briefdescription>
+<para>Dec 1912. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317a64a9932ab1688145c3f1bb42523c0856" prot="public">
+          <name>Gr_Austria</name>
+          <initializer> Gr_Unknown</initializer>
+          <briefdescription>
+<para>Different regions on different dates. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317aba0700d67949baf1bf200a59617715bc" prot="public">
+          <name>Gr_Austria_Brixen</name>
+          <briefdescription>
+<para>5 Oct 1583 -&gt; 16 Oct 1583 </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317acb5120488c117ba78ba36ab10581ab77" prot="public">
+          <name>Gr_Austria_Salzburg</name>
+          <initializer> Gr_Austria_Brixen</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317ac8a237f0ca20df155aee6a630eee7d56" prot="public">
+          <name>Gr_Austria_Tyrol</name>
+          <initializer> Gr_Austria_Brixen</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317a2fdd4296b61409ba6137c54c24de1184" prot="public">
+          <name>Gr_Austria_Carinthia</name>
+          <briefdescription>
+<para>14 Dec 1583 -&gt; 25 Dec 1583 </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317a8feaf713e78adfaac7c388dfe3769fe7" prot="public">
+          <name>Gr_Austria_Styria</name>
+          <initializer> Gr_Austria_Carinthia</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317a3dd2bfdf9a317cd64ee1d872bdb71bf3" prot="public">
+          <name>Gr_Belgium</name>
+          <briefdescription>
+<para>Then part of the Netherlands. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317a6eb3599f7df7795299e1329987635b26" prot="public">
+          <name>Gr_Bulgaria</name>
+          <initializer> Gr_Unknown</initializer>
+          <briefdescription>
+<para>Unknown precisely (from 1915 to 1920) </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317a81153a3b91db33cf97dd922e559d4803" prot="public">
+          <name>Gr_Bulgaria_1</name>
+          <briefdescription>
+<para>18 Mar 1916 -&gt; 1 Apr 1916 </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317a313aaf6e63984bbd01acba1136e4ceb8" prot="public">
+          <name>Gr_Bulgaria_2</name>
+          <briefdescription>
+<para>31 Mar 1916 -&gt; 14 Apr 1916 </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317aac0677659007a2d70bd4ab4c5b77ef42" prot="public">
+          <name>Gr_Bulgaria_3</name>
+          <briefdescription>
+<para>3 Sep 1920 -&gt; 17 Sep 1920 </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317a3e6076008e6e276d91bc712617c016c3" prot="public">
+          <name>Gr_Canada</name>
+          <initializer> Gr_Unknown</initializer>
+          <briefdescription>
+<para>Different regions followed the changes in. </para>          </briefdescription>
+          <detaileddescription>
+<para>Great Britain or France </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317a3f3ab769bcda13a477dc7c04cf088f2b" prot="public">
+          <name>Gr_China</name>
+          <initializer> Gr_Unknown</initializer>
+          <briefdescription>
+<para>Different authorities say: </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317a86de67f7311b714d7bc03b925b16d2f6" prot="public">
+          <name>Gr_China_1</name>
+          <briefdescription>
+<para>18 Dec 1911 -&gt; 1 Jan 1912 </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317af575d0129f4299c0fe82b5eee235a15d" prot="public">
+          <name>Gr_China_2</name>
+          <briefdescription>
+<para>18 Dec 1928 -&gt; 1 Jan 1929 </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317ad2ff56a64e8f363be4cc86261172b433" prot="public">
+          <name>Gr_Czechoslovakia</name>
+          <briefdescription>
+<para>(Bohemia and Moravia) 6 Jan 1584 -&gt; 17 Jan 1584 </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317af751fc7cd10bca979be1c7957f6cadf4" prot="public">
+          <name>Gr_Denmark</name>
+          <briefdescription>
+<para>(including Norway) 18 Feb 1700 -&gt; 1 Mar 1700 </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317a5c23c8d399e00d541929677dad05f5de" prot="public">
+          <name>Gr_Egypt</name>
+          <briefdescription>
+<para>1875 </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317a774d8cb0ccfd097e13f99e57afbeafae" prot="public">
+          <name>Gr_Estonia</name>
+          <briefdescription>
+<para>1918 </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317a27c2f2620b16c4546e1c5caaa1379343" prot="public">
+          <name>Gr_Finland</name>
+          <briefdescription>
+<para>Then part of Sweden. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317a4c2bceeb7a061d44c062b9e450a9dd90" prot="public">
+          <name>Gr_France</name>
+          <briefdescription>
+<para>9 Dec 1582 -&gt; 20 Dec 1582 </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317a37dea54fc1b91b33d2d4d0fa10f4c046" prot="public">
+          <name>Gr_France_Alsace</name>
+          <briefdescription>
+<para>4 Feb 1682 -&gt; 16 Feb 1682 </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317a8cafd9b0774b18975382394e8fa632d0" prot="public">
+          <name>Gr_France_Lorraine</name>
+          <briefdescription>
+<para>16 Feb 1760 -&gt; 28 Feb 1760 </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317a68d64c61ff73ddc11cad0fe383b66822" prot="public">
+          <name>Gr_France_Strasbourg</name>
+          <briefdescription>
+<para>February 1682. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317a6b7847b0d144f3aecd16fa042d4fdec3" prot="public">
+          <name>Gr_Germany</name>
+          <initializer> Gr_Unknown</initializer>
+          <briefdescription>
+<para>Different states on different dates: </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317a779d56125e0580bb10d4ea4a7464fe0e" prot="public">
+          <name>Gr_Germany_Catholic</name>
+          <briefdescription>
+<para>1583-1585 (we take 1584) </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317aaf52d049dacff4fd5a5a6b306e96a06b" prot="public">
+          <name>Gr_Germany_Prussia</name>
+          <briefdescription>
+<para>22 Aug 1610 -&gt; 2 Sep 1610 </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317adfc5edfa459249ff2814902cca2b6954" prot="public">
+          <name>Gr_Germany_Protestant</name>
+          <briefdescription>
+<para>18 Feb 1700 -&gt; 1 Mar 1700 </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317a25b99348c611ed84a19af72e26b013e1" prot="public">
+          <name>Gr_GreatBritain</name>
+          <briefdescription>
+<para>2 Sep 1752 -&gt; 14 Sep 1752 (use &apos;cal(1)&apos;) </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317ac485fa851a1ee173c80210f616484707" prot="public">
+          <name>Gr_Greece</name>
+          <briefdescription>
+<para>9 Mar 1924 -&gt; 23 Mar 1924 </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317a8007a580c9e884bae5b87328cb7cb54f" prot="public">
+          <name>Gr_Hungary</name>
+          <briefdescription>
+<para>21 Oct 1587 -&gt; 1 Nov 1587 </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317a95c6df7082e39814d5e8d7846d392def" prot="public">
+          <name>Gr_Ireland</name>
+          <initializer> Gr_GreatBritain</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317a91cc915cb7147c36759bcdcb4d99f660" prot="public">
+          <name>Gr_Italy</name>
+          <initializer> Gr_Standard</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317af4791fa36354961c11364deb54fb2b05" prot="public">
+          <name>Gr_Japan</name>
+          <initializer> Gr_Unknown</initializer>
+          <briefdescription>
+<para>Different authorities say: </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317ad7edcc3093b70a9bed5cda45581e34d3" prot="public">
+          <name>Gr_Japan_1</name>
+          <briefdescription>
+<para>19 Dec 1872 -&gt; 1 Jan 1873 </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317ab4bce89cacb65d137454820528fada52" prot="public">
+          <name>Gr_Japan_2</name>
+          <briefdescription>
+<para>19 Dec 1892 -&gt; 1 Jan 1893 </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317aa1f74230daa188563e80ce208e920eed" prot="public">
+          <name>Gr_Japan_3</name>
+          <briefdescription>
+<para>18 Dec 1918 -&gt; 1 Jan 1919 </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317a8752ca8b7ff2660cebe50f9f948d93ba" prot="public">
+          <name>Gr_Latvia</name>
+          <briefdescription>
+<para>1915-1918 (we take 1915) </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317a89a1723eaea222c54c6553c069934723" prot="public">
+          <name>Gr_Lithuania</name>
+          <briefdescription>
+<para>1915 </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317a94f984187ab5803769ec84acaf0aca9e" prot="public">
+          <name>Gr_Luxemburg</name>
+          <briefdescription>
+<para>14 Dec 1582 -&gt; 25 Dec 1582 </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317a16945c6424a4e585e9c017c8a382f751" prot="public">
+          <name>Gr_Netherlands</name>
+          <initializer> Gr_Belgium</initializer>
+          <briefdescription>
+<para>(including Belgium) 1 Jan 1583 </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317a8cae778930077458b2ab1bbfc890ca55" prot="public">
+          <name>Gr_Netherlands_Groningen</name>
+          <briefdescription>
+<para>Special case of Groningen. </para>          </briefdescription>
+          <detaileddescription>
+<para>The Gregorian calendar was introduced twice in Groningen, first time 28 Feb 1583 was followed by 11 Mar 1583, then it has gone back to Julian in the summer of 1584 and then 13 Dec 1700 was followed by 12 Jan 1701 -- which is the date we take into account here. 13 Dec 1700 -&gt; 12 Jan 1701 </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317ad4103aa6ef56cc10f724100838f983e7" prot="public">
+          <name>Gr_Netherlands_Gelderland</name>
+          <briefdescription>
+<para>30 Jun 1700 -&gt; 12 Jul 1700 </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317a674b465bb0122dc3db3276c4e1f7850f" prot="public">
+          <name>Gr_Netherlands_Utrecht</name>
+          <briefdescription>
+<para>(and Overijssel) 30 Nov 1700-&gt;12 Dec 1700 </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317a440e29ec7706a83a326ffc84f8249de5" prot="public">
+          <name>Gr_Netherlands_Friesland</name>
+          <briefdescription>
+<para>(and Drenthe) 31 Dec 1700 -&gt; 12 Jan 1701 </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317ae7bc2c790ffcdd7a91bd24577e55c99d" prot="public">
+          <name>Gr_Norway</name>
+          <initializer> Gr_Denmark</initializer>
+          <briefdescription>
+<para>Then part of Denmark. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317a5f336f64ab1e62f8657442b2b0d836f5" prot="public">
+          <name>Gr_Poland</name>
+          <initializer> Gr_Standard</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317a44078e070f2694410690eef540fd2fcc" prot="public">
+          <name>Gr_Portugal</name>
+          <initializer> Gr_Standard</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317ad8b4b8c05ff8f1bcdb37eb0a1327c4af" prot="public">
+          <name>Gr_Romania</name>
+          <briefdescription>
+<para>31 Mar 1919 -&gt; 14 Apr 1919 </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317a39494148c6a009e1a82043c311ec52c5" prot="public">
+          <name>Gr_Russia</name>
+          <briefdescription>
+<para>31 Jan 1918 -&gt; 14 Feb 1918 </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317a29bb208ac771f94590dd70d451b91d0a" prot="public">
+          <name>Gr_Scotland</name>
+          <initializer> Gr_GreatBritain</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317abf97390c78ce699eb5601374ab6146f8" prot="public">
+          <name>Gr_Spain</name>
+          <initializer> Gr_Standard</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317af067437c5bed57ecda188870bab9771c" prot="public">
+          <name>Gr_Sweden</name>
+          <initializer> Gr_Finland</initializer>
+          <briefdescription>
+<para>Special case of Sweden. </para>          </briefdescription>
+          <detaileddescription>
+<para>Sweden has a curious history. Sweden decided to make a gradual change from the Julian to the Gregorian calendar. By dropping every leap year from 1700 through 1740 the eleven superfluous days would be omitted and from 1 Mar 1740 they would be in sync with the Gregorian calendar. (But in the meantime they would be in sync with nobody!)</para><para>So 1700 (which should have been a leap year in the Julian calendar) was not a leap year in Sweden. However, by mistake 1704 and 1708 became leap years. This left Sweden out of synchronisation with both the Julian and the Gregorian world, so they decided to go back to the Julian calendar. In order to do this, they inserted an extra day in 1712, making that year a double leap year! So in 1712, February had 30 days in Sweden.</para><para>Later, in 1753, Sweden changed to the Gregorian calendar by dropping 11 days like everyone else and this is what we use here. 17 Feb 1753 -&gt; 1 Mar 1753 </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317a86da3df019977a63e36f1018159c5dc0" prot="public">
+          <name>Gr_Switzerland</name>
+          <initializer> Gr_Unknown</initializer>
+          <briefdescription>
+<para>Different cantons used different dates. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317ab3aaeab436356942212a7046564cfdef" prot="public">
+          <name>Gr_Switzerland_Catholic</name>
+          <briefdescription>
+<para>1583, 1584 or 1597 (we take 1584) </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317a201a3b062edfd3e5b2d10ccb5ff531aa" prot="public">
+          <name>Gr_Switzerland_Protestant</name>
+          <briefdescription>
+<para>31 Dec 1700 -&gt; 12 Jan 1701 </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317a6a775db8ee6cfbe1330f41339a74db41" prot="public">
+          <name>Gr_Turkey</name>
+          <briefdescription>
+<para>1 Jan 1927 </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317af08da678c431fbed68b12de09c1df008" prot="public">
+          <name>Gr_USA</name>
+          <initializer> Gr_GreatBritain</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317a884f46d9c1fea51f02941bbbc7168c1f" prot="public">
+          <name>Gr_Wales</name>
+          <initializer> Gr_GreatBritain</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317ae2163df9c406989dec5f6ca0749be866" prot="public">
+          <name>Gr_Yugoslavia</name>
+          <briefdescription>
+<para>1919 </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Values corresponding to different dates of adoption of the Gregorian calendar. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classwx_date_time_1aa87b3990a0d925f9d0221411aa8c9375" kindref="member">IsGregorianDate</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="174" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" bodystart="173" bodyend="287"/>
       </memberdef>
       <memberdef kind="enum" id="classwx_date_time_1abdd3b3e656f92a4923c3ddf2026ed126" prot="public" static="no">
         <name>Country</name>
@@ -2702,7 +3215,7 @@
 <para>It takes one of the following values as parameter. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="179" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" bodystart="178" bodyend="194"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="295" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" bodystart="294" bodyend="310"/>
       </memberdef>
       <memberdef kind="enum" id="classwx_date_time_1a156e17eb15e3c16a7da36cd810ff9117" prot="public" static="no">
         <name>Month</name>
@@ -2803,7 +3316,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="198" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" bodystart="197" bodyend="203"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="314" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" bodystart="313" bodyend="319"/>
       </memberdef>
       <memberdef kind="enum" id="classwx_date_time_1a9ce844e5c79b28711f52ae2d9a571457" prot="public" static="no">
         <name>WeekDay</name>
@@ -2869,7 +3382,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="207" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" bodystart="206" bodyend="212"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="323" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" bodystart="322" bodyend="328"/>
       </memberdef>
       <memberdef kind="enum" id="classwx_date_time_1a4f9ba1f993835bc0096f8811f92f5d79" prot="public" static="no">
         <name>Year</name>
@@ -2887,7 +3400,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="216" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" bodystart="215" bodyend="218"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="332" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" bodystart="331" bodyend="334"/>
       </memberdef>
       <memberdef kind="enum" id="classwx_date_time_1a49326e6533b05df469ac7c5ff2af78b7" prot="public" static="no">
         <name>NameFlags</name>
@@ -2913,7 +3426,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="224" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" bodystart="223" bodyend="227"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="340" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" bodystart="339" bodyend="343"/>
       </memberdef>
       <memberdef kind="enum" id="classwx_date_time_1a8ab175ce5385f833894d9b89987a90d4" prot="public" static="no">
         <name>WeekFlags</name>
@@ -2944,7 +3457,7 @@
 <para>In some countries, the week starts on Sunday, while in others -- on Monday. The ISO standard doesn&apos;t address this issue, so we support both conventions in the functions whose result depends on it (<ref refid="classwx_date_time_1aeb92e6f6fdd172850a759fda324c87fb" kindref="member">GetWeekOfYear()</ref> and <ref refid="classwx_date_time_1ac2e541595f16d6f48db34b489a5d1ce9" kindref="member">GetWeekOfMonth()</ref>).</para><para>The desired behaviour may be specified by giving one of the following constants as argument to these functions. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="240" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" bodystart="239" bodyend="244"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="356" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" bodystart="355" bodyend="360"/>
       </memberdef>
       <memberdef kind="typedef" id="classwx_date_time_1a27df9e32a320a1ca266288d1a436de98" prot="public" static="no">
         <type>unsigned short</type>
@@ -2957,7 +3470,7 @@
 <para>It should be at least short (i.e. not char) to contain the number of milliseconds - it may also be &apos;int&apos; because there is no size penalty associated with it in our code, we don&apos;t store any data in this format. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="93" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" bodystart="93" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="87" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" bodystart="87" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -2973,13 +3486,13 @@
         <briefdescription>
 <para>Converts the year in absolute notation (i.e. </para>        </briefdescription>
         <detaileddescription>
-<para>a number which can be negative, positive or zero) to the year in BC/AD notation. For the positive years, nothing is done, but the year 0 is year 1 BC and so for other years there is a difference of 1.</para><para>This function should be used like this:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_date_time" kindref="compound" tooltip="wxDateTime class represents an absolute moment in the time.">wxDateTime</ref><sp/>dt(...);</highlight></codeline>
+<para>a number which can be negative, positive or zero) to the year in BC/AD notation. For the positive years, nothing is done, but the year 0 is year 1 BC and so for other years there is a difference of 1.</para><para>This function should be used like this:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_date_time" kindref="compound" tooltip="wxDateTime class represents an absolute moment in time.">wxDateTime</ref><sp/>dt(...);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y<sp/>=<sp/>dt.<ref refid="classwx_date_time_1a27fe507f5ba549091f1f7d523e424be9" kindref="member" tooltip="Returns the year in the given timezone (local one by default).">GetYear</ref>();</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;The<sp/>year<sp/>is<sp/>%d%s&quot;</highlight><highlight class="normal">,<sp/><ref refid="classwx_date_time_1a52e2fe22ededf8aaf3922a3e8136ddb0" kindref="member" tooltip="Converts the year in absolute notation (i.e.">wxDateTime::ConvertYearToBC</ref>(y),<sp/>y<sp/>&gt;<sp/>0<sp/>?<sp/></highlight><highlight class="stringliteral">&quot;AD&quot;</highlight><highlight class="normal"><sp/>:<sp/></highlight><highlight class="stringliteral">&quot;BC&quot;</highlight><highlight class="normal">);</highlight></codeline>
 </programlisting> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1254"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1343"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1a9ef535b0db4eeb117858a5b31ac00ae5" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -3000,7 +3513,7 @@
 <para>Either of the pointers may be NULL if the corresponding value is not needed. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1261"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1350"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1a968bb73469fdccd2903c671b435735d7" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_date_time" kindref="compound">wxDateTime</ref></type>
@@ -3024,7 +3537,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1271"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1360"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1a8c811978a0390f54ffa6012931ecb1af" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_date_time" kindref="compound">wxDateTime</ref></type>
@@ -3048,7 +3561,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1280"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1369"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1aa7da8657207e8872291e757bc6065b61" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -3065,7 +3578,7 @@
 <para>first two digits of the year, in given calendar (only Gregorian is currently supported). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1286"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1375"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1a92fb00b090bd665f4ba13d70738ecd4a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_date_time_1abdd3b3e656f92a4923c3ddf2026ed126" kindref="member">Country</ref></type>
@@ -3079,7 +3592,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1294"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1383"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1a729d7baff7dba54605946ea946597b71" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_date_time_1a156e17eb15e3c16a7da36cd810ff9117" kindref="member">Month</ref></type>
@@ -3097,7 +3610,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1300"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1389"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1a7f7702c3a3bd20f15efd8ae819c76041" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -3115,7 +3628,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1306"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1395"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1a836d364cdde8a69553613b457491e435" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -3154,7 +3667,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1325"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1414"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1ad9543420706df2f207dfcfbd3449b111" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -3193,7 +3706,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1344"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1433"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1a85afc6bab234a485e7939e7fec941d76" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -3231,7 +3744,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1359"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1448"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1aafc0ca017777f402d3f60a53d5e1a70f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_date_time_1a27df9e32a320a1ca266288d1a436de98" kindref="member">wxDateTime_t</ref></type>
@@ -3250,10 +3763,10 @@
         <briefdescription>
 <para>Returns the number of days in the given year. </para>        </briefdescription>
         <detaileddescription>
-<para>The only supported value for <emphasis>cal</emphasis> currently is <computeroutput>Gregorian</computeroutput>.</para><para><bold>wxPython Note:</bold> This method is named &quot;GetNumberOfDaysInYear&quot; in wxPython. </para>        </detaileddescription>
+<para>The only supported value for <emphasis>cal</emphasis> currently is <computeroutput>Gregorian</computeroutput>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1369"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1454"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1a1eba7b64affea1f43dda1cb9baf01c96" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_date_time_1a27df9e32a320a1ca266288d1a436de98" kindref="member">wxDateTime_t</ref></type>
@@ -3277,10 +3790,10 @@
         <briefdescription>
 <para>Returns the number of days in the given month of the given year. </para>        </briefdescription>
         <detaileddescription>
-<para>The only supported value for <emphasis>cal</emphasis> currently is <computeroutput>Gregorian</computeroutput>.</para><para><bold>wxPython Note:</bold> This method is named &quot;GetNumberOfDaysInMonth&quot; in wxPython. </para>        </detaileddescription>
+<para>The only supported value for <emphasis>cal</emphasis> currently is <computeroutput>Gregorian</computeroutput>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1380"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1461"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1a972ecfc13254561b3620719f673d1053" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>time_t</type>
@@ -3293,7 +3806,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1385"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1466"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1a52e8e2420a4ecfaeb0920c20af6f974a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>tm *</type>
@@ -3310,7 +3823,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1391"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1472"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1afc3dc3d2e1da6990b3bf4f8b552d0367" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>tm *</type>
@@ -3323,7 +3836,7 @@
 <para>Note that this function returns a pointer to a static buffer that&apos;s reused by calls to this function and certain C library functions (e.g. localtime). If there is any chance your code might be used in a multi-threaded application, you really should use <ref refid="classwx_date_time_1a52e8e2420a4ecfaeb0920c20af6f974a" kindref="member">GetTmNow(struct tm *)</ref> instead. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1400"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1481"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1a766fa258f8e30e406489df23de54e29f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -3361,7 +3874,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1416"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1497"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1a52f2fcf206a4a78b3f3d36891263b4c9" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -3384,7 +3897,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1423"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1504"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1a55f8149cfda08356431d6c36ef9c02dc" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -3407,7 +3920,7 @@
 <para>This functions supports Gregorian and Julian calendars. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1429"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1510"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1a93292d73b18e4858735c13e754224dcb" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -3425,7 +3938,7 @@
 <para>It is used internally by <ref refid="classwx_date_time" kindref="compound">wxDateTime</ref> to determine the DST convention and date and time formatting rules. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1436"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1517"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1a6e6c37a0414bb4831e2cc03b37f498a2" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_date_time" kindref="compound">wxDateTime</ref></type>
@@ -3435,14 +3948,14 @@
         <briefdescription>
 <para>Returns the object corresponding to the current time. </para>        </briefdescription>
         <detaileddescription>
-<para>Example:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_date_time" kindref="compound" tooltip="wxDateTime class represents an absolute moment in the time.">wxDateTime</ref><sp/>now<sp/>=<sp/><ref refid="classwx_date_time_1a6e6c37a0414bb4831e2cc03b37f498a2" kindref="member" tooltip="Returns the object corresponding to the current time.">wxDateTime::Now</ref>();</highlight></codeline>
+<para>Example:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_date_time" kindref="compound" tooltip="wxDateTime class represents an absolute moment in time.">wxDateTime</ref><sp/>now<sp/>=<sp/><ref refid="classwx_date_time_1a6e6c37a0414bb4831e2cc03b37f498a2" kindref="member" tooltip="Returns the object corresponding to the current time.">wxDateTime::Now</ref>();</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Current<sp/>time<sp/>in<sp/>Paris:\t%s\n&quot;</highlight><highlight class="normal">,<sp/>now.<ref refid="classwx_date_time_1a32377f43a31e29ad4fe70f299650c5f8" kindref="member" tooltip="This function does the same as the standard ANSI C strftime(3) function (http://www.cplusplus.com/reference/clibrary/ctime/strftime.html).">Format</ref>(</highlight><highlight class="stringliteral">&quot;%c&quot;</highlight><highlight class="normal">,<sp/><ref refid="classwx_date_time_1a4db12283a6c06cea4c92528fbb7f88bba768e71f1f3c63c6cf64dd9c9a0f20b0b" kindref="member" tooltip="Central Europe Time.">wxDateTime::CET</ref>).<ref refid="classwx_string_1a6418ec90c6d4ffe0b05702be1b35df4f" kindref="member" tooltip="Returns a lightweight intermediate class which is in turn implicitly convertible to both const char* ...">c_str</ref>());</highlight></codeline>
-</programlisting></para><para><simplesect kind="note"><para>This function is accurate up to seconds. <ref refid="classwx_date_time_1a0db1c9bac7b2d27d589cad2a38d1438c" kindref="member">UNow()</ref> should be used for better precision, but it is less efficient and might not be available on all platforms.</para></simplesect>
+</programlisting></para><para><simplesect kind="note"><para>This function is accurate up to seconds. <ref refid="classwx_date_time_1a0db1c9bac7b2d27d589cad2a38d1438c" kindref="member">UNow()</ref> can be used if better precision is required.</para></simplesect>
 <simplesect kind="see"><para><ref refid="classwx_date_time_1af730202238b9acd5a5df2977fa40c569" kindref="member">Today()</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1454"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1534"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1a5ad5b532c62dd26784bb51366a27ca8d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -3460,7 +3973,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1462"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1542"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1ab91c82e85621326436f2931660434719" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_date_time" kindref="compound">wxDateTime</ref></type>
@@ -3486,7 +3999,7 @@
 <para>The number should be in range 1-53.</para><para>Note that the returned date may be in a different year than the one passed to this function because both the week 1 and week 52 or 53 (for leap years) contain days from different years. See <ref refid="classwx_date_time_1aeb92e6f6fdd172850a759fda324c87fb" kindref="member">GetWeekOfYear()</ref> for the explanation of how the year weeks are counted. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1474"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1554"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1af730202238b9acd5a5df2977fa40c569" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_date_time" kindref="compound">wxDateTime</ref></type>
@@ -3500,7 +4013,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1482"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1562"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_time_1a0db1c9bac7b2d27d589cad2a38d1438c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_date_time" kindref="compound">wxDateTime</ref></type>
@@ -3508,21 +4021,21 @@
         <argsstring>()</argsstring>
         <name>UNow</name>
         <briefdescription>
-<para>Returns the object corresponding to the current time including the milliseconds if a function to get time with such precision is available on the current platform (supported under most Unices and Win32). </para>        </briefdescription>
+<para>Returns the object corresponding to the current UTC time including the milliseconds. </para>        </briefdescription>
         <detaileddescription>
-<para><simplesect kind="see"><para><ref refid="classwx_date_time_1a6e6c37a0414bb4831e2cc03b37f498a2" kindref="member">Now()</ref> </para></simplesect>
+<para>Notice that unlike <ref refid="classwx_date_time_1a6e6c37a0414bb4831e2cc03b37f498a2" kindref="member">Now()</ref>, this method creates a <ref refid="classwx_date_time" kindref="compound">wxDateTime</ref> object corresponding to UTC, not local, time.</para><para><simplesect kind="see"><para><ref refid="classwx_date_time_1a6e6c37a0414bb4831e2cc03b37f498a2" kindref="member">Now()</ref>, <ref refid="group__group__funcmacro__time_1ga9e6cb143b3e04cf0459aa3f9763eec82" kindref="member">wxGetUTCTimeMillis()</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1491"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1573"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
-<para><ref refid="classwx_date_time" kindref="compound">wxDateTime</ref> class represents an absolute moment in the time. </para>    </briefdescription>
+<para><ref refid="classwx_date_time" kindref="compound">wxDateTime</ref> class represents an absolute moment in time. </para>    </briefdescription>
     <detaileddescription>
 <para>The type <computeroutput>wxDateTime_t</computeroutput> is typedefed as <computeroutput>unsigned short</computeroutput> and is used to contain the number of years, hours, minutes, seconds and milliseconds.</para><para>Global constant <ref refid="interface_2wx_2datetime_8h_1ade74a40ef749abadb7c5338e2c9a9321" kindref="member">wxDefaultDateTime</ref> and synonym for it <ref refid="interface_2wx_2datetime_8h_1ad06d2c408599c48fd9bb17804188bf96" kindref="member">wxInvalidDateTime</ref> are defined. This constant will be different from any valid <ref refid="classwx_date_time" kindref="compound">wxDateTime</ref> object.</para><sect1 id="classwx_date_time_1datetime_static">
 <title>Static Functions</title>
-<para>All static functions either set or return the static variables of <ref refid="classwx_date_span" kindref="compound">wxDateSpan</ref> (the country), return the current moment, year, month or number of days in it, or do some general calendar-related actions.</para><para>Please note that although several function accept an extra Calendar parameter, it is currently ignored as only the Gregorian calendar is supported. Future versions will support other calendars.</para><para><bold>wxPython Note:</bold> These methods are standalone functions named &quot;wxDateTime_&lt;StaticMethodName&gt;&quot; in wxPython.</para></sect1>
+<para>All static functions either set or return the static variables of <ref refid="classwx_date_span" kindref="compound">wxDateSpan</ref> (the country), return the current moment, year, month or number of days in it, or do some general calendar-related actions.</para><para>Please note that although several function accept an extra Calendar parameter, it is currently ignored as only the Gregorian calendar is supported. Future versions will support other calendars.</para></sect1>
 <sect1 id="classwx_date_time_1datetime_formatting">
 <title>Date Formatting and Parsing</title>
 <para>The date formatting and parsing functions convert <ref refid="classwx_date_time" kindref="compound">wxDateTime</ref> objects to and from text. The conversions to text are mostly trivial: you can either do it using the default date and time representations for the current locale (<ref refid="classwx_date_time_1ab9886b69761a87ccf77f0ffee7c7f12e" kindref="member">FormatDate()</ref> and <ref refid="classwx_date_time_1a4d3145af33faf443ac9d9fdfc4256c1e" kindref="member">FormatTime()</ref>), using the international standard representation defined by ISO 8601 (<ref refid="classwx_date_time_1a7dc79585261a999dbd43152186e52299" kindref="member">FormatISODate()</ref>, <ref refid="classwx_date_time_1a0f677ffcbc651c733249af36af6bbb3b" kindref="member">FormatISOTime()</ref> and <ref refid="classwx_date_time_1a8d99cfc519de33d2fcf16360a13212f0" kindref="member">FormatISOCombined()</ref>) or by specifying any format at all and using <ref refid="classwx_date_time_1a32377f43a31e29ad4fe70f299650c5f8" kindref="member">Format()</ref> directly.</para><para>The conversions from text are more interesting, as there are much more possibilities to care about. The simplest cases can be taken care of with <ref refid="classwx_date_time_1a5d01d56c310d505a093f1a7f25086a1b" kindref="member">ParseFormat()</ref> which can parse any date in the given (rigid) format. <ref refid="classwx_date_time_1ab0f2485c52d0d3cf0196aaf0062d2f83" kindref="member">ParseRfc822Date()</ref> is another function for parsing dates in predefined format -- the one of RFC 822 which (still...) defines the format of email messages on the Internet. This format cannot be described with <computeroutput>strptime(3)-like</computeroutput> format strings used by <ref refid="classwx_date_time_1a32377f43a31e29ad4fe70f299650c5f8" kindref="member">Format()</ref>, hence the need for a separate function.</para><para>But the most interesting functions are <ref refid="classwx_date_time_1ac903b3227620e1b88019e76b807327e8" kindref="member">ParseTime()</ref>, <ref refid="classwx_date_time_1acdcb88e25b38099994af45b11391c962" kindref="member">ParseDate()</ref> and <ref refid="classwx_date_time_1a332a41f998bc3be6c0a9a81449112485" kindref="member">ParseDateTime()</ref>. They try to parse the date and time (or only one of them) in &apos;free&apos; format, i.e. allow them to be specified in any of possible ways. These functions will usually be used to parse the (interactive) user input which is not bound to be in any predefined format. As an example, <ref refid="classwx_date_time_1acdcb88e25b38099994af45b11391c962" kindref="member">ParseDate()</ref> can parse the strings such as &quot;tomorrow&quot;, &quot;March first&quot; and even &quot;next Sunday&quot;.</para><para>Finally notice that each of the parsing functions is available in several overloads: if the input string is a narrow (<computeroutput>char</computeroutput> *) string, then a narrow pointer is returned. If the input string is a wide string, a wide char pointer is returned. Finally, if the input parameter is a <ref refid="classwx_string" kindref="compound">wxString</ref>, a narrow char pointer is also returned for backwards compatibility but there is also an additional argument of wxString::const_iterator type in which, if it is not NULL, an iterator pointing to the end of the scanned string part is returned.</para><para><heading level="2"></heading>
@@ -3531,7 +4044,7 @@
 </para><para><simplesect kind="see"><para><ref refid="overview_datetime" kindref="compound">Date and Time</ref>, <ref refid="classwx_time_span" kindref="compound">wxTimeSpan</ref>, <ref refid="classwx_date_span" kindref="compound">wxDateSpan</ref>, <ref refid="classwx_calendar_ctrl" kindref="compound">wxCalendarCtrl</ref> </para></simplesect>
 </para></sect1>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="84" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" bodystart="83" bodyend="1492"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="78" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" bodystart="77" bodyend="1574"/>
     <listofallmembers>
       <member refid="classwx_date_time_1a4db12283a6c06cea4c92528fbb7f88bba10a8880abe7d55c0e28c41badf1a3857" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>A_CST</name></member>
       <member refid="classwx_date_time_1a4db12283a6c06cea4c92528fbb7f88bba09b72a5bdfbec3d2e22153ee0ae585c2" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>A_ESST</name></member>
@@ -3577,7 +4090,7 @@
       <member refid="classwx_date_time_1a947daf50d898d95d063777c2cef27feb" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>FromTimezone</name></member>
       <member refid="classwx_date_time_1abdd3b3e656f92a4923c3ddf2026ed126ad2ede5cdb83afee5880b1056f544fece" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>Germany</name></member>
       <member refid="classwx_date_time_1a9ef535b0db4eeb117858a5b31ac00ae5" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>GetAmPmStrings</name></member>
-      <member refid="classwx_date_time_1aae2426d8e550a3e8fd0db66a87a9d135" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>GetAsDOS</name></member>
+      <member refid="classwx_date_time_1a66aebd04f50f468049f17e8159e69a6a" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>GetAsDOS</name></member>
       <member refid="classwx_date_time_1ae40a8c0a37d06ac476d856827e5176d8" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>GetAsMSWSysTime</name></member>
       <member refid="classwx_date_time_1a968bb73469fdccd2903c671b435735d7" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>GetBeginDST</name></member>
       <member refid="classwx_date_time_1acc8f531061b26803b921e20e19faaea1" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>GetCentury</name></member>
@@ -3586,18 +4099,18 @@
       <member refid="classwx_date_time_1a729d7baff7dba54605946ea946597b71" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>GetCurrentMonth</name></member>
       <member refid="classwx_date_time_1a7f7702c3a3bd20f15efd8ae819c76041" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>GetCurrentYear</name></member>
       <member refid="classwx_date_time_1a3b341c8cb0e343d3b7f9db929c7b4830" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>GetDateOnly</name></member>
-      <member refid="classwx_date_time_1a1b7e51b1f11430df08182b34e1f6f551" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>GetDay</name></member>
-      <member refid="classwx_date_time_1a98091e7adceeea387bca0486959f9cde" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>GetDayOfYear</name></member>
+      <member refid="classwx_date_time_1a6ce5fca7b6e7cc7a230e4595d52fb8ed" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>GetDay</name></member>
+      <member refid="classwx_date_time_1a0242e2ec46f3345576bce53354cf5e6a" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>GetDayOfYear</name></member>
       <member refid="classwx_date_time_1a8c811978a0390f54ffa6012931ecb1af" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>GetEndDST</name></member>
       <member refid="classwx_date_time_1a836d364cdde8a69553613b457491e435" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>GetEnglishMonthName</name></member>
       <member refid="classwx_date_time_1ad9543420706df2f207dfcfbd3449b111" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>GetEnglishWeekDayName</name></member>
-      <member refid="classwx_date_time_1abad26a81819464f1ee6df37f89621b63" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>GetHour</name></member>
+      <member refid="classwx_date_time_1a0c07232d5f21ba2ede2a4751f3531c1a" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>GetHour</name></member>
       <member refid="classwx_date_time_1a0bde25a418d8a7fd3e6e6a4c3941e20f" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>GetJDN</name></member>
       <member refid="classwx_date_time_1af99c22cc0d4d7deaffbc3b998403b7d1" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>GetJulianDayNumber</name></member>
       <member refid="classwx_date_time_1a87f1ede94cfcda2a8b2db7322432f2f2" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>GetLastMonthDay</name></member>
       <member refid="classwx_date_time_1a931022efed3491d720ebc9767acb9051" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>GetLastWeekDay</name></member>
-      <member refid="classwx_date_time_1a1d20ba245aee8e4ea0cb46bf7b81e838" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>GetMillisecond</name></member>
-      <member refid="classwx_date_time_1a081d1faa16d00b5cc6be7306827e4eb2" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>GetMinute</name></member>
+      <member refid="classwx_date_time_1a9ae6607047e0e0971e1f6e02fbaf12d4" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>GetMillisecond</name></member>
+      <member refid="classwx_date_time_1ad78c55f442700463a58e3f57054c61e8" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>GetMinute</name></member>
       <member refid="classwx_date_time_1a28e2d20d224aedadad683a93d88c5c4e" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>GetMJD</name></member>
       <member refid="classwx_date_time_1aec513fdaa56ec1f13ca9d1e3e48a485d" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>GetModifiedJulianDayNumber</name></member>
       <member refid="classwx_date_time_1a7e1316e87a89b31a2b72958201105061" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>GetMonth</name></member>
@@ -3607,7 +4120,7 @@
       <member refid="classwx_date_time_1a1eba7b64affea1f43dda1cb9baf01c96" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>GetNumberOfDays</name></member>
       <member refid="classwx_date_time_1a5a982f1f5674f694e4ae1df980fb1af6" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>GetPrevWeekDay</name></member>
       <member refid="classwx_date_time_1ab81c9b7069ad4eb91bafdc144a2baea6" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>GetRataDie</name></member>
-      <member refid="classwx_date_time_1a87bf2d95a45084e2d0cff6ac427cd307" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>GetSecond</name></member>
+      <member refid="classwx_date_time_1adf71fea598bd0baeb6b0e1f56eba093b" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>GetSecond</name></member>
       <member refid="classwx_date_time_1a6be02e8f615380ff701c5f9cedc9fb84" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>GetTicks</name></member>
       <member refid="classwx_date_time_1a972ecfc13254561b3620719f673d1053" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>GetTimeNow</name></member>
       <member refid="classwx_date_time_1a5eb3d08cd32226a5aefa87a65dffe759" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>GetTm</name></member>
@@ -3647,7 +4160,72 @@
       <member refid="classwx_date_time_1a4db12283a6c06cea4c92528fbb7f88bba7663c300529ca4254900540cecb0b0ce" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>GMT_7</name></member>
       <member refid="classwx_date_time_1a4db12283a6c06cea4c92528fbb7f88bba399a20c6a1a04a0104db4dffe3e97c58" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>GMT_8</name></member>
       <member refid="classwx_date_time_1a4db12283a6c06cea4c92528fbb7f88bba92f26e662b9b6fe85e9129b01792405c" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>GMT_9</name></member>
+      <member refid="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317af01a3afc4efc21f6ffb06248c7f61aff" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>Gr_Alaska</name></member>
+      <member refid="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317a0de48e9efd9a07f1811664b5a409a326" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>Gr_Albania</name></member>
+      <member refid="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317a64a9932ab1688145c3f1bb42523c0856" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>Gr_Austria</name></member>
+      <member refid="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317aba0700d67949baf1bf200a59617715bc" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>Gr_Austria_Brixen</name></member>
+      <member refid="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317a2fdd4296b61409ba6137c54c24de1184" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>Gr_Austria_Carinthia</name></member>
+      <member refid="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317acb5120488c117ba78ba36ab10581ab77" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>Gr_Austria_Salzburg</name></member>
+      <member refid="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317a8feaf713e78adfaac7c388dfe3769fe7" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>Gr_Austria_Styria</name></member>
+      <member refid="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317ac8a237f0ca20df155aee6a630eee7d56" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>Gr_Austria_Tyrol</name></member>
+      <member refid="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317a3dd2bfdf9a317cd64ee1d872bdb71bf3" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>Gr_Belgium</name></member>
+      <member refid="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317a6eb3599f7df7795299e1329987635b26" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>Gr_Bulgaria</name></member>
+      <member refid="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317a81153a3b91db33cf97dd922e559d4803" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>Gr_Bulgaria_1</name></member>
+      <member refid="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317a313aaf6e63984bbd01acba1136e4ceb8" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>Gr_Bulgaria_2</name></member>
+      <member refid="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317aac0677659007a2d70bd4ab4c5b77ef42" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>Gr_Bulgaria_3</name></member>
+      <member refid="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317a3e6076008e6e276d91bc712617c016c3" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>Gr_Canada</name></member>
+      <member refid="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317a3f3ab769bcda13a477dc7c04cf088f2b" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>Gr_China</name></member>
+      <member refid="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317a86de67f7311b714d7bc03b925b16d2f6" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>Gr_China_1</name></member>
+      <member refid="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317af575d0129f4299c0fe82b5eee235a15d" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>Gr_China_2</name></member>
+      <member refid="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317ad2ff56a64e8f363be4cc86261172b433" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>Gr_Czechoslovakia</name></member>
+      <member refid="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317af751fc7cd10bca979be1c7957f6cadf4" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>Gr_Denmark</name></member>
+      <member refid="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317a5c23c8d399e00d541929677dad05f5de" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>Gr_Egypt</name></member>
+      <member refid="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317a774d8cb0ccfd097e13f99e57afbeafae" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>Gr_Estonia</name></member>
+      <member refid="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317a27c2f2620b16c4546e1c5caaa1379343" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>Gr_Finland</name></member>
+      <member refid="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317a4c2bceeb7a061d44c062b9e450a9dd90" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>Gr_France</name></member>
+      <member refid="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317a37dea54fc1b91b33d2d4d0fa10f4c046" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>Gr_France_Alsace</name></member>
+      <member refid="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317a8cafd9b0774b18975382394e8fa632d0" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>Gr_France_Lorraine</name></member>
+      <member refid="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317a68d64c61ff73ddc11cad0fe383b66822" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>Gr_France_Strasbourg</name></member>
+      <member refid="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317a6b7847b0d144f3aecd16fa042d4fdec3" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>Gr_Germany</name></member>
+      <member refid="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317a779d56125e0580bb10d4ea4a7464fe0e" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>Gr_Germany_Catholic</name></member>
+      <member refid="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317adfc5edfa459249ff2814902cca2b6954" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>Gr_Germany_Protestant</name></member>
+      <member refid="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317aaf52d049dacff4fd5a5a6b306e96a06b" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>Gr_Germany_Prussia</name></member>
+      <member refid="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317a25b99348c611ed84a19af72e26b013e1" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>Gr_GreatBritain</name></member>
+      <member refid="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317ac485fa851a1ee173c80210f616484707" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>Gr_Greece</name></member>
+      <member refid="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317a8007a580c9e884bae5b87328cb7cb54f" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>Gr_Hungary</name></member>
+      <member refid="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317a95c6df7082e39814d5e8d7846d392def" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>Gr_Ireland</name></member>
+      <member refid="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317a91cc915cb7147c36759bcdcb4d99f660" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>Gr_Italy</name></member>
+      <member refid="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317af4791fa36354961c11364deb54fb2b05" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>Gr_Japan</name></member>
+      <member refid="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317ad7edcc3093b70a9bed5cda45581e34d3" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>Gr_Japan_1</name></member>
+      <member refid="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317ab4bce89cacb65d137454820528fada52" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>Gr_Japan_2</name></member>
+      <member refid="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317aa1f74230daa188563e80ce208e920eed" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>Gr_Japan_3</name></member>
+      <member refid="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317a8752ca8b7ff2660cebe50f9f948d93ba" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>Gr_Latvia</name></member>
+      <member refid="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317a89a1723eaea222c54c6553c069934723" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>Gr_Lithuania</name></member>
+      <member refid="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317a94f984187ab5803769ec84acaf0aca9e" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>Gr_Luxemburg</name></member>
+      <member refid="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317a16945c6424a4e585e9c017c8a382f751" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>Gr_Netherlands</name></member>
+      <member refid="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317a440e29ec7706a83a326ffc84f8249de5" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>Gr_Netherlands_Friesland</name></member>
+      <member refid="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317ad4103aa6ef56cc10f724100838f983e7" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>Gr_Netherlands_Gelderland</name></member>
+      <member refid="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317a8cae778930077458b2ab1bbfc890ca55" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>Gr_Netherlands_Groningen</name></member>
+      <member refid="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317a674b465bb0122dc3db3276c4e1f7850f" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>Gr_Netherlands_Utrecht</name></member>
+      <member refid="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317ae7bc2c790ffcdd7a91bd24577e55c99d" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>Gr_Norway</name></member>
+      <member refid="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317a5f336f64ab1e62f8657442b2b0d836f5" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>Gr_Poland</name></member>
+      <member refid="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317a44078e070f2694410690eef540fd2fcc" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>Gr_Portugal</name></member>
+      <member refid="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317ad8b4b8c05ff8f1bcdb37eb0a1327c4af" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>Gr_Romania</name></member>
+      <member refid="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317a39494148c6a009e1a82043c311ec52c5" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>Gr_Russia</name></member>
+      <member refid="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317a29bb208ac771f94590dd70d451b91d0a" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>Gr_Scotland</name></member>
+      <member refid="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317abf97390c78ce699eb5601374ab6146f8" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>Gr_Spain</name></member>
+      <member refid="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317adb5a0d088fe066053e4ee22aa18ec6e7" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>Gr_Standard</name></member>
+      <member refid="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317af067437c5bed57ecda188870bab9771c" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>Gr_Sweden</name></member>
+      <member refid="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317a86da3df019977a63e36f1018159c5dc0" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>Gr_Switzerland</name></member>
+      <member refid="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317ab3aaeab436356942212a7046564cfdef" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>Gr_Switzerland_Catholic</name></member>
+      <member refid="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317a201a3b062edfd3e5b2d10ccb5ff531aa" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>Gr_Switzerland_Protestant</name></member>
+      <member refid="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317a6a775db8ee6cfbe1330f41339a74db41" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>Gr_Turkey</name></member>
+      <member refid="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317a05b4d00b4f3b2cf9f94653731d077df7" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>Gr_Unknown</name></member>
+      <member refid="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317af08da678c431fbed68b12de09c1df008" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>Gr_USA</name></member>
+      <member refid="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317a884f46d9c1fea51f02941bbbc7168c1f" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>Gr_Wales</name></member>
+      <member refid="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317ae2163df9c406989dec5f6ca0749be866" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>Gr_Yugoslavia</name></member>
       <member refid="classwx_date_time_1ab2c1717e9dff5256cc01f917a5b7f70ca4b609caf0c9d7b04a88a0aa2dbd5dd91" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>Gregorian</name></member>
+      <member refid="classwx_date_time_1a7fe78a6acfef499befaf0f9123257317" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>GregorianAdoption</name></member>
       <member refid="classwx_date_time_1a4db12283a6c06cea4c92528fbb7f88bba19b49f77ce14e8456f6ba311d5323c51" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>HST</name></member>
       <member refid="classwx_date_time_1a156e17eb15e3c16a7da36cd810ff9117ad2d17a16763803c0aa4977feb7725831" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>Inv_Month</name></member>
       <member refid="classwx_date_time_1a9ce844e5c79b28711f52ae2d9a571457a7bf2467543ea4311ceede8d992829f2c" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>Inv_WeekDay</name></member>
@@ -3692,7 +4270,7 @@
       <member refid="classwx_date_time_1a4db12283a6c06cea4c92528fbb7f88bba50981f4a9aa23c5765bbf82a31353d9c" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>NZDT</name></member>
       <member refid="classwx_date_time_1a4db12283a6c06cea4c92528fbb7f88bbab65d681d65687315d5e8f5160e2d375d" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>NZST</name></member>
       <member refid="classwx_date_time_1a156e17eb15e3c16a7da36cd810ff9117a553f38557712cd32124ffe521573f2cb" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>Oct</name></member>
-      <member refid="classwx_date_time_1aa7d96c558490c187e5ce5fe0cf06ae8d" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>operator+=</name></member>
+      <member refid="classwx_date_time_1ac1a77fc607ee36a16fba7078d25fe44d" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>operator+=</name></member>
       <member refid="classwx_date_time_1ae3f78fde5174f576fca00eb21654544f" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>operator+=</name></member>
       <member refid="classwx_date_time_1a146dd110466fb8ba714e98a853b83019" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>operator-=</name></member>
       <member refid="classwx_date_time_1a45d8ef84a5fcda547a9a15226ee68347" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>operator-=</name></member>
@@ -3716,9 +4294,10 @@
       <member refid="classwx_date_time_1a156e17eb15e3c16a7da36cd810ff9117a7028d6990bff742f5f92387f91438884" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>Sep</name></member>
       <member refid="classwx_date_time_1a221052d954c072ce56b796eaa4c075d3" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>Set</name></member>
       <member refid="classwx_date_time_1ae38d80eca7dcbfcd0984708e957c343f" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>Set</name></member>
+      <member refid="classwx_date_time_1afe75b8090e51a7b4e1aacccc55fd10bc" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>Set</name></member>
       <member refid="classwx_date_time_1acfaba2a9f0241f74aff4641304f0a8fb" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>Set</name></member>
       <member refid="classwx_date_time_1a0b73caf2a363e429725244483ebc0d08" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>Set</name></member>
-      <member refid="classwx_date_time_1a8edf536d1491a72bd9e280e86f582bf2" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>Set</name></member>
+      <member refid="classwx_date_time_1a6f7ee89e55144c61ac19a6543e67db6a" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>Set</name></member>
       <member refid="classwx_date_time_1a5ad5b532c62dd26784bb51366a27ca8d" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>SetCountry</name></member>
       <member refid="classwx_date_time_1a153d3687333e318574299ad191f340bb" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>SetDay</name></member>
       <member refid="classwx_date_time_1acdba3b71eec0870b14417d3010311a1a" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>SetFromDOS</name></member>
@@ -3761,11 +4340,12 @@
       <member refid="classwx_date_time_1a4db12283a6c06cea4c92528fbb7f88bbad85e6d8f2aaa3f603c2bfc58d84edb7a" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>WEST</name></member>
       <member refid="classwx_date_time_1a4db12283a6c06cea4c92528fbb7f88bbad1bb3e8d84a7cd92efabe75a088862ef" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>WET</name></member>
       <member refid="classwx_date_time_1a4cc372429453a21632d64f34f635d853" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>wxDateTime</name></member>
+      <member refid="classwx_date_time_1aca2bc3b942d920e01e496841bd759001" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>wxDateTime</name></member>
       <member refid="classwx_date_time_1af389cfd683905c7bd26d78ed2830f8d3" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>wxDateTime</name></member>
       <member refid="classwx_date_time_1af060ddc94177492d3cedf60f9e17224a" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>wxDateTime</name></member>
       <member refid="classwx_date_time_1aa2c38922eafec2a94fb5ee9221c0f6b9" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>wxDateTime</name></member>
       <member refid="classwx_date_time_1a929b59bfd0b445d2bd2e5e2b58767c18" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>wxDateTime</name></member>
-      <member refid="classwx_date_time_1a11bc08a6d3a49d9c04f66c23bad5edf8" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>wxDateTime</name></member>
+      <member refid="classwx_date_time_1a8e4a6d1104d1882514679514e3dbc642" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>wxDateTime</name></member>
       <member refid="classwx_date_time_1a7d16ccd02f0c98f0667f57376da89da7" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>wxDateTime</name></member>
       <member refid="classwx_date_time_1a27df9e32a320a1ca266288d1a436de98" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>wxDateTime_t</name></member>
       <member refid="classwx_date_time_1a4f9ba1f993835bc0096f8811f92f5d79" prot="public" virt="non-virtual"><scope>wxDateTime</scope><name>Year</name></member>

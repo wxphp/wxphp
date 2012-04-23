@@ -34,7 +34,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scrolwin.h" line="13" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scrolwin.h" bodystart="12" bodyend="17"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/scrolwin.h" line="13" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/scrolwin.h" bodystart="12" bodyend="17"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="typedef">
@@ -52,7 +52,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scrolwin.h" line="576" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scrolwin.h" bodystart="576" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/scrolwin.h" line="576" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/scrolwin.h" bodystart="576" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="group__group__class__miscwnd_1ga6b205af0f8759231eab11f15f7d4a098" prot="public" static="no">
         <type><ref refid="classwx_scrolled" kindref="compound">wxScrolled</ref>&lt; <ref refid="classwx_window" kindref="compound">wxWindow</ref> &gt;</type>
@@ -68,13 +68,13 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scrolwin.h" line="589" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scrolwin.h" bodystart="589" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/scrolwin.h" line="589" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/scrolwin.h" bodystart="589" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scrolwin.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/scrolwin.h"/>
   </compounddef>
 </doxygen>

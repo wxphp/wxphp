@@ -27,7 +27,20 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tipdlg.h" line="35"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/tipdlg.h" line="35"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_tip_provider_1af857c316bdea09ae6207fc8743e44cfb" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual wxTipProvider::~wxTipProvider</definition>
+        <argsstring>()</argsstring>
+        <name>~wxTipProvider</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/tipdlg.h" line="37"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tip_provider_1acff065db246be564d5e888210d99e0fc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -40,7 +53,7 @@
 <para>the one which would be returned by <ref refid="classwx_tip_provider_1a82f7aea7a77b67707bc265bab365eb49" kindref="member">GetTip()</ref>).</para><para>The program usually remembers the value returned by this function after calling <ref refid="group__group__funcmacro__dialog_1ga71723a35f5e98349f5a79d7a025dac07" kindref="member">wxShowTip()</ref>. Note that it is not the same as the value which was passed to wxShowTip + 1 because the user might have pressed the &quot;Next&quot; button in the tip dialog. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tipdlg.h" line="45"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/tipdlg.h" line="47"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tip_provider_1a82f7aea7a77b67707bc265bab365eb49" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -53,13 +66,13 @@
 <para>This function is pure virtual, it should be implemented in the derived classes. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tipdlg.h" line="51"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/tipdlg.h" line="53"/>
       </memberdef>
-      <memberdef kind="function" id="classwx_tip_provider_1ad837ab18c7eef0407af4531d82028b31" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+      <memberdef kind="function" id="classwx_tip_provider_1a91c0e04e803102a917e83278d4b626ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
-        <definition>virtual wxString wxTipProvider::PreProcessTip</definition>
+        <definition>virtual wxString wxTipProvider::PreprocessTip</definition>
         <argsstring>(const wxString &amp;tip)</argsstring>
-        <name>PreProcessTip</name>
+        <name>PreprocessTip</name>
         <param>
           <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
           <declname>tip</declname>
@@ -70,7 +83,7 @@
 <para>This function will be called immediately after read, and before being check whether it is a comment, an empty string or a string to translate. You can optionally override this in your custom user-derived class to optionally to modify the tip as soon as it is read. You can return any modification to the string. If you return wxEmptyString, then this tip is skipped, and the next one is read. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tipdlg.h" line="63"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/tipdlg.h" line="65"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -79,12 +92,13 @@
 <para>It must implement <ref refid="classwx_tip_provider_1a82f7aea7a77b67707bc265bab365eb49" kindref="member">wxTipProvider::GetTip</ref> function and return the current tip from it (different tip each time it is called).</para><para>You will never use this class yourself, but you need it to show startup tips with wxShowTip. Also, if you want to get the tips text from elsewhere than a simple text file, you will want to derive a new class from <ref refid="classwx_tip_provider" kindref="compound">wxTipProvider</ref> and use it instead of the one returned by <ref refid="group__group__funcmacro__dialog_1ga9cc492bddff104d3afceca94ae945f38" kindref="member">wxCreateFileTipProvider()</ref>.</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__misc" kindref="compound">Miscellaneous</ref></para><para><simplesect kind="see"><para><ref refid="overview_tips" kindref="compound">wxTipProvider Overview</ref>, <ref refid="group__group__funcmacro__dialog_1ga71723a35f5e98349f5a79d7a025dac07" kindref="member">wxShowTip</ref> </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tipdlg.h" line="27" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tipdlg.h" bodystart="26" bodyend="64"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/tipdlg.h" line="27" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/tipdlg.h" bodystart="26" bodyend="66"/>
     <listofallmembers>
       <member refid="classwx_tip_provider_1acff065db246be564d5e888210d99e0fc" prot="public" virt="non-virtual"><scope>wxTipProvider</scope><name>GetCurrentTip</name></member>
       <member refid="classwx_tip_provider_1a82f7aea7a77b67707bc265bab365eb49" prot="public" virt="pure-virtual"><scope>wxTipProvider</scope><name>GetTip</name></member>
-      <member refid="classwx_tip_provider_1ad837ab18c7eef0407af4531d82028b31" prot="public" virt="virtual"><scope>wxTipProvider</scope><name>PreProcessTip</name></member>
+      <member refid="classwx_tip_provider_1a91c0e04e803102a917e83278d4b626ea" prot="public" virt="virtual"><scope>wxTipProvider</scope><name>PreprocessTip</name></member>
       <member refid="classwx_tip_provider_1af2509a4e7eadc624198d06bf4e99717e" prot="public" virt="non-virtual"><scope>wxTipProvider</scope><name>wxTipProvider</name></member>
+      <member refid="classwx_tip_provider_1af857c316bdea09ae6207fc8743e44cfb" prot="public" virt="virtual"><scope>wxTipProvider</scope><name>~wxTipProvider</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

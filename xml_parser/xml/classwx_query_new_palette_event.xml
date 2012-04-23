@@ -21,7 +21,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3086"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="3081"/>
       </memberdef>
       <memberdef kind="function" id="classwx_query_new_palette_event_1a351fc69e97118c9e217a53bf571e6cd2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -38,7 +38,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3088"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="3083"/>
       </memberdef>
       <memberdef kind="function" id="classwx_query_new_palette_event_1a81eff6fe59ca6c4118d99424da0d9ce7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -51,7 +51,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3089"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="3084"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -59,49 +59,49 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="8974">
+      <node id="9157">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="8972">
+      <node id="9155">
         <label>wxQueryNewPaletteEvent</label>
         <link refid="classwx_query_new_palette_event"/>
-        <childnode refid="8973" relation="public-inheritance">
+        <childnode refid="9156" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8973">
+      <node id="9156">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="8974" relation="public-inheritance">
+        <childnode refid="9157" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="8977">
+      <node id="9160">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="8978" relation="usage">
+        <childnode refid="9161" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="8975">
+      <node id="9158">
         <label>wxQueryNewPaletteEvent</label>
         <link refid="classwx_query_new_palette_event"/>
-        <childnode refid="8976" relation="public-inheritance">
+        <childnode refid="9159" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8976">
+      <node id="9159">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="8977" relation="public-inheritance">
+        <childnode refid="9160" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8978">
+      <node id="9161">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3084" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="3083" bodyend="3090"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="3079" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="3078" bodyend="3085"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxQueryNewPaletteEvent</scope><name>AllocExclusive</name></member>
       <member refid="classwx_event_1a26878097a702e8d0368da150125d4158" prot="public" virt="pure-virtual"><scope>wxQueryNewPaletteEvent</scope><name>Clone</name></member>

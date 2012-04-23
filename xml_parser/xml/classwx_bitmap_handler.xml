@@ -16,7 +16,7 @@
 <para>In your own default constructor, initialise the members m_name, m_extension and m_type. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bitmap.h" line="45"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/bitmap.h" line="45"/>
       </memberdef>
       <memberdef kind="function" id="classwx_bitmap_handler_1ab4b3ac003a5abee9791f1b11845eb54a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bitmap.h" line="50"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/bitmap.h" line="50"/>
       </memberdef>
       <memberdef kind="function" id="classwx_bitmap_handler_1abca903682df7e8cc170ee2c9dc70a02e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -111,7 +111,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bitmap.h" line="74"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/bitmap.h" line="74"/>
       </memberdef>
       <memberdef kind="function" id="classwx_bitmap_handler_1af5cc310885a067b0305290d91eafb819" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -124,7 +124,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bitmap.h" line="79"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/bitmap.h" line="79"/>
       </memberdef>
       <memberdef kind="function" id="classwx_bitmap_handler_1ac03dc595b8b91f8f8e8f536d48030896" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -137,7 +137,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bitmap.h" line="84"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/bitmap.h" line="84"/>
       </memberdef>
       <memberdef kind="function" id="classwx_bitmap_handler_1ac0cf8205bf3966bbeb40368808faeb99" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="gdicmn_8h_1a90a1eb6d85b5044a99b706fd979f27f5" kindref="member">wxBitmapType</ref></type>
@@ -150,7 +150,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bitmap.h" line="89"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/bitmap.h" line="89"/>
       </memberdef>
       <memberdef kind="function" id="classwx_bitmap_handler_1aac07bb0a10aa0f29e14f4f2c1d43a8a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -221,7 +221,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bitmap.h" line="112"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/bitmap.h" line="112"/>
       </memberdef>
       <memberdef kind="function" id="classwx_bitmap_handler_1a533cb232ebb1bd2b7e37ccbe866c50cb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -282,7 +282,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bitmap.h" line="131"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/bitmap.h" line="131"/>
       </memberdef>
       <memberdef kind="function" id="classwx_bitmap_handler_1a0a416eea17524f4153a1ac5bb0294218" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -307,7 +307,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bitmap.h" line="139"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/bitmap.h" line="139"/>
       </memberdef>
       <memberdef kind="function" id="classwx_bitmap_handler_1ae7b2cf15809b3940cbdd339b31dec25e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -332,7 +332,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bitmap.h" line="147"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/bitmap.h" line="147"/>
       </memberdef>
       <memberdef kind="function" id="classwx_bitmap_handler_1ac88850ce5ac8b4c5893fac8bce635f03" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -357,7 +357,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bitmap.h" line="155"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/bitmap.h" line="155"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -367,37 +367,37 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__gdi" kindref="compound">Graphics Device Interface (GDI)</ref></para><para><simplesect kind="see"><para><ref refid="overview_bitmap" kindref="compound">Bitmaps and Icons</ref>, <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref>, <ref refid="classwx_icon" kindref="compound">wxIcon</ref>, <ref refid="classwx_cursor" kindref="compound">wxCursor</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="4521">
+      <node id="4611">
         <label>wxBitmapHandler</label>
         <link refid="classwx_bitmap_handler"/>
-        <childnode refid="4522" relation="public-inheritance">
+        <childnode refid="4612" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4522">
+      <node id="4612">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="4523">
+      <node id="4613">
         <label>wxBitmapHandler</label>
         <link refid="classwx_bitmap_handler"/>
-        <childnode refid="4524" relation="public-inheritance">
+        <childnode refid="4614" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4524">
+      <node id="4614">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="4525" relation="usage">
+        <childnode refid="4615" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="4525">
+      <node id="4615">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bitmap.h" line="37" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bitmap.h" bodystart="36" bodyend="156"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/bitmap.h" line="37" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/bitmap.h" bodystart="36" bodyend="156"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxBitmapHandler</scope><name>AllocExclusive</name></member>
       <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxBitmapHandler</scope><name>CloneRefData</name></member>

@@ -24,7 +24,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/numformatter.h" line="100"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/numformatter.h" line="100"/>
       </memberdef>
       <memberdef kind="function" id="classwx_number_formatter_1abc24487021d98af50ca8465f63a262f1" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -46,7 +46,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/numformatter.h" line="101"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/numformatter.h" line="101"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-type">
@@ -82,7 +82,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/numformatter.h" line="27" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/numformatter.h" bodystart="26" bodyend="53"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/numformatter.h" line="27" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/numformatter.h" bodystart="26" bodyend="53"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -121,7 +121,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/numformatter.h" line="73"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/numformatter.h" line="73"/>
       </memberdef>
       <memberdef kind="function" id="classwx_number_formatter_1a42c2c2129c5bf3693e6a3699bae8595f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -169,7 +169,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/numformatter.h" line="86"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/numformatter.h" line="86"/>
       </memberdef>
       <memberdef kind="function" id="classwx_number_formatter_1ae1e22af7b2df6978f19f6a618d25823d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="group__group__funcmacro__string_1gad42f64d8c82f1ce4ae58773a89b2d6a7" kindref="member">wxChar</ref></type>
@@ -182,7 +182,7 @@
 <para>Decimal separators is always defined and we fall back to returning &apos;.&apos; in case of an error. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/numformatter.h" line="110"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/numformatter.h" line="110"/>
       </memberdef>
       <memberdef kind="function" id="classwx_number_formatter_1a057fac14867aa14f5e0d461b8e8c5a99" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -207,7 +207,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/numformatter.h" line="124"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/numformatter.h" line="124"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -216,7 +216,7 @@
 <para>This class contains only static functions, so users must not create instances but directly call the member functions.</para><para><simplesect kind="since"><para>2.9.2</para></simplesect>
 <heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref> </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/numformatter.h" line="21" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/numformatter.h" bodystart="20" bodyend="126"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/numformatter.h" line="21" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/numformatter.h" bodystart="20" bodyend="126"/>
     <listofallmembers>
       <member refid="classwx_number_formatter_1aad539451a9ac91198141eead3be4e743" prot="public" virt="non-virtual"><scope>wxNumberFormatter</scope><name>FromString</name></member>
       <member refid="classwx_number_formatter_1abc24487021d98af50ca8465f63a262f1" prot="public" virt="non-virtual"><scope>wxNumberFormatter</scope><name>FromString</name></member>

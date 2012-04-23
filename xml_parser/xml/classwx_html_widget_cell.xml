@@ -40,7 +40,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlcell.h" line="606"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlcell.h" line="620"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -49,51 +49,51 @@
 <para>You can use it to display things like forms, input boxes etc. in an HTML window.</para><para><ref refid="classwx_html_widget_cell" kindref="compound">wxHtmlWidgetCell</ref> takes care of resizing and moving window.</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxhtml" kindref="member">wxHTML</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__html" kindref="compound">HTML</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7134">
+      <node id="7321">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="7133">
+      <node id="7320">
         <label>wxHtmlCell</label>
         <link refid="classwx_html_cell"/>
-        <childnode refid="7134" relation="public-inheritance">
+        <childnode refid="7321" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7132">
+      <node id="7319">
         <label>wxHtmlWidgetCell</label>
         <link refid="classwx_html_widget_cell"/>
-        <childnode refid="7133" relation="public-inheritance">
+        <childnode refid="7320" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7137">
+      <node id="7324">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="7138" relation="usage">
+        <childnode refid="7325" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="7136">
+      <node id="7323">
         <label>wxHtmlCell</label>
         <link refid="classwx_html_cell"/>
-        <childnode refid="7137" relation="public-inheritance">
+        <childnode refid="7324" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7135">
+      <node id="7322">
         <label>wxHtmlWidgetCell</label>
         <link refid="classwx_html_widget_cell"/>
-        <childnode refid="7136" relation="public-inheritance">
+        <childnode refid="7323" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7138">
+      <node id="7325">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlcell.h" line="593" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlcell.h" bodystart="592" bodyend="607"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlcell.h" line="607" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlcell.h" bodystart="606" bodyend="621"/>
     <listofallmembers>
-      <member refid="classwx_html_cell_1a0444199b22671fe2a1ac7924002b683a" prot="public" virt="virtual"><scope>wxHtmlWidgetCell</scope><name>AdjustPagebreak</name></member>
+      <member refid="classwx_html_cell_1a6ac3cb5003fcfbe2a5a5209877303cb5" prot="public" virt="virtual"><scope>wxHtmlWidgetCell</scope><name>AdjustPagebreak</name></member>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxHtmlWidgetCell</scope><name>AllocExclusive</name></member>
       <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxHtmlWidgetCell</scope><name>CloneRefData</name></member>
       <member refid="classwx_object_1a95c6a5e4e1e03ff23c7b9efe4cff0c1a" prot="protected" virt="virtual"><scope>wxHtmlWidgetCell</scope><name>CreateRefData</name></member>

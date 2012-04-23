@@ -32,7 +32,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="214"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ctrlsub.h" line="214"/>
       </memberdef>
       <memberdef kind="function" id="classwx_item_container_1a97d16e94976e21abf796cc6e0c8c0fd0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -69,7 +69,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="229"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ctrlsub.h" line="229"/>
       </memberdef>
       <memberdef kind="function" id="classwx_item_container_1a8cb993082012406873ac3ef1b91774f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -106,7 +106,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="244"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ctrlsub.h" line="244"/>
       </memberdef>
       <memberdef kind="function" id="classwx_item_container_1a4c8560213df6b6e7467437c9cff5cc0e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -131,7 +131,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="255"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ctrlsub.h" line="255"/>
       </memberdef>
       <memberdef kind="function" id="classwx_item_container_1a4de5b5afbf2aebe2ee29c11d009fbe75" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -167,7 +167,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="269"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ctrlsub.h" line="269"/>
       </memberdef>
       <memberdef kind="function" id="classwx_item_container_1ada2c60d0621a4a2d62a50345778e13f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -203,7 +203,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="283"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ctrlsub.h" line="283"/>
       </memberdef>
       <memberdef kind="function" id="classwx_item_container_1ab75a452e13a6b21e32caae829a026515" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -239,7 +239,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="296"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ctrlsub.h" line="296"/>
       </memberdef>
       <memberdef kind="function" id="classwx_item_container_1a87fe2b791693f23475b77ffb037a7766" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -286,7 +286,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="313"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ctrlsub.h" line="313"/>
       </memberdef>
       <memberdef kind="function" id="classwx_item_container_1ab328ab2886486b545f03daa667308a63" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -333,7 +333,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="330"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ctrlsub.h" line="330"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -361,7 +361,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="414"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ctrlsub.h" line="414"/>
       </memberdef>
       <memberdef kind="function" id="classwx_item_container_1a4298e30787423ecdca2eb0171e7fb98c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_client_data" kindref="compound">wxClientData</ref> *</type>
@@ -387,7 +387,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="432"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ctrlsub.h" line="432"/>
       </memberdef>
       <memberdef kind="function" id="classwx_item_container_1a4316a72acaf30acf9d2c9c457e16a8d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -423,7 +423,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="444"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ctrlsub.h" line="444"/>
       </memberdef>
       <memberdef kind="function" id="classwx_item_container_1ae0a26343071841e8d1139642a0081d9f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -459,7 +459,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="459"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ctrlsub.h" line="459"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -498,7 +498,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="476"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ctrlsub.h" line="476"/>
       </memberdef>
       <memberdef kind="function" id="classwx_item_container_1a6540ebe5868badb8ff7ac4975c054309" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -546,7 +546,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="491"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ctrlsub.h" line="491"/>
       </memberdef>
       <memberdef kind="function" id="classwx_item_container_1a3ecaaa4bc63315056ff7fb4894866b9e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -594,7 +594,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="507"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ctrlsub.h" line="507"/>
       </memberdef>
       <memberdef kind="function" id="classwx_item_container_1abd876bdf2d3b5aaf577808c0520f78e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -631,7 +631,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="522"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ctrlsub.h" line="522"/>
       </memberdef>
       <memberdef kind="function" id="classwx_item_container_1aa5b5f6059ef10221c521da9587269192" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -679,7 +679,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="541"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ctrlsub.h" line="541"/>
       </memberdef>
       <memberdef kind="function" id="classwx_item_container_1a9b15c918cc24743b9af994a48ee0cad6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -727,7 +727,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="560"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ctrlsub.h" line="560"/>
       </memberdef>
       <memberdef kind="function" id="classwx_item_container_1a3faa9e4006d69dffd0ecb71088beb24c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -775,7 +775,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="578"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ctrlsub.h" line="578"/>
       </memberdef>
       <memberdef kind="function" id="classwx_item_container_1a109dfe5f94135d8d16445ee72834d1b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -834,7 +834,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="600"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ctrlsub.h" line="600"/>
       </memberdef>
       <memberdef kind="function" id="classwx_item_container_1ad2bc86a398c44f6ab6d3d6f64d946c70" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -893,7 +893,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="622"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ctrlsub.h" line="622"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -920,7 +920,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="635"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ctrlsub.h" line="635"/>
       </memberdef>
       <memberdef kind="function" id="classwx_item_container_1a913f1901456fc75a45558775f967a2ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -956,7 +956,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="649"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ctrlsub.h" line="649"/>
       </memberdef>
       <memberdef kind="function" id="classwx_item_container_1aa49e05430329dc56a15b2f75fc7cd05c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -992,7 +992,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="663"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ctrlsub.h" line="663"/>
       </memberdef>
       <memberdef kind="function" id="classwx_item_container_1af5759464c9fd1396ed9b86a9d1242d30" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1028,7 +1028,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="676"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ctrlsub.h" line="676"/>
       </memberdef>
       <memberdef kind="function" id="classwx_item_container_1aac979e6201e45b121f226389e29fd68a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1075,7 +1075,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="692"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ctrlsub.h" line="692"/>
       </memberdef>
       <memberdef kind="function" id="classwx_item_container_1a3a1dab2066917e84f46c57b27fb4f258" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1122,7 +1122,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="708"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ctrlsub.h" line="708"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -1137,7 +1137,7 @@
 <para><ref refid="classwx_item_container_1aea621d4fdfbc3a06bf24dcc97304e2c1" kindref="member">Clear()</ref> also deletes the client data of the existing items if it is owned by the control. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="338"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ctrlsub.h" line="338"/>
       </memberdef>
       <memberdef kind="function" id="classwx_item_container_1a0e8379f41e9d7b912564000828140a19" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1163,7 +1163,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="353"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ctrlsub.h" line="353"/>
       </memberdef>
       <memberdef kind="function" id="classwx_item_container_1a5f8a63ddcc72ff3504389f7df19b5dd3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_client_data" kindref="compound">wxClientData</ref> *</type>
@@ -1190,7 +1190,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="375"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ctrlsub.h" line="375"/>
       </memberdef>
       <memberdef kind="function" id="classwx_item_container_1a1be770286ad65ced7ba31b5cb4bbc5f7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1203,7 +1203,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="381"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ctrlsub.h" line="381"/>
       </memberdef>
       <memberdef kind="function" id="classwx_item_container_1a900b5089f2c284ce7f49995ac4cd1a1e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1216,7 +1216,7 @@
 <para>Object data pointers have the type <computeroutput>wxClientData*</computeroutput> instead of <computeroutput>void*</computeroutput> and, importantly, are owned by the control, i.e. will be deleted by it, unlike their untyped counterparts. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="391"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ctrlsub.h" line="391"/>
       </memberdef>
       <memberdef kind="function" id="classwx_item_container_1af72624c57f89d9209c8ed6ff1c51d6cb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1229,7 +1229,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="397"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ctrlsub.h" line="397"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -1239,78 +1239,84 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref></para><para><simplesect kind="see"><para><ref refid="classwx_control_with_items" kindref="compound">wxControlWithItems</ref>, <ref refid="classwx_item_container_immutable" kindref="compound">wxItemContainerImmutable</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7333">
+      <node id="7529">
         <label>wxItemContainer</label>
         <link refid="classwx_item_container"/>
-        <childnode refid="7334" relation="public-inheritance">
+        <childnode refid="7530" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7339">
+      <node id="7536">
         <label>wxListBox</label>
         <link refid="classwx_list_box"/>
-        <childnode refid="7337" relation="public-inheritance">
+        <childnode refid="7533" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7342">
+      <node id="7539">
         <label>wxSimpleHtmlListBox</label>
         <link refid="classwx_simple_html_list_box"/>
-        <childnode refid="7333" relation="public-inheritance">
+        <childnode refid="7529" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7336">
+      <node id="7532">
         <label>wxBitmapComboBox</label>
         <link refid="classwx_bitmap_combo_box"/>
-        <childnode refid="7335" relation="public-inheritance">
+        <childnode refid="7531" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7340">
+      <node id="7537">
         <label>wxCheckListBox</label>
         <link refid="classwx_check_list_box"/>
-        <childnode refid="7339" relation="public-inheritance">
+        <childnode refid="7536" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7341">
+      <node id="7538">
         <label>wxRearrangeList</label>
         <link refid="classwx_rearrange_list"/>
-        <childnode refid="7340" relation="public-inheritance">
+        <childnode refid="7537" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7338">
+      <node id="7534">
         <label>wxChoice</label>
         <link refid="classwx_choice"/>
-        <childnode refid="7337" relation="public-inheritance">
+        <childnode refid="7533" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7335">
+      <node id="7531">
         <label>wxComboBox</label>
         <link refid="classwx_combo_box"/>
-        <childnode refid="7333" relation="public-inheritance">
+        <childnode refid="7529" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7337">
+      <node id="7533">
         <label>wxControlWithItems</label>
         <link refid="classwx_control_with_items"/>
-        <childnode refid="7333" relation="public-inheritance">
+        <childnode refid="7529" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7334">
+      <node id="7535">
+        <label>wxDirFilterListCtrl</label>
+        <link refid="classwx_dir_filter_list_ctrl"/>
+        <childnode refid="7534" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7530">
         <label>wxItemContainerImmutable</label>
         <link refid="classwx_item_container_immutable"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7343">
+      <node id="7540">
         <label>wxItemContainer</label>
         <link refid="classwx_item_container"/>
-        <childnode refid="7344" relation="public-inheritance">
+        <childnode refid="7541" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7344">
+      <node id="7541">
         <label>wxItemContainerImmutable</label>
         <link refid="classwx_item_container_immutable"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="199" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" bodystart="198" bodyend="710"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ctrlsub.h" line="199" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/ctrlsub.h" bodystart="198" bodyend="710"/>
     <listofallmembers>
       <member refid="classwx_item_container_1a8fdc0090e3eabc762ff0e49e925f8bc4" prot="public" virt="non-virtual"><scope>wxItemContainer</scope><name>Append</name></member>
       <member refid="classwx_item_container_1a97d16e94976e21abf796cc6e0c8c0fd0" prot="public" virt="non-virtual"><scope>wxItemContainer</scope><name>Append</name></member>

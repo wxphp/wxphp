@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="636"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" line="636"/>
       </memberdef>
       <memberdef kind="function" id="classwx_log_formatter_1aca9b346cd05f61cc09ee67fe5e0cf072" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -64,7 +64,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="664"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" line="664"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-func">
@@ -92,7 +92,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="678"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" line="678"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -108,14 +108,14 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>info.<ref refid="classwx_log_record_info_1af7766219720d7215dcdef349d247916e" kindref="member" tooltip="Id of the thread in which the message was generated.">threadId</ref>,<sp/>info.<ref refid="classwx_log_record_info_1a91290266e065128e556e76a21e01dbd9" kindref="member" tooltip="The name of the file where this log message was generated.">filename</ref>,<sp/>info.<ref refid="classwx_log_record_info_1a1b5362167925e65dc65d59b2ea30a077" kindref="member" tooltip="The line number at which this log message was generated.">line</ref>,<sp/>msg);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
-</programlisting> And then associate it with <ref refid="classwx_log" kindref="compound">wxLog</ref> instance using its SetFormatter(). Then, if you call:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__log_1ga249358701f3c2d410088ddf7a61d8564" kindref="member" tooltip="For all normal, informational messages.">wxLogMessage</ref>(<ref refid="group__group__funcmacro__string_1ga8a02b8875a521df57263a9e6f090f2d0" kindref="member" tooltip="This macro expands into a call to wxGetTranslation(), so it marks the message for the extraction by x...">_</ref>(</highlight><highlight class="stringliteral">&quot;***<sp/>Application<sp/>started<sp/>***&quot;</highlight><highlight class="normal">));</highlight></codeline>
+</programlisting> And then associate it with <ref refid="classwx_log" kindref="compound">wxLog</ref> instance using its SetFormatter(). Then, if you call:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__log_1ga249358701f3c2d410088ddf7a61d8564" kindref="member" tooltip="For all normal, informational messages.">wxLogMessage</ref>(<ref refid="group__group__funcmacro__string_1ga8a02b8875a521df57263a9e6f090f2d0" kindref="member" tooltip="Macro to be used around all literal strings that should be translated.">_</ref>(</highlight><highlight class="stringliteral">&quot;***<sp/>Application<sp/>started<sp/>***&quot;</highlight><highlight class="normal">));</highlight></codeline>
 </programlisting></para><para>the log output could be something like:</para><para><verbatim>
         [7872] d:\testApp\src\testApp.cpp(85) : *** Application started ***
     </verbatim></para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__logging" kindref="compound">Logging</ref></para><para><simplesect kind="see"><para><ref refid="overview_log" kindref="compound">wxLog Classes Overview</ref></para></simplesect>
 <simplesect kind="since"><para>2.9.4 </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="631" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" bodystart="630" bodyend="679"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" line="631" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" bodystart="630" bodyend="679"/>
     <listofallmembers>
       <member refid="classwx_log_formatter_1aca9b346cd05f61cc09ee67fe5e0cf072" prot="public" virt="virtual"><scope>wxLogFormatter</scope><name>Format</name></member>
       <member refid="classwx_log_formatter_1a1d870f91f6df3deea1cd4bcf904b7f8e" prot="protected" virt="virtual"><scope>wxLogFormatter</scope><name>FormatTime</name></member>

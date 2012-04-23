@@ -27,6 +27,7 @@
     <innerclass refid="classwx_grid_column_header_renderer_default" prot="public">wxGridColumnHeaderRendererDefault</innerclass>
     <innerclass refid="classwx_grid_corner_header_renderer_default" prot="public">wxGridCornerHeaderRendererDefault</innerclass>
     <innerclass refid="classwx_grid_cell_attr_provider" prot="public">wxGridCellAttrProvider</innerclass>
+    <innerclass refid="classwx_grid_cell_coords" prot="public">wxGridCellCoords</innerclass>
     <innerclass refid="classwx_grid_table_base" prot="public">wxGridTableBase</innerclass>
     <innerclass refid="structwx_grid_sizes_info" prot="public">wxGridSizesInfo</innerclass>
     <innerclass refid="classwx_grid" prot="public">wxGrid</innerclass>
@@ -85,13 +86,13 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="188" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" bodystart="187" bodyend="204"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="188" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" bodystart="187" bodyend="204"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h"/>
   </compounddef>
 </doxygen>

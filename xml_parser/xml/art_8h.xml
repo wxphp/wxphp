@@ -699,7 +699,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h" line="21" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h" bodystart="20" bodyend="120"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/art.h" line="21" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/art.h" bodystart="20" bodyend="120"/>
       </memberdef>
       <memberdef kind="enum" id="art_8h_1af1a48dec08a6e9f2501acbf98d545ab1" prot="public" static="no">
         <name>wxRibbonScrollButtonStyle</name>
@@ -814,7 +814,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h" line="130" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h" bodystart="129" bodyend="152"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/art.h" line="130" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/art.h" bodystart="129" bodyend="152"/>
       </memberdef>
       <memberdef kind="enum" id="art_8h_1a49672bfa76086982645f3797b0162e19" prot="public" static="no">
         <name>wxRibbonButtonKind</name>
@@ -856,13 +856,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h" line="159" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h" bodystart="158" bodyend="183"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/art.h" line="159" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/art.h" bodystart="158" bodyend="183"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/art.h"/>
   </compounddef>
 </doxygen>

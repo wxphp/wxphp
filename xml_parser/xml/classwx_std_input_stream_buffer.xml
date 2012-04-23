@@ -27,7 +27,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stdstream.h" line="52"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stdstream.h" line="52"/>
       </memberdef>
       <memberdef kind="function" id="classwx_std_input_stream_buffer_1a242ed0eb632cf28708259e2bf5d155c4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type></type>
@@ -40,7 +40,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stdstream.h" line="57" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stdstream.h" bodystart="57" bodyend="57"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stdstream.h" line="57" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/stdstream.h" bodystart="57" bodyend="57"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -65,7 +65,7 @@
 </programlisting></para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__streams" kindref="compound">Streams</ref></para><para><simplesect kind="see"><para><ref refid="classwx_input_stream" kindref="compound">wxInputStream</ref>, <ref refid="classwx_std_input_stream" kindref="compound">wxStdInputStream</ref> </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stdstream.h" line="43" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stdstream.h" bodystart="42" bodyend="58"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stdstream.h" line="43" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/stdstream.h" bodystart="42" bodyend="58"/>
     <listofallmembers>
       <member refid="classwx_std_input_stream_buffer_1a1d9b4db1edb694fe29c47d12570153e8" prot="public" virt="non-virtual"><scope>wxStdInputStreamBuffer</scope><name>wxStdInputStreamBuffer</name></member>
       <member refid="classwx_std_input_stream_buffer_1a242ed0eb632cf28708259e2bf5d155c4" prot="public" virt="virtual"><scope>wxStdInputStreamBuffer</scope><name>~wxStdInputStreamBuffer</name></member>

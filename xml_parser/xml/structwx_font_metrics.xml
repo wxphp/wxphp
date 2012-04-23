@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="97" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" bodystart="97" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="97" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" bodystart="97" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structwx_font_metrics_1a9533aac68b8db86e4d1b0752edd4af6e" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -28,7 +28,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="98" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" bodystart="97" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="98" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" bodystart="97" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structwx_font_metrics_1a6f8f240fe0c6f684fb4ddff02d7ff926" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -41,7 +41,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="99" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" bodystart="97" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="99" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" bodystart="97" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structwx_font_metrics_1a118ea02d51fa606b315e33fca19fca9f" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -54,7 +54,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="100" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" bodystart="97" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="100" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" bodystart="97" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structwx_font_metrics_1a4fdda5ff1f519c92b2927b873bddaf85" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -67,7 +67,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="101" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" bodystart="97" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="101" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" bodystart="97" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structwx_font_metrics_1afa5a0acb2e38a4ea9286be4e11dac961" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -80,7 +80,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="102" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" bodystart="97" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="102" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" bodystart="97" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -95,7 +95,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="95"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="95"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -104,7 +104,7 @@
 <para>This object is returned by <ref refid="classwx_d_c_1a017ad82379a6e52d6b2ba1d212b65950" kindref="member">wxDC::GetFontMetrics()</ref>.</para><para><simplesect kind="since"><para>2.9.2</para></simplesect>
 <heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__dc" kindref="compound">Device Contexts</ref>, <ref refid="group__group__class__gdi" kindref="compound">Graphics Device Interface (GDI)</ref> </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="93" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" bodystart="92" bodyend="103"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="93" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" bodystart="92" bodyend="103"/>
     <listofallmembers>
       <member refid="structwx_font_metrics_1a9533aac68b8db86e4d1b0752edd4af6e" prot="public" virt="non-virtual"><scope>wxFontMetrics</scope><name>ascent</name></member>
       <member refid="structwx_font_metrics_1afa5a0acb2e38a4ea9286be4e11dac961" prot="public" virt="non-virtual"><scope>wxFontMetrics</scope><name>averageWidth</name></member>

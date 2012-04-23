@@ -15,7 +15,7 @@
 <para>Always returns true if <computeroutput>wxUSE_THREADS</computeroutput> is 0.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/thread.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="1751"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" line="1751"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__thread_1ga6671c1599fd4ccf6a7c7bb90b2304709" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -41,7 +41,7 @@
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/thread.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="1787"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" line="1787"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__thread_1gaddfdb2956953480a379d998ea7ced5b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -55,7 +55,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/thread.h&gt; 
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/thread.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="1797"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" line="1797"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="define">
@@ -68,7 +68,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/thread.h&gt; 
 <para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/thread.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="1679" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" bodystart="1679" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" line="1679" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" bodystart="1679" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__thread_1gaa9f05a4361ea095939f90512ee52a831" prot="public" static="no">
         <name>wxCRIT_SECT_DECLARE_MEMBER</name>
@@ -79,7 +79,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/thread.h&gt; 
 <para>As it doesn&apos;t include the <computeroutput>static</computeroutput> keyword (unlike <ref refid="group__group__funcmacro__thread_1ga79ee915c6353e705958843a57a5148e2" kindref="member">wxCRIT_SECT_DECLARE()</ref>), it can be used to declare a class or struct member which explains its name.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/thread.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="1689" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" bodystart="1689" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" line="1689" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" bodystart="1689" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__thread_1gae589848294c2cf63ad6895c4344755fe" prot="public" static="no">
         <name>wxCRIT_SECT_LOCKER</name>
@@ -91,7 +91,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/thread.h&gt; 
 <para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/thread.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="1698" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" bodystart="1698" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" line="1698" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" bodystart="1698" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__thread_1ga3b0ab821a03aeecc1a7ddfcecb581355" prot="public" static="no">
         <name>wxCRITICAL_SECTION</name>
@@ -110,7 +110,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/thread.h&gt; 
 </programlisting></para><para>Note that this example assumes that the function is called the first time from the main thread so that the critical section object is initialized correctly by the time other threads start calling it, if this is not the case this approach can <bold>not</bold> be used and the critical section must be made a global instead.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/thread.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="1725" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" bodystart="1725" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" line="1725" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" bodystart="1725" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__thread_1gab5a243025a42da8c351a2df8519f4208" prot="public" static="no">
         <name>wxLEAVE_CRIT_SECT</name>
@@ -121,7 +121,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/thread.h&gt; 
 <para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/thread.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="1734" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" bodystart="1734" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" line="1734" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" bodystart="1734" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__thread_1ga53ce988bc3201b82b77d4779610be608" prot="public" static="no">
         <name>wxENTER_CRIT_SECT</name>
@@ -132,7 +132,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/thread.h&gt; 
 <para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/thread.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="1743" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" bodystart="1743" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" line="1743" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" bodystart="1743" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

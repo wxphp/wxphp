@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="302"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="302"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -26,42 +26,42 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__grid" kindref="compound">Grid Related Classes</ref></para><para><simplesect kind="see"><para><ref refid="classwx_grid_cell_renderer" kindref="compound">wxGridCellRenderer</ref>, <ref refid="classwx_grid_cell_auto_wrap_string_renderer" kindref="compound">wxGridCellAutoWrapStringRenderer</ref>, <ref refid="classwx_grid_cell_bool_renderer" kindref="compound">wxGridCellBoolRenderer</ref>, <ref refid="classwx_grid_cell_date_time_renderer" kindref="compound">wxGridCellDateTimeRenderer</ref>, <ref refid="classwx_grid_cell_enum_renderer" kindref="compound">wxGridCellEnumRenderer</ref>, <ref refid="classwx_grid_cell_float_renderer" kindref="compound">wxGridCellFloatRenderer</ref>, <ref refid="classwx_grid_cell_string_renderer" kindref="compound">wxGridCellStringRenderer</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="6716">
+      <node id="6886">
         <label>wxGridCellNumberRenderer</label>
         <link refid="classwx_grid_cell_number_renderer"/>
-        <childnode refid="6717" relation="public-inheritance">
+        <childnode refid="6887" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6718">
+      <node id="6888">
         <label>wxGridCellRenderer</label>
         <link refid="classwx_grid_cell_renderer"/>
       </node>
-      <node id="6717">
+      <node id="6887">
         <label>wxGridCellStringRenderer</label>
         <link refid="classwx_grid_cell_string_renderer"/>
-        <childnode refid="6718" relation="public-inheritance">
+        <childnode refid="6888" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="6719">
+      <node id="6889">
         <label>wxGridCellNumberRenderer</label>
         <link refid="classwx_grid_cell_number_renderer"/>
-        <childnode refid="6720" relation="public-inheritance">
+        <childnode refid="6890" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6721">
+      <node id="6891">
         <label>wxGridCellRenderer</label>
         <link refid="classwx_grid_cell_renderer"/>
       </node>
-      <node id="6720">
+      <node id="6890">
         <label>wxGridCellStringRenderer</label>
         <link refid="classwx_grid_cell_string_renderer"/>
-        <childnode refid="6721" relation="public-inheritance">
+        <childnode refid="6891" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="297" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" bodystart="296" bodyend="303"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="297" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" bodystart="296" bodyend="303"/>
     <listofallmembers>
       <member refid="classwx_grid_cell_renderer_1a55c1db8c06f8cb994beb90615d5264f7" prot="public" virt="pure-virtual"><scope>wxGridCellNumberRenderer</scope><name>Clone</name></member>
       <member refid="classwx_grid_cell_renderer_1a1848512422742bbbf9dec1b173bfc752" prot="public" virt="pure-virtual"><scope>wxGridCellNumberRenderer</scope><name>Draw</name></member>

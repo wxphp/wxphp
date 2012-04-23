@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyledlg.h" line="27"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextstyledlg.h" line="27"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_style_organiser_dialog_1af7cba2ae8c47432bba2a1da1a764112b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -76,7 +76,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyledlg.h" line="75"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextstyledlg.h" line="75"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_style_organiser_dialog_1a04e54d0fe7542523681a32ab73ad6030" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -94,7 +94,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyledlg.h" line="81"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextstyledlg.h" line="81"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_style_organiser_dialog_1aa3950f84400521a787b2d12783d255e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -148,7 +148,7 @@
 <para>See the ctor. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyledlg.h" line="88"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextstyledlg.h" line="88"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_style_organiser_dialog_1a361eca735eb9c46b84a3c8db0b3ed6a1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -161,7 +161,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyledlg.h" line="93"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextstyledlg.h" line="93"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_style_organiser_dialog_1a2de91f9919f6cd38d0ea8b836ca04810" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_rich_text_ctrl" kindref="compound">wxRichTextCtrl</ref> *</type>
@@ -174,7 +174,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyledlg.h" line="98"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextstyledlg.h" line="98"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_style_organiser_dialog_1a9cebc78e6b1881e4426cd89030401eb5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -187,7 +187,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyledlg.h" line="103"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextstyledlg.h" line="103"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_style_organiser_dialog_1a624c4f4e2fb9073daf432884a19b0534" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_rich_text_style_definition" kindref="compound">wxRichTextStyleDefinition</ref> *</type>
@@ -200,7 +200,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyledlg.h" line="108"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextstyledlg.h" line="108"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_style_organiser_dialog_1a78fcdadca5b4cbd1c19799da6fcb7f9b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_rich_text_style_sheet" kindref="compound">wxRichTextStyleSheet</ref> *</type>
@@ -213,7 +213,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyledlg.h" line="113"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextstyledlg.h" line="113"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_style_organiser_dialog_1a8ab24d3282fa66768de392ecdc1ae024" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -230,7 +230,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyledlg.h" line="118"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextstyledlg.h" line="118"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_style_organiser_dialog_1af9f054d70edd8f9bb360cb03a946dd7a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -247,7 +247,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyledlg.h" line="123"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextstyledlg.h" line="123"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_style_organiser_dialog_1a5b2c5b292d07559c307ceee81fa5ec1e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -264,7 +264,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyledlg.h" line="129"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextstyledlg.h" line="129"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_style_organiser_dialog_1adb311102d40cad4d9368d188760abaed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -281,7 +281,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyledlg.h" line="139"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextstyledlg.h" line="139"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_style_organiser_dialog_1a20fee2869e98ef7982c594e62dbf5848" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -294,7 +294,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyledlg.h" line="144"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextstyledlg.h" line="144"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -313,7 +313,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyledlg.h" line="134"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextstyledlg.h" line="134"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -322,109 +322,109 @@
 <para>It can also be used as a style browser, for example if the application is not using a permanent <ref refid="classwx_rich_text_style_combo_ctrl" kindref="compound">wxRichTextStyleComboCtrl</ref> or <ref refid="classwx_rich_text_style_list_ctrl" kindref="compound">wxRichTextStyleListCtrl</ref> to present styles.</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxrichtext" kindref="member">wxRichText</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__richtext" kindref="compound">Rich Text</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="9966">
+      <node id="10149">
         <label>wxNonOwnedWindow</label>
         <link refid="classwx_non_owned_window"/>
-        <childnode refid="9967" relation="public-inheritance">
+        <childnode refid="10150" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9969">
+      <node id="10152">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="9968">
+      <node id="10151">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="9969" relation="public-inheritance">
+        <childnode refid="10152" relation="public-inheritance">
         </childnode>
-        <childnode refid="9970" relation="public-inheritance">
+        <childnode refid="10153" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9963">
+      <node id="10146">
         <label>wxRichTextStyleOrganiserDialog</label>
         <link refid="classwx_rich_text_style_organiser_dialog"/>
-        <childnode refid="9964" relation="public-inheritance">
+        <childnode refid="10147" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9970">
+      <node id="10153">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="9967">
+      <node id="10150">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="9968" relation="public-inheritance">
+        <childnode refid="10151" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9964">
+      <node id="10147">
         <label>wxDialog</label>
         <link refid="classwx_dialog"/>
-        <childnode refid="9965" relation="public-inheritance">
+        <childnode refid="10148" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9965">
+      <node id="10148">
         <label>wxTopLevelWindow</label>
         <link refid="classwx_top_level_window"/>
-        <childnode refid="9966" relation="public-inheritance">
+        <childnode refid="10149" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="9974">
+      <node id="10157">
         <label>wxNonOwnedWindow</label>
         <link refid="classwx_non_owned_window"/>
-        <childnode refid="9975" relation="public-inheritance">
+        <childnode refid="10158" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9977">
+      <node id="10160">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="9978" relation="usage">
+        <childnode refid="10161" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="9976">
+      <node id="10159">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="9977" relation="public-inheritance">
+        <childnode refid="10160" relation="public-inheritance">
         </childnode>
-        <childnode refid="9979" relation="public-inheritance">
+        <childnode refid="10162" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9971">
+      <node id="10154">
         <label>wxRichTextStyleOrganiserDialog</label>
         <link refid="classwx_rich_text_style_organiser_dialog"/>
-        <childnode refid="9972" relation="public-inheritance">
+        <childnode refid="10155" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9979">
+      <node id="10162">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="9975">
+      <node id="10158">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="9976" relation="public-inheritance">
+        <childnode refid="10159" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9972">
+      <node id="10155">
         <label>wxDialog</label>
         <link refid="classwx_dialog"/>
-        <childnode refid="9973" relation="public-inheritance">
+        <childnode refid="10156" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9973">
+      <node id="10156">
         <label>wxTopLevelWindow</label>
         <link refid="classwx_top_level_window"/>
-        <childnode refid="9974" relation="public-inheritance">
+        <childnode refid="10157" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9978">
+      <node id="10161">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyledlg.h" line="22" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyledlg.h" bodystart="21" bodyend="145"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextstyledlg.h" line="22" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextstyledlg.h" bodystart="21" bodyend="145"/>
     <listofallmembers>
       <member refid="classwx_window_1a3afbd49b1ea2f8275e3600dcac102923" prot="public" virt="virtual"><scope>wxRichTextStyleOrganiserDialog</scope><name>AcceptsFocus</name></member>
       <member refid="classwx_window_1a2370bdd3ab08e7ef3c7555c6aa8301b8" prot="public" virt="virtual"><scope>wxRichTextStyleOrganiserDialog</scope><name>AcceptsFocusFromKeyboard</name></member>
@@ -470,6 +470,7 @@
       <member refid="classwx_dialog_1a0c6fb55be0b07b934b30550e0225df8f" prot="public" virt="non-virtual"><scope>wxRichTextStyleOrganiserDialog</scope><name>CreateSeparatedButtonSizer</name></member>
       <member refid="classwx_dialog_1ab7a5666b612d6cfdfb2660fd9bd3393e" prot="public" virt="non-virtual"><scope>wxRichTextStyleOrganiserDialog</scope><name>CreateSeparatedSizer</name></member>
       <member refid="classwx_dialog_1a8f2f565975f843035391ce62b0b9f8e8" prot="public" virt="non-virtual"><scope>wxRichTextStyleOrganiserDialog</scope><name>CreateStdDialogButtonSizer</name></member>
+      <member refid="classwx_dialog_1a5bead5e932f17b7c2345dfc41b6cc79c" prot="public" virt="non-virtual"><scope>wxRichTextStyleOrganiserDialog</scope><name>CreateTextSizer</name></member>
       <member refid="classwx_evt_handler_1a6e7f9cf4ebd0623c1d94979855d096f8" prot="public" virt="non-virtual"><scope>wxRichTextStyleOrganiserDialog</scope><name>DeletePendingEvents</name></member>
       <member refid="classwx_window_1a6bf0c5be864544d9ce0560087667b7fc" prot="public" virt="virtual"><scope>wxRichTextStyleOrganiserDialog</scope><name>Destroy</name></member>
       <member refid="classwx_window_1aff47b32c8d42d515ea0bb6a6c2fea917" prot="public" virt="non-virtual"><scope>wxRichTextStyleOrganiserDialog</scope><name>DestroyChildren</name></member>
@@ -624,6 +625,7 @@
       <member refid="classwx_top_level_window_1afa58f411cf488eb9279683b1d20a74b6" prot="public" virt="virtual"><scope>wxRichTextStyleOrganiserDialog</scope><name>IsActive</name></member>
       <member refid="classwx_top_level_window_1ac0c7a7cb6e6dfdf7e59300ee5d476ce3" prot="public" virt="virtual"><scope>wxRichTextStyleOrganiserDialog</scope><name>IsAlwaysMaximized</name></member>
       <member refid="classwx_window_1af918e6fe8565c2d5235973cc3de84a43" prot="public" virt="non-virtual"><scope>wxRichTextStyleOrganiserDialog</scope><name>IsBeingDeleted</name></member>
+      <member refid="classwx_window_1a469f0881da248d37691440c9d4cc7200" prot="public" virt="non-virtual"><scope>wxRichTextStyleOrganiserDialog</scope><name>IsDescendant</name></member>
       <member refid="classwx_window_1a9d1be1bbb625ebf87ad4ad47e49a0194" prot="public" virt="virtual"><scope>wxRichTextStyleOrganiserDialog</scope><name>IsDoubleBuffered</name></member>
       <member refid="classwx_window_1a59452a5bd42f5ea4b31d7fc4aa59644f" prot="public" virt="non-virtual"><scope>wxRichTextStyleOrganiserDialog</scope><name>IsEnabled</name></member>
       <member refid="classwx_window_1af27ef77c913e32050543f3b0ca435a0d" prot="public" virt="non-virtual"><scope>wxRichTextStyleOrganiserDialog</scope><name>IsExposed</name></member>
@@ -645,6 +647,7 @@
       <member refid="classwx_window_1a72d70fd14e3565bf782fbcd3271d8930" prot="public" virt="virtual"><scope>wxRichTextStyleOrganiserDialog</scope><name>IsShownOnScreen</name></member>
       <member refid="classwx_window_1a657ef8b6055eb06df894ac5e6ddfecf8" prot="public" virt="non-virtual"><scope>wxRichTextStyleOrganiserDialog</scope><name>IsThisEnabled</name></member>
       <member refid="classwx_window_1a0002826ad05f2a5661b4c8995713f37f" prot="public" virt="virtual"><scope>wxRichTextStyleOrganiserDialog</scope><name>IsTopLevel</name></member>
+      <member refid="classwx_window_1a7940d510c5bdc062a2b109a1022dd8c2" prot="public" virt="virtual"><scope>wxRichTextStyleOrganiserDialog</scope><name>IsTransparentBackgroundSupported</name></member>
       <member refid="classwx_evt_handler_1a360fdeefcf53b62fb49fb828406bb8a6" prot="public" virt="non-virtual"><scope>wxRichTextStyleOrganiserDialog</scope><name>IsUnlinked</name></member>
       <member refid="classwx_top_level_window_1a305c48ddb8e45f89add1694053185a7d" prot="public" virt="non-virtual"><scope>wxRichTextStyleOrganiserDialog</scope><name>IsUsingNativeDecorations</name></member>
       <member refid="classwx_top_level_window_1adfe7e3f4a32f3ed178968f64431bbfe0" prot="public" virt="virtual"><scope>wxRichTextStyleOrganiserDialog</scope><name>Layout</name></member>
@@ -652,7 +655,6 @@
       <member refid="classwx_window_1afc0816a174ceee6d36d1995c6824a273" prot="public" virt="non-virtual"><scope>wxRichTextStyleOrganiserDialog</scope><name>LineUp</name></member>
       <member refid="classwx_window_1a124944524f36b71385dad8fddaad8ded" prot="public" virt="virtual"><scope>wxRichTextStyleOrganiserDialog</scope><name>Lower</name></member>
       <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxRichTextStyleOrganiserDialog</scope><name>m_refData</name></member>
-      <member refid="classwx_window_1a192fc8b467845d093c16452db96c65c5" prot="public" virt="virtual"><scope>wxRichTextStyleOrganiserDialog</scope><name>MakeModal</name></member>
       <member refid="classwx_top_level_window_1addb1612e9f00ac82c2e19c2bac6ffc4f" prot="public" virt="virtual"><scope>wxRichTextStyleOrganiserDialog</scope><name>Maximize</name></member>
       <member refid="classwx_window_1ab1cb98c8d25b9e6ff7b706b1446c3df7" prot="public" virt="non-virtual"><scope>wxRichTextStyleOrganiserDialog</scope><name>Move</name></member>
       <member refid="classwx_window_1a22a22c1e23ca05776707e7999d8047fe" prot="public" virt="non-virtual"><scope>wxRichTextStyleOrganiserDialog</scope><name>Move</name></member>
@@ -663,7 +665,6 @@
       <member refid="classwx_window_1aa58039c8fc65e19160becf510ee1d1d5" prot="public" virt="non-virtual"><scope>wxRichTextStyleOrganiserDialog</scope><name>NavigateIn</name></member>
       <member refid="classwx_window_1a8175da594e6045635a1d1cfe775cdddb" prot="public" virt="non-virtual"><scope>wxRichTextStyleOrganiserDialog</scope><name>NewControlId</name></member>
       <member refid="classwx_window_1a6b5654c0c6c6245d592c279521f7099c" prot="public" virt="virtual"><scope>wxRichTextStyleOrganiserDialog</scope><name>OnInternalIdle</name></member>
-      <member refid="classwx_dialog_1a31dde643f83e859e53759b8ae5f07378" prot="public" virt="non-virtual"><scope>wxRichTextStyleOrganiserDialog</scope><name>OnSysColourChanged</name></member>
       <member refid="classwx_object_1a07b8f34f5afc5743195c5fed052f55d3" prot="public" virt="non-virtual"><scope>wxRichTextStyleOrganiserDialog</scope><name>operator delete</name></member>
       <member refid="classwx_object_1a96fa423a1dbc212c8227a5d83825971f" prot="public" virt="non-virtual"><scope>wxRichTextStyleOrganiserDialog</scope><name>operator new</name></member>
       <member refid="classwx_top_level_window_1a5890684b71321e27e8f3a223ad3c2445" prot="public" virt="virtual"><scope>wxRichTextStyleOrganiserDialog</scope><name>OSXIsModified</name></member>
@@ -803,7 +804,6 @@
       <member refid="classwx_window_1a88cc65e424a129d9b0057756cdb67ec9" prot="public" virt="virtual"><scope>wxRichTextStyleOrganiserDialog</scope><name>TransferDataToWindow</name></member>
       <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxRichTextStyleOrganiserDialog</scope><name>TryAfter</name></member>
       <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxRichTextStyleOrganiserDialog</scope><name>TryBefore</name></member>
-      <member refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" virt="non-virtual"><scope>wxRichTextStyleOrganiserDialog</scope><name>TryThis</name></member>
       <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxRichTextStyleOrganiserDialog</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxRichTextStyleOrganiserDialog</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a22e5db2ec1d19c8252c056fd116975d7" prot="public" virt="non-virtual"><scope>wxRichTextStyleOrganiserDialog</scope><name>Unlink</name></member>

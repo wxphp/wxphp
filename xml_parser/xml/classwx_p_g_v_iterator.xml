@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridpagestate.h" line="173" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridpagestate.h" bodystart="173" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridpagestate.h" line="173" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridpagestate.h" bodystart="173" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridpagestate.h" line="153" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridpagestate.h" bodystart="153" bodyend="153"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridpagestate.h" line="153" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridpagestate.h" bodystart="153" bodyend="153"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_v_iterator_1af6124eb3d25d28ff872a59f7a8070660" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -47,7 +47,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridpagestate.h" line="154" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridpagestate.h" bodystart="154" bodyend="154"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridpagestate.h" line="154" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridpagestate.h" bodystart="154" bodyend="154"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_v_iterator_1afd370ecf6c6bd468f4379c41ebdd4da1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -60,7 +60,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridpagestate.h" line="155" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridpagestate.h" bodystart="155" bodyend="155"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridpagestate.h" line="155" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridpagestate.h" bodystart="155" bodyend="155"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_v_iterator_1a2d44bacf35809551b455ffd46ff6d5c1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -73,7 +73,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridpagestate.h" line="156" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridpagestate.h" bodystart="156" bodyend="156"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridpagestate.h" line="156" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridpagestate.h" bodystart="156" bodyend="156"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_v_iterator_1a8fb686d4f216fcec2806110668ecc9ac" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -90,7 +90,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridpagestate.h" line="158" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridpagestate.h" bodystart="157" bodyend="161"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridpagestate.h" line="158" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridpagestate.h" bodystart="157" bodyend="161"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_v_iterator_1ae57d43dac839898575706c9c2bcfc97c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>const <ref refid="classwx_p_g_v_iterator" kindref="compound">wxPGVIterator</ref> &amp;</type>
@@ -107,7 +107,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridpagestate.h" line="163" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridpagestate.h" bodystart="162" bodyend="168"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridpagestate.h" line="163" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridpagestate.h" bodystart="162" bodyend="168"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_v_iterator_1aa44ee191f93c15bc4a0d510b9723be2f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -120,7 +120,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridpagestate.h" line="169" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridpagestate.h" bodystart="169" bodyend="169"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridpagestate.h" line="169" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridpagestate.h" bodystart="169" bodyend="169"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_v_iterator_1a46dc31e866898f24ac4d0f3f86d471ff" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -133,7 +133,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridpagestate.h" line="170" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridpagestate.h" bodystart="170" bodyend="170"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridpagestate.h" line="170" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridpagestate.h" bodystart="170" bodyend="170"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_v_iterator_1a69fbb856e1046a923f17847725a576c4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classwx_p_g_property" kindref="compound">wxPGProperty</ref> *</type>
@@ -146,7 +146,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridpagestate.h" line="171" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridpagestate.h" bodystart="171" bodyend="171"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridpagestate.h" line="171" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridpagestate.h" bodystart="171" bodyend="171"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -156,7 +156,7 @@
 <title>wxPGVIterator</title>
 <para>Abstract implementation of a simple iterator. Can only be used to iterate in forward order, and only through the entire container. Used to have functions dealing with all properties work with both <ref refid="classwx_property_grid" kindref="compound">wxPropertyGrid</ref> and <ref refid="classwx_property_grid_manager" kindref="compound">wxPropertyGridManager</ref>. </para></sect1>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridpagestate.h" line="151" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridpagestate.h" bodystart="150" bodyend="174"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridpagestate.h" line="151" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgridpagestate.h" bodystart="150" bodyend="174"/>
     <listofallmembers>
       <member refid="classwx_p_g_v_iterator_1a46dc31e866898f24ac4d0f3f86d471ff" prot="public" virt="non-virtual"><scope>wxPGVIterator</scope><name>AtEnd</name></member>
       <member refid="classwx_p_g_v_iterator_1a69fbb856e1046a923f17847725a576c4" prot="public" virt="non-virtual"><scope>wxPGVIterator</scope><name>GetProperty</name></member>

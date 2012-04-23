@@ -10,12 +10,12 @@
         <argsstring></argsstring>
         <name>font</name>
         <briefdescription>
-        </briefdescription>
+<para>The font used for control label/text inside it. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/window.h" line="61" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/window.h" bodystart="61" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/window.h" line="61" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/window.h" bodystart="61" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structwx_visual_attributes_1a79a563271030b92fdb5737bb5b880a72" prot="public" static="no" mutable="no">
         <type><ref refid="classwx_colour" kindref="compound">wxColour</ref></type>
@@ -23,12 +23,12 @@
         <argsstring></argsstring>
         <name>colFg</name>
         <briefdescription>
-        </briefdescription>
+<para>The foreground colour. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/window.h" line="64" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/window.h" bodystart="64" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/window.h" line="64" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/window.h" bodystart="64" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structwx_visual_attributes_1a0b91d2c961e684e69f9388bcb770fd08" prot="public" static="no" mutable="no">
         <type><ref refid="classwx_colour" kindref="compound">wxColour</ref></type>
@@ -36,61 +36,61 @@
         <argsstring></argsstring>
         <name>colBg</name>
         <briefdescription>
-        </briefdescription>
+<para>The background colour. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>May be wxNullColour if the controls background colour is not solid. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/window.h" line="68" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/window.h" bodystart="68" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/window.h" line="71" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/window.h" bodystart="71" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
-<para>struct containing all the visual attributes of a control </para>    </briefdescription>
+<para>Struct containing all the visual attributes of a control. </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
     <collaborationgraph>
-      <node id="11373">
+      <node id="11562">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="11374" relation="usage">
+        <childnode refid="11563" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="11371">
+      <node id="11560">
         <label>wxVisualAttributes</label>
         <link refid="structwx_visual_attributes"/>
-        <childnode refid="11372" relation="usage">
+        <childnode refid="11561" relation="usage">
           <edgelabel>colFg</edgelabel>
           <edgelabel>colBg</edgelabel>
         </childnode>
-        <childnode refid="11375" relation="usage">
+        <childnode refid="11564" relation="usage">
           <edgelabel>font</edgelabel>
         </childnode>
       </node>
-      <node id="11372">
+      <node id="11561">
         <label>wxColour</label>
         <link refid="classwx_colour"/>
-        <childnode refid="11373" relation="public-inheritance">
+        <childnode refid="11562" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11376">
+      <node id="11565">
         <label>wxGDIObject</label>
         <link refid="classwx_g_d_i_object"/>
-        <childnode refid="11373" relation="public-inheritance">
+        <childnode refid="11562" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11375">
+      <node id="11564">
         <label>wxFont</label>
         <link refid="classwx_font"/>
-        <childnode refid="11376" relation="public-inheritance">
+        <childnode refid="11565" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11374">
+      <node id="11563">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/window.h" line="59" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/window.h" bodystart="58" bodyend="69"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/window.h" line="59" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/window.h" bodystart="58" bodyend="72"/>
     <listofallmembers>
       <member refid="structwx_visual_attributes_1a0b91d2c961e684e69f9388bcb770fd08" prot="public" virt="non-virtual"><scope>wxVisualAttributes</scope><name>colBg</name></member>
       <member refid="structwx_visual_attributes_1a79a563271030b92fdb5737bb5b880a72" prot="public" virt="non-virtual"><scope>wxVisualAttributes</scope><name>colFg</name></member>

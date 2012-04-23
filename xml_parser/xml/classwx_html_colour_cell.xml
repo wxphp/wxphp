@@ -42,7 +42,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlcell.h" line="575"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlcell.h" line="589"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -51,51 +51,51 @@
 <para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxhtml" kindref="member">wxHTML</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__html" kindref="compound">HTML</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="6984">
+      <node id="7166">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="6983">
+      <node id="7165">
         <label>wxHtmlCell</label>
         <link refid="classwx_html_cell"/>
-        <childnode refid="6984" relation="public-inheritance">
+        <childnode refid="7166" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6982">
+      <node id="7164">
         <label>wxHtmlColourCell</label>
         <link refid="classwx_html_colour_cell"/>
-        <childnode refid="6983" relation="public-inheritance">
+        <childnode refid="7165" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="6987">
+      <node id="7169">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="6988" relation="usage">
+        <childnode refid="7170" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="6986">
+      <node id="7168">
         <label>wxHtmlCell</label>
         <link refid="classwx_html_cell"/>
-        <childnode refid="6987" relation="public-inheritance">
+        <childnode refid="7169" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6985">
+      <node id="7167">
         <label>wxHtmlColourCell</label>
         <link refid="classwx_html_colour_cell"/>
-        <childnode refid="6986" relation="public-inheritance">
+        <childnode refid="7168" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6988">
+      <node id="7170">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlcell.h" line="563" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlcell.h" bodystart="562" bodyend="576"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlcell.h" line="577" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlcell.h" bodystart="576" bodyend="590"/>
     <listofallmembers>
-      <member refid="classwx_html_cell_1a0444199b22671fe2a1ac7924002b683a" prot="public" virt="virtual"><scope>wxHtmlColourCell</scope><name>AdjustPagebreak</name></member>
+      <member refid="classwx_html_cell_1a6ac3cb5003fcfbe2a5a5209877303cb5" prot="public" virt="virtual"><scope>wxHtmlColourCell</scope><name>AdjustPagebreak</name></member>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxHtmlColourCell</scope><name>AllocExclusive</name></member>
       <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxHtmlColourCell</scope><name>CloneRefData</name></member>
       <member refid="classwx_object_1a95c6a5e4e1e03ff23c7b9efe4cff0c1a" prot="protected" virt="virtual"><scope>wxHtmlColourCell</scope><name>CreateRefData</name></member>

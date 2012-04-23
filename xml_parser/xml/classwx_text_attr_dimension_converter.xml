@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="579" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="579" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextbuffer.h" line="579" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextbuffer.h" bodystart="579" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classwx_text_attr_dimension_converter_1ad45ef3e2007d25cb851112941409d66d" prot="public" static="no" mutable="no">
         <type>double</type>
@@ -28,7 +28,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="580" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="580" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextbuffer.h" line="580" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextbuffer.h" bodystart="580" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classwx_text_attr_dimension_converter_1af72fbeac15dc73f42111c47b9e4f09fb" prot="public" static="no" mutable="no">
         <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
@@ -41,7 +41,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="581" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="581" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextbuffer.h" line="581" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextbuffer.h" bodystart="581" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -70,7 +70,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="555"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextbuffer.h" line="555"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_dimension_converter_1a84c26d4ef4a9c36086b139bcac2303be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -97,7 +97,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="559"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextbuffer.h" line="559"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_dimension_converter_1a83bc14c1efc6cc68b8169bba8b7f188e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -119,7 +119,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="564"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextbuffer.h" line="564"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_dimension_converter_1ab8502db6ef108d1eab296a835ad2fdb6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -136,7 +136,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="568"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextbuffer.h" line="568"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_dimension_converter_1a5f19434377a109954ec13fc8428c9632" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -153,7 +153,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="573"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextbuffer.h" line="573"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_attr_dimension_converter_1aff1153317c6b2a37f024d240c78c8775" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -170,7 +170,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="577"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextbuffer.h" line="577"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -180,19 +180,19 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxrichtext" kindref="member">wxRichText</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__richtext" kindref="compound">Rich Text</ref></para><para><simplesect kind="see"><para><ref refid="classwx_rich_text_attr" kindref="compound">wxRichTextAttr</ref>, <ref refid="classwx_rich_text_ctrl" kindref="compound">wxRichTextCtrl</ref>, <ref refid="classwx_text_attr_dimension" kindref="compound">wxTextAttrDimension</ref> </para></simplesect>
 </para>    </detaileddescription>
     <collaborationgraph>
-      <node id="10752">
+      <node id="10937">
         <label>wxTextAttrDimensionConverter</label>
         <link refid="classwx_text_attr_dimension_converter"/>
-        <childnode refid="10753" relation="usage">
+        <childnode refid="10938" relation="usage">
           <edgelabel>m_parentSize</edgelabel>
         </childnode>
       </node>
-      <node id="10753">
+      <node id="10938">
         <label>wxSize</label>
         <link refid="classwx_size"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="550" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="549" bodyend="582"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextbuffer.h" line="550" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextbuffer.h" bodystart="549" bodyend="582"/>
     <listofallmembers>
       <member refid="classwx_text_attr_dimension_converter_1aff1153317c6b2a37f024d240c78c8775" prot="public" virt="non-virtual"><scope>wxTextAttrDimensionConverter</scope><name>ConvertPixelsToTenthsMM</name></member>
       <member refid="classwx_text_attr_dimension_converter_1a5f19434377a109954ec13fc8428c9632" prot="public" virt="non-virtual"><scope>wxTextAttrDimensionConverter</scope><name>ConvertTenthsMMToPixels</name></member>

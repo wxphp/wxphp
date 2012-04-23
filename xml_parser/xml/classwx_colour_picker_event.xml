@@ -5,6 +5,19 @@
     <basecompoundref refid="classwx_command_event" prot="public" virt="non-virtual">wxCommandEvent</basecompoundref>
     <includes local="no">wx/clrpicker.h</includes>
       <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_colour_picker_event_1afa8edf53f69e85cbaa6a1f2e91c22f2e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxColourPickerEvent::wxColourPickerEvent</definition>
+        <argsstring>()</argsstring>
+        <name>wxColourPickerEvent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/clrpicker.h" line="134"/>
+      </memberdef>
       <memberdef kind="function" id="classwx_colour_picker_event_1ab9d9e7ef4204c0dc7511eddf4fc4eb0c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
         <definition>wxColourPickerEvent::wxColourPickerEvent</definition>
@@ -28,7 +41,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/clrpicker.h" line="129"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/clrpicker.h" line="140"/>
       </memberdef>
       <memberdef kind="function" id="classwx_colour_picker_event_1ad2e33ceb89230095cef3f191e7dc0077" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_colour" kindref="compound">wxColour</ref></type>
@@ -41,7 +54,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/clrpicker.h" line="134"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/clrpicker.h" line="145"/>
       </memberdef>
       <memberdef kind="function" id="classwx_colour_picker_event_1a7f5ec104ad3c539ed19afd10f48ee361" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -58,7 +71,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/clrpicker.h" line="139"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/clrpicker.h" line="150"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -72,61 +85,61 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="classwx_colour_picker_ctrl" kindref="compound">wxColourPickerCtrl</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="4898">
+      <node id="4990">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="4896">
+      <node id="4988">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="4897" relation="public-inheritance">
+        <childnode refid="4989" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4895">
+      <node id="4987">
         <label>wxColourPickerEvent</label>
         <link refid="classwx_colour_picker_event"/>
-        <childnode refid="4896" relation="public-inheritance">
+        <childnode refid="4988" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4897">
+      <node id="4989">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="4898" relation="public-inheritance">
+        <childnode refid="4990" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="4902">
+      <node id="4994">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="4903" relation="usage">
+        <childnode refid="4995" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="4900">
+      <node id="4992">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="4901" relation="public-inheritance">
+        <childnode refid="4993" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4899">
+      <node id="4991">
         <label>wxColourPickerEvent</label>
         <link refid="classwx_colour_picker_event"/>
-        <childnode refid="4900" relation="public-inheritance">
+        <childnode refid="4992" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4901">
+      <node id="4993">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="4902" relation="public-inheritance">
+        <childnode refid="4994" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4903">
+      <node id="4995">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/clrpicker.h" line="123" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/clrpicker.h" bodystart="122" bodyend="140"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/clrpicker.h" line="132" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/clrpicker.h" bodystart="131" bodyend="151"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxColourPickerEvent</scope><name>AllocExclusive</name></member>
       <member refid="classwx_event_1a26878097a702e8d0368da150125d4158" prot="public" virt="pure-virtual"><scope>wxColourPickerEvent</scope><name>Clone</name></member>
@@ -174,6 +187,7 @@
       <member refid="classwx_event_1a060a7d222404daff4d3cef30cddeaae3" prot="public" virt="non-virtual"><scope>wxColourPickerEvent</scope><name>StopPropagation</name></member>
       <member refid="classwx_object_1af51efc6b1ae632fc7f0cd7ebbce9fa36" prot="public" virt="non-virtual"><scope>wxColourPickerEvent</scope><name>UnRef</name></member>
       <member refid="classwx_object_1a74b40e42d19a4b9e9bec0b57d62a5725" prot="public" virt="non-virtual"><scope>wxColourPickerEvent</scope><name>UnShare</name></member>
+      <member refid="classwx_colour_picker_event_1afa8edf53f69e85cbaa6a1f2e91c22f2e" prot="public" virt="non-virtual"><scope>wxColourPickerEvent</scope><name>wxColourPickerEvent</name></member>
       <member refid="classwx_colour_picker_event_1ab9d9e7ef4204c0dc7511eddf4fc4eb0c" prot="public" virt="non-virtual"><scope>wxColourPickerEvent</scope><name>wxColourPickerEvent</name></member>
       <member refid="classwx_command_event_1aad941347872cd71fedcfc765fae7b2f7" prot="public" virt="non-virtual"><scope>wxColourPickerEvent</scope><name>wxCommandEvent</name></member>
       <member refid="classwx_event_1aaf2a5cf056d006859cea36689ba13d36" prot="public" virt="non-virtual"><scope>wxColourPickerEvent</scope><name>wxEvent</name></member>

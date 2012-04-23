@@ -22,7 +22,7 @@
 </programlisting></para><para>Notice that the use of the ugly <ref refid="tls_8h_1a006b3d4d82de2eb0e067e63cfe773b55" kindref="member">wxTLS_VALUE()</ref> macro is unfortunately required if you need to support platforms without native compiler support for thread-specific variables. If you compile your code only on platforms which do have such support (recent versions of GNU C++ compiler, Microsoft Visual C++ and Sun C++ compiler are known to have it), you can avoid it and use the variable directly. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tls.h" line="38" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tls.h" bodystart="38" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/tls.h" line="38" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/tls.h" bodystart="38" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="tls_8h_1a006b3d4d82de2eb0e067e63cfe773b55" prot="public" static="no">
         <name>wxTLS_VALUE</name>
@@ -34,7 +34,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tls.h" line="56" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tls.h" bodystart="56" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/tls.h" line="56" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/tls.h" bodystart="56" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="tls_8h_1a0077bfcfde11a116e390d2f9b84a5e68" prot="public" static="no">
         <name>wxTLS_PTR</name>
@@ -45,13 +45,13 @@
 <para>This macro is similar to <ref refid="tls_8h_1a006b3d4d82de2eb0e067e63cfe773b55" kindref="member">wxTLS_VALUE()</ref> except that it always returns a pointer to the type of thread-specific variable.</para><para>Notice that this is not a constant expression even if the macro is defined simply as <computeroutput>&amp;var</computeroutput> -- the value returned is still different for every thread. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tls.h" line="68" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tls.h" bodystart="68" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/tls.h" line="68" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/tls.h" bodystart="68" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tls.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/tls.h"/>
   </compounddef>
 </doxygen>

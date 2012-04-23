@@ -22,7 +22,7 @@ For general cases, <ref refid="classwx_weak_ref_3_01_t_01_4" kindref="compound">
 </parameterlist>
 <heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/>None; this class implementation is entirely header-based.</para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__smartpointers" kindref="compound">Smart Pointers</ref> </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/weakref.h" line="37" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/weakref.h" bodystart="36" bodyend="40"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/weakref.h" line="37" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/weakref.h" bodystart="36" bodyend="40"/>
     <listofallmembers>
     </listofallmembers>
   </compounddef>

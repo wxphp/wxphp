@@ -4,6 +4,7 @@
     <compoundname>wxMessageDialog</compoundname>
     <basecompoundref refid="classwx_dialog" prot="public" virt="non-virtual">wxDialog</basecompoundref>
     <includes local="no">wx/msgdlg.h</includes>
+    <innerclass refid="classwx_message_dialog_1_1_button_label" prot="public">wxMessageDialog::ButtonLabel</innerclass>
       <sectiondef kind="public-func">
       <memberdef kind="function" id="classwx_message_dialog_1a444cfa18ba33da6cfe81d6a93c737d24" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -21,7 +22,7 @@
         <param>
           <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
           <declname>caption</declname>
-          <defval>wxMessageBoxCaptionStr</defval>
+          <defval><ref refid="msgdlg_8h_1a5f93cd31111d1a0f2c65a4b4235035da" kindref="member">wxMessageBoxCaptionStr</ref></defval>
         </param>
         <param>
           <type>long</type>
@@ -75,7 +76,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msgdlg.h" line="109"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msgdlg.h" line="148"/>
       </memberdef>
       <memberdef kind="function" id="classwx_message_dialog_1a6085d6b273139c655af06874abf03ea3" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -93,7 +94,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msgdlg.h" line="123"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msgdlg.h" line="162"/>
       </memberdef>
       <memberdef kind="function" id="classwx_message_dialog_1a85dd2dfd88baa9af9de185bae6642c0e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -101,7 +102,7 @@
         <argsstring>(const ButtonLabel &amp;help)</argsstring>
         <name>SetHelpLabel</name>
         <param>
-          <type>const ButtonLabel &amp;</type>
+          <type>const <ref refid="classwx_message_dialog_1_1_button_label" kindref="compound">ButtonLabel</ref> &amp;</type>
           <declname>help</declname>
         </param>
         <briefdescription>
@@ -111,7 +112,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msgdlg.h" line="136"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msgdlg.h" line="175"/>
       </memberdef>
       <memberdef kind="function" id="classwx_message_dialog_1a43fd42a28d0008f5de3c8bd88aa47a87" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -129,7 +130,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msgdlg.h" line="143"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msgdlg.h" line="182"/>
       </memberdef>
       <memberdef kind="function" id="classwx_message_dialog_1ad8fdf1426f7363bd1e1e07af5f1e7adc" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -137,11 +138,11 @@
         <argsstring>(const ButtonLabel &amp;ok, const ButtonLabel &amp;cancel)</argsstring>
         <name>SetOKCancelLabels</name>
         <param>
-          <type>const ButtonLabel &amp;</type>
+          <type>const <ref refid="classwx_message_dialog_1_1_button_label" kindref="compound">ButtonLabel</ref> &amp;</type>
           <declname>ok</declname>
         </param>
         <param>
-          <type>const ButtonLabel &amp;</type>
+          <type>const <ref refid="classwx_message_dialog_1_1_button_label" kindref="compound">ButtonLabel</ref> &amp;</type>
           <declname>cancel</declname>
         </param>
         <briefdescription>
@@ -151,7 +152,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msgdlg.h" line="153"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msgdlg.h" line="192"/>
       </memberdef>
       <memberdef kind="function" id="classwx_message_dialog_1a9790fa9c1f2fc473539b57d9c1e862a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -159,7 +160,7 @@
         <argsstring>(const ButtonLabel &amp;ok)</argsstring>
         <name>SetOKLabel</name>
         <param>
-          <type>const ButtonLabel &amp;</type>
+          <type>const <ref refid="classwx_message_dialog_1_1_button_label" kindref="compound">ButtonLabel</ref> &amp;</type>
           <declname>ok</declname>
         </param>
         <briefdescription>
@@ -169,7 +170,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msgdlg.h" line="162"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msgdlg.h" line="201"/>
       </memberdef>
       <memberdef kind="function" id="classwx_message_dialog_1a69d5facbe995eee8e92035423e30f534" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -177,15 +178,15 @@
         <argsstring>(const ButtonLabel &amp;yes, const ButtonLabel &amp;no, const ButtonLabel &amp;cancel)</argsstring>
         <name>SetYesNoCancelLabels</name>
         <param>
-          <type>const ButtonLabel &amp;</type>
+          <type>const <ref refid="classwx_message_dialog_1_1_button_label" kindref="compound">ButtonLabel</ref> &amp;</type>
           <declname>yes</declname>
         </param>
         <param>
-          <type>const ButtonLabel &amp;</type>
+          <type>const <ref refid="classwx_message_dialog_1_1_button_label" kindref="compound">ButtonLabel</ref> &amp;</type>
           <declname>no</declname>
         </param>
         <param>
-          <type>const ButtonLabel &amp;</type>
+          <type>const <ref refid="classwx_message_dialog_1_1_button_label" kindref="compound">ButtonLabel</ref> &amp;</type>
           <declname>cancel</declname>
         </param>
         <briefdescription>
@@ -195,7 +196,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msgdlg.h" line="173"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msgdlg.h" line="212"/>
       </memberdef>
       <memberdef kind="function" id="classwx_message_dialog_1aa23b25ebf18bf0915d438cc13b55cb23" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -203,28 +204,28 @@
         <argsstring>(const ButtonLabel &amp;yes, const ButtonLabel &amp;no)</argsstring>
         <name>SetYesNoLabels</name>
         <param>
-          <type>const ButtonLabel &amp;</type>
+          <type>const <ref refid="classwx_message_dialog_1_1_button_label" kindref="compound">ButtonLabel</ref> &amp;</type>
           <declname>yes</declname>
         </param>
         <param>
-          <type>const ButtonLabel &amp;</type>
+          <type>const <ref refid="classwx_message_dialog_1_1_button_label" kindref="compound">ButtonLabel</ref> &amp;</type>
           <declname>no</declname>
         </param>
         <briefdescription>
 <para>Overrides the default labels of the Yes and No buttons. </para>        </briefdescription>
         <detaileddescription>
 <para>The arguments of this function can be either strings or one of the standard identifiers, such as <computeroutput>wxID_APPLY</computeroutput> or <computeroutput>wxID_OPEN</computeroutput>. Notice that even if the label is specified as an identifier, the return value of the dialog <ref refid="classwx_message_dialog_1a28e6cea6fb3857df6cc9b103e06dbadf" kindref="member">ShowModal()</ref> method still remains one of <computeroutput>wxID_OK</computeroutput>, <computeroutput>wxID_CANCEL</computeroutput>, <computeroutput>wxID_YES</computeroutput> or <computeroutput>wxID_NO</computeroutput> values, i.e. this identifier changes only the label appearance but not the return code generated by the button. It is possible to mix stock identifiers and string labels in the same function call, for example: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_message_dialog" kindref="compound" tooltip="This class represents a dialog that shows a single or multi-line message, with a choice of OK...">wxMessageDialog</ref><sp/>dlg(...);</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dlg.SetYesNoLabels(<ref refid="defs_8h_1ac66d0a09761e7d86b2ac0b2e0c6a8cbbaa688a737db4be9c21c29ef3ffb7f3c43" kindref="member">wxID_SAVE</ref>,<sp/><ref refid="group__group__funcmacro__string_1ga8a02b8875a521df57263a9e6f090f2d0" kindref="member" tooltip="This macro expands into a call to wxGetTranslation(), so it marks the message for the extraction by x...">_</ref>(</highlight><highlight class="stringliteral">&quot;&amp;Don&apos;t<sp/>save&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dlg.SetYesNoLabels(<ref refid="defs_8h_1ac66d0a09761e7d86b2ac0b2e0c6a8cbbaa688a737db4be9c21c29ef3ffb7f3c43" kindref="member">wxID_SAVE</ref>,<sp/><ref refid="group__group__funcmacro__string_1ga8a02b8875a521df57263a9e6f090f2d0" kindref="member" tooltip="Macro to be used around all literal strings that should be translated.">_</ref>(</highlight><highlight class="stringliteral">&quot;&amp;Don&apos;t<sp/>save&quot;</highlight><highlight class="normal">));</highlight></codeline>
 </programlisting></para><para>Also notice that this function is not currently available on all platforms (although as of wxWidgets 2.9.0 it is implemented in all major ports), so it may return false to indicate that the labels couldn&apos;t be changed. If it returns true, the labels were set successfully.</para><para>Typically, if the function was used successfully, the main dialog message may need to be changed, e.g.: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_message_dialog" kindref="compound" tooltip="This class represents a dialog that shows a single or multi-line message, with a choice of OK...">wxMessageDialog</ref><sp/>dlg(...);</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>dlg.SetYesNoLabels(<ref refid="group__group__funcmacro__string_1ga8a02b8875a521df57263a9e6f090f2d0" kindref="member" tooltip="This macro expands into a call to wxGetTranslation(), so it marks the message for the extraction by x...">_</ref>(</highlight><highlight class="stringliteral">&quot;&amp;Quit&quot;</highlight><highlight class="normal">),<sp/><ref refid="group__group__funcmacro__string_1ga8a02b8875a521df57263a9e6f090f2d0" kindref="member" tooltip="This macro expands into a call to wxGetTranslation(), so it marks the message for the extraction by x...">_</ref>(</highlight><highlight class="stringliteral">&quot;&amp;Don&apos;t<sp/>quit&quot;</highlight><highlight class="normal">))<sp/>)</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dlg.SetMessage(<ref refid="group__group__funcmacro__string_1ga8a02b8875a521df57263a9e6f090f2d0" kindref="member" tooltip="This macro expands into a call to wxGetTranslation(), so it marks the message for the extraction by x...">_</ref>(</highlight><highlight class="stringliteral">&quot;What<sp/>do<sp/>you<sp/>want<sp/>to<sp/>do?&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>dlg.SetYesNoLabels(<ref refid="group__group__funcmacro__string_1ga8a02b8875a521df57263a9e6f090f2d0" kindref="member" tooltip="Macro to be used around all literal strings that should be translated.">_</ref>(</highlight><highlight class="stringliteral">&quot;&amp;Quit&quot;</highlight><highlight class="normal">),<sp/><ref refid="group__group__funcmacro__string_1ga8a02b8875a521df57263a9e6f090f2d0" kindref="member" tooltip="Macro to be used around all literal strings that should be translated.">_</ref>(</highlight><highlight class="stringliteral">&quot;&amp;Don&apos;t<sp/>quit&quot;</highlight><highlight class="normal">))<sp/>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dlg.SetMessage(<ref refid="group__group__funcmacro__string_1ga8a02b8875a521df57263a9e6f090f2d0" kindref="member" tooltip="Macro to be used around all literal strings that should be translated.">_</ref>(</highlight><highlight class="stringliteral">&quot;What<sp/>do<sp/>you<sp/>want<sp/>to<sp/>do?&quot;</highlight><highlight class="normal">));</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">//<sp/>buttons<sp/>have<sp/>standard<sp/>&quot;Yes&quot;/&quot;No&quot;<sp/>values,<sp/>so<sp/>rephrase<sp/>the<sp/>question</highlight><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dlg.SetMessage(<ref refid="group__group__funcmacro__string_1ga8a02b8875a521df57263a9e6f090f2d0" kindref="member" tooltip="This macro expands into a call to wxGetTranslation(), so it marks the message for the extraction by x...">_</ref>(</highlight><highlight class="stringliteral">&quot;Do<sp/>you<sp/>really<sp/>want<sp/>to<sp/>quit?&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dlg.SetMessage(<ref refid="group__group__funcmacro__string_1ga8a02b8875a521df57263a9e6f090f2d0" kindref="member" tooltip="Macro to be used around all literal strings that should be translated.">_</ref>(</highlight><highlight class="stringliteral">&quot;Do<sp/>you<sp/>really<sp/>want<sp/>to<sp/>quit?&quot;</highlight><highlight class="normal">));</highlight></codeline>
 </programlisting></para><para><simplesect kind="since"><para>2.9.0 </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msgdlg.h" line="209"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msgdlg.h" line="248"/>
       </memberdef>
       <memberdef kind="function" id="classwx_message_dialog_1a28e6cea6fb3857df6cc9b103e06dbadf" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>int</type>
@@ -235,10 +236,10 @@
         <briefdescription>
 <para>Shows the dialog, returning one of wxID_OK, wxID_CANCEL, wxID_YES, wxID_NO or wxID_HELP. </para>        </briefdescription>
         <detaileddescription>
-<para>Notice that this method returns the identifier of the button which was clicked unlike <ref refid="group__group__funcmacro__dialog_1gaf8a6b7e1e34eae82d3d75e3721298b26" kindref="member">wxMessageBox()</ref> function. </para>        </detaileddescription>
+<para>Notice that this method returns the identifier of the button which was clicked unlike <ref refid="group__group__funcmacro__dialog_1ga193c64ed4802e379799cdb42de252647" kindref="member">wxMessageBox()</ref> function. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msgdlg.h" line="218"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msgdlg.h" line="257"/>
       </memberdef>
       <memberdef kind="function" id="classwx_message_dialog_1a7842964bb48cba52a524e709f43416c7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -251,7 +252,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msgdlg.h" line="221"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msgdlg.h" line="260"/>
       </memberdef>
       <memberdef kind="function" id="classwx_message_dialog_1a55b5e0f7ba6439a5c0a2c2bcbb52e1bb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -264,7 +265,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msgdlg.h" line="222"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msgdlg.h" line="261"/>
       </memberdef>
       <memberdef kind="function" id="classwx_message_dialog_1adcbd21f7a6e58a2919e7a6afb89185f9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -277,7 +278,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msgdlg.h" line="223"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msgdlg.h" line="262"/>
       </memberdef>
       <memberdef kind="function" id="classwx_message_dialog_1ac3951ff8144aa6e50bb90c6f356d7118" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>long</type>
@@ -290,7 +291,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msgdlg.h" line="224"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msgdlg.h" line="263"/>
       </memberdef>
       <memberdef kind="function" id="classwx_message_dialog_1afe76de4b7d31ae646ba1ad95f20a8026" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -303,7 +304,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msgdlg.h" line="225"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msgdlg.h" line="264"/>
       </memberdef>
       <memberdef kind="function" id="classwx_message_dialog_1afb85d738343535c514a1c4388cab446d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -316,7 +317,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msgdlg.h" line="226"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msgdlg.h" line="265"/>
       </memberdef>
       <memberdef kind="function" id="classwx_message_dialog_1a8eb71016cbd99f3568dcc020ef536274" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -329,7 +330,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msgdlg.h" line="227"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msgdlg.h" line="266"/>
       </memberdef>
       <memberdef kind="function" id="classwx_message_dialog_1a883c32c843456aa43333e141b1fd7e67" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -342,7 +343,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msgdlg.h" line="228"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msgdlg.h" line="267"/>
       </memberdef>
       <memberdef kind="function" id="classwx_message_dialog_1a622945162bfdca9eb55a2c8c51474ed0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -355,7 +356,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msgdlg.h" line="229"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msgdlg.h" line="268"/>
       </memberdef>
       <memberdef kind="function" id="classwx_message_dialog_1a995530e19ca844c9f8d473ce4c9a37da" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -368,7 +369,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msgdlg.h" line="230"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msgdlg.h" line="269"/>
       </memberdef>
       <memberdef kind="function" id="classwx_message_dialog_1ae7e4409b46c4035649216fcd15476e5c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>long</type>
@@ -381,7 +382,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msgdlg.h" line="231"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msgdlg.h" line="270"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -411,109 +412,109 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para> Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__cmndlg" kindref="compound">Common Dialogs</ref></para><para> <simplesect kind="see"><para><ref refid="overview_cmndlg_1overview_cmndlg_msg" kindref="member">wxMessageDialog Overview</ref> </para><simplesectsep/><para><ref refid="classwx_rich_message_dialog" kindref="compound">wxRichMessageDialog</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7737">
+      <node id="7930">
         <label>wxNonOwnedWindow</label>
         <link refid="classwx_non_owned_window"/>
-        <childnode refid="7738" relation="public-inheritance">
+        <childnode refid="7931" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7740">
+      <node id="7933">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="7739">
+      <node id="7932">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="7740" relation="public-inheritance">
+        <childnode refid="7933" relation="public-inheritance">
         </childnode>
-        <childnode refid="7741" relation="public-inheritance">
+        <childnode refid="7934" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7741">
+      <node id="7934">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="7738">
+      <node id="7931">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="7739" relation="public-inheritance">
+        <childnode refid="7932" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7735">
+      <node id="7928">
         <label>wxDialog</label>
         <link refid="classwx_dialog"/>
-        <childnode refid="7736" relation="public-inheritance">
+        <childnode refid="7929" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7734">
+      <node id="7927">
         <label>wxMessageDialog</label>
         <link refid="classwx_message_dialog"/>
-        <childnode refid="7735" relation="public-inheritance">
+        <childnode refid="7928" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7736">
+      <node id="7929">
         <label>wxTopLevelWindow</label>
         <link refid="classwx_top_level_window"/>
-        <childnode refid="7737" relation="public-inheritance">
+        <childnode refid="7930" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7745">
+      <node id="7938">
         <label>wxNonOwnedWindow</label>
         <link refid="classwx_non_owned_window"/>
-        <childnode refid="7746" relation="public-inheritance">
+        <childnode refid="7939" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7748">
+      <node id="7941">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="7749" relation="usage">
+        <childnode refid="7942" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="7747">
+      <node id="7940">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="7748" relation="public-inheritance">
+        <childnode refid="7941" relation="public-inheritance">
         </childnode>
-        <childnode refid="7750" relation="public-inheritance">
+        <childnode refid="7943" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7750">
+      <node id="7943">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="7746">
+      <node id="7939">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="7747" relation="public-inheritance">
+        <childnode refid="7940" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7743">
+      <node id="7936">
         <label>wxDialog</label>
         <link refid="classwx_dialog"/>
-        <childnode refid="7744" relation="public-inheritance">
+        <childnode refid="7937" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7742">
+      <node id="7935">
         <label>wxMessageDialog</label>
         <link refid="classwx_message_dialog"/>
-        <childnode refid="7743" relation="public-inheritance">
+        <childnode refid="7936" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7744">
+      <node id="7937">
         <label>wxTopLevelWindow</label>
         <link refid="classwx_top_level_window"/>
-        <childnode refid="7745" relation="public-inheritance">
+        <childnode refid="7938" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7749">
+      <node id="7942">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msgdlg.h" line="82" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msgdlg.h" bodystart="81" bodyend="233"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msgdlg.h" line="88" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/msgdlg.h" bodystart="87" bodyend="272"/>
     <listofallmembers>
       <member refid="classwx_window_1a3afbd49b1ea2f8275e3600dcac102923" prot="public" virt="virtual"><scope>wxMessageDialog</scope><name>AcceptsFocus</name></member>
       <member refid="classwx_window_1a2370bdd3ab08e7ef3c7555c6aa8301b8" prot="public" virt="virtual"><scope>wxMessageDialog</scope><name>AcceptsFocusFromKeyboard</name></member>
@@ -557,6 +558,7 @@
       <member refid="classwx_dialog_1a0c6fb55be0b07b934b30550e0225df8f" prot="public" virt="non-virtual"><scope>wxMessageDialog</scope><name>CreateSeparatedButtonSizer</name></member>
       <member refid="classwx_dialog_1ab7a5666b612d6cfdfb2660fd9bd3393e" prot="public" virt="non-virtual"><scope>wxMessageDialog</scope><name>CreateSeparatedSizer</name></member>
       <member refid="classwx_dialog_1a8f2f565975f843035391ce62b0b9f8e8" prot="public" virt="non-virtual"><scope>wxMessageDialog</scope><name>CreateStdDialogButtonSizer</name></member>
+      <member refid="classwx_dialog_1a5bead5e932f17b7c2345dfc41b6cc79c" prot="public" virt="non-virtual"><scope>wxMessageDialog</scope><name>CreateTextSizer</name></member>
       <member refid="classwx_evt_handler_1a6e7f9cf4ebd0623c1d94979855d096f8" prot="public" virt="non-virtual"><scope>wxMessageDialog</scope><name>DeletePendingEvents</name></member>
       <member refid="classwx_window_1a6bf0c5be864544d9ce0560087667b7fc" prot="public" virt="virtual"><scope>wxMessageDialog</scope><name>Destroy</name></member>
       <member refid="classwx_window_1aff47b32c8d42d515ea0bb6a6c2fea917" prot="public" virt="non-virtual"><scope>wxMessageDialog</scope><name>DestroyChildren</name></member>
@@ -716,6 +718,7 @@
       <member refid="classwx_top_level_window_1afa58f411cf488eb9279683b1d20a74b6" prot="public" virt="virtual"><scope>wxMessageDialog</scope><name>IsActive</name></member>
       <member refid="classwx_top_level_window_1ac0c7a7cb6e6dfdf7e59300ee5d476ce3" prot="public" virt="virtual"><scope>wxMessageDialog</scope><name>IsAlwaysMaximized</name></member>
       <member refid="classwx_window_1af918e6fe8565c2d5235973cc3de84a43" prot="public" virt="non-virtual"><scope>wxMessageDialog</scope><name>IsBeingDeleted</name></member>
+      <member refid="classwx_window_1a469f0881da248d37691440c9d4cc7200" prot="public" virt="non-virtual"><scope>wxMessageDialog</scope><name>IsDescendant</name></member>
       <member refid="classwx_window_1a9d1be1bbb625ebf87ad4ad47e49a0194" prot="public" virt="virtual"><scope>wxMessageDialog</scope><name>IsDoubleBuffered</name></member>
       <member refid="classwx_window_1a59452a5bd42f5ea4b31d7fc4aa59644f" prot="public" virt="non-virtual"><scope>wxMessageDialog</scope><name>IsEnabled</name></member>
       <member refid="classwx_window_1af27ef77c913e32050543f3b0ca435a0d" prot="public" virt="non-virtual"><scope>wxMessageDialog</scope><name>IsExposed</name></member>
@@ -737,6 +740,7 @@
       <member refid="classwx_window_1a72d70fd14e3565bf782fbcd3271d8930" prot="public" virt="virtual"><scope>wxMessageDialog</scope><name>IsShownOnScreen</name></member>
       <member refid="classwx_window_1a657ef8b6055eb06df894ac5e6ddfecf8" prot="public" virt="non-virtual"><scope>wxMessageDialog</scope><name>IsThisEnabled</name></member>
       <member refid="classwx_window_1a0002826ad05f2a5661b4c8995713f37f" prot="public" virt="virtual"><scope>wxMessageDialog</scope><name>IsTopLevel</name></member>
+      <member refid="classwx_window_1a7940d510c5bdc062a2b109a1022dd8c2" prot="public" virt="virtual"><scope>wxMessageDialog</scope><name>IsTransparentBackgroundSupported</name></member>
       <member refid="classwx_evt_handler_1a360fdeefcf53b62fb49fb828406bb8a6" prot="public" virt="non-virtual"><scope>wxMessageDialog</scope><name>IsUnlinked</name></member>
       <member refid="classwx_top_level_window_1a305c48ddb8e45f89add1694053185a7d" prot="public" virt="non-virtual"><scope>wxMessageDialog</scope><name>IsUsingNativeDecorations</name></member>
       <member refid="classwx_top_level_window_1adfe7e3f4a32f3ed178968f64431bbfe0" prot="public" virt="virtual"><scope>wxMessageDialog</scope><name>Layout</name></member>
@@ -744,7 +748,6 @@
       <member refid="classwx_window_1afc0816a174ceee6d36d1995c6824a273" prot="public" virt="non-virtual"><scope>wxMessageDialog</scope><name>LineUp</name></member>
       <member refid="classwx_window_1a124944524f36b71385dad8fddaad8ded" prot="public" virt="virtual"><scope>wxMessageDialog</scope><name>Lower</name></member>
       <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxMessageDialog</scope><name>m_refData</name></member>
-      <member refid="classwx_window_1a192fc8b467845d093c16452db96c65c5" prot="public" virt="virtual"><scope>wxMessageDialog</scope><name>MakeModal</name></member>
       <member refid="classwx_top_level_window_1addb1612e9f00ac82c2e19c2bac6ffc4f" prot="public" virt="virtual"><scope>wxMessageDialog</scope><name>Maximize</name></member>
       <member refid="classwx_window_1ab1cb98c8d25b9e6ff7b706b1446c3df7" prot="public" virt="non-virtual"><scope>wxMessageDialog</scope><name>Move</name></member>
       <member refid="classwx_window_1a22a22c1e23ca05776707e7999d8047fe" prot="public" virt="non-virtual"><scope>wxMessageDialog</scope><name>Move</name></member>
@@ -755,7 +758,6 @@
       <member refid="classwx_window_1aa58039c8fc65e19160becf510ee1d1d5" prot="public" virt="non-virtual"><scope>wxMessageDialog</scope><name>NavigateIn</name></member>
       <member refid="classwx_window_1a8175da594e6045635a1d1cfe775cdddb" prot="public" virt="non-virtual"><scope>wxMessageDialog</scope><name>NewControlId</name></member>
       <member refid="classwx_window_1a6b5654c0c6c6245d592c279521f7099c" prot="public" virt="virtual"><scope>wxMessageDialog</scope><name>OnInternalIdle</name></member>
-      <member refid="classwx_dialog_1a31dde643f83e859e53759b8ae5f07378" prot="public" virt="non-virtual"><scope>wxMessageDialog</scope><name>OnSysColourChanged</name></member>
       <member refid="classwx_object_1a07b8f34f5afc5743195c5fed052f55d3" prot="public" virt="non-virtual"><scope>wxMessageDialog</scope><name>operator delete</name></member>
       <member refid="classwx_object_1a96fa423a1dbc212c8227a5d83825971f" prot="public" virt="non-virtual"><scope>wxMessageDialog</scope><name>operator new</name></member>
       <member refid="classwx_top_level_window_1a5890684b71321e27e8f3a223ad3c2445" prot="public" virt="virtual"><scope>wxMessageDialog</scope><name>OSXIsModified</name></member>
@@ -897,7 +899,6 @@
       <member refid="classwx_window_1a88cc65e424a129d9b0057756cdb67ec9" prot="public" virt="virtual"><scope>wxMessageDialog</scope><name>TransferDataToWindow</name></member>
       <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxMessageDialog</scope><name>TryAfter</name></member>
       <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxMessageDialog</scope><name>TryBefore</name></member>
-      <member refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" virt="non-virtual"><scope>wxMessageDialog</scope><name>TryThis</name></member>
       <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxMessageDialog</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxMessageDialog</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a22e5db2ec1d19c8252c056fd116975d7" prot="public" virt="non-virtual"><scope>wxMessageDialog</scope><name>Unlink</name></member>

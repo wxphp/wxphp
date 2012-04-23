@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dde.h" line="236"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dde.h" line="236"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_d_e_client_1a5d0f1d6d23eb7a55b7ff39300f5a9fbe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_connection_base" kindref="compound">wxConnectionBase</ref> *</type>
@@ -41,7 +41,7 @@
 <para>If the server allows a connection, a <ref refid="classwx_d_d_e_connection" kindref="compound">wxDDEConnection</ref> object will be returned.</para><para>The type of <ref refid="classwx_d_d_e_connection" kindref="compound">wxDDEConnection</ref> returned can be altered by overriding the <ref refid="classwx_d_d_e_client_1a286079977cd233d29497507fd04d71c0" kindref="member">OnMakeConnection()</ref> member to return your own derived connection object. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dde.h" line="249"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dde.h" line="249"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_d_e_client_1a286079977cd233d29497507fd04d71c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_connection_base" kindref="compound">wxConnectionBase</ref> *</type>
@@ -54,7 +54,7 @@
 <para>By default, a <ref refid="classwx_d_d_e_connection" kindref="compound">wxDDEConnection</ref> object is returned.</para><para>The advantage of deriving your own connection class is that it will enable you to intercept messages initiated by the server, such as <ref refid="classwx_d_d_e_connection_1a13bf3348f8ad73e63a7778feb707f137" kindref="member">wxDDEConnection::OnAdvise()</ref>. You may also want to store application-specific data in instances of the new class. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dde.h" line="262"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dde.h" line="262"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_d_e_client_1ac10cacc5cd6c922607cd2087a281de08" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -71,7 +71,7 @@
 <para>This always returns true under MS Windows. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dde.h" line="268"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dde.h" line="268"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -81,37 +81,37 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ipc" kindref="compound">Interprocess Communication</ref> Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page_port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor> </para><para><simplesect kind="see"><para><ref refid="classwx_d_d_e_server" kindref="compound">wxDDEServer</ref>, <ref refid="classwx_d_d_e_connection" kindref="compound">wxDDEConnection</ref>, <ref refid="overview_ipc" kindref="compound">Interprocess Communication</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="5532">
+      <node id="5627">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="5531">
+      <node id="5626">
         <label>wxDDEClient</label>
         <link refid="classwx_d_d_e_client"/>
-        <childnode refid="5532" relation="public-inheritance">
+        <childnode refid="5627" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="5534">
+      <node id="5629">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="5535" relation="usage">
+        <childnode refid="5630" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="5533">
+      <node id="5628">
         <label>wxDDEClient</label>
         <link refid="classwx_d_d_e_client"/>
-        <childnode refid="5534" relation="public-inheritance">
+        <childnode refid="5629" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5535">
+      <node id="5630">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dde.h" line="231" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dde.h" bodystart="230" bodyend="269"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dde.h" line="231" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dde.h" bodystart="230" bodyend="269"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxDDEClient</scope><name>AllocExclusive</name></member>
       <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxDDEClient</scope><name>CloneRefData</name></member>

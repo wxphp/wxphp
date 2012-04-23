@@ -19,7 +19,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="241"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" line="241"/>
       </memberdef>
       <memberdef kind="function" id="classwx_critical_section_locker_1a74e6eff6391e4f4ee8c0eeb77cfd95e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -32,7 +32,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="246"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" line="246"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -60,7 +60,7 @@
 </programlisting></para><para>Without <ref refid="classwx_critical_section_locker" kindref="compound">wxCriticalSectionLocker</ref>, you would need to remember to manually leave the critical section before each <computeroutput>return</computeroutput>.</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__threading" kindref="compound">Threading</ref></para><para><simplesect kind="see"><para><ref refid="classwx_critical_section" kindref="compound">wxCriticalSection</ref>, <ref refid="classwx_mutex_locker" kindref="compound">wxMutexLocker</ref> </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="235" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" bodystart="234" bodyend="247"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" line="235" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" bodystart="234" bodyend="247"/>
     <listofallmembers>
       <member refid="classwx_critical_section_locker_1a5a91c24edee0c85444ef0706e5b78694" prot="public" virt="non-virtual"><scope>wxCriticalSectionLocker</scope><name>wxCriticalSectionLocker</name></member>
       <member refid="classwx_critical_section_locker_1a74e6eff6391e4f4ee8c0eeb77cfd95e5" prot="public" virt="non-virtual"><scope>wxCriticalSectionLocker</scope><name>~wxCriticalSectionLocker</name></member>

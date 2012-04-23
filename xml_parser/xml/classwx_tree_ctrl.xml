@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="172"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="172"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_ctrl_1a298f48e824d12a43539a018e2cc06999" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -114,7 +114,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="201"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="201"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_ctrl_1aade1a015a27126fe19d21942740ee4bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -127,7 +127,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="207"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="207"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_ctrl_1a1fa4eecee7fca8ea6d69903be8e6c285" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_tree_item_id" kindref="compound">wxTreeItemId</ref></type>
@@ -159,7 +159,7 @@
 <para>The <emphasis>image</emphasis> and <emphasis>selImage</emphasis> parameters are an index within the normal image list specifying the image to use for unselected and selected items, respectively. If <emphasis>image</emphasis> -1 and <emphasis>selImage</emphasis> is -1, the same image is used for both selected and unselected items. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="219"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="219"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_ctrl_1a0a798a2a06f21bcb5bef2c4b4b7cc3a5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_tree_item_id" kindref="compound">wxTreeItemId</ref></type>
@@ -195,7 +195,7 @@
 <para>The <emphasis>image</emphasis> and <emphasis>selImage</emphasis> parameters are an index within the normal image list specifying the image to use for unselected and selected items, respectively. If <emphasis>image</emphasis> -1 and <emphasis>selImage</emphasis> is -1, the same image is used for both selected and unselected items. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="234"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="234"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_ctrl_1a2a24d50d475f0c487a9162f477f6e69e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -213,7 +213,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="249"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="249"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_ctrl_1a29e4021e0f110909a17517b476dfb58b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -231,7 +231,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="258"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="258"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_ctrl_1a6f42485bcb6ff7445862b08b78f01f33" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -249,7 +249,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="267"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="267"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_ctrl_1a6be5e621a37cd9a82e68eed0a083c211" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -266,7 +266,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="272"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="272"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_ctrl_1a954bf5a6b748ac7b7b60ee18156467db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -280,7 +280,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="279"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="279"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_ctrl_1aeef3170b6bb0fc53b79351183bd595d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -298,7 +298,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="286"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="286"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_ctrl_1a15b56333132fbcdb6ade6590adf0ad1c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -315,7 +315,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="291"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="291"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_ctrl_1adf40716643252f78e72fcb95dbd347ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -363,7 +363,7 @@
 <para>See <ref refid="classwx_tree_ctrl_1ac4a07aa9c3ef92d6663ace3c20aa1576" kindref="member">wxTreeCtrl::wxTreeCtrl()</ref> for further details. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="302"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="302"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_ctrl_1a53a2292e2b7b6c13ba3e2d542d8bc1d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -380,7 +380,7 @@
 <para>A <computeroutput>EVT_TREE_DELETE_ITEM</computeroutput> event will be generated.</para><para>This function may cause a subsequent call to <ref refid="classwx_tree_ctrl_1aa2c7b3253780ee1b86da858511bb2149" kindref="member">GetNextChild()</ref> to fail. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="310"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="310"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_ctrl_1a76de2019d0fcc73f4c302dff5d392c66" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -393,7 +393,7 @@
 <para>Note that this may not generate <computeroutput>EVT_TREE_DELETE_ITEM</computeroutput> events under some Windows versions although normally such event is generated for each removed item. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="317"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="317"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_ctrl_1a56b91fbfa520892a23b546432c4428b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -410,7 +410,7 @@
 <para>Note that this will <bold>not</bold> generate any events unlike <ref refid="classwx_tree_ctrl_1a53a2292e2b7b6c13ba3e2d542d8bc1d2" kindref="member">Delete()</ref> method.</para><para>If you have called <ref refid="classwx_tree_ctrl_1a26211b6424ab2b4108311a2b733eb7e5" kindref="member">SetItemHasChildren()</ref>, you may need to call it again since <ref refid="classwx_tree_ctrl_1a56b91fbfa520892a23b546432c4428b6" kindref="member">DeleteChildren()</ref> does not automatically clear the setting. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="326"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="326"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_ctrl_1a08d88a76e02f59001766bc90e20016b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_text_ctrl" kindref="compound">wxTextCtrl</ref> *</type>
@@ -433,7 +433,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="340"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="340"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_ctrl_1a548331161e0b9f620a4663d84ec642b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -457,7 +457,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="351"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="351"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_ctrl_1a6440663f2dcf7652635ec7347d023f83" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -474,7 +474,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="356"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="356"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_ctrl_1a36e5c8826d223336df5b807700f4bded" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -491,7 +491,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="361"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="361"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_ctrl_1a8767f4e10e5fb007a77701e27d3927e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -504,7 +504,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="366"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="366"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_ctrl_1a41b109ce1f196c2ed77a7f1c3dc3e7ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -521,7 +521,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="371"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="371"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_ctrl_1a020247f2a77f87cee1b6cf534accc5fc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -544,10 +544,10 @@
         <briefdescription>
 <para>Retrieves the rectangle bounding the <emphasis>item</emphasis>. </para>        </briefdescription>
         <detaileddescription>
-<para>If <emphasis>textOnly</emphasis> is true, only the rectangle around the item&apos;s label will be returned, otherwise the item&apos;s image is also taken into account.</para><para>The return value is true if the rectangle was successfully retrieved or <computeroutput></computeroutput> false if it was not (in this case <emphasis>rect</emphasis> is not changed) -- for example, if the item is currently invisible.</para><para>Notice that the rectangle coordinates are logical, not physical ones. So, for example, the x coordinate may be negative if the tree has a horizontal scrollbar and its position is not 0.</para><para><bold>wxPython Note:</bold> The wxPython version of this method requires only the <emphasis>item</emphasis> and <emphasis>textOnly</emphasis> parameters. The return value is either a <ref refid="classwx_rect" kindref="compound">wxRect</ref> object or <computeroutput>None</computeroutput>.</para><para><bold>wxPerl Note:</bold> In wxPerl this method only takes the <emphasis>item</emphasis> and <emphasis>textOnly</emphasis> parameters and returns a <computeroutput>Wx::Rect</computeroutput> (or <computeroutput>undef</computeroutput>). </para>        </detaileddescription>
+<para>If <emphasis>textOnly</emphasis> is true, only the rectangle around the item&apos;s label will be returned, otherwise the item&apos;s image is also taken into account.</para><para>The return value is true if the rectangle was successfully retrieved or <computeroutput></computeroutput> false if it was not (in this case <emphasis>rect</emphasis> is not changed) -- for example, if the item is currently invisible.</para><para>Notice that the rectangle coordinates are logical, not physical ones. So, for example, the x coordinate may be negative if the tree has a horizontal scrollbar and its position is not 0.</para><para><bold>wxPerl Note:</bold> In wxPerl this method only takes the <emphasis>item</emphasis> and <emphasis>textOnly</emphasis> parameters and returns a <computeroutput>Wx::Rect</computeroutput> (or <computeroutput>undef</computeroutput>). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="398"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="392"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_ctrl_1a139140d7083a4fb360a967665eec31d2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_image_list" kindref="compound">wxImageList</ref> *</type>
@@ -560,7 +560,7 @@
 <para>This function is only available in the generic version. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="406"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="400"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_ctrl_1a4e552da413db75724c9135c0582b3997" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>size_t</type>
@@ -582,7 +582,7 @@
 <para>If <emphasis>recursively</emphasis> is true, returns the total number of descendants, otherwise only one level of children is counted. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="414"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="408"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_ctrl_1a8005a57d177ba5d0ac67ecb9937ccb39" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>unsigned int</type>
@@ -595,7 +595,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="419"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="413"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_ctrl_1a4d76ce7f63998b90439737c44a2fd5eb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_text_ctrl" kindref="compound">wxTextCtrl</ref> *</type>
@@ -609,7 +609,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="427"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="421"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_ctrl_1ae30654f33f4f81a3c5d08eee27bb19f7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_tree_item_id" kindref="compound">wxTreeItemId</ref></type>
@@ -627,11 +627,11 @@
         <briefdescription>
 <para>Returns the first child; call <ref refid="classwx_tree_ctrl_1aa2c7b3253780ee1b86da858511bb2149" kindref="member">GetNextChild()</ref> for the next child. </para>        </briefdescription>
         <detaileddescription>
-<para>For this enumeration function you must pass in a &apos;cookie&apos; parameter which is opaque for the application but is necessary for the library to make these functions reentrant (i.e. allow more than one enumeration on one and the same object simultaneously). The cookie passed to <ref refid="classwx_tree_ctrl_1ae30654f33f4f81a3c5d08eee27bb19f7" kindref="member">GetFirstChild()</ref> and <ref refid="classwx_tree_ctrl_1aa2c7b3253780ee1b86da858511bb2149" kindref="member">GetNextChild()</ref> should be the same variable.</para><para>Returns an invalid tree item (i.e. <ref refid="classwx_tree_item_id_1af1e170fe0fa8dab8c8bfd601267034a6" kindref="member">wxTreeItemId::IsOk()</ref> returns false) if there are no further children.</para><para><bold>wxPython Note:</bold> In wxPython the returned <ref refid="classwx_tree_item_id" kindref="compound">wxTreeItemId</ref> and the new cookie value are both returned as a tuple containing the two values.</para><para><bold>wxPerl Note:</bold> In wxPerl this method only takes the <emphasis>item</emphasis> parameter, and returns a 2-element list (item, cookie).</para><para><simplesect kind="see"><para><ref refid="classwx_tree_ctrl_1aa2c7b3253780ee1b86da858511bb2149" kindref="member">GetNextChild()</ref>, <ref refid="classwx_tree_ctrl_1a37cfa1f5c266db3c2a26457343648ff0" kindref="member">GetNextSibling()</ref> </para></simplesect>
+<para>For this enumeration function you must pass in a &apos;cookie&apos; parameter which is opaque for the application but is necessary for the library to make these functions reentrant (i.e. allow more than one enumeration on one and the same object simultaneously). The cookie passed to <ref refid="classwx_tree_ctrl_1ae30654f33f4f81a3c5d08eee27bb19f7" kindref="member">GetFirstChild()</ref> and <ref refid="classwx_tree_ctrl_1aa2c7b3253780ee1b86da858511bb2149" kindref="member">GetNextChild()</ref> should be the same variable.</para><para>Returns an invalid tree item (i.e. <ref refid="classwx_tree_item_id_1af1e170fe0fa8dab8c8bfd601267034a6" kindref="member">wxTreeItemId::IsOk()</ref> returns false) if there are no further children.</para><para><bold>wxPerl Note:</bold> In wxPerl this method only takes the <emphasis>item</emphasis> parameter, and returns a 2-element list (item, cookie).</para><para><simplesect kind="see"><para><ref refid="classwx_tree_ctrl_1aa2c7b3253780ee1b86da858511bb2149" kindref="member">GetNextChild()</ref>, <ref refid="classwx_tree_ctrl_1a37cfa1f5c266db3c2a26457343648ff0" kindref="member">GetNextSibling()</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="454"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="443"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_ctrl_1a30e7cb88c428bec01c59acd618b0b2ed" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_tree_item_id" kindref="compound">wxTreeItemId</ref></type>
@@ -644,7 +644,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="459"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="448"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_ctrl_1aa9e94313591c2f0927dc89c06433efa4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_tree_item_id" kindref="compound">wxTreeItemId</ref></type>
@@ -658,7 +658,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="468"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="457"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_ctrl_1a37114ccd8ab49b27991ccba2b786672a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -672,7 +672,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="476"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="465"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_ctrl_1a37890d9d52a21c58342560906b658f1c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -698,7 +698,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="485"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="474"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_ctrl_1af5ade7b9d84362feec0643c0b871123c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_image_list" kindref="compound">wxImageList</ref> *</type>
@@ -711,7 +711,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="491"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="480"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_ctrl_1a2e3d5fef1404bc60639ad6a6fe721939" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>unsigned int</type>
@@ -724,7 +724,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="496"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="485"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_ctrl_1ae11e83245f13c08f582afabae457b4f1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_colour" kindref="compound">wxColour</ref></type>
@@ -741,7 +741,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="501"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="490"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_ctrl_1acda99a877de8d0fa855879778bfaee62" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_tree_item_data" kindref="compound">wxTreeItemData</ref> *</type>
@@ -756,15 +756,12 @@
 <para>Returns the tree item data associated with the item. </para>        </briefdescription>
         <detaileddescription>
 <para><simplesect kind="see"><para><ref refid="classwx_tree_item_data" kindref="compound">wxTreeItemData</ref></para></simplesect>
-<bold>wxPython Note:</bold> wxPython provides the following shortcut method: <itemizedlist>
-<listitem><para>GetPyData(item): Returns the Python Object associated with the <ref refid="classwx_tree_item_data" kindref="compound">wxTreeItemData</ref> for the given item Id.</para></listitem>
-</itemizedlist>
 <bold>wxPerl Note:</bold> wxPerl provides the following shortcut method:<itemizedlist>
 <listitem><para>GetPlData(item): returns the Perl data associated with the Wx::TreeItemData. It is just the same as tree-&gt;GetItemData(item)-&gt;GetData(). </para></listitem></itemizedlist>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="521"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="504"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_ctrl_1a70dc73c7ab6c672f6d21ed82eb4d527d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_font" kindref="compound">wxFont</ref></type>
@@ -781,7 +778,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="526"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="509"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_ctrl_1a44a94930420afe792e616a0127678ac0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>int</type>
@@ -805,7 +802,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="541"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="524"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_ctrl_1a83ffb5efee84e04d1e38d5db8ef7d729" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_tree_item_id" kindref="compound">wxTreeItemId</ref></type>
@@ -822,7 +819,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="546"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="529"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_ctrl_1a9a636cfdf6e77f923b22c4ee1b8e6073" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -839,7 +836,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="551"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="534"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_ctrl_1a337808759a699b900425ed8667864cb0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -856,7 +853,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="556"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="539"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_ctrl_1ade8334ecf5e98564d9d8711222c7ff96" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_colour" kindref="compound">wxColour</ref></type>
@@ -873,7 +870,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="561"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="544"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_ctrl_1a1dc37c1ce3d00bfa75f66c7d7a89bcf5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_tree_item_id" kindref="compound">wxTreeItemId</ref></type>
@@ -891,7 +888,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="569"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="552"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_ctrl_1aa2c7b3253780ee1b86da858511bb2149" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_tree_item_id" kindref="compound">wxTreeItemId</ref></type>
@@ -909,11 +906,11 @@
         <briefdescription>
 <para>Returns the next child; call <ref refid="classwx_tree_ctrl_1ae30654f33f4f81a3c5d08eee27bb19f7" kindref="member">GetFirstChild()</ref> for the first child. </para>        </briefdescription>
         <detaileddescription>
-<para>For this enumeration function you must pass in a &apos;cookie&apos; parameter which is opaque for the application but is necessary for the library to make these functions reentrant (i.e. allow more than one enumeration on one and the same object simultaneously). The cookie passed to <ref refid="classwx_tree_ctrl_1ae30654f33f4f81a3c5d08eee27bb19f7" kindref="member">GetFirstChild()</ref> and <ref refid="classwx_tree_ctrl_1aa2c7b3253780ee1b86da858511bb2149" kindref="member">GetNextChild()</ref> should be the same.</para><para>Returns an invalid tree item if there are no further children.</para><para><bold>wxPython Note:</bold> In wxPython the returned <ref refid="classwx_tree_item_id" kindref="compound">wxTreeItemId</ref> and the new cookie value are both returned as a tuple containing the two values.</para><para><bold>wxPerl Note:</bold> In wxPerl this method returns a 2-element list (item, cookie) instead of modifying its parameters.</para><para><simplesect kind="see"><para><ref refid="classwx_tree_ctrl_1ae30654f33f4f81a3c5d08eee27bb19f7" kindref="member">GetFirstChild()</ref> </para></simplesect>
+<para>For this enumeration function you must pass in a &apos;cookie&apos; parameter which is opaque for the application but is necessary for the library to make these functions reentrant (i.e. allow more than one enumeration on one and the same object simultaneously). The cookie passed to <ref refid="classwx_tree_ctrl_1ae30654f33f4f81a3c5d08eee27bb19f7" kindref="member">GetFirstChild()</ref> and <ref refid="classwx_tree_ctrl_1aa2c7b3253780ee1b86da858511bb2149" kindref="member">GetNextChild()</ref> should be the same.</para><para>Returns an invalid tree item if there are no further children.</para><para><bold>wxPerl Note:</bold> In wxPerl this method returns a 2-element list (item, cookie) instead of modifying its parameters.</para><para><simplesect kind="see"><para><ref refid="classwx_tree_ctrl_1ae30654f33f4f81a3c5d08eee27bb19f7" kindref="member">GetFirstChild()</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="594"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="572"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_ctrl_1a37cfa1f5c266db3c2a26457343648ff0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_tree_item_id" kindref="compound">wxTreeItemId</ref></type>
@@ -931,7 +928,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="604"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="582"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_ctrl_1adf6f7b7f531d1e0e187d7b289c5a6c6c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_tree_item_id" kindref="compound">wxTreeItemId</ref></type>
@@ -949,7 +946,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="612"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="590"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_ctrl_1afdbe92a045b68d816d16d4d8d4d3e6a2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_tree_item_id" kindref="compound">wxTreeItemId</ref></type>
@@ -967,7 +964,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="622"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="600"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_ctrl_1a8a99e541ec08ae3b03da0cddf8a8e742" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_tree_item_id" kindref="compound">wxTreeItemId</ref></type>
@@ -985,7 +982,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="630"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="608"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_ctrl_1a1886352707d6699842f9a67d96ffaa18" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -999,7 +996,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="638"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="616"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_ctrl_1afed0748f200720d0adb143ed10802914" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_tree_item_id" kindref="compound">wxTreeItemId</ref></type>
@@ -1012,7 +1009,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="643"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="621"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_ctrl_1a3e66754ba95d24c994e94fb72fb5da8b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_tree_item_id" kindref="compound">wxTreeItemId</ref></type>
@@ -1025,7 +1022,7 @@
 <para>This function only works with the controls without <computeroutput>wxTR_MULTIPLE</computeroutput> style, use <ref refid="classwx_tree_ctrl_1a44c0a5e8d6fbfb83d17a1ab5f9407ae8" kindref="member">GetSelections()</ref> for the controls which do have this style or, if a single item is wanted, use <ref refid="classwx_tree_ctrl_1aa9e94313591c2f0927dc89c06433efa4" kindref="member">GetFocusedItem()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="651"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="629"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_ctrl_1a44c0a5e8d6fbfb83d17a1ab5f9407ae8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>size_t</type>
@@ -1039,10 +1036,10 @@
         <briefdescription>
 <para>Fills the array of tree items passed in with the currently selected items. </para>        </briefdescription>
         <detaileddescription>
-<para>This function can be called only if the control has the <computeroutput>wxTR_MULTIPLE</computeroutput> style.</para><para>Returns the number of selected items.</para><para><bold>wxPython Note:</bold> The wxPython version of this method accepts no parameters and returns a Python list of <ref refid="classwx_tree_item_id" kindref="compound">wxTreeItemId</ref>s.</para><para><bold>wxPerl Note:</bold> In wxPerl this method takes no parameters and returns a list of <computeroutput>Wx::TreeItemId</computeroutput>. </para>        </detaileddescription>
+<para>This function can be called only if the control has the <computeroutput>wxTR_MULTIPLE</computeroutput> style.</para><para>Returns the number of selected items.</para><para><bold>wxPerl Note:</bold> In wxPerl this method takes no parameters and returns a list of <computeroutput>Wx::TreeItemId</computeroutput>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="670"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="643"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_ctrl_1a964988f35bf71ef9cadc5f4d1b854a78" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_image_list" kindref="compound">wxImageList</ref> *</type>
@@ -1055,7 +1052,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="676"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="649"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_ctrl_1a575b779e272951cb515b6d459af6dede" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_tree_item_id" kindref="compound">wxTreeItemId</ref></type>
@@ -1075,10 +1072,10 @@
         <detaileddescription>
 <para><emphasis>flags</emphasis> is a bitlist of the following:</para><para><itemizedlist>
 <listitem><para><computeroutput>wxTREE_HITTEST_ABOVE:</computeroutput> Above the client area.</para></listitem><listitem><para><computeroutput>wxTREE_HITTEST_BELOW:</computeroutput> Below the client area.</para></listitem><listitem><para><computeroutput>wxTREE_HITTEST_NOWHERE:</computeroutput> In the client area but below the last item.</para></listitem><listitem><para><computeroutput>wxTREE_HITTEST_ONITEMBUTTON:</computeroutput> On the button associated with an item.</para></listitem><listitem><para><computeroutput>wxTREE_HITTEST_ONITEMICON:</computeroutput> On the bitmap associated with an item.</para></listitem><listitem><para><computeroutput>wxTREE_HITTEST_ONITEMINDENT:</computeroutput> In the indentation associated with an item.</para></listitem><listitem><para><computeroutput>wxTREE_HITTEST_ONITEMLABEL:</computeroutput> On the label (string) associated with an item.</para></listitem><listitem><para><computeroutput>wxTREE_HITTEST_ONITEMRIGHT:</computeroutput> In the area to the right of an item.</para></listitem><listitem><para><computeroutput>wxTREE_HITTEST_ONITEMSTATEICON:</computeroutput> On the state icon for a tree view item that is in a user-defined state.</para></listitem><listitem><para><computeroutput>wxTREE_HITTEST_TOLEFT:</computeroutput> To the right of the client area.</para></listitem><listitem><para><computeroutput>wxTREE_HITTEST_TORIGHT:</computeroutput> To the left of the client area.</para></listitem></itemizedlist>
-</para><para><bold>wxPython Note:</bold> In wxPython both the <ref refid="classwx_tree_item_id" kindref="compound">wxTreeItemId</ref> and the flags are returned as a tuple.</para><para><bold>wxPerl Note:</bold> In wxPerl this method only takes the <emphasis>point</emphasis> parameter and returns a 2-element list (item, flags). </para>        </detaileddescription>
+</para><para><bold>wxPerl Note:</bold> In wxPerl this method only takes the <emphasis>point</emphasis> parameter and returns a 2-element list (item, flags). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="705"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="674"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_ctrl_1a06e1e6b25a7121922412eea510bd3109" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_tree_item_id" kindref="compound">wxTreeItemId</ref></type>
@@ -1118,7 +1115,7 @@
 <para>The <emphasis>image</emphasis> and <emphasis>selImage</emphasis> parameters are an index within the normal image list specifying the image to use for unselected and selected items, respectively. If <emphasis>image</emphasis> -1 and <emphasis>selImage</emphasis> is -1, the same image is used for both selected and unselected items. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="721"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="690"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_ctrl_1a6cf31e12b0d57e3bb0a97b6c20801375" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_tree_item_id" kindref="compound">wxTreeItemId</ref></type>
@@ -1155,10 +1152,10 @@
         <briefdescription>
 <para>Inserts an item before one identified by its position (<emphasis>before</emphasis>). </para>        </briefdescription>
         <detaileddescription>
-<para><emphasis>before</emphasis> must be less than the number of children.</para><para>The <emphasis>image</emphasis> and <emphasis>selImage</emphasis> parameters are an index within the normal image list specifying the image to use for unselected and selected items, respectively. If <emphasis>image</emphasis> -1 and <emphasis>selImage</emphasis> is -1, the same image is used for both selected and unselected items.</para><para><bold>wxPython Note:</bold> In wxPython, this form of this method is called <computeroutput>InsertItemBefore()</computeroutput>. </para>        </detaileddescription>
+<para><emphasis>before</emphasis> must be less than the number of children.</para><para>The <emphasis>image</emphasis> and <emphasis>selImage</emphasis> parameters are an index within the normal image list specifying the image to use for unselected and selected items, respectively. If <emphasis>image</emphasis> -1 and <emphasis>selImage</emphasis> is -1, the same image is used for both selected and unselected items. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="742"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="707"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_ctrl_1aaa71183181e62fd1bdcd574780eea0a7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -1176,7 +1173,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="749"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="714"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_ctrl_1a6ff1cdea42c620ef2bc2be4e66478df0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1189,7 +1186,7 @@
 <para>has no items, even no root one). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="755"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="720"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_ctrl_1a7a25fc316347949a24d7362093b22073" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -1206,7 +1203,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="761"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="726"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_ctrl_1a9c3e359d01cdce98f2b803398629b69c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -1223,7 +1220,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="766"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="731"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_ctrl_1af325a01b27c2c9343b96bca48d9dbbbc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -1240,7 +1237,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="771"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="736"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_ctrl_1a1db3d4d5887231f446d5b882733431e3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -1257,7 +1254,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="776"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="741"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_ctrl_1ab90a465793c291ca7aa827a576b7d146" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>int</type>
@@ -1279,7 +1276,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="793"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="758"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_ctrl_1ab7ec4164ca8eb1675646f0c16b681566" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_tree_item_id" kindref="compound">wxTreeItemId</ref></type>
@@ -1315,7 +1312,7 @@
 <para>The <emphasis>image</emphasis> and <emphasis>selImage</emphasis> parameters are an index within the normal image list specifying the image to use for unselected and selected items, respectively. If <emphasis>image</emphasis> -1 and <emphasis>selImage</emphasis> is -1, the same image is used for both selected and unselected items. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="807"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="772"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_ctrl_1a5448656d47293d10348971c56aba61ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -1332,7 +1329,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="812"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="777"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_ctrl_1ab6ed9a6e7c3d101ec51a496ef71b422e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -1354,7 +1351,7 @@
 <para>In multiple selection controls, can be also used to deselect a currently selected item if the value of <emphasis>select</emphasis> is false.</para><para>Notice that calling this method will generate <computeroutput>wxEVT_COMMAND_TREE_SEL_CHANGING</computeroutput> and <computeroutput>wxEVT_COMMAND_TREE_SEL_CHANGED</computeroutput> events and that the change could be vetoed by the former event handler. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="824"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="789"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_ctrl_1aa8ce6bdc82a7966d1cba0fdf5a79f6d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1373,7 +1370,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="840"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="805"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_ctrl_1a8bc83d1a7145d681fa512e6b43cede45" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -1391,7 +1388,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="849"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="814"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_ctrl_1a1db2c8ef0b28483515a2585a0312dc43" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -1408,7 +1405,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="854"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="819"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_ctrl_1ae55f83069faef927b8d4a4d3e45daae6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -1429,7 +1426,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="860"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="825"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_ctrl_1a52744e373d5405e384928eab5fb9c991" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -1452,7 +1449,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="868"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="833"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_ctrl_1adb74a81b41ab25bd38884311bb4b3b46" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -1470,14 +1467,12 @@
         <briefdescription>
 <para>Sets the item client data. </para>        </briefdescription>
         <detaileddescription>
-<para>Notice that the client data previously associated with the <emphasis>item</emphasis> (if any) is <emphasis>not</emphasis> freed by this function and so calling this function multiple times for the same item will result in memory leaks unless you delete the old item data pointer yourself.</para><para><bold>wxPython Note:</bold><itemizedlist>
-<listitem><para><bold>SetPyData</bold>( <emphasis>item</emphasis>, <computeroutput>obj</computeroutput>): Associate the given Python Object with the <ref refid="classwx_tree_item_data" kindref="compound">wxTreeItemData</ref> for the given item Id.</para></listitem></itemizedlist>
-</para><para><bold>wxPerl Note:</bold> wxPerl provides the following shortcut method:<itemizedlist>
+<para>Notice that the client data previously associated with the <emphasis>item</emphasis> (if any) is <emphasis>not</emphasis> freed by this function and so calling this function multiple times for the same item will result in memory leaks unless you delete the old item data pointer yourself.</para><para><bold>wxPerl Note:</bold> wxPerl provides the following shortcut method:<itemizedlist>
 <listitem><para>SetPlData(item, data): sets the Perl data associated with the <computeroutput>Wx::TreeItemData</computeroutput>. It is just the same as tree-&gt;GetItemData(item)-&gt;SetData(data). </para></listitem></itemizedlist>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="890"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="850"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_ctrl_1a03fd2789f5bdb6c645b381739772c673" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -1499,7 +1494,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="900"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="860"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_ctrl_1ae8283e7314d164b7a69056fa182d2386" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -1521,7 +1516,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="909"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="869"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_ctrl_1a26211b6424ab2b4108311a2b733eb7e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -1543,7 +1538,7 @@
 <para>This is useful to allow the user to expand the items which don&apos;t have any children now, but instead adding them only when needed, thus minimizing memory usage and loading time. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="918"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="878"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_ctrl_1aab11b22f08ca5dd75919d8cbf3e902ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -1569,7 +1564,7 @@
 <para>See <ref refid="classwx_tree_ctrl_1a44a94930420afe792e616a0127678ac0" kindref="member">GetItemImage()</ref> for the description of the <emphasis>which</emphasis> parameter. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="925"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="885"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_ctrl_1a8424e24cb8d4ceedffd11f5bc6218038" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1592,7 +1587,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="934"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="894"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_ctrl_1aab82b6353f72d0f06c6e65a6924a1df1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -1613,7 +1608,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="939"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="899"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_ctrl_1a319b4ca62f34f0a4377f4ec77cb92974" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -1634,7 +1629,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="945"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="905"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_ctrl_1a54a5d1e4cd35b5c693d0d701a04ff358" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1652,7 +1647,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="954"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="914"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_ctrl_1aabb789a3eaa97608659e50afbd7a46ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -1670,7 +1665,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="964"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="924"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_ctrl_1a00974d17198e3883bfe4cca9d7ab52ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1689,7 +1684,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="972"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="932"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_ctrl_1aa59a3c3081b78ffe644fee0a4bcd1ca3" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -1707,7 +1702,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="981"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="941"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_ctrl_1a618a620d9a434bacf91a51202ab807b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -1724,7 +1719,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="986"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="946"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_ctrl_1a458eab144e16efbaf283748bacc475f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1741,7 +1736,7 @@
 <para>For multiselection controls only. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="992"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="952"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_ctrl_1a86a5a649501f02a635ce193afb9d9f0f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -1754,7 +1749,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="997"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="957"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_ctrl_1afc7bb2bb77f3589abdca5b4c1d99094d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -1767,7 +1762,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="1004"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="964"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_ctrl_1ad5eb938fd64cd961a2e50a90211974ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1784,7 +1779,7 @@
 <para>This works in multiselection controls only. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="1009"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="969"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_ctrl_1a3d43ef6217902a3a8f4c774de6be13ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -1802,7 +1797,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="1018"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="978"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -1830,7 +1825,7 @@
 <listitem><para>EVT_TREE_BEGIN_RDRAG(id,  func): Begin dragging with the right mouse button. If you want to enable right-dragging you need to intercept this event and explicitly call <ref refid="classwx_notify_event_1a7b23515f827b2ce1da1e6990d9aafe80" kindref="member">wxTreeEvent::Allow()</ref>, as it&apos;s vetoed by default. Processes a <computeroutput>wxEVT_COMMAND_TREE_BEGIN_RDRAG</computeroutput> event type. </para></listitem>
 <listitem><para>EVT_TREE_END_DRAG(id,  func): End dragging with the left or right mouse button. Processes a <computeroutput>wxEVT_COMMAND_TREE_END_DRAG</computeroutput> event type. </para></listitem>
 <listitem><para>EVT_TREE_BEGIN_LABEL_EDIT(id,  func): Begin editing a label. This can be prevented by calling Veto(). Processes a <computeroutput>wxEVT_COMMAND_TREE_BEGIN_LABEL_EDIT</computeroutput> event type. </para></listitem>
-<listitem><para>EVT_TREE_END_LABEL_EDIT(id,  func): Finish editing a label. This can be prevented by calling Veto(). Processes a <computeroutput>wxEVT_COMMAND_TREE_BEGIN_LABEL_EDIT</computeroutput> event type. </para></listitem>
+<listitem><para>EVT_TREE_END_LABEL_EDIT(id,  func): Finish editing a label. This can be prevented by calling Veto(). Processes a <computeroutput>wxEVT_COMMAND_TREE_END_LABEL_EDIT</computeroutput> event type. </para></listitem>
 <listitem><para>EVT_TREE_DELETE_ITEM(id,  func): An item was deleted. Processes a <computeroutput>wxEVT_COMMAND_TREE_DELETE_ITEM</computeroutput> event type. </para></listitem>
 <listitem><para>EVT_TREE_GET_INFO(id,  func): Request information from the application. Processes a <computeroutput>wxEVT_COMMAND_TREE_GET_INFO</computeroutput> event type. </para></listitem>
 <listitem><para>EVT_TREE_SET_INFO(id,  func): Information is being supplied. Processes a <computeroutput>wxEVT_COMMAND_TREE_SET_INFO</computeroutput> event type. </para></listitem>
@@ -1852,85 +1847,85 @@ See also <ref refid="overview_windowstyles" kindref="compound">Window Styles</re
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref> <htmlonly> &lt;br&gt;&lt;div&gt;&lt;span class=&apos;appearance&apos;&gt;Appearance:&lt;/span&gt;&lt;br&gt;&lt;table class=&apos;appearance&apos;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&apos;wxmsw/treectrl.png&apos; alt=&apos;wxMSW appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxgtk/treectrl.png&apos; alt=&apos;wxGTK appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxmac/treectrl.png&apos; alt=&apos;wxMac appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;wxMSW appearance&lt;/td&gt;&lt;td&gt;wxGTK appearance&lt;/td&gt;&lt;td&gt;wxMac appearance&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt; </htmlonly></para><para><simplesect kind="see"><para><ref refid="classwx_data_view_tree_ctrl" kindref="compound">wxDataViewTreeCtrl</ref>, <ref refid="classwx_tree_event" kindref="compound">wxTreeEvent</ref>, <ref refid="classwx_tree_item_data" kindref="compound">wxTreeItemData</ref>, <ref refid="overview_treectrl" kindref="compound">wxTreeCtrl Overview</ref>, <ref refid="classwx_list_box" kindref="compound">wxListBox</ref>, <ref refid="classwx_list_ctrl" kindref="compound">wxListCtrl</ref>, <ref refid="classwx_image_list" kindref="compound">wxImageList</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="11188">
+      <node id="11377">
         <label>wxTreeCtrl</label>
         <link refid="classwx_tree_ctrl"/>
-        <childnode refid="11189" relation="public-inheritance">
+        <childnode refid="11378" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11192">
+      <node id="11381">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="11191">
+      <node id="11380">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="11192" relation="public-inheritance">
+        <childnode refid="11381" relation="public-inheritance">
         </childnode>
-        <childnode refid="11193" relation="public-inheritance">
+        <childnode refid="11382" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11193">
+      <node id="11382">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="11189">
+      <node id="11378">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="11190" relation="public-inheritance">
+        <childnode refid="11379" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11190">
+      <node id="11379">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="11191" relation="public-inheritance">
+        <childnode refid="11380" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="11194">
+      <node id="11383">
         <label>wxTreeCtrl</label>
         <link refid="classwx_tree_ctrl"/>
-        <childnode refid="11195" relation="public-inheritance">
+        <childnode refid="11384" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11198">
+      <node id="11387">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="11199" relation="usage">
+        <childnode refid="11388" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="11197">
+      <node id="11386">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="11198" relation="public-inheritance">
+        <childnode refid="11387" relation="public-inheritance">
         </childnode>
-        <childnode refid="11200" relation="public-inheritance">
+        <childnode refid="11389" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11200">
+      <node id="11389">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="11195">
+      <node id="11384">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="11196" relation="public-inheritance">
+        <childnode refid="11385" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11196">
+      <node id="11385">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="11197" relation="public-inheritance">
+        <childnode refid="11386" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11199">
+      <node id="11388">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="167" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" bodystart="166" bodyend="1019"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="167" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" bodystart="166" bodyend="979"/>
     <listofallmembers>
       <member refid="classwx_window_1a3afbd49b1ea2f8275e3600dcac102923" prot="public" virt="virtual"><scope>wxTreeCtrl</scope><name>AcceptsFocus</name></member>
       <member refid="classwx_window_1a2370bdd3ab08e7ef3c7555c6aa8301b8" prot="public" virt="virtual"><scope>wxTreeCtrl</scope><name>AcceptsFocusFromKeyboard</name></member>
@@ -2146,6 +2141,7 @@ See also <ref refid="overview_windowstyles" kindref="compound">Window Styles</re
       <member refid="classwx_window_1ae1b56ca87d8590ee5e576012229a380a" prot="public" virt="non-virtual"><scope>wxTreeCtrl</scope><name>InvalidateBestSize</name></member>
       <member refid="classwx_window_1af918e6fe8565c2d5235973cc3de84a43" prot="public" virt="non-virtual"><scope>wxTreeCtrl</scope><name>IsBeingDeleted</name></member>
       <member refid="classwx_tree_ctrl_1aaa71183181e62fd1bdcd574780eea0a7" prot="public" virt="virtual"><scope>wxTreeCtrl</scope><name>IsBold</name></member>
+      <member refid="classwx_window_1a469f0881da248d37691440c9d4cc7200" prot="public" virt="non-virtual"><scope>wxTreeCtrl</scope><name>IsDescendant</name></member>
       <member refid="classwx_window_1a9d1be1bbb625ebf87ad4ad47e49a0194" prot="public" virt="virtual"><scope>wxTreeCtrl</scope><name>IsDoubleBuffered</name></member>
       <member refid="classwx_tree_ctrl_1a6ff1cdea42c620ef2bc2be4e66478df0" prot="public" virt="non-virtual"><scope>wxTreeCtrl</scope><name>IsEmpty</name></member>
       <member refid="classwx_window_1a59452a5bd42f5ea4b31d7fc4aa59644f" prot="public" virt="non-virtual"><scope>wxTreeCtrl</scope><name>IsEnabled</name></member>
@@ -2164,6 +2160,7 @@ See also <ref refid="overview_windowstyles" kindref="compound">Window Styles</re
       <member refid="classwx_window_1a72d70fd14e3565bf782fbcd3271d8930" prot="public" virt="virtual"><scope>wxTreeCtrl</scope><name>IsShownOnScreen</name></member>
       <member refid="classwx_window_1a657ef8b6055eb06df894ac5e6ddfecf8" prot="public" virt="non-virtual"><scope>wxTreeCtrl</scope><name>IsThisEnabled</name></member>
       <member refid="classwx_window_1a0002826ad05f2a5661b4c8995713f37f" prot="public" virt="virtual"><scope>wxTreeCtrl</scope><name>IsTopLevel</name></member>
+      <member refid="classwx_window_1a7940d510c5bdc062a2b109a1022dd8c2" prot="public" virt="virtual"><scope>wxTreeCtrl</scope><name>IsTransparentBackgroundSupported</name></member>
       <member refid="classwx_evt_handler_1a360fdeefcf53b62fb49fb828406bb8a6" prot="public" virt="non-virtual"><scope>wxTreeCtrl</scope><name>IsUnlinked</name></member>
       <member refid="classwx_tree_ctrl_1af325a01b27c2c9343b96bca48d9dbbbc" prot="public" virt="virtual"><scope>wxTreeCtrl</scope><name>IsVisible</name></member>
       <member refid="classwx_tree_ctrl_1a1db3d4d5887231f446d5b882733431e3" prot="public" virt="virtual"><scope>wxTreeCtrl</scope><name>ItemHasChildren</name></member>
@@ -2172,7 +2169,6 @@ See also <ref refid="overview_windowstyles" kindref="compound">Window Styles</re
       <member refid="classwx_window_1afc0816a174ceee6d36d1995c6824a273" prot="public" virt="non-virtual"><scope>wxTreeCtrl</scope><name>LineUp</name></member>
       <member refid="classwx_window_1a124944524f36b71385dad8fddaad8ded" prot="public" virt="virtual"><scope>wxTreeCtrl</scope><name>Lower</name></member>
       <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxTreeCtrl</scope><name>m_refData</name></member>
-      <member refid="classwx_window_1a192fc8b467845d093c16452db96c65c5" prot="public" virt="virtual"><scope>wxTreeCtrl</scope><name>MakeModal</name></member>
       <member refid="classwx_window_1ab1cb98c8d25b9e6ff7b706b1446c3df7" prot="public" virt="non-virtual"><scope>wxTreeCtrl</scope><name>Move</name></member>
       <member refid="classwx_window_1a22a22c1e23ca05776707e7999d8047fe" prot="public" virt="non-virtual"><scope>wxTreeCtrl</scope><name>Move</name></member>
       <member refid="classwx_window_1a79e66079125e8420de269811bdb6f2b6" prot="public" virt="non-virtual"><scope>wxTreeCtrl</scope><name>MoveAfterInTabOrder</name></member>
@@ -2317,7 +2313,6 @@ See also <ref refid="overview_windowstyles" kindref="compound">Window Styles</re
       <member refid="classwx_window_1a88cc65e424a129d9b0057756cdb67ec9" prot="public" virt="virtual"><scope>wxTreeCtrl</scope><name>TransferDataToWindow</name></member>
       <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxTreeCtrl</scope><name>TryAfter</name></member>
       <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxTreeCtrl</scope><name>TryBefore</name></member>
-      <member refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" virt="non-virtual"><scope>wxTreeCtrl</scope><name>TryThis</name></member>
       <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxTreeCtrl</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxTreeCtrl</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a22e5db2ec1d19c8252c056fd116975d7" prot="public" virt="non-virtual"><scope>wxTreeCtrl</scope><name>Unlink</name></member>

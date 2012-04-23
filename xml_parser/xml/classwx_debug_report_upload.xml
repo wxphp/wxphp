@@ -33,7 +33,7 @@
 <para>The <emphasis>url</emphasis> is the upload page address, <emphasis>input</emphasis> is the name of the <computeroutput>&quot;type=file&quot;</computeroutput> control on the form used for the file name and <emphasis>action</emphasis> is the value of the form action field. The report is uploaded using the <emphasis>curl</emphasis> program which should be available, the <emphasis>curl</emphasis> parameter may be used to specify the full path to it. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debugrpt.h" line="378"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/debugrpt.h" line="378"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-func">
@@ -52,7 +52,7 @@
 <para>Value returned by this function becomes the return value of <ref refid="classwx_debug_report_1a3ec35bb65b88aac386a399b27ef940a5" kindref="member">wxDebugReport::Process()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debugrpt.h" line="387"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/debugrpt.h" line="387"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -61,42 +61,42 @@
 <para>As this class derives from <ref refid="classwx_debug_report_compress" kindref="compound">wxDebugReportCompress</ref>, before upload the report is compressed in a single ZIP file.</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxqa" kindref="member">wxQA</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__debugging" kindref="compound">Debugging</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="5563">
+      <node id="5658">
         <label>wxDebugReportUpload</label>
         <link refid="classwx_debug_report_upload"/>
-        <childnode refid="5564" relation="public-inheritance">
+        <childnode refid="5659" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5565">
+      <node id="5660">
         <label>wxDebugReport</label>
         <link refid="classwx_debug_report"/>
       </node>
-      <node id="5564">
+      <node id="5659">
         <label>wxDebugReportCompress</label>
         <link refid="classwx_debug_report_compress"/>
-        <childnode refid="5565" relation="public-inheritance">
+        <childnode refid="5660" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="5566">
+      <node id="5661">
         <label>wxDebugReportUpload</label>
         <link refid="classwx_debug_report_upload"/>
-        <childnode refid="5567" relation="public-inheritance">
+        <childnode refid="5662" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5568">
+      <node id="5663">
         <label>wxDebugReport</label>
         <link refid="classwx_debug_report"/>
       </node>
-      <node id="5567">
+      <node id="5662">
         <label>wxDebugReportCompress</label>
         <link refid="classwx_debug_report_compress"/>
-        <childnode refid="5568" relation="public-inheritance">
+        <childnode refid="5663" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debugrpt.h" line="365" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debugrpt.h" bodystart="364" bodyend="388"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/debugrpt.h" line="365" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/debugrpt.h" bodystart="364" bodyend="388"/>
     <listofallmembers>
       <member refid="classwx_debug_report_1aeec28b7b39294cdb29a5f4da252cc18b" prot="public" virt="non-virtual"><scope>wxDebugReportUpload</scope><name>AddAll</name></member>
       <member refid="classwx_debug_report_1a8f54f2a1a052a7e33d10a5deb0b1037f" prot="public" virt="virtual"><scope>wxDebugReportUpload</scope><name>AddContext</name></member>

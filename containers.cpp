@@ -50,6 +50,7 @@
 #include "others.h"
 
 
+
 void php_wxClientData_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -58,13 +59,13 @@ void php_wxClientData_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 	#endif
 	
 	
-	wxClientData_php* object = (wxClientData_php*)rsrc->ptr;
+	wxClientData_php* object = static_cast<wxClientData_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -125,7 +126,6 @@ PHP_METHOD(php_wxClientData, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -171,6 +171,7 @@ PHP_METHOD(php_wxClientData, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+
 void php_wxTreeItemData_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -179,13 +180,13 @@ void php_wxTreeItemData_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC
 	#endif
 	
 	
-	wxTreeItemData_php* object = (wxTreeItemData_php*)rsrc->ptr;
+	wxTreeItemData_php* object = static_cast<wxTreeItemData_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -274,7 +275,6 @@ PHP_METHOD(php_wxTreeItemData, GetId)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -288,8 +288,8 @@ PHP_METHOD(php_wxTreeItemData, GetId)
 				value_to_return0 = (wxTreeItemId_php*) &((wxTreeItemData_php*)_this)->GetId();
 
 				if(value_to_return0->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return0->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return0->phpObj != NULL){
+						return_value = value_to_return0->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -304,7 +304,6 @@ PHP_METHOD(php_wxTreeItemData, GetId)
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
 					references->AddReference(return_value);
 				}
-				references->AddReference(return_value);
 
 
 				return;
@@ -375,7 +374,8 @@ PHP_METHOD(php_wxTreeItemData, SetId)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&id0, php_wxTreeItemId_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "O", &id0, php_wxTreeItemId_entry ) == SUCCESS)
+		char parse_parameters_string[] = "O";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id0, php_wxTreeItemId_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(id0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(id0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -386,10 +386,6 @@ PHP_METHOD(php_wxTreeItemData, SetId)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(id0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(id0);
 				}
 				else if(Z_TYPE_P(id0) != IS_NULL)
 				{
@@ -403,7 +399,6 @@ PHP_METHOD(php_wxTreeItemData, SetId)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -460,7 +455,6 @@ PHP_METHOD(php_wxTreeItemData, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)

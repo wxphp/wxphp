@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/layout.h" line="38"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/layout.h" line="38"/>
       </memberdef>
       <memberdef kind="function" id="classwx_individual_layout_constraint_1ab624b1e864f8ccfc0c6af2ac155fb3ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/layout.h" line="42"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/layout.h" line="42"/>
       </memberdef>
       <memberdef kind="function" id="classwx_individual_layout_constraint_1a648bd68db74082ac8c48d09a857ee715" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -64,7 +64,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/layout.h" line="48"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/layout.h" line="48"/>
       </memberdef>
       <memberdef kind="function" id="classwx_individual_layout_constraint_1a4c3bc9ceec644b0bb494c877d3afe8f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -86,7 +86,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/layout.h" line="53"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/layout.h" line="53"/>
       </memberdef>
       <memberdef kind="function" id="classwx_individual_layout_constraint_1a69b221adb3fb436b51c95370f52a9db4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -108,7 +108,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/layout.h" line="54"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/layout.h" line="54"/>
       </memberdef>
       <memberdef kind="function" id="classwx_individual_layout_constraint_1a8be116eb428a18074987822b566802f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -130,7 +130,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/layout.h" line="55"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/layout.h" line="55"/>
       </memberdef>
       <memberdef kind="function" id="classwx_individual_layout_constraint_1a33ff304bfb455500cf539c5dc007d420" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -152,7 +152,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/layout.h" line="56"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/layout.h" line="56"/>
       </memberdef>
       <memberdef kind="function" id="classwx_individual_layout_constraint_1abb2f1176eba21e5fc5c1b9e8d4b6dfa1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -178,7 +178,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/layout.h" line="61"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/layout.h" line="61"/>
       </memberdef>
       <memberdef kind="function" id="classwx_individual_layout_constraint_1a9f284aba8611bde3f6a30e6b1db3fd12" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -203,7 +203,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/layout.h" line="64"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/layout.h" line="64"/>
       </memberdef>
       <memberdef kind="function" id="classwx_individual_layout_constraint_1a88cb480c5541a8354d2b19e3fa8ebfdd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -220,9 +220,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/layout.h" line="69"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/layout.h" line="69"/>
       </memberdef>
-      <memberdef kind="function" id="classwx_individual_layout_constraint_1a3e61fd2f841dbd96a98434b2541d53fb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classwx_individual_layout_constraint_1a3e61fd2f841dbd96a98434b2541d53fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void wxIndividualLayoutConstraint::Unconstrained</definition>
         <argsstring>()</argsstring>
@@ -233,9 +233,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/layout.h" line="74" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/layout.h" bodystart="74" bodyend="74"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/layout.h" line="74"/>
       </memberdef>
-      <memberdef kind="function" id="classwx_individual_layout_constraint_1a16786c9cbb409119e9a91c081a1d293c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classwx_individual_layout_constraint_1a16786c9cbb409119e9a91c081a1d293c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void wxIndividualLayoutConstraint::AsIs</definition>
         <argsstring>()</argsstring>
@@ -246,7 +246,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/layout.h" line="79" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/layout.h" bodystart="79" bodyend="79"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/layout.h" line="79"/>
       </memberdef>
       <memberdef kind="function" id="classwx_individual_layout_constraint_1a319b8e21b233535c963c3c0946a44c89" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
@@ -259,7 +259,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/layout.h" line="84"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/layout.h" line="84"/>
       </memberdef>
       <memberdef kind="function" id="classwx_individual_layout_constraint_1aceb10bdab496b95d4524ff649a6dab07" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="layout_8h_1add86e0d78c35fcb5c14d99b9732c58b7" kindref="member">wxEdge</ref></type>
@@ -272,7 +272,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/layout.h" line="85"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/layout.h" line="85"/>
       </memberdef>
       <memberdef kind="function" id="classwx_individual_layout_constraint_1aca6c3ab7397941a531b0fa23639ee205" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -289,7 +289,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/layout.h" line="86"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/layout.h" line="86"/>
       </memberdef>
       <memberdef kind="function" id="classwx_individual_layout_constraint_1a6abf56b3412b780996d14558fc1b289e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -306,7 +306,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/layout.h" line="87"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/layout.h" line="87"/>
       </memberdef>
       <memberdef kind="function" id="classwx_individual_layout_constraint_1aa408e0cf44610933a2cb1f75fce9656a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -319,7 +319,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/layout.h" line="88"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/layout.h" line="88"/>
       </memberdef>
       <memberdef kind="function" id="classwx_individual_layout_constraint_1ab554ed64d91f8d411d89879e36c1f6d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -336,7 +336,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/layout.h" line="89"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/layout.h" line="89"/>
       </memberdef>
       <memberdef kind="function" id="classwx_individual_layout_constraint_1a101862b356f53d63ad19b25aeb55b48b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -349,7 +349,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/layout.h" line="90"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/layout.h" line="90"/>
       </memberdef>
       <memberdef kind="function" id="classwx_individual_layout_constraint_1a16a0b4dbaa7e3df3a5fddc26dc730bef" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -362,7 +362,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/layout.h" line="91"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/layout.h" line="91"/>
       </memberdef>
       <memberdef kind="function" id="classwx_individual_layout_constraint_1a759c400dcdf1485581d81ffa1da6d088" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -375,7 +375,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/layout.h" line="92"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/layout.h" line="92"/>
       </memberdef>
       <memberdef kind="function" id="classwx_individual_layout_constraint_1a480ad67f12cff2d0f7236b6d4bb3d5cc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -388,7 +388,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/layout.h" line="93"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/layout.h" line="93"/>
       </memberdef>
       <memberdef kind="function" id="classwx_individual_layout_constraint_1ae189b16280b45063f3f9cd8e64e66040" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -405,7 +405,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/layout.h" line="94"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/layout.h" line="94"/>
       </memberdef>
       <memberdef kind="function" id="classwx_individual_layout_constraint_1a61b29d9e1fa5e0b7cbee1c035829aedc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="layout_8h_1a9f3a78fa78c99c527b87047207a7b3a1" kindref="member">wxRelationship</ref></type>
@@ -418,7 +418,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/layout.h" line="95"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/layout.h" line="95"/>
       </memberdef>
       <memberdef kind="function" id="classwx_individual_layout_constraint_1a5e857dc243c0c6e56bf6217264dc44bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -435,7 +435,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/layout.h" line="96"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/layout.h" line="96"/>
       </memberdef>
       <memberdef kind="function" id="classwx_individual_layout_constraint_1ac8b87247980fd13025db8cac56cd21d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -452,7 +452,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/layout.h" line="99"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/layout.h" line="99"/>
       </memberdef>
       <memberdef kind="function" id="classwx_individual_layout_constraint_1ae0172d5e016d15f5a09a493bbaf7f9fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -473,7 +473,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/layout.h" line="102"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/layout.h" line="102"/>
       </memberdef>
       <memberdef kind="function" id="classwx_individual_layout_constraint_1ab9171e40b243d4be9af99805d170df8e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -498,7 +498,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/layout.h" line="106"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/layout.h" line="106"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -506,37 +506,37 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="7260">
+      <node id="7447">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="7259">
+      <node id="7446">
         <label>wxIndividualLayoutConstraint</label>
         <link refid="classwx_individual_layout_constraint"/>
-        <childnode refid="7260" relation="public-inheritance">
+        <childnode refid="7447" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7262">
+      <node id="7449">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="7263" relation="usage">
+        <childnode refid="7450" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="7261">
+      <node id="7448">
         <label>wxIndividualLayoutConstraint</label>
         <link refid="classwx_individual_layout_constraint"/>
-        <childnode refid="7262" relation="public-inheritance">
+        <childnode refid="7449" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7263">
+      <node id="7450">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/layout.h" line="36" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/layout.h" bodystart="35" bodyend="107"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/layout.h" line="36" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/layout.h" bodystart="35" bodyend="107"/>
     <listofallmembers>
       <member refid="classwx_individual_layout_constraint_1a8be116eb428a18074987822b566802f6" prot="public" virt="non-virtual"><scope>wxIndividualLayoutConstraint</scope><name>Above</name></member>
       <member refid="classwx_individual_layout_constraint_1a88cb480c5541a8354d2b19e3fa8ebfdd" prot="public" virt="non-virtual"><scope>wxIndividualLayoutConstraint</scope><name>Absolute</name></member>

@@ -15,6 +15,7 @@
  * pointed by the documentation but they dont implement Destroy
  */
 ?>
+
 void php_<?=$class_name?>_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 <?if(!inherits_from_class("wxSizer", $class_name) && !inherits_from_class("wxTopLevelWindow", $class_name) && !inherits_from_class("wxPanel", $class_name) && !inherits_from_class("wxControl", $class_name) && $class_name != "wxMenu" && $class_name != "wxMenuItem" && $class_name != "wxMenuBar" && $class_name != "wxPanel" && $class_name != "wxSplitterWindow" && $class_name != "wxScrolledWindow" && $class_name != "wxScrolledWindow" && $class_name != "wxAuiManager"){?>
@@ -25,13 +26,13 @@ void php_<?=$class_name?>_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_
 	
 <?if($class_name != "wxGridCellAttr" && $class_name != "wxGridCellEditor" && $class_name != "wxDataViewModel" && $class_name != "wxRefCounter" && $class_name != "wxVariantData"){?>
 	
-	<?=$class_name?>_php* object = (<?=$class_name?>_php*)rsrc->ptr;
+	<?=$class_name?>_php* object = static_cast<<?=$class_name?>_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())

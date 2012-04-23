@@ -35,7 +35,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dir.h" line="13" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dir.h" bodystart="12" bodyend="17"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dir.h" line="13" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dir.h" bodystart="12" bodyend="17"/>
       </memberdef>
       <memberdef kind="enum" id="dir_8h_1aa45988fae9ce0d0c4f8312a6cf026232" prot="public" static="no">
         <name>wxDirFlags</name>
@@ -85,13 +85,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dir.h" line="101" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dir.h" bodystart="100" bodyend="110"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dir.h" line="101" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dir.h" bodystart="100" bodyend="110"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dir.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dir.h"/>
   </compounddef>
 </doxygen>

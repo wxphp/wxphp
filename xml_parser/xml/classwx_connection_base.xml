@@ -8,47 +8,47 @@
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-<para><xrefsect id="todo_1_todo000038"><xreftitle>Todo</xreftitle><xrefdescription><para>Document this class.</para></xrefdescription></xrefsect></para><para>This class provides base, common functionality shared between <ref refid="classwx_d_d_e_connection" kindref="compound">wxDDEConnection</ref>, and <ref refid="classwx_t_c_p_connection" kindref="compound">wxTCPConnection</ref>.</para><para><heading level="2"></heading>
+<para><xrefsect id="todo_1_todo000037"><xreftitle>Todo</xreftitle><xrefdescription><para>Document this class.</para></xrefdescription></xrefsect></para><para>This class provides base, common functionality shared between <ref refid="classwx_d_d_e_connection" kindref="compound">wxDDEConnection</ref>, and <ref refid="classwx_t_c_p_connection" kindref="compound">wxTCPConnection</ref>.</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ipc" kindref="compound">Interprocess Communication</ref></para><para><simplesect kind="see"><para><ref refid="classwx_d_d_e_connection" kindref="compound">wxDDEConnection</ref>, <ref refid="classwx_t_c_p_connection" kindref="compound">wxTCPConnection</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="5051">
+      <node id="5144">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="5050">
+      <node id="5143">
         <label>wxConnectionBase</label>
         <link refid="classwx_connection_base"/>
-        <childnode refid="5051" relation="public-inheritance">
+        <childnode refid="5144" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5052">
+      <node id="5145">
         <label>wxDDEConnection</label>
         <link refid="classwx_d_d_e_connection"/>
-        <childnode refid="5050" relation="public-inheritance">
+        <childnode refid="5143" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="5054">
+      <node id="5147">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="5055" relation="usage">
+        <childnode refid="5148" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="5053">
+      <node id="5146">
         <label>wxConnectionBase</label>
         <link refid="classwx_connection_base"/>
-        <childnode refid="5054" relation="public-inheritance">
+        <childnode refid="5147" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5055">
+      <node id="5148">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ipcbase.h" line="51" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ipcbase.h" bodystart="50" bodyend="54"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ipcbase.h" line="51" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/ipcbase.h" bodystart="50" bodyend="54"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxConnectionBase</scope><name>AllocExclusive</name></member>
       <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxConnectionBase</scope><name>CloneRefData</name></member>

@@ -83,13 +83,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/protocol.h" line="13" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/protocol.h" bodystart="12" bodyend="24"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/protocol/protocol.h" line="13" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/protocol/protocol.h" bodystart="12" bodyend="24"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/protocol.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/protocol/protocol.h"/>
   </compounddef>
 </doxygen>

@@ -25,7 +25,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/frame.h" line="150"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/frame.h" line="151"/>
       </memberdef>
       <memberdef kind="function" id="classwx_frame_1a01b53ac2d4a5e6b0773ecbcf7b5f6af8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -122,7 +122,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/frame.h" line="185"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/frame.h" line="186"/>
       </memberdef>
       <memberdef kind="function" id="classwx_frame_1ac3e62e78a52d8e7fc2deb0777029bb5f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -135,7 +135,7 @@
 <para>Destroys all child windows and menu bar if present.</para><para>See <ref refid="overview_windowdeletion" kindref="compound">Window Deletion</ref> for more info. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/frame.h" line="192"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/frame.h" line="193"/>
       </memberdef>
       <memberdef kind="function" id="classwx_frame_1a39b18ed552aabaf2a1bc4af7cc924a0f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -162,7 +162,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/frame.h" line="200"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/frame.h" line="201"/>
       </memberdef>
       <memberdef kind="function" id="classwx_frame_1a6541d1aab71fc90041bfdde6e8705add" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -210,12 +210,12 @@
 <para>See <ref refid="classwx_frame_1af80368ba23c71c5d947c3178b8fe10fc" kindref="member">wxFrame()</ref> for further details. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/frame.h" line="210"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/frame.h" line="211"/>
       </memberdef>
-      <memberdef kind="function" id="classwx_frame_1ae8a54b5e9eed1ed7483be05e0706e346" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+      <memberdef kind="function" id="classwx_frame_1aaa5134dcecc1ec77386465a327dd0a21" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_status_bar" kindref="compound">wxStatusBar</ref> *</type>
         <definition>virtual wxStatusBar* wxFrame::CreateStatusBar</definition>
-        <argsstring>(int number=1, long style=wxSTB_DEFAULT_STYLE, wxWindowID id=0, const wxString &amp;name=wxStatusLineNameStr)</argsstring>
+        <argsstring>(int number=1, long style=wxSTB_DEFAULT_STYLE, wxWindowID id=0, const wxString &amp;name=wxStatusBarNameStr)</argsstring>
         <name>CreateStatusBar</name>
         <param>
           <type>int</type>
@@ -235,7 +235,7 @@
         <param>
           <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
           <declname>name</declname>
-          <defval>wxStatusLineNameStr</defval>
+          <defval>wxStatusBarNameStr</defval>
         </param>
         <briefdescription>
 <para>Creates a status bar at the bottom of the frame. </para>        </briefdescription>
@@ -275,7 +275,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/frame.h" line="237"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/frame.h" line="238"/>
       </memberdef>
       <memberdef kind="function" id="classwx_frame_1a529698edc2fd2037ac8578dadafad0e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_tool_bar" kindref="compound">wxToolBar</ref> *</type>
@@ -324,11 +324,11 @@
 </parameterlist>
 <simplesect kind="return"><para>A pointer to the toolbar if it was created successfully, NULL otherwise.</para></simplesect>
 <simplesect kind="remark"><para>By default, the toolbar is an instance of <ref refid="classwx_tool_bar" kindref="compound">wxToolBar</ref>. To use a different class, override <ref refid="classwx_frame_1a45277b2ee2d95e792da16fee2aa8fdcc" kindref="member">OnCreateToolBar()</ref>. When a toolbar has been created with this function, or made known to the frame with <ref refid="classwx_frame_1ab4017f727aa97560f51457d7302b0ca5" kindref="member">wxFrame::SetToolBar()</ref>, the frame will manage the toolbar position and adjust the return value from <ref refid="classwx_window_1ae56fc53268b815b58570f66bfc33838f" kindref="member">wxWindow::GetClientSize()</ref> to reflect the available space for application windows. Under Pocket PC, you should always use this function for creating the toolbar to be managed by the frame, so that wxWidgets can use a combined menubar and toolbar. Where you manage your own toolbars, create a <ref refid="classwx_tool_bar" kindref="compound">wxToolBar</ref> as usual.</para></simplesect>
-<simplesect kind="see"><para><ref refid="classwx_frame_1ae8a54b5e9eed1ed7483be05e0706e346" kindref="member">CreateStatusBar()</ref>, <ref refid="classwx_frame_1a45277b2ee2d95e792da16fee2aa8fdcc" kindref="member">OnCreateToolBar()</ref>, <ref refid="classwx_frame_1ab4017f727aa97560f51457d7302b0ca5" kindref="member">SetToolBar()</ref>, <ref refid="classwx_frame_1aa9256e3e483df4fc3403585047c96dbc" kindref="member">GetToolBar()</ref> </para></simplesect>
+<simplesect kind="see"><para><ref refid="classwx_frame_1aaa5134dcecc1ec77386465a327dd0a21" kindref="member">CreateStatusBar()</ref>, <ref refid="classwx_frame_1a45277b2ee2d95e792da16fee2aa8fdcc" kindref="member">OnCreateToolBar()</ref>, <ref refid="classwx_frame_1ab4017f727aa97560f51457d7302b0ca5" kindref="member">SetToolBar()</ref>, <ref refid="classwx_frame_1aa9256e3e483df4fc3403585047c96dbc" kindref="member">GetToolBar()</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/frame.h" line="270"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/frame.h" line="271"/>
       </memberdef>
       <memberdef kind="function" id="classwx_frame_1ab4c447b8c1b139680d3ce4858dcd5db4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_point" kindref="compound">wxPoint</ref></type>
@@ -342,7 +342,7 @@
 <para>It may be different from (0, 0) if the frame has a toolbar. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/frame.h" line="276"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/frame.h" line="277"/>
       </memberdef>
       <memberdef kind="function" id="classwx_frame_1aa71c4e210aac131e9361529393ad6638" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_menu_bar" kindref="compound">wxMenuBar</ref> *</type>
@@ -356,7 +356,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/frame.h" line="283"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/frame.h" line="284"/>
       </memberdef>
       <memberdef kind="function" id="classwx_frame_1a6f14d67263cba3440d7bf8dd253c12ef" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_status_bar" kindref="compound">wxStatusBar</ref> *</type>
@@ -366,11 +366,11 @@
         <briefdescription>
 <para>Returns a pointer to the status bar currently associated with the frame (if any). </para>        </briefdescription>
         <detaileddescription>
-<para><simplesect kind="see"><para><ref refid="classwx_frame_1ae8a54b5e9eed1ed7483be05e0706e346" kindref="member">CreateStatusBar()</ref>, <ref refid="classwx_status_bar" kindref="compound">wxStatusBar</ref> </para></simplesect>
+<para><simplesect kind="see"><para><ref refid="classwx_frame_1aaa5134dcecc1ec77386465a327dd0a21" kindref="member">CreateStatusBar()</ref>, <ref refid="classwx_status_bar" kindref="compound">wxStatusBar</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/frame.h" line="291"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/frame.h" line="292"/>
       </memberdef>
       <memberdef kind="function" id="classwx_frame_1aa1414d00144828f261ff7d7a7950e1a6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -384,7 +384,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/frame.h" line="298"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/frame.h" line="299"/>
       </memberdef>
       <memberdef kind="function" id="classwx_frame_1aa9256e3e483df4fc3403585047c96dbc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_tool_bar" kindref="compound">wxToolBar</ref> *</type>
@@ -398,7 +398,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/frame.h" line="305"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/frame.h" line="306"/>
       </memberdef>
       <memberdef kind="function" id="classwx_frame_1a34c3472eb2e8a7a355d4282d2e08eca7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_status_bar" kindref="compound">wxStatusBar</ref> *</type>
@@ -422,7 +422,7 @@
           <declname>name</declname>
         </param>
         <briefdescription>
-<para>Virtual function called when a status bar is requested by <ref refid="classwx_frame_1ae8a54b5e9eed1ed7483be05e0706e346" kindref="member">CreateStatusBar()</ref>. </para>        </briefdescription>
+<para>Virtual function called when a status bar is requested by <ref refid="classwx_frame_1aaa5134dcecc1ec77386465a327dd0a21" kindref="member">CreateStatusBar()</ref>. </para>        </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -455,11 +455,11 @@
 </parameterlist>
 <simplesect kind="return"><para>A status bar object.</para></simplesect>
 <simplesect kind="remark"><para>An application can override this function to return a different kind of status bar. The default implementation returns an instance of <ref refid="classwx_status_bar" kindref="compound">wxStatusBar</ref>.</para></simplesect>
-<simplesect kind="see"><para><ref refid="classwx_frame_1ae8a54b5e9eed1ed7483be05e0706e346" kindref="member">CreateStatusBar()</ref>, <ref refid="classwx_status_bar" kindref="compound">wxStatusBar</ref>. </para></simplesect>
+<simplesect kind="see"><para><ref refid="classwx_frame_1aaa5134dcecc1ec77386465a327dd0a21" kindref="member">CreateStatusBar()</ref>, <ref refid="classwx_status_bar" kindref="compound">wxStatusBar</ref>. </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/frame.h" line="331"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/frame.h" line="332"/>
       </memberdef>
       <memberdef kind="function" id="classwx_frame_1a45277b2ee2d95e792da16fee2aa8fdcc" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_tool_bar" kindref="compound">wxToolBar</ref> *</type>
@@ -509,7 +509,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/frame.h" line="354"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/frame.h" line="355"/>
       </memberdef>
       <memberdef kind="function" id="classwx_frame_1a3dfab71a356ba08da4f065ca6c108b74" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -534,7 +534,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/frame.h" line="362"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/frame.h" line="363"/>
       </memberdef>
       <memberdef kind="function" id="classwx_frame_1a83e63c48e1a3f14e661de3ccd434cbbf" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -561,7 +561,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/frame.h" line="381"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/frame.h" line="382"/>
       </memberdef>
       <memberdef kind="function" id="classwx_frame_1a1c3714836fab3f8b892e18b45eb011b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -575,11 +575,11 @@
         <briefdescription>
 <para>Associates a status bar with the frame. </para>        </briefdescription>
         <detaileddescription>
-<para>If <emphasis>statusBar</emphasis> is NULL, then the status bar, if present, is detached from the frame, but <emphasis>not</emphasis> deleted.</para><para><simplesect kind="see"><para><ref refid="classwx_frame_1ae8a54b5e9eed1ed7483be05e0706e346" kindref="member">CreateStatusBar()</ref>, <ref refid="classwx_status_bar" kindref="compound">wxStatusBar</ref>, <ref refid="classwx_frame_1a6f14d67263cba3440d7bf8dd253c12ef" kindref="member">GetStatusBar()</ref> </para></simplesect>
+<para>If <emphasis>statusBar</emphasis> is NULL, then the status bar, if present, is detached from the frame, but <emphasis>not</emphasis> deleted.</para><para><simplesect kind="see"><para><ref refid="classwx_frame_1aaa5134dcecc1ec77386465a327dd0a21" kindref="member">CreateStatusBar()</ref>, <ref refid="classwx_status_bar" kindref="compound">wxStatusBar</ref>, <ref refid="classwx_frame_1a6f14d67263cba3440d7bf8dd253c12ef" kindref="member">GetStatusBar()</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/frame.h" line="391"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/frame.h" line="392"/>
       </memberdef>
       <memberdef kind="function" id="classwx_frame_1a8a82de139a9a44ce638fe978c00ac07f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -596,7 +596,7 @@
 <para>Using -1 disables help display. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/frame.h" line="397"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/frame.h" line="398"/>
       </memberdef>
       <memberdef kind="function" id="classwx_frame_1a0026c883df35e1d1f8818e229c41249f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -631,11 +631,11 @@
 </parameteritem>
 </parameterlist>
 <simplesect kind="remark"><para>Use an empty string to clear the status bar.</para></simplesect>
-<simplesect kind="see"><para><ref refid="classwx_frame_1ae8a54b5e9eed1ed7483be05e0706e346" kindref="member">CreateStatusBar()</ref>, <ref refid="classwx_status_bar" kindref="compound">wxStatusBar</ref> </para></simplesect>
+<simplesect kind="see"><para><ref refid="classwx_frame_1aaa5134dcecc1ec77386465a327dd0a21" kindref="member">CreateStatusBar()</ref>, <ref refid="classwx_status_bar" kindref="compound">wxStatusBar</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/frame.h" line="411"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/frame.h" line="412"/>
       </memberdef>
       <memberdef kind="function" id="classwx_frame_1a5e872935a702d136a4dafb808c4a2456" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -672,7 +672,7 @@
 <bold>wxPerl Note:</bold> In wxPerl this method takes the field widths as parameters. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/frame.h" line="433"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/frame.h" line="434"/>
       </memberdef>
       <memberdef kind="function" id="classwx_frame_1ab4017f727aa97560f51457d7302b0ca5" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -689,7 +689,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/frame.h" line="438"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/frame.h" line="439"/>
       </memberdef>
       <memberdef kind="function" id="classwx_frame_1a65346afc0ded65a824c13fedca1bf7a5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -711,7 +711,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/frame.h" line="441"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/frame.h" line="442"/>
       </memberdef>
       <memberdef kind="function" id="classwx_frame_1aec7e735264adfd53e99fb0ccb506f87c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -729,13 +729,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/frame.h" line="442"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/frame.h" line="443"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para>A frame is a window whose size and position can (usually) be changed by the user. </para>    </briefdescription>
     <detaileddescription>
-<para>It usually has thick borders and a title bar, and can optionally contain a menu bar, toolbar and status bar. A frame can contain any window that is not a frame or dialog.</para><para>A frame that has a status bar and toolbar, created via the <ref refid="classwx_frame_1ae8a54b5e9eed1ed7483be05e0706e346" kindref="member">CreateStatusBar()</ref> and <ref refid="classwx_frame_1a529698edc2fd2037ac8578dadafad0e2" kindref="member">CreateToolBar()</ref> functions, manages these windows and adjusts the value returned by <ref refid="classwx_window_1ae56fc53268b815b58570f66bfc33838f" kindref="member">GetClientSize()</ref> to reflect the remaining size available to application windows.</para><para><simplesect kind="remark"><para>An application should normally define an <ref refid="classwx_close_event" kindref="compound">wxCloseEvent</ref> handler for the frame to respond to system close events, for example so that related data and subwindows can be cleaned up.</para></simplesect>
+<para>It usually has thick borders and a title bar, and can optionally contain a menu bar, toolbar and status bar. A frame can contain any window that is not a frame or dialog.</para><para>A frame that has a status bar and toolbar, created via the <ref refid="classwx_frame_1aaa5134dcecc1ec77386465a327dd0a21" kindref="member">CreateStatusBar()</ref> and <ref refid="classwx_frame_1a529698edc2fd2037ac8578dadafad0e2" kindref="member">CreateToolBar()</ref> functions, manages these windows and adjusts the value returned by <ref refid="classwx_window_1ae56fc53268b815b58570f66bfc33838f" kindref="member">GetClientSize()</ref> to reflect the remaining size available to application windows.</para><para><simplesect kind="remark"><para>An application should normally define an <ref refid="classwx_close_event" kindref="compound">wxCloseEvent</ref> handler for the frame to respond to system close events, for example so that related data and subwindows can be cleaned up.</para></simplesect>
 </para><sect1 id="classwx_frame_1frame_defaultevent">
 <title>Default event processing</title>
 <para><ref refid="classwx_frame" kindref="compound">wxFrame</ref> processes the following events:</para><para><itemizedlist>
@@ -769,7 +769,7 @@ The default frame style is for normal, resizable frames. To create a frame which
 </itemizedlist>
 <heading level="2">Events emitted by this class</heading>
 </para><para>Event macros for events emitted by this class: <itemizedlist>
-<listitem><para>EVT_CLOSE(func): The frame is being closed by the user or programmatically (see <ref refid="classwx_window_1a3e44f4a494fc9ef4346c4fba70c8de0c" kindref="member">wxWindow::Close</ref>). The user may generate this event clicking the close button (typically the &apos;X&apos; on the top-right of the title bar) if it&apos;s present (see the <computeroutput>wxCLOSE_BOX</computeroutput> style). See <ref refid="classwx_close_event" kindref="compound">wxCloseEvent</ref>. </para></listitem>
+<listitem><para>EVT_CLOSE(func): Process a <computeroutput>wxEVT_CLOSE_WINDOW</computeroutput> event when the frame is being closed by the user or programmatically (see <ref refid="classwx_window_1a3e44f4a494fc9ef4346c4fba70c8de0c" kindref="member">wxWindow::Close</ref>). The user may generate this event clicking the close button (typically the &apos;X&apos; on the top-right of the title bar) if it&apos;s present (see the <computeroutput>wxCLOSE_BOX</computeroutput> style). See <ref refid="classwx_close_event" kindref="compound">wxCloseEvent</ref>. </para></listitem>
 <listitem><para>EVT_ICONIZE(func): Process a <computeroutput>wxEVT_ICONIZE</computeroutput> event. See <ref refid="classwx_iconize_event" kindref="compound">wxIconizeEvent</ref>. </para></listitem>
 <listitem><para>EVT_MENU_OPEN(func): A menu is about to be opened. See <ref refid="classwx_menu_event" kindref="compound">wxMenuEvent</ref>. </para></listitem>
 <listitem><para>EVT_MENU_CLOSE(func): A menu has been just closed. See <ref refid="classwx_menu_event" kindref="compound">wxMenuEvent</ref>. </para></listitem>
@@ -781,163 +781,163 @@ The default frame style is for normal, resizable frames. To create a frame which
 </para></sect1>
     </detaileddescription>
     <inheritancegraph>
-      <node id="6432">
+      <node id="6572">
         <label>wxDocChildFrame</label>
         <link refid="classwx_doc_child_frame"/>
-        <childnode refid="6425" relation="public-inheritance">
+        <childnode refid="6565" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6427">
+      <node id="6567">
         <label>wxNonOwnedWindow</label>
         <link refid="classwx_non_owned_window"/>
-        <childnode refid="6428" relation="public-inheritance">
+        <childnode refid="6568" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6436">
+      <node id="6576">
         <label>wxMDIChildFrame</label>
         <link refid="classwx_m_d_i_child_frame"/>
-        <childnode refid="6425" relation="public-inheritance">
+        <childnode refid="6565" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6430">
+      <node id="6570">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="6429">
+      <node id="6569">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="6430" relation="public-inheritance">
+        <childnode refid="6570" relation="public-inheritance">
         </childnode>
-        <childnode refid="6431" relation="public-inheritance">
+        <childnode refid="6571" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6433">
+      <node id="6573">
         <label>wxDocParentFrame</label>
         <link refid="classwx_doc_parent_frame"/>
-        <childnode refid="6425" relation="public-inheritance">
+        <childnode refid="6565" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6431">
+      <node id="6571">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="6428">
+      <node id="6568">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="6429" relation="public-inheritance">
+        <childnode refid="6569" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6439">
+      <node id="6579">
         <label>wxDocMDIParentFrame</label>
         <link refid="classwx_doc_m_d_i_parent_frame"/>
-        <childnode refid="6438" relation="public-inheritance">
+        <childnode refid="6578" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6425">
+      <node id="6565">
         <label>wxFrame</label>
         <link refid="classwx_frame"/>
-        <childnode refid="6426" relation="public-inheritance">
+        <childnode refid="6566" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6441">
+      <node id="6581">
         <label>wxPreviewFrame</label>
         <link refid="classwx_preview_frame"/>
-        <childnode refid="6425" relation="public-inheritance">
+        <childnode refid="6565" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6434">
+      <node id="6574">
         <label>wxHtmlHelpDialog</label>
         <link refid="classwx_html_help_dialog"/>
-        <childnode refid="6425" relation="public-inheritance">
+        <childnode refid="6565" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6440">
+      <node id="6580">
         <label>wxMiniFrame</label>
         <link refid="classwx_mini_frame"/>
-        <childnode refid="6425" relation="public-inheritance">
+        <childnode refid="6565" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6426">
+      <node id="6566">
         <label>wxTopLevelWindow</label>
         <link refid="classwx_top_level_window"/>
-        <childnode refid="6427" relation="public-inheritance">
+        <childnode refid="6567" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6435">
+      <node id="6575">
         <label>wxHtmlHelpFrame</label>
         <link refid="classwx_html_help_frame"/>
-        <childnode refid="6425" relation="public-inheritance">
+        <childnode refid="6565" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6442">
+      <node id="6582">
         <label>wxSplashScreen</label>
         <link refid="classwx_splash_screen"/>
-        <childnode refid="6425" relation="public-inheritance">
+        <childnode refid="6565" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6438">
+      <node id="6578">
         <label>wxMDIParentFrame</label>
         <link refid="classwx_m_d_i_parent_frame"/>
-        <childnode refid="6425" relation="public-inheritance">
+        <childnode refid="6565" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6437">
+      <node id="6577">
         <label>wxDocMDIChildFrame</label>
         <link refid="classwx_doc_m_d_i_child_frame"/>
-        <childnode refid="6436" relation="public-inheritance">
+        <childnode refid="6576" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="6445">
+      <node id="6585">
         <label>wxNonOwnedWindow</label>
         <link refid="classwx_non_owned_window"/>
-        <childnode refid="6446" relation="public-inheritance">
+        <childnode refid="6586" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6448">
+      <node id="6588">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="6449" relation="usage">
+        <childnode refid="6589" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="6447">
+      <node id="6587">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="6448" relation="public-inheritance">
+        <childnode refid="6588" relation="public-inheritance">
         </childnode>
-        <childnode refid="6450" relation="public-inheritance">
+        <childnode refid="6590" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6450">
+      <node id="6590">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="6446">
+      <node id="6586">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="6447" relation="public-inheritance">
+        <childnode refid="6587" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6443">
+      <node id="6583">
         <label>wxFrame</label>
         <link refid="classwx_frame"/>
-        <childnode refid="6444" relation="public-inheritance">
+        <childnode refid="6584" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6444">
+      <node id="6584">
         <label>wxTopLevelWindow</label>
         <link refid="classwx_top_level_window"/>
-        <childnode refid="6445" relation="public-inheritance">
+        <childnode refid="6585" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6449">
+      <node id="6589">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/frame.h" line="145" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/frame.h" bodystart="144" bodyend="444"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/frame.h" line="146" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/frame.h" bodystart="145" bodyend="445"/>
     <listofallmembers>
       <member refid="classwx_window_1a3afbd49b1ea2f8275e3600dcac102923" prot="public" virt="virtual"><scope>wxFrame</scope><name>AcceptsFocus</name></member>
       <member refid="classwx_window_1a2370bdd3ab08e7ef3c7555c6aa8301b8" prot="public" virt="virtual"><scope>wxFrame</scope><name>AcceptsFocusFromKeyboard</name></member>
@@ -975,7 +975,7 @@ The default frame style is for normal, resizable frames. To create a frame which
       <member refid="classwx_frame_1a6541d1aab71fc90041bfdde6e8705add" prot="public" virt="non-virtual"><scope>wxFrame</scope><name>Create</name></member>
       <member refid="classwx_window_1a95b7ca8faa033f5ab35458887c07bf38" prot="public" virt="non-virtual" ambiguityscope="wxNonOwnedWindow::"><scope>wxFrame</scope><name>Create</name></member>
       <member refid="classwx_object_1a95c6a5e4e1e03ff23c7b9efe4cff0c1a" prot="protected" virt="virtual"><scope>wxFrame</scope><name>CreateRefData</name></member>
-      <member refid="classwx_frame_1ae8a54b5e9eed1ed7483be05e0706e346" prot="public" virt="virtual"><scope>wxFrame</scope><name>CreateStatusBar</name></member>
+      <member refid="classwx_frame_1aaa5134dcecc1ec77386465a327dd0a21" prot="public" virt="virtual"><scope>wxFrame</scope><name>CreateStatusBar</name></member>
       <member refid="classwx_frame_1a529698edc2fd2037ac8578dadafad0e2" prot="public" virt="virtual"><scope>wxFrame</scope><name>CreateToolBar</name></member>
       <member refid="classwx_evt_handler_1a6e7f9cf4ebd0623c1d94979855d096f8" prot="public" virt="non-virtual"><scope>wxFrame</scope><name>DeletePendingEvents</name></member>
       <member refid="classwx_window_1a6bf0c5be864544d9ce0560087667b7fc" prot="public" virt="virtual"><scope>wxFrame</scope><name>Destroy</name></member>
@@ -1115,6 +1115,7 @@ The default frame style is for normal, resizable frames. To create a frame which
       <member refid="classwx_top_level_window_1afa58f411cf488eb9279683b1d20a74b6" prot="public" virt="virtual"><scope>wxFrame</scope><name>IsActive</name></member>
       <member refid="classwx_top_level_window_1ac0c7a7cb6e6dfdf7e59300ee5d476ce3" prot="public" virt="virtual"><scope>wxFrame</scope><name>IsAlwaysMaximized</name></member>
       <member refid="classwx_window_1af918e6fe8565c2d5235973cc3de84a43" prot="public" virt="non-virtual"><scope>wxFrame</scope><name>IsBeingDeleted</name></member>
+      <member refid="classwx_window_1a469f0881da248d37691440c9d4cc7200" prot="public" virt="non-virtual"><scope>wxFrame</scope><name>IsDescendant</name></member>
       <member refid="classwx_window_1a9d1be1bbb625ebf87ad4ad47e49a0194" prot="public" virt="virtual"><scope>wxFrame</scope><name>IsDoubleBuffered</name></member>
       <member refid="classwx_window_1a59452a5bd42f5ea4b31d7fc4aa59644f" prot="public" virt="non-virtual"><scope>wxFrame</scope><name>IsEnabled</name></member>
       <member refid="classwx_window_1af27ef77c913e32050543f3b0ca435a0d" prot="public" virt="non-virtual"><scope>wxFrame</scope><name>IsExposed</name></member>
@@ -1133,6 +1134,7 @@ The default frame style is for normal, resizable frames. To create a frame which
       <member refid="classwx_window_1a72d70fd14e3565bf782fbcd3271d8930" prot="public" virt="virtual"><scope>wxFrame</scope><name>IsShownOnScreen</name></member>
       <member refid="classwx_window_1a657ef8b6055eb06df894ac5e6ddfecf8" prot="public" virt="non-virtual"><scope>wxFrame</scope><name>IsThisEnabled</name></member>
       <member refid="classwx_window_1a0002826ad05f2a5661b4c8995713f37f" prot="public" virt="virtual"><scope>wxFrame</scope><name>IsTopLevel</name></member>
+      <member refid="classwx_window_1a7940d510c5bdc062a2b109a1022dd8c2" prot="public" virt="virtual"><scope>wxFrame</scope><name>IsTransparentBackgroundSupported</name></member>
       <member refid="classwx_evt_handler_1a360fdeefcf53b62fb49fb828406bb8a6" prot="public" virt="non-virtual"><scope>wxFrame</scope><name>IsUnlinked</name></member>
       <member refid="classwx_top_level_window_1a305c48ddb8e45f89add1694053185a7d" prot="public" virt="non-virtual"><scope>wxFrame</scope><name>IsUsingNativeDecorations</name></member>
       <member refid="classwx_top_level_window_1adfe7e3f4a32f3ed178968f64431bbfe0" prot="public" virt="virtual"><scope>wxFrame</scope><name>Layout</name></member>
@@ -1140,7 +1142,6 @@ The default frame style is for normal, resizable frames. To create a frame which
       <member refid="classwx_window_1afc0816a174ceee6d36d1995c6824a273" prot="public" virt="non-virtual"><scope>wxFrame</scope><name>LineUp</name></member>
       <member refid="classwx_window_1a124944524f36b71385dad8fddaad8ded" prot="public" virt="virtual"><scope>wxFrame</scope><name>Lower</name></member>
       <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxFrame</scope><name>m_refData</name></member>
-      <member refid="classwx_window_1a192fc8b467845d093c16452db96c65c5" prot="public" virt="virtual"><scope>wxFrame</scope><name>MakeModal</name></member>
       <member refid="classwx_top_level_window_1addb1612e9f00ac82c2e19c2bac6ffc4f" prot="public" virt="virtual"><scope>wxFrame</scope><name>Maximize</name></member>
       <member refid="classwx_window_1ab1cb98c8d25b9e6ff7b706b1446c3df7" prot="public" virt="non-virtual"><scope>wxFrame</scope><name>Move</name></member>
       <member refid="classwx_window_1a22a22c1e23ca05776707e7999d8047fe" prot="public" virt="non-virtual"><scope>wxFrame</scope><name>Move</name></member>
@@ -1286,7 +1287,6 @@ The default frame style is for normal, resizable frames. To create a frame which
       <member refid="classwx_window_1a88cc65e424a129d9b0057756cdb67ec9" prot="public" virt="virtual"><scope>wxFrame</scope><name>TransferDataToWindow</name></member>
       <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxFrame</scope><name>TryAfter</name></member>
       <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxFrame</scope><name>TryBefore</name></member>
-      <member refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" virt="non-virtual"><scope>wxFrame</scope><name>TryThis</name></member>
       <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxFrame</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxFrame</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a22e5db2ec1d19c8252c056fd116975d7" prot="public" virt="non-virtual"><scope>wxFrame</scope><name>Unlink</name></member>

@@ -3,6 +3,7 @@
   <compounddef id="classwx_file_type" kind="class" prot="public">
     <compoundname>wxFileType</compoundname>
     <includes local="no">wx/mimetype.h</includes>
+    <innerclass refid="classwx_file_type_1_1_message_parameters" prot="public">wxFileType::MessageParameters</innerclass>
       <sectiondef kind="user-defined">
       <memberdef kind="function" id="classwx_file_type_1a8f9858233c0cb06a2b87a8cd5861deb1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -14,7 +15,7 @@
           <declname>command</declname>
         </param>
         <param>
-          <type>const MessageParameters &amp;</type>
+          <type>const <ref refid="classwx_file_type_1_1_message_parameters" kindref="compound">MessageParameters</ref> &amp;</type>
           <declname>params</declname>
         </param>
         <briefdescription>
@@ -23,7 +24,7 @@
 <para>In this case, the name of the file as well as any other parameters is retrieved from MessageParameters() class.</para><para>In the second case, only the filename is specified and the command to be used to open this kind of file is returned directly. An empty string is returned to indicate that an error occurred (typically meaning that there is no standard way to open this kind of files). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mimetype.h" line="322"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mimetype.h" line="351"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_type_1af12a5b8a3fedbd8581ce340a97deaeb5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -40,7 +41,7 @@
 <para>In this case, the name of the file as well as any other parameters is retrieved from MessageParameters() class.</para><para>In the second case, only the filename is specified and the command to be used to open this kind of file is returned directly. An empty string is returned to indicate that an error occurred (typically meaning that there is no standard way to open this kind of files). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mimetype.h" line="323"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mimetype.h" line="352"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -55,7 +56,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mimetype.h" line="221"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mimetype.h" line="221"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -74,7 +75,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mimetype.h" line="227"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mimetype.h" line="256"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_type_1a4630ec5a736ce618b86f4ed788174b8d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -87,7 +88,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mimetype.h" line="232"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mimetype.h" line="261"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_type_1affe40c3eb331bd0a5a16a9ad84e5dac7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -104,7 +105,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mimetype.h" line="260"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mimetype.h" line="289"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_type_1a0a7c9308f011bb686b94fc5aac1d38b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -121,7 +122,7 @@
 <para><bold>Windows:</bold> This function is currently not implemented: there is no (efficient) way to retrieve associated extensions from the given MIME type on this platform, so it will only return true if the <ref refid="classwx_file_type" kindref="compound">wxFileType</ref> object was created by <ref refid="classwx_mime_types_manager_1a20a5bd44120549886911a6bb34a06feb" kindref="member">wxMimeTypesManager::GetFileTypeFromExtension</ref> function in the first place. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mimetype.h" line="274"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mimetype.h" line="303"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_type_1a5e5a5491cffb54791285663fd337d351" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -138,7 +139,7 @@
 <para>A <ref refid="classwx_icon" kindref="compound">wxIcon</ref> may be created from <emphasis>iconLoc</emphasis> later.</para><para><bold>Windows:</bold> The function returns the icon shown by Explorer for the files of the specified type.</para><para><bold>Mac:</bold> This function is not implemented and always returns false.</para><para><bold>Unix:</bold> MIME manager gathers information about icons from GNOME and KDE settings and thus GetIcon&apos;s success depends on availability of these desktop environments. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mimetype.h" line="290"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mimetype.h" line="319"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_type_1aa1bbe8e37377bd0b16d777f646d318a8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -155,7 +156,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mimetype.h" line="296"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mimetype.h" line="325"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_type_1a835504fe7d4d483f8c1a1dd27cff721e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -172,7 +173,7 @@
 <para>This array will contain only one item in most cases but sometimes, notably under Unix with KDE, may contain more MIME types. This happens when one file extension is mapped to different MIME types by KDE, mailcap and mime.types. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mimetype.h" line="306"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mimetype.h" line="335"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_type_1ac9972c75cd94f7ebd39421b06801fda0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -184,16 +185,16 @@
           <declname>command</declname>
         </param>
         <param>
-          <type>const MessageParameters &amp;</type>
+          <type>const <ref refid="classwx_file_type_1_1_message_parameters" kindref="compound">MessageParameters</ref> &amp;</type>
           <declname>params</declname>
         </param>
         <briefdescription>
 <para>If the function returns true, the string pointed to by <emphasis>command</emphasis> is filled with the command which must be executed (see <ref refid="group__group__funcmacro__procctrl_1gaa276e9e676e26bafeec3141b73399b33" kindref="member">wxExecute()</ref>) in order to print the file of the given type. </para>        </briefdescription>
         <detaileddescription>
-<para>The name of the file is retrieved from the MessageParameters class. </para>        </detaileddescription>
+<para>The name of the file is retrieved from the <ref refid="classwx_file_type_1_1_message_parameters" kindref="compound">MessageParameters</ref> class. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mimetype.h" line="334"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mimetype.h" line="363"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -207,18 +208,18 @@
           <declname>command</declname>
         </param>
         <param>
-          <type>const MessageParameters &amp;</type>
+          <type>const <ref refid="classwx_file_type_1_1_message_parameters" kindref="compound">MessageParameters</ref> &amp;</type>
           <declname>params</declname>
         </param>
         <briefdescription>
 <para>This function is primarily intended for GetOpenCommand and GetPrintCommand usage but may be also used by the application directly if, for example, you want to use some non-default command to open the file. </para>        </briefdescription>
         <detaileddescription>
 <para>The function replaces all occurrences of:<itemizedlist>
-<listitem><para>s with the full file name</para></listitem><listitem><para>t with the MIME type</para></listitem><listitem><para>%{param} with the value of the parameter <emphasis>param</emphasis> using the MessageParameters object you pass to it.</para></listitem></itemizedlist>
+<listitem><para>s with the full file name</para></listitem><listitem><para>t with the MIME type</para></listitem><listitem><para>%{param} with the value of the parameter <emphasis>param</emphasis> using the <ref refid="classwx_file_type_1_1_message_parameters" kindref="compound">MessageParameters</ref> object you pass to it.</para></listitem></itemizedlist>
 </para><para>If there is no &apos;s&apos; in the command string (and the string is not empty), it is assumed that the command reads the data on stdin and so the effect is the same as &quot; %s&quot; were appended to the string.</para><para>Unlike all other functions of this class, there is no error return for this function. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mimetype.h" line="253"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mimetype.h" line="282"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -226,7 +227,7 @@
     <detaileddescription>
 <para>File type is the same as MIME type under Unix, but under Windows it corresponds more to an extension than to MIME type (in fact, several extensions may correspond to a file type).</para><para>This object may be created in several different ways: the program might know the file extension and wish to find out the corresponding MIME type or, conversely, it might want to find the right extension for the file to which it writes the contents of given MIME type. Depending on how it was created some fields may be unknown so the return value of all the accessors <bold>must</bold> be checked: false will be returned if the corresponding information couldn&apos;t be found.</para><para>The objects of this class are never created by the application code but are returned by <ref refid="classwx_mime_types_manager_1a5c4bc90bfd1b4355d489bb7eb0ed4a6f" kindref="member">wxMimeTypesManager::GetFileTypeFromMimeType</ref> and <ref refid="classwx_mime_types_manager_1a20a5bd44120549886911a6bb34a06feb" kindref="member">wxMimeTypesManager::GetFileTypeFromExtension</ref> methods. But it is your responsibility to delete the returned pointer when you&apos;re done with it!</para><para>A brief reminder about what the MIME types are (see the RFC 1341 for more information): basically, it is just a pair category/type (for example, &quot;text/plain&quot;) where the category is a basic indication of what a file is. Examples of categories are &quot;application&quot;, &quot;image&quot;, &quot;text&quot;, &quot;binary&quot;, and type is a precise definition of the document format: &quot;plain&quot; in the example above means just ASCII text without any formatting, while &quot;text/html&quot; is the HTML document source.</para><para>A MIME type may have one or more associated extensions: &quot;text/plain&quot; will typically correspond to the extension &quot;.txt&quot;, but may as well be associated with &quot;.ini&quot; or &quot;.conf&quot;.</para><sect1 id="classwx_file_type_1filetype_example">
 <title>MessageParameters class</title>
-<para>One of the most common usages of MIME is to encode an e-mail message. The MIME type of the encoded message is an example of a message parameter. These parameters are found in the message headers (&quot;Content-XXX&quot;).</para><para>At the very least, they must specify the MIME type and the version of MIME used, but almost always they provide additional information about the message such as the original file name or the charset (for the text documents). These parameters may be useful to the program used to open, edit, view or print the message, so, for example, an e-mail client program will have to pass them to this program. Because <ref refid="classwx_file_type" kindref="compound">wxFileType</ref> itself cannot know about these parameters, it uses MessageParameters class to query them.</para><para>The default implementation only requires the caller to provide the file name (always used by the program to be called - it must know which file to open) and the MIME type and supposes that there are no other parameters.</para><para>If you wish to supply additional parameters, you must derive your own class from MessageParameters and override GetParamValue() function, for example:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>provide<sp/>the<sp/>message<sp/>parameters<sp/>for<sp/>the<sp/>MIME<sp/>type<sp/>manager</highlight><highlight class="normal"></highlight></codeline>
+<para>One of the most common usages of MIME is to encode an e-mail message. The MIME type of the encoded message is an example of a message parameter. These parameters are found in the message headers (&quot;Content-XXX&quot;).</para><para>At the very least, they must specify the MIME type and the version of MIME used, but almost always they provide additional information about the message such as the original file name or the charset (for the text documents). These parameters may be useful to the program used to open, edit, view or print the message, so, for example, an e-mail client program will have to pass them to this program. Because <ref refid="classwx_file_type" kindref="compound">wxFileType</ref> itself cannot know about these parameters, it uses <ref refid="classwx_file_type_1_1_message_parameters" kindref="compound">MessageParameters</ref> class to query them.</para><para>The default implementation only requires the caller to provide the file name (always used by the program to be called - it must know which file to open) and the MIME type and supposes that there are no other parameters.</para><para>If you wish to supply additional parameters, you must derive your own class from <ref refid="classwx_file_type_1_1_message_parameters" kindref="compound">MessageParameters</ref> and override GetParamValue() function, for example:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>provide<sp/>the<sp/>message<sp/>parameters<sp/>for<sp/>the<sp/>MIME<sp/>type<sp/>manager</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">MailMessageParameters<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classwx_file_type" kindref="compound" tooltip="This class holds information about a given file type.">wxFileType</ref>::MessageParameters</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
@@ -242,7 +243,7 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>name.<ref refid="classwx_string_1a9c0eb52308e347031f9e479a9abc0a8f" kindref="member" tooltip="Case-insensitive comparison.">CmpNoCase</ref>(</highlight><highlight class="stringliteral">&quot;charset&quot;</highlight><highlight class="normal">)<sp/>==<sp/>0<sp/>)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;US-ASCII&quot;</highlight><highlight class="normal">;</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>wxFileType::MessageParameters::GetParamValue(name);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classwx_file_type_1_1_message_parameters_1aad2203f9d2ecaf064cae9a28f864b3bf" kindref="member" tooltip="Overridable method for derived classes. Returns empty string by default.">wxFileType::MessageParameters::GetParamValue</ref>(name);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
 </programlisting></para><para>Now you only need to create an object of this class and pass it to, for example, GetOpenCommand like this:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change was actually the m...">wxString</ref><sp/>command;</highlight></codeline>
@@ -256,11 +257,11 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>we<sp/>don&apos;t<sp/>know<sp/>how<sp/>to<sp/>handle<sp/>such<sp/>files...</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-</programlisting></para><para>Windows: As only the file name is used by the program associated with the given extension anyhow (but no other message parameters), there is no need to ever derive from MessageParameters class for a Windows-only program.</para><para><heading level="2"></heading>
+</programlisting></para><para>Windows: As only the file name is used by the program associated with the given extension anyhow (but no other message parameters), there is no need to ever derive from <ref refid="classwx_file_type_1_1_message_parameters" kindref="compound">MessageParameters</ref> class for a Windows-only program.</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__data" kindref="compound">Data Structures</ref></para><para><simplesect kind="see"><para><ref refid="classwx_mime_types_manager" kindref="compound">wxMimeTypesManager</ref> </para></simplesect>
 </para></sect1>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mimetype.h" line="215" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mimetype.h" bodystart="214" bodyend="335"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mimetype.h" line="215" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/mimetype.h" bodystart="214" bodyend="364"/>
     <listofallmembers>
       <member refid="classwx_file_type_1a441757a97b3827847cea348baf427b2b" prot="public" virt="non-virtual"><scope>wxFileType</scope><name>ExpandCommand</name></member>
       <member refid="classwx_file_type_1affe40c3eb331bd0a5a16a9ad84e5dac7" prot="public" virt="non-virtual"><scope>wxFileType</scope><name>GetDescription</name></member>

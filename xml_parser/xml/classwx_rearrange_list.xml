@@ -16,7 +16,7 @@
 <para><ref refid="classwx_rearrange_list_1a48b402d920f8afaa5e84aa2638d514a1" kindref="member">Create()</ref> must be called later to effectively create the control. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/rearrangectrl.h" line="58"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/rearrangectrl.h" line="58"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rearrange_list_1a3cf5cbfc0a24b5a58cd3683c80d303ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -68,7 +68,7 @@
 <para>Please see <ref refid="classwx_rearrange_list_1a48b402d920f8afaa5e84aa2638d514a1" kindref="member">Create()</ref> for the parameters description. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/rearrangectrl.h" line="73"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/rearrangectrl.h" line="73"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rearrange_list_1a48b402d920f8afaa5e84aa2638d514a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -184,7 +184,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/rearrangectrl.h" line="112"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/rearrangectrl.h" line="112"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rearrange_list_1ae65ff14616a9ceed844e82047b53f4d1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="dynarray_8h_1add87f199292e36ee87efd6d7f0d4ee66" kindref="member">wxArrayInt</ref> &amp;</type>
@@ -197,7 +197,7 @@
 <para>The order may be different from the one passed to the constructor if <ref refid="classwx_rearrange_list_1a03703035ef32e9d1596138f3a8595070" kindref="member">MoveCurrentUp()</ref> or <ref refid="classwx_rearrange_list_1a71a00acdbae45613486d562b7bc17470" kindref="member">MoveCurrentDown()</ref> were called. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/rearrangectrl.h" line="121"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/rearrangectrl.h" line="121"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rearrange_list_1a602a89387cec9a0363b1caf98dbcb23b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -212,7 +212,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/rearrangectrl.h" line="137"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/rearrangectrl.h" line="137"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rearrange_list_1a830e317315784d59874ee43dd56add37" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -226,7 +226,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/rearrangectrl.h" line="144"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/rearrangectrl.h" line="144"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rearrange_list_1a03703035ef32e9d1596138f3a8595070" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -241,7 +241,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/rearrangectrl.h" line="157"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/rearrangectrl.h" line="157"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rearrange_list_1a71a00acdbae45613486d562b7bc17470" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -255,7 +255,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/rearrangectrl.h" line="164"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/rearrangectrl.h" line="164"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -268,145 +268,145 @@
 <heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="9022">
+      <node id="9205">
         <label>wxItemContainer</label>
         <link refid="classwx_item_container"/>
-        <childnode refid="9023" relation="public-inheritance">
+        <childnode refid="9206" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9015">
+      <node id="9198">
         <label>wxListBox</label>
         <link refid="classwx_list_box"/>
-        <childnode refid="9016" relation="public-inheritance">
+        <childnode refid="9199" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9020">
+      <node id="9203">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="9019">
+      <node id="9202">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="9020" relation="public-inheritance">
+        <childnode refid="9203" relation="public-inheritance">
         </childnode>
-        <childnode refid="9021" relation="public-inheritance">
+        <childnode refid="9204" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9014">
+      <node id="9197">
         <label>wxCheckListBox</label>
         <link refid="classwx_check_list_box"/>
-        <childnode refid="9015" relation="public-inheritance">
+        <childnode refid="9198" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9021">
+      <node id="9204">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="9013">
+      <node id="9196">
         <label>wxRearrangeList</label>
         <link refid="classwx_rearrange_list"/>
-        <childnode refid="9014" relation="public-inheritance">
+        <childnode refid="9197" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9017">
+      <node id="9200">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="9018" relation="public-inheritance">
+        <childnode refid="9201" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9018">
+      <node id="9201">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="9019" relation="public-inheritance">
+        <childnode refid="9202" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9016">
+      <node id="9199">
         <label>wxControlWithItems</label>
         <link refid="classwx_control_with_items"/>
-        <childnode refid="9017" relation="public-inheritance">
+        <childnode refid="9200" relation="public-inheritance">
         </childnode>
-        <childnode refid="9022" relation="public-inheritance">
+        <childnode refid="9205" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9023">
+      <node id="9206">
         <label>wxItemContainerImmutable</label>
         <link refid="classwx_item_container_immutable"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="9034">
+      <node id="9217">
         <label>wxItemContainer</label>
         <link refid="classwx_item_container"/>
-        <childnode refid="9035" relation="public-inheritance">
+        <childnode refid="9218" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9026">
+      <node id="9209">
         <label>wxListBox</label>
         <link refid="classwx_list_box"/>
-        <childnode refid="9027" relation="public-inheritance">
+        <childnode refid="9210" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9031">
+      <node id="9214">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="9032" relation="usage">
+        <childnode refid="9215" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="9030">
+      <node id="9213">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="9031" relation="public-inheritance">
+        <childnode refid="9214" relation="public-inheritance">
         </childnode>
-        <childnode refid="9033" relation="public-inheritance">
+        <childnode refid="9216" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9025">
+      <node id="9208">
         <label>wxCheckListBox</label>
         <link refid="classwx_check_list_box"/>
-        <childnode refid="9026" relation="public-inheritance">
+        <childnode refid="9209" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9033">
+      <node id="9216">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="9024">
+      <node id="9207">
         <label>wxRearrangeList</label>
         <link refid="classwx_rearrange_list"/>
-        <childnode refid="9025" relation="public-inheritance">
+        <childnode refid="9208" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9028">
+      <node id="9211">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="9029" relation="public-inheritance">
+        <childnode refid="9212" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9029">
+      <node id="9212">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="9030" relation="public-inheritance">
+        <childnode refid="9213" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9027">
+      <node id="9210">
         <label>wxControlWithItems</label>
         <link refid="classwx_control_with_items"/>
-        <childnode refid="9028" relation="public-inheritance">
+        <childnode refid="9211" relation="public-inheritance">
         </childnode>
-        <childnode refid="9034" relation="public-inheritance">
+        <childnode refid="9217" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9035">
+      <node id="9218">
         <label>wxItemContainerImmutable</label>
         <link refid="classwx_item_container_immutable"/>
       </node>
-      <node id="9032">
+      <node id="9215">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/rearrangectrl.h" line="51" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/rearrangectrl.h" bodystart="50" bodyend="165"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/rearrangectrl.h" line="51" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/rearrangectrl.h" bodystart="50" bodyend="165"/>
     <listofallmembers>
       <member refid="classwx_window_1a3afbd49b1ea2f8275e3600dcac102923" prot="public" virt="virtual"><scope>wxRearrangeList</scope><name>AcceptsFocus</name></member>
       <member refid="classwx_window_1a2370bdd3ab08e7ef3c7555c6aa8301b8" prot="public" virt="virtual"><scope>wxRearrangeList</scope><name>AcceptsFocusFromKeyboard</name></member>
@@ -615,6 +615,7 @@
       <member refid="classwx_window_1ae1b56ca87d8590ee5e576012229a380a" prot="public" virt="non-virtual"><scope>wxRearrangeList</scope><name>InvalidateBestSize</name></member>
       <member refid="classwx_window_1af918e6fe8565c2d5235973cc3de84a43" prot="public" virt="non-virtual"><scope>wxRearrangeList</scope><name>IsBeingDeleted</name></member>
       <member refid="classwx_check_list_box_1a9662fd127c0f51764b4f6836205c40fe" prot="public" virt="non-virtual"><scope>wxRearrangeList</scope><name>IsChecked</name></member>
+      <member refid="classwx_window_1a469f0881da248d37691440c9d4cc7200" prot="public" virt="non-virtual"><scope>wxRearrangeList</scope><name>IsDescendant</name></member>
       <member refid="classwx_window_1a9d1be1bbb625ebf87ad4ad47e49a0194" prot="public" virt="virtual"><scope>wxRearrangeList</scope><name>IsDoubleBuffered</name></member>
       <member refid="classwx_item_container_immutable_1a32c254e4cd1a6090377e0504e230bb88" prot="public" virt="non-virtual"><scope>wxRearrangeList</scope><name>IsEmpty</name></member>
       <member refid="classwx_window_1a59452a5bd42f5ea4b31d7fc4aa59644f" prot="public" virt="non-virtual"><scope>wxRearrangeList</scope><name>IsEnabled</name></member>
@@ -633,13 +634,13 @@
       <member refid="classwx_list_box_1a9e01d17eeb9ff465604a3878f8ab7f52" prot="public" virt="virtual"><scope>wxRearrangeList</scope><name>IsSorted</name></member>
       <member refid="classwx_window_1a657ef8b6055eb06df894ac5e6ddfecf8" prot="public" virt="non-virtual"><scope>wxRearrangeList</scope><name>IsThisEnabled</name></member>
       <member refid="classwx_window_1a0002826ad05f2a5661b4c8995713f37f" prot="public" virt="virtual"><scope>wxRearrangeList</scope><name>IsTopLevel</name></member>
+      <member refid="classwx_window_1a7940d510c5bdc062a2b109a1022dd8c2" prot="public" virt="virtual"><scope>wxRearrangeList</scope><name>IsTransparentBackgroundSupported</name></member>
       <member refid="classwx_evt_handler_1a360fdeefcf53b62fb49fb828406bb8a6" prot="public" virt="non-virtual"><scope>wxRearrangeList</scope><name>IsUnlinked</name></member>
       <member refid="classwx_window_1a1b143c3e72bd0af533b76db4830a6113" prot="public" virt="virtual"><scope>wxRearrangeList</scope><name>Layout</name></member>
       <member refid="classwx_window_1ade808784f0e64d9985e2f279b5ca8c02" prot="public" virt="non-virtual"><scope>wxRearrangeList</scope><name>LineDown</name></member>
       <member refid="classwx_window_1afc0816a174ceee6d36d1995c6824a273" prot="public" virt="non-virtual"><scope>wxRearrangeList</scope><name>LineUp</name></member>
       <member refid="classwx_window_1a124944524f36b71385dad8fddaad8ded" prot="public" virt="virtual"><scope>wxRearrangeList</scope><name>Lower</name></member>
       <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxRearrangeList</scope><name>m_refData</name></member>
-      <member refid="classwx_window_1a192fc8b467845d093c16452db96c65c5" prot="public" virt="virtual"><scope>wxRearrangeList</scope><name>MakeModal</name></member>
       <member refid="classwx_window_1ab1cb98c8d25b9e6ff7b706b1446c3df7" prot="public" virt="non-virtual"><scope>wxRearrangeList</scope><name>Move</name></member>
       <member refid="classwx_window_1a22a22c1e23ca05776707e7999d8047fe" prot="public" virt="non-virtual"><scope>wxRearrangeList</scope><name>Move</name></member>
       <member refid="classwx_window_1a79e66079125e8420de269811bdb6f2b6" prot="public" virt="non-virtual"><scope>wxRearrangeList</scope><name>MoveAfterInTabOrder</name></member>
@@ -669,7 +670,7 @@
       <member refid="classwx_window_1a69e450f21b0d7013269ec1a4771f043b" prot="protected" virt="virtual"><scope>wxRearrangeList</scope><name>QueueEvent</name></member>
       <member refid="classwx_window_1a54808c933f22a891c5db646f6209fa4d" prot="public" virt="virtual"><scope>wxRearrangeList</scope><name>Raise</name></member>
       <member refid="classwx_object_1a2f6f1aa51fe9fc2b1415ca4211a90e9e" prot="public" virt="non-virtual"><scope>wxRearrangeList</scope><name>Ref</name></member>
-      <member refid="classwx_list_box_1a5c6ce6ef25b2a51b909f36b591cfe5a2" prot="public" virt="virtual"><scope>wxRearrangeList</scope><name>Refresh</name></member>
+      <member refid="classwx_window_1a29dc7251746154c821b17841b9877830" prot="public" virt="virtual"><scope>wxRearrangeList</scope><name>Refresh</name></member>
       <member refid="classwx_window_1ab0ae6b9898cd261c39ebeb2891aa3d67" prot="public" virt="non-virtual"><scope>wxRearrangeList</scope><name>RefreshRect</name></member>
       <member refid="classwx_window_1a53ca57872dac5851ea6ba55a494b899b" prot="public" virt="virtual"><scope>wxRearrangeList</scope><name>RegisterHotKey</name></member>
       <member refid="classwx_window_1adcc538819c11ecb3bd3e4e5d13c5ba7a" prot="public" virt="non-virtual"><scope>wxRearrangeList</scope><name>ReleaseMouse</name></member>
@@ -689,14 +690,12 @@
       <member refid="classwx_window_1a7e21eb6a0819281b29134a6432d064fe" prot="protected" virt="non-virtual"><scope>wxRearrangeList</scope><name>SendDestroyEvent</name></member>
       <member refid="classwx_window_1a237f739b21937d3e8f1bff5fa82ba4c2" prot="public" virt="virtual"><scope>wxRearrangeList</scope><name>SendSizeEvent</name></member>
       <member refid="classwx_window_1af7987987978fd8a93df88b29b19a6388" prot="public" virt="non-virtual"><scope>wxRearrangeList</scope><name>SendSizeEventToParent</name></member>
-      <member refid="classwx_list_box_1ac9ccf7a7dc8e9f01bee629842d2493ad" prot="public" virt="non-virtual"><scope>wxRearrangeList</scope><name>Set</name></member>
-      <member refid="classwx_list_box_1a81fa4437304d8ca0f94113becd2041cb" prot="public" virt="non-virtual"><scope>wxRearrangeList</scope><name>Set</name></member>
-      <member refid="classwx_item_container_1a0758ff813749b9dfe4d8c4975778f40d" prot="public" virt="non-virtual" ambiguityscope="wxControlWithItems::"><scope>wxRearrangeList</scope><name>Set</name></member>
-      <member refid="classwx_item_container_1a913f1901456fc75a45558775f967a2ce" prot="public" virt="non-virtual" ambiguityscope="wxControlWithItems::"><scope>wxRearrangeList</scope><name>Set</name></member>
-      <member refid="classwx_item_container_1aa49e05430329dc56a15b2f75fc7cd05c" prot="public" virt="non-virtual" ambiguityscope="wxControlWithItems::"><scope>wxRearrangeList</scope><name>Set</name></member>
-      <member refid="classwx_item_container_1af5759464c9fd1396ed9b86a9d1242d30" prot="public" virt="non-virtual" ambiguityscope="wxControlWithItems::"><scope>wxRearrangeList</scope><name>Set</name></member>
-      <member refid="classwx_item_container_1aac979e6201e45b121f226389e29fd68a" prot="public" virt="non-virtual" ambiguityscope="wxControlWithItems::"><scope>wxRearrangeList</scope><name>Set</name></member>
-      <member refid="classwx_item_container_1a3a1dab2066917e84f46c57b27fb4f258" prot="public" virt="non-virtual" ambiguityscope="wxControlWithItems::"><scope>wxRearrangeList</scope><name>Set</name></member>
+      <member refid="classwx_item_container_1a0758ff813749b9dfe4d8c4975778f40d" prot="public" virt="non-virtual"><scope>wxRearrangeList</scope><name>Set</name></member>
+      <member refid="classwx_item_container_1a913f1901456fc75a45558775f967a2ce" prot="public" virt="non-virtual"><scope>wxRearrangeList</scope><name>Set</name></member>
+      <member refid="classwx_item_container_1aa49e05430329dc56a15b2f75fc7cd05c" prot="public" virt="non-virtual"><scope>wxRearrangeList</scope><name>Set</name></member>
+      <member refid="classwx_item_container_1af5759464c9fd1396ed9b86a9d1242d30" prot="public" virt="non-virtual"><scope>wxRearrangeList</scope><name>Set</name></member>
+      <member refid="classwx_item_container_1aac979e6201e45b121f226389e29fd68a" prot="public" virt="non-virtual"><scope>wxRearrangeList</scope><name>Set</name></member>
+      <member refid="classwx_item_container_1a3a1dab2066917e84f46c57b27fb4f258" prot="public" virt="non-virtual"><scope>wxRearrangeList</scope><name>Set</name></member>
       <member refid="classwx_window_1a0af5e9aa4dee6a4e92c0700f92605642" prot="public" virt="virtual"><scope>wxRearrangeList</scope><name>SetAcceleratorTable</name></member>
       <member refid="classwx_window_1a413220ead41f05a2ec2cfe10b3d573df" prot="public" virt="non-virtual"><scope>wxRearrangeList</scope><name>SetAccessible</name></member>
       <member refid="classwx_window_1ad369fe1db5c20f9d9edff7b5eb1f7226" prot="public" virt="non-virtual"><scope>wxRearrangeList</scope><name>SetAutoLayout</name></member>
@@ -779,7 +778,6 @@
       <member refid="classwx_window_1a88cc65e424a129d9b0057756cdb67ec9" prot="public" virt="virtual"><scope>wxRearrangeList</scope><name>TransferDataToWindow</name></member>
       <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxRearrangeList</scope><name>TryAfter</name></member>
       <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxRearrangeList</scope><name>TryBefore</name></member>
-      <member refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" virt="non-virtual"><scope>wxRearrangeList</scope><name>TryThis</name></member>
       <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxRearrangeList</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxRearrangeList</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a22e5db2ec1d19c8252c056fd116975d7" prot="public" virt="non-virtual"><scope>wxRearrangeList</scope><name>Unlink</name></member>

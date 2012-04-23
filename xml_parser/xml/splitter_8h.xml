@@ -14,7 +14,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/splitter.h" line="10" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/splitter.h" bodystart="10" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/splitter.h" line="10" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/splitter.h" bodystart="10" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="splitter_8h_1aa75ca4a02d1f2f73f0853680b26677d2" prot="public" static="no">
         <name>wxSP_THIN_SASH</name>
@@ -25,7 +25,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/splitter.h" line="11" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/splitter.h" bodystart="11" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/splitter.h" line="11" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/splitter.h" bodystart="11" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="splitter_8h_1a4aa2970c3de3f16174ab5224e83885db" prot="public" static="no">
         <name>wxSP_NOSASH</name>
@@ -36,7 +36,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/splitter.h" line="12" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/splitter.h" bodystart="12" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/splitter.h" line="12" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/splitter.h" bodystart="12" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="splitter_8h_1a683cb2dd582c3849571db5e62d26eb97" prot="public" static="no">
         <name>wxSP_PERMIT_UNSPLIT</name>
@@ -47,7 +47,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/splitter.h" line="13" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/splitter.h" bodystart="13" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/splitter.h" line="13" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/splitter.h" bodystart="13" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="splitter_8h_1a621a11ea59033d70eb36cc51e8b46b09" prot="public" static="no">
         <name>wxSP_LIVE_UPDATE</name>
@@ -58,7 +58,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/splitter.h" line="14" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/splitter.h" bodystart="14" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/splitter.h" line="14" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/splitter.h" bodystart="14" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="splitter_8h_1a5535622489c5cb81164e1afce768d063" prot="public" static="no">
         <name>wxSP_3DSASH</name>
@@ -69,7 +69,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/splitter.h" line="15" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/splitter.h" bodystart="15" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/splitter.h" line="15" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/splitter.h" bodystart="15" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="splitter_8h_1a754e53dc74fc14aac12da16f8362add1" prot="public" static="no">
         <name>wxSP_3DBORDER</name>
@@ -80,7 +80,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/splitter.h" line="16" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/splitter.h" bodystart="16" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/splitter.h" line="16" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/splitter.h" bodystart="16" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="splitter_8h_1a28f550d3a8a860fdb94de907545f7458" prot="public" static="no">
         <name>wxSP_NO_XP_THEME</name>
@@ -91,7 +91,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/splitter.h" line="17" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/splitter.h" bodystart="17" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/splitter.h" line="17" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/splitter.h" bodystart="17" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="splitter_8h_1a8000035bfd3cf7d1942ff26403df7f8e" prot="public" static="no">
         <name>wxSP_BORDER</name>
@@ -102,7 +102,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/splitter.h" line="18" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/splitter.h" bodystart="18" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/splitter.h" line="18" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/splitter.h" bodystart="18" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="splitter_8h_1a2ed822e3d8affe4727f294271377c425" prot="public" static="no">
         <name>wxSP_3D</name>
@@ -113,7 +113,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/splitter.h" line="19" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/splitter.h" bodystart="19" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/splitter.h" line="19" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/splitter.h" bodystart="19" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="enum">
@@ -140,25 +140,25 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/splitter.h" line="23" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/splitter.h" bodystart="22" bodyend="26"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/splitter.h" line="23" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/splitter.h" bodystart="22" bodyend="26"/>
       </memberdef>
-      <memberdef kind="enum" id="splitter_8h_1aae05225933a42f81e7c4a9fb286596f9" prot="public" static="no">
-        <name>@21</name>
-        <enumvalue id="splitter_8h_1aae05225933a42f81e7c4a9fb286596f9a0104a81dc27fa395227f9c44bd82b57c" prot="public">
+      <memberdef kind="enum" id="splitter_8h_1a4caf8d8f829279fba122163d961608a4" prot="public" static="no">
+        <name>@33</name>
+        <enumvalue id="splitter_8h_1a4caf8d8f829279fba122163d961608a4a0104a81dc27fa395227f9c44bd82b57c" prot="public">
           <name>wxSPLIT_DRAG_NONE</name>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="splitter_8h_1aae05225933a42f81e7c4a9fb286596f9a6b4b071477f4bd0ae3947979a5ff8ddf" prot="public">
+        <enumvalue id="splitter_8h_1a4caf8d8f829279fba122163d961608a4a6b4b071477f4bd0ae3947979a5ff8ddf" prot="public">
           <name>wxSPLIT_DRAG_DRAGGING</name>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="splitter_8h_1aae05225933a42f81e7c4a9fb286596f9a37a3bfa6b9346a107e91d650f74cf3da" prot="public">
+        <enumvalue id="splitter_8h_1a4caf8d8f829279fba122163d961608a4a37a3bfa6b9346a107e91d650f74cf3da" prot="public">
           <name>wxSPLIT_DRAG_LEFT_DOWN</name>
           <briefdescription>
           </briefdescription>
@@ -171,7 +171,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/splitter.h" line="29" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/splitter.h" bodystart="28" bodyend="33"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/splitter.h" line="29" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/splitter.h" bodystart="28" bodyend="33"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="var">
@@ -186,7 +186,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/splitter.h" line="519" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/splitter.h" bodystart="519" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/splitter.h" line="558" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/splitter.h" bodystart="558" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="splitter_8h_1a5ccb89a47b489cdc842006b110be3d9f" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -199,7 +199,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/splitter.h" line="520" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/splitter.h" bodystart="520" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/splitter.h" line="559" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/splitter.h" bodystart="559" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="splitter_8h_1add9685c4ed96a8dfefb4101eefbfbc4a" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -212,7 +212,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/splitter.h" line="521" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/splitter.h" bodystart="521" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/splitter.h" line="560" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/splitter.h" bodystart="560" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="splitter_8h_1adef24a57d1814dc5f15cb9ce0b494a2a" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -225,13 +225,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/splitter.h" line="522" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/splitter.h" bodystart="522" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/splitter.h" line="561" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/splitter.h" bodystart="561" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/splitter.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/splitter.h"/>
   </compounddef>
 </doxygen>

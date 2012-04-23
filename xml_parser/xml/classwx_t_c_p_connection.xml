@@ -16,7 +16,7 @@
 <para>If no user-defined connection object is to be derived from <ref refid="classwx_t_c_p_connection" kindref="compound">wxTCPConnection</ref>, then the constructor should not be called directly, since the default connection object will be provided on requesting (or accepting) a connection.</para><para>However, if the user defines his or her own derived connection object, the <ref refid="classwx_t_c_p_server_1a7042468880f14ee549cbf75c91c889cb" kindref="member">wxTCPServer::OnAcceptConnection</ref> and/or <ref refid="classwx_t_c_p_client_1a23359471eace5dca485aad4a3e24680f" kindref="member">wxTCPClient::OnMakeConnection</ref> members should be replaced by functions which construct the new connection object.</para><para>If the arguments of the <ref refid="classwx_t_c_p_connection" kindref="compound">wxTCPConnection</ref> constructor are void, then a default buffer is associated with the connection. Otherwise, the programmer must provide a buffer and size of the buffer for the connection object to use in transactions. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sckipc.h" line="193"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sckipc.h" line="193"/>
       </memberdef>
       <memberdef kind="function" id="classwx_t_c_p_connection_1ae4c765338770dbe493a0af28eade65db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -37,7 +37,7 @@
 <para>If no user-defined connection object is to be derived from <ref refid="classwx_t_c_p_connection" kindref="compound">wxTCPConnection</ref>, then the constructor should not be called directly, since the default connection object will be provided on requesting (or accepting) a connection.</para><para>However, if the user defines his or her own derived connection object, the <ref refid="classwx_t_c_p_server_1a7042468880f14ee549cbf75c91c889cb" kindref="member">wxTCPServer::OnAcceptConnection</ref> and/or <ref refid="classwx_t_c_p_client_1a23359471eace5dca485aad4a3e24680f" kindref="member">wxTCPClient::OnMakeConnection</ref> members should be replaced by functions which construct the new connection object.</para><para>If the arguments of the <ref refid="classwx_t_c_p_connection" kindref="compound">wxTCPConnection</ref> constructor are void, then a default buffer is associated with the connection. Otherwise, the programmer must provide a buffer and size of the buffer for the connection object to use in transactions. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sckipc.h" line="194"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sckipc.h" line="194"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -69,7 +69,7 @@
 <para>Causes the client connection&apos;s <ref refid="classwx_t_c_p_connection_1afc89b194cbd4d4fc30b189235fa8a1bf" kindref="member">OnAdvise()</ref> member to be called.</para><para>Returns true if successful. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sckipc.h" line="207"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sckipc.h" line="207"/>
       </memberdef>
       <memberdef kind="function" id="classwx_t_c_p_connection_1a4a9ccea19d0903c6a617b779e2096ef0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -90,7 +90,7 @@
 <para>Causes the client connection&apos;s <ref refid="classwx_t_c_p_connection_1afc89b194cbd4d4fc30b189235fa8a1bf" kindref="member">OnAdvise()</ref> member to be called.</para><para>Returns true if successful. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sckipc.h" line="208"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sckipc.h" line="208"/>
       </memberdef>
       <memberdef kind="function" id="classwx_t_c_p_connection_1a946d24c15d11ad057a69d80c9c4158d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -111,7 +111,7 @@
 <para>Causes the client connection&apos;s <ref refid="classwx_t_c_p_connection_1afc89b194cbd4d4fc30b189235fa8a1bf" kindref="member">OnAdvise()</ref> member to be called.</para><para>Returns true if successful. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sckipc.h" line="209"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sckipc.h" line="209"/>
       </memberdef>
       <memberdef kind="function" id="classwx_t_c_p_connection_1a9e6fa84fe6b8aa720fda4ea6625eddee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -132,7 +132,7 @@
 <para>Causes the client connection&apos;s <ref refid="classwx_t_c_p_connection_1afc89b194cbd4d4fc30b189235fa8a1bf" kindref="member">OnAdvise()</ref> member to be called.</para><para>Returns true if successful. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sckipc.h" line="210"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sckipc.h" line="210"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -160,7 +160,7 @@
 <para>Can also be used to transfer arbitrary data to the server (similar to <ref refid="classwx_t_c_p_connection_1ab9a0d9650141a968fc143e5402869729" kindref="member">Poke()</ref> in that respect). Causes the server connection&apos;s <ref refid="classwx_t_c_p_connection_1a0748b23c702f79a69b0a32c1e9a54561" kindref="member">OnExecute()</ref> member to be called.</para><para>Returns true if successful. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sckipc.h" line="236"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sckipc.h" line="236"/>
       </memberdef>
       <memberdef kind="function" id="classwx_t_c_p_connection_1a769489b5552ee8bf4f9adb7641c5d2ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -177,7 +177,7 @@
 <para>Can also be used to transfer arbitrary data to the server (similar to <ref refid="classwx_t_c_p_connection_1ab9a0d9650141a968fc143e5402869729" kindref="member">Poke()</ref> in that respect). Causes the server connection&apos;s <ref refid="classwx_t_c_p_connection_1a0748b23c702f79a69b0a32c1e9a54561" kindref="member">OnExecute()</ref> member to be called.</para><para>Returns true if successful. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sckipc.h" line="237"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sckipc.h" line="237"/>
       </memberdef>
       <memberdef kind="function" id="classwx_t_c_p_connection_1ab1ef7d71025cfa7bd2f23fd9250b310f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -194,7 +194,7 @@
 <para>Can also be used to transfer arbitrary data to the server (similar to <ref refid="classwx_t_c_p_connection_1ab9a0d9650141a968fc143e5402869729" kindref="member">Poke()</ref> in that respect). Causes the server connection&apos;s <ref refid="classwx_t_c_p_connection_1a0748b23c702f79a69b0a32c1e9a54561" kindref="member">OnExecute()</ref> member to be called.</para><para>Returns true if successful. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sckipc.h" line="238"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sckipc.h" line="238"/>
       </memberdef>
       <memberdef kind="function" id="classwx_t_c_p_connection_1a2c6e4b9f85685bd29341ca7922c8ab96" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -211,7 +211,7 @@
 <para>Can also be used to transfer arbitrary data to the server (similar to <ref refid="classwx_t_c_p_connection_1ab9a0d9650141a968fc143e5402869729" kindref="member">Poke()</ref> in that respect). Causes the server connection&apos;s <ref refid="classwx_t_c_p_connection_1a0748b23c702f79a69b0a32c1e9a54561" kindref="member">OnExecute()</ref> member to be called.</para><para>Returns true if successful. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sckipc.h" line="239"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sckipc.h" line="239"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -243,7 +243,7 @@
 <para>Can be used to transfer arbitrary data to the server. Causes the server connection&apos;s <ref refid="classwx_t_c_p_connection_1a49e8aa8f754c9c8c4d284f312019167c" kindref="member">OnPoke()</ref> member to be called. Returns true if successful. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sckipc.h" line="312"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sckipc.h" line="312"/>
       </memberdef>
       <memberdef kind="function" id="classwx_t_c_p_connection_1a3162a7c98869a229913b79bfd4ee73c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -264,7 +264,7 @@
 <para>Can be used to transfer arbitrary data to the server. Causes the server connection&apos;s <ref refid="classwx_t_c_p_connection_1a49e8aa8f754c9c8c4d284f312019167c" kindref="member">OnPoke()</ref> member to be called. Returns true if successful. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sckipc.h" line="313"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sckipc.h" line="313"/>
       </memberdef>
       <memberdef kind="function" id="classwx_t_c_p_connection_1a8240df8d32aca9ef2007bfcd735f3b83" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -285,7 +285,7 @@
 <para>Can be used to transfer arbitrary data to the server. Causes the server connection&apos;s <ref refid="classwx_t_c_p_connection_1a49e8aa8f754c9c8c4d284f312019167c" kindref="member">OnPoke()</ref> member to be called. Returns true if successful. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sckipc.h" line="314"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sckipc.h" line="314"/>
       </memberdef>
       <memberdef kind="function" id="classwx_t_c_p_connection_1ad8428f33c71b01f539eeaab68f5aa40b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -306,7 +306,7 @@
 <para>Can be used to transfer arbitrary data to the server. Causes the server connection&apos;s <ref refid="classwx_t_c_p_connection_1a49e8aa8f754c9c8c4d284f312019167c" kindref="member">OnPoke()</ref> member to be called. Returns true if successful. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sckipc.h" line="315"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sckipc.h" line="315"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -321,7 +321,7 @@
 <para>The default behaviour of <bold>OnDisconnect</bold> is to delete the connection, but the calling application must explicitly delete its side of the connection having called <bold>Disconnect</bold>.</para><para>Returns true if successful. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sckipc.h" line="224"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sckipc.h" line="224"/>
       </memberdef>
       <memberdef kind="function" id="classwx_t_c_p_connection_1afc89b194cbd4d4fc30b189235fa8a1bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -354,7 +354,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sckipc.h" line="250"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sckipc.h" line="250"/>
       </memberdef>
       <memberdef kind="function" id="classwx_t_c_p_connection_1aa66169feb0200153f993ab5af86703ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -367,7 +367,7 @@
 <para>Default behaviour is to delete the connection object. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sckipc.h" line="257"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sckipc.h" line="257"/>
       </memberdef>
       <memberdef kind="function" id="classwx_t_c_p_connection_1a0748b23c702f79a69b0a32c1e9a54561" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -396,7 +396,7 @@
 <para>Note that there is no item associated with this message. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sckipc.h" line="266"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sckipc.h" line="266"/>
       </memberdef>
       <memberdef kind="function" id="classwx_t_c_p_connection_1a49e8aa8f754c9c8c4d284f312019167c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -429,7 +429,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sckipc.h" line="275"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sckipc.h" line="275"/>
       </memberdef>
       <memberdef kind="function" id="classwx_t_c_p_connection_1a62fd57f6d0a56194ce25e4d7594ab251" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>const void *</type>
@@ -458,7 +458,7 @@
 <para>The server should respond by returning a character string from <bold>OnRequest</bold>, or NULL to indicate no data. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sckipc.h" line="286"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sckipc.h" line="286"/>
       </memberdef>
       <memberdef kind="function" id="classwx_t_c_p_connection_1af2e09ce74dc7252983a0c0c4f4aa3d79" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -479,7 +479,7 @@
 <para>The server can refuse to participate by returning false. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sckipc.h" line="294"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sckipc.h" line="294"/>
       </memberdef>
       <memberdef kind="function" id="classwx_t_c_p_connection_1af38ae616a3af2569a7dde96fb6e95e8e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -500,7 +500,7 @@
 <para>The server can refuse to stop the advise loop by returning false, although this doesn&apos;t have much meaning in practice. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sckipc.h" line="303"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sckipc.h" line="303"/>
       </memberdef>
       <memberdef kind="function" id="classwx_t_c_p_connection_1a72b129804884c02058f729647a35bb1a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>const void *</type>
@@ -527,7 +527,7 @@
 <para>Causes the server connection&apos;s <ref refid="classwx_t_c_p_connection_1a62fd57f6d0a56194ce25e4d7594ab251" kindref="member">OnRequest()</ref> member to be called.</para><para>Returns a character string (actually a pointer to the connection&apos;s buffer) if successful, NULL otherwise. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sckipc.h" line="326"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sckipc.h" line="326"/>
       </memberdef>
       <memberdef kind="function" id="classwx_t_c_p_connection_1a2bc425519ddda572c7dbf292f525fd43" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -544,7 +544,7 @@
 <para>Causes the server connection&apos;s <ref refid="classwx_t_c_p_connection_1af2e09ce74dc7252983a0c0c4f4aa3d79" kindref="member">OnStartAdvise()</ref> member to be called. Returns true if the server okays it, false otherwise. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sckipc.h" line="335"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sckipc.h" line="335"/>
       </memberdef>
       <memberdef kind="function" id="classwx_t_c_p_connection_1a06987cc9489bd3fe6ea1002975807b68" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -561,7 +561,7 @@
 <para>Causes the server connection&apos;s <ref refid="classwx_t_c_p_connection_1af38ae616a3af2569a7dde96fb6e95e8e" kindref="member">OnStopAdvise()</ref> member to be called. Returns true if the server okays it, false otherwise. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sckipc.h" line="342"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sckipc.h" line="342"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -571,37 +571,37 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxnet" kindref="member">wxNet</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__net" kindref="compound">Networking</ref></para><para><simplesect kind="see"><para><ref refid="classwx_t_c_p_client" kindref="compound">wxTCPClient</ref>, <ref refid="classwx_t_c_p_server" kindref="compound">wxTCPServer</ref>, <ref refid="overview_ipc" kindref="compound">Interprocess Communication</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10722">
+      <node id="10907">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="10721">
+      <node id="10906">
         <label>wxTCPConnection</label>
         <link refid="classwx_t_c_p_connection"/>
-        <childnode refid="10722" relation="public-inheritance">
+        <childnode refid="10907" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10724">
+      <node id="10909">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="10725" relation="usage">
+        <childnode refid="10910" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="10723">
+      <node id="10908">
         <label>wxTCPConnection</label>
         <link refid="classwx_t_c_p_connection"/>
-        <childnode refid="10724" relation="public-inheritance">
+        <childnode refid="10909" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10725">
+      <node id="10910">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sckipc.h" line="174" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sckipc.h" bodystart="173" bodyend="343"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sckipc.h" line="174" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/sckipc.h" bodystart="173" bodyend="343"/>
     <listofallmembers>
       <member refid="classwx_t_c_p_connection_1adc7cc4dd3ed4af62f392e0cb91cdaed9" prot="public" virt="non-virtual"><scope>wxTCPConnection</scope><name>Advise</name></member>
       <member refid="classwx_t_c_p_connection_1a4a9ccea19d0903c6a617b779e2096ef0" prot="public" virt="non-virtual"><scope>wxTCPConnection</scope><name>Advise</name></member>

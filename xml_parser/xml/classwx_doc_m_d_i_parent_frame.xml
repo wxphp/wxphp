@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/docmdi.h" line="31"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/docmdi.h" line="31"/>
       </memberdef>
       <memberdef kind="function" id="classwx_doc_m_d_i_parent_frame_1abd68ff67098226a0ce937349e2934ac0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -65,7 +65,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/docmdi.h" line="38"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/docmdi.h" line="38"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -80,7 +80,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/docmdi.h" line="44"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/docmdi.h" line="44"/>
       </memberdef>
       <memberdef kind="function" id="classwx_doc_m_d_i_parent_frame_1a773f74ca8bcbb944d20e20fa52c5056d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -129,33 +129,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/docmdi.h" line="54"/>
-      </memberdef>
-      <memberdef kind="function" id="classwx_doc_m_d_i_parent_frame_1ad56f03940da870e4f06f634de34b12e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void wxDocMDIParentFrame::OnCloseWindow</definition>
-        <argsstring>(wxCloseEvent &amp;event)</argsstring>
-        <name>OnCloseWindow</name>
-        <param>
-          <type><ref refid="classwx_close_event" kindref="compound">wxCloseEvent</ref> &amp;</type>
-          <declname>event</declname>
-        </param>
-        <briefdescription>
-<para>Deletes all views and documents. </para>        </briefdescription>
-        <detaileddescription>
-<para>If no user input cancelled the operation, the frame will be destroyed and the application will exit.</para><para>Since understanding how document/view clean-up takes place can be difficult, the implementation of this function is shown below:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classwx_doc_m_d_i_parent_frame_1ad56f03940da870e4f06f634de34b12e4" kindref="member" tooltip="Deletes all views and documents.">wxDocParentFrame::OnCloseWindow</ref>(<ref refid="classwx_close_event" kindref="compound" tooltip="This event class contains information about window and session close events.">wxCloseEvent</ref>&amp;<sp/>event)</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(m_docManager-&gt;Clear(!event.<ref refid="classwx_close_event_1adaa0548df45e05e8487cc5664ac352cf" kindref="member" tooltip="Returns true if you can veto a system shutdown or a window close event.">CanVeto</ref>()))</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;<ref refid="classwx_window_1a6bf0c5be864544d9ce0560087667b7fc" kindref="member" tooltip="Destroys the window safely.">Destroy</ref>();</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">event</highlight><highlight class="normal">.Veto();</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-</programlisting> </para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/docmdi.h" line="75"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/docmdi.h" line="54"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -165,121 +139,121 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__docview" kindref="compound">Document/View Framework</ref></para><para><simplesect kind="see"><para><ref refid="overview_docview" kindref="compound">Document/View Framework</ref>, <ref refid="page_samples_1page_samples_docview" kindref="member">Document/View Sample</ref>, <ref refid="classwx_m_d_i_parent_frame" kindref="compound">wxMDIParentFrame</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="5728">
+      <node id="5843">
         <label>wxNonOwnedWindow</label>
         <link refid="classwx_non_owned_window"/>
-        <childnode refid="5729" relation="public-inheritance">
+        <childnode refid="5844" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5731">
+      <node id="5846">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="5730">
+      <node id="5845">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="5731" relation="public-inheritance">
+        <childnode refid="5846" relation="public-inheritance">
         </childnode>
-        <childnode refid="5732" relation="public-inheritance">
+        <childnode refid="5847" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5732">
+      <node id="5847">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="5729">
+      <node id="5844">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="5730" relation="public-inheritance">
+        <childnode refid="5845" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5724">
+      <node id="5839">
         <label>wxDocMDIParentFrame</label>
         <link refid="classwx_doc_m_d_i_parent_frame"/>
-        <childnode refid="5725" relation="public-inheritance">
+        <childnode refid="5840" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5726">
+      <node id="5841">
         <label>wxFrame</label>
         <link refid="classwx_frame"/>
-        <childnode refid="5727" relation="public-inheritance">
+        <childnode refid="5842" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5727">
+      <node id="5842">
         <label>wxTopLevelWindow</label>
         <link refid="classwx_top_level_window"/>
-        <childnode refid="5728" relation="public-inheritance">
+        <childnode refid="5843" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5725">
+      <node id="5840">
         <label>wxMDIParentFrame</label>
         <link refid="classwx_m_d_i_parent_frame"/>
-        <childnode refid="5726" relation="public-inheritance">
+        <childnode refid="5841" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="5737">
+      <node id="5852">
         <label>wxNonOwnedWindow</label>
         <link refid="classwx_non_owned_window"/>
-        <childnode refid="5738" relation="public-inheritance">
+        <childnode refid="5853" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5740">
+      <node id="5855">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="5741" relation="usage">
+        <childnode refid="5856" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="5739">
+      <node id="5854">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="5740" relation="public-inheritance">
+        <childnode refid="5855" relation="public-inheritance">
         </childnode>
-        <childnode refid="5742" relation="public-inheritance">
+        <childnode refid="5857" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5742">
+      <node id="5857">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="5738">
+      <node id="5853">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="5739" relation="public-inheritance">
+        <childnode refid="5854" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5733">
+      <node id="5848">
         <label>wxDocMDIParentFrame</label>
         <link refid="classwx_doc_m_d_i_parent_frame"/>
-        <childnode refid="5734" relation="public-inheritance">
+        <childnode refid="5849" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5735">
+      <node id="5850">
         <label>wxFrame</label>
         <link refid="classwx_frame"/>
-        <childnode refid="5736" relation="public-inheritance">
+        <childnode refid="5851" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5736">
+      <node id="5851">
         <label>wxTopLevelWindow</label>
         <link refid="classwx_top_level_window"/>
-        <childnode refid="5737" relation="public-inheritance">
+        <childnode refid="5852" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5734">
+      <node id="5849">
         <label>wxMDIParentFrame</label>
         <link refid="classwx_m_d_i_parent_frame"/>
-        <childnode refid="5735" relation="public-inheritance">
+        <childnode refid="5850" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5741">
+      <node id="5856">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/docmdi.h" line="25" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/docmdi.h" bodystart="24" bodyend="76"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/docmdi.h" line="25" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/docmdi.h" bodystart="24" bodyend="55"/>
     <listofallmembers>
       <member refid="classwx_window_1a3afbd49b1ea2f8275e3600dcac102923" prot="public" virt="virtual"><scope>wxDocMDIParentFrame</scope><name>AcceptsFocus</name></member>
       <member refid="classwx_window_1a2370bdd3ab08e7ef3c7555c6aa8301b8" prot="public" virt="virtual"><scope>wxDocMDIParentFrame</scope><name>AcceptsFocusFromKeyboard</name></member>
@@ -322,7 +296,7 @@
       <member refid="classwx_m_d_i_parent_frame_1a72bf23c5e4ad28a8954b37e4951a3b73" prot="public" virt="non-virtual" ambiguityscope="wxMDIParentFrame::"><scope>wxDocMDIParentFrame</scope><name>Create</name></member>
       <member refid="classwx_window_1a95b7ca8faa033f5ab35458887c07bf38" prot="public" virt="non-virtual" ambiguityscope="wxNonOwnedWindow::"><scope>wxDocMDIParentFrame</scope><name>Create</name></member>
       <member refid="classwx_object_1a95c6a5e4e1e03ff23c7b9efe4cff0c1a" prot="protected" virt="virtual"><scope>wxDocMDIParentFrame</scope><name>CreateRefData</name></member>
-      <member refid="classwx_frame_1ae8a54b5e9eed1ed7483be05e0706e346" prot="public" virt="virtual"><scope>wxDocMDIParentFrame</scope><name>CreateStatusBar</name></member>
+      <member refid="classwx_frame_1aaa5134dcecc1ec77386465a327dd0a21" prot="public" virt="virtual"><scope>wxDocMDIParentFrame</scope><name>CreateStatusBar</name></member>
       <member refid="classwx_frame_1a529698edc2fd2037ac8578dadafad0e2" prot="public" virt="virtual"><scope>wxDocMDIParentFrame</scope><name>CreateToolBar</name></member>
       <member refid="classwx_evt_handler_1a6e7f9cf4ebd0623c1d94979855d096f8" prot="public" virt="non-virtual"><scope>wxDocMDIParentFrame</scope><name>DeletePendingEvents</name></member>
       <member refid="classwx_window_1a6bf0c5be864544d9ce0560087667b7fc" prot="public" virt="virtual"><scope>wxDocMDIParentFrame</scope><name>Destroy</name></member>
@@ -465,6 +439,7 @@
       <member refid="classwx_top_level_window_1afa58f411cf488eb9279683b1d20a74b6" prot="public" virt="virtual"><scope>wxDocMDIParentFrame</scope><name>IsActive</name></member>
       <member refid="classwx_top_level_window_1ac0c7a7cb6e6dfdf7e59300ee5d476ce3" prot="public" virt="virtual"><scope>wxDocMDIParentFrame</scope><name>IsAlwaysMaximized</name></member>
       <member refid="classwx_window_1af918e6fe8565c2d5235973cc3de84a43" prot="public" virt="non-virtual"><scope>wxDocMDIParentFrame</scope><name>IsBeingDeleted</name></member>
+      <member refid="classwx_window_1a469f0881da248d37691440c9d4cc7200" prot="public" virt="non-virtual"><scope>wxDocMDIParentFrame</scope><name>IsDescendant</name></member>
       <member refid="classwx_window_1a9d1be1bbb625ebf87ad4ad47e49a0194" prot="public" virt="virtual"><scope>wxDocMDIParentFrame</scope><name>IsDoubleBuffered</name></member>
       <member refid="classwx_window_1a59452a5bd42f5ea4b31d7fc4aa59644f" prot="public" virt="non-virtual"><scope>wxDocMDIParentFrame</scope><name>IsEnabled</name></member>
       <member refid="classwx_window_1af27ef77c913e32050543f3b0ca435a0d" prot="public" virt="non-virtual"><scope>wxDocMDIParentFrame</scope><name>IsExposed</name></member>
@@ -484,6 +459,7 @@
       <member refid="classwx_m_d_i_parent_frame_1a6ce1a36e785251e359a551cee9c72585" prot="public" virt="non-virtual"><scope>wxDocMDIParentFrame</scope><name>IsTDI</name></member>
       <member refid="classwx_window_1a657ef8b6055eb06df894ac5e6ddfecf8" prot="public" virt="non-virtual"><scope>wxDocMDIParentFrame</scope><name>IsThisEnabled</name></member>
       <member refid="classwx_window_1a0002826ad05f2a5661b4c8995713f37f" prot="public" virt="virtual"><scope>wxDocMDIParentFrame</scope><name>IsTopLevel</name></member>
+      <member refid="classwx_window_1a7940d510c5bdc062a2b109a1022dd8c2" prot="public" virt="virtual"><scope>wxDocMDIParentFrame</scope><name>IsTransparentBackgroundSupported</name></member>
       <member refid="classwx_evt_handler_1a360fdeefcf53b62fb49fb828406bb8a6" prot="public" virt="non-virtual"><scope>wxDocMDIParentFrame</scope><name>IsUnlinked</name></member>
       <member refid="classwx_top_level_window_1a305c48ddb8e45f89add1694053185a7d" prot="public" virt="non-virtual"><scope>wxDocMDIParentFrame</scope><name>IsUsingNativeDecorations</name></member>
       <member refid="classwx_top_level_window_1adfe7e3f4a32f3ed178968f64431bbfe0" prot="public" virt="virtual"><scope>wxDocMDIParentFrame</scope><name>Layout</name></member>
@@ -491,7 +467,6 @@
       <member refid="classwx_window_1afc0816a174ceee6d36d1995c6824a273" prot="public" virt="non-virtual"><scope>wxDocMDIParentFrame</scope><name>LineUp</name></member>
       <member refid="classwx_window_1a124944524f36b71385dad8fddaad8ded" prot="public" virt="virtual"><scope>wxDocMDIParentFrame</scope><name>Lower</name></member>
       <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxDocMDIParentFrame</scope><name>m_refData</name></member>
-      <member refid="classwx_window_1a192fc8b467845d093c16452db96c65c5" prot="public" virt="virtual"><scope>wxDocMDIParentFrame</scope><name>MakeModal</name></member>
       <member refid="classwx_top_level_window_1addb1612e9f00ac82c2e19c2bac6ffc4f" prot="public" virt="virtual"><scope>wxDocMDIParentFrame</scope><name>Maximize</name></member>
       <member refid="classwx_window_1ab1cb98c8d25b9e6ff7b706b1446c3df7" prot="public" virt="non-virtual"><scope>wxDocMDIParentFrame</scope><name>Move</name></member>
       <member refid="classwx_window_1a22a22c1e23ca05776707e7999d8047fe" prot="public" virt="non-virtual"><scope>wxDocMDIParentFrame</scope><name>Move</name></member>
@@ -501,7 +476,6 @@
       <member refid="classwx_window_1a86904f6785df4af6036b33383490a805" prot="public" virt="non-virtual"><scope>wxDocMDIParentFrame</scope><name>Navigate</name></member>
       <member refid="classwx_window_1aa58039c8fc65e19160becf510ee1d1d5" prot="public" virt="non-virtual"><scope>wxDocMDIParentFrame</scope><name>NavigateIn</name></member>
       <member refid="classwx_window_1a8175da594e6045635a1d1cfe775cdddb" prot="public" virt="non-virtual"><scope>wxDocMDIParentFrame</scope><name>NewControlId</name></member>
-      <member refid="classwx_doc_m_d_i_parent_frame_1ad56f03940da870e4f06f634de34b12e4" prot="public" virt="non-virtual"><scope>wxDocMDIParentFrame</scope><name>OnCloseWindow</name></member>
       <member refid="classwx_m_d_i_parent_frame_1a218d7f590ee36e9a113b5321eb4a83cd" prot="public" virt="virtual"><scope>wxDocMDIParentFrame</scope><name>OnCreateClient</name></member>
       <member refid="classwx_frame_1a34c3472eb2e8a7a355d4282d2e08eca7" prot="public" virt="virtual"><scope>wxDocMDIParentFrame</scope><name>OnCreateStatusBar</name></member>
       <member refid="classwx_frame_1a45277b2ee2d95e792da16fee2aa8fdcc" prot="public" virt="virtual"><scope>wxDocMDIParentFrame</scope><name>OnCreateToolBar</name></member>
@@ -641,7 +615,6 @@
       <member refid="classwx_window_1a88cc65e424a129d9b0057756cdb67ec9" prot="public" virt="virtual"><scope>wxDocMDIParentFrame</scope><name>TransferDataToWindow</name></member>
       <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxDocMDIParentFrame</scope><name>TryAfter</name></member>
       <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxDocMDIParentFrame</scope><name>TryBefore</name></member>
-      <member refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" virt="non-virtual"><scope>wxDocMDIParentFrame</scope><name>TryThis</name></member>
       <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxDocMDIParentFrame</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxDocMDIParentFrame</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a22e5db2ec1d19c8252c056fd116975d7" prot="public" virt="non-virtual"><scope>wxDocMDIParentFrame</scope><name>Unlink</name></member>

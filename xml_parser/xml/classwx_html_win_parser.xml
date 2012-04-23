@@ -21,7 +21,7 @@
 <para>Don&apos;t use the default one, use the constructor with <emphasis>wndIface</emphasis> parameter (<emphasis>wndIface</emphasis> is a pointer to interface object for the associated <ref refid="classwx_html_window" kindref="compound">wxHtmlWindow</ref> or other HTML rendering window such as <ref refid="classwx_html_list_box" kindref="compound">wxHtmlListBox</ref>). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/winpars.h" line="88"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/winpars.h" line="88"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_win_parser_1aad9104fa431ab3573fd55cf8ddef4f60" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_html_container_cell" kindref="compound">wxHtmlContainerCell</ref> *</type>
@@ -34,7 +34,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/winpars.h" line="99"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/winpars.h" line="99"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_win_parser_1ada1e87387b94f32cef2b1104d99c7902" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_font" kindref="compound">wxFont</ref> *</type>
@@ -47,7 +47,7 @@
 <para>If the font was already created only a pointer is returned. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/winpars.h" line="108"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/winpars.h" line="108"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_win_parser_1adf0fbe00bc47eeed954f328a2a547e0f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_colour" kindref="compound">wxColour</ref> &amp;</type>
@@ -60,7 +60,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/winpars.h" line="113"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/winpars.h" line="113"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_win_parser_1ad08178da222715d99fae02119fa6ac5f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -73,7 +73,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/winpars.h" line="118"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/winpars.h" line="118"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_win_parser_1afcbf6233423d9734bb9fbf9cb062e56a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -87,7 +87,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/winpars.h" line="127"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/winpars.h" line="127"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_win_parser_1a0fe540c3d5146677f85ce1bccccf799c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -101,7 +101,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/winpars.h" line="136"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/winpars.h" line="136"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_win_parser_1aae7e19af3ac1b42fa57113f9bcbe997c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_html_container_cell" kindref="compound">wxHtmlContainerCell</ref> *</type>
@@ -115,7 +115,7 @@
 </programlisting> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/winpars.h" line="145"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/winpars.h" line="145"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_win_parser_1a2abd87a4c73912c003e35614493a65e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_d_c" kindref="compound">wxDC</ref> *</type>
@@ -128,7 +128,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/winpars.h" line="150"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/winpars.h" line="150"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_win_parser_1ae4332025fc2dca3e2c771c1c82603c90" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_encoding_converter" kindref="compound">wxEncodingConverter</ref> *</type>
@@ -141,7 +141,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/winpars.h" line="157"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/winpars.h" line="157"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_win_parser_1a60366178684b53b0a956282a9c7ab1c8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -154,7 +154,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/winpars.h" line="162"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/winpars.h" line="162"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_win_parser_1ad22d30ddb714b8421daed468661d63b9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -167,7 +167,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/winpars.h" line="167"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/winpars.h" line="167"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_win_parser_1a7086dc239ce43cc08a72df29f0cdb217" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -180,7 +180,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/winpars.h" line="172"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/winpars.h" line="172"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_win_parser_1a5ff97d921e4760b126331bf3887a3b20" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -193,7 +193,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/winpars.h" line="177"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/winpars.h" line="177"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_win_parser_1a716afd1a419ea618283cd90e170560d8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -206,7 +206,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/winpars.h" line="182"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/winpars.h" line="182"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_win_parser_1a20b4f3396cfb67eda54f9bdf4fac74bf" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -219,7 +219,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/winpars.h" line="187"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/winpars.h" line="187"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_win_parser_1ac21739c0bcedad7a43ba5ca796d45159" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="interface_2wx_2font_8h_1a09016a7497d1ec6defdf13fd6439acca" kindref="member">wxFontEncoding</ref></type>
@@ -232,7 +232,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/winpars.h" line="192"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/winpars.h" line="192"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_win_parser_1a91585f410810a6180fb02aa3c583eeed" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_html_link_info" kindref="compound">wxHtmlLinkInfo</ref> &amp;</type>
@@ -245,7 +245,7 @@
 <para>(This value has a non-empty <ref refid="classwx_html_link_info_1abc179e298f968a124578f53ea024662d" kindref="member">wxHtmlLinkInfo::GetHref</ref> Href string if the parser is between &lt;A&gt; and &lt;/A&gt; tags, wxEmptyString otherwise.) </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/winpars.h" line="199"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/winpars.h" line="199"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_win_parser_1a874bb42c7af97d42ae89530652b48524" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_colour" kindref="compound">wxColour</ref> &amp;</type>
@@ -258,7 +258,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/winpars.h" line="204"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/winpars.h" line="204"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_win_parser_1a2658e54c1f7bd8e5663faae906bf50a1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="interface_2wx_2font_8h_1a09016a7497d1ec6defdf13fd6439acca" kindref="member">wxFontEncoding</ref></type>
@@ -271,7 +271,7 @@
 <para>closest match to document&apos;s input encoding that is supported by operating system. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/winpars.h" line="210"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/winpars.h" line="210"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_win_parser_1a053718939ca694aa6f65aeacab851d21" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_html_window" kindref="compound">wxHtmlWindow</ref> *</type>
@@ -284,7 +284,7 @@
 <para>This may be NULL! (You should always test if it is non-NULL. For example <computeroutput>TITLE</computeroutput> handler sets window title only if some window is associated, otherwise it does nothing. <xrefsect id="deprecated_1_deprecated000025"><xreftitle>Deprecated</xreftitle><xrefdescription><para>use GetWindowInterface()-&gt;GetHTMLWindow() instead </para></xrefdescription></xrefsect></para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/winpars.h" line="219"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/winpars.h" line="219"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_win_parser_1a893a9b0a622a76275a8fdd8227bfa7de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_html_container_cell" kindref="compound">wxHtmlContainerCell</ref> *</type>
@@ -297,7 +297,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/winpars.h" line="224"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/winpars.h" line="224"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_win_parser_1ac907a10217394dd080867c4a2e55c5f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -314,7 +314,7 @@
 <para>Note: this DOESN&apos;T change the colour! You must create <ref refid="classwx_html_colour_cell" kindref="compound">wxHtmlColourCell</ref> yourself. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/winpars.h" line="230"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/winpars.h" line="230"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_win_parser_1a426535f9bf8e2c44335242488212bc05" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -331,7 +331,7 @@
 <para>Alignment of newly opened container is set to this value. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/winpars.h" line="236"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/winpars.h" line="236"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_win_parser_1ae1b4a5967cc3d9ac94877a77573383b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_html_container_cell" kindref="compound">wxHtmlContainerCell</ref> *</type>
@@ -348,7 +348,7 @@
 <para>This is not recommended - you should use <ref refid="classwx_html_win_parser_1a893a9b0a622a76275a8fdd8227bfa7de" kindref="member">OpenContainer()</ref> wherever possible. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/winpars.h" line="242"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/winpars.h" line="242"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_win_parser_1a967c0644be980c403c4e22f898734e63" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -370,7 +370,7 @@
 <para>This must be called before <ref refid="classwx_html_parser_1ad2a0f4c4a60f7745f31a0b0bac9ceac5" kindref="member">wxHtmlParser::Parse</ref>!</para><para><emphasis>pixel_scale</emphasis> can be used when rendering to high-resolution DCs (e.g. printer) to adjust size of pixel metrics. (Many dimensions in HTML are given in pixels -- e.g. image sizes. 300x300 image would be only one inch wide on typical printer. With pixel_scale = 3.0 it would be 3 inches.) </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/winpars.h" line="252"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/winpars.h" line="252"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_win_parser_1a423f6ef5434aeeaaf52f3ae8fe11aa05" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -387,7 +387,7 @@
 <para><emphasis>x</emphasis> is either true of false. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/winpars.h" line="257"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/winpars.h" line="257"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_win_parser_1ac112e4b42c325907cc490e0e38ab7045" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -404,7 +404,7 @@
 <para>This affects either fixed size font or proportional, depending on context (whether the parser is inside <computeroutput>&lt;TT&gt;</computeroutput> tag or not). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/winpars.h" line="264"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/winpars.h" line="264"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_win_parser_1a79a1ecaa98f00de98117de16bf3acf03" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -421,7 +421,7 @@
 <para><emphasis>x</emphasis> is either true of false. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/winpars.h" line="269"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/winpars.h" line="269"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_win_parser_1afe136004d2f3ba7dcdd6394ce066dc83" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -438,7 +438,7 @@
 <para><emphasis>x</emphasis> is either true of false. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/winpars.h" line="274"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/winpars.h" line="274"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_win_parser_1a7ba34af3e883e91f0534d924f8110d97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -455,7 +455,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/winpars.h" line="279"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/winpars.h" line="279"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_win_parser_1a06bf052fc526f650c883db33554b4e4e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -472,7 +472,7 @@
 <para><emphasis>x</emphasis> is either true of false. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/winpars.h" line="284"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/winpars.h" line="284"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_win_parser_1a2a8444d57b8b1cc75c02fa0c5c66dc9d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -498,7 +498,7 @@
 <para>See <ref refid="classwx_html_window_1a31b77979403242da3ccd40bea9b29b87" kindref="member">wxHtmlWindow::SetFonts</ref> for detailed description. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/winpars.h" line="290"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/winpars.h" line="290"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_win_parser_1aea8e3d8834abbdca41cebf144e6d843a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -515,7 +515,7 @@
 <para>The parser uses this information to build conversion tables from document&apos;s encoding to some encoding supported by operating system. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/winpars.h" line="296"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/winpars.h" line="296"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_win_parser_1aae1f9a5c34fae114c20ea04ebb64d915" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -532,7 +532,7 @@
 <para>Empty link is represented by <ref refid="classwx_html_link_info" kindref="compound">wxHtmlLinkInfo</ref> with <emphasis>Href</emphasis> equal to wxEmptyString. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/winpars.h" line="303"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/winpars.h" line="303"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_win_parser_1aee39cfe3bb21fd68f265611d7a26c4cc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -549,7 +549,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/winpars.h" line="308"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/winpars.h" line="308"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -568,7 +568,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/winpars.h" line="93"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/winpars.h" line="93"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -579,30 +579,30 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxhtml" kindref="member">wxHTML</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__html" kindref="compound">HTML</ref></para><para><simplesect kind="see"><para><ref refid="overview_html_1overview_html_handlers" kindref="member">Tag Handlers</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7143">
+      <node id="7330">
         <label>wxHtmlWinParser</label>
         <link refid="classwx_html_win_parser"/>
-        <childnode refid="7144" relation="public-inheritance">
+        <childnode refid="7331" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7144">
+      <node id="7331">
         <label>wxHtmlParser</label>
         <link refid="classwx_html_parser"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7145">
+      <node id="7332">
         <label>wxHtmlWinParser</label>
         <link refid="classwx_html_win_parser"/>
-        <childnode refid="7146" relation="public-inheritance">
+        <childnode refid="7333" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7146">
+      <node id="7333">
         <label>wxHtmlParser</label>
         <link refid="classwx_html_parser"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/winpars.h" line="79" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/winpars.h" bodystart="78" bodyend="309"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/winpars.h" line="79" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/html/winpars.h" bodystart="78" bodyend="309"/>
     <listofallmembers>
       <member refid="classwx_html_win_parser_1ab4687a3f0cfec951418dc58c35f6f8c1" prot="public" virt="non-virtual"><scope>wxHtmlWinParser</scope><name>AddModule</name></member>
       <member refid="classwx_html_parser_1a78f5d8c42846d23b6b33093f585f1352" prot="protected" virt="virtual"><scope>wxHtmlWinParser</scope><name>AddTag</name></member>

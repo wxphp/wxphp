@@ -56,7 +56,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/manager.h" line="229"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/manager.h" line="229"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_manager_1aef52885fcf7fece27641a69e9685a4f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -70,7 +70,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/manager.h" line="234"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/manager.h" line="234"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_manager_1abd80d049d6128227f8cad00abeb05c70" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -87,7 +87,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/manager.h" line="239"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/manager.h" line="239"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_manager_1a3ca4d12437ccffa301e25c120bbc5fac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -106,13 +106,14 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/manager.h" line="246"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/manager.h" line="246"/>
       </memberdef>
-      <memberdef kind="function" id="classwx_property_grid_manager_1a7a6df890e38787cf587a286b12e7e4ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classwx_property_grid_manager_1ac5197b6834f4dfe5d5864c4af4a06be1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
         <definition>bool wxPropertyGridManager::Create</definition>
-        <argsstring>(wxWindow *parent, wxWindowID id=wxID_ANY, const wxPoint &amp;pos=wxDefaultPosition, const wxSize &amp;size=wxDefaultSize, long style=wxPGMAN_DEFAULT_STYLE, const wxChar *name=wxPropertyGridManagerNameStr)</argsstring>
+        <argsstring>(wxWindow *parent, wxWindowID id=wxID_ANY, const wxPoint &amp;pos=wxDefaultPosition, const wxSize &amp;size=wxDefaultSize, long style=wxPGMAN_DEFAULT_STYLE, const wxString &amp;name=wxPropertyGridManagerNameStr)</argsstring>
         <name>Create</name>
+        <reimplements refid="classwx_panel_1a3ff58c601a52262e03abf84d3896ff2f">Create</reimplements>
         <param>
           <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
           <declname>parent</declname>
@@ -138,7 +139,7 @@
           <defval>wxPGMAN_DEFAULT_STYLE</defval>
         </param>
         <param>
-          <type>const <ref refid="group__group__funcmacro__string_1gad42f64d8c82f1ce4ae58773a89b2d6a7" kindref="member">wxChar</ref> *</type>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
           <declname>name</declname>
           <defval>wxPropertyGridManagerNameStr</defval>
         </param>
@@ -149,7 +150,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/manager.h" line="259"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/manager.h" line="259"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_manager_1a37688e0426dd2ad5eb6e7a270214c118" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -167,7 +168,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/manager.h" line="267"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/manager.h" line="267"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_manager_1a2d16cf29a73db0366e9553ea9ac79c14" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -185,7 +186,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/manager.h" line="275"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/manager.h" line="275"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_manager_1a956671dcf8bd8285ce8099bdf6d12d8c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -203,7 +204,7 @@
 <para>By the default, returns number of columns on current page. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/manager.h" line="281"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/manager.h" line="281"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_manager_1ae4b975a635ed9cf93b84812c008e8619" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -216,7 +217,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/manager.h" line="286"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/manager.h" line="286"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_manager_1aa0c62e680e94493dabdf40ab4642fef6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_property_grid" kindref="compound">wxPropertyGrid</ref> *</type>
@@ -229,7 +230,7 @@
 <para>This does not change after <ref refid="classwx_property_grid_manager" kindref="compound">wxPropertyGridManager</ref> has been created, so you can safely obtain pointer once and use it for the entire lifetime of the manager instance. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/manager.h" line="294"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/manager.h" line="294"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_manager_1a189b6489e0c9354685652af65dc1fe1e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_p_g_v_iterator" kindref="compound">wxPGVIterator</ref></type>
@@ -247,7 +248,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/manager.h" line="301"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/manager.h" line="301"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_manager_1a4a6e81e1a1254e7b5ecf2a5a034a2ace" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_property_grid_page" kindref="compound">wxPropertyGridPage</ref> *</type>
@@ -260,7 +261,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/manager.h" line="306"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/manager.h" line="306"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_manager_1a7deaa866fbf87e6880c0564e4582f54e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_property_grid_page" kindref="compound">wxPropertyGridPage</ref> *</type>
@@ -277,7 +278,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/manager.h" line="311"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/manager.h" line="311"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_manager_1a09490e7245944778edf7ac44868a0c1d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_property_grid_page" kindref="compound">wxPropertyGridPage</ref> *</type>
@@ -294,7 +295,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/manager.h" line="316"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/manager.h" line="316"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_manager_1a8b72a2066a9fcc33ee15cd7019233a24" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -311,7 +312,7 @@
 <para>If no match is found, wxNOT_FOUND is returned. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/manager.h" line="322"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/manager.h" line="322"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_manager_1a0e88ea58686ef6761df187a3c72c9be3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -324,7 +325,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/manager.h" line="327"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/manager.h" line="327"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_manager_1ac8a1e1377a8056919524a2ddbb06c962" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -341,7 +342,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/manager.h" line="332"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/manager.h" line="332"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_manager_1a622bcfc13be945c910c92f8718d7fc17" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_p_g_property" kindref="compound">wxPGProperty</ref> *</type>
@@ -358,7 +359,7 @@
 <para>It does not have name, etc. and it is not visible. It is only useful for accessing its children. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/manager.h" line="338"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/manager.h" line="338"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_manager_1ad4c41a6c49e58e5ff8354d19093c007d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -371,7 +372,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/manager.h" line="341"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/manager.h" line="341"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_manager_1ae86787464e595c933cb86ec1d06e564a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_p_g_property" kindref="compound">wxPGProperty</ref> *</type>
@@ -379,26 +380,26 @@
         <argsstring>() const </argsstring>
         <name>GetSelectedProperty</name>
         <briefdescription>
-<para>Shortcut for <ref refid="classwx_property_grid_manager_1aa0c62e680e94493dabdf40ab4642fef6" kindref="member">GetGrid()</ref>-&gt;<ref refid="classwx_property_grid_manager_1a11d495eb9b5aa80560beaae0cb421af4" kindref="member">GetSelection()</ref>. </para>        </briefdescription>
+<para>Alias for <ref refid="classwx_property_grid_manager_1a1e409fede5d20f32967c0a19d490d663" kindref="member">GetSelection()</ref>. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/manager.h" line="344"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/manager.h" line="344"/>
       </memberdef>
-      <memberdef kind="function" id="classwx_property_grid_manager_1a11d495eb9b5aa80560beaae0cb421af4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type>int</type>
-        <definition>int wxPropertyGridManager::GetSelection</definition>
+      <memberdef kind="function" id="classwx_property_grid_manager_1a1e409fede5d20f32967c0a19d490d663" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_p_g_property" kindref="compound">wxPGProperty</ref> *</type>
+        <definition>wxPGProperty* wxPropertyGridManager::GetSelection</definition>
         <argsstring>() const </argsstring>
         <name>GetSelection</name>
         <reimplements refid="classwx_property_grid_interface_1a302ae0ff624d48131544f6010373e599">GetSelection</reimplements>
         <briefdescription>
-<para>Synonyme for GetSelectedPage. </para>        </briefdescription>
+<para>Shortcut for <ref refid="classwx_property_grid_manager_1aa0c62e680e94493dabdf40ab4642fef6" kindref="member">GetGrid()</ref>-&gt;<ref refid="classwx_property_grid_manager_1a1e409fede5d20f32967c0a19d490d663" kindref="member">GetSelection()</ref>. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/manager.h" line="347"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/manager.h" line="347"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_manager_1ab2decc50ae90322856521d43013a3949" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_tool_bar" kindref="compound">wxToolBar</ref> *</type>
@@ -411,7 +412,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/manager.h" line="353"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/manager.h" line="353"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_manager_1a931af3cfb2d6b1c089b90f460b30ad96" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_property_grid_page" kindref="compound">wxPropertyGridPage</ref> *</type>
@@ -472,7 +473,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/manager.h" line="377"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/manager.h" line="377"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_manager_1a82670ca361a8c7cb66ecaa95bc84c4e0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -485,7 +486,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/manager.h" line="382"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/manager.h" line="382"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_manager_1ac035d9e555a127ef4bbba1ea3b94b052" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -499,7 +500,7 @@
 <para><ref refid="classwx_window_1a15c678314cfc1d807196bc298b713ed3" kindref="member">Freeze()</ref> called but not yet <ref refid="classwx_window_1a279a532124073261b28131b6afb59a1e" kindref="member">Thaw()</ref> ). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/manager.h" line="387"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/manager.h" line="387"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_manager_1a244e17f79361a95a3d476a667fc51ded" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -516,7 +517,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/manager.h" line="392"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/manager.h" line="392"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_manager_1a521008dc912d8340ee064b27acc135f6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -534,7 +535,7 @@
 <para>Since selection is page based, this function checks every page in the manager. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/manager.h" line="398"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/manager.h" line="398"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_manager_1a973a08c2c5f0fb08f39cdb21872d49ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -552,7 +553,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/manager.h" line="405"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/manager.h" line="405"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_manager_1a7fe7f2a7306735e560e4e6c5e6c4b918" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -577,7 +578,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/manager.h" line="413"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/manager.h" line="413"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_manager_1a093387e95e523fd1b51df11295a8b4b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -594,7 +595,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/manager.h" line="418"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/manager.h" line="418"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_manager_1a91a26e1f7dab1206e74d73824fc2448b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -611,7 +612,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/manager.h" line="421"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/manager.h" line="421"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_manager_1a525d15b98ed910a505bfc80b39ec8e61" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -634,7 +635,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/manager.h" line="429"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/manager.h" line="429"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_manager_1a53abc7834b0a4a979eb346f1472772c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -657,7 +658,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/manager.h" line="438"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/manager.h" line="438"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_manager_1a6303b282f5ac3db2666c92fda79657c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -679,7 +680,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/manager.h" line="447"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/manager.h" line="447"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_manager_1a37085048fd6afde99a0b78f90e5b673c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -700,7 +701,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/manager.h" line="452"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/manager.h" line="452"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_manager_1ae5d9a7e208376f7961109f9bc0b643ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -722,7 +723,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/manager.h" line="455"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/manager.h" line="455"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_manager_1ac69dcad0f3049e5d21209770a594213e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -760,7 +761,29 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/manager.h" line="468"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/manager.h" line="468"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_property_grid_manager_1a8f0f7b25cd6febf992430491e8ecdeee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxPropertyGridManager::SetPageSplitterLeft</definition>
+        <argsstring>(int page, bool subProps=false)</argsstring>
+        <name>SetPageSplitterLeft</name>
+        <param>
+          <type>int</type>
+          <declname>page</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>subProps</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Moves splitter as left as possible on an individual page, while still allowing all labels to be shown in full. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/manager.h" line="473"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_manager_1a570a711217d963488b2061b095033f81" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -787,7 +810,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/manager.h" line="477"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/manager.h" line="482"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_manager_1a9552f800943bd0bb1e4d559a5d4414bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -810,24 +833,7 @@
 If you use header, then you should always use this member function to set the splitter position, instead of ones present in <ref refid="classwx_property_grid" kindref="compound">wxPropertyGrid</ref> or <ref refid="classwx_property_grid_page" kindref="compound">wxPropertyGridPage</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/manager.h" line="491"/>
-      </memberdef>
-      <memberdef kind="function" id="classwx_property_grid_manager_1ae31c7301d2985a5ee89cdf788c93357d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void wxPropertyGridManager::SetStringSelection</definition>
-        <argsstring>(const wxChar *name)</argsstring>
-        <name>SetStringSelection</name>
-        <param>
-          <type>const <ref refid="group__group__funcmacro__string_1gad42f64d8c82f1ce4ae58773a89b2d6a7" kindref="member">wxChar</ref> *</type>
-          <declname>name</declname>
-        </param>
-        <briefdescription>
-<para>Synonyme for SelectPage(name). </para>        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/manager.h" line="494"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/manager.h" line="496"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_manager_1a9c52643774dfa45d4aecbf05629cfd91" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -846,7 +852,7 @@ If you use header, then you should always use this member function to set the sp
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/manager.h" line="503"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/manager.h" line="505"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-func">
@@ -858,16 +864,16 @@ If you use header, then you should always use this member function to set the sp
         <briefdescription>
 <para>Creates property grid for the manager. </para>        </briefdescription>
         <detaileddescription>
-<para>Reimplement in derived class to use subclassed <ref refid="classwx_property_grid" kindref="compound">wxPropertyGrid</ref>. However, if you do this then you must also use the two-step construction (ie. default constructor and <ref refid="classwx_property_grid_manager_1a7a6df890e38787cf587a286b12e7e4ef" kindref="member">Create()</ref> instead of constructor with arguments) when creating the manager. </para>        </detaileddescription>
+<para>Reimplement in derived class to use subclassed <ref refid="classwx_property_grid" kindref="compound">wxPropertyGrid</ref>. However, if you do this then you must also use the two-step construction (ie. default constructor and <ref refid="classwx_property_grid_manager_1ac5197b6834f4dfe5d5864c4af4a06be1" kindref="member">Create()</ref> instead of constructor with arguments) when creating the manager. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/manager.h" line="518"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/manager.h" line="520"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para><ref refid="classwx_property_grid_manager" kindref="compound">wxPropertyGridManager</ref> is an efficient multi-page version of <ref refid="classwx_property_grid" kindref="compound">wxPropertyGrid</ref>, which can optionally have toolbar for mode and page selection, a help text box, and a header. </para>    </briefdescription>
     <detaileddescription>
-<para><ref refid="classwx_property_grid_manager" kindref="compound">wxPropertyGridManager</ref> inherits from <ref refid="classwx_property_grid_interface" kindref="compound">wxPropertyGridInterface</ref>, and as such it has most property manipulation functions. However, only some of them affect properties on all pages (eg. <ref refid="classwx_property_grid_interface_1ac5723b61ae48d373671343e774632ed3" kindref="member">GetPropertyByName()</ref> and <ref refid="classwx_property_grid_interface_1a678020610f0af4140eda4726cd89d728" kindref="member">ExpandAll()</ref>), while some (eg. <ref refid="classwx_property_grid_interface_1a8496963f469db86941157f8ce67896c4" kindref="member">Append()</ref>) only apply to the currently selected page.</para><para>To operate explicitly on properties on specific page, use <ref refid="classwx_property_grid_manager_1a7deaa866fbf87e6880c0564e4582f54e" kindref="member">wxPropertyGridManager::GetPage()</ref> to obtain pointer to page&apos;s <ref refid="classwx_property_grid_page" kindref="compound">wxPropertyGridPage</ref> object.</para><para>Visual methods, such as SetCellBackgroundColour() are only available in <ref refid="classwx_property_grid" kindref="compound">wxPropertyGrid</ref>. Use <ref refid="classwx_property_grid_manager_1aa0c62e680e94493dabdf40ab4642fef6" kindref="member">wxPropertyGridManager::GetGrid()</ref> to obtain pointer to it.</para><para>Non-virtual iterators will not work in <ref refid="classwx_property_grid_manager" kindref="compound">wxPropertyGridManager</ref>. Instead, you must acquire the internal grid (<ref refid="classwx_property_grid_manager_1aa0c62e680e94493dabdf40ab4642fef6" kindref="member">GetGrid()</ref>) or <ref refid="classwx_property_grid_page" kindref="compound">wxPropertyGridPage</ref> object (<ref refid="classwx_property_grid_manager_1a7deaa866fbf87e6880c0564e4582f54e" kindref="member">GetPage()</ref>).</para><para><ref refid="classwx_property_grid_manager" kindref="compound">wxPropertyGridManager</ref> constructor has exact same format as <ref refid="classwx_property_grid" kindref="compound">wxPropertyGrid</ref> constructor, and basicly accepts same extra window style flags (albeit also has some extra ones).</para><para>Here&apos;s some example code for creating and populating a <ref refid="classwx_property_grid_manager" kindref="compound">wxPropertyGridManager</ref>:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_property_grid_manager" kindref="compound" tooltip="wxPropertyGridManager is an efficient multi-page version of wxPropertyGrid, which can optionally have...">wxPropertyGridManager</ref>*<sp/>pgMan<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classwx_property_grid_manager" kindref="compound" tooltip="wxPropertyGridManager is an efficient multi-page version of wxPropertyGrid, which can optionally have...">wxPropertyGridManager</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>PGID,</highlight></codeline>
+<para><ref refid="classwx_property_grid_manager" kindref="compound">wxPropertyGridManager</ref> inherits from <ref refid="classwx_property_grid_interface" kindref="compound">wxPropertyGridInterface</ref>, and as such it has most property manipulation functions. However, only some of them affect properties on all pages (eg. <ref refid="classwx_property_grid_interface_1ac5723b61ae48d373671343e774632ed3" kindref="member">GetPropertyByName()</ref> and <ref refid="classwx_property_grid_interface_1a678020610f0af4140eda4726cd89d728" kindref="member">ExpandAll()</ref>), while some (eg. <ref refid="classwx_property_grid_interface_1a8496963f469db86941157f8ce67896c4" kindref="member">Append()</ref>) only apply to the currently selected page.</para><para>To operate explicitly on properties on specific page, use <ref refid="classwx_property_grid_manager_1a7deaa866fbf87e6880c0564e4582f54e" kindref="member">wxPropertyGridManager::GetPage()</ref> to obtain pointer to page&apos;s <ref refid="classwx_property_grid_page" kindref="compound">wxPropertyGridPage</ref> object.</para><para>Visual methods, such as SetCellBackgroundColour() are only available in <ref refid="classwx_property_grid" kindref="compound">wxPropertyGrid</ref>. Use <ref refid="classwx_property_grid_manager_1aa0c62e680e94493dabdf40ab4642fef6" kindref="member">wxPropertyGridManager::GetGrid()</ref> to obtain pointer to it.</para><para>Non-virtual iterators will not work in <ref refid="classwx_property_grid_manager" kindref="compound">wxPropertyGridManager</ref>. Instead, you must acquire the internal grid (<ref refid="classwx_property_grid_manager_1aa0c62e680e94493dabdf40ab4642fef6" kindref="member">GetGrid()</ref>) or <ref refid="classwx_property_grid_page" kindref="compound">wxPropertyGridPage</ref> object (<ref refid="classwx_property_grid_manager_1a7deaa866fbf87e6880c0564e4582f54e" kindref="member">GetPage()</ref>).</para><para><ref refid="classwx_property_grid_manager" kindref="compound">wxPropertyGridManager</ref> constructor has exact same format as <ref refid="classwx_property_grid" kindref="compound">wxPropertyGrid</ref> constructor, and basically accepts same extra window style flags (albeit also has some extra ones).</para><para>Here&apos;s some example code for creating and populating a <ref refid="classwx_property_grid_manager" kindref="compound">wxPropertyGridManager</ref>:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_property_grid_manager" kindref="compound" tooltip="wxPropertyGridManager is an efficient multi-page version of wxPropertyGrid, which can optionally have...">wxPropertyGridManager</ref>*<sp/>pgMan<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classwx_property_grid_manager" kindref="compound" tooltip="wxPropertyGridManager is an efficient multi-page version of wxPropertyGrid, which can optionally have...">wxPropertyGridManager</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>PGID,</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="gdicmn_8h_1af5a90c753eaf3d3e3e5068a19ec3c1d0" kindref="member" tooltip="Global instance of a wxPoint initialized with values (-1,-1).">wxDefaultPosition</ref>,<sp/><ref refid="gdicmn_8h_1a33a012cdb075e9f78c93f63bec2dc27b" kindref="member" tooltip="Global instance of a wxSize object initialized to (-1,-1).">wxDefaultSize</ref>,</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>These<sp/>and<sp/>other<sp/>similar<sp/>styles<sp/>are<sp/>automatically</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>passed<sp/>to<sp/>the<sp/>embedded<sp/>wxPropertyGrid.</highlight><highlight class="normal"></highlight></codeline>
@@ -909,97 +915,97 @@ If you use header, then you should always use this member function to set the sp
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxpropgrid" kindref="member">wxPropertyGrid</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__propgrid" kindref="compound">wxPropertyGrid</ref> </para></sect1>
     </detaileddescription>
     <inheritancegraph>
-      <node id="8907">
+      <node id="9090">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="8906">
+      <node id="9089">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="8907" relation="public-inheritance">
+        <childnode refid="9090" relation="public-inheritance">
         </childnode>
-        <childnode refid="8908" relation="public-inheritance">
+        <childnode refid="9091" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8904">
+      <node id="9087">
         <label>wxPanel</label>
         <link refid="classwx_panel"/>
-        <childnode refid="8905" relation="public-inheritance">
+        <childnode refid="9088" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8908">
+      <node id="9091">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="8905">
+      <node id="9088">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="8906" relation="public-inheritance">
+        <childnode refid="9089" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8903">
+      <node id="9086">
         <label>wxPropertyGridManager</label>
         <link refid="classwx_property_grid_manager"/>
-        <childnode refid="8904" relation="public-inheritance">
+        <childnode refid="9087" relation="public-inheritance">
         </childnode>
-        <childnode refid="8909" relation="public-inheritance">
+        <childnode refid="9092" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8909">
+      <node id="9092">
         <label>wxPropertyGridInterface</label>
         <link refid="classwx_property_grid_interface"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="8914">
+      <node id="9097">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="8915" relation="usage">
+        <childnode refid="9098" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="8913">
+      <node id="9096">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="8914" relation="public-inheritance">
+        <childnode refid="9097" relation="public-inheritance">
         </childnode>
-        <childnode refid="8916" relation="public-inheritance">
+        <childnode refid="9099" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8911">
+      <node id="9094">
         <label>wxPanel</label>
         <link refid="classwx_panel"/>
-        <childnode refid="8912" relation="public-inheritance">
+        <childnode refid="9095" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8916">
+      <node id="9099">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="8912">
+      <node id="9095">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="8913" relation="public-inheritance">
+        <childnode refid="9096" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8910">
+      <node id="9093">
         <label>wxPropertyGridManager</label>
         <link refid="classwx_property_grid_manager"/>
-        <childnode refid="8911" relation="public-inheritance">
+        <childnode refid="9094" relation="public-inheritance">
         </childnode>
-        <childnode refid="8917" relation="public-inheritance">
+        <childnode refid="9100" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8917">
+      <node id="9100">
         <label>wxPropertyGridInterface</label>
         <link refid="classwx_property_grid_interface"/>
       </node>
-      <node id="8915">
+      <node id="9098">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/manager.h" line="204" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/manager.h" bodystart="203" bodyend="519"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/manager.h" line="204" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/manager.h" bodystart="203" bodyend="521"/>
     <listofallmembers>
       <member refid="classwx_panel_1ad43482bf961c0a8185624085facd0853" prot="public" virt="virtual"><scope>wxPropertyGridManager</scope><name>AcceptsFocus</name></member>
       <member refid="classwx_window_1a2370bdd3ab08e7ef3c7555c6aa8301b8" prot="public" virt="virtual"><scope>wxPropertyGridManager</scope><name>AcceptsFocusFromKeyboard</name></member>
@@ -1045,8 +1051,7 @@ If you use header, then you should always use this member function to set the sp
       <member refid="classwx_window_1a3daf76b93f648c68224e6ccd8095066b" prot="public" virt="non-virtual"><scope>wxPropertyGridManager</scope><name>ConvertDialogToPixels</name></member>
       <member refid="classwx_window_1a449aac6a24f1d14b1a82b58003447dfe" prot="public" virt="non-virtual"><scope>wxPropertyGridManager</scope><name>ConvertPixelsToDialog</name></member>
       <member refid="classwx_window_1afd955ce9d25ec26a115bfb794b1c7d8b" prot="public" virt="non-virtual"><scope>wxPropertyGridManager</scope><name>ConvertPixelsToDialog</name></member>
-      <member refid="classwx_property_grid_manager_1a7a6df890e38787cf587a286b12e7e4ef" prot="public" virt="non-virtual"><scope>wxPropertyGridManager</scope><name>Create</name></member>
-      <member refid="classwx_panel_1a3ff58c601a52262e03abf84d3896ff2f" prot="public" virt="non-virtual" ambiguityscope="wxPanel::"><scope>wxPropertyGridManager</scope><name>Create</name></member>
+      <member refid="classwx_property_grid_manager_1ac5197b6834f4dfe5d5864c4af4a06be1" prot="public" virt="non-virtual"><scope>wxPropertyGridManager</scope><name>Create</name></member>
       <member refid="classwx_property_grid_manager_1a6980326efa2bfc466aa9a5bbead7fe8c" prot="protected" virt="virtual"><scope>wxPropertyGridManager</scope><name>CreatePropertyGrid</name></member>
       <member refid="classwx_object_1a95c6a5e4e1e03ff23c7b9efe4cff0c1a" prot="protected" virt="virtual"><scope>wxPropertyGridManager</scope><name>CreateRefData</name></member>
       <member refid="classwx_evt_handler_1a6e7f9cf4ebd0623c1d94979855d096f8" prot="public" virt="non-virtual"><scope>wxPropertyGridManager</scope><name>DeletePendingEvents</name></member>
@@ -1199,7 +1204,7 @@ If you use header, then you should always use this member function to set the sp
       <member refid="classwx_property_grid_manager_1ad4c41a6c49e58e5ff8354d19093c007d" prot="public" virt="non-virtual"><scope>wxPropertyGridManager</scope><name>GetSelectedPage</name></member>
       <member refid="classwx_property_grid_interface_1a49ccd0da1d0f4a68004e1a174bf5f998" prot="public" virt="non-virtual"><scope>wxPropertyGridManager</scope><name>GetSelectedProperties</name></member>
       <member refid="classwx_property_grid_manager_1ae86787464e595c933cb86ec1d06e564a" prot="public" virt="non-virtual"><scope>wxPropertyGridManager</scope><name>GetSelectedProperty</name></member>
-      <member refid="classwx_property_grid_manager_1a11d495eb9b5aa80560beaae0cb421af4" prot="public" virt="non-virtual"><scope>wxPropertyGridManager</scope><name>GetSelection</name></member>
+      <member refid="classwx_property_grid_manager_1a1e409fede5d20f32967c0a19d490d663" prot="public" virt="non-virtual"><scope>wxPropertyGridManager</scope><name>GetSelection</name></member>
       <member refid="classwx_window_1a124c12cff1e7b6e96a5e1fd3e48dca34" prot="public" virt="non-virtual"><scope>wxPropertyGridManager</scope><name>GetSize</name></member>
       <member refid="classwx_window_1a66e144ed8ab9a20e080ae6c69fc7015c" prot="public" virt="non-virtual"><scope>wxPropertyGridManager</scope><name>GetSize</name></member>
       <member refid="classwx_window_1ad8284cce1a2afe57724b52a89d7fac2f" prot="public" virt="non-virtual"><scope>wxPropertyGridManager</scope><name>GetSizer</name></member>
@@ -1243,6 +1248,7 @@ If you use header, then you should always use this member function to set the sp
       <member refid="classwx_window_1ae1b56ca87d8590ee5e576012229a380a" prot="public" virt="non-virtual"><scope>wxPropertyGridManager</scope><name>InvalidateBestSize</name></member>
       <member refid="classwx_property_grid_manager_1a82670ca361a8c7cb66ecaa95bc84c4e0" prot="public" virt="non-virtual"><scope>wxPropertyGridManager</scope><name>IsAnyModified</name></member>
       <member refid="classwx_window_1af918e6fe8565c2d5235973cc3de84a43" prot="public" virt="non-virtual"><scope>wxPropertyGridManager</scope><name>IsBeingDeleted</name></member>
+      <member refid="classwx_window_1a469f0881da248d37691440c9d4cc7200" prot="public" virt="non-virtual"><scope>wxPropertyGridManager</scope><name>IsDescendant</name></member>
       <member refid="classwx_window_1a9d1be1bbb625ebf87ad4ad47e49a0194" prot="public" virt="virtual"><scope>wxPropertyGridManager</scope><name>IsDoubleBuffered</name></member>
       <member refid="classwx_window_1a59452a5bd42f5ea4b31d7fc4aa59644f" prot="public" virt="non-virtual"><scope>wxPropertyGridManager</scope><name>IsEnabled</name></member>
       <member refid="classwx_window_1af27ef77c913e32050543f3b0ca435a0d" prot="public" virt="non-virtual"><scope>wxPropertyGridManager</scope><name>IsExposed</name></member>
@@ -1266,6 +1272,7 @@ If you use header, then you should always use this member function to set the sp
       <member refid="classwx_window_1a72d70fd14e3565bf782fbcd3271d8930" prot="public" virt="virtual"><scope>wxPropertyGridManager</scope><name>IsShownOnScreen</name></member>
       <member refid="classwx_window_1a657ef8b6055eb06df894ac5e6ddfecf8" prot="public" virt="non-virtual"><scope>wxPropertyGridManager</scope><name>IsThisEnabled</name></member>
       <member refid="classwx_window_1a0002826ad05f2a5661b4c8995713f37f" prot="public" virt="virtual"><scope>wxPropertyGridManager</scope><name>IsTopLevel</name></member>
+      <member refid="classwx_window_1a7940d510c5bdc062a2b109a1022dd8c2" prot="public" virt="virtual"><scope>wxPropertyGridManager</scope><name>IsTransparentBackgroundSupported</name></member>
       <member refid="classwx_evt_handler_1a360fdeefcf53b62fb49fb828406bb8a6" prot="public" virt="non-virtual"><scope>wxPropertyGridManager</scope><name>IsUnlinked</name></member>
       <member refid="classwx_panel_1a6ded9b75baf21e2c9f5496f746b68bf0" prot="public" virt="virtual"><scope>wxPropertyGridManager</scope><name>Layout</name></member>
       <member refid="classwx_property_grid_interface_1aac3d13601fb3a97f531b86923b20d5ff" prot="public" virt="non-virtual"><scope>wxPropertyGridManager</scope><name>LimitPropertyEditing</name></member>
@@ -1273,7 +1280,6 @@ If you use header, then you should always use this member function to set the sp
       <member refid="classwx_window_1afc0816a174ceee6d36d1995c6824a273" prot="public" virt="non-virtual"><scope>wxPropertyGridManager</scope><name>LineUp</name></member>
       <member refid="classwx_window_1a124944524f36b71385dad8fddaad8ded" prot="public" virt="virtual"><scope>wxPropertyGridManager</scope><name>Lower</name></member>
       <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxPropertyGridManager</scope><name>m_refData</name></member>
-      <member refid="classwx_window_1a192fc8b467845d093c16452db96c65c5" prot="public" virt="virtual"><scope>wxPropertyGridManager</scope><name>MakeModal</name></member>
       <member refid="classwx_window_1ab1cb98c8d25b9e6ff7b706b1446c3df7" prot="public" virt="non-virtual"><scope>wxPropertyGridManager</scope><name>Move</name></member>
       <member refid="classwx_window_1a22a22c1e23ca05776707e7999d8047fe" prot="public" virt="non-virtual"><scope>wxPropertyGridManager</scope><name>Move</name></member>
       <member refid="classwx_window_1a79e66079125e8420de269811bdb6f2b6" prot="public" virt="non-virtual"><scope>wxPropertyGridManager</scope><name>MoveAfterInTabOrder</name></member>
@@ -1379,6 +1385,7 @@ If you use header, then you should always use this member function to set the sp
       <member refid="classwx_window_1a9a3f9d8477aab1d9176cd66ee56e75d9" prot="public" virt="non-virtual"><scope>wxPropertyGridManager</scope><name>SetOwnBackgroundColour</name></member>
       <member refid="classwx_window_1a89a4f62f23c1e7c845b8d07cecae4c43" prot="public" virt="non-virtual"><scope>wxPropertyGridManager</scope><name>SetOwnFont</name></member>
       <member refid="classwx_window_1a53f4a878e4e2d440bd00543f8014aaaa" prot="public" virt="non-virtual"><scope>wxPropertyGridManager</scope><name>SetOwnForegroundColour</name></member>
+      <member refid="classwx_property_grid_manager_1a8f0f7b25cd6febf992430491e8ecdeee" prot="public" virt="non-virtual"><scope>wxPropertyGridManager</scope><name>SetPageSplitterLeft</name></member>
       <member refid="classwx_property_grid_manager_1a570a711217d963488b2061b095033f81" prot="public" virt="non-virtual"><scope>wxPropertyGridManager</scope><name>SetPageSplitterPosition</name></member>
       <member refid="classwx_window_1aee57358435d6bd33f598c81354b47425" prot="public" virt="non-virtual"><scope>wxPropertyGridManager</scope><name>SetPalette</name></member>
       <member refid="classwx_window_1a81f23590239934fa10fded0566a65d8c" prot="public" virt="non-virtual"><scope>wxPropertyGridManager</scope><name>SetPosition</name></member>
@@ -1429,7 +1436,6 @@ If you use header, then you should always use this member function to set the sp
       <member refid="classwx_window_1a29938af9828fd35da666536cdfb6b73c" prot="public" virt="non-virtual"><scope>wxPropertyGridManager</scope><name>SetSizerAndFit</name></member>
       <member refid="classwx_property_grid_manager_1ac69dcad0f3049e5d21209770a594213e" prot="public" virt="non-virtual"><scope>wxPropertyGridManager</scope><name>SetSplitterLeft</name></member>
       <member refid="classwx_property_grid_manager_1a9552f800943bd0bb1e4d559a5d4414bf" prot="public" virt="non-virtual"><scope>wxPropertyGridManager</scope><name>SetSplitterPosition</name></member>
-      <member refid="classwx_property_grid_manager_1ae31c7301d2985a5ee89cdf788c93357d" prot="public" virt="non-virtual"><scope>wxPropertyGridManager</scope><name>SetStringSelection</name></member>
       <member refid="classwx_window_1a41dd19ed8809fd8ec662e2aa2a9579c3" prot="public" virt="virtual"><scope>wxPropertyGridManager</scope><name>SetThemeEnabled</name></member>
       <member refid="classwx_window_1a81a9fb74e3c6c7f4416e882f5e589b8c" prot="public" virt="non-virtual"><scope>wxPropertyGridManager</scope><name>SetToolTip</name></member>
       <member refid="classwx_window_1a494e0b7cfca9299caa40e847767e7357" prot="public" virt="non-virtual"><scope>wxPropertyGridManager</scope><name>SetToolTip</name></member>
@@ -1454,7 +1460,6 @@ If you use header, then you should always use this member function to set the sp
       <member refid="classwx_window_1a88cc65e424a129d9b0057756cdb67ec9" prot="public" virt="virtual"><scope>wxPropertyGridManager</scope><name>TransferDataToWindow</name></member>
       <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxPropertyGridManager</scope><name>TryAfter</name></member>
       <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxPropertyGridManager</scope><name>TryBefore</name></member>
-      <member refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" virt="non-virtual"><scope>wxPropertyGridManager</scope><name>TryThis</name></member>
       <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxPropertyGridManager</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxPropertyGridManager</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a22e5db2ec1d19c8252c056fd116975d7" prot="public" virt="non-virtual"><scope>wxPropertyGridManager</scope><name>Unlink</name></member>

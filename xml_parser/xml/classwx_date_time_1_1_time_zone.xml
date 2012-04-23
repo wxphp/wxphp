@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="classwx_date_time_1_1_time_zone" kind="class" prot="public">
+    <compoundname>wxDateTime::TimeZone</compoundname>
+    <includes local="no">wx/datetime.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_date_time_1_1_time_zone_1a6c92018c57951577204d0cc844187f6b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxDateTime::TimeZone::TimeZone</definition>
+        <argsstring>(TZ tz)</argsstring>
+        <name>TimeZone</name>
+        <param>
+          <type><ref refid="classwx_date_time_1a4db12283a6c06cea4c92528fbb7f88bb" kindref="member">TZ</ref></type>
+          <declname>tz</declname>
+        </param>
+        <briefdescription>
+<para>Constructor for a named time zone. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="372"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_date_time_1_1_time_zone_1a62f55033025c400f4337df35a1421f6a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxDateTime::TimeZone::TimeZone</definition>
+        <argsstring>(long offset=0)</argsstring>
+        <name>TimeZone</name>
+        <param>
+          <type>long</type>
+          <declname>offset</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Constructor for the given offset in seconds. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="375"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_date_time_1_1_time_zone_1a27049df8ab57ecc090e9144180b26ef8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>long</type>
+        <definition>long wxDateTime::TimeZone::GetOffset</definition>
+        <argsstring>() const </argsstring>
+        <name>GetOffset</name>
+        <briefdescription>
+<para>Return the offset of this time zone from UTC, in seconds. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="381"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classwx_date_time_1_1_time_zone_1a6bed142b6b0716f1100f8205e06db623" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_date_time_1_1_time_zone" kindref="compound">TimeZone</ref></type>
+        <definition>static TimeZone wxDateTime::TimeZone::Make</definition>
+        <argsstring>(long offset)</argsstring>
+        <name>Make</name>
+        <param>
+          <type>long</type>
+          <declname>offset</declname>
+        </param>
+        <briefdescription>
+<para>Create a time zone with the given offset in seconds. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="378"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Class representing a time zone. </para>    </briefdescription>
+    <detaileddescription>
+<para>The representation is simply the offset, in seconds, from UTC. </para>    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="369" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" bodystart="368" bodyend="382"/>
+    <listofallmembers>
+      <member refid="classwx_date_time_1_1_time_zone_1a27049df8ab57ecc090e9144180b26ef8" prot="public" virt="non-virtual"><scope>wxDateTime::TimeZone</scope><name>GetOffset</name></member>
+      <member refid="classwx_date_time_1_1_time_zone_1a6bed142b6b0716f1100f8205e06db623" prot="public" virt="non-virtual"><scope>wxDateTime::TimeZone</scope><name>Make</name></member>
+      <member refid="classwx_date_time_1_1_time_zone_1a6c92018c57951577204d0cc844187f6b" prot="public" virt="non-virtual"><scope>wxDateTime::TimeZone</scope><name>TimeZone</name></member>
+      <member refid="classwx_date_time_1_1_time_zone_1a62f55033025c400f4337df35a1421f6a" prot="public" virt="non-virtual"><scope>wxDateTime::TimeZone</scope><name>TimeZone</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

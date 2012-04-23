@@ -21,7 +21,7 @@
 <para>The object will try to detect the input of the multibyte text given to its <ref refid="classwx_m_b_conv_1a22ad1976c06a540a95dfa878038d65f2" kindref="member">wxMBConv::ToWChar()</ref> method automatically but if the automatic detection of Unicode encodings fails, the fall-back encoding <emphasis>enc</emphasis> will be used to interpret it as multibyte text.</para><para>The default value of <emphasis>enc</emphasis>, <computeroutput>wxFONTENCODING_DEFAULT</computeroutput>, means that the global default value (which can be set using <ref refid="classwx_conv_auto_1a5c3f9760a2ae03fbf4748423367e7903" kindref="member">SetFallbackEncoding()</ref>) should be used. As with that method, passing <computeroutput>wxFONTENCODING_MAX</computeroutput> inhibits using this encoding completely so the input multibyte text will always be interpreted as UTF-8 in the absence of BOM and the conversion will fail if the input doesn&apos;t form valid UTF-8 sequence.</para><para>Another special value is <computeroutput>wxFONTENCODING_SYSTEM</computeroutput> which means to use the encoding currently used on the user system, i.e. the encoding returned by <ref refid="classwx_locale_1aa807dd0db36c3bd6556c2a37014239d6" kindref="member">wxLocale::GetSystemEncoding()</ref>. Any other encoding will be used as is, e.g. passing <computeroutput>wxFONTENCODING_ISO8859_1</computeroutput> ensures that non-UTF-8 input will be treated as latin1. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/convauto.h" line="135"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/convauto.h" line="135"/>
       </memberdef>
       <memberdef kind="function" id="classwx_conv_auto_1a0d64e621be1c3cd491c483f1f7559a85" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="convauto_8h_1af393832da543c9238919f38be4536f60" kindref="member">wxBOM</ref></type>
@@ -35,7 +35,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/convauto.h" line="148"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/convauto.h" line="148"/>
       </memberdef>
       <memberdef kind="function" id="classwx_conv_auto_1a708201fd5509f31db43fb2e265432a7d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>const char *</type>
@@ -73,7 +73,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/convauto.h" line="168"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/convauto.h" line="168"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -88,7 +88,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/convauto.h" line="174"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/convauto.h" line="174"/>
       </memberdef>
       <memberdef kind="function" id="classwx_conv_auto_1a7dc2532ac7a49fddf4da770b1a814abd" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="interface_2wx_2font_8h_1a09016a7497d1ec6defdf13fd6439acca" kindref="member">wxFontEncoding</ref></type>
@@ -101,7 +101,7 @@
 <para>By default, returns <computeroutput>wxFONTENCODING_ISO8859_1</computeroutput> but can be changed using <ref refid="classwx_conv_auto_1a5c3f9760a2ae03fbf4748423367e7903" kindref="member">SetFallbackEncoding()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/convauto.h" line="182"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/convauto.h" line="182"/>
       </memberdef>
       <memberdef kind="function" id="classwx_conv_auto_1a5c3f9760a2ae03fbf4748423367e7903" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -118,7 +118,7 @@
 <para>The default value, which can be retrieved using <ref refid="classwx_conv_auto_1a7dc2532ac7a49fddf4da770b1a814abd" kindref="member">GetFallbackEncoding()</ref>, is <computeroutput>wxFONTENCODING_ISO8859_1</computeroutput>.</para><para>Special values of <computeroutput>wxFONTENCODING_SYSTEM</computeroutput> or <computeroutput>wxFONTENCODING_MAX</computeroutput> can be used for the <emphasis>enc</emphasis> parameter to use the encoding of the current user locale as fall back or not use any encoding for fall back at all, respectively (just as with the similar constructor parameter). However, <computeroutput>wxFONTENCODING_DEFAULT</computeroutput> can&apos;t be used here. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/convauto.h" line="195"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/convauto.h" line="195"/>
       </memberdef>
       <memberdef kind="function" id="classwx_conv_auto_1a51eb3693a422ca8712ae9d168dace637" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="convauto_8h_1af393832da543c9238919f38be4536f60" kindref="member">wxBOM</ref></type>
@@ -140,7 +140,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/convauto.h" line="207"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/convauto.h" line="207"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -150,30 +150,30 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__data" kindref="compound">Data Structures</ref></para><para><simplesect kind="see"><para><ref refid="overview_mbconv" kindref="compound">wxMBConv Overview</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="5199">
+      <node id="5294">
         <label>wxConvAuto</label>
         <link refid="classwx_conv_auto"/>
-        <childnode refid="5200" relation="public-inheritance">
+        <childnode refid="5295" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5200">
+      <node id="5295">
         <label>wxMBConv</label>
         <link refid="classwx_m_b_conv"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="5201">
+      <node id="5296">
         <label>wxConvAuto</label>
         <link refid="classwx_conv_auto"/>
-        <childnode refid="5202" relation="public-inheritance">
+        <childnode refid="5297" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5202">
+      <node id="5297">
         <label>wxMBConv</label>
         <link refid="classwx_m_b_conv"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/convauto.h" line="113" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/convauto.h" bodystart="112" bodyend="208"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/convauto.h" line="113" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/convauto.h" bodystart="112" bodyend="208"/>
     <listofallmembers>
       <member refid="classwx_m_b_conv_1ae6fd1020a2c7c82191c4822682e80d05" prot="public" virt="pure-virtual"><scope>wxConvAuto</scope><name>Clone</name></member>
       <member refid="classwx_m_b_conv_1a0e572efeda6c5c73ddff1292609fa211" prot="public" virt="non-virtual"><scope>wxConvAuto</scope><name>cMB2WC</name></member>

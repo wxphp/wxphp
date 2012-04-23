@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msgout.h" line="174"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msgout.h" line="185"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -25,30 +25,30 @@
 <para>This class is only available to GUI applications, unlike all the other wxMessageOutput-derived classes.</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__logging" kindref="compound">Logging</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7770">
+      <node id="7963">
         <label>wxMessageOutput</label>
         <link refid="classwx_message_output"/>
       </node>
-      <node id="7769">
+      <node id="7962">
         <label>wxMessageOutputMessageBox</label>
         <link refid="classwx_message_output_message_box"/>
-        <childnode refid="7770" relation="public-inheritance">
+        <childnode refid="7963" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7772">
+      <node id="7965">
         <label>wxMessageOutput</label>
         <link refid="classwx_message_output"/>
       </node>
-      <node id="7771">
+      <node id="7964">
         <label>wxMessageOutputMessageBox</label>
         <link refid="classwx_message_output_message_box"/>
-        <childnode refid="7772" relation="public-inheritance">
+        <childnode refid="7965" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msgout.h" line="171" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msgout.h" bodystart="170" bodyend="175"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msgout.h" line="182" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/msgout.h" bodystart="181" bodyend="186"/>
     <listofallmembers>
       <member refid="classwx_message_output_1aff0387f83c5ee4db7cf26b909e1057e7" prot="public" virt="non-virtual"><scope>wxMessageOutputMessageBox</scope><name>Get</name></member>
       <member refid="classwx_message_output_1ae8b0b6734006e716bd80fd053a7b4e4d" prot="public" virt="pure-virtual"><scope>wxMessageOutputMessageBox</scope><name>Output</name></member>

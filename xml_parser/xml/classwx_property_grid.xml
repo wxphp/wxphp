@@ -29,7 +29,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="1111"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="1107"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_1af170d02811ab8eed906963de693b79aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -47,7 +47,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="1119"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="1115"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_1a56a8acd3679b1906251057ecc95f2a74" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_status_bar" kindref="compound">wxStatusBar</ref> *</type>
@@ -60,7 +60,7 @@
 <para>You can reimplement this member function in derived class to override the default behaviour of using the top-level wxFrame&apos;s status bar, if any. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="1127"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="1123"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -79,7 +79,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="1148"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="1144"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_1a29f61bcb090bcb7d420d2e6d2b6d38e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -93,7 +93,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="1155"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="1151"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_1ade04fcca24012924118de1b9c441e5cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_variant" kindref="compound">wxVariant</ref></type>
@@ -106,7 +106,7 @@
 <para>This will return value different from <ref refid="classwx_property_grid_1add0df801cd2035422c5f23f52ce941be" kindref="member">GetSelectedProperty()</ref>-&gt;GetValue() only when text editor is activate and string edited by user represents valid, uncommitted property value. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="1163"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="1159"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_1a0f26abcaf04e88fefe7b2659d025ffc7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -119,7 +119,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="1168"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="1164"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_1a7b0f2d8866f2931762aaabe88bf7d85e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -140,7 +140,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="1173"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="1169"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_1aee5777433137edfe9d6fbb301775e9bf" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -153,7 +153,7 @@
 <para>It really only detects if was value was changed using <ref refid="classwx_p_g_property_1ade9385b0bc3c9ba4833b271157e87354" kindref="member">wxPGProperty::SetValueInEvent()</ref>, which is usually used when a &apos;picker&apos; dialog is displayed. If value was written by &quot;normal means&quot; in <ref refid="classwx_p_g_property_1a974a9b01c1f88cf4db630b6895453db8" kindref="member">wxPGProperty::StringToValue()</ref> or IntToValue(), then this function will return false (on the other hand, <ref refid="classwx_p_g_property_1a16fbe26240bf47ab0a9a02d21781da73" kindref="member">wxPGProperty::OnEvent()</ref> is not even called in those cases). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="1185"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="1181"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -165,15 +165,15 @@
         <briefdescription>
 <para>Two step constructor. </para>        </briefdescription>
         <detaileddescription>
-<para>Call <ref refid="classwx_property_grid_1a29ff769a339440bbc260c3cfd6ba8f5d" kindref="member">Create()</ref> when this constructor is called to build up the <ref refid="classwx_property_grid" kindref="compound">wxPropertyGrid</ref> </para>        </detaileddescription>
+<para>Call <ref refid="classwx_property_grid_1a4d40c2c871fbef07cdabf66a91d9ea40" kindref="member">Create()</ref> when this constructor is called to build up the <ref refid="classwx_property_grid" kindref="compound">wxPropertyGrid</ref> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="472"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="472"/>
       </memberdef>
-      <memberdef kind="function" id="classwx_property_grid_1a8d3cffba290a9341ffb62d3d585a5d6c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classwx_property_grid_1ab49165b6ddec7f8f844e7182f837447c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
         <definition>wxPropertyGrid::wxPropertyGrid</definition>
-        <argsstring>(wxWindow *parent, wxWindowID id=wxID_ANY, const wxPoint &amp;pos=wxDefaultPosition, const wxSize &amp;size=wxDefaultSize, long style=wxPG_DEFAULT_STYLE, const wxChar *name=wxPropertyGridNameStr)</argsstring>
+        <argsstring>(wxWindow *parent, wxWindowID id=wxID_ANY, const wxPoint &amp;pos=wxDefaultPosition, const wxSize &amp;size=wxDefaultSize, long style=wxPG_DEFAULT_STYLE, const wxString &amp;name=wxPropertyGridNameStr)</argsstring>
         <name>wxPropertyGrid</name>
         <param>
           <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
@@ -200,7 +200,7 @@
           <defval>wxPG_DEFAULT_STYLE</defval>
         </param>
         <param>
-          <type>const <ref refid="group__group__funcmacro__string_1gad42f64d8c82f1ce4ae58773a89b2d6a7" kindref="member">wxChar</ref> *</type>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
           <declname>name</declname>
           <defval>wxPropertyGridNameStr</defval>
         </param>
@@ -211,7 +211,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="484"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="484"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_1ac79584315d9b7dfff150299e35b7d32a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -224,7 +224,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="487"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="487"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_1af19463a573440f6bc928ceaa60a1e5e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -275,7 +275,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="509"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="509"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_1a3bf9a182fefadf6146ede040fe593d35" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -293,7 +293,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="523"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="523"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_1ab3faed67c164f6339ca7e521c9427aba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -320,7 +320,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="547"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="547"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_1a6958b5c1a1f71512afaf6f2c07c1becd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -343,7 +343,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="556"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="556"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_1a6803d445ae77514558ec4ad00a25f65a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -369,7 +369,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="565"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="565"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_1a48ef39121da1882f16f2cbf868cc0f2c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -383,7 +383,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="570"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="570"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_1adb1e0d4270da795649f7e323b41f5a6b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -408,7 +408,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="578"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="578"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_1a6e06d92a622237457fea00372df1eaae" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -427,13 +427,14 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="587"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="587"/>
       </memberdef>
-      <memberdef kind="function" id="classwx_property_grid_1a29ff769a339440bbc260c3cfd6ba8f5d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classwx_property_grid_1a4d40c2c871fbef07cdabf66a91d9ea40" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
         <definition>bool wxPropertyGrid::Create</definition>
-        <argsstring>(wxWindow *parent, wxWindowID id=wxID_ANY, const wxPoint &amp;pos=wxDefaultPosition, const wxSize &amp;size=wxDefaultSize, long style=wxPG_DEFAULT_STYLE, const wxChar *name=wxPropertyGridNameStr)</argsstring>
+        <argsstring>(wxWindow *parent, wxWindowID id=wxID_ANY, const wxPoint &amp;pos=wxDefaultPosition, const wxSize &amp;size=wxDefaultSize, long style=wxPG_DEFAULT_STYLE, const wxString &amp;name=wxPropertyGridNameStr)</argsstring>
         <name>Create</name>
+        <reimplements refid="classwx_window_1a95b7ca8faa033f5ab35458887c07bf38">Create</reimplements>
         <param>
           <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
           <declname>parent</declname>
@@ -459,7 +460,7 @@
           <defval>wxPG_DEFAULT_STYLE</defval>
         </param>
         <param>
-          <type>const <ref refid="group__group__funcmacro__string_1gad42f64d8c82f1ce4ae58773a89b2d6a7" kindref="member">wxChar</ref> *</type>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
           <declname>name</declname>
           <defval>wxPropertyGridNameStr</defval>
         </param>
@@ -470,7 +471,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="600"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="600"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_1a51ca791689c92a604e4b840c055cfc5d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -487,7 +488,7 @@
 <para>This means that such key presses will not be redirected to editor controls.</para><para>Using this function allows, for example, navigation between properties using arrow keys even when the focus is in the editor control. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="610"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="610"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_1a69fd5ebd1012ee52f35721c824327278" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -505,7 +506,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="620"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="620"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_1a6ce64394848fef5da64ae050a780de87" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -532,7 +533,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="631"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="631"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_1a96df37bf51702982294faf5991c7ae27" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -550,7 +551,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="638"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="638"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_1aa05232102d44635763e27df0d91b5eed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
@@ -565,7 +566,7 @@
 This function only works properly if grid size prior to call was already fairly large.</para><para>Note that you can also get calculated column widths by calling GetState-&gt;GetColumnWidth() immediately after this function returns. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="655"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="655"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_1a9114ef630b607bf411aeaaa5aae3b013" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_text_ctrl" kindref="compound">wxTextCtrl</ref> *</type>
@@ -578,7 +579,7 @@ This function only works properly if grid size prior to call was already fairly 
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="660"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="660"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_1ab9f525164a7d8bd0a8960d8a8bbcf891" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
@@ -591,7 +592,7 @@ This function only works properly if grid size prior to call was already fairly 
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="666"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="666"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_1a64c926d116e6a984b6521edd442a9e16" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_colour" kindref="compound">wxColour</ref></type>
@@ -604,7 +605,7 @@ This function only works properly if grid size prior to call was already fairly 
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="671"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="671"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_1aec51d57b8ab13dee21e31a1843a5ea45" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_font" kindref="compound">wxFont</ref> &amp;</type>
@@ -617,7 +618,7 @@ This function only works properly if grid size prior to call was already fairly 
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="676"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="676"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_1a7a6873c630a7c36268ca3e3ebff3ea74" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_colour" kindref="compound">wxColour</ref></type>
@@ -630,7 +631,7 @@ This function only works properly if grid size prior to call was already fairly 
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="681"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="681"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_1a954ddd8903893b8090be621834eff9b7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_colour" kindref="compound">wxColour</ref></type>
@@ -643,7 +644,7 @@ This function only works properly if grid size prior to call was already fairly 
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="686"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="686"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_1a6a38606446d345a088650898a2c50dc5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_colour" kindref="compound">wxColour</ref></type>
@@ -656,7 +657,7 @@ This function only works properly if grid size prior to call was already fairly 
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="691"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="691"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_1abc4c2116081fdd319ee489e18b45cc1a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_colour" kindref="compound">wxColour</ref></type>
@@ -669,7 +670,7 @@ This function only works properly if grid size prior to call was already fairly 
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="696"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="696"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_1a7b2a4d79e4f6a3aa60451e260f985dea" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>unsigned int</type>
@@ -682,7 +683,7 @@ This function only works properly if grid size prior to call was already fairly 
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="701"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="701"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_1afdb846c3d5184b414da3e97adce4a34d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_colour" kindref="compound">wxColour</ref></type>
@@ -695,7 +696,7 @@ This function only works properly if grid size prior to call was already fairly 
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="706"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="706"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_1ac66fe4ff205f56f6c1f45197ce72749e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -708,7 +709,7 @@ This function only works properly if grid size prior to call was already fairly 
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="711"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="711"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_1a1f148708274d44397fe6e6bd20838b6d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_property_grid" kindref="compound">wxPropertyGrid</ref> *</type>
@@ -721,7 +722,7 @@ This function only works properly if grid size prior to call was already fairly 
 <para>Dummy function that enables same kind of code to use <ref refid="classwx_property_grid" kindref="compound">wxPropertyGrid</ref> and <ref refid="classwx_property_grid_manager" kindref="compound">wxPropertyGridManager</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="717"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="717"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_1aac968b95c8be030185780dd145cdeadd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_rect" kindref="compound">wxRect</ref></type>
@@ -757,7 +758,7 @@ This function only works properly if grid size prior to call was already fairly 
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="729"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="729"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_1ad7a4a2400a020312ade2d1346c3ec498" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
@@ -795,7 +796,7 @@ This function only works properly if grid size prior to call was already fairly 
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="742"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="742"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_1a4610a440d5e81ac8f33e3a83b2538096" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_p_g_property" kindref="compound">wxPGProperty</ref> *</type>
@@ -821,7 +822,7 @@ This function only works properly if grid size prior to call was already fairly 
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="750"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="750"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_1a0b63e1b91091ed4a0dd1ffb497cadd85" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_colour" kindref="compound">wxColour</ref></type>
@@ -834,7 +835,7 @@ This function only works properly if grid size prior to call was already fairly 
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="755"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="755"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_1ac5d1453174eed3613a40608155902c11" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_colour" kindref="compound">wxColour</ref></type>
@@ -847,7 +848,7 @@ This function only works properly if grid size prior to call was already fairly 
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="760"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="760"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_1a012ab61170fc0c747f5a910283560718" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_p_g_property" kindref="compound">wxPGProperty</ref> *</type>
@@ -860,7 +861,7 @@ This function only works properly if grid size prior to call was already fairly 
 <para>It does not have name, etc. and it is not visible. It is only useful for accessing its children. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="766"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="766"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_1acc83fee2be3dae5aef4250ab42d7f988" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -873,7 +874,7 @@ This function only works properly if grid size prior to call was already fairly 
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="771"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="771"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_1add0df801cd2035422c5f23f52ce941be" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_p_g_property" kindref="compound">wxPGProperty</ref> *</type>
@@ -886,7 +887,7 @@ This function only works properly if grid size prior to call was already fairly 
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="776"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="776"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_1ac2be24e5df0f27b041dc895007ad64f4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_p_g_property" kindref="compound">wxPGProperty</ref> *</type>
@@ -900,7 +901,7 @@ This function only works properly if grid size prior to call was already fairly 
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="781"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="781"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_1acadbfc88f22d5f20882297b6143f5b8c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_colour" kindref="compound">wxColour</ref></type>
@@ -913,7 +914,7 @@ This function only works properly if grid size prior to call was already fairly 
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="786"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="786"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_1ac42f480a4a9ed1b8a76d3dca822d8061" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_colour" kindref="compound">wxColour</ref></type>
@@ -926,7 +927,7 @@ This function only works properly if grid size prior to call was already fairly 
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="791"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="791"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_1aa0d82af21a87fe9e7ef23faebec694e8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="interface_2wx_2propgrid_2propgrid_8h_1add392b8d6550141475e3efb953b0a20f" kindref="member">wxPGSortCallback</ref></type>
@@ -940,7 +941,7 @@ This function only works properly if grid size prior to call was already fairly 
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="798"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="798"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_1ac2124d0210ec71f0939d3ceccb10030b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -958,7 +959,7 @@ This function only works properly if grid size prior to call was already fairly 
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="803"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="803"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_1a9a75dc5a4828db6fa36ed5db0f4f8842" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_text_ctrl" kindref="compound">wxTextCtrl</ref> *</type>
@@ -971,7 +972,7 @@ This function only works properly if grid size prior to call was already fairly 
 <para>Takes <ref refid="classwx_owner_drawn_combo_box" kindref="compound">wxOwnerDrawnComboBox</ref> into account. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="809"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="809"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_1ac6a9ca5a696a674baf26f2be8fc0534c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_p_g_cell" kindref="compound">wxPGCell</ref> &amp;</type>
@@ -985,7 +986,7 @@ This function only works properly if grid size prior to call was already fairly 
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="816"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="816"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_1a33fa8240e20151a6d3d04afe557faa10" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -1011,7 +1012,7 @@ This function only works properly if grid size prior to call was already fairly 
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="824"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="824"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_1a65bbb87f2b7b162d3b12cac3627ef413" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -1024,7 +1025,7 @@ This function only works properly if grid size prior to call was already fairly 
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="829"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="829"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_1af20ff1e30938a1e0424ade4bf3905989" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structwx_property_grid_hit_test_result" kindref="compound">wxPropertyGridHitTestResult</ref></type>
@@ -1050,7 +1051,7 @@ This function only works properly if grid size prior to call was already fairly 
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="840"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="840"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_1a35965ecaa422d47e379db010a42cc1b0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1063,7 +1064,7 @@ This function only works properly if grid size prior to call was already fairly 
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="845"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="845"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_1a989d75b306988d7aece23a40eede8041" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1076,7 +1077,7 @@ This function only works properly if grid size prior to call was already fairly 
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="850"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="850"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_1a07c6b69661f61f992e74e17a60e3c47b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1090,7 +1091,7 @@ This function only works properly if grid size prior to call was already fairly 
 <para><ref refid="classwx_window_1a15c678314cfc1d807196bc298b713ed3" kindref="member">Freeze()</ref> called but not yet <ref refid="classwx_window_1a279a532124073261b28131b6afb59a1e" kindref="member">Thaw()</ref> ). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="856"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="856"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_1a5c67655306de7aa158518360be66b0c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1128,7 +1129,7 @@ This function only works properly if grid size prior to call was already fairly 
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="868"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="868"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_1a2662c18312222d84453305cf2c85f849" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1154,7 +1155,7 @@ This function only works properly if grid size prior to call was already fairly 
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="883"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="883"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_1a0706eeff64712ce81ac7c31cd0b2d879" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1167,7 +1168,7 @@ This function only works properly if grid size prior to call was already fairly 
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="888"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="888"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_1a05cab6dc2fde0464176b86548b7bb12a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -1184,7 +1185,7 @@ This function only works properly if grid size prior to call was already fairly 
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="893"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="893"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_1a03a5a1d8a8ce8b0f92418288ecff1f3f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1197,7 +1198,7 @@ This function only works properly if grid size prior to call was already fairly 
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="907"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="911"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_1a799155caa94f83ec50252df91b4715bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1224,7 +1225,7 @@ This function only works properly if grid size prior to call was already fairly 
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="918"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="922"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_1a8c3db3b7df8b21c7ee1a1f1a6efe5e40" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1241,7 +1242,7 @@ This function only works properly if grid size prior to call was already fairly 
 <para>If property is not selected, an assertion failure will occur. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="924"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="928"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_1ab2c5acf3ce62377a8d570fd089cb815b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1281,35 +1282,7 @@ This function only works properly if grid size prior to call was already fairly 
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="947"/>
-      </memberdef>
-      <memberdef kind="function" id="classwx_property_grid_1a523f90a749685d6d97ca247907f1793a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void wxPropertyGrid::SetButtonShortcut</definition>
-        <argsstring>(int keycode, bool ctrlDown=false, bool altDown=false)</argsstring>
-        <name>SetButtonShortcut</name>
-        <param>
-          <type>int</type>
-          <declname>keycode</declname>
-        </param>
-        <param>
-          <type>bool</type>
-          <declname>ctrlDown</declname>
-          <defval>false</defval>
-        </param>
-        <param>
-          <type>bool</type>
-          <declname>altDown</declname>
-          <defval>false</defval>
-        </param>
-        <briefdescription>
-<para>Changes keyboard shortcut to push the editor button. </para>        </briefdescription>
-        <detaileddescription>
-<para><simplesect kind="remark"><para>You can set default with keycode 0. Good value for the platform is guessed, but don&apos;t expect it to be very accurate. </para></simplesect>
-</para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="955"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="951"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_1a206216506a3e873044b020a3f41c2841" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1326,7 +1299,7 @@ This function only works properly if grid size prior to call was already fairly 
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="960"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="956"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_1a690cc9643f94225f38720c336789c7d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1343,7 +1316,7 @@ This function only works properly if grid size prior to call was already fairly 
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="965"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="961"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_1a0610da7b0eae7239902fe7b9a9c06983" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1360,7 +1333,7 @@ This function only works properly if grid size prior to call was already fairly 
 <para>Note that appearance of editor widgets may not be affected. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="971"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="967"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_1af68284dc3b280abb2c49de3f2ace072c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1377,7 +1350,7 @@ This function only works properly if grid size prior to call was already fairly 
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="976"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="972"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_1a9ca000c6df42b90fd751e65ead5296c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1394,7 +1367,7 @@ This function only works properly if grid size prior to call was already fairly 
 <para>Note that appearance of editor widgets may not be affected. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="982"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="978"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_1a4a02bfcf431899e6737a669f97884cb4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1411,7 +1384,7 @@ This function only works properly if grid size prior to call was already fairly 
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="987"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="983"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_1a37acf1866bf41ccf1434e8c659e42c02" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1428,7 +1401,7 @@ This function only works properly if grid size prior to call was already fairly 
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="993"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="989"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_1a52022182a61c16b35e54fa6602345771" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1445,7 +1418,7 @@ This function only works properly if grid size prior to call was already fairly 
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="998"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="994"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_1a258482fbdc922a616daa63a4988f041e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1462,7 +1435,7 @@ This function only works properly if grid size prior to call was already fairly 
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="1003"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="999"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_1a5126790886683c52971cfcd2ebe4d04e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1479,7 +1452,7 @@ This function only works properly if grid size prior to call was already fairly 
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="1008"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="1004"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_1ad2e7aa1091f730d774860f55df81dee4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1496,7 +1469,7 @@ This function only works properly if grid size prior to call was already fairly 
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="1013"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="1009"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_1a3509c02317f851067925a75e2933f769" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1513,7 +1486,7 @@ This function only works properly if grid size prior to call was already fairly 
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="1019"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="1015"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_1af5cca9b97ff1c127027930c78c208258" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1530,7 +1503,7 @@ This function only works properly if grid size prior to call was already fairly 
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="1024"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="1020"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_1ad413c2a9f94db90466bc9039f928afe6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1563,7 +1536,7 @@ This function only works properly if grid size prior to call was already fairly 
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="1051"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="1047"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_1ae989700639a5d59dbb4657ee98331671" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1586,7 +1559,7 @@ This function only works properly if grid size prior to call was already fairly 
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="1061"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="1057"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_1a67266e617ef6d4d25d36c06439cba40d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1612,7 +1585,7 @@ This function only works properly if grid size prior to call was already fairly 
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="1070"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="1066"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_1ae4d3d62469b3f0b8a7a6e2f10fa473ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1631,7 +1604,7 @@ This function only works properly if grid size prior to call was already fairly 
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="1083"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="1079"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_1a8829779832e7670948a11b5ea46f41bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1648,7 +1621,7 @@ This function only works properly if grid size prior to call was already fairly 
 <para>Can be 1, 2, or 3 - a value relative to font height. Value of 2 should be default on most platforms. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="1089"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="1085"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -1667,13 +1640,35 @@ This function only works properly if grid size prior to call was already fairly 
 <para>Default is false. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="532"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="532"/>
       </memberdef>
-      <memberdef kind="function" id="classwx_property_grid_1a89ee01017530df27ff2c469bfbe0605e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classwx_property_grid_1adb8c3d0d29d1c051a8a9ece93d40f6b7" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_p_g_editor" kindref="compound">wxPGEditor</ref> *</type>
         <definition>static wxPGEditor* wxPropertyGrid::RegisterEditorClass</definition>
-        <argsstring>(wxPGEditor *editor, const wxString &amp;name, bool noDefCheck=false)</argsstring>
+        <argsstring>(wxPGEditor *editor, bool noDefCheck=false)</argsstring>
         <name>RegisterEditorClass</name>
+        <param>
+          <type><ref refid="classwx_p_g_editor" kindref="compound">wxPGEditor</ref> *</type>
+          <declname>editor</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>noDefCheck</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Forwards to DoRegisterEditorClass with empty name. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="898"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_property_grid_1ab36a1375ca0f3b4bd33dd2c27e97bfb9" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_p_g_editor" kindref="compound">wxPGEditor</ref> *</type>
+        <definition>static wxPGEditor* wxPropertyGrid::DoRegisterEditorClass</definition>
+        <argsstring>(wxPGEditor *editor, const wxString &amp;name, bool noDefCheck=false)</argsstring>
+        <name>DoRegisterEditorClass</name>
         <param>
           <type><ref refid="classwx_p_g_editor" kindref="compound">wxPGEditor</ref> *</type>
           <declname>editor</declname>
@@ -1694,7 +1689,7 @@ This function only works properly if grid size prior to call was already fairly 
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="902"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="906"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -1726,97 +1721,97 @@ This function only works properly if grid size prior to call was already fairly 
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxpropgrid" kindref="member">wxPropertyGrid</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__propgrid" kindref="compound">wxPropertyGrid</ref> <htmlonly> &lt;br&gt;&lt;div&gt;&lt;span class=&apos;appearance&apos;&gt;Appearance:&lt;/span&gt;&lt;br&gt;&lt;table class=&apos;appearance&apos;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&apos;wxmsw/propertygrid.png&apos; alt=&apos;wxMSW appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxgtk/propertygrid.png&apos; alt=&apos;wxGTK appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxmac/propertygrid.png&apos; alt=&apos;wxMac appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;wxMSW appearance&lt;/td&gt;&lt;td&gt;wxGTK appearance&lt;/td&gt;&lt;td&gt;wxMac appearance&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt; </htmlonly> </para></sect1>
     </detaileddescription>
     <inheritancegraph>
-      <node id="8871">
+      <node id="9054">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="8870">
+      <node id="9053">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="8871" relation="public-inheritance">
+        <childnode refid="9054" relation="public-inheritance">
         </childnode>
-        <childnode refid="8872" relation="public-inheritance">
+        <childnode refid="9055" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8872">
+      <node id="9055">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="8868">
+      <node id="9051">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="8869" relation="public-inheritance">
+        <childnode refid="9052" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8869">
+      <node id="9052">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="8870" relation="public-inheritance">
+        <childnode refid="9053" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8867">
+      <node id="9050">
         <label>wxPropertyGrid</label>
         <link refid="classwx_property_grid"/>
-        <childnode refid="8868" relation="public-inheritance">
+        <childnode refid="9051" relation="public-inheritance">
         </childnode>
-        <childnode refid="8873" relation="public-inheritance">
+        <childnode refid="9056" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8873">
+      <node id="9056">
         <label>wxPropertyGridInterface</label>
         <link refid="classwx_property_grid_interface"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="8878">
+      <node id="9061">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="8879" relation="usage">
+        <childnode refid="9062" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="8877">
+      <node id="9060">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="8878" relation="public-inheritance">
+        <childnode refid="9061" relation="public-inheritance">
         </childnode>
-        <childnode refid="8880" relation="public-inheritance">
+        <childnode refid="9063" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8880">
+      <node id="9063">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="8875">
+      <node id="9058">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="8876" relation="public-inheritance">
+        <childnode refid="9059" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8876">
+      <node id="9059">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="8877" relation="public-inheritance">
+        <childnode refid="9060" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8874">
+      <node id="9057">
         <label>wxPropertyGrid</label>
         <link refid="classwx_property_grid"/>
-        <childnode refid="8875" relation="public-inheritance">
+        <childnode refid="9058" relation="public-inheritance">
         </childnode>
-        <childnode refid="8881" relation="public-inheritance">
+        <childnode refid="9064" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8881">
+      <node id="9064">
         <label>wxPropertyGridInterface</label>
         <link refid="classwx_property_grid_interface"/>
       </node>
-      <node id="8879">
+      <node id="9062">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="466" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" bodystart="463" bodyend="1188"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="466" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" bodystart="463" bodyend="1184"/>
     <listofallmembers>
       <member refid="classwx_window_1a3afbd49b1ea2f8275e3600dcac102923" prot="public" virt="virtual"><scope>wxPropertyGrid</scope><name>AcceptsFocus</name></member>
       <member refid="classwx_window_1a2370bdd3ab08e7ef3c7555c6aa8301b8" prot="public" virt="virtual"><scope>wxPropertyGrid</scope><name>AcceptsFocusFromKeyboard</name></member>
@@ -1867,9 +1862,8 @@ This function only works properly if grid size prior to call was already fairly 
       <member refid="classwx_window_1a3daf76b93f648c68224e6ccd8095066b" prot="public" virt="non-virtual"><scope>wxPropertyGrid</scope><name>ConvertDialogToPixels</name></member>
       <member refid="classwx_window_1a449aac6a24f1d14b1a82b58003447dfe" prot="public" virt="non-virtual"><scope>wxPropertyGrid</scope><name>ConvertPixelsToDialog</name></member>
       <member refid="classwx_window_1afd955ce9d25ec26a115bfb794b1c7d8b" prot="public" virt="non-virtual"><scope>wxPropertyGrid</scope><name>ConvertPixelsToDialog</name></member>
-      <member refid="classwx_property_grid_1a29ff769a339440bbc260c3cfd6ba8f5d" prot="public" virt="non-virtual"><scope>wxPropertyGrid</scope><name>Create</name></member>
+      <member refid="classwx_property_grid_1a4d40c2c871fbef07cdabf66a91d9ea40" prot="public" virt="non-virtual"><scope>wxPropertyGrid</scope><name>Create</name></member>
       <member refid="classwx_control_1abe23789c94c86907463a0e8434be822a" prot="public" virt="non-virtual" ambiguityscope="wxControl::"><scope>wxPropertyGrid</scope><name>Create</name></member>
-      <member refid="classwx_window_1a95b7ca8faa033f5ab35458887c07bf38" prot="public" virt="non-virtual" ambiguityscope="wxWindow::"><scope>wxPropertyGrid</scope><name>Create</name></member>
       <member refid="classwx_object_1a95c6a5e4e1e03ff23c7b9efe4cff0c1a" prot="protected" virt="virtual"><scope>wxPropertyGrid</scope><name>CreateRefData</name></member>
       <member refid="classwx_property_grid_1a51ca791689c92a604e4b840c055cfc5d" prot="public" virt="non-virtual"><scope>wxPropertyGrid</scope><name>DedicateKey</name></member>
       <member refid="classwx_evt_handler_1a6e7f9cf4ebd0623c1d94979855d096f8" prot="public" virt="non-virtual"><scope>wxPropertyGrid</scope><name>DeletePendingEvents</name></member>
@@ -1885,6 +1879,7 @@ This function only works properly if grid size prior to call was already fairly 
       <member refid="classwx_window_1a2d10b472a4962d1c852c83d55252c44b" prot="protected" virt="virtual"><scope>wxPropertyGrid</scope><name>DoCentre</name></member>
       <member refid="classwx_window_1a01e7604ab0f0b2b1a8e322a630a4669e" prot="protected" virt="virtual"><scope>wxPropertyGrid</scope><name>DoGetBestSize</name></member>
       <member refid="classwx_property_grid_1af170d02811ab8eed906963de693b79aa" prot="public" virt="virtual"><scope>wxPropertyGrid</scope><name>DoHidePropertyError</name></member>
+      <member refid="classwx_property_grid_1ab36a1375ca0f3b4bd33dd2c27e97bfb9" prot="public" virt="non-virtual"><scope>wxPropertyGrid</scope><name>DoRegisterEditorClass</name></member>
       <member refid="classwx_property_grid_1a6eff1187beba43109be7a12194b0bf2b" prot="public" virt="virtual"><scope>wxPropertyGrid</scope><name>DoShowPropertyError</name></member>
       <member refid="classwx_window_1ae8a84a80645e99f4d24a22e5c386f626" prot="public" virt="virtual"><scope>wxPropertyGrid</scope><name>DoUpdateWindowUI</name></member>
       <member refid="classwx_window_1a7e7015bc61bd79b6821d2dccaecf9eda" prot="public" virt="virtual"><scope>wxPropertyGrid</scope><name>DragAcceptFiles</name></member>
@@ -2092,6 +2087,7 @@ This function only works properly if grid size prior to call was already fairly 
       <member refid="classwx_window_1ae1b56ca87d8590ee5e576012229a380a" prot="public" virt="non-virtual"><scope>wxPropertyGrid</scope><name>InvalidateBestSize</name></member>
       <member refid="classwx_property_grid_1a35965ecaa422d47e379db010a42cc1b0" prot="public" virt="non-virtual"><scope>wxPropertyGrid</scope><name>IsAnyModified</name></member>
       <member refid="classwx_window_1af918e6fe8565c2d5235973cc3de84a43" prot="public" virt="non-virtual"><scope>wxPropertyGrid</scope><name>IsBeingDeleted</name></member>
+      <member refid="classwx_window_1a469f0881da248d37691440c9d4cc7200" prot="public" virt="non-virtual"><scope>wxPropertyGrid</scope><name>IsDescendant</name></member>
       <member refid="classwx_window_1a9d1be1bbb625ebf87ad4ad47e49a0194" prot="public" virt="virtual"><scope>wxPropertyGrid</scope><name>IsDoubleBuffered</name></member>
       <member refid="classwx_property_grid_1a989d75b306988d7aece23a40eede8041" prot="public" virt="non-virtual"><scope>wxPropertyGrid</scope><name>IsEditorFocused</name></member>
       <member refid="classwx_property_grid_1a0f26abcaf04e88fefe7b2659d025ffc7" prot="public" virt="non-virtual"><scope>wxPropertyGrid</scope><name>IsEditorsValueModified</name></member>
@@ -2116,6 +2112,7 @@ This function only works properly if grid size prior to call was already fairly 
       <member refid="classwx_window_1a72d70fd14e3565bf782fbcd3271d8930" prot="public" virt="virtual"><scope>wxPropertyGrid</scope><name>IsShownOnScreen</name></member>
       <member refid="classwx_window_1a657ef8b6055eb06df894ac5e6ddfecf8" prot="public" virt="non-virtual"><scope>wxPropertyGrid</scope><name>IsThisEnabled</name></member>
       <member refid="classwx_window_1a0002826ad05f2a5661b4c8995713f37f" prot="public" virt="virtual"><scope>wxPropertyGrid</scope><name>IsTopLevel</name></member>
+      <member refid="classwx_window_1a7940d510c5bdc062a2b109a1022dd8c2" prot="public" virt="virtual"><scope>wxPropertyGrid</scope><name>IsTransparentBackgroundSupported</name></member>
       <member refid="classwx_evt_handler_1a360fdeefcf53b62fb49fb828406bb8a6" prot="public" virt="non-virtual"><scope>wxPropertyGrid</scope><name>IsUnlinked</name></member>
       <member refid="classwx_window_1a1b143c3e72bd0af533b76db4830a6113" prot="public" virt="virtual"><scope>wxPropertyGrid</scope><name>Layout</name></member>
       <member refid="classwx_property_grid_interface_1aac3d13601fb3a97f531b86923b20d5ff" prot="public" virt="non-virtual"><scope>wxPropertyGrid</scope><name>LimitPropertyEditing</name></member>
@@ -2124,7 +2121,6 @@ This function only works properly if grid size prior to call was already fairly 
       <member refid="classwx_window_1a124944524f36b71385dad8fddaad8ded" prot="public" virt="virtual"><scope>wxPropertyGrid</scope><name>Lower</name></member>
       <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxPropertyGrid</scope><name>m_refData</name></member>
       <member refid="classwx_property_grid_1a5c67655306de7aa158518360be66b0c7" prot="public" virt="non-virtual"><scope>wxPropertyGrid</scope><name>MakeColumnEditable</name></member>
-      <member refid="classwx_window_1a192fc8b467845d093c16452db96c65c5" prot="public" virt="virtual"><scope>wxPropertyGrid</scope><name>MakeModal</name></member>
       <member refid="classwx_window_1ab1cb98c8d25b9e6ff7b706b1446c3df7" prot="public" virt="non-virtual"><scope>wxPropertyGrid</scope><name>Move</name></member>
       <member refid="classwx_window_1a22a22c1e23ca05776707e7999d8047fe" prot="public" virt="non-virtual"><scope>wxPropertyGrid</scope><name>Move</name></member>
       <member refid="classwx_window_1a79e66079125e8420de269811bdb6f2b6" prot="public" virt="non-virtual"><scope>wxPropertyGrid</scope><name>MoveAfterInTabOrder</name></member>
@@ -2159,7 +2155,7 @@ This function only works properly if grid size prior to call was already fairly 
       <member refid="classwx_property_grid_1a05cab6dc2fde0464176b86548b7bb12a" prot="public" virt="virtual"><scope>wxPropertyGrid</scope><name>RefreshProperty</name></member>
       <member refid="classwx_window_1ab0ae6b9898cd261c39ebeb2891aa3d67" prot="public" virt="non-virtual"><scope>wxPropertyGrid</scope><name>RefreshRect</name></member>
       <member refid="classwx_property_grid_interface_1a330dc911b08378e967955f8a6a938612" prot="public" virt="non-virtual"><scope>wxPropertyGrid</scope><name>RegisterAdditionalEditors</name></member>
-      <member refid="classwx_property_grid_1a89ee01017530df27ff2c469bfbe0605e" prot="public" virt="non-virtual"><scope>wxPropertyGrid</scope><name>RegisterEditorClass</name></member>
+      <member refid="classwx_property_grid_1adb8c3d0d29d1c051a8a9ece93d40f6b7" prot="public" virt="non-virtual"><scope>wxPropertyGrid</scope><name>RegisterEditorClass</name></member>
       <member refid="classwx_window_1a53ca57872dac5851ea6ba55a494b899b" prot="public" virt="virtual"><scope>wxPropertyGrid</scope><name>RegisterHotKey</name></member>
       <member refid="classwx_window_1adcc538819c11ecb3bd3e4e5d13c5ba7a" prot="public" virt="non-virtual"><scope>wxPropertyGrid</scope><name>ReleaseMouse</name></member>
       <member refid="classwx_window_1acee332ed4368d26e8bc3db5767c1240a" prot="public" virt="virtual"><scope>wxPropertyGrid</scope><name>RemoveChild</name></member>
@@ -2193,7 +2189,6 @@ This function only works properly if grid size prior to call was already fairly 
       <member refid="classwx_window_1a37219df52734626e23401fd83b25d8a0" prot="public" virt="virtual"><scope>wxPropertyGrid</scope><name>SetBackgroundColour</name></member>
       <member refid="classwx_window_1af14f8fd2ed2d30a9bbb5d4f9fd6594ec" prot="public" virt="virtual"><scope>wxPropertyGrid</scope><name>SetBackgroundStyle</name></member>
       <member refid="classwx_property_grid_interface_1ac02e6f40e5c5138a40c99a4f7b98100b" prot="public" virt="non-virtual"><scope>wxPropertyGrid</scope><name>SetBoolChoices</name></member>
-      <member refid="classwx_property_grid_1a523f90a749685d6d97ca247907f1793a" prot="public" virt="non-virtual"><scope>wxPropertyGrid</scope><name>SetButtonShortcut</name></member>
       <member refid="classwx_window_1a2b8b2e99231a0ec1a05f5066f1b7f3d8" prot="public" virt="virtual"><scope>wxPropertyGrid</scope><name>SetCanFocus</name></member>
       <member refid="classwx_property_grid_1a206216506a3e873044b020a3f41c2841" prot="public" virt="non-virtual"><scope>wxPropertyGrid</scope><name>SetCaptionBackgroundColour</name></member>
       <member refid="classwx_property_grid_1a690cc9643f94225f38720c336789c7d4" prot="public" virt="non-virtual"><scope>wxPropertyGrid</scope><name>SetCaptionTextColour</name></member>
@@ -2320,7 +2315,6 @@ This function only works properly if grid size prior to call was already fairly 
       <member refid="classwx_window_1a88cc65e424a129d9b0057756cdb67ec9" prot="public" virt="virtual"><scope>wxPropertyGrid</scope><name>TransferDataToWindow</name></member>
       <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxPropertyGrid</scope><name>TryAfter</name></member>
       <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxPropertyGrid</scope><name>TryBefore</name></member>
-      <member refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" virt="non-virtual"><scope>wxPropertyGrid</scope><name>TryThis</name></member>
       <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxPropertyGrid</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxPropertyGrid</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a22e5db2ec1d19c8252c056fd116975d7" prot="public" virt="non-virtual"><scope>wxPropertyGrid</scope><name>Unlink</name></member>
@@ -2341,7 +2335,7 @@ This function only works properly if grid size prior to call was already fairly 
       <member refid="classwx_object_1acaa378363a28af421ab56ad7b46eadf0" prot="public" virt="non-virtual"><scope>wxPropertyGrid</scope><name>wxObject</name></member>
       <member refid="classwx_object_1a4721b4dc9b7aff0f30904ba2ea3954cf" prot="public" virt="non-virtual"><scope>wxPropertyGrid</scope><name>wxObject</name></member>
       <member refid="classwx_property_grid_1a05092c0055245bbce1f42d93d0825327" prot="public" virt="non-virtual"><scope>wxPropertyGrid</scope><name>wxPropertyGrid</name></member>
-      <member refid="classwx_property_grid_1a8d3cffba290a9341ffb62d3d585a5d6c" prot="public" virt="non-virtual"><scope>wxPropertyGrid</scope><name>wxPropertyGrid</name></member>
+      <member refid="classwx_property_grid_1ab49165b6ddec7f8f844e7182f837447c" prot="public" virt="non-virtual"><scope>wxPropertyGrid</scope><name>wxPropertyGrid</name></member>
       <member refid="classwx_window_1a695200a4915b934926dcf32afa44544c" prot="public" virt="non-virtual"><scope>wxPropertyGrid</scope><name>wxWindow</name></member>
       <member refid="classwx_window_1a7799009b10d1765d1bbb6db4994f922e" prot="public" virt="non-virtual"><scope>wxPropertyGrid</scope><name>wxWindow</name></member>
       <member refid="classwx_evt_handler_1a372d2239d91521eddc8fd2715fcab584" prot="public" virt="virtual"><scope>wxPropertyGrid</scope><name>~wxEvtHandler</name></member>

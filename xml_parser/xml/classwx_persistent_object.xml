@@ -14,7 +14,7 @@
         <definition>virtual void wxPersistentObject::Save</definition>
         <argsstring>() const =0</argsstring>
         <name>Save</name>
-        <reimplementedby refid="classwx_persistent_tree_book_1adb7107cbe9cfb9376767140234a546e2">Save</reimplementedby>
+        <reimplementedby refid="classwx_persistent_tree_book_ctrl_1ad8af4b7ed5c2aa2bbb1c51b2268794af">Save</reimplementedby>
         <reimplementedby refid="classwx_persistent_t_l_w_1a0f727e11a56129a481fb06e899df0442">Save</reimplementedby>
         <reimplementedby refid="classwx_persistent_book_ctrl_1a3ccf1fec20301165cac5713d1d8f8dd5">Save</reimplementedby>
         <briefdescription>
@@ -23,14 +23,14 @@
 <para>The implementation of this method should use <ref refid="classwx_persistent_object_1aa29d1261d86f638dcbc3813e10f05b30" kindref="member">SaveValue()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/persist.h" line="247"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/persist.h" line="247"/>
       </memberdef>
       <memberdef kind="function" id="classwx_persistent_object_1a04f9a557b8dd17c60c83cb29102e093e" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>bool</type>
         <definition>virtual bool wxPersistentObject::Restore</definition>
         <argsstring>()=0</argsstring>
         <name>Restore</name>
-        <reimplementedby refid="classwx_persistent_tree_book_1a62599a3fca3e820190fe31ddff3a8aab">Restore</reimplementedby>
+        <reimplementedby refid="classwx_persistent_tree_book_ctrl_1ac74fd4229fe85d962ec33ffe0137d9d0">Restore</reimplementedby>
         <reimplementedby refid="classwx_persistent_t_l_w_1ab32aa061f7548f6ccc4ed4820f73d2e5">Restore</reimplementedby>
         <reimplementedby refid="classwx_persistent_book_ctrl_1a5c7d8a31c3018ed3773e7f97133e4299">Restore</reimplementedby>
         <briefdescription>
@@ -39,7 +39,7 @@
 <para>The implementation of this method should use <ref refid="classwx_persistent_object_1a0f55e4f45d2569287cbd527c54445ebf" kindref="member">RestoreValue()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/persist.h" line="254"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/persist.h" line="254"/>
       </memberdef>
       <memberdef kind="function" id="classwx_persistent_object_1a53d730bbfe3fdf57c9c553987f1096f8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -52,7 +52,7 @@
 <para>This method is called from <ref refid="classwx_persistent_object_1aa29d1261d86f638dcbc3813e10f05b30" kindref="member">SaveValue()</ref> and <ref refid="classwx_persistent_object_1a0f55e4f45d2569287cbd527c54445ebf" kindref="member">RestoreValue()</ref> and normally returns some short (but not too cryptic) strings, e.g. <computeroutput>&quot;Checkbox&quot;</computeroutput>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/persist.h" line="264"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/persist.h" line="264"/>
       </memberdef>
       <memberdef kind="function" id="classwx_persistent_object_1ae175687a86da6a3d0d6edac12840d7e0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -68,7 +68,7 @@
 <para>This method is used together with <ref refid="classwx_persistent_object_1a53d730bbfe3fdf57c9c553987f1096f8" kindref="member">GetKind()</ref> to construct the unique full name of the object in e.g. a configuration file. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/persist.h" line="273"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/persist.h" line="273"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -87,7 +87,7 @@
 <para>This object must have life-time greater than ours as we keep a pointer to it. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/persist.h" line="228"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/persist.h" line="228"/>
       </memberdef>
       <memberdef kind="function" id="classwx_persistent_object_1accfdecb17fa0e67708e0c9057cc91041" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -100,7 +100,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/persist.h" line="231"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/persist.h" line="231"/>
       </memberdef>
       <memberdef kind="function" id="classwx_persistent_object_1ae2a7456b936bcc5b3271e4dd2de0ef02" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void *</type>
@@ -113,7 +113,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/persist.h" line="279"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/persist.h" line="279"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-func">
@@ -157,7 +157,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/persist.h" line="293"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/persist.h" line="293"/>
       </memberdef>
       <memberdef kind="function" id="classwx_persistent_object_1a0f55e4f45d2569287cbd527c54445ebf" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -199,7 +199,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/persist.h" line="308"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/persist.h" line="308"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -208,48 +208,48 @@
 <para>wxWidgets persistence framework is non-intrusive, i.e. can work with the classes which have no relationship to nor knowledge of it. To allow this, an intermediate persistence adapter is used: this is just a simple object which provides the methods used by <ref refid="classwx_persistence_manager" kindref="compound">wxPersistenceManager</ref> to save and restore the object properties and implements them using the concrete class methods.</para><para>You may derive your own classes from <ref refid="classwx_persistent_object" kindref="compound">wxPersistentObject</ref> to implement persistence support for your common classes, see <ref refid="overview_persistence_1persistence_defining" kindref="member">Defining Custom Persistent Windows</ref>.</para><para><simplesect kind="see"><para>wxPersistentWindow&lt;&gt; </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="8616">
+      <node id="8809">
         <label>wxPersistentWindow&lt; T &gt;</label>
         <link refid="classwx_persistent_window"/>
-        <childnode refid="8615" relation="public-inheritance">
+        <childnode refid="8808" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8618">
+      <node id="8811">
         <label>wxPersistentBookCtrl</label>
         <link refid="classwx_persistent_book_ctrl"/>
-        <childnode refid="8617" relation="public-inheritance">
+        <childnode refid="8810" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8621">
+      <node id="8814">
         <label>wxPersistentTLW</label>
         <link refid="classwx_persistent_t_l_w"/>
-        <childnode refid="8620" relation="public-inheritance">
+        <childnode refid="8813" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8620">
+      <node id="8813">
         <label>wxPersistentWindow&lt; wxTopLevelWindow &gt;</label>
         <link refid="classwx_persistent_window"/>
-        <childnode refid="8615" relation="public-inheritance">
+        <childnode refid="8808" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8619">
-        <label>wxPersistentTreeBook</label>
-        <link refid="classwx_persistent_tree_book"/>
-        <childnode refid="8618" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="8617">
+      <node id="8810">
         <label>wxPersistentWindow&lt; wxBookCtrlBase &gt;</label>
         <link refid="classwx_persistent_window"/>
-        <childnode refid="8615" relation="public-inheritance">
+        <childnode refid="8808" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8615">
+      <node id="8808">
         <label>wxPersistentObject</label>
         <link refid="classwx_persistent_object"/>
       </node>
+      <node id="8812">
+        <label>wxPersistentTreeBookCtrl</label>
+        <link refid="classwx_persistent_tree_book_ctrl"/>
+        <childnode refid="8811" relation="public-inheritance">
+        </childnode>
+      </node>
     </inheritancegraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/persist.h" line="220" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/persist.h" bodystart="219" bodyend="309"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/persist.h" line="220" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/persist.h" bodystart="219" bodyend="309"/>
     <listofallmembers>
       <member refid="classwx_persistent_object_1a53d730bbfe3fdf57c9c553987f1096f8" prot="public" virt="pure-virtual"><scope>wxPersistentObject</scope><name>GetKind</name></member>
       <member refid="classwx_persistent_object_1ae175687a86da6a3d0d6edac12840d7e0" prot="public" virt="pure-virtual"><scope>wxPersistentObject</scope><name>GetName</name></member>

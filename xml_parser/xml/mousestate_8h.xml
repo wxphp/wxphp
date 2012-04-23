@@ -75,13 +75,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mousestate.h" line="12" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mousestate.h" bodystart="11" bodyend="36"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mousestate.h" line="12" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/mousestate.h" bodystart="11" bodyend="36"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mousestate.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mousestate.h"/>
   </compounddef>
 </doxygen>

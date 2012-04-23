@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="636"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/webview.h" line="635"/>
       </memberdef>
       <memberdef kind="function" id="classwx_web_view_event_1add54e8e14fdd8dd55d1761a4a6bee553" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -45,7 +45,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="638"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/webview.h" line="637"/>
       </memberdef>
       <memberdef kind="function" id="classwx_web_view_event_1a4e1154fd63292544f84d1181f538c41b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -55,10 +55,10 @@
         <briefdescription>
 <para>Get the name of the target frame which the url of this event has been or will be loaded into. </para>        </briefdescription>
         <detaileddescription>
-<para>This may return an emptry string if the frame is not avaliable. </para>        </detaileddescription>
+<para>This may return an emptry string if the frame is not available. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="645"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/webview.h" line="644"/>
       </memberdef>
       <memberdef kind="function" id="classwx_web_view_event_1a73635aae6b1f71f078fad337e67280d9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -71,7 +71,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="650"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/webview.h" line="649"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -91,73 +91,73 @@
 Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxwebview" kindref="member">wxWebView</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref>, <ref refid="group__group__class__webview" kindref="compound">WebView</ref></para><para><simplesect kind="see"><para><ref refid="classwx_web_view" kindref="compound">wxWebView</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="11451">
+      <node id="11640">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="11449">
+      <node id="11638">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="11450" relation="public-inheritance">
+        <childnode refid="11639" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11447">
+      <node id="11636">
         <label>wxWebViewEvent</label>
         <link refid="classwx_web_view_event"/>
-        <childnode refid="11448" relation="public-inheritance">
+        <childnode refid="11637" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11448">
+      <node id="11637">
         <label>wxNotifyEvent</label>
         <link refid="classwx_notify_event"/>
-        <childnode refid="11449" relation="public-inheritance">
+        <childnode refid="11638" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11450">
+      <node id="11639">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="11451" relation="public-inheritance">
+        <childnode refid="11640" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="11456">
+      <node id="11645">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="11457" relation="usage">
+        <childnode refid="11646" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="11454">
+      <node id="11643">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="11455" relation="public-inheritance">
+        <childnode refid="11644" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11452">
+      <node id="11641">
         <label>wxWebViewEvent</label>
         <link refid="classwx_web_view_event"/>
-        <childnode refid="11453" relation="public-inheritance">
+        <childnode refid="11642" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11453">
+      <node id="11642">
         <label>wxNotifyEvent</label>
         <link refid="classwx_notify_event"/>
-        <childnode refid="11454" relation="public-inheritance">
+        <childnode refid="11643" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11455">
+      <node id="11644">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="11456" relation="public-inheritance">
+        <childnode refid="11645" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11457">
+      <node id="11646">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="634" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" bodystart="633" bodyend="651"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/webview.h" line="633" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/webview.h" bodystart="632" bodyend="650"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxWebViewEvent</scope><name>AllocExclusive</name></member>
       <member refid="classwx_notify_event_1a7b23515f827b2ce1da1e6990d9aafe80" prot="public" virt="non-virtual"><scope>wxWebViewEvent</scope><name>Allow</name></member>

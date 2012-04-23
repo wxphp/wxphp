@@ -44,13 +44,13 @@
 </programlisting></para><para>This simulates the wxMM_TEXT mapping mode, which wxWidgets assumes.</para><para>Placeable metafiles may be imported by many Windows applications, and can be used in RTF (Rich Text Format) files.</para><para><emphasis>scale</emphasis> allows the specification of scale for the metafile.</para><para>This function is only available under Windows.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/metafile.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/metafile.h" line="171"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/metafile.h" line="171"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/metafile.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/metafile.h"/>
   </compounddef>
 </doxygen>

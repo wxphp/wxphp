@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h" line="213"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/art.h" line="213"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_art_provider_1a392b91dde5089fc50580f6303f8f7e15" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -28,7 +28,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h" line="218"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/art.h" line="218"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_art_provider_1a7d5c4aedb277c10201b8594f780e6f67" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type><ref refid="classwx_ribbon_art_provider" kindref="compound">wxRibbonArtProvider</ref> *</type>
@@ -41,7 +41,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h" line="223"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/art.h" line="223"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_art_provider_1ad5f47ae6b9c2d4c67b931e48a71befa3" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -58,7 +58,7 @@
 <para>Normally called automatically by <ref refid="classwx_ribbon_bar_1adba2da31cb9ec4b9f0e80629c96ea691" kindref="member">wxRibbonBar::SetArtProvider</ref> with the ribbon bar&apos;s style flags, so that the art provider has the same flags as the bar which it is serving. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h" line="232"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/art.h" line="232"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_art_provider_1a4ec0f9caed973d4eea3f2c61708d9473" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type>long</type>
@@ -71,7 +71,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h" line="237"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/art.h" line="237"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_art_provider_1a560bcaebdbea38f8a5bf2e7fb5be0a92" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type>int</type>
@@ -88,7 +88,7 @@
 <para><emphasis>id</emphasis> can be one of the size values of <ref refid="art_8h_1a1d09d963ecc6e5a290768e15a1f70155" kindref="member">wxRibbonArtSetting</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h" line="243"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/art.h" line="243"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_art_provider_1af0bc8f57e0016f0a9d1501fa9499c616" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -109,7 +109,7 @@
 <para><emphasis>id</emphasis> can be one of the size values of <ref refid="art_8h_1a1d09d963ecc6e5a290768e15a1f70155" kindref="member">wxRibbonArtSetting</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h" line="249"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/art.h" line="249"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_art_provider_1ac225e7587c06fffdaadb306cafc153fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -130,7 +130,7 @@
 <para><emphasis>id</emphasis> can be one of the font values of <ref refid="art_8h_1a1d09d963ecc6e5a290768e15a1f70155" kindref="member">wxRibbonArtSetting</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h" line="255"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/art.h" line="255"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_art_provider_1a793d17d671afaac75273f2934bd56495" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type><ref refid="classwx_font" kindref="compound">wxFont</ref></type>
@@ -147,7 +147,7 @@
 <para><emphasis>id</emphasis> can be one of the font values of <ref refid="art_8h_1a1d09d963ecc6e5a290768e15a1f70155" kindref="member">wxRibbonArtSetting</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h" line="261"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/art.h" line="261"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_art_provider_1ad048e9bd640c22f88ac94031052d9e57" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type><ref refid="classwx_colour" kindref="compound">wxColour</ref></type>
@@ -164,7 +164,7 @@
 <para><emphasis>id</emphasis> can be one of the colour values of <ref refid="art_8h_1a1d09d963ecc6e5a290768e15a1f70155" kindref="member">wxRibbonArtSetting</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h" line="267"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/art.h" line="267"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_art_provider_1ab0f69278adbfabd03df9e5ee0b8b3679" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -186,7 +186,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h" line="276"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/art.h" line="276"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_art_provider_1a90056470545d7c4d6a8e44439d8e51f7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_colour" kindref="compound">wxColour</ref></type>
@@ -204,7 +204,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h" line="281"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/art.h" line="281"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_art_provider_1a710c582dac748afbfd33d5524749a8eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -226,7 +226,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h" line="286"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/art.h" line="286"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_art_provider_1a23498380fde981a820c37ce40eabe651" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -248,7 +248,7 @@
         <briefdescription>
 <para>Get the current colour scheme. </para>        </briefdescription>
         <detaileddescription>
-<para>Returns three colours such that if <ref refid="classwx_ribbon_art_provider_1a027db8d45ff72b2f8df164dc79c3eb87" kindref="member">SetColourScheme()</ref> were called with them, the colour scheme would be restored to what it was when <ref refid="classwx_ribbon_art_provider_1a027db8d45ff72b2f8df164dc79c3eb87" kindref="member">SetColourScheme()</ref> was last called. In practice, this usually means that the returned values are the three colours given in the last call to <ref refid="classwx_ribbon_art_provider_1a027db8d45ff72b2f8df164dc79c3eb87" kindref="member">SetColourScheme()</ref>, however if <ref refid="classwx_ribbon_art_provider_1a027db8d45ff72b2f8df164dc79c3eb87" kindref="member">SetColourScheme()</ref> performs an idempotent operation upon the colours it is given (like clamping a component of the colour), then the returned values may not be the three colours given in the last call to <ref refid="classwx_ribbon_art_provider_1a027db8d45ff72b2f8df164dc79c3eb87" kindref="member">SetColourScheme()</ref>. If <ref refid="classwx_ribbon_art_provider_1a027db8d45ff72b2f8df164dc79c3eb87" kindref="member">SetColourScheme()</ref> has not been called, then the returned values should result in a colour scheme similar to, if not identical to, the default colours of the art provider. Note that if <ref refid="classwx_ribbon_art_provider_1ab0f69278adbfabd03df9e5ee0b8b3679" kindref="member">SetColour()</ref> is called, then <ref refid="classwx_ribbon_art_provider_1a23498380fde981a820c37ce40eabe651" kindref="member">GetColourScheme()</ref> does not try and return a colour scheme similar to colours being used - it&apos;s return values are dependant upon the last values given to <ref refid="classwx_ribbon_art_provider_1a027db8d45ff72b2f8df164dc79c3eb87" kindref="member">SetColourScheme()</ref>, as described above.</para><para><parameterlist kind="param"><parameteritem>
+<para>Returns three colours such that if <ref refid="classwx_ribbon_art_provider_1a027db8d45ff72b2f8df164dc79c3eb87" kindref="member">SetColourScheme()</ref> were called with them, the colour scheme would be restored to what it was when <ref refid="classwx_ribbon_art_provider_1a027db8d45ff72b2f8df164dc79c3eb87" kindref="member">SetColourScheme()</ref> was last called. In practice, this usually means that the returned values are the three colours given in the last call to <ref refid="classwx_ribbon_art_provider_1a027db8d45ff72b2f8df164dc79c3eb87" kindref="member">SetColourScheme()</ref>, however if <ref refid="classwx_ribbon_art_provider_1a027db8d45ff72b2f8df164dc79c3eb87" kindref="member">SetColourScheme()</ref> performs an idempotent operation upon the colours it is given (like clamping a component of the colour), then the returned values may not be the three colours given in the last call to <ref refid="classwx_ribbon_art_provider_1a027db8d45ff72b2f8df164dc79c3eb87" kindref="member">SetColourScheme()</ref>. If <ref refid="classwx_ribbon_art_provider_1a027db8d45ff72b2f8df164dc79c3eb87" kindref="member">SetColourScheme()</ref> has not been called, then the returned values should result in a colour scheme similar to, if not identical to, the default colours of the art provider. Note that if <ref refid="classwx_ribbon_art_provider_1ab0f69278adbfabd03df9e5ee0b8b3679" kindref="member">SetColour()</ref> is called, then <ref refid="classwx_ribbon_art_provider_1a23498380fde981a820c37ce40eabe651" kindref="member">GetColourScheme()</ref> does not try and return a colour scheme similar to colours being used - it&apos;s return values are dependent upon the last values given to <ref refid="classwx_ribbon_art_provider_1a027db8d45ff72b2f8df164dc79c3eb87" kindref="member">SetColourScheme()</ref>, as described above.</para><para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername direction="out">primary</parametername>
 </parameternamelist>
@@ -273,7 +273,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h" line="316"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/art.h" line="316"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_art_provider_1a027db8d45ff72b2f8df164dc79c3eb87" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -299,7 +299,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h" line="332"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/art.h" line="332"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_art_provider_1a0cdf421efa57fc932fcabd4095da5974" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -346,7 +346,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h" line="347"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/art.h" line="347"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_art_provider_1a103f0d6af1d9431623361d6818e83745" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -393,7 +393,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h" line="367"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/art.h" line="367"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_art_provider_1a65db56a6fb82fc47fa27d39bbdd6f697" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -451,7 +451,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h" line="387"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/art.h" line="387"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_art_provider_1ab579704095f947e7bdffd84d142e1902" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -499,7 +499,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h" line="405"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/art.h" line="405"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_art_provider_1aee81b27bd880ee8681682919fdb7a01d" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -557,7 +557,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h" line="431"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/art.h" line="431"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_art_provider_1a200c597d607ba3bd95a7038236658af0" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -604,7 +604,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h" line="454"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/art.h" line="454"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_art_provider_1ad41db7f3891c8b541ef1cc6e9add15f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -651,7 +651,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h" line="479"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/art.h" line="479"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_art_provider_1a3d52bff64e7fbcf1a56a11c552008a34" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -709,7 +709,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h" line="512"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/art.h" line="512"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_art_provider_1a32378494458223326d70261ea3afbd6a" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -767,7 +767,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h" line="536"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/art.h" line="536"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_art_provider_1a6271fda02361a91c508972d13647a228" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -814,7 +814,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h" line="552"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/art.h" line="552"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_art_provider_1aa465a3894f4d46f9b1bad349e1099e0a" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -916,7 +916,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h" line="588"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/art.h" line="588"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_art_provider_1aa73ed5659bf7130cd53746a7ef67f9a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -963,7 +963,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h" line="607"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/art.h" line="607"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_art_provider_1a27d75cf08c75157439b6cb302cc82bec" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -1010,7 +1010,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h" line="630"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/art.h" line="630"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_art_provider_1a1ef15193ceae62665fe17c207db69677" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -1090,7 +1090,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h" line="662"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/art.h" line="662"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_art_provider_1a231e0a24c4eca119c99cef80d749f247" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -1192,7 +1192,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h" line="696"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/art.h" line="696"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_art_provider_1a0409f65a0bf21ebbec064a802d144f78" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>int</type>
@@ -1239,7 +1239,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h" line="714"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/art.h" line="714"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_art_provider_1a55e55a4a05d19fd555f85f71502ea84a" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
@@ -1286,7 +1286,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h" line="732"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/art.h" line="732"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_art_provider_1ad73b98f0673ac6e72b768baac9caf38c" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
@@ -1345,7 +1345,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h" line="755"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/art.h" line="755"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_art_provider_1a91de8ee36cdbb22bc8af726611a40adb" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
@@ -1404,7 +1404,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h" line="778"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/art.h" line="778"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_art_provider_1a622a74a205eb1b13af29bfed8e705dd2" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
@@ -1452,7 +1452,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h" line="797"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/art.h" line="797"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_art_provider_1abb0f2d7564900953a406ea3518108c97" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
@@ -1543,7 +1543,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h" line="831"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/art.h" line="831"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_art_provider_1acdc605f1e231f47a4d247c7e41b8e3e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type><ref refid="classwx_rect" kindref="compound">wxRect</ref></type>
@@ -1601,7 +1601,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h" line="854"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/art.h" line="854"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_art_provider_1a848d2c74d291caec0d21f2d0c41a1766" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>bool</type>
@@ -1726,7 +1726,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h" line="897"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/art.h" line="897"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_art_provider_1ad495a398a67be326541a59063682fb57" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
@@ -1784,7 +1784,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h" line="918"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/art.h" line="918"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_art_provider_1af8b23b6097865cfbf3255a791ea7c368" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
@@ -1875,7 +1875,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h" line="946"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/art.h" line="946"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -1884,7 +1884,7 @@
 <para>This allows a ribbon bar to have a pluggable look-and-feel, while retaining the same underlying behaviour. As a single art provider is used for all ribbon components, a ribbon bar usually has a consistent (though unique) appearance.</para><para>By default, a <ref refid="classwx_ribbon_bar" kindref="compound">wxRibbonBar</ref> uses an instance of this class called <computeroutput>wxRibbonDefaultArtProvider</computeroutput>, which resolves to <computeroutput>wxRibbonAUIArtProvider</computeroutput>, <computeroutput>wxRibbonMSWArtProvider</computeroutput>, or <computeroutput>wxRibbonOSXArtProvider</computeroutput> - whichever is most appropriate to the current platform. These art providers are all slightly configurable with regard to colours and fonts, but for larger modifications, you can derive from one of these classes, or write a completely new art provider class. Call <ref refid="classwx_ribbon_bar_1adba2da31cb9ec4b9f0e80629c96ea691" kindref="member">wxRibbonBar::SetArtProvider</ref> to change the art provider being used.</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxribbon" kindref="member">wxRibbon</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ribbon" kindref="compound">Ribbon User Interface</ref></para><para><simplesect kind="see"><para><ref refid="classwx_ribbon_bar" kindref="compound">wxRibbonBar</ref> </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h" line="208" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h" bodystart="207" bodyend="947"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/art.h" line="208" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/art.h" bodystart="207" bodyend="947"/>
     <listofallmembers>
       <member refid="classwx_ribbon_art_provider_1a7d5c4aedb277c10201b8594f780e6f67" prot="public" virt="pure-virtual"><scope>wxRibbonArtProvider</scope><name>Clone</name></member>
       <member refid="classwx_ribbon_art_provider_1a6271fda02361a91c508972d13647a228" prot="public" virt="pure-virtual"><scope>wxRibbonArtProvider</scope><name>DrawButtonBarBackground</name></member>

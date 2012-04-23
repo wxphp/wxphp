@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1801"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1883"/>
       </memberdef>
       <memberdef kind="function" id="classwx_time_span_1a10cda75f656f2c024591c03bc973541c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -47,7 +47,7 @@
 <para>Hours are not restricted to 0-24 range, neither are minutes, seconds or milliseconds. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1807"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1889"/>
       </memberdef>
       <memberdef kind="function" id="classwx_time_span_1a438300050b4927782c536da41b44fde8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_time_span" kindref="compound">wxTimeSpan</ref></type>
@@ -60,7 +60,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1812"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1894"/>
       </memberdef>
       <memberdef kind="function" id="classwx_time_span_1aab7ff940776041a8f1b31787f196a177" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_time_span" kindref="compound">wxTimeSpan</ref></type>
@@ -78,7 +78,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1819"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1901"/>
       </memberdef>
       <memberdef kind="function" id="classwx_time_span_1af9c2f01cfa6be96370f6ff1dab7fa340" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_time_span" kindref="compound">wxTimeSpan</ref> &amp;</type>
@@ -95,15 +95,16 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1824"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1906"/>
       </memberdef>
-      <memberdef kind="function" id="classwx_time_span_1a8c590c0571118648c0b89b9b2090e5be" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classwx_time_span_1a7af6f89c05f38162eed4115122a39857" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
         <definition>wxString wxTimeSpan::Format</definition>
-        <argsstring>(const wxString &amp;=wxDefaultTimeSpanFormat) const </argsstring>
+        <argsstring>(const wxString &amp;format=wxDefaultTimeSpanFormat) const </argsstring>
         <name>Format</name>
         <param>
           <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>format</declname>
           <defval>wxDefaultTimeSpanFormat</defval>
         </param>
         <briefdescription>
@@ -114,7 +115,7 @@
 </para><para>Note that, for example, the number of hours in the description above is not well defined: it can be either the total number of hours (for example, for a time span of 50 hours this would be 50) or just the hour part of the time span, which would be 2 in this case as 50 hours is equal to 2 days and 2 hours.</para><para><ref refid="classwx_time_span" kindref="compound">wxTimeSpan</ref> resolves this ambiguity in the following way: if there had been, indeed, the <computeroutput>D</computeroutput> format specified preceding the <computeroutput>H</computeroutput>, then it is interpreted as 2. Otherwise, it is 50.</para><para>The same applies to all other format specifiers: if they follow a specifier of larger unit, only the rest part is taken, otherwise the full value is used. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1862"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1944"/>
       </memberdef>
       <memberdef kind="function" id="classwx_time_span_1a9174015fd14ffcb41951f1376484ff69" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -127,7 +128,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1867"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1949"/>
       </memberdef>
       <memberdef kind="function" id="classwx_time_span_1ae0f8757d7df0c3aa7f547095a1ec949d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -140,7 +141,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1872"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1954"/>
       </memberdef>
       <memberdef kind="function" id="classwx_time_span_1a75039abd1def3cdef3621b5db917bb71" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_long_long" kindref="compound">wxLongLong</ref></type>
@@ -153,7 +154,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1877"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1959"/>
       </memberdef>
       <memberdef kind="function" id="classwx_time_span_1a9e5c21ae877c142dfada8bfa6d1e85fc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -166,7 +167,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1882"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1964"/>
       </memberdef>
       <memberdef kind="function" id="classwx_time_span_1a6fadb09b3015be457aaeb57c46f70aac" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_long_long" kindref="compound">wxLongLong</ref></type>
@@ -179,7 +180,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1887"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1969"/>
       </memberdef>
       <memberdef kind="function" id="classwx_time_span_1a64c3cb36ab72b5974a1d5eaf38365bdf" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_long_long" kindref="compound">wxLongLong</ref></type>
@@ -192,7 +193,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1892"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1974"/>
       </memberdef>
       <memberdef kind="function" id="classwx_time_span_1a40994ccf16944a16a4a22725fe7dee8b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -205,7 +206,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1897"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1979"/>
       </memberdef>
       <memberdef kind="function" id="classwx_time_span_1acd1b707465613a3ba4398da3243bece0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -222,7 +223,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1912"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1994"/>
       </memberdef>
       <memberdef kind="function" id="classwx_time_span_1ad955d33731c4fd6f83aa445383175e6d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -239,7 +240,7 @@
 <para>-2 hours is longer than 1 hour. Also, it will return false if the timespans are equal in absolute value. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1919"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="2001"/>
       </memberdef>
       <memberdef kind="function" id="classwx_time_span_1a3da48b98dfb4c056fe6a3d63987f2825" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -252,7 +253,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1924"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="2006"/>
       </memberdef>
       <memberdef kind="function" id="classwx_time_span_1a3fd095cb0efead83f535d266bd8bcd37" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -265,7 +266,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1929"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="2011"/>
       </memberdef>
       <memberdef kind="function" id="classwx_time_span_1aa03d3817f2772b25c120ac8dd2d2cd61" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -278,7 +279,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1934"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="2016"/>
       </memberdef>
       <memberdef kind="function" id="classwx_time_span_1ab1c374222f9be7363f16c1c030462112" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -295,7 +296,7 @@
 <para>1 hour is shorter than -2 hours. Also, it will return false if the timespans are equal in absolute value. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1941"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="2023"/>
       </memberdef>
       <memberdef kind="function" id="classwx_time_span_1ab515cf02a32b07825ca99a6a99327a5f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_time_span" kindref="compound">wxTimeSpan</ref></type>
@@ -313,7 +314,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1968"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="2050"/>
       </memberdef>
       <memberdef kind="function" id="classwx_time_span_1a3ca6fdcf682d05c27c4be20143404253" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_time_span" kindref="compound">wxTimeSpan</ref> &amp;</type>
@@ -331,7 +332,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1974"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="2056"/>
       </memberdef>
       <memberdef kind="function" id="classwx_time_span_1af5da5b5b3fb8b50db4db3254a4149be2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_time_span" kindref="compound">wxTimeSpan</ref> &amp;</type>
@@ -345,7 +346,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1981"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="2063"/>
       </memberdef>
       <memberdef kind="function" id="classwx_time_span_1a979b2100518aaa0e8b0fae6d6e6888ec" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_time_span" kindref="compound">wxTimeSpan</ref></type>
@@ -359,7 +360,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1988"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="2070"/>
       </memberdef>
       <memberdef kind="function" id="classwx_time_span_1a37c606300f4c95ebdc5675173187be8c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_time_span" kindref="compound">wxTimeSpan</ref></type>
@@ -377,7 +378,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="2005"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="2087"/>
       </memberdef>
       <memberdef kind="function" id="classwx_time_span_1a79c63c002e37303eb4ec735193802bb7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_time_span" kindref="compound">wxTimeSpan</ref> &amp;</type>
@@ -394,7 +395,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="2010"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="2092"/>
       </memberdef>
       <memberdef kind="function" id="classwx_time_span_1a569b960b978d98a877c1c4b654873c82" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_time_span" kindref="compound">wxTimeSpan</ref> &amp;</type>
@@ -411,7 +412,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="2025"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="2107"/>
       </memberdef>
       <memberdef kind="function" id="classwx_time_span_1adba80c3c26708d2d8a684e3bc9cbf098" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_time_span" kindref="compound">wxTimeSpan</ref> &amp;</type>
@@ -429,7 +430,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="2032"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="2114"/>
       </memberdef>
       <memberdef kind="function" id="classwx_time_span_1ac2b8bd3ef1852b8df1c73d2206624cf1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_time_span" kindref="compound">wxTimeSpan</ref> &amp;</type>
@@ -443,7 +444,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="2039"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="2121"/>
       </memberdef>
       <memberdef kind="function" id="classwx_time_span_1a6d11a9ef00c378315b5a2377433ef6f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_time_span" kindref="compound">wxTimeSpan</ref> &amp;</type>
@@ -460,7 +461,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="2045"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="2127"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -475,7 +476,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1829"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1911"/>
       </memberdef>
       <memberdef kind="function" id="classwx_time_span_1aec82871692ad813631adb7d0edaa6e12" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_time_span" kindref="compound">wxTimeSpan</ref></type>
@@ -492,7 +493,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1834"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1916"/>
       </memberdef>
       <memberdef kind="function" id="classwx_time_span_1a0c11a4d4a25d91f06609456b05f92ea4" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_time_span" kindref="compound">wxTimeSpan</ref></type>
@@ -505,7 +506,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1902"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1984"/>
       </memberdef>
       <memberdef kind="function" id="classwx_time_span_1ac6a07b71387e1402d79381eb51becab7" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_time_span" kindref="compound">wxTimeSpan</ref></type>
@@ -522,7 +523,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1907"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1989"/>
       </memberdef>
       <memberdef kind="function" id="classwx_time_span_1a5b979776a9120071f0602e21a5be733f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_time_span" kindref="compound">wxTimeSpan</ref></type>
@@ -535,7 +536,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1946"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="2028"/>
       </memberdef>
       <memberdef kind="function" id="classwx_time_span_1aab4dda04fc0654b91e0829e17fb9d59d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_time_span" kindref="compound">wxTimeSpan</ref></type>
@@ -552,7 +553,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1951"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="2033"/>
       </memberdef>
       <memberdef kind="function" id="classwx_time_span_1af2c88d43853d1168eee6f816b3aafcb3" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_time_span" kindref="compound">wxTimeSpan</ref></type>
@@ -565,7 +566,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1956"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="2038"/>
       </memberdef>
       <memberdef kind="function" id="classwx_time_span_1ac1207a105513060a4ce39b5f6b4fe6d1" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_time_span" kindref="compound">wxTimeSpan</ref></type>
@@ -582,7 +583,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1961"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="2043"/>
       </memberdef>
       <memberdef kind="function" id="classwx_time_span_1a077e3e6579aa0ee7b72c1e80495d70c7" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_time_span" kindref="compound">wxTimeSpan</ref></type>
@@ -595,7 +596,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1993"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="2075"/>
       </memberdef>
       <memberdef kind="function" id="classwx_time_span_1a54f32d8bbffd4325b7e62f1e0f503630" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_time_span" kindref="compound">wxTimeSpan</ref></type>
@@ -612,7 +613,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1998"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="2080"/>
       </memberdef>
       <memberdef kind="function" id="classwx_time_span_1a13255b41b8e02c10485b5837f0691e1c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_time_span" kindref="compound">wxTimeSpan</ref></type>
@@ -625,7 +626,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="2015"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="2097"/>
       </memberdef>
       <memberdef kind="function" id="classwx_time_span_1ade5a8124740101ceb0302480be6c8303" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_time_span" kindref="compound">wxTimeSpan</ref></type>
@@ -642,7 +643,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="2020"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="2102"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -651,14 +652,14 @@
 <para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__data" kindref="compound">Data Structures</ref></para><para><simplesect kind="see"><para><ref refid="overview_datetime" kindref="compound">Date and Time</ref>, <ref refid="classwx_date_time" kindref="compound">wxDateTime</ref> </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1796" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" bodystart="1795" bodyend="2046"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1878" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" bodystart="1877" bodyend="2128"/>
     <listofallmembers>
       <member refid="classwx_time_span_1a438300050b4927782c536da41b44fde8" prot="public" virt="non-virtual"><scope>wxTimeSpan</scope><name>Abs</name></member>
       <member refid="classwx_time_span_1aab7ff940776041a8f1b31787f196a177" prot="public" virt="non-virtual"><scope>wxTimeSpan</scope><name>Add</name></member>
       <member refid="classwx_time_span_1af9c2f01cfa6be96370f6ff1dab7fa340" prot="public" virt="non-virtual"><scope>wxTimeSpan</scope><name>Add</name></member>
       <member refid="classwx_time_span_1a9f1c5135a3295bace15e5c2bd3f49aa1" prot="public" virt="non-virtual"><scope>wxTimeSpan</scope><name>Day</name></member>
       <member refid="classwx_time_span_1aec82871692ad813631adb7d0edaa6e12" prot="public" virt="non-virtual"><scope>wxTimeSpan</scope><name>Days</name></member>
-      <member refid="classwx_time_span_1a8c590c0571118648c0b89b9b2090e5be" prot="public" virt="non-virtual"><scope>wxTimeSpan</scope><name>Format</name></member>
+      <member refid="classwx_time_span_1a7af6f89c05f38162eed4115122a39857" prot="public" virt="non-virtual"><scope>wxTimeSpan</scope><name>Format</name></member>
       <member refid="classwx_time_span_1a9174015fd14ffcb41951f1376484ff69" prot="public" virt="non-virtual"><scope>wxTimeSpan</scope><name>GetDays</name></member>
       <member refid="classwx_time_span_1ae0f8757d7df0c3aa7f547095a1ec949d" prot="public" virt="non-virtual"><scope>wxTimeSpan</scope><name>GetHours</name></member>
       <member refid="classwx_time_span_1a75039abd1def3cdef3621b5db917bb71" prot="public" virt="non-virtual"><scope>wxTimeSpan</scope><name>GetMilliseconds</name></member>

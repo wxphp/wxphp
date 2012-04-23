@@ -17,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/manager.h" line="43" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/manager.h" bodystart="43" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/manager.h" line="43" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/manager.h" bodystart="43" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -32,7 +32,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/manager.h" line="46"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/manager.h" line="46"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_page_1a51af551484cb8785e2fe8664b4e28775" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -45,7 +45,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/manager.h" line="47"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/manager.h" line="47"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_page_1a702b0d8cd205cf29c8888e80e3e426a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -59,7 +59,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/manager.h" line="52"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/manager.h" line="52"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_page_1a97fdd418c9e8727e1800428e30c6164c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
@@ -74,7 +74,7 @@
 Note that you can also get calculated column widths by calling GetColumnWidth() immediately after this function returns. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/manager.h" line="66"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/manager.h" line="66"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_page_1a4a66eb036e9bd5592904446f991a013b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -87,7 +87,7 @@ Note that you can also get calculated column widths by calling GetColumnWidth() 
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/manager.h" line="71"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/manager.h" line="71"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_page_1ac2d74a899d99af4182a307af41be42b8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_p_g_property" kindref="compound">wxPGProperty</ref> *</type>
@@ -100,7 +100,7 @@ Note that you can also get calculated column widths by calling GetColumnWidth() 
 <para>It does not have name, etc. and it is not visible. It is only useful for accessing its children. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/manager.h" line="77"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/manager.h" line="77"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_page_1a7309da21cd3a505fb6fe53cd36cff677" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -118,7 +118,7 @@ Note that you can also get calculated column widths by calling GetColumnWidth() 
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/manager.h" line="82"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/manager.h" line="82"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_page_1a8662f6cd2fd234a959493e4a3c693d2e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -131,7 +131,7 @@ Note that you can also get calculated column widths by calling GetColumnWidth() 
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/manager.h" line="88"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/manager.h" line="88"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_page_1aada6353fdf4ff5e1d2196001f2404283" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -147,7 +147,7 @@ Note that you can also get calculated column widths by calling GetColumnWidth() 
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/manager.h" line="96"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/manager.h" line="96"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_page_1a21a33aea3b2c498c0cf63a79c70952ef" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -160,7 +160,7 @@ Note that you can also get calculated column widths by calling GetColumnWidth() 
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/manager.h" line="102"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/manager.h" line="102"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_page_1ab60f9672f417f1f124d7e777185a9263" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -173,7 +173,7 @@ Note that you can also get calculated column widths by calling GetColumnWidth() 
 <para>Useful, for instance, creating properties just-in-time. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/manager.h" line="108"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/manager.h" line="108"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_page_1ac66be7baa5683eddb727d75dfddabd88" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -190,7 +190,7 @@ Note that you can also get calculated column widths by calling GetColumnWidth() 
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/manager.h" line="113"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/manager.h" line="113"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_page_1a487917dd83814af6d6023280b8589fec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -213,7 +213,7 @@ Note that you can also get calculated column widths by calling GetColumnWidth() 
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/manager.h" line="123"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/manager.h" line="123"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -225,73 +225,73 @@ Note that you can also get calculated column widths by calling GetColumnWidth() 
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxpropgrid" kindref="member">wxPropertyGrid</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__propgrid" kindref="compound">wxPropertyGrid</ref> </para></sect1>
     </detaileddescription>
     <inheritancegraph>
-      <node id="8920">
+      <node id="9103">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="8919">
+      <node id="9102">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="8920" relation="public-inheritance">
+        <childnode refid="9103" relation="public-inheritance">
         </childnode>
-        <childnode refid="8921" relation="public-inheritance">
+        <childnode refid="9104" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8921">
+      <node id="9104">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="8918">
+      <node id="9101">
         <label>wxPropertyGridPage</label>
         <link refid="classwx_property_grid_page"/>
-        <childnode refid="8919" relation="public-inheritance">
+        <childnode refid="9102" relation="public-inheritance">
         </childnode>
-        <childnode refid="8922" relation="public-inheritance">
+        <childnode refid="9105" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8922">
+      <node id="9105">
         <label>wxPropertyGridInterface</label>
         <link refid="classwx_property_grid_interface"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="8925">
+      <node id="9108">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="8926" relation="usage">
+        <childnode refid="9109" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="8924">
+      <node id="9107">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="8925" relation="public-inheritance">
+        <childnode refid="9108" relation="public-inheritance">
         </childnode>
-        <childnode refid="8927" relation="public-inheritance">
+        <childnode refid="9110" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8927">
+      <node id="9110">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="8923">
+      <node id="9106">
         <label>wxPropertyGridPage</label>
         <link refid="classwx_property_grid_page"/>
-        <childnode refid="8924" relation="public-inheritance">
+        <childnode refid="9107" relation="public-inheritance">
         </childnode>
-        <childnode refid="8928" relation="public-inheritance">
+        <childnode refid="9111" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8928">
+      <node id="9111">
         <label>wxPropertyGridInterface</label>
         <link refid="classwx_property_grid_interface"/>
       </node>
-      <node id="8926">
+      <node id="9109">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/manager.h" line="42" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/manager.h" bodystart="40" bodyend="124"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/manager.h" line="42" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/manager.h" bodystart="40" bodyend="124"/>
     <listofallmembers>
       <member refid="classwx_evt_handler_1a7dc3c701781f4044372049de5004137e" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>AddFilter</name></member>
       <member refid="classwx_evt_handler_1a0737c6d2cbcd5ded4b1ecdd53ed0def3" prot="public" virt="virtual"><scope>wxPropertyGridPage</scope><name>AddPendingEvent</name></member>
@@ -465,7 +465,6 @@ Note that you can also get calculated column widths by calling GetColumnWidth() 
       <member refid="classwx_property_grid_interface_1acd38be5728243d99365e0f371b6c19aea1cc473f6d94d75e3e97159ccd4a325d3" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>SplitterPosState</name></member>
       <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxPropertyGridPage</scope><name>TryAfter</name></member>
       <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxPropertyGridPage</scope><name>TryBefore</name></member>
-      <member refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>TryThis</name></member>
       <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a22e5db2ec1d19c8252c056fd116975d7" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>Unlink</name></member>

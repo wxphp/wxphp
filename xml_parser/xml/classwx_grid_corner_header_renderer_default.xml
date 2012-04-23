@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="1060"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="1060"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -39,30 +39,30 @@
 <simplesect kind="since"><para>2.9.1 </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="6771">
+      <node id="6941">
         <label>wxGridCornerHeaderRenderer</label>
         <link refid="classwx_grid_corner_header_renderer"/>
       </node>
-      <node id="6770">
+      <node id="6940">
         <label>wxGridCornerHeaderRendererDefault</label>
         <link refid="classwx_grid_corner_header_renderer_default"/>
-        <childnode refid="6771" relation="public-inheritance">
+        <childnode refid="6941" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="6773">
+      <node id="6943">
         <label>wxGridCornerHeaderRenderer</label>
         <link refid="classwx_grid_corner_header_renderer"/>
       </node>
-      <node id="6772">
+      <node id="6942">
         <label>wxGridCornerHeaderRendererDefault</label>
         <link refid="classwx_grid_corner_header_renderer_default"/>
-        <childnode refid="6773" relation="public-inheritance">
+        <childnode refid="6943" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="1055" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" bodystart="1054" bodyend="1061"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="1055" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" bodystart="1054" bodyend="1061"/>
     <listofallmembers>
       <member refid="classwx_grid_corner_header_renderer_default_1a42d30f4a08d81c7932b7f25cfd9ce0ff" prot="public" virt="virtual"><scope>wxGridCornerHeaderRendererDefault</scope><name>DrawBorder</name></member>
     </listofallmembers>

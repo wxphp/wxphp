@@ -53,7 +53,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/valnum.h" line="323"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/valnum.h" line="323"/>
       </memberdef>
       <memberdef kind="function" id="classwx_floating_point_validator_1af013bd27c33a9878c271e4899417fa42" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -102,7 +102,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/valnum.h" line="326"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/valnum.h" line="326"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-type">
@@ -118,7 +118,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/valnum.h" line="305" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/valnum.h" bodystart="305" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/valnum.h" line="305" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/valnum.h" bodystart="305" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -137,7 +137,7 @@
 <para>Precision is the number of digits shown (and accepted on input) after the decimal point. By default this is set to the maximal precision supported by the type handled by the validator in its constructor. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/valnum.h" line="338"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/valnum.h" line="338"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -167,85 +167,85 @@
 <simplesect kind="since"><para>2.9.2 </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="6346">
+      <node id="6486">
         <label>wxValidator</label>
         <link refid="classwx_validator"/>
-        <childnode refid="6347" relation="public-inheritance">
+        <childnode refid="6487" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6345">
+      <node id="6485">
         <label>wxNumValidator&lt; T &gt;</label>
         <link refid="classwx_num_validator"/>
-        <childnode refid="6346" relation="public-inheritance">
+        <childnode refid="6486" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6348">
+      <node id="6488">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="6347">
+      <node id="6487">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="6348" relation="public-inheritance">
+        <childnode refid="6488" relation="public-inheritance">
         </childnode>
-        <childnode refid="6349" relation="public-inheritance">
+        <childnode refid="6489" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6349">
+      <node id="6489">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="6344">
+      <node id="6484">
         <label>wxFloatingPointValidator&lt; T &gt;</label>
         <link refid="classwx_floating_point_validator"/>
-        <childnode refid="6345" relation="public-inheritance">
+        <childnode refid="6485" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="6352">
+      <node id="6492">
         <label>wxValidator</label>
         <link refid="classwx_validator"/>
-        <childnode refid="6353" relation="public-inheritance">
+        <childnode refid="6493" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6351">
+      <node id="6491">
         <label>wxNumValidator&lt; T &gt;</label>
         <link refid="classwx_num_validator"/>
-        <childnode refid="6352" relation="public-inheritance">
+        <childnode refid="6492" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6354">
+      <node id="6494">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="6355" relation="usage">
+        <childnode refid="6495" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="6353">
+      <node id="6493">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="6354" relation="public-inheritance">
+        <childnode refid="6494" relation="public-inheritance">
         </childnode>
-        <childnode refid="6356" relation="public-inheritance">
+        <childnode refid="6496" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6356">
+      <node id="6496">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="6350">
+      <node id="6490">
         <label>wxFloatingPointValidator&lt; T &gt;</label>
         <link refid="classwx_floating_point_validator"/>
-        <childnode refid="6351" relation="public-inheritance">
+        <childnode refid="6491" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6355">
+      <node id="6495">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/valnum.h" line="302" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/valnum.h" bodystart="301" bodyend="339"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/valnum.h" line="302" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/valnum.h" bodystart="301" bodyend="339"/>
     <listofallmembers>
       <member refid="classwx_evt_handler_1a7dc3c701781f4044372049de5004137e" prot="public" virt="non-virtual"><scope>wxFloatingPointValidator</scope><name>AddFilter</name></member>
       <member refid="classwx_evt_handler_1a0737c6d2cbcd5ded4b1ecdd53ed0def3" prot="public" virt="virtual"><scope>wxFloatingPointValidator</scope><name>AddPendingEvent</name></member>
@@ -301,7 +301,6 @@
       <member refid="classwx_num_validator_1a629f0860d54bf200fe8779e7daa9a863" prot="public" virt="virtual"><scope>wxFloatingPointValidator</scope><name>TransferToWindow</name></member>
       <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxFloatingPointValidator</scope><name>TryAfter</name></member>
       <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxFloatingPointValidator</scope><name>TryBefore</name></member>
-      <member refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" virt="non-virtual"><scope>wxFloatingPointValidator</scope><name>TryThis</name></member>
       <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxFloatingPointValidator</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxFloatingPointValidator</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a22e5db2ec1d19c8252c056fd116975d7" prot="public" virt="non-virtual"><scope>wxFloatingPointValidator</scope><name>Unlink</name></member>

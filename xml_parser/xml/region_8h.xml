@@ -37,7 +37,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" line="13" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" bodystart="12" bodyend="32"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/region.h" line="13" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/region.h" bodystart="12" bodyend="32"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="var">
@@ -52,13 +52,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" line="502" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" bodystart="502" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/region.h" line="498" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/region.h" bodystart="498" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/region.h"/>
   </compounddef>
 </doxygen>

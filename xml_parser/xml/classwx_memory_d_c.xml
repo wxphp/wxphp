@@ -17,7 +17,7 @@
 <para>Use the <ref refid="classwx_d_c_1aac2d04cf636651fbbc943d4236586e3a" kindref="member">wxDC::IsOk()</ref> member to test whether the constructor was successful in creating a usable device context. Don&apos;t forget to select a bitmap into the DC before drawing on it. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dcmemory.h" line="57"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dcmemory.h" line="57"/>
       </memberdef>
       <memberdef kind="function" id="classwx_memory_d_c_1aaa30d5e8f9caa2a3a727296226488a8d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -34,7 +34,7 @@
 <para>This constructor creates a memory device context <emphasis>compatible</emphasis> with <emphasis>dc</emphasis> in wxMSW, the argument is ignored in the other ports. If <emphasis>dc</emphasis> is NULL, a device context compatible with the screen is created, just as with the default constructor. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dcmemory.h" line="68"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dcmemory.h" line="68"/>
       </memberdef>
       <memberdef kind="function" id="classwx_memory_d_c_1ab6d6febe55bb6fbbac655cdaf1a719d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -51,7 +51,7 @@
 <para>Use the <ref refid="classwx_d_c_1aac2d04cf636651fbbc943d4236586e3a" kindref="member">wxDC::IsOk()</ref> member to test whether the constructor was successful in creating a usable device context. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dcmemory.h" line="77"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dcmemory.h" line="77"/>
       </memberdef>
       <memberdef kind="function" id="classwx_memory_d_c_1a93d218796ba9359eb4aec2ae46a813e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -69,7 +69,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dcmemory.h" line="98"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dcmemory.h" line="98"/>
       </memberdef>
       <memberdef kind="function" id="classwx_memory_d_c_1a148ceba1c29d4a78fca6026a90e2ee5f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -86,7 +86,7 @@
 <para>Selecting the bitmap into a memory DC allows you to draw into the DC (and therefore the bitmap) and also to use <ref refid="classwx_d_c_1a12bed94a15136b9080683f4151042a34" kindref="member">wxDC::Blit()</ref> to copy the bitmap to a window. For this purpose, you may find <ref refid="classwx_d_c_1a890d011a03308a28039d4940dd04264e" kindref="member">wxDC::DrawIcon()</ref> easier to use instead.</para><para>If the argument is <ref refid="interface_2wx_2bitmap_8h_1a2947690e84b8fdb2e37b79a4af8f8a21" kindref="member">wxNullBitmap</ref> (or some other uninitialised <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref>) the current bitmap is selected out of the device context, and the original bitmap restored, allowing the current bitmap to be destroyed safely. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dcmemory.h" line="112"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dcmemory.h" line="112"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -104,67 +104,67 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__dc" kindref="compound">Device Contexts</ref></para><para><simplesect kind="see"><para><ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref>, <ref refid="classwx_d_c" kindref="compound">wxDC</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7675">
+      <node id="7868">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="7673">
+      <node id="7866">
         <label>wxMemoryDC</label>
         <link refid="classwx_memory_d_c"/>
-        <childnode refid="7674" relation="public-inheritance">
+        <childnode refid="7867" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7677">
+      <node id="7870">
         <label>wxBufferedPaintDC</label>
         <link refid="classwx_buffered_paint_d_c"/>
-        <childnode refid="7676" relation="public-inheritance">
+        <childnode refid="7869" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7676">
+      <node id="7869">
         <label>wxBufferedDC</label>
         <link refid="classwx_buffered_d_c"/>
-        <childnode refid="7673" relation="public-inheritance">
+        <childnode refid="7866" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7674">
+      <node id="7867">
         <label>wxDC</label>
         <link refid="classwx_d_c"/>
-        <childnode refid="7675" relation="public-inheritance">
+        <childnode refid="7868" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7678">
+      <node id="7871">
         <label>wxAutoBufferedPaintDC</label>
         <link refid="classwx_auto_buffered_paint_d_c"/>
-        <childnode refid="7677" relation="public-inheritance">
+        <childnode refid="7870" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7681">
+      <node id="7874">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="7682" relation="usage">
+        <childnode refid="7875" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="7679">
+      <node id="7872">
         <label>wxMemoryDC</label>
         <link refid="classwx_memory_d_c"/>
-        <childnode refid="7680" relation="public-inheritance">
+        <childnode refid="7873" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7680">
+      <node id="7873">
         <label>wxDC</label>
         <link refid="classwx_d_c"/>
-        <childnode refid="7681" relation="public-inheritance">
+        <childnode refid="7874" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7682">
+      <node id="7875">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dcmemory.h" line="48" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dcmemory.h" bodystart="47" bodyend="113"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dcmemory.h" line="48" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dcmemory.h" bodystart="47" bodyend="113"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxMemoryDC</scope><name>AllocExclusive</name></member>
       <member refid="classwx_d_c_1a12bed94a15136b9080683f4151042a34" prot="public" virt="non-virtual"><scope>wxMemoryDC</scope><name>Blit</name></member>

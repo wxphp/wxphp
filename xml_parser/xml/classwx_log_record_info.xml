@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="44" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" bodystart="44" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" line="44" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" bodystart="44" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classwx_log_record_info_1a1b5362167925e65dc65d59b2ea30a077" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -28,7 +28,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="47" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" bodystart="47" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" line="47" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" bodystart="47" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classwx_log_record_info_1a417ea2d0476c2838cbb17deba2bcab68" prot="public" static="no" mutable="no">
         <type>const char *</type>
@@ -41,7 +41,7 @@
 <para>This field may be NULL if the compiler doesn&apos;t support <computeroutput>__FUNCTION__</computeroutput> (but most modern compilers do). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="55" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" bodystart="55" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" line="55" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" bodystart="55" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classwx_log_record_info_1a702d51504b8ae8b313f642de68f38964" prot="public" static="no" mutable="no">
         <type>time_t</type>
@@ -54,7 +54,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="58" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" bodystart="58" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" line="58" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" bodystart="58" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classwx_log_record_info_1af7766219720d7215dcdef349d247916e" prot="public" static="no" mutable="no">
         <type>wxThreadIdType</type>
@@ -68,14 +68,14 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="68" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" bodystart="68" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" line="68" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" bodystart="68" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para>Information about a log record (unit of the log output). </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="41" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" bodystart="40" bodyend="69"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" line="41" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" bodystart="40" bodyend="69"/>
     <listofallmembers>
       <member refid="classwx_log_record_info_1a91290266e065128e556e76a21e01dbd9" prot="public" virt="non-virtual"><scope>wxLogRecordInfo</scope><name>filename</name></member>
       <member refid="classwx_log_record_info_1a417ea2d0476c2838cbb17deba2bcab68" prot="public" virt="non-virtual"><scope>wxLogRecordInfo</scope><name>func</name></member>

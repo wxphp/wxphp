@@ -33,7 +33,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/power.h" line="10" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/power.h" bodystart="9" bodyend="14"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/power.h" line="10" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/power.h" bodystart="9" bodyend="14"/>
       </memberdef>
       <memberdef kind="enum" id="power_8h_1a1222ff013d6af054701028e127405bbd" prot="public" static="no">
         <name>wxBatteryState</name>
@@ -78,13 +78,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/power.h" line="17" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/power.h" bodystart="16" bodyend="23"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/power.h" line="17" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/power.h" bodystart="16" bodyend="23"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/power.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/power.h"/>
   </compounddef>
 </doxygen>

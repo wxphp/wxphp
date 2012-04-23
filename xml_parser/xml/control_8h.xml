@@ -45,7 +45,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/control.h" line="13" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/control.h" bodystart="12" bodyend="41"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/control.h" line="13" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/control.h" bodystart="12" bodyend="41"/>
       </memberdef>
       <memberdef kind="enum" id="control_8h_1a0293befa07fe89f6efd8caec89c3b489" prot="public" static="no">
         <name>wxEllipsizeMode</name>
@@ -84,13 +84,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/control.h" line="49" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/control.h" bodystart="48" bodyend="61"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/control.h" line="49" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/control.h" bodystart="48" bodyend="61"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/control.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/control.h"/>
   </compounddef>
 </doxygen>

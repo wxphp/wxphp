@@ -50,7 +50,7 @@
 Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__validator" kindref="compound">Validators</ref> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/valnum.h" line="21" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/valnum.h" bodystart="20" bodyend="63"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/valnum.h" line="21" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/valnum.h" bodystart="20" bodyend="63"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

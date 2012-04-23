@@ -6,6 +6,80 @@
     <innerclass refid="classwx_calendar_date_attr" prot="public">wxCalendarDateAttr</innerclass>
     <innerclass refid="classwx_calendar_ctrl" prot="public">wxCalendarCtrl</innerclass>
       <sectiondef kind="enum">
+      <memberdef kind="enum" id="calctrl_8h_1abc6126af1d45847bc59afa0aa3216b04" prot="public" static="no">
+        <name>@3</name>
+        <enumvalue id="calctrl_8h_1abc6126af1d45847bc59afa0aa3216b04a04263009a6a32ceb76f424658421a45c" prot="public">
+          <name>wxCAL_SUNDAY_FIRST</name>
+          <initializer> 0x0000</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="calctrl_8h_1abc6126af1d45847bc59afa0aa3216b04aa952a796449771542672ff7eacc9a518" prot="public">
+          <name>wxCAL_MONDAY_FIRST</name>
+          <initializer> 0x0001</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="calctrl_8h_1abc6126af1d45847bc59afa0aa3216b04afb5dd28f654a7e21dd4f4f619677e1ca" prot="public">
+          <name>wxCAL_SHOW_HOLIDAYS</name>
+          <initializer> 0x0002</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="calctrl_8h_1abc6126af1d45847bc59afa0aa3216b04a6d5a642b0621cac960d4bf6ff0c812cb" prot="public">
+          <name>wxCAL_NO_YEAR_CHANGE</name>
+          <initializer> 0x0004</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="calctrl_8h_1abc6126af1d45847bc59afa0aa3216b04a8c4d936ec249dfa5515f0129f6a05ead" prot="public">
+          <name>wxCAL_NO_MONTH_CHANGE</name>
+          <initializer> 0x000c</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="calctrl_8h_1abc6126af1d45847bc59afa0aa3216b04aa46c723754f55fdb614af114a28f0648" prot="public">
+          <name>wxCAL_SEQUENTIAL_MONTH_SELECTION</name>
+          <initializer> 0x0010</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="calctrl_8h_1abc6126af1d45847bc59afa0aa3216b04a30fd70f68ee1994be37783d718118474" prot="public">
+          <name>wxCAL_SHOW_SURROUNDING_WEEKS</name>
+          <initializer> 0x0020</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="calctrl_8h_1abc6126af1d45847bc59afa0aa3216b04a4f3a328926a7c3700f2f8d60d01909ba" prot="public">
+          <name>wxCAL_SHOW_WEEK_NUMBERS</name>
+          <initializer> 0x0040</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/calctrl.h" line="10" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/calctrl.h" bodystart="9" bodyend="36"/>
+      </memberdef>
       <memberdef kind="enum" id="calctrl_8h_1a6dbe7946c87601eee0d7fd2b4f73fdd6" prot="public" static="no">
         <name>wxCalendarDateBorder</name>
         <enumvalue id="calctrl_8h_1a6dbe7946c87601eee0d7fd2b4f73fdd6ab019c909b7996da160f11d6c3ea07efd" prot="public">
@@ -35,7 +109,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/calctrl.h" line="43" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/calctrl.h" bodystart="42" bodyend="47"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/calctrl.h" line="82" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/calctrl.h" bodystart="81" bodyend="86"/>
       </memberdef>
       <memberdef kind="enum" id="calctrl_8h_1ab54c21fe15c064d2ea6741533fa235bc" prot="public" static="no">
         <name>wxCalendarHitTestResult</name>
@@ -94,13 +168,80 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/calctrl.h" line="182" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/calctrl.h" bodystart="181" bodyend="190"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/calctrl.h" line="221" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/calctrl.h" bodystart="220" bodyend="229"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="calctrl_8h_1abfed728b5c2fb4ab2c7b3da58853f70f" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_CALENDAR_SEL_CHANGED</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_CALENDAR_SEL_CHANGED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/calctrl.h" line="69" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/calctrl.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="calctrl_8h_1a72360871e99ab580d7dbd129dace478b" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_CALENDAR_PAGE_CHANGED</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_CALENDAR_PAGE_CHANGED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/calctrl.h" line="70" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/calctrl.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="calctrl_8h_1ad77ff00612a02b85418dfd2b4ef38282" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_CALENDAR_DOUBLECLICKED</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_CALENDAR_DOUBLECLICKED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/calctrl.h" line="71" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/calctrl.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="calctrl_8h_1ae1a98e00086a47906b19019a7b9353bd" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_CALENDAR_WEEKDAY_CLICKED</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_CALENDAR_WEEKDAY_CLICKED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/calctrl.h" line="72" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/calctrl.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="calctrl_8h_1a9c58de44f96afb1de64f1028090fb7cf" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_CALENDAR_WEEK_CLICKED</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_CALENDAR_WEEK_CLICKED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/calctrl.h" line="73" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/calctrl.h" bodystart="73" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/calctrl.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/calctrl.h"/>
   </compounddef>
 </doxygen>

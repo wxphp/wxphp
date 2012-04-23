@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ipc.h" line="265"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ipc.h" line="265"/>
       </memberdef>
       <memberdef kind="function" id="classwx_client_1a6ca1cef89e834a724d34edf9872f545d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_connection_base" kindref="compound">wxConnectionBase</ref> *</type>
@@ -42,7 +42,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ipc.h" line="288"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ipc.h" line="288"/>
       </memberdef>
       <memberdef kind="function" id="classwx_client_1a71328614681f8f50de8a561b5dcfbbde" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_connection_base" kindref="compound">wxConnectionBase</ref> *</type>
@@ -55,7 +55,7 @@
 <para>Override this method to return a <ref refid="classwx_connection" kindref="compound">wxConnection</ref> descendant customised for the application.</para><para>The advantage of deriving your own connection class is that it will enable you to intercept messages initiated by the server, such as <ref refid="classwx_connection_1a9dddf8014802c9643378b9bdb34bfc48" kindref="member">wxConnection::OnAdvise</ref>. You may also want to store application-specific data in instances of the new class. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ipc.h" line="300"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ipc.h" line="300"/>
       </memberdef>
       <memberdef kind="function" id="classwx_client_1a532e7914e2e5aa79ef770521e0257108" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -72,7 +72,7 @@
 <para>This always returns true under MS Windows. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ipc.h" line="306"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ipc.h" line="306"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -82,37 +82,37 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ipc" kindref="compound">Interprocess Communication</ref></para><para><simplesect kind="see"><para><ref refid="classwx_server" kindref="compound">wxServer</ref>, <ref refid="classwx_connection" kindref="compound">wxConnection</ref>, <ref refid="overview_ipc" kindref="compound">Interprocess Communication</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="4784">
+      <node id="4875">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="4783">
+      <node id="4874">
         <label>wxClient</label>
         <link refid="classwx_client"/>
-        <childnode refid="4784" relation="public-inheritance">
+        <childnode refid="4875" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="4786">
+      <node id="4877">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="4787" relation="usage">
+        <childnode refid="4878" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="4785">
+      <node id="4876">
         <label>wxClient</label>
         <link refid="classwx_client"/>
-        <childnode refid="4786" relation="public-inheritance">
+        <childnode refid="4877" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4787">
+      <node id="4878">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ipc.h" line="260" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ipc.h" bodystart="259" bodyend="307"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ipc.h" line="260" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/ipc.h" bodystart="259" bodyend="307"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxClient</scope><name>AllocExclusive</name></member>
       <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxClient</scope><name>CloneRefData</name></member>

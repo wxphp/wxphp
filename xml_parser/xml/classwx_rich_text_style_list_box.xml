@@ -40,7 +40,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyles.h" line="244"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextstyles.h" line="244"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_style_list_box_1a1a7078e15e65b93dda3e8b766dd75354" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -53,7 +53,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyles.h" line="249"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextstyles.h" line="249"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_style_list_box_1a2da33ae64e88ce8577eb1f39e45eefac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -70,7 +70,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyles.h" line="254"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextstyles.h" line="254"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_style_list_box_1ac2006f6d153b40e089772f08315c783f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -91,7 +91,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyles.h" line="259"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextstyles.h" line="259"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_style_list_box_1a422bef822d41f4d6a7f334a335d5db0e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -108,7 +108,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyles.h" line="264"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextstyles.h" line="264"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_style_list_box_1ac7297c7eea9a08e33460a2e5968ff3fd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -121,7 +121,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyles.h" line="270"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextstyles.h" line="270"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_style_list_box_1a0bdbf28398e2b0bd12b565825e3002f2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_rich_text_ctrl" kindref="compound">wxRichTextCtrl</ref> *</type>
@@ -134,7 +134,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyles.h" line="275"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextstyles.h" line="275"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_style_list_box_1a550e533c3245b83b0b286489d79a2600" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_rich_text_style_definition" kindref="compound">wxRichTextStyleDefinition</ref> *</type>
@@ -151,7 +151,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyles.h" line="280"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextstyles.h" line="280"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_style_list_box_1a39924101fb129885b9d9e876e9590ae5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_rich_text_style_sheet" kindref="compound">wxRichTextStyleSheet</ref> *</type>
@@ -164,7 +164,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyles.h" line="285"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextstyles.h" line="285"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_style_list_box_1a71004d479738dd24c8cc21ee37708432" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>wxRichTextStyleListBox::wxRichTextStyleType</type>
@@ -177,7 +177,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyles.h" line="290"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextstyles.h" line="290"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_style_list_box_1ae08a496f4de42bf9a8ca4fc51d800a86" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -194,24 +194,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyles.h" line="296"/>
-      </memberdef>
-      <memberdef kind="function" id="classwx_rich_text_style_list_box_1aa18565b9fff2fd7d0d704acf983347a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void wxRichTextStyleListBox::OnSelect</definition>
-        <argsstring>(wxCommandEvent &amp;event)</argsstring>
-        <name>OnSelect</name>
-        <param>
-          <type><ref refid="classwx_command_event" kindref="compound">wxCommandEvent</ref> &amp;</type>
-          <declname>event</declname>
-        </param>
-        <briefdescription>
-<para>Reacts to selection. </para>        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyles.h" line="301"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextstyles.h" line="296"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_style_list_box_1a14e8e3be7875b9463cd074f450c73f6c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -228,7 +211,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyles.h" line="307"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextstyles.h" line="302"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_style_list_box_1a6fb908c0041d4f1a420e56e1ef3e45e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -245,7 +228,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyles.h" line="312"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextstyles.h" line="307"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_style_list_box_1af25c36fa1851cbb419898d444f67f41d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -262,7 +245,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyles.h" line="317"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextstyles.h" line="312"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_style_list_box_1a66b9a57ad532068858d6f7b5d4cfc383" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -281,7 +264,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyles.h" line="326"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextstyles.h" line="321"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_style_list_box_1a314c4c4cb0ee05ea129c678dc4ebc179" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -294,7 +277,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyles.h" line="331"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextstyles.h" line="326"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-func">
@@ -314,7 +297,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyles.h" line="338"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextstyles.h" line="333"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -324,145 +307,145 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxrichtext" kindref="member">wxRichText</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__richtext" kindref="compound">Rich Text</ref></para><para><simplesect kind="see"><para><ref refid="classwx_rich_text_style_combo_ctrl" kindref="compound">wxRichTextStyleComboCtrl</ref>, <ref refid="overview_richtextctrl" kindref="compound">wxRichTextCtrl Overview</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="9937">
+      <node id="10120">
         <label>wxVarScrollHelperBase</label>
         <link refid="classwx_var_scroll_helper_base"/>
       </node>
-      <node id="9929">
+      <node id="10112">
         <label>wxVListBox</label>
         <link refid="classwx_v_list_box"/>
-        <childnode refid="9930" relation="public-inheritance">
+        <childnode refid="10113" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9934">
+      <node id="10117">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="9930">
+      <node id="10113">
         <label>wxVScrolledWindow</label>
         <link refid="classwx_v_scrolled_window"/>
-        <childnode refid="9931" relation="public-inheritance">
+        <childnode refid="10114" relation="public-inheritance">
         </childnode>
-        <childnode refid="9936" relation="public-inheritance">
+        <childnode refid="10119" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9933">
+      <node id="10116">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="9934" relation="public-inheritance">
+        <childnode refid="10117" relation="public-inheritance">
         </childnode>
-        <childnode refid="9935" relation="public-inheritance">
+        <childnode refid="10118" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9931">
+      <node id="10114">
         <label>wxPanel</label>
         <link refid="classwx_panel"/>
-        <childnode refid="9932" relation="public-inheritance">
+        <childnode refid="10115" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9935">
+      <node id="10118">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="9927">
+      <node id="10110">
         <label>wxRichTextStyleListBox</label>
         <link refid="classwx_rich_text_style_list_box"/>
-        <childnode refid="9928" relation="public-inheritance">
+        <childnode refid="10111" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9932">
+      <node id="10115">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="9933" relation="public-inheritance">
+        <childnode refid="10116" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9928">
+      <node id="10111">
         <label>wxHtmlListBox</label>
         <link refid="classwx_html_list_box"/>
-        <childnode refid="9929" relation="public-inheritance">
+        <childnode refid="10112" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9936">
+      <node id="10119">
         <label>wxVarVScrollHelper</label>
         <link refid="classwx_var_v_scroll_helper"/>
-        <childnode refid="9937" relation="public-inheritance">
+        <childnode refid="10120" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="9949">
+      <node id="10132">
         <label>wxVarScrollHelperBase</label>
         <link refid="classwx_var_scroll_helper_base"/>
       </node>
-      <node id="9940">
+      <node id="10123">
         <label>wxVListBox</label>
         <link refid="classwx_v_list_box"/>
-        <childnode refid="9941" relation="public-inheritance">
+        <childnode refid="10124" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9945">
+      <node id="10128">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="9946" relation="usage">
+        <childnode refid="10129" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="9941">
+      <node id="10124">
         <label>wxVScrolledWindow</label>
         <link refid="classwx_v_scrolled_window"/>
-        <childnode refid="9942" relation="public-inheritance">
+        <childnode refid="10125" relation="public-inheritance">
         </childnode>
-        <childnode refid="9948" relation="public-inheritance">
+        <childnode refid="10131" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9944">
+      <node id="10127">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="9945" relation="public-inheritance">
+        <childnode refid="10128" relation="public-inheritance">
         </childnode>
-        <childnode refid="9947" relation="public-inheritance">
+        <childnode refid="10130" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9942">
+      <node id="10125">
         <label>wxPanel</label>
         <link refid="classwx_panel"/>
-        <childnode refid="9943" relation="public-inheritance">
+        <childnode refid="10126" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9947">
+      <node id="10130">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="9938">
+      <node id="10121">
         <label>wxRichTextStyleListBox</label>
         <link refid="classwx_rich_text_style_list_box"/>
-        <childnode refid="9939" relation="public-inheritance">
+        <childnode refid="10122" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9943">
+      <node id="10126">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="9944" relation="public-inheritance">
+        <childnode refid="10127" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9939">
+      <node id="10122">
         <label>wxHtmlListBox</label>
         <link refid="classwx_html_list_box"/>
-        <childnode refid="9940" relation="public-inheritance">
+        <childnode refid="10123" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9948">
+      <node id="10131">
         <label>wxVarVScrollHelper</label>
         <link refid="classwx_var_v_scroll_helper"/>
-        <childnode refid="9949" relation="public-inheritance">
+        <childnode refid="10132" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9946">
+      <node id="10129">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyles.h" line="235" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyles.h" bodystart="234" bodyend="339"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextstyles.h" line="235" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextstyles.h" bodystart="234" bodyend="334"/>
     <listofallmembers>
       <member refid="classwx_panel_1ad43482bf961c0a8185624085facd0853" prot="public" virt="virtual"><scope>wxRichTextStyleListBox</scope><name>AcceptsFocus</name></member>
       <member refid="classwx_window_1a2370bdd3ab08e7ef3c7555c6aa8301b8" prot="public" virt="virtual"><scope>wxRichTextStyleListBox</scope><name>AcceptsFocusFromKeyboard</name></member>
@@ -658,6 +641,7 @@
       <member refid="classwx_window_1ae1b56ca87d8590ee5e576012229a380a" prot="public" virt="non-virtual"><scope>wxRichTextStyleListBox</scope><name>InvalidateBestSize</name></member>
       <member refid="classwx_window_1af918e6fe8565c2d5235973cc3de84a43" prot="public" virt="non-virtual"><scope>wxRichTextStyleListBox</scope><name>IsBeingDeleted</name></member>
       <member refid="classwx_v_list_box_1adbef7038b847654aba0823d81496b60b" prot="public" virt="non-virtual"><scope>wxRichTextStyleListBox</scope><name>IsCurrent</name></member>
+      <member refid="classwx_window_1a469f0881da248d37691440c9d4cc7200" prot="public" virt="non-virtual"><scope>wxRichTextStyleListBox</scope><name>IsDescendant</name></member>
       <member refid="classwx_window_1a9d1be1bbb625ebf87ad4ad47e49a0194" prot="public" virt="virtual"><scope>wxRichTextStyleListBox</scope><name>IsDoubleBuffered</name></member>
       <member refid="classwx_window_1a59452a5bd42f5ea4b31d7fc4aa59644f" prot="public" virt="non-virtual"><scope>wxRichTextStyleListBox</scope><name>IsEnabled</name></member>
       <member refid="classwx_window_1af27ef77c913e32050543f3b0ca435a0d" prot="public" virt="non-virtual"><scope>wxRichTextStyleListBox</scope><name>IsExposed</name></member>
@@ -675,6 +659,7 @@
       <member refid="classwx_window_1a72d70fd14e3565bf782fbcd3271d8930" prot="public" virt="virtual"><scope>wxRichTextStyleListBox</scope><name>IsShownOnScreen</name></member>
       <member refid="classwx_window_1a657ef8b6055eb06df894ac5e6ddfecf8" prot="public" virt="non-virtual"><scope>wxRichTextStyleListBox</scope><name>IsThisEnabled</name></member>
       <member refid="classwx_window_1a0002826ad05f2a5661b4c8995713f37f" prot="public" virt="virtual"><scope>wxRichTextStyleListBox</scope><name>IsTopLevel</name></member>
+      <member refid="classwx_window_1a7940d510c5bdc062a2b109a1022dd8c2" prot="public" virt="virtual"><scope>wxRichTextStyleListBox</scope><name>IsTransparentBackgroundSupported</name></member>
       <member refid="classwx_evt_handler_1a360fdeefcf53b62fb49fb828406bb8a6" prot="public" virt="non-virtual"><scope>wxRichTextStyleListBox</scope><name>IsUnlinked</name></member>
       <member refid="classwx_var_scroll_helper_base_1aeb032c41e1436c630b9fadf3c198c91d" prot="public" virt="non-virtual"><scope>wxRichTextStyleListBox</scope><name>IsVisible</name></member>
       <member refid="classwx_panel_1a6ded9b75baf21e2c9f5496f746b68bf0" prot="public" virt="virtual"><scope>wxRichTextStyleListBox</scope><name>Layout</name></member>
@@ -682,7 +667,6 @@
       <member refid="classwx_window_1afc0816a174ceee6d36d1995c6824a273" prot="public" virt="non-virtual"><scope>wxRichTextStyleListBox</scope><name>LineUp</name></member>
       <member refid="classwx_window_1a124944524f36b71385dad8fddaad8ded" prot="public" virt="virtual"><scope>wxRichTextStyleListBox</scope><name>Lower</name></member>
       <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxRichTextStyleListBox</scope><name>m_refData</name></member>
-      <member refid="classwx_window_1a192fc8b467845d093c16452db96c65c5" prot="public" virt="virtual"><scope>wxRichTextStyleListBox</scope><name>MakeModal</name></member>
       <member refid="classwx_window_1ab1cb98c8d25b9e6ff7b706b1446c3df7" prot="public" virt="non-virtual"><scope>wxRichTextStyleListBox</scope><name>Move</name></member>
       <member refid="classwx_window_1a22a22c1e23ca05776707e7999d8047fe" prot="public" virt="non-virtual"><scope>wxRichTextStyleListBox</scope><name>Move</name></member>
       <member refid="classwx_window_1a79e66079125e8420de269811bdb6f2b6" prot="public" virt="non-virtual"><scope>wxRichTextStyleListBox</scope><name>MoveAfterInTabOrder</name></member>
@@ -703,7 +687,6 @@
       <member refid="classwx_rich_text_style_list_box_1ae08a496f4de42bf9a8ca4fc51d800a86" prot="public" virt="non-virtual"><scope>wxRichTextStyleListBox</scope><name>OnLeftDown</name></member>
       <member refid="classwx_html_list_box_1a5620eba484dda2af40312db52f4ea921" prot="protected" virt="virtual"><scope>wxRichTextStyleListBox</scope><name>OnLinkClicked</name></member>
       <member refid="classwx_v_list_box_1a25c651d397f60c62039dd89bd6f92152" prot="protected" virt="pure-virtual"><scope>wxRichTextStyleListBox</scope><name>OnMeasureItem</name></member>
-      <member refid="classwx_rich_text_style_list_box_1aa18565b9fff2fd7d0d704acf983347a8" prot="public" virt="non-virtual"><scope>wxRichTextStyleListBox</scope><name>OnSelect</name></member>
       <member refid="classwx_panel_1a3953dd8ab6e04b15206b24a96c2636a4" prot="public" virt="non-virtual"><scope>wxRichTextStyleListBox</scope><name>OnSysColourChanged</name></member>
       <member refid="classwx_object_1a07b8f34f5afc5743195c5fed052f55d3" prot="public" virt="non-virtual"><scope>wxRichTextStyleListBox</scope><name>operator delete</name></member>
       <member refid="classwx_object_1a96fa423a1dbc212c8227a5d83825971f" prot="public" virt="non-virtual"><scope>wxRichTextStyleListBox</scope><name>operator new</name></member>
@@ -836,7 +819,6 @@
       <member refid="classwx_window_1a88cc65e424a129d9b0057756cdb67ec9" prot="public" virt="virtual"><scope>wxRichTextStyleListBox</scope><name>TransferDataToWindow</name></member>
       <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxRichTextStyleListBox</scope><name>TryAfter</name></member>
       <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxRichTextStyleListBox</scope><name>TryBefore</name></member>
-      <member refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" virt="non-virtual"><scope>wxRichTextStyleListBox</scope><name>TryThis</name></member>
       <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxRichTextStyleListBox</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxRichTextStyleListBox</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a22e5db2ec1d19c8252c056fd116975d7" prot="public" virt="non-virtual"><scope>wxRichTextStyleListBox</scope><name>Unlink</name></member>

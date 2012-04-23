@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/imaglist.h" line="49"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/imaglist.h" line="49"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_list_1a7c99503e0d851e8d416204325014901a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -77,7 +77,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/imaglist.h" line="67"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/imaglist.h" line="67"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_list_1a697f268509e3a8d45da7506349b7533d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -116,7 +116,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/imaglist.h" line="87"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/imaglist.h" line="87"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_list_1a2022beccd2564ee2be79b273246b50a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -154,7 +154,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/imaglist.h" line="106"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/imaglist.h" line="106"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_list_1a5cdf301d2c4ec6d074816a7566d6d7c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -181,7 +181,7 @@
 Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page_port_1page_port_wxmsw" kindref="member">wxMSW</ref>, <ref refid="page_port_1page_port_wxosx" kindref="member">wxOSX</ref> ports.  <onlyfor>wxmsw,wxosx</onlyfor>  </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/imaglist.h" line="125"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/imaglist.h" line="125"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_list_1a03b4ba6c8a868eff25f3d20cb3499673" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -212,7 +212,7 @@ Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref
 <para>See <ref refid="classwx_image_list_1a91cdd6895654c2043d51bf31bc370d90" kindref="member">wxImageList()</ref> for details. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/imaglist.h" line="131"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/imaglist.h" line="131"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_list_1aca7da30ce467d74a5e9037ad99ec3287" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -296,7 +296,7 @@ Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/imaglist.h" line="156"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/imaglist.h" line="156"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_list_1a088dccbd280d249daf5f013740b8375e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref></type>
@@ -313,7 +313,7 @@ Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/imaglist.h" line="161"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/imaglist.h" line="161"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_list_1a61e605604d1c176bee65ee772aae861c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_icon" kindref="compound">wxIcon</ref></type>
@@ -330,7 +330,7 @@ Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/imaglist.h" line="166"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/imaglist.h" line="166"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_list_1ad98e6cb815e803464f228a79dddd0f2b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>int</type>
@@ -343,7 +343,7 @@ Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/imaglist.h" line="171"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/imaglist.h" line="171"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_list_1a968cbb92b379df39dd3ce64bf0cd94cb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -391,7 +391,7 @@ Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/imaglist.h" line="187"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/imaglist.h" line="187"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_list_1a70e5bc2c695d3bdd1a3a151c8774b9ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -408,7 +408,7 @@ Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/imaglist.h" line="192"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/imaglist.h" line="192"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_list_1a9de067947c75fc53798541cad5d6ebce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -421,7 +421,7 @@ Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/imaglist.h" line="197"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/imaglist.h" line="197"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_list_1ada78532ad344127e0917d363a34783a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -471,7 +471,7 @@ Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/imaglist.h" line="216"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/imaglist.h" line="216"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_list_1af003aa28ad738528ef15d873e8e96756" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -509,7 +509,7 @@ Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref
 Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page_port_1page_port_wxmsw" kindref="member">wxMSW</ref>, <ref refid="page_port_1page_port_wxosx" kindref="member">wxOSX</ref> ports.  <onlyfor>wxmsw,wxosx</onlyfor>  </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/imaglist.h" line="233"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/imaglist.h" line="233"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -519,37 +519,37 @@ Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__gdi" kindref="compound">Graphics Device Interface (GDI)</ref></para><para><simplesect kind="see"><para><ref refid="classwx_tree_ctrl" kindref="compound">wxTreeCtrl</ref>, <ref refid="classwx_list_ctrl" kindref="compound">wxListCtrl</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7255">
+      <node id="7442">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="7254">
+      <node id="7441">
         <label>wxImageList</label>
         <link refid="classwx_image_list"/>
-        <childnode refid="7255" relation="public-inheritance">
+        <childnode refid="7442" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7257">
+      <node id="7444">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="7258" relation="usage">
+        <childnode refid="7445" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="7256">
+      <node id="7443">
         <label>wxImageList</label>
         <link refid="classwx_image_list"/>
-        <childnode refid="7257" relation="public-inheritance">
+        <childnode refid="7444" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7258">
+      <node id="7445">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/imaglist.h" line="44" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/imaglist.h" bodystart="43" bodyend="234"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/imaglist.h" line="44" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/imaglist.h" bodystart="43" bodyend="234"/>
     <listofallmembers>
       <member refid="classwx_image_list_1a697f268509e3a8d45da7506349b7533d" prot="public" virt="non-virtual"><scope>wxImageList</scope><name>Add</name></member>
       <member refid="classwx_image_list_1a2022beccd2564ee2be79b273246b50a8" prot="public" virt="non-virtual"><scope>wxImageList</scope><name>Add</name></member>

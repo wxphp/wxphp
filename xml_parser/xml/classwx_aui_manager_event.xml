@@ -21,7 +21,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/framemanager.h" line="891"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/framemanager.h" line="897"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_manager_event_1a554d36a4f5d9088ad315ae5b242c3a4b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -36,7 +36,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/framemanager.h" line="898"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/framemanager.h" line="904"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_manager_event_1aac8b2de101d101267fb462d33185c183" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -50,7 +50,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/framemanager.h" line="903"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/framemanager.h" line="909"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_manager_event_1a5f03c0fcae47ff7dcc4cd8178a912a51" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_d_c" kindref="compound">wxDC</ref> *</type>
@@ -63,7 +63,7 @@
 <para><xrefsect id="todo_1_todo000016"><xreftitle>Todo</xreftitle><xrefdescription><para>What is this? </para></xrefdescription></xrefsect></para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/framemanager.h" line="908"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/framemanager.h" line="914"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_manager_event_1a6b1b4b97f8243625630a465ecbe3f748" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -78,7 +78,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/framemanager.h" line="915"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/framemanager.h" line="921"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_manager_event_1a6f139f34962a10cfb59de65577e1f029" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_aui_manager" kindref="compound">wxAuiManager</ref> *</type>
@@ -92,7 +92,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/framemanager.h" line="920"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/framemanager.h" line="926"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_manager_event_1a1864036025e73e3942b9660060113bf2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_aui_pane_info" kindref="compound">wxAuiPaneInfo</ref> *</type>
@@ -106,7 +106,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/framemanager.h" line="925"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/framemanager.h" line="931"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_manager_event_1ae8075eba7422633e38cb69589d29ff33" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -123,7 +123,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/framemanager.h" line="930"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/framemanager.h" line="936"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_manager_event_1a8f83db3762c2adc676ffa4f1a38d32ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -140,7 +140,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/framemanager.h" line="935"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/framemanager.h" line="941"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_manager_event_1aa9f90aa2e0991f2e63c97ed0c8af8371" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -157,7 +157,7 @@
 <para><xrefsect id="todo_1_todo000017"><xreftitle>Todo</xreftitle><xrefdescription><para>What is this? </para></xrefdescription></xrefsect></para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/framemanager.h" line="940"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/framemanager.h" line="946"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_manager_event_1a917104c3176d91ad6abb80d6d8e3b327" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -174,7 +174,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/framemanager.h" line="945"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/framemanager.h" line="951"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_manager_event_1a18488d5595ea69346ad34e07b47c0d92" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -191,7 +191,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/framemanager.h" line="950"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/framemanager.h" line="956"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_manager_event_1a047b8f9e45d34658a11df8cea0255820" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -209,7 +209,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/framemanager.h" line="955"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/framemanager.h" line="961"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -221,55 +221,56 @@
 <listitem><para>EVT_AUI_PANE_CLOSE(func): Triggered when a docked or floating pane is closed. </para></listitem>
 <listitem><para>EVT_AUI_PANE_MAXIMIZE(func): Triggered when a pane is maximized. </para></listitem>
 <listitem><para>EVT_AUI_PANE_RESTORE(func): Triggered when a pane is restored. </para></listitem>
+<listitem><para>EVT_AUI_PANE_ACTIVATED(func): Triggered when a pane is made &apos;active&apos;. This event is new since wxWidgets 2.9.4. </para></listitem>
 <listitem><para>EVT_AUI_RENDER(func): This event can be caught to override the default renderer in order to custom draw your <ref refid="classwx_aui_manager" kindref="compound">wxAuiManager</ref> window (not recommended). </para></listitem>
 </itemizedlist>
 <heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxaui" kindref="member">wxAui</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref>, <ref refid="group__group__class__aui" kindref="compound">Window Docking (wxAUI)</ref></para><para><simplesect kind="see"><para><ref refid="classwx_aui_manager" kindref="compound">wxAuiManager</ref>, <ref refid="classwx_aui_pane_info" kindref="compound">wxAuiPaneInfo</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="4372">
+      <node id="4462">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="4371">
+      <node id="4461">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="4372" relation="public-inheritance">
+        <childnode refid="4462" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4370">
+      <node id="4460">
         <label>wxAuiManagerEvent</label>
         <link refid="classwx_aui_manager_event"/>
-        <childnode refid="4371" relation="public-inheritance">
+        <childnode refid="4461" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="4375">
+      <node id="4465">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="4376" relation="usage">
+        <childnode refid="4466" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="4374">
+      <node id="4464">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="4375" relation="public-inheritance">
+        <childnode refid="4465" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4373">
+      <node id="4463">
         <label>wxAuiManagerEvent</label>
         <link refid="classwx_aui_manager_event"/>
-        <childnode refid="4374" relation="public-inheritance">
+        <childnode refid="4464" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4376">
+      <node id="4466">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/framemanager.h" line="886" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/framemanager.h" bodystart="885" bodyend="956"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/framemanager.h" line="892" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/framemanager.h" bodystart="891" bodyend="962"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxAuiManagerEvent</scope><name>AllocExclusive</name></member>
       <member refid="classwx_aui_manager_event_1a554d36a4f5d9088ad315ae5b242c3a4b" prot="public" virt="non-virtual"><scope>wxAuiManagerEvent</scope><name>CanVeto</name></member>

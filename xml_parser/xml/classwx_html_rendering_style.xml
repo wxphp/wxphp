@@ -19,7 +19,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlcell.h" line="28"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlcell.h" line="28"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_rendering_style_1ac0b0f3518cb5cdd51dc66bcab8963416" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type><ref refid="classwx_colour" kindref="compound">wxColour</ref></type>
@@ -36,7 +36,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlcell.h" line="33"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlcell.h" line="33"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -45,7 +45,7 @@
 <para>This class is used when rendering wxHtmlCells as a callback.</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxhtml" kindref="member">wxHTML</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__html" kindref="compound">HTML</ref></para><para><simplesect kind="see"><para><ref refid="classwx_html_rendering_info" kindref="compound">wxHtmlRenderingInfo</ref> </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlcell.h" line="23" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlcell.h" bodystart="22" bodyend="34"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlcell.h" line="23" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlcell.h" bodystart="22" bodyend="34"/>
     <listofallmembers>
       <member refid="classwx_html_rendering_style_1ac0b0f3518cb5cdd51dc66bcab8963416" prot="public" virt="pure-virtual"><scope>wxHtmlRenderingStyle</scope><name>GetSelectedTextBgColour</name></member>
       <member refid="classwx_html_rendering_style_1ab0709339a84297ec87a8c768bea70475" prot="public" virt="pure-virtual"><scope>wxHtmlRenderingStyle</scope><name>GetSelectedTextColour</name></member>

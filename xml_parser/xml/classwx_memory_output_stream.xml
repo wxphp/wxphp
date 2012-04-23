@@ -27,7 +27,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mstream.h" line="49"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mstream.h" line="49"/>
       </memberdef>
       <memberdef kind="function" id="classwx_memory_output_stream_1a619e3e36463589e813df94910b6f6d4c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -40,7 +40,7 @@
 <para>If the buffer wasn&apos;t provided by the user, it will be deleted here. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mstream.h" line="56"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mstream.h" line="56"/>
       </memberdef>
       <memberdef kind="function" id="classwx_memory_output_stream_1a820285ceb1462674c9e3ea958295f28d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -61,7 +61,7 @@
 <para><emphasis>len</emphasis> specifies the size of the buffer. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mstream.h" line="62"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mstream.h" line="62"/>
       </memberdef>
       <memberdef kind="function" id="classwx_memory_output_stream_1ad8848291967d46abc6bb3fce3d9bbb39" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_stream_buffer" kindref="compound">wxStreamBuffer</ref> *</type>
@@ -74,7 +74,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mstream.h" line="68"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mstream.h" line="68"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -98,42 +98,42 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__streams" kindref="compound">Streams</ref></para><para><simplesect kind="see"><para><ref refid="classwx_stream_buffer" kindref="compound">wxStreamBuffer</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7696">
+      <node id="7889">
         <label>wxMemoryOutputStream</label>
         <link refid="classwx_memory_output_stream"/>
-        <childnode refid="7697" relation="public-inheritance">
+        <childnode refid="7890" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7698">
+      <node id="7891">
         <label>wxStreamBase</label>
         <link refid="classwx_stream_base"/>
       </node>
-      <node id="7697">
+      <node id="7890">
         <label>wxOutputStream</label>
         <link refid="classwx_output_stream"/>
-        <childnode refid="7698" relation="public-inheritance">
+        <childnode refid="7891" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7699">
+      <node id="7892">
         <label>wxMemoryOutputStream</label>
         <link refid="classwx_memory_output_stream"/>
-        <childnode refid="7700" relation="public-inheritance">
+        <childnode refid="7893" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7701">
+      <node id="7894">
         <label>wxStreamBase</label>
         <link refid="classwx_stream_base"/>
       </node>
-      <node id="7700">
+      <node id="7893">
         <label>wxOutputStream</label>
         <link refid="classwx_output_stream"/>
-        <childnode refid="7701" relation="public-inheritance">
+        <childnode refid="7894" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mstream.h" line="39" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mstream.h" bodystart="38" bodyend="69"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mstream.h" line="39" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/mstream.h" bodystart="38" bodyend="69"/>
     <listofallmembers>
       <member refid="classwx_output_stream_1a1c306ce99990d525921f8f6ae8432083" prot="public" virt="virtual"><scope>wxMemoryOutputStream</scope><name>Close</name></member>
       <member refid="classwx_memory_output_stream_1a820285ceb1462674c9e3ea958295f28d" prot="public" virt="non-virtual"><scope>wxMemoryOutputStream</scope><name>CopyTo</name></member>

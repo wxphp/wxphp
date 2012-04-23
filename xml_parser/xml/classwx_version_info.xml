@@ -88,7 +88,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/versioninfo.h" line="48"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/versioninfo.h" line="48"/>
       </memberdef>
       <memberdef kind="function" id="classwx_version_info_1afed2db21b2f55b9ba62e022b1051b971" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -102,7 +102,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/versioninfo.h" line="55"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/versioninfo.h" line="55"/>
       </memberdef>
       <memberdef kind="function" id="classwx_version_info_1a77531c768795847697ba5a029861bd7e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -116,7 +116,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/versioninfo.h" line="62"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/versioninfo.h" line="62"/>
       </memberdef>
       <memberdef kind="function" id="classwx_version_info_1aaf959a58093e04962b79078a94d66c8f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -130,7 +130,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/versioninfo.h" line="69"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/versioninfo.h" line="69"/>
       </memberdef>
       <memberdef kind="function" id="classwx_version_info_1aa68030a2419cbfbec81d1b3e41ef1466" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -144,7 +144,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/versioninfo.h" line="76"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/versioninfo.h" line="76"/>
       </memberdef>
       <memberdef kind="function" id="classwx_version_info_1a4954ed97dcb394535948dd4d85e4186d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -158,7 +158,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/versioninfo.h" line="86"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/versioninfo.h" line="86"/>
       </memberdef>
       <memberdef kind="function" id="classwx_version_info_1aecd55d444927d33c447349d62b8c0203" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -172,7 +172,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/versioninfo.h" line="95"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/versioninfo.h" line="95"/>
       </memberdef>
       <memberdef kind="function" id="classwx_version_info_1aabf7e3533fdfdae93dab6750a74c3947" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -186,7 +186,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/versioninfo.h" line="102"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/versioninfo.h" line="102"/>
       </memberdef>
       <memberdef kind="function" id="classwx_version_info_1ada40727f16a9715fd8b3af30c932877d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -200,7 +200,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/versioninfo.h" line="111"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/versioninfo.h" line="111"/>
       </memberdef>
       <memberdef kind="function" id="classwx_version_info_1a3226154214ef354a196ec96d2634240c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -214,7 +214,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/versioninfo.h" line="118"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/versioninfo.h" line="118"/>
       </memberdef>
       <memberdef kind="function" id="classwx_version_info_1a10bdbdfc5f5a1170e43ea571492f33f9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -228,7 +228,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/versioninfo.h" line="127"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/versioninfo.h" line="127"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -237,7 +237,7 @@
 <para>This class is used by wxWidgets to provide version information about the libraries it uses and itself, but you can also apply it in user space, to provide version information about your own libraries, or other libraries that you use.</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__data" kindref="compound">Data Structures</ref></para><para><simplesect kind="since"><para>2.9.2 </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/versioninfo.h" line="26" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/versioninfo.h" bodystart="25" bodyend="128"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/versioninfo.h" line="26" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/versioninfo.h" bodystart="25" bodyend="128"/>
     <listofallmembers>
       <member refid="classwx_version_info_1a10bdbdfc5f5a1170e43ea571492f33f9" prot="public" virt="non-virtual"><scope>wxVersionInfo</scope><name>GetCopyright</name></member>
       <member refid="classwx_version_info_1ada40727f16a9715fd8b3af30c932877d" prot="public" virt="non-virtual"><scope>wxVersionInfo</scope><name>GetDescription</name></member>

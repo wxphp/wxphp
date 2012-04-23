@@ -50,6 +50,7 @@
 #include "others.h"
 
 
+
 void php_wxRefCounter_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -133,7 +134,6 @@ PHP_METHOD(php_wxRefCounter, DecRef)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -229,7 +229,6 @@ PHP_METHOD(php_wxRefCounter, GetRefCount)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -325,7 +324,6 @@ PHP_METHOD(php_wxRefCounter, IncRef)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -381,7 +379,6 @@ PHP_METHOD(php_wxRefCounter, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -427,6 +424,7 @@ PHP_METHOD(php_wxRefCounter, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+
 void php_wxObject_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -435,13 +433,13 @@ void php_wxObject_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 	#endif
 	
 	
-	wxObject_php* object = (wxObject_php*)rsrc->ptr;
+	wxObject_php* object = static_cast<wxObject_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -501,7 +499,8 @@ PHP_METHOD(php_wxObject, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&other0, php_wxObject_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "O", &other0, php_wxObject_entry ) == SUCCESS)
+		char parse_parameters_string[] = "O";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &other0, php_wxObject_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(other0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(other0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -512,10 +511,6 @@ PHP_METHOD(php_wxObject, __construct)
 					{
 						goto overload1;
 					}
-				}
-				else if(Z_TYPE_P(other0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(other0);
 				}
 				else if(Z_TYPE_P(other0) != IS_NULL)
 				{
@@ -541,7 +536,6 @@ PHP_METHOD(php_wxObject, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -560,7 +554,6 @@ PHP_METHOD(php_wxObject, __construct)
 		}
 	}
 
-	
 	if(overload1_called)
 	{
 		switch(arguments_received)
@@ -645,7 +638,9 @@ PHP_METHOD(php_wxObject, __get)
 		zend_error(E_ERROR, "Could not process __get call as static\n");
 	}
 	
-	if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "s", &name, &name_len ) == FAILURE)
+	char parse_parameters_string[] = "s";
+	
+	if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &name, &name_len ) == FAILURE)
 	{
 		RETVAL_NULL();
 	}
@@ -759,6 +754,8 @@ PHP_METHOD(php_wxObject, UnShare)
 				references = &((wxPrintDialog_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxSingleChoiceDialog)
 				references = &((wxSingleChoiceDialog_php*)_this)->references;
+			else if(parent_rsrc_type == le_wxGenericProgressDialog)
+				references = &((wxGenericProgressDialog_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPopupWindow)
 				references = &((wxPopupWindow_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPopupTransientWindow)
@@ -905,10 +902,6 @@ PHP_METHOD(php_wxObject, UnShare)
 				references = &((wxSplitterWindow_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPanel)
 				references = &((wxPanel_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWizardPage)
-				references = &((wxWizardPage_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWizardPageSimple)
-				references = &((wxWizardPageSimple_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxScrolledWindow)
 				references = &((wxScrolledWindow_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxHtmlWindow)
@@ -917,6 +910,10 @@ PHP_METHOD(php_wxObject, UnShare)
 				references = &((wxGrid_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPreviewCanvas)
 				references = &((wxPreviewCanvas_php*)_this)->references;
+			else if(parent_rsrc_type == le_wxWizardPage)
+				references = &((wxWizardPage_php*)_this)->references;
+			else if(parent_rsrc_type == le_wxWizardPageSimple)
+				references = &((wxWizardPageSimple_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxEditableListBox)
 				references = &((wxEditableListBox_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxHScrolledWindow)
@@ -1115,10 +1112,6 @@ PHP_METHOD(php_wxObject, UnShare)
 				references = &((wxMouseEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxMoveEvent)
 				references = &((wxMoveEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMouseCaptureLostEvent)
-				references = &((wxMouseCaptureLostEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMouseCaptureChangedEvent)
-				references = &((wxMouseCaptureChangedEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxTimerEvent)
 				references = &((wxTimerEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxThreadEvent)
@@ -1133,12 +1126,8 @@ PHP_METHOD(php_wxObject, UnShare)
 				references = &((wxEraseEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxSetCursorEvent)
 				references = &((wxSetCursorEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxIconizeEvent)
-				references = &((wxIconizeEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxIdleEvent)
 				references = &((wxIdleEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxShowEvent)
-				references = &((wxShowEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPaintEvent)
 				references = &((wxPaintEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPaletteChangedEvent)
@@ -1157,8 +1146,6 @@ PHP_METHOD(php_wxObject, UnShare)
 				references = &((wxDisplayChangedEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxCalculateLayoutEvent)
 				references = &((wxCalculateLayoutEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxDropFilesEvent)
-				references = &((wxDropFilesEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxQueryLayoutInfoEvent)
 				references = &((wxQueryLayoutInfoEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxTaskBarIconEvent)
@@ -1223,8 +1210,6 @@ PHP_METHOD(php_wxObject, UnShare)
 				references = &((wxColourData_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxFontData)
 				references = &((wxFontData_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxToolBarToolBase)
-				references = &((wxToolBarToolBase_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxGridTableBase)
 				references = &((wxGridTableBase_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxDataViewRenderer)
@@ -1297,6 +1282,8 @@ PHP_METHOD(php_wxObject, UnShare)
 				references = &((wxLayoutAlgorithm_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxFileHistory)
 				references = &((wxFileHistory_php*)_this)->references;
+			else if(parent_rsrc_type == le_wxToolBarToolBase)
+				references = &((wxToolBarToolBase_php*)_this)->references;
 		}
 	}
 	else
@@ -1322,7 +1309,6 @@ PHP_METHOD(php_wxObject, UnShare)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -1437,6 +1423,8 @@ PHP_METHOD(php_wxObject, UnRef)
 				references = &((wxPrintDialog_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxSingleChoiceDialog)
 				references = &((wxSingleChoiceDialog_php*)_this)->references;
+			else if(parent_rsrc_type == le_wxGenericProgressDialog)
+				references = &((wxGenericProgressDialog_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPopupWindow)
 				references = &((wxPopupWindow_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPopupTransientWindow)
@@ -1583,10 +1571,6 @@ PHP_METHOD(php_wxObject, UnRef)
 				references = &((wxSplitterWindow_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPanel)
 				references = &((wxPanel_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWizardPage)
-				references = &((wxWizardPage_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWizardPageSimple)
-				references = &((wxWizardPageSimple_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxScrolledWindow)
 				references = &((wxScrolledWindow_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxHtmlWindow)
@@ -1595,6 +1579,10 @@ PHP_METHOD(php_wxObject, UnRef)
 				references = &((wxGrid_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPreviewCanvas)
 				references = &((wxPreviewCanvas_php*)_this)->references;
+			else if(parent_rsrc_type == le_wxWizardPage)
+				references = &((wxWizardPage_php*)_this)->references;
+			else if(parent_rsrc_type == le_wxWizardPageSimple)
+				references = &((wxWizardPageSimple_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxEditableListBox)
 				references = &((wxEditableListBox_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxHScrolledWindow)
@@ -1793,10 +1781,6 @@ PHP_METHOD(php_wxObject, UnRef)
 				references = &((wxMouseEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxMoveEvent)
 				references = &((wxMoveEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMouseCaptureLostEvent)
-				references = &((wxMouseCaptureLostEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMouseCaptureChangedEvent)
-				references = &((wxMouseCaptureChangedEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxTimerEvent)
 				references = &((wxTimerEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxThreadEvent)
@@ -1811,12 +1795,8 @@ PHP_METHOD(php_wxObject, UnRef)
 				references = &((wxEraseEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxSetCursorEvent)
 				references = &((wxSetCursorEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxIconizeEvent)
-				references = &((wxIconizeEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxIdleEvent)
 				references = &((wxIdleEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxShowEvent)
-				references = &((wxShowEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPaintEvent)
 				references = &((wxPaintEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPaletteChangedEvent)
@@ -1835,8 +1815,6 @@ PHP_METHOD(php_wxObject, UnRef)
 				references = &((wxDisplayChangedEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxCalculateLayoutEvent)
 				references = &((wxCalculateLayoutEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxDropFilesEvent)
-				references = &((wxDropFilesEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxQueryLayoutInfoEvent)
 				references = &((wxQueryLayoutInfoEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxTaskBarIconEvent)
@@ -1901,8 +1879,6 @@ PHP_METHOD(php_wxObject, UnRef)
 				references = &((wxColourData_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxFontData)
 				references = &((wxFontData_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxToolBarToolBase)
-				references = &((wxToolBarToolBase_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxGridTableBase)
 				references = &((wxGridTableBase_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxDataViewRenderer)
@@ -1975,6 +1951,8 @@ PHP_METHOD(php_wxObject, UnRef)
 				references = &((wxLayoutAlgorithm_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxFileHistory)
 				references = &((wxFileHistory_php*)_this)->references;
+			else if(parent_rsrc_type == le_wxToolBarToolBase)
+				references = &((wxToolBarToolBase_php*)_this)->references;
 		}
 	}
 	else
@@ -2000,7 +1978,6 @@ PHP_METHOD(php_wxObject, UnRef)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -2115,6 +2092,8 @@ PHP_METHOD(php_wxObject, IsSameAs)
 				references = &((wxPrintDialog_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxSingleChoiceDialog)
 				references = &((wxSingleChoiceDialog_php*)_this)->references;
+			else if(parent_rsrc_type == le_wxGenericProgressDialog)
+				references = &((wxGenericProgressDialog_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPopupWindow)
 				references = &((wxPopupWindow_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPopupTransientWindow)
@@ -2261,10 +2240,6 @@ PHP_METHOD(php_wxObject, IsSameAs)
 				references = &((wxSplitterWindow_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPanel)
 				references = &((wxPanel_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWizardPage)
-				references = &((wxWizardPage_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWizardPageSimple)
-				references = &((wxWizardPageSimple_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxScrolledWindow)
 				references = &((wxScrolledWindow_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxHtmlWindow)
@@ -2273,6 +2248,10 @@ PHP_METHOD(php_wxObject, IsSameAs)
 				references = &((wxGrid_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPreviewCanvas)
 				references = &((wxPreviewCanvas_php*)_this)->references;
+			else if(parent_rsrc_type == le_wxWizardPage)
+				references = &((wxWizardPage_php*)_this)->references;
+			else if(parent_rsrc_type == le_wxWizardPageSimple)
+				references = &((wxWizardPageSimple_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxEditableListBox)
 				references = &((wxEditableListBox_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxHScrolledWindow)
@@ -2471,10 +2450,6 @@ PHP_METHOD(php_wxObject, IsSameAs)
 				references = &((wxMouseEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxMoveEvent)
 				references = &((wxMoveEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMouseCaptureLostEvent)
-				references = &((wxMouseCaptureLostEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMouseCaptureChangedEvent)
-				references = &((wxMouseCaptureChangedEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxTimerEvent)
 				references = &((wxTimerEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxThreadEvent)
@@ -2489,12 +2464,8 @@ PHP_METHOD(php_wxObject, IsSameAs)
 				references = &((wxEraseEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxSetCursorEvent)
 				references = &((wxSetCursorEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxIconizeEvent)
-				references = &((wxIconizeEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxIdleEvent)
 				references = &((wxIdleEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxShowEvent)
-				references = &((wxShowEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPaintEvent)
 				references = &((wxPaintEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPaletteChangedEvent)
@@ -2513,8 +2484,6 @@ PHP_METHOD(php_wxObject, IsSameAs)
 				references = &((wxDisplayChangedEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxCalculateLayoutEvent)
 				references = &((wxCalculateLayoutEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxDropFilesEvent)
-				references = &((wxDropFilesEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxQueryLayoutInfoEvent)
 				references = &((wxQueryLayoutInfoEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxTaskBarIconEvent)
@@ -2579,8 +2548,6 @@ PHP_METHOD(php_wxObject, IsSameAs)
 				references = &((wxColourData_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxFontData)
 				references = &((wxFontData_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxToolBarToolBase)
-				references = &((wxToolBarToolBase_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxGridTableBase)
 				references = &((wxGridTableBase_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxDataViewRenderer)
@@ -2653,6 +2620,8 @@ PHP_METHOD(php_wxObject, IsSameAs)
 				references = &((wxLayoutAlgorithm_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxFileHistory)
 				references = &((wxFileHistory_php*)_this)->references;
+			else if(parent_rsrc_type == le_wxToolBarToolBase)
+				references = &((wxToolBarToolBase_php*)_this)->references;
 		}
 	}
 	else
@@ -2675,7 +2644,8 @@ PHP_METHOD(php_wxObject, IsSameAs)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&obj0, php_wxObject_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "O", &obj0, php_wxObject_entry ) == SUCCESS)
+		char parse_parameters_string[] = "O";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &obj0, php_wxObject_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(obj0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(obj0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -2686,10 +2656,6 @@ PHP_METHOD(php_wxObject, IsSameAs)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(obj0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(obj0);
 				}
 				else if(Z_TYPE_P(obj0) != IS_NULL)
 				{
@@ -2703,7 +2669,6 @@ PHP_METHOD(php_wxObject, IsSameAs)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -2819,6 +2784,8 @@ PHP_METHOD(php_wxObject, Ref)
 				references = &((wxPrintDialog_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxSingleChoiceDialog)
 				references = &((wxSingleChoiceDialog_php*)_this)->references;
+			else if(parent_rsrc_type == le_wxGenericProgressDialog)
+				references = &((wxGenericProgressDialog_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPopupWindow)
 				references = &((wxPopupWindow_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPopupTransientWindow)
@@ -2965,10 +2932,6 @@ PHP_METHOD(php_wxObject, Ref)
 				references = &((wxSplitterWindow_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPanel)
 				references = &((wxPanel_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWizardPage)
-				references = &((wxWizardPage_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWizardPageSimple)
-				references = &((wxWizardPageSimple_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxScrolledWindow)
 				references = &((wxScrolledWindow_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxHtmlWindow)
@@ -2977,6 +2940,10 @@ PHP_METHOD(php_wxObject, Ref)
 				references = &((wxGrid_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPreviewCanvas)
 				references = &((wxPreviewCanvas_php*)_this)->references;
+			else if(parent_rsrc_type == le_wxWizardPage)
+				references = &((wxWizardPage_php*)_this)->references;
+			else if(parent_rsrc_type == le_wxWizardPageSimple)
+				references = &((wxWizardPageSimple_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxEditableListBox)
 				references = &((wxEditableListBox_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxHScrolledWindow)
@@ -3175,10 +3142,6 @@ PHP_METHOD(php_wxObject, Ref)
 				references = &((wxMouseEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxMoveEvent)
 				references = &((wxMoveEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMouseCaptureLostEvent)
-				references = &((wxMouseCaptureLostEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMouseCaptureChangedEvent)
-				references = &((wxMouseCaptureChangedEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxTimerEvent)
 				references = &((wxTimerEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxThreadEvent)
@@ -3193,12 +3156,8 @@ PHP_METHOD(php_wxObject, Ref)
 				references = &((wxEraseEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxSetCursorEvent)
 				references = &((wxSetCursorEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxIconizeEvent)
-				references = &((wxIconizeEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxIdleEvent)
 				references = &((wxIdleEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxShowEvent)
-				references = &((wxShowEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPaintEvent)
 				references = &((wxPaintEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPaletteChangedEvent)
@@ -3217,8 +3176,6 @@ PHP_METHOD(php_wxObject, Ref)
 				references = &((wxDisplayChangedEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxCalculateLayoutEvent)
 				references = &((wxCalculateLayoutEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxDropFilesEvent)
-				references = &((wxDropFilesEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxQueryLayoutInfoEvent)
 				references = &((wxQueryLayoutInfoEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxTaskBarIconEvent)
@@ -3283,8 +3240,6 @@ PHP_METHOD(php_wxObject, Ref)
 				references = &((wxColourData_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxFontData)
 				references = &((wxFontData_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxToolBarToolBase)
-				references = &((wxToolBarToolBase_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxGridTableBase)
 				references = &((wxGridTableBase_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxDataViewRenderer)
@@ -3357,6 +3312,8 @@ PHP_METHOD(php_wxObject, Ref)
 				references = &((wxLayoutAlgorithm_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxFileHistory)
 				references = &((wxFileHistory_php*)_this)->references;
+			else if(parent_rsrc_type == le_wxToolBarToolBase)
+				references = &((wxToolBarToolBase_php*)_this)->references;
 		}
 	}
 	else
@@ -3379,7 +3336,8 @@ PHP_METHOD(php_wxObject, Ref)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&clone0, php_wxObject_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "O", &clone0, php_wxObject_entry ) == SUCCESS)
+		char parse_parameters_string[] = "O";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &clone0, php_wxObject_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(clone0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(clone0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -3390,10 +3348,6 @@ PHP_METHOD(php_wxObject, Ref)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(clone0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(clone0);
 				}
 				else if(Z_TYPE_P(clone0) != IS_NULL)
 				{
@@ -3407,7 +3361,6 @@ PHP_METHOD(php_wxObject, Ref)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -3523,6 +3476,8 @@ PHP_METHOD(php_wxObject, GetClassInfo)
 				references = &((wxPrintDialog_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxSingleChoiceDialog)
 				references = &((wxSingleChoiceDialog_php*)_this)->references;
+			else if(parent_rsrc_type == le_wxGenericProgressDialog)
+				references = &((wxGenericProgressDialog_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPopupWindow)
 				references = &((wxPopupWindow_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPopupTransientWindow)
@@ -3669,10 +3624,6 @@ PHP_METHOD(php_wxObject, GetClassInfo)
 				references = &((wxSplitterWindow_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPanel)
 				references = &((wxPanel_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWizardPage)
-				references = &((wxWizardPage_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWizardPageSimple)
-				references = &((wxWizardPageSimple_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxScrolledWindow)
 				references = &((wxScrolledWindow_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxHtmlWindow)
@@ -3681,6 +3632,10 @@ PHP_METHOD(php_wxObject, GetClassInfo)
 				references = &((wxGrid_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPreviewCanvas)
 				references = &((wxPreviewCanvas_php*)_this)->references;
+			else if(parent_rsrc_type == le_wxWizardPage)
+				references = &((wxWizardPage_php*)_this)->references;
+			else if(parent_rsrc_type == le_wxWizardPageSimple)
+				references = &((wxWizardPageSimple_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxEditableListBox)
 				references = &((wxEditableListBox_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxHScrolledWindow)
@@ -3879,10 +3834,6 @@ PHP_METHOD(php_wxObject, GetClassInfo)
 				references = &((wxMouseEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxMoveEvent)
 				references = &((wxMoveEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMouseCaptureLostEvent)
-				references = &((wxMouseCaptureLostEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMouseCaptureChangedEvent)
-				references = &((wxMouseCaptureChangedEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxTimerEvent)
 				references = &((wxTimerEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxThreadEvent)
@@ -3897,12 +3848,8 @@ PHP_METHOD(php_wxObject, GetClassInfo)
 				references = &((wxEraseEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxSetCursorEvent)
 				references = &((wxSetCursorEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxIconizeEvent)
-				references = &((wxIconizeEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxIdleEvent)
 				references = &((wxIdleEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxShowEvent)
-				references = &((wxShowEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPaintEvent)
 				references = &((wxPaintEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPaletteChangedEvent)
@@ -3921,8 +3868,6 @@ PHP_METHOD(php_wxObject, GetClassInfo)
 				references = &((wxDisplayChangedEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxCalculateLayoutEvent)
 				references = &((wxCalculateLayoutEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxDropFilesEvent)
-				references = &((wxDropFilesEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxQueryLayoutInfoEvent)
 				references = &((wxQueryLayoutInfoEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxTaskBarIconEvent)
@@ -3987,8 +3932,6 @@ PHP_METHOD(php_wxObject, GetClassInfo)
 				references = &((wxColourData_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxFontData)
 				references = &((wxFontData_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxToolBarToolBase)
-				references = &((wxToolBarToolBase_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxGridTableBase)
 				references = &((wxGridTableBase_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxDataViewRenderer)
@@ -4061,6 +4004,8 @@ PHP_METHOD(php_wxObject, GetClassInfo)
 				references = &((wxLayoutAlgorithm_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxFileHistory)
 				references = &((wxFileHistory_php*)_this)->references;
+			else if(parent_rsrc_type == le_wxToolBarToolBase)
+				references = &((wxToolBarToolBase_php*)_this)->references;
 		}
 	}
 	else
@@ -4086,7 +4031,6 @@ PHP_METHOD(php_wxObject, GetClassInfo)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -4103,8 +4047,8 @@ PHP_METHOD(php_wxObject, GetClassInfo)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return0->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return0->phpObj != NULL){
+						return_value = value_to_return0->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -4223,6 +4167,8 @@ PHP_METHOD(php_wxObject, IsKindOf)
 				references = &((wxPrintDialog_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxSingleChoiceDialog)
 				references = &((wxSingleChoiceDialog_php*)_this)->references;
+			else if(parent_rsrc_type == le_wxGenericProgressDialog)
+				references = &((wxGenericProgressDialog_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPopupWindow)
 				references = &((wxPopupWindow_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPopupTransientWindow)
@@ -4369,10 +4315,6 @@ PHP_METHOD(php_wxObject, IsKindOf)
 				references = &((wxSplitterWindow_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPanel)
 				references = &((wxPanel_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWizardPage)
-				references = &((wxWizardPage_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWizardPageSimple)
-				references = &((wxWizardPageSimple_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxScrolledWindow)
 				references = &((wxScrolledWindow_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxHtmlWindow)
@@ -4381,6 +4323,10 @@ PHP_METHOD(php_wxObject, IsKindOf)
 				references = &((wxGrid_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPreviewCanvas)
 				references = &((wxPreviewCanvas_php*)_this)->references;
+			else if(parent_rsrc_type == le_wxWizardPage)
+				references = &((wxWizardPage_php*)_this)->references;
+			else if(parent_rsrc_type == le_wxWizardPageSimple)
+				references = &((wxWizardPageSimple_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxEditableListBox)
 				references = &((wxEditableListBox_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxHScrolledWindow)
@@ -4579,10 +4525,6 @@ PHP_METHOD(php_wxObject, IsKindOf)
 				references = &((wxMouseEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxMoveEvent)
 				references = &((wxMoveEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMouseCaptureLostEvent)
-				references = &((wxMouseCaptureLostEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMouseCaptureChangedEvent)
-				references = &((wxMouseCaptureChangedEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxTimerEvent)
 				references = &((wxTimerEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxThreadEvent)
@@ -4597,12 +4539,8 @@ PHP_METHOD(php_wxObject, IsKindOf)
 				references = &((wxEraseEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxSetCursorEvent)
 				references = &((wxSetCursorEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxIconizeEvent)
-				references = &((wxIconizeEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxIdleEvent)
 				references = &((wxIdleEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxShowEvent)
-				references = &((wxShowEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPaintEvent)
 				references = &((wxPaintEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPaletteChangedEvent)
@@ -4621,8 +4559,6 @@ PHP_METHOD(php_wxObject, IsKindOf)
 				references = &((wxDisplayChangedEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxCalculateLayoutEvent)
 				references = &((wxCalculateLayoutEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxDropFilesEvent)
-				references = &((wxDropFilesEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxQueryLayoutInfoEvent)
 				references = &((wxQueryLayoutInfoEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxTaskBarIconEvent)
@@ -4687,8 +4623,6 @@ PHP_METHOD(php_wxObject, IsKindOf)
 				references = &((wxColourData_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxFontData)
 				references = &((wxFontData_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxToolBarToolBase)
-				references = &((wxToolBarToolBase_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxGridTableBase)
 				references = &((wxGridTableBase_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxDataViewRenderer)
@@ -4761,6 +4695,8 @@ PHP_METHOD(php_wxObject, IsKindOf)
 				references = &((wxLayoutAlgorithm_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxFileHistory)
 				references = &((wxFileHistory_php*)_this)->references;
+			else if(parent_rsrc_type == le_wxToolBarToolBase)
+				references = &((wxToolBarToolBase_php*)_this)->references;
 		}
 	}
 	else
@@ -4783,7 +4719,8 @@ PHP_METHOD(php_wxObject, IsKindOf)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&info0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "z", &info0 ) == SUCCESS)
+		char parse_parameters_string[] = "z";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &info0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(info0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(info0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -4794,10 +4731,6 @@ PHP_METHOD(php_wxObject, IsKindOf)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(info0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(info0);
 				}
 				else if(Z_TYPE_P(info0) != IS_NULL)
 				{
@@ -4811,7 +4744,6 @@ PHP_METHOD(php_wxObject, IsKindOf)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -4833,6 +4765,7 @@ PHP_METHOD(php_wxObject, IsKindOf)
 
 		
 }
+
 void php_wxClassInfo_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4841,13 +4774,13 @@ void php_wxClassInfo_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 	#endif
 	
 	
-	wxClassInfo_php* object = (wxClassInfo_php*)rsrc->ptr;
+	wxClassInfo_php* object = static_cast<wxClassInfo_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -4936,7 +4869,6 @@ PHP_METHOD(php_wxClassInfo, CreateObject)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -4956,8 +4888,8 @@ PHP_METHOD(php_wxClassInfo, CreateObject)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return0->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return0->phpObj != NULL){
+						return_value = value_to_return0->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -5042,7 +4974,8 @@ PHP_METHOD(php_wxClassInfo, FindClass)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&className0, &className_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "s", &className0, &className_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "s";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &className0, &className_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -5050,7 +4983,6 @@ PHP_METHOD(php_wxClassInfo, FindClass)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -5067,8 +4999,8 @@ PHP_METHOD(php_wxClassInfo, FindClass)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return1->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return1->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return1->phpObj != NULL){
+						return_value = value_to_return1->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -5153,7 +5085,6 @@ PHP_METHOD(php_wxClassInfo, GetSize)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -5240,7 +5171,6 @@ PHP_METHOD(php_wxClassInfo, IsDynamic)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -5324,7 +5254,8 @@ PHP_METHOD(php_wxClassInfo, IsKindOf)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&info0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "z", &info0 ) == SUCCESS)
+		char parse_parameters_string[] = "z";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &info0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(info0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(info0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -5335,10 +5266,6 @@ PHP_METHOD(php_wxClassInfo, IsKindOf)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(info0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(info0);
 				}
 				else if(Z_TYPE_P(info0) != IS_NULL)
 				{
@@ -5352,7 +5279,6 @@ PHP_METHOD(php_wxClassInfo, IsKindOf)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)

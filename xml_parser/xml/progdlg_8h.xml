@@ -2,6 +2,7 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="progdlg_8h" kind="file">
     <compoundname>progdlg.h</compoundname>
+    <innerclass refid="classwx_generic_progress_dialog" prot="public">wxGenericProgressDialog</innerclass>
     <innerclass refid="classwx_progress_dialog" prot="public">wxProgressDialog</innerclass>
       <sectiondef kind="define">
       <memberdef kind="define" id="progdlg_8h_1a2d0baba05d36d3f740c8230d0e7cbff4" prot="public" static="no">
@@ -13,7 +14,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/progdlg.h" line="9" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/progdlg.h" bodystart="9" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/progdlg.h" line="9" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/progdlg.h" bodystart="9" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="progdlg_8h_1a026a5ca22cff9a45ddac578745bf5c72" prot="public" static="no">
         <name>wxPD_APP_MODAL</name>
@@ -24,7 +25,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/progdlg.h" line="10" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/progdlg.h" bodystart="10" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/progdlg.h" line="10" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/progdlg.h" bodystart="10" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="progdlg_8h_1a4812f82ef717083515b12a6fa2db1dc9" prot="public" static="no">
         <name>wxPD_AUTO_HIDE</name>
@@ -35,7 +36,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/progdlg.h" line="11" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/progdlg.h" bodystart="11" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/progdlg.h" line="11" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/progdlg.h" bodystart="11" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="progdlg_8h_1a955c96eae347afb520ad11c1cb23c897" prot="public" static="no">
         <name>wxPD_ELAPSED_TIME</name>
@@ -46,7 +47,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/progdlg.h" line="12" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/progdlg.h" bodystart="12" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/progdlg.h" line="12" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/progdlg.h" bodystart="12" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="progdlg_8h_1abd3ec359f5a5084fd004fceb9abddc92" prot="public" static="no">
         <name>wxPD_ESTIMATED_TIME</name>
@@ -57,7 +58,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/progdlg.h" line="13" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/progdlg.h" bodystart="13" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/progdlg.h" line="13" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/progdlg.h" bodystart="13" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="progdlg_8h_1a8e4626b4377393d34755c34e2f618ee8" prot="public" static="no">
         <name>wxPD_SMOOTH</name>
@@ -68,7 +69,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/progdlg.h" line="14" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/progdlg.h" bodystart="14" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/progdlg.h" line="14" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/progdlg.h" bodystart="14" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="progdlg_8h_1a44297ed677ba59572bd231f6cf4ff21a" prot="public" static="no">
         <name>wxPD_REMAINING_TIME</name>
@@ -79,7 +80,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/progdlg.h" line="15" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/progdlg.h" bodystart="15" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/progdlg.h" line="15" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/progdlg.h" bodystart="15" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="progdlg_8h_1a261a92ab5ff4439b9e4ec316b43e8963" prot="public" static="no">
         <name>wxPD_CAN_SKIP</name>
@@ -90,13 +91,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/progdlg.h" line="16" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/progdlg.h" bodystart="16" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/progdlg.h" line="16" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/progdlg.h" bodystart="16" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/progdlg.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/progdlg.h"/>
   </compounddef>
 </doxygen>

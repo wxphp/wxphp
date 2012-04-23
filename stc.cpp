@@ -50,6 +50,7 @@
 #include "others.h"
 
 
+
 void php_wxStyledTextCtrl_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -97,21 +98,18 @@ PHP_METHOD(php_wxStyledTextCtrl, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z|lOOls' (&parent0, &id0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &name0, &name_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "z|lOOls", &parent0, &id0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &name0, &name_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "z|lOOls";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &name0, &name_len0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(parent0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(parent0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
 				{
 					id_to_find = Z_RESVAL_P(*tmp);
 					object_pointer0_0 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer0_0 || (rsrc_type != le_wxNonOwnedWindow && rsrc_type != le_wxTopLevelWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxMDIChildFrame && rsrc_type != le_wxMDIParentFrame && rsrc_type != le_wxMiniFrame && rsrc_type != le_wxPreviewFrame && rsrc_type != le_wxHtmlHelpDialog && rsrc_type != le_wxHtmlHelpFrame && rsrc_type != le_wxDialog && rsrc_type != le_wxTextEntryDialog && rsrc_type != le_wxPasswordEntryDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxFindReplaceDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxSymbolPickerDialog && rsrc_type != le_wxPropertySheetDialog && rsrc_type != le_wxWizard && rsrc_type != le_wxProgressDialog && rsrc_type != le_wxColourDialog && rsrc_type != le_wxFileDialog && rsrc_type != le_wxFontDialog && rsrc_type != le_wxPageSetupDialog && rsrc_type != le_wxPrintDialog && rsrc_type != le_wxSingleChoiceDialog && rsrc_type != le_wxPopupWindow && rsrc_type != le_wxPopupTransientWindow && rsrc_type != le_wxControl && rsrc_type != le_wxStatusBar && rsrc_type != le_wxAnyButton && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxToggleButton && rsrc_type != le_wxBitmapToggleButton && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxControlWithItems && rsrc_type != le_wxListBox && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxRearrangeList && rsrc_type != le_wxChoice && rsrc_type != le_wxBookCtrlBase && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxListbook && rsrc_type != le_wxChoicebook && rsrc_type != le_wxNotebook && rsrc_type != le_wxTreebook && rsrc_type != le_wxToolbook && rsrc_type != le_wxAnimationCtrl && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxScrollBar && rsrc_type != le_wxStaticText && rsrc_type != le_wxStaticLine && rsrc_type != le_wxStaticBox && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxCheckBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxSearchCtrl && rsrc_type != le_wxComboBox && rsrc_type != le_wxBitmapComboBox && rsrc_type != le_wxAuiToolBar && rsrc_type != le_wxListCtrl && rsrc_type != le_wxListView && rsrc_type != le_wxRadioBox && rsrc_type != le_wxRadioButton && rsrc_type != le_wxSlider && rsrc_type != le_wxSpinCtrl && rsrc_type != le_wxSpinButton && rsrc_type != le_wxGauge && rsrc_type != le_wxHyperlinkCtrl && rsrc_type != le_wxSpinCtrlDouble && rsrc_type != le_wxGenericDirCtrl && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxPickerBase && rsrc_type != le_wxColourPickerCtrl && rsrc_type != le_wxFontPickerCtrl && rsrc_type != le_wxFilePickerCtrl && rsrc_type != le_wxDirPickerCtrl && rsrc_type != le_wxTimePickerCtrl && rsrc_type != le_wxToolBar && rsrc_type != le_wxDatePickerCtrl && rsrc_type != le_wxCollapsiblePane && rsrc_type != le_wxComboCtrl && rsrc_type != le_wxDataViewCtrl && rsrc_type != le_wxDataViewListCtrl && rsrc_type != le_wxDataViewTreeCtrl && rsrc_type != le_wxHeaderCtrl && rsrc_type != le_wxHeaderCtrlSimple && rsrc_type != le_wxFileCtrl && rsrc_type != le_wxInfoBar && rsrc_type != le_wxRibbonControl && rsrc_type != le_wxRibbonBar && rsrc_type != le_wxRibbonButtonBar && rsrc_type != le_wxRibbonGallery && rsrc_type != le_wxRibbonPage && rsrc_type != le_wxRibbonPanel && rsrc_type != le_wxRibbonToolBar && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxPanel && rsrc_type != le_wxWizardPage && rsrc_type != le_wxWizardPageSimple && rsrc_type != le_wxScrolledWindow && rsrc_type != le_wxHtmlWindow && rsrc_type != le_wxGrid && rsrc_type != le_wxPreviewCanvas && rsrc_type != le_wxEditableListBox && rsrc_type != le_wxHScrolledWindow && rsrc_type != le_wxPreviewControlBar && rsrc_type != le_wxMenuBar && rsrc_type != le_wxBannerWindow && rsrc_type != le_wxMDIClientWindow && rsrc_type != le_wxTreeListCtrl && rsrc_type != le_wxSashWindow && rsrc_type != le_wxSashLayoutWindow && rsrc_type != le_wxHtmlHelpWindow))
+					if (!object_pointer0_0 || (rsrc_type != le_wxNonOwnedWindow && rsrc_type != le_wxTopLevelWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxMDIChildFrame && rsrc_type != le_wxMDIParentFrame && rsrc_type != le_wxMiniFrame && rsrc_type != le_wxPreviewFrame && rsrc_type != le_wxHtmlHelpDialog && rsrc_type != le_wxHtmlHelpFrame && rsrc_type != le_wxDialog && rsrc_type != le_wxTextEntryDialog && rsrc_type != le_wxPasswordEntryDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxFindReplaceDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxSymbolPickerDialog && rsrc_type != le_wxPropertySheetDialog && rsrc_type != le_wxWizard && rsrc_type != le_wxProgressDialog && rsrc_type != le_wxColourDialog && rsrc_type != le_wxFileDialog && rsrc_type != le_wxFontDialog && rsrc_type != le_wxPageSetupDialog && rsrc_type != le_wxPrintDialog && rsrc_type != le_wxSingleChoiceDialog && rsrc_type != le_wxGenericProgressDialog && rsrc_type != le_wxPopupWindow && rsrc_type != le_wxPopupTransientWindow && rsrc_type != le_wxControl && rsrc_type != le_wxStatusBar && rsrc_type != le_wxAnyButton && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxToggleButton && rsrc_type != le_wxBitmapToggleButton && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxControlWithItems && rsrc_type != le_wxListBox && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxRearrangeList && rsrc_type != le_wxChoice && rsrc_type != le_wxBookCtrlBase && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxListbook && rsrc_type != le_wxChoicebook && rsrc_type != le_wxNotebook && rsrc_type != le_wxTreebook && rsrc_type != le_wxToolbook && rsrc_type != le_wxAnimationCtrl && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxScrollBar && rsrc_type != le_wxStaticText && rsrc_type != le_wxStaticLine && rsrc_type != le_wxStaticBox && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxCheckBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxSearchCtrl && rsrc_type != le_wxComboBox && rsrc_type != le_wxBitmapComboBox && rsrc_type != le_wxAuiToolBar && rsrc_type != le_wxListCtrl && rsrc_type != le_wxListView && rsrc_type != le_wxRadioBox && rsrc_type != le_wxRadioButton && rsrc_type != le_wxSlider && rsrc_type != le_wxSpinCtrl && rsrc_type != le_wxSpinButton && rsrc_type != le_wxGauge && rsrc_type != le_wxHyperlinkCtrl && rsrc_type != le_wxSpinCtrlDouble && rsrc_type != le_wxGenericDirCtrl && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxPickerBase && rsrc_type != le_wxColourPickerCtrl && rsrc_type != le_wxFontPickerCtrl && rsrc_type != le_wxFilePickerCtrl && rsrc_type != le_wxDirPickerCtrl && rsrc_type != le_wxTimePickerCtrl && rsrc_type != le_wxToolBar && rsrc_type != le_wxDatePickerCtrl && rsrc_type != le_wxCollapsiblePane && rsrc_type != le_wxComboCtrl && rsrc_type != le_wxDataViewCtrl && rsrc_type != le_wxDataViewListCtrl && rsrc_type != le_wxDataViewTreeCtrl && rsrc_type != le_wxHeaderCtrl && rsrc_type != le_wxHeaderCtrlSimple && rsrc_type != le_wxFileCtrl && rsrc_type != le_wxInfoBar && rsrc_type != le_wxRibbonControl && rsrc_type != le_wxRibbonBar && rsrc_type != le_wxRibbonButtonBar && rsrc_type != le_wxRibbonGallery && rsrc_type != le_wxRibbonPage && rsrc_type != le_wxRibbonPanel && rsrc_type != le_wxRibbonToolBar && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxPanel && rsrc_type != le_wxScrolledWindow && rsrc_type != le_wxHtmlWindow && rsrc_type != le_wxGrid && rsrc_type != le_wxPreviewCanvas && rsrc_type != le_wxWizardPage && rsrc_type != le_wxWizardPageSimple && rsrc_type != le_wxEditableListBox && rsrc_type != le_wxHScrolledWindow && rsrc_type != le_wxPreviewControlBar && rsrc_type != le_wxMenuBar && rsrc_type != le_wxBannerWindow && rsrc_type != le_wxMDIClientWindow && rsrc_type != le_wxTreeListCtrl && rsrc_type != le_wxSashWindow && rsrc_type != le_wxSashLayoutWindow && rsrc_type != le_wxHtmlHelpWindow))
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(parent0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(parent0);
 				}
 				else if(Z_TYPE_P(parent0) != IS_NULL)
 				{
@@ -129,10 +127,6 @@ PHP_METHOD(php_wxStyledTextCtrl, __construct)
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(pos0) == IS_LONG)
-				{
-					object_pointer0_2 = Z_LVAL_P(pos0);
-				}
 				else if(Z_TYPE_P(pos0) != IS_NULL)
 				{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
@@ -149,10 +143,6 @@ PHP_METHOD(php_wxStyledTextCtrl, __construct)
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(size0) == IS_LONG)
-				{
-					object_pointer0_3 = Z_LVAL_P(size0);
-				}
 				else if(Z_TYPE_P(size0) != IS_NULL)
 				{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
@@ -165,7 +155,6 @@ PHP_METHOD(php_wxStyledTextCtrl, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -337,7 +326,6 @@ PHP_METHOD(php_wxStyledTextCtrl, ZoomOut)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -421,7 +409,6 @@ PHP_METHOD(php_wxStyledTextCtrl, ZoomIn)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -502,7 +489,8 @@ PHP_METHOD(php_wxStyledTextCtrl, AddText)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&text0, &text_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "s", &text0, &text_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "s";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &text0, &text_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -510,7 +498,6 @@ PHP_METHOD(php_wxStyledTextCtrl, AddText)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -591,7 +578,8 @@ PHP_METHOD(php_wxStyledTextCtrl, AddSelection)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&caret0, &anchor0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ll", &caret0, &anchor0 ) == SUCCESS)
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &caret0, &anchor0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -599,7 +587,6 @@ PHP_METHOD(php_wxStyledTextCtrl, AddSelection)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -679,7 +666,8 @@ PHP_METHOD(php_wxStyledTextCtrl, WrapCount)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&line0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &line0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &line0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -687,7 +675,6 @@ PHP_METHOD(php_wxStyledTextCtrl, WrapCount)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -768,7 +755,8 @@ PHP_METHOD(php_wxStyledTextCtrl, WordStartPosition)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lb' (&pos0, &onlyWordCharacters0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "lb", &pos0, &onlyWordCharacters0 ) == SUCCESS)
+		char parse_parameters_string[] = "lb";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0, &onlyWordCharacters0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -776,7 +764,6 @@ PHP_METHOD(php_wxStyledTextCtrl, WordStartPosition)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -860,7 +847,6 @@ PHP_METHOD(php_wxStyledTextCtrl, WordRightExtend)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -941,7 +927,8 @@ PHP_METHOD(php_wxStyledTextCtrl, AddUndoAction)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&token0, &flags0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ll", &token0, &flags0 ) == SUCCESS)
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &token0, &flags0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -949,7 +936,6 @@ PHP_METHOD(php_wxStyledTextCtrl, AddUndoAction)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -1029,7 +1015,8 @@ PHP_METHOD(php_wxStyledTextCtrl, Allocate)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&bytes0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &bytes0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &bytes0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -1037,7 +1024,6 @@ PHP_METHOD(php_wxStyledTextCtrl, Allocate)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -1121,7 +1107,6 @@ PHP_METHOD(php_wxStyledTextCtrl, AnnotationClearAll)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -1201,7 +1186,8 @@ PHP_METHOD(php_wxStyledTextCtrl, AnnotationGetLines)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&line0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &line0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &line0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -1209,7 +1195,6 @@ PHP_METHOD(php_wxStyledTextCtrl, AnnotationGetLines)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -1289,7 +1274,8 @@ PHP_METHOD(php_wxStyledTextCtrl, AnnotationGetStyle)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&line0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &line0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &line0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -1297,7 +1283,6 @@ PHP_METHOD(php_wxStyledTextCtrl, AnnotationGetStyle)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -1381,7 +1366,6 @@ PHP_METHOD(php_wxStyledTextCtrl, AnnotationGetStyleOffset)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -1461,7 +1445,8 @@ PHP_METHOD(php_wxStyledTextCtrl, AnnotationGetStyles)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&line0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &line0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &line0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -1469,7 +1454,6 @@ PHP_METHOD(php_wxStyledTextCtrl, AnnotationGetStyles)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -1555,7 +1539,8 @@ PHP_METHOD(php_wxStyledTextCtrl, AnnotationGetText)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&line0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &line0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &line0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -1563,7 +1548,6 @@ PHP_METHOD(php_wxStyledTextCtrl, AnnotationGetText)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -1653,7 +1637,6 @@ PHP_METHOD(php_wxStyledTextCtrl, AnnotationGetVisible)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -1734,7 +1717,8 @@ PHP_METHOD(php_wxStyledTextCtrl, AnnotationSetStyle)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&line0, &style0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ll", &line0, &style0 ) == SUCCESS)
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &line0, &style0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -1742,7 +1726,6 @@ PHP_METHOD(php_wxStyledTextCtrl, AnnotationSetStyle)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -1822,7 +1805,8 @@ PHP_METHOD(php_wxStyledTextCtrl, AnnotationSetStyleOffset)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&style0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &style0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &style0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -1830,7 +1814,6 @@ PHP_METHOD(php_wxStyledTextCtrl, AnnotationSetStyleOffset)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -1912,7 +1895,8 @@ PHP_METHOD(php_wxStyledTextCtrl, AnnotationSetStyles)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ls' (&line0, &styles0, &styles_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ls", &line0, &styles0, &styles_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "ls";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &line0, &styles0, &styles_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -1920,7 +1904,6 @@ PHP_METHOD(php_wxStyledTextCtrl, AnnotationSetStyles)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -2002,7 +1985,8 @@ PHP_METHOD(php_wxStyledTextCtrl, AnnotationSetText)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ls' (&line0, &text0, &text_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ls", &line0, &text0, &text_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "ls";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &line0, &text0, &text_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -2010,7 +1994,6 @@ PHP_METHOD(php_wxStyledTextCtrl, AnnotationSetText)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -2090,7 +2073,8 @@ PHP_METHOD(php_wxStyledTextCtrl, AnnotationSetVisible)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&visible0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &visible0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &visible0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -2098,7 +2082,6 @@ PHP_METHOD(php_wxStyledTextCtrl, AnnotationSetVisible)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -2179,7 +2162,8 @@ PHP_METHOD(php_wxStyledTextCtrl, AppendText)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&text0, &text_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "s", &text0, &text_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "s";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &text0, &text_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -2187,7 +2171,6 @@ PHP_METHOD(php_wxStyledTextCtrl, AppendText)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -2271,7 +2254,6 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompActive)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -2355,7 +2337,6 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompCancel)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -2439,7 +2420,6 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompComplete)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -2523,7 +2503,6 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompGetAutoHide)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -2607,7 +2586,6 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompGetCancelAtStart)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -2691,7 +2669,6 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompGetChooseSingle)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -2775,7 +2752,6 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompGetCurrent)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -2859,7 +2835,6 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompGetDropRestOfWord)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -2943,7 +2918,6 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompGetIgnoreCase)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -3027,7 +3001,6 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompGetMaxHeight)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -3111,7 +3084,6 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompGetMaxWidth)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -3195,7 +3167,6 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompGetSeparator)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -3279,7 +3250,6 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompGetTypeSeparator)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -3363,7 +3333,6 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompPosStart)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -3444,7 +3413,8 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompSelect)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&text0, &text_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "s", &text0, &text_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "s";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &text0, &text_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -3452,7 +3422,6 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompSelect)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -3532,7 +3501,8 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompSetAutoHide)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&autoHide0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "b", &autoHide0 ) == SUCCESS)
+		char parse_parameters_string[] = "b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &autoHide0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -3540,7 +3510,6 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompSetAutoHide)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -3620,7 +3589,8 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompSetCancelAtStart)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&cancel0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "b", &cancel0 ) == SUCCESS)
+		char parse_parameters_string[] = "b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &cancel0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -3628,7 +3598,6 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompSetCancelAtStart)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -3708,7 +3677,8 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompSetChooseSingle)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&chooseSingle0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "b", &chooseSingle0 ) == SUCCESS)
+		char parse_parameters_string[] = "b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &chooseSingle0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -3716,7 +3686,6 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompSetChooseSingle)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -3796,7 +3765,8 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompSetDropRestOfWord)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&dropRestOfWord0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "b", &dropRestOfWord0 ) == SUCCESS)
+		char parse_parameters_string[] = "b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dropRestOfWord0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -3804,7 +3774,6 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompSetDropRestOfWord)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -3885,7 +3854,8 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompSetFillUps)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&characterSet0, &characterSet_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "s", &characterSet0, &characterSet_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "s";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &characterSet0, &characterSet_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -3893,7 +3863,6 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompSetFillUps)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -3973,7 +3942,8 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompSetIgnoreCase)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&ignoreCase0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "b", &ignoreCase0 ) == SUCCESS)
+		char parse_parameters_string[] = "b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &ignoreCase0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -3981,7 +3951,6 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompSetIgnoreCase)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -4061,7 +4030,8 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompSetMaxHeight)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&rowCount0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &rowCount0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &rowCount0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -4069,7 +4039,6 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompSetMaxHeight)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -4149,7 +4118,8 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompSetMaxWidth)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&characterCount0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &characterCount0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &characterCount0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -4157,7 +4127,6 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompSetMaxWidth)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -4237,7 +4206,8 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompSetSeparator)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&separatorCharacter0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &separatorCharacter0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &separatorCharacter0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -4245,7 +4215,6 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompSetSeparator)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -4325,7 +4294,8 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompSetTypeSeparator)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&separatorCharacter0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &separatorCharacter0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &separatorCharacter0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -4333,7 +4303,6 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompSetTypeSeparator)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -4415,7 +4384,8 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompShow)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ls' (&lenEntered0, &itemList0, &itemList_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ls", &lenEntered0, &itemList0, &itemList_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "ls";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &lenEntered0, &itemList0, &itemList_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -4423,7 +4393,6 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompShow)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -4504,7 +4473,8 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompStops)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&characterSet0, &characterSet_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "s", &characterSet0, &characterSet_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "s";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &characterSet0, &characterSet_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -4512,7 +4482,6 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompStops)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -4596,7 +4565,6 @@ PHP_METHOD(php_wxStyledTextCtrl, BackTab)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -4680,7 +4648,6 @@ PHP_METHOD(php_wxStyledTextCtrl, BeginUndoAction)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -4760,7 +4727,8 @@ PHP_METHOD(php_wxStyledTextCtrl, BraceBadLight)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&pos0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &pos0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -4768,7 +4736,6 @@ PHP_METHOD(php_wxStyledTextCtrl, BraceBadLight)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -4849,7 +4816,8 @@ PHP_METHOD(php_wxStyledTextCtrl, BraceHighlight)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&pos10, &pos20)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ll", &pos10, &pos20 ) == SUCCESS)
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos10, &pos20 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -4857,7 +4825,6 @@ PHP_METHOD(php_wxStyledTextCtrl, BraceHighlight)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -4937,7 +4904,8 @@ PHP_METHOD(php_wxStyledTextCtrl, BraceMatch)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&pos0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &pos0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -4945,7 +4913,6 @@ PHP_METHOD(php_wxStyledTextCtrl, BraceMatch)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -5029,7 +4996,6 @@ PHP_METHOD(php_wxStyledTextCtrl, CallTipActive)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -5040,184 +5006,6 @@ PHP_METHOD(php_wxStyledTextCtrl, CallTipActive)
 				php_printf("Executing RETURN_BOOL(wxStyledTextCtrl::CallTipActive())\n\n");
 				#endif
 				ZVAL_BOOL(return_value, ((wxStyledTextCtrl_php*)_this)->CallTipActive());
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_METHOD(php_wxStyledTextCtrl, AppendTextRaw)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxStyledTextCtrl::AppendTextRaw\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	bool return_is_user_initialized = false;
-	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
-	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
-		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxStyledTextCtrl::AppendTextRaw\n");
-			
-			return;
-		}
-		else
-		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
-			
-			if(parent_rsrc_type == le_wxStyledTextCtrl)
-				references = &((wxStyledTextCtrl_php*)_this)->references;
-		}
-	}
-	else
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Processing the method call as static\n");
-		#endif
-	}
-	
-	//Parameters for overload 0
-	char* text0;
-	long text_len0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 's' (&text0, &text_len0)\n");
-		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "s", &text0, &text_len0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxStyledTextCtrl::AppendTextRaw(text0)\n\n");
-				#endif
-				((wxStyledTextCtrl_php*)_this)->AppendTextRaw(text0);
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_METHOD(php_wxStyledTextCtrl, AddTextRaw)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxStyledTextCtrl::AddTextRaw\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	bool return_is_user_initialized = false;
-	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
-	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
-		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxStyledTextCtrl::AddTextRaw\n");
-			
-			return;
-		}
-		else
-		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
-			
-			if(parent_rsrc_type == le_wxStyledTextCtrl)
-				references = &((wxStyledTextCtrl_php*)_this)->references;
-		}
-	}
-	else
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Processing the method call as static\n");
-		#endif
-	}
-	
-	//Parameters for overload 0
-	char* text0;
-	long text_len0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 's' (&text0, &text_len0)\n");
-		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "s", &text0, &text_len0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxStyledTextCtrl::AddTextRaw(text0)\n\n");
-				#endif
-				((wxStyledTextCtrl_php*)_this)->AddTextRaw(text0);
 
 
 				return;
@@ -5291,7 +5079,6 @@ PHP_METHOD(php_wxStyledTextCtrl, CallTipCancel)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -5375,7 +5162,6 @@ PHP_METHOD(php_wxStyledTextCtrl, CallTipPosAtStart)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -5456,7 +5242,8 @@ PHP_METHOD(php_wxStyledTextCtrl, CallTipSetBackground)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&back0, php_wxColour_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "O", &back0, php_wxColour_entry ) == SUCCESS)
+		char parse_parameters_string[] = "O";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &back0, php_wxColour_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(back0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(back0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -5467,10 +5254,6 @@ PHP_METHOD(php_wxStyledTextCtrl, CallTipSetBackground)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(back0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(back0);
 				}
 				else if(Z_TYPE_P(back0) != IS_NULL)
 				{
@@ -5484,7 +5267,6 @@ PHP_METHOD(php_wxStyledTextCtrl, CallTipSetBackground)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -5566,7 +5348,8 @@ PHP_METHOD(php_wxStyledTextCtrl, CallTipSetForeground)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&fore0, php_wxColour_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "O", &fore0, php_wxColour_entry ) == SUCCESS)
+		char parse_parameters_string[] = "O";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &fore0, php_wxColour_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(fore0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(fore0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -5577,10 +5360,6 @@ PHP_METHOD(php_wxStyledTextCtrl, CallTipSetForeground)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(fore0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(fore0);
 				}
 				else if(Z_TYPE_P(fore0) != IS_NULL)
 				{
@@ -5594,7 +5373,6 @@ PHP_METHOD(php_wxStyledTextCtrl, CallTipSetForeground)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -5676,7 +5454,8 @@ PHP_METHOD(php_wxStyledTextCtrl, CallTipSetForegroundHighlight)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&fore0, php_wxColour_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "O", &fore0, php_wxColour_entry ) == SUCCESS)
+		char parse_parameters_string[] = "O";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &fore0, php_wxColour_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(fore0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(fore0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -5687,10 +5466,6 @@ PHP_METHOD(php_wxStyledTextCtrl, CallTipSetForegroundHighlight)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(fore0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(fore0);
 				}
 				else if(Z_TYPE_P(fore0) != IS_NULL)
 				{
@@ -5704,7 +5479,6 @@ PHP_METHOD(php_wxStyledTextCtrl, CallTipSetForegroundHighlight)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -5786,7 +5560,8 @@ PHP_METHOD(php_wxStyledTextCtrl, CallTipSetHighlight)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&start0, &end0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ll", &start0, &end0 ) == SUCCESS)
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &start0, &end0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -5794,7 +5569,6 @@ PHP_METHOD(php_wxStyledTextCtrl, CallTipSetHighlight)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -5876,7 +5650,8 @@ PHP_METHOD(php_wxStyledTextCtrl, CallTipShow)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ls' (&pos0, &definition0, &definition_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ls", &pos0, &definition0, &definition_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "ls";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0, &definition0, &definition_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -5884,7 +5659,6 @@ PHP_METHOD(php_wxStyledTextCtrl, CallTipShow)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -5964,7 +5738,8 @@ PHP_METHOD(php_wxStyledTextCtrl, CallTipUseStyle)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&tabSize0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &tabSize0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &tabSize0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -5972,7 +5747,6 @@ PHP_METHOD(php_wxStyledTextCtrl, CallTipUseStyle)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -6056,7 +5830,6 @@ PHP_METHOD(php_wxStyledTextCtrl, CanPaste)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -6140,7 +5913,6 @@ PHP_METHOD(php_wxStyledTextCtrl, CanRedo)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -6224,7 +5996,6 @@ PHP_METHOD(php_wxStyledTextCtrl, CanUndo)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -6308,7 +6079,6 @@ PHP_METHOD(php_wxStyledTextCtrl, Cancel)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -6392,7 +6162,6 @@ PHP_METHOD(php_wxStyledTextCtrl, CharLeft)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -6476,7 +6245,6 @@ PHP_METHOD(php_wxStyledTextCtrl, CharLeftExtend)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -6560,7 +6328,6 @@ PHP_METHOD(php_wxStyledTextCtrl, CharLeftRectExtend)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -6641,7 +6408,8 @@ PHP_METHOD(php_wxStyledTextCtrl, CharPositionFromPoint)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&x0, &y0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ll", &x0, &y0 ) == SUCCESS)
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &x0, &y0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -6649,7 +6417,6 @@ PHP_METHOD(php_wxStyledTextCtrl, CharPositionFromPoint)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -6730,7 +6497,8 @@ PHP_METHOD(php_wxStyledTextCtrl, CharPositionFromPointClose)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&x0, &y0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ll", &x0, &y0 ) == SUCCESS)
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &x0, &y0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -6738,7 +6506,6 @@ PHP_METHOD(php_wxStyledTextCtrl, CharPositionFromPointClose)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -6822,7 +6589,6 @@ PHP_METHOD(php_wxStyledTextCtrl, CharRight)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -6906,7 +6672,6 @@ PHP_METHOD(php_wxStyledTextCtrl, CharRightExtend)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -6990,7 +6755,6 @@ PHP_METHOD(php_wxStyledTextCtrl, CharRightRectExtend)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -7074,7 +6838,6 @@ PHP_METHOD(php_wxStyledTextCtrl, ChooseCaretX)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -7158,7 +6921,6 @@ PHP_METHOD(php_wxStyledTextCtrl, Clear)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -7242,7 +7004,6 @@ PHP_METHOD(php_wxStyledTextCtrl, ClearAll)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -7326,7 +7087,6 @@ PHP_METHOD(php_wxStyledTextCtrl, ClearDocumentStyle)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -7410,7 +7170,6 @@ PHP_METHOD(php_wxStyledTextCtrl, ClearRegisteredImages)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -7494,7 +7253,6 @@ PHP_METHOD(php_wxStyledTextCtrl, ClearSelections)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -7576,7 +7334,8 @@ PHP_METHOD(php_wxStyledTextCtrl, CmdKeyAssign)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lll' (&key0, &modifiers0, &cmd0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "lll", &key0, &modifiers0, &cmd0 ) == SUCCESS)
+		char parse_parameters_string[] = "lll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &key0, &modifiers0, &cmd0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -7584,7 +7343,6 @@ PHP_METHOD(php_wxStyledTextCtrl, CmdKeyAssign)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -7665,7 +7423,8 @@ PHP_METHOD(php_wxStyledTextCtrl, CmdKeyClear)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&key0, &modifiers0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ll", &key0, &modifiers0 ) == SUCCESS)
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &key0, &modifiers0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -7673,7 +7432,6 @@ PHP_METHOD(php_wxStyledTextCtrl, CmdKeyClear)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -7757,7 +7515,6 @@ PHP_METHOD(php_wxStyledTextCtrl, CmdKeyClearAll)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -7837,7 +7594,8 @@ PHP_METHOD(php_wxStyledTextCtrl, CmdKeyExecute)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&cmd0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &cmd0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &cmd0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -7845,7 +7603,6 @@ PHP_METHOD(php_wxStyledTextCtrl, CmdKeyExecute)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -7926,7 +7683,8 @@ PHP_METHOD(php_wxStyledTextCtrl, Colourise)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&start0, &end0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ll", &start0, &end0 ) == SUCCESS)
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &start0, &end0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -7934,7 +7692,6 @@ PHP_METHOD(php_wxStyledTextCtrl, Colourise)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -8014,7 +7771,8 @@ PHP_METHOD(php_wxStyledTextCtrl, ConvertEOLs)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&eolMode0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &eolMode0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &eolMode0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -8022,7 +7780,6 @@ PHP_METHOD(php_wxStyledTextCtrl, ConvertEOLs)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -8106,7 +7863,6 @@ PHP_METHOD(php_wxStyledTextCtrl, Copy)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -8190,7 +7946,6 @@ PHP_METHOD(php_wxStyledTextCtrl, CopyAllowLine)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -8271,7 +8026,8 @@ PHP_METHOD(php_wxStyledTextCtrl, CopyRange)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&start0, &end0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ll", &start0, &end0 ) == SUCCESS)
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &start0, &end0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -8279,7 +8035,6 @@ PHP_METHOD(php_wxStyledTextCtrl, CopyRange)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -8361,7 +8116,8 @@ PHP_METHOD(php_wxStyledTextCtrl, CopyText)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ls' (&length0, &text0, &text_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ls", &length0, &text0, &text_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "ls";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &length0, &text0, &text_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -8369,7 +8125,6 @@ PHP_METHOD(php_wxStyledTextCtrl, CopyText)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -8458,21 +8213,18 @@ PHP_METHOD(php_wxStyledTextCtrl, Create)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z|lOOls' (&parent0, &id0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &name0, &name_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "z|lOOls", &parent0, &id0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &name0, &name_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "z|lOOls";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &id0, &pos0, php_wxPoint_entry, &size0, php_wxSize_entry, &style0, &name0, &name_len0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(parent0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(parent0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
 				{
 					id_to_find = Z_RESVAL_P(*tmp);
 					object_pointer0_0 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer0_0 || (rsrc_type != le_wxNonOwnedWindow && rsrc_type != le_wxTopLevelWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxMDIChildFrame && rsrc_type != le_wxMDIParentFrame && rsrc_type != le_wxMiniFrame && rsrc_type != le_wxPreviewFrame && rsrc_type != le_wxHtmlHelpDialog && rsrc_type != le_wxHtmlHelpFrame && rsrc_type != le_wxDialog && rsrc_type != le_wxTextEntryDialog && rsrc_type != le_wxPasswordEntryDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxFindReplaceDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxSymbolPickerDialog && rsrc_type != le_wxPropertySheetDialog && rsrc_type != le_wxWizard && rsrc_type != le_wxProgressDialog && rsrc_type != le_wxColourDialog && rsrc_type != le_wxFileDialog && rsrc_type != le_wxFontDialog && rsrc_type != le_wxPageSetupDialog && rsrc_type != le_wxPrintDialog && rsrc_type != le_wxSingleChoiceDialog && rsrc_type != le_wxPopupWindow && rsrc_type != le_wxPopupTransientWindow && rsrc_type != le_wxControl && rsrc_type != le_wxStatusBar && rsrc_type != le_wxAnyButton && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxToggleButton && rsrc_type != le_wxBitmapToggleButton && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxControlWithItems && rsrc_type != le_wxListBox && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxRearrangeList && rsrc_type != le_wxChoice && rsrc_type != le_wxBookCtrlBase && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxListbook && rsrc_type != le_wxChoicebook && rsrc_type != le_wxNotebook && rsrc_type != le_wxTreebook && rsrc_type != le_wxToolbook && rsrc_type != le_wxAnimationCtrl && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxScrollBar && rsrc_type != le_wxStaticText && rsrc_type != le_wxStaticLine && rsrc_type != le_wxStaticBox && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxCheckBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxSearchCtrl && rsrc_type != le_wxComboBox && rsrc_type != le_wxBitmapComboBox && rsrc_type != le_wxAuiToolBar && rsrc_type != le_wxListCtrl && rsrc_type != le_wxListView && rsrc_type != le_wxRadioBox && rsrc_type != le_wxRadioButton && rsrc_type != le_wxSlider && rsrc_type != le_wxSpinCtrl && rsrc_type != le_wxSpinButton && rsrc_type != le_wxGauge && rsrc_type != le_wxHyperlinkCtrl && rsrc_type != le_wxSpinCtrlDouble && rsrc_type != le_wxGenericDirCtrl && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxPickerBase && rsrc_type != le_wxColourPickerCtrl && rsrc_type != le_wxFontPickerCtrl && rsrc_type != le_wxFilePickerCtrl && rsrc_type != le_wxDirPickerCtrl && rsrc_type != le_wxTimePickerCtrl && rsrc_type != le_wxToolBar && rsrc_type != le_wxDatePickerCtrl && rsrc_type != le_wxCollapsiblePane && rsrc_type != le_wxComboCtrl && rsrc_type != le_wxDataViewCtrl && rsrc_type != le_wxDataViewListCtrl && rsrc_type != le_wxDataViewTreeCtrl && rsrc_type != le_wxHeaderCtrl && rsrc_type != le_wxHeaderCtrlSimple && rsrc_type != le_wxFileCtrl && rsrc_type != le_wxInfoBar && rsrc_type != le_wxRibbonControl && rsrc_type != le_wxRibbonBar && rsrc_type != le_wxRibbonButtonBar && rsrc_type != le_wxRibbonGallery && rsrc_type != le_wxRibbonPage && rsrc_type != le_wxRibbonPanel && rsrc_type != le_wxRibbonToolBar && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxPanel && rsrc_type != le_wxWizardPage && rsrc_type != le_wxWizardPageSimple && rsrc_type != le_wxScrolledWindow && rsrc_type != le_wxHtmlWindow && rsrc_type != le_wxGrid && rsrc_type != le_wxPreviewCanvas && rsrc_type != le_wxEditableListBox && rsrc_type != le_wxHScrolledWindow && rsrc_type != le_wxPreviewControlBar && rsrc_type != le_wxMenuBar && rsrc_type != le_wxBannerWindow && rsrc_type != le_wxMDIClientWindow && rsrc_type != le_wxTreeListCtrl && rsrc_type != le_wxSashWindow && rsrc_type != le_wxSashLayoutWindow && rsrc_type != le_wxHtmlHelpWindow))
+					if (!object_pointer0_0 || (rsrc_type != le_wxNonOwnedWindow && rsrc_type != le_wxTopLevelWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxMDIChildFrame && rsrc_type != le_wxMDIParentFrame && rsrc_type != le_wxMiniFrame && rsrc_type != le_wxPreviewFrame && rsrc_type != le_wxHtmlHelpDialog && rsrc_type != le_wxHtmlHelpFrame && rsrc_type != le_wxDialog && rsrc_type != le_wxTextEntryDialog && rsrc_type != le_wxPasswordEntryDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxFindReplaceDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxSymbolPickerDialog && rsrc_type != le_wxPropertySheetDialog && rsrc_type != le_wxWizard && rsrc_type != le_wxProgressDialog && rsrc_type != le_wxColourDialog && rsrc_type != le_wxFileDialog && rsrc_type != le_wxFontDialog && rsrc_type != le_wxPageSetupDialog && rsrc_type != le_wxPrintDialog && rsrc_type != le_wxSingleChoiceDialog && rsrc_type != le_wxGenericProgressDialog && rsrc_type != le_wxPopupWindow && rsrc_type != le_wxPopupTransientWindow && rsrc_type != le_wxControl && rsrc_type != le_wxStatusBar && rsrc_type != le_wxAnyButton && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxToggleButton && rsrc_type != le_wxBitmapToggleButton && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxControlWithItems && rsrc_type != le_wxListBox && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxRearrangeList && rsrc_type != le_wxChoice && rsrc_type != le_wxBookCtrlBase && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxListbook && rsrc_type != le_wxChoicebook && rsrc_type != le_wxNotebook && rsrc_type != le_wxTreebook && rsrc_type != le_wxToolbook && rsrc_type != le_wxAnimationCtrl && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxScrollBar && rsrc_type != le_wxStaticText && rsrc_type != le_wxStaticLine && rsrc_type != le_wxStaticBox && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxCheckBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxSearchCtrl && rsrc_type != le_wxComboBox && rsrc_type != le_wxBitmapComboBox && rsrc_type != le_wxAuiToolBar && rsrc_type != le_wxListCtrl && rsrc_type != le_wxListView && rsrc_type != le_wxRadioBox && rsrc_type != le_wxRadioButton && rsrc_type != le_wxSlider && rsrc_type != le_wxSpinCtrl && rsrc_type != le_wxSpinButton && rsrc_type != le_wxGauge && rsrc_type != le_wxHyperlinkCtrl && rsrc_type != le_wxSpinCtrlDouble && rsrc_type != le_wxGenericDirCtrl && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxPickerBase && rsrc_type != le_wxColourPickerCtrl && rsrc_type != le_wxFontPickerCtrl && rsrc_type != le_wxFilePickerCtrl && rsrc_type != le_wxDirPickerCtrl && rsrc_type != le_wxTimePickerCtrl && rsrc_type != le_wxToolBar && rsrc_type != le_wxDatePickerCtrl && rsrc_type != le_wxCollapsiblePane && rsrc_type != le_wxComboCtrl && rsrc_type != le_wxDataViewCtrl && rsrc_type != le_wxDataViewListCtrl && rsrc_type != le_wxDataViewTreeCtrl && rsrc_type != le_wxHeaderCtrl && rsrc_type != le_wxHeaderCtrlSimple && rsrc_type != le_wxFileCtrl && rsrc_type != le_wxInfoBar && rsrc_type != le_wxRibbonControl && rsrc_type != le_wxRibbonBar && rsrc_type != le_wxRibbonButtonBar && rsrc_type != le_wxRibbonGallery && rsrc_type != le_wxRibbonPage && rsrc_type != le_wxRibbonPanel && rsrc_type != le_wxRibbonToolBar && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxPanel && rsrc_type != le_wxScrolledWindow && rsrc_type != le_wxHtmlWindow && rsrc_type != le_wxGrid && rsrc_type != le_wxPreviewCanvas && rsrc_type != le_wxWizardPage && rsrc_type != le_wxWizardPageSimple && rsrc_type != le_wxEditableListBox && rsrc_type != le_wxHScrolledWindow && rsrc_type != le_wxPreviewControlBar && rsrc_type != le_wxMenuBar && rsrc_type != le_wxBannerWindow && rsrc_type != le_wxMDIClientWindow && rsrc_type != le_wxTreeListCtrl && rsrc_type != le_wxSashWindow && rsrc_type != le_wxSashLayoutWindow && rsrc_type != le_wxHtmlHelpWindow))
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(parent0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(parent0);
 				}
 				else if(Z_TYPE_P(parent0) != IS_NULL)
 				{
@@ -8490,10 +8242,6 @@ PHP_METHOD(php_wxStyledTextCtrl, Create)
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(pos0) == IS_LONG)
-				{
-					object_pointer0_2 = Z_LVAL_P(pos0);
-				}
 				else if(Z_TYPE_P(pos0) != IS_NULL)
 				{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
@@ -8510,10 +8258,6 @@ PHP_METHOD(php_wxStyledTextCtrl, Create)
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(size0) == IS_LONG)
-				{
-					object_pointer0_3 = Z_LVAL_P(size0);
-				}
 				else if(Z_TYPE_P(size0) != IS_NULL)
 				{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
@@ -8526,7 +8270,6 @@ PHP_METHOD(php_wxStyledTextCtrl, Create)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -8678,7 +8421,6 @@ PHP_METHOD(php_wxStyledTextCtrl, CreateDocument)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -8762,7 +8504,6 @@ PHP_METHOD(php_wxStyledTextCtrl, Cut)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -8846,7 +8587,6 @@ PHP_METHOD(php_wxStyledTextCtrl, DelLineLeft)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -8930,7 +8670,6 @@ PHP_METHOD(php_wxStyledTextCtrl, DelLineRight)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -9014,7 +8753,6 @@ PHP_METHOD(php_wxStyledTextCtrl, DelWordLeft)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -9098,7 +8836,6 @@ PHP_METHOD(php_wxStyledTextCtrl, DelWordRight)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -9182,7 +8919,6 @@ PHP_METHOD(php_wxStyledTextCtrl, DeleteBack)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -9266,7 +9002,6 @@ PHP_METHOD(php_wxStyledTextCtrl, DeleteBackNotLine)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -9348,7 +9083,8 @@ PHP_METHOD(php_wxStyledTextCtrl, DoDragOver)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lll' (&x0, &y0, &def0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "lll", &x0, &y0, &def0 ) == SUCCESS)
+		char parse_parameters_string[] = "lll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &x0, &y0, &def0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -9356,7 +9092,6 @@ PHP_METHOD(php_wxStyledTextCtrl, DoDragOver)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -9439,7 +9174,8 @@ PHP_METHOD(php_wxStyledTextCtrl, DoDropText)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lls' (&x0, &y0, &data0, &data_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "lls", &x0, &y0, &data0, &data_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "lls";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &x0, &y0, &data0, &data_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -9447,7 +9183,6 @@ PHP_METHOD(php_wxStyledTextCtrl, DoDropText)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -9527,7 +9262,8 @@ PHP_METHOD(php_wxStyledTextCtrl, DocLineFromVisible)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&lineDisplay0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &lineDisplay0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &lineDisplay0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -9535,7 +9271,6 @@ PHP_METHOD(php_wxStyledTextCtrl, DocLineFromVisible)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -9619,7 +9354,6 @@ PHP_METHOD(php_wxStyledTextCtrl, DocumentEnd)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -9703,7 +9437,6 @@ PHP_METHOD(php_wxStyledTextCtrl, DocumentEndExtend)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -9787,7 +9520,6 @@ PHP_METHOD(php_wxStyledTextCtrl, DocumentStart)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -9871,7 +9603,6 @@ PHP_METHOD(php_wxStyledTextCtrl, DocumentStartExtend)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -9955,7 +9686,6 @@ PHP_METHOD(php_wxStyledTextCtrl, EditToggleOvertype)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -10039,7 +9769,6 @@ PHP_METHOD(php_wxStyledTextCtrl, EmptyUndoBuffer)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -10123,7 +9852,6 @@ PHP_METHOD(php_wxStyledTextCtrl, EndUndoAction)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -10207,7 +9935,6 @@ PHP_METHOD(php_wxStyledTextCtrl, EnsureCaretVisible)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -10287,7 +10014,8 @@ PHP_METHOD(php_wxStyledTextCtrl, EnsureVisible)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&line0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &line0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &line0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -10295,7 +10023,6 @@ PHP_METHOD(php_wxStyledTextCtrl, EnsureVisible)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -10375,7 +10102,8 @@ PHP_METHOD(php_wxStyledTextCtrl, EnsureVisibleEnforcePolicy)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&line0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &line0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &line0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -10383,7 +10111,6 @@ PHP_METHOD(php_wxStyledTextCtrl, EnsureVisibleEnforcePolicy)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -10464,7 +10191,8 @@ PHP_METHOD(php_wxStyledTextCtrl, FindColumn)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&line0, &column0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ll", &line0, &column0 ) == SUCCESS)
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &line0, &column0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -10472,7 +10200,6 @@ PHP_METHOD(php_wxStyledTextCtrl, FindColumn)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -10556,7 +10283,8 @@ PHP_METHOD(php_wxStyledTextCtrl, FindText)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lls|l' (&minPos0, &maxPos0, &text0, &text_len0, &flags0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "lls|l", &minPos0, &maxPos0, &text0, &text_len0, &flags0 ) == SUCCESS)
+		char parse_parameters_string[] = "lls|l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &minPos0, &maxPos0, &text0, &text_len0, &flags0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -10564,7 +10292,6 @@ PHP_METHOD(php_wxStyledTextCtrl, FindText)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -10659,7 +10386,6 @@ PHP_METHOD(php_wxStyledTextCtrl, FormFeed)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -10749,7 +10475,8 @@ PHP_METHOD(php_wxStyledTextCtrl, FormatRange)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'bllzzOO' (&doDraw0, &startPos0, &endPos0, &draw0, &target0, &renderRect0, php_wxRect_entry, &pageRect0, php_wxRect_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "bllzzOO", &doDraw0, &startPos0, &endPos0, &draw0, &target0, &renderRect0, php_wxRect_entry, &pageRect0, php_wxRect_entry ) == SUCCESS)
+		char parse_parameters_string[] = "bllzzOO";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &doDraw0, &startPos0, &endPos0, &draw0, &target0, &renderRect0, php_wxRect_entry, &pageRect0, php_wxRect_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 4){
 				if(Z_TYPE_P(draw0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(draw0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -10760,10 +10487,6 @@ PHP_METHOD(php_wxStyledTextCtrl, FormatRange)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(draw0) == IS_LONG)
-				{
-					object_pointer0_3 = Z_LVAL_P(draw0);
 				}
 				else if(Z_TYPE_P(draw0) != IS_NULL)
 				{
@@ -10781,10 +10504,6 @@ PHP_METHOD(php_wxStyledTextCtrl, FormatRange)
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(target0) == IS_LONG)
-				{
-					object_pointer0_4 = Z_LVAL_P(target0);
-				}
 				else if(Z_TYPE_P(target0) != IS_NULL)
 				{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
@@ -10800,10 +10519,6 @@ PHP_METHOD(php_wxStyledTextCtrl, FormatRange)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(renderRect0) == IS_LONG)
-				{
-					object_pointer0_5 = Z_LVAL_P(renderRect0);
 				}
 				else if(Z_TYPE_P(renderRect0) != IS_NULL)
 				{
@@ -10821,10 +10536,6 @@ PHP_METHOD(php_wxStyledTextCtrl, FormatRange)
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(pageRect0) == IS_LONG)
-				{
-					object_pointer0_6 = Z_LVAL_P(pageRect0);
-				}
 				else if(Z_TYPE_P(pageRect0) != IS_NULL)
 				{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
@@ -10837,7 +10548,6 @@ PHP_METHOD(php_wxStyledTextCtrl, FormatRange)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -10923,7 +10633,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetAdditionalCaretForeground)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -11012,7 +10721,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetAdditionalCaretsBlink)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -11096,7 +10804,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetAdditionalCaretsVisible)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -11180,7 +10887,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetAdditionalSelAlpha)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -11264,7 +10970,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetAdditionalSelectionTyping)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -11348,7 +11053,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetAnchor)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -11432,7 +11136,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetBackSpaceUnIndents)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -11516,7 +11219,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetBufferedDraw)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -11600,7 +11302,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetCaretForeground)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -11689,7 +11390,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetCaretLineBackAlpha)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -11773,7 +11473,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetCaretLineBackground)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -11862,7 +11561,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetCaretLineVisible)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -11946,7 +11644,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetCaretPeriod)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -12030,7 +11727,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetCaretSticky)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -12114,7 +11810,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetCaretWidth)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -12194,7 +11889,8 @@ PHP_METHOD(php_wxStyledTextCtrl, GetCharAt)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&pos0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &pos0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -12202,7 +11898,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetCharAt)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -12286,7 +11981,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetCharacterPointer)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -12297,7 +11991,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetCharacterPointer)
 				php_printf("Executing RETURN_STRING(wxStyledTextCtrl::GetCharacterPointer().fn_str(), 1)\n\n");
 				#endif
 				char* value_to_return0;
-				value_to_return0 = ((wxStyledTextCtrl_php*)_this)->GetCharacterPointer();
+				value_to_return0 = (char*) ((wxStyledTextCtrl_php*)_this)->GetCharacterPointer();
 				ZVAL_STRING(return_value, value_to_return0, 1);
 
 
@@ -12372,7 +12066,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetCodePage)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -12452,7 +12145,8 @@ PHP_METHOD(php_wxStyledTextCtrl, GetColumn)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&pos0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &pos0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -12460,7 +12154,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetColumn)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -12544,7 +12237,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetControlCharSymbol)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -12628,7 +12320,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetCurrentLine)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -12712,7 +12403,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetCurrentPos)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -12796,7 +12486,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetEOLMode)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -12880,7 +12569,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetEdgeColour)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -12969,7 +12657,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetEdgeColumn)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -13053,7 +12740,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetEdgeMode)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -13137,7 +12823,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetEndAtLastLine)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -13221,7 +12906,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetEndStyled)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -13305,7 +12989,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetExtraAscent)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -13389,7 +13072,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetExtraDescent)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -13473,7 +13155,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetFirstVisibleLine)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -13553,7 +13234,8 @@ PHP_METHOD(php_wxStyledTextCtrl, GetFoldExpanded)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&line0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &line0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &line0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -13561,7 +13243,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetFoldExpanded)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -13641,7 +13322,8 @@ PHP_METHOD(php_wxStyledTextCtrl, GetFoldLevel)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&line0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &line0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &line0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -13649,7 +13331,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetFoldLevel)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -13729,7 +13410,8 @@ PHP_METHOD(php_wxStyledTextCtrl, GetFoldParent)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&line0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &line0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &line0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -13737,7 +13419,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetFoldParent)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -13821,7 +13502,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetHighlightGuide)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -13905,7 +13585,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetIndent)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -13989,7 +13668,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetIndentationGuides)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -14073,7 +13751,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetKeysUnicode)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -14154,7 +13831,8 @@ PHP_METHOD(php_wxStyledTextCtrl, GetLastChild)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&line0, &level0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ll", &line0, &level0 ) == SUCCESS)
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &line0, &level0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -14162,7 +13840,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetLastChild)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -14246,7 +13923,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetLastKeydownProcessed)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -14330,7 +14006,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetLayoutCache)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -14414,7 +14089,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetLength)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -14498,7 +14172,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetLexer)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -14582,7 +14255,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetLibraryVersionInfo)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -14672,7 +14344,8 @@ PHP_METHOD(php_wxStyledTextCtrl, GetLine)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&line0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &line0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &line0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -14680,7 +14353,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetLine)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -14770,7 +14442,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetLineCount)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -14850,7 +14521,8 @@ PHP_METHOD(php_wxStyledTextCtrl, GetLineEndPosition)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&line0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &line0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &line0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -14858,7 +14530,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetLineEndPosition)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -14938,7 +14609,8 @@ PHP_METHOD(php_wxStyledTextCtrl, GetLineIndentPosition)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&line0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &line0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &line0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -14946,7 +14618,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetLineIndentPosition)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -15026,7 +14697,8 @@ PHP_METHOD(php_wxStyledTextCtrl, GetLineIndentation)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&line0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &line0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &line0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -15034,7 +14706,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetLineIndentation)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -15114,7 +14785,8 @@ PHP_METHOD(php_wxStyledTextCtrl, GetLineSelEndPosition)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&line0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &line0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &line0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -15122,7 +14794,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetLineSelEndPosition)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -15202,7 +14873,8 @@ PHP_METHOD(php_wxStyledTextCtrl, GetLineSelStartPosition)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&line0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &line0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &line0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -15210,7 +14882,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetLineSelStartPosition)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -15290,7 +14961,8 @@ PHP_METHOD(php_wxStyledTextCtrl, GetLineState)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&line0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &line0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &line0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -15298,7 +14970,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetLineState)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -15378,7 +15049,8 @@ PHP_METHOD(php_wxStyledTextCtrl, GetLineVisible)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&line0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &line0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &line0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -15386,7 +15058,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetLineVisible)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -15470,7 +15141,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetMainSelection)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -15554,7 +15224,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetMarginLeft)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -15634,7 +15303,8 @@ PHP_METHOD(php_wxStyledTextCtrl, GetMarginMask)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&margin0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &margin0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &margin0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -15642,7 +15312,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetMarginMask)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -15726,7 +15395,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetMarginRight)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -15806,7 +15474,8 @@ PHP_METHOD(php_wxStyledTextCtrl, GetMarginSensitive)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&margin0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &margin0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &margin0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -15814,7 +15483,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetMarginSensitive)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -15894,7 +15562,8 @@ PHP_METHOD(php_wxStyledTextCtrl, GetMarginType)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&margin0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &margin0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &margin0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -15902,7 +15571,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetMarginType)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -15982,7 +15650,8 @@ PHP_METHOD(php_wxStyledTextCtrl, GetMarginWidth)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&margin0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &margin0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &margin0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -15990,7 +15659,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetMarginWidth)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -16070,7 +15738,8 @@ PHP_METHOD(php_wxStyledTextCtrl, GetMarkerSymbolDefined)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&markerNumber0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &markerNumber0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &markerNumber0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -16078,7 +15747,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetMarkerSymbolDefined)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -16162,7 +15830,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetMaxLineState)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -16246,7 +15913,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetModEventMask)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -16330,7 +15996,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetModify)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -16414,7 +16079,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetMouseDownCaptures)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -16498,7 +16162,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetMouseDwellTime)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -16582,7 +16245,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetMultipleSelection)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -16666,7 +16328,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetOvertype)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -16750,7 +16411,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetPasteConvertEndings)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -16834,7 +16494,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetPrintColourMode)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -16918,7 +16577,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetPrintMagnification)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -17002,7 +16660,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetPrintWrapMode)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -17083,7 +16740,8 @@ PHP_METHOD(php_wxStyledTextCtrl, GetProperty)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&key0, &key_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "s", &key0, &key_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "s";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &key0, &key_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -17091,7 +16749,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetProperty)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -17178,7 +16835,8 @@ PHP_METHOD(php_wxStyledTextCtrl, GetPropertyExpanded)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&key0, &key_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "s", &key0, &key_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "s";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &key0, &key_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -17186,7 +16844,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetPropertyExpanded)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -17273,7 +16930,8 @@ PHP_METHOD(php_wxStyledTextCtrl, GetPropertyInt)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&key0, &key_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "s", &key0, &key_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "s";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &key0, &key_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -17281,7 +16939,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetPropertyInt)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -17365,7 +17022,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetReadOnly)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -17449,7 +17105,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetRectangularSelectionAnchor)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -17533,7 +17188,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetRectangularSelectionAnchorVirtualSpace)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -17617,7 +17271,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetRectangularSelectionCaret)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -17701,7 +17354,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetRectangularSelectionCaretVirtualSpace)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -17785,7 +17437,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetRectangularSelectionModifier)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -17869,7 +17520,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetSTCCursor)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -17953,7 +17603,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetSTCFocus)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -18037,7 +17686,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetScrollWidth)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -18121,7 +17769,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetSearchFlags)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -18205,7 +17852,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetSelAlpha)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -18289,7 +17935,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetSelectedText)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -18379,7 +18024,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetSelectionEnd)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -18463,7 +18107,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetSelectionMode)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -18543,7 +18186,8 @@ PHP_METHOD(php_wxStyledTextCtrl, GetSelectionNAnchor)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&selection0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &selection0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &selection0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -18551,7 +18195,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetSelectionNAnchor)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -18631,7 +18274,8 @@ PHP_METHOD(php_wxStyledTextCtrl, GetSelectionNAnchorVirtualSpace)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&selection0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &selection0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &selection0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -18639,7 +18283,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetSelectionNAnchorVirtualSpace)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -18719,7 +18362,8 @@ PHP_METHOD(php_wxStyledTextCtrl, GetSelectionNCaret)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&selection0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &selection0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &selection0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -18727,7 +18371,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetSelectionNCaret)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -18807,7 +18450,8 @@ PHP_METHOD(php_wxStyledTextCtrl, GetSelectionNCaretVirtualSpace)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&selection0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &selection0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &selection0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -18815,7 +18459,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetSelectionNCaretVirtualSpace)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -18895,7 +18538,8 @@ PHP_METHOD(php_wxStyledTextCtrl, GetSelectionNEnd)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&selection0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &selection0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &selection0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -18903,7 +18547,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetSelectionNEnd)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -18983,7 +18626,8 @@ PHP_METHOD(php_wxStyledTextCtrl, GetSelectionNStart)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&selection0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &selection0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &selection0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -18991,7 +18635,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetSelectionNStart)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -19075,7 +18718,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetSelectionStart)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -19159,7 +18801,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetSelections)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -19243,7 +18884,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetStatus)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -19323,7 +18963,8 @@ PHP_METHOD(php_wxStyledTextCtrl, GetStyleAt)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&pos0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &pos0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -19331,7 +18972,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetStyleAt)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -19415,7 +19055,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetStyleBits)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -19499,7 +19138,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetStyleBitsNeeded)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -19583,7 +19221,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetTabIndents)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -19667,7 +19304,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetTabWidth)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -19751,7 +19387,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetTargetEnd)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -19835,7 +19470,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetTargetStart)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -19919,7 +19553,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetText)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -20009,7 +19642,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetTextLength)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -20090,7 +19722,8 @@ PHP_METHOD(php_wxStyledTextCtrl, GetTextRange)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&startPos0, &endPos0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ll", &startPos0, &endPos0 ) == SUCCESS)
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &startPos0, &endPos0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -20098,7 +19731,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetTextRange)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -20188,7 +19820,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetTwoPhaseDraw)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -20272,7 +19903,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetUndoCollection)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -20356,7 +19986,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetUseAntiAliasing)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -20440,7 +20069,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetUseHorizontalScrollBar)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -20524,7 +20152,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetUseTabs)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -20608,7 +20235,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetUseVerticalScrollBar)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -20692,7 +20318,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetViewEOL)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -20776,7 +20401,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetViewWhiteSpace)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -20860,7 +20484,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetVirtualSpaceOptions)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -20944,7 +20567,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetWhitespaceSize)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -21028,7 +20650,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetWrapIndentMode)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -21112,7 +20733,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetWrapMode)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -21196,7 +20816,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetWrapStartIndent)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -21280,7 +20899,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetWrapVisualFlags)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -21364,7 +20982,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetWrapVisualFlagsLocation)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -21448,7 +21065,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetXOffset)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -21532,7 +21148,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GetZoom)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -21612,7 +21227,8 @@ PHP_METHOD(php_wxStyledTextCtrl, GotoLine)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&line0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &line0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &line0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -21620,7 +21236,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GotoLine)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -21700,7 +21315,8 @@ PHP_METHOD(php_wxStyledTextCtrl, GotoPos)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&pos0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &pos0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -21708,7 +21324,6 @@ PHP_METHOD(php_wxStyledTextCtrl, GotoPos)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -21789,7 +21404,8 @@ PHP_METHOD(php_wxStyledTextCtrl, HideLines)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&lineStart0, &lineEnd0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ll", &lineStart0, &lineEnd0 ) == SUCCESS)
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &lineStart0, &lineEnd0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -21797,7 +21413,6 @@ PHP_METHOD(php_wxStyledTextCtrl, HideLines)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -21877,7 +21492,8 @@ PHP_METHOD(php_wxStyledTextCtrl, HideSelection)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&normal0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "b", &normal0 ) == SUCCESS)
+		char parse_parameters_string[] = "b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &normal0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -21885,7 +21501,6 @@ PHP_METHOD(php_wxStyledTextCtrl, HideSelection)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -21969,7 +21584,6 @@ PHP_METHOD(php_wxStyledTextCtrl, Home)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -22053,7 +21667,6 @@ PHP_METHOD(php_wxStyledTextCtrl, HomeDisplay)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -22137,7 +21750,6 @@ PHP_METHOD(php_wxStyledTextCtrl, HomeDisplayExtend)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -22221,7 +21833,6 @@ PHP_METHOD(php_wxStyledTextCtrl, HomeExtend)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -22305,7 +21916,6 @@ PHP_METHOD(php_wxStyledTextCtrl, HomeRectExtend)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -22389,7 +21999,6 @@ PHP_METHOD(php_wxStyledTextCtrl, HomeWrap)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -22473,7 +22082,6 @@ PHP_METHOD(php_wxStyledTextCtrl, HomeWrapExtend)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -22553,7 +22161,8 @@ PHP_METHOD(php_wxStyledTextCtrl, IndicatorGetAlpha)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&indicator0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &indicator0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &indicator0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -22561,7 +22170,6 @@ PHP_METHOD(php_wxStyledTextCtrl, IndicatorGetAlpha)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -22641,7 +22249,8 @@ PHP_METHOD(php_wxStyledTextCtrl, IndicatorGetForeground)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&indic0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &indic0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &indic0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -22649,7 +22258,6 @@ PHP_METHOD(php_wxStyledTextCtrl, IndicatorGetForeground)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -22734,7 +22342,8 @@ PHP_METHOD(php_wxStyledTextCtrl, IndicatorGetStyle)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&indic0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &indic0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &indic0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -22742,7 +22351,6 @@ PHP_METHOD(php_wxStyledTextCtrl, IndicatorGetStyle)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -22823,7 +22431,8 @@ PHP_METHOD(php_wxStyledTextCtrl, IndicatorSetAlpha)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&indicator0, &alpha0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ll", &indicator0, &alpha0 ) == SUCCESS)
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &indicator0, &alpha0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -22831,7 +22440,6 @@ PHP_METHOD(php_wxStyledTextCtrl, IndicatorSetAlpha)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -22913,7 +22521,8 @@ PHP_METHOD(php_wxStyledTextCtrl, IndicatorSetForeground)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lO' (&indic0, &fore0, php_wxColour_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "lO", &indic0, &fore0, php_wxColour_entry ) == SUCCESS)
+		char parse_parameters_string[] = "lO";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &indic0, &fore0, php_wxColour_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 2){
 				if(Z_TYPE_P(fore0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(fore0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -22924,10 +22533,6 @@ PHP_METHOD(php_wxStyledTextCtrl, IndicatorSetForeground)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(fore0) == IS_LONG)
-				{
-					object_pointer0_1 = Z_LVAL_P(fore0);
 				}
 				else if(Z_TYPE_P(fore0) != IS_NULL)
 				{
@@ -22941,7 +22546,6 @@ PHP_METHOD(php_wxStyledTextCtrl, IndicatorSetForeground)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -23023,7 +22627,8 @@ PHP_METHOD(php_wxStyledTextCtrl, IndicatorSetStyle)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&indic0, &style0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ll", &indic0, &style0 ) == SUCCESS)
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &indic0, &style0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -23031,7 +22636,6 @@ PHP_METHOD(php_wxStyledTextCtrl, IndicatorSetStyle)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -23113,7 +22717,8 @@ PHP_METHOD(php_wxStyledTextCtrl, InsertText)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ls' (&pos0, &text0, &text_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ls", &pos0, &text0, &text_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "ls";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0, &text0, &text_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -23121,7 +22726,6 @@ PHP_METHOD(php_wxStyledTextCtrl, InsertText)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -23203,7 +22807,8 @@ PHP_METHOD(php_wxStyledTextCtrl, InsertTextRaw)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ls' (&pos0, &text0, &text_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ls", &pos0, &text0, &text_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "ls";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0, &text0, &text_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -23211,7 +22816,6 @@ PHP_METHOD(php_wxStyledTextCtrl, InsertTextRaw)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -23295,7 +22899,6 @@ PHP_METHOD(php_wxStyledTextCtrl, LineCopy)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -23379,7 +22982,6 @@ PHP_METHOD(php_wxStyledTextCtrl, LineCut)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -23463,7 +23065,6 @@ PHP_METHOD(php_wxStyledTextCtrl, LineDelete)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -23547,7 +23148,6 @@ PHP_METHOD(php_wxStyledTextCtrl, LineDown)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -23631,7 +23231,6 @@ PHP_METHOD(php_wxStyledTextCtrl, LineDownExtend)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -23715,7 +23314,6 @@ PHP_METHOD(php_wxStyledTextCtrl, LineDownRectExtend)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -23799,7 +23397,6 @@ PHP_METHOD(php_wxStyledTextCtrl, LineDuplicate)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -23883,7 +23480,6 @@ PHP_METHOD(php_wxStyledTextCtrl, LineEnd)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -23967,7 +23563,6 @@ PHP_METHOD(php_wxStyledTextCtrl, LineEndDisplay)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -24051,7 +23646,6 @@ PHP_METHOD(php_wxStyledTextCtrl, LineEndDisplayExtend)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -24135,7 +23729,6 @@ PHP_METHOD(php_wxStyledTextCtrl, LineEndExtend)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -24219,7 +23812,6 @@ PHP_METHOD(php_wxStyledTextCtrl, LineEndRectExtend)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -24303,7 +23895,6 @@ PHP_METHOD(php_wxStyledTextCtrl, LineEndWrap)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -24387,7 +23978,6 @@ PHP_METHOD(php_wxStyledTextCtrl, LineEndWrapExtend)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -24467,7 +24057,8 @@ PHP_METHOD(php_wxStyledTextCtrl, LineFromPosition)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&pos0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &pos0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -24475,7 +24066,6 @@ PHP_METHOD(php_wxStyledTextCtrl, LineFromPosition)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -24555,7 +24145,8 @@ PHP_METHOD(php_wxStyledTextCtrl, LineLength)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&line0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &line0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &line0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -24563,7 +24154,6 @@ PHP_METHOD(php_wxStyledTextCtrl, LineLength)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -24644,7 +24234,8 @@ PHP_METHOD(php_wxStyledTextCtrl, LineScroll)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&columns0, &lines0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ll", &columns0, &lines0 ) == SUCCESS)
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &columns0, &lines0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -24652,7 +24243,6 @@ PHP_METHOD(php_wxStyledTextCtrl, LineScroll)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -24736,7 +24326,6 @@ PHP_METHOD(php_wxStyledTextCtrl, LineScrollDown)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -24820,7 +24409,6 @@ PHP_METHOD(php_wxStyledTextCtrl, LineScrollUp)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -24904,7 +24492,6 @@ PHP_METHOD(php_wxStyledTextCtrl, LineTranspose)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -24988,7 +24575,6 @@ PHP_METHOD(php_wxStyledTextCtrl, LineUp)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -25072,7 +24658,6 @@ PHP_METHOD(php_wxStyledTextCtrl, LineUpExtend)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -25156,7 +24741,6 @@ PHP_METHOD(php_wxStyledTextCtrl, LineUpRectExtend)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -25240,7 +24824,6 @@ PHP_METHOD(php_wxStyledTextCtrl, LinesJoin)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -25324,7 +24907,6 @@ PHP_METHOD(php_wxStyledTextCtrl, LinesOnScreen)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -25404,7 +24986,8 @@ PHP_METHOD(php_wxStyledTextCtrl, LinesSplit)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&pixelWidth0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &pixelWidth0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pixelWidth0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -25412,7 +24995,6 @@ PHP_METHOD(php_wxStyledTextCtrl, LinesSplit)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -25494,7 +25076,8 @@ PHP_METHOD(php_wxStyledTextCtrl, LoadFile)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's|l' (&file0, &file_len0, &fileType0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "s|l", &file0, &file_len0, &fileType0 ) == SUCCESS)
+		char parse_parameters_string[] = "s|l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &file0, &file_len0, &fileType0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -25502,7 +25085,6 @@ PHP_METHOD(php_wxStyledTextCtrl, LoadFile)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -25597,7 +25179,6 @@ PHP_METHOD(php_wxStyledTextCtrl, LowerCase)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -25677,7 +25258,8 @@ PHP_METHOD(php_wxStyledTextCtrl, MarginGetStyle)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&line0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &line0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &line0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -25685,7 +25267,6 @@ PHP_METHOD(php_wxStyledTextCtrl, MarginGetStyle)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -25769,7 +25350,6 @@ PHP_METHOD(php_wxStyledTextCtrl, MarginGetStyleOffset)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -25849,7 +25429,8 @@ PHP_METHOD(php_wxStyledTextCtrl, MarginGetStyles)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&line0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &line0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &line0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -25857,7 +25438,6 @@ PHP_METHOD(php_wxStyledTextCtrl, MarginGetStyles)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -25943,7 +25523,8 @@ PHP_METHOD(php_wxStyledTextCtrl, MarginGetText)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&line0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &line0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &line0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -25951,7 +25532,6 @@ PHP_METHOD(php_wxStyledTextCtrl, MarginGetText)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -26038,7 +25618,8 @@ PHP_METHOD(php_wxStyledTextCtrl, MarginSetStyle)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&line0, &style0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ll", &line0, &style0 ) == SUCCESS)
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &line0, &style0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -26046,7 +25627,6 @@ PHP_METHOD(php_wxStyledTextCtrl, MarginSetStyle)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -26126,7 +25706,8 @@ PHP_METHOD(php_wxStyledTextCtrl, MarginSetStyleOffset)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&style0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &style0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &style0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -26134,7 +25715,6 @@ PHP_METHOD(php_wxStyledTextCtrl, MarginSetStyleOffset)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -26216,7 +25796,8 @@ PHP_METHOD(php_wxStyledTextCtrl, MarginSetStyles)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ls' (&line0, &styles0, &styles_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ls", &line0, &styles0, &styles_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "ls";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &line0, &styles0, &styles_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -26224,7 +25805,6 @@ PHP_METHOD(php_wxStyledTextCtrl, MarginSetStyles)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -26306,7 +25886,8 @@ PHP_METHOD(php_wxStyledTextCtrl, MarginSetText)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ls' (&line0, &text0, &text_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ls", &line0, &text0, &text_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "ls";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &line0, &text0, &text_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -26314,7 +25895,6 @@ PHP_METHOD(php_wxStyledTextCtrl, MarginSetText)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -26398,7 +25978,6 @@ PHP_METHOD(php_wxStyledTextCtrl, MarginTextClearAll)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -26479,7 +26058,8 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerAdd)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&line0, &markerNumber0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ll", &line0, &markerNumber0 ) == SUCCESS)
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &line0, &markerNumber0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -26487,7 +26067,6 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerAdd)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -26568,7 +26147,8 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerAddSet)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&line0, &set0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ll", &line0, &set0 ) == SUCCESS)
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &line0, &set0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -26576,7 +26156,6 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerAddSet)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -26661,7 +26240,8 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerDefine)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll|OO' (&markerNumber0, &markerSymbol0, &foreground0, php_wxColour_entry, &background0, php_wxColour_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ll|OO", &markerNumber0, &markerSymbol0, &foreground0, php_wxColour_entry, &background0, php_wxColour_entry ) == SUCCESS)
+		char parse_parameters_string[] = "ll|OO";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &markerNumber0, &markerSymbol0, &foreground0, php_wxColour_entry, &background0, php_wxColour_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 3){
 				if(Z_TYPE_P(foreground0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(foreground0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -26672,10 +26252,6 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerDefine)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(foreground0) == IS_LONG)
-				{
-					object_pointer0_2 = Z_LVAL_P(foreground0);
 				}
 				else if(Z_TYPE_P(foreground0) != IS_NULL)
 				{
@@ -26693,10 +26269,6 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerDefine)
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(background0) == IS_LONG)
-				{
-					object_pointer0_3 = Z_LVAL_P(background0);
-				}
 				else if(Z_TYPE_P(background0) != IS_NULL)
 				{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
@@ -26709,7 +26281,6 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerDefine)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -26816,7 +26387,8 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerDefineBitmap)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lO' (&markerNumber0, &bmp0, php_wxBitmap_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "lO", &markerNumber0, &bmp0, php_wxBitmap_entry ) == SUCCESS)
+		char parse_parameters_string[] = "lO";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &markerNumber0, &bmp0, php_wxBitmap_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 2){
 				if(Z_TYPE_P(bmp0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(bmp0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -26827,10 +26399,6 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerDefineBitmap)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(bmp0) == IS_LONG)
-				{
-					object_pointer0_1 = Z_LVAL_P(bmp0);
 				}
 				else if(Z_TYPE_P(bmp0) != IS_NULL)
 				{
@@ -26844,7 +26412,6 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerDefineBitmap)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -26926,7 +26493,8 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerDelete)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&line0, &markerNumber0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ll", &line0, &markerNumber0 ) == SUCCESS)
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &line0, &markerNumber0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -26934,7 +26502,6 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerDelete)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -27014,7 +26581,8 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerDeleteAll)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&markerNumber0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &markerNumber0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &markerNumber0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -27022,7 +26590,6 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerDeleteAll)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -27102,7 +26669,8 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerDeleteHandle)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&handle0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &handle0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &handle0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -27110,7 +26678,6 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerDeleteHandle)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -27190,7 +26757,8 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerGet)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&line0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &line0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &line0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -27198,7 +26766,6 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerGet)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -27278,7 +26845,8 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerLineFromHandle)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&handle0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &handle0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &handle0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -27286,7 +26854,6 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerLineFromHandle)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -27367,7 +26934,8 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerNext)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&lineStart0, &markerMask0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ll", &lineStart0, &markerMask0 ) == SUCCESS)
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &lineStart0, &markerMask0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -27375,7 +26943,6 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerNext)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -27456,7 +27023,8 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerPrevious)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&lineStart0, &markerMask0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ll", &lineStart0, &markerMask0 ) == SUCCESS)
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &lineStart0, &markerMask0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -27464,7 +27032,6 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerPrevious)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -27545,7 +27112,8 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerSetAlpha)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&markerNumber0, &alpha0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ll", &markerNumber0, &alpha0 ) == SUCCESS)
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &markerNumber0, &alpha0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -27553,7 +27121,6 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerSetAlpha)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -27635,7 +27202,8 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerSetBackground)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lO' (&markerNumber0, &back0, php_wxColour_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "lO", &markerNumber0, &back0, php_wxColour_entry ) == SUCCESS)
+		char parse_parameters_string[] = "lO";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &markerNumber0, &back0, php_wxColour_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 2){
 				if(Z_TYPE_P(back0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(back0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -27646,10 +27214,6 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerSetBackground)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(back0) == IS_LONG)
-				{
-					object_pointer0_1 = Z_LVAL_P(back0);
 				}
 				else if(Z_TYPE_P(back0) != IS_NULL)
 				{
@@ -27663,7 +27227,6 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerSetBackground)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -27746,7 +27309,8 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerSetForeground)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lO' (&markerNumber0, &fore0, php_wxColour_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "lO", &markerNumber0, &fore0, php_wxColour_entry ) == SUCCESS)
+		char parse_parameters_string[] = "lO";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &markerNumber0, &fore0, php_wxColour_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 2){
 				if(Z_TYPE_P(fore0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(fore0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -27757,10 +27321,6 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerSetForeground)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(fore0) == IS_LONG)
-				{
-					object_pointer0_1 = Z_LVAL_P(fore0);
 				}
 				else if(Z_TYPE_P(fore0) != IS_NULL)
 				{
@@ -27774,7 +27334,6 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerSetForeground)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -27859,7 +27418,6 @@ PHP_METHOD(php_wxStyledTextCtrl, MoveCaretInsideView)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -27943,7 +27501,6 @@ PHP_METHOD(php_wxStyledTextCtrl, NewLine)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -28027,7 +27584,6 @@ PHP_METHOD(php_wxStyledTextCtrl, PageDown)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -28111,7 +27667,6 @@ PHP_METHOD(php_wxStyledTextCtrl, PageDownExtend)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -28195,7 +27750,6 @@ PHP_METHOD(php_wxStyledTextCtrl, PageDownRectExtend)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -28279,7 +27833,6 @@ PHP_METHOD(php_wxStyledTextCtrl, PageUp)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -28363,7 +27916,6 @@ PHP_METHOD(php_wxStyledTextCtrl, PageUpExtend)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -28447,7 +27999,6 @@ PHP_METHOD(php_wxStyledTextCtrl, PageUpRectExtend)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -28531,7 +28082,6 @@ PHP_METHOD(php_wxStyledTextCtrl, ParaDown)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -28615,7 +28165,6 @@ PHP_METHOD(php_wxStyledTextCtrl, ParaDownExtend)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -28699,7 +28248,6 @@ PHP_METHOD(php_wxStyledTextCtrl, ParaUp)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -28783,7 +28331,6 @@ PHP_METHOD(php_wxStyledTextCtrl, ParaUpExtend)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -28867,7 +28414,6 @@ PHP_METHOD(php_wxStyledTextCtrl, Paste)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -28947,7 +28493,8 @@ PHP_METHOD(php_wxStyledTextCtrl, PointFromPosition)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&pos0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &pos0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -28955,7 +28502,6 @@ PHP_METHOD(php_wxStyledTextCtrl, PointFromPosition)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -29040,7 +28586,8 @@ PHP_METHOD(php_wxStyledTextCtrl, PositionAfter)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&pos0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &pos0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -29048,7 +28595,6 @@ PHP_METHOD(php_wxStyledTextCtrl, PositionAfter)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -29128,7 +28674,8 @@ PHP_METHOD(php_wxStyledTextCtrl, PositionBefore)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&pos0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &pos0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -29136,7 +28683,6 @@ PHP_METHOD(php_wxStyledTextCtrl, PositionBefore)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -29216,7 +28762,8 @@ PHP_METHOD(php_wxStyledTextCtrl, PositionFromLine)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&line0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &line0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &line0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -29224,7 +28771,6 @@ PHP_METHOD(php_wxStyledTextCtrl, PositionFromLine)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -29305,7 +28851,8 @@ PHP_METHOD(php_wxStyledTextCtrl, PositionFromPoint)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&pt0, php_wxPoint_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "O", &pt0, php_wxPoint_entry ) == SUCCESS)
+		char parse_parameters_string[] = "O";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pt0, php_wxPoint_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(pt0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(pt0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -29316,10 +28863,6 @@ PHP_METHOD(php_wxStyledTextCtrl, PositionFromPoint)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(pt0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(pt0);
 				}
 				else if(Z_TYPE_P(pt0) != IS_NULL)
 				{
@@ -29333,7 +28876,6 @@ PHP_METHOD(php_wxStyledTextCtrl, PositionFromPoint)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -29414,7 +28956,8 @@ PHP_METHOD(php_wxStyledTextCtrl, PositionFromPointClose)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&x0, &y0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ll", &x0, &y0 ) == SUCCESS)
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &x0, &y0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -29422,7 +28965,6 @@ PHP_METHOD(php_wxStyledTextCtrl, PositionFromPointClose)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -29506,7 +29048,6 @@ PHP_METHOD(php_wxStyledTextCtrl, Redo)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -29588,7 +29129,8 @@ PHP_METHOD(php_wxStyledTextCtrl, RegisterImage)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lO' (&type0, &bmp0, php_wxBitmap_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "lO", &type0, &bmp0, php_wxBitmap_entry ) == SUCCESS)
+		char parse_parameters_string[] = "lO";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &type0, &bmp0, php_wxBitmap_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 2){
 				if(Z_TYPE_P(bmp0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(bmp0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -29599,10 +29141,6 @@ PHP_METHOD(php_wxStyledTextCtrl, RegisterImage)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(bmp0) == IS_LONG)
-				{
-					object_pointer0_1 = Z_LVAL_P(bmp0);
 				}
 				else if(Z_TYPE_P(bmp0) != IS_NULL)
 				{
@@ -29616,7 +29154,6 @@ PHP_METHOD(php_wxStyledTextCtrl, RegisterImage)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -29698,7 +29235,8 @@ PHP_METHOD(php_wxStyledTextCtrl, ReplaceSelection)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&text0, &text_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "s", &text0, &text_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "s";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &text0, &text_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -29706,7 +29244,6 @@ PHP_METHOD(php_wxStyledTextCtrl, ReplaceSelection)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -29787,7 +29324,8 @@ PHP_METHOD(php_wxStyledTextCtrl, ReplaceTarget)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&text0, &text_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "s", &text0, &text_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "s";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &text0, &text_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -29795,7 +29333,6 @@ PHP_METHOD(php_wxStyledTextCtrl, ReplaceTarget)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -29876,7 +29413,8 @@ PHP_METHOD(php_wxStyledTextCtrl, ReplaceTargetRE)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&text0, &text_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "s", &text0, &text_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "s";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &text0, &text_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -29884,7 +29422,6 @@ PHP_METHOD(php_wxStyledTextCtrl, ReplaceTargetRE)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -29968,7 +29505,6 @@ PHP_METHOD(php_wxStyledTextCtrl, RotateSelection)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -30050,7 +29586,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SaveFile)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|sl' (&file0, &file_len0, &fileType0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|sl", &file0, &file_len0, &fileType0 ) == SUCCESS)
+		char parse_parameters_string[] = "|sl";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &file0, &file_len0, &fileType0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -30058,7 +29595,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SaveFile)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -30160,7 +29696,8 @@ PHP_METHOD(php_wxStyledTextCtrl, ScrollToColumn)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&column0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &column0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &column0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -30168,7 +29705,6 @@ PHP_METHOD(php_wxStyledTextCtrl, ScrollToColumn)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -30248,7 +29784,8 @@ PHP_METHOD(php_wxStyledTextCtrl, ScrollToLine)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&line0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &line0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &line0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -30256,7 +29793,6 @@ PHP_METHOD(php_wxStyledTextCtrl, ScrollToLine)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -30340,7 +29876,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SearchAnchor)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -30421,7 +29956,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SearchInTarget)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&text0, &text_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "s", &text0, &text_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "s";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &text0, &text_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -30429,7 +29965,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SearchInTarget)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -30511,7 +30046,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SearchNext)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ls' (&flags0, &text0, &text_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ls", &flags0, &text0, &text_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "ls";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &flags0, &text0, &text_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -30519,7 +30055,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SearchNext)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -30601,7 +30136,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SearchPrev)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ls' (&flags0, &text0, &text_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ls", &flags0, &text0, &text_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "ls";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &flags0, &text0, &text_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -30609,7 +30145,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SearchPrev)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -30693,7 +30228,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SelectAll)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -30777,7 +30311,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SelectionDuplicate)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -30861,7 +30394,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SelectionIsRectangle)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -30942,7 +30474,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetAdditionalCaretForeground)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&fore0, php_wxColour_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "O", &fore0, php_wxColour_entry ) == SUCCESS)
+		char parse_parameters_string[] = "O";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &fore0, php_wxColour_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(fore0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(fore0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -30953,10 +30486,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetAdditionalCaretForeground)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(fore0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(fore0);
 				}
 				else if(Z_TYPE_P(fore0) != IS_NULL)
 				{
@@ -30970,7 +30499,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetAdditionalCaretForeground)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -31051,7 +30579,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetAdditionalCaretsBlink)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&additionalCaretsBlink0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "b", &additionalCaretsBlink0 ) == SUCCESS)
+		char parse_parameters_string[] = "b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &additionalCaretsBlink0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -31059,7 +30588,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetAdditionalCaretsBlink)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -31139,7 +30667,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetAdditionalCaretsVisible)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&additionalCaretsBlink0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "b", &additionalCaretsBlink0 ) == SUCCESS)
+		char parse_parameters_string[] = "b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &additionalCaretsBlink0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -31147,7 +30676,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetAdditionalCaretsVisible)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -31227,7 +30755,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetAdditionalSelAlpha)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&alpha0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &alpha0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &alpha0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -31235,7 +30764,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetAdditionalSelAlpha)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -31316,7 +30844,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetAdditionalSelBackground)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&back0, php_wxColour_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "O", &back0, php_wxColour_entry ) == SUCCESS)
+		char parse_parameters_string[] = "O";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &back0, php_wxColour_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(back0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(back0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -31327,10 +30856,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetAdditionalSelBackground)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(back0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(back0);
 				}
 				else if(Z_TYPE_P(back0) != IS_NULL)
 				{
@@ -31344,7 +30869,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetAdditionalSelBackground)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -31426,7 +30950,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetAdditionalSelForeground)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&fore0, php_wxColour_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "O", &fore0, php_wxColour_entry ) == SUCCESS)
+		char parse_parameters_string[] = "O";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &fore0, php_wxColour_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(fore0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(fore0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -31437,10 +30962,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetAdditionalSelForeground)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(fore0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(fore0);
 				}
 				else if(Z_TYPE_P(fore0) != IS_NULL)
 				{
@@ -31454,7 +30975,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetAdditionalSelForeground)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -31535,7 +31055,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetAdditionalSelectionTyping)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&additionalSelectionTyping0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "b", &additionalSelectionTyping0 ) == SUCCESS)
+		char parse_parameters_string[] = "b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &additionalSelectionTyping0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -31543,7 +31064,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetAdditionalSelectionTyping)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -31623,7 +31143,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetAnchor)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&posAnchor0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &posAnchor0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &posAnchor0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -31631,7 +31152,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetAnchor)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -31711,7 +31231,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetBackSpaceUnIndents)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&bsUnIndents0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "b", &bsUnIndents0 ) == SUCCESS)
+		char parse_parameters_string[] = "b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &bsUnIndents0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -31719,7 +31240,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetBackSpaceUnIndents)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -31799,7 +31319,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetBufferedDraw)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&buffered0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "b", &buffered0 ) == SUCCESS)
+		char parse_parameters_string[] = "b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &buffered0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -31807,7 +31328,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetBufferedDraw)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -31888,7 +31408,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetCaretForeground)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&fore0, php_wxColour_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "O", &fore0, php_wxColour_entry ) == SUCCESS)
+		char parse_parameters_string[] = "O";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &fore0, php_wxColour_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(fore0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(fore0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -31899,10 +31420,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetCaretForeground)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(fore0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(fore0);
 				}
 				else if(Z_TYPE_P(fore0) != IS_NULL)
 				{
@@ -31916,7 +31433,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetCaretForeground)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -31997,7 +31513,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetCaretLineBackAlpha)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&alpha0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &alpha0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &alpha0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -32005,7 +31522,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetCaretLineBackAlpha)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -32086,7 +31602,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetCaretLineBackground)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&back0, php_wxColour_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "O", &back0, php_wxColour_entry ) == SUCCESS)
+		char parse_parameters_string[] = "O";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &back0, php_wxColour_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(back0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(back0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -32097,10 +31614,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetCaretLineBackground)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(back0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(back0);
 				}
 				else if(Z_TYPE_P(back0) != IS_NULL)
 				{
@@ -32114,7 +31627,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetCaretLineBackground)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -32195,7 +31707,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetCaretLineVisible)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&show0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "b", &show0 ) == SUCCESS)
+		char parse_parameters_string[] = "b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &show0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -32203,7 +31716,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetCaretLineVisible)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -32283,7 +31795,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetCaretPeriod)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&periodMilliseconds0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &periodMilliseconds0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &periodMilliseconds0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -32291,7 +31804,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetCaretPeriod)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -32371,7 +31883,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetCaretSticky)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&useCaretStickyBehaviour0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "b", &useCaretStickyBehaviour0 ) == SUCCESS)
+		char parse_parameters_string[] = "b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &useCaretStickyBehaviour0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -32379,7 +31892,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetCaretSticky)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -32459,7 +31971,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetCaretWidth)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&pixelWidth0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &pixelWidth0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pixelWidth0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -32467,7 +31980,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetCaretWidth)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -32551,7 +32063,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetCharsDefault)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -32631,7 +32142,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetCodePage)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&codePage0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &codePage0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &codePage0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -32639,7 +32151,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetCodePage)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -32719,7 +32230,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetControlCharSymbol)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&symbol0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &symbol0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &symbol0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -32727,7 +32239,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetControlCharSymbol)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -32807,7 +32318,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetCurrentPos)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&pos0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &pos0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -32815,7 +32327,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetCurrentPos)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -32895,7 +32406,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetEOLMode)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&eolMode0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &eolMode0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &eolMode0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -32903,7 +32415,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetEOLMode)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -32984,7 +32495,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetEdgeColour)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&edgeColour0, php_wxColour_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "O", &edgeColour0, php_wxColour_entry ) == SUCCESS)
+		char parse_parameters_string[] = "O";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &edgeColour0, php_wxColour_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(edgeColour0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(edgeColour0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -32995,10 +32507,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetEdgeColour)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(edgeColour0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(edgeColour0);
 				}
 				else if(Z_TYPE_P(edgeColour0) != IS_NULL)
 				{
@@ -33012,7 +32520,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetEdgeColour)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -33093,7 +32600,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetEdgeColumn)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&column0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &column0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &column0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -33101,7 +32609,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetEdgeColumn)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -33181,7 +32688,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetEdgeMode)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&mode0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &mode0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &mode0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -33189,7 +32697,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetEdgeMode)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -33269,7 +32776,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetEndAtLastLine)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&endAtLastLine0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "b", &endAtLastLine0 ) == SUCCESS)
+		char parse_parameters_string[] = "b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &endAtLastLine0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -33277,7 +32785,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetEndAtLastLine)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -33357,7 +32864,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetExtraAscent)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&extraAscent0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &extraAscent0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &extraAscent0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -33365,7 +32873,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetExtraAscent)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -33445,7 +32952,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetExtraDescent)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&extraDescent0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &extraDescent0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &extraDescent0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -33453,7 +32961,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetExtraDescent)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -33533,7 +33040,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetFirstVisibleLine)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&lineDisplay0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &lineDisplay0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &lineDisplay0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -33541,7 +33049,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetFirstVisibleLine)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -33622,7 +33129,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetFoldExpanded)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lb' (&line0, &expanded0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "lb", &line0, &expanded0 ) == SUCCESS)
+		char parse_parameters_string[] = "lb";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &line0, &expanded0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -33630,7 +33138,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetFoldExpanded)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -33710,7 +33217,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetFoldFlags)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&flags0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &flags0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &flags0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -33718,7 +33226,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetFoldFlags)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -33799,7 +33306,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetFoldLevel)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&line0, &level0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ll", &line0, &level0 ) == SUCCESS)
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &line0, &level0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -33807,7 +33315,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetFoldLevel)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -33889,7 +33396,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetFoldMarginColour)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'bO' (&useSetting0, &back0, php_wxColour_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "bO", &useSetting0, &back0, php_wxColour_entry ) == SUCCESS)
+		char parse_parameters_string[] = "bO";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &useSetting0, &back0, php_wxColour_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 2){
 				if(Z_TYPE_P(back0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(back0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -33900,10 +33408,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetFoldMarginColour)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(back0) == IS_LONG)
-				{
-					object_pointer0_1 = Z_LVAL_P(back0);
 				}
 				else if(Z_TYPE_P(back0) != IS_NULL)
 				{
@@ -33917,7 +33421,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetFoldMarginColour)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -34000,7 +33503,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetFoldMarginHiColour)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'bO' (&useSetting0, &fore0, php_wxColour_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "bO", &useSetting0, &fore0, php_wxColour_entry ) == SUCCESS)
+		char parse_parameters_string[] = "bO";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &useSetting0, &fore0, php_wxColour_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 2){
 				if(Z_TYPE_P(fore0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(fore0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -34011,10 +33515,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetFoldMarginHiColour)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(fore0) == IS_LONG)
-				{
-					object_pointer0_1 = Z_LVAL_P(fore0);
 				}
 				else if(Z_TYPE_P(fore0) != IS_NULL)
 				{
@@ -34028,7 +33528,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetFoldMarginHiColour)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -34110,7 +33609,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetHScrollBar)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&bar0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "z", &bar0 ) == SUCCESS)
+		char parse_parameters_string[] = "z";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &bar0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(bar0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(bar0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -34121,10 +33621,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetHScrollBar)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(bar0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(bar0);
 				}
 				else if(Z_TYPE_P(bar0) != IS_NULL)
 				{
@@ -34138,7 +33634,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetHScrollBar)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -34219,7 +33714,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetHighlightGuide)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&column0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &column0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &column0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -34227,7 +33723,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetHighlightGuide)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -34309,7 +33804,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetHotspotActiveBackground)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'bO' (&useSetting0, &back0, php_wxColour_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "bO", &useSetting0, &back0, php_wxColour_entry ) == SUCCESS)
+		char parse_parameters_string[] = "bO";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &useSetting0, &back0, php_wxColour_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 2){
 				if(Z_TYPE_P(back0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(back0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -34320,10 +33816,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetHotspotActiveBackground)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(back0) == IS_LONG)
-				{
-					object_pointer0_1 = Z_LVAL_P(back0);
 				}
 				else if(Z_TYPE_P(back0) != IS_NULL)
 				{
@@ -34337,7 +33829,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetHotspotActiveBackground)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -34420,7 +33911,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetHotspotActiveForeground)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'bO' (&useSetting0, &fore0, php_wxColour_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "bO", &useSetting0, &fore0, php_wxColour_entry ) == SUCCESS)
+		char parse_parameters_string[] = "bO";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &useSetting0, &fore0, php_wxColour_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 2){
 				if(Z_TYPE_P(fore0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(fore0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -34431,10 +33923,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetHotspotActiveForeground)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(fore0) == IS_LONG)
-				{
-					object_pointer0_1 = Z_LVAL_P(fore0);
 				}
 				else if(Z_TYPE_P(fore0) != IS_NULL)
 				{
@@ -34448,7 +33936,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetHotspotActiveForeground)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -34529,7 +34016,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetHotspotActiveUnderline)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&underline0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "b", &underline0 ) == SUCCESS)
+		char parse_parameters_string[] = "b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &underline0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -34537,7 +34025,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetHotspotActiveUnderline)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -34617,7 +34104,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetHotspotSingleLine)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&singleLine0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "b", &singleLine0 ) == SUCCESS)
+		char parse_parameters_string[] = "b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &singleLine0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -34625,7 +34113,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetHotspotSingleLine)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -34705,7 +34192,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetIndent)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&indentSize0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &indentSize0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &indentSize0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -34713,7 +34201,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetIndent)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -34793,7 +34280,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetIndentationGuides)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&indentView0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &indentView0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &indentView0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -34801,7 +34289,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetIndentationGuides)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -34883,7 +34370,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetKeyWords)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ls' (&keywordSet0, &keyWords0, &keyWords_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ls", &keywordSet0, &keyWords0, &keyWords_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "ls";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &keywordSet0, &keyWords0, &keyWords_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -34891,7 +34379,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetKeyWords)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -34971,7 +34458,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetKeysUnicode)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&keysUnicode0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "b", &keysUnicode0 ) == SUCCESS)
+		char parse_parameters_string[] = "b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &keysUnicode0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -34979,7 +34467,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetKeysUnicode)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -35059,7 +34546,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetLastKeydownProcessed)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&val0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "b", &val0 ) == SUCCESS)
+		char parse_parameters_string[] = "b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &val0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -35067,7 +34555,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetLastKeydownProcessed)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -35147,7 +34634,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetLayoutCache)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&mode0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &mode0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &mode0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -35155,7 +34643,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetLayoutCache)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -35235,7 +34722,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetLexer)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&lexer0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &lexer0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &lexer0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -35243,7 +34731,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetLexer)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -35324,7 +34811,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetLexerLanguage)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&language0, &language_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "s", &language0, &language_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "s";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &language0, &language_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -35332,7 +34820,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetLexerLanguage)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -35413,7 +34900,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetLineIndentation)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&line0, &indentSize0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ll", &line0, &indentSize0 ) == SUCCESS)
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &line0, &indentSize0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -35421,7 +34909,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetLineIndentation)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -35502,7 +34989,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetLineState)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&line0, &state0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ll", &line0, &state0 ) == SUCCESS)
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &line0, &state0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -35510,7 +34998,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetLineState)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -35590,7 +35077,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetMainSelection)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&selection0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &selection0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &selection0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -35598,7 +35086,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetMainSelection)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -35678,7 +35165,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetMarginLeft)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&pixelWidth0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &pixelWidth0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pixelWidth0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -35686,7 +35174,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetMarginLeft)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -35767,7 +35254,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetMarginMask)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&margin0, &mask0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ll", &margin0, &mask0 ) == SUCCESS)
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &margin0, &mask0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -35775,7 +35263,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetMarginMask)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -35855,7 +35342,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetMarginRight)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&pixelWidth0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &pixelWidth0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pixelWidth0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -35863,7 +35351,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetMarginRight)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -35944,7 +35431,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetMarginSensitive)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lb' (&margin0, &sensitive0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "lb", &margin0, &sensitive0 ) == SUCCESS)
+		char parse_parameters_string[] = "lb";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &margin0, &sensitive0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -35952,7 +35440,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetMarginSensitive)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -36033,7 +35520,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetMarginType)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&margin0, &marginType0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ll", &margin0, &marginType0 ) == SUCCESS)
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &margin0, &marginType0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -36041,7 +35529,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetMarginType)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -36122,7 +35609,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetMarginWidth)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&margin0, &pixelWidth0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ll", &margin0, &pixelWidth0 ) == SUCCESS)
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &margin0, &pixelWidth0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -36130,7 +35618,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetMarginWidth)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -36211,7 +35698,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetMargins)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&left0, &right0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ll", &left0, &right0 ) == SUCCESS)
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &left0, &right0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -36219,7 +35707,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetMargins)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -36299,7 +35786,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetModEventMask)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&mask0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &mask0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &mask0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -36307,7 +35795,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetModEventMask)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -36387,7 +35874,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetMouseDownCaptures)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&captures0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "b", &captures0 ) == SUCCESS)
+		char parse_parameters_string[] = "b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &captures0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -36395,7 +35883,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetMouseDownCaptures)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -36475,7 +35962,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetMouseDwellTime)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&periodMilliseconds0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &periodMilliseconds0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &periodMilliseconds0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -36483,7 +35971,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetMouseDwellTime)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -36563,7 +36050,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetMultipleSelection)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&multipleSelection0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "b", &multipleSelection0 ) == SUCCESS)
+		char parse_parameters_string[] = "b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &multipleSelection0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -36571,7 +36059,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetMultipleSelection)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -36651,7 +36138,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetOvertype)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&overtype0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "b", &overtype0 ) == SUCCESS)
+		char parse_parameters_string[] = "b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &overtype0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -36659,7 +36147,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetOvertype)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -36739,7 +36226,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetPasteConvertEndings)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&convert0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "b", &convert0 ) == SUCCESS)
+		char parse_parameters_string[] = "b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &convert0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -36747,7 +36235,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetPasteConvertEndings)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -36827,7 +36314,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetPrintColourMode)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&mode0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &mode0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &mode0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -36835,7 +36323,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetPrintColourMode)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -36915,7 +36402,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetPrintMagnification)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&magnification0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &magnification0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &magnification0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -36923,7 +36411,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetPrintMagnification)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -37003,7 +36490,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetPrintWrapMode)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&mode0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &mode0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &mode0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -37011,7 +36499,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetPrintWrapMode)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -37094,7 +36581,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetProperty)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ss' (&key0, &key_len0, &value0, &value_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ss", &key0, &key_len0, &value0, &value_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "ss";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &key0, &key_len0, &value0, &value_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -37102,7 +36590,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetProperty)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -37182,7 +36669,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetReadOnly)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&readOnly0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "b", &readOnly0 ) == SUCCESS)
+		char parse_parameters_string[] = "b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &readOnly0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -37190,7 +36678,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetReadOnly)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -37270,7 +36757,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetRectangularSelectionAnchor)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&posAnchor0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &posAnchor0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &posAnchor0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -37278,7 +36766,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetRectangularSelectionAnchor)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -37358,7 +36845,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetRectangularSelectionAnchorVirtualSpace)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&space0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &space0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &space0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -37366,7 +36854,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetRectangularSelectionAnchorVirtualSpace)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -37446,7 +36933,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetRectangularSelectionCaret)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&pos0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &pos0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -37454,7 +36942,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetRectangularSelectionCaret)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -37534,7 +37021,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetRectangularSelectionCaretVirtualSpace)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&space0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &space0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &space0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -37542,7 +37030,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetRectangularSelectionCaretVirtualSpace)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -37622,7 +37109,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetRectangularSelectionModifier)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&modifier0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &modifier0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &modifier0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -37630,7 +37118,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetRectangularSelectionModifier)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -37710,7 +37197,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSTCCursor)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&cursorType0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &cursorType0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &cursorType0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -37718,7 +37206,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSTCCursor)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -37798,7 +37285,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSTCFocus)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&focus0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "b", &focus0 ) == SUCCESS)
+		char parse_parameters_string[] = "b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &focus0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -37806,7 +37294,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSTCFocus)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -37890,7 +37377,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSavePoint)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -37970,7 +37456,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetScrollWidth)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&pixelWidth0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &pixelWidth0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pixelWidth0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -37978,7 +37465,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetScrollWidth)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -38058,7 +37544,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSearchFlags)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&flags0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &flags0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &flags0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -38066,7 +37553,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSearchFlags)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -38146,7 +37632,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSelAlpha)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&alpha0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &alpha0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &alpha0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -38154,7 +37641,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSelAlpha)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -38236,7 +37722,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSelBackground)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'bO' (&useSetting0, &back0, php_wxColour_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "bO", &useSetting0, &back0, php_wxColour_entry ) == SUCCESS)
+		char parse_parameters_string[] = "bO";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &useSetting0, &back0, php_wxColour_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 2){
 				if(Z_TYPE_P(back0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(back0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -38247,10 +37734,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSelBackground)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(back0) == IS_LONG)
-				{
-					object_pointer0_1 = Z_LVAL_P(back0);
 				}
 				else if(Z_TYPE_P(back0) != IS_NULL)
 				{
@@ -38264,7 +37747,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSelBackground)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -38347,7 +37829,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSelForeground)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'bO' (&useSetting0, &fore0, php_wxColour_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "bO", &useSetting0, &fore0, php_wxColour_entry ) == SUCCESS)
+		char parse_parameters_string[] = "bO";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &useSetting0, &fore0, php_wxColour_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 2){
 				if(Z_TYPE_P(fore0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(fore0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -38358,10 +37841,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSelForeground)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(fore0) == IS_LONG)
-				{
-					object_pointer0_1 = Z_LVAL_P(fore0);
 				}
 				else if(Z_TYPE_P(fore0) != IS_NULL)
 				{
@@ -38375,7 +37854,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSelForeground)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -38457,7 +37935,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSelection)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&from0, &to0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ll", &from0, &to0 ) == SUCCESS)
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &from0, &to0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -38465,7 +37944,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSelection)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -38545,7 +38023,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSelectionEnd)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&pos0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &pos0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -38553,7 +38032,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSelectionEnd)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -38633,7 +38111,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSelectionMode)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&mode0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &mode0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &mode0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -38641,7 +38120,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSelectionMode)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -38722,7 +38200,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSelectionNAnchor)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&selection0, &posAnchor0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ll", &selection0, &posAnchor0 ) == SUCCESS)
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &selection0, &posAnchor0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -38730,7 +38209,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSelectionNAnchor)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -38811,7 +38289,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSelectionNAnchorVirtualSpace)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&selection0, &space0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ll", &selection0, &space0 ) == SUCCESS)
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &selection0, &space0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -38819,7 +38298,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSelectionNAnchorVirtualSpace)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -38900,7 +38378,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSelectionNCaret)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&selection0, &pos0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ll", &selection0, &pos0 ) == SUCCESS)
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &selection0, &pos0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -38908,7 +38387,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSelectionNCaret)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -38989,7 +38467,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSelectionNCaretVirtualSpace)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&selection0, &space0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ll", &selection0, &space0 ) == SUCCESS)
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &selection0, &space0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -38997,7 +38476,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSelectionNCaretVirtualSpace)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -39078,7 +38556,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSelectionNEnd)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&selection0, &pos0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ll", &selection0, &pos0 ) == SUCCESS)
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &selection0, &pos0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -39086,7 +38565,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSelectionNEnd)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -39167,7 +38645,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSelectionNStart)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&selection0, &pos0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ll", &selection0, &pos0 ) == SUCCESS)
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &selection0, &pos0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -39175,7 +38654,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSelectionNStart)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -39255,7 +38733,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSelectionStart)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&pos0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &pos0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -39263,7 +38742,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSelectionStart)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -39343,7 +38821,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetStatus)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&statusCode0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &statusCode0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &statusCode0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -39351,7 +38830,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetStatus)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -39431,7 +38909,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetStyleBits)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&bits0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &bits0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &bits0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -39439,7 +38918,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetStyleBits)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -39520,7 +38998,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetStyling)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&length0, &style0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ll", &length0, &style0 ) == SUCCESS)
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &length0, &style0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -39528,7 +39007,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetStyling)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -39608,7 +39086,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetTabIndents)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&tabIndents0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "b", &tabIndents0 ) == SUCCESS)
+		char parse_parameters_string[] = "b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &tabIndents0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -39616,7 +39095,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetTabIndents)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -39696,7 +39174,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetTabWidth)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&tabWidth0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &tabWidth0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &tabWidth0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -39704,7 +39183,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetTabWidth)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -39784,7 +39262,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetTargetEnd)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&pos0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &pos0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -39792,7 +39271,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetTargetEnd)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -39872,7 +39350,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetTargetStart)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&pos0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &pos0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -39880,7 +39359,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetTargetStart)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -39961,7 +39439,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetText)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&text0, &text_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "s", &text0, &text_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "s";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &text0, &text_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -39969,7 +39448,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetText)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -40050,7 +39528,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetTextRaw)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&text0, &text_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "s", &text0, &text_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "s";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &text0, &text_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -40058,7 +39537,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetTextRaw)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -40138,7 +39616,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetTwoPhaseDraw)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&twoPhase0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "b", &twoPhase0 ) == SUCCESS)
+		char parse_parameters_string[] = "b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &twoPhase0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -40146,7 +39625,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetTwoPhaseDraw)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -40226,7 +39704,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetUndoCollection)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&collectUndo0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "b", &collectUndo0 ) == SUCCESS)
+		char parse_parameters_string[] = "b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &collectUndo0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -40234,7 +39713,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetUndoCollection)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -40314,7 +39792,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetUseAntiAliasing)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&useAA0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "b", &useAA0 ) == SUCCESS)
+		char parse_parameters_string[] = "b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &useAA0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -40322,7 +39801,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetUseAntiAliasing)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -40402,7 +39880,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetUseHorizontalScrollBar)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&show0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "b", &show0 ) == SUCCESS)
+		char parse_parameters_string[] = "b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &show0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -40410,7 +39889,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetUseHorizontalScrollBar)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -40490,7 +39968,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetUseTabs)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&useTabs0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "b", &useTabs0 ) == SUCCESS)
+		char parse_parameters_string[] = "b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &useTabs0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -40498,7 +39977,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetUseTabs)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -40578,7 +40056,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetUseVerticalScrollBar)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&show0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "b", &show0 ) == SUCCESS)
+		char parse_parameters_string[] = "b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &show0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -40586,7 +40065,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetUseVerticalScrollBar)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -40667,7 +40145,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetVScrollBar)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&bar0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "z", &bar0 ) == SUCCESS)
+		char parse_parameters_string[] = "z";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &bar0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(bar0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(bar0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -40678,10 +40157,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetVScrollBar)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(bar0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(bar0);
 				}
 				else if(Z_TYPE_P(bar0) != IS_NULL)
 				{
@@ -40695,7 +40170,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetVScrollBar)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -40776,7 +40250,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetViewEOL)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&visible0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "b", &visible0 ) == SUCCESS)
+		char parse_parameters_string[] = "b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &visible0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -40784,7 +40259,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetViewEOL)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -40864,7 +40338,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetViewWhiteSpace)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&viewWS0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &viewWS0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &viewWS0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -40872,7 +40347,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetViewWhiteSpace)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -40952,7 +40426,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetVirtualSpaceOptions)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&virtualSpaceOptions0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &virtualSpaceOptions0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &virtualSpaceOptions0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -40960,7 +40435,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetVirtualSpaceOptions)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -41041,7 +40515,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetVisiblePolicy)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&visiblePolicy0, &visibleSlop0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ll", &visiblePolicy0, &visibleSlop0 ) == SUCCESS)
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &visiblePolicy0, &visibleSlop0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -41049,7 +40524,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetVisiblePolicy)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -41131,7 +40605,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetWhitespaceBackground)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'bO' (&useSetting0, &back0, php_wxColour_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "bO", &useSetting0, &back0, php_wxColour_entry ) == SUCCESS)
+		char parse_parameters_string[] = "bO";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &useSetting0, &back0, php_wxColour_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 2){
 				if(Z_TYPE_P(back0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(back0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -41142,10 +40617,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetWhitespaceBackground)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(back0) == IS_LONG)
-				{
-					object_pointer0_1 = Z_LVAL_P(back0);
 				}
 				else if(Z_TYPE_P(back0) != IS_NULL)
 				{
@@ -41159,7 +40630,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetWhitespaceBackground)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -41241,7 +40711,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetWhitespaceChars)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&characters0, &characters_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "s", &characters0, &characters_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "s";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &characters0, &characters_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -41249,7 +40720,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetWhitespaceChars)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -41331,7 +40801,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetWhitespaceForeground)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'bO' (&useSetting0, &fore0, php_wxColour_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "bO", &useSetting0, &fore0, php_wxColour_entry ) == SUCCESS)
+		char parse_parameters_string[] = "bO";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &useSetting0, &fore0, php_wxColour_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 2){
 				if(Z_TYPE_P(fore0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(fore0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -41342,10 +40813,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetWhitespaceForeground)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(fore0) == IS_LONG)
-				{
-					object_pointer0_1 = Z_LVAL_P(fore0);
 				}
 				else if(Z_TYPE_P(fore0) != IS_NULL)
 				{
@@ -41359,7 +40826,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetWhitespaceForeground)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -41440,7 +40906,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetWhitespaceSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&size0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &size0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &size0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -41448,7 +40915,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetWhitespaceSize)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -41529,7 +40995,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetWordChars)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&characters0, &characters_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "s", &characters0, &characters_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "s";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &characters0, &characters_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -41537,7 +41004,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetWordChars)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -41617,7 +41083,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetWrapIndentMode)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&mode0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &mode0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &mode0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -41625,7 +41092,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetWrapIndentMode)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -41705,7 +41171,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetWrapMode)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&mode0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &mode0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &mode0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -41713,7 +41180,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetWrapMode)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -41793,7 +41259,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetWrapStartIndent)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&indent0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &indent0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &indent0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -41801,7 +41268,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetWrapStartIndent)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -41881,7 +41347,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetWrapVisualFlags)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&wrapVisualFlags0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &wrapVisualFlags0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &wrapVisualFlags0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -41889,7 +41356,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetWrapVisualFlags)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -41969,7 +41435,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetWrapVisualFlagsLocation)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&wrapVisualFlagsLocation0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &wrapVisualFlagsLocation0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &wrapVisualFlagsLocation0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -41977,7 +41444,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetWrapVisualFlagsLocation)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -42058,7 +41524,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetXCaretPolicy)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&caretPolicy0, &caretSlop0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ll", &caretPolicy0, &caretSlop0 ) == SUCCESS)
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &caretPolicy0, &caretSlop0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -42066,7 +41533,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetXCaretPolicy)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -42146,7 +41612,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetXOffset)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&newOffset0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &newOffset0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &newOffset0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -42154,7 +41621,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetXOffset)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -42235,7 +41701,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetYCaretPolicy)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&caretPolicy0, &caretSlop0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ll", &caretPolicy0, &caretSlop0 ) == SUCCESS)
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &caretPolicy0, &caretSlop0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -42243,7 +41710,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetYCaretPolicy)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -42323,7 +41789,8 @@ PHP_METHOD(php_wxStyledTextCtrl, SetZoom)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&zoom0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &zoom0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &zoom0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -42331,7 +41798,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SetZoom)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -42412,7 +41878,8 @@ PHP_METHOD(php_wxStyledTextCtrl, ShowLines)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&lineStart0, &lineEnd0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ll", &lineStart0, &lineEnd0 ) == SUCCESS)
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &lineStart0, &lineEnd0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -42420,7 +41887,6 @@ PHP_METHOD(php_wxStyledTextCtrl, ShowLines)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -42504,7 +41970,6 @@ PHP_METHOD(php_wxStyledTextCtrl, StartRecord)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -42585,7 +42050,8 @@ PHP_METHOD(php_wxStyledTextCtrl, StartStyling)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&pos0, &mask0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ll", &pos0, &mask0 ) == SUCCESS)
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0, &mask0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -42593,7 +42059,6 @@ PHP_METHOD(php_wxStyledTextCtrl, StartStyling)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -42677,7 +42142,6 @@ PHP_METHOD(php_wxStyledTextCtrl, StopRecord)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -42761,7 +42225,6 @@ PHP_METHOD(php_wxStyledTextCtrl, StutteredPageDown)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -42845,7 +42308,6 @@ PHP_METHOD(php_wxStyledTextCtrl, StutteredPageDownExtend)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -42929,7 +42391,6 @@ PHP_METHOD(php_wxStyledTextCtrl, StutteredPageUp)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -43013,7 +42474,6 @@ PHP_METHOD(php_wxStyledTextCtrl, StutteredPageUpExtend)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -43097,7 +42557,6 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleClearAll)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -43181,7 +42640,6 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleResetDefault)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -43263,7 +42721,8 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetBackground)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lO' (&style0, &back0, php_wxColour_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "lO", &style0, &back0, php_wxColour_entry ) == SUCCESS)
+		char parse_parameters_string[] = "lO";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &style0, &back0, php_wxColour_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 2){
 				if(Z_TYPE_P(back0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(back0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -43274,10 +42733,6 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetBackground)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(back0) == IS_LONG)
-				{
-					object_pointer0_1 = Z_LVAL_P(back0);
 				}
 				else if(Z_TYPE_P(back0) != IS_NULL)
 				{
@@ -43291,7 +42746,6 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetBackground)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -43373,7 +42827,8 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetBold)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lb' (&style0, &bold0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "lb", &style0, &bold0 ) == SUCCESS)
+		char parse_parameters_string[] = "lb";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &style0, &bold0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -43381,7 +42836,6 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetBold)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -43462,7 +42916,8 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetCase)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&style0, &caseForce0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ll", &style0, &caseForce0 ) == SUCCESS)
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &style0, &caseForce0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -43470,7 +42925,6 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetCase)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -43551,7 +43005,8 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetChangeable)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lb' (&style0, &changeable0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "lb", &style0, &changeable0 ) == SUCCESS)
+		char parse_parameters_string[] = "lb";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &style0, &changeable0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -43559,7 +43014,6 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetChangeable)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -43640,7 +43094,8 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetCharacterSet)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&style0, &characterSet0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ll", &style0, &characterSet0 ) == SUCCESS)
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &style0, &characterSet0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -43648,7 +43103,6 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetCharacterSet)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -43729,7 +43183,8 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetEOLFilled)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lb' (&style0, &filled0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "lb", &style0, &filled0 ) == SUCCESS)
+		char parse_parameters_string[] = "lb";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &style0, &filled0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -43737,7 +43192,6 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetEOLFilled)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -43819,7 +43273,8 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetFaceName)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ls' (&style0, &fontName0, &fontName_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ls", &style0, &fontName0, &fontName_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "ls";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &style0, &fontName0, &fontName_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -43827,7 +43282,6 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetFaceName)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -43909,7 +43363,8 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetFont)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lO' (&styleNum0, &font0, php_wxFont_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "lO", &styleNum0, &font0, php_wxFont_entry ) == SUCCESS)
+		char parse_parameters_string[] = "lO";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &styleNum0, &font0, php_wxFont_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 2){
 				if(Z_TYPE_P(font0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(font0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -43920,10 +43375,6 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetFont)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(font0) == IS_LONG)
-				{
-					object_pointer0_1 = Z_LVAL_P(font0);
 				}
 				else if(Z_TYPE_P(font0) != IS_NULL)
 				{
@@ -43937,7 +43388,6 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetFont)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -44025,7 +43475,8 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetFontAttr)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'llsbbb|l' (&styleNum0, &size0, &faceName0, &faceName_len0, &bold0, &italic0, &underline0, &encoding0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "llsbbb|l", &styleNum0, &size0, &faceName0, &faceName_len0, &bold0, &italic0, &underline0, &encoding0 ) == SUCCESS)
+		char parse_parameters_string[] = "llsbbb|l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &styleNum0, &size0, &faceName0, &faceName_len0, &bold0, &italic0, &underline0, &encoding0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -44033,7 +43484,6 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetFontAttr)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -44125,7 +43575,8 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetFontEncoding)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&style0, &encoding0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ll", &style0, &encoding0 ) == SUCCESS)
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &style0, &encoding0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -44133,7 +43584,6 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetFontEncoding)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -44215,7 +43665,8 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetForeground)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lO' (&style0, &fore0, php_wxColour_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "lO", &style0, &fore0, php_wxColour_entry ) == SUCCESS)
+		char parse_parameters_string[] = "lO";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &style0, &fore0, php_wxColour_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 2){
 				if(Z_TYPE_P(fore0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(fore0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -44226,10 +43677,6 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetForeground)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(fore0) == IS_LONG)
-				{
-					object_pointer0_1 = Z_LVAL_P(fore0);
 				}
 				else if(Z_TYPE_P(fore0) != IS_NULL)
 				{
@@ -44243,7 +43690,6 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetForeground)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -44325,7 +43771,8 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetHotSpot)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lb' (&style0, &hotspot0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "lb", &style0, &hotspot0 ) == SUCCESS)
+		char parse_parameters_string[] = "lb";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &style0, &hotspot0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -44333,7 +43780,6 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetHotSpot)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -44414,7 +43860,8 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetItalic)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lb' (&style0, &italic0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "lb", &style0, &italic0 ) == SUCCESS)
+		char parse_parameters_string[] = "lb";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &style0, &italic0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -44422,7 +43869,6 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetItalic)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -44503,7 +43949,8 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (&style0, &sizePoints0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ll", &style0, &sizePoints0 ) == SUCCESS)
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &style0, &sizePoints0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -44511,7 +43958,6 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetSize)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -44593,7 +44039,8 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetSpec)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ls' (&styleNum0, &spec0, &spec_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ls", &styleNum0, &spec0, &spec_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "ls";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &styleNum0, &spec0, &spec_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -44601,7 +44048,6 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetSpec)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -44682,7 +44128,8 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetUnderline)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lb' (&style0, &underline0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "lb", &style0, &underline0 ) == SUCCESS)
+		char parse_parameters_string[] = "lb";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &style0, &underline0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -44690,7 +44137,6 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetUnderline)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -44771,7 +44217,8 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetVisible)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lb' (&style0, &visible0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "lb", &style0, &visible0 ) == SUCCESS)
+		char parse_parameters_string[] = "lb";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &style0, &visible0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -44779,7 +44226,6 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetVisible)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -44863,7 +44309,6 @@ PHP_METHOD(php_wxStyledTextCtrl, SwapMainAnchorCaret)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -44947,7 +44392,6 @@ PHP_METHOD(php_wxStyledTextCtrl, Tab)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -45031,7 +44475,6 @@ PHP_METHOD(php_wxStyledTextCtrl, TargetFromSelection)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -45111,7 +44554,8 @@ PHP_METHOD(php_wxStyledTextCtrl, TextHeight)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&line0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &line0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &line0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -45119,7 +44563,6 @@ PHP_METHOD(php_wxStyledTextCtrl, TextHeight)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -45201,7 +44644,8 @@ PHP_METHOD(php_wxStyledTextCtrl, TextWidth)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ls' (&style0, &text0, &text_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ls", &style0, &text0, &text_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "ls";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &style0, &text0, &text_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -45209,7 +44653,6 @@ PHP_METHOD(php_wxStyledTextCtrl, TextWidth)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -45293,7 +44736,6 @@ PHP_METHOD(php_wxStyledTextCtrl, ToggleCaretSticky)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -45373,7 +44815,8 @@ PHP_METHOD(php_wxStyledTextCtrl, ToggleFold)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&line0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &line0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &line0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -45381,7 +44824,6 @@ PHP_METHOD(php_wxStyledTextCtrl, ToggleFold)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -45465,7 +44907,6 @@ PHP_METHOD(php_wxStyledTextCtrl, Undo)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -45549,7 +44990,6 @@ PHP_METHOD(php_wxStyledTextCtrl, UpperCase)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -45629,7 +45069,8 @@ PHP_METHOD(php_wxStyledTextCtrl, UsePopUp)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&allowPopUp0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "b", &allowPopUp0 ) == SUCCESS)
+		char parse_parameters_string[] = "b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &allowPopUp0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -45637,7 +45078,6 @@ PHP_METHOD(php_wxStyledTextCtrl, UsePopUp)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -45719,7 +45159,8 @@ PHP_METHOD(php_wxStyledTextCtrl, UserListShow)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ls' (&listType0, &itemList0, &itemList_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ls", &listType0, &itemList0, &itemList_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "ls";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &listType0, &itemList0, &itemList_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -45727,7 +45168,6 @@ PHP_METHOD(php_wxStyledTextCtrl, UserListShow)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -45811,7 +45251,6 @@ PHP_METHOD(php_wxStyledTextCtrl, VCHome)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -45895,7 +45334,6 @@ PHP_METHOD(php_wxStyledTextCtrl, VCHomeExtend)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -45979,7 +45417,6 @@ PHP_METHOD(php_wxStyledTextCtrl, VCHomeRectExtend)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -46063,7 +45500,6 @@ PHP_METHOD(php_wxStyledTextCtrl, VCHomeWrap)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -46147,7 +45583,6 @@ PHP_METHOD(php_wxStyledTextCtrl, VCHomeWrapExtend)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -46227,7 +45662,8 @@ PHP_METHOD(php_wxStyledTextCtrl, VisibleFromDocLine)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&line0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &line0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &line0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -46235,7 +45671,6 @@ PHP_METHOD(php_wxStyledTextCtrl, VisibleFromDocLine)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -46316,7 +45751,8 @@ PHP_METHOD(php_wxStyledTextCtrl, WordEndPosition)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lb' (&pos0, &onlyWordCharacters0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "lb", &pos0, &onlyWordCharacters0 ) == SUCCESS)
+		char parse_parameters_string[] = "lb";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0, &onlyWordCharacters0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -46324,7 +45760,6 @@ PHP_METHOD(php_wxStyledTextCtrl, WordEndPosition)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -46408,7 +45843,6 @@ PHP_METHOD(php_wxStyledTextCtrl, WordLeft)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -46492,7 +45926,6 @@ PHP_METHOD(php_wxStyledTextCtrl, WordLeftEnd)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -46576,7 +46009,6 @@ PHP_METHOD(php_wxStyledTextCtrl, WordLeftEndExtend)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -46660,7 +46092,6 @@ PHP_METHOD(php_wxStyledTextCtrl, WordLeftExtend)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -46744,7 +46175,6 @@ PHP_METHOD(php_wxStyledTextCtrl, WordPartLeft)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -46828,7 +46258,6 @@ PHP_METHOD(php_wxStyledTextCtrl, WordPartLeftExtend)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -46912,7 +46341,6 @@ PHP_METHOD(php_wxStyledTextCtrl, WordPartRight)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -46996,7 +46424,6 @@ PHP_METHOD(php_wxStyledTextCtrl, WordPartRightExtend)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -47080,7 +46507,6 @@ PHP_METHOD(php_wxStyledTextCtrl, WordRight)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -47164,7 +46590,6 @@ PHP_METHOD(php_wxStyledTextCtrl, WordRightEnd)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -47248,7 +46673,6 @@ PHP_METHOD(php_wxStyledTextCtrl, WordRightEndExtend)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -47259,6 +46683,208 @@ PHP_METHOD(php_wxStyledTextCtrl, WordRightEndExtend)
 				php_printf("Executing wxStyledTextCtrl::WordRightEndExtend()\n\n");
 				#endif
 				((wxStyledTextCtrl_php*)_this)->WordRightEndExtend();
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+}
+PHP_METHOD(php_wxStyledTextCtrl, AppendTextRaw)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::AppendTextRaw\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	//In case the constructor uses objects
+	zval **tmp;
+	int rsrc_type;
+	int parent_rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	
+	//Other variables used thru the code
+	int arguments_received = ZEND_NUM_ARGS();
+	void *_this;
+	zval* dummy;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	bool return_is_user_initialized = false;
+	
+	//Get pointer of object that called this method if not a static method
+	if (getThis() != NULL) 
+	{
+		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		{
+			zend_error(E_ERROR, "Failed to get the parent object that called wxStyledTextCtrl::AppendTextRaw\n");
+			
+			return;
+		}
+		else
+		{
+			id_to_find = Z_RESVAL_P(*tmp);
+			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			
+			if(parent_rsrc_type == le_wxStyledTextCtrl)
+				references = &((wxStyledTextCtrl_php*)_this)->references;
+		}
+	}
+	else
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Processing the method call as static\n");
+		#endif
+	}
+	
+	//Parameters for overload 0
+	char* text0;
+	long text_len0;
+	long length0;
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received >= 1  && arguments_received <= 2)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with 's|l' (&text0, &text_len0, &length0)\n");
+		#endif
+		char parse_parameters_string[] = "s|l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &text0, &text_len0, &length0 ) == SUCCESS)
+		{
+			overload0_called = true;
+			already_called = true;
+		}
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 1:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing wxStyledTextCtrl::AppendTextRaw(text0)\n\n");
+				#endif
+				((wxStyledTextCtrl_php*)_this)->AppendTextRaw(text0);
+
+
+				return;
+				break;
+			}
+			case 2:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing wxStyledTextCtrl::AppendTextRaw(text0, (int) length0)\n\n");
+				#endif
+				((wxStyledTextCtrl_php*)_this)->AppendTextRaw(text0, (int) length0);
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+}
+PHP_METHOD(php_wxStyledTextCtrl, AddTextRaw)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxStyledTextCtrl::AddTextRaw\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	//In case the constructor uses objects
+	zval **tmp;
+	int rsrc_type;
+	int parent_rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	
+	//Other variables used thru the code
+	int arguments_received = ZEND_NUM_ARGS();
+	void *_this;
+	zval* dummy;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	bool return_is_user_initialized = false;
+	
+	//Get pointer of object that called this method if not a static method
+	if (getThis() != NULL) 
+	{
+		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		{
+			zend_error(E_ERROR, "Failed to get the parent object that called wxStyledTextCtrl::AddTextRaw\n");
+			
+			return;
+		}
+		else
+		{
+			id_to_find = Z_RESVAL_P(*tmp);
+			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			
+			if(parent_rsrc_type == le_wxStyledTextCtrl)
+				references = &((wxStyledTextCtrl_php*)_this)->references;
+		}
+	}
+	else
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Processing the method call as static\n");
+		#endif
+	}
+	
+	//Parameters for overload 0
+	char* text0;
+	long text_len0;
+	long length0;
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received >= 1  && arguments_received <= 2)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with 's|l' (&text0, &text_len0, &length0)\n");
+		#endif
+		char parse_parameters_string[] = "s|l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &text0, &text_len0, &length0 ) == SUCCESS)
+		{
+			overload0_called = true;
+			already_called = true;
+		}
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 1:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing wxStyledTextCtrl::AddTextRaw(text0)\n\n");
+				#endif
+				((wxStyledTextCtrl_php*)_this)->AddTextRaw(text0);
+
+
+				return;
+				break;
+			}
+			case 2:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing wxStyledTextCtrl::AddTextRaw(text0, (int) length0)\n\n");
+				#endif
+				((wxStyledTextCtrl_php*)_this)->AddTextRaw(text0, (int) length0);
 
 
 				return;

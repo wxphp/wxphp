@@ -47,13 +47,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mediactrl.h" line="11" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mediactrl.h" bodystart="10" bodyend="26"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mediactrl.h" line="11" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/mediactrl.h" bodystart="10" bodyend="26"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mediactrl.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mediactrl.h"/>
   </compounddef>
 </doxygen>

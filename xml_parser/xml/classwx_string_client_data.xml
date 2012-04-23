@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/clntdata.h" line="121"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/clntdata.h" line="121"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_client_data_1a925c48a578e1e58c2865367ba7c2bff1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -33,7 +33,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/clntdata.h" line="126"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/clntdata.h" line="126"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_client_data_1a9440c47dc151625601ee0e3a18022b63" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -46,7 +46,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/clntdata.h" line="131"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/clntdata.h" line="131"/>
       </memberdef>
       <memberdef kind="function" id="classwx_string_client_data_1abe60d86b8478828b4ecaf2f64710fda5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -63,7 +63,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/clntdata.h" line="136"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/clntdata.h" line="136"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -72,30 +72,30 @@
 <para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__containers" kindref="compound">Containers</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10583">
+      <node id="10768">
         <label>wxClientData</label>
         <link refid="classwx_client_data"/>
       </node>
-      <node id="10582">
+      <node id="10767">
         <label>wxStringClientData</label>
         <link refid="classwx_string_client_data"/>
-        <childnode refid="10583" relation="public-inheritance">
+        <childnode refid="10768" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10585">
+      <node id="10770">
         <label>wxClientData</label>
         <link refid="classwx_client_data"/>
       </node>
-      <node id="10584">
+      <node id="10769">
         <label>wxStringClientData</label>
         <link refid="classwx_string_client_data"/>
-        <childnode refid="10585" relation="public-inheritance">
+        <childnode refid="10770" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/clntdata.h" line="116" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/clntdata.h" bodystart="115" bodyend="137"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/clntdata.h" line="116" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/clntdata.h" bodystart="115" bodyend="137"/>
     <listofallmembers>
       <member refid="classwx_string_client_data_1a9440c47dc151625601ee0e3a18022b63" prot="public" virt="non-virtual"><scope>wxStringClientData</scope><name>GetData</name></member>
       <member refid="classwx_string_client_data_1abe60d86b8478828b4ecaf2f64710fda5" prot="public" virt="non-virtual"><scope>wxStringClientData</scope><name>SetData</name></member>

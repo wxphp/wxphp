@@ -11,7 +11,9 @@ PHP_FUNCTION(php_wxDynamicCast)
 	zval *_argObj0 = 0;
 	int id_to_find0;
 	
-	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "z!s!",  &_argObj0 , &_argStr0 , &_argStr0_len ) == SUCCESS){
+	char parse_parameters[] = "z!s!";
+	
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, parse_parameters, &_argObj0 , &_argStr0 , &_argStr0_len ) == SUCCESS){
 
 		if(_argObj0)
 		{

@@ -20,7 +20,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/hash.h" line="80"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/hash.h" line="80"/>
       </memberdef>
       <memberdef kind="function" id="classwx_hash_table_1aff09f249e24efd29d19b6c39f83f3004" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_object" kindref="compound">wxObject</ref> *</type>
@@ -37,7 +37,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/hash.h" line="81"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/hash.h" line="81"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -56,7 +56,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/hash.h" line="95"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/hash.h" line="95"/>
       </memberdef>
       <memberdef kind="function" id="classwx_hash_table_1ac547d2424eb4de291ae4dcab32ad0a42" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_object" kindref="compound">wxObject</ref> *</type>
@@ -73,7 +73,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/hash.h" line="96"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/hash.h" line="96"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -96,7 +96,7 @@
 <para>The key string is copied and stored by the hash table implementation. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/hash.h" line="127"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/hash.h" line="127"/>
       </memberdef>
       <memberdef kind="function" id="classwx_hash_table_1a1b49d2625b891b2340b7f144b5446faf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -117,7 +117,7 @@
 <para>The key string is copied and stored by the hash table implementation. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/hash.h" line="128"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/hash.h" line="128"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -142,7 +142,7 @@
 <para><emphasis>key_type</emphasis> is one of wxKEY_INTEGER, or wxKEY_STRING, and indicates what sort of keying is required. <emphasis>size</emphasis> is optional. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/hash.h" line="57"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/hash.h" line="57"/>
       </memberdef>
       <memberdef kind="function" id="classwx_hash_table_1a45efbe355442ffb851e54369f272bb97" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -155,7 +155,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/hash.h" line="62"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/hash.h" line="62"/>
       </memberdef>
       <memberdef kind="function" id="classwx_hash_table_1a430714a9e63d36f76c092e5cdfb23f31" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -168,7 +168,7 @@
 <para>If the application wishes to iterate through all the data in the hash table, it can call <ref refid="classwx_hash_table_1a430714a9e63d36f76c092e5cdfb23f31" kindref="member">BeginFind()</ref> and then loop on <ref refid="classwx_hash_table_1a00235bc431b25a3b39e2be9ab69b6eda" kindref="member">Next()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/hash.h" line="69"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/hash.h" line="69"/>
       </memberdef>
       <memberdef kind="function" id="classwx_hash_table_1a2e50578a4f417d135e0063cacc216768" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -181,7 +181,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/hash.h" line="74"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/hash.h" line="74"/>
       </memberdef>
       <memberdef kind="function" id="classwx_hash_table_1a8f55c12691b5f49e6475fd76b4816c9a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -198,7 +198,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/hash.h" line="88"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/hash.h" line="88"/>
       </memberdef>
       <memberdef kind="function" id="classwx_hash_table_1ae0a8acd448351eb22a8a173df866fcf7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -211,7 +211,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/hash.h" line="102"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/hash.h" line="102"/>
       </memberdef>
       <memberdef kind="function" id="classwx_hash_table_1a00235bc431b25a3b39e2be9ab69b6eda" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>wxHashTable::Node *</type>
@@ -224,7 +224,7 @@
 <para>This function returns a <bold>wxHashTable::Node</bold> pointer (or NULL if there are no more nodes).</para><para>The return value is functionally equivalent to <bold>wxNode</bold> but might not be implemented as a <bold>wxNode</bold>. The user will probably only wish to use the wxNode::GetData() method to retrieve the data; the node may also be deleted. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/hash.h" line="119"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/hash.h" line="119"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -243,7 +243,7 @@
 <para>An application may wish to make a key explicitly (for instance when combining two data values to form a key). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/hash.h" line="108"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/hash.h" line="108"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -261,37 +261,37 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__containers" kindref="compound">Containers</ref></para><para><simplesect kind="see"><para>wxList </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="6862">
+      <node id="7032">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="6861">
+      <node id="7031">
         <label>wxHashTable</label>
         <link refid="classwx_hash_table"/>
-        <childnode refid="6862" relation="public-inheritance">
+        <childnode refid="7032" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="6864">
+      <node id="7034">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="6865" relation="usage">
+        <childnode refid="7035" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="6863">
+      <node id="7033">
         <label>wxHashTable</label>
         <link refid="classwx_hash_table"/>
-        <childnode refid="6864" relation="public-inheritance">
+        <childnode refid="7034" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6865">
+      <node id="7035">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/hash.h" line="51" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/hash.h" bodystart="50" bodyend="130"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/hash.h" line="51" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/hash.h" bodystart="50" bodyend="130"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxHashTable</scope><name>AllocExclusive</name></member>
       <member refid="classwx_hash_table_1a430714a9e63d36f76c092e5cdfb23f31" prot="public" virt="non-virtual"><scope>wxHashTable</scope><name>BeginFind</name></member>

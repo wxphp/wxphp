@@ -20,7 +20,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/list.h" line="103"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/list.h" line="103"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_3_01_t_01_4_1abfbd82cc6a9378edef3205a4ed2a2cd0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -42,7 +42,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/list.h" line="108"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/list.h" line="108"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_3_01_t_01_4_1a94d5e8a7634b8a85569b0d2cf8b94021" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -55,7 +55,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/list.h" line="114"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/list.h" line="114"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_3_01_t_01_4_1a83473b364e28de85930f4f6d455b1126" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>wxList&lt; T &gt;::compatibility_iterator</type>
@@ -72,7 +72,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/list.h" line="119"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/list.h" line="119"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_3_01_t_01_4_1ac6fe12197b364ff2e3f5059cd2981b50" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -85,7 +85,7 @@
 <para>Deletes the actual objects if DeleteContents( true ) was called previously. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/list.h" line="125"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/list.h" line="125"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_3_01_t_01_4_1aacdd6247511c440656421c518ca11f88" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -102,7 +102,7 @@
 <para>The default is false. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/list.h" line="132"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/list.h" line="132"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_3_01_t_01_4_1ae84c8a713cbc97a613f7d4ecae804c1a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -119,7 +119,7 @@
 <para>Returns true if successful.</para><para>Deletes the actual object if DeleteContents( true ) was called previously. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/list.h" line="140"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/list.h" line="140"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_3_01_t_01_4_1ac1ce9ebe3f444f94996056c0673cbf45" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -136,7 +136,7 @@
 <para>Deletes <emphasis>object</emphasis> if DeleteContents( true ) was called previously. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/list.h" line="148"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/list.h" line="148"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_3_01_t_01_4_1a587aa506850f01705ec1c6765288f4ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -153,7 +153,7 @@
 <para>Deletes the actual object if DeleteContents( true ) was called previously. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/list.h" line="155"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/list.h" line="155"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_3_01_t_01_4_1a00281b9a83a24adc8166181f4e86e219" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>wxList&lt; T &gt;::compatibility_iterator</type>
@@ -165,12 +165,12 @@
           <declname>object</declname>
         </param>
         <briefdescription>
-<para>Returns the iterator refering to <emphasis>object</emphasis> or NULL if none found. </para>        </briefdescription>
+<para>Returns the iterator referring to <emphasis>object</emphasis> or NULL if none found. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/list.h" line="160"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/list.h" line="160"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_3_01_t_01_4_1a8661213abcb683290337a751a7ae233a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -183,7 +183,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/list.h" line="165"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/list.h" line="165"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_3_01_t_01_4_1a53d5663bfc1ef42f281270978481ba86" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>wxList&lt; T &gt;::compatibility_iterator</type>
@@ -196,7 +196,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/list.h" line="170"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/list.h" line="170"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_3_01_t_01_4_1a283c50efc08130512b722dbff88f2091" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>wxList&lt; T &gt;::compatibility_iterator</type>
@@ -209,7 +209,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/list.h" line="175"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/list.h" line="175"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_3_01_t_01_4_1a7578e8bae594bce2f54a25f599f9796d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -226,7 +226,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/list.h" line="181"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/list.h" line="181"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_3_01_t_01_4_1a3a482e758da82c1b07c363c9d9079005" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>wxList&lt; T &gt;::compatibility_iterator</type>
@@ -243,7 +243,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/list.h" line="186"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/list.h" line="186"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_3_01_t_01_4_1a6702dc935cb39735575569cfbc9aa2ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>wxList&lt; T &gt;::compatibility_iterator</type>
@@ -264,7 +264,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/list.h" line="192"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/list.h" line="192"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_3_01_t_01_4_1ad1b718169edb3d8d237c44818139c454" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>wxList&lt; T &gt;::compatibility_iterator</type>
@@ -285,7 +285,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/list.h" line="198"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/list.h" line="198"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_3_01_t_01_4_1aa13247d53e344bf94f5ba5e2719bd5a8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -298,7 +298,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/list.h" line="203"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/list.h" line="203"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_3_01_t_01_4_1ace585a27d94a307f638a7748b20075a7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>wxList&lt; T &gt;::compatibility_iterator</type>
@@ -310,12 +310,12 @@
           <declname>index</declname>
         </param>
         <briefdescription>
-<para>Returns the iterator refering to the object at the given <emphasis>index</emphasis> in the list. </para>        </briefdescription>
+<para>Returns the iterator referring to the object at the given <emphasis>index</emphasis> in the list. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/list.h" line="209"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/list.h" line="209"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_3_01_t_01_4_1a710612f09a76d234d949724405338e1d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -333,7 +333,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/list.h" line="216"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/list.h" line="216"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_3_01_t_01_4_1a97e1e3cf0afc38f2428c1c72196c1c97" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>wxList&lt; T &gt;::compatibility_iterator</type>
@@ -350,7 +350,7 @@
 <para><xrefsect id="deprecated_1_deprecated000027"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This function is deprecated, use <ref refid="classwx_list_3_01_t_01_4_1ace585a27d94a307f638a7748b20075a7" kindref="member">Item()</ref> instead.</para></xrefdescription></xrefsect></para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/list.h" line="221"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/list.h" line="221"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_3_01_t_01_4_1a8d958f395ca2a85e6b5ec3efcd055388" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -363,7 +363,7 @@
 <para><xrefsect id="deprecated_1_deprecated000028"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This function is deprecated, use wxList::GetCount instead.</para></xrefdescription></xrefsect>Returns the number of elements in the list. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/list.h" line="227"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/list.h" line="227"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_3_01_t_01_4_1ad3defd443865ca9acc9e71bf8a6d7405" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -380,7 +380,7 @@
 <para>We use the system <bold>qsort</bold> function for the actual sorting process. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/list.h" line="234"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/list.h" line="234"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_3_01_t_01_4_1ad6111a1f42c6b65189b80b2ff936ee3b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -401,7 +401,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/list.h" line="239"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/list.h" line="239"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_3_01_t_01_4_1a193c8c65b0cc8ed948fe1be57feafe8b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -423,7 +423,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/list.h" line="244"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/list.h" line="244"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_3_01_t_01_4_1a6a4a4c768c5f245512715fe2718037ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>reference</type>
@@ -436,7 +436,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/list.h" line="249"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/list.h" line="249"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_3_01_t_01_4_1a0ce0c1bc1eac67f2534083dd39c2a9c5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const_reference</type>
@@ -449,7 +449,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/list.h" line="254"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/list.h" line="254"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_3_01_t_01_4_1a2bc8066f4e262ddf6e28594a07e4f895" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>iterator</type>
@@ -462,7 +462,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/list.h" line="259"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/list.h" line="259"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_3_01_t_01_4_1a27a4f8994e4b11332a1fdc6a02b02619" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const_iterator</type>
@@ -475,7 +475,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/list.h" line="264"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/list.h" line="264"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_3_01_t_01_4_1afc31bec93008cd4881b27f0f7201b9f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -488,7 +488,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/list.h" line="269"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/list.h" line="269"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_3_01_t_01_4_1a2319b140ebf24a4c2b5ef5468eb08db5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -501,7 +501,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/list.h" line="274"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/list.h" line="274"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_3_01_t_01_4_1ab75bbef5aeabfdd054afc8de9113b6f8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const_iterator</type>
@@ -514,7 +514,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/list.h" line="279"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/list.h" line="279"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_3_01_t_01_4_1a2cef277e3fdbeca92cf84b7a43cc2d50" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>iterator</type>
@@ -527,7 +527,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/list.h" line="284"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/list.h" line="284"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_3_01_t_01_4_1a14e23d2a4bcf958e414457154f255bb8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>iterator</type>
@@ -544,7 +544,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/list.h" line="289"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/list.h" line="289"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_3_01_t_01_4_1a733bf0261f4c557c976818e5f788407d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>iterator</type>
@@ -565,7 +565,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/list.h" line="295"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/list.h" line="295"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_3_01_t_01_4_1ac809ea40e4499f656d7d2d3a6d7b7e2f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>reference</type>
@@ -578,7 +578,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/list.h" line="300"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/list.h" line="300"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_3_01_t_01_4_1ab01b847479dadcc633afac06430a25d0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const_reference</type>
@@ -591,7 +591,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/list.h" line="305"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/list.h" line="305"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_3_01_t_01_4_1a8d6883880a636bb77226f04f8c5f18ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>iterator</type>
@@ -608,7 +608,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/list.h" line="310"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/list.h" line="310"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_3_01_t_01_4_1a58b871b00ea26a8d03713be2f5d278d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -629,7 +629,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/list.h" line="315"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/list.h" line="315"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_3_01_t_01_4_1ac91180303f81772a3113742ad0128dfc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -654,7 +654,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/list.h" line="321"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/list.h" line="321"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_3_01_t_01_4_1aef1bb3d170c87215ff36443773a37017" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>size_type</type>
@@ -667,7 +667,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/list.h" line="326"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/list.h" line="326"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_3_01_t_01_4_1ac5912f6288b56db08e76f6dda722e0e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -680,7 +680,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/list.h" line="331"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/list.h" line="331"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_3_01_t_01_4_1a633be592989e7ee27e70da865f12f60d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -693,7 +693,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/list.h" line="336"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/list.h" line="336"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_3_01_t_01_4_1a04421addbc3c50caddf3e60ccb1375d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -711,7 +711,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/list.h" line="341"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/list.h" line="341"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_3_01_t_01_4_1afd57f0b7a8ffb7b5047bfe027398e86e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -729,7 +729,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/list.h" line="346"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/list.h" line="346"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_3_01_t_01_4_1aa7a5a1e9422dbd6e6fa72fb89117c1a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>reverse_iterator</type>
@@ -742,7 +742,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/list.h" line="352"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/list.h" line="352"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_3_01_t_01_4_1adad51201fbc661eb2ea528de97ff72e6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const_reverse_iterator</type>
@@ -755,7 +755,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/list.h" line="358"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/list.h" line="358"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_3_01_t_01_4_1a2d5df236b8c230fe449506076cac2ad8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -772,7 +772,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/list.h" line="363"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/list.h" line="363"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_3_01_t_01_4_1a17020c95641b37d5938d0e62e145e768" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>reverse_iterator</type>
@@ -785,7 +785,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/list.h" line="368"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/list.h" line="368"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_3_01_t_01_4_1ae25d3071b82f35e8dbe4c6b001c3a15d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const_reverse_iterator</type>
@@ -798,7 +798,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/list.h" line="373"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/list.h" line="373"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_3_01_t_01_4_1ac8e1fd756566bb90a786011e8d5e849f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -820,7 +820,7 @@
 <para>If the list is longer than <emphasis>n</emphasis>, then items are removed until the list becomes long <emphasis>n</emphasis>. If the list is shorter than <emphasis>n</emphasis> items with the value <emphasis>v</emphasis> are appended to the list until the list becomes long <emphasis>n</emphasis>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/list.h" line="383"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/list.h" line="383"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_3_01_t_01_4_1a354d6659c3047e3d8f529a574fe5fdeb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -833,7 +833,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/list.h" line="388"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/list.h" line="388"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_3_01_t_01_4_1aae3afa0cf1e567490c2c890859a0d02d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>size_type</type>
@@ -846,7 +846,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/list.h" line="393"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/list.h" line="393"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -906,7 +906,7 @@
 <heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__containers" kindref="compound">Containers</ref></para><para><simplesect kind="see"><para><ref refid="classwx_array_3_01_t_01_4" kindref="compound">wxArray&lt;T&gt;</ref>, <ref refid="classwx_vector_3_01_t_01_4" kindref="compound">wxVector&lt;T&gt;</ref>, <ref refid="classwx_node_3_01_t_01_4" kindref="compound">wxNode&lt;T&gt;</ref> </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/list.h" line="98" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/list.h" bodystart="97" bodyend="394"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/list.h" line="98" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/list.h" bodystart="97" bodyend="394"/>
     <listofallmembers>
       <member refid="classwx_list_3_01_t_01_4_1a83473b364e28de85930f4f6d455b1126" prot="public" virt="non-virtual"><scope>wxList&lt; T &gt;</scope><name>Append</name></member>
       <member refid="classwx_list_3_01_t_01_4_1ad6111a1f42c6b65189b80b2ff936ee3b" prot="public" virt="non-virtual"><scope>wxList&lt; T &gt;</scope><name>assign</name></member>

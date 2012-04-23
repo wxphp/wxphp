@@ -1,0 +1,803 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="classwx_generic_progress_dialog" kind="class" prot="public">
+    <compoundname>wxGenericProgressDialog</compoundname>
+    <basecompoundref refid="classwx_dialog" prot="public" virt="non-virtual">wxDialog</basecompoundref>
+    <derivedcompoundref refid="classwx_progress_dialog" prot="public" virt="non-virtual">wxProgressDialog</derivedcompoundref>
+    <includes local="no">wx/progdlg.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_generic_progress_dialog_1ac015aa72408dcddef95f4f575bb628bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxGenericProgressDialog::wxGenericProgressDialog</definition>
+        <argsstring>(const wxString &amp;title, const wxString &amp;message, int maximum=100, wxWindow *parent=NULL, int style=wxPD_AUTO_HIDE|wxPD_APP_MODAL)</argsstring>
+        <name>wxGenericProgressDialog</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>title</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>maximum</declname>
+          <defval>100</defval>
+        </param>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>parent</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>style</declname>
+          <defval>wxPD_AUTO_HIDE|wxPD_APP_MODAL</defval>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para>Creates the dialog, displays it and disables user input for other windows, or, if <computeroutput>wxPD_APP_MODAL</computeroutput> flag is not given, for its parent window only.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>title</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Dialog title to show in titlebar. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Message displayed above the progress bar. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>maximum</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Maximum value for the progress bar. In the generic implementation the progress bar is constructed only if this value is greater than zero. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>parent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parent window. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>style</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The dialog style. See <ref refid="classwx_progress_dialog" kindref="compound">wxProgressDialog</ref>. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/progdlg.h" line="95"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_generic_progress_dialog_1ab8c52516eca99ecb72f703086a471877" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual wxGenericProgressDialog::~wxGenericProgressDialog</definition>
+        <argsstring>()</argsstring>
+        <name>~wxGenericProgressDialog</name>
+        <briefdescription>
+<para>Destructor. </para>        </briefdescription>
+        <detaileddescription>
+<para>Deletes the dialog and enables all top level windows. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/progdlg.h" line="100"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_generic_progress_dialog_1a00dfb93cd982bacdfd20261aff0b4e62" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxGenericProgressDialog::GetValue</definition>
+        <argsstring>() const </argsstring>
+        <name>GetValue</name>
+        <briefdescription>
+<para>Returns the last value passed to the <ref refid="classwx_window_1abaf28f1a075fd1b10f761a8febe597ec" kindref="member">Update()</ref> function or <computeroutput>wxNOT_FOUND</computeroutput> if the dialog has no progress bar. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="since"><para>2.9.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/progdlg.h" line="108"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_generic_progress_dialog_1a4081c26570ddd49e304d6db45467d4b8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxGenericProgressDialog::GetRange</definition>
+        <argsstring>() const </argsstring>
+        <name>GetRange</name>
+        <briefdescription>
+<para>Returns the maximum value of the progress meter, as passed to the constructor or <computeroutput>wxNOT_FOUND</computeroutput> if the dialog has no progress bar. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="since"><para>2.9.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/progdlg.h" line="116"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_generic_progress_dialog_1a1b74e60297cbbbf459f1d0df1987d62e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxGenericProgressDialog::GetMessage</definition>
+        <argsstring>() const </argsstring>
+        <name>GetMessage</name>
+        <briefdescription>
+<para>Returns the last message passed to the <ref refid="classwx_window_1abaf28f1a075fd1b10f761a8febe597ec" kindref="member">Update()</ref> function; if you always passed wxEmptyString to <ref refid="classwx_window_1abaf28f1a075fd1b10f761a8febe597ec" kindref="member">Update()</ref> then the message set through the constructor is returned. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="since"><para>2.9.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/progdlg.h" line="125"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_generic_progress_dialog_1ab5ecf227eebaa1aadb5f5c553e4a4ee5" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxGenericProgressDialog::Pulse</definition>
+        <argsstring>(const wxString &amp;newmsg=wxEmptyString, bool *skip=NULL)</argsstring>
+        <name>Pulse</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>newmsg</declname>
+          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
+        </param>
+        <param>
+          <type>bool *</type>
+          <declname>skip</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+<para>Like <ref refid="classwx_window_1abaf28f1a075fd1b10f761a8febe597ec" kindref="member">Update()</ref> but makes the gauge control run in indeterminate mode. </para>        </briefdescription>
+        <detaileddescription>
+<para>In indeterminate mode the remaining and the estimated time labels (if present) are set to &quot;Unknown&quot; or to <emphasis>newmsg</emphasis> (if it&apos;s non-empty). Each call to this function moves the progress bar a bit to indicate that some progress was done.</para><para><simplesect kind="see"><para><ref refid="classwx_gauge_1a45c379e7a36861aa4cf4a381f8dc1e31" kindref="member">wxGauge::Pulse()</ref>, <ref refid="classwx_window_1abaf28f1a075fd1b10f761a8febe597ec" kindref="member">Update()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/progdlg.h" line="137"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_generic_progress_dialog_1a076a10d2d6cb1e2561b6f1820663cd70" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxGenericProgressDialog::Resume</definition>
+        <argsstring>()</argsstring>
+        <name>Resume</name>
+        <briefdescription>
+<para>Can be used to continue with the dialog, after the user had clicked the &quot;Abort&quot; button. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/progdlg.h" line="142"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_generic_progress_dialog_1af5f24bd05ef8b31dd1991bbc7533cb17" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxGenericProgressDialog::SetRange</definition>
+        <argsstring>(int maximum)</argsstring>
+        <name>SetRange</name>
+        <param>
+          <type>int</type>
+          <declname>maximum</declname>
+        </param>
+        <briefdescription>
+<para>Changes the maximum value of the progress meter given in the constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function can only be called (with a positive value) if the value passed in the constructor was positive.</para><para><simplesect kind="since"><para>2.9.1 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/progdlg.h" line="151"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_generic_progress_dialog_1abd27b3af19db770d90db015a50f38f2c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxGenericProgressDialog::WasCancelled</definition>
+        <argsstring>() const </argsstring>
+        <name>WasCancelled</name>
+        <briefdescription>
+<para>Returns true if the &quot;Cancel&quot; button was pressed. </para>        </briefdescription>
+        <detaileddescription>
+<para>Normally a Cancel button press is indicated by <ref refid="classwx_window_1abaf28f1a075fd1b10f761a8febe597ec" kindref="member">Update()</ref> returning false but sometimes it may be more convenient to check if the dialog was cancelled from elsewhere in the code and this function allows to do it.</para><para>It always returns false if the Cancel button is not shown at all.</para><para><simplesect kind="since"><para>2.9.1 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/progdlg.h" line="166"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_generic_progress_dialog_1a7b86291b5380e622cf32b697825ce03d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxGenericProgressDialog::WasSkipped</definition>
+        <argsstring>() const </argsstring>
+        <name>WasSkipped</name>
+        <briefdescription>
+<para>Returns true if the &quot;Skip&quot; button was pressed. </para>        </briefdescription>
+        <detaileddescription>
+<para>This is similar to <ref refid="classwx_generic_progress_dialog_1abd27b3af19db770d90db015a50f38f2c" kindref="member">WasCancelled()</ref> but returns true if the &quot;Skip&quot; button was pressed, not the &quot;Cancel&quot; one.</para><para><simplesect kind="since"><para>2.9.1 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/progdlg.h" line="176"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_generic_progress_dialog_1a1d542cea96c531d85c32d6612bd55a02" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxGenericProgressDialog::Update</definition>
+        <argsstring>(int value, const wxString &amp;newmsg=wxEmptyString, bool *skip=NULL)</argsstring>
+        <name>Update</name>
+        <param>
+          <type>int</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>newmsg</declname>
+          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
+        </param>
+        <param>
+          <type>bool *</type>
+          <declname>skip</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+<para>Updates the dialog, setting the progress bar to the new value and updating the message if new one is specified. </para>        </briefdescription>
+        <detaileddescription>
+<para>Returns true unless the &quot;Cancel&quot; button has been pressed.</para><para>If false is returned, the application can either immediately destroy the dialog or ask the user for the confirmation and if the abort is not confirmed the dialog may be resumed with <ref refid="classwx_generic_progress_dialog_1a076a10d2d6cb1e2561b6f1820663cd70" kindref="member">Resume()</ref> function.</para><para>If <emphasis>value</emphasis> is the maximum value for the dialog, the behaviour of the function depends on whether <computeroutput>wxPD_AUTO_HIDE</computeroutput> was used when the dialog was created. If it was, the dialog is hidden and the function returns immediately. If it was not, the dialog becomes a modal dialog and waits for the user to dismiss it, meaning that this function does not return until this happens.</para><para>Notice that you may want to call <ref refid="classwx_window_1a2bf38a6cbd1f82fb46f274396f482994" kindref="member">Fit()</ref> to change the dialog size to conform to the length of the new message if desired. The dialog does not do this automatically.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new value of the progress meter. It should be less than or equal to the maximum value given to the constructor. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>newmsg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new messages for the progress dialog text, if it is empty (which is the default) the message is not changed. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>skip</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If &quot;Skip&quot; button was pressed since last <ref refid="classwx_window_1abaf28f1a075fd1b10f761a8febe597ec" kindref="member">Update()</ref> call, this is set to true. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/progdlg.h" line="211"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class represents a dialog that shows a short message and a progress bar. </para>    </briefdescription>
+    <detaileddescription>
+<para>Optionally, it can display ABORT and SKIP buttons, and the elapsed, remaining and estimated time for the end of the progress.</para><para>This class provides a generic implementation of the progress dialog. If the platform has a native progress dialog available then it will be accessible using the <emphasis><ref refid="classwx_progress_dialog" kindref="compound">wxProgressDialog</ref></emphasis> class, otherwise it will essentially be the same as this class.</para><para>Note that you must be aware that <ref refid="classwx_progress_dialog" kindref="compound">wxProgressDialog</ref> internally calls <ref refid="classwx_event_loop_base_1afb5ed08160c7e6b1364170af6115af55" kindref="member">wxEventLoopBase::YieldFor</ref> with <computeroutput>wxEVT_CATEGORY_UI</computeroutput> and <computeroutput>wxEVT_CATEGORY_USER_INPUT</computeroutput> and this may cause unwanted re-entrancies or the out-of-order processing of pending events (to help preventing the last problem if you&apos;re using <ref refid="classwx_progress_dialog" kindref="compound">wxProgressDialog</ref> in a multi-threaded application you should be sure to use <ref refid="classwx_thread_event" kindref="compound">wxThreadEvent</ref> for your inter-threads communications).</para><para><heading level="2">Styles</heading>
+</para><para>This class supports the following styles: <itemizedlist>
+<listitem><para>wxPD_APP_MODAL: Make the progress dialog modal. If this flag is not given, it is only &quot;locally&quot; modal - that is the input to the parent window is disabled, but not to the other ones. </para></listitem>
+<listitem><para>wxPD_AUTO_HIDE: Causes the progress dialog to disappear from screen as soon as the maximum value of the progress meter has been reached. If this style is not present, the dialog will become a modal dialog (see <ref refid="classwx_dialog_1a6e078c3d0653f75ad3c34a37c0b54637" kindref="member">wxDialog::ShowModal</ref>) once the maximum value has been reached and wait for the user to dismiss it. </para></listitem>
+<listitem><para>wxPD_SMOOTH: Causes smooth progress of the gauge control (uses a <ref refid="classwx_gauge" kindref="compound">wxGauge</ref> with the <computeroutput>wxGA_SMOOTH</computeroutput> style). </para></listitem>
+<listitem><para>wxPD_CAN_ABORT: This flag tells the dialog that it should have a &quot;Cancel&quot; button which the user may press. If this happens, the next call to <ref refid="classwx_window_1abaf28f1a075fd1b10f761a8febe597ec" kindref="member">Update()</ref> will return false. </para></listitem>
+<listitem><para>wxPD_CAN_SKIP: This flag tells the dialog that it should have a &quot;Skip&quot; button which the user may press. If this happens, the next call to <ref refid="classwx_window_1abaf28f1a075fd1b10f761a8febe597ec" kindref="member">Update()</ref> will return true in its skip parameter. </para></listitem>
+<listitem><para>wxPD_ELAPSED_TIME: This flag tells the dialog that it should show elapsed time (since creating the dialog). </para></listitem>
+<listitem><para>wxPD_ESTIMATED_TIME: This flag tells the dialog that it should show estimated time. </para></listitem>
+<listitem><para>wxPD_REMAINING_TIME: This flag tells the dialog that it should show remaining time. </para></listitem>
+</itemizedlist>
+<heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__cmndlg" kindref="compound">Common Dialogs</ref> </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="6681">
+        <label>wxNonOwnedWindow</label>
+        <link refid="classwx_non_owned_window"/>
+        <childnode refid="6682" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6678">
+        <label>wxGenericProgressDialog</label>
+        <link refid="classwx_generic_progress_dialog"/>
+        <childnode refid="6679" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6684">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+      </node>
+      <node id="6683">
+        <label>wxEvtHandler</label>
+        <link refid="classwx_evt_handler"/>
+        <childnode refid="6684" relation="public-inheritance">
+        </childnode>
+        <childnode refid="6685" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6686">
+        <label>wxProgressDialog</label>
+        <link refid="classwx_progress_dialog"/>
+        <childnode refid="6678" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6685">
+        <label>wxTrackable</label>
+        <link refid="classwx_trackable"/>
+      </node>
+      <node id="6682">
+        <label>wxWindow</label>
+        <link refid="classwx_window"/>
+        <childnode refid="6683" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6679">
+        <label>wxDialog</label>
+        <link refid="classwx_dialog"/>
+        <childnode refid="6680" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6680">
+        <label>wxTopLevelWindow</label>
+        <link refid="classwx_top_level_window"/>
+        <childnode refid="6681" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="6690">
+        <label>wxNonOwnedWindow</label>
+        <link refid="classwx_non_owned_window"/>
+        <childnode refid="6691" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6687">
+        <label>wxGenericProgressDialog</label>
+        <link refid="classwx_generic_progress_dialog"/>
+        <childnode refid="6688" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6693">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="6694" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="6692">
+        <label>wxEvtHandler</label>
+        <link refid="classwx_evt_handler"/>
+        <childnode refid="6693" relation="public-inheritance">
+        </childnode>
+        <childnode refid="6695" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6695">
+        <label>wxTrackable</label>
+        <link refid="classwx_trackable"/>
+      </node>
+      <node id="6691">
+        <label>wxWindow</label>
+        <link refid="classwx_window"/>
+        <childnode refid="6692" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6688">
+        <label>wxDialog</label>
+        <link refid="classwx_dialog"/>
+        <childnode refid="6689" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6689">
+        <label>wxTopLevelWindow</label>
+        <link refid="classwx_top_level_window"/>
+        <childnode refid="6690" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6694">
+        <label>wxObjectRefData</label>
+        <link refid="classwx_object_ref_data"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/progdlg.h" line="72" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/progdlg.h" bodystart="71" bodyend="212"/>
+    <listofallmembers>
+      <member refid="classwx_window_1a3afbd49b1ea2f8275e3600dcac102923" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>AcceptsFocus</name></member>
+      <member refid="classwx_window_1a2370bdd3ab08e7ef3c7555c6aa8301b8" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>AcceptsFocusFromKeyboard</name></member>
+      <member refid="classwx_window_1ac7ed96693517630f4d2e99265b76d1a9" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>AcceptsFocusRecursively</name></member>
+      <member refid="classwx_window_1abf60159278059a5bb397eb8647227bb3" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>AddChild</name></member>
+      <member refid="classwx_evt_handler_1a7dc3c701781f4044372049de5004137e" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>AddFilter</name></member>
+      <member refid="classwx_dialog_1af3a75b9d24abe5c79d1bb5397c67b108" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>AddMainButtonId</name></member>
+      <member refid="classwx_window_1a774b5b5548a6258727b5e2099e63ae9a" prot="protected" virt="virtual"><scope>wxGenericProgressDialog</scope><name>AddPendingEvent</name></member>
+      <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>AllocExclusive</name></member>
+      <member refid="classwx_window_1aae29552806a328c6a55ef8f07647f5ba" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>AlwaysShowScrollbars</name></member>
+      <member refid="classwx_evt_handler_1a84b1e446053bda8f76f13336839e8b64" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>Bind</name></member>
+      <member refid="classwx_evt_handler_1a95520e770e157ef93d1d60e03db66e5c" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>Bind</name></member>
+      <member refid="classwx_window_1a100905524d330cfd9620fd726e378066" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>CacheBestSize</name></member>
+      <member refid="classwx_dialog_1a233dd280efa8ee93c61792e439904731" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>CanDoLayoutAdaptation</name></member>
+      <member refid="classwx_window_1a179f9a770f8c835f279923d2cbe5d766" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>CanScroll</name></member>
+      <member refid="classwx_top_level_window_1a392cf325512c5558d776ca85abc0c451" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>CanSetTransparent</name></member>
+      <member refid="classwx_window_1a5c72c6260a73ef77bb0b1f7ec85fcfef" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>CaptureMouse</name></member>
+      <member refid="classwx_window_1a06c0ecb262995b40083bfb446a6cff99" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>Center</name></member>
+      <member refid="classwx_window_1a2dc4e0a85d33fc55cc9650eaea1da0a4" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>CenterOnParent</name></member>
+      <member refid="classwx_top_level_window_1a576b03af8fa7ee6a6eacba9f39339196" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>CenterOnScreen</name></member>
+      <member refid="classwx_dialog_1a6af384c4a558965bfee61784f5e0b7fc" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>Centre</name></member>
+      <member refid="classwx_window_1ab8e9b91b0e2db344fd71259616dfd433" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>CentreOnParent</name></member>
+      <member refid="classwx_top_level_window_1a1d28df1d739af6a3d5d2ec9e43b03c29" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>CentreOnScreen</name></member>
+      <member refid="classwx_window_1a61e833684ee5c89775e91e88be1a9a52" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>ClearBackground</name></member>
+      <member refid="classwx_window_1a29eac611e5f6b47db82bb4dd5450ba3d" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>ClientToScreen</name></member>
+      <member refid="classwx_window_1a7de852b144210b93b690189e99dbe1df" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>ClientToScreen</name></member>
+      <member refid="classwx_window_1a693fffbbb7ad5f36a5f442703396dafa" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>ClientToWindowSize</name></member>
+      <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxGenericProgressDialog</scope><name>CloneRefData</name></member>
+      <member refid="classwx_window_1a3e44f4a494fc9ef4346c4fba70c8de0c" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>Close</name></member>
+      <member refid="classwx_evt_handler_1a78719e8b82c9f9c6e4056b3449df1943" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>Connect</name></member>
+      <member refid="classwx_evt_handler_1a1e8b5fc4c7e7f6d32d40bc00d4108ba4" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>Connect</name></member>
+      <member refid="classwx_evt_handler_1aa290d9b67348e74c1da8497955a4e35c" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>Connect</name></member>
+      <member refid="classwx_window_1acb6787b6c3c314f9e015658a89ad0265" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>ConvertDialogToPixels</name></member>
+      <member refid="classwx_window_1a3daf76b93f648c68224e6ccd8095066b" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>ConvertDialogToPixels</name></member>
+      <member refid="classwx_window_1a449aac6a24f1d14b1a82b58003447dfe" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>ConvertPixelsToDialog</name></member>
+      <member refid="classwx_window_1afd955ce9d25ec26a115bfb794b1c7d8b" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>ConvertPixelsToDialog</name></member>
+      <member refid="classwx_dialog_1a44e42338cb8bd2a1b312ab7a6f1722a3" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>Create</name></member>
+      <member refid="classwx_window_1a95b7ca8faa033f5ab35458887c07bf38" prot="public" virt="non-virtual" ambiguityscope="wxNonOwnedWindow::"><scope>wxGenericProgressDialog</scope><name>Create</name></member>
+      <member refid="classwx_dialog_1ae362b7c61430593ef8ac5034f1bd92c8" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>CreateButtonSizer</name></member>
+      <member refid="classwx_object_1a95c6a5e4e1e03ff23c7b9efe4cff0c1a" prot="protected" virt="virtual"><scope>wxGenericProgressDialog</scope><name>CreateRefData</name></member>
+      <member refid="classwx_dialog_1a0c6fb55be0b07b934b30550e0225df8f" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>CreateSeparatedButtonSizer</name></member>
+      <member refid="classwx_dialog_1ab7a5666b612d6cfdfb2660fd9bd3393e" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>CreateSeparatedSizer</name></member>
+      <member refid="classwx_dialog_1a8f2f565975f843035391ce62b0b9f8e8" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>CreateStdDialogButtonSizer</name></member>
+      <member refid="classwx_dialog_1a5bead5e932f17b7c2345dfc41b6cc79c" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>CreateTextSizer</name></member>
+      <member refid="classwx_evt_handler_1a6e7f9cf4ebd0623c1d94979855d096f8" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>DeletePendingEvents</name></member>
+      <member refid="classwx_window_1a6bf0c5be864544d9ce0560087667b7fc" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>Destroy</name></member>
+      <member refid="classwx_window_1aff47b32c8d42d515ea0bb6a6c2fea917" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>DestroyChildren</name></member>
+      <member refid="classwx_window_1a26d7329a9a753fa0445501f01f66c41e" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>Disable</name></member>
+      <member refid="classwx_evt_handler_1a13061cf0ed01ac10a804ac057ef4bdbc" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>Disconnect</name></member>
+      <member refid="classwx_evt_handler_1a2f171e19444b9c4034c5e11f24fa9c91" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>Disconnect</name></member>
+      <member refid="classwx_evt_handler_1a16a6f823853e4b74b43dd9a2cf3abee6" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>Disconnect</name></member>
+      <member refid="classwx_window_1a2d10b472a4962d1c852c83d55252c44b" prot="protected" virt="virtual"><scope>wxGenericProgressDialog</scope><name>DoCentre</name></member>
+      <member refid="classwx_window_1a01e7604ab0f0b2b1a8e322a630a4669e" prot="protected" virt="virtual"><scope>wxGenericProgressDialog</scope><name>DoGetBestSize</name></member>
+      <member refid="classwx_dialog_1a919613599a9e919913146e21d09b44c0" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>DoLayoutAdaptation</name></member>
+      <member refid="classwx_dialog_1a08a07820be45f6c6fcde5c9e2f786389" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>DoOK</name></member>
+      <member refid="classwx_window_1ae8a84a80645e99f4d24a22e5c386f626" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>DoUpdateWindowUI</name></member>
+      <member refid="classwx_window_1a7e7015bc61bd79b6821d2dccaecf9eda" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>DragAcceptFiles</name></member>
+      <member refid="classwx_window_1a4e933aa891f42fbb3b87438057c573af" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>Enable</name></member>
+      <member refid="classwx_top_level_window_1a78a9441746702894fba7653c2d98cb8d" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>EnableCloseButton</name></member>
+      <member refid="classwx_dialog_1a016cfd686f75bcfc5f7b6f127be74c7c" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>EnableLayoutAdaptation</name></member>
+      <member refid="classwx_dialog_1a89b6085b05b63e98001311fafcfb21f0" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>EndModal</name></member>
+      <member refid="classwx_window_1a777258379a3eef1b0530f12db6b77cab" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>FindFocus</name></member>
+      <member refid="classwx_window_1a3468ef382c612b5f8e91c7c18d00a69f" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>FindWindow</name></member>
+      <member refid="classwx_window_1ab2dad735acc2121b964ee1d51836cffa" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>FindWindow</name></member>
+      <member refid="classwx_window_1a101201b12ccd5fba49fa06ed19b5c6fb" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>FindWindowById</name></member>
+      <member refid="classwx_window_1ab8eb148fffae109e0fac86e88d569670" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>FindWindowByLabel</name></member>
+      <member refid="classwx_window_1adbe4eea02f615313c12a2c00557a44c3" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>FindWindowByName</name></member>
+      <member refid="classwx_window_1a2bf38a6cbd1f82fb46f274396f482994" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>Fit</name></member>
+      <member refid="classwx_window_1a55aca401aab29d59f7cc53f89ba2e38d" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>FitInside</name></member>
+      <member refid="classwx_window_1a15c678314cfc1d807196bc298b713ed3" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>Freeze</name></member>
+      <member refid="classwx_window_1aefc02d7275010ebb8d5b66569e7287c4" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>GetAcceleratorTable</name></member>
+      <member refid="classwx_window_1ae0469b554e9c501b356b3ed4b6d8a3af" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>GetAccessible</name></member>
+      <member refid="classwx_dialog_1ae1dfa9d9b983615e6f350dbbfafbabe6" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>GetAffirmativeId</name></member>
+      <member refid="classwx_window_1ad7a9d7fca325112fae493a00d253b3be" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>GetAutoLayout</name></member>
+      <member refid="classwx_window_1a3006d98a4145b7064c1f08e39487d257" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>GetBackgroundColour</name></member>
+      <member refid="classwx_window_1a59047d52b88f2422bbcf01bbecdc4b7b" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>GetBackgroundStyle</name></member>
+      <member refid="classwx_window_1a7e64b9380374e5681f146e9e319e35e3" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>GetBestSize</name></member>
+      <member refid="classwx_window_1a0180343fa395e0c8e6de4022684ca5d6" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>GetBestVirtualSize</name></member>
+      <member refid="classwx_window_1ad95a95e683e57ac6365745b737571582" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>GetBorder</name></member>
+      <member refid="classwx_window_1aa53c8d1b5af17a8fbbe8845210e2032b" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>GetBorder</name></member>
+      <member refid="classwx_window_1a483d3f73925bd38c3964dad058672f0a" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>GetCapture</name></member>
+      <member refid="classwx_window_1a83ed7c9d9252b912eebc753d6132245b" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>GetCaret</name></member>
+      <member refid="classwx_window_1a304b4446de399b240a3fa4aa83a2e468" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>GetCharHeight</name></member>
+      <member refid="classwx_window_1aef2745df13435e913027107cab2a6286" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>GetCharWidth</name></member>
+      <member refid="classwx_window_1ad500085ad0511879b5e018706c91a494" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>GetChildren</name></member>
+      <member refid="classwx_window_1a666cfe7cc8eda6fcecfd39c67c50f609" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>GetChildren</name></member>
+      <member refid="classwx_window_1a170d85e4aa0cbacbfcdd0728120e1417" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>GetClassDefaultAttributes</name></member>
+      <member refid="classwx_object_1ab3a0c6f723cbaddb47be4e8dd98cc8e2" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>GetClassInfo</name></member>
+      <member refid="classwx_window_1a8fd1c0fd88d63dfbf6fefb688b7fd19e" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>GetClientAreaOrigin</name></member>
+      <member refid="classwx_evt_handler_1ad6e543115a9405962152630138645588" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>GetClientData</name></member>
+      <member refid="classwx_evt_handler_1a2b3949eaba1f25cb48618163a7c0583b" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>GetClientObject</name></member>
+      <member refid="classwx_window_1a3928765a8dd3c5c3d6a689179c8005e0" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>GetClientRect</name></member>
+      <member refid="classwx_window_1ae56fc53268b815b58570f66bfc33838f" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>GetClientSize</name></member>
+      <member refid="classwx_window_1afb9fd4a3b3310b2e11049a5113f749fa" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>GetClientSize</name></member>
+      <member refid="classwx_window_1ac5664c7cd26848b5eebfaded2ecde7be" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>GetConstraints</name></member>
+      <member refid="classwx_window_1ade8de9a91bb5bf49c3a52e5262a5ffea" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>GetContainingSizer</name></member>
+      <member refid="classwx_dialog_1aee73457b69fb24e29a9039b6506eb92e" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>GetContentWindow</name></member>
+      <member refid="classwx_window_1ad7ce1e9af33e6be0b608813eff2d349c" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>GetCursor</name></member>
+      <member refid="classwx_window_1a24e7b8f717e91f4590d148140e853dc5" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>GetDefaultAttributes</name></member>
+      <member refid="classwx_top_level_window_1a23d4891fff947cd3676c205dfbb59762" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>GetDefaultItem</name></member>
+      <member refid="classwx_top_level_window_1ab096a9937afef5bc150686b6a819c64a" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>GetDefaultSize</name></member>
+      <member refid="classwx_window_1a4511e71affd926a47c5c320563ca2df5" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>GetDropTarget</name></member>
+      <member refid="classwx_window_1a1a54fcda8d52986482e030bd54739e9f" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>GetEffectiveMinSize</name></member>
+      <member refid="classwx_dialog_1ae65d2ca1b31f331cb5b820509721d857" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>GetEscapeId</name></member>
+      <member refid="classwx_window_1a72c2454cf309f30109da3cbfe237c760" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>GetEventHandler</name></member>
+      <member refid="classwx_evt_handler_1a533e62afcb125abf1fcc8bb53fbc2e81" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>GetEvtHandlerEnabled</name></member>
+      <member refid="classwx_window_1a8da0e59017af368c062f11c9abe2c667" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>GetExtraStyle</name></member>
+      <member refid="classwx_window_1a0dcc6f6f7bda203a868ff10c413289fa" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>GetFont</name></member>
+      <member refid="classwx_window_1acb8e9bd1c88f330bc9748255a5592964" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>GetForegroundColour</name></member>
+      <member refid="classwx_window_1a55d3155d2d3139a84e8fb19a8900aa76" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>GetGrandParent</name></member>
+      <member refid="classwx_window_1a185e6cd7065367b552748cb722651b27" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>GetHandle</name></member>
+      <member refid="classwx_window_1a77f8a4bbee228ed333af2e6a06509cff" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>GetHelpText</name></member>
+      <member refid="classwx_window_1afa448f4e01bedc4a5e3d4324929e5d5d" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>GetHelpTextAtPoint</name></member>
+      <member refid="classwx_top_level_window_1a8d348a7243dcdabafdd02999120f0fa4" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>GetIcon</name></member>
+      <member refid="classwx_top_level_window_1a9ba40d042855f8f547d1845502ff4598" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>GetIcons</name></member>
+      <member refid="classwx_window_1a4633b6ad527c921598f55af5274156f0" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>GetId</name></member>
+      <member refid="classwx_window_1a87fc676546f2ab837342b2e164dd52f0" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>GetLabel</name></member>
+      <member refid="classwx_dialog_1a52d7d0ff9942ce8fee87a07c8d45e8f7" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>GetLayoutAdaptationDone</name></member>
+      <member refid="classwx_dialog_1aef837b62721ec6d0043d2baa7da7d566" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>GetLayoutAdaptationLevel</name></member>
+      <member refid="classwx_dialog_1a4e84aaae7dacd40639c6e76adab2bfbe" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>GetLayoutAdaptationMode</name></member>
+      <member refid="classwx_dialog_1a6689e06106c3005c86bf73ac0718f6b6" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>GetLayoutAdapter</name></member>
+      <member refid="classwx_window_1a0a624f5fad4a603d58ffe94b058d4dda" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>GetLayoutDirection</name></member>
+      <member refid="classwx_dialog_1ad32f9a1b42bb0ab4cea9816dbd4af4ea" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>GetMainButtonIds</name></member>
+      <member refid="classwx_window_1aef9b71458720452374137cd20be24b97" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>GetMaxClientSize</name></member>
+      <member refid="classwx_window_1a5cc2082eb5ddb27f97be191bd093709e" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>GetMaxHeight</name></member>
+      <member refid="classwx_window_1a0a1672e81caf81a95eb5b48383d22065" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>GetMaxSize</name></member>
+      <member refid="classwx_window_1a2e953a64c41131b87bdd7c513ced3687" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>GetMaxWidth</name></member>
+      <member refid="classwx_generic_progress_dialog_1a1b74e60297cbbbf459f1d0df1987d62e" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>GetMessage</name></member>
+      <member refid="classwx_window_1a8e88d1d38c2bf98a72d86b42cf3e35c0" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>GetMinClientSize</name></member>
+      <member refid="classwx_window_1ae4dd9a046ff774ea3ef114caeb452681" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>GetMinHeight</name></member>
+      <member refid="classwx_window_1a853c9a8443f996a368569a8fae551f5a" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>GetMinSize</name></member>
+      <member refid="classwx_window_1a9f79aa07a1b82a9a738f6c1d9c17496f" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>GetMinWidth</name></member>
+      <member refid="classwx_window_1aab1b302c4bdabd134ce8d401dbaaf990" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>GetName</name></member>
+      <member refid="classwx_evt_handler_1a4b2f853f5c7a64432ae72f9b606698f9" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>GetNextHandler</name></member>
+      <member refid="classwx_window_1a41608736affe2ff115d80d8f69dc832e" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>GetNextSibling</name></member>
+      <member refid="classwx_window_1a63871f881941b99b4b94328d1c4cd163" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>GetParent</name></member>
+      <member refid="classwx_window_1a9b7de6ea85ca926b668ba0682a61a93e" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>GetPopupMenuSelectionFromUser</name></member>
+      <member refid="classwx_window_1a00f5cb3cac003205317a565a33d4bb27" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>GetPopupMenuSelectionFromUser</name></member>
+      <member refid="classwx_window_1a9f36392b289a1e567e95bee073d6533e" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>GetPosition</name></member>
+      <member refid="classwx_window_1ad9a883e20827fa717e92fc2f8bd99d6b" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>GetPosition</name></member>
+      <member refid="classwx_evt_handler_1aad1ba7fa9ccbf12ee2d80f5f12350adb" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>GetPreviousHandler</name></member>
+      <member refid="classwx_window_1aa4cb912eb28be31279fa1b95747c6d02" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>GetPrevSibling</name></member>
+      <member refid="classwx_generic_progress_dialog_1a4081c26570ddd49e304d6db45467d4b8" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>GetRange</name></member>
+      <member refid="classwx_window_1ac8809904bb379c32c33c79fbe38745eb" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>GetRect</name></member>
+      <member refid="classwx_object_1aabdb4fc957226544a8408167844e4f42" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>GetRefData</name></member>
+      <member refid="classwx_dialog_1a5f56f8d3ecc4336df4150aea989343df" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>GetReturnCode</name></member>
+      <member refid="classwx_window_1abd39ef50fbc1ef3771f695e7322e8c1d" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>GetScreenPosition</name></member>
+      <member refid="classwx_window_1a32074a2c677ebadb1ed6e92ab172656c" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>GetScreenPosition</name></member>
+      <member refid="classwx_window_1a5c0e45fac07ac4cf29eefa108337a110" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>GetScreenRect</name></member>
+      <member refid="classwx_window_1a3e23d10c17943fd873d0acb472db0caa" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>GetScrollPos</name></member>
+      <member refid="classwx_window_1a067d2a38efbf2f535f717f1027003281" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>GetScrollRange</name></member>
+      <member refid="classwx_window_1a10d24c60525a1c612cd775fc44dd1953" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>GetScrollThumb</name></member>
+      <member refid="classwx_window_1a124c12cff1e7b6e96a5e1fd3e48dca34" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>GetSize</name></member>
+      <member refid="classwx_window_1a66e144ed8ab9a20e080ae6c69fc7015c" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>GetSize</name></member>
+      <member refid="classwx_window_1ad8284cce1a2afe57724b52a89d7fac2f" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>GetSizer</name></member>
+      <member refid="classwx_window_1ac9cd7b4472d5419e518f69311914466f" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>GetTextExtent</name></member>
+      <member refid="classwx_window_1a79e5f88a2408871663d4ab0405cd35f6" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>GetTextExtent</name></member>
+      <member refid="classwx_window_1a0b31a21532407cf809d73aa09f34235c" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>GetThemeEnabled</name></member>
+      <member refid="classwx_top_level_window_1ac9dd7cd78a4cdb7870152d9af7360d9b" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>GetTitle</name></member>
+      <member refid="classwx_top_level_window_1a9a48e119913454f2b548daeb1b093bc7" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>GetTmpDefaultItem</name></member>
+      <member refid="classwx_dialog_1a80c76ed6b8f6eb92992f816e1a987f80" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>GetToolBar</name></member>
+      <member refid="classwx_window_1aae94155ccf8a6e4e72ad08527c89ba89" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>GetToolTip</name></member>
+      <member refid="classwx_window_1ad1a9c53c8e7e5010874f15b8ff4a6568" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>GetToolTipText</name></member>
+      <member refid="classwx_window_1a7e32d9a9ffd058c931db20416bc55baa" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>GetUpdateClientRect</name></member>
+      <member refid="classwx_window_1aa982adbcebfa7bc73fbae7465132115b" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>GetUpdateRegion</name></member>
+      <member refid="classwx_window_1a6a332586346cb9ece4a8fe058a7b88c4" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>GetValidator</name></member>
+      <member refid="classwx_generic_progress_dialog_1a00dfb93cd982bacdfd20261aff0b4e62" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>GetValue</name></member>
+      <member refid="classwx_window_1a614d32c464296b7d6caabcafc18deb97" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>GetVirtualSize</name></member>
+      <member refid="classwx_window_1a2628c6f1f4aecb790f0c86622ebf4d56" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>GetVirtualSize</name></member>
+      <member refid="classwx_window_1afd861e553190e22a76d3d40ee5e8d628" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>GetWindowBorderSize</name></member>
+      <member refid="classwx_window_1a994147d8294bd7d5a32c825d5692af28" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>GetWindowStyle</name></member>
+      <member refid="classwx_window_1a0a0e81677bf2f0de5982a634e11d9a69" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>GetWindowStyleFlag</name></member>
+      <member refid="classwx_window_1aafcccd0d5d31651484df02453c53361c" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>GetWindowVariant</name></member>
+      <member refid="classwx_window_1a89d1b079de97aac170e999692095872c" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>HandleAsNavigationKey</name></member>
+      <member refid="classwx_top_level_window_1ac804159a17302c7e805d70ff4911318c" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>HandleSettingChange</name></member>
+      <member refid="classwx_window_1a665731bbfa46a72c215b04df60216ef1" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>HandleWindowEvent</name></member>
+      <member refid="classwx_window_1a9b44f61543b77317f9820e06856c5514" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>HasCapture</name></member>
+      <member refid="classwx_window_1ae30b415c1ef526563161efea5b78d640" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>HasExtraStyle</name></member>
+      <member refid="classwx_window_1a62ba2fb9be6422bf06bb7db5871d551f" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>HasFlag</name></member>
+      <member refid="classwx_window_1a4e0abff99d64d2a595ee0ab4b415bbd6" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>HasFocus</name></member>
+      <member refid="classwx_window_1abe1522483478b1f777ad8ef34fa7c44a" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>HasMultiplePages</name></member>
+      <member refid="classwx_window_1a950847ecf2d488d83c14a74a3906f668" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>HasScrollbar</name></member>
+      <member refid="classwx_window_1ab9cbcb6d6f4a272c2f0342e69a13b59a" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>HasTransparentBackground</name></member>
+      <member refid="classwx_window_1a7ed103df04014cb3c59c6a3fb4d95328" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>Hide</name></member>
+      <member refid="classwx_window_1a5326fbb26557a224507a1c06e5640e89" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>HideWithEffect</name></member>
+      <member refid="classwx_window_1a6a026b2a16a9f050deddd44e5586762c" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>HitTest</name></member>
+      <member refid="classwx_window_1a44f4d85f42fac6090a42cafd40f24ff5" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>HitTest</name></member>
+      <member refid="classwx_dialog_1afbc8650246551e62a37bf9667c05fc68" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>Iconize</name></member>
+      <member refid="classwx_window_1a9fd5b6520c1b30eb8e82bb5d56bc24c0" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>InformFirstDirection</name></member>
+      <member refid="classwx_window_1a6b1bf9e099704e7a493b8c4666b1f7f7" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>InheritAttributes</name></member>
+      <member refid="classwx_window_1aa90a260c0a835a133043460b7d0024a8" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>InitDialog</name></member>
+      <member refid="classwx_window_1ae1b56ca87d8590ee5e576012229a380a" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>InvalidateBestSize</name></member>
+      <member refid="classwx_top_level_window_1afa58f411cf488eb9279683b1d20a74b6" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>IsActive</name></member>
+      <member refid="classwx_top_level_window_1ac0c7a7cb6e6dfdf7e59300ee5d476ce3" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>IsAlwaysMaximized</name></member>
+      <member refid="classwx_window_1af918e6fe8565c2d5235973cc3de84a43" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>IsBeingDeleted</name></member>
+      <member refid="classwx_window_1a469f0881da248d37691440c9d4cc7200" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>IsDescendant</name></member>
+      <member refid="classwx_window_1a9d1be1bbb625ebf87ad4ad47e49a0194" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>IsDoubleBuffered</name></member>
+      <member refid="classwx_window_1a59452a5bd42f5ea4b31d7fc4aa59644f" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>IsEnabled</name></member>
+      <member refid="classwx_window_1af27ef77c913e32050543f3b0ca435a0d" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>IsExposed</name></member>
+      <member refid="classwx_window_1a31af79f647cbec4950ce31620db51753" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>IsExposed</name></member>
+      <member refid="classwx_window_1a4a23e724619ec070f7d5c45ba21529d5" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>IsExposed</name></member>
+      <member refid="classwx_window_1a4da9a2d13534535aaf7b45200ee8728e" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>IsExposed</name></member>
+      <member refid="classwx_window_1a866c62cc23d8de88e952aad5db4d1a61" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>IsFrozen</name></member>
+      <member refid="classwx_top_level_window_1a8239216e113ae811ad5f517f256e2bed" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>IsFullScreen</name></member>
+      <member refid="classwx_dialog_1a6a08c94474dc5691639c519bd81b8dee" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>IsIconized</name></member>
+      <member refid="classwx_object_1af40d580385cf4f8112fae7713404b01e" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>IsKindOf</name></member>
+      <member refid="classwx_dialog_1ae74a22f52a5978f9a8a2b4853c60c376" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>IsLayoutAdaptationEnabled</name></member>
+      <member refid="classwx_dialog_1ab300c0c3bdf454efb22e85bfc30a8e41" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>IsMainButtonId</name></member>
+      <member refid="classwx_top_level_window_1a0cefec818c018b44435d32a5cb78893c" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>IsMaximized</name></member>
+      <member refid="classwx_dialog_1a2c135c1ae94d87a64ab6b6390fa8ce1e" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>IsModal</name></member>
+      <member refid="classwx_window_1ae9b31dec54256b68574a4bba8cca94ab" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>IsRetained</name></member>
+      <member refid="classwx_object_1a80a1a3fda7b14396a9ddd3d7a46a88bd" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>IsSameAs</name></member>
+      <member refid="classwx_window_1aeeef7eaf8c8f1ec1a54e7a68d63923d0" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>IsScrollbarAlwaysShown</name></member>
+      <member refid="classwx_window_1a95af3a39aa422580dae156ed281a7e88" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>IsShown</name></member>
+      <member refid="classwx_window_1a72d70fd14e3565bf782fbcd3271d8930" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>IsShownOnScreen</name></member>
+      <member refid="classwx_window_1a657ef8b6055eb06df894ac5e6ddfecf8" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>IsThisEnabled</name></member>
+      <member refid="classwx_window_1a0002826ad05f2a5661b4c8995713f37f" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>IsTopLevel</name></member>
+      <member refid="classwx_window_1a7940d510c5bdc062a2b109a1022dd8c2" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>IsTransparentBackgroundSupported</name></member>
+      <member refid="classwx_evt_handler_1a360fdeefcf53b62fb49fb828406bb8a6" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>IsUnlinked</name></member>
+      <member refid="classwx_top_level_window_1a305c48ddb8e45f89add1694053185a7d" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>IsUsingNativeDecorations</name></member>
+      <member refid="classwx_top_level_window_1adfe7e3f4a32f3ed178968f64431bbfe0" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>Layout</name></member>
+      <member refid="classwx_window_1ade808784f0e64d9985e2f279b5ca8c02" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>LineDown</name></member>
+      <member refid="classwx_window_1afc0816a174ceee6d36d1995c6824a273" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>LineUp</name></member>
+      <member refid="classwx_window_1a124944524f36b71385dad8fddaad8ded" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>Lower</name></member>
+      <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>m_refData</name></member>
+      <member refid="classwx_top_level_window_1addb1612e9f00ac82c2e19c2bac6ffc4f" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>Maximize</name></member>
+      <member refid="classwx_window_1ab1cb98c8d25b9e6ff7b706b1446c3df7" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>Move</name></member>
+      <member refid="classwx_window_1a22a22c1e23ca05776707e7999d8047fe" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>Move</name></member>
+      <member refid="classwx_window_1a79e66079125e8420de269811bdb6f2b6" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>MoveAfterInTabOrder</name></member>
+      <member refid="classwx_window_1af2b92f61cd9f9e2e0efe4cce307e25b1" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>MoveBeforeInTabOrder</name></member>
+      <member refid="classwx_top_level_window_1a503565e9c0a1f37a281b52e1d53029b6" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>MSWGetSystemMenu</name></member>
+      <member refid="classwx_window_1a86904f6785df4af6036b33383490a805" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>Navigate</name></member>
+      <member refid="classwx_window_1aa58039c8fc65e19160becf510ee1d1d5" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>NavigateIn</name></member>
+      <member refid="classwx_window_1a8175da594e6045635a1d1cfe775cdddb" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>NewControlId</name></member>
+      <member refid="classwx_window_1a6b5654c0c6c6245d592c279521f7099c" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>OnInternalIdle</name></member>
+      <member refid="classwx_object_1a07b8f34f5afc5743195c5fed052f55d3" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>operator delete</name></member>
+      <member refid="classwx_object_1a96fa423a1dbc212c8227a5d83825971f" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>operator new</name></member>
+      <member refid="classwx_top_level_window_1a5890684b71321e27e8f3a223ad3c2445" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>OSXIsModified</name></member>
+      <member refid="classwx_top_level_window_1a6d102c9180b115a7a72b2e21f56cbc3e" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>OSXSetModified</name></member>
+      <member refid="classwx_window_1a61e78cb48ece3e9e989e37b475ac1e35" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>PageDown</name></member>
+      <member refid="classwx_window_1aa7c2bbc480d8863d9f139c01d7abc1b1" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>PageUp</name></member>
+      <member refid="classwx_window_1ac45c1f4cf96c70779764c14cf528790b" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>PopEventHandler</name></member>
+      <member refid="classwx_window_1a8f715d238cf74a845488b0e2645e98df" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>PopupMenu</name></member>
+      <member refid="classwx_window_1a834bcdfd41f5e5370ebd9ea401c92900" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>PopupMenu</name></member>
+      <member refid="classwx_window_1ab1943463e6661f97e072b43337c6cc09" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>PostSizeEvent</name></member>
+      <member refid="classwx_window_1aa080d8dcda58bcc6ea2abd8bea592e3e" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>PostSizeEventToParent</name></member>
+      <member refid="classwx_window_1a5ebdbd87c28644149a07f1742996df96" prot="protected" virt="virtual"><scope>wxGenericProgressDialog</scope><name>ProcessEvent</name></member>
+      <member refid="classwx_evt_handler_1ac0f5d2cb29a04c1f7f82eb6b351f79fb" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>ProcessEventLocally</name></member>
+      <member refid="classwx_window_1a7cbee38944dab02d753a4dba74230443" prot="protected" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>ProcessPendingEvents</name></member>
+      <member refid="classwx_window_1a9350b3a9c2e380707eaea92cedad12a5" prot="protected" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>ProcessThreadEvent</name></member>
+      <member refid="classwx_window_1a0a76891d726ad5f9a729e27e4eab2b57" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>ProcessWindowEvent</name></member>
+      <member refid="classwx_window_1a0a11aa4a50491d051f947e2618e52178" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>ProcessWindowEventLocally</name></member>
+      <member refid="classwx_generic_progress_dialog_1ab5ecf227eebaa1aadb5f5c553e4a4ee5" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>Pulse</name></member>
+      <member refid="classwx_window_1a398c11ab9af7956067a964f560d1978c" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>PushEventHandler</name></member>
+      <member refid="classwx_window_1a69e450f21b0d7013269ec1a4771f043b" prot="protected" virt="virtual"><scope>wxGenericProgressDialog</scope><name>QueueEvent</name></member>
+      <member refid="classwx_window_1a54808c933f22a891c5db646f6209fa4d" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>Raise</name></member>
+      <member refid="classwx_object_1a2f6f1aa51fe9fc2b1415ca4211a90e9e" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>Ref</name></member>
+      <member refid="classwx_window_1a29dc7251746154c821b17841b9877830" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>Refresh</name></member>
+      <member refid="classwx_window_1ab0ae6b9898cd261c39ebeb2891aa3d67" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>RefreshRect</name></member>
+      <member refid="classwx_window_1a53ca57872dac5851ea6ba55a494b899b" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>RegisterHotKey</name></member>
+      <member refid="classwx_window_1adcc538819c11ecb3bd3e4e5d13c5ba7a" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>ReleaseMouse</name></member>
+      <member refid="classwx_window_1acee332ed4368d26e8bc3db5767c1240a" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>RemoveChild</name></member>
+      <member refid="classwx_window_1aacbfe424fa527966b954229a1db96ab5" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>RemoveEventHandler</name></member>
+      <member refid="classwx_evt_handler_1a67a57b759c447b121bf70a7c9804c8f2" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>RemoveFilter</name></member>
+      <member refid="classwx_window_1a7977b749284e65aecfed2ce146799cb9" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>Reparent</name></member>
+      <member refid="classwx_top_level_window_1a749d23ea08f6273fb93fe2c003b650b3" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>RequestUserAttention</name></member>
+      <member refid="classwx_generic_progress_dialog_1a076a10d2d6cb1e2561b6f1820663cd70" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>Resume</name></member>
+      <member refid="classwx_window_1a0f9814efc50316b4c57b7ec2bf78b716" prot="protected" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>SafelyProcessEvent</name></member>
+      <member refid="classwx_window_1a65531bbc52f9508b0e31a9c08c97bd31" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>ScreenToClient</name></member>
+      <member refid="classwx_window_1a59d02b70a9107433836a977c4c0cd7a9" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>ScreenToClient</name></member>
+      <member refid="classwx_window_1aa5c5b683bd11a0d9771bd2fcdf643c64" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>ScrollLines</name></member>
+      <member refid="classwx_window_1adc0ed5e1c4925223cb901ced14b8343d" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>ScrollPages</name></member>
+      <member refid="classwx_window_1ab7be4956ff22da37fff2b8aaa581045c" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>ScrollWindow</name></member>
+      <member refid="classwx_evt_handler_1a3c07426130d2868a5ae7fa918a251f49" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>SearchEventTable</name></member>
+      <member refid="classwx_window_1a7e21eb6a0819281b29134a6432d064fe" prot="protected" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>SendDestroyEvent</name></member>
+      <member refid="classwx_window_1a237f739b21937d3e8f1bff5fa82ba4c2" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>SendSizeEvent</name></member>
+      <member refid="classwx_window_1af7987987978fd8a93df88b29b19a6388" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>SendSizeEventToParent</name></member>
+      <member refid="classwx_window_1a0af5e9aa4dee6a4e92c0700f92605642" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>SetAcceleratorTable</name></member>
+      <member refid="classwx_window_1a413220ead41f05a2ec2cfe10b3d573df" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>SetAccessible</name></member>
+      <member refid="classwx_dialog_1a72ea7e269bedb2552bfeaccdbac07939" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>SetAffirmativeId</name></member>
+      <member refid="classwx_window_1ad369fe1db5c20f9d9edff7b5eb1f7226" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>SetAutoLayout</name></member>
+      <member refid="classwx_window_1a37219df52734626e23401fd83b25d8a0" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>SetBackgroundColour</name></member>
+      <member refid="classwx_window_1af14f8fd2ed2d30a9bbb5d4f9fd6594ec" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>SetBackgroundStyle</name></member>
+      <member refid="classwx_window_1a2b8b2e99231a0ec1a05f5066f1b7f3d8" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>SetCanFocus</name></member>
+      <member refid="classwx_window_1acfef5e1cada92c73e2937b84ff57ff57" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>SetCaret</name></member>
+      <member refid="classwx_evt_handler_1a82c74f2cebfa02cb3c1563d459c872bf" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>SetClientData</name></member>
+      <member refid="classwx_evt_handler_1af1e33a06087b8b2ddc43c7d15a91b326" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>SetClientObject</name></member>
+      <member refid="classwx_window_1aa59f715217fffa5bcf14cd97f92e7840" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>SetClientSize</name></member>
+      <member refid="classwx_window_1ab2aadc857ee7f55f47ab9a8669e3beb7" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>SetClientSize</name></member>
+      <member refid="classwx_window_1a582d4d1f60a3f777627773b2da0bb2ef" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>SetClientSize</name></member>
+      <member refid="classwx_window_1afa75d111bbd9a68f837101a5fbed60a7" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>SetConstraints</name></member>
+      <member refid="classwx_window_1a0ccf78fe06722b500adfb7f36b8ce443" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>SetContainingSizer</name></member>
+      <member refid="classwx_window_1ad83f9c51c6f31e0e05f598b47a19ed98" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>SetCursor</name></member>
+      <member refid="classwx_top_level_window_1ae27318a65876ca787c0483c960bdbb01" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>SetDefaultItem</name></member>
+      <member refid="classwx_window_1a5477a89c17fdcc3ec6c90274796eb1c3" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>SetDoubleBuffered</name></member>
+      <member refid="classwx_window_1ae34b4d45433ca8287df0e47d46411e58" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>SetDropTarget</name></member>
+      <member refid="classwx_dialog_1a585869988e308f549128a6a065f387c6" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>SetEscapeId</name></member>
+      <member refid="classwx_window_1af6c84b7679183b377ba27a52a2f708b4" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>SetEventHandler</name></member>
+      <member refid="classwx_evt_handler_1a7388ae19c8657e5656471b658c320036" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>SetEvtHandlerEnabled</name></member>
+      <member refid="classwx_window_1ae9655f7c35ce7ac89cac2f6c0054b103" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>SetExtraStyle</name></member>
+      <member refid="classwx_window_1a697f9f8d3ff389790f1c74b59bcb1d75" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>SetFocus</name></member>
+      <member refid="classwx_window_1a6fa03f82d7917dff482754d0d2e2b1c8" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>SetFocusFromKbd</name></member>
+      <member refid="classwx_window_1a9ab11e7da57a1d08918aa75fc33f6ad3" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>SetFont</name></member>
+      <member refid="classwx_window_1a69f1e1c7ddd370d72e68c70f13ac8de9" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>SetForegroundColour</name></member>
+      <member refid="classwx_window_1a4c1a2cbc7363237b3a7c70af4e702c72" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>SetHelpText</name></member>
+      <member refid="classwx_dialog_1a717435f3dd9d977feaa40fb359a6da84" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>SetIcon</name></member>
+      <member refid="classwx_dialog_1a25159a919f632d6b2d15f19a1bfbe639" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>SetIcons</name></member>
+      <member refid="classwx_window_1a7f27d0faed14effa013381bdc40e1bcd" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>SetId</name></member>
+      <member refid="classwx_window_1ae6dfe0b0d4a8c666b21ce8df8d96727b" prot="protected" virt="virtual"><scope>wxGenericProgressDialog</scope><name>SetInitialBestSize</name></member>
+      <member refid="classwx_window_1a1b309ca50ba87e34f968c83b79af1397" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>SetInitialSize</name></member>
+      <member refid="classwx_window_1aa00ffea9f53587f29ae343adde033b8e" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>SetLabel</name></member>
+      <member refid="classwx_dialog_1ab8b02ae4d97e300b4d7bbce6cc6af221" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>SetLayoutAdaptationDone</name></member>
+      <member refid="classwx_dialog_1a9eaef1625f225bc25f8c92449d123a67" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>SetLayoutAdaptationLevel</name></member>
+      <member refid="classwx_dialog_1a9f949c545ca70571cec8cd2fcbfc0991" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>SetLayoutAdaptationMode</name></member>
+      <member refid="classwx_dialog_1a371e3d760ea9beb49b74c5ffee52a0ee" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>SetLayoutAdapter</name></member>
+      <member refid="classwx_window_1a7d494549f7fcfed44af95f8ee364c1f9" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>SetLayoutDirection</name></member>
+      <member refid="classwx_top_level_window_1a198cff4212ff5342c0c4358b59274fd5" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>SetLeftMenu</name></member>
+      <member refid="classwx_window_1a664e5b2ddd817d9c58788269fe1d8479" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>SetMaxClientSize</name></member>
+      <member refid="classwx_top_level_window_1afd6d2cccfe0ba0ff91e36f4d16cf3c7b" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>SetMaxSize</name></member>
+      <member refid="classwx_window_1a6e35ba44b97e374dfffa460d41d94b31" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>SetMinClientSize</name></member>
+      <member refid="classwx_top_level_window_1ac491313979c027b67526786b06167e6d" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>SetMinSize</name></member>
+      <member refid="classwx_dialog_1a38e21fd7eb13d9d44cd9ea4f85a36517" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>SetModal</name></member>
+      <member refid="classwx_window_1af80875cda5e1af98dcd7c8e712e3c800" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>SetName</name></member>
+      <member refid="classwx_window_1aeab905f61df7004c1b76a3351dca9e96" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>SetNextHandler</name></member>
+      <member refid="classwx_window_1a9a3f9d8477aab1d9176cd66ee56e75d9" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>SetOwnBackgroundColour</name></member>
+      <member refid="classwx_window_1a89a4f62f23c1e7c845b8d07cecae4c43" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>SetOwnFont</name></member>
+      <member refid="classwx_window_1a53f4a878e4e2d440bd00543f8014aaaa" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>SetOwnForegroundColour</name></member>
+      <member refid="classwx_window_1aee57358435d6bd33f598c81354b47425" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>SetPalette</name></member>
+      <member refid="classwx_window_1a81f23590239934fa10fded0566a65d8c" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>SetPosition</name></member>
+      <member refid="classwx_window_1a07f5f7ed3f78e0ef7b3dee3f4da81001" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>SetPreviousHandler</name></member>
+      <member refid="classwx_generic_progress_dialog_1af5f24bd05ef8b31dd1991bbc7533cb17" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>SetRange</name></member>
+      <member refid="classwx_object_1afab780710f2adc1bb33310e27590140b" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>SetRefData</name></member>
+      <member refid="classwx_top_level_window_1a82afa6f09dd5faef6330807ef59374e8" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>SetRepresentedFilename</name></member>
+      <member refid="classwx_dialog_1a0d04ed85ac5cd271a61514d446340673" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>SetReturnCode</name></member>
+      <member refid="classwx_top_level_window_1a98e95b1b10f44b80f9b29a03ab09a879" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>SetRightMenu</name></member>
+      <member refid="classwx_window_1aa842d59529f873683e55cd8392ec46e9" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>SetScrollbar</name></member>
+      <member refid="classwx_window_1afbf4dc9064cf70cfe6884554b97a27bf" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>SetScrollPos</name></member>
+      <member refid="classwx_non_owned_window_1a7f223eadbd72caea66efcb0b55e89613" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>SetShape</name></member>
+      <member refid="classwx_non_owned_window_1aa3c3e3fe90bd1b20407262157a593de7" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>SetShape</name></member>
+      <member refid="classwx_window_1a180312d5ad4a4a5ad805b8d52d67a74e" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>SetSize</name></member>
+      <member refid="classwx_window_1a8e383bc6d5ca008965922a36c676aea0" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>SetSize</name></member>
+      <member refid="classwx_window_1a030a928cd854de3def97c5720f14695b" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>SetSize</name></member>
+      <member refid="classwx_window_1a2ea9b25296d591aea4470c8fd99ff7cb" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>SetSize</name></member>
+      <member refid="classwx_top_level_window_1ac01a45e5d82e4e3be22a4841c1217e11" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>SetSizeHints</name></member>
+      <member refid="classwx_top_level_window_1a4ddaae1bebf05a2bc474a192a5b30e42" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>SetSizeHints</name></member>
+      <member refid="classwx_window_1abc95691b45e29a52c24aa9d33d46dec1" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>SetSizer</name></member>
+      <member refid="classwx_window_1a29938af9828fd35da666536cdfb6b73c" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>SetSizerAndFit</name></member>
+      <member refid="classwx_window_1a41dd19ed8809fd8ec662e2aa2a9579c3" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>SetThemeEnabled</name></member>
+      <member refid="classwx_top_level_window_1afb944376c19d735a8251654ee4ac276f" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>SetTitle</name></member>
+      <member refid="classwx_top_level_window_1a03d21174f2a9a527d6483c7562339167" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>SetTmpDefaultItem</name></member>
+      <member refid="classwx_window_1a81a9fb74e3c6c7f4416e882f5e589b8c" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>SetToolTip</name></member>
+      <member refid="classwx_window_1a494e0b7cfca9299caa40e847767e7357" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>SetToolTip</name></member>
+      <member refid="classwx_top_level_window_1a8e37aff45a001a83ff49745298a6978e" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>SetTransparent</name></member>
+      <member refid="classwx_window_1a00066c70049a7be3ce6b648d206e6432" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>SetValidator</name></member>
+      <member refid="classwx_window_1a37f293b7904bc6668b86cccb0aea5669" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>SetVirtualSize</name></member>
+      <member refid="classwx_window_1a8e95201edebe43b9623bd3bdc555af4d" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>SetVirtualSize</name></member>
+      <member refid="classwx_window_1a306af30adec68689f74ed537b4f9d5fd" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>SetWindowStyle</name></member>
+      <member refid="classwx_window_1aee2cf342f80523432e7f2299d299451b" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>SetWindowStyleFlag</name></member>
+      <member refid="classwx_window_1acd955418c336e73b3e32cadf1ca46e29" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>SetWindowVariant</name></member>
+      <member refid="classwx_window_1a0c43a27fa04f9c17cc28fde71fdba490" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>ShouldInheritColours</name></member>
+      <member refid="classwx_top_level_window_1a8a0024cce99199bc3ba70bbfb10ec620" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>ShouldPreventAppExit</name></member>
+      <member refid="classwx_dialog_1ae8e5fa98d473b812b8d1c2f163b65c67" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>Show</name></member>
+      <member refid="classwx_top_level_window_1ab4089f1274bcb74e5f7763d1fb84ee28" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>ShowFullScreen</name></member>
+      <member refid="classwx_dialog_1a6e078c3d0653f75ad3c34a37c0b54637" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>ShowModal</name></member>
+      <member refid="classwx_dialog_1a5c61636f657c0ae9503c4dfa534e073e" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>ShowWindowModal</name></member>
+      <member refid="classwx_window_1a596b1715edfc7609f352b2e000ecbaec" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>ShowWithEffect</name></member>
+      <member refid="classwx_window_1a279a532124073261b28131b6afb59a1e" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>Thaw</name></member>
+      <member refid="classwx_window_1a8a4fa47129de552bfec37db8c69688a2" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>ToggleWindowStyle</name></member>
+      <member refid="classwx_window_1ab8e51f36e7d8790b361c8d8c6f37b1ad" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>TransferDataFromWindow</name></member>
+      <member refid="classwx_window_1a88cc65e424a129d9b0057756cdb67ec9" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>TransferDataToWindow</name></member>
+      <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxGenericProgressDialog</scope><name>TryAfter</name></member>
+      <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxGenericProgressDialog</scope><name>TryBefore</name></member>
+      <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>Unbind</name></member>
+      <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>Unbind</name></member>
+      <member refid="classwx_evt_handler_1a22e5db2ec1d19c8252c056fd116975d7" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>Unlink</name></member>
+      <member refid="classwx_object_1af51efc6b1ae632fc7f0cd7ebbce9fa36" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>UnRef</name></member>
+      <member refid="classwx_window_1a695f60d65f8f6c12e3c3645ad9c0c35b" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>UnregisterHotKey</name></member>
+      <member refid="classwx_window_1ad9bc342d1e38d221e37f0f6396950c8c" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>UnreserveControlId</name></member>
+      <member refid="classwx_window_1ae75712451673658b0a533480bf5eeaa4" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>UnsetToolTip</name></member>
+      <member refid="classwx_object_1a74b40e42d19a4b9e9bec0b57d62a5725" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>UnShare</name></member>
+      <member refid="classwx_generic_progress_dialog_1a1d542cea96c531d85c32d6612bd55a02" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>Update</name></member>
+      <member refid="classwx_window_1abaf28f1a075fd1b10f761a8febe597ec" prot="public" virt="virtual" ambiguityscope="wxDialog::"><scope>wxGenericProgressDialog</scope><name>Update</name></member>
+      <member refid="classwx_window_1adf0a4987728bd0bf69f922641b3efbfc" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>UpdateWindowUI</name></member>
+      <member refid="classwx_top_level_window_1a4d13f215c9b4fbad26fced00eff20d90" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>UseNativeDecorations</name></member>
+      <member refid="classwx_top_level_window_1afd809e099fdd7cef3d9892167a477531" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>UseNativeDecorationsByDefault</name></member>
+      <member refid="classwx_window_1ac87f253253a0c5eb498871c83afa40fd" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>Validate</name></member>
+      <member refid="classwx_window_1ac500152d1eca3a2ee98a68e7ea7372b5" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>WarpPointer</name></member>
+      <member refid="classwx_generic_progress_dialog_1abd27b3af19db770d90db015a50f38f2c" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>WasCancelled</name></member>
+      <member refid="classwx_generic_progress_dialog_1a7b86291b5380e622cf32b697825ce03d" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>WasSkipped</name></member>
+      <member refid="classwx_window_1aa456f800c9dde3b2361cad0abf54bc27" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>WindowToClientSize</name></member>
+      <member refid="classwx_dialog_1a11f9715b3975218071a4de9b29a4ed03" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>wxDialog</name></member>
+      <member refid="classwx_dialog_1a0bbd20a18b306aad59429b9d6783d39b" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>wxDialog</name></member>
+      <member refid="classwx_evt_handler_1a3f0166c4154227d05575b01eb2c8d4be" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>wxEvtHandler</name></member>
+      <member refid="classwx_generic_progress_dialog_1ac015aa72408dcddef95f4f575bb628bc" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>wxGenericProgressDialog</name></member>
+      <member refid="classwx_object_1acaa378363a28af421ab56ad7b46eadf0" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>wxObject</name></member>
+      <member refid="classwx_object_1a4721b4dc9b7aff0f30904ba2ea3954cf" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>wxObject</name></member>
+      <member refid="classwx_top_level_window_1abb919ad585057de6fce94bb7d5497256" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>wxTopLevelWindow</name></member>
+      <member refid="classwx_top_level_window_1abddbaa0d42b46847b679464b485654be" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>wxTopLevelWindow</name></member>
+      <member refid="classwx_window_1a695200a4915b934926dcf32afa44544c" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>wxWindow</name></member>
+      <member refid="classwx_window_1a7799009b10d1765d1bbb6db4994f922e" prot="public" virt="non-virtual"><scope>wxGenericProgressDialog</scope><name>wxWindow</name></member>
+      <member refid="classwx_dialog_1a9cf257635ad3273cde4a95a0d356657c" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>~wxDialog</name></member>
+      <member refid="classwx_evt_handler_1a372d2239d91521eddc8fd2715fcab584" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>~wxEvtHandler</name></member>
+      <member refid="classwx_generic_progress_dialog_1ab8c52516eca99ecb72f703086a471877" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>~wxGenericProgressDialog</name></member>
+      <member refid="classwx_object_1a2a51aa8bfbab47ca2f051bcf84b3f35b" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>~wxObject</name></member>
+      <member refid="classwx_top_level_window_1a643df4d651b5394b8a674067aef4dd04" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>~wxTopLevelWindow</name></member>
+      <member refid="classwx_window_1a0c2a46181a89c349327f0b276f5ef8d7" prot="public" virt="virtual"><scope>wxGenericProgressDialog</scope><name>~wxWindow</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

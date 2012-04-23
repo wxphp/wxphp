@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dcps.h" line="22"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dcps.h" line="22"/>
       </memberdef>
       <memberdef kind="function" id="classwx_post_script_d_c_1a185dd92c45cadbb205f2aef2abe8dfcf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -33,7 +33,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dcps.h" line="27"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dcps.h" line="27"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -42,49 +42,49 @@
 <para>See <ref refid="classwx_d_c" kindref="compound">wxDC</ref> for descriptions of the member functions.</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__dc" kindref="compound">Device Contexts</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="8733">
+      <node id="8926">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="8732">
+      <node id="8925">
         <label>wxDC</label>
         <link refid="classwx_d_c"/>
-        <childnode refid="8733" relation="public-inheritance">
+        <childnode refid="8926" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8731">
+      <node id="8924">
         <label>wxPostScriptDC</label>
         <link refid="classwx_post_script_d_c"/>
-        <childnode refid="8732" relation="public-inheritance">
+        <childnode refid="8925" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="8736">
+      <node id="8929">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="8737" relation="usage">
+        <childnode refid="8930" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="8735">
+      <node id="8928">
         <label>wxDC</label>
         <link refid="classwx_d_c"/>
-        <childnode refid="8736" relation="public-inheritance">
+        <childnode refid="8929" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8734">
+      <node id="8927">
         <label>wxPostScriptDC</label>
         <link refid="classwx_post_script_d_c"/>
-        <childnode refid="8735" relation="public-inheritance">
+        <childnode refid="8928" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8737">
+      <node id="8930">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dcps.h" line="20" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dcps.h" bodystart="19" bodyend="29"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dcps.h" line="20" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dcps.h" bodystart="19" bodyend="29"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxPostScriptDC</scope><name>AllocExclusive</name></member>
       <member refid="classwx_d_c_1a12bed94a15136b9080683f4151042a34" prot="public" virt="non-virtual"><scope>wxPostScriptDC</scope><name>Blit</name></member>

@@ -44,7 +44,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/calctrl.h" line="504"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/calctrl.h" line="543"/>
       </memberdef>
       <memberdef kind="function" id="classwx_calendar_ctrl_1ae98a953de9b869030719d7dede370637" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -82,7 +82,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/calctrl.h" line="523"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/calctrl.h" line="562"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -97,7 +97,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/calctrl.h" line="271"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/calctrl.h" line="310"/>
       </memberdef>
       <memberdef kind="function" id="classwx_calendar_ctrl_1aaa594799b72c7b7fbbd80346d202f582" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -143,7 +143,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/calctrl.h" line="281"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/calctrl.h" line="320"/>
       </memberdef>
       <memberdef kind="function" id="classwx_calendar_ctrl_1a89f3bd2030aa27a4aa3841d6a11c78d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -156,7 +156,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/calctrl.h" line="286"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/calctrl.h" line="325"/>
       </memberdef>
       <memberdef kind="function" id="classwx_calendar_ctrl_1aad5c70c750a9f9df456fa8402f7adb7e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -202,7 +202,7 @@
 <para>See <ref refid="classwx_window_1a695200a4915b934926dcf32afa44544c" kindref="member">wxWindow::wxWindow()</ref> for the meaning of the parameters and the control overview for the possible styles. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/calctrl.h" line="297"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/calctrl.h" line="336"/>
       </memberdef>
       <memberdef kind="function" id="classwx_calendar_ctrl_1ab357bcc9d60dda85a331511bb303228d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -220,7 +220,7 @@
 <para>It enables or disables the special highlighting of the holidays. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/calctrl.h" line="304"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/calctrl.h" line="343"/>
       </memberdef>
       <memberdef kind="function" id="classwx_calendar_ctrl_1a201fb9498116d7e02f853b75d3e300e8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -239,7 +239,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/calctrl.h" line="315"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/calctrl.h" line="354"/>
       </memberdef>
       <memberdef kind="function" id="classwx_calendar_ctrl_1ab2e1f2d643c4a48f3d5cb2273e3a6e13" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -257,7 +257,7 @@
 <para><xrefsect id="deprecated_1_deprecated000004"><xreftitle>Deprecated</xreftitle><xrefdescription></xrefdescription></xrefsect></para><para>This function should be used instead of changing <computeroutput>wxCAL_NO_YEAR_CHANGE</computeroutput> style bit directly. It allows or disallows the user to change the year interactively. Only in generic <ref refid="classwx_calendar_ctrl" kindref="compound">wxCalendarCtrl</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/calctrl.h" line="324"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/calctrl.h" line="363"/>
       </memberdef>
       <memberdef kind="function" id="classwx_calendar_ctrl_1a3e07a57b126a31e5d3b0b14460197f07" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_calendar_date_attr" kindref="compound">wxCalendarDateAttr</ref> *</type>
@@ -274,7 +274,7 @@
 <para>The returned pointer may be NULL. Only in generic <ref refid="classwx_calendar_ctrl" kindref="compound">wxCalendarCtrl</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/calctrl.h" line="331"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/calctrl.h" line="370"/>
       </memberdef>
       <memberdef kind="function" id="classwx_calendar_ctrl_1a67edb516afe73834cba6fdd8bdf18628" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_date_time" kindref="compound">wxDateTime</ref></type>
@@ -287,7 +287,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/calctrl.h" line="336"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/calctrl.h" line="375"/>
       </memberdef>
       <memberdef kind="function" id="classwx_calendar_ctrl_1a38c6e40c7f70f8f1f11f091ad4622811" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>const <ref refid="classwx_colour" kindref="compound">wxColour</ref> &amp;</type>
@@ -301,7 +301,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/calctrl.h" line="346"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/calctrl.h" line="385"/>
       </memberdef>
       <memberdef kind="function" id="classwx_calendar_ctrl_1a9a6bce1589b017956426d77e5eef91b5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>const <ref refid="classwx_colour" kindref="compound">wxColour</ref> &amp;</type>
@@ -315,7 +315,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/calctrl.h" line="356"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/calctrl.h" line="395"/>
       </memberdef>
       <memberdef kind="function" id="classwx_calendar_ctrl_1a47771e0f6a579d930389972ce1b2b1d4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>const <ref refid="classwx_colour" kindref="compound">wxColour</ref> &amp;</type>
@@ -329,7 +329,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/calctrl.h" line="366"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/calctrl.h" line="405"/>
       </memberdef>
       <memberdef kind="function" id="classwx_calendar_ctrl_1a00d5cd5a0aec8f7520d40281ec8da225" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>const <ref refid="classwx_colour" kindref="compound">wxColour</ref> &amp;</type>
@@ -343,7 +343,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/calctrl.h" line="376"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/calctrl.h" line="415"/>
       </memberdef>
       <memberdef kind="function" id="classwx_calendar_ctrl_1a2759d2fe8f254623bf8fe09e0fe49313" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>const <ref refid="classwx_colour" kindref="compound">wxColour</ref> &amp;</type>
@@ -357,7 +357,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/calctrl.h" line="387"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/calctrl.h" line="426"/>
       </memberdef>
       <memberdef kind="function" id="classwx_calendar_ctrl_1a53f0724721016997f45dfa14bb3b42fd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>const <ref refid="classwx_colour" kindref="compound">wxColour</ref> &amp;</type>
@@ -371,7 +371,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/calctrl.h" line="398"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/calctrl.h" line="437"/>
       </memberdef>
       <memberdef kind="function" id="classwx_calendar_ctrl_1a986900efb8466550508681559f093110" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="calctrl_8h_1ab54c21fe15c064d2ea6741533fa235bc" kindref="member">wxCalendarHitTestResult</ref></type>
@@ -398,7 +398,7 @@
 <para>Not implemented in wxGTK currently. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/calctrl.h" line="409"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/calctrl.h" line="448"/>
       </memberdef>
       <memberdef kind="function" id="classwx_calendar_ctrl_1afc59e68f03a92e602822dbec608aece8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -415,7 +415,7 @@
 <para>Only in generic <ref refid="classwx_calendar_ctrl" kindref="compound">wxCalendarCtrl</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/calctrl.h" line="415"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/calctrl.h" line="454"/>
       </memberdef>
       <memberdef kind="function" id="classwx_calendar_ctrl_1abeded70d9cfa8d42bc7f6f6610c40a15" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -436,7 +436,7 @@
 <para>If the pointer is NULL, the items attribute is cleared. Only in generic <ref refid="classwx_calendar_ctrl" kindref="compound">wxCalendarCtrl</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/calctrl.h" line="422"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/calctrl.h" line="461"/>
       </memberdef>
       <memberdef kind="function" id="classwx_calendar_ctrl_1ae10603c5b221e24665bdff196edbfb80" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -453,7 +453,7 @@
 <para>The <emphasis>date</emphasis> parameter must be valid and in the currently valid range as set by <ref refid="classwx_calendar_ctrl_1a79094f14e7b500012099907dea5f3211" kindref="member">SetDateRange()</ref>, otherwise the current date is not changed and the function returns false. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/calctrl.h" line="431"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/calctrl.h" line="470"/>
       </memberdef>
       <memberdef kind="function" id="classwx_calendar_ctrl_1a904833f654ad90958de59b61cb9e1e64" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -474,7 +474,7 @@
 <para>This method is currently only implemented in generic <ref refid="classwx_calendar_ctrl" kindref="compound">wxCalendarCtrl</ref> and does nothing in the native versions. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/calctrl.h" line="441"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/calctrl.h" line="480"/>
       </memberdef>
       <memberdef kind="function" id="classwx_calendar_ctrl_1a3f391058d675744a49cf9afaa2b786c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -495,7 +495,7 @@
 <para>This method is currently only implemented in generic <ref refid="classwx_calendar_ctrl" kindref="compound">wxCalendarCtrl</ref> and does nothing in the native versions. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/calctrl.h" line="451"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/calctrl.h" line="490"/>
       </memberdef>
       <memberdef kind="function" id="classwx_calendar_ctrl_1a801ea4e8f0bcec1c6ec5e8d75a393150" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -512,7 +512,7 @@
 <para>This method is only implemented in the generic version of the control and does nothing in the native ones. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/calctrl.h" line="459"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/calctrl.h" line="498"/>
       </memberdef>
       <memberdef kind="function" id="classwx_calendar_ctrl_1a3a751664b6aec52ce4252bdb099ec7eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -533,7 +533,7 @@
 <para>This method is only implemented in the generic version of the control and does nothing in the native ones. It should also only be called if the window style includes <computeroutput>wxCAL_SHOW_HOLIDAYS</computeroutput> flag or <ref refid="classwx_calendar_ctrl_1ab357bcc9d60dda85a331511bb303228d" kindref="member">EnableHolidayDisplay()</ref> had been called. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/calctrl.h" line="471"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/calctrl.h" line="510"/>
       </memberdef>
       <memberdef kind="function" id="classwx_calendar_ctrl_1a7273a1c06a5a838c0a2980dececdf4f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -554,7 +554,7 @@
 <para>This day of month will be marked in every month. In generic <ref refid="classwx_calendar_ctrl" kindref="compound">wxCalendarCtrl</ref>, </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/calctrl.h" line="477"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/calctrl.h" line="516"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -584,85 +584,85 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref> <htmlonly> &lt;br&gt;&lt;div&gt;&lt;span class=&apos;appearance&apos;&gt;Appearance:&lt;/span&gt;&lt;br&gt;&lt;table class=&apos;appearance&apos;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&apos;wxmsw/calendarctrl.png&apos; alt=&apos;wxMSW appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxgtk/calendarctrl.png&apos; alt=&apos;wxGTK appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxmac/calendarctrl.png&apos; alt=&apos;wxMac appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;wxMSW appearance&lt;/td&gt;&lt;td&gt;wxGTK appearance&lt;/td&gt;&lt;td&gt;wxMac appearance&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt; </htmlonly></para><para>Implementations:<nonbreakablespace/><nonbreakablespace/>native under <ref refid="page_port_1page_port_wxgtk" kindref="member">wxGTK</ref>, <ref refid="page_port_1page_port_wxmsw" kindref="member">wxMSW</ref> ports; a generic implementation is used elsewhere.</para><para><simplesect kind="see"><para><ref refid="page_samples_1page_samples_calendar" kindref="member">Calendar Sample</ref>, <ref refid="classwx_calendar_date_attr" kindref="compound">wxCalendarDateAttr</ref>, <ref refid="classwx_calendar_event" kindref="compound">wxCalendarEvent</ref>, <ref refid="classwx_date_picker_ctrl" kindref="compound">wxDatePickerCtrl</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="4667">
+      <node id="4757">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="4666">
+      <node id="4756">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="4667" relation="public-inheritance">
+        <childnode refid="4757" relation="public-inheritance">
         </childnode>
-        <childnode refid="4668" relation="public-inheritance">
+        <childnode refid="4758" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4668">
+      <node id="4758">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="4664">
+      <node id="4754">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="4665" relation="public-inheritance">
+        <childnode refid="4755" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4665">
+      <node id="4755">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="4666" relation="public-inheritance">
+        <childnode refid="4756" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4663">
+      <node id="4753">
         <label>wxCalendarCtrl</label>
         <link refid="classwx_calendar_ctrl"/>
-        <childnode refid="4664" relation="public-inheritance">
+        <childnode refid="4754" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="4673">
+      <node id="4763">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="4674" relation="usage">
+        <childnode refid="4764" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="4672">
+      <node id="4762">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="4673" relation="public-inheritance">
+        <childnode refid="4763" relation="public-inheritance">
         </childnode>
-        <childnode refid="4675" relation="public-inheritance">
+        <childnode refid="4765" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4675">
+      <node id="4765">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="4670">
+      <node id="4760">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="4671" relation="public-inheritance">
+        <childnode refid="4761" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4671">
+      <node id="4761">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="4672" relation="public-inheritance">
+        <childnode refid="4762" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4674">
+      <node id="4764">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
-      <node id="4669">
+      <node id="4759">
         <label>wxCalendarCtrl</label>
         <link refid="classwx_calendar_ctrl"/>
-        <childnode refid="4670" relation="public-inheritance">
+        <childnode refid="4760" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/calctrl.h" line="266" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/calctrl.h" bodystart="265" bodyend="526"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/calctrl.h" line="305" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/calctrl.h" bodystart="304" bodyend="565"/>
     <listofallmembers>
       <member refid="classwx_window_1a3afbd49b1ea2f8275e3600dcac102923" prot="public" virt="virtual"><scope>wxCalendarCtrl</scope><name>AcceptsFocus</name></member>
       <member refid="classwx_window_1a2370bdd3ab08e7ef3c7555c6aa8301b8" prot="public" virt="virtual"><scope>wxCalendarCtrl</scope><name>AcceptsFocusFromKeyboard</name></member>
@@ -840,6 +840,7 @@
       <member refid="classwx_window_1aa90a260c0a835a133043460b7d0024a8" prot="public" virt="virtual"><scope>wxCalendarCtrl</scope><name>InitDialog</name></member>
       <member refid="classwx_window_1ae1b56ca87d8590ee5e576012229a380a" prot="public" virt="non-virtual"><scope>wxCalendarCtrl</scope><name>InvalidateBestSize</name></member>
       <member refid="classwx_window_1af918e6fe8565c2d5235973cc3de84a43" prot="public" virt="non-virtual"><scope>wxCalendarCtrl</scope><name>IsBeingDeleted</name></member>
+      <member refid="classwx_window_1a469f0881da248d37691440c9d4cc7200" prot="public" virt="non-virtual"><scope>wxCalendarCtrl</scope><name>IsDescendant</name></member>
       <member refid="classwx_window_1a9d1be1bbb625ebf87ad4ad47e49a0194" prot="public" virt="virtual"><scope>wxCalendarCtrl</scope><name>IsDoubleBuffered</name></member>
       <member refid="classwx_window_1a59452a5bd42f5ea4b31d7fc4aa59644f" prot="public" virt="non-virtual"><scope>wxCalendarCtrl</scope><name>IsEnabled</name></member>
       <member refid="classwx_window_1af27ef77c913e32050543f3b0ca435a0d" prot="public" virt="non-virtual"><scope>wxCalendarCtrl</scope><name>IsExposed</name></member>
@@ -855,13 +856,13 @@
       <member refid="classwx_window_1a72d70fd14e3565bf782fbcd3271d8930" prot="public" virt="virtual"><scope>wxCalendarCtrl</scope><name>IsShownOnScreen</name></member>
       <member refid="classwx_window_1a657ef8b6055eb06df894ac5e6ddfecf8" prot="public" virt="non-virtual"><scope>wxCalendarCtrl</scope><name>IsThisEnabled</name></member>
       <member refid="classwx_window_1a0002826ad05f2a5661b4c8995713f37f" prot="public" virt="virtual"><scope>wxCalendarCtrl</scope><name>IsTopLevel</name></member>
+      <member refid="classwx_window_1a7940d510c5bdc062a2b109a1022dd8c2" prot="public" virt="virtual"><scope>wxCalendarCtrl</scope><name>IsTransparentBackgroundSupported</name></member>
       <member refid="classwx_evt_handler_1a360fdeefcf53b62fb49fb828406bb8a6" prot="public" virt="non-virtual"><scope>wxCalendarCtrl</scope><name>IsUnlinked</name></member>
       <member refid="classwx_window_1a1b143c3e72bd0af533b76db4830a6113" prot="public" virt="virtual"><scope>wxCalendarCtrl</scope><name>Layout</name></member>
       <member refid="classwx_window_1ade808784f0e64d9985e2f279b5ca8c02" prot="public" virt="non-virtual"><scope>wxCalendarCtrl</scope><name>LineDown</name></member>
       <member refid="classwx_window_1afc0816a174ceee6d36d1995c6824a273" prot="public" virt="non-virtual"><scope>wxCalendarCtrl</scope><name>LineUp</name></member>
       <member refid="classwx_window_1a124944524f36b71385dad8fddaad8ded" prot="public" virt="virtual"><scope>wxCalendarCtrl</scope><name>Lower</name></member>
       <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxCalendarCtrl</scope><name>m_refData</name></member>
-      <member refid="classwx_window_1a192fc8b467845d093c16452db96c65c5" prot="public" virt="virtual"><scope>wxCalendarCtrl</scope><name>MakeModal</name></member>
       <member refid="classwx_calendar_ctrl_1a7273a1c06a5a838c0a2980dececdf4f0" prot="public" virt="virtual"><scope>wxCalendarCtrl</scope><name>Mark</name></member>
       <member refid="classwx_window_1ab1cb98c8d25b9e6ff7b706b1446c3df7" prot="public" virt="non-virtual"><scope>wxCalendarCtrl</scope><name>Move</name></member>
       <member refid="classwx_window_1a22a22c1e23ca05776707e7999d8047fe" prot="public" virt="non-virtual"><scope>wxCalendarCtrl</scope><name>Move</name></member>
@@ -991,7 +992,6 @@
       <member refid="classwx_window_1a88cc65e424a129d9b0057756cdb67ec9" prot="public" virt="virtual"><scope>wxCalendarCtrl</scope><name>TransferDataToWindow</name></member>
       <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxCalendarCtrl</scope><name>TryAfter</name></member>
       <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxCalendarCtrl</scope><name>TryBefore</name></member>
-      <member refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" virt="non-virtual"><scope>wxCalendarCtrl</scope><name>TryThis</name></member>
       <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxCalendarCtrl</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxCalendarCtrl</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a22e5db2ec1d19c8252c056fd116975d7" prot="public" virt="non-virtual"><scope>wxCalendarCtrl</scope><name>Unlink</name></member>

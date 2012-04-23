@@ -41,13 +41,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/txtstrm.h" line="177" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/txtstrm.h" bodystart="176" bodyend="197"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/txtstrm.h" line="177" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/txtstrm.h" bodystart="176" bodyend="197"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/txtstrm.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/txtstrm.h"/>
   </compounddef>
 </doxygen>

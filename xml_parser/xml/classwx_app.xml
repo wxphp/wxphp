@@ -17,7 +17,7 @@
 <para>Override this to create a new document in your app.</para><para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page_port_1page_port_wxosx" kindref="member">wxOSX</ref> port.  <onlyfor>wxosx</onlyfor>  </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" line="806"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/app.h" line="806"/>
       </memberdef>
       <memberdef kind="function" id="classwx_app_1a0cf8d83fc9e1a7b7f911f29f05127d24" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -35,7 +35,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" line="823"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/app.h" line="823"/>
       </memberdef>
       <memberdef kind="function" id="classwx_app_1a420a1cef557cfe2edaee6ffdaaa5f7fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -52,7 +52,7 @@
 <para><xrefsect id="deprecated_1_deprecated000002"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This function is kept mostly for backwards compatibility. Please override <ref refid="classwx_app_1a0cf8d83fc9e1a7b7f911f29f05127d24" kindref="member">wxApp::MacOpenFiles</ref> method instead in any new code.</para></xrefdescription></xrefsect></para><para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page_port_1page_port_wxosx" kindref="member">wxOSX</ref> port.  <onlyfor>wxosx</onlyfor>  </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" line="834"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/app.h" line="834"/>
       </memberdef>
       <memberdef kind="function" id="classwx_app_1a2c0ab6480ef6113488a5847a79044ac7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -69,7 +69,7 @@
 <para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page_port_1page_port_wxosx" kindref="member">wxOSX</ref> port.  <onlyfor>wxosx</onlyfor>  </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" line="841"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/app.h" line="841"/>
       </memberdef>
       <memberdef kind="function" id="classwx_app_1a1f6e5bc7e119f4394fddae1782acd047" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -86,7 +86,7 @@
 <para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page_port_1page_port_wxosx" kindref="member">wxOSX</ref> port.  <onlyfor>wxosx</onlyfor>  </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" line="848"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/app.h" line="848"/>
       </memberdef>
       <memberdef kind="function" id="classwx_app_1a2054c2fadff9170b91e474eb02c83227" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -99,127 +99,7 @@
 <para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page_port_1page_port_wxosx" kindref="member">wxOSX</ref> port.  <onlyfor>wxosx</onlyfor>  </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" line="855"/>
-      </memberdef>
-      <memberdef kind="function" id="classwx_app_1a15aa866b61f2a722e42c00882b79fa30" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>long</type>
-        <definition>static long wxApp::GetMacAboutMenuItemId</definition>
-        <argsstring>()</argsstring>
-        <name>GetMacAboutMenuItemId</name>
-        <briefdescription>
-<para>Called in response of an &quot;open-application&quot; Apple event. </para>        </briefdescription>
-        <detaileddescription>
-<para>Override this to create a new document in your app.</para><para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page_port_1page_port_wxosx" kindref="member">wxOSX</ref> port.  <onlyfor>wxosx</onlyfor>  </para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" line="858"/>
-      </memberdef>
-      <memberdef kind="function" id="classwx_app_1a15f0bba44849ea2ccf054fa4388b51d6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>long</type>
-        <definition>static long wxApp::GetMacPreferencesMenuItemId</definition>
-        <argsstring>()</argsstring>
-        <name>GetMacPreferencesMenuItemId</name>
-        <briefdescription>
-<para>Called in response of an &quot;open-application&quot; Apple event. </para>        </briefdescription>
-        <detaileddescription>
-<para>Override this to create a new document in your app.</para><para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page_port_1page_port_wxosx" kindref="member">wxOSX</ref> port.  <onlyfor>wxosx</onlyfor>  </para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" line="859"/>
-      </memberdef>
-      <memberdef kind="function" id="classwx_app_1ac201cc2b338e3b517d032e806c3f8528" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>long</type>
-        <definition>static long wxApp::GetMacExitMenuItemId</definition>
-        <argsstring>()</argsstring>
-        <name>GetMacExitMenuItemId</name>
-        <briefdescription>
-<para>Called in response of an &quot;open-application&quot; Apple event. </para>        </briefdescription>
-        <detaileddescription>
-<para>Override this to create a new document in your app.</para><para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page_port_1page_port_wxosx" kindref="member">wxOSX</ref> port.  <onlyfor>wxosx</onlyfor>  </para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" line="860"/>
-      </memberdef>
-      <memberdef kind="function" id="classwx_app_1ad5f3d7a4296e66389e964527929263a0" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
-        <definition>static wxString wxApp::GetMacHelpMenuTitleName</definition>
-        <argsstring>()</argsstring>
-        <name>GetMacHelpMenuTitleName</name>
-        <briefdescription>
-<para>Called in response of an &quot;open-application&quot; Apple event. </para>        </briefdescription>
-        <detaileddescription>
-<para>Override this to create a new document in your app.</para><para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page_port_1page_port_wxosx" kindref="member">wxOSX</ref> port.  <onlyfor>wxosx</onlyfor>  </para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" line="861"/>
-      </memberdef>
-      <memberdef kind="function" id="classwx_app_1abbf27aab1b2cb30c8c5fbe13cedfd1f8" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>static void wxApp::SetMacAboutMenuItemId</definition>
-        <argsstring>(long val)</argsstring>
-        <name>SetMacAboutMenuItemId</name>
-        <param>
-          <type>long</type>
-          <declname>val</declname>
-        </param>
-        <briefdescription>
-<para>Called in response of an &quot;open-application&quot; Apple event. </para>        </briefdescription>
-        <detaileddescription>
-<para>Override this to create a new document in your app.</para><para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page_port_1page_port_wxosx" kindref="member">wxOSX</ref> port.  <onlyfor>wxosx</onlyfor>  </para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" line="863"/>
-      </memberdef>
-      <memberdef kind="function" id="classwx_app_1aeb97a3d74c353702c1aaa0f5cae32d25" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>static void wxApp::SetMacPreferencesMenuItemId</definition>
-        <argsstring>(long val)</argsstring>
-        <name>SetMacPreferencesMenuItemId</name>
-        <param>
-          <type>long</type>
-          <declname>val</declname>
-        </param>
-        <briefdescription>
-<para>Called in response of an &quot;open-application&quot; Apple event. </para>        </briefdescription>
-        <detaileddescription>
-<para>Override this to create a new document in your app.</para><para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page_port_1page_port_wxosx" kindref="member">wxOSX</ref> port.  <onlyfor>wxosx</onlyfor>  </para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" line="864"/>
-      </memberdef>
-      <memberdef kind="function" id="classwx_app_1a0e2319c7d3f286829f3c79397ecd397c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>static void wxApp::SetMacExitMenuItemId</definition>
-        <argsstring>(long val)</argsstring>
-        <name>SetMacExitMenuItemId</name>
-        <param>
-          <type>long</type>
-          <declname>val</declname>
-        </param>
-        <briefdescription>
-<para>Called in response of an &quot;open-application&quot; Apple event. </para>        </briefdescription>
-        <detaileddescription>
-<para>Override this to create a new document in your app.</para><para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page_port_1page_port_wxosx" kindref="member">wxOSX</ref> port.  <onlyfor>wxosx</onlyfor>  </para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" line="865"/>
-      </memberdef>
-      <memberdef kind="function" id="classwx_app_1a302df5b1818d5ef9e66ac482cb15963c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>static void wxApp::SetMacHelpMenuTitleName</definition>
-        <argsstring>(const wxString &amp;val)</argsstring>
-        <name>SetMacHelpMenuTitleName</name>
-        <param>
-          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
-          <declname>val</declname>
-        </param>
-        <briefdescription>
-<para>Called in response of an &quot;open-application&quot; Apple event. </para>        </briefdescription>
-        <detaileddescription>
-<para>Override this to create a new document in your app.</para><para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page_port_1page_port_wxosx" kindref="member">wxOSX</ref> port.  <onlyfor>wxosx</onlyfor>  </para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" line="866"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/app.h" line="855"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -234,7 +114,7 @@
 <para>Called implicitly with a definition of a <ref refid="classwx_app" kindref="compound">wxApp</ref> object. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" line="628"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/app.h" line="628"/>
       </memberdef>
       <memberdef kind="function" id="classwx_app_1a25231a49945f24810016957bfd47ee9c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -247,7 +127,7 @@
 <para>Will be called implicitly on program exit if the <ref refid="classwx_app" kindref="compound">wxApp</ref> object is created on the stack. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" line="634"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/app.h" line="634"/>
       </memberdef>
       <memberdef kind="function" id="classwx_app_1a3eaf7422bab93bfd22e386dc9e818802" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="structwx_video_mode" kindref="compound">wxVideoMode</ref></type>
@@ -260,7 +140,7 @@
 <para>This is only used in framebuffer wxWidgets ports such as wxDFB. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" line="640"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/app.h" line="640"/>
       </memberdef>
       <memberdef kind="function" id="classwx_app_1aee1f79af6e680ea4031299ace9615a67" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -274,7 +154,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" line="647"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/app.h" line="647"/>
       </memberdef>
       <memberdef kind="function" id="classwx_app_1a8e1165d81e9cd2304a9417d31836b9a5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="intl_8h_1a7e30efec05ef9b40b1750ac046400c81" kindref="member">wxLayoutDirection</ref></type>
@@ -287,7 +167,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" line="653"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/app.h" line="653"/>
       </memberdef>
       <memberdef kind="function" id="classwx_app_1a62c50aefd224ad3d0b1db1925c25995d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -301,7 +181,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" line="661"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/app.h" line="661"/>
       </memberdef>
       <memberdef kind="function" id="classwx_app_1abc2b3305178f59f4024f492855c1bfdc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
@@ -316,7 +196,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" line="673"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/app.h" line="673"/>
       </memberdef>
       <memberdef kind="function" id="classwx_app_1aa3e51f8e47abc31ee00b0cdfd29b9bdf" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -329,7 +209,7 @@
 <para>if one of its windows is currently in the foreground.</para><para>If this function returns false and you need to attract users attention to the application, you may use <ref refid="classwx_top_level_window_1a749d23ea08f6273fb93fe2c003b650b3" kindref="member">wxTopLevelWindow::RequestUserAttention</ref> to do it. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" line="682"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/app.h" line="682"/>
       </memberdef>
       <memberdef kind="function" id="classwx_app_1a81cc0e2724a7adbc0cc8b0aeeb5a072f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -351,7 +231,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" line="693"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/app.h" line="693"/>
       </memberdef>
       <memberdef kind="function" id="classwx_app_1a1537cb1bb2e4b556c4f0e8b3a740a6f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -372,7 +252,7 @@
 <para>See wxAppConsole::YieldFor for more info. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" line="701"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/app.h" line="701"/>
       </memberdef>
       <memberdef kind="function" id="classwx_app_1a3759df64f7f4df0627627d3ca7299664" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -397,7 +277,7 @@
 </programlisting></para><para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page_port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor>  </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" line="726"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/app.h" line="726"/>
       </memberdef>
       <memberdef kind="function" id="classwx_app_1a4a1ed8a19b5e6992ec75f2d16177fc6e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -414,7 +294,7 @@
 <para>This is only used in framebuffer wxWidgets ports such as wxDFB. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" line="732"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/app.h" line="732"/>
       </memberdef>
       <memberdef kind="function" id="classwx_app_1aceb948ece9ba286f738ec3379a18bc52" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -440,7 +320,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" line="744"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/app.h" line="744"/>
       </memberdef>
       <memberdef kind="function" id="classwx_app_1a66e7bd3ff1d3b9ec44a3862a1ded663e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -465,7 +345,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" line="755"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/app.h" line="755"/>
       </memberdef>
       <memberdef kind="function" id="classwx_app_1a39033ec4c79bc1871c91ada7b31941e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -492,7 +372,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" line="774"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/app.h" line="774"/>
       </memberdef>
       <memberdef kind="function" id="classwx_app_1aaf48f6af563da066af2143afe6cf04c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -529,7 +409,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" line="792"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/app.h" line="792"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -549,85 +429,85 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__appmanagement" kindref="compound">Application and Process Management</ref></para><para><simplesect kind="see"><para><ref refid="overview_app" kindref="compound">wxApp Overview</ref>, <ref refid="classwx_app_traits" kindref="compound">wxAppTraits</ref>, <ref refid="classwx_event_loop_base" kindref="compound">wxEventLoopBase</ref>, <ref refid="classwx_system_settings" kindref="compound">wxSystemSettings</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="4282">
+      <node id="4365">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="4281">
+      <node id="4364">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="4282" relation="public-inheritance">
+        <childnode refid="4365" relation="public-inheritance">
         </childnode>
-        <childnode refid="4283" relation="public-inheritance">
+        <childnode refid="4366" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4283">
+      <node id="4366">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="4279">
+      <node id="4362">
         <label>wxApp</label>
         <link refid="classwx_app"/>
-        <childnode refid="4280" relation="public-inheritance">
+        <childnode refid="4363" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4280">
+      <node id="4363">
         <label>wxAppConsole</label>
         <link refid="classwx_app_console"/>
-        <childnode refid="4281" relation="public-inheritance">
+        <childnode refid="4364" relation="public-inheritance">
         </childnode>
-        <childnode refid="4284" relation="public-inheritance">
+        <childnode refid="4367" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4284">
+      <node id="4367">
         <label>wxEventFilter</label>
         <link refid="classwx_event_filter"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="4288">
+      <node id="4371">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="4289" relation="usage">
+        <childnode refid="4372" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="4287">
+      <node id="4370">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="4288" relation="public-inheritance">
+        <childnode refid="4371" relation="public-inheritance">
         </childnode>
-        <childnode refid="4290" relation="public-inheritance">
+        <childnode refid="4373" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4290">
+      <node id="4373">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="4285">
+      <node id="4368">
         <label>wxApp</label>
         <link refid="classwx_app"/>
-        <childnode refid="4286" relation="public-inheritance">
+        <childnode refid="4369" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4286">
+      <node id="4369">
         <label>wxAppConsole</label>
         <link refid="classwx_app_console"/>
-        <childnode refid="4287" relation="public-inheritance">
+        <childnode refid="4370" relation="public-inheritance">
         </childnode>
-        <childnode refid="4291" relation="public-inheritance">
+        <childnode refid="4374" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4291">
+      <node id="4374">
         <label>wxEventFilter</label>
         <link refid="classwx_event_filter"/>
       </node>
-      <node id="4289">
+      <node id="4372">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" line="623" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" bodystart="622" bodyend="870"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/app.h" line="623" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/app.h" bodystart="622" bodyend="859"/>
     <listofallmembers>
       <member refid="classwx_evt_handler_1a7dc3c701781f4044372049de5004137e" prot="public" virt="non-virtual"><scope>wxApp</scope><name>AddFilter</name></member>
       <member refid="classwx_evt_handler_1a0737c6d2cbcd5ded4b1ecdd53ed0def3" prot="public" virt="virtual"><scope>wxApp</scope><name>AddPendingEvent</name></member>
@@ -646,9 +526,9 @@
       <member refid="classwx_evt_handler_1a13061cf0ed01ac10a804ac057ef4bdbc" prot="public" virt="non-virtual"><scope>wxApp</scope><name>Disconnect</name></member>
       <member refid="classwx_evt_handler_1a2f171e19444b9c4034c5e11f24fa9c91" prot="public" virt="non-virtual"><scope>wxApp</scope><name>Disconnect</name></member>
       <member refid="classwx_evt_handler_1a16a6f823853e4b74b43dd9a2cf3abee6" prot="public" virt="non-virtual"><scope>wxApp</scope><name>Disconnect</name></member>
-      <member refid="classwx_event_filter_1a35d6b67209fb2293e927cf19f95e7da1aa2b35768d0be474ac339b9162c0db85a" prot="public" virt="non-virtual"><scope>wxApp</scope><name>Event_Ignore</name></member>
-      <member refid="classwx_event_filter_1a35d6b67209fb2293e927cf19f95e7da1a6d508074572ecf366e3c3b537bcba776" prot="public" virt="non-virtual"><scope>wxApp</scope><name>Event_Processed</name></member>
-      <member refid="classwx_event_filter_1a35d6b67209fb2293e927cf19f95e7da1ae3620010ea8dc45c4547052a75fe51da" prot="public" virt="non-virtual"><scope>wxApp</scope><name>Event_Skip</name></member>
+      <member refid="classwx_event_filter_1ae89e8a66a4dfab0d4efc4bd55fa40b2faa2b35768d0be474ac339b9162c0db85a" prot="public" virt="non-virtual"><scope>wxApp</scope><name>Event_Ignore</name></member>
+      <member refid="classwx_event_filter_1ae89e8a66a4dfab0d4efc4bd55fa40b2fa6d508074572ecf366e3c3b537bcba776" prot="public" virt="non-virtual"><scope>wxApp</scope><name>Event_Processed</name></member>
+      <member refid="classwx_event_filter_1ae89e8a66a4dfab0d4efc4bd55fa40b2fae3620010ea8dc45c4547052a75fe51da" prot="public" virt="non-virtual"><scope>wxApp</scope><name>Event_Skip</name></member>
       <member refid="classwx_app_console_1ad0f1e724efa8ae1e94cde655c74c85dc" prot="public" virt="virtual"><scope>wxApp</scope><name>ExitMainLoop</name></member>
       <member refid="classwx_app_console_1ada7ab606e014a10d46e4b3c6f602e20c" prot="public" virt="virtual"><scope>wxApp</scope><name>FilterEvent</name></member>
       <member refid="classwx_app_console_1a83aa5fdf1e636dc441b62ceb95c8bf5a" prot="public" virt="non-virtual"><scope>wxApp</scope><name>GetAppDisplayName</name></member>
@@ -662,10 +542,6 @@
       <member refid="classwx_app_1aee1f79af6e680ea4031299ace9615a67" prot="public" virt="non-virtual"><scope>wxApp</scope><name>GetExitOnFrameDelete</name></member>
       <member refid="classwx_app_console_1a2cb953d248e41fd5bdb95ade98311ad3" prot="public" virt="non-virtual"><scope>wxApp</scope><name>GetInstance</name></member>
       <member refid="classwx_app_1a8e1165d81e9cd2304a9417d31836b9a5" prot="public" virt="virtual"><scope>wxApp</scope><name>GetLayoutDirection</name></member>
-      <member refid="classwx_app_1a15aa866b61f2a722e42c00882b79fa30" prot="public" virt="non-virtual"><scope>wxApp</scope><name>GetMacAboutMenuItemId</name></member>
-      <member refid="classwx_app_1ac201cc2b338e3b517d032e806c3f8528" prot="public" virt="non-virtual"><scope>wxApp</scope><name>GetMacExitMenuItemId</name></member>
-      <member refid="classwx_app_1ad5f3d7a4296e66389e964527929263a0" prot="public" virt="non-virtual"><scope>wxApp</scope><name>GetMacHelpMenuTitleName</name></member>
-      <member refid="classwx_app_1a15f0bba44849ea2ccf054fa4388b51d6" prot="public" virt="non-virtual"><scope>wxApp</scope><name>GetMacPreferencesMenuItemId</name></member>
       <member refid="classwx_app_console_1a131ba350b1be3ef88a764170c59d8e40" prot="public" virt="non-virtual"><scope>wxApp</scope><name>GetMainLoop</name></member>
       <member refid="classwx_evt_handler_1a4b2f853f5c7a64432ae72f9b606698f9" prot="public" virt="non-virtual"><scope>wxApp</scope><name>GetNextHandler</name></member>
       <member refid="classwx_evt_handler_1aad1ba7fa9ccbf12ee2d80f5f12350adb" prot="public" virt="non-virtual"><scope>wxApp</scope><name>GetPreviousHandler</name></member>
@@ -728,10 +604,6 @@
       <member refid="classwx_evt_handler_1a7388ae19c8657e5656471b658c320036" prot="public" virt="non-virtual"><scope>wxApp</scope><name>SetEvtHandlerEnabled</name></member>
       <member refid="classwx_app_1aceb948ece9ba286f738ec3379a18bc52" prot="public" virt="non-virtual"><scope>wxApp</scope><name>SetExitOnFrameDelete</name></member>
       <member refid="classwx_app_console_1a7ca751aa37cd3f920e20d9d967ad413d" prot="public" virt="non-virtual"><scope>wxApp</scope><name>SetInstance</name></member>
-      <member refid="classwx_app_1abbf27aab1b2cb30c8c5fbe13cedfd1f8" prot="public" virt="non-virtual"><scope>wxApp</scope><name>SetMacAboutMenuItemId</name></member>
-      <member refid="classwx_app_1a0e2319c7d3f286829f3c79397ecd397c" prot="public" virt="non-virtual"><scope>wxApp</scope><name>SetMacExitMenuItemId</name></member>
-      <member refid="classwx_app_1a302df5b1818d5ef9e66ac482cb15963c" prot="public" virt="non-virtual"><scope>wxApp</scope><name>SetMacHelpMenuTitleName</name></member>
-      <member refid="classwx_app_1aeb97a3d74c353702c1aaa0f5cae32d25" prot="public" virt="non-virtual"><scope>wxApp</scope><name>SetMacPreferencesMenuItemId</name></member>
       <member refid="classwx_app_1a66e7bd3ff1d3b9ec44a3862a1ded663e" prot="public" virt="virtual"><scope>wxApp</scope><name>SetNativeTheme</name></member>
       <member refid="classwx_evt_handler_1a68e2ef2d2b7d68c4c9c18ca92933031b" prot="public" virt="virtual"><scope>wxApp</scope><name>SetNextHandler</name></member>
       <member refid="classwx_evt_handler_1aff0d1836464be82e2ad723ad3a58eccc" prot="public" virt="virtual"><scope>wxApp</scope><name>SetPreviousHandler</name></member>
@@ -743,7 +615,6 @@
       <member refid="classwx_app_console_1af892210f0e50a1c7df9ae39280cbc972" prot="public" virt="non-virtual"><scope>wxApp</scope><name>SuspendProcessingOfPendingEvents</name></member>
       <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxApp</scope><name>TryAfter</name></member>
       <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxApp</scope><name>TryBefore</name></member>
-      <member refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" virt="non-virtual"><scope>wxApp</scope><name>TryThis</name></member>
       <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxApp</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxApp</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a22e5db2ec1d19c8252c056fd116975d7" prot="public" virt="non-virtual"><scope>wxApp</scope><name>Unlink</name></member>

@@ -8,9 +8,9 @@
     <innerclass refid="classwx_renderer_native" prot="public">wxRendererNative</innerclass>
     <innerclass refid="structwx_renderer_version" prot="public">wxRendererVersion</innerclass>
       <sectiondef kind="enum">
-      <memberdef kind="enum" id="renderer_8h_1af9bdc3014f3d54c426b6d2df10de4960" prot="public" static="no">
-        <name>@19</name>
-        <enumvalue id="renderer_8h_1af9bdc3014f3d54c426b6d2df10de4960a3d8d7abd0ed48af0a6bc3f1fbbebc9b4" prot="public">
+      <memberdef kind="enum" id="renderer_8h_1a0944a4353780132eeab7b06e3e42291d" prot="public" static="no">
+        <name>@31</name>
+        <enumvalue id="renderer_8h_1a0944a4353780132eeab7b06e3e42291da3d8d7abd0ed48af0a6bc3f1fbbebc9b4" prot="public">
           <name>wxCONTROL_DISABLED</name>
           <initializer> 0x00000001</initializer>
           <briefdescription>
@@ -18,7 +18,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="renderer_8h_1af9bdc3014f3d54c426b6d2df10de4960a7194487636dc1f9af9cdf11a6a107863" prot="public">
+        <enumvalue id="renderer_8h_1a0944a4353780132eeab7b06e3e42291da7194487636dc1f9af9cdf11a6a107863" prot="public">
           <name>wxCONTROL_FOCUSED</name>
           <initializer> 0x00000002</initializer>
           <briefdescription>
@@ -26,7 +26,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="renderer_8h_1af9bdc3014f3d54c426b6d2df10de4960a880591308e5be5f18833feebe58425b8" prot="public">
+        <enumvalue id="renderer_8h_1a0944a4353780132eeab7b06e3e42291da880591308e5be5f18833feebe58425b8" prot="public">
           <name>wxCONTROL_PRESSED</name>
           <initializer> 0x00000004</initializer>
           <briefdescription>
@@ -34,7 +34,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="renderer_8h_1af9bdc3014f3d54c426b6d2df10de4960a1812ed91a039f91ce229c905a00d0216" prot="public">
+        <enumvalue id="renderer_8h_1a0944a4353780132eeab7b06e3e42291da1812ed91a039f91ce229c905a00d0216" prot="public">
           <name>wxCONTROL_SPECIAL</name>
           <initializer> 0x00000008</initializer>
           <briefdescription>
@@ -42,7 +42,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="renderer_8h_1af9bdc3014f3d54c426b6d2df10de4960a458826f35f89551784b650217feefe80" prot="public">
+        <enumvalue id="renderer_8h_1a0944a4353780132eeab7b06e3e42291da458826f35f89551784b650217feefe80" prot="public">
           <name>wxCONTROL_ISDEFAULT</name>
           <initializer> wxCONTROL_SPECIAL</initializer>
           <briefdescription>
@@ -50,7 +50,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="renderer_8h_1af9bdc3014f3d54c426b6d2df10de4960ade0a98cf24183e9338e16d3766be978a" prot="public">
+        <enumvalue id="renderer_8h_1a0944a4353780132eeab7b06e3e42291dade0a98cf24183e9338e16d3766be978a" prot="public">
           <name>wxCONTROL_ISSUBMENU</name>
           <initializer> wxCONTROL_SPECIAL</initializer>
           <briefdescription>
@@ -58,7 +58,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="renderer_8h_1af9bdc3014f3d54c426b6d2df10de4960a4d958d4815a78ed713f281c44bf7df55" prot="public">
+        <enumvalue id="renderer_8h_1a0944a4353780132eeab7b06e3e42291da4d958d4815a78ed713f281c44bf7df55" prot="public">
           <name>wxCONTROL_EXPANDED</name>
           <initializer> wxCONTROL_SPECIAL</initializer>
           <briefdescription>
@@ -66,7 +66,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="renderer_8h_1af9bdc3014f3d54c426b6d2df10de4960a3e4eaca40b36dc7cddfb9a5f5f3e3abe" prot="public">
+        <enumvalue id="renderer_8h_1a0944a4353780132eeab7b06e3e42291da3e4eaca40b36dc7cddfb9a5f5f3e3abe" prot="public">
           <name>wxCONTROL_SIZEGRIP</name>
           <initializer> wxCONTROL_SPECIAL</initializer>
           <briefdescription>
@@ -74,7 +74,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="renderer_8h_1af9bdc3014f3d54c426b6d2df10de4960a7e8a12ce9aedf8cf53fd4e409809dd90" prot="public">
+        <enumvalue id="renderer_8h_1a0944a4353780132eeab7b06e3e42291da7e8a12ce9aedf8cf53fd4e409809dd90" prot="public">
           <name>wxCONTROL_FLAT</name>
           <initializer> wxCONTROL_SPECIAL</initializer>
           <briefdescription>
@@ -82,7 +82,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="renderer_8h_1af9bdc3014f3d54c426b6d2df10de4960a3ecb8ed1c903bf33cbecc6000f934ca4" prot="public">
+        <enumvalue id="renderer_8h_1a0944a4353780132eeab7b06e3e42291da3ecb8ed1c903bf33cbecc6000f934ca4" prot="public">
           <name>wxCONTROL_CURRENT</name>
           <initializer> 0x00000010</initializer>
           <briefdescription>
@@ -90,7 +90,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="renderer_8h_1af9bdc3014f3d54c426b6d2df10de4960ab6ab58986de34143ef72614ab9b27c84" prot="public">
+        <enumvalue id="renderer_8h_1a0944a4353780132eeab7b06e3e42291dab6ab58986de34143ef72614ab9b27c84" prot="public">
           <name>wxCONTROL_SELECTED</name>
           <initializer> 0x00000020</initializer>
           <briefdescription>
@@ -98,7 +98,7 @@
           <detaileddescription>
 <para>listbox. </para>          </detaileddescription>
         </enumvalue>
-        <enumvalue id="renderer_8h_1af9bdc3014f3d54c426b6d2df10de4960a7dae428efe63276e0890216073c46b9b" prot="public">
+        <enumvalue id="renderer_8h_1a0944a4353780132eeab7b06e3e42291da7dae428efe63276e0890216073c46b9b" prot="public">
           <name>wxCONTROL_CHECKED</name>
           <initializer> 0x00000040</initializer>
           <briefdescription>
@@ -106,7 +106,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="renderer_8h_1af9bdc3014f3d54c426b6d2df10de4960a2bc2c9944ab1d50181afa49b543bae7c" prot="public">
+        <enumvalue id="renderer_8h_1a0944a4353780132eeab7b06e3e42291da2bc2c9944ab1d50181afa49b543bae7c" prot="public">
           <name>wxCONTROL_CHECKABLE</name>
           <initializer> 0x00000080</initializer>
           <briefdescription>
@@ -114,7 +114,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="renderer_8h_1af9bdc3014f3d54c426b6d2df10de4960a5aebeecd7eb3312e58d0c7e761c016de" prot="public">
+        <enumvalue id="renderer_8h_1a0944a4353780132eeab7b06e3e42291da5aebeecd7eb3312e58d0c7e761c016de" prot="public">
           <name>wxCONTROL_UNDETERMINED</name>
           <initializer> wxCONTROL_CHECKABLE</initializer>
           <briefdescription>
@@ -128,7 +128,7 @@
 <para><anchor id="renderer_8h_1wxCONTROL_FLAGS"/></para><para>The following rendering flags are defined for <ref refid="classwx_renderer_native" kindref="compound">wxRendererNative</ref>: </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/renderer.h" line="15" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/renderer.h" bodystart="14" bodyend="57"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/renderer.h" line="15" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/renderer.h" bodystart="14" bodyend="57"/>
       </memberdef>
       <memberdef kind="enum" id="renderer_8h_1ae435532b3f5fb0268b6c0375621eb180" prot="public" static="no">
         <name>wxTitleBarButton</name>
@@ -178,7 +178,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/renderer.h" line="63" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/renderer.h" bodystart="62" bodyend="69"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/renderer.h" line="63" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/renderer.h" bodystart="62" bodyend="69"/>
       </memberdef>
       <memberdef kind="enum" id="renderer_8h_1a9902390625d1f5ae05a28f6b5ff56f5e" prot="public" static="no">
         <name>wxHeaderSortIconType</name>
@@ -209,13 +209,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/renderer.h" line="135" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/renderer.h" bodystart="134" bodyend="139"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/renderer.h" line="135" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/renderer.h" bodystart="134" bodyend="139"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/renderer.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/renderer.h"/>
   </compounddef>
 </doxygen>

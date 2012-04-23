@@ -20,7 +20,7 @@
 <para>The parameter could be NULL in which case nothing is done. If <emphasis>grid</emphasis> is non-NULL then the grid must exist for longer than this <ref refid="classwx_grid_update_locker" kindref="compound">wxGridUpdateLocker</ref> object itself.</para><para>The default constructor could be followed by a call to <ref refid="classwx_grid_update_locker_1a43089db17a5ef1a315c6700e20cf71ac" kindref="member">Create()</ref> to set the grid object later. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="4181"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="4253"/>
       </memberdef>
       <memberdef kind="function" id="classwx_grid_update_locker_1a113526734475b92e808dc474d8cb89a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -33,7 +33,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="4187"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="4259"/>
       </memberdef>
       <memberdef kind="function" id="classwx_grid_update_locker_1a43089db17a5ef1a315c6700e20cf71ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -50,7 +50,7 @@
 <para>It must not be called more than once. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="4193"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="4265"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -69,7 +69,7 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 </programlisting></para><para>Using this class is easier and safer than calling <ref refid="classwx_grid_1ae51929a4e2843e246abe01d79c5a9183" kindref="member">wxGrid::BeginBatch()</ref> and <ref refid="classwx_grid_1a2f1a59dabc5875761c81b588604451ff" kindref="member">wxGrid::EndBatch()</ref> because you don&apos;t risk missing the call the latter (due to an exception for example).</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__grid" kindref="compound">Grid Related Classes</ref> </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="4170" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" bodystart="4169" bodyend="4194"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="4242" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" bodystart="4241" bodyend="4266"/>
     <listofallmembers>
       <member refid="classwx_grid_update_locker_1a43089db17a5ef1a315c6700e20cf71ac" prot="public" virt="non-virtual"><scope>wxGridUpdateLocker</scope><name>Create</name></member>
       <member refid="classwx_grid_update_locker_1a13605827243de9ed1c0864fbd055cb8f" prot="public" virt="non-virtual"><scope>wxGridUpdateLocker</scope><name>wxGridUpdateLocker</name></member>

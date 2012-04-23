@@ -46,7 +46,7 @@
 <para>Notice that the base class <ref refid="classwx_grid_corner_header_renderer_1ae645864cfd4fe4be47522b2151ee2e45" kindref="member">DrawBorder()</ref> method is called before this one.</para><para>The default implementation uses <ref refid="classwx_grid_1a041d3b0e941945eb1578ba1ea05b9d5b" kindref="member">wxGrid::GetLabelTextColour()</ref> and <ref refid="classwx_grid_1a1ab54c5e05306ca3e1dcfe3a68220b5e" kindref="member">wxGrid::GetLabelFont()</ref> to draw the label. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="976"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="976"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -56,54 +56,54 @@
 <simplesect kind="since"><para>2.9.1 </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="6794">
+      <node id="6964">
         <label>wxGridHeaderLabelsRenderer</label>
         <link refid="classwx_grid_header_labels_renderer"/>
-        <childnode refid="6795" relation="public-inheritance">
+        <childnode refid="6965" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6795">
+      <node id="6965">
         <label>wxGridCornerHeaderRenderer</label>
         <link refid="classwx_grid_corner_header_renderer"/>
       </node>
-      <node id="6796">
+      <node id="6966">
         <label>wxGridColumnHeaderRenderer</label>
         <link refid="classwx_grid_column_header_renderer"/>
-        <childnode refid="6794" relation="public-inheritance">
+        <childnode refid="6964" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6798">
+      <node id="6968">
         <label>wxGridRowHeaderRenderer</label>
         <link refid="classwx_grid_row_header_renderer"/>
-        <childnode refid="6794" relation="public-inheritance">
+        <childnode refid="6964" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6799">
+      <node id="6969">
         <label>wxGridRowHeaderRendererDefault</label>
         <link refid="classwx_grid_row_header_renderer_default"/>
-        <childnode refid="6798" relation="public-inheritance">
+        <childnode refid="6968" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6797">
+      <node id="6967">
         <label>wxGridColumnHeaderRendererDefault</label>
         <link refid="classwx_grid_column_header_renderer_default"/>
-        <childnode refid="6796" relation="public-inheritance">
+        <childnode refid="6966" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="6800">
+      <node id="6970">
         <label>wxGridHeaderLabelsRenderer</label>
         <link refid="classwx_grid_header_labels_renderer"/>
-        <childnode refid="6801" relation="public-inheritance">
+        <childnode refid="6971" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6801">
+      <node id="6971">
         <label>wxGridCornerHeaderRenderer</label>
         <link refid="classwx_grid_corner_header_renderer"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="959" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" bodystart="958" bodyend="977"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="959" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" bodystart="958" bodyend="977"/>
     <listofallmembers>
       <member refid="classwx_grid_corner_header_renderer_1ae645864cfd4fe4be47522b2151ee2e45" prot="public" virt="pure-virtual"><scope>wxGridHeaderLabelsRenderer</scope><name>DrawBorder</name></member>
       <member refid="classwx_grid_header_labels_renderer_1adc92b8e48a5e88b1c91c5d50e37846ea" prot="public" virt="virtual"><scope>wxGridHeaderLabelsRenderer</scope><name>DrawLabel</name></member>

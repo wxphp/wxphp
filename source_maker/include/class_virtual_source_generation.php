@@ -34,8 +34,10 @@ function class_virtual_method_parameters_to_zvals($method_definition, $method_na
 	$output .= "//Parameters for conversion\n\t";
 	foreach($method_definition[$parameter_types] as $parameter_index=>$parameter_type)
 	{
+		$parameter_is_array = $method_definition["parameters_is_array"][$parameter_index];
+		
 		$argument_type_modifier = "";
-		$standard_parameter_type = parameter_type($parameter_type, $method_name, $class_name, $argument_type_modifier);
+		$standard_parameter_type = parameter_type($parameter_type, $parameter_is_array, $method_name, $class_name, $argument_type_modifier);
 		$return_type = str_replace(array("const ", "&", "*"), "", $parameter_type);
 		
 		switch($standard_parameter_type)
@@ -161,19 +163,19 @@ function class_virtual_method_parameters_to_zvals($method_definition, $method_na
 					case "pointer":
 					case "const_pointer":
 						$output .= "object_init_ex(arguments[$parameter_index], php_{$return_type}_entry);\n";
-						$output .= "\tadd_property_resource(arguments[$parameter_index], _wxResource, zend_list_insert(".$method_definition[$parameter_names][$parameter_index].", le_{$return_type}));\n";
+						$output .= "\tadd_property_resource(arguments[$parameter_index], _wxResource, zend_list_insert((void*)".$method_definition[$parameter_names][$parameter_index].", le_{$return_type}));\n";
 						break;
 				
 					case "reference":
 					case "const_reference":
 						$output .= "object_init_ex(arguments[$parameter_index], php_{$return_type}_entry);\n";
-						$output .= "\tadd_property_resource(arguments[$parameter_index], _wxResource, zend_list_insert(&".$method_definition[$parameter_names][$parameter_index].", le_{$return_type}));\n";
+						$output .= "\tadd_property_resource(arguments[$parameter_index], _wxResource, zend_list_insert((void*)&".$method_definition[$parameter_names][$parameter_index].", le_{$return_type}));\n";
 						break;
 						
 					case "none":
 					case "const_none":
 						$output .= "object_init_ex(arguments[$parameter_index], php_{$return_type}_entry);\n";
-						$output .= "\tadd_property_resource(arguments[$parameter_index], _wxResource, zend_list_insert(&".$method_definition[$parameter_names][$parameter_index].", le_{$return_type}));\n";
+						$output .= "\tadd_property_resource(arguments[$parameter_index], _wxResource, zend_list_insert((void*)&".$method_definition[$parameter_names][$parameter_index].", le_{$return_type}));\n";
 						break;
 				}
 				break;
@@ -181,7 +183,7 @@ function class_virtual_method_parameters_to_zvals($method_definition, $method_na
 				
 			default: 
 				ob_clean();
-				die("Virtual Unhandled type " . parameter_type($parameter_type, $method_name, $class_name) . " on class '$class_name' at method '$method_name'\n");
+				die("Virtual Unhandled type " . parameter_type($parameter_type, $parameter_is_array, $method_name, $class_name) . " on class '$class_name' at method '$method_name'\n");
 		}
 		
 		$output .= "\t";
@@ -208,7 +210,8 @@ function class_virtual_method_return($method_definition, $method_name, $class_na
 	$output = "";
 	
 	$return_type_modifier = "";
-	$standard_parameter_type = parameter_type($method_definition[$function_return_types], $method_name, $class_name, $return_type_modifier);
+	$standard_parameter_type = parameter_type($method_definition[$function_return_types], false, $method_name, $class_name, $return_type_modifier);
+	$return_type = str_replace(array("const ", "&", "*"), "", $method_definition[$function_return_types]);
 	
 	switch($standard_parameter_type)
 	{
@@ -221,32 +224,42 @@ function class_virtual_method_return($method_definition, $method_name, $class_na
 		case	"class_enum":
 		case	"global_enum":
 		{
-			$output = "return Z_LVAL_P(return_value);\n";
+			$output .= "return ($return_type) Z_LVAL_P(return_value);\n";
 			break;
 		}
 		case	"float":
 		{
-			$output = "return Z_DVAL_P(return_value);\n";
+			$output .= "return Z_DVAL_P(return_value);\n";
 			break;
 		}
 		case	"characters":
 		{
-			$output = "return Z_STRVAL_P(return_value);\n";
+			$output .= "return Z_STRVAL_P(return_value);\n";
 			break;
 		}
 		case "void":
 		{
-			$output .= "return;\n";
+			switch($return_type_modifier)
+			{
+				case "const_pointer":
+				case "pointer":
+					$output .= "return (void*) Z_STRVAL_P(return_value);\n";
+					break;
+				
+				default:	
+					$output .= "return;\n";
+					break;
+			}
 			break;
 		}
 		case	"date":
 		{
-			$output = "return wxDateTime(Z_LVAL_P(return_value));\n";
+			$output .= "return wxDateTime(Z_LVAL_P(return_value));\n";
 			break;
 		}		
 		case	"string":
 		{
-			$output = "return wxString(Z_STRVAL_P(return_value), wxConvUTF8);\n";
+			$output .= "return wxString(Z_STRVAL_P(return_value), wxConvUTF8);\n";
 			break;
 		}	
 		/*case "strings_array":
@@ -259,10 +272,6 @@ function class_virtual_method_return($method_definition, $method_name, $class_na
 			$output .= "\t\t{\n";
 			$output .= "\t\t\tid_to_find = Z_RESVAL_P(*tmp);\n";
 			$output .= "\t\t\treturn_object = zend_list_find(id_to_find, &rsrc_type);\n";
-			$output .= "\t\t}\n";
-			$output .= "\t\telse if(Z_TYPE_P(return_value) == IS_LONG)\n";
-			$output .= "\t\t{\n";
-			$output .= "\t\t\treturn_object = Z_LVAL_P(return_value);\n";
 			$output .= "\t\t}\n";
 			
 			switch($return_type_modifier)

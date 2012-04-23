@@ -23,7 +23,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/headercol.h" line="201"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/headercol.h" line="201"/>
       </memberdef>
       <memberdef kind="function" id="classwx_settable_header_column_1a8cf3f4e113b8192fce88f06b44ad5728" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -41,7 +41,7 @@
 <para>Notice that the bitmaps displayed in different columns of the same control must all be of the same size. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/headercol.h" line="209"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/headercol.h" line="209"/>
       </memberdef>
       <memberdef kind="function" id="classwx_settable_header_column_1aac89bf5d893ccf57c3e50e3d1acbebea" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -67,7 +67,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/headercol.h" line="219"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/headercol.h" line="219"/>
       </memberdef>
       <memberdef kind="function" id="classwx_settable_header_column_1a83af483273d0a5263377a83800a3dad3" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -93,7 +93,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/headercol.h" line="233"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/headercol.h" line="233"/>
       </memberdef>
       <memberdef kind="function" id="classwx_settable_header_column_1a6b516a1b80ebe8d336ea31e29d9ded00" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -119,7 +119,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/headercol.h" line="246"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/headercol.h" line="246"/>
       </memberdef>
       <memberdef kind="function" id="classwx_settable_header_column_1aaeebec7c145f5b36914694fa231df528" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -145,7 +145,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/headercol.h" line="261"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/headercol.h" line="261"/>
       </memberdef>
       <memberdef kind="function" id="classwx_settable_header_column_1ae4c0570355a3c4b712352457c925a7dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -182,7 +182,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/headercol.h" line="274"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/headercol.h" line="274"/>
       </memberdef>
       <memberdef kind="function" id="classwx_settable_header_column_1a71eddf8ebeb18d55d10fd40cc457aa97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -200,7 +200,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/headercol.h" line="281"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/headercol.h" line="281"/>
       </memberdef>
       <memberdef kind="function" id="classwx_settable_header_column_1afb2fa0ed8e8e729d16ff9fefe9e41a26" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -218,7 +218,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/headercol.h" line="288"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/headercol.h" line="288"/>
       </memberdef>
       <memberdef kind="function" id="classwx_settable_header_column_1a4734d269e6b4454aae75eb3641f4b023" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -236,7 +236,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/headercol.h" line="298"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/headercol.h" line="298"/>
       </memberdef>
       <memberdef kind="function" id="classwx_settable_header_column_1ac8996814e5625c634ed71d932071c6c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -253,7 +253,7 @@
 <para>By default, the columns are resizable.</para><para>Equivalent to ChangeFlag(wxCOL_RESIZABLE, resizable). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/headercol.h" line="309"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/headercol.h" line="309"/>
       </memberdef>
       <memberdef kind="function" id="classwx_settable_header_column_1afa46b4fd0a56898b3e2d5cc8e4401757" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -270,7 +270,7 @@
 <para>By default, the columns are not sortable so you need to explicitly call this function to allow sorting by the field corresponding to this column.</para><para>Equivalent to ChangeFlag(wxCOL_SORTABLE, sortable). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/headercol.h" line="321"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/headercol.h" line="321"/>
       </memberdef>
       <memberdef kind="function" id="classwx_settable_header_column_1a954858d4987d17a2f8fa30ef84ad2445" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -287,7 +287,7 @@
 <para>Equivalent to ChangeFlag(wxCOL_REORDERABLE, reorderable). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/headercol.h" line="328"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/headercol.h" line="328"/>
       </memberdef>
       <memberdef kind="function" id="classwx_settable_header_column_1a92740fb99132c52fd91f333d703b0410" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -304,7 +304,7 @@
 <para>By default all columns are shown but some of them can be completely hidden from view by calling this function.</para><para>Equivalent to ChangeFlag(wxCOL_HIDDEN, hidden). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/headercol.h" line="338"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/headercol.h" line="338"/>
       </memberdef>
       <memberdef kind="function" id="classwx_settable_header_column_1a9f045a0c1f080d10600c8680b6e7a5b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -317,7 +317,7 @@
 <para>This is the reverse of <ref refid="classwx_settable_header_column_1a360deabbdb9ede8c9e616d460f276124" kindref="member">SetSortOrder()</ref> and is called to indicate that this column is not used for sorting any longer. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/headercol.h" line="347"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/headercol.h" line="347"/>
       </memberdef>
       <memberdef kind="function" id="classwx_settable_header_column_1a360deabbdb9ede8c9e616d460f276124" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -343,7 +343,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/headercol.h" line="365"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/headercol.h" line="365"/>
       </memberdef>
       <memberdef kind="function" id="classwx_settable_header_column_1a85f9c3278526a0f60b79fd32607d31bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -357,7 +357,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/headercol.h" line="376"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/headercol.h" line="376"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -366,42 +366,42 @@
 <para>This class adds setters for the column attributes defined by <ref refid="classwx_header_column" kindref="compound">wxHeaderColumn</ref>. It is still an abstract base class and needs to be implemented before using it with <ref refid="classwx_header_ctrl" kindref="compound">wxHeaderCtrl</ref>.</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10159">
+      <node id="10342">
         <label>wxSettableHeaderColumn</label>
         <link refid="classwx_settable_header_column"/>
-        <childnode refid="10160" relation="public-inheritance">
+        <childnode refid="10343" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10160">
+      <node id="10343">
         <label>wxHeaderColumn</label>
         <link refid="classwx_header_column"/>
       </node>
-      <node id="10161">
+      <node id="10344">
         <label>wxDataViewColumn</label>
         <link refid="classwx_data_view_column"/>
-        <childnode refid="10159" relation="public-inheritance">
+        <childnode refid="10342" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10162">
+      <node id="10345">
         <label>wxHeaderColumnSimple</label>
         <link refid="classwx_header_column_simple"/>
-        <childnode refid="10159" relation="public-inheritance">
+        <childnode refid="10342" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10163">
+      <node id="10346">
         <label>wxSettableHeaderColumn</label>
         <link refid="classwx_settable_header_column"/>
-        <childnode refid="10164" relation="public-inheritance">
+        <childnode refid="10347" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10164">
+      <node id="10347">
         <label>wxHeaderColumn</label>
         <link refid="classwx_header_column"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/headercol.h" line="196" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/headercol.h" bodystart="195" bodyend="377"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/headercol.h" line="196" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/headercol.h" bodystart="195" bodyend="377"/>
     <listofallmembers>
       <member refid="classwx_settable_header_column_1ae4c0570355a3c4b712352457c925a7dd" prot="public" virt="non-virtual"><scope>wxSettableHeaderColumn</scope><name>ChangeFlag</name></member>
       <member refid="classwx_settable_header_column_1afb2fa0ed8e8e729d16ff9fefe9e41a26" prot="public" virt="non-virtual"><scope>wxSettableHeaderColumn</scope><name>ClearFlag</name></member>

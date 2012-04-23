@@ -11,49 +11,49 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__archive" kindref="compound">Archive support</ref>, <ref refid="group__group__class__streams" kindref="compound">Streams</ref></para><para><simplesect kind="see"><para><ref refid="overview_archive" kindref="compound">Archive Formats</ref>, <ref refid="overview_archive_1overview_archive_generic" kindref="member">Generic Archive Programming</ref>, <ref refid="classwx_zip_entry" kindref="compound">wxZipEntry</ref>, <ref refid="classwx_zip_input_stream" kindref="compound">wxZipInputStream</ref>, <ref refid="classwx_zip_output_stream" kindref="compound">wxZipOutputStream</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="11749">
+      <node id="11947">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="11747">
+      <node id="11945">
         <label>wxZipClassFactory</label>
         <link refid="classwx_zip_class_factory"/>
-        <childnode refid="11748" relation="public-inheritance">
+        <childnode refid="11946" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11748">
+      <node id="11946">
         <label>wxArchiveClassFactory</label>
         <link refid="classwx_archive_class_factory"/>
-        <childnode refid="11749" relation="public-inheritance">
+        <childnode refid="11947" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="11752">
+      <node id="11950">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="11753" relation="usage">
+        <childnode refid="11951" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="11750">
+      <node id="11948">
         <label>wxZipClassFactory</label>
         <link refid="classwx_zip_class_factory"/>
-        <childnode refid="11751" relation="public-inheritance">
+        <childnode refid="11949" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11751">
+      <node id="11949">
         <label>wxArchiveClassFactory</label>
         <link refid="classwx_archive_class_factory"/>
-        <childnode refid="11752" relation="public-inheritance">
+        <childnode refid="11950" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11753">
+      <node id="11951">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/zipstrm.h" line="455" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/zipstrm.h" bodystart="454" bodyend="458"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/zipstrm.h" line="455" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/zipstrm.h" bodystart="454" bodyend="458"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxZipClassFactory</scope><name>AllocExclusive</name></member>
       <member refid="classwx_archive_class_factory_1a91f564a745dc5d35498e638078a8cb81" prot="public" virt="non-virtual"><scope>wxZipClassFactory</scope><name>CanHandle</name></member>

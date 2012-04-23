@@ -41,7 +41,7 @@
 <para>For more info see the docs for the <ref refid="classwx_config_base_1a7c3ce1f79df2837bc532c0ff551e7bac" kindref="member">wxConfigBase::wxConfigBase()</ref> constructor.</para><para>Note that wxRegConfig&apos;s <emphasis>style</emphasis> argument defaults to <computeroutput>wxCONFIG_USE_GLOBAL_FILE</computeroutput>, i.e. to the use of the <computeroutput>HKLM</computeroutput> key (also known as &quot;HKEY_LOCAL_MACHINE&quot;). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/regconf.h" line="37"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msw/regconf.h" line="37"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -51,49 +51,49 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__cfg" kindref="compound">Application and System configuration</ref></para><para><simplesect kind="see"><para><ref refid="classwx_config_base" kindref="compound">wxConfigBase</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="9055">
+      <node id="9238">
         <label>wxConfigBase</label>
         <link refid="classwx_config_base"/>
-        <childnode refid="9056" relation="public-inheritance">
+        <childnode refid="9239" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9056">
+      <node id="9239">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="9054">
+      <node id="9237">
         <label>wxRegConfig</label>
         <link refid="classwx_reg_config"/>
-        <childnode refid="9055" relation="public-inheritance">
+        <childnode refid="9238" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="9058">
+      <node id="9241">
         <label>wxConfigBase</label>
         <link refid="classwx_config_base"/>
-        <childnode refid="9059" relation="public-inheritance">
+        <childnode refid="9242" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9059">
+      <node id="9242">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="9060" relation="usage">
+        <childnode refid="9243" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="9057">
+      <node id="9240">
         <label>wxRegConfig</label>
         <link refid="classwx_reg_config"/>
-        <childnode refid="9058" relation="public-inheritance">
+        <childnode refid="9241" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9060">
+      <node id="9243">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/regconf.h" line="24" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/regconf.h" bodystart="23" bodyend="38"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msw/regconf.h" line="24" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/msw/regconf.h" bodystart="23" bodyend="38"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxRegConfig</scope><name>AllocExclusive</name></member>
       <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxRegConfig</scope><name>CloneRefData</name></member>

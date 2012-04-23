@@ -50,6 +50,7 @@
 #include "others.h"
 
 
+
 void php_wxFileHistory_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -58,13 +59,13 @@ void php_wxFileHistory_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 	#endif
 	
 	
-	wxFileHistory_php* object = (wxFileHistory_php*)rsrc->ptr;
+	wxFileHistory_php* object = static_cast<wxFileHistory_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -150,7 +151,8 @@ PHP_METHOD(php_wxFileHistory, AddFileToHistory)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&filename0, &filename_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "s", &filename0, &filename_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "s";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &filename0, &filename_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -158,7 +160,6 @@ PHP_METHOD(php_wxFileHistory, AddFileToHistory)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -253,7 +254,8 @@ PHP_METHOD(php_wxFileHistory, AddFilesToMenu)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&menu1)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "z", &menu1 ) == SUCCESS)
+		char parse_parameters_string[] = "z";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &menu1 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(menu1) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(menu1), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -264,10 +266,6 @@ PHP_METHOD(php_wxFileHistory, AddFilesToMenu)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(menu1) == IS_LONG)
-				{
-					object_pointer1_0 = Z_LVAL_P(menu1);
 				}
 				else if(Z_TYPE_P(menu1) != IS_NULL)
 				{
@@ -281,7 +279,6 @@ PHP_METHOD(php_wxFileHistory, AddFilesToMenu)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -300,7 +297,6 @@ PHP_METHOD(php_wxFileHistory, AddFilesToMenu)
 		}
 	}
 
-	
 	if(overload1_called)
 	{
 		switch(arguments_received)
@@ -385,7 +381,6 @@ PHP_METHOD(php_wxFileHistory, GetBaseId)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -469,7 +464,6 @@ PHP_METHOD(php_wxFileHistory, GetCount)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -549,7 +543,8 @@ PHP_METHOD(php_wxFileHistory, GetHistoryFile)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&index0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &index0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &index0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -557,7 +552,6 @@ PHP_METHOD(php_wxFileHistory, GetHistoryFile)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -647,7 +641,6 @@ PHP_METHOD(php_wxFileHistory, GetMaxFiles)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -728,7 +721,8 @@ PHP_METHOD(php_wxFileHistory, Load)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&config0, php_wxConfigBase_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "O", &config0, php_wxConfigBase_entry ) == SUCCESS)
+		char parse_parameters_string[] = "O";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &config0, php_wxConfigBase_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(config0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(config0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -739,10 +733,6 @@ PHP_METHOD(php_wxFileHistory, Load)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(config0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(config0);
 				}
 				else if(Z_TYPE_P(config0) != IS_NULL)
 				{
@@ -756,7 +746,6 @@ PHP_METHOD(php_wxFileHistory, Load)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -837,7 +826,8 @@ PHP_METHOD(php_wxFileHistory, RemoveFileFromHistory)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&i0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &i0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &i0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -845,7 +835,6 @@ PHP_METHOD(php_wxFileHistory, RemoveFileFromHistory)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -926,7 +915,8 @@ PHP_METHOD(php_wxFileHistory, RemoveMenu)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&menu0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "z", &menu0 ) == SUCCESS)
+		char parse_parameters_string[] = "z";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &menu0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(menu0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(menu0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -937,10 +927,6 @@ PHP_METHOD(php_wxFileHistory, RemoveMenu)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(menu0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(menu0);
 				}
 				else if(Z_TYPE_P(menu0) != IS_NULL)
 				{
@@ -954,7 +940,6 @@ PHP_METHOD(php_wxFileHistory, RemoveMenu)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -1036,7 +1021,8 @@ PHP_METHOD(php_wxFileHistory, Save)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&config0, php_wxConfigBase_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "O", &config0, php_wxConfigBase_entry ) == SUCCESS)
+		char parse_parameters_string[] = "O";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &config0, php_wxConfigBase_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(config0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(config0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -1047,10 +1033,6 @@ PHP_METHOD(php_wxFileHistory, Save)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(config0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(config0);
 				}
 				else if(Z_TYPE_P(config0) != IS_NULL)
 				{
@@ -1064,7 +1046,6 @@ PHP_METHOD(php_wxFileHistory, Save)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -1145,7 +1126,8 @@ PHP_METHOD(php_wxFileHistory, SetBaseId)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&baseId0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &baseId0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &baseId0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -1153,7 +1135,6 @@ PHP_METHOD(php_wxFileHistory, SetBaseId)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -1234,7 +1215,8 @@ PHP_METHOD(php_wxFileHistory, UseMenu)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&menu0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "z", &menu0 ) == SUCCESS)
+		char parse_parameters_string[] = "z";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &menu0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(menu0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(menu0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -1245,10 +1227,6 @@ PHP_METHOD(php_wxFileHistory, UseMenu)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(menu0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(menu0);
 				}
 				else if(Z_TYPE_P(menu0) != IS_NULL)
 				{
@@ -1262,7 +1240,6 @@ PHP_METHOD(php_wxFileHistory, UseMenu)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -1316,7 +1293,8 @@ PHP_METHOD(php_wxFileHistory, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|ll' (&maxFiles0, &idBase0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|ll", &maxFiles0, &idBase0 ) == SUCCESS)
+		char parse_parameters_string[] = "|ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &maxFiles0, &idBase0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -1324,7 +1302,6 @@ PHP_METHOD(php_wxFileHistory, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)

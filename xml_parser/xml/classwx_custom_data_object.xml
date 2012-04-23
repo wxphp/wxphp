@@ -21,7 +21,7 @@
 <para>If it isn&apos;t set here, <ref refid="classwx_data_object_simple_1adf9d889c7fcc7e05cb6253b3b1e3cb0f" kindref="member">wxDataObjectSimple::SetFormat()</ref> should be used. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataobj.h" line="344"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataobj.h" line="339"/>
       </memberdef>
       <memberdef kind="function" id="classwx_custom_data_object_1a042c4d25874ae1bdf71ce21dea4989d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -34,7 +34,7 @@
 <para>Notice that although it calls the virtual <ref refid="classwx_custom_data_object_1a4978a39c76eaba4fc880aea751139b1c" kindref="member">Free()</ref> function, the base class version will always be called (C++ doesn&apos;t allow calling virtual functions from constructors or destructors), so if you override <ref refid="classwx_custom_data_object_1a4978a39c76eaba4fc880aea751139b1c" kindref="member">Free()</ref>, you should override the destructor in your class as well (which would probably just call the derived class&apos; version of <ref refid="classwx_custom_data_object_1a4978a39c76eaba4fc880aea751139b1c" kindref="member">Free()</ref>). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataobj.h" line="354"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataobj.h" line="349"/>
       </memberdef>
       <memberdef kind="function" id="classwx_custom_data_object_1a6d9480a051d902ef368f41fecbc886f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void *</type>
@@ -51,7 +51,7 @@
 <para>The default version just uses the operator new. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataobj.h" line="360"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataobj.h" line="355"/>
       </memberdef>
       <memberdef kind="function" id="classwx_custom_data_object_1a4978a39c76eaba4fc880aea751139b1c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -64,7 +64,7 @@
 <para>The default version calls operator delete[] on the data. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataobj.h" line="367"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataobj.h" line="362"/>
       </memberdef>
       <memberdef kind="function" id="classwx_custom_data_object_1a47064b9dcd307e4e3b253551f38c57f0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>void *</type>
@@ -77,7 +77,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataobj.h" line="372"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataobj.h" line="367"/>
       </memberdef>
       <memberdef kind="function" id="classwx_custom_data_object_1adce7c255d4b86568add6ceffbb96fcbd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>size_t</type>
@@ -90,7 +90,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataobj.h" line="377"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataobj.h" line="372"/>
       </memberdef>
       <memberdef kind="function" id="classwx_custom_data_object_1a5a0cdd8e3a80d0bd7853b86e662650b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -109,10 +109,10 @@
         <briefdescription>
 <para>Set the data. </para>        </briefdescription>
         <detaileddescription>
-<para>The data object will make an internal copy.</para><para><bold>wxPython Note:</bold> This method expects a string in wxPython. You can pass nearly any object by pickling it first. </para>        </detaileddescription>
+<para>The data object will make an internal copy. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataobj.h" line="387"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataobj.h" line="377"/>
       </memberdef>
       <memberdef kind="function" id="classwx_custom_data_object_1a133a6a8044d298b68b50945c422ae4a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -130,10 +130,10 @@
         <briefdescription>
 <para>Like <ref refid="classwx_custom_data_object_1a5a0cdd8e3a80d0bd7853b86e662650b4" kindref="member">SetData()</ref>, but doesn&apos;t copy the data - instead the object takes ownership of the pointer. </para>        </briefdescription>
         <detaileddescription>
-<para><bold>wxPython Note:</bold> This method expects a string in wxPython. You can pass nearly any object by pickling it first. </para>        </detaileddescription>
+        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataobj.h" line="398"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataobj.h" line="383"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -143,42 +143,42 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__dnd" kindref="compound">Clipboard and Drag &amp; Drop</ref></para><para><simplesect kind="see"><para><ref refid="classwx_data_object" kindref="compound">wxDataObject</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="5228">
+      <node id="5323">
         <label>wxDataObject</label>
         <link refid="classwx_data_object"/>
       </node>
-      <node id="5226">
+      <node id="5321">
         <label>wxCustomDataObject</label>
         <link refid="classwx_custom_data_object"/>
-        <childnode refid="5227" relation="public-inheritance">
+        <childnode refid="5322" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5227">
+      <node id="5322">
         <label>wxDataObjectSimple</label>
         <link refid="classwx_data_object_simple"/>
-        <childnode refid="5228" relation="public-inheritance">
+        <childnode refid="5323" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="5231">
+      <node id="5326">
         <label>wxDataObject</label>
         <link refid="classwx_data_object"/>
       </node>
-      <node id="5229">
+      <node id="5324">
         <label>wxCustomDataObject</label>
         <link refid="classwx_custom_data_object"/>
-        <childnode refid="5230" relation="public-inheritance">
+        <childnode refid="5325" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5230">
+      <node id="5325">
         <label>wxDataObjectSimple</label>
         <link refid="classwx_data_object_simple"/>
-        <childnode refid="5231" relation="public-inheritance">
+        <childnode refid="5326" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataobj.h" line="337" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataobj.h" bodystart="336" bodyend="399"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataobj.h" line="332" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dataobj.h" bodystart="331" bodyend="384"/>
     <listofallmembers>
       <member refid="classwx_custom_data_object_1a6d9480a051d902ef368f41fecbc886f6" prot="public" virt="virtual"><scope>wxCustomDataObject</scope><name>Alloc</name></member>
       <member refid="classwx_data_object_1a7623fd02a6bef5dba7c96ff0a1a692efa1f94b69e55238c5470f85e252b5fd8df" prot="public" virt="non-virtual"><scope>wxCustomDataObject</scope><name>Both</name></member>

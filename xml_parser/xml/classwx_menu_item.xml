@@ -17,7 +17,7 @@
 <para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page_port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor>  </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menuitem.h" line="160"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/menuitem.h" line="160"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_item_1a26eefb7f49e3edca96e9f71cdb243b12" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>const <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> &amp;</type>
@@ -30,7 +30,7 @@
 <para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page_port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor>  </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menuitem.h" line="167"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/menuitem.h" line="167"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_item_1aad2b17eed2726df1d5d5752a40f536da" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_font" kindref="compound">wxFont</ref> &amp;</type>
@@ -43,7 +43,7 @@
 <para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page_port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor>  </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menuitem.h" line="174"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/menuitem.h" line="174"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_item_1a679c3f9a7bd66d82b3a148629fc6cc5c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -56,7 +56,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menuitem.h" line="179"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/menuitem.h" line="179"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_item_1aec5349782813e4605158f8eeed9a92eb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -69,7 +69,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menuitem.h" line="184"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/menuitem.h" line="184"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_item_1a6fde1e54cf3cecd90853f627fc4f4493" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -83,7 +83,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menuitem.h" line="192"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/menuitem.h" line="192"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_item_1acfd765d248029f8c548dc700b03f6198" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -97,7 +97,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menuitem.h" line="200"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/menuitem.h" line="200"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_item_1a759fcdb50560600608446a2099e33d49" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="defs_8h_1abd0c640814a55e4adda3bce698646d2d" kindref="member">wxItemKind</ref></type>
@@ -110,7 +110,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menuitem.h" line="206"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/menuitem.h" line="206"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_item_1a97554b69d2ad5948b856b68bfa3e4824" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -120,11 +120,11 @@
         <briefdescription>
 <para>Returns the text associated with the menu item without any accelerator characters it might contain. </para>        </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000041"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This function is deprecated in favour of <ref refid="classwx_menu_item_1acfd765d248029f8c548dc700b03f6198" kindref="member">GetItemLabelText()</ref>.</para></xrefdescription></xrefsect></para><para><simplesect kind="see"><para><ref refid="classwx_menu_item_1acfd765d248029f8c548dc700b03f6198" kindref="member">GetItemLabelText()</ref> </para></simplesect>
+<para><xrefsect id="deprecated_1_deprecated000040"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This function is deprecated in favour of <ref refid="classwx_menu_item_1acfd765d248029f8c548dc700b03f6198" kindref="member">GetItemLabelText()</ref>.</para></xrefdescription></xrefsect></para><para><simplesect kind="see"><para><ref refid="classwx_menu_item_1acfd765d248029f8c548dc700b03f6198" kindref="member">GetItemLabelText()</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menuitem.h" line="216"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/menuitem.h" line="216"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_item_1a22c16a54a88b192f62200bafd598628c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -137,7 +137,7 @@
 <para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page_port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor>  </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menuitem.h" line="223"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/menuitem.h" line="223"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_item_1aa749549977f23192c9d05c19d87ecbee" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_menu" kindref="compound">wxMenu</ref> *</type>
@@ -150,7 +150,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menuitem.h" line="229"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/menuitem.h" line="229"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_item_1aa1910ae1850b6dc659e008530e3ddb38" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -160,11 +160,11 @@
         <briefdescription>
 <para>Returns the text associated with the menu item. </para>        </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000042"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This function is deprecated. Please use <ref refid="classwx_menu_item_1a6fde1e54cf3cecd90853f627fc4f4493" kindref="member">GetItemLabel()</ref> or <ref refid="classwx_menu_item_1acfd765d248029f8c548dc700b03f6198" kindref="member">GetItemLabelText()</ref> instead.</para></xrefdescription></xrefsect></para><para><simplesect kind="see"><para><ref refid="classwx_menu_item_1a6fde1e54cf3cecd90853f627fc4f4493" kindref="member">GetItemLabel()</ref>, <ref refid="classwx_menu_item_1acfd765d248029f8c548dc700b03f6198" kindref="member">GetItemLabelText()</ref> </para></simplesect>
+<para><xrefsect id="deprecated_1_deprecated000041"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This function is deprecated. Please use <ref refid="classwx_menu_item_1a6fde1e54cf3cecd90853f627fc4f4493" kindref="member">GetItemLabel()</ref> or <ref refid="classwx_menu_item_1acfd765d248029f8c548dc700b03f6198" kindref="member">GetItemLabelText()</ref> instead.</para></xrefdescription></xrefsect></para><para><simplesect kind="see"><para><ref refid="classwx_menu_item_1a6fde1e54cf3cecd90853f627fc4f4493" kindref="member">GetItemLabel()</ref>, <ref refid="classwx_menu_item_1acfd765d248029f8c548dc700b03f6198" kindref="member">GetItemLabelText()</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menuitem.h" line="238"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/menuitem.h" line="238"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_item_1a517e8a2c8ce4427eb21999b8b378987b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_menu" kindref="compound">wxMenu</ref> *</type>
@@ -177,7 +177,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menuitem.h" line="243"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/menuitem.h" line="243"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_item_1af81fb6c07a980fc2d8314f0be6f38170" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -187,11 +187,11 @@
         <briefdescription>
 <para>Returns the text associated with the menu item, such as it was passed to the <ref refid="classwx_menu_item" kindref="compound">wxMenuItem</ref> constructor, i.e. </para>        </briefdescription>
         <detaileddescription>
-<para>with any accelerator characters it may contain.</para><para><xrefsect id="deprecated_1_deprecated000043"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This function is deprecated in favour of <ref refid="classwx_menu_item_1a6fde1e54cf3cecd90853f627fc4f4493" kindref="member">GetItemLabel()</ref>.</para></xrefdescription></xrefsect></para><para><simplesect kind="see"><para><ref refid="classwx_menu_item_1af8f7bb0c7ca8808047c3c97b564069ed" kindref="member">GetLabelFromText()</ref> </para></simplesect>
+<para>with any accelerator characters it may contain.</para><para><xrefsect id="deprecated_1_deprecated000042"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This function is deprecated in favour of <ref refid="classwx_menu_item_1a6fde1e54cf3cecd90853f627fc4f4493" kindref="member">GetItemLabel()</ref>.</para></xrefdescription></xrefsect></para><para><simplesect kind="see"><para><ref refid="classwx_menu_item_1af8f7bb0c7ca8808047c3c97b564069ed" kindref="member">GetLabelFromText()</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menuitem.h" line="253"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/menuitem.h" line="253"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_item_1a62a0d8dabfec3d2ff25dc03bd7cb1b8c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_colour" kindref="compound">wxColour</ref> &amp;</type>
@@ -204,7 +204,7 @@
 <para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page_port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor>  </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menuitem.h" line="260"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/menuitem.h" line="260"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -220,7 +220,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menuitem.h" line="274"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/menuitem.h" line="274"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_item_1a629b1b82993b4f654b214cc90f427974" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -233,7 +233,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menuitem.h" line="279"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/menuitem.h" line="279"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_item_1a0ec10aa48da0e8d17f057834e791c7c8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -246,7 +246,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menuitem.h" line="284"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/menuitem.h" line="284"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_item_1af717c39d2c08161b9b167a7c6ed1fe93" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -259,7 +259,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menuitem.h" line="289"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/menuitem.h" line="289"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_item_1a8b0f0c3f83c47e4f332c94abd406459f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -272,7 +272,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menuitem.h" line="294"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/menuitem.h" line="294"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -292,7 +292,7 @@
 <para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page_port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor>  </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menuitem.h" line="310"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/menuitem.h" line="310"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_item_1a2b5d6bcb820b992b1e4709facbf6d4fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -314,7 +314,7 @@
 <para>It is equivalent to wxMenuItem::SetBitmaps(bmp, wxNullBitmap) if <emphasis>checked</emphasis> is true (default value) or SetBitmaps(wxNullBitmap, bmp) otherwise.</para><para>Notice that GTK+ uses a global setting called <computeroutput>gtk-menu-images</computeroutput> to determine if the images should be shown in the menus at all. If it is off (which is the case in e.g. Gnome 2.28 by default), no images will be shown, consistently with the native behaviour.</para><para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page_port_1page_port_wxmsw" kindref="member">wxMSW</ref>, <ref refid="page_port_1page_port_wxosx" kindref="member">wxOSX</ref>, <ref refid="page_port_1page_port_wxgtk" kindref="member">wxGTK</ref> ports.  <onlyfor>wxmsw,wxosx,wxgtk</onlyfor>  </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menuitem.h" line="326"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/menuitem.h" line="326"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_item_1a62407ad793cb3ef9c59873349558ce5c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -336,7 +336,7 @@
 <para>The first bitmap is also used as the single bitmap for uncheckable menu items.</para><para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page_port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor>  </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menuitem.h" line="335"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/menuitem.h" line="335"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_item_1a5deda3866e4308a965caa2fb78c1ca93" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -353,7 +353,7 @@
 <para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page_port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor>  </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menuitem.h" line="342"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/menuitem.h" line="342"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_item_1af20e2cb1c73892e1c8e86e69b40d9040" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -370,7 +370,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menuitem.h" line="347"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/menuitem.h" line="347"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_item_1a8b0517fb35e3eada66b51568aa87f261" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -394,7 +394,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menuitem.h" line="398"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/menuitem.h" line="398"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_item_1aac2257b03dd2485c72f9398ceb1a76cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -411,7 +411,7 @@
 <para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page_port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor>  </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menuitem.h" line="405"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/menuitem.h" line="405"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_item_1a41fb81219430a81e7e2a668831868296" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -428,7 +428,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menuitem.h" line="410"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/menuitem.h" line="410"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_item_1ab222651b8b47653d8890cd3469d5ff5a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -445,7 +445,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menuitem.h" line="415"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/menuitem.h" line="415"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_item_1a742aa5bb0d3faa020e7b3bd66e336499" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -459,11 +459,11 @@
         <briefdescription>
 <para>Sets the text associated with the menu item. </para>        </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000044"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This function is deprecated in favour of <ref refid="classwx_menu_item_1a8b0517fb35e3eada66b51568aa87f261" kindref="member">SetItemLabel()</ref>.</para></xrefdescription></xrefsect></para><para><simplesect kind="see"><para><ref refid="classwx_menu_item_1a8b0517fb35e3eada66b51568aa87f261" kindref="member">SetItemLabel()</ref>. </para></simplesect>
+<para><xrefsect id="deprecated_1_deprecated000043"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This function is deprecated in favour of <ref refid="classwx_menu_item_1a8b0517fb35e3eada66b51568aa87f261" kindref="member">SetItemLabel()</ref>.</para></xrefdescription></xrefsect></para><para><simplesect kind="see"><para><ref refid="classwx_menu_item_1a8b0517fb35e3eada66b51568aa87f261" kindref="member">SetItemLabel()</ref>. </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menuitem.h" line="424"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/menuitem.h" line="424"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_item_1a695b5f2f1c2325ec01dba5cdd83dd3b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -480,7 +480,7 @@
 <para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page_port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor>  </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menuitem.h" line="431"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/menuitem.h" line="431"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -530,7 +530,7 @@
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>use<sp/>all<sp/>stock<sp/>properties<sp/>except<sp/>for<sp/>the<sp/>bitmap:</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_menu_item" kindref="compound" tooltip="A menu item represents an item in a menu.">wxMenuItem</ref><sp/>*mymenu<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classwx_menu_item_1a6e9b0e1b786fa84250a42c88d84aed2b" kindref="member" tooltip="Constructs a wxMenuItem object.">wxMenuItem</ref>(helpMenu,<sp/><ref refid="defs_8h_1ac66d0a09761e7d86b2ac0b2e0c6a8cbba777a4075af4d1bfbbdb6ecfeaa9e8957" kindref="member">wxID_ABOUT</ref>);</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mymenu-&gt;<ref refid="classwx_menu_item_1a2b5d6bcb820b992b1e4709facbf6d4fb" kindref="member" tooltip="Sets the bitmap for the menu item.">SetBitmap</ref>(<ref refid="classwx_art_provider_1a405ecf7cdead6dbfb092376a51a856c4" kindref="member" tooltip="Query registered providers for bitmap with given ID.">wxArtProvider::GetBitmap</ref>(wxART_WARNING));</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mymenu-&gt;<ref refid="classwx_menu_item_1a2b5d6bcb820b992b1e4709facbf6d4fb" kindref="member" tooltip="Sets the bitmap for the menu item.">SetBitmap</ref>(<ref refid="classwx_art_provider_1a405ecf7cdead6dbfb092376a51a856c4" kindref="member" tooltip="Query registered providers for bitmap with given ID.">wxArtProvider::GetBitmap</ref>(<ref refid="artprov_8h_1a96947921ebc5c5ff7d92f46c99584268" kindref="member">wxART_WARNING</ref>));</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>helpMenu-&gt;Append(mymenu);</highlight></codeline>
 </programlisting></para><para>that is, stock properties are set independently one from the other.</para><para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -578,7 +578,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menuitem.h" line="110"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/menuitem.h" line="110"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_item_1a61df296959898555031e23d412508323" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -591,7 +591,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menuitem.h" line="115"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/menuitem.h" line="115"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_item_1afcfbb12e302c0528e55efcb1c6f5f7fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -609,7 +609,7 @@
 <para>Note that this only works when the item is already appended to a menu. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menuitem.h" line="121"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/menuitem.h" line="121"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_item_1a1e399da82f486adea3893480bcf66b21" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -627,7 +627,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menuitem.h" line="126"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/menuitem.h" line="126"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -643,11 +643,11 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000040"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This function is deprecated; please use <ref refid="classwx_menu_item_1afed23d53a97171076763385c93207fc0" kindref="member">GetLabelText()</ref> instead.</para></xrefdescription></xrefsect></para><para><simplesect kind="see"><para><ref refid="classwx_menu_item_1afed23d53a97171076763385c93207fc0" kindref="member">GetLabelText()</ref> </para></simplesect>
+<para><xrefsect id="deprecated_1_deprecated000039"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This function is deprecated; please use <ref refid="classwx_menu_item_1afed23d53a97171076763385c93207fc0" kindref="member">GetLabelText()</ref> instead.</para></xrefdescription></xrefsect></para><para><simplesect kind="see"><para><ref refid="classwx_menu_item_1afed23d53a97171076763385c93207fc0" kindref="member">GetLabelText()</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menuitem.h" line="133"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/menuitem.h" line="133"/>
       </memberdef>
       <memberdef kind="function" id="classwx_menu_item_1afed23d53a97171076763385c93207fc0" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -666,7 +666,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menuitem.h" line="147"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/menuitem.h" line="147"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -685,37 +685,37 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__menus" kindref="compound">Menus</ref></para><para><simplesect kind="see"><para><ref refid="classwx_menu_bar" kindref="compound">wxMenuBar</ref>, <ref refid="classwx_menu" kindref="compound">wxMenu</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7730">
+      <node id="7923">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="7729">
+      <node id="7922">
         <label>wxMenuItem</label>
         <link refid="classwx_menu_item"/>
-        <childnode refid="7730" relation="public-inheritance">
+        <childnode refid="7923" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7732">
+      <node id="7925">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="7733" relation="usage">
+        <childnode refid="7926" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="7731">
+      <node id="7924">
         <label>wxMenuItem</label>
         <link refid="classwx_menu_item"/>
-        <childnode refid="7732" relation="public-inheritance">
+        <childnode refid="7925" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7733">
+      <node id="7926">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menuitem.h" line="49" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menuitem.h" bodystart="48" bodyend="434"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/menuitem.h" line="49" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/menuitem.h" bodystart="48" bodyend="434"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxMenuItem</scope><name>AllocExclusive</name></member>
       <member refid="classwx_menu_item_1afcfbb12e302c0528e55efcb1c6f5f7fc" prot="public" virt="virtual"><scope>wxMenuItem</scope><name>Check</name></member>

@@ -62,13 +62,13 @@
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/colordlg.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colordlg.h" line="89"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/colordlg.h" line="89"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colordlg.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/colordlg.h"/>
   </compounddef>
 </doxygen>

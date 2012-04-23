@@ -20,7 +20,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="411"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" line="411"/>
       </memberdef>
       <memberdef kind="function" id="classwx_thread_helper_1affe96946d9bceaba028209f4fd90ddf8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -33,7 +33,7 @@
 <para>Because of the <ref refid="classwx_thread_1a2cbff8b3b0a93ab82f212c02f38a1ef4" kindref="member">wxThread::Kill</ref> unsafety, you should always wait (with <ref refid="classwx_thread_1a62ee778033013d3a4754b71b8cf2902e" kindref="member">wxThread::Wait</ref>) for joinable threads to end or call <ref refid="classwx_thread_1a66796042bf5f3eb33a0ad3db85f686d4" kindref="member">wxThread::Delete</ref> on detached threads, instead of relying on this destructor for stopping the thread. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="422"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" line="422"/>
       </memberdef>
       <memberdef kind="function" id="classwx_thread_helper_1a7f3e0f028fb1b295bc61064ad4d4bc1b" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>ExitCode</type>
@@ -61,7 +61,7 @@
 </programlisting></para><para>The returned value is the thread exit code which is only useful for joinable threads and is the value returned by <computeroutput>&quot;GetThread()-&gt;Wait()&quot;</computeroutput>.</para><para>This function is called by wxWidgets itself and should never be called directly. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="455"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" line="455"/>
       </memberdef>
       <memberdef kind="function" id="classwx_thread_helper_1ad6275bdfa1590d13f4890a433ee3e1c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -76,7 +76,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="472"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" line="472"/>
       </memberdef>
       <memberdef kind="function" id="classwx_thread_helper_1aafc07894e382cbd964c3e9900b2b780b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -91,7 +91,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="486"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" line="486"/>
       </memberdef>
       <memberdef kind="function" id="classwx_thread_helper_1ae9f65014cb9c8ef1d27f22d6259c0fc2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="interface_2wx_2thread_8h_1a9e4ba0577f752fee0ba2133035f75ac2" kindref="member">wxThreadError</ref></type>
@@ -106,10 +106,10 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000056"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="classwx_thread_helper_1a3682b1b5a08741335aa8acc7feb0ece5" kindref="member">CreateThread()</ref> instead.</para></xrefdescription></xrefsect></para>        </detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000055"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="classwx_thread_helper_1a3682b1b5a08741335aa8acc7feb0ece5" kindref="member">CreateThread()</ref> instead.</para></xrefdescription></xrefsect></para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="492"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" line="492"/>
       </memberdef>
       <memberdef kind="function" id="classwx_thread_helper_1a3682b1b5a08741335aa8acc7feb0ece5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="interface_2wx_2thread_8h_1a9e4ba0577f752fee0ba2133035f75ac2" kindref="member">wxThreadError</ref></type>
@@ -133,7 +133,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="506"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" line="506"/>
       </memberdef>
       <memberdef kind="function" id="classwx_thread_helper_1ac61fe16deda566773cdc7d4d38709370" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_thread" kindref="compound">wxThread</ref> *</type>
@@ -146,7 +146,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="512"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" line="512"/>
       </memberdef>
       <memberdef kind="function" id="classwx_thread_helper_1ae84f7a6b2bfc7e890d0dfd296cbc43cd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="interface_2wx_2thread_8h_1a0dc9a167e8d084946512da99b37b5fd0" kindref="member">wxThreadKind</ref></type>
@@ -159,7 +159,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="518"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" line="518"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -283,7 +283,7 @@
 </programlisting></para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__threading" kindref="compound">Threading</ref></para><para><simplesect kind="see"><para><ref refid="classwx_thread" kindref="compound">wxThread</ref>, <ref refid="classwx_thread_event" kindref="compound">wxThreadEvent</ref> </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="405" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" bodystart="404" bodyend="519"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" line="405" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" bodystart="404" bodyend="519"/>
     <listofallmembers>
       <member refid="classwx_thread_helper_1ae9f65014cb9c8ef1d27f22d6259c0fc2" prot="public" virt="non-virtual"><scope>wxThreadHelper</scope><name>Create</name></member>
       <member refid="classwx_thread_helper_1a3682b1b5a08741335aa8acc7feb0ece5" prot="public" virt="non-virtual"><scope>wxThreadHelper</scope><name>CreateThread</name></member>
