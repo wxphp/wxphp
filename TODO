@@ -1,8 +1,29 @@
-* Update config.w32 and configd.w32 to use new wxWidgets 2.9.x
+Short term TODO
+==============================
+
+* Fix segmentation bug that occurs on shutdown (FIXED).
+
+* fix xml_parser not using <array>[]</array> on argument types (DONE)
+
+* Update config.w32 and configd.w32 to use new wxWidgets 2.9.x (almost done)
+
 * Compilation testing and troubleshooting on windows
+
 * Compilation testing and troubleshooting on mac
+
 * Implement __set to write to internal wxWidgets class properties.
+
 * Implement compare_objects handler for wxWidget classes that implement
   operator== etc...
-* Fix segmentation bug that occurs on shutdown (almost fixed).
-* fix xml_parser not using <array>[]</array> on argument types;
+  
+* Check why PHP Segfaults when loading the library from the php.ini while
+  loading it with dl function works as expected.
+  
+  
+Long term TODO
+==============================
+
+* Approach a more object oriended style for the source maker
+
+* Develop a modules architecture in order to use the source maker to
+  generate the PHP bindings for any library with doxygen documentation.
